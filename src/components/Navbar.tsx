@@ -70,8 +70,11 @@ export default function Navbar() {
               <Link to="/login" className="text-sm font-medium text-slate-muted hover:text-parchment">
                 Log in
               </Link>
-              <Link to="/register" className="btn-primary text-sm">
-                Get Started
+              <Link to="/tutor/register" className="text-sm font-medium text-slate-muted hover:text-parchment">
+                Become a Tutor
+              </Link>
+              <Link to="/student/register" className="btn-primary text-sm">
+                Student Registration
               </Link>
             </>
           )}
@@ -128,8 +131,11 @@ export default function Navbar() {
                   <Link to="/login" onClick={() => setMenuOpen(false)} className="btn-secondary text-sm">
                     Log in
                   </Link>
-                  <Link to="/register" onClick={() => setMenuOpen(false)} className="btn-primary text-sm">
-                    Get Started
+                  <Link to="/student/register" onClick={() => setMenuOpen(false)} className="btn-primary text-sm">
+                    Student Registration
+                  </Link>
+                  <Link to="/tutor/register" onClick={() => setMenuOpen(false)} className="btn-secondary text-sm">
+                    Become a Tutor
                   </Link>
                 </>
               )}
