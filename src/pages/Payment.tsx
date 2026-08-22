@@ -4,6 +4,7 @@ import { QRCodeSVG } from 'qrcode.react'
 import { supabase } from '@/lib/supabase'
 import { useAuth } from '@/hooks/useAuth'
 import type { Course, Payment } from '@/types/database'
+import { getCourseDisplayName } from '@/lib/courseDisplay'
 
 const PAYEE_NAME = import.meta.env.VITE_UPI_PAYEE_NAME || 'VATTAMS ACADEMIA'
 const PAYEE_VPA = import.meta.env.VITE_UPI_VPA as string | undefined
@@ -90,9 +91,11 @@ export default function Payment() {
     return <div className="mx-auto max-w-xl px-4 py-16 text-slate-muted">{error ?? 'Loading payment details…'}</div>
   }
 
+  const courseDisplayName = getCourseDisplayName(course.name)
+
   const upiLink = PAYEE_VPA
     ? `upi://pay?pa=${encodeURIComponent(PAYEE_VPA)}&pn=${encodeURIComponent(PAYEE_NAME)}&am=${payment.amount}&cu=INR&tn=${encodeURIComponent(
-        `VATTAMS ACADEMIA - ${course.name}`
+        `VATTAMS ACADEMIA - ${courseDisplayName}`
       )}`
     : null
 
@@ -115,7 +118,7 @@ export default function Payment() {
       <div className="card mt-6 divide-y divide-white/10">
         <div className="flex items-center justify-between p-4 text-sm">
           <span className="text-slate-muted">Programme</span>
-          <span className="font-medium">{course.name}</span>
+          <span className="font-medium">{courseDisplayName}</span>
         </div>
         <div className="flex items-center justify-between p-4 text-sm">
           <span className="text-slate-muted">Base fee</span>

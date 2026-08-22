@@ -3,6 +3,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
 import CourseCard from '@/components/CourseCard'
+import { getCourseDisplayName } from '@/lib/courseDisplay'
 
 type LoadState = 'loading' | 'loaded' | 'error'
 
@@ -83,7 +84,7 @@ export default function Courses() {
 
       if (!term) return true
 
-      const haystack = [c.name, c.short_description, c.description, c.instructor_name]
+      const haystack = [getCourseDisplayName(c.name), c.name, c.short_description, c.description, c.instructor_name]
         .filter(Boolean)
         .join(' ')
         .toLowerCase()

@@ -1,8 +1,5 @@
-import { lazy, Suspense, useEffect, useState } from 'react'
-import { Route, Routes, useParams } from 'react-router-dom'
-import { collection, getDocs, query, where } from 'firebase/firestore'
-import { firestore } from '@/lib/firebase'
-import type { Course } from '@/types/database'
+import { lazy, Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Home from '@/pages/Home'
@@ -25,6 +22,8 @@ const StudentDashboard = lazy(() => import('@/pages/StudentDashboard'))
 const CourseLearn = lazy(() => import('@/pages/CourseLearn'))
 const VerifyCertificate = lazy(() => import('@/pages/VerifyCertificate'))
 const Auth = lazy(() => import('@/pages/Auth'))
+const StudentRegister = lazy(() => import('@/pages/StudentRegister'))
+const TutorRegister = lazy(() => import('@/pages/TutorRegister'))
 const About = lazy(() => import('@/pages/About'))
 const Founder = lazy(() => import('@/pages/Founder'))
 const Contact = lazy(() => import('@/pages/Contact'))
@@ -45,65 +44,6 @@ function PageFallback() {
   )
 }
 
-// CourseDetail (src/pages/CourseDetail.tsx) requires a `course` prop — it
-// doesn't fetch its own data. This wrapper reads :slug and loads the
-// matching course the same way the other slug-keyed public course pages
-// already do (Courses.tsx, CourseLearn.tsx): Firestore `courses`
-// collection, filtered to `is_published`. Payment.tsx/admin pages load
-// courses from Supabase by id instead, but that's a different, id-keyed
-// flow — this route mirrors its actual slug-keyed siblings.
-function CourseDetailRoute() {
-  const { slug } = useParams<{ slug: string }>()
-  const [course, setCourse] = useState<Course | null>(null)
-  const [state, setState] = useState<'loading' | 'loaded' | 'not_found'>('loading')
-
-  useEffect(() => {
-    let cancelled = false
-    setState('loading')
-
-    if (!slug) {
-      setState('not_found')
-      return
-    }
-
-    async function load() {
-      try {
-        const courseQuery = query(
-          collection(firestore, 'courses'),
-          where('slug', '==', slug),
-          where('is_published', '==', true)
-        )
-        const snapshot = await getDocs(courseQuery)
-        if (cancelled) return
-
-        if (snapshot.empty) {
-          setState('not_found')
-          return
-        }
-
-        const courseDoc = snapshot.docs[0]
-        setCourse({ id: courseDoc.id, ...courseDoc.data() } as Course)
-        setState('loaded')
-      } catch (err) {
-        console.error('CourseDetailRoute Firebase error:', err)
-        if (cancelled) return
-        setState('not_found')
-      }
-    }
-
-    load()
-
-    return () => {
-      cancelled = true
-    }
-  }, [slug])
-
-  if (state === 'loading') return <PageFallback />
-  if (state === 'not_found' || !course) return <NotFound />
-
-  return <CourseDetail course={course} />
-}
-
 export default function App() {
   return (
     <div className="flex min-h-screen flex-col">
@@ -113,7 +53,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/courses" element={<Courses />} />
-            <Route path="/courses/:slug" element={<CourseDetailRoute />} />
+            <Route path="/courses/:slug" element={<CourseDetail />} />
 
             {/* No competition data source exists yet (no table, no
                 collection, no admin UI) — this route is an honest
@@ -132,6 +72,8 @@ export default function App() {
 
             <Route path="/login" element={<Auth mode="login" />} />
             <Route path="/register" element={<Auth mode="register" />} />
+            <Route path="/student/register" element={<StudentRegister />} />
+            <Route path="/tutor/register" element={<TutorRegister />} />
 
             {/* Payment.tsx reads useParams<{ courseId }>() — the param
                 name here must match that, not "paymentId". */}
@@ -140,6 +82,10 @@ export default function App() {
             <Route path="/learn/:slug" element={<CourseLearn />} />
 
             <Route path="/admin" element={<AdminLogin />} />
+            {/* Alias for the existing admin login — same component, same
+                Supabase-backed `admins` table check. Not linked from any
+                public nav; only reachable if you know the URL. */}
+            <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/payments" element={<AdminPayments />} />
             <Route path="/admin/courses" element={<AdminCourses />} />
             <Route path="/admin/courses/:id" element={<AdminCourseForm />} />
