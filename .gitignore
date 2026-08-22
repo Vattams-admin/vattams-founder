@@ -5,3 +5,11 @@ dist/
 !.env.example
 *.log
 .DS_Store
+.env
+.env.*
+!.env.example
+*.backup
+*.backup-*
+src_backup_before_supabase_remove/
+dist/
+node_modules/
