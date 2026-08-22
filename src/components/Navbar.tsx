@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { signOut } from 'firebase/auth'
+import { firebaseAuth } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
-import { logout } from '@/services/auth'
 
 const navItems = [
   { to: '/', label: 'Home', end: true },
@@ -14,12 +15,12 @@ const navItems = [
 ]
 
 export default function Navbar() {
-  const { user, profile, isAdmin, loading } = useAuth()
+  const { user, loading } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
 
   async function handleLogout() {
-    await logout()
+    await signOut(firebaseAuth)
     navigate('/')
   }
 
@@ -57,13 +58,8 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 xl:flex">
           {loading ? null : user ? (
             <>
-              {isAdmin && (
-                <Link to="/admin/dashboard" className="text-sm font-medium text-slate-muted hover:text-parchment">
-                  Admin
-                </Link>
-              )}
               <Link to="/dashboard" className="text-sm font-medium text-slate-muted hover:text-parchment">
-                {profile?.fullName?.split(' ')[0] ?? 'Dashboard'}
+                {user.displayName?.split(' ')[0] ?? 'Dashboard'}
               </Link>
               <button onClick={handleLogout} className="btn-secondary text-sm">
                 Log out
@@ -114,11 +110,6 @@ export default function Navbar() {
             <div className="mt-3 flex flex-col gap-2 border-t border-white/10 pt-3">
               {user ? (
                 <>
-                  {isAdmin && (
-                    <Link to="/admin/dashboard" onClick={() => setMenuOpen(false)} className="btn-secondary text-sm">
-                      Admin
-                    </Link>
-                  )}
                   <Link to="/dashboard" onClick={() => setMenuOpen(false)} className="btn-secondary text-sm">
                     Dashboard
                   </Link>
