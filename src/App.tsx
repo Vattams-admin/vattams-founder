@@ -22,6 +22,8 @@ const StudentDashboard = lazy(() => import('@/pages/StudentDashboard'))
 const CourseLearn = lazy(() => import('@/pages/CourseLearn'))
 const VerifyCertificate = lazy(() => import('@/pages/VerifyCertificate'))
 const Auth = lazy(() => import('@/pages/Auth'))
+const StudentRegister = lazy(() => import('@/pages/StudentRegister'))
+const TutorRegister = lazy(() => import('@/pages/TutorRegister'))
 const About = lazy(() => import('@/pages/About'))
 const Founder = lazy(() => import('@/pages/Founder'))
 const Contact = lazy(() => import('@/pages/Contact'))
@@ -70,6 +72,8 @@ export default function App() {
 
             <Route path="/login" element={<Auth mode="login" />} />
             <Route path="/register" element={<Auth mode="register" />} />
+            <Route path="/student/register" element={<StudentRegister />} />
+            <Route path="/tutor/register" element={<TutorRegister />} />
 
             {/* Payment.tsx reads useParams<{ courseId }>() — the param
                 name here must match that, not "paymentId". */}
@@ -78,6 +82,10 @@ export default function App() {
             <Route path="/learn/:slug" element={<CourseLearn />} />
 
             <Route path="/admin" element={<AdminLogin />} />
+            {/* Alias for the existing admin login — same component, same
+                Supabase-backed `admins` table check. Not linked from any
+                public nav; only reachable if you know the URL. */}
+            <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/payments" element={<AdminPayments />} />
             <Route path="/admin/courses" element={<AdminCourses />} />
             <Route path="/admin/courses/:id" element={<AdminCourseForm />} />
