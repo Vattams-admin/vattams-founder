@@ -4,10 +4,13 @@ import { useAuth } from '@/hooks/useAuth'
 import { logout } from '@/services/auth'
 
 const navItems = [
+  { to: '/', label: 'Home', end: true },
   { to: '/courses', label: 'Courses' },
   { to: '/competitive-exams', label: 'Competitive Exams' },
   { to: '/competitions', label: 'Competitions' },
-  { to: '/verify-certificate', label: 'Verify Certificate' }
+  { to: '/verify-certificate', label: 'Certifications' },
+  { to: '/about', label: 'About' },
+  { to: '/founder', label: 'Founder' }
 ]
 
 export default function Navbar() {
@@ -30,13 +33,18 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        {/* Seven top-level items is intentional (per nav spec) — the full
+            row only shows from xl up so it never feels cramped; below
+            that, everything (including these links) lives in the mobile
+            menu instead of squeezing into a narrower bar. */}
+        <nav className="hidden items-center gap-5 xl:flex">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
+              end={item.end}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors ${
+                `whitespace-nowrap text-sm font-medium transition-colors ${
                   isActive ? 'text-gold-bright' : 'text-slate-muted hover:text-parchment'
                 }`
               }
@@ -46,7 +54,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           {loading ? null : user ? (
             <>
               {isAdmin && (
@@ -74,7 +82,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="rounded-card p-2 text-parchment md:hidden"
+          className="rounded-card p-2 text-parchment xl:hidden"
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((v) => !v)}
@@ -86,12 +94,13 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="border-t border-gold/15 bg-ink px-4 pb-4 md:hidden">
+        <div className="border-t border-gold/15 bg-ink px-4 pb-4 xl:hidden">
           <nav className="flex flex-col gap-1 pt-2">
             {navItems.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
+                end={item.end}
                 onClick={() => setMenuOpen(false)}
                 className={({ isActive }) =>
                   `rounded-card px-2 py-2.5 text-sm font-medium ${
