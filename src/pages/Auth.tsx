@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -77,6 +77,12 @@ export default function Auth({
           ? 'Log in'
           : 'Create your account'}
       </h1>
+
+      {mode === 'login' && (
+        <p className="mt-2 text-sm text-slate-muted">
+          Students and tutors can sign in here.
+        </p>
+      )}
 
       <form
         onSubmit={handleSubmit}
@@ -156,6 +162,30 @@ export default function Auth({
               : 'Create account'}
         </button>
       </form>
+
+      {mode === 'login' && (
+        <div className="mt-6 space-y-2 text-center text-sm text-slate-muted">
+          <p>
+            New here?{' '}
+            <Link
+              to="/student/register"
+              state={{ redirectTo }}
+              className="font-medium text-gold hover:text-gold-bright"
+            >
+              Student Registration
+            </Link>
+          </p>
+          <p>
+            Want to teach?{' '}
+            <Link
+              to="/tutor/register"
+              className="font-medium text-gold hover:text-gold-bright"
+            >
+              Tutor Registration
+            </Link>
+          </p>
+        </div>
+      )}
     </div>
   )
 }
