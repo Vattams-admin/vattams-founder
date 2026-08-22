@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vattams-founder",
+  "compatibility_date": "2025-06-01",
+  "assets": {
+    // Vite's build output — must match `vite build`'s outDir (default "dist").
+    "directory": "./dist",
+    // Required for a client-side-routed SPA (react-router BrowserRouter):
+    // any request that doesn't match a real file in dist/ (e.g. /courses,
+    // /dashboard, /admin/exams/123) falls back to index.html instead of
+    // a raw 404, so React Router — not the Worker — resolves the route.
+    "not_found_handling": "single-page-application"
+  }
+}
