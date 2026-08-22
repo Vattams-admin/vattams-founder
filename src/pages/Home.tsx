@@ -1,90 +1,168 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { listPublishedCourses } from '@/services/courses'
-import { listPublishedExams } from '@/services/exams'
-import { listCompetitions } from '@/services/competitions'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { firestore } from '@/lib/firebase'
+import type { Course } from '@/types/database'
 import CourseCard from '@/components/CourseCard'
-import ExamCard from '@/components/ExamCard'
-import CompetitionCard from '@/components/CompetitionCard'
-import type { Course, CompetitiveExam, Competition } from '@/types/models'
 
-const offerings = [
+// NOTE ON DATA SOURCES (read this before touching this file again):
+// Courses are the only offering with a working data layer right now —
+// Courses.tsx already fetches them straight from Firestore's `courses`
+// collection, so Featured Courses below mirrors that exact pattern
+// (same collection, same `Course` type from '@/types/database', same
+// CourseCard). There is currently no working fetch layer anywhere in the
+// codebase for exams or competitions (no service, no Firestore/Supabase
+// query, no card component) — inventing one here would mean guessing a
+// collection/table shape that may not match what admin eventually builds.
+// So the Competitive Exams and Competitions sections below are static
+// premium sections using only copy that already exists elsewhere in this
+// app (About.tsx, the original Home.tsx), linking to their real routes.
+// Swap them for live cards once `/exams` and `/competitions` have an
+// actual data source — the section wrappers are already structured to
+// take a card grid in place of the static content.
+
+const categories = [
   {
-    title: 'Courses',
-    body: 'Structured academic and professional courses with modules, lessons, and progress tracking.',
-    to: '/courses'
+    title: 'Academic Courses',
+    body: 'Structured, syllabus-aligned courses with lessons, modules, and progress tracking.',
+    to: '/courses',
+    icon: IconGraduationCap
   },
   {
     title: 'Competitive Exams',
     body: 'TNPSC, UPSC, SSC, Banking, Railway, Police, Defence, UGC NET/SET and TET preparation.',
-    to: '/competitive-exams'
+    to: '/competitive-exams',
+    icon: IconTarget
   },
   {
     title: 'Competitions',
     body: 'Timed academic competitions with public leaderboards and eligible-finisher certificates.',
-    to: '/competitions'
+    to: '/competitions',
+    icon: IconTrophy
+  },
+  {
+    title: 'Professional & Skill Courses',
+    body: 'Career-focused, skill-building courses designed for practical, real-world application.',
+    to: '/courses',
+    icon: IconBriefcase
   },
   {
     title: 'Certifications',
     body: 'Every certificate carries a unique number, instantly verifiable by anyone, anywhere.',
-    to: '/verify-certificate'
+    to: '/verify-certificate',
+    icon: IconBadgeCheck
+  }
+]
+
+const whyVattams = [
+  {
+    title: 'Structured learning',
+    body: 'Every course is organised into clear modules and lessons, so progress always has a next step.'
+  },
+  {
+    title: 'Quality learning resources',
+    body: 'Study material built for depth, not filler — written to actually prepare you, not just fill a page.'
+  },
+  {
+    title: 'Competitive exam preparation',
+    body: 'Subject-wise question banks and timed mock tests built to mirror the real exam pattern.'
+  },
+  {
+    title: 'Knowledge competitions',
+    body: 'Timed academic competitions with public leaderboards, open to every enrolled student.'
+  },
+  {
+    title: 'Verifiable certifications',
+    body: 'Every certificate carries a unique number anyone can verify publicly, instantly, no login required.'
+  },
+  {
+    title: 'Student-focused experience',
+    body: 'Transparent, live pricing and a platform built around one goal: helping you actually learn.'
   }
 ]
 
 const journeySteps = [
-  { step: '01', title: 'Choose your path', body: 'Pick a course, an exam programme, or a competition that matches your goal.' },
-  { step: '02', title: 'Enrol & pay securely', body: 'Pay by UPI and submit your reference — enrolment activates once verified.' },
-  { step: '03', title: 'Learn & practice', body: 'Work through lessons, question banks, and timed mock tests at your pace.' },
-  { step: '04', title: 'Get certified', body: 'Earn a certificate carrying a unique number anyone can verify publicly.' }
+  { step: '01', title: 'Discover', body: 'Browse courses, exam programmes, and competitions across the platform.' },
+  { step: '02', title: 'Enrol', body: 'Pay securely by UPI and submit your reference to activate enrolment.' },
+  { step: '03', title: 'Learn', body: 'Work through structured lessons and modules at your own pace.' },
+  { step: '04', title: 'Practice', body: 'Test yourself with subject-wise question banks and timed mock exams.' },
+  { step: '05', title: 'Compete', body: 'Take part in timed competitions and see where you stand on the leaderboard.' },
+  { step: '06', title: 'Certify', body: 'Earn a certificate carrying a unique number anyone can verify publicly.' }
 ]
 
 export default function Home() {
-  const [courses, setCourses] = useState<Course[]>([])
-  const [exams, setExams] = useState<CompetitiveExam[]>([])
-  const [competitions, setCompetitions] = useState<Competition[]>([])
+  const [courses, setCourses] = useState<Course[] | null>(null)
 
   useEffect(() => {
-    listPublishedCourses({ featuredOnly: true, pageSize: 3 }).then(setCourses).catch(() => {})
-    listPublishedExams().then((rows) => setExams(rows.slice(0, 3))).catch(() => {})
-    listCompetitions('registration_open').then((rows) => setCompetitions(rows.slice(0, 3))).catch(() => {})
+    let cancelled = false
+
+    async function loadFeaturedCourses() {
+      try {
+        const coursesQuery = query(
+          collection(firestore, 'courses'),
+          where('is_published', '==', true),
+          where('is_featured', '==', true)
+        )
+        const snapshot = await getDocs(coursesQuery)
+        if (cancelled) return
+        const rows = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })) as Course[]
+        setCourses(rows.slice(0, 3))
+      } catch {
+        if (!cancelled) setCourses([])
+      }
+    }
+
+    loadFeaturedCourses()
+    return () => {
+      cancelled = true
+    }
   }, [])
 
   return (
     <div>
-      {/* Hero */}
+      {/* Premium hero */}
       <section className="relative overflow-hidden border-b border-gold/15">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_-10%,rgba(201,162,75,0.14),transparent_55%)]" />
-        <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_-10%,rgba(201,162,75,0.16),transparent_50%),radial-gradient(circle_at_85%_0%,rgba(28,58,102,0.5),transparent_45%)]" />
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
           <p className="font-display text-xs uppercase tracking-[0.4em] text-gold sm:text-sm">
             Learn &middot; Compete &middot; Certify &middot; Grow
           </p>
           <h1 className="mt-5 max-w-2xl font-display text-4xl font-semibold leading-tight sm:text-5xl">
-            Learn. Compete. Certify. Grow.
+            An international-standard education platform, built to prepare you for what&apos;s next.
           </h1>
-          <p className="mt-5 max-w-xl text-slate-muted">
-            VATTAMS ACADEMIA brings structured courses, competitive exam preparation, timed
-            competitions, and verifiable certification together on one academic-standard platform.
+          <p className="mt-5 max-w-xl text-parchment/90">
+            VATTAMS ACADEMIA brings academic and professional courses, competitive exam preparation,
+            knowledge competitions, and verifiable certification together on one institution-grade
+            platform.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/courses" className="btn-primary">Explore Courses</Link>
-            <Link to="/register" className="btn-secondary">Get Started</Link>
+            <Link to="/competitions" className="btn-secondary">Explore Competitions</Link>
           </div>
         </div>
       </section>
 
-      {/* What we offer */}
+      {/* Education categories */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <SectionHeading eyebrow="Platform" title="What VATTAMS ACADEMIA offers" />
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {offerings.map((o) => (
-            <Link key={o.title} to={o.to} className="card group p-6 transition-colors hover:border-gold/40">
-              <h3 className="font-display text-lg text-gold-bright">{o.title}</h3>
-              <p className="mt-2 text-sm text-slate-muted">{o.body}</p>
-              <span className="mt-4 inline-block text-xs font-semibold uppercase tracking-wide text-gold group-hover:text-gold-bright">
-                Explore →
-              </span>
-            </Link>
-          ))}
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {categories.map((c) => {
+            const Icon = c.icon
+            return (
+              <Link key={c.title} to={c.to} className="card group flex flex-col gap-4 p-6 transition-colors hover:border-gold/40">
+                <span className="flex h-11 w-11 items-center justify-center rounded-card bg-gold/10 text-gold group-hover:bg-gold/15 group-hover:text-gold-bright">
+                  <Icon />
+                </span>
+                <div>
+                  <h3 className="font-display text-lg text-gold-bright">{c.title}</h3>
+                  <p className="mt-2 text-sm text-slate-muted">{c.body}</p>
+                </div>
+                <span className="mt-auto text-xs font-semibold uppercase tracking-wide text-gold group-hover:text-gold-bright">
+                  Explore →
+                </span>
+              </Link>
+            )
+          })}
         </div>
       </section>
 
@@ -92,7 +170,13 @@ export default function Home() {
       <section className="border-t border-white/5 bg-navy/40 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeading eyebrow="Courses" title="Featured courses" action={{ to: '/courses', label: 'View all courses' }} />
-          {courses.length === 0 ? (
+          {courses === null ? (
+            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="card h-64 animate-pulse" />
+              ))}
+            </div>
+          ) : courses.length === 0 ? (
             <EmptyState message="Featured courses will appear here as soon as they're published." />
           ) : (
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -106,27 +190,33 @@ export default function Home() {
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeading eyebrow="Competitive Exams" title="Competitive exam preparation" action={{ to: '/competitive-exams', label: 'View all programmes' }} />
-          {exams.length === 0 ? (
-            <EmptyState message="Exam programmes will appear here as soon as they're published." />
-          ) : (
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {exams.map((e) => <ExamCard key={e.id} exam={e} />)}
+          <div className="mt-8 card flex flex-col gap-6 p-8 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h3 className="font-display text-lg text-gold-bright">TNPSC &middot; UPSC &middot; SSC &middot; Banking &middot; Railway &middot; Police &middot; Defence &middot; UGC NET/SET &middot; TET</h3>
+              <p className="mt-3 max-w-2xl text-sm text-slate-muted">
+                Subject-wise question banks and timed mock tests built to mirror the actual exam
+                pattern, so preparation reflects the real thing.
+              </p>
             </div>
-          )}
+            <Link to="/competitive-exams" className="btn-primary shrink-0">View programmes</Link>
+          </div>
         </div>
       </section>
 
       {/* Competitions */}
       <section className="border-t border-white/5 bg-navy/40 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <SectionHeading eyebrow="Competitions" title="Open for registration" action={{ to: '/competitions', label: 'View all competitions' }} />
-          {competitions.length === 0 ? (
-            <EmptyState message="No competitions are open for registration right now — check back soon." />
-          ) : (
-            <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {competitions.map((c) => <CompetitionCard key={c.id} competition={c} />)}
+          <SectionHeading eyebrow="Competitions" title="Timed academic competitions" action={{ to: '/competitions', label: 'View all competitions' }} />
+          <div className="mt-8 card flex flex-col gap-6 p-8 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h3 className="font-display text-lg text-gold-bright">Public leaderboards. Real certificates.</h3>
+              <p className="mt-3 max-w-2xl text-sm text-slate-muted">
+                Take part in timed competitions and see where you stand — eligible finishers earn a
+                certificate carrying a unique, publicly verifiable number.
+              </p>
             </div>
-          )}
+            <Link to="/competitions" className="btn-primary shrink-0">View competitions</Link>
+          </div>
         </div>
       </section>
 
@@ -149,12 +239,8 @@ export default function Home() {
       <section className="border-t border-white/5 bg-navy/40 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <SectionHeading eyebrow="Why us" title="Why VATTAMS ACADEMIA" />
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
-            {[
-              { title: 'Transparent pricing', body: 'The fee shown on every course, exam, or competition is the live, admin-configured price — never hardcoded, never stale.' },
-              { title: 'Real exam preparation', body: 'Subject-wise question banks and timed mock tests are built to mirror the actual exam pattern.' },
-              { title: 'Verifiable certification', body: 'Every certificate carries a unique number anyone can verify publicly, instantly.' }
-            ].map((item) => (
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {whyVattams.map((item) => (
               <div key={item.title} className="card p-6">
                 <h3 className="font-display text-lg text-gold-bright">{item.title}</h3>
                 <p className="mt-2 text-sm text-slate-muted">{item.body}</p>
@@ -164,15 +250,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it works */}
+      {/* Learning experience */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <SectionHeading eyebrow="How it works" title="Your learning journey" />
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {journeySteps.map((s) => (
-            <div key={s.step} className="card p-5">
-              <span className="font-display text-2xl text-gold/50">{s.step}</span>
-              <h3 className="mt-2 font-display text-base">{s.title}</h3>
-              <p className="mt-2 text-sm text-slate-muted">{s.body}</p>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
+          {journeySteps.map((s, i) => (
+            <div key={s.step} className="relative">
+              <div className="card h-full p-5">
+                <span className="font-display text-2xl text-gold/50">{s.step}</span>
+                <h3 className="mt-2 font-display text-base">{s.title}</h3>
+                <p className="mt-2 text-sm text-slate-muted">{s.body}</p>
+              </div>
+              {i < journeySteps.length - 1 && (
+                <span className="pointer-events-none absolute -right-3 top-1/2 hidden -translate-y-1/2 text-gold/40 lg:block">→</span>
+              )}
             </div>
           ))}
         </div>
@@ -181,13 +272,13 @@ export default function Home() {
       {/* Final CTA */}
       <section className="border-t border-gold/15 bg-navy-dark py-16">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <h2 className="font-display text-2xl sm:text-3xl">Ready to start your journey?</h2>
+          <h2 className="font-display text-2xl sm:text-3xl">Start Your Learning Journey</h2>
           <p className="mt-3 text-slate-muted">
             Join VATTAMS ACADEMIA today and bring your courses, exam prep, and certification together.
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            <Link to="/register" className="btn-primary">Get Started</Link>
-            <Link to="/courses" className="btn-secondary">Explore Courses</Link>
+            <Link to="/courses" className="btn-primary">Explore Courses</Link>
+            <Link to="/register" className="btn-secondary">Create Student Account</Link>
           </div>
         </div>
       </section>
@@ -213,4 +304,54 @@ function SectionHeading({ eyebrow, title, action }: { eyebrow: string; title: st
 
 function EmptyState({ message }: { message: string }) {
   return <div className="card mt-8 p-8 text-center text-sm text-slate-muted">{message}</div>
+}
+
+// Inline icons — kept local to Home.tsx (no new icon-library dependency)
+// and styled to inherit currentColor, matching the Navbar's existing icon
+// convention (stroke-based, 2px stroke width).
+function IconGraduationCap() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+      <path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5" />
+    </svg>
+  )
+}
+
+function IconTarget() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="5" />
+      <circle cx="12" cy="12" r="1" fill="currentColor" />
+    </svg>
+  )
+}
+
+function IconTrophy() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M8 4h8v5a4 4 0 0 1-8 0V4Z" />
+      <path d="M8 5H4v1a4 4 0 0 0 4 4M16 5h4v1a4 4 0 0 1-4 4" />
+      <path d="M12 13v3M9 20h6M10 20v-3.5M14 20v-3.5" />
+    </svg>
+  )
+}
+
+function IconBriefcase() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="3" y="7" width="18" height="13" rx="2" />
+      <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18" />
+    </svg>
+  )
+}
+
+function IconBadgeCheck() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M12 2 14.5 4 17.5 3.5 18.5 6.5 21 8l-1 3 1 3-2.5 1.5-1 3-3-.5L12 20l-2.5-2-3 .5-1-3L3 14l1-3-1-3 2.5-1.5 1-3 3 .5L12 2Z" />
+      <path d="m9 12 2 2 4-4" />
+    </svg>
+  )
 }
