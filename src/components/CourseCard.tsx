@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import type { Course } from '@/types/database'
+import { getCourseDisplayName } from '@/lib/courseDisplay'
 
 export default function CourseCard({ course }: { course: Course }) {
   const finalPrice = Math.max(course.base_fee - course.discount_amount, 0)
+  const displayName = getCourseDisplayName(course.name)
 
   return (
     <Link to={`/courses/${course.slug}`} className="card group flex flex-col overflow-hidden">
@@ -25,7 +27,7 @@ export default function CourseCard({ course }: { course: Course }) {
             {course.level}
           </span>
         )}
-        <h3 className="font-display text-lg leading-snug">{course.name}</h3>
+        <h3 className="font-display text-lg leading-snug">{displayName}</h3>
         {course.short_description && (
           <p className="line-clamp-2 text-sm text-slate-muted">{course.short_description}</p>
         )}
