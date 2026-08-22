@@ -1,5 +1,8 @@
-import { lazy, Suspense } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { lazy, Suspense, useEffect, useState } from 'react'
+import { Route, Routes, useParams } from 'react-router-dom'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { firestore } from '@/lib/firebase'
+import type { Course } from '@/types/database'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Home from '@/pages/Home'
@@ -42,6 +45,65 @@ function PageFallback() {
   )
 }
 
+// CourseDetail (src/pages/CourseDetail.tsx) requires a `course` prop — it
+// doesn't fetch its own data. This wrapper reads :slug and loads the
+// matching course the same way the other slug-keyed public course pages
+// already do (Courses.tsx, CourseLearn.tsx): Firestore `courses`
+// collection, filtered to `is_published`. Payment.tsx/admin pages load
+// courses from Supabase by id instead, but that's a different, id-keyed
+// flow — this route mirrors its actual slug-keyed siblings.
+function CourseDetailRoute() {
+  const { slug } = useParams<{ slug: string }>()
+  const [course, setCourse] = useState<Course | null>(null)
+  const [state, setState] = useState<'loading' | 'loaded' | 'not_found'>('loading')
+
+  useEffect(() => {
+    let cancelled = false
+    setState('loading')
+
+    if (!slug) {
+      setState('not_found')
+      return
+    }
+
+    async function load() {
+      try {
+        const courseQuery = query(
+          collection(firestore, 'courses'),
+          where('slug', '==', slug),
+          where('is_published', '==', true)
+        )
+        const snapshot = await getDocs(courseQuery)
+        if (cancelled) return
+
+        if (snapshot.empty) {
+          setState('not_found')
+          return
+        }
+
+        const courseDoc = snapshot.docs[0]
+        setCourse({ id: courseDoc.id, ...courseDoc.data() } as Course)
+        setState('loaded')
+      } catch (err) {
+        console.error('CourseDetailRoute Firebase error:', err)
+        if (cancelled) return
+        setState('not_found')
+      }
+    }
+
+    load()
+
+    return () => {
+      cancelled = true
+    }
+  }, [slug])
+
+  if (state === 'loading') return <PageFallback />
+  if (state === 'not_found' || !course) return <NotFound />
+
+  return <CourseDetail course={course} />
+}
+
 export default function App() {
   return (
     <div className="flex min-h-screen flex-col">
@@ -51,7 +113,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/courses" element={<Courses />} />
-            <Route path="/courses/:slug" element={<CourseDetail />} />
+            <Route path="/courses/:slug" element={<CourseDetailRoute />} />
 
             {/* No competition data source exists yet (no table, no
                 collection, no admin UI) — this route is an honest
