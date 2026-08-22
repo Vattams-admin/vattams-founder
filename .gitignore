@@ -1,5 +1,7 @@
 node_modules/
 dist/
+.tsc-out/
+*.tsbuildinfo
 .env
 .env.*
 !.env.example
