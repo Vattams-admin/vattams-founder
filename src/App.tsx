@@ -34,6 +34,9 @@ const AdminLogin = lazy(() => import('@/pages/admin/AdminLogin'))
 const AdminPayments = lazy(() => import('@/pages/admin/AdminPayments'))
 const AdminCourses = lazy(() => import('@/pages/admin/AdminCourses'))
 const AdminCourseForm = lazy(() => import('@/pages/admin/AdminCourseForm'))
+const AdminStudents = lazy(() => import('@/pages/admin/AdminStudents'))
+const AdminTutors = lazy(() => import('@/pages/admin/AdminTutors'))
+const AdminRoute = lazy(() => import('@/components/AdminRoute'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 
 function PageFallback() {
@@ -89,6 +92,24 @@ export default function App() {
             <Route path="/admin/payments" element={<AdminPayments />} />
             <Route path="/admin/courses" element={<AdminCourses />} />
             <Route path="/admin/courses/:id" element={<AdminCourseForm />} />
+            {/* New in Phase 2 — guarded, unlike the existing /admin/*
+                routes above (see components/AdminRoute.tsx). */}
+            <Route
+              path="/admin/students"
+              element={
+                <AdminRoute>
+                  <AdminStudents />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/admin/tutors"
+              element={
+                <AdminRoute>
+                  <AdminTutors />
+                </AdminRoute>
+              }
+            />
 
             {/* Exam-taking UI, competitions backend, materials, assignments,
                 certificate issuance etc. are the next build passes — see

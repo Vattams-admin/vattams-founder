@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { doc, setDoc } from 'firebase/firestore'
 import { firebaseAuth, firestore } from '@/lib/firebase'
+import { syncAcademyStudent } from '@/lib/academyRegistration'
 
 // Same Firebase Auth + Firestore `students` collection used by the
 // existing generic Auth.tsx register flow — this page does not create a
@@ -54,6 +55,16 @@ export default function StudentRegister() {
         email: user.email ?? email,
         role: 'student',
         created_at: new Date().toISOString(),
+      })
+
+      // Phase 2: also mirror this registration into the new
+      // public.academy_students table so it shows up in /admin/students.
+      // Best-effort — Firebase registration above already succeeded and
+      // is not rolled back if this fails.
+      await syncAcademyStudent({
+        firebaseUid: user.uid,
+        fullName,
+        email: user.email ?? email,
       })
 
       navigate(redirectTo)
