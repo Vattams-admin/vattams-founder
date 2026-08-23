@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0B1730" />
+    <title>VATTAMS ACADEMIA — Learn. Compete. Certify. Grow.</title>
+    <meta name="description" content="VATTAMS ACADEMIA: courses, competitive exam preparation, competitions and certification on one platform." />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/branding/logo-header.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/branding/logo-header.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-ink text-parchment font-body">
+    <div id="root"></div>
+    <!-- TEMPORARY DIAGNOSTIC — remove once the blank-page issue is root-caused.
+         Runs as a classic (non-module) script so it executes and attaches its
+         handlers before the module script below is parsed/run. Catches any
+         uncaught error or unhandled promise rejection — including ones that
+         happen before React mounts, which the RootErrorBoundary component
+         cannot see — and writes it as plain visible text into #root, so it's
+         visible with no devtools/console access needed. -->
+    <script>
+      (function () {
+        function show(label, detail) {
+          var el = document.getElementById('root');
+          if (!el) return;
+          var pre = document.createElement('pre');
+          pre.style.cssText =
+            'white-space:pre-wrap;word-break:break-word;color:#ffb4b4;background:#1a0000;' +
+            'padding:16px;margin:16px;border:1px solid #ff4d4d;border-radius:8px;font-size:12px;';
+          pre.textContent = '[DIAGNOSTIC] ' + label + '\n' + detail;
+          el.appendChild(pre);
+        }
+        window.addEventListener('error', function (e) {
+          show(
+            'Uncaught error',
+            (e.message || 'Unknown error') +
+              '\nFile: ' + (e.filename || 'unknown') + ':' + (e.lineno || '?') + ':' + (e.colno || '?') +
+              (e.error && e.error.stack ? '\n' + e.error.stack : '')
+          );
+        });
+        window.addEventListener('unhandledrejection', function (e) {
+          var reason = e.reason;
+          show(
+            'Unhandled promise rejection',
+            (reason && reason.stack) ? reason.stack : String(reason)
+          );
+        });
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
