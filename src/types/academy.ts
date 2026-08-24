@@ -16,17 +16,12 @@ export type AcademyStudentStatus = 'active' | 'inactive' | 'pending' | string
 
 export interface AcademyStudent {
   id: string
-  // Not written by StudentRegister.tsx today; kept optional since
-  // AdminCertificates.tsx populates it defensively (falling back to the
-  // doc id) when cross-referencing certificates against a student.
   firebase_uid?: string | null
   full_name: string
   email: string | null
   role?: string | null
   status: AcademyStudentStatus | null
   created_at: string
-  // Not part of the current registration form; kept optional in case a
-  // future form or a manually-added Firestore doc includes them.
   phone?: string | null
   class?: string | null
   school?: string | null
@@ -51,8 +46,6 @@ export interface AcademyTutor {
   rejected_by: string | null
   rejection_reason: string | null
   created_at: string
-  // Not part of the current registration form; kept optional in case a
-  // future form or a manually-added Firestore doc includes them.
   phone?: string | null
   city?: string | null
   experience?: string | null
