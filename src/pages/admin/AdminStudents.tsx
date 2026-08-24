@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import AdminNav from '@/components/AdminNav'
-import { listAcademyStudents, displayField } from '@/lib/academyAdmin'
+import { listAcademyStudents } from '@/lib/academyAdmin'
 import type { AcademyStudent } from '@/types/academy'
 
 type LoadState = 'loading' | 'loaded' | 'error'
@@ -43,7 +43,7 @@ export default function AdminStudents() {
     return students.filter((s) => {
       if (statusFilter !== 'all' && s.status !== statusFilter) return false
       if (!term) return true
-      const haystack = [s.full_name, s.email, s.phone, s.school, s.parent_name, s.city]
+      const haystack = [s.full_name, s.email]
         .filter(Boolean)
         .join(' ')
         .toLowerCase()
@@ -67,7 +67,7 @@ export default function AdminStudents() {
           type="search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search by name, email, phone, school, parent, city…"
+          placeholder="Search by name or email…"
           className="input flex-1"
         />
         {availableStatuses.length > 0 && (
@@ -127,10 +127,6 @@ export default function AdminStudents() {
               <tr>
                 <th className="px-4 py-3">Name</th>
                 <th className="px-4 py-3">Email</th>
-                <th className="px-4 py-3">Phone</th>
-                <th className="px-4 py-3">Class</th>
-                <th className="px-4 py-3">School</th>
-                <th className="px-4 py-3">City</th>
                 <th className="px-4 py-3">Status</th>
                 <th className="px-4 py-3">Created</th>
                 <th className="px-4 py-3" />
@@ -139,12 +135,8 @@ export default function AdminStudents() {
             <tbody className="divide-y divide-white/10">
               {filtered.map((s) => (
                 <tr key={s.id}>
-                  <td className="px-4 py-3 font-medium">{displayField(s as unknown as Record<string, unknown>, 'full_name', 'name')}</td>
+                  <td className="px-4 py-3 font-medium">{s.full_name || '—'}</td>
                   <td className="px-4 py-3 text-slate-muted">{s.email ?? '—'}</td>
-                  <td className="px-4 py-3 text-slate-muted">{s.phone ?? '—'}</td>
-                  <td className="px-4 py-3 text-slate-muted">{displayField(s as unknown as Record<string, unknown>, 'class', 'student_class', 'grade')}</td>
-                  <td className="px-4 py-3 text-slate-muted">{s.school ?? '—'}</td>
-                  <td className="px-4 py-3 text-slate-muted">{s.city ?? '—'}</td>
                   <td className="px-4 py-3">
                     <span className="rounded-full bg-gold/15 px-2 py-0.5 text-xs uppercase tracking-wide text-gold-bright">
                       {s.status ?? 'unknown'}
@@ -182,14 +174,8 @@ export default function AdminStudents() {
             </div>
             <dl className="mt-4 space-y-2 text-sm">
               <Detail label="Email" value={selected.email} />
-              <Detail label="Phone" value={selected.phone} />
-              <Detail label="Class" value={displayField(selected as unknown as Record<string, unknown>, 'class', 'student_class', 'grade')} />
-              <Detail label="School" value={selected.school} />
-              <Detail label="Parent name" value={selected.parent_name} />
-              <Detail label="Parent phone" value={selected.parent_phone} />
-              <Detail label="City" value={selected.city} />
               <Detail label="Status" value={selected.status} />
-              <Detail label="Firebase UID" value={selected.firebase_uid} />
+              <Detail label="Firebase UID" value={selected.id} />
               <Detail
                 label="Created"
                 value={selected.created_at ? new Date(selected.created_at).toLocaleString('en-IN') : null}
