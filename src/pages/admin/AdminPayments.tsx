@@ -4,8 +4,8 @@ import {
   doc,
   getDoc,
   getDocs,
-  orderBy,
   query,
+  serverTimestamp,
   setDoc,
   updateDoc,
   where
@@ -13,18 +13,6 @@ import {
 import { firestore } from '@/lib/firebase'
 import AdminNav from '@/components/AdminNav'
 import type { Payment } from '@/types/database'
-
-// Postgres had a trigger (activate_enrolment_on_payment_approval) that
-// auto-created/activated the matching course_enrolments row whenever a
-// payment flipped to 'approved'. Firestore has no triggers here (no
-// Cloud Functions in this repo), so that step is done explicitly below,
-// right after the payment status update — this is now the ONLY place
-// enrolment activation happens, same as the trigger was the only place.
-//
-// No manual join/lookup is needed for the list itself: Payment.tsx
-// already denormalizes course_name + student_name onto the payment doc
-// at creation time, so this page just reads the payments collection
-// directly.
 
 export default function AdminPayments() {
   const [rows, setRows] = useState<Payment[] | null>(null)
@@ -35,73 +23,64 @@ export default function AdminPayments() {
   async function load() {
     setLoadError(false)
     try {
-      // Requires a composite index on (status, submitted_at) — Firestore
-      // will show a console link to create it the first time this runs
-      // if it's missing.
-      const snapshot = await getDocs(
-        query(
-          collection(firestore, 'payments'),
-          where('status', '==', 'submitted'),
-          orderBy('submitted_at', 'asc')
-        )
-      )
-      setRows(snapshot.docs.map((d) => ({ id: d.id, ...d.data() }) as Payment))
+      // course_name / student_name are denormalized onto the payment doc
+      // at creation time (see Payment.tsx) — Firestore has no joins, so
+      // this is a single-collection read instead of the old
+      // students(...)/courses(...) select.
+      const q = query(collection(firestore, 'payments'), where('status', '==', 'submitted'))
+      const snapshot = await getDocs(q)
+      const data = snapshot.docs.map((d) => ({ id: d.id, ...d.data() })) as Payment[]
+      data.sort((a, b) => (a.submitted_at ?? '').localeCompare(b.submitted_at ?? ''))
+      setRows(data)
     } catch (err) {
-      console.error('Unexpected error loading payments:', err)
+      console.error('Failed to load payments:', err)
       setLoadError(true)
     }
   }
 
   useEffect(() => { load() }, [])
 
-  async function activateEnrolment(row: Payment) {
-    // Deterministic id (student_id_course_id) instead of a uuid — this is
-    // what gives us Postgres's `on conflict (student_id, course_id) do
-    // update` behaviour for free: writing to the same doc id again just
-    // updates it instead of creating a duplicate enrolment.
-    const enrolmentId = `${row.student_id}_${row.course_id}`
-    const enrolmentRef = doc(firestore, 'enrolments', enrolmentId)
-
-    const [enrolmentSnap, courseSnap] = await Promise.all([
-      getDoc(enrolmentRef),
-      getDoc(doc(firestore, 'courses', row.course_id))
-    ])
-
-    const courseSlug = courseSnap.exists() ? (courseSnap.data().slug as string | undefined) ?? null : null
-
-    await setDoc(
-      enrolmentRef,
-      {
-        student_id: row.student_id,
-        course_id: row.course_id,
-        course_name: row.course_name,
-        course_slug: courseSlug,
-        status: 'active',
-        enrolled_at: new Date().toISOString(),
-        // Only stamp created_at the first time this doc is written —
-        // `on conflict ... do update` never touched created_at either.
-        ...(enrolmentSnap.exists() ? {} : { created_at: new Date().toISOString() })
-      },
-      { merge: true }
-    )
-  }
-
-  async function decide(row: Payment, status: 'approved' | 'rejected') {
-    setBusyId(row.id)
+  async function decide(payment: Payment, status: 'approved' | 'rejected') {
+    setBusyId(payment.id)
     setError(null)
     try {
-      await updateDoc(doc(firestore, 'payments', row.id), {
+      await updateDoc(doc(firestore, 'payments', payment.id), {
         status,
         verified_at: new Date().toISOString()
       })
 
+      // Firestore has no server-side triggers, so the enrolment
+      // activation that Supabase used to do in
+      // activate_enrolment_on_payment_approval() happens here instead,
+      // right after the payment update succeeds. Doc id is
+      // student_id_course_id so this "upsert" (setDoc + merge) plays
+      // the same role as the old `on conflict (student_id, course_id)`.
       if (status === 'approved') {
-        await activateEnrolment(row)
+        // Fetched fresh so the enrolment carries the course's current
+        // slug (needed by StudentDashboard's "go to lesson" link) —
+        // course_slug isn't on the payment doc itself.
+        const courseSnap = await getDoc(doc(firestore, 'courses', payment.course_id))
+        const courseSlug = courseSnap.exists() ? (courseSnap.data().slug as string | undefined) ?? null : null
+
+        const enrolmentId = `${payment.student_id}_${payment.course_id}`
+        await setDoc(
+          doc(firestore, 'enrolments', enrolmentId),
+          {
+            student_id: payment.student_id,
+            course_id: payment.course_id,
+            course_name: payment.course_name,
+            course_slug: courseSlug,
+            status: 'active',
+            enrolled_at: new Date().toISOString(),
+            created_at: serverTimestamp()
+          },
+          { merge: true }
+        )
       }
 
-      setRows((prev) => prev?.filter((r) => r.id !== row.id) ?? null)
+      setRows((prev) => prev?.filter((r) => r.id !== payment.id) ?? null)
     } catch (err) {
-      console.error('Unexpected error updating payment status:', err)
+      console.error('Failed to update payment status:', err)
       setError('Unable to save this decision right now. Please check your connection and try again.')
     } finally {
       setBusyId(null)
@@ -113,7 +92,7 @@ export default function AdminPayments() {
       <AdminNav active="payments" />
       <h1 className="mt-6 font-display text-3xl">Payments awaiting verification</h1>
       <p className="mt-2 text-sm text-slate-muted">
-        Approving a payment automatically activates the matching enrolment — no manual follow-up step.
+        Approving a payment activates the matching enrolment right away — no manual follow-up step.
       </p>
 
       {error && <p className="mt-4 text-sm text-danger">{error}</p>}
