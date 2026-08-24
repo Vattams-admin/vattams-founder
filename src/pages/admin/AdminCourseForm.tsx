@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { supabase } from '@/lib/supabase'
+import { addDoc, collection, doc, getDoc, updateDoc } from 'firebase/firestore'
+import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
 
 const emptyForm = {
@@ -28,25 +29,38 @@ export default function AdminCourseForm() {
 
   useEffect(() => {
     if (isNew) return
+    let cancelled = false
     setLoading(true)
     setLoadError(false)
-    supabase.from('courses').select('*').eq('id', id).single().then(({ data, error }) => {
-      if (error) {
-        console.error('Failed to load course for editing:', error)
+
+    // `id` is the Firestore document id — same convention as Payment.tsx
+    // and every other page that reads a single course by id.
+    getDoc(doc(firestore, 'courses', id as string))
+      .then((snap) => {
+        if (cancelled) return
+        if (!snap.exists()) {
+          setLoadError(true)
+          setLoading(false)
+          return
+        }
+        const c = { id: snap.id, ...snap.data() } as Course
+        setForm({
+          name: c.name, slug: c.slug, short_description: c.short_description ?? '',
+          description: c.description ?? '', level: c.level ?? 'beginner',
+          instructor_name: c.instructor_name ?? '', duration_text: c.duration_text ?? '',
+          cover_image_url: c.cover_image_url ?? '', base_fee: c.base_fee,
+          discount_amount: c.discount_amount, is_free: c.is_free
+        })
+        setLoading(false)
+      })
+      .catch((err) => {
+        if (cancelled) return
+        console.error('Failed to load course for editing:', err)
         setLoadError(true)
         setLoading(false)
-        return
-      }
-      const c = data as unknown as Course
-      setForm({
-        name: c.name, slug: c.slug, short_description: c.short_description ?? '',
-        description: c.description ?? '', level: c.level ?? 'beginner',
-        instructor_name: c.instructor_name ?? '', duration_text: c.duration_text ?? '',
-        cover_image_url: c.cover_image_url ?? '', base_fee: c.base_fee,
-        discount_amount: c.discount_amount, is_free: c.is_free
       })
-      setLoading(false)
-    })
+
+    return () => { cancelled = true }
   }, [id, isNew, retryToken])
 
   function update<K extends keyof typeof form>(key: K, value: (typeof form)[K]) {
@@ -63,14 +77,17 @@ export default function AdminCourseForm() {
     }
 
     try {
-      const result = isNew
-        ? await supabase.from('courses').insert(payload).select().single()
-        : await supabase.from('courses').update(payload).eq('id', id).select().single()
-
-      if (result.error) {
-        console.error('Failed to save course:', result.error)
-        setError('Unable to save right now. Please check your connection and try again.')
-        return
+      if (isNew) {
+        await addDoc(collection(firestore, 'courses'), {
+          ...payload,
+          category_id: null,
+          preview_video_url: null,
+          is_published: publish ?? false,
+          is_featured: false,
+          created_at: new Date().toISOString()
+        })
+      } else {
+        await updateDoc(doc(firestore, 'courses', id as string), payload)
       }
       navigate('/admin/courses')
     } catch (err) {
