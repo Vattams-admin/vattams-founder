@@ -1,22 +1,11 @@
-import { doc, getDoc } from 'firebase/firestore'
-import { firestore } from '@/lib/firebase'
+import { supabase } from '@/lib/supabase'
 
-// Admin identity now lives in Firebase Auth + this Firestore `admins`
-// collection, mirroring the existing `students` / `tutors` collections
-// (doc id = Firebase uid). This does not replace or touch the Supabase
-// `public.admins` table — that table still exists and still gates every
-// RLS-protected admin action (approving payments, publishing courses)
-// via `auth.uid()`. The two `admins` records for a given person must
-// share the same role of "this person is an admin" but are provisioned
-// separately: one row per system, keyed by that system's own user id.
-//
-// See docs/PHASE-MASTER-MATRIX.md-style note: an admin needs BOTH
-//   1. a Firebase Auth user + a Firestore `admins/{firebaseUid}` doc, and
-//   2. a Supabase Auth user (same email) with a matching row in the
-//      Supabase `public.admins` table (id = that Supabase user's id)
-// for login to succeed and for admin actions to actually pass RLS.
-// Provisioning both sides is an operational/admin-console step, not
-// something this client code can do without service-role credentials.
+// Admin identity lives in Supabase's public.admin_users table, keyed by
+// email — NOT in Firestore, and NOT by Firebase uid. Firebase Auth is the
+// authentication system (it verifies the password); this lookup is the
+// authorization check that runs after Firebase confirms who the person
+// is, using the email Firebase already validated. admin_users.password_hash
+// is unrelated to Firebase auth and is never read here.
 
 export const ADMIN_ROLES = ['admin', 'super_admin', 'instructor'] as const
 export type AdminRole = (typeof ADMIN_ROLES)[number]
@@ -33,20 +22,31 @@ function isAdminRole(value: unknown): value is AdminRole {
 }
 
 /**
- * Looks up the Firestore admin profile for a Firebase uid. Returns null
- * if no such document exists (i.e. this authenticated user is not an
- * admin) rather than throwing, so callers can treat "not an admin" as a
- * normal, expected outcome instead of an error state.
+ * Looks up the public.admin_users row for a signed-in Firebase user's
+ * email. Returns null if there is no matching row, the row is inactive
+ * (is_active !== true), or the role isn't a recognized admin role — all
+ * treated as "not an admin" rather than an error, so callers can show
+ * "this account does not have admin access" as a normal outcome. Throws
+ * only on an actual query failure (offline, RLS misconfiguration, etc.),
+ * which callers should treat as "couldn't confirm" rather than "confirmed
+ * not admin."
  */
-export async function getAdminProfile(uid: string): Promise<AdminProfile | null> {
-  const snap = await getDoc(doc(firestore, 'admins', uid))
-  if (!snap.exists()) return null
+export async function getAdminProfile(email: string | null | undefined): Promise<AdminProfile | null> {
+  if (!email) return null
 
-  const data = snap.data()
+  const { data, error } = await supabase
+    .from('admin_users')
+    .select('id, full_name, role, is_active, created_at')
+    .ilike('email', email.trim())
+    .maybeSingle()
+
+  if (error) throw error
+  if (!data) return null
+  if (data.is_active !== true) return null
   if (!isAdminRole(data.role)) return null
 
   return {
-    id: uid,
+    id: data.id,
     full_name: typeof data.full_name === 'string' ? data.full_name : '',
     role: data.role,
     created_at: typeof data.created_at === 'string' ? data.created_at : '',
