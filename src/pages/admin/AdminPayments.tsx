@@ -1,19 +1,33 @@
 import { useEffect, useState } from 'react'
-import { supabase } from '@/lib/supabase'
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  orderBy,
+  query,
+  setDoc,
+  updateDoc,
+  where
+} from 'firebase/firestore'
+import { firestore } from '@/lib/firebase'
 import AdminNav from '@/components/AdminNav'
+import type { Payment } from '@/types/database'
 
-interface PaymentRow {
-  id: string
-  amount: number
-  status: string
-  utr_reference: string | null
-  submitted_at: string | null
-  students: { full_name: string } | null
-  courses: { name: string } | null
-}
+// Postgres had a trigger (activate_enrolment_on_payment_approval) that
+// auto-created/activated the matching course_enrolments row whenever a
+// payment flipped to 'approved'. Firestore has no triggers here (no
+// Cloud Functions in this repo), so that step is done explicitly below,
+// right after the payment status update — this is now the ONLY place
+// enrolment activation happens, same as the trigger was the only place.
+//
+// No manual join/lookup is needed for the list itself: Payment.tsx
+// already denormalizes course_name + student_name onto the payment doc
+// at creation time, so this page just reads the payments collection
+// directly.
 
 export default function AdminPayments() {
-  const [rows, setRows] = useState<PaymentRow[] | null>(null)
+  const [rows, setRows] = useState<Payment[] | null>(null)
   const [busyId, setBusyId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [loadError, setLoadError] = useState(false)
@@ -21,18 +35,17 @@ export default function AdminPayments() {
   async function load() {
     setLoadError(false)
     try {
-      const { data, error } = await supabase
-        .from('payments')
-        .select('id, amount, status, utr_reference, submitted_at, students(full_name), courses(name)')
-        .eq('status', 'submitted')
-        .order('submitted_at', { ascending: true })
-
-      if (error) {
-        console.error('Failed to load payments:', error)
-        setLoadError(true)
-        return
-      }
-      setRows(data as unknown as PaymentRow[])
+      // Requires a composite index on (status, submitted_at) — Firestore
+      // will show a console link to create it the first time this runs
+      // if it's missing.
+      const snapshot = await getDocs(
+        query(
+          collection(firestore, 'payments'),
+          where('status', '==', 'submitted'),
+          orderBy('submitted_at', 'asc')
+        )
+      )
+      setRows(snapshot.docs.map((d) => ({ id: d.id, ...d.data() }) as Payment))
     } catch (err) {
       console.error('Unexpected error loading payments:', err)
       setLoadError(true)
@@ -41,20 +54,52 @@ export default function AdminPayments() {
 
   useEffect(() => { load() }, [])
 
-  async function decide(id: string, status: 'approved' | 'rejected') {
-    setBusyId(id)
+  async function activateEnrolment(row: Payment) {
+    // Deterministic id (student_id_course_id) instead of a uuid — this is
+    // what gives us Postgres's `on conflict (student_id, course_id) do
+    // update` behaviour for free: writing to the same doc id again just
+    // updates it instead of creating a duplicate enrolment.
+    const enrolmentId = `${row.student_id}_${row.course_id}`
+    const enrolmentRef = doc(firestore, 'enrolments', enrolmentId)
+
+    const [enrolmentSnap, courseSnap] = await Promise.all([
+      getDoc(enrolmentRef),
+      getDoc(doc(firestore, 'courses', row.course_id))
+    ])
+
+    const courseSlug = courseSnap.exists() ? (courseSnap.data().slug as string | undefined) ?? null : null
+
+    await setDoc(
+      enrolmentRef,
+      {
+        student_id: row.student_id,
+        course_id: row.course_id,
+        course_name: row.course_name,
+        course_slug: courseSlug,
+        status: 'active',
+        enrolled_at: new Date().toISOString(),
+        // Only stamp created_at the first time this doc is written —
+        // `on conflict ... do update` never touched created_at either.
+        ...(enrolmentSnap.exists() ? {} : { created_at: new Date().toISOString() })
+      },
+      { merge: true }
+    )
+  }
+
+  async function decide(row: Payment, status: 'approved' | 'rejected') {
+    setBusyId(row.id)
     setError(null)
     try {
-      const { error } = await supabase
-        .from('payments')
-        .update({ status, verified_at: new Date().toISOString() })
-        .eq('id', id)
-      if (error) {
-        console.error('Failed to update payment status:', error)
-        setError('Unable to save this decision right now. Please check your connection and try again.')
-      } else {
-        setRows((prev) => prev?.filter((r) => r.id !== id) ?? null)
+      await updateDoc(doc(firestore, 'payments', row.id), {
+        status,
+        verified_at: new Date().toISOString()
+      })
+
+      if (status === 'approved') {
+        await activateEnrolment(row)
       }
+
+      setRows((prev) => prev?.filter((r) => r.id !== row.id) ?? null)
     } catch (err) {
       console.error('Unexpected error updating payment status:', err)
       setError('Unable to save this decision right now. Please check your connection and try again.')
@@ -92,19 +137,19 @@ export default function AdminPayments() {
         {!loadError && rows?.map((r) => (
           <div key={r.id} className="card flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="text-sm">
-              <p className="font-medium">{r.students?.full_name ?? 'Student'} — {r.courses?.name ?? 'Course'}</p>
+              <p className="font-medium">{r.student_name ?? 'Student'} — {r.course_name ?? 'Course'}</p>
               <p className="text-slate-muted">₹{r.amount.toLocaleString('en-IN')} · UTR: {r.utr_reference}</p>
             </div>
             <div className="flex gap-2">
               <button
-                onClick={() => decide(r.id, 'approved')}
+                onClick={() => decide(r, 'approved')}
                 disabled={busyId === r.id}
                 className="rounded-card bg-success px-4 py-2 text-sm font-semibold text-ink disabled:opacity-60"
               >
                 Approve
               </button>
               <button
-                onClick={() => decide(r.id, 'rejected')}
+                onClick={() => decide(r, 'rejected')}
                 disabled={busyId === r.id}
                 className="rounded-card border border-danger/50 px-4 py-2 text-sm font-semibold text-danger disabled:opacity-60"
               >
