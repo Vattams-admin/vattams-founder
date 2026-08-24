@@ -27,6 +27,13 @@ function isAdminRole(value: unknown): value is AdminRole {
   return typeof value === 'string' && (ADMIN_ROLES as readonly string[]).includes(value)
 }
 
+interface AdminProfileRpcRow {
+  id: string
+  full_name: string
+  role: string
+  created_at: string
+}
+
 /**
  * Looks up admin authorization for a signed-in Firebase user's email via
  * the get_admin_profile_by_email() RPC. Returns null if there is no
@@ -42,7 +49,7 @@ export async function getAdminProfile(email: string | null | undefined): Promise
 
   const { data, error } = await supabase
     .rpc('get_admin_profile_by_email', { p_email: email.trim() })
-    .maybeSingle()
+    .maybeSingle<AdminProfileRpcRow>()
 
   if (error) throw error
   if (!data) return null
