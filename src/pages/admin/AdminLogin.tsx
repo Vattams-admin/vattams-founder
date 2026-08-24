@@ -19,36 +19,20 @@ import { useAdminAuth } from '@/hooks/useAdminAuth'
 function friendlyFirebaseError(err: unknown): string {
   const code = (err as Partial<AuthError>)?.code
 
-  const message = (() => {
-    switch (code) {
-      case 'auth/invalid-credential':
-      case 'auth/wrong-password':
-      case 'auth/user-not-found':
-        return 'Incorrect email or password.'
-      case 'auth/invalid-email':
-        return 'That email address looks invalid.'
-      case 'auth/too-many-requests':
-        return 'Too many attempts. Please wait a moment and try again.'
-      case 'auth/network-request-failed':
-        return 'Network error. Please check your connection and try again.'
-      default:
-        return 'Sign in failed. Please try again.'
-    }
-  })()
-
-  // TEMPORARY DIAGNOSTIC — dev-only. Appends the Firebase error code (never
-  // secrets/tokens/passwords) so we can identify the exact failure mode.
-  // Also logs the full error object to the console, dev-only. Remove once
-  // the root cause is confirmed.
-  if (import.meta.env.DEV) {
-    if (code) {
-      console.error('[AdminLogin diagnostic] Firebase auth error:', err)
-      return `${message} Firebase error: ${code}`
-    }
-    console.error('[AdminLogin diagnostic] Non-Firebase error during sign-in:', err)
+  switch (code) {
+    case 'auth/invalid-credential':
+    case 'auth/wrong-password':
+    case 'auth/user-not-found':
+      return 'Incorrect email or password.'
+    case 'auth/invalid-email':
+      return 'That email address looks invalid.'
+    case 'auth/too-many-requests':
+      return 'Too many attempts. Please wait a moment and try again.'
+    case 'auth/network-request-failed':
+      return 'Network error. Please check your connection and try again.'
+    default:
+      return 'Sign in failed. Please try again.'
   }
-
-  return message
 }
 
 export default function AdminLogin() {
@@ -100,7 +84,7 @@ export default function AdminLogin() {
 
     setSubmitting(true)
 
-    let firebaseSignedIn = false
+    let credentialUser: Awaited<ReturnType<typeof signInWithEmailAndPassword>>['user'] | null = null
 
     try {
       const credential = await signInWithEmailAndPassword(
@@ -108,12 +92,28 @@ export default function AdminLogin() {
         email.trim(),
         password
       )
-      firebaseSignedIn = true
+      credentialUser = credential.user
+    } catch (err) {
+      // Real Firebase Auth failure (bad password, unknown email, etc.) —
+      // the account was never signed in, so there's nothing to roll back.
+      console.error('Admin login: Firebase sign-in failed.', err)
+      setError(friendlyFirebaseError(err))
+      setSubmitting(false)
+      return
+    }
 
+    if (!credentialUser) {
+      // Unreachable in practice (the catch above always returns), but
+      // keeps credentialUser.email below from being used unnarrowed.
+      setSubmitting(false)
+      return
+    }
+
+    try {
       // Membership in public.admin_users (active + a valid admin role)
       // is what grants admin access — not merely having a Firebase
       // account. Look up by the email Firebase just verified.
-      const profile = await getAdminProfile(credential.user.email)
+      const profile = await getAdminProfile(credentialUser.email)
       if (!profile) {
         await firebaseSignOut(firebaseAuth)
         setError('This account does not have admin access.')
@@ -123,10 +123,16 @@ export default function AdminLogin() {
 
       navigate('/admin/payments')
     } catch (err) {
-      if (firebaseSignedIn) {
-        await firebaseSignOut(firebaseAuth).catch(() => {})
-      }
-      setError(friendlyFirebaseError(err))
+      // Firebase login succeeded, but confirming admin status against
+      // Supabase failed (offline, RLS blocking the anon-key read, etc.).
+      // This is not "wrong password" and not "not an admin" — it's a
+      // connection/configuration problem, so say that plainly rather
+      // than reusing the generic sign-in-failed copy, and log it
+      // unconditionally (error code/message only — no credentials) so
+      // it's visible in the browser console on the live site.
+      console.error('Admin login: signed in to Firebase, but the admin_users lookup failed.', err)
+      await firebaseSignOut(firebaseAuth).catch(() => {})
+      setError('Signed in, but unable to verify admin access right now. Please check your connection and try again.')
       setSubmitting(false)
     }
   }
