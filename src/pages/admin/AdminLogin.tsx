@@ -9,11 +9,9 @@ import { firebaseAuth } from '@/lib/firebase'
 import { getAdminProfile } from '@/lib/adminData'
 import { useAdminAuth } from '@/hooks/useAdminAuth'
 
-// Admin identity is Firebase Auth (verifies the password) + a matching,
-// active row in Supabase's public.admin_users table, looked up by the
-// email Firebase just confirmed (see src/lib/adminData.ts). Firebase is
-// the one and only authentication/session system here — there is no
-// second, parallel Supabase Auth sign-in.
+// Admin identity is Firebase-only: Firebase Auth verifies the password,
+// and Firestore's admin_users/{uid} document (see src/lib/adminData.ts)
+// grants authorization. There is no Supabase involvement in this flow.
 
 function friendlyFirebaseError(err: unknown): string {
   const code = (err as Partial<AuthError>)?.code
@@ -109,10 +107,11 @@ export default function AdminLogin() {
     }
 
     try {
-      // Membership in public.admin_users (active + a valid admin role)
-      // is what grants admin access — not merely having a Firebase
-      // account. Look up by the email Firebase just verified.
-      const profile = await getAdminProfile(credentialUser.email)
+      // Membership in the admin_users/{uid} Firestore document (active +
+      // a valid admin role) is what grants admin access — not merely
+      // having a Firebase account. Look up by the uid Firebase just
+      // verified.
+      const profile = await getAdminProfile(credentialUser.uid)
       if (!profile) {
         await firebaseSignOut(firebaseAuth)
         setError('This account does not have admin access.')
@@ -123,10 +122,11 @@ export default function AdminLogin() {
       navigate('/admin/payments')
     } catch (err) {
       // Firebase login succeeded, but confirming admin status against
-      // Supabase failed (offline, RPC unavailable, etc.). This is not
-      // "wrong password" and not "not an admin" — it's a connection
-      // problem, so say that plainly without exposing internal error
-      // details on screen. Full details go to the console for support.
+      // Firestore failed (offline, security rules blocking the read,
+      // etc.). This is not "wrong password" and not "not an admin" —
+      // it's a connection problem, so say that plainly without exposing
+      // internal error details on screen. Full details go to the
+      // console for support.
       console.error('Admin login: signed in to Firebase, but the admin_users lookup failed.', err)
       await firebaseSignOut(firebaseAuth).catch(() => {})
       setError('Signed in, but unable to verify admin access right now. Please try again.')
