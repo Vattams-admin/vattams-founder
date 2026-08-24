@@ -1,128 +1,126 @@
-import { supabase } from '@/lib/supabase'
+import { collection, doc, getDocs, orderBy, query, updateDoc } from 'firebase/firestore'
+import { firestore } from '@/lib/firebase'
 import type { AcademyStudent, AcademyTutor } from '@/types/academy'
 
-// ---------------------------------------------------------------------
-// Reads always use select('*') rather than a named column list. The real
-// schema of academy_students / academy_tutors could not be confirmed from
-// this repo (see src/types/academy.ts), so selecting '*' guarantees the
-// list pages still load and render *something* even if some of the
-// display-field name guesses below are wrong — instead of the whole page
-// failing on "column does not exist".
-// ---------------------------------------------------------------------
+// Reads the `students` and `tutors` Firestore collections directly —
+// these are the same collections StudentRegister.tsx / TutorRegister.tsx
+// write to via setDoc(doc(firestore, 'students' | 'tutors', uid), ...).
+// There is no separate Supabase mirror: Firestore is the single source
+// of truth for academy registrations, so the admin panel reads from the
+// same place registrations are written.
 
 export interface AcademyListResult<T> {
   rows: T[]
   error: string | null
 }
 
-function friendlySupabaseError(error: { message: string; code?: string } | null, context: string): string | null {
+function friendlyFirestoreError(error: unknown, context: string): string | null {
   if (!error) return null
 
-  // Surface the real error in dev so the exact column/table mismatch is
-  // visible; show a clean message in production.
   if (import.meta.env.DEV) {
     console.error(`[academyAdmin] ${context}:`, error)
   }
 
-  // PostgREST: table truly missing (schema cache / doesn't exist yet).
-  if (error.message?.toLowerCase().includes('could not find the table')) {
-    return `The ${context} table could not be found. It may not have been created yet, or the Supabase schema cache needs a reload.`
+  const code = (error as { code?: string })?.code
+
+  // Firestore security rules blocking the read surfaces as
+  // 'permission-denied'.
+  if (code === 'permission-denied') {
+    return `You don't have permission to view ${context}. Check that your admin account has an active Firebase session and a matching Firestore security rule.`
   }
 
-  // PostgREST/Postgres: RLS denial usually surfaces as a permission error
-  // or as an empty result with a 42501 code.
-  if (error.code === '42501' || error.message?.toLowerCase().includes('permission denied')) {
-    return `You don't have permission to view ${context}. Check that your admin account has an active Supabase session and a matching RLS policy.`
-  }
-
-  if (error.message?.toLowerCase().includes('failed to fetch')) {
+  if (code === 'unavailable' || code === 'failed-precondition') {
     return `Network error while loading ${context}. Check your connection and try again.`
   }
 
   return `Something went wrong loading ${context}. Please try again.`
 }
 
-export async function listAcademyStudents(): Promise<AcademyListResult<AcademyStudent>> {
-  const { data, error } = await supabase
-    .from('academy_students')
-    .select('*')
-    .order('created_at', { ascending: false })
+function toIsoString(value: unknown): string {
+  if (typeof value === 'string') return value
+  // Firestore Timestamp objects expose toDate().
+  if (value && typeof (value as { toDate?: () => Date }).toDate === 'function') {
+    return (value as { toDate: () => Date }).toDate().toISOString()
+  }
+  return ''
+}
 
-  return {
-    rows: (data as unknown as AcademyStudent[]) ?? [],
-    error: friendlySupabaseError(error, 'students'),
+export async function listAcademyStudents(): Promise<AcademyListResult<AcademyStudent>> {
+  try {
+    const snapshot = await getDocs(query(collection(firestore, 'students'), orderBy('created_at', 'desc')))
+    const rows: AcademyStudent[] = snapshot.docs.map((d) => {
+      const data = d.data()
+      return {
+        id: d.id,
+        full_name: typeof data.full_name === 'string' ? data.full_name : '',
+        email: typeof data.email === 'string' ? data.email : null,
+        role: typeof data.role === 'string' ? data.role : null,
+        status: typeof data.status === 'string' ? data.status : null,
+        created_at: toIsoString(data.created_at),
+      }
+    })
+    return { rows, error: null }
+  } catch (error) {
+    return { rows: [], error: friendlyFirestoreError(error, 'students') }
   }
 }
 
 export async function listAcademyTutors(): Promise<AcademyListResult<AcademyTutor>> {
-  const { data, error } = await supabase
-    .from('academy_tutors')
-    .select('*')
-    .order('created_at', { ascending: false })
-
-  return {
-    rows: (data as unknown as AcademyTutor[]) ?? [],
-    error: friendlySupabaseError(error, 'tutors'),
+  try {
+    const snapshot = await getDocs(query(collection(firestore, 'tutors'), orderBy('created_at', 'desc')))
+    const rows: AcademyTutor[] = snapshot.docs.map((d) => {
+      const data = d.data()
+      return {
+        id: d.id,
+        full_name: typeof data.full_name === 'string' ? data.full_name : '',
+        email: typeof data.email === 'string' ? data.email : null,
+        qualification: typeof data.qualification === 'string' ? data.qualification : null,
+        expertise: typeof data.expertise === 'string' ? data.expertise : null,
+        introduction: typeof data.introduction === 'string' ? data.introduction : null,
+        role: typeof data.role === 'string' ? data.role : null,
+        status: typeof data.status === 'string' ? data.status : null,
+        approved_at: typeof data.approved_at === 'string' ? data.approved_at : null,
+        approved_by: typeof data.approved_by === 'string' ? data.approved_by : null,
+        rejected_at: typeof data.rejected_at === 'string' ? data.rejected_at : null,
+        rejected_by: typeof data.rejected_by === 'string' ? data.rejected_by : null,
+        rejection_reason: typeof data.rejection_reason === 'string' ? data.rejection_reason : null,
+        created_at: toIsoString(data.created_at),
+      }
+    })
+    return { rows, error: null }
+  } catch (error) {
+    return { rows: [], error: friendlyFirestoreError(error, 'tutors') }
   }
 }
 
 /**
- * Approves a pending tutor. `adminIdentifier` should be something stable
- * and human-identifiable for the `approved_by` audit field — this project
- * has no single canonical "current admin id" shared between Firebase and
- * Supabase (see docs on the dual-auth admin flow), so callers pass the
- * admin's email, which both sides log in with.
+ * Approves a pending tutor by updating their Firestore document's
+ * `status` field. `adminIdentifier` is the signed-in admin's email
+ * (falls back to uid), used for the `approved_by` audit field.
  */
 export async function approveAcademyTutor(tutorId: string, adminIdentifier: string) {
-  const { error } = await supabase
-    .from('academy_tutors')
-    .update({
-      approval_status: 'approved',
+  try {
+    await updateDoc(doc(firestore, 'tutors', tutorId), {
       status: 'approved',
       approved_at: new Date().toISOString(),
       approved_by: adminIdentifier,
     })
-    .eq('id', tutorId)
-
-  return { error: friendlySupabaseError(error, 'tutor approval') }
+    return { error: null }
+  } catch (error) {
+    return { error: friendlyFirestoreError(error, 'tutor approval') }
+  }
 }
 
 export async function rejectAcademyTutor(tutorId: string, adminIdentifier: string, reason: string) {
-  const { error } = await supabase
-    .from('academy_tutors')
-    .update({
-      approval_status: 'rejected',
+  try {
+    await updateDoc(doc(firestore, 'tutors', tutorId), {
       status: 'rejected',
       rejected_at: new Date().toISOString(),
       rejected_by: adminIdentifier,
       rejection_reason: reason,
     })
-    .eq('id', tutorId)
-
-  return { error: friendlySupabaseError(error, 'tutor rejection') }
-}
-
-// ---------------------------------------------------------------------
-// Display-field normalization: several fields in the spec (subjects,
-// experience) could plausibly be stored under a slightly different name
-// or shape than guessed in academy.ts. These helpers try the most likely
-// alternates before giving up, so the UI degrades gracefully instead of
-// showing "—" for a field that does exist under a different key.
-// ---------------------------------------------------------------------
-
-export function displaySubjects(tutor: AcademyTutor): string {
-  const raw = tutor.subjects ?? (tutor as unknown as Record<string, unknown>).subject
-  if (!raw) return '—'
-  if (Array.isArray(raw)) return raw.join(', ')
-  return String(raw)
-}
-
-export function displayField(row: Record<string, unknown>, ...candidateKeys: string[]): string {
-  for (const key of candidateKeys) {
-    const value = row[key]
-    if (value !== null && value !== undefined && value !== '') {
-      return String(value)
-    }
+    return { error: null }
+  } catch (error) {
+    return { error: friendlyFirestoreError(error, 'tutor rejection') }
   }
-  return '—'
 }
