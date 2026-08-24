@@ -13,8 +13,7 @@ import { useAdminAuth } from '@/hooks/useAdminAuth'
 // active row in Supabase's public.admin_users table, looked up by the
 // email Firebase just confirmed (see src/lib/adminData.ts). Firebase is
 // the one and only authentication/session system here — there is no
-// second, parallel Supabase Auth sign-in. admin_users.password_hash is
-// not used for authentication and is never read by this flow.
+// second, parallel Supabase Auth sign-in.
 
 function friendlyFirebaseError(err: unknown): string {
   const code = (err as Partial<AuthError>)?.code
@@ -33,26 +32,6 @@ function friendlyFirebaseError(err: unknown): string {
     default:
       return 'Sign in failed. Please try again.'
   }
-}
-
-// TEMPORARY DIAGNOSTIC — remove once the admin_users lookup failure is
-// root-caused and fixed. Turns a Supabase/Postgrest error (or any other
-// thrown error) into a short, on-screen string: code + message + hint,
-// which for RLS/schema problems describes the policy or column at fault
-// — never user credentials or secrets. This exists so the failure can be
-// read directly off a phone screen without needing browser devtools.
-function describeSupabaseError(err: unknown): string {
-  if (err && typeof err === 'object') {
-    const e = err as { code?: unknown; message?: unknown; hint?: unknown; details?: unknown }
-    const parts = [
-      e.code ? `code=${e.code}` : null,
-      e.message ? `message=${e.message}` : null,
-      e.hint ? `hint=${e.hint}` : null,
-      e.details ? `details=${e.details}` : null,
-    ].filter(Boolean)
-    if (parts.length > 0) return parts.join(' · ')
-  }
-  return String(err)
 }
 
 export default function AdminLogin() {
@@ -144,19 +123,13 @@ export default function AdminLogin() {
       navigate('/admin/payments')
     } catch (err) {
       // Firebase login succeeded, but confirming admin status against
-      // Supabase failed (offline, RLS blocking the anon-key read, wrong
-      // table/column name, etc.). This is not "wrong password" and not
-      // "not an admin" — it's a connection/configuration problem, so say
-      // that plainly. The underlying Postgrest error (code/message/hint)
-      // is safe to show here: it describes a schema/policy problem, never
-      // credentials — and putting it on screen means it can be read
-      // directly off a phone without needing browser devtools.
+      // Supabase failed (offline, RPC unavailable, etc.). This is not
+      // "wrong password" and not "not an admin" — it's a connection
+      // problem, so say that plainly without exposing internal error
+      // details on screen. Full details go to the console for support.
       console.error('Admin login: signed in to Firebase, but the admin_users lookup failed.', err)
       await firebaseSignOut(firebaseAuth).catch(() => {})
-      setError(
-        'Signed in, but unable to verify admin access right now. ' +
-          `Details: ${describeSupabaseError(err)}`
-      )
+      setError('Signed in, but unable to verify admin access right now. Please try again.')
       setSubmitting(false)
     }
   }
