@@ -6,20 +6,15 @@ import {
   type AuthError,
 } from 'firebase/auth'
 import { firebaseAuth } from '@/lib/firebase'
-import { supabase } from '@/lib/supabase'
 import { getAdminProfile } from '@/lib/adminData'
 import { useAdminAuth } from '@/hooks/useAdminAuth'
 
-// Admin identity is Firebase Auth + a Firestore `admins/{uid}` doc (see
-// src/lib/adminData.ts). But every admin-only Supabase RLS policy is
-// still gated on `is_admin()`, which checks `auth.uid()` — Supabase's
-// own JWT session, unrelated to Firebase. So a successful admin login
-// signs the same person into BOTH systems with the same email/password:
-// Firebase is the source of truth for "is this person an admin" (via
-// Firestore), and the parallel Supabase session is what lets the admin
-// pages' existing Supabase queries (payments, courses) pass RLS. This
-// requires the admin to already exist in both systems with matching
-// credentials — see the deployment note in adminData.ts.
+// Admin identity is Firebase Auth (verifies the password) + a matching,
+// active row in Supabase's public.admin_users table, looked up by the
+// email Firebase just confirmed (see src/lib/adminData.ts). Firebase is
+// the one and only authentication/session system here — there is no
+// second, parallel Supabase Auth sign-in. admin_users.password_hash is
+// not used for authentication and is never read by this flow.
 
 function friendlyFirebaseError(err: unknown): string {
   const code = (err as Partial<AuthError>)?.code
@@ -84,7 +79,7 @@ export default function AdminLogin() {
   }, [loading, adminUser, isAdmin, navigate])
 
   // Session exists but we couldn't confirm admin status because of a
-  // network/Firestore error — don't silently show an empty login form as
+  // network/Supabase error — don't silently show an empty login form as
   // if they were signed out; tell them what actually happened.
   useEffect(() => {
     if (!loading && adminUser && !isAdmin && profileError) {
@@ -115,32 +110,13 @@ export default function AdminLogin() {
       )
       firebaseSignedIn = true
 
-      // Membership in Firestore `admins` is what grants admin access —
-      // not merely having a Firebase account.
-      const profile = await getAdminProfile(credential.user.uid)
+      // Membership in public.admin_users (active + a valid admin role)
+      // is what grants admin access — not merely having a Firebase
+      // account. Look up by the email Firebase just verified.
+      const profile = await getAdminProfile(credential.user.email)
       if (!profile) {
         await firebaseSignOut(firebaseAuth)
         setError('This account does not have admin access.')
-        setSubmitting(false)
-        return
-      }
-
-      // Mirror the same credentials into Supabase so `auth.uid()` in
-      // RLS policies resolves for this session too. If this fails, the
-      // Firebase side is rolled back rather than leaving a half-signed-in
-      // admin who can pass the Firestore check but fail every RLS-gated
-      // action on the payments/courses pages.
-      const { error: supabaseError } = await supabase.auth.signInWithPassword({
-        email: email.trim(),
-        password,
-      })
-
-      if (supabaseError) {
-        await firebaseSignOut(firebaseAuth)
-        setError(
-          'Your admin account is not fully set up for this login yet. ' +
-            'Please contact the site administrator.'
-        )
         setSubmitting(false)
         return
       }
