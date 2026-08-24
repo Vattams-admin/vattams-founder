@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { addDoc, collection, doc, getDoc, updateDoc } from 'firebase/firestore'
+import { addDoc, collection, doc, getDoc, serverTimestamp, updateDoc } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
 
@@ -33,8 +33,6 @@ export default function AdminCourseForm() {
     setLoading(true)
     setLoadError(false)
 
-    // `id` is the Firestore document id — same convention as Payment.tsx
-    // and every other page that reads a single course by id.
     getDoc(doc(firestore, 'courses', id as string))
       .then((snap) => {
         if (cancelled) return
@@ -70,28 +68,30 @@ export default function AdminCourseForm() {
   async function handleSave(publish?: boolean) {
     setSaving(true)
     setError(null)
-    const payload = {
-      ...form,
-      slug: form.slug || slugify(form.name),
-      ...(publish !== undefined ? { is_published: publish } : {})
-    }
 
     try {
       if (isNew) {
-        await addDoc(collection(firestore, 'courses'), {
-          ...payload,
+        const payload = {
+          ...form,
+          slug: form.slug || slugify(form.name),
           category_id: null,
           preview_video_url: null,
           is_published: publish ?? false,
           is_featured: false,
-          created_at: new Date().toISOString()
-        })
+          created_at: serverTimestamp()
+        }
+        await addDoc(collection(firestore, 'courses'), payload)
       } else {
+        const payload = {
+          ...form,
+          slug: form.slug || slugify(form.name),
+          ...(publish !== undefined ? { is_published: publish } : {})
+        }
         await updateDoc(doc(firestore, 'courses', id as string), payload)
       }
       navigate('/admin/courses')
     } catch (err) {
-      console.error('Unexpected error saving course:', err)
+      console.error('Failed to save course:', err)
       setError('Unable to save right now. Please check your connection and try again.')
     } finally {
       setSaving(false)
