@@ -1,12 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import AdminNav from '@/components/AdminNav'
 import { useAdminAuth } from '@/hooks/useAdminAuth'
-import {
-  approveAcademyTutor,
-  displaySubjects,
-  listAcademyTutors,
-  rejectAcademyTutor,
-} from '@/lib/academyAdmin'
+import { approveAcademyTutor, listAcademyTutors, rejectAcademyTutor } from '@/lib/academyAdmin'
 import type { AcademyTutor } from '@/types/academy'
 
 type LoadState = 'loading' | 'loaded' | 'error'
@@ -18,16 +13,14 @@ export default function AdminTutors() {
   const [error, setError] = useState<string | null>(null)
   const [actionError, setActionError] = useState<string | null>(null)
   const [search, setSearch] = useState('')
-  const [approvalFilter, setApprovalFilter] = useState<string>('all')
-  const [paymentFilter, setPaymentFilter] = useState<string>('all')
+  const [statusFilter, setStatusFilter] = useState<string>('all')
   const [selected, setSelected] = useState<AcademyTutor | null>(null)
   const [rejecting, setRejecting] = useState<AcademyTutor | null>(null)
   const [rejectionReason, setRejectionReason] = useState('')
   const [busyId, setBusyId] = useState<string | null>(null)
 
-  // Falls back to the Firebase admin's email, since this project has no
-  // single canonical admin id shared between Firebase and Supabase — see
-  // src/lib/academyAdmin.ts.
+  // Falls back to the Firebase admin's uid if email isn't set on the
+  // account, for the approved_by / rejected_by audit fields.
   const adminIdentifier = adminUser?.email ?? adminUser?.uid ?? 'unknown-admin'
 
   async function load() {
@@ -47,31 +40,24 @@ export default function AdminTutors() {
     load()
   }, [])
 
-  const availableApprovalStatuses = useMemo(() => {
+  const availableStatuses = useMemo(() => {
     const found = new Set<string>()
-    for (const t of tutors) if (t.approval_status) found.add(t.approval_status)
-    return Array.from(found)
-  }, [tutors])
-
-  const availablePaymentStatuses = useMemo(() => {
-    const found = new Set<string>()
-    for (const t of tutors) if (t.payment_status) found.add(t.payment_status)
+    for (const t of tutors) if (t.status) found.add(t.status)
     return Array.from(found)
   }, [tutors])
 
   const filtered = useMemo(() => {
     const term = search.trim().toLowerCase()
     return tutors.filter((t) => {
-      if (approvalFilter !== 'all' && t.approval_status !== approvalFilter) return false
-      if (paymentFilter !== 'all' && t.payment_status !== paymentFilter) return false
+      if (statusFilter !== 'all' && t.status !== statusFilter) return false
       if (!term) return true
-      const haystack = [t.full_name, t.email, t.phone, t.city, t.qualification, displaySubjects(t)]
+      const haystack = [t.full_name, t.email, t.qualification, t.expertise]
         .filter(Boolean)
         .join(' ')
         .toLowerCase()
       return haystack.includes(term)
     })
-  }, [tutors, search, approvalFilter, paymentFilter])
+  }, [tutors, search, statusFilter])
 
   async function handleApprove(tutor: AcademyTutor) {
     setBusyId(tutor.id)
@@ -118,31 +104,17 @@ export default function AdminTutors() {
           type="search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search by name, email, phone, city, qualification…"
+          placeholder="Search by name, email, qualification, expertise…"
           className="input flex-1"
         />
-        {availableApprovalStatuses.length > 0 && (
+        {availableStatuses.length > 0 && (
           <select
-            value={approvalFilter}
-            onChange={(e) => setApprovalFilter(e.target.value)}
+            value={statusFilter}
+            onChange={(e) => setStatusFilter(e.target.value)}
             className="rounded-card border border-white/15 bg-ink px-3 py-2 text-sm outline-none focus:border-gold"
           >
-            <option value="all">All approval statuses</option>
-            {availableApprovalStatuses.map((s) => (
-              <option key={s} value={s}>
-                {s}
-              </option>
-            ))}
-          </select>
-        )}
-        {availablePaymentStatuses.length > 0 && (
-          <select
-            value={paymentFilter}
-            onChange={(e) => setPaymentFilter(e.target.value)}
-            className="rounded-card border border-white/15 bg-ink px-3 py-2 text-sm outline-none focus:border-gold"
-          >
-            <option value="all">All payment statuses</option>
-            {availablePaymentStatuses.map((s) => (
+            <option value="all">All statuses</option>
+            {availableStatuses.map((s) => (
               <option key={s} value={s}>
                 {s}
               </option>
@@ -178,8 +150,7 @@ export default function AdminTutors() {
           <button
             onClick={() => {
               setSearch('')
-              setApprovalFilter('all')
-              setPaymentFilter('all')
+              setStatusFilter('all')
             }}
             className="btn-secondary mt-4"
           >
@@ -195,16 +166,15 @@ export default function AdminTutors() {
               <div className="text-sm">
                 <p className="font-medium">{t.full_name}</p>
                 <p className="text-slate-muted">
-                  {t.qualification ?? 'No qualification listed'} · {displaySubjects(t)} · {t.city ?? 'City unknown'}
+                  {t.qualification ?? 'No qualification listed'} · {t.expertise ?? 'No expertise listed'}
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-2">
-                <StatusPill value={t.approval_status} kind="approval" />
-                <StatusPill value={t.payment_status} kind="payment" />
+                <StatusPill value={t.status} />
                 <button onClick={() => setSelected(t)} className="btn-secondary text-xs">
                   View
                 </button>
-                {t.approval_status !== 'approved' && (
+                {t.status !== 'approved' && (
                   <button
                     onClick={() => handleApprove(t)}
                     disabled={busyId === t.id}
@@ -213,7 +183,7 @@ export default function AdminTutors() {
                     Approve
                   </button>
                 )}
-                {t.approval_status !== 'rejected' && (
+                {t.status !== 'rejected' && (
                   <button
                     onClick={() => {
                       setRejecting(t)
@@ -245,16 +215,11 @@ export default function AdminTutors() {
             </div>
             <dl className="mt-4 space-y-2 text-sm">
               <Detail label="Email" value={selected.email} />
-              <Detail label="Phone" value={selected.phone} />
-              <Detail label="City" value={selected.city} />
               <Detail label="Qualification" value={selected.qualification} />
-              <Detail label="Experience" value={selected.experience} />
-              <Detail label="Teaching mode" value={selected.teaching_mode} />
-              <Detail label="Subjects" value={displaySubjects(selected)} />
-              <Detail label="Availability" value={selected.availability} />
-              <Detail label="Approval status" value={selected.approval_status} />
-              <Detail label="Payment status" value={selected.payment_status} />
-              <Detail label="Firebase UID" value={selected.firebase_uid} />
+              <Detail label="Expertise" value={selected.expertise} />
+              <Detail label="Introduction" value={selected.introduction} />
+              <Detail label="Status" value={selected.status} />
+              <Detail label="Firebase UID" value={selected.id} />
               {selected.rejection_reason && <Detail label="Rejection reason" value={selected.rejection_reason} />}
               <Detail
                 label="Created"
@@ -302,10 +267,10 @@ export default function AdminTutors() {
   )
 }
 
-function StatusPill({ value, kind }: { value: string | null | undefined; kind: 'approval' | 'payment' }) {
+function StatusPill({ value }: { value: string | null | undefined }) {
   const label = value ?? 'unknown'
-  const positive = kind === 'approval' ? value === 'approved' : value === 'paid'
-  const negative = kind === 'approval' ? value === 'rejected' : value === 'failed'
+  const positive = value === 'approved'
+  const negative = value === 'rejected'
 
   return (
     <span
@@ -317,7 +282,6 @@ function StatusPill({ value, kind }: { value: string | null | undefined; kind: '
           : 'bg-gold/20 text-gold'
       }`}
     >
-      {kind === 'approval' ? 'Approval: ' : 'Payment: '}
       {label}
     </span>
   )
