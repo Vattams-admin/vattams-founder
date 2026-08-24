@@ -56,6 +56,11 @@ export default function StudentRegister() {
           full_name: fullName,
           email: user.email ?? email,
           role: 'student',
+          // Explicit starting status so the admin approval/onboarding
+          // flow (/admin/students) has something to act on — previously
+          // no status was set at all, which showed as "unknown" in the
+          // admin table and could never be approved or onboarded.
+          status: 'pending',
           created_at: new Date().toISOString(),
         })
       } catch (profileErr) {

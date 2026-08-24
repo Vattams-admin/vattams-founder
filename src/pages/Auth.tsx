@@ -4,7 +4,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from 'firebase/auth'
-import { doc, setDoc } from 'firebase/firestore'
+import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { firebaseAuth, firestore } from '@/lib/firebase'
 import { friendlyAuthError } from '@/lib/authErrors'
 
@@ -47,6 +47,8 @@ export default function Auth({
             id: user.uid,
             full_name: fullName,
             email: user.email ?? email,
+            role: 'student',
+            status: 'pending',
             created_at: new Date().toISOString(),
           })
         } catch (profileErr) {
@@ -70,11 +72,31 @@ export default function Auth({
         return
       }
 
-      await signInWithEmailAndPassword(
+      const signInCredential = await signInWithEmailAndPassword(
         firebaseAuth,
         email,
         password
       )
+
+      // Tutors and students share this one login form/auth system (per
+      // spec — no parallel auth). Only when the caller didn't already ask
+      // for a specific page (e.g. Payment.tsx bouncing a student back to
+      // checkout) do we pick a default landing page, and a tutor account
+      // should land on the tutor dashboard rather than the student one.
+      const explicitRedirect = (location.state as { redirectTo?: string })?.redirectTo
+      if (!explicitRedirect) {
+        try {
+          const tutorSnap = await getDoc(doc(firestore, 'tutors', signInCredential.user.uid))
+          if (tutorSnap.exists()) {
+            navigate('/tutor/dashboard')
+            return
+          }
+        } catch (tutorLookupErr) {
+          // Couldn't confirm either way — fall through to the default
+          // student dashboard rather than blocking login.
+          console.error('Tutor lookup after login failed:', tutorLookupErr)
+        }
+      }
 
       navigate(redirectTo)
     } catch (err) {

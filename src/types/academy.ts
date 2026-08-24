@@ -12,7 +12,14 @@
 export type AcademyApprovalStatus = 'pending' | 'approved' | 'rejected'
 export type AcademyPaymentStatus = 'pending' | 'paid' | 'failed' | 'refunded'
 export type AcademyTutorStatus = 'pending_approval' | 'approved' | 'rejected' | string
-export type AcademyStudentStatus = 'active' | 'inactive' | 'pending' | string
+export type AcademyStudentStatus = 'active' | 'inactive' | 'pending' | 'approved' | 'rejected' | string
+
+// Onboarding is tracked separately from approval status (`status` above).
+// A record can be 'approved' but not yet onboarded (no code assigned
+// yet); once an admin clicks Onboard, onboarding_status flips straight
+// to 'active' and employee_code/tutor_id (or student_code/student_id)
+// are permanently assigned — see src/lib/onboarding.ts.
+export type AcademyOnboardingStatus = 'not_onboarded' | 'active'
 
 export interface AcademyStudent {
   id: string
@@ -28,6 +35,16 @@ export interface AcademyStudent {
   parent_name?: string | null
   parent_phone?: string | null
   city?: string | null
+  approved_at?: string | null
+  approved_by?: string | null
+  rejected_at?: string | null
+  rejected_by?: string | null
+  rejection_reason?: string | null
+  student_code?: string | null
+  student_id?: string | null
+  onboarding_status?: AcademyOnboardingStatus | null
+  onboarded_at?: string | null
+  onboarded_by?: string | null
 }
 
 export interface AcademyTutor {
@@ -54,4 +71,9 @@ export interface AcademyTutor {
   availability?: string | null
   payment_status?: AcademyPaymentStatus | null
   approval_status?: AcademyApprovalStatus | null
+  employee_code?: string | null
+  tutor_id?: string | null
+  onboarding_status?: AcademyOnboardingStatus | null
+  onboarded_at?: string | null
+  onboarded_by?: string | null
 }
