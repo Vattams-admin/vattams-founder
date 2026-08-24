@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { supabase } from '@/lib/supabase'
+import { collection, getDocs, limit, query, where } from 'firebase/firestore'
+import { firestore } from '@/lib/firebase'
 import type { CertificateVerification } from '@/types/database'
 
 export default function VerifyCertificate() {
@@ -14,22 +15,30 @@ export default function VerifyCertificate() {
     setResult(null)
     setConnectionError(false)
     try {
-      const { data, error } = await supabase.rpc('verify_certificate', { code: code.trim() })
-      if (error) {
-        // An RPC/network error is not the same thing as "no certificate
-        // found for this code" — don't tell someone their certificate is
-        // invalid when the real problem is our connection.
-        console.error('Certificate verification failed:', error)
-        setConnectionError(true)
-        return
-      }
-      if (!data || data.length === 0) {
+      // Replaces the old verify_certificate() RPC. That RPC joined
+      // students + courses server-side for a minimal, non-sensitive
+      // projection; here the `certificates` collection already stores
+      // student_name / course_name directly on each doc (same
+      // denormalize-at-write pattern as payments/enrolments), so a
+      // plain query by certificate_code is enough — no join, and no
+      // student contact info is read or exposed either way.
+      const q = query(
+        collection(firestore, 'certificates'),
+        where('certificate_code', '==', code.trim()),
+        limit(1)
+      )
+      const snapshot = await getDocs(q)
+
+      if (snapshot.empty) {
         setResult('not_found')
         return
       }
-      setResult(data[0] as CertificateVerification)
+      setResult(snapshot.docs[0].data() as CertificateVerification)
     } catch (err) {
-      console.error('Unexpected error verifying certificate:', err)
+      // A Firestore/network error is not the same thing as "no
+      // certificate found for this code" — don't tell someone their
+      // certificate is invalid when the real problem is our connection.
+      console.error('Certificate verification failed:', err)
       setConnectionError(true)
     } finally {
       setChecking(false)
