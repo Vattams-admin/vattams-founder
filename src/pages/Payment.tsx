@@ -1,7 +1,20 @@
+// src/pages/Payment.tsx
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { QRCodeSVG } from 'qrcode.react'
-import { supabase } from '@/lib/supabase'
+import {
+  addDoc,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  limit,
+  orderBy,
+  query,
+  updateDoc,
+  where
+} from 'firebase/firestore'
+import { firestore } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
 import type { Course, Payment } from '@/types/database'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
@@ -29,6 +42,10 @@ export default function Payment() {
       navigate('/login', { state: { redirectTo: `/pay/${courseId}` } })
       return
     }
+    if (!courseId) {
+      setNotFound(true)
+      return
+    }
     let cancelled = false
 
     async function init() {
@@ -36,80 +53,64 @@ export default function Payment() {
       setNotFound(false)
 
       try {
-        const { data: courseData, error: courseErr } = await supabase
-          .from('courses')
-          .select('*')
-          .eq('id', courseId)
-          .single()
+        // `courseId` is the Firestore document id — same as CourseDetail.tsx
+        // (`{ id: docSnap.id, ...docSnap.data() }`), so a direct doc get
+        // is enough; no query needed like the slug-based pages.
+        const courseSnap = await getDoc(doc(firestore, 'courses', courseId as string))
         if (cancelled) return
-        if (courseErr) {
-          // PGRST116 = no rows for .single() — a genuine "course not
-          // found," not a network problem. Anything else (offline,
-          // timeout, RLS, etc.) is a connection error and should offer a
-          // retry rather than claiming the course doesn't exist.
-          if (courseErr.code === 'PGRST116') {
-            setNotFound(true)
-          } else {
-            console.error('Failed to load course for payment:', courseErr)
-            setError(CONNECTION_ERROR)
-          }
-          return
-        }
-        if (!courseData) {
+
+        if (!courseSnap.exists()) {
           setNotFound(true)
           return
         }
-        setCourse(courseData as unknown as Course)
+        const courseData = { id: courseSnap.id, ...courseSnap.data() } as Course
+        setCourse(courseData)
 
-        // Reuse an existing pending payment for this student+course if one
-        // exists, instead of creating duplicates on every page visit.
-        const { data: existing, error: existingErr } = await supabase
-          .from('payments')
-          .select('*')
-          .eq('student_id', user!.id)
-          .eq('course_id', courseId)
-          .in('status', ['pending', 'submitted'])
-          .order('created_at', { ascending: false })
-          .limit(1)
-          .maybeSingle()
-
+        // Reuse an existing pending/submitted payment for this
+        // student+course instead of creating duplicates on every visit.
+        // Requires a composite index on (student_id, course_id, status,
+        // created_at) — Firestore will show a console link to create it
+        // the first time this query runs if it's missing.
+        const existingQuery = query(
+          collection(firestore, 'payments'),
+          where('student_id', '==', user!.id),
+          where('course_id', '==', courseId),
+          where('status', 'in', ['pending', 'submitted']),
+          orderBy('created_at', 'desc'),
+          limit(1)
+        )
+        const existingSnapshot = await getDocs(existingQuery)
         if (cancelled) return
 
-        if (existingErr) {
-          // Don't fall through to creating a new payment when we couldn't
-          // even check for an existing one — that's how a transient
-          // network blip on this read turns into a duplicate pending
-          // payment. Stop here and let the person retry instead.
-          console.error('Failed to check for an existing payment:', existingErr)
-          setError(CONNECTION_ERROR)
+        if (!existingSnapshot.empty) {
+          const existingDoc = existingSnapshot.docs[0]
+          setPayment({ id: existingDoc.id, ...existingDoc.data() } as Payment)
           return
         }
 
-        if (existing) {
-          setPayment(existing as unknown as Payment)
-          return
+        const amount = Math.max(courseData.base_fee - courseData.discount_amount, 0)
+        const newPayment = {
+          student_id: user!.id,
+          course_id: courseId,
+          // Denormalized so payment lists (admin + student dashboard) can
+          // render without a join — Firestore has none.
+          course_name: courseData.name,
+          student_name: user!.displayName ?? user!.email ?? null,
+          amount,
+          status: 'pending' as const,
+          utr_reference: null,
+          submitted_at: null,
+          verified_at: null,
+          verified_by: null,
+          admin_notes: null,
+          created_at: new Date().toISOString()
         }
-
-        const c = courseData as unknown as Course
-        const amount = Math.max(c.base_fee - c.discount_amount, 0)
-        const { data: created, error: createErr } = await supabase
-          .from('payments')
-          .insert({ student_id: user!.id, course_id: courseId, amount, status: 'pending' })
-          .select()
-          .single()
-
+        const createdRef = await addDoc(collection(firestore, 'payments'), newPayment)
         if (cancelled) return
-
-        if (createErr) {
-          console.error('Failed to create payment record:', createErr)
-          setError(CONNECTION_ERROR)
-        } else {
-          setPayment(created as unknown as Payment)
-        }
+        setPayment({ id: createdRef.id, ...newPayment } as Payment)
       } catch (err) {
-        // Guards against anything that escapes the supabase-js error
-        // objects above (e.g. a raw network exception) leaving this page
-        // stuck on "Loading payment details…" forever.
+        // Guards against anything that escapes the Firestore calls above
+        // leaving this page stuck on "Loading payment details…" forever.
         if (cancelled) return
         console.error('Unexpected error loading payment page:', err)
         setError(CONNECTION_ERROR)
@@ -126,16 +127,12 @@ export default function Payment() {
     setSubmitting(true)
     setError(null)
     try {
-      const { error } = await supabase
-        .from('payments')
-        .update({ utr_reference: utr.trim(), status: 'submitted', submitted_at: new Date().toISOString() })
-        .eq('id', payment.id)
-      if (error) {
-        console.error('Failed to submit payment reference:', error)
-        setError('Unable to submit right now. Please check your connection and try again.')
-      } else {
-        setPayment({ ...payment, utr_reference: utr.trim(), status: 'submitted' })
-      }
+      await updateDoc(doc(firestore, 'payments', payment.id), {
+        utr_reference: utr.trim(),
+        status: 'submitted',
+        submitted_at: new Date().toISOString()
+      })
+      setPayment({ ...payment, utr_reference: utr.trim(), status: 'submitted' })
     } catch (err) {
       console.error('Unexpected error submitting payment reference:', err)
       setError('Unable to submit right now. Please check your connection and try again.')
