@@ -49,9 +49,8 @@ export function useAdminAuth(): AdminAuthState {
         try {
           const profile = await getAdminProfile(firebaseUser.uid)
           if (!cancelled) setAdminProfile(profile)
-        } catch {
-          // Firestore read failed (offline, rules, etc.) — treat as "not
-          // confirmed admin" rather than leaving loading stuck forever.
+        } catch (error) {
+          console.error('[AdminAuth] Firestore admin profile read failed:', error)
           if (!cancelled) setAdminProfile(null)
         } finally {
           if (!cancelled) setLoading(false)
