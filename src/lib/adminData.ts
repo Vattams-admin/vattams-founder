@@ -1,17 +1,20 @@
-import { supabase } from '@/lib/supabase'
+import { doc, getDoc } from 'firebase/firestore'
+import { firestore } from '@/lib/firebase'
 
-// Admin identity lives in Supabase's public.admin_users table, keyed by
-// email — NOT in Firestore, and NOT by Firebase uid. Firebase Auth is the
-// authentication system (it verifies the password); this lookup is the
-// authorization check that runs after Firebase confirms who the person
-// is, using the email Firebase already validated.
+// Admin identity is Firebase-only: Firebase Auth verifies the password,
+// and admin authorization is a Firestore document at
+// admin_users/{firebaseUid} — no Supabase involved anywhere in this
+// flow. The document's existence (plus is_active === true and a
+// recognized role) is what grants admin access.
 //
-// The lookup goes through the get_admin_profile_by_email() Postgres
-// function (see supabase/migrations/0004_admin_users_firebase_login.sql)
-// rather than a direct table SELECT. admin_users has RLS enabled with no
-// SELECT policy, so the anon key cannot read the table directly or
-// enumerate the admin roster — the function is SECURITY DEFINER and
-// returns a row only for the single matching, active email passed in.
+// These documents are NOT created by the app — there is no signup flow
+// for admins. Create them by hand in the Firebase Console:
+//   Firestore Database → admin_users collection → Add document
+//   Document ID: the admin's Firebase Auth UID (Authentication → Users
+//   → copy the UID next to their email)
+//   Fields: full_name (string), role (string: "admin" | "super_admin" |
+//   "instructor"), is_active (boolean: true), created_at (timestamp,
+//   optional)
 
 export const ADMIN_ROLES = ['admin', 'super_admin', 'instructor'] as const
 export type AdminRole = (typeof ADMIN_ROLES)[number]
@@ -27,38 +30,39 @@ function isAdminRole(value: unknown): value is AdminRole {
   return typeof value === 'string' && (ADMIN_ROLES as readonly string[]).includes(value)
 }
 
-interface AdminProfileRpcRow {
-  id: string
-  full_name: string
-  role: string
-  created_at: string
-}
-
 /**
- * Looks up admin authorization for a signed-in Firebase user's email via
- * the get_admin_profile_by_email() RPC. Returns null if there is no
- * matching row, the row is inactive, or the role isn't a recognized
- * admin role — all treated as "not an admin" rather than an error, so
- * callers can show "this account does not have admin access" as a
- * normal outcome. Throws only on an actual RPC/network failure (offline,
- * function missing, etc.), which callers should treat as "couldn't
- * confirm" rather than "confirmed not admin."
+ * Looks up admin authorization for a signed-in Firebase user by uid,
+ * via the admin_users/{uid} Firestore document. Returns null if the
+ * document doesn't exist, is_active isn't true, or the role isn't a
+ * recognized admin role — all treated as "not an admin" rather than an
+ * error, so callers can show "this account does not have admin access"
+ * as a normal outcome. Throws only on an actual read failure (offline,
+ * Firestore security rules blocking the read, etc.), which callers
+ * should treat as "couldn't confirm" rather than "confirmed not admin."
  */
-export async function getAdminProfile(email: string | null | undefined): Promise<AdminProfile | null> {
-  if (!email) return null
+export async function getAdminProfile(uid: string | null | undefined): Promise<AdminProfile | null> {
+  if (!uid) return null
 
-  const { data, error } = await supabase
-    .rpc('get_admin_profile_by_email', { p_email: email.trim() })
-    .maybeSingle<AdminProfileRpcRow>()
+  const snapshot = await getDoc(doc(firestore, 'admin_users', uid))
 
-  if (error) throw error
-  if (!data) return null
+  if (!snapshot.exists()) return null
+
+  const data = snapshot.data()
+  if (data.is_active !== true) return null
   if (!isAdminRole(data.role)) return null
 
+  const createdAt = data.created_at
+  const createdAtIso =
+    createdAt && typeof createdAt.toDate === 'function'
+      ? createdAt.toDate().toISOString()
+      : typeof createdAt === 'string'
+        ? createdAt
+        : ''
+
   return {
-    id: data.id,
+    id: snapshot.id,
     full_name: typeof data.full_name === 'string' ? data.full_name : '',
     role: data.role,
-    created_at: typeof data.created_at === 'string' ? data.created_at : '',
+    created_at: createdAtIso,
   }
 }
