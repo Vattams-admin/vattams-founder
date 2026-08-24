@@ -7,7 +7,7 @@ import { getAdminProfile, type AdminProfile } from '@/lib/adminData'
 interface AdminAuthState {
   /** The raw Firebase user, or null if not signed in at all. */
   adminUser: User | null
-  /** The Firestore admin profile, or null if signed in but not an admin. */
+  /** The admin_users profile, or null if signed in but not an admin. */
   adminProfile: AdminProfile | null
   /** True only once we have a definite adminProfile with a valid role. */
   isAdmin: boolean
@@ -17,7 +17,7 @@ interface AdminAuthState {
    * redirect firing before Firebase has restored the session on refresh. */
   loading: boolean
   /** True when a signed-in user's admin-role lookup could not be
-   * completed (offline, Firestore unavailable, etc.) — as opposed to the
+   * completed (offline, Supabase unavailable, etc.) — as opposed to the
    * lookup completing and confirming they are not an admin. Callers
    * (AdminRoute, AdminLogin) must check this before treating `isAdmin ===
    * false` as "this account does not have admin access": a network error
@@ -27,10 +27,10 @@ interface AdminAuthState {
 }
 
 /**
- * Tracks Firebase auth state and, if a user is signed in, whether they
- * also have a Firestore `admins/{uid}` doc with a valid role. Does not
- * redirect or sign anyone out — it only reports state; route guards
- * (e.g. AdminRoute) and AdminLogin decide what to do with it.
+ * Tracks Firebase auth state and, if a user is signed in, whether their
+ * email has a matching, active role in Supabase's public.admin_users
+ * table. Does not redirect or sign anyone out — it only reports state;
+ * route guards (e.g. AdminRoute) and AdminLogin decide what to do with it.
  */
 export function useAdminAuth(): AdminAuthState {
   const [adminUser, setAdminUser] = useState<User | null>(null)
@@ -57,18 +57,19 @@ export function useAdminAuth(): AdminAuthState {
         if (!cancelled) setAdminUser(firebaseUser)
 
         try {
-          const profile = await getAdminProfile(firebaseUser.uid)
+          const profile = await getAdminProfile(firebaseUser.email)
           if (!cancelled) {
             setAdminProfile(profile)
             setProfileError(false)
           }
         } catch (err) {
-          // Firestore read failed (offline, unavailable, etc.) — this is
-          // NOT the same thing as "looked it up and confirmed not an
-          // admin." Keep adminProfile null (so isAdmin stays false, the
-          // safe default) but flag profileError so AdminRoute/AdminLogin
-          // can show a retry/connection message instead of redirecting
-          // with "this account does not have admin access."
+          // The admin_users lookup failed (offline, Supabase unavailable,
+          // RLS misconfiguration, etc.) — this is NOT the same thing as
+          // "looked it up and confirmed not an admin." Keep adminProfile
+          // null (so isAdmin stays false, the safe default) but flag
+          // profileError so AdminRoute/AdminLogin can show a
+          // retry/connection message instead of redirecting with "this
+          // account does not have admin access."
           console.error('Failed to load admin profile:', err)
           if (!cancelled) {
             setAdminProfile(null)
