@@ -16,6 +16,7 @@ interface AdminAuthState {
    * false before deciding to redirect, to avoid a false "not logged in"
    * redirect firing before Firebase has restored the session on refresh. */
   loading: boolean
+  authError: string | null
 }
 
 /**
@@ -28,6 +29,7 @@ export function useAdminAuth(): AdminAuthState {
   const [adminUser, setAdminUser] = useState<User | null>(null)
   const [adminProfile, setAdminProfile] = useState<AdminProfile | null>(null)
   const [loading, setLoading] = useState(true)
+  const [authError, setAuthError] = useState<string | null>(null)
 
   useEffect(() => {
     let cancelled = false
@@ -48,10 +50,16 @@ export function useAdminAuth(): AdminAuthState {
 
         try {
           const profile = await getAdminProfile(firebaseUser.uid)
-          if (!cancelled) setAdminProfile(profile)
+          if (!cancelled) {
+            setAdminProfile(profile)
+            setAuthError(profile ? null : 'Firestore admins document not found or role is invalid.')
+          }
         } catch (error) {
           console.error('[AdminAuth] Firestore admin profile read failed:', error)
-          if (!cancelled) setAdminProfile(null)
+          if (!cancelled) {
+            setAdminProfile(null)
+            setAuthError(error instanceof Error ? error.message : String(error))
+          }
         } finally {
           if (!cancelled) setLoading(false)
         }
@@ -81,5 +89,6 @@ export function useAdminAuth(): AdminAuthState {
     adminProfile,
     isAdmin: adminProfile !== null,
     loading,
+    authError,
   }
 }

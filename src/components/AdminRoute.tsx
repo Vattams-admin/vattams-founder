@@ -12,7 +12,7 @@ import { useAdminAuth } from '@/hooks/useAdminAuth'
 // /admin/courses/:id) are left as-is — wrapping them was not requested
 // here and is a one-line change to apply later if wanted.
 export default function AdminRoute({ children }: { children: ReactNode }) {
-  const { adminUser, isAdmin, loading } = useAdminAuth()
+  const { adminUser, adminProfile, isAdmin, loading, authError } = useAdminAuth()
   const location = useLocation()
 
   if (loading) {
@@ -35,11 +35,25 @@ export default function AdminRoute({ children }: { children: ReactNode }) {
 
   if (!isAdmin) {
     return (
-      <Navigate
-        to="/admin/login"
-        state={{ notice: 'This account does not have admin access.' }}
-        replace
-      />
+      <div className="mx-auto max-w-xl px-4 py-20">
+        <h1 className="font-display text-3xl text-gold">
+          Admin verification failed
+        </h1>
+
+        <div className="mt-6 rounded-card border border-red-400/30 bg-red-400/10 p-5 text-sm">
+          <p><strong>Firebase user:</strong> {adminUser ? 'YES' : 'NO'}</p>
+          <p className="mt-2"><strong>UID:</strong> {adminUser?.uid ?? 'NONE'}</p>
+          <p className="mt-2"><strong>Admin profile:</strong> {adminProfile ? 'FOUND' : 'NOT FOUND'}</p>
+          <p className="mt-2"><strong>Reason:</strong> {authError ?? 'Unknown'}</p>
+        </div>
+
+        <a
+          href="/admin/login"
+          className="mt-6 inline-block rounded-card bg-gold px-5 py-3 font-semibold text-ink"
+        >
+          Back to Admin Login
+        </a>
+      </div>
     )
   }
 
