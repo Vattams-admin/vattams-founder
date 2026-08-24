@@ -31,6 +31,7 @@ const PrivacyPolicy = lazy(() => import('@/pages/PrivacyPolicy'))
 const Terms = lazy(() => import('@/pages/Terms'))
 const RefundPolicy = lazy(() => import('@/pages/RefundPolicy'))
 const AdminLogin = lazy(() => import('@/pages/admin/AdminLogin'))
+const AdminDashboard = lazy(() => import('@/pages/admin/AdminDashboard'))
 const AdminPayments = lazy(() => import('@/pages/admin/AdminPayments'))
 const AdminCourses = lazy(() => import('@/pages/admin/AdminCourses'))
 const AdminCourseForm = lazy(() => import('@/pages/admin/AdminCourseForm'))
@@ -84,14 +85,42 @@ export default function App() {
             <Route path="/dashboard" element={<StudentDashboard />} />
             <Route path="/learn/:slug" element={<CourseLearn />} />
 
-            <Route path="/admin" element={<AdminLogin />} />
+            <Route
+              path="/admin"
+              element={
+                <AdminRoute>
+                  <AdminDashboard />
+                </AdminRoute>
+              }
+            />
             {/* Alias for the existing admin login — same component, same
                 Supabase-backed `admins` table check. Not linked from any
                 public nav; only reachable if you know the URL. */}
             <Route path="/admin/login" element={<AdminLogin />} />
-            <Route path="/admin/payments" element={<AdminPayments />} />
-            <Route path="/admin/courses" element={<AdminCourses />} />
-            <Route path="/admin/courses/:id" element={<AdminCourseForm />} />
+            <Route
+              path="/admin/payments"
+              element={
+                <AdminRoute>
+                  <AdminPayments />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/admin/courses"
+              element={
+                <AdminRoute>
+                  <AdminCourses />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/admin/courses/:id"
+              element={
+                <AdminRoute>
+                  <AdminCourseForm />
+                </AdminRoute>
+              }
+            />
             {/* New in Phase 2 — guarded, unlike the existing /admin/*
                 routes above (see components/AdminRoute.tsx). */}
             <Route

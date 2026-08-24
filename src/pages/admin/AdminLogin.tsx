@@ -79,7 +79,7 @@ export default function AdminLogin() {
   // sign in again.
   useEffect(() => {
     if (!loading && adminUser && isAdmin) {
-      navigate('/admin/payments', { replace: true })
+      navigate('/admin', { replace: true })
     }
   }, [loading, adminUser, isAdmin, navigate])
 
@@ -135,7 +135,7 @@ export default function AdminLogin() {
         return
       }
 
-      navigate('/admin/payments')
+      navigate('/admin')
     } catch (err) {
       if (firebaseSignedIn) {
         await firebaseSignOut(firebaseAuth).catch(() => {})
