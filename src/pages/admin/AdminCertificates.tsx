@@ -192,8 +192,8 @@ export default function AdminCertificates() {
                   {refState === 'loading' ? 'Loading…' : 'Select a student'}
                 </option>
                 {students.map((s) => (
-                  <option key={s.firebase_uid} value={s.firebase_uid}>
-                    {s.full_name || s.email || s.firebase_uid}
+                  <option key={s.firebase_uid ?? s.id} value={s.firebase_uid ?? ''}>
+                    {s.full_name || s.email || s.firebase_uid || s.id}
                   </option>
                 ))}
               </select>
