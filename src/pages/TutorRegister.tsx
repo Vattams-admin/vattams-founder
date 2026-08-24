@@ -3,16 +3,13 @@ import { Link } from 'react-router-dom'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { doc, setDoc } from 'firebase/firestore'
 import { firebaseAuth, firestore } from '@/lib/firebase'
-import { syncAcademyTutor } from '@/lib/academyRegistration'
 import { friendlyAuthError } from '@/lib/authErrors'
 
-// No tutor collection, tutor role, or tutor approval flow exists anywhere
-// in this project yet — so this page follows the same Firebase Auth +
-// Firestore pattern as the existing student registration (Auth.tsx),
-// writing to a sibling `tutors` collection instead of `students`, with a
-// role and a pending-approval status. This is the same authentication
-// system the project already uses, applied consistently — not a second
-// backend.
+// Firebase Auth + a `tutors` Firestore collection, mirroring the
+// existing student registration pattern (Auth.tsx) — role fixed to
+// 'tutor' and status starts at pending_approval. This is the single
+// source of truth for tutor applications; the admin panel
+// (/admin/tutors) reads directly from this same collection.
 export default function TutorRegister() {
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
@@ -72,19 +69,6 @@ export default function TutorRegister() {
         setSubmitting(false)
         return
       }
-
-      // Phase 2: also mirror this application into the new
-      // public.academy_tutors table so it shows up in /admin/tutors,
-      // starting at pending_approval / pending / pending as required.
-      // Best-effort — Firebase registration above already succeeded and
-      // is not rolled back if this fails.
-      await syncAcademyTutor({
-        firebaseUid: user.uid,
-        fullName,
-        email: user.email ?? email,
-        qualification,
-        expertise,
-      })
 
       setSubmitted(true)
       setSubmitting(false)
