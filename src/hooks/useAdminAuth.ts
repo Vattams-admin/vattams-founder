@@ -28,9 +28,10 @@ interface AdminAuthState {
 
 /**
  * Tracks Firebase auth state and, if a user is signed in, whether their
- * email has a matching, active role in Supabase's public.admin_users
- * table. Does not redirect or sign anyone out — it only reports state;
- * route guards (e.g. AdminRoute) and AdminLogin decide what to do with it.
+ * uid has a matching, active admin document in Firestore
+ * (admin_users/{uid}). Does not redirect or sign anyone out — it only
+ * reports state; route guards (e.g. AdminRoute) and AdminLogin decide
+ * what to do with it.
  */
 export function useAdminAuth(): AdminAuthState {
   const [adminUser, setAdminUser] = useState<User | null>(null)
@@ -57,14 +58,14 @@ export function useAdminAuth(): AdminAuthState {
         if (!cancelled) setAdminUser(firebaseUser)
 
         try {
-          const profile = await getAdminProfile(firebaseUser.email)
+          const profile = await getAdminProfile(firebaseUser.uid)
           if (!cancelled) {
             setAdminProfile(profile)
             setProfileError(false)
           }
         } catch (err) {
-          // The admin_users lookup failed (offline, Supabase unavailable,
-          // RLS misconfiguration, etc.) — this is NOT the same thing as
+          // The admin_users lookup failed (offline, Firestore rules
+          // blocking the read, etc.) — this is NOT the same thing as
           // "looked it up and confirmed not an admin." Keep adminProfile
           // null (so isAdmin stays false, the safe default) but flag
           // profileError so AdminRoute/AdminLogin can show a
