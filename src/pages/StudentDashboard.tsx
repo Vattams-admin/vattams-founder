@@ -1,57 +1,47 @@
 import { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
-import { supabase } from '@/lib/supabase'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { firestore } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
-import type { Payment } from '@/types/database'
-
-interface EnrolmentRow {
-  id: string
-  status: string
-  courses: { name: string; slug: string | null } | null
-}
+import type { Enrolment, Payment } from '@/types/database'
 
 type SectionState = 'loading' | 'loaded' | 'error'
 
 export default function StudentDashboard() {
   const { user, loading } = useAuth()
-  const [enrolments, setEnrolments] = useState<EnrolmentRow[]>([])
+  const [enrolments, setEnrolments] = useState<Enrolment[]>([])
   const [enrolmentsState, setEnrolmentsState] = useState<SectionState>('loading')
   const [payments, setPayments] = useState<Payment[]>([])
   const [paymentsState, setPaymentsState] = useState<SectionState>('loading')
 
-  function loadEnrolments(userId: string) {
+  async function loadEnrolments(userId: string) {
     setEnrolmentsState('loading')
-    supabase
-      .from('course_enrolments')
-      .select('id, status, courses(name, slug)')
-      .eq('student_id', userId)
-      .then(({ data, error }) => {
-        if (error) {
-          console.error('Failed to load enrolments:', error)
-          setEnrolmentsState('error')
-          return
-        }
-        setEnrolments((data as unknown as EnrolmentRow[]) ?? [])
-        setEnrolmentsState('loaded')
-      })
+    try {
+      // course_name / course_slug are denormalized onto the enrolment
+      // doc when it's created (see AdminPayments.tsx) — no join needed.
+      const q = query(collection(firestore, 'enrolments'), where('student_id', '==', userId))
+      const snapshot = await getDocs(q)
+      setEnrolments(snapshot.docs.map((d) => ({ id: d.id, ...d.data() })) as Enrolment[])
+      setEnrolmentsState('loaded')
+    } catch (err) {
+      console.error('Failed to load enrolments:', err)
+      setEnrolmentsState('error')
+    }
   }
 
-  function loadPayments(userId: string) {
+  async function loadPayments(userId: string) {
     setPaymentsState('loading')
-    supabase
-      .from('payments')
-      .select('*')
-      .eq('student_id', userId)
-      .order('created_at', { ascending: false })
-      .then(({ data, error }) => {
-        if (error) {
-          console.error('Failed to load payment history:', error)
-          setPaymentsState('error')
-          return
-        }
-        setPayments((data as unknown as Payment[]) ?? [])
-        setPaymentsState('loaded')
-      })
+    try {
+      const q = query(collection(firestore, 'payments'), where('student_id', '==', userId))
+      const snapshot = await getDocs(q)
+      const data = snapshot.docs.map((d) => ({ id: d.id, ...d.data() })) as Payment[]
+      data.sort((a, b) => b.created_at.localeCompare(a.created_at))
+      setPayments(data)
+      setPaymentsState('loaded')
+    } catch (err) {
+      console.error('Failed to load payment history:', err)
+      setPaymentsState('error')
+    }
   }
 
   useEffect(() => {
@@ -88,10 +78,10 @@ export default function StudentDashboard() {
         <div className="mt-4 grid gap-3">
           {enrolmentsState === 'loaded' && enrolments.map((e) => (
             <div key={e.id} className="card flex items-center justify-between p-4">
-              {e.status === 'active' && e.courses?.slug ? (
-                <a href={`/learn/${e.courses.slug}`} className="hover:text-gold-bright">{e.courses?.name ?? 'Course'}</a>
+              {e.status === 'active' && e.course_slug ? (
+                <a href={`/learn/${e.course_slug}`} className="hover:text-gold-bright">{e.course_name ?? 'Course'}</a>
               ) : (
-                <span>{e.courses?.name ?? 'Course'}</span>
+                <span>{e.course_name ?? 'Course'}</span>
               )}
               <span
                 className={`rounded-full px-2 py-0.5 text-xs uppercase tracking-wide ${
@@ -144,4 +134,3 @@ export default function StudentDashboard() {
     </div>
   )
 }
-
