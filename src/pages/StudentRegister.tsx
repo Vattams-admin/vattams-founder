@@ -3,14 +3,14 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { doc, setDoc } from 'firebase/firestore'
 import { firebaseAuth, firestore } from '@/lib/firebase'
-import { syncAcademyStudent } from '@/lib/academyRegistration'
 import { friendlyAuthError } from '@/lib/authErrors'
 
 // Same Firebase Auth + Firestore `students` collection used by the
 // existing generic Auth.tsx register flow — this page does not create a
 // second authentication system, it only adds a clearer, student-specific
 // form in front of the same logic, plus a `role` field so the account is
-// unambiguously a student record going forward.
+// unambiguously a student record going forward. This is also the single
+// source of truth read by the admin panel (/admin/students).
 export default function StudentRegister() {
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
@@ -70,16 +70,6 @@ export default function StudentRegister() {
         setSubmitting(false)
         return
       }
-
-      // Phase 2: also mirror this registration into the new
-      // public.academy_students table so it shows up in /admin/students.
-      // Best-effort — Firebase registration above already succeeded and
-      // is not rolled back if this fails.
-      await syncAcademyStudent({
-        firebaseUid: user.uid,
-        fullName,
-        email: user.email ?? email,
-      })
 
       navigate(redirectTo)
     } catch (err) {
