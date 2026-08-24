@@ -1,3 +1,10 @@
+// Firestore-backed types for the whole app (courses, payments,
+// enrolments, certificates). Field names match the collections already
+// read by the public site (Courses.tsx, CourseDetail.tsx, Home.tsx,
+// CourseLearn.tsx) — those pages moved to Firestore first, and this
+// migration brings the admin panel, payments, and student dashboard in
+// line with the same collections instead of a separate Supabase schema.
+
 export interface Course {
   id: string
   category_id: string | null
@@ -15,36 +22,37 @@ export interface Course {
   is_free: boolean
   is_published: boolean
   is_featured: boolean
-}
-
-export interface CoursePricing {
-  course_id: string
-  base_fee: number
-  discount_amount: number
-  final_price: number
-  is_free: boolean
+  created_at?: string
 }
 
 export interface Payment {
   id: string
   student_id: string
   course_id: string
+  // Denormalized at creation time so payment/enrolment lists can render
+  // without a join — Firestore has none, so the alternative is an extra
+  // read per row on every list render.
+  course_name: string | null
+  student_name: string | null
   amount: number
   status: 'pending' | 'submitted' | 'approved' | 'rejected'
   utr_reference: string | null
   submitted_at: string | null
   verified_at: string | null
+  verified_by: string | null
   admin_notes: string | null
   created_at: string
 }
 
-export interface StudentProfile {
+export interface Enrolment {
   id: string
-  full_name: string
-  mobile: string | null
-  city: string | null
-  state: string | null
-  country: string | null
+  student_id: string
+  course_id: string
+  course_name: string | null
+  course_slug: string | null
+  status: 'pending' | 'active' | 'revoked'
+  enrolled_at: string | null
+  created_at: string
 }
 
 export interface CertificateVerification {
@@ -54,48 +62,4 @@ export interface CertificateVerification {
   certificate_type: string
   issued_at: string
   is_valid: boolean
-}
-
-/*
- * Flexible Supabase schema for the current Academia launch slice.
- *
- * This keeps TypeScript from incorrectly inferring tables as `never`
- * while the final generated Supabase schema is not yet installed.
- */
-
-type AnyRow = Record<string, any>
-
-type AnyTable = {
-  Row: AnyRow
-  Insert: AnyRow
-  Update: AnyRow
-  Relationships: []
-}
-
-type AnyTables = {
-  [table: string]: AnyTable
-}
-
-export type Database = {
-  public: {
-    Tables: AnyTables
-    Views: {
-      [view: string]: {
-        Row: AnyRow
-        Relationships: []
-      }
-    }
-    Functions: {
-      [fn: string]: {
-        Args: AnyRow
-        Returns: any
-      }
-    }
-    Enums: {
-      [enumName: string]: string
-    }
-    CompositeTypes: {
-      [typeName: string]: AnyRow
-    }
-  }
 }
