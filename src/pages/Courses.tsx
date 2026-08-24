@@ -4,6 +4,7 @@ import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
 import CourseCard from '@/components/CourseCard'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
+import { CATALOG_CATEGORIES } from '@/lib/catalog'
 
 type LoadState = 'loading' | 'loaded' | 'error'
 
@@ -19,6 +20,7 @@ export default function Courses() {
   const [state, setState] = useState<LoadState>('loading')
   const [searchTerm, setSearchTerm] = useState('')
   const [levelFilter, setLevelFilter] = useState<string>('all')
+  const [categoryFilter, setCategoryFilter] = useState<string>('all')
   const [retryToken, setRetryToken] = useState(0)
 
   useEffect(() => {
@@ -38,10 +40,16 @@ export default function Courses() {
 
         if (cancelled) return
 
-        const rows = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        })) as Course[]
+        // VATTAMS Competitions live in the same `courses` collection
+        // (same pricing/publish architecture) but are entered from the
+        // dedicated /competitions page, not bought here as a tutor-led
+        // course — so they're excluded from this grid.
+        const rows = snapshot.docs
+          .map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }))
+          .filter((c) => !(c as Course).is_competition) as Course[]
 
         rows.sort((a, b) => {
           if (a.is_featured === b.is_featured) return 0
@@ -65,10 +73,9 @@ export default function Courses() {
   }, [retryToken])
 
   // Only built from levels that actually appear in the loaded data — no
-  // invented categories, no hardcoded taxonomy. The `courses` table has no
-  // reliable, admin-populated category field yet (category_id exists on
-  // the type but nothing in the current data-entry flow sets it), so level
-  // is the one real, consistently-populated filter dimension available.
+  // invented categories, no hardcoded taxonomy. Level is populated on
+  // some rows and not others, so this list only ever shows values that
+  // are actually in use.
   const availableLevels = useMemo(() => {
     const found = new Set<string>()
     for (const c of courses) {
@@ -77,11 +84,24 @@ export default function Courses() {
     return Array.from(found) as NonNullable<Course['level']>[]
   }, [courses])
 
+  // Same idea for category_id, restricted to the known catalog category
+  // slugs (src/lib/catalog.ts) — older/unrelated rows with no category_id
+  // or an unrecognized value simply don't add a chip, they still show up
+  // under "All categories".
+  const availableCategories = useMemo(() => {
+    const found = new Set<string>()
+    for (const c of courses) {
+      if (c.category_id) found.add(c.category_id)
+    }
+    return CATALOG_CATEGORIES.filter((cat) => found.has(cat.id))
+  }, [courses])
+
   const filteredCourses = useMemo(() => {
     const term = searchTerm.trim().toLowerCase()
 
     return courses.filter((c) => {
       if (levelFilter !== 'all' && c.level !== levelFilter) return false
+      if (categoryFilter !== 'all' && c.category_id !== categoryFilter) return false
 
       if (!term) return true
 
@@ -92,7 +112,7 @@ export default function Courses() {
 
       return haystack.includes(term)
     })
-  }, [courses, searchTerm, levelFilter])
+  }, [courses, searchTerm, levelFilter, categoryFilter])
 
   return (
     <div>
@@ -156,6 +176,19 @@ export default function Courses() {
           )}
         </div>
 
+        {availableCategories.length > 0 && (
+          <div className="mt-4 flex flex-wrap items-center gap-2">
+            <FilterChip active={categoryFilter === 'all'} onClick={() => setCategoryFilter('all')}>
+              All categories
+            </FilterChip>
+            {availableCategories.map((cat) => (
+              <FilterChip key={cat.id} active={categoryFilter === cat.id} onClick={() => setCategoryFilter(cat.id)}>
+                {cat.label}
+              </FilterChip>
+            ))}
+          </div>
+        )}
+
         {/* Error state */}
         {state === 'error' && (
           <div className="mt-10 card border-danger/40 p-8 text-center">
@@ -194,6 +227,7 @@ export default function Courses() {
               onClick={() => {
                 setSearchTerm('')
                 setLevelFilter('all')
+                setCategoryFilter('all')
               }}
               className="btn-secondary mt-5"
             >

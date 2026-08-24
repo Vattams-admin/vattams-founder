@@ -4,6 +4,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
+import { getCategoryLabel } from '@/lib/catalog'
 
 type LoadState = 'loading' | 'loaded' | 'not-found' | 'error'
 
@@ -96,16 +97,26 @@ export default function CourseDetail() {
 
   const finalPrice = Math.max(course.base_fee - course.discount_amount, 0)
   const displayName = getCourseDisplayName(course.name)
+  const categoryLabel = getCategoryLabel(course.category_id)
 
   return (
     <div>
       <section className="relative overflow-hidden border-b border-gold/15">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_-10%,rgba(201,162,75,0.16),transparent_50%),radial-gradient(circle_at_85%_0%,rgba(28,58,102,0.5),transparent_45%)]" />
         <div className="relative mx-auto max-w-3xl px-4 py-14 sm:px-6 sm:py-20">
-          {course.level && (
-            <span className="w-fit rounded-full border border-gold/30 px-2 py-0.5 text-[11px] uppercase tracking-wide text-gold">
-              {course.level}
-            </span>
+          {(categoryLabel || course.level) && (
+            <div className="flex flex-wrap gap-1.5">
+              {categoryLabel && (
+                <span className="w-fit rounded-full border border-white/25 px-2 py-0.5 text-[11px] uppercase tracking-wide text-parchment/80">
+                  {categoryLabel}
+                </span>
+              )}
+              {course.level && (
+                <span className="w-fit rounded-full border border-gold/30 px-2 py-0.5 text-[11px] uppercase tracking-wide text-gold">
+                  {course.level}
+                </span>
+              )}
+            </div>
           )}
           <h1 className="mt-4 font-display text-3xl font-semibold leading-tight sm:text-4xl">
             {displayName}
@@ -157,7 +168,7 @@ export default function CourseDetail() {
             </div>
 
             <Link to={`/pay/${course.id}`} className="btn-primary mt-4 flex w-full justify-center">
-              Enrol now
+              {course.is_competition ? 'Register now' : 'Enrol now'}
             </Link>
             <p className="mt-3 text-center text-xs text-slate-muted">
               You&apos;ll be asked to log in or register first if you haven&apos;t already.

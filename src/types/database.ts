@@ -7,6 +7,12 @@
 
 export interface Course {
   id: string
+  // Historically always null — no admin UI ever set this until the
+  // catalog seed (see src/lib/catalog.ts). Kept as a plain string (not a
+  // foreign key) because there is no separate Firestore `categories`
+  // collection in this project; CATALOG_CATEGORIES in src/lib/catalog.ts
+  // is the single source of truth for the three known slugs, but the
+  // field stays a loose string so older/unrelated rows never fail to type.
   category_id: string | null
   name: string
   slug: string
@@ -22,6 +28,12 @@ export interface Course {
   is_free: boolean
   is_published: boolean
   is_featured: boolean
+  // New, additive field (default/absent = false = ordinary course).
+  // Marks a catalog row as a VATTAMS Competition entry so it's excluded
+  // from the public Courses grid/purchase-as-a-course flow and listed on
+  // /competitions instead, while still reusing the same courses
+  // collection, pricing, and enrolment architecture.
+  is_competition?: boolean
   created_at?: string
 }
 

@@ -4,6 +4,7 @@ import { collection, deleteDoc, doc, getDocs, updateDoc } from 'firebase/firesto
 import { firestore } from '@/lib/firebase'
 import AdminNav from '@/components/AdminNav'
 import type { Course } from '@/types/database'
+import { getCategoryLabel } from '@/lib/catalog'
 
 type LoadState = 'loading' | 'loaded' | 'error'
 
@@ -119,10 +120,18 @@ export default function AdminCourses() {
           filtered.map((course) => (
             <div key={course.id} className="card flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between">
               <div className="text-sm">
-                <p className="font-medium">{course.name}</p>
+                <p className="font-medium">
+                  {course.name}
+                  {course.is_competition && (
+                    <span className="ml-2 rounded-full bg-gold/15 px-2 py-0.5 text-[10px] uppercase tracking-wide text-gold">
+                      Competition
+                    </span>
+                  )}
+                </p>
                 <p className="text-slate-muted">
                   /{course.slug} · {course.is_free ? 'Free' : `₹${course.base_fee.toLocaleString('en-IN')}`}
                   {course.instructor_name ? ` · ${course.instructor_name}` : ''}
+                  {getCategoryLabel(course.category_id) ? ` · ${getCategoryLabel(course.category_id)}` : ''}
                 </p>
               </div>
               <div className="flex items-center gap-2">

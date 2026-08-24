@@ -3,12 +3,15 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { addDoc, collection, doc, getDoc, serverTimestamp, updateDoc } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
+import { CATALOG_CATEGORIES, type CatalogCategoryId } from '@/lib/catalog'
 
 const emptyForm = {
   name: '', slug: '', short_description: '', description: '',
   level: 'beginner' as NonNullable<Course['level']>,
   instructor_name: '', duration_text: '', cover_image_url: '',
-  base_fee: 0, discount_amount: 0, is_free: false
+  base_fee: 0, discount_amount: 0, is_free: false,
+  category_id: '' as CatalogCategoryId | '',
+  is_competition: false,
 }
 
 function slugify(s: string) {
@@ -47,7 +50,9 @@ export default function AdminCourseForm() {
           description: c.description ?? '', level: c.level ?? 'beginner',
           instructor_name: c.instructor_name ?? '', duration_text: c.duration_text ?? '',
           cover_image_url: c.cover_image_url ?? '', base_fee: c.base_fee,
-          discount_amount: c.discount_amount, is_free: c.is_free
+          discount_amount: c.discount_amount, is_free: c.is_free,
+          category_id: (c.category_id as CatalogCategoryId | null) ?? '',
+          is_competition: c.is_competition ?? false,
         })
         setLoading(false)
       })
@@ -74,7 +79,7 @@ export default function AdminCourseForm() {
         const payload = {
           ...form,
           slug: form.slug || slugify(form.name),
-          category_id: null,
+          category_id: form.category_id || null,
           preview_video_url: null,
           is_published: publish ?? false,
           is_featured: false,
@@ -85,6 +90,7 @@ export default function AdminCourseForm() {
         const payload = {
           ...form,
           slug: form.slug || slugify(form.name),
+          category_id: form.category_id || null,
           ...(publish !== undefined ? { is_published: publish } : {})
         }
         await updateDoc(doc(firestore, 'courses', id as string), payload)
@@ -144,6 +150,31 @@ export default function AdminCourseForm() {
             <input value={form.duration_text} onChange={(e) => update('duration_text', e.target.value)} placeholder="e.g. 6 weeks" className="input" />
           </Field>
         </div>
+        <div className="grid grid-cols-2 gap-4">
+          <Field label="Category">
+            <select
+              value={form.category_id}
+              onChange={(e) => update('category_id', e.target.value as CatalogCategoryId | '')}
+              className="input"
+            >
+              <option value="">No category</option>
+              {CATALOG_CATEGORIES.map((cat) => (
+                <option key={cat.id} value={cat.id}>{cat.label}</option>
+              ))}
+            </select>
+          </Field>
+          <label className="flex items-center gap-2 self-end pb-2 text-sm">
+            <input
+              type="checkbox"
+              checked={form.is_competition}
+              onChange={(e) => update('is_competition', e.target.checked)}
+            />
+            This is a VATTAMS Competition entry
+          </label>
+        </div>
+        <p className="-mt-2 text-xs text-slate-muted">
+          Competition entries are excluded from the public Courses page and listed on /competitions instead.
+        </p>
         <Field label="Instructor name">
           <input value={form.instructor_name} onChange={(e) => update('instructor_name', e.target.value)} className="input" />
         </Field>
