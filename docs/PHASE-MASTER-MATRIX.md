@@ -7,7 +7,7 @@ no UI/logic yet) · **Not started**
 |---|---|---|---|---|
 | Public course catalogue | Done | Done | RLS: public read published only | **Done** |
 | Course detail + live pricing | Done | Done (view `course_pricing`) | — | **Done** |
-| Student auth (signup/login) | Done | Supabase Auth + `students` table | RLS: own row only | **Done** |
+| Student auth (signup/login) | Done | Firebase Auth + `students` collection | Firestore rules: own doc only | **Done** |
 | Free-course enrolment | Done | Done | RLS on `course_enrolments` | **Done** |
 | Paid enrolment via UPI + UTR | Done | `payments` table | RLS: student inserts/reads own; admin verifies | **Done** |
 | Auto-activation on approval | — | Postgres trigger | `security definer` function | **Done** |

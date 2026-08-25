@@ -34,7 +34,6 @@ const AdminLogin = lazy(() => import('@/pages/admin/AdminLogin'))
 const AdminPayments = lazy(() => import('@/pages/admin/AdminPayments'))
 const AdminCourses = lazy(() => import('@/pages/admin/AdminCourses'))
 const AdminCourseForm = lazy(() => import('@/pages/admin/AdminCourseForm'))
-const AdminCourseMaterials = lazy(() => import('@/pages/admin/AdminCourseMaterials'))
 const AdminStudents = lazy(() => import('@/pages/admin/AdminStudents'))
 const AdminTutors = lazy(() => import('@/pages/admin/AdminTutors'))
 const AdminRoute = lazy(() => import('@/components/AdminRoute'))
@@ -96,14 +95,6 @@ export default function App() {
             <Route path="/admin/payments" element={<AdminPayments />} />
             <Route path="/admin/courses" element={<AdminCourses />} />
             <Route path="/admin/courses/:id" element={<AdminCourseForm />} />
-            <Route
-              path="/admin/courses/:id/materials"
-              element={
-                <AdminRoute>
-                  <AdminCourseMaterials />
-                </AdminRoute>
-              }
-            />
             {/* New in Phase 2 — guarded, unlike the existing /admin/*
                 routes above (see components/AdminRoute.tsx). */}
             <Route

@@ -10,11 +10,10 @@ end-to-end flow — not a mockup, not stubbed pages.
 **Working right now:**
 - Public course catalogue (published courses only, live pricing)
 - Course detail → enrol → UPI payment (QR + deep link) → UTR submission
-- Admin payment verification queue → approving auto-activates the enrolment
-  (via a Postgres trigger, not frontend logic)
+- Admin payment verification queue → approving activates the enrolment
 - Student dashboard (enrolments + payment history)
-- Public certificate verification by code (RPC-based, no student data leak)
-- Full Row Level Security on every table — nothing is open by accident
+- Public certificate verification by code (no student data leak)
+- Firestore security rules on every collection — nothing is open by accident
 - PWA scaffold (manifest, service worker via vite-plugin-pwa)
 
 **Not built yet** (see `docs/PHASE-MASTER-MATRIX.md`):
@@ -30,26 +29,28 @@ end-to-end flow — not a mockup, not stubbed pages.
 
 This was a deliberate call: a real, secure, working slice beats a large
 pile of stubbed screens with fake data. Everything above is a good base to
-build the rest on top of — same schema conventions, same RLS pattern, same
-"price lives in the database" rule throughout.
+build the rest on top of — same Firestore data conventions, same security
+rules pattern throughout.
 
 ## Setup
 
 ```bash
 npm install
-cp .env.example .env.local   # fill in your Supabase project + UPI VPA
+cp .env.example .env.local   # fill in your Firebase project + UPI VPA
 ```
 
-Create a Supabase project, then run the migration:
+Create a Firebase project (Auth + Firestore + Storage enabled), grab the web
+app config from Firebase Console → Project settings → General → Your apps →
+SDK setup and configuration, and fill in the `VITE_FIREBASE_*` values in
+`.env.local`. Deploy the Firestore security rules:
 
 ```bash
-supabase link --project-ref <your-project-ref>
-supabase db push
+firebase deploy --only firestore:rules
 ```
 
 Create your first admin manually (sign up as a normal user via `/register`,
-then insert a matching row into `admins` with that user's `id` from the SQL
-editor — there's intentionally no self-service admin signup).
+then set that user's role/admin flag directly in the Firestore console —
+there's intentionally no self-service admin signup).
 
 ```bash
 npm run dev
@@ -66,4 +67,4 @@ npm run dev
 
 - `docs/PHASE-MASTER-MATRIX.md` — honest status per feature area
 - `docs/PAYMENT-GUIDE.md` — how the UPI/UTR flow works end to end
-- `supabase/migrations/0001_init.sql` — schema + RLS, read this before extending it
+- `firestore.rules` — security rules, read this before extending the schema

@@ -30,7 +30,7 @@ export default defineConfig({
         navigateFallbackDenylist: [/^\/api/, /^\/auth/],
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/.*\.supabase\.co\/storage\/v1\/object\/public\//,
+            urlPattern: /^https:\/\/firebasestorage\.googleapis\.com\/v0\/b\/.*\/o\//,
             handler: 'CacheFirst',
             options: {
               cacheName: 'vattams-public-assets',
