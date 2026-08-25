@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.vite/
+.DS_Store
+*.log
+
+# TypeScript build output
+.tsc-out/
+
+# TypeScript incremental build info
+*.tsbuildinfo
