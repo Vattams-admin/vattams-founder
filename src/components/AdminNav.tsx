@@ -5,7 +5,7 @@ import { useAdminAuth } from '@/hooks/useAdminAuth'
 export default function AdminNav({
   active
 }: {
-  active: 'payments' | 'courses' | 'students' | 'tutors' | 'certificates' | 'notifications'
+  active: 'payments' | 'courses' | 'students' | 'tutors' | 'certificates' | 'notifications' | 'live-sessions'
 }) {
   // Notification recipient is resolved here (not passed in as a prop) so
   // every existing call site (AdminPayments, AdminCourses, AdminStudents,

@@ -48,6 +48,9 @@ const AdminCertificates = lazy(() => import('@/pages/admin/AdminCertificates'))
 const AdminCourseMaterials = lazy(() => import('@/pages/admin/AdminCourseMaterials'))
 const Notifications = lazy(() => import('@/pages/Notifications'))
 const AdminNotifications = lazy(() => import('@/pages/admin/AdminNotifications'))
+const LiveSession = lazy(() => import('@/pages/LiveSession'))
+const TutorLiveSessions = lazy(() => import('@/pages/tutor/TutorLiveSessions'))
+const AdminLiveSessions = lazy(() => import('@/pages/admin/AdminLiveSessions'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 
 function PageFallback() {
@@ -185,7 +188,19 @@ export default function App() {
             {/* Exam-taking UI, competitions backend, materials, assignments,
                 certificate issuance etc. are the next build passes — see
                 docs/PHASE-MASTER-MATRIX.md */}
-            <Route path="*" element={<NotFound />} />
+            {/* Classroom / Live Sessions */}
+      <Route path="/live-session/:sessionId" element={<LiveSession />} />
+      <Route path="/tutor/live-sessions" element={<TutorLiveSessions />} />
+      <Route
+        path="/admin/live-sessions"
+        element={
+          <AdminRoute>
+            <AdminLiveSessions />
+          </AdminRoute>
+        }
+      />
+
+      <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </main>
