@@ -30,6 +30,11 @@ const Contact = lazy(() => import('@/pages/Contact'))
 const PrivacyPolicy = lazy(() => import('@/pages/PrivacyPolicy'))
 const Terms = lazy(() => import('@/pages/Terms'))
 const RefundPolicy = lazy(() => import('@/pages/RefundPolicy'))
+const TutorVerificationPolicy = lazy(() => import('@/pages/TutorVerificationPolicy'))
+const StudentParentGuidelines = lazy(() => import('@/pages/StudentParentGuidelines'))
+const TutorCodeOfConduct = lazy(() => import('@/pages/TutorCodeOfConduct'))
+const PaymentEnrollmentTerms = lazy(() => import('@/pages/PaymentEnrollmentTerms'))
+const CertificateCompetitionTerms = lazy(() => import('@/pages/CertificateCompetitionTerms'))
 const AdminLogin = lazy(() => import('@/pages/admin/AdminLogin'))
 const AdminPayments = lazy(() => import('@/pages/admin/AdminPayments'))
 const AdminCourses = lazy(() => import('@/pages/admin/AdminCourses'))
@@ -76,6 +81,11 @@ export default function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/tutor-verification-policy" element={<TutorVerificationPolicy />} />
+            <Route path="/student-parent-guidelines" element={<StudentParentGuidelines />} />
+            <Route path="/tutor-code-of-conduct" element={<TutorCodeOfConduct />} />
+            <Route path="/payment-enrollment-terms" element={<PaymentEnrollmentTerms />} />
+            <Route path="/certificate-competition-terms" element={<CertificateCompetitionTerms />} />
 
             <Route path="/login" element={<Auth mode="login" />} />
             <Route path="/register" element={<Auth mode="register" />} />

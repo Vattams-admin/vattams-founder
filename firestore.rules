@@ -100,6 +100,76 @@ service cloud.firestore {
     // is intentionally NOT covered here — see the warning at the top of
     // this file. Merge in your existing rules for those collections
     // before deploying.
+    // ------------------------------------------------------------------
+    // Notifications
+    // ------------------------------------------------------------------
+    match /notifications/{notificationId} {
+
+      function isApprovedTutor() {
+        return isSignedIn() &&
+          exists(/databases/$(database)/documents/tutors/$(request.auth.uid)) &&
+          get(/databases/$(database)/documents/tutors/$(request.auth.uid)).data.status == 'approved';
+      }
+
+      function isOwnNotification() {
+        return isSignedIn() &&
+          resource.data.recipient_uid == request.auth.uid;
+      }
+
+      function isAdminBroadcast() {
+        return resource.data.recipient_uid == null &&
+          resource.data.recipient_role == 'admin';
+      }
+
+      function isTutorBroadcast() {
+        return resource.data.recipient_uid == null &&
+          resource.data.recipient_role == 'tutor';
+      }
+
+      allow read: if isOwnNotification()
+        || (isAdminBroadcast() && isAdmin())
+        || (isTutorBroadcast() && isApprovedTutor());
+
+      allow create: if isSignedIn()
+        && request.resource.data.is_read == false
+        && request.resource.data.keys().hasAll([
+          'recipient_uid',
+          'recipient_role',
+          'type',
+          'title',
+          'message',
+          'is_read',
+          'created_at'
+        ])
+        && (
+          isAdmin()
+          || (
+            request.resource.data.recipient_uid == request.auth.uid
+            && request.resource.data.type == 'registration_success'
+          )
+          || (
+            request.resource.data.recipient_uid == null
+            && request.resource.data.recipient_role == 'admin'
+            && request.resource.data.type in [
+              'new_student_registration',
+              'tutor_activity',
+              'payment_received'
+            ]
+          )
+        );
+
+      allow update: if (
+          isOwnNotification()
+          || (isAdminBroadcast() && isAdmin())
+          || (isTutorBroadcast() && isApprovedTutor())
+        )
+        && request.resource.data.diff(resource.data)
+             .affectedKeys()
+             .hasOnly(['is_read']);
+
+      allow delete: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }
