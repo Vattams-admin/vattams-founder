@@ -37,6 +37,8 @@ const AdminCourseForm = lazy(() => import('@/pages/admin/AdminCourseForm'))
 const AdminStudents = lazy(() => import('@/pages/admin/AdminStudents'))
 const AdminTutors = lazy(() => import('@/pages/admin/AdminTutors'))
 const AdminRoute = lazy(() => import('@/components/AdminRoute'))
+const AdminCertificates = lazy(() => import('@/pages/admin/AdminCertificates'))
+const AdminCourseMaterials = lazy(() => import('@/pages/admin/AdminCourseMaterials'))
 const Notifications = lazy(() => import('@/pages/Notifications'))
 const AdminNotifications = lazy(() => import('@/pages/admin/AdminNotifications'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
@@ -92,11 +94,56 @@ export default function App() {
                 Supabase-backed `admins` table check. Not linked from any
                 public nav; only reachable if you know the URL. */}
             <Route path="/admin/login" element={<AdminLogin />} />
-            <Route path="/admin/payments" element={<AdminPayments />} />
-            <Route path="/admin/courses" element={<AdminCourses />} />
-            <Route path="/admin/courses/:id" element={<AdminCourseForm />} />
-            {/* New in Phase 2 — guarded, unlike the existing /admin/*
-                routes above (see components/AdminRoute.tsx). */}
+            {/* All /admin/* routes below are now guarded by AdminRoute —
+                previously /admin/payments, /admin/courses and
+                /admin/courses/:id rendered for anyone who loaded the URL,
+                signed in or not; actual data access still depended on
+                Firestore rules, but the page shell itself was reachable.
+                AdminCertificates and AdminCourseMaterials existed as files
+                with no <Route> at all (dead code, unreachable even for an
+                admin) — added here so the "Certificates" link in
+                AdminNav.tsx and the course materials workflow resolve
+                instead of 404ing. */}
+            <Route
+              path="/admin/payments"
+              element={
+                <AdminRoute>
+                  <AdminPayments />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/admin/courses"
+              element={
+                <AdminRoute>
+                  <AdminCourses />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/admin/courses/:id"
+              element={
+                <AdminRoute>
+                  <AdminCourseForm />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/admin/courses/:id/materials"
+              element={
+                <AdminRoute>
+                  <AdminCourseMaterials />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/admin/certificates"
+              element={
+                <AdminRoute>
+                  <AdminCertificates />
+                </AdminRoute>
+              }
+            />
             <Route
               path="/admin/students"
               element={
