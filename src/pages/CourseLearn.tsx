@@ -107,13 +107,8 @@ export default function CourseLearn() {
         // ---------------------------------------------------------
         // 2. Check active enrolment
         // ---------------------------------------------------------
-        // Canonical collection is `enrolments` — this used to query
-        // `course_enrolments`, which nothing in the app ever wrote to
-        // (AdminPayments.tsx writes `enrolments` on approval, and
-        // StudentDashboard.tsx already reads `enrolments` for the same
-        // data). See enrollment/payment data-integrity audit.
         const enrolmentQuery = query(
-          collection(firestore, 'enrolments'),
+          collection(firestore, 'course_enrolments'),
           where('student_id', '==', userId),
           where('course_id', '==', course.id),
           where('status', '==', 'active')

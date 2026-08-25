@@ -21,16 +21,6 @@
       transition-duration: 0.01ms !important;
     }
   }
-  /* Only matters once installed as a standalone PWA (status bar, gesture
-     bar, notches) — regular browser tabs already handle their own chrome,
-     so this is scoped to display-mode: standalone rather than applied
-     globally. */
-  @media (display-mode: standalone) {
-    body {
-      padding-top: env(safe-area-inset-top);
-      padding-bottom: env(safe-area-inset-bottom);
-    }
-  }
 }
 
 @layer components {

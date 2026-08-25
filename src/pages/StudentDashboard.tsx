@@ -4,6 +4,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
 import type { Enrolment, Payment } from '@/types/database'
+import NextLiveSessionCard from '@/components/live-session/NextLiveSessionCard'
 
 type SectionState = 'loading' | 'loaded' | 'error'
 
@@ -56,6 +57,10 @@ export default function StudentDashboard() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
       <h1 className="font-display text-3xl">Your learning</h1>
+
+      <section className="mt-6">
+        <NextLiveSessionCard studentUid={user.id} />
+      </section>
 
       <section className="mt-8">
         <h2 className="font-display text-xl text-gold-bright">Enrolled courses</h2>
