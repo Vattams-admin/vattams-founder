@@ -15,3 +15,22 @@ dist/
 src_backup_before_supabase_remove/
 dist/
 node_modules/
+# Dependencies
+node_modules/
+**/node_modules/
+
+# npm / Termux caches
+.npm/
+.npm-cache/
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS / editor files
+.DS_Store
+Thumbs.db
