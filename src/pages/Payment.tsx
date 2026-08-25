@@ -18,6 +18,7 @@ import { firestore } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
 import type { Course, Payment } from '@/types/database'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
+import { createAdminBroadcast } from '@/lib/notifications'
 
 const PAYEE_NAME = import.meta.env.VITE_UPI_PAYEE_NAME || 'VATTAMS ACADEMIA'
 const PAYEE_VPA = import.meta.env.VITE_UPI_VPA as string | undefined
@@ -133,6 +134,19 @@ export default function Payment() {
         submitted_at: new Date().toISOString()
       })
       setPayment({ ...payment, utr_reference: utr.trim(), status: 'submitted' })
+
+      // Lets the admin team know a payment is waiting on
+      // /admin/payments without needing to poll the page. Never blocks
+      // or fails the submission itself — see createNotification() in
+      // src/lib/notifications.ts.
+      void createAdminBroadcast({
+        type: 'payment_received',
+        title: 'Payment awaiting verification',
+        message: `${user!.displayName ?? user!.email ?? 'A student'} submitted a UTR for ${course?.name ?? 'a course'} (₹${payment.amount.toLocaleString('en-IN')}).`,
+        related_id: payment.id,
+        related_type: 'payment',
+        action_url: '/admin/payments',
+      })
     } catch (err) {
       console.error('Unexpected error submitting payment reference:', err)
       setError('Unable to submit right now. Please check your connection and try again.')

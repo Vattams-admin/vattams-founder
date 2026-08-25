@@ -3,6 +3,8 @@ import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { signOut } from 'firebase/auth'
 import { firebaseAuth } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
+import { useUserRole } from '@/hooks/useUserRole'
+import NotificationBell from '@/components/NotificationBell'
 
 const navItems = [
   { to: '/', label: 'Home', end: true },
@@ -16,6 +18,7 @@ const navItems = [
 
 export default function Navbar() {
   const { user, loading } = useAuth()
+  const { role } = useUserRole()
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
 
@@ -58,6 +61,7 @@ export default function Navbar() {
         <div className="hidden items-center gap-3 xl:flex">
           {loading ? null : user ? (
             <>
+              <NotificationBell uid={user.id} role={role} />
               <Link to="/dashboard" className="text-sm font-medium text-slate-muted hover:text-parchment">
                 {user.displayName?.split(' ')[0] ?? 'Dashboard'}
               </Link>
@@ -113,6 +117,16 @@ export default function Navbar() {
             <div className="mt-3 flex flex-col gap-2 border-t border-white/10 pt-3">
               {user ? (
                 <>
+                  <div className="flex items-center justify-between">
+                    <Link
+                      to="/notifications"
+                      onClick={() => setMenuOpen(false)}
+                      className="text-sm font-medium text-slate-muted hover:text-parchment"
+                    >
+                      Notifications
+                    </Link>
+                    <NotificationBell uid={user.id} role={role} />
+                  </div>
                   <Link to="/dashboard" onClick={() => setMenuOpen(false)} className="btn-secondary text-sm">
                     Dashboard
                   </Link>

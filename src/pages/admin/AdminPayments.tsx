@@ -13,6 +13,7 @@ import {
 import { firestore } from '@/lib/firebase'
 import AdminNav from '@/components/AdminNav'
 import type { Payment } from '@/types/database'
+import { createAdminBroadcast, createNotification } from '@/lib/notifications'
 
 export default function AdminPayments() {
   const [rows, setRows] = useState<Payment[] | null>(null)
@@ -76,6 +77,44 @@ export default function AdminPayments() {
           },
           { merge: true }
         )
+
+        // Three student-facing notifications, never blocking the
+        // approval itself (see createNotification() doc comment).
+        // payment_success and enrollment_success are genuinely distinct
+        // events here (a payment can exist without an active enrolment
+        // yet, e.g. mid-verification), but this app has no separate
+        // access-gating step beyond the enrolment going active, so
+        // course_access_granted is folded into the same enrollment_success
+        // moment rather than firing as a fourth near-duplicate notification
+        // — see delivery report.
+        void createNotification({
+          recipient_uid: payment.student_id,
+          recipient_role: 'student',
+          type: 'payment_success',
+          title: 'Payment verified',
+          message: `Your payment of ₹${payment.amount.toLocaleString('en-IN')} for ${payment.course_name ?? 'your course'} has been verified.`,
+          related_id: payment.id,
+          related_type: 'payment',
+          action_url: '/dashboard',
+        })
+        void createNotification({
+          recipient_uid: payment.student_id,
+          recipient_role: 'student',
+          type: 'enrollment_success',
+          title: 'Enrollment activated',
+          message: `You're enrolled in ${payment.course_name ?? 'your course'}. Course access has been granted.`,
+          related_id: enrolmentId,
+          related_type: 'enrolment',
+          action_url: courseSlug ? `/learn/${courseSlug}` : '/dashboard',
+        })
+        void createAdminBroadcast({
+          type: 'new_enrollment',
+          title: 'New enrollment activated',
+          message: `${payment.student_name ?? 'A student'} is now enrolled in ${payment.course_name ?? 'a course'}.`,
+          related_id: enrolmentId,
+          related_type: 'enrolment',
+          action_url: '/admin/payments',
+        })
       }
 
       setRows((prev) => prev?.filter((r) => r.id !== payment.id) ?? null)

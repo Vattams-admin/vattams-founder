@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { doc, setDoc } from 'firebase/firestore'
 import { firebaseAuth, firestore } from '@/lib/firebase'
 import { friendlyAuthError } from '@/lib/authErrors'
+import { createAdminBroadcast, createNotification } from '@/lib/notifications'
 
 // Same Firebase Auth + Firestore `students` collection used by the
 // existing generic Auth.tsx register flow — this page does not create a
@@ -56,11 +57,6 @@ export default function StudentRegister() {
           full_name: fullName,
           email: user.email ?? email,
           role: 'student',
-          // Explicit starting status so the admin approval/onboarding
-          // flow (/admin/students) has something to act on — previously
-          // no status was set at all, which showed as "unknown" in the
-          // admin table and could never be approved or onboarded.
-          status: 'pending',
           created_at: new Date().toISOString(),
         })
       } catch (profileErr) {
@@ -75,6 +71,30 @@ export default function StudentRegister() {
         setSubmitting(false)
         return
       }
+
+      // Notifications never block or fail registration — see
+      // createNotification()'s doc comment in src/lib/notifications.ts.
+      // Fired after the profile write succeeds (not awaited before
+      // navigating) so a slow/offline notification write never delays
+      // getting the student to their dashboard.
+      void createNotification({
+        recipient_uid: user.uid,
+        recipient_role: 'student',
+        type: 'registration_success',
+        title: 'Welcome to VATTAMS ACADEMIA',
+        message: `Your student account is ready, ${fullName.split(' ')[0] || 'there'}. Explore the course catalogue to get started.`,
+        related_id: user.uid,
+        related_type: 'student',
+        action_url: '/courses',
+      })
+      void createAdminBroadcast({
+        type: 'new_student_registration',
+        title: 'New student registration',
+        message: `${fullName || user.email || 'A new student'} just registered.`,
+        related_id: user.uid,
+        related_type: 'student',
+        action_url: '/admin/students',
+      })
 
       navigate(redirectTo)
     } catch (err) {

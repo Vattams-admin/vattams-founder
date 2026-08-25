@@ -57,16 +57,6 @@ export async function listAcademyStudents(): Promise<AcademyListResult<AcademySt
         role: typeof data.role === 'string' ? data.role : null,
         status: typeof data.status === 'string' ? data.status : null,
         created_at: toIsoString(data.created_at),
-        approved_at: typeof data.approved_at === 'string' ? data.approved_at : null,
-        approved_by: typeof data.approved_by === 'string' ? data.approved_by : null,
-        rejected_at: typeof data.rejected_at === 'string' ? data.rejected_at : null,
-        rejected_by: typeof data.rejected_by === 'string' ? data.rejected_by : null,
-        rejection_reason: typeof data.rejection_reason === 'string' ? data.rejection_reason : null,
-        student_code: typeof data.student_code === 'string' ? data.student_code : null,
-        student_id: typeof data.student_id === 'string' ? data.student_id : null,
-        onboarding_status: typeof data.onboarding_status === 'string' ? data.onboarding_status : null,
-        onboarded_at: typeof data.onboarded_at === 'string' ? data.onboarded_at : null,
-        onboarded_by: typeof data.onboarded_by === 'string' ? data.onboarded_by : null,
       }
     })
     return { rows, error: null }
@@ -95,11 +85,6 @@ export async function listAcademyTutors(): Promise<AcademyListResult<AcademyTuto
         rejected_by: typeof data.rejected_by === 'string' ? data.rejected_by : null,
         rejection_reason: typeof data.rejection_reason === 'string' ? data.rejection_reason : null,
         created_at: toIsoString(data.created_at),
-        employee_code: typeof data.employee_code === 'string' ? data.employee_code : null,
-        tutor_id: typeof data.tutor_id === 'string' ? data.tutor_id : null,
-        onboarding_status: typeof data.onboarding_status === 'string' ? data.onboarding_status : null,
-        onboarded_at: typeof data.onboarded_at === 'string' ? data.onboarded_at : null,
-        onboarded_by: typeof data.onboarded_by === 'string' ? data.onboarded_by : null,
       }
     })
     return { rows, error: null }
@@ -137,40 +122,5 @@ export async function rejectAcademyTutor(tutorId: string, adminIdentifier: strin
     return { error: null }
   } catch (error) {
     return { error: friendlyFirestoreError(error, 'tutor rejection') }
-  }
-}
-
-/**
- * Approves/rejects a student application the same way tutors are
- * approved/rejected above — same `status`/`approved_at`/`approved_by`
- * (and rejected_*) field shape, same `students` collection. Added
- * because the onboarding lifecycle (REGISTERED → REVIEW → APPROVED →
- * ONBOARDED → ACTIVE) requires an approval step before a Student Code
- * can be issued, and no approve/reject path existed for students before.
- */
-export async function approveAcademyStudent(studentId: string, adminIdentifier: string) {
-  try {
-    await updateDoc(doc(firestore, 'students', studentId), {
-      status: 'approved',
-      approved_at: new Date().toISOString(),
-      approved_by: adminIdentifier,
-    })
-    return { error: null }
-  } catch (error) {
-    return { error: friendlyFirestoreError(error, 'student approval') }
-  }
-}
-
-export async function rejectAcademyStudent(studentId: string, adminIdentifier: string, reason: string) {
-  try {
-    await updateDoc(doc(firestore, 'students', studentId), {
-      status: 'rejected',
-      rejected_at: new Date().toISOString(),
-      rejected_by: adminIdentifier,
-      rejection_reason: reason,
-    })
-    return { error: null }
-  } catch (error) {
-    return { error: friendlyFirestoreError(error, 'student rejection') }
   }
 }

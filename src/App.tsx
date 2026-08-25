@@ -19,14 +19,6 @@ const CourseDetail = lazy(() => import('@/pages/CourseDetail'))
 const Competitions = lazy(() => import('@/pages/Competitions'))
 const Payment = lazy(() => import('@/pages/Payment'))
 const StudentDashboard = lazy(() => import('@/pages/StudentDashboard'))
-<<<<<<< HEAD
-=======
-const StudentIdCard = lazy(() => import('@/pages/StudentIdCard'))
-const StudentWelcomeLetter = lazy(() => import('@/pages/StudentWelcomeLetter'))
-const TutorDashboard = lazy(() => import('@/pages/TutorDashboard'))
-const TutorIdCard = lazy(() => import('@/pages/TutorIdCard'))
-const TutorOnboardingLetter = lazy(() => import('@/pages/TutorOnboardingLetter'))
->>>>>>> cb2a2b7a (Update VATTAMS FOUNDER onboarding)
 const CourseLearn = lazy(() => import('@/pages/CourseLearn'))
 const VerifyCertificate = lazy(() => import('@/pages/VerifyCertificate'))
 const Auth = lazy(() => import('@/pages/Auth'))
@@ -45,6 +37,8 @@ const AdminCourseForm = lazy(() => import('@/pages/admin/AdminCourseForm'))
 const AdminStudents = lazy(() => import('@/pages/admin/AdminStudents'))
 const AdminTutors = lazy(() => import('@/pages/admin/AdminTutors'))
 const AdminRoute = lazy(() => import('@/components/AdminRoute'))
+const Notifications = lazy(() => import('@/pages/Notifications'))
+const AdminNotifications = lazy(() => import('@/pages/admin/AdminNotifications'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 
 function PageFallback() {
@@ -90,15 +84,8 @@ export default function App() {
                 name here must match that, not "paymentId". */}
             <Route path="/pay/:courseId" element={<Payment />} />
             <Route path="/dashboard" element={<StudentDashboard />} />
-<<<<<<< HEAD
-=======
-            <Route path="/student/id-card" element={<StudentIdCard />} />
-            <Route path="/student/welcome-letter" element={<StudentWelcomeLetter />} />
-            <Route path="/tutor/dashboard" element={<TutorDashboard />} />
-            <Route path="/tutor/id-card" element={<TutorIdCard />} />
-            <Route path="/tutor/onboarding-letter" element={<TutorOnboardingLetter />} />
->>>>>>> cb2a2b7a (Update VATTAMS FOUNDER onboarding)
             <Route path="/learn/:slug" element={<CourseLearn />} />
+            <Route path="/notifications" element={<Notifications />} />
 
             <Route path="/admin" element={<AdminLogin />} />
             {/* Alias for the existing admin login — same component, same
@@ -123,6 +110,14 @@ export default function App() {
               element={
                 <AdminRoute>
                   <AdminTutors />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/admin/notifications"
+              element={
+                <AdminRoute>
+                  <AdminNotifications />
                 </AdminRoute>
               }
             />

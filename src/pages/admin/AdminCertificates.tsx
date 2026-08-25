@@ -4,6 +4,7 @@ import { firestore } from '@/lib/firebase'
 import AdminNav from '@/components/AdminNav'
 import type { Course } from '@/types/database'
 import type { AcademyStudent } from '@/types/academy'
+import { createNotification } from '@/lib/notifications'
 
 // Firestore has no server-side default like Supabase's
 // `encode(gen_random_bytes(6), 'hex')`, so the same 12-hex-char code
@@ -128,6 +129,24 @@ export default function AdminCertificates() {
         is_valid: true
       }
       await addDoc(collection(firestore, 'certificates'), payload)
+
+      // Fired after the certificate write succeeds; never blocks or
+      // fails issuance (see createNotification() in
+      // src/lib/notifications.ts). student_id here is the Firebase Auth
+      // uid (see comment above on `payload`), so this reaches the right
+      // account. action_url pre-fills the code on the public verify page
+      // (see the ?code= support added to VerifyCertificate.tsx).
+      void createNotification({
+        recipient_uid: selectedStudent.firebase_uid ?? null,
+        recipient_role: 'student',
+        type: 'certificate_issued',
+        title: 'Certificate issued',
+        message: `Your ${certificateType.replace('_', ' ')} certificate${selectedCourse ? ` for ${selectedCourse.name}` : ''} is ready.`,
+        related_id: payload.certificate_code,
+        related_type: 'certificate',
+        action_url: `/verify-certificate?code=${encodeURIComponent(payload.certificate_code)}`,
+      })
+
       setStudentId('')
       setCourseId('')
       setScore('')

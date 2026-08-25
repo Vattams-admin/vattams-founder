@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { collection, getDocs, limit, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { CertificateVerification } from '@/types/database'
 
 export default function VerifyCertificate() {
-  const [code, setCode] = useState('')
+  const [searchParams] = useSearchParams()
+  const [code, setCode] = useState(() => searchParams.get('code') ?? '')
   const [result, setResult] = useState<CertificateVerification | null | 'not_found'>(null)
   const [checking, setChecking] = useState(false)
   const [connectionError, setConnectionError] = useState(false)
@@ -44,6 +46,16 @@ export default function VerifyCertificate() {
       setChecking(false)
     }
   }
+
+  useEffect(() => {
+    // Prefills + auto-verifies when arriving via a certificate_issued
+    // notification's action_url (?code=...) — see AdminCertificates.tsx.
+    // Manual entry (no query param) behaves exactly as before.
+    if (searchParams.get('code')) {
+      check()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className="mx-auto max-w-xl px-4 py-16 sm:px-6">

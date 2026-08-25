@@ -1,14 +1,10 @@
 import { useEffect, useMemo, useState } from 'react'
 import AdminNav from '@/components/AdminNav'
-import IdentityCard from '@/components/IdentityCard'
-import OnboardingLetter from '@/components/OnboardingLetter'
 import { useAdminAuth } from '@/hooks/useAdminAuth'
 import { approveAcademyTutor, listAcademyTutors, rejectAcademyTutor } from '@/lib/academyAdmin'
-import { onboardTutor } from '@/lib/onboarding'
 import type { AcademyTutor } from '@/types/academy'
 
 type LoadState = 'loading' | 'loaded' | 'error'
-type DocView = 'documents' | 'id-card' | 'letter' | null
 
 export default function AdminTutors() {
   const { adminUser } = useAdminAuth()
@@ -22,7 +18,6 @@ export default function AdminTutors() {
   const [rejecting, setRejecting] = useState<AcademyTutor | null>(null)
   const [rejectionReason, setRejectionReason] = useState('')
   const [busyId, setBusyId] = useState<string | null>(null)
-  const [docView, setDocView] = useState<{ tutor: AcademyTutor; view: DocView } | null>(null)
 
   // Falls back to the Firebase admin's uid if email isn't set on the
   // account, for the approved_by / rejected_by audit fields.
@@ -89,19 +84,6 @@ export default function AdminTutors() {
     }
     setRejecting(null)
     setRejectionReason('')
-    setSelected(null)
-    load()
-  }
-
-  async function handleOnboard(tutor: AcademyTutor) {
-    setBusyId(tutor.id)
-    setActionError(null)
-    const result = await onboardTutor(tutor.id, adminIdentifier)
-    setBusyId(null)
-    if (result.error) {
-      setActionError(result.error)
-      return
-    }
     setSelected(null)
     load()
   }
@@ -186,24 +168,11 @@ export default function AdminTutors() {
                 <p className="text-slate-muted">
                   {t.qualification ?? 'No qualification listed'} · {t.expertise ?? 'No expertise listed'}
                 </p>
-                {t.employee_code && (
-                  <p className="mt-1 text-xs text-gold-bright">
-                    {t.employee_code} · {t.tutor_id}
-                  </p>
-                )}
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 <StatusPill value={t.status} />
-                {t.employee_code && (
-                  <span className="rounded-full bg-success/20 px-2 py-0.5 text-xs uppercase tracking-wide text-success">
-                    Onboarded
-                  </span>
-                )}
                 <button onClick={() => setSelected(t)} className="btn-secondary text-xs">
-                  View Profile
-                </button>
-                <button onClick={() => setDocView({ tutor: t, view: 'documents' })} className="btn-secondary text-xs">
-                  View Documents
+                  View
                 </button>
                 {t.status !== 'approved' && (
                   <button
@@ -225,25 +194,6 @@ export default function AdminTutors() {
                   >
                     Reject
                   </button>
-                )}
-                {t.status === 'approved' && !t.employee_code && (
-                  <button
-                    onClick={() => handleOnboard(t)}
-                    disabled={busyId === t.id}
-                    className="rounded-card bg-gold px-3 py-1.5 text-xs font-semibold text-ink disabled:opacity-60"
-                  >
-                    {busyId === t.id ? 'Onboarding…' : 'Onboard'}
-                  </button>
-                )}
-                {t.employee_code && (
-                  <>
-                    <button onClick={() => setDocView({ tutor: t, view: 'id-card' })} className="btn-secondary text-xs">
-                      View ID Card
-                    </button>
-                    <button onClick={() => setDocView({ tutor: t, view: 'letter' })} className="btn-secondary text-xs">
-                      View Onboarding Letter
-                    </button>
-                  </>
                 )}
               </div>
             </div>
@@ -269,9 +219,6 @@ export default function AdminTutors() {
               <Detail label="Expertise" value={selected.expertise} />
               <Detail label="Introduction" value={selected.introduction} />
               <Detail label="Status" value={selected.status} />
-              <Detail label="Employee Code" value={selected.employee_code} />
-              <Detail label="Tutor ID" value={selected.tutor_id} />
-              <Detail label="Onboarding Status" value={selected.onboarding_status ?? (selected.employee_code ? 'active' : 'not_onboarded')} />
               <Detail label="Firebase UID" value={selected.id} />
               {selected.rejection_reason && <Detail label="Rejection reason" value={selected.rejection_reason} />}
               <Detail
@@ -313,66 +260,6 @@ export default function AdminTutors() {
                 {busyId === rejecting.id ? 'Rejecting…' : 'Confirm rejection'}
               </button>
             </div>
-          </div>
-        </div>
-      )}
-
-      {docView && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-black/60 p-4"
-          onClick={() => setDocView(null)}
-        >
-          <div
-            className="card w-full max-w-lg p-6 print:border-0 print:bg-transparent print:p-0 print:shadow-none"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between print:hidden">
-              <h2 className="font-display text-lg">
-                {docView.view === 'documents' && 'Documents'}
-                {docView.view === 'id-card' && 'ID Card'}
-                {docView.view === 'letter' && 'Onboarding Letter'}
-                {' — '}
-                {docView.tutor.full_name}
-              </h2>
-              <button onClick={() => setDocView(null)} className="text-slate-muted hover:text-parchment">
-                ✕
-              </button>
-            </div>
-
-            {docView.view === 'documents' && (
-              <p className="mt-4 text-sm text-slate-muted">
-                No document upload feature exists yet in Tutor Registration, so there are no supporting documents on file for
-                this tutor.
-              </p>
-            )}
-
-            {docView.view === 'id-card' && docView.tutor.employee_code && docView.tutor.tutor_id && (
-              <div className="mt-4">
-                <IdentityCard
-                  role="Tutor"
-                  name={docView.tutor.full_name}
-                  code={docView.tutor.employee_code}
-                  permanentId={docView.tutor.tutor_id}
-                  status={docView.tutor.onboarding_status ?? 'active'}
-                  subtitle={docView.tutor.expertise}
-                  issuedAt={docView.tutor.onboarded_at}
-                />
-              </div>
-            )}
-
-            {docView.view === 'letter' && docView.tutor.employee_code && docView.tutor.tutor_id && (
-              <div className="mt-4">
-                <OnboardingLetter
-                  role="Tutor"
-                  name={docView.tutor.full_name}
-                  code={docView.tutor.employee_code}
-                  permanentId={docView.tutor.tutor_id}
-                  status={docView.tutor.onboarding_status ?? 'active'}
-                  issuedAt={docView.tutor.onboarded_at ?? new Date().toISOString()}
-                  subtitle={docView.tutor.expertise}
-                />
-              </div>
-            )}
           </div>
         </div>
       )}

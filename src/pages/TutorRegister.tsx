@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { doc, setDoc } from 'firebase/firestore'
 import { firebaseAuth, firestore } from '@/lib/firebase'
 import { friendlyAuthError } from '@/lib/authErrors'
+import { createAdminBroadcast } from '@/lib/notifications'
 
 // Firebase Auth + a `tutors` Firestore collection, mirroring the
 // existing student registration pattern (Auth.tsx) — role fixed to
@@ -69,6 +70,21 @@ export default function TutorRegister() {
         setSubmitting(false)
         return
       }
+
+      // No TUTOR notification type fits "your own application was
+      // received" (the spec's TUTOR type list has no registration_success
+      // equivalent), and a pending tutor has nowhere to see it yet (no
+      // tutor portal exists — see delivery report), so only the admin
+      // side is notified here. Never blocks or fails the application
+      // (see createNotification() in src/lib/notifications.ts).
+      void createAdminBroadcast({
+        type: 'tutor_activity',
+        title: 'New tutor application',
+        message: `${fullName || user.email || 'A new tutor'} applied to teach (${expertise || 'subject not specified'}).`,
+        related_id: user.uid,
+        related_type: 'tutor',
+        action_url: '/admin/tutors',
+      })
 
       setSubmitted(true)
       setSubmitting(false)

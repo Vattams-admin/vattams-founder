@@ -1,18 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
-import { collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore'
+import { Navigate } from 'react-router-dom'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
 import type { Enrolment, Payment } from '@/types/database'
 
 type SectionState = 'loading' | 'loaded' | 'error'
-
-interface StudentIdentity {
-  fullName: string
-  studentCode: string | null
-  studentId: string | null
-  onboardingStatus: string | null
-}
 
 export default function StudentDashboard() {
   const { user, loading } = useAuth()
@@ -20,25 +13,6 @@ export default function StudentDashboard() {
   const [enrolmentsState, setEnrolmentsState] = useState<SectionState>('loading')
   const [payments, setPayments] = useState<Payment[]>([])
   const [paymentsState, setPaymentsState] = useState<SectionState>('loading')
-  const [identity, setIdentity] = useState<StudentIdentity | null>(null)
-
-  async function loadIdentity(userId: string) {
-    try {
-      const snap = await getDoc(doc(firestore, 'students', userId))
-      if (!snap.exists()) return
-      const d = snap.data()
-      setIdentity({
-        fullName: typeof d.full_name === 'string' ? d.full_name : '',
-        studentCode: typeof d.student_code === 'string' ? d.student_code : null,
-        studentId: typeof d.student_id === 'string' ? d.student_id : null,
-        onboardingStatus: typeof d.onboarding_status === 'string' ? d.onboarding_status : null,
-      })
-    } catch (err) {
-      // Non-fatal — the rest of the dashboard (enrolments/payments)
-      // still works without the identity section.
-      console.error('Failed to load student identity:', err)
-    }
-  }
 
   async function loadEnrolments(userId: string) {
     setEnrolmentsState('loading')
@@ -74,7 +48,6 @@ export default function StudentDashboard() {
     if (!user) return
     loadEnrolments(user.id)
     loadPayments(user.id)
-    loadIdentity(user.id)
   }, [user])
 
   if (loading) return <div className="mx-auto max-w-4xl px-4 py-16 text-slate-muted">Loading…</div>
@@ -83,35 +56,6 @@ export default function StudentDashboard() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
       <h1 className="font-display text-3xl">Your learning</h1>
-
-      {identity && identity.studentCode && identity.studentId && (
-        <section className="mt-6 card p-6">
-          <p className="font-display text-xs uppercase tracking-[0.25em] text-gold">VATTAMS ACADEMIA</p>
-          <h2 className="mt-2 font-display text-xl">Welcome, {identity.fullName}</h2>
-          <dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 text-sm sm:grid-cols-3">
-            <div>
-              <dt className="text-slate-muted">Student Code</dt>
-              <dd className="mt-0.5 font-medium">{identity.studentCode}</dd>
-            </div>
-            <div>
-              <dt className="text-slate-muted">Student ID</dt>
-              <dd className="mt-0.5 font-medium">{identity.studentId}</dd>
-            </div>
-            <div>
-              <dt className="text-slate-muted">Status</dt>
-              <dd className="mt-0.5">
-                <span className="rounded-full bg-success/20 px-2 py-0.5 text-xs font-semibold uppercase tracking-wide text-success">
-                  {identity.onboardingStatus ?? 'active'}
-                </span>
-              </dd>
-            </div>
-          </dl>
-          <div className="mt-6 flex flex-wrap gap-2">
-            <Link to="/student/id-card" className="btn-secondary text-sm">View ID Card</Link>
-            <Link to="/student/welcome-letter" className="btn-secondary text-sm">View Welcome Letter</Link>
-          </div>
-        </section>
-      )}
 
       <section className="mt-8">
         <h2 className="font-display text-xl text-gold-bright">Enrolled courses</h2>
