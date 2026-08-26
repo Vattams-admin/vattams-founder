@@ -1,9 +1,0 @@
-{
-  "//": "No firebase.json existed in this repo before the Learning Materials module — rules were managed by hand in the Firebase Console (see firestore.rules / storage.rules). This file is additive and minimal: it only wires up the two rules files so `firebase deploy --only firestore:rules,storage:rules` works if/when this project adopts the Firebase CLI. It intentionally does not configure hosting, functions, or emulators, since none of those exist in this project and guessing at that config could conflict with how it's actually deployed today.",
-  "firestore": {
-    "rules": "firestore.rules"
-  },
-  "storage": {
-    "rules": "storage.rules"
-  }
-}
