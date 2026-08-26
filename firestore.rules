@@ -1,0 +1,200 @@
+rules_version = '2';
+
+// IMPORTANT — READ BEFORE DEPLOYING
+// ----------------------------------------------------------------------
+// No firestore.rules file existed anywhere in this repository before this
+// change, and this environment has no network access and no Firebase
+// credentials, so the rules actually deployed on the live VATTAMS
+// ACADEMIA Firebase project could not be fetched or inspected. This file
+// only defines rules for the collections the Tutor/Student onboarding
+// identity system touches: `tutors`, `students`, `admins`, and the new
+// `counters` collection used for Employee/Student Code generation.
+//
+// Do NOT deploy this file over your live project as-is. Open the
+// Firebase Console → Firestore Database → Rules, diff what's currently
+// deployed against this file, and merge in the existing rules for
+// `courses`, `enrolments`, `payments`, `certificates`, and any other
+// collection not covered below — this file's fallback `match /{document=**}`
+// denies everything not explicitly allowed, which will break those
+// features if deployed verbatim without merging.
+// ----------------------------------------------------------------------
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Mirrors src/lib/adminData.ts: admin authorization is the existence
+    // of an active admins/{uid} doc with a recognized role. Firestore
+    // rules can't call into app code, so the same check is duplicated
+    // here against the same collection/field names.
+    function isAdmin() {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.is_active == true;
+    }
+
+    // Fields an onboarded identity must never be able to change on its
+    // own document — only the onboarding transaction (run by an admin
+    // client, see src/lib/onboarding.ts) or another admin action may
+    // touch these.
+    function tutorIdentityFieldsUnchanged() {
+      return request.resource.data.employee_code == resource.data.employee_code &&
+        request.resource.data.tutor_id == resource.data.tutor_id &&
+        request.resource.data.status == resource.data.status &&
+        request.resource.data.onboarding_status == resource.data.onboarding_status;
+    }
+
+    function studentIdentityFieldsUnchanged() {
+      return request.resource.data.student_code == resource.data.student_code &&
+        request.resource.data.student_id == resource.data.student_id &&
+        request.resource.data.status == resource.data.status &&
+        request.resource.data.onboarding_status == resource.data.onboarding_status;
+    }
+
+    match /tutors/{tutorId} {
+      // A tutor can read their own onboarding info, ID card, and
+      // onboarding letter data; an admin can read any tutor.
+      allow read: if isOwner(tutorId) || isAdmin();
+
+      // Registration (TutorRegister.tsx) creates the doc with the
+      // signed-in user's own uid as the doc ID.
+      allow create: if isOwner(tutorId);
+
+      // A tutor may update their own profile fields, but never their
+      // Employee Code, Tutor ID, approval status, or onboarding status.
+      allow update: if (isOwner(tutorId) && tutorIdentityFieldsUnchanged()) || isAdmin();
+
+      allow delete: if false;
+    }
+
+    match /students/{studentId} {
+      allow read: if isOwner(studentId) || isAdmin();
+      allow create: if isOwner(studentId);
+      allow update: if (isOwner(studentId) && studentIdentityFieldsUnchanged()) || isAdmin();
+      allow delete: if false;
+    }
+
+    match /admins/{adminId} {
+      // Admin documents are created by hand in the Firebase Console (see
+      // src/lib/adminData.ts) — never through the app. A signed-in admin
+      // may read their own record (used by useAdminAuth); nothing may
+      // write to this collection from a client.
+      allow read: if isOwner(adminId);
+      allow write: if false;
+    }
+
+    match /counters/{counterId} {
+      // Only used by the onboarding transaction (src/lib/onboarding.ts),
+      // which always runs from an authenticated admin session.
+      allow read, write: if isAdmin();
+    }
+
+    // ------------------------------------------------------------------
+    // Phase 19 — Live Sessions
+    // ------------------------------------------------------------------
+    // NOT independently verified against a live Firebase project (same
+    // no-network-access caveat as the top of this file) — run these
+    // through the Firebase Console Rules Playground before deploying.
+
+    function isApprovedTutor() {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/tutors/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/tutors/$(request.auth.uid)).data.status == 'approved';
+    }
+
+    // enrolments/{studentId}_{courseId} is the deterministic id already
+    // used by src/pages/admin/AdminPayments.tsx. Firestore rules cannot
+    // run `where` queries, so real server-side enrolment checks are only
+    // possible because that id is deterministic — reading it directly by
+    // path is what makes this a genuine authorization check rather than
+    // just a client-side courtesy message (spec: "Never rely only on
+    // hiding the Join button").
+    function hasActiveEnrolment(courseId) {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)) &&
+        get(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)).data.status == 'active';
+    }
+
+    match /live_sessions/{sessionId} {
+      // A student can only read a PUBLISHED session for a course they
+      // are actively enrolled in — a draft is invisible to students
+      // regardless of the sessionId they try, and a session for a
+      // course they never paid for/enrolled in is invisible even with
+      // the exact right sessionId (blocks the "change sessionId /
+      // courseId in the URL" IDOR case called out in the spec).
+      allow read: if isAdmin()
+        || (isApprovedTutor() && resource.data.tutor_id == request.auth.uid)
+        || (resource.data.status == 'published' && hasActiveEnrolment(resource.data.course_id));
+
+      allow create: if isAdmin()
+        || (isApprovedTutor() && request.resource.data.tutor_id == request.auth.uid);
+
+      // A tutor may update only a session they own, and may not
+      // reassign it to a different tutor or course out from under
+      // themselves.
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && resource.data.tutor_id == request.auth.uid
+            && request.resource.data.tutor_id == resource.data.tutor_id
+            && request.resource.data.course_id == resource.data.course_id);
+
+      allow delete: if isAdmin();
+    }
+
+    match /session_attendance/{attendanceId} {
+      // Doc id convention: `${session_id}_${student_id}` (mirrors
+      // enrolments' `${student_id}_${course_id}` pattern).
+      allow read: if isAdmin()
+        || isOwner(resource.data.student_id)
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid);
+
+      // A student may create ONLY their own self-reported join record,
+      // for a session they're actually enrolled in and that is
+      // currently published — never a status other than 'present' and
+      // never a source other than 'self_reported' (a tutor/admin
+      // override always goes through the branches below instead).
+      allow create: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(request.resource.data.student_id)
+          && attendanceId == request.resource.data.session_id + '_' + request.auth.uid
+          && request.resource.data.source == 'self_reported'
+          && request.resource.data.status == 'present'
+          && hasActiveEnrolment(request.resource.data.course_id)
+          && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.status == 'published'
+        );
+
+      // Updates: a student may only ever touch their own `joined_at` on
+      // their own self-reported row (repeated join clicks); everything
+      // else (status corrections, marking other students) is a
+      // tutor/admin action.
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(resource.data.student_id)
+          && resource.data.source == 'self_reported'
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['joined_at'])
+        );
+
+      allow delete: if isAdmin();
+    }
+
+    // Everything else (courses, enrolments, payments, certificates, ...)
+    // is intentionally NOT covered here — see the warning at the top of
+    // this file. Merge in your existing rules for those collections
+    // before deploying.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
