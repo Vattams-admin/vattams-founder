@@ -20,6 +20,10 @@ export const STUDENT_NOTIFICATION_TYPES = [
   'class_reminder',
   'class_cancelled',
   'class_rescheduled',
+  // Phase 19 (Live Sessions) additions — appended per the extension
+  // pattern documented below rather than replacing anything.
+  'class_live_now',
+  'class_recording_ready',
   'admin_announcement'
 ] as const
 
@@ -84,6 +88,8 @@ export const NOTIFICATION_TYPE_META: Record<string, { label: string; icon: 'chec
   class_reminder: { label: 'Class reminder', icon: 'clock' },
   class_cancelled: { label: 'Class cancelled', icon: 'x' },
   class_rescheduled: { label: 'Class rescheduled', icon: 'calendar' },
+  class_live_now: { label: 'Live now', icon: 'bell' },
+  class_recording_ready: { label: 'Recording available', icon: 'book' },
   admin_announcement: { label: 'Announcement', icon: 'megaphone' },
   new_student_enrollment: { label: 'New enrollment', icon: 'user' },
   course_assignment: { label: 'Course assignment', icon: 'book' },

@@ -119,7 +119,7 @@ export default function AdminLogin() {
         return
       }
 
-      navigate('/admin/payments')
+      navigate('/admin/dashboard')
     } catch (err) {
       // Firebase login succeeded, but confirming admin status against
       // Firestore failed (offline, security rules blocking the read,
