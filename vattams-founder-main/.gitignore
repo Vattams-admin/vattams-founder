@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.tsc-out/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+*.backup
+*.backup-*
+dist/
+node_modules/

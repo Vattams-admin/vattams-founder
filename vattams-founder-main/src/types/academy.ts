@@ -1,0 +1,62 @@
+// Types for the Firestore `students` and `tutors` collections.
+//
+// These collections are written by StudentRegister.tsx / TutorRegister.tsx
+// via setDoc(doc(firestore, 'students' | 'tutors', user.uid), {...}) and
+// read by src/lib/academyAdmin.ts. The fields below reflect exactly what
+// Firestore documents are schemaless, so a handful of fields that other
+// admin screens (e.g. AdminCertificates.tsx) optionally populate on
+// ad-hoc, partial reads are kept as optional rather than required, since
+// not every read path fetches every field.
+
+export type AcademyApprovalStatus = 'pending' | 'approved' | 'rejected'
+export type AcademyPaymentStatus = 'pending' | 'paid' | 'failed' | 'refunded'
+export type AcademyTutorStatus = 'pending_approval' | 'approved' | 'rejected' | string
+export type AcademyStudentStatus = 'active' | 'inactive' | 'pending' | string
+
+export interface AcademyStudent {
+  id: string
+  firebase_uid?: string | null
+  full_name: string
+  email: string | null
+  role?: string | null
+  status: AcademyStudentStatus | null
+  created_at: string
+  phone?: string | null
+  class?: string | null
+  school?: string | null
+  parent_name?: string | null
+  parent_phone?: string | null
+  city?: string | null
+}
+
+export interface AcademyTutor {
+  id: string
+  firebase_uid?: string | null
+  full_name: string
+  email: string | null
+  qualification: string | null
+  expertise: string | null
+  introduction: string | null
+  role?: string | null
+  status: AcademyTutorStatus | null
+  approved_at: string | null
+  approved_by: string | null
+  rejected_at: string | null
+  rejected_by: string | null
+  rejection_reason: string | null
+  created_at: string
+  phone?: string | null
+  city?: string | null
+  experience?: string | null
+  teaching_mode?: string | null
+  employee_code?: string | null
+  tutor_id?: string | null
+  onboarding_status?: string | null
+  onboarded_at?: string | null
+  onboarded_by?: string | null 
+ subjects?: string[] | string | null
+  availability?: string | null
+  payment_status?: AcademyPaymentStatus | null
+  approval_status?: AcademyApprovalStatus | null
+}
+
