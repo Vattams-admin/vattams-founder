@@ -74,10 +74,20 @@ export default function AdminCourseForm() {
     setSaving(true)
     setError(null)
 
+    // A free course must never carry a stale nonzero fee — the pricing
+    // inputs are hidden (not cleared) when "This is a free course" is
+    // checked, and Payment.tsx / firestore.rules both derive the actual
+    // charge from these fields, so a leftover base_fee here would make
+    // a course that displays as free actually chargeable. Normalized
+    // right before every save, not just on toggle, so it's also
+    // corrected for a course that was priced, saved, then switched to
+    // free later.
+    const normalizedForm = form.is_free ? { ...form, base_fee: 0, discount_amount: 0 } : form
+
     try {
       if (isNew) {
         const payload = {
-          ...form,
+          ...normalizedForm,
           slug: form.slug || slugify(form.name),
           category_id: form.category_id || null,
           preview_video_url: null,
@@ -88,7 +98,7 @@ export default function AdminCourseForm() {
         await addDoc(collection(firestore, 'courses'), payload)
       } else {
         const payload = {
-          ...form,
+          ...normalizedForm,
           slug: form.slug || slugify(form.name),
           category_id: form.category_id || null,
           ...(publish !== undefined ? { is_published: publish } : {})
