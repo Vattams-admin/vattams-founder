@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
@@ -21,7 +21,7 @@ export default function AdminCourseMaterials() {
   const [busyId, setBusyId] = useState<string | null>(null)
   const [formMode, setFormMode] = useState<'none' | 'new' | Material>('none')
 
-  async function load() {
+  const load = useCallback(async () => {
     if (!courseId) return
     setState('loading')
     try {
@@ -40,11 +40,11 @@ export default function AdminCourseMaterials() {
     }
     setMaterials(rows)
     setState('loaded')
-  }
+  }, [courseId])
 
   useEffect(() => {
     load()
-  }, [courseId])
+  }, [load])
 
   async function handleTogglePublish(material: Material) {
     if (!courseId) return
