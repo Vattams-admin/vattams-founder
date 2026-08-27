@@ -1,0 +1,467 @@
+rules_version = '2';
+
+// IMPORTANT — READ BEFORE DEPLOYING
+// ----------------------------------------------------------------------
+// This is a PROPOSED rules file, produced by a Phase 1 Part 3 security
+// audit. It has NOT been deployed. This environment has no network
+// access and no Firebase credentials, so the rules actually live on
+// the VATTAMS ACADEMIA Firebase project could not be fetched — this
+// file was built by reading every Firestore read/write call in `src/`
+// and reverse-engineering the access pattern each one needs, not by
+// diffing against production. Before deploying:
+//   1. Open Firebase Console → Firestore Database → Rules and copy
+//      what's currently live somewhere safe.
+//   2. Diff it against this file. If any collection/field not covered
+//      by the audit below exists in production, merge it in — do not
+//      just paste this file over it.
+//   3. Deploy through your normal process. Nothing here does that for
+//      you.
+//
+// Every collection below now has an explicit rule (the previous
+// version of this file only covered tutors/students/admins/counters,
+// and its `match /{document=**} { allow read, write: if false; }`
+// fallback silently denied everything else — courses, payments,
+// enrolments, certificates, notifications, materials, the whole
+// learning module). That fallback stays as the final line of defense
+// for anything genuinely uncovered, but it should no longer be hiding
+// real, in-use collections.
+// ----------------------------------------------------------------------
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ============================================================
+    // SHARED HELPERS
+    // ============================================================
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // Mirrors src/lib/adminData.ts: admin authorization is the existence
+    // of an active admins/{uid} doc with is_active == true. Firestore
+    // rules can't call into app code, so the same check is duplicated
+    // here against the same collection/field names. This project has no
+    // Cloud Functions / server process (see src/lib/notifications.ts'
+    // recipient-model comment) — this Firestore-document check is the
+    // actual server-side authorization boundary for "admin", not merely
+    // a client-side convenience check.
+    function isAdmin() {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.is_active == true;
+    }
+
+    // A signed-in user with their own tutors/{uid} doc. Used only for
+    // notification-role targeting below — does NOT grant any
+    // Tutor-course permission, since no such feature exists yet (see
+    // audit note under LEARNING MATERIALS / course_modules).
+    function isTutorUser() {
+      return isSignedIn() && exists(/databases/$(database)/documents/tutors/$(request.auth.uid));
+    }
+
+    function isStudentUser() {
+      return isSignedIn() && exists(/databases/$(database)/documents/students/$(request.auth.uid));
+    }
+
+    function isApprovedTutor() {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/tutors/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/tutors/$(request.auth.uid)).data.status == 'approved';
+    }
+
+    // Enrolment doc IDs are always `${studentUid}_${courseId}` (see
+    // AdminPayments.tsx / CourseLearn.tsx / storage.rules). Centralized
+    // here so every collection that gates on "is this student actively
+    // enrolled in this course" (course_modules, course_lessons,
+    // materials) uses the exact same check.
+    function activeEnrolment(courseId) {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)) &&
+        get(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)).data.status == 'active';
+    }
+
+    // Fields an onboarded identity must never be able to change on its
+    // own document — only an admin action may touch these.
+    function tutorIdentityFieldsUnchanged() {
+      return request.resource.data.employee_code == resource.data.employee_code &&
+        request.resource.data.tutor_id == resource.data.tutor_id &&
+        request.resource.data.status == resource.data.status &&
+        request.resource.data.onboarding_status == resource.data.onboarding_status;
+    }
+
+    function studentIdentityFieldsUnchanged() {
+      return request.resource.data.student_code == resource.data.student_code &&
+        request.resource.data.student_id == resource.data.student_id &&
+        request.resource.data.status == resource.data.status &&
+        request.resource.data.onboarding_status == resource.data.onboarding_status;
+    }
+
+    // ============================================================
+    // IDENTITY: tutors / students / admins / counters
+    // (unchanged from the previous file — carried forward as-is)
+    // ============================================================
+
+    match /tutors/{tutorId} {
+      allow read: if isOwner(tutorId) || isAdmin();
+      allow create: if isOwner(tutorId);
+      allow update: if (isOwner(tutorId) && tutorIdentityFieldsUnchanged()) || isAdmin();
+      allow delete: if false;
+    }
+
+    match /students/{studentId} {
+      allow read: if isOwner(studentId) || isAdmin();
+      allow create: if isOwner(studentId);
+      allow update: if (isOwner(studentId) && studentIdentityFieldsUnchanged()) || isAdmin();
+      allow delete: if false;
+    }
+
+    match /admins/{adminId} {
+      // Created by hand in the Firebase Console — never through the
+      // app. A signed-in admin may read their own record (useAdminAuth);
+      // nothing may write to this collection from a client.
+      allow read: if isOwner(adminId);
+      allow write: if false;
+    }
+
+    match /counters/{counterId} {
+      // Only used by the onboarding transaction (src/lib/onboarding.ts),
+      // which always runs from an authenticated admin session.
+      allow read, write: if isAdmin();
+    }
+
+    // ============================================================
+    // COURSES
+    // ============================================================
+    // Public catalog pages (Home, Courses, CourseDetail, Competitions,
+    // CourseLearn) only ever query is_published == true. Payment.tsx
+    // and the admin pages read/write a course by ID directly without
+    // that filter. Course metadata (title/pricing/description) isn't
+    // sensitive, so read access is: published to everyone, OR any
+    // signed-in user (covers Payment.tsx reading a specific course by
+    // ID, which doesn't re-check is_published), OR admin. Write is
+    // admin-only (AdminCourseForm.tsx / AdminCourses.tsx).
+    match /courses/{courseId} {
+      allow read: if resource.data.is_published == true || isSignedIn();
+      allow create, update, delete: if isAdmin();
+
+      // ----------------------------------------------------------
+      // LEARNING MATERIALS: courses/{courseId}/materials/{materialId}
+      // ----------------------------------------------------------
+      // Mirrors storage.rules' authorization for the same path.
+      // Metadata read for an unpublished material is only slightly
+      // more sensitive than the file itself (a title/description),
+      // but is still gated the same way for consistency: admin, or an
+      // actively enrolled student AND the doc says published.
+      // Unauthenticated users get neither branch and are denied.
+      match /materials/{materialId} {
+        allow read: if isAdmin() ||
+          (activeEnrolment(courseId) && resource.data.is_published == true);
+
+        // No tutor-authoring path exists for materials today (see
+        // src/components/AdminRoute.tsx — the materials admin page is
+        // behind the same admin-only guard as payments/courses/
+        // certificates). Not inventing one here.
+        allow create, update, delete: if isAdmin();
+      }
+    }
+
+    // ============================================================
+    // COURSE CONTENT: course_modules / course_lessons / course_progress
+    // ============================================================
+    // Read by CourseLearn.tsx only after it has already confirmed an
+    // active enrolment client-side — these rules make that check
+    // authoritative instead of merely a UI gate. Nothing in the app
+    // writes modules/lessons (they're populated by hand today, per the
+    // absence of any admin authoring UI for them) — write stays admin
+    // -only so that if/when an authoring UI ships, it already works
+    // without a rules change, while no client can inject/alter course
+    // content in the meantime.
+    match /course_modules/{moduleId} {
+      allow read: if isAdmin() || activeEnrolment(resource.data.course_id);
+      allow write: if isAdmin();
+    }
+
+    match /course_lessons/{lessonId} {
+      // A lesson doesn't carry course_id directly (see CourseLearn.tsx's
+      // Lesson type — only module_id), so this looks up the parent
+      // module to find the course to check enrolment against. The
+      // extra get() mirrors the same cross-collection pattern already
+      // used in storage.rules for materials.
+      allow read: if isAdmin() ||
+        activeEnrolment(get(/databases/$(database)/documents/course_modules/$(resource.data.module_id)).data.course_id);
+      allow write: if isAdmin();
+    }
+
+    match /course_progress/{progressId} {
+      // Doc ID is always `${enrolmentId}_${lessonId}` where enrolmentId
+      // is `${studentUid}_${courseId}` (see CourseLearn.tsx markComplete).
+      // A student may only read/write their own progress, and only for
+      // a course they are actually actively enrolled in — this prevents
+      // a signed-in student from writing a progress row against another
+      // student's enrolment, or fabricating progress for a course they
+      // never paid for.
+      allow read: if isAdmin() || (isSignedIn() && resource.data.student_id == request.auth.uid);
+
+      allow create, update: if isAdmin() || (
+        isSignedIn() &&
+        request.resource.data.student_id == request.auth.uid &&
+        progressId == request.resource.data.enrolment_id + '_' + request.resource.data.lesson_id &&
+        exists(/databases/$(database)/documents/enrolments/$(request.resource.data.enrolment_id)) &&
+        get(/databases/$(database)/documents/enrolments/$(request.resource.data.enrolment_id)).data.student_id == request.auth.uid &&
+        get(/databases/$(database)/documents/enrolments/$(request.resource.data.enrolment_id)).data.status == 'active'
+      );
+
+      allow delete: if isAdmin();
+    }
+
+    // ============================================================
+    // ENROLMENTS  (canonical collection — see CourseLearn.tsx comment:
+    // `course_enrolments` is dead, nothing writes it; `enrolments` is
+    // the real one, written by AdminPayments.tsx on approval)
+    // ============================================================
+    // No Cloud Functions in this project (see notifications.ts comment),
+    // so the "activate enrolment on payment approval" step happens
+    // directly from AdminPayments.tsx as an authenticated admin client
+    // action rather than a trusted server trigger — write access is
+    // restricted to isAdmin() to make that the enforced boundary, not
+    // just the intended one. Students can only ever read their own row;
+    // there is no student-facing enrolment write path anywhere in the
+    // app today.
+    match /enrolments/{enrolmentId} {
+      allow read: if isAdmin() || (isSignedIn() && resource.data.student_id == request.auth.uid);
+      allow write: if isAdmin();
+    }
+
+    // ============================================================
+    // PAYMENTS
+    // ============================================================
+    // Students create their own pending payment and later submit a UTR
+    // reference (Payment.tsx) — but can never approve/reject their own
+    // or anyone else's payment, and can never read another student's.
+    match /payments/{paymentId} {
+      allow read: if isAdmin() || (isSignedIn() && resource.data.student_id == request.auth.uid);
+
+      // Create: only for yourself, only starting at status "pending",
+      // never pre-verified, and the amount must match what the course
+      // actually costs — a modified client can't just POST a lower
+      // amount. course.base_fee / discount_amount mirror Payment.tsx's
+      // own `Math.max(base_fee - discount_amount, 0)` calculation.
+      allow create: if isSignedIn() &&
+        request.resource.data.student_id == request.auth.uid &&
+        request.resource.data.status == 'pending' &&
+        request.resource.data.verified_at == null &&
+        request.resource.data.verified_by == null &&
+        request.resource.data.utr_reference == null &&
+        request.resource.data.amount == math.max(
+          get(/databases/$(database)/documents/courses/$(request.resource.data.course_id)).data.base_fee -
+          get(/databases/$(database)/documents/courses/$(request.resource.data.course_id)).data.discount_amount,
+          0
+        );
+
+      // Update: two disjoint, non-overlapping paths.
+      //  - The owning student may only move pending -> submitted and
+      //    set utr_reference/submitted_at — every other field
+      //    (amount, course_id, student_id, verified_at, verified_by,
+      //    admin_notes) must stay byte-for-byte identical. This is what
+      //    makes "students cannot approve payments" a database
+      //    guarantee: there is no field combination a student can send
+      //    that results in status == 'approved'.
+      //  - An admin may do anything (AdminPayments.tsx's approve/reject,
+      //    which also sets verified_at).
+      allow update: if isAdmin() || (
+        isSignedIn() &&
+        resource.data.student_id == request.auth.uid &&
+        resource.data.status == 'pending' &&
+        request.resource.data.status == 'submitted' &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'utr_reference', 'submitted_at'])
+      );
+
+      allow delete: if false;
+    }
+
+    // ============================================================
+    // CERTIFICATES
+    // ============================================================
+    // VerifyCertificate.tsx is a public, unauthenticated page by
+    // design (this is the whole feature) — read is intentionally
+    // open. This is a narrow, deliberate exception to "no public
+    // read/write", not a blanket one: write stays admin-only, and
+    // nothing here grants public write of any kind.
+    match /certificates/{certificateId} {
+      allow read: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    // ============================================================
+    // NOTIFICATIONS
+    // ============================================================
+    // See src/lib/notifications.ts' "RECIPIENT MODEL" comment for the
+    // design this implements: no backend to fan out "every admin" by
+    // uid, so admin/tutor notifications are role broadcasts
+    // (recipient_uid: null, recipient_role: 'admin'|'tutor') instead of
+    // being addressed to a specific person. Rules constrain WHO can
+    // target WHICH recipient — not the exact `type` string, which the
+    // type file documents as intentionally extensible without a rules
+    // change (see src/types/notifications.ts).
+    match /notifications/{notificationId} {
+      allow read: if isAdmin() ||
+        (isSignedIn() && resource.data.recipient_uid == request.auth.uid) ||
+        (isSignedIn() && resource.data.recipient_uid == null && (
+          (resource.data.recipient_role == 'admin' && isAdmin()) ||
+          (resource.data.recipient_role == 'tutor' && isTutorUser())
+        ));
+
+      allow create: if isSignedIn() &&
+        request.resource.data.is_read == false &&
+        request.resource.data.type is string && request.resource.data.type.size() > 0 &&
+        request.resource.data.title is string && request.resource.data.title.size() > 0 &&
+        request.resource.data.message is string && request.resource.data.message.size() > 0 &&
+        request.resource.data.recipient_role in ['student', 'tutor', 'admin'] &&
+        (
+          // Personal notifications can only target the caller.
+          (request.resource.data.recipient_uid == request.auth.uid) ||
+
+          // Lower-privilege users may only raise the three admin
+          // broadcasts the current app actually produces.
+          (request.resource.data.recipient_uid == null &&
+            request.resource.data.recipient_role == 'admin' &&
+            request.resource.data.type in ['new_student_registration', 'tutor_activity', 'payment_received']) ||
+
+          // Approved tutors may notify enrolled students only for the
+          // live-session events they are allowed to trigger, and only
+          // for a session they own.
+          (isApprovedTutor() &&
+            request.resource.data.recipient_uid is string &&
+            request.resource.data.recipient_role == 'student' &&
+            request.resource.data.type in ['class_reminder', 'class_cancelled', 'class_rescheduled', 'class_recording_ready', 'class_live_now'] &&
+            request.resource.data.related_type == 'live_session' &&
+            exists(/databases/$(database)/documents/live_sessions/$(request.resource.data.related_id)) &&
+            get(/databases/$(database)/documents/live_sessions/$(request.resource.data.related_id)).data.tutor_id == request.auth.uid &&
+            exists(/databases/$(database)/documents/enrolments/$(request.resource.data.recipient_uid + '_' + get(/databases/$(database)/documents/live_sessions/$(request.resource.data.related_id)).data.course_id)) &&
+            get(/databases/$(database)/documents/enrolments/$(request.resource.data.recipient_uid + '_' + get(/databases/$(database)/documents/live_sessions/$(request.resource.data.related_id)).data.course_id)).data.status == 'active') ||
+
+          isAdmin()
+        );
+
+      // Only is_read may ever change, and only by the notification's
+      // actual recipient: its own owner (recipient_uid == their uid),
+      // or a verified member of the role a broadcast targets. No other
+      // field can be altered by a non-admin update — protects both
+      // "update permissions" and prevents a read receipt from doubling
+      // as a content-editing path.
+      allow update: if isAdmin() || (
+        isSignedIn() &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['is_read']) &&
+        (
+          resource.data.recipient_uid == request.auth.uid ||
+          (resource.data.recipient_uid == null && (
+            (resource.data.recipient_role == 'admin' && isAdmin()) ||
+            (resource.data.recipient_role == 'tutor' && isTutorUser())
+          ))
+        )
+      );
+
+      allow delete: if isAdmin();
+    }
+
+    // ------------------------------------------------------------------
+    // Phase 19 — Live Sessions
+    // ------------------------------------------------------------------
+    // NOT independently verified against a live Firebase project (same
+    // no-network-access caveat as the top of this file) — run these
+    // through the Firebase Console Rules Playground before deploying.
+
+    // enrolments/{studentId}_{courseId} is the deterministic id already
+    // used by src/pages/admin/AdminPayments.tsx. Firestore rules cannot
+    // run `where` queries, so real server-side enrolment checks are only
+    // possible because that id is deterministic — reading it directly by
+    // path is what makes this a genuine authorization check rather than
+    // just a client-side courtesy message (spec: "Never rely only on
+    // hiding the Join button").
+    function hasActiveEnrolment(courseId) {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)) &&
+        get(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)).data.status == 'active';
+    }
+
+    match /live_sessions/{sessionId} {
+      // A student can only read a PUBLISHED session for a course they
+      // are actively enrolled in — a draft is invisible to students
+      // regardless of the sessionId they try, and a session for a
+      // course they never paid for/enrolled in is invisible even with
+      // the exact right sessionId (blocks the "change sessionId /
+      // courseId in the URL" IDOR case called out in the spec).
+      allow read: if isAdmin()
+        || (isApprovedTutor() && resource.data.tutor_id == request.auth.uid)
+        || (resource.data.status == 'published' && hasActiveEnrolment(resource.data.course_id));
+
+      allow create: if isAdmin()
+        || (isApprovedTutor() && request.resource.data.tutor_id == request.auth.uid);
+
+      // A tutor may update only a session they own, and may not
+      // reassign it to a different tutor or course out from under
+      // themselves.
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && resource.data.tutor_id == request.auth.uid
+            && request.resource.data.tutor_id == resource.data.tutor_id
+            && request.resource.data.course_id == resource.data.course_id);
+
+      allow delete: if isAdmin();
+    }
+
+    match /session_attendance/{attendanceId} {
+      // Doc id convention: `${session_id}_${student_id}` (mirrors
+      // enrolments' `${student_id}_${course_id}` pattern).
+      allow read: if isAdmin()
+        || isOwner(resource.data.student_id)
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid);
+
+      // A student may create ONLY their own self-reported join record,
+      // for a session they're actually enrolled in and that is
+      // currently published — never a status other than 'present' and
+      // never a source other than 'self_reported' (a tutor/admin
+      // override always goes through the branches below instead).
+      allow create: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(request.resource.data.student_id)
+          && attendanceId == request.resource.data.session_id + '_' + request.auth.uid
+          && request.resource.data.source == 'self_reported'
+          && request.resource.data.status == 'present'
+          && hasActiveEnrolment(request.resource.data.course_id)
+          && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.status == 'published'
+        );
+
+      // Updates: a student may only ever touch their own `joined_at` on
+      // their own self-reported row (repeated join clicks); everything
+      // else (status corrections, marking other students) is a
+      // tutor/admin action.
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(resource.data.student_id)
+          && resource.data.source == 'self_reported'
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['joined_at'])
+        );
+
+      allow delete: if isAdmin();
+    }
+
+
+    // ============================================================
+    // Everything else: deny by default.
+    // ============================================================
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
