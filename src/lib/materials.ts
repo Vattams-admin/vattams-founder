@@ -12,9 +12,9 @@
 // There is no server/Cloud Functions layer in this project (frontend
 // talks to Firebase directly), so uploads, validation, and deletes all
 // happen from the client, same as every other write in this codebase.
-// The real access-control boundary is Firestore/Storage security rules
-// (see firestore.rules / storage.rules at the repo root) — this file
-// does not (and cannot) enforce authorization on its own.
+// Firestore security rules protect the metadata; Supabase Storage policies
+// protect the file operations. This file does not enforce authorization on
+// its own.
 
 import {
   collection,
@@ -28,14 +28,12 @@ import {
   updateDoc,
   where,
 } from 'firebase/firestore'
+import { firestore } from '@/lib/firebase'
 import {
-  deleteObject,
-  getDownloadURL,
-  ref,
-  uploadBytesResumable,
-  type UploadTaskSnapshot,
-} from 'firebase/storage'
-import { firestore, firebaseStorage } from '@/lib/firebase'
+  deleteCourseMaterialFile,
+  uploadCourseMaterial,
+  type SupabaseUploadResult,
+} from '@/lib/supabaseStorage'
 import type { Material, MaterialInput, MaterialType } from '@/types/materials'
 import { sanitizeFilename } from '@/lib/materialValidation'
 
@@ -140,15 +138,11 @@ export function materialStoragePath(courseId: string, materialId: string, filena
   return `courses/${courseId}/materials/${materialId}/${sanitizeFilename(filename)}`
 }
 
-export interface UploadResult {
-  url: string
-  storagePath: string
-  size: number
-  mimeType: string
-}
+export type UploadResult = SupabaseUploadResult
 
-// Uploads a file for a pdf/image/video material and resolves once the
-// download URL is available. `onProgress` receives 0–100.
+// Uploads a file for a pdf/image/video material to Supabase Storage and
+// resolves once the object is available at its public URL. `onProgress`
+// receives 0–100.
 export function uploadMaterialFile(
   courseId: string,
   materialId: string,
@@ -156,44 +150,18 @@ export function uploadMaterialFile(
   onProgress?: (percent: number) => void
 ): { promise: Promise<UploadResult>; cancel: () => void } {
   const storagePath = materialStoragePath(courseId, materialId, file.name)
-  const storageRef = ref(firebaseStorage, storagePath)
-  const task = uploadBytesResumable(storageRef, file, { contentType: file.type })
-
-  const promise = new Promise<UploadResult>((resolve, reject) => {
-    task.on(
-      'state_changed',
-      (snapshot: UploadTaskSnapshot) => {
-        if (onProgress) {
-          const percent = snapshot.totalBytes
-            ? Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100)
-            : 0
-          onProgress(percent)
-        }
-      },
-      (error) => reject(error),
-      async () => {
-        try {
-          const url = await getDownloadURL(task.snapshot.ref)
-          resolve({ url, storagePath, size: file.size, mimeType: file.type })
-        } catch (err) {
-          reject(err)
-        }
-      }
-    )
-  })
-
-  return { promise, cancel: () => task.cancel() }
+  const { promise, cancel } = uploadCourseMaterial(storagePath, file, onProgress)
+  return { promise, cancel }
 }
 
 export async function deleteMaterialFile(storagePath: string | null): Promise<void> {
   if (!storagePath) return
   try {
-    await deleteObject(ref(firebaseStorage, storagePath))
+    await deleteCourseMaterialFile(storagePath)
   } catch (error) {
     // A missing/already-deleted object is not fatal — the Firestore doc
-    // deletion (the source of truth for "does this material exist") is
-    // what matters; log and move on rather than blocking the user.
-    if (import.meta.env.DEV) console.error('[materials] Failed to delete storage file:', error)
+    // deletion remains the source of truth for whether the material exists.
+    if (import.meta.env.DEV) console.error('[materials] Failed to delete Supabase Storage file:', error)
   }
 }
 

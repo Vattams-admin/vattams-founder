@@ -1,17 +1,27 @@
+# Dependencies
 node_modules/
+
+# Build output
 dist/
 .tsc-out/
 *.tsbuildinfo
+
+# npm / Termux caches
+.npm/
+.npm-cache/
+
+# Local environment / secrets
 .env
 .env.*
 !.env.example
-*.log
-.DS_Store
-.env
-.env.*
-!.env.example
-*.backup
-*.backup-*
+
+# Backup files
+*.backup*
 src_backup_before_supabase_remove/
-dist/
-node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

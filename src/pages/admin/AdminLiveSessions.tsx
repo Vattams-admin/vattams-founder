@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import AdminNav from '@/components/AdminNav'
 import { cancelLiveSession, listAllSessions } from '@/lib/liveSessions'
 import { computeLiveSessionPhase, type LiveSession, type LiveSessionPhase } from '@/types/liveSession'
+import { classifyFirestoreError, type ClassifiedFirestoreError } from '@/lib/firestoreErrors'
 
 // Spec §"LIVE SESSION ADMIN DASHBOARD". Read/audit-focused — scheduling
 // itself happens from the Tutor Live Sessions page (an admin who needs
@@ -23,17 +24,19 @@ function phaseLabel(phase: LiveSessionPhase): string {
 export default function AdminLiveSessions() {
   const [sessions, setSessions] = useState<LiveSession[]>([])
   const [state, setState] = useState<'loading' | 'loaded' | 'error'>('loading')
+  const [loadError, setLoadError] = useState<ClassifiedFirestoreError | null>(null)
   const [filter, setFilter] = useState<FilterKey>('all')
   const [search, setSearch] = useState('')
 
   async function load() {
     setState('loading')
+    setLoadError(null)
     try {
       const rows = await listAllSessions()
       setSessions(rows)
       setState('loaded')
     } catch (err) {
-      console.error('Failed to load live sessions:', err)
+      setLoadError(classifyFirestoreError(err, 'AdminLiveSessions: listAllSessions'))
       setState('error')
     }
   }
@@ -97,10 +100,14 @@ export default function AdminLiveSessions() {
         />
       </div>
 
-      {state === 'error' && (
+      {state === 'error' && loadError && (
         <div className="mt-8 card border-danger/40 p-8 text-center">
-          <p className="font-display text-lg text-danger">Unable to connect</p>
-          <p className="mt-2 text-sm text-slate-muted">Please check your internet connection and try again.</p>
+          <p className="font-display text-lg text-danger">{loadError.headline}</p>
+          <p className="mx-auto mt-2 max-w-xl text-sm text-slate-muted">{loadError.detail}</p>
+          {loadError.code && (
+            <p className="mt-2 font-mono text-xs text-slate-muted/70">Error code: {loadError.code}</p>
+          )}
+
           <button onClick={load} className="btn-secondary mt-4">
             Retry
           </button>

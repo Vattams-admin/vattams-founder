@@ -11,6 +11,11 @@ import {
 } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
+import { listPublishedMaterials } from '@/lib/materials'
+import type { Material } from '@/types/materials'
+import { getMaterialTypeLabel } from '@/types/materials'
+import { formatFileSize } from '@/lib/materialValidation'
+import { MaterialTypeIcon } from '@/components/materials/MaterialIcons'
 
 interface Course {
   id: string
@@ -51,6 +56,7 @@ export default function CourseLearn() {
   const [modules, setModules] = useState<Module[]>([])
   const [lessons, setLessons] = useState<Lesson[]>([])
   const [progress, setProgress] = useState<Record<string, boolean>>({})
+  const [materials, setMaterials] = useState<Material[]>([])
   const [activeLessonId, setActiveLessonId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [status, setStatus] = useState<
@@ -207,7 +213,17 @@ export default function CourseLearn() {
         if (cancelled) return
 
         // ---------------------------------------------------------
-        // 6. Update state
+        // 6b. Course materials (Learning Materials module — separate
+        // from lessons; see src/lib/materials.ts). Non-fatal: a
+        // failure here (e.g. a permission issue specific to that
+        // subcollection) must not block the lesson view students
+        // already have access to.
+        // ---------------------------------------------------------
+        const { rows: materialRows } = await listPublishedMaterials(course.id)
+        if (!cancelled) setMaterials(materialRows)
+
+        // ---------------------------------------------------------
+        // 7. Update state
         // ---------------------------------------------------------
         setModules(moduleRows)
         setLessons(lessonRows)
@@ -483,6 +499,39 @@ export default function CourseLearn() {
           )}
         </section>
       </div>
+
+      {materials.length > 0 && (
+        <section className="card mt-6 p-6">
+          <h2 className="font-display text-lg">Course Materials</h2>
+          <div className="mt-4 space-y-2">
+            {materials.map((material) => (
+              <div key={material.id} className="flex items-center justify-between gap-3 rounded-card border border-white/10 p-3 text-sm">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-card bg-gold/15 text-gold">
+                    <MaterialTypeIcon type={material.type} />
+                  </span>
+                  <div>
+                    <p className="font-medium">{material.title}</p>
+                    <p className="text-xs text-slate-muted">
+                      {getMaterialTypeLabel(material.type)}
+                      {material.file_size ? ` · ${formatFileSize(material.file_size)}` : ''}
+                    </p>
+                  </div>
+                </div>
+                {material.type === 'notes' ? (
+                  <span className="text-xs text-slate-muted">See below</span>
+                ) : (
+                  material.url && (
+                    <a href={material.url} target="_blank" rel="noreferrer" className="btn-secondary text-xs">
+                      Open
+                    </a>
+                  )
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   )
 }

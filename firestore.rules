@@ -96,80 +96,7 @@ service cloud.firestore {
       allow read, write: if isAdmin();
     }
 
-    // Everything else (courses, enrolments, payments, certificates, ...)
-    // is intentionally NOT covered here — see the warning at the top of
-    // this file. Merge in your existing rules for those collections
-    // before deploying.
     // ------------------------------------------------------------------
-    // Notifications
-    // ------------------------------------------------------------------
-    match /notifications/{notificationId} {
-
-      function isApprovedTutor() {
-        return isSignedIn() &&
-          exists(/databases/$(database)/documents/tutors/$(request.auth.uid)) &&
-          get(/databases/$(database)/documents/tutors/$(request.auth.uid)).data.status == 'approved';
-      }
-
-      function isOwnNotification() {
-        return isSignedIn() &&
-          resource.data.recipient_uid == request.auth.uid;
-      }
-
-      function isAdminBroadcast() {
-        return resource.data.recipient_uid == null &&
-          resource.data.recipient_role == 'admin';
-      }
-
-      function isTutorBroadcast() {
-        return resource.data.recipient_uid == null &&
-          resource.data.recipient_role == 'tutor';
-      }
-
-      allow read: if isOwnNotification()
-        || (isAdminBroadcast() && isAdmin())
-        || (isTutorBroadcast() && isApprovedTutor());
-
-      allow create: if isSignedIn()
-        && request.resource.data.is_read == false
-        && request.resource.data.keys().hasAll([
-          'recipient_uid',
-          'recipient_role',
-          'type',
-          'title',
-          'message',
-          'is_read',
-          'created_at'
-        ])
-        && (
-          isAdmin()
-          || (
-            request.resource.data.recipient_uid == request.auth.uid
-            && request.resource.data.type == 'registration_success'
-          )
-          || (
-            request.resource.data.recipient_uid == null
-            && request.resource.data.recipient_role == 'admin'
-            && request.resource.data.type in [
-              'new_student_registration',
-              'tutor_activity',
-              'payment_received'
-            ]
-          )
-        );
-
-      allow update: if (
-          isOwnNotification()
-          || (isAdminBroadcast() && isAdmin())
-          || (isTutorBroadcast() && isApprovedTutor())
-        )
-        && request.resource.data.diff(resource.data)
-             .affectedKeys()
-             .hasOnly(['is_read']);
-
-      allow delete: if false;
-    }
-
     // Phase 19 — Live Sessions
     // ------------------------------------------------------------------
     // NOT independently verified against a live Firebase project (same
@@ -193,6 +120,41 @@ service cloud.firestore {
       return isSignedIn() &&
         exists(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)) &&
         get(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)).data.status == 'active';
+    }
+
+    // ------------------------------------------------------------------
+    // Learning Materials (courses/{courseId}/materials/{materialId}) —
+    // see src/lib/materials.ts. Supabase Storage now holds the actual file
+    // bytes; this Firestore rule gates the material metadata itself,
+    // so students only discover published material URLs after an active
+    // enrolment check, while admins can manage all material records.
+    // deny-all catch-all at the bottom of this file — the metadata
+    // list would permission-deny even though the file, if you already
+    // had its URL, would not. Mirrors storage.rules' isAdmin() /
+    // isActivelyEnrolled() logic; hasActiveEnrolment() above is the
+    // same function storage.rules' isActivelyEnrolled() reimplements
+    // (Storage rules cannot import from Firestore rules).
+    // ------------------------------------------------------------------
+    // ------------------------------------------------------------------
+    // Courses (courses/{courseId}) — the catalog document itself had no
+    // explicit rule anywhere in this file (same gap as the materials
+    // subcollection above), so it fell through to the deny-all
+    // catch-all too. Admin gets full CRUD; everyone else (including
+    // signed-out visitors) can only read published rows — matches
+    // AdminCourses.tsx (admin lists all, no `where` filter) vs.
+    // Courses.tsx / CourseDetail.tsx / Home.tsx (public,
+    // `is_published == true`).
+    // ------------------------------------------------------------------
+    match /courses/{courseId} {
+      allow read: if isAdmin() || resource.data.is_published == true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /courses/{courseId}/materials/{materialId} {
+      allow read: if isAdmin()
+        || (hasActiveEnrolment(courseId) && resource.data.is_published == true);
+
+      allow create, update, delete: if isAdmin();
     }
 
     match /live_sessions/{sessionId} {
@@ -261,6 +223,72 @@ service cloud.firestore {
 
       allow delete: if isAdmin();
     }
+
+    // Phase 19 — Live Sessions
+    // ------------------------------------------------------------------
+    // NOT independently verified against a live Firebase project (same
+    // no-network-access caveat as the top of this file) — run these
+    // through the Firebase Console Rules Playground before deploying.
+
+    function isApprovedTutor() {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/tutors/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/tutors/$(request.auth.uid)).data.status == 'approved';
+    }
+
+    function hasActiveEnrolment(courseId) {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)) &&
+        get(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)).data.status == 'active';
+    }
+
+    match /live_sessions/{sessionId} {
+      allow read: if isAdmin()
+        || (isApprovedTutor() && resource.data.tutor_id == request.auth.uid)
+        || (resource.data.status == 'published' && hasActiveEnrolment(resource.data.course_id));
+
+      allow create: if isAdmin()
+        || (isApprovedTutor() && request.resource.data.tutor_id == request.auth.uid);
+
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && resource.data.tutor_id == request.auth.uid
+            && request.resource.data.tutor_id == resource.data.tutor_id
+            && request.resource.data.course_id == resource.data.course_id);
+
+      allow delete: if isAdmin();
+    }
+
+    match /session_attendance/{attendanceId} {
+      allow read: if isAdmin()
+        || isOwner(resource.data.student_id)
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid);
+
+      allow create: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(request.resource.data.student_id)
+          && attendanceId == request.resource.data.session_id + '_' + request.auth.uid
+          && request.resource.data.source == 'self_reported'
+          && request.resource.data.status == 'present'
+          && hasActiveEnrolment(request.resource.data.course_id)
+          && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.status == 'published'
+        );
+
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(resource.data.student_id)
+          && resource.data.source == 'self_reported'
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['joined_at'])
+        );
+
+      allow delete: if isAdmin();
+    }
+
 
     // Everything else (courses, enrolments, payments, certificates, ...)
     // is intentionally NOT covered here — see the warning at the top of
