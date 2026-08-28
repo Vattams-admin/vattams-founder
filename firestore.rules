@@ -96,80 +96,138 @@ service cloud.firestore {
       allow read, write: if isAdmin();
     }
 
+    // ------------------------------------------------------------------
+    // Phase 19 — Live Sessions
+    // ------------------------------------------------------------------
+    // NOT independently verified against a live Firebase project (same
+    // no-network-access caveat as the top of this file) — run these
+    // through the Firebase Console Rules Playground before deploying.
+
+    function isApprovedTutor() {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/tutors/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/tutors/$(request.auth.uid)).data.status == 'approved';
+    }
+
+    // enrolments/{studentId}_{courseId} is the deterministic id already
+    // used by src/pages/admin/AdminPayments.tsx. Firestore rules cannot
+    // run `where` queries, so real server-side enrolment checks are only
+    // possible because that id is deterministic — reading it directly by
+    // path is what makes this a genuine authorization check rather than
+    // just a client-side courtesy message (spec: "Never rely only on
+    // hiding the Join button").
+    function hasActiveEnrolment(courseId) {
+      return isSignedIn() &&
+        exists(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)) &&
+        get(/databases/$(database)/documents/enrolments/$(request.auth.uid + '_' + courseId)).data.status == 'active';
+    }
+
+    // ------------------------------------------------------------------
+    // Learning Materials (courses/{courseId}/materials/{materialId}) —
+    // see src/lib/materials.ts. Supabase Storage now holds the actual file
+    // bytes; this Firestore rule gates the material metadata itself,
+    // so students only discover published material URLs after an active
+    // enrolment check, while admins can manage all material records.
+    // deny-all catch-all at the bottom of this file — the metadata
+    // list would permission-deny even though the file, if you already
+    // had its URL, would not. Mirrors storage.rules' isAdmin() /
+    // isActivelyEnrolled() logic; hasActiveEnrolment() above is the
+    // same function storage.rules' isActivelyEnrolled() reimplements
+    // (Storage rules cannot import from Firestore rules).
+    // ------------------------------------------------------------------
+    // ------------------------------------------------------------------
+    // Courses (courses/{courseId}) — the catalog document itself had no
+    // explicit rule anywhere in this file (same gap as the materials
+    // subcollection above), so it fell through to the deny-all
+    // catch-all too. Admin gets full CRUD; everyone else (including
+    // signed-out visitors) can only read published rows — matches
+    // AdminCourses.tsx (admin lists all, no `where` filter) vs.
+    // Courses.tsx / CourseDetail.tsx / Home.tsx (public,
+    // `is_published == true`).
+    // ------------------------------------------------------------------
+    match /courses/{courseId} {
+      allow read: if isAdmin() || resource.data.is_published == true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /courses/{courseId}/materials/{materialId} {
+      allow read: if isAdmin()
+        || (hasActiveEnrolment(courseId) && resource.data.is_published == true);
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /live_sessions/{sessionId} {
+      // A student can only read a PUBLISHED session for a course they
+      // are actively enrolled in — a draft is invisible to students
+      // regardless of the sessionId they try, and a session for a
+      // course they never paid for/enrolled in is invisible even with
+      // the exact right sessionId (blocks the "change sessionId /
+      // courseId in the URL" IDOR case called out in the spec).
+      allow read: if isAdmin()
+        || (isApprovedTutor() && resource.data.tutor_id == request.auth.uid)
+        || (resource.data.status == 'published' && hasActiveEnrolment(resource.data.course_id));
+
+      allow create: if isAdmin()
+        || (isApprovedTutor() && request.resource.data.tutor_id == request.auth.uid);
+
+      // A tutor may update only a session they own, and may not
+      // reassign it to a different tutor or course out from under
+      // themselves.
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && resource.data.tutor_id == request.auth.uid
+            && request.resource.data.tutor_id == resource.data.tutor_id
+            && request.resource.data.course_id == resource.data.course_id);
+
+      allow delete: if isAdmin();
+    }
+
+    match /session_attendance/{attendanceId} {
+      // Doc id convention: `${session_id}_${student_id}` (mirrors
+      // enrolments' `${student_id}_${course_id}` pattern).
+      allow read: if isAdmin()
+        || isOwner(resource.data.student_id)
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid);
+
+      // A student may create ONLY their own self-reported join record,
+      // for a session they're actually enrolled in and that is
+      // currently published — never a status other than 'present' and
+      // never a source other than 'self_reported' (a tutor/admin
+      // override always goes through the branches below instead).
+      allow create: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(request.resource.data.student_id)
+          && attendanceId == request.resource.data.session_id + '_' + request.auth.uid
+          && request.resource.data.source == 'self_reported'
+          && request.resource.data.status == 'present'
+          && hasActiveEnrolment(request.resource.data.course_id)
+          && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.status == 'published'
+        );
+
+      // Updates: a student may only ever touch their own `joined_at` on
+      // their own self-reported row (repeated join clicks); everything
+      // else (status corrections, marking other students) is a
+      // tutor/admin action.
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(resource.data.student_id)
+          && resource.data.source == 'self_reported'
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['joined_at'])
+        );
+
+      allow delete: if isAdmin();
+    }
+
     // Everything else (courses, enrolments, payments, certificates, ...)
     // is intentionally NOT covered here — see the warning at the top of
     // this file. Merge in your existing rules for those collections
     // before deploying.
-    // ------------------------------------------------------------------
-    // Notifications
-    // ------------------------------------------------------------------
-    match /notifications/{notificationId} {
-
-      function isApprovedTutor() {
-        return isSignedIn() &&
-          exists(/databases/$(database)/documents/tutors/$(request.auth.uid)) &&
-          get(/databases/$(database)/documents/tutors/$(request.auth.uid)).data.status == 'approved';
-      }
-
-      function isOwnNotification() {
-        return isSignedIn() &&
-          resource.data.recipient_uid == request.auth.uid;
-      }
-
-      function isAdminBroadcast() {
-        return resource.data.recipient_uid == null &&
-          resource.data.recipient_role == 'admin';
-      }
-
-      function isTutorBroadcast() {
-        return resource.data.recipient_uid == null &&
-          resource.data.recipient_role == 'tutor';
-      }
-
-      allow read: if isOwnNotification()
-        || (isAdminBroadcast() && isAdmin())
-        || (isTutorBroadcast() && isApprovedTutor());
-
-      allow create: if isSignedIn()
-        && request.resource.data.is_read == false
-        && request.resource.data.keys().hasAll([
-          'recipient_uid',
-          'recipient_role',
-          'type',
-          'title',
-          'message',
-          'is_read',
-          'created_at'
-        ])
-        && (
-          isAdmin()
-          || (
-            request.resource.data.recipient_uid == request.auth.uid
-            && request.resource.data.type == 'registration_success'
-          )
-          || (
-            request.resource.data.recipient_uid == null
-            && request.resource.data.recipient_role == 'admin'
-            && request.resource.data.type in [
-              'new_student_registration',
-              'tutor_activity',
-              'payment_received'
-            ]
-          )
-        );
-
-      allow update: if (
-          isOwnNotification()
-          || (isAdminBroadcast() && isAdmin())
-          || (isTutorBroadcast() && isApprovedTutor())
-        )
-        && request.resource.data.diff(resource.data)
-             .affectedKeys()
-             .hasOnly(['is_read']);
-
-      allow delete: if false;
-    }
-
     match /{document=**} {
       allow read, write: if false;
     }

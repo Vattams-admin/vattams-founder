@@ -139,20 +139,36 @@ export default function CourseDetail() {
               </div>
             )}
 
-            <dl className="mt-6 grid grid-cols-2 gap-4 text-sm">
-              {course.instructor_name && (
-                <div>
-                  <dt className="text-slate-muted">Instructor</dt>
-                  <dd className="mt-1 font-medium">{course.instructor_name}</dd>
-                </div>
-              )}
-              {course.duration_text && (
-                <div>
-                  <dt className="text-slate-muted">Duration</dt>
-                  <dd className="mt-1 font-medium">{course.duration_text}</dd>
-                </div>
-              )}
-            </dl>
+            {(course.instructor_name || course.duration_text) && (
+              <dl className="mt-6 grid grid-cols-2 gap-4 text-sm">
+                {course.instructor_name && (
+                  <div>
+                    <dt className="text-slate-muted">Instructor</dt>
+                    <dd className="mt-1 font-medium">{course.instructor_name}</dd>
+                  </div>
+                )}
+                {course.duration_text && (
+                  <div>
+                    <dt className="text-slate-muted">Duration</dt>
+                    <dd className="mt-1 font-medium">{course.duration_text}</dd>
+                  </div>
+                )}
+              </dl>
+            )}
+
+            {course.preview_video_url && (
+              <div className="card mt-6 p-6">
+                <h2 className="font-display text-lg">Preview</h2>
+                <a
+                  href={course.preview_video_url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-secondary mt-3 inline-flex"
+                >
+                  Watch preview video
+                </a>
+              </div>
+            )}
           </div>
 
           <div className="card h-fit p-6">

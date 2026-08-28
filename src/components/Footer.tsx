@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom'
-import SocialConnect from '@/components/SocialConnect'
-import WhatsAppButton from '@/components/WhatsAppButton'
 
 const platformLinks = [
   { to: '/courses', label: 'Courses' },
@@ -18,12 +16,7 @@ const companyLinks = [
 const legalLinks = [
   { to: '/privacy-policy', label: 'Privacy Policy' },
   { to: '/terms', label: 'Terms & Conditions' },
-  { to: '/refund-policy', label: 'Refund Policy' },
-  { to: '/tutor-verification-policy', label: 'Tutor Verification Policy' },
-  { to: '/student-parent-guidelines', label: 'Student / Parent Guidelines' },
-  { to: '/tutor-code-of-conduct', label: 'Tutor Code of Conduct' },
-  { to: '/payment-enrollment-terms', label: 'Payment & Enrollment Terms' },
-  { to: '/certificate-competition-terms', label: 'Certificate / Competition Terms' }
+  { to: '/refund-policy', label: 'Refund Policy' }
 ]
 
 export default function Footer() {
@@ -47,16 +40,6 @@ export default function Footer() {
               Courses, competitive exam preparation, competitions, and verifiable certification —
               built to one academic standard.
             </p>
-
-            <div className="mt-5">
-              <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                Connect
-              </h3>
-              <div className="mt-3 flex flex-wrap items-center gap-3">
-                <SocialConnect />
-                <WhatsAppButton />
-              </div>
-            </div>
           </div>
 
           <FooterColumn title="Platform" links={platformLinks} />

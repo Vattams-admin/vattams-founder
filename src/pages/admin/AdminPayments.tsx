@@ -5,21 +5,23 @@ import {
   getDoc,
   getDocs,
   query,
+  runTransaction,
   serverTimestamp,
-  setDoc,
-  updateDoc,
   where
 } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import AdminNav from '@/components/AdminNav'
+import { useAdminAuth } from '@/hooks/useAdminAuth'
 import type { Payment } from '@/types/database'
 import { createAdminBroadcast, createNotification } from '@/lib/notifications'
 
 export default function AdminPayments() {
+  const { adminUser } = useAdminAuth()
   const [rows, setRows] = useState<Payment[] | null>(null)
   const [busyId, setBusyId] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [loadError, setLoadError] = useState(false)
+  const [rejectNotes, setRejectNotes] = useState<Record<string, string>>({})
 
   async function load() {
     setLoadError(false)
@@ -42,42 +44,84 @@ export default function AdminPayments() {
   useEffect(() => { load() }, [])
 
   async function decide(payment: Payment, status: 'approved' | 'rejected') {
+    const note = rejectNotes[payment.id]?.trim() || null
     setBusyId(payment.id)
     setError(null)
     try {
-      await updateDoc(doc(firestore, 'payments', payment.id), {
-        status,
-        verified_at: new Date().toISOString()
-      })
+      // Course slug lookup is read-only reference data (used only for the
+      // student notification's deep link) — not part of the authoritative
+      // state being changed, so it's fetched before the transaction rather
+      // than inside it.
+      let courseSlug: string | null = null
+      if (status === 'approved') {
+        const courseSnap = await getDoc(doc(firestore, 'courses', payment.course_id))
+        courseSlug = courseSnap.exists() ? (courseSnap.data().slug as string | undefined) ?? null : null
+      }
+
+      const enrolmentId = `${payment.student_id}_${payment.course_id}`
+      const paymentRef = doc(firestore, 'payments', payment.id)
+      const enrolmentRef = doc(firestore, 'enrolments', enrolmentId)
 
       // Firestore has no server-side triggers, so the enrolment
       // activation that Supabase used to do in
-      // activate_enrolment_on_payment_approval() happens here instead,
-      // right after the payment update succeeds. Doc id is
-      // student_id_course_id so this "upsert" (setDoc + merge) plays
-      // the same role as the old `on conflict (student_id, course_id)`.
+      // activate_enrolment_on_payment_approval() happens here instead.
+      // Wrapped in a transaction so the payment's status flip and the
+      // enrolment's activation commit together or not at all — a
+      // dropped connection between the two can no longer leave an
+      // "approved" payment with no active enrolment (or vice versa).
+      // The transaction also re-reads the payment first as an
+      // idempotency guard: if it's already been decided (e.g. a second
+      // admin tab, or a double click that slipped past `busyId`), this
+      // is a no-op instead of a duplicate enrolment write / duplicate
+      // notifications.
+      const result = await runTransaction(firestore, async (tx) => {
+        const freshSnap = await tx.get(paymentRef)
+        if (!freshSnap.exists()) {
+          throw new Error('This payment no longer exists.')
+        }
+        if (freshSnap.data().status !== 'submitted') {
+          return { alreadyProcessed: true }
+        }
+
+        tx.update(paymentRef, {
+          status,
+          verified_at: new Date().toISOString(),
+          // adminUser is guaranteed non-null here: this page is only
+          // reachable behind AdminRoute, which never renders children
+          // until an authenticated admin is confirmed.
+          verified_by: adminUser!.uid,
+          admin_notes: note
+        })
+
+        if (status === 'approved') {
+          // setDoc(..., { merge: true }) semantics via transaction.set —
+          // doc id is student_id_course_id, so re-approving (should that
+          // ever happen) safely converges on the same enrolment record
+          // rather than creating a duplicate.
+          tx.set(
+            enrolmentRef,
+            {
+              student_id: payment.student_id,
+              course_id: payment.course_id,
+              course_name: payment.course_name,
+              course_slug: courseSlug,
+              status: 'active',
+              enrolled_at: new Date().toISOString(),
+              created_at: serverTimestamp()
+            },
+            { merge: true }
+          )
+        }
+
+        return { alreadyProcessed: false }
+      })
+
+      if (result.alreadyProcessed) {
+        setRows((prev) => prev?.filter((r) => r.id !== payment.id) ?? null)
+        return
+      }
+
       if (status === 'approved') {
-        // Fetched fresh so the enrolment carries the course's current
-        // slug (needed by StudentDashboard's "go to lesson" link) —
-        // course_slug isn't on the payment doc itself.
-        const courseSnap = await getDoc(doc(firestore, 'courses', payment.course_id))
-        const courseSlug = courseSnap.exists() ? (courseSnap.data().slug as string | undefined) ?? null : null
-
-        const enrolmentId = `${payment.student_id}_${payment.course_id}`
-        await setDoc(
-          doc(firestore, 'enrolments', enrolmentId),
-          {
-            student_id: payment.student_id,
-            course_id: payment.course_id,
-            course_name: payment.course_name,
-            course_slug: courseSlug,
-            status: 'active',
-            enrolled_at: new Date().toISOString(),
-            created_at: serverTimestamp()
-          },
-          { merge: true }
-        )
-
         // Three student-facing notifications, never blocking the
         // approval itself (see createNotification() doc comment).
         // payment_success and enrollment_success are genuinely distinct
@@ -117,6 +161,26 @@ export default function AdminPayments() {
         })
       }
 
+      if (status === 'rejected') {
+        void createNotification({
+          recipient_uid: payment.student_id,
+          recipient_role: 'student',
+          type: 'payment_rejected',
+          title: 'Payment could not be verified',
+          message: note
+            ? `Your payment of ₹${payment.amount.toLocaleString('en-IN')} for ${payment.course_name ?? 'your course'} was rejected: ${note}`
+            : `Your payment of ₹${payment.amount.toLocaleString('en-IN')} for ${payment.course_name ?? 'your course'} could not be verified. Please check your reference and try again.`,
+          related_id: payment.id,
+          related_type: 'payment',
+          action_url: '/dashboard',
+        })
+      }
+
+      setRejectNotes((prev) => {
+        const next = { ...prev }
+        delete next[payment.id]
+        return next
+      })
       setRows((prev) => prev?.filter((r) => r.id !== payment.id) ?? null)
     } catch (err) {
       console.error('Failed to update payment status:', err)
@@ -157,6 +221,15 @@ export default function AdminPayments() {
             <div className="text-sm">
               <p className="font-medium">{r.student_name ?? 'Student'} — {r.course_name ?? 'Course'}</p>
               <p className="text-slate-muted">₹{r.amount.toLocaleString('en-IN')} · UTR: {r.utr_reference}</p>
+              <p className="text-xs text-slate-muted">
+                Submitted {r.submitted_at ? new Date(r.submitted_at).toLocaleString('en-IN') : '—'}
+              </p>
+              <input
+                value={rejectNotes[r.id] ?? ''}
+                onChange={(e) => setRejectNotes((prev) => ({ ...prev, [r.id]: e.target.value }))}
+                placeholder="Rejection reason (optional, shown to student if rejected)"
+                className="mt-2 w-full max-w-sm rounded-card border border-white/15 bg-ink px-2 py-1 text-xs outline-none focus:border-gold"
+              />
             </div>
             <div className="flex gap-2">
               <button

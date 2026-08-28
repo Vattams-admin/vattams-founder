@@ -51,7 +51,6 @@ export default defineConfig({
         ]
       },
       workbox: {
-            mode: 'development',
         // Only precache the built app shell + same-origin static assets —
         // never API/data responses. globIgnores keeps this from also
         // sweeping up source maps into the precache manifest.

@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import { Navigate } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
 import type { Enrolment, Payment } from '@/types/database'
+import EmailVerificationBanner from '@/components/EmailVerificationBanner'
 
 type SectionState = 'loading' | 'loaded' | 'error'
 
@@ -57,6 +58,19 @@ export default function StudentDashboard() {
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
       <h1 className="font-display text-3xl">Your learning</h1>
 
+      <div className="mt-6">
+        <EmailVerificationBanner user={user} />
+      </div>
+
+      <div className="mt-3 flex flex-wrap gap-4 text-sm">
+        <Link to="/student/id-card" className="font-medium text-gold hover:text-gold-bright">
+          View ID card
+        </Link>
+        <Link to="/student/welcome-letter" className="font-medium text-gold hover:text-gold-bright">
+          Welcome letter
+        </Link>
+      </div>
+
       <section className="mt-8">
         <h2 className="font-display text-xl text-gold-bright">Enrolled courses</h2>
         {enrolmentsState === 'loading' && <p className="mt-2 text-sm text-slate-muted">Loading…</p>}
@@ -72,14 +86,14 @@ export default function StudentDashboard() {
         )}
         {enrolmentsState === 'loaded' && enrolments.length === 0 && (
           <p className="mt-2 text-sm text-slate-muted">
-            No enrolments yet. Browse the <a href="/courses" className="underline">course catalogue</a> to get started.
+            No enrolments yet. Browse the <Link to="/courses" className="underline">course catalogue</Link> to get started.
           </p>
         )}
         <div className="mt-4 grid gap-3">
           {enrolmentsState === 'loaded' && enrolments.map((e) => (
             <div key={e.id} className="card flex items-center justify-between p-4">
               {e.status === 'active' && e.course_slug ? (
-                <a href={`/learn/${e.course_slug}`} className="hover:text-gold-bright">{e.course_name ?? 'Course'}</a>
+                <Link to={`/learn/${e.course_slug}`} className="hover:text-gold-bright">{e.course_name ?? 'Course'}</Link>
               ) : (
                 <span>{e.course_name ?? 'Course'}</span>
               )}
@@ -113,8 +127,15 @@ export default function StudentDashboard() {
           {paymentsState === 'loaded' && payments.map((p) => (
             <div key={p.id} className="flex items-center justify-between p-4 text-sm">
               <div>
+                <p className="font-medium">{p.course_name ?? 'Course'}</p>
                 <p>₹{p.amount.toLocaleString('en-IN')}</p>
                 {p.utr_reference && <p className="text-xs text-slate-muted">UTR: {p.utr_reference}</p>}
+                <p className="text-xs text-slate-muted">
+                  {new Date(p.created_at).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
+                </p>
+                {p.status === 'rejected' && p.admin_notes && (
+                  <p className="mt-1 text-xs text-danger">Reason: {p.admin_notes}</p>
+                )}
               </div>
               <span
                 className={`rounded-full px-2 py-0.5 text-xs uppercase tracking-wide ${

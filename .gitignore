@@ -1,23 +1,9 @@
-node_modules/
 dist/
-.tsc-out/
-*.tsbuildinfo
-.env
-.env.*
-!.env.example
-*.log
-.DS_Store
-.env
-.env.*
-!.env.example
-*.backup
-*.backup-*
+*.backup*
 src_backup_before_supabase_remove/
-dist/
-node_modules/
+
 # Dependencies
 node_modules/
-**/node_modules/
 
 # npm / Termux caches
 .npm/
@@ -34,3 +20,7 @@ node_modules/
 # OS / editor files
 .DS_Store
 Thumbs.db
+
+# TypeScript compiler output
+.tsc-out/
+*.tsbuildinfo

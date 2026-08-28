@@ -94,7 +94,7 @@ export default function AdminCourseMaterials() {
         )}
       </div>
 
-      {error && <p className="mt-4 text-sm text-danger">{error}</p>}
+      {error && state !== 'error' && <p className="mt-4 text-sm text-danger">{error}</p>}
 
       {formMode !== 'none' && (
         <div className="mt-6">
@@ -116,8 +116,10 @@ export default function AdminCourseMaterials() {
 
       {state === 'error' && (
         <div className="mt-8 card border-danger/40 p-8 text-center">
-          <p className="font-display text-lg text-danger">Unable to connect</p>
-          <p className="mt-2 text-sm text-slate-muted">Please check your internet connection and try again.</p>
+          <p className="font-display text-lg text-danger">Couldn&apos;t load materials</p>
+          <p className="mx-auto mt-2 max-w-md text-sm text-slate-muted">
+            {error ?? 'Please check your internet connection and try again.'}
+          </p>
           <button onClick={load} className="btn-secondary mt-4">
             Retry
           </button>

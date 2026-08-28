@@ -124,3 +124,30 @@ match /notifications/{notificationId} {
   allow delete: if false;
 }
 ```
+
+## Phase 19 addition — Live Session notifications
+
+Live session scheduling/cancelling/rescheduling (see
+`src/lib/liveSessions.ts`) notifies enrolled students directly by uid,
+not as a broadcast — the existing `create` rule's branch 1 already
+covers this for admins. It does NOT yet cover a **tutor** doing the
+same (a tutor scheduling their own class needs to notify their
+students without being an admin). Add a fourth branch to the
+`allow create` rule above:
+
+```
+// 4) An approved tutor may notify a specific student, but ONLY for
+//    the allow-listed live-session types, ONLY addressed as
+//    'student', and ONLY when related_id points at a live_sessions
+//    doc that tutor actually owns — this stops a tutor from spamming
+//    an arbitrary uid under an unrelated session id.
+|| (isApprovedTutor()
+    && request.resource.data.recipient_role == 'student'
+    && request.resource.data.related_type == 'live_session'
+    && request.resource.data.type in ['class_reminder', 'class_cancelled', 'class_rescheduled', 'class_live_now', 'class_recording_ready']
+    && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.related_id)).data.tutor_id == request.auth.uid)
+```
+
+This has not been run against a live Firestore project (see the
+caveat at the top of `firestore.rules`) — verify in the Rules
+Playground before deploying.

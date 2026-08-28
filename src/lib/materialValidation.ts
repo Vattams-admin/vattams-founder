@@ -3,11 +3,10 @@
 // denylist of "bad" extensions, which is trivially bypassed by
 // renaming a file), and a filename sanitizer for the Storage path.
 //
-// These limits are enforced here (client-side, for a fast/clear error
-// message) AND must be mirrored in storage.rules (see repo root) —
-// client-side validation alone is not security, it's UX. A student or
-// a modified client could skip this file entirely, so the Storage
-// rules are the real enforcement boundary.
+// These limits are enforced here for a fast/clear client-side error.
+// They must also be enforced by Supabase Storage policies/server-side
+// upload controls in production; client-side validation alone is UX, not
+// security.
 
 import type { MaterialType } from '@/types/materials'
 

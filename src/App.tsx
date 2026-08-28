@@ -30,22 +30,20 @@ const Contact = lazy(() => import('@/pages/Contact'))
 const PrivacyPolicy = lazy(() => import('@/pages/PrivacyPolicy'))
 const Terms = lazy(() => import('@/pages/Terms'))
 const RefundPolicy = lazy(() => import('@/pages/RefundPolicy'))
-const TutorVerificationPolicy = lazy(() => import('@/pages/TutorVerificationPolicy'))
-const StudentParentGuidelines = lazy(() => import('@/pages/StudentParentGuidelines'))
-const TutorCodeOfConduct = lazy(() => import('@/pages/TutorCodeOfConduct'))
-const PaymentEnrollmentTerms = lazy(() => import('@/pages/PaymentEnrollmentTerms'))
-const CertificateCompetitionTerms = lazy(() => import('@/pages/CertificateCompetitionTerms'))
 const AdminLogin = lazy(() => import('@/pages/admin/AdminLogin'))
+const AdminDashboard = lazy(() => import('@/pages/admin/AdminDashboard'))
 const AdminPayments = lazy(() => import('@/pages/admin/AdminPayments'))
 const AdminCourses = lazy(() => import('@/pages/admin/AdminCourses'))
 const AdminCourseForm = lazy(() => import('@/pages/admin/AdminCourseForm'))
+const AdminCourseMaterials = lazy(() => import('@/pages/admin/AdminCourseMaterials'))
 const AdminStudents = lazy(() => import('@/pages/admin/AdminStudents'))
 const AdminTutors = lazy(() => import('@/pages/admin/AdminTutors'))
 const AdminRoute = lazy(() => import('@/components/AdminRoute'))
-const AdminCertificates = lazy(() => import('@/pages/admin/AdminCertificates'))
-const AdminCourseMaterials = lazy(() => import('@/pages/admin/AdminCourseMaterials'))
 const Notifications = lazy(() => import('@/pages/Notifications'))
 const AdminNotifications = lazy(() => import('@/pages/admin/AdminNotifications'))
+const LiveSession = lazy(() => import('@/pages/LiveSession'))
+const TutorLiveSessions = lazy(() => import('@/pages/tutor/TutorLiveSessions'))
+const AdminLiveSessions = lazy(() => import('@/pages/admin/AdminLiveSessions'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 
 function PageFallback() {
@@ -81,11 +79,6 @@ export default function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
-            <Route path="/tutor-verification-policy" element={<TutorVerificationPolicy />} />
-            <Route path="/student-parent-guidelines" element={<StudentParentGuidelines />} />
-            <Route path="/tutor-code-of-conduct" element={<TutorCodeOfConduct />} />
-            <Route path="/payment-enrollment-terms" element={<PaymentEnrollmentTerms />} />
-            <Route path="/certificate-competition-terms" element={<CertificateCompetitionTerms />} />
 
             <Route path="/login" element={<Auth mode="login" />} />
             <Route path="/register" element={<Auth mode="register" />} />
@@ -99,45 +92,35 @@ export default function App() {
             <Route path="/learn/:slug" element={<CourseLearn />} />
             <Route path="/notifications" element={<Notifications />} />
 
+            {/* Phase 19 — Live Sessions. /live-session/:sessionId enforces
+                its own access control (see LiveSession.tsx + the
+                live_sessions rule in firestore.rules), so it isn't
+                wrapped in a route guard here. */}
+            <Route path="/live-session/:sessionId" element={<LiveSession />} />
+            <Route path="/tutor/live-sessions" element={<TutorLiveSessions />} />
+
             <Route path="/admin" element={<AdminLogin />} />
+            <Route
+              path="/admin/dashboard"
+              element={
+                <AdminRoute>
+                  <AdminDashboard />
+                </AdminRoute>
+              }
+            />
             {/* Alias for the existing admin login — same component, same
                 Supabase-backed `admins` table check. Not linked from any
                 public nav; only reachable if you know the URL. */}
             <Route path="/admin/login" element={<AdminLogin />} />
-            {/* All /admin/* routes below are now guarded by AdminRoute —
-                previously /admin/payments, /admin/courses and
-                /admin/courses/:id rendered for anyone who loaded the URL,
-                signed in or not; actual data access still depended on
-                Firestore rules, but the page shell itself was reachable.
-                AdminCertificates and AdminCourseMaterials existed as files
-                with no <Route> at all (dead code, unreachable even for an
-                admin) — added here so the "Certificates" link in
-                AdminNav.tsx and the course materials workflow resolve
-                instead of 404ing. */}
-            <Route
-              path="/admin/payments"
-              element={
-                <AdminRoute>
-                  <AdminPayments />
-                </AdminRoute>
-              }
-            />
-            <Route
-              path="/admin/courses"
-              element={
-                <AdminRoute>
-                  <AdminCourses />
-                </AdminRoute>
-              }
-            />
-            <Route
-              path="/admin/courses/:id"
-              element={
-                <AdminRoute>
-                  <AdminCourseForm />
-                </AdminRoute>
-              }
-            />
+            <Route path="/admin/payments" element={<AdminPayments />} />
+            <Route path="/admin/courses" element={<AdminCourses />} />
+            <Route path="/admin/courses/:id" element={<AdminCourseForm />} />
+            {/* Was already fully built (upload/replace/remove, validation,
+                progress) but had no <Route> at all — the actual root cause
+                of "Course Edit doesn't offer a PDF upload option". See
+                AdminCourseForm.tsx's "Course PDF / Study Material" card,
+                which links here for the full multi-material manager
+                (video/image/notes/link, publish toggle). */}
             <Route
               path="/admin/courses/:id/materials"
               element={
@@ -146,14 +129,8 @@ export default function App() {
                 </AdminRoute>
               }
             />
-            <Route
-              path="/admin/certificates"
-              element={
-                <AdminRoute>
-                  <AdminCertificates />
-                </AdminRoute>
-              }
-            />
+            {/* New in Phase 2 — guarded, unlike the existing /admin/*
+                routes above (see components/AdminRoute.tsx). */}
             <Route
               path="/admin/students"
               element={
@@ -175,6 +152,14 @@ export default function App() {
               element={
                 <AdminRoute>
                   <AdminNotifications />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/admin/live-sessions"
+              element={
+                <AdminRoute>
+                  <AdminLiveSessions />
                 </AdminRoute>
               }
             />
