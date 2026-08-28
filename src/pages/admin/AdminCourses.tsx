@@ -217,6 +217,9 @@ export default function AdminCourses() {
         <div className="mt-8 card border-danger/40 p-8 text-center">
           <p className="font-display text-lg text-danger">{loadError.headline}</p>
           <p className="mx-auto mt-2 max-w-md text-sm text-slate-muted">{loadError.detail}</p>
+          <p className="mt-2 text-xs text-slate-muted">
+            Firestore error code: {loadError.code ?? 'unknown'}
+          </p>
           <button onClick={load} className="btn-secondary mt-4">
             Retry
           </button>
