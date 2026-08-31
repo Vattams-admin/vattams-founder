@@ -1,14 +1,12 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import type { Material } from '@/types/materials'
+import { createCourseMaterialDownloadUrl } from '@/lib/supabaseStorage'
 import { CloseIcon } from './MaterialIcons'
 import PdfViewer from './PdfViewer'
 import ImageViewer from './ImageViewer'
 import VideoPlayer from './VideoPlayer'
 import NotesReader from './NotesReader'
 
-// Shared modal shell for pdf / image / video / notes materials.
-// 'link' materials never open this — they navigate out directly (see
-// MaterialCard) since there's nothing of ours to view.
 export default function MaterialViewerModal({
   material,
   onClose,
@@ -16,12 +14,65 @@ export default function MaterialViewerModal({
   material: Material
   onClose: () => void
 }) {
+  const [signedUrl, setSignedUrl] = useState<string | null>(null)
+  const [loading, setLoading] = useState(
+    material.type !== 'notes' && material.type !== 'link'
+  )
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function loadSignedUrl() {
+      if (
+        material.type === 'notes' ||
+        material.type === 'link' ||
+        !material.storage_path
+      ) {
+        setLoading(false)
+        return
+      }
+
+      setLoading(true)
+      setError(null)
+
+      try {
+        const url = await createCourseMaterialDownloadUrl(
+          material.storage_path
+        )
+
+        if (!cancelled) {
+          setSignedUrl(url)
+        }
+      } catch (err) {
+        if (!cancelled) {
+          console.error('Failed to create material download URL:', err)
+          setError(
+            'Unable to open this learning material. Please try again.'
+          )
+        }
+      } finally {
+        if (!cancelled) {
+          setLoading(false)
+        }
+      }
+    }
+
+    loadSignedUrl()
+
+    return () => {
+      cancelled = true
+    }
+  }, [material.type, material.storage_path])
+
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
       if (e.key === 'Escape') onClose()
     }
+
     document.addEventListener('keydown', onKeyDown)
     document.body.style.overflow = 'hidden'
+
     return () => {
       document.removeEventListener('keydown', onKeyDown)
       document.body.style.overflow = ''
@@ -49,17 +100,46 @@ export default function MaterialViewerModal({
           <CloseIcon />
         </button>
 
-        {material.type === 'pdf' && material.url && (
-          <PdfViewer url={material.url} title={material.title} />
+        {loading && (
+          <div className="flex flex-1 items-center justify-center p-8">
+            <p className="text-sm text-slate-muted">
+              Opening learning material…
+            </p>
+          </div>
         )}
-        {material.type === 'image' && material.url && (
-          <ImageViewer url={material.url} title={material.title} />
+
+        {!loading && error && (
+          <div className="flex flex-1 items-center justify-center p-8 text-center">
+            <div>
+              <p className="font-medium text-danger">{error}</p>
+              <button
+                type="button"
+                onClick={() => window.location.reload()}
+                className="btn-secondary mt-4 text-xs"
+              >
+                Retry
+              </button>
+            </div>
+          </div>
         )}
-        {material.type === 'video' && material.url && (
-          <VideoPlayer url={material.url} title={material.title} />
+
+        {!loading && !error && material.type === 'pdf' && signedUrl && (
+          <PdfViewer url={signedUrl} title={material.title} />
         )}
-        {material.type === 'notes' && (
-          <NotesReader title={material.title} content={material.content ?? ''} />
+
+        {!loading && !error && material.type === 'image' && signedUrl && (
+          <ImageViewer url={signedUrl} title={material.title} />
+        )}
+
+        {!loading && !error && material.type === 'video' && signedUrl && (
+          <VideoPlayer url={signedUrl} title={material.title} />
+        )}
+
+        {!loading && !error && material.type === 'notes' && (
+          <NotesReader
+            title={material.title}
+            content={material.content ?? ''}
+          />
         )}
       </div>
     </div>

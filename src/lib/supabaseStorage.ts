@@ -1,47 +1,9 @@
-// Supabase Storage adapter for VATTAMS ACADEMIA course-learning files.
-//
-// Firestore remains the source of truth for course/material metadata.
-// Supabase Storage is used only for the binary file itself.
-//
-// This frontend uses the Supabase project's public anon key. The storage
-// bucket must therefore be configured in Supabase with policies appropriate
-// to this deployment. The bucket is expected to be PUBLIC so students can
-// open material URLs without a separate Supabase Auth session; Firebase
-// Auth/Firestore remain the application's identity and authorization layer
-// for discovering material records.
-//
-// Required environment variables:
-//   VITE_SUPABASE_URL
-//   VITE_SUPABASE_ANON_KEY
-//   VITE_SUPABASE_STORAGE_BUCKET
+import { firebaseAuth } from '@/lib/firebase'
 
-function requiredEnv(name: keyof ImportMetaEnv): string {
-  const value = import.meta.env[name]
-  if (!value) {
-    throw new Error(
-      `Supabase Storage configuration is missing ${name}. Add it to .env.local and restart the Vite server.`
-    )
-  }
-  return value
-}
+const SUPABASE_FUNCTION_URL =
+  'https://nfcibyprftnowaiwlxxc.supabase.co/functions/v1/course-material'
 
-const supabaseUrl = requiredEnv('VITE_SUPABASE_URL').replace(/\/+$/, '')
-const supabaseAnonKey = requiredEnv('VITE_SUPABASE_ANON_KEY')
-const bucket = requiredEnv('VITE_SUPABASE_STORAGE_BUCKET')
-
-function objectUrl(path: string): string {
-  return `${supabaseUrl}/storage/v1/object/public/${encodeURIComponent(bucket)}/${path
-    .split('/')
-    .map(encodeURIComponent)
-    .join('/')}`
-}
-
-function objectEndpoint(path: string): string {
-  return `${supabaseUrl}/storage/v1/object/${encodeURIComponent(bucket)}/${path
-    .split('/')
-    .map(encodeURIComponent)
-    .join('/')}`
-}
+const DEFAULT_BUCKET = 'academia-course-materials'
 
 export interface SupabaseUploadResult {
   url: string
@@ -50,95 +12,214 @@ export interface SupabaseUploadResult {
   mimeType: string
 }
 
+interface FunctionResponse {
+  ok?: boolean
+  url?: string
+  path?: string
+  token?: string
+  expires_in?: number
+  error?: string
+}
+
+async function getFirebaseToken(): Promise<string> {
+  const user = firebaseAuth.currentUser
+
+  if (!user) {
+    throw new Error('You must be signed in to manage course materials.')
+  }
+
+  return user.getIdToken()
+}
+
+async function callCourseMaterialFunction(
+  body: Record<string, unknown>
+): Promise<FunctionResponse> {
+  const token = await getFirebaseToken()
+
+  const response = await fetch(SUPABASE_FUNCTION_URL, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(body),
+  })
+
+  let data: FunctionResponse = {}
+
+  try {
+    data = (await response.json()) as FunctionResponse
+  } catch {
+    // Keep the HTTP status as the fallback error.
+  }
+
+  if (!response.ok) {
+    throw new Error(
+      data.error || `Course material service failed (${response.status}).`
+    )
+  }
+
+  return data
+}
+
+function storagePathForUpload(
+  courseId: string,
+  materialId: string,
+  filename: string
+): string {
+  return `courses/${courseId}/materials/${materialId}/${filename}`
+}
+
 export function uploadCourseMaterial(
   storagePath: string,
   file: File,
   onProgress?: (percent: number) => void
-): { promise: Promise<SupabaseUploadResult>; cancel: () => void } {
-  const xhr = new XMLHttpRequest()
+): {
+  promise: Promise<SupabaseUploadResult>
+  cancel: () => void
+} {
+  const controller = new AbortController()
   let settled = false
 
-  const promise = new Promise<SupabaseUploadResult>((resolve, reject) => {
-    xhr.open('POST', objectEndpoint(storagePath), true)
-    xhr.setRequestHeader('Authorization', `Bearer ${supabaseAnonKey}`)
-    xhr.setRequestHeader('apikey', supabaseAnonKey)
-    xhr.setRequestHeader('x-upsert', 'true')
-    xhr.setRequestHeader('Content-Type', file.type || 'application/octet-stream')
+  const promise = (async (): Promise<SupabaseUploadResult> => {
+    try {
+      onProgress?.(0)
 
-    xhr.upload.onprogress = (event) => {
-      if (event.lengthComputable && onProgress) {
-        onProgress(Math.round((event.loaded / event.total) * 100))
+      /*
+       * The Edge Function performs the Firebase-authenticated admin check
+       * and creates a signed Supabase Storage upload URL.
+       */
+      const result = await callCourseMaterialFunction({
+        action: 'create-upload-url',
+        path: storagePath,
+      })
+
+      if (!result.token) {
+        throw new Error('Upload authorization token was not returned.')
       }
+
+      const uploadUrl =
+        `https://nfcibyprftnowaiwlxxc.supabase.co/storage/v1/object/upload/sign/` +
+        `${encodeURIComponent(DEFAULT_BUCKET)}/${storagePath}?token=` +
+        encodeURIComponent(result.token)
+
+      const xhr = new XMLHttpRequest()
+
+      const uploadPromise = new Promise<void>((resolve, reject) => {
+        xhr.open('PUT', uploadUrl, true)
+        xhr.setRequestHeader(
+          'Content-Type',
+          file.type || 'application/octet-stream'
+        )
+
+        xhr.upload.onprogress = (event) => {
+          if (event.lengthComputable) {
+            onProgress?.(
+              Math.round((event.loaded / event.total) * 100)
+            )
+          }
+        }
+
+        xhr.onload = () => {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            resolve()
+          } else {
+            reject(
+              new Error(
+                `Supabase Storage upload failed (${xhr.status}).`
+              )
+            )
+          }
+        }
+
+        xhr.onerror = () => {
+          reject(
+            new Error(
+              'Network error while uploading the course material.'
+            )
+          )
+        }
+
+        xhr.onabort = () => {
+          reject(new Error('Upload canceled.'))
+        }
+
+        xhr.send(file)
+      })
+
+      /*
+       * AbortController is used for the function request.
+       * The XMLHttpRequest itself is cancelled through xhr.abort().
+       */
+      await uploadPromise
+
+      if (settled) {
+        throw new Error('Upload canceled.')
+      }
+
+      onProgress?.(100)
+
+      /*
+       * Private bucket: there is deliberately NO public object URL.
+       * The material metadata stores the storage path only.
+       *
+       * A fresh signed download URL is generated when the student/admin
+       * actually opens the material.
+       */
+      return {
+        url: '',
+        storagePath,
+        size: file.size,
+        mimeType: file.type,
+      }
+    } catch (error) {
+      if (controller.signal.aborted) {
+        throw new Error('Upload canceled.')
+      }
+
+      throw error
     }
-
-    xhr.onload = () => {
-      if (settled) return
-      settled = true
-
-      if (xhr.status >= 200 && xhr.status < 300) {
-        resolve({
-          url: objectUrl(storagePath),
-          storagePath,
-          size: file.size,
-          mimeType: file.type,
-        })
-        return
-      }
-
-      let message = `Supabase Storage upload failed (${xhr.status}).`
-      try {
-        const body = JSON.parse(xhr.responseText) as { message?: string; error?: string }
-        message = body.message || body.error || message
-      } catch {
-        // Keep the HTTP-status message when the response isn't JSON.
-      }
-      reject(new Error(message))
-    }
-
-    xhr.onerror = () => {
-      if (!settled) {
-        settled = true
-        reject(new Error('Network error while uploading the course material.'))
-      }
-    }
-
-    xhr.onabort = () => {
-      if (!settled) {
-        settled = true
-        reject(new Error('Upload canceled.'))
-      }
-    }
-
-    xhr.send(file)
-  })
+  })()
 
   return {
     promise,
     cancel: () => {
-      if (!settled) xhr.abort()
+      settled = true
+      controller.abort()
     },
   }
 }
 
-export async function deleteCourseMaterialFile(storagePath: string | null): Promise<void> {
-  if (!storagePath) return
-
-  const response = await fetch(objectEndpoint(storagePath), {
-    method: 'DELETE',
-    headers: {
-      Authorization: `Bearer ${supabaseAnonKey}`,
-      apikey: supabaseAnonKey,
-    },
+export async function createCourseMaterialDownloadUrl(
+  storagePath: string
+): Promise<string> {
+  const result = await callCourseMaterialFunction({
+    action: 'create-download-url',
+    path: storagePath,
   })
 
-  if (!response.ok) {
-    let message = `Supabase Storage delete failed (${response.status}).`
-    try {
-      const body = (await response.json()) as { message?: string; error?: string }
-      message = body.message || body.error || message
-    } catch {
-      // Keep the HTTP-status message when the response isn't JSON.
-    }
-    throw new Error(message)
+  if (!result.url) {
+    throw new Error('Download URL was not returned.')
   }
+
+  return result.url
+}
+
+export async function deleteCourseMaterialFile(
+  storagePath: string | null
+): Promise<void> {
+  if (!storagePath) return
+
+  await callCourseMaterialFunction({
+    action: 'delete',
+    path: storagePath,
+  })
+}
+
+export function getCourseMaterialStoragePath(
+  courseId: string,
+  materialId: string,
+  filename: string
+): string {
+  return storagePathForUpload(courseId, materialId, filename)
 }
