@@ -1,6 +1,5 @@
 import { firebaseAuth } from '@/lib/firebase'
 
-<<<<<<< HEAD
 // Both the Edge Function URL and the signed-upload endpoint below are
 // derived from VITE_SUPABASE_URL (matching src/lib/supabase.ts and
 // AdminCourseContent.tsx) rather than a hardcoded project URL, so
@@ -15,10 +14,6 @@ if (!SUPABASE_URL) {
 }
 
 const SUPABASE_FUNCTION_URL = `${SUPABASE_URL}/functions/v1/course-material`
-=======
-const SUPABASE_FUNCTION_URL =
-  'https://nfcibyprftnowaiwlxxc.supabase.co/functions/v1/course-material'
->>>>>>> 608b594f8dc225f088fec5f0ed026aa7758a62e1
 
 const DEFAULT_BUCKET = 'academia-course-materials'
 
@@ -115,7 +110,6 @@ export function uploadCourseMaterial(
         throw new Error('Upload authorization token was not returned.')
       }
 
-<<<<<<< HEAD
       // Built from VITE_SUPABASE_URL rather than the @supabase/supabase-js
       // client's storage.uploadToSignedUrl() helper: that helper wraps a
       // plain fetch() with no upload-progress event, and the progress bar
@@ -124,10 +118,6 @@ export function uploadCourseMaterial(
       // still comes from the Edge Function above.
       const uploadUrl =
         `${SUPABASE_URL}/storage/v1/object/upload/sign/` +
-=======
-      const uploadUrl =
-        `https://nfcibyprftnowaiwlxxc.supabase.co/storage/v1/object/upload/sign/` +
->>>>>>> 608b594f8dc225f088fec5f0ed026aa7758a62e1
         `${encodeURIComponent(DEFAULT_BUCKET)}/${storagePath}?token=` +
         encodeURIComponent(result.token)
 
