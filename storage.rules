@@ -1,0 +1,8 @@
+# OBSOLETE — VATTAMS ACADEMIA course-material files no longer use Firebase Storage.
+#
+# Course/material metadata remains in Firebase Firestore.
+# Course/material binary files now live in Supabase Storage.
+#
+# Supabase Storage policies must be configured in the VATTAMS Supabase project
+# for the bucket named by VITE_SUPABASE_STORAGE_BUCKET. Do not deploy this
+# Firebase Storage rules file for course materials.
