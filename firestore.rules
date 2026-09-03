@@ -42,7 +42,8 @@ service cloud.firestore {
     function isAdmin() {
       return isSignedIn() &&
         exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
-        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.is_active == true;
+        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.is_active == true &&
+        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.role in ['admin', 'super_admin', 'instructor'];
     }
 
     // Fields an onboarded identity must never be able to change on its
@@ -128,6 +129,26 @@ service cloud.firestore {
     }
 
     // ------------------------------------------------------------------
+    function paymentMatchesCourse(courseId, amount, courseName) {
+      let course = get(/databases/$(database)/documents/courses/$(courseId)).data;
+      return course.is_published == true &&
+        courseName == course.name &&
+        amount == (course.base_fee - course.discount_amount > 0 ? course.base_fee - course.discount_amount : 0);
+    }
+
+    // Payment-flow audit fix: a course counts as free from the server's
+    // point of view exactly the same way src/lib/enrolment.ts decides
+    // it client-side — either explicitly flagged, or its real price is
+    // already zero — so a student can never talk their way into a free
+    // self-enrolment for anything that actually costs money, regardless
+    // of which of the two fields the admin relied on.
+    function courseIsFree(courseId) {
+      let course = get(/databases/$(database)/documents/courses/$(courseId)).data;
+      return course.is_published == true &&
+        (course.is_free == true || (course.base_fee - course.discount_amount > 0 ? course.base_fee - course.discount_amount : 0) == 0);
+    }
+
+
     // Courses (courses/{courseId}) — the catalog document itself had no
     // explicit rule anywhere in this file, so it fell through to the
     // deny-all catch-all. Admin gets full CRUD; everyone else (including
@@ -278,6 +299,82 @@ service cloud.firestore {
     // intentionally NOT covered here — see the warning at the top of
     // this file. Merge in your existing rules for those collections
     // before deploying.
+    match /payments/{paymentId} {
+      // A student reads only their own payments (StudentDashboard.tsx);
+      // an admin reads all (AdminPayments.tsx).
+      allow read: if isAdmin() || (isSignedIn() && resource.data.student_id == request.auth.uid);
+
+      // Payment.tsx creates its own pending payment doc from
+      // course.base_fee/discount_amount it just read from Firestore —
+      // but a client calling the SDK directly isn't bound by what the
+      // UI actually read, so `amount` and `course_name` are re-derived
+      // here from the *server's* course document, not trusted from the
+      // request. A forged amount (or a course_id pointing at an
+      // unpublished/nonexistent course) is rejected outright.
+      allow create: if isSignedIn()
+        && request.resource.data.student_id == request.auth.uid
+        && request.resource.data.status == 'pending'
+        && request.resource.data.verified_at == null
+        && request.resource.data.verified_by == null
+        && request.resource.data.course_id is string
+        && paymentMatchesCourse(request.resource.data.course_id, request.resource.data.amount, request.resource.data.course_name);
+
+      // Update: either (a) the owning student submitting their UTR —
+      // only utr_reference/status/submitted_at may change, and status
+      // may only move to 'submitted' — or (b) an admin verifying
+      // (approve/reject), which AdminPayments.tsx does alongside the
+      // enrolment write below.
+      allow update: if isAdmin() || (
+        isSignedIn() && resource.data.student_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      );
+
+      allow delete: if false;
+    }
+
+
+    match /certificates/{certificateId} {
+      allow get: if true;
+      allow list: if isAdmin() || request.query.limit <= 1;
+      allow create, update: if isAdmin();
+      allow delete: if false;
+    }
+
+    match /notifications/{notificationId} {
+      function isOwnNotification() {
+        return isSignedIn() && resource.data.recipient_uid == request.auth.uid;
+      }
+      function isAdminBroadcast() {
+        return resource.data.recipient_uid == null && resource.data.recipient_role == 'admin';
+      }
+      function isTutorBroadcast() {
+        return resource.data.recipient_uid == null && resource.data.recipient_role == 'tutor';
+      }
+
+      allow read: if isOwnNotification()
+        || (isAdminBroadcast() && isAdmin())
+        || (isTutorBroadcast() && isApprovedTutor());
+
+      allow create: if isSignedIn() && request.resource.data.is_read == false
+        && request.resource.data.keys().hasAll(['recipient_uid','recipient_role','type','title','message','is_read','created_at'])
+        && (
+          isAdmin()
+          || (request.resource.data.recipient_uid == request.auth.uid
+              && request.resource.data.type == 'registration_success')
+          || (request.resource.data.recipient_uid == null
+              && request.resource.data.recipient_role == 'admin'
+              && request.resource.data.type in ['new_student_registration', 'new_enrollment', 'tutor_activity', 'payment_received'])
+        );
+
+      allow update: if (isOwnNotification() || (isAdminBroadcast() && isAdmin()) || (isTutorBroadcast() && isApprovedTutor()))
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['is_read']);
+
+      allow delete: if false;
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

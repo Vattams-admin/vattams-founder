@@ -110,6 +110,33 @@ async function firestoreGet(
   return await response.json()
 }
 
+async function firestoreQuery(
+  structuredQuery: unknown,
+  firebaseToken: string
+) {
+  const response = await fetch(
+    `${firestoreBaseUrl()}:runQuery`,
+    {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${firebaseToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        structuredQuery,
+      }),
+    }
+  )
+
+  if (!response.ok) {
+    const text = await response.text()
+    console.error('Firestore query failed:', response.status, text)
+    throw new Error('Firestore authorization query failed')
+  }
+
+  return await response.json()
+}
+
 function isSafeSegment(value: string) {
   return /^[a-zA-Z0-9_-]+$/.test(value)
 }

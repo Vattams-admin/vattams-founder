@@ -1,21 +1,11 @@
 import { firebaseAuth } from '@/lib/firebase'
 
-// Both the Edge Function URL and the signed-upload endpoint below are
-// derived from VITE_SUPABASE_URL (matching src/lib/supabase.ts and
-// AdminCourseContent.tsx) rather than a hardcoded project URL, so
-// switching Supabase projects/environments doesn't silently break
-// Learning Materials uploads/downloads.
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL
+const SUPABASE_FUNCTION_URL =
+  `${SUPABASE_URL}/functions/v1/course-material`
 
-if (!SUPABASE_URL) {
-  throw new Error(
-    'VITE_SUPABASE_URL is missing. Add it to the environment, then restart Vite.'
-  )
-}
-
-const SUPABASE_FUNCTION_URL = `${SUPABASE_URL}/functions/v1/course-material`
-
-const DEFAULT_BUCKET = 'academia-course-materials'
+const DEFAULT_BUCKET =
+  import.meta.env.VITE_SUPABASE_STORAGE_BUCKET || 'academia-course-materials'
 
 export interface SupabaseUploadResult {
   url: string
@@ -91,6 +81,7 @@ export function uploadCourseMaterial(
   cancel: () => void
 } {
   const controller = new AbortController()
+  let xhr: XMLHttpRequest | null = null
   let settled = false
 
   const promise = (async (): Promise<SupabaseUploadResult> => {
@@ -110,27 +101,29 @@ export function uploadCourseMaterial(
         throw new Error('Upload authorization token was not returned.')
       }
 
-      // Built from VITE_SUPABASE_URL rather than the @supabase/supabase-js
-      // client's storage.uploadToSignedUrl() helper: that helper wraps a
-      // plain fetch() with no upload-progress event, and the progress bar
-      // in MaterialUploadForm.tsx depends on XHR's upload.onprogress.
-      // Same authorization boundary either way — the token/path pair
-      // still comes from the Edge Function above.
+      /*
+       * Deliberate implementation note: keep XHR for the actual signed upload.
+       * The Supabase SDK signed-upload helper uses fetch internally and does not
+       * expose upload-progress events, while the admin UI needs XHR's
+       * `upload.onprogress` for a real progress indicator. The endpoint is still
+       * derived entirely from VITE_SUPABASE_URL; this is not a missed SDK migration.
+       */
       const uploadUrl =
         `${SUPABASE_URL}/storage/v1/object/upload/sign/` +
         `${encodeURIComponent(DEFAULT_BUCKET)}/${storagePath}?token=` +
         encodeURIComponent(result.token)
 
-      const xhr = new XMLHttpRequest()
+      const request = new XMLHttpRequest()
+      xhr = request
 
       const uploadPromise = new Promise<void>((resolve, reject) => {
-        xhr.open('PUT', uploadUrl, true)
-        xhr.setRequestHeader(
+        request.open('PUT', uploadUrl, true)
+        request.setRequestHeader(
           'Content-Type',
           file.type || 'application/octet-stream'
         )
 
-        xhr.upload.onprogress = (event) => {
+        request.upload.onprogress = (event) => {
           if (event.lengthComputable) {
             onProgress?.(
               Math.round((event.loaded / event.total) * 100)
@@ -138,19 +131,19 @@ export function uploadCourseMaterial(
           }
         }
 
-        xhr.onload = () => {
-          if (xhr.status >= 200 && xhr.status < 300) {
+        request.onload = () => {
+          if (request.status >= 200 && request.status < 300) {
             resolve()
           } else {
             reject(
               new Error(
-                `Supabase Storage upload failed (${xhr.status}).`
+                `Supabase Storage upload failed (${request.status}).`
               )
             )
           }
         }
 
-        xhr.onerror = () => {
+        request.onerror = () => {
           reject(
             new Error(
               'Network error while uploading the course material.'
@@ -158,17 +151,13 @@ export function uploadCourseMaterial(
           )
         }
 
-        xhr.onabort = () => {
+        request.onabort = () => {
           reject(new Error('Upload canceled.'))
         }
 
-        xhr.send(file)
+        request.send(file)
       })
 
-      /*
-       * AbortController is used for the function request.
-       * The XMLHttpRequest itself is cancelled through xhr.abort().
-       */
       await uploadPromise
 
       if (settled) {
@@ -202,8 +191,10 @@ export function uploadCourseMaterial(
   return {
     promise,
     cancel: () => {
+      if (settled) return
       settled = true
       controller.abort()
+      xhr?.abort()
     },
   }
 }
