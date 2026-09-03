@@ -136,17 +136,6 @@ service cloud.firestore {
         amount == (course.base_fee - course.discount_amount > 0 ? course.base_fee - course.discount_amount : 0);
     }
 
-    // Payment-flow audit fix: a course counts as free from the server's
-    // point of view exactly the same way src/lib/enrolment.ts decides
-    // it client-side — either explicitly flagged, or its real price is
-    // already zero — so a student can never talk their way into a free
-    // self-enrolment for anything that actually costs money, regardless
-    // of which of the two fields the admin relied on.
-    function courseIsFree(courseId) {
-      let course = get(/databases/$(database)/documents/courses/$(courseId)).data;
-      return course.is_published == true &&
-        (course.is_free == true || (course.base_fee - course.discount_amount > 0 ? course.base_fee - course.discount_amount : 0) == 0);
-    }
 
 
     // Courses (courses/{courseId}) — the catalog document itself had no
