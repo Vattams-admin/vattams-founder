@@ -69,6 +69,7 @@ export default function App() {
                 collection, no admin UI) — this route is an honest
                 "coming soon" placeholder, not the full feature. */}
             <Route path="/competitions" element={<Competitions />} />
+            <Route path="/competitive-exams" element={<Competitions />} />
 
             <Route path="/verify-certificate" element={<VerifyCertificate />} />
             <Route path="/verify" element={<VerifyCertificate />} />
