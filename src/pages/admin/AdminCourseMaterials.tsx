@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
@@ -21,7 +21,7 @@ export default function AdminCourseMaterials() {
   const [busyId, setBusyId] = useState<string | null>(null)
   const [formMode, setFormMode] = useState<'none' | 'new' | Material>('none')
 
-  const load = useCallback(async () => {
+  async function load() {
     if (!courseId) return
     setState('loading')
     try {
@@ -40,11 +40,11 @@ export default function AdminCourseMaterials() {
     }
     setMaterials(rows)
     setState('loaded')
-  }, [courseId])
+  }
 
   useEffect(() => {
     load()
-  }, [load])
+  }, [courseId])
 
   async function handleTogglePublish(material: Material) {
     if (!courseId) return
@@ -64,16 +64,19 @@ export default function AdminCourseMaterials() {
     if (!courseId) return
     if (!window.confirm(`Delete "${material.title}"? This cannot be undone.`)) return
     setBusyId(material.id)
-    const { error: err, deleted } = await deleteMaterial(courseId, material.id, material.storage_path)
-    // `deleted` tells us whether the Firestore record is actually gone —
-    // `err` alone is ambiguous, since it's also set for the "deleted,
-    // but storage cleanup failed" case (see deleteMaterial in
-    // lib/materials.ts), where the row still needs to disappear.
+    const { error: err, deleted, storageCleanupFailed } = await deleteMaterial(
+      courseId,
+      material.id,
+      material.storage_path
+    )
     if (deleted) {
       setMaterials((prev) => prev.filter((m) => m.id !== material.id))
     }
     if (err) {
       setError(err)
+    }
+    if (storageCleanupFailed) {
+      console.warn('Material metadata deleted but Storage cleanup failed.')
     }
     setBusyId(null)
   }

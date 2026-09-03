@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import {
   addDoc,
@@ -123,7 +123,7 @@ export default function AdminCourseContent() {
 
   const [uploading, setUploading] = useState<string | null>(null)
 
-  const loadContent = useCallback(async () => {
+  async function loadContent() {
     if (!courseId) return
 
     setLoading(true)
@@ -190,11 +190,11 @@ export default function AdminCourseContent() {
     } finally {
       setLoading(false)
     }
-  }, [courseId])
+  }
 
   useEffect(() => {
     loadContent()
-  }, [loadContent])
+  }, [courseId])
 
   async function addModule() {
     if (!courseId || !newModuleTitle.trim()) return

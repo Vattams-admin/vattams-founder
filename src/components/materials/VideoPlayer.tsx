@@ -1,12 +1,9 @@
-// HTML5 <video> playback for course material videos. The bucket is
-// private Supabase Storage — `url` is a short-lived signed download
-// URL obtained through the course-material Edge Function immediately
-// before rendering, not a permanent/public URL. Native controls
-// already provide play/pause/seek/volume/fullscreen — no paid
-// streaming platform, no custom player library.
+// HTML5 <video> playback for Firebase-Storage-hosted material videos.
+// Native controls already provide play/pause/seek/volume/fullscreen —
+// no paid streaming platform, no custom player library.
 //
 // Known limitation (documented per the brief, not hidden): this is
-// progressive download, not adaptive-bitrate streaming. Supabase
+// progressive download, not adaptive-bitrate streaming. Firebase
 // Storage serves the whole file at one quality with HTTP range
 // support (so seeking works), but there's no automatic quality
 // switching for slow connections the way a real streaming platform

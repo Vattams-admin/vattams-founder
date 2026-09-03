@@ -247,14 +247,16 @@ export async function updateMaterial({
 
     if (upload && previousStoragePath && previousStoragePath !== upload.storagePath) {
       try {
-        await deleteMaterialFile(previousStoragePath)
-      } catch (error) {
-        // Non-fatal: the replacement itself already succeeded (the
-        // Firestore update above committed first). The old file is
-        // just orphaned in storage rather than lost/broken — don't
-        // report the whole save as failed over a cleanup miss.
-        console.error('Failed to delete previous material file from storage:', error)
-      }
+      await deleteMaterialFile(previousStoragePath)
+    } catch (error) {
+      // Non-fatal: the replacement itself already succeeded in Firestore.
+      // Firestore metadata must not be reported as failed just because
+      // cleanup of the old Storage file could not be completed.
+      console.error(
+        'Failed to delete previous material file from storage:',
+        error
+      )
+    }
     }
 
     return { error: null }
@@ -287,22 +289,26 @@ export async function deleteMaterial(
   try {
     await deleteDoc(materialDocRef(courseId, materialId))
   } catch (error) {
-    return { error: friendlyError(error, 'material deletion'), deleted: false, storageCleanupFailed: false }
+    return {
+      error: friendlyError(error, 'material deletion'),
+      deleted: false,
+      storageCleanupFailed: false,
+    }
   }
 
-  // The material record is gone at this point — a Storage cleanup
-  // failure below is a leftover-file problem, not a "delete failed"
-  // problem, and must be reported as such rather than telling the
-  // admin the whole delete failed (which would look like nothing
-  // happened, when the material is in fact already gone).
+  if (!storagePath) {
+    return { error: null, deleted: true, storageCleanupFailed: false }
+  }
+
   try {
-    await deleteMaterialFile(storagePath)
+    await deleteCourseMaterialFile(storagePath)
     return { error: null, deleted: true, storageCleanupFailed: false }
   } catch (error) {
-    console.error('Failed to delete material file from storage:', error)
+    if (import.meta.env.DEV) {
+      console.error('[materials] Storage cleanup failed after metadata deletion:', error)
+    }
     return {
-      error:
-        'Material deleted, but its file could not be removed from storage. Contact support to clean it up manually.',
+      error: 'Material deleted, but its Storage file could not be cleaned up.',
       deleted: true,
       storageCleanupFailed: true,
     }

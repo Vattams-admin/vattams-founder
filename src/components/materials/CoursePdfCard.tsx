@@ -144,14 +144,20 @@ export default function CoursePdfCard({
     if (!pdf) return
     if (!window.confirm(`Remove "${pdf.title}"? Students will no longer be able to open it.`)) return
     setBusy(true)
-    const { error: deleteError, deleted } = await deleteMaterial(courseId, pdf.id, pdf.storage_path)
+    const { error: deleteError, deleted, storageCleanupFailed } = await deleteMaterial(
+      courseId,
+      pdf.id,
+      pdf.storage_path
+    )
     setBusy(false)
     if (deleted) {
       setPdf(null)
     }
     if (deleteError) {
       setError(deleteError)
-      return
+    }
+    if (storageCleanupFailed) {
+      console.warn('Material metadata deleted but Storage cleanup failed.')
     }
   }
 

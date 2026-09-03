@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { Material, MaterialType } from '@/types/materials'
 import { MATERIAL_TYPES } from '@/types/materials'
 import { listPublishedMaterials } from '@/lib/materials'
@@ -20,7 +20,7 @@ export default function LearningMaterialsSection({ courseId }: { courseId: strin
   const [filter, setFilter] = useState<Filter>('all')
   const [openMaterial, setOpenMaterial] = useState<Material | null>(null)
 
-  const load = useCallback(async () => {
+  async function load() {
     setState('loading')
     const { rows, error } = await listPublishedMaterials(courseId)
     if (error) {
@@ -29,11 +29,11 @@ export default function LearningMaterialsSection({ courseId }: { courseId: strin
     }
     setMaterials(rows)
     setState('loaded')
-  }, [courseId])
+  }
 
   useEffect(() => {
     load()
-  }, [load])
+  }, [courseId])
 
   const filtered = useMemo(() => {
     const term = search.trim().toLowerCase()

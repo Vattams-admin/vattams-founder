@@ -34,18 +34,11 @@ export interface Material {
 
   // Set only for uploaded file types (pdf / image / video). Null for
   // 'notes' (no file — see `content`) and 'link' (no file — see `url`).
-  // This is the source of truth for locating the file in the private
-  // Supabase Storage bucket — see src/lib/supabaseStorage.ts.
   storage_path: string | null
 
-  // For pdf/image/video: NOT a usable download URL. The bucket is
-  // private, so uploads leave this null/empty; a short-lived signed
-  // URL is requested from storage_path via the course-material Edge
-  // Function only when the material is actually opened (see
-  // createCourseMaterialDownloadUrl in src/lib/supabaseStorage.ts) and
-  // is never persisted here.
-  // For 'link': the external destination URL — this is the one case
-  // where `url` is meaningful and permanent.
+  // For pdf/image/video: null for private Supabase uploads; a signed
+  // download URL is generated on demand when the material is opened.
+  // For 'link': the external destination URL.
   // Null for 'notes'.
   url: string | null
 
@@ -67,10 +60,8 @@ export interface Material {
 
 // Shape accepted when creating/updating a material from the admin form —
 // everything the UI collects before `uploaded_by` / timestamps are
-// attached. Firestore writes happen directly from the client
-// (lib/materials.ts); the Supabase side (file upload/download/delete)
-// goes through the course-material Edge Function, which is the actual
-// backend authorization layer for the private Storage bucket.
+// attached by the client data layer and the Firebase-authenticated
+// Supabase Edge Function where file operations require it.
 export interface MaterialInput {
   title: string
   description: string

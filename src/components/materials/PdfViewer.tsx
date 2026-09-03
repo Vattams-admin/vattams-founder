@@ -2,12 +2,11 @@ import { useRef, useState } from 'react'
 import { ZoomInIcon, ZoomOutIcon, FullscreenIcon, ExternalLinkIcon } from './MaterialIcons'
 
 // Renders the PDF via the browser's own built-in PDF viewer (an
-// <iframe> pointed at a short-lived signed Supabase Storage download
-// URL, obtained through the course-material Edge Function immediately
-// before rendering) rather than a bundled viewer library — the brief
-// calls for free-first, browser-native APIs where practical, and
-// desktop Chrome/Edge/Firefox all render PDFs inline with their own
-// page navigation UI for free.
+// <iframe> pointed at the file's Storage URL) rather than a bundled
+// viewer library. This project has no network access to install new
+// npm packages in this environment and the brief calls for free-first,
+// browser-native APIs where practical — desktop Chrome/Edge/Firefox
+// all render PDFs inline with their own page navigation UI for free.
 //
 // What this component adds on top: a zoom control (CSS transform,
 // works regardless of which native viewer the browser uses) and a
