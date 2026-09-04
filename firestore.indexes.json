@@ -27,6 +27,40 @@
         { "fieldPath": "created_at", "order": "DESCENDING" }
       ]
     }
+,
+    {
+      "collectionGroup": "enrolments",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "student_id", "order": "ASCENDING" },
+        { "fieldPath": "course_id", "order": "ASCENDING" },
+        { "fieldPath": "status", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "course_modules",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "course_id", "order": "ASCENDING" },
+        { "fieldPath": "sort_order", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "course_lessons",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "module_id", "order": "ASCENDING" },
+        { "fieldPath": "sort_order", "order": "ASCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "courses",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "slug", "order": "ASCENDING" },
+        { "fieldPath": "is_published", "order": "ASCENDING" }
+      ]
+    }
   ],
   "fieldOverrides": []
 }
