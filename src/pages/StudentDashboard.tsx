@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
-import { firestore } from '@/lib/firebase'
+import { firebaseAuth, firestore } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
 import type { Enrolment, Payment } from '@/types/database'
 import EmailVerificationBanner from '@/components/EmailVerificationBanner'
@@ -59,7 +59,9 @@ export default function StudentDashboard() {
       <h1 className="font-display text-3xl">Your learning</h1>
 
       <div className="mt-6">
-        <EmailVerificationBanner user={user} />
+        {firebaseAuth.currentUser && (
+          <EmailVerificationBanner user={firebaseAuth.currentUser} />
+        )}
       </div>
 
       <div className="mt-3 flex flex-wrap gap-4 text-sm">
