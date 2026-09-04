@@ -28,8 +28,8 @@ export default function Navbar() {
   }
 
   return (
-    <header className="sticky top-0 z-40 border-b border-gold/15 bg-ink/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+    <header className="sticky top-0 z-40 border-b border-white/5 bg-ink/85 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link to="/" className="flex shrink-0 items-center gap-2.5" aria-label="VATTAMS ACADEMIA home">
           <img src="/branding/logo.png" alt="" className="h-9 w-9 object-contain" />
           <span className="font-display text-base font-semibold leading-none tracking-wide text-parchment sm:text-lg">
@@ -49,7 +49,7 @@ export default function Navbar() {
               end={item.end}
               className={({ isActive }) =>
                 `whitespace-nowrap text-sm font-medium transition-colors ${
-                  isActive ? 'text-gold-bright' : 'text-slate-muted hover:text-parchment'
+                  isActive ? 'text-azure-bright' : 'text-slate-muted hover:text-parchment'
                 }`
               }
             >
@@ -97,7 +97,7 @@ export default function Navbar() {
       </div>
 
       {menuOpen && (
-        <div className="border-t border-gold/15 bg-ink px-4 pb-4 xl:hidden">
+        <div className="border-t border-white/5 bg-ink px-4 pb-4 xl:hidden">
           <nav className="flex flex-col gap-1 pt-2">
             {navItems.map((item) => (
               <NavLink
@@ -107,7 +107,7 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
                 className={({ isActive }) =>
                   `rounded-card px-2 py-2.5 text-sm font-medium ${
-                    isActive ? 'bg-gold/10 text-gold-bright' : 'text-slate-muted hover:bg-navy hover:text-parchment'
+                    isActive ? 'bg-azure/10 text-azure-bright' : 'text-slate-muted hover:bg-navy hover:text-parchment'
                   }`
                 }
               >

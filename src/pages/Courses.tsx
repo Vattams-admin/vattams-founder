@@ -105,7 +105,7 @@ export default function Courses() {
 
       if (!term) return true
 
-      const haystack = [getCourseDisplayName(c.name), c.name, c.short_description, c.description, c.instructor_name, c.subject]
+      const haystack = [getCourseDisplayName(c.name), c.name, c.short_description, c.description, c.instructor_name]
         .filter(Boolean)
         .join(' ')
         .toLowerCase()
@@ -117,13 +117,11 @@ export default function Courses() {
   return (
     <div>
       {/* Premium hero */}
-      <section className="relative overflow-hidden border-b border-gold/15">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_-10%,rgba(201,162,75,0.16),transparent_50%),radial-gradient(circle_at_85%_0%,rgba(28,58,102,0.5),transparent_45%)]" />
+      <section className="relative overflow-hidden border-b border-white/5">
+        <div className="pointer-events-none absolute inset-0 bg-grid-glow" />
         <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
-          <p className="font-display text-xs uppercase tracking-[0.4em] text-gold sm:text-sm">
-            Course Catalogue
-          </p>
-          <h1 className="mt-4 font-display text-3xl font-semibold leading-tight sm:text-4xl">
+          <p className="eyebrow">Course Catalogue</p>
+          <h1 className="mt-4 font-display text-3xl font-semibold leading-tight sm:text-5xl">
             Explore Courses
           </h1>
           <p className="mt-4 max-w-2xl text-parchment/90">
@@ -192,7 +190,7 @@ export default function Courses() {
         {/* Error state */}
         {state === 'error' && (
           <div className="mt-10 card border-danger/40 p-8 text-center">
-            <p className="font-display text-lg text-danger">Couldn&apos;t load courses</p>
+            <p className="text-lg font-semibold text-danger">Couldn&apos;t load courses</p>
             <p className="mt-2 text-sm text-slate-muted">
               Something went wrong on our end. Please refresh the page or check back shortly.
             </p>
@@ -214,14 +212,14 @@ export default function Courses() {
         {/* Empty states */}
         {state === 'loaded' && courses.length === 0 && (
           <div className="mt-10 card p-10 text-center">
-            <p className="font-display text-lg">No courses published yet</p>
+            <p className="text-lg font-semibold">No courses published yet</p>
             <p className="mt-2 text-sm text-slate-muted">Check back soon — new courses are added regularly.</p>
           </div>
         )}
 
         {state === 'loaded' && courses.length > 0 && filteredCourses.length === 0 && (
           <div className="mt-10 card p-10 text-center">
-            <p className="font-display text-lg">No courses match your search</p>
+            <p className="text-lg font-semibold">No courses match your search</p>
             <p className="mt-2 text-sm text-slate-muted">Try a different keyword or clear the level filter.</p>
             <button
               onClick={() => {
@@ -267,10 +265,10 @@ function FilterChip({
     <button
       type="button"
       onClick={onClick}
-      className={`whitespace-nowrap rounded-full border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors ${
+      className={`whitespace-nowrap rounded-pill border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors ${
         active
-          ? 'border-gold bg-gold/15 text-gold-bright'
-          : 'border-white/15 text-slate-muted hover:border-gold/40 hover:text-parchment'
+          ? 'border-azure bg-azure/15 text-azure-bright'
+          : 'border-white/15 text-slate-muted hover:border-azure/40 hover:text-parchment'
       }`}
     >
       {children}

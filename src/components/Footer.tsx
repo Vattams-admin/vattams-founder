@@ -23,9 +23,9 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-gold/15 bg-navy-dark">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+    <footer className="border-t border-white/5 bg-navy-dark">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link to="/" className="flex items-center gap-2.5">
               <img src="/branding/logo.png" alt="" className="h-9 w-9 object-contain" />
@@ -47,7 +47,7 @@ export default function Footer() {
           <FooterColumn title="Legal" links={legalLinks} />
         </div>
 
-        <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-slate-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-slate-muted sm:flex-row sm:items-center sm:justify-between">
           <p>© {year} VATTAMS ACADEMIA. All rights reserved.</p>
           <Link to="/verify-certificate" className="hover:text-parchment">Verify a certificate</Link>
         </div>

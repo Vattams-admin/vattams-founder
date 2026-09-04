@@ -11,7 +11,6 @@ import CourseCard from '@/components/CourseCard'
 // collection, so Featured Courses below mirrors that exact pattern
 // (same collection, same `Course` type from '@/types/database', same
 // CourseCard). There is currently no working fetch layer anywhere in the
-// codebase for exams or competitions (no service, no Firestore/Supabase
 // query, no card component) — inventing one here would mean guessing a
 // collection/table shape that may not match what admin eventually builds.
 // So the Competitive Exams and Competitions sections below are static
@@ -121,24 +120,44 @@ export default function Home() {
   return (
     <div>
       {/* Premium hero */}
-      <section className="relative overflow-hidden border-b border-gold/15">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_-10%,rgba(201,162,75,0.16),transparent_50%),radial-gradient(circle_at_85%_0%,rgba(28,58,102,0.5),transparent_45%)]" />
+      <section className="relative overflow-hidden border-b border-white/5">
+        <div className="pointer-events-none absolute inset-0 bg-grid-glow" />
+        <div
+          className="pointer-events-none absolute -right-24 top-1/2 hidden h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-azure/20 blur-[110px] sm:block motion-safe:animate-pulse"
+          style={{ animationDuration: '6s' }}
+          aria-hidden="true"
+        />
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
-          <p className="font-display text-xs uppercase tracking-[0.4em] text-gold sm:text-sm">
+          <p className="font-display text-sm font-medium tracking-wide text-azure-bright sm:text-base">
             Learn &middot; Compete &middot; Certify &middot; Grow
           </p>
-          <h1 className="mt-5 max-w-2xl font-display text-4xl font-semibold leading-tight sm:text-5xl">
+          <h1 className="mt-5 max-w-2xl font-display text-4xl font-semibold leading-[1.1] sm:text-6xl">
             An international-standard education platform, built to prepare you for what&apos;s next.
           </h1>
-          <p className="mt-5 max-w-xl text-parchment/90">
+          <p className="mt-6 max-w-xl text-base text-parchment/80 sm:text-lg">
             VATTAMS ACADEMIA brings academic and professional courses, competitive exam preparation,
             knowledge competitions, and verifiable certification together on one institution-grade
             platform.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-9 flex flex-wrap gap-3">
             <Link to="/courses" className="btn-primary">Explore Courses</Link>
             <Link to="/competitions" className="btn-secondary">Explore Competitions</Link>
           </div>
+
+          <dl className="mt-14 grid max-w-xl grid-cols-3 gap-6 border-t border-white/10 pt-8">
+            <div>
+              <dt className="text-2xl font-semibold text-parchment sm:text-3xl">6</dt>
+              <dd className="mt-1 text-xs text-slate-muted sm:text-sm">Steps from discovery to certificate</dd>
+            </div>
+            <div>
+              <dt className="text-2xl font-semibold text-parchment sm:text-3xl">9+</dt>
+              <dd className="mt-1 text-xs text-slate-muted sm:text-sm">Competitive exams covered</dd>
+            </div>
+            <div>
+              <dt className="text-2xl font-semibold text-parchment sm:text-3xl">100%</dt>
+              <dd className="mt-1 text-xs text-slate-muted sm:text-sm">Certificates publicly verifiable</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -149,16 +168,19 @@ export default function Home() {
           {categories.map((c) => {
             const Icon = c.icon
             return (
-              <Link key={c.title} to={c.to} className="card group flex flex-col gap-4 p-6 transition-colors hover:border-gold/40">
-                <span className="flex h-11 w-11 items-center justify-center rounded-card bg-gold/10 text-gold group-hover:bg-gold/15 group-hover:text-gold-bright">
+              <Link key={c.title} to={c.to} className="card group flex flex-col gap-4 p-6 transition-all hover:-translate-y-1 hover:border-azure/40 hover:shadow-glow">
+                <span className="flex h-11 w-11 items-center justify-center rounded-card bg-azure/10 text-azure-bright transition-colors group-hover:bg-azure/20">
                   <Icon />
                 </span>
                 <div>
-                  <h3 className="font-display text-lg text-gold-bright">{c.title}</h3>
+                  <h3 className="text-lg font-semibold text-parchment">{c.title}</h3>
                   <p className="mt-2 text-sm text-slate-muted">{c.body}</p>
                 </div>
-                <span className="mt-auto text-xs font-semibold uppercase tracking-wide text-gold group-hover:text-gold-bright">
-                  Explore →
+                <span className="mt-auto flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-azure-bright">
+                  Explore
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
                 </span>
               </Link>
             )
@@ -192,7 +214,7 @@ export default function Home() {
           <SectionHeading eyebrow="Competitive Exams" title="Competitive exam preparation" action={{ to: '/competitive-exams', label: 'View all programmes' }} />
           <div className="mt-8 card flex flex-col gap-6 p-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <h3 className="font-display text-lg text-gold-bright">TNPSC &middot; UPSC &middot; SSC &middot; Banking &middot; Railway &middot; Police &middot; Defence &middot; UGC NET/SET &middot; TET</h3>
+              <h3 className="text-lg font-semibold text-parchment">TNPSC &middot; UPSC &middot; SSC &middot; Banking &middot; Railway &middot; Police &middot; Defence &middot; UGC NET/SET &middot; TET</h3>
               <p className="mt-3 max-w-2xl text-sm text-slate-muted">
                 Subject-wise question banks and timed mock tests built to mirror the actual exam
                 pattern, so preparation reflects the real thing.
@@ -209,7 +231,7 @@ export default function Home() {
           <SectionHeading eyebrow="Competitions" title="Timed academic competitions" action={{ to: '/competitions', label: 'View all competitions' }} />
           <div className="mt-8 card flex flex-col gap-6 p-8 lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <h3 className="font-display text-lg text-gold-bright">Public leaderboards. Real certificates.</h3>
+              <h3 className="text-lg font-semibold text-parchment">Public leaderboards. Real certificates.</h3>
               <p className="mt-3 max-w-2xl text-sm text-slate-muted">
                 Take part in timed competitions and see where you stand — eligible finishers earn a
                 certificate carrying a unique, publicly verifiable number.
@@ -241,8 +263,8 @@ export default function Home() {
           <SectionHeading eyebrow="Why us" title="Why VATTAMS ACADEMIA" />
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {whyVattams.map((item) => (
-              <div key={item.title} className="card p-6">
-                <h3 className="font-display text-lg text-gold-bright">{item.title}</h3>
+              <div key={item.title} className="card p-6 transition-colors hover:border-azure/30">
+                <h3 className="text-lg font-semibold text-parchment">{item.title}</h3>
                 <p className="mt-2 text-sm text-slate-muted">{item.body}</p>
               </div>
             ))}
@@ -257,12 +279,12 @@ export default function Home() {
           {journeySteps.map((s, i) => (
             <div key={s.step} className="relative">
               <div className="card h-full p-5">
-                <span className="font-display text-2xl text-gold/50">{s.step}</span>
-                <h3 className="mt-2 font-display text-base">{s.title}</h3>
+                <span className="font-display text-2xl text-azure/50">{s.step}</span>
+                <h3 className="mt-2 text-base font-semibold text-parchment">{s.title}</h3>
                 <p className="mt-2 text-sm text-slate-muted">{s.body}</p>
               </div>
               {i < journeySteps.length - 1 && (
-                <span className="pointer-events-none absolute -right-3 top-1/2 hidden -translate-y-1/2 text-gold/40 lg:block">→</span>
+                <span className="pointer-events-none absolute -right-3 top-1/2 hidden -translate-y-1/2 text-azure/40 lg:block">→</span>
               )}
             </div>
           ))}
@@ -270,8 +292,9 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="border-t border-gold/15 bg-navy-dark py-16">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
+      <section className="relative overflow-hidden border-t border-white/5 bg-navy-dark py-16">
+        <div className="pointer-events-none absolute inset-0 bg-grid-glow" />
+        <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
           <h2 className="font-display text-2xl sm:text-3xl">Start Your Learning Journey</h2>
           <p className="mt-3 text-slate-muted">
             Join VATTAMS ACADEMIA today and bring your courses, exam prep, and certification together.
@@ -290,11 +313,11 @@ function SectionHeading({ eyebrow, title, action }: { eyebrow: string; title: st
   return (
     <div className="flex flex-wrap items-end justify-between gap-3">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{eyebrow}</p>
-        <h2 className="mt-2 font-display text-2xl">{title}</h2>
+        <p className="eyebrow">{eyebrow}</p>
+        <h2 className="mt-2 text-2xl font-semibold sm:text-3xl">{title}</h2>
       </div>
       {action && (
-        <Link to={action.to} className="text-sm font-medium text-gold hover:text-gold-bright">
+        <Link to={action.to} className="text-sm font-medium text-azure-bright hover:text-azure-bright/80">
           {action.label} →
         </Link>
       )}
