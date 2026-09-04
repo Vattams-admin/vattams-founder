@@ -175,7 +175,9 @@ export default function TutorLiveSessions() {
       setForm(emptyForm)
     } catch (err) {
       console.error('Failed to create live session:', err)
-      setFormErrors(['Unable to save right now. Please check your connection and try again.'])
+      setFormErrors([
+        err instanceof Error ? err.message : String(err),
+      ])
     } finally {
       setSaving(false)
     }
