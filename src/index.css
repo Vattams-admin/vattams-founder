@@ -3,40 +3,92 @@
 @tailwind utilities;
 
 @layer base {
-  h1, h2, h3, h4 {
-    @apply font-display text-parchment;
-  }
+  html { scroll-behavior: smooth; }
   body {
     @apply bg-ink text-parchment antialiased;
+    background:
+      radial-gradient(circle at 8% 0%, rgba(232,200,119,.08), transparent 28rem),
+      radial-gradient(circle at 92% 12%, rgba(47,93,154,.14), transparent 30rem),
+      #0B1730;
   }
-  /* Visible focus ring everywhere — accessibility is not optional per spec §37 */
-  :focus-visible {
-    outline: 2px solid theme('colors.gold.bright');
-    outline-offset: 2px;
-  }
+  h1, h2, h3, h4 { @apply font-display text-parchment; }
+  ::selection { background: rgba(232,200,119,.24); color: #fffaf0; }
+  :focus-visible { outline: 2px solid theme('colors.gold.bright'); outline-offset: 3px; }
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
+    *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
   }
 }
 
 @layer components {
-  .rule-gold {
-    @apply border-t border-gold/30;
-  }
+  .rule-gold { @apply border-t border-gold/30; }
+
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-card bg-gold px-5 py-2.5 font-body font-semibold text-ink transition-colors hover:bg-gold-bright;
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-body text-sm font-semibold text-ink transition-all duration-200;
+    background: linear-gradient(135deg, #E8C877 0%, #C9A24B 55%, #A9822F 100%);
+    box-shadow: 0 10px 28px rgba(201,162,75,.16), inset 0 1px 0 rgba(255,255,255,.35);
   }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 14px 34px rgba(201,162,75,.23), inset 0 1px 0 rgba(255,255,255,.42); }
+
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-card border border-gold/40 px-5 py-2.5 font-body font-semibold text-parchment transition-colors hover:border-gold;
+    @apply inline-flex items-center justify-center rounded-xl border px-5 py-3 font-body text-sm font-semibold text-parchment transition-all duration-200;
+    border-color: rgba(232,200,119,.32);
+    background: rgba(18,42,78,.52);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
   }
+  .btn-secondary:hover { transform: translateY(-1px); border-color: rgba(232,200,119,.7); background: rgba(28,58,102,.7); }
+
   .card {
-    @apply rounded-card border border-white/10 bg-navy shadow-crest;
+    @apply rounded-2xl border;
+    border-color: rgba(232,200,119,.16);
+    background:
+      linear-gradient(145deg, rgba(28,58,102,.86), rgba(13,30,57,.92));
+    box-shadow: 0 16px 42px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.045);
+    transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
   }
+  .card:hover { border-color: rgba(232,200,119,.3); box-shadow: 0 20px 50px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.06); }
+
   .input {
-    @apply w-full rounded-card border border-white/15 bg-ink px-3 py-2 text-sm outline-none focus:border-gold;
+    @apply w-full rounded-xl border bg-ink/70 px-3.5 py-3 text-sm outline-none transition-all;
+    border-color: rgba(255,255,255,.12);
   }
+  .input:focus { border-color: rgba(232,200,119,.72); box-shadow: 0 0 0 3px rgba(232,200,119,.08); }
+
+  .premium-section { position: relative; overflow: hidden; }
+  .premium-section::before { content:""; position:absolute; inset:0; pointer-events:none; background: linear-gradient(180deg, rgba(255,255,255,.015), transparent 35%); }
+  .eyebrow { @apply text-[11px] font-semibold uppercase tracking-[.34em] text-gold; }
+  .gold-text { background: linear-gradient(90deg,#F2D58D,#C9A24B); -webkit-background-clip:text; background-clip:text; color:transparent; }
 }
+
+/* Shared shell polish: the visual language now carries across public, student,
+   tutor and admin surfaces without changing their data or navigation logic. */
+header.sticky {
+  background: rgba(7,17,34,.82) !important;
+  border-bottom-color: rgba(232,200,119,.18) !important;
+  box-shadow: 0 10px 35px rgba(0,0,0,.12);
+}
+footer {
+  background: linear-gradient(180deg, #081120 0%, #050b16 100%) !important;
+}
+
+@media (max-width: 640px) {
+  .btn-primary, .btn-secondary { min-height: 44px; }
+}
+
+/* Form controls inherit the same institutional finish even where a page uses
+   native select/textarea elements rather than the shared .input class. */
+select, textarea {
+  border-radius: .75rem;
+  border-color: rgba(255,255,255,.12) !important;
+  background-color: rgba(11,23,48,.78) !important;
+  color: #F6F2E7;
+}
+select:focus, textarea:focus {
+  border-color: rgba(232,200,119,.72) !important;
+  box-shadow: 0 0 0 3px rgba(232,200,119,.08);
+}
+
+/* A restrained lift for dense management screens without changing their
+   existing layout or functionality. */
+main a:not(.btn-primary):not(.btn-secondary) { transition: color .2s ease, opacity .2s ease; }
+button { transition: transform .2s ease, border-color .2s ease, background-color .2s ease, box-shadow .2s ease; }
+button:hover:not(:disabled) { transform: translateY(-1px); }
