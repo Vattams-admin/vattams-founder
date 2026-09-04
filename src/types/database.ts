@@ -16,6 +16,7 @@ export interface Course {
   category_id: string | null
   name: string
   slug: string
+  subject?: string | null
   short_description: string | null
   description: string | null
   level: 'beginner' | 'intermediate' | 'advanced' | 'professional' | null

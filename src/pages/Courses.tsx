@@ -105,7 +105,7 @@ export default function Courses() {
 
       if (!term) return true
 
-      const haystack = [getCourseDisplayName(c.name), c.name, c.short_description, c.description, c.instructor_name]
+      const haystack = [getCourseDisplayName(c.name), c.name, c.short_description, c.description, c.instructor_name, c.subject]
         .filter(Boolean)
         .join(' ')
         .toLowerCase()

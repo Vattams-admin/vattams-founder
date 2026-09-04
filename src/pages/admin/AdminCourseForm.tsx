@@ -20,6 +20,7 @@ type LevelValue = NonNullable<Course['level']> | ''
 interface FormState {
   name: string
   slug: string
+  subject: string
   short_description: string
   description: string
   level: LevelValue
@@ -39,6 +40,7 @@ interface FormState {
 const emptyForm: FormState = {
   name: '',
   slug: '',
+  subject: '',
   short_description: '',
   description: '',
   level: '',
@@ -95,6 +97,32 @@ export default function AdminCourseForm() {
   const [fieldErrors, setFieldErrors] = useState<Partial<Record<keyof FormState, string>>>({})
   const [saved, setSaved] = useState(false)
   const [retryToken, setRetryToken] = useState(0)
+  // Existing subject values across all courses, for the Subject field's
+  // datalist — lets an admin pick a subject already in use (so the same
+  // subject spelling is reused across courses) or type a new one. Loaded
+  // once, best-effort: if this fails, the datalist is just empty and the
+  // field still works as a free-text input, same as before.
+  const [existingSubjects, setExistingSubjects] = useState<string[]>([])
+
+  useEffect(() => {
+    let cancelled = false
+    getDocs(collection(firestore, 'courses'))
+      .then((snap) => {
+        if (cancelled) return
+        const found = new Set<string>()
+        for (const d of snap.docs) {
+          const s = (d.data() as Partial<Course>).subject
+          if (typeof s === 'string' && s.trim()) found.add(s.trim())
+        }
+        setExistingSubjects(Array.from(found).sort((a, b) => a.localeCompare(b)))
+      })
+      .catch(() => {
+        // Best-effort only — the Subject input still works as free text.
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   useEffect(() => {
     if (isNew) return
@@ -119,6 +147,7 @@ export default function AdminCourseForm() {
         setForm({
           name: c.name,
           slug: c.slug,
+          subject: c.subject ?? '',
           short_description: c.short_description ?? '',
           description: c.description ?? '',
           level: c.level ?? '',
@@ -245,6 +274,7 @@ export default function AdminCourseForm() {
       const basePayload = {
         name: form.name.trim(),
         slug,
+        subject: normalizeOptionalText(form.subject),
         short_description: normalizeOptionalText(form.short_description),
         description: normalizeOptionalText(form.description),
         level: form.level || null,
@@ -324,6 +354,21 @@ export default function AdminCourseForm() {
               /courses/{originalSlug} will stop working. Only change this if you&apos;re sure.
             </p>
           )}
+        </Field>
+        <Field label="Subject">
+          <input
+            value={form.subject}
+            onChange={(e) => update('subject', e.target.value)}
+            placeholder="e.g. Mathematics, English, Science"
+            list="existing-subjects"
+            className="input"
+          />
+          <datalist id="existing-subjects">
+            {existingSubjects.map((s) => (
+              <option key={s} value={s} />
+            ))}
+          </datalist>
+          <p className="mt-1 text-xs text-slate-muted">Use this for the primary subject when the course is subject-specific.</p>
         </Field>
         <Field label="Short description">
           <input

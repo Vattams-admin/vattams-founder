@@ -24,11 +24,16 @@ export default function CourseCard({ course }: { course: Course }) {
         )}
       </div>
       <div className="flex flex-1 flex-col gap-2 p-4">
-        {(course.level || categoryLabel) && (
+        {(course.level || categoryLabel || course.subject) && (
           <div className="flex flex-wrap gap-1.5">
             {categoryLabel && (
               <span className="w-fit rounded-full border border-white/15 px-2 py-0.5 text-[11px] uppercase tracking-wide text-slate-muted">
                 {categoryLabel}
+              </span>
+            )}
+            {course.subject && (
+              <span className="w-fit rounded-full border border-white/15 px-2 py-0.5 text-[11px] uppercase tracking-wide text-slate-muted">
+                {course.subject}
               </span>
             )}
             {course.level && (

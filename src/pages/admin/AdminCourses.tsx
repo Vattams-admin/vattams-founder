@@ -20,6 +20,7 @@ export default function AdminCourses() {
   const [publishFilter, setPublishFilter] = useState<PublishFilter>('all')
   const [featuredFilter, setFeaturedFilter] = useState<FeaturedFilter>('all')
   const [categoryFilter, setCategoryFilter] = useState<string>('all')
+  const [subjectFilter, setSubjectFilter] = useState<string>('all')
   const [competitionsOnly, setCompetitionsOnly] = useState(false)
   const [sortKey, setSortKey] = useState<SortKey>('name')
   const [busyId, setBusyId] = useState<string | null>(null)
@@ -55,10 +56,12 @@ export default function AdminCourses() {
       if (featuredFilter === 'featured' && !c.is_featured) return false
       if (featuredFilter === 'not-featured' && c.is_featured) return false
       if (categoryFilter !== 'all' && c.category_id !== categoryFilter) return false
+      if (subjectFilter === '__none__' && c.subject) return false
+      if (subjectFilter !== 'all' && subjectFilter !== '__none__' && c.subject !== subjectFilter) return false
       if (competitionsOnly && !c.is_competition) return false
 
       if (!term) return true
-      return [c.name, c.slug, c.instructor_name].filter(Boolean).join(' ').toLowerCase().includes(term)
+      return [c.name, c.slug, c.subject, c.instructor_name].filter(Boolean).join(' ').toLowerCase().includes(term)
     })
 
     return rows.sort((a, b) => {
@@ -73,12 +76,22 @@ export default function AdminCourses() {
           return a.name.localeCompare(b.name)
       }
     })
-  }, [courses, search, publishFilter, featuredFilter, categoryFilter, competitionsOnly, sortKey])
+  }, [courses, search, publishFilter, featuredFilter, categoryFilter, subjectFilter, competitionsOnly, sortKey])
 
   const availableCategories = useMemo(() => {
     const found = new Set<string>()
     for (const c of courses) if (c.category_id) found.add(c.category_id)
     return CATALOG_CATEGORIES.filter((cat) => found.has(cat.id))
+  }, [courses])
+
+  // Distinct subject values actually in use, for the Subject filter
+  // dropdown — same idea as availableCategories above, but subject is
+  // free text (no fixed catalog), so this is just every unique trimmed
+  // value currently on a course, sorted for a stable dropdown order.
+  const availableSubjects = useMemo(() => {
+    const found = new Set<string>()
+    for (const c of courses) if (c.subject) found.add(c.subject)
+    return Array.from(found).sort((a, b) => a.localeCompare(b))
   }, [courses])
 
   async function togglePublish(course: Course) {
@@ -202,6 +215,20 @@ export default function AdminCourses() {
             </select>
           )}
 
+          <select
+              value={subjectFilter}
+              onChange={(e) => setSubjectFilter(e.target.value)}
+              className="input h-auto w-auto py-1 text-xs"
+            >
+              <option value="all">All subjects</option>
+              {availableSubjects.map((s) => (
+                <option key={s} value={s}>
+                  {s}
+                </option>
+              ))}
+              <option value="__none__">Subject not set</option>
+            </select>
+
           <select value={sortKey} onChange={(e) => setSortKey(e.target.value as SortKey)} className="input ml-auto h-auto w-auto py-1 text-xs">
             <option value="name">Sort: Name (A–Z)</option>
             <option value="newest">Sort: Newest</option>
@@ -252,6 +279,9 @@ export default function AdminCourses() {
                   {course.instructor_name ? ` · ${course.instructor_name}` : ''}
                   {getCategoryLabel(course.category_id) ? ` · ${getCategoryLabel(course.category_id)}` : ''}
                 </p>
+                <p className={`mt-0.5 text-xs ${course.subject ? 'text-slate-muted' : 'italic text-slate-muted/70'}`}>
+                  Subject: {course.subject || 'Subject not set'}
+                </p>
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 <span
@@ -280,6 +310,9 @@ export default function AdminCourses() {
                 >
                   {course.is_featured ? 'Unfeature' : 'Feature'}
                 </button>
+                <Link to={`/admin/courses/${course.id}/materials`} className="btn-secondary text-xs">
+                  Manage content
+                </Link>
                 <Link to={`/admin/courses/${course.id}`} className="btn-secondary text-xs">
                   Edit
                 </Link>
