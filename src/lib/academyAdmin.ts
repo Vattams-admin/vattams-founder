@@ -56,12 +56,34 @@ export async function listAcademyStudents(): Promise<AcademyListResult<AcademySt
         email: typeof data.email === 'string' ? data.email : null,
         role: typeof data.role === 'string' ? data.role : null,
         status: typeof data.status === 'string' ? data.status : null,
+        student_code: typeof data.student_code === 'string' ? data.student_code : null,
+        student_id: typeof data.student_id === 'string' ? data.student_id : null,
+        onboarding_status: typeof data.onboarding_status === 'string' ? data.onboarding_status : null,
+        onboarded_at: typeof data.onboarded_at === 'string' ? data.onboarded_at : null,
+        onboarded_by: typeof data.onboarded_by === 'string' ? data.onboarded_by : null,
         created_at: toIsoString(data.created_at),
       }
     })
     return { rows, error: null }
   } catch (error) {
     return { rows: [], error: friendlyFirestoreError(error, 'students') }
+  }
+}
+
+/**
+ * Approves a pending student. Onboarding remains a separate explicit
+ * admin action because onboarding generates the permanent student code/ID.
+ */
+export async function approveAcademyStudent(studentId: string, adminIdentifier: string) {
+  try {
+    await updateDoc(doc(firestore, 'students', studentId), {
+      status: 'approved',
+      approved_at: new Date().toISOString(),
+      approved_by: adminIdentifier,
+    })
+    return { error: null }
+  } catch (error) {
+    return { error: friendlyFirestoreError(error, 'student approval') }
   }
 }
 

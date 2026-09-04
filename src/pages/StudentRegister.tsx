@@ -57,6 +57,7 @@ export default function StudentRegister() {
           full_name: fullName,
           email: user.email ?? email,
           role: 'student',
+          status: 'pending',
           created_at: new Date().toISOString(),
         })
       } catch (profileErr) {

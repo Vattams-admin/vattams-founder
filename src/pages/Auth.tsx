@@ -47,6 +47,8 @@ export default function Auth({
             id: user.uid,
             full_name: fullName,
             email: user.email ?? email,
+            role: 'student',
+            status: 'pending',
             created_at: new Date().toISOString(),
           })
         } catch (profileErr) {

@@ -31,7 +31,7 @@ export default function OnboardingLetter({ role, name, code, permanentId, status
         <p className="mt-6 text-sm text-slate-muted">{today}</p>
 
         <h1 className="mt-4 font-display text-2xl">
-          {role === 'Tutor' ? 'Tutor Onboarding Letter' : 'Student Onboarding &amp; Welcome Letter'}
+          {role === 'Tutor' ? 'Tutor Onboarding Letter' : 'Student Onboarding & Welcome Letter'}
         </h1>
 
         <p className="mt-6 text-sm leading-relaxed">Dear {name},</p>

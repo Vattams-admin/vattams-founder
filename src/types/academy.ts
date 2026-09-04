@@ -28,6 +28,13 @@ export interface AcademyStudent {
   parent_name?: string | null
   parent_phone?: string | null
   city?: string | null
+  student_code?: string | null
+  student_id?: string | null
+  onboarding_status?: string | null
+  onboarded_at?: string | null
+  onboarded_by?: string | null
+  approved_at?: string | null
+  approved_by?: string | null
 }
 
 export interface AcademyTutor {

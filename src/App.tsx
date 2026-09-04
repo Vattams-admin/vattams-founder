@@ -19,6 +19,8 @@ const CourseDetail = lazy(() => import('@/pages/CourseDetail'))
 const Competitions = lazy(() => import('@/pages/Competitions'))
 const Payment = lazy(() => import('@/pages/Payment'))
 const StudentDashboard = lazy(() => import('@/pages/StudentDashboard'))
+const StudentIdCard = lazy(() => import('@/pages/StudentIdCard'))
+const StudentWelcomeLetter = lazy(() => import('@/pages/StudentWelcomeLetter'))
 const CourseLearn = lazy(() => import('@/pages/CourseLearn'))
 const VerifyCertificate = lazy(() => import('@/pages/VerifyCertificate'))
 const Auth = lazy(() => import('@/pages/Auth'))
@@ -91,6 +93,8 @@ export default function App() {
                 name here must match that, not "paymentId". */}
             <Route path="/pay/:courseId" element={<Payment />} />
             <Route path="/dashboard" element={<StudentDashboard />} />
+            <Route path="/student/id-card" element={<StudentIdCard />} />
+            <Route path="/student/welcome-letter" element={<StudentWelcomeLetter />} />
             <Route path="/learn/:slug" element={<CourseLearn />} />
             <Route path="/notifications" element={<Notifications />} />
 

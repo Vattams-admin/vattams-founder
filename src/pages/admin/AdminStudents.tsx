@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import AdminNav from '@/components/AdminNav'
-import { listAcademyStudents } from '@/lib/academyAdmin'
+import { useAdminAuth } from '@/hooks/useAdminAuth'
+import { approveAcademyStudent, listAcademyStudents } from '@/lib/academyAdmin'
+import { onboardStudent } from '@/lib/onboarding'
 import type { AcademyStudent } from '@/types/academy'
 
 type LoadState = 'loading' | 'loaded' | 'error'
@@ -12,6 +14,11 @@ export default function AdminStudents() {
   const [search, setSearch] = useState('')
   const [statusFilter, setStatusFilter] = useState<string>('all')
   const [selected, setSelected] = useState<AcademyStudent | null>(null)
+  const [actionError, setActionError] = useState<string | null>(null)
+  const [busyId, setBusyId] = useState<string | null>(null)
+
+  const { adminUser } = useAdminAuth()
+  const adminIdentifier = adminUser?.email ?? adminUser?.uid ?? 'unknown-admin'
 
   async function load() {
     setState('loading')
@@ -29,6 +36,40 @@ export default function AdminStudents() {
   useEffect(() => {
     load()
   }, [])
+
+  async function handleApprove(student: AcademyStudent) {
+    setBusyId(student.id)
+    setActionError(null)
+
+    const { error } = await approveAcademyStudent(student.id, adminIdentifier)
+
+    setBusyId(null)
+
+    if (error) {
+      setActionError(error)
+      return
+    }
+
+    setSelected(null)
+    await load()
+  }
+
+  async function handleOnboard(student: AcademyStudent) {
+    setBusyId(student.id)
+    setActionError(null)
+
+    const result = await onboardStudent(student.id, adminIdentifier)
+
+    setBusyId(null)
+
+    if (result.error) {
+      setActionError(result.error)
+      return
+    }
+
+    setSelected(null)
+    await load()
+  }
 
   const availableStatuses = useMemo(() => {
     const found = new Set<string>()
@@ -61,6 +102,8 @@ export default function AdminStudents() {
           Refresh
         </button>
       </div>
+
+      {actionError && <p className="mt-4 text-sm text-danger">{actionError}</p>}
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
         <input
@@ -146,9 +189,37 @@ export default function AdminStudents() {
                     {s.created_at ? new Date(s.created_at).toLocaleDateString('en-IN') : '—'}
                   </td>
                   <td className="px-4 py-3">
-                    <button onClick={() => setSelected(s)} className="btn-secondary text-xs">
-                      View
-                    </button>
+                    <div className="flex flex-wrap gap-2">
+                      <button onClick={() => setSelected(s)} className="btn-secondary text-xs">
+                        View
+                      </button>
+
+                      {(s.status === 'pending' || !s.status) && (
+                        <button
+                          onClick={() => handleApprove(s)}
+                          disabled={busyId === s.id}
+                          className="rounded-card bg-success px-3 py-1.5 text-xs font-semibold text-ink disabled:opacity-60"
+                        >
+                          {busyId === s.id ? 'Approving…' : 'Approve'}
+                        </button>
+                      )}
+
+                      {s.status === 'approved' && !s.student_code && (
+                        <button
+                          onClick={() => handleOnboard(s)}
+                          disabled={busyId === s.id}
+                          className="rounded-card bg-gold px-3 py-1.5 text-xs font-semibold text-ink disabled:opacity-60"
+                        >
+                          {busyId === s.id ? 'Onboarding…' : 'Onboard'}
+                        </button>
+                      )}
+
+                      {s.student_code && (
+                        <span className="rounded-card border border-success/40 px-3 py-1.5 text-xs text-success">
+                          {s.student_code}
+                        </span>
+                      )}
+                    </div>
                   </td>
                 </tr>
               ))}
@@ -175,6 +246,9 @@ export default function AdminStudents() {
             <dl className="mt-4 space-y-2 text-sm">
               <Detail label="Email" value={selected.email} />
               <Detail label="Status" value={selected.status} />
+              <Detail label="Student Code" value={selected.student_code} />
+              <Detail label="Student ID" value={selected.student_id} />
+              <Detail label="Onboarding Status" value={selected.onboarding_status} />
               <Detail label="Firebase UID" value={selected.id} />
               <Detail
                 label="Created"
