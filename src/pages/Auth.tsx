@@ -4,7 +4,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from 'firebase/auth'
-import { doc, setDoc } from 'firebase/firestore'
+import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { firebaseAuth, firestore } from '@/lib/firebase'
 import { friendlyAuthError } from '@/lib/authErrors'
 
@@ -72,11 +72,26 @@ export default function Auth({
         return
       }
 
-      await signInWithEmailAndPassword(
+      const credential = await signInWithEmailAndPassword(
         firebaseAuth,
         email,
         password
       )
+
+      try {
+        const tutorSnap = await getDoc(
+          doc(firestore, 'tutors', credential.user.uid)
+        )
+
+        if (tutorSnap.exists()) {
+          navigate(redirectTo === '/dashboard' ? '/tutor/dashboard' : redirectTo)
+          return
+        }
+      } catch (tutorCheckErr) {
+        // Non-tutor accounts may be denied access to the tutors collection.
+        // In that case, preserve the existing student login flow.
+        console.debug('Tutor profile check skipped:', tutorCheckErr)
+      }
 
       navigate(redirectTo)
     } catch (err) {

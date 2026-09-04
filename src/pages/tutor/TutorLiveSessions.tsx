@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import { Navigate } from 'react-router-dom'
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
 import {
@@ -83,7 +83,12 @@ export default function TutorLiveSessions() {
     if (!user) return
     ;(async () => {
       try {
-        const snap = await getDocs(collection(firestore, 'courses'))
+        const snap = await getDocs(
+          query(
+            collection(firestore, 'courses'),
+            where('is_published', '==', true)
+          )
+        )
         setCourses(
           snap.docs.map((d) => ({
             id: d.id,

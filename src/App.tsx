@@ -26,6 +26,9 @@ const VerifyCertificate = lazy(() => import('@/pages/VerifyCertificate'))
 const Auth = lazy(() => import('@/pages/Auth'))
 const StudentRegister = lazy(() => import('@/pages/StudentRegister'))
 const TutorRegister = lazy(() => import('@/pages/TutorRegister'))
+const TutorDashboard = lazy(() => import('@/pages/TutorDashboard'))
+const TutorIdCard = lazy(() => import('@/pages/TutorIdCard'))
+const TutorOnboardingLetter = lazy(() => import('@/pages/TutorOnboardingLetter'))
 const About = lazy(() => import('@/pages/About'))
 const Founder = lazy(() => import('@/pages/Founder'))
 const Contact = lazy(() => import('@/pages/Contact'))
@@ -94,6 +97,9 @@ export default function App() {
                 name here must match that, not "paymentId". */}
             <Route path="/pay/:courseId" element={<Payment />} />
             <Route path="/dashboard" element={<StudentDashboard />} />
+                        <Route path="/tutor/dashboard" element={<TutorDashboard />} />
+                        <Route path="/tutor/id-card" element={<TutorIdCard />} />
+                        <Route path="/tutor/onboarding-letter" element={<TutorOnboardingLetter />} />
             <Route path="/student/id-card" element={<StudentIdCard />} />
             <Route path="/student/welcome-letter" element={<StudentWelcomeLetter />} />
             <Route path="/learn/:slug" element={<CourseLearn />} />
