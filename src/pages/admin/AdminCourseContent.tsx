@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import {
   addDoc,
@@ -123,7 +123,7 @@ export default function AdminCourseContent() {
 
   const [uploading, setUploading] = useState<string | null>(null)
 
-  async function loadContent() {
+  const loadContent = useCallback(async () => {
     if (!courseId) return
 
     setLoading(true)
@@ -146,14 +146,12 @@ export default function AdminCourseContent() {
       )
 
       const moduleRows = moduleSnapshot.docs
+        .filter((item) => item.data().course_id === courseId)
         .map((item) => ({
           id: item.id,
           title: String(item.data().title ?? ''),
           sort_order: Number(item.data().sort_order ?? 0),
-          course_id: item.data().course_id,
         }))
-        .filter((item) => item.course_id === courseId)
-        .map(({ course_id: _courseId, ...item }) => item)
 
       const lessonSnapshot = await getDocs(
         query(
@@ -163,6 +161,7 @@ export default function AdminCourseContent() {
       )
 
       const lessonRows = lessonSnapshot.docs
+        .filter((item) => item.data().course_id === courseId)
         .map((item) => ({
           id: item.id,
           module_id: String(item.data().module_id ?? ''),
@@ -173,10 +172,7 @@ export default function AdminCourseContent() {
           video_url: item.data().video_url ?? null,
           pdf_url: item.data().pdf_url ?? null,
           sort_order: Number(item.data().sort_order ?? 0),
-          course_id: item.data().course_id,
         }))
-        .filter((item) => item.course_id === courseId)
-        .map(({ course_id: _courseId, ...item }) => item)
 
       setModules(moduleRows)
       setLessons(lessonRows)
@@ -190,11 +186,11 @@ export default function AdminCourseContent() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [courseId])
 
   useEffect(() => {
     loadContent()
-  }, [courseId])
+  }, [loadContent])
 
   async function addModule() {
     if (!courseId || !newModuleTitle.trim()) return
