@@ -38,6 +38,7 @@ const AdminCourseForm = lazy(() => import('@/pages/admin/AdminCourseForm'))
 const AdminCourseMaterials = lazy(() => import('@/pages/admin/AdminCourseMaterials'))
 const AdminStudents = lazy(() => import('@/pages/admin/AdminStudents'))
 const AdminTutors = lazy(() => import('@/pages/admin/AdminTutors'))
+const AdminCertificates = lazy(() => import('@/pages/admin/AdminCertificates'))
 const AdminRoute = lazy(() => import('@/components/AdminRoute'))
 const Notifications = lazy(() => import('@/pages/Notifications'))
 const AdminNotifications = lazy(() => import('@/pages/admin/AdminNotifications'))
@@ -146,6 +147,14 @@ export default function App() {
               element={
                 <AdminRoute>
                   <AdminTutors />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/admin/certificates"
+              element={
+                <AdminRoute>
+                  <AdminCertificates />
                 </AdminRoute>
               }
             />

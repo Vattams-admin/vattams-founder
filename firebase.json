@@ -1,6 +1,7 @@
 {
   "//": "Firebase is used for Auth and Firestore. Course/material binary files are stored in Supabase Storage.",
   "firestore": {
-    "rules": "firestore.rules"
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
   }
 }
