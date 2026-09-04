@@ -27,7 +27,7 @@ const CONNECTION_ERROR = 'Unable to connect right now. Please check your interne
 
 export default function Payment() {
   const { courseId } = useParams<{ courseId: string }>()
-  const { user } = useAuth()
+  const { user, loading: authLoading } = useAuth()
   const navigate = useNavigate()
 
   const [course, setCourse] = useState<Course | null>(null)
@@ -39,6 +39,8 @@ export default function Payment() {
   const [retryToken, setRetryToken] = useState(0)
 
   useEffect(() => {
+    if (authLoading) return
+
     if (!user) {
       navigate('/login', { state: { redirectTo: `/pay/${courseId}` } })
       return
@@ -120,8 +122,7 @@ export default function Payment() {
 
     init()
     return () => { cancelled = true }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [courseId, user, retryToken])
+  }, [authLoading, courseId, user, retryToken, navigate])
 
   async function submitUtr() {
     if (!payment || !utr.trim()) return
