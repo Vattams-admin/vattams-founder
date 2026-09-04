@@ -307,15 +307,28 @@ Deno.serve(async (req) => {
         )
       }
 
+      // upsert: true — a signed-upload URL reserves the object's row in
+      // storage.objects the moment it is issued, before any bytes are
+      // sent. Without upsert, re-requesting a URL for a path that was
+      // already reserved (a previous attempt that errored/was retried
+      // before the PUT completed, or a legitimate re-upload of a
+      // corrected file to the same material) fails with "The resource
+      // already exists" — surfaced here as the generic "Unable to
+      // create upload URL". The path is fully admin-authorized and
+      // deterministic (courseId/materialId/fileName), so allowing it to
+      // overwrite its own prior reservation/object is safe.
       const { data, error } =
         await supabase.storage
           .from(BUCKET)
-          .createSignedUploadUrl(path)
+          .createSignedUploadUrl(path, { upsert: true })
 
       if (error) {
+        // Message only (never headers/tokens) — needed to tell apart
+        // "resource already exists" vs. bucket/permission/network
+        // failures in the function logs without guessing.
         console.error(
           'createSignedUploadUrl error:',
-          error
+          error.message
         )
 
         return json(
