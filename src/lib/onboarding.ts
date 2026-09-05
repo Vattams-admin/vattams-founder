@@ -1,5 +1,7 @@
 import { doc, runTransaction } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
+import { tutorRegistrationPaymentId } from '@/lib/tutorPayments'
+import { REQUIRED_TUTOR_ONBOARDING_DOCUMENT_TYPES } from '@/types/tutorOnboarding'
 
 // Onboarding turns an APPROVED tutor/student into an ONBOARDED + ACTIVE
 // one, and is the single place a permanent Employee Code / Student Code
@@ -48,6 +50,11 @@ export interface OnboardResult {
   error: string | null
 }
 
+type ExtraGate = (
+  tx: import('firebase/firestore').Transaction,
+  personId: string
+) => Promise<{ ok: boolean; reason?: string }>
+
 async function onboard(
   collectionName: 'tutors' | 'students',
   personId: string,
@@ -56,7 +63,8 @@ async function onboard(
   codeField: 'employee_code' | 'student_code',
   idField: 'tutor_id' | 'student_id',
   counterId: 'tutor_employee_code' | 'student_code',
-  idRolePrefix: 'TID' | 'SID'
+  idRolePrefix: 'TID' | 'SID',
+  extraGate?: ExtraGate
 ): Promise<OnboardResult> {
   try {
     const personRef = doc(firestore, collectionName, personId)
@@ -81,6 +89,13 @@ async function onboard(
       // Only an approved application can be onboarded.
       if (data.status !== 'approved') {
         throw new Error('not-approved')
+      }
+
+      if (extraGate) {
+        const gateResult = await extraGate(tx, personId)
+        if (!gateResult.ok) {
+          throw new Error(gateResult.reason ?? 'gate-blocked')
+        }
       }
 
       const counterSnap = await tx.get(counterRef)
@@ -123,6 +138,22 @@ async function onboard(
         error: 'Only approved applications can be onboarded. Approve this record first.',
       }
     }
+    if (message === 'payment-not-verified') {
+      return {
+        employeeOrStudentCode: '',
+        permanentId: '',
+        alreadyOnboarded: false,
+        error: 'The ₹500 registration payment must be verified before onboarding.',
+      }
+    }
+    if (message === 'documents-not-verified') {
+      return {
+        employeeOrStudentCode: '',
+        permanentId: '',
+        alreadyOnboarded: false,
+        error: 'All required onboarding documents must be verified before onboarding.',
+      }
+    }
     if (import.meta.env.DEV) console.error(`[onboarding] ${collectionName} onboarding failed:`, error)
     return {
       employeeOrStudentCode: '',
@@ -133,8 +164,48 @@ async function onboard(
   }
 }
 
+const tutorOnboardingExtraGate: ExtraGate = async (tx, tutorId) => {
+  const paymentRef = doc(
+    firestore,
+    'payments',
+    tutorRegistrationPaymentId(tutorId)
+  )
+  const paymentSnap = await tx.get(paymentRef)
+
+  if (!paymentSnap.exists() || paymentSnap.data().status !== 'approved') {
+    return { ok: false, reason: 'payment-not-verified' }
+  }
+
+  for (const documentType of REQUIRED_TUTOR_ONBOARDING_DOCUMENT_TYPES) {
+    const documentRef = doc(
+      firestore,
+      'tutors',
+      tutorId,
+      'onboarding_documents',
+      documentType
+    )
+    const documentSnap = await tx.get(documentRef)
+
+    if (!documentSnap.exists() || documentSnap.data().status !== 'verified') {
+      return { ok: false, reason: 'documents-not-verified' }
+    }
+  }
+
+  return { ok: true }
+}
+
 export function onboardTutor(tutorId: string, adminIdentifier: string) {
-  return onboard('tutors', tutorId, adminIdentifier, 'VA-TUT', 'employee_code', 'tutor_id', 'tutor_employee_code', 'TID')
+  return onboard(
+    'tutors',
+    tutorId,
+    adminIdentifier,
+    'VA-TUT',
+    'employee_code',
+    'tutor_id',
+    'tutor_employee_code',
+    'TID',
+    tutorOnboardingExtraGate
+  )
 }
 
 export function onboardStudent(studentId: string, adminIdentifier: string) {

@@ -4,6 +4,8 @@ import { doc, getDoc } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
 import type { AcademyTutor } from '@/types/academy'
+import { getTutorRegistrationPayment } from '@/lib/tutorPayments'
+import type { Payment } from '@/types/database'
 
 // There was no Tutor Dashboard anywhere in this project before — tutors
 // who logged in landed on the Student Dashboard, which only shows
@@ -16,6 +18,7 @@ type LoadState = 'loading' | 'loaded' | 'error' | 'not-found'
 export default function TutorDashboard() {
   const { user, loading: authLoading } = useAuth()
   const [tutor, setTutor] = useState<AcademyTutor | null>(null)
+  const [payment, setPayment] = useState<Payment | null>(null)
   const [state, setState] = useState<LoadState>('loading')
 
   useEffect(() => {
@@ -51,6 +54,11 @@ export default function TutorDashboard() {
           onboarded_at: typeof data.onboarded_at === 'string' ? data.onboarded_at : null,
           onboarded_by: typeof data.onboarded_by === 'string' ? data.onboarded_by : null,
         })
+
+        const paymentResult = await getTutorRegistrationPayment(user.id)
+        if (cancelled) return
+        setPayment(paymentResult)
+
         setState('loaded')
       } catch (err) {
         console.error('Failed to load tutor profile:', err)
@@ -126,6 +134,36 @@ export default function TutorDashboard() {
               <p className="mt-1 text-slate-muted">
                 Your Employee Code and Tutor ID will appear here once an administrator completes onboarding.
               </p>
+
+              {tutor.status !== 'rejected' && payment?.status !== 'approved' && (
+                <div className="mt-3">
+                  <p className="text-parchment">
+                    {payment?.status === 'submitted'
+                      ? 'Your ₹500 registration payment is awaiting verification.'
+                      : payment?.status === 'rejected'
+                        ? 'Your ₹500 registration payment was rejected — please pay again.'
+                        : 'Complete your ₹500 registration payment to continue.'}
+                  </p>
+                  <Link to="/tutor/pay" className="btn-primary mt-2 inline-flex text-sm">
+                    {payment?.status === 'submitted' ? 'View payment status' : 'Pay ₹500 registration fee'}
+                  </Link>
+                </div>
+              )}
+
+              {tutor.status !== 'approved' && tutor.status !== 'rejected' && payment?.status === 'approved' && (
+                <p className="mt-3 text-parchment">
+                  Your ₹500 payment is verified. Your application is now waiting on final admin approval.
+                </p>
+              )}
+
+              {tutor.status === 'approved' && payment?.status === 'approved' && (
+                <div className="mt-3">
+                  <p className="text-parchment">Upload your required onboarding documents next.</p>
+                  <Link to="/tutor/onboarding-documents" className="btn-primary mt-2 inline-flex text-sm">
+                    Upload onboarding documents
+                  </Link>
+                </div>
+              )}
             </div>
           )}
         </section>

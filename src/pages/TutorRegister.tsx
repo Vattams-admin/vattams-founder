@@ -99,11 +99,11 @@ export default function TutorRegister() {
       <div className="mx-auto max-w-sm px-4 py-16 text-center sm:px-6">
         <h1 className="font-display text-2xl">Application received</h1>
         <p className="mt-3 text-sm text-slate-muted">
-          Thanks for applying to teach at VATTAMS ACADEMIA. Your tutor account is
-          pending review — we&apos;ll notify you at {email} once it&apos;s approved.
+          Thanks for applying to teach at VATTAMS ACADEMIA. Next, complete your ₹500 registration payment — your
+          application will be reviewed for approval once it&apos;s verified.
         </p>
-        <Link to="/" className="btn-secondary mt-6 inline-flex">
-          Back to home
+        <Link to="/tutor/pay" className="btn-primary mt-6 inline-flex">
+          Pay ₹500 registration fee
         </Link>
       </div>
     )

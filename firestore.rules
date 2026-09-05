@@ -57,6 +57,23 @@ service cloud.firestore {
         request.resource.data.onboarding_status == resource.data.onboarding_status;
     }
 
+    // Tutor approval requires the deterministic ₹500 registration
+    // payment to be approved first.
+    function tutorRegistrationPaymentVerified(tutorId) {
+      return exists(/databases/$(database)/documents/payments/$('tutor_registration_' + tutorId)) &&
+        get(/databases/$(database)/documents/payments/$('tutor_registration_' + tutorId)).data.status == 'approved';
+    }
+
+    function tutorApprovalGateOk(tutorId) {
+      return request.resource.data.status != 'approved' ||
+        tutorRegistrationPaymentVerified(tutorId);
+    }
+
+    function onboardingDocIdentityFieldsUnchanged() {
+      return request.resource.data.tutor_id == resource.data.tutor_id &&
+        request.resource.data.document_type == resource.data.document_type;
+    }
+
     function studentIdentityFieldsUnchanged() {
       return request.resource.data.student_code == resource.data.student_code &&
         request.resource.data.student_id == resource.data.student_id &&
@@ -71,11 +88,46 @@ service cloud.firestore {
 
       // Registration (TutorRegister.tsx) creates the doc with the
       // signed-in user's own uid as the doc ID.
-      allow create: if isOwner(tutorId);
+      allow create: if isOwner(tutorId)
+        && request.resource.data.status == 'pending_approval'
+        && !('employee_code' in request.resource.data)
+        && !('tutor_id' in request.resource.data)
+        && !('onboarding_status' in request.resource.data);
 
       // A tutor may update their own profile fields, but never their
       // Employee Code, Tutor ID, approval status, or onboarding status.
-      allow update: if (isOwner(tutorId) && tutorIdentityFieldsUnchanged()) || isAdmin();
+      allow update: if (isOwner(tutorId) && tutorIdentityFieldsUnchanged())
+        || (isAdmin() && tutorApprovalGateOk(tutorId));
+
+      allow delete: if false;
+    }
+
+    // Tutor onboarding documents: metadata only. Actual files are stored
+    // privately in Supabase Storage.
+    match /tutors/{tutorId}/onboarding_documents/{documentId} {
+      allow read: if isOwner(tutorId) || isAdmin();
+
+      allow create: if isOwner(tutorId)
+        && documentId == request.resource.data.document_type
+        && request.resource.data.tutor_id == tutorId
+        && request.resource.data.status == 'pending'
+        && request.resource.data.reviewed_at == null
+        && request.resource.data.reviewed_by == null
+        && request.resource.data.rejection_reason == null;
+
+      allow update: if (
+        isOwner(tutorId)
+        && onboardingDocIdentityFieldsUnchanged()
+        && resource.data.status == 'rejected'
+        && request.resource.data.status == 'pending'
+        && request.resource.data.reviewed_at == null
+        && request.resource.data.reviewed_by == null
+        && request.resource.data.rejection_reason == null
+      ) || (
+        isAdmin()
+        && onboardingDocIdentityFieldsUnchanged()
+        && request.resource.data.status in ['verified', 'rejected']
+      );
 
       allow delete: if false;
     }
@@ -291,7 +343,61 @@ service cloud.firestore {
     match /payments/{paymentId} {
       // A student reads only their own payments (StudentDashboard.tsx);
       // an admin reads all (AdminPayments.tsx).
-      allow read: if isAdmin() || (isSignedIn() && resource.data.student_id == request.auth.uid);
+      allow read: if isAdmin()
+        || (isSignedIn() && (
+          resource.data.student_id == request.auth.uid
+          || resource.data.tutor_id == request.auth.uid
+        ));
+
+      // Tutor registration payments are deterministic: one payment document
+      // per tutor, always exactly ₹500.
+      allow create: if isSignedIn()
+        && paymentId == ('tutor_registration_' + request.auth.uid)
+        && request.resource.data.payment_type == 'tutor_registration'
+        && request.resource.data.tutor_id == request.auth.uid
+        && request.resource.data.tutor_name is string
+        && request.resource.data.student_id == null
+        && request.resource.data.course_id == null
+        && request.resource.data.course_name == null
+        && request.resource.data.amount == 500
+        && request.resource.data.status == 'pending'
+        && request.resource.data.verified_at == null
+        && request.resource.data.verified_by == null
+        && request.resource.data.keys().hasAll([
+          'payment_type',
+          'tutor_id',
+          'tutor_name',
+          'student_id',
+          'course_id',
+          'course_name',
+          'amount',
+          'status',
+          'verified_at',
+          'verified_by',
+          'utr_reference',
+          'submitted_at',
+          'created_at'
+        ]);
+
+      // A tutor may only submit their own pending registration payment.
+      // Admins retain the existing verification authority below.
+      allow update: if isAdmin() || (
+        isSignedIn()
+        && resource.data.payment_type == 'tutor_registration'
+        && resource.data.tutor_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      ) || (
+        isSignedIn()
+        && resource.data.payment_type != 'tutor_registration'
+        && resource.data.student_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      );
 
       // Payment.tsx creates its own pending payment doc from
       // course.base_fee/discount_amount it just read from Firestore —
@@ -356,6 +462,9 @@ service cloud.firestore {
           || (request.resource.data.recipient_uid == null
               && request.resource.data.recipient_role == 'admin'
               && request.resource.data.type in ['new_student_registration', 'new_enrollment', 'tutor_activity', 'payment_received'])
+          || (request.resource.data.recipient_uid == request.auth.uid
+              && request.resource.data.recipient_role == 'tutor'
+              && request.resource.data.type == 'tutor_payment_status')
         );
 
       allow update: if (isOwnNotification() || (isAdminBroadcast() && isAdmin()) || (isTutorBroadcast() && isApprovedTutor()))

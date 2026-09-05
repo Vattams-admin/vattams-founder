@@ -1,6 +1,7 @@
 import { collection, doc, getDocs, orderBy, query, updateDoc } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { AcademyStudent, AcademyTutor } from '@/types/academy'
+import { getTutorRegistrationPayment } from '@/lib/tutorPayments'
 
 // Reads the `students` and `tutors` Firestore collections directly —
 // these are the same collections StudentRegister.tsx / TutorRegister.tsx
@@ -122,6 +123,11 @@ export async function listAcademyTutors(): Promise<AcademyListResult<AcademyTuto
  */
 export async function approveAcademyTutor(tutorId: string, adminIdentifier: string) {
   try {
+    const payment = await getTutorRegistrationPayment(tutorId)
+    if (payment?.status !== 'approved') {
+      return { error: 'This tutor’s ₹500 registration payment must be verified before approval.' }
+    }
+
     await updateDoc(doc(firestore, 'tutors', tutorId), {
       status: 'approved',
       approved_at: new Date().toISOString(),

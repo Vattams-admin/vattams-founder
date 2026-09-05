@@ -3,6 +3,12 @@ import AdminNav from '@/components/AdminNav'
 import { useAdminAuth } from '@/hooks/useAdminAuth'
 import { approveAcademyTutor, listAcademyTutors, rejectAcademyTutor } from '@/lib/academyAdmin'
 import type { AcademyTutor } from '@/types/academy'
+import type { Payment } from '@/types/database'
+import { decideTutorRegistrationPayment, getTutorRegistrationPayment } from '@/lib/tutorPayments'
+import { getTutorOnboardingReadiness, type TutorOnboardingReadiness } from '@/lib/tutorOnboardingGate'
+import { reviewTutorOnboardingDocument } from '@/lib/tutorOnboardingDocuments'
+import { REQUIRED_TUTOR_ONBOARDING_DOCUMENTS, type TutorOnboardingDocumentType } from '@/types/tutorOnboarding'
+import { onboardTutor } from '@/lib/onboarding'
 
 type LoadState = 'loading' | 'loaded' | 'error'
 
@@ -19,6 +25,23 @@ export default function AdminTutors() {
   const [rejectionReason, setRejectionReason] = useState('')
   const [busyId, setBusyId] = useState<string | null>(null)
 
+  // Registration payment status, keyed by tutor id — fetched once
+  // alongside the tutor list so the row list can show a clear
+  // "tutor registration payment" status per Part D, without a separate
+  // click into each tutor's detail view.
+  const [paymentByTutorId, setPaymentByTutorId] = useState<Record<string, Payment | null>>({})
+
+  // Detail-modal-only state: onboarding documents + readiness are only
+  // fetched for the currently-selected tutor (would be an unnecessary
+  // number of reads to fetch for every row in the list).
+  const [detailLoading, setDetailLoading] = useState(false)
+  const [readiness, setReadiness] = useState<TutorOnboardingReadiness | null>(null)
+  const [rejectingDocument, setRejectingDocument] = useState<TutorOnboardingDocumentType | null>(null)
+  const [documentRejectionReason, setDocumentRejectionReason] = useState('')
+  const [documentBusyType, setDocumentBusyType] = useState<TutorOnboardingDocumentType | null>(null)
+  const [onboardBusy, setOnboardBusy] = useState(false)
+  const [onboardResultMessage, setOnboardResultMessage] = useState<string | null>(null)
+
   // Falls back to the Firebase admin's uid if email isn't set on the
   // account, for the approved_by / rejected_by audit fields.
   const adminIdentifier = adminUser?.email ?? adminUser?.uid ?? 'unknown-admin'
@@ -34,11 +57,39 @@ export default function AdminTutors() {
     }
     setTutors(rows)
     setState('loaded')
+
+    // Fetch each tutor's ₹500 registration payment status in parallel —
+    // exact deterministic doc lookup (tutor_registration_{uid}), same
+    // pattern as everywhere else this payment is read.
+    const entries = await Promise.all(
+      rows.map(async (t) => [t.id, await getTutorRegistrationPayment(t.id)] as const)
+    )
+    setPaymentByTutorId(Object.fromEntries(entries))
   }
 
   useEffect(() => {
     load()
   }, [])
+
+  async function loadDetail(tutor: AcademyTutor) {
+    setDetailLoading(true)
+    setOnboardResultMessage(null)
+    try {
+      const result = await getTutorOnboardingReadiness(tutor.id, tutor.status)
+      setReadiness(result)
+    } catch (err) {
+      console.error('Failed to load onboarding readiness:', err)
+      setReadiness(null)
+    } finally {
+      setDetailLoading(false)
+    }
+  }
+
+  function openDetail(tutor: AcademyTutor) {
+    setSelected(tutor)
+    setReadiness(null)
+    void loadDetail(tutor)
+  }
 
   const availableStatuses = useMemo(() => {
     const found = new Set<string>()
@@ -59,7 +110,18 @@ export default function AdminTutors() {
     })
   }, [tutors, search, statusFilter])
 
+  function isPaymentVerified(tutorId: string): boolean {
+    return paymentByTutorId[tutorId]?.status === 'approved'
+  }
+
   async function handleApprove(tutor: AcademyTutor) {
+    // Client-side gate for a clear message — the real enforcement is
+    // firestore.rules' tutorApprovalGateOk(), which blocks this write
+    // server-side regardless of what the UI does.
+    if (!isPaymentVerified(tutor.id)) {
+      setActionError('This tutor\u2019s ₹500 registration payment must be verified before you can approve them.')
+      return
+    }
     setBusyId(tutor.id)
     setActionError(null)
     const { error } = await approveAcademyTutor(tutor.id, adminIdentifier)
@@ -86,6 +148,78 @@ export default function AdminTutors() {
     setRejectionReason('')
     setSelected(null)
     load()
+  }
+
+  async function handleDecidePayment(status: 'approved' | 'rejected') {
+    if (!selected) return
+    const payment = paymentByTutorId[selected.id]
+    if (!payment) return
+    setBusyId(selected.id)
+    setActionError(null)
+    const note = status === 'rejected' ? window.prompt('Rejection reason (shown to the tutor):', '') : null
+    if (status === 'rejected' && note === null) {
+      setBusyId(null)
+      return
+    }
+    const { error } = await decideTutorRegistrationPayment(payment, status, adminIdentifier, note)
+    setBusyId(null)
+    if (error) {
+      setActionError(error)
+      return
+    }
+    await load()
+    await loadDetail(selected)
+  }
+
+  async function handleReviewDocument(status: 'verified' | 'rejected') {
+    if (!selected || !rejectingDocument) return
+    const documentType = rejectingDocument
+    setDocumentBusyType(documentType)
+    const { error } = await reviewTutorOnboardingDocument(
+      selected.id,
+      documentType,
+      status,
+      adminIdentifier,
+      status === 'rejected' ? documentRejectionReason.trim() : null
+    )
+    setDocumentBusyType(null)
+    if (error) {
+      setActionError(error)
+      return
+    }
+    setRejectingDocument(null)
+    setDocumentRejectionReason('')
+    await loadDetail(selected)
+  }
+
+  async function handleVerifyDocument(documentType: TutorOnboardingDocumentType) {
+    if (!selected) return
+    setDocumentBusyType(documentType)
+    const { error } = await reviewTutorOnboardingDocument(selected.id, documentType, 'verified', adminIdentifier, null)
+    setDocumentBusyType(null)
+    if (error) {
+      setActionError(error)
+      return
+    }
+    await loadDetail(selected)
+  }
+
+  async function handleOnboard() {
+    if (!selected) return
+    setOnboardBusy(true)
+    setOnboardResultMessage(null)
+    const result = await onboardTutor(selected.id, adminIdentifier)
+    setOnboardBusy(false)
+    if (result.error) {
+      setOnboardResultMessage(result.error)
+      return
+    }
+    setOnboardResultMessage(
+      result.alreadyOnboarded
+        ? `Already onboarded — Employee Code ${result.employeeOrStudentCode}, Tutor ID ${result.permanentId}.`
+        : `Onboarded — Employee Code ${result.employeeOrStudentCode}, Tutor ID ${result.permanentId}.`
+    )
+    await load()
   }
 
   return (
@@ -168,16 +302,25 @@ export default function AdminTutors() {
                 <p className="text-slate-muted">
                   {t.qualification ?? 'No qualification listed'} · {t.expertise ?? 'No expertise listed'}
                 </p>
+                <div className="mt-1 flex flex-wrap gap-1.5">
+                  <PaymentStatusPill payment={paymentByTutorId[t.id]} />
+                  {t.employee_code && (
+                    <span className="rounded-full bg-success/20 px-2 py-0.5 text-[10px] uppercase tracking-wide text-success">
+                      Onboarded — {t.employee_code}
+                    </span>
+                  )}
+                </div>
               </div>
               <div className="flex flex-wrap items-center gap-2">
                 <StatusPill value={t.status} />
-                <button onClick={() => setSelected(t)} className="btn-secondary text-xs">
+                <button onClick={() => openDetail(t)} className="btn-secondary text-xs">
                   View
                 </button>
                 {t.status !== 'approved' && (
                   <button
                     onClick={() => handleApprove(t)}
-                    disabled={busyId === t.id}
+                    disabled={busyId === t.id || !isPaymentVerified(t.id)}
+                    title={!isPaymentVerified(t.id) ? 'Registration payment must be verified first' : undefined}
                     className="rounded-card bg-success px-3 py-1.5 text-xs font-semibold text-ink disabled:opacity-60"
                   >
                     Approve
@@ -206,7 +349,7 @@ export default function AdminTutors() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
           onClick={() => setSelected(null)}
         >
-          <div className="card w-full max-w-lg p-6" onClick={(e) => e.stopPropagation()}>
+          <div className="card max-h-[90vh] w-full max-w-xl overflow-y-auto p-6" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between">
               <h2 className="font-display text-xl">{selected.full_name}</h2>
               <button onClick={() => setSelected(null)} className="text-slate-muted hover:text-parchment">
@@ -226,6 +369,153 @@ export default function AdminTutors() {
                 value={selected.created_at ? new Date(selected.created_at).toLocaleString('en-IN') : null}
               />
             </dl>
+
+            {/* Part D — ₹500 registration payment status + actions */}
+            <div className="mt-6 border-t border-white/10 pt-4">
+              <h3 className="font-display text-sm uppercase tracking-wide text-gold">Registration payment</h3>
+              <div className="mt-2 flex items-center justify-between text-sm">
+                <PaymentStatusPill payment={paymentByTutorId[selected.id]} />
+                {paymentByTutorId[selected.id]?.utr_reference && (
+                  <span className="text-xs text-slate-muted">
+                    UTR: {paymentByTutorId[selected.id]?.utr_reference}
+                  </span>
+                )}
+              </div>
+              {paymentByTutorId[selected.id]?.status === 'submitted' && (
+                <div className="mt-3 flex gap-2">
+                  <button
+                    onClick={() => handleDecidePayment('approved')}
+                    disabled={busyId === selected.id}
+                    className="rounded-card bg-success px-3 py-1.5 text-xs font-semibold text-ink disabled:opacity-60"
+                  >
+                    Verify payment
+                  </button>
+                  <button
+                    onClick={() => handleDecidePayment('rejected')}
+                    disabled={busyId === selected.id}
+                    className="rounded-card border border-danger/50 px-3 py-1.5 text-xs font-semibold text-danger disabled:opacity-60"
+                  >
+                    Reject payment
+                  </button>
+                </div>
+              )}
+              {!paymentByTutorId[selected.id] && (
+                <p className="mt-2 text-xs text-slate-muted">Tutor hasn&apos;t started the ₹500 payment yet.</p>
+              )}
+            </div>
+
+            {/* Part D — onboarding document review */}
+            <div className="mt-6 border-t border-white/10 pt-4">
+              <h3 className="font-display text-sm uppercase tracking-wide text-gold">Onboarding documents</h3>
+              {detailLoading && <p className="mt-2 text-xs text-slate-muted">Loading…</p>}
+              {!detailLoading && readiness && (
+                <div className="mt-2 space-y-2">
+                  {REQUIRED_TUTOR_ONBOARDING_DOCUMENTS.map((def) => {
+                    const document = readiness.documentsByType[def.type]
+                    const busy = documentBusyType === def.type
+                    return (
+                      <div key={def.type} className="rounded-card border border-white/10 p-3 text-xs">
+                        <div className="flex items-center justify-between">
+                          <span className="font-medium text-parchment">{def.label}</span>
+                          <DocumentStatusPill status={document?.status ?? null} />
+                        </div>
+                        {document?.rejection_reason && (
+                          <p className="mt-1 text-danger">Rejected: {document.rejection_reason}</p>
+                        )}
+                        {document && document.status !== 'verified' && (
+                          <div className="mt-2 flex gap-2">
+                            <button
+                              onClick={() => handleVerifyDocument(def.type)}
+                              disabled={busy}
+                              className="rounded-card bg-success px-2.5 py-1 text-[11px] font-semibold text-ink disabled:opacity-60"
+                            >
+                              Verify
+                            </button>
+                            <button
+                              onClick={() => {
+                                setRejectingDocument(def.type)
+                                setDocumentRejectionReason('')
+                              }}
+                              disabled={busy}
+                              className="rounded-card border border-danger/50 px-2.5 py-1 text-[11px] font-semibold text-danger disabled:opacity-60"
+                            >
+                              Reject
+                            </button>
+                          </div>
+                        )}
+                        {!document && <p className="mt-1 text-slate-muted">Not uploaded yet.</p>}
+                      </div>
+                    )
+                  })}
+                </div>
+              )}
+            </div>
+
+            {/* Part D — onboard action, gated with a clear blocked reason */}
+            <div className="mt-6 border-t border-white/10 pt-4">
+              <h3 className="font-display text-sm uppercase tracking-wide text-gold">Onboarding</h3>
+              {selected.employee_code && selected.tutor_id ? (
+                <div className="mt-2 text-sm">
+                  <p>Employee Code: <span className="font-medium">{selected.employee_code}</span></p>
+                  <p>Tutor ID: <span className="font-medium">{selected.tutor_id}</span></p>
+                  <p className="mt-1 text-xs text-slate-muted">
+                    Onboarding status: {selected.onboarding_status ?? 'active'}
+                  </p>
+                </div>
+              ) : (
+                <>
+                  {readiness && !readiness.canOnboard && (
+                    <ul className="mt-2 list-disc pl-5 text-xs text-slate-muted">
+                      {readiness.blockedReasons.map((reason) => (
+                        <li key={reason}>{reason}</li>
+                      ))}
+                    </ul>
+                  )}
+                  <button
+                    onClick={handleOnboard}
+                    disabled={onboardBusy || !readiness?.canOnboard}
+                    className="btn-primary mt-3 text-sm disabled:opacity-60"
+                  >
+                    {onboardBusy ? 'Onboarding…' : 'Complete onboarding'}
+                  </button>
+                </>
+              )}
+              {onboardResultMessage && <p className="mt-2 text-sm text-parchment">{onboardResultMessage}</p>}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {rejectingDocument && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+          onClick={() => setRejectingDocument(null)}
+        >
+          <div className="card w-full max-w-md p-6" onClick={(e) => e.stopPropagation()}>
+            <h2 className="font-display text-xl">Reject document</h2>
+            <label htmlFor="doc-reason" className="mt-4 block text-sm font-medium">
+              Rejection reason
+            </label>
+            <textarea
+              id="doc-reason"
+              rows={3}
+              value={documentRejectionReason}
+              onChange={(e) => setDocumentRejectionReason(e.target.value)}
+              placeholder="Let the tutor know why this document was rejected"
+              className="mt-1 w-full rounded-card border border-white/15 bg-ink px-3 py-2 text-sm outline-none focus:border-gold"
+            />
+            <div className="mt-4 flex justify-end gap-2">
+              <button onClick={() => setRejectingDocument(null)} className="btn-secondary text-sm">
+                Cancel
+              </button>
+              <button
+                onClick={() => handleReviewDocument('rejected')}
+                disabled={documentBusyType === rejectingDocument || !documentRejectionReason.trim()}
+                className="rounded-card border border-danger/50 px-4 py-2 text-sm font-semibold text-danger disabled:opacity-60"
+              >
+                {documentBusyType === rejectingDocument ? 'Rejecting…' : 'Confirm rejection'}
+              </button>
+            </div>
           </div>
         </div>
       )}
@@ -280,6 +570,42 @@ function StatusPill({ value }: { value: string | null | undefined }) {
           : negative
           ? 'bg-danger/20 text-danger'
           : 'bg-gold/20 text-gold'
+      }`}
+    >
+      {label}
+    </span>
+  )
+}
+
+function PaymentStatusPill({ payment }: { payment: Payment | null | undefined }) {
+  const status = payment?.status ?? 'not started'
+  const positive = status === 'approved'
+  const negative = status === 'rejected'
+
+  return (
+    <span
+      className={`rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wide ${
+        positive
+          ? 'bg-success/20 text-success'
+          : negative
+          ? 'bg-danger/20 text-danger'
+          : 'bg-white/10 text-slate-muted'
+      }`}
+    >
+      ₹500 fee: {status}
+    </span>
+  )
+}
+
+function DocumentStatusPill({ status }: { status: string | null }) {
+  const label = status ?? 'not uploaded'
+  const verified = status === 'verified'
+  const rejected = status === 'rejected'
+
+  return (
+    <span
+      className={`rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wide ${
+        verified ? 'bg-success/20 text-success' : rejected ? 'bg-danger/20 text-danger' : 'bg-gold/20 text-gold'
       }`}
     >
       {label}

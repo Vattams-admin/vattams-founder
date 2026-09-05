@@ -33,7 +33,10 @@ export const TUTOR_NOTIFICATION_TYPES = [
   'class_scheduled',
   'class_reminder',
   'enrollment_update',
-  'admin_announcement'
+  'admin_announcement',
+  'tutor_payment_status',
+  'tutor_document_status',
+  'tutor_onboarding_complete'
 ] as const
 
 export const ADMIN_NOTIFICATION_TYPES = [
@@ -98,6 +101,9 @@ export const NOTIFICATION_TYPE_META: Record<string, { label: string; icon: 'chec
   new_student_registration: { label: 'New registration', icon: 'user' },
   new_enrollment: { label: 'New enrollment', icon: 'book' },
   payment_received: { label: 'Payment received', icon: 'card' },
+  tutor_payment_status: { label: 'Registration payment', icon: 'card' },
+  tutor_document_status: { label: 'Onboarding document', icon: 'book' },
+  tutor_onboarding_complete: { label: 'Onboarding complete', icon: 'check' },
   tutor_activity: { label: 'Tutor activity', icon: 'user' },
   system_alert: { label: 'System alert', icon: 'alert' }
 }

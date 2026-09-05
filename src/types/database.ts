@@ -40,13 +40,17 @@ export interface Course {
 
 export interface Payment {
   id: string
-  student_id: string
-  course_id: string
+  student_id: string | null
+  course_id: string | null
   // Denormalized at creation time so payment/enrolment lists can render
   // without a join — Firestore has none, so the alternative is an extra
   // read per row on every list render.
   course_name: string | null
   student_name: string | null
+  // Tutor registration payments use these optional fields; course payments remain unchanged.
+  payment_type?: 'course' | 'tutor_registration'
+  tutor_id?: string | null
+  tutor_name?: string | null
   amount: number
   status: 'pending' | 'submitted' | 'approved' | 'rejected'
   utr_reference: string | null
@@ -59,8 +63,8 @@ export interface Payment {
 
 export interface Enrolment {
   id: string
-  student_id: string
-  course_id: string
+  student_id: string | null
+  course_id: string | null
   course_name: string | null
   course_slug: string | null
   status: 'pending' | 'active' | 'revoked'
