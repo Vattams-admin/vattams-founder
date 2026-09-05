@@ -20,7 +20,7 @@ const PAYEE_VPA = import.meta.env.VITE_UPI_VPA as string | undefined
 const CONNECTION_ERROR = 'Unable to connect right now. Please check your internet connection and try again.'
 
 export default function TutorPayment() {
-  const { user } = useAuth()
+  const { user, loading } = useAuth()
   const navigate = useNavigate()
 
   const [payment, setPayment] = useState<Payment | null>(null)
@@ -31,6 +31,8 @@ export default function TutorPayment() {
   const [retryToken, setRetryToken] = useState(0)
 
   useEffect(() => {
+    if (loading) return
+
     if (!user) {
       navigate('/login', { state: { redirectTo: '/tutor/pay' } })
       return
@@ -65,7 +67,7 @@ export default function TutorPayment() {
     init()
     return () => { cancelled = true }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user, retryToken])
+  }, [user, loading, retryToken])
 
   async function submitUtr() {
     if (!payment || !utr.trim()) return
