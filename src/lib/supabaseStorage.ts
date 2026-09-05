@@ -21,6 +21,10 @@ interface FunctionResponse {
   token?: string
   expires_in?: number
   error?: string
+  // Present on structured failures (see supabase/functions/course-material) —
+  // a sanitized technical detail, safe to log but not to show to students.
+  message?: string
+  details?: string
 }
 
 async function getFirebaseToken(): Promise<string> {
@@ -56,8 +60,25 @@ async function callCourseMaterialFunction(
   }
 
   if (!response.ok) {
+    // `details` is a sanitized technical message from the Edge Function
+    // (see supabase/functions/course-material) — safe to log, but the
+    // user-facing error stays generic. Without this, the real cause
+    // (e.g. "The resource already exists") was invisible in the browser
+    // console; only the flat "Unable to create upload URL" ever reached
+    // the caller.
+    if (import.meta.env.DEV && (data.details || data.message)) {
+      console.error('course-material function error:', {
+        status: response.status,
+        error: data.error,
+        message: data.message,
+        details: data.details,
+      })
+    }
+
     throw new Error(
-      data.error || `Course material service failed (${response.status}).`
+      data.error === 'UPLOAD_URL_FAILED'
+        ? data.message || 'Unable to create upload URL'
+        : data.error || `Course material service failed (${response.status}).`
     )
   }
 

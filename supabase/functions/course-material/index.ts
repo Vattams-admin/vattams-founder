@@ -307,34 +307,83 @@ Deno.serve(async (req) => {
         )
       }
 
-      // upsert: true — a signed-upload URL reserves the object's row in
-      // storage.objects the moment it is issued, before any bytes are
-      // sent. Without upsert, re-requesting a URL for a path that was
-      // already reserved (a previous attempt that errored/was retried
-      // before the PUT completed, or a legitimate re-upload of a
-      // corrected file to the same material) fails with "The resource
-      // already exists" — surfaced here as the generic "Unable to
-      // create upload URL". The path is fully admin-authorized and
-      // deterministic (courseId/materialId/fileName), so allowing it to
-      // overwrite its own prior reservation/object is safe.
-      const { data, error } =
-        await supabase.storage
+      // `{ upsert: true }` on createSignedUploadUrl() is a documented,
+      // still-open bug in supabase-js (supabase-js#1246, storage#502):
+      // the flag is silently ignored at *signed-URL creation* time — it
+      // only works on uploadToSignedUrl()/the x-upsert header, which is
+      // not what this flow uses (the browser PUTs straight to Storage
+      // with the returned token, see src/lib/supabaseStorage.ts). So any
+      // second request for a path whose object row was already reserved
+      // by an earlier attempt — a retried request, a refresh mid-upload,
+      // a legitimate re-upload of a corrected file to the same material —
+      // still fails with "The resource already exists", which is what
+      // was being surfaced here as the generic "Unable to create upload
+      // URL" even after the upsert option was added.
+      //
+      // The path is fully admin-authorized and deterministic
+      // (courseId/materialId/fileName), so it's safe to clear the prior
+      // reservation ourselves and retry, which is what upsert was
+      // supposed to do.
+      let signResult = await supabase.storage
+        .from(BUCKET)
+        .createSignedUploadUrl(path)
+
+      if (
+        signResult.error &&
+        /exists/i.test(signResult.error.message)
+      ) {
+        console.error(
+          'createSignedUploadUrl: path already reserved, clearing and retrying',
+          {
+            operation: 'create-upload-url',
+            uid: firebaseUser.uid,
+            courseId: parsedPath.courseId,
+            path,
+          }
+        )
+
+        const { error: removeError } = await supabase.storage
           .from(BUCKET)
-          .createSignedUploadUrl(path, { upsert: true })
+          .remove([path])
+
+        if (removeError) {
+          console.error('createSignedUploadUrl retry: remove failed', {
+            operation: 'create-upload-url',
+            uid: firebaseUser.uid,
+            path,
+            message: removeError.message,
+          })
+        } else {
+          signResult = await supabase.storage
+            .from(BUCKET)
+            .createSignedUploadUrl(path)
+        }
+      }
+
+      const { data, error } = signResult
 
       if (error) {
         // Message only (never headers/tokens) — needed to tell apart
         // "resource already exists" vs. bucket/permission/network
         // failures in the function logs without guessing.
-        console.error(
-          'createSignedUploadUrl error:',
-          error.message
-        )
+        console.error('createSignedUploadUrl error:', {
+          operation: 'create-upload-url',
+          uid: firebaseUser.uid,
+          courseId: parsedPath.courseId,
+          materialId:
+            parsedPath.kind === 'material' ? parsedPath.materialId : undefined,
+          path,
+          name: error.name,
+          message: error.message,
+        })
 
         return json(
           {
-            error:
-              'Unable to create upload URL',
+            error: 'UPLOAD_URL_FAILED',
+            message: 'Unable to create upload URL',
+            // Sanitized — the storage client's own error message, never
+            // headers, tokens, or the service-role key.
+            details: error.message,
           },
           500
         )
