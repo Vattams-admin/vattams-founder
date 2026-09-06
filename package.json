@@ -10,7 +10,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "seed:catalog": "node scripts/seed-catalog.mjs",
-    "seed:catalog:dry-run": "node scripts/seed-catalog.mjs --dry-run"
+    "seed:catalog:dry-run": "node scripts/seed-catalog.mjs --dry-run",
+    "prebuild": "node scripts/generate-sitemap.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",

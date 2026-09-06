@@ -1,32 +1,12 @@
 #!/usr/bin/env node
-// =====================================================================
-// VATTAMS ACADEMIA — sitemap generator (Firestore, NOT Supabase)
-//
-// Regenerates public/sitemap.xml: the static public routes below, plus
-// one <url> per published, non-competition course from the `courses`
-// Firestore collection (is_published: true — the same collection and
-// flag Courses.tsx / CourseDetail.tsx already read).
-//
-// STATIC_ROUTES is hand-maintained against src/App.tsx's actual <Route>
-// list. It intentionally excludes /verify and /competitive-exams —
-// both are duplicate routes for /verify-certificate and /competitions
-// (same component, two paths) and carry a canonical link back to the
-// canonical path instead (see useSeo() calls in VerifyCertificate.tsx /
-// Competitions.tsx) — including the duplicate path here would submit
-// the same content twice.
-//
-// Same firebase-admin credential pattern as scripts/seed-catalog.mjs —
-// see that script's header for full setup:
-//   export GOOGLE_APPLICATION_CREDENTIALS=/absolute/path/to/key.json
-//   node scripts/generate-sitemap.mjs
-//
-// Read-only: only reads the `courses` collection, never writes to
-// Firestore or to Supabase. Only writes to public/sitemap.xml on disk.
-// =====================================================================
+
+// VATTAMS ACADEMIA — sitemap generator
+// Uses the same public Firebase client-read path as the website.
+// Reads published courses only; never writes to Firestore or Supabase.
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
-import { initializeApp, applicationDefault } from 'firebase-admin/app'
-import { getFirestore } from 'firebase-admin/firestore'
+import { initializeApp } from 'firebase/app'
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 
 const SITE_URL = 'https://academia.vattams.net'
 
@@ -48,10 +28,12 @@ const STATIC_ROUTES = [
 function loadDotEnvLocal() {
   const path = new URL('../.env.local', import.meta.url)
   if (!existsSync(path)) return
+
   for (const line of readFileSync(path, 'utf8').split('\n')) {
-    const m = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)\s*$/)
-    if (!m) continue
-    const [, key, rawValue] = m
+    const match = line.match(/^\s*([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(.*)\s*$/)
+    if (!match) continue
+
+    const [, key, rawValue] = match
     if (process.env[key] === undefined) {
       process.env[key] = rawValue.replace(/^["']|["']$/g, '')
     }
@@ -60,30 +42,33 @@ function loadDotEnvLocal() {
 
 loadDotEnvLocal()
 
-const projectId = process.env.FIREBASE_PROJECT_ID || process.env.VITE_FIREBASE_PROJECT_ID
-if (!projectId) {
-  console.error(
-    'Missing project id. Set VITE_FIREBASE_PROJECT_ID in .env.local (same value the app already uses) ' +
-      'or FIREBASE_PROJECT_ID as an env var.'
-  )
+const required = [
+  'VITE_FIREBASE_API_KEY',
+  'VITE_FIREBASE_AUTH_DOMAIN',
+  'VITE_FIREBASE_PROJECT_ID',
+  'VITE_FIREBASE_MESSAGING_SENDER_ID',
+  'VITE_FIREBASE_APP_ID',
+]
+
+const missing = required.filter((name) => !process.env[name])
+
+if (missing.length > 0) {
+  console.error(`Missing Firebase environment variable(s): ${missing.join(', ')}`)
   process.exit(1)
 }
 
-const credential = process.env.GOOGLE_APPLICATION_CREDENTIALS ? applicationDefault() : null
-if (!credential) {
-  console.error(
-    'Missing GOOGLE_APPLICATION_CREDENTIALS. Generate a service account key from ' +
-      'Firebase Console -> Project settings -> Service accounts, then:\n' +
-      '  export GOOGLE_APPLICATION_CREDENTIALS=/absolute/path/to/key.json'
-  )
-  process.exit(1)
-}
+const app = initializeApp({
+  apiKey: process.env.VITE_FIREBASE_API_KEY,
+  authDomain: process.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.VITE_FIREBASE_PROJECT_ID,
+  messagingSenderId: process.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VITE_FIREBASE_APP_ID,
+})
 
-initializeApp({ credential, projectId })
-const db = getFirestore()
+const db = getFirestore(app)
 
 function escapeXml(value) {
-  return value
+  return String(value)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -102,7 +87,12 @@ function urlEntry({ path, changefreq, priority }) {
 }
 
 async function main() {
-  const snapshot = await db.collection('courses').where('is_published', '==', true).get()
+  const coursesQuery = query(
+    collection(db, 'courses'),
+    where('is_published', '==', true),
+  )
+
+  const snapshot = await getDocs(coursesQuery)
 
   const courseRoutes = snapshot.docs
     .map((doc) => doc.data())
@@ -112,16 +102,16 @@ async function main() {
       changefreq: 'weekly',
       priority: '0.8',
     }))
+    .sort((a, b) => a.path.localeCompare(b.path))
 
-  const entries = [...STATIC_ROUTES, ...courseRoutes].map(urlEntry).join('\n')
+  const entries = [...STATIC_ROUTES, ...courseRoutes]
+    .map(urlEntry)
+    .join('\n')
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <!--
   VATTAMS ACADEMIA — sitemap.xml
-  Generated by scripts/generate-sitemap.mjs — do not hand-edit course
-  URLs here; re-run the script instead. Static routes can be hand-edited
-  (also update STATIC_ROUTES in the script so the next run doesn't drop
-  the change).
+  Generated by scripts/generate-sitemap.mjs
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${entries}
@@ -131,7 +121,9 @@ ${entries}
   const outPath = new URL('../public/sitemap.xml', import.meta.url)
   writeFileSync(outPath, xml, 'utf8')
 
-  console.log(`Wrote ${STATIC_ROUTES.length} static + ${courseRoutes.length} course URLs to public/sitemap.xml`)
+  console.log(
+    `Wrote ${STATIC_ROUTES.length} static + ${courseRoutes.length} course URLs to public/sitemap.xml`,
+  )
 }
 
 main().catch((err) => {
