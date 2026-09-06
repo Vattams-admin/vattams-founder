@@ -5,6 +5,7 @@ import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
 import { getCategoryLabel } from '@/lib/catalog'
+import { useSeo, SITE_URL } from '@/hooks/useSeo'
 
 type LoadState = 'loading' | 'loaded' | 'not-found' | 'error'
 
@@ -58,6 +59,37 @@ export default function CourseDetail() {
       cancelled = true
     }
   }, [slug, retryToken])
+
+  const displayNameForSeo = course ? getCourseDisplayName(course.name) : undefined
+
+  useSeo({
+    title: displayNameForSeo ?? 'Course',
+    description:
+      course?.short_description ??
+      (course?.subject
+        ? `Learn ${course.subject} with this course on VATTAMS ACADEMIA — structured lessons, progress tracking and a verifiable certificate on completion.`
+        : 'Explore this course on VATTAMS ACADEMIA — structured lessons, progress tracking and a verifiable certificate on completion.'),
+    path: slug ? `/courses/${slug}` : '/courses',
+    noindex: state !== 'loaded',
+    type: 'website',
+    image: course?.cover_image_url || undefined,
+    jsonLd:
+      state === 'loaded' && course
+        ? {
+            '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: displayNameForSeo,
+            description: course.short_description ?? course.description ?? undefined,
+            ...(course.subject ? { about: { '@type': 'Thing', name: course.subject } } : {}),
+            ...(course.level ? { educationalLevel: course.level } : {}),
+            provider: {
+              '@type': 'EducationalOrganization',
+              name: 'VATTAMS ACADEMIA',
+              sameAs: SITE_URL,
+            },
+          }
+        : undefined,
+  })
 
   if (state === 'loading') {
     return (

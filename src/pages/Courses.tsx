@@ -4,6 +4,7 @@ import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
 import CourseCard from '@/components/CourseCard'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
+import { useSeo } from '@/hooks/useSeo'
 import { CATALOG_CATEGORIES } from '@/lib/catalog'
 
 type LoadState = 'loading' | 'loaded' | 'error'
@@ -16,6 +17,13 @@ const LEVEL_LABELS: Record<NonNullable<Course['level']>, string> = {
 }
 
 export default function Courses() {
+  useSeo({
+    title: 'Online Courses',
+    description:
+      'Browse structured, syllabus-aligned online courses from VATTAMS ACADEMIA — beginner to professional level, with lessons, modules and progress tracking.',
+    path: '/courses',
+  })
+
   const [courses, setCourses] = useState<Course[]>([])
   const [state, setState] = useState<LoadState>('loading')
   const [searchTerm, setSearchTerm] = useState('')

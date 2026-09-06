@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  VATTAMS ACADEMIA — sitemap.xml
+
+  Static public routes only — /courses/:slug URLs are data-driven
+  (Firestore `courses` collection) and can't be listed by this static
+  file. Run `node scripts/generate-sitemap.mjs` (needs
+  GOOGLE_APPLICATION_CREDENTIALS, see that script's header) to
+  regenerate this file with published course URLs included.
+
+  /verify and /competitive-exams are intentionally excluded — they are
+  duplicate routes for /verify-certificate and /competitions (same
+  component mounted at two paths) and set a canonical link back to the
+  canonical path instead of being separately indexed.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://academia.vattams.net/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://academia.vattams.net/courses</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://academia.vattams.net/competitions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://academia.vattams.net/verify-certificate</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://academia.vattams.net/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://academia.vattams.net/founder</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://academia.vattams.net/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://academia.vattams.net/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://academia.vattams.net/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://academia.vattams.net/refund-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://academia.vattams.net/student/register</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://academia.vattams.net/tutor/register</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

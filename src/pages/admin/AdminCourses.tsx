@@ -6,6 +6,7 @@ import AdminNav from '@/components/AdminNav'
 import type { Course } from '@/types/database'
 import { CATALOG_CATEGORIES, getCategoryLabel } from '@/lib/catalog'
 import { classifyFirestoreError, type ClassifiedFirestoreError } from '@/lib/firestoreErrors'
+import { useSeo } from '@/hooks/useSeo'
 
 type LoadState = 'loading' | 'loaded' | 'error'
 type PublishFilter = 'all' | 'published' | 'unpublished'
@@ -13,6 +14,8 @@ type FeaturedFilter = 'all' | 'featured' | 'not-featured'
 type SortKey = 'name' | 'newest' | 'price-high' | 'price-low'
 
 export default function AdminCourses() {
+  useSeo({ title: 'Admin · Courses', noindex: true })
+
   const [courses, setCourses] = useState<Course[]>([])
   const [state, setState] = useState<LoadState>('loading')
   const [loadError, setLoadError] = useState<ClassifiedFirestoreError | null>(null)

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
+import { useSeo, SITE_URL } from '@/hooks/useSeo'
 import type { Course } from '@/types/database'
 import CourseCard from '@/components/CourseCard'
 
@@ -90,6 +91,28 @@ const journeySteps = [
 ]
 
 export default function Home() {
+  useSeo({
+    title: 'VATTAMS ACADEMIA | Courses, Competitive Exams, Competitions & Certifications',
+    description:
+      'VATTAMS ACADEMIA is an India-focused education platform offering structured courses, competitive exam preparation, academic competitions, and verifiable certificates.',
+    path: '/',
+    jsonLd: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'EducationalOrganization',
+        name: 'VATTAMS ACADEMIA',
+        url: SITE_URL,
+        logo: `${SITE_URL}/branding/logo.png`,
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'VATTAMS ACADEMIA',
+        url: SITE_URL,
+      },
+    ],
+  })
+
   const [courses, setCourses] = useState<Course[] | null>(null)
 
   useEffect(() => {

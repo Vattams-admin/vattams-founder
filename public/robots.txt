@@ -1,3 +1,33 @@
 User-agent: *
 Allow: /
-Sitemap: /sitemap.xml
+
+# Private / authenticated application routes — not indexable content,
+# and a per-route <meta name="robots" content="noindex,nofollow"> is
+# also set on each of these (see src/hooks/useSeo.ts). robots.txt is
+# not a security mechanism; these routes are still protected by
+# Firebase Auth / Firestore security rules / the course-material Edge
+# Function's Firebase-JWT check regardless of this file.
+Disallow: /login
+Disallow: /register
+Disallow: /pay/
+Disallow: /dashboard
+Disallow: /learn/
+Disallow: /notifications
+Disallow: /live-session/
+Disallow: /tutor/dashboard
+Disallow: /tutor/id-card
+Disallow: /tutor/onboarding-letter
+Disallow: /tutor/live-sessions
+Disallow: /student/id-card
+Disallow: /student/welcome-letter
+Disallow: /admin
+Disallow: /admin/
+
+# /verify and /competitive-exams are duplicates of /verify-certificate
+# and /competitions respectively (same component mounted at two paths —
+# see App.tsx). Not blocked here: blocking via Disallow would stop
+# crawlers from ever seeing the <link rel="canonical"> those pages set
+# back to their canonical counterpart, which is the correct way to
+# resolve this kind of duplicate.
+
+Sitemap: https://academia.vattams.net/sitemap.xml
