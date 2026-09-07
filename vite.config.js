@@ -51,6 +51,7 @@ export default defineConfig({
         ]
       },
       workbox: {
+        importScripts: ['push-sw.js'],
             mode: 'development',
         // Only precache the built app shell + same-origin static assets —
         // never API/data responses. globIgnores keeps this from also
