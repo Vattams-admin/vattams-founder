@@ -16,7 +16,8 @@ const companyLinks = [
 const legalLinks = [
   { to: '/privacy-policy', label: 'Privacy Policy' },
   { to: '/terms', label: 'Terms & Conditions' },
-  { to: '/refund-policy', label: 'Refund Policy' }
+  { to: '/refund-policy', label: 'Refund Policy' },
+  { to: '/udyam-registration', label: 'Udyam Registration' }
 ]
 
 export default function Footer() {

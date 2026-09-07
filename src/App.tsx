@@ -37,6 +37,7 @@ const Contact = lazy(() => import('@/pages/Contact'))
 const PrivacyPolicy = lazy(() => import('@/pages/PrivacyPolicy'))
 const Terms = lazy(() => import('@/pages/Terms'))
 const RefundPolicy = lazy(() => import('@/pages/RefundPolicy'))
+const UdyamRegistration = lazy(() => import('@/pages/UdyamRegistration'))
 const AdminLogin = lazy(() => import('@/pages/admin/AdminLogin'))
 const AdminDashboard = lazy(() => import('@/pages/admin/AdminDashboard'))
 const AdminPayments = lazy(() => import('@/pages/admin/AdminPayments'))
@@ -89,6 +90,7 @@ export default function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/udyam-registration" element={<UdyamRegistration />} />
 
             <Route path="/login" element={<Auth mode="login" />} />
             <Route path="/register" element={<Auth mode="register" />} />
