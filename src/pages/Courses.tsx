@@ -6,6 +6,8 @@ import CourseCard from '@/components/CourseCard'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
 import { useSeo } from '@/hooks/useSeo'
 import { CATALOG_CATEGORIES } from '@/lib/catalog'
+import { DEFAULT_PRICING_CONFIG, type PricingConfig } from '@/lib/pricingModel'
+import { getPricingConfig } from '@/lib/pricingConfig'
 
 type LoadState = 'loading' | 'loaded' | 'error'
 
@@ -30,6 +32,15 @@ export default function Courses() {
   const [levelFilter, setLevelFilter] = useState<string>('all')
   const [categoryFilter, setCategoryFilter] = useState<string>('all')
   const [retryToken, setRetryToken] = useState(0)
+  const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  useEffect(() => {
+    let cancelled = false
+    getPricingConfig()
+      .then((c) => { if (!cancelled) setPricingConfig(c) })
+      .catch(() => { /* CourseCard falls back to defaults */ })
+    return () => { cancelled = true }
+  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -250,7 +261,7 @@ export default function Courses() {
             </p>
             <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filteredCourses.map((course) => (
-                <CourseCard key={course.id} course={course} />
+                <CourseCard key={course.id} course={course} pricingConfig={pricingConfig} />
               ))}
             </div>
           </>

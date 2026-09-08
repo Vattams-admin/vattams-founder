@@ -7,6 +7,23 @@ import { CATALOG_CATEGORIES, type CatalogCategoryId } from '@/lib/catalog'
 import { classifyFirestoreError, type ClassifiedFirestoreError } from '@/lib/firestoreErrors'
 import { useAdminAuth } from '@/hooks/useAdminAuth'
 import CoursePdfCard from '@/components/materials/CoursePdfCard'
+import {
+  DEFAULT_PRICING_CONFIG,
+  computeGroupBatchSplit,
+  computeOneToOneSplit,
+  computeSpecialOfferSplit,
+  type PricingConfig,
+} from '@/lib/pricingModel'
+import { getPricingConfig } from '@/lib/pricingConfig'
+import { listAcademyTutors } from '@/lib/academyAdmin'
+import type { AcademyTutor } from '@/types/academy'
+
+function inr(n: number): string {
+  return `₹${Math.round(n).toLocaleString('en-IN')}`
+}
+
+type PricingMode = NonNullable<Course['pricing_mode']>
+type SpecialOfferKey = NonNullable<Course['special_offer_key']>
 
 // Level intentionally includes '' ("Not set") as a real, distinct form
 // value — separate from any of the four actual levels. The bug this
@@ -25,6 +42,10 @@ interface FormState {
   description: string
   level: LevelValue
   instructor_name: string
+  // Links this course to an approved tutor for the tutor_earnings
+  // payout ledger — see Course.instructor_tutor_id in
+  // src/types/database.ts. '' = not assigned.
+  instructor_tutor_id: string
   duration_text: string
   cover_image_url: string
   preview_video_url: string
@@ -35,6 +56,14 @@ interface FormState {
   is_featured: boolean
   category_id: CatalogCategoryId | ''
   is_competition: boolean
+  // New pricing-model fields — see Course type in src/types/database.ts.
+  // 'legacy' preserves today's behavior exactly (base_fee/discount_amount
+  // as a one-time fee); the other three opt into the approved
+  // monthly/revenue-share model.
+  pricing_mode: PricingMode
+  monthly_fee_override: string
+  batch_size_override: string
+  special_offer_key: SpecialOfferKey | ''
 }
 
 const emptyForm: FormState = {
@@ -45,6 +74,7 @@ const emptyForm: FormState = {
   description: '',
   level: '',
   instructor_name: '',
+  instructor_tutor_id: '',
   duration_text: '',
   cover_image_url: '',
   preview_video_url: '',
@@ -54,7 +84,11 @@ const emptyForm: FormState = {
   is_published: false,
   is_featured: false,
   category_id: '',
-  is_competition: false
+  is_competition: false,
+  pricing_mode: 'legacy',
+  monthly_fee_override: '',
+  batch_size_override: '',
+  special_offer_key: ''
 }
 
 function slugify(s: string) {
@@ -104,6 +138,44 @@ export default function AdminCourseForm() {
   // field still works as a free-text input, same as before.
   const [existingSubjects, setExistingSubjects] = useState<string[]>([])
 
+  // Admin-configured pricing model (settings/pricing) — used only to
+  // render a live split preview here; falls back to in-memory defaults
+  // if the doc hasn't been created yet (see src/lib/pricingConfig.ts).
+  const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  // Approved tutors, for the payout-assignment dropdown below — only
+  // approved tutors are offered since an unapproved one can't be paid
+  // out to yet (see AdminTutors.tsx approval flow).
+  const [tutors, setTutors] = useState<AcademyTutor[]>([])
+
+  useEffect(() => {
+    let cancelled = false
+    listAcademyTutors()
+      .then(({ rows }) => {
+        if (!cancelled) setTutors(rows.filter((t) => t.status === 'approved'))
+      })
+      .catch(() => {
+        // Best-effort only — the tutor-assignment dropdown just stays empty.
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  useEffect(() => {
+    let cancelled = false
+    getPricingConfig()
+      .then((c) => {
+        if (!cancelled) setPricingConfig(c)
+      })
+      .catch(() => {
+        // Best-effort only — the form still works with in-memory defaults.
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
   useEffect(() => {
     let cancelled = false
     getDocs(collection(firestore, 'courses'))
@@ -152,6 +224,7 @@ export default function AdminCourseForm() {
           description: c.description ?? '',
           level: c.level ?? '',
           instructor_name: c.instructor_name ?? '',
+          instructor_tutor_id: c.instructor_tutor_id ?? '',
           duration_text: c.duration_text ?? '',
           cover_image_url: c.cover_image_url ?? '',
           preview_video_url: c.preview_video_url ?? '',
@@ -161,7 +234,11 @@ export default function AdminCourseForm() {
           is_published: c.is_published,
           is_featured: c.is_featured,
           category_id: (c.category_id as CatalogCategoryId | null) ?? '',
-          is_competition: c.is_competition ?? false
+          is_competition: c.is_competition ?? false,
+          pricing_mode: c.pricing_mode ?? 'legacy',
+          monthly_fee_override: c.monthly_fee_override != null ? String(c.monthly_fee_override) : '',
+          batch_size_override: c.batch_size_override != null ? String(c.batch_size_override) : '',
+          special_offer_key: c.special_offer_key ?? ''
         })
         setOriginalSlug(c.slug)
         setLoading(false)
@@ -213,6 +290,16 @@ export default function AdminCourseForm() {
       ) {
         errors.discount_amount = 'Discount cannot exceed the base fee.'
       }
+    }
+
+    if (form.monthly_fee_override.trim() !== '' && (!Number.isFinite(Number(form.monthly_fee_override)) || Number(form.monthly_fee_override) < 0)) {
+      errors.monthly_fee_override = 'Enter a valid amount of 0 or more, or leave blank to use the default.'
+    }
+    if (form.batch_size_override.trim() !== '' && (!Number.isFinite(Number(form.batch_size_override)) || Number(form.batch_size_override) < 1)) {
+      errors.batch_size_override = 'Enter a valid batch size of 1 or more, or leave blank to use the default.'
+    }
+    if (form.pricing_mode === 'special_offer' && !form.special_offer_key) {
+      errors.special_offer_key = 'Choose which configured special offer this course uses.'
     }
 
     if (form.cover_image_url.trim() && !isPlausibleUrl(form.cover_image_url.trim())) {
@@ -279,6 +366,7 @@ export default function AdminCourseForm() {
         description: normalizeOptionalText(form.description),
         level: form.level || null,
         instructor_name: normalizeOptionalText(form.instructor_name),
+        instructor_tutor_id: form.instructor_tutor_id || null,
         duration_text: normalizeOptionalText(form.duration_text),
         cover_image_url: normalizeOptionalText(form.cover_image_url),
         preview_video_url: normalizeOptionalText(form.preview_video_url),
@@ -286,7 +374,11 @@ export default function AdminCourseForm() {
         is_free: form.is_free,
         category_id: form.category_id || null,
         is_competition: form.is_competition,
-        is_featured: form.is_featured
+        is_featured: form.is_featured,
+        pricing_mode: form.pricing_mode,
+        monthly_fee_override: form.monthly_fee_override.trim() === '' ? null : Number(form.monthly_fee_override),
+        batch_size_override: form.batch_size_override.trim() === '' ? null : Number(form.batch_size_override),
+        special_offer_key: form.pricing_mode === 'special_offer' && form.special_offer_key ? form.special_offer_key : null
       }
 
       if (isNew) {
@@ -439,6 +531,34 @@ export default function AdminCourseForm() {
             className="input"
           />
         </Field>
+        <Field label="Assigned tutor (for payout tracking)">
+          <select
+            value={form.instructor_tutor_id}
+            onChange={(e) => {
+              const tutorId = e.target.value
+              update('instructor_tutor_id', tutorId)
+              // Convenience only — admin can still edit the display name
+              // separately; this just saves a redundant lookup for the
+              // common case of assigning a tutor to a freshly-named course.
+              if (tutorId && !form.instructor_name.trim()) {
+                const tutor = tutors.find((t) => t.id === tutorId)
+                if (tutor) update('instructor_name', tutor.full_name)
+              }
+            }}
+            className="input"
+          >
+            <option value="">Not assigned</option>
+            {tutors.map((t) => (
+              <option key={t.id} value={t.id}>
+                {t.full_name}
+              </option>
+            ))}
+          </select>
+          <p className="mt-1 text-xs text-slate-muted">
+            Determines who the 40% tutor share of approved payments for this course is recorded against
+            (Admin → Tutors → this tutor → Course revenue). Only approved tutors are listed.
+          </p>
+        </Field>
         <Field label="Cover image URL" error={fieldErrors.cover_image_url}>
           <input value={form.cover_image_url} onChange={(e) => update('cover_image_url', e.target.value)} className="input" />
           {form.cover_image_url.trim() && isPlausibleUrl(form.cover_image_url.trim()) && (
@@ -453,6 +573,132 @@ export default function AdminCourseForm() {
             className="input"
           />
         </Field>
+
+        <div className="card p-4">
+          <h2 className="text-sm font-medium">Pricing model</h2>
+          <p className="mt-1 text-xs text-slate-muted">
+            "Legacy (one-time fee)" keeps using the Base fee / Discount fields below exactly as before —
+            this is the default for every existing course. The other options apply the approved
+            revenue-share model (see Admin → Pricing) to this course instead.
+          </p>
+          <Field label="Mode">
+            <select
+              value={form.pricing_mode}
+              onChange={(e) => update('pricing_mode', e.target.value as PricingMode)}
+              className="input mt-1"
+            >
+              <option value="legacy">Legacy (one-time fee)</option>
+              <option value="monthly_group">Monthly group session</option>
+              <option value="one_to_one">One-to-one</option>
+              <option value="special_offer">Special offer</option>
+            </select>
+          </Field>
+
+          {form.pricing_mode === 'monthly_group' && (
+            <div className="mt-4 grid grid-cols-2 gap-4">
+              <Field label={`Fee per student (₹/month) — default ${inr(pricingConfig.monthlyGroupFeePerStudent)}`} error={fieldErrors.monthly_fee_override}>
+                <input
+                  type="number"
+                  min={0}
+                  value={form.monthly_fee_override}
+                  onChange={(e) => update('monthly_fee_override', e.target.value)}
+                  placeholder={String(pricingConfig.monthlyGroupFeePerStudent)}
+                  className="input"
+                />
+              </Field>
+              <Field label={`Students per batch — default ${pricingConfig.groupBatchSize}`} error={fieldErrors.batch_size_override}>
+                <input
+                  type="number"
+                  min={1}
+                  value={form.batch_size_override}
+                  onChange={(e) => update('batch_size_override', e.target.value)}
+                  placeholder={String(pricingConfig.groupBatchSize)}
+                  className="input"
+                />
+              </Field>
+            </div>
+          )}
+          {form.pricing_mode === 'one_to_one' && (
+            <div className="mt-4">
+              <Field label={`Monthly fee (₹) — default ${inr(pricingConfig.oneToOneMonthlyFee)}`} error={fieldErrors.monthly_fee_override}>
+                <input
+                  type="number"
+                  min={0}
+                  value={form.monthly_fee_override}
+                  onChange={(e) => update('monthly_fee_override', e.target.value)}
+                  placeholder={String(pricingConfig.oneToOneMonthlyFee)}
+                  className="input"
+                />
+              </Field>
+            </div>
+          )}
+          {form.pricing_mode === 'special_offer' && (
+            <div className="mt-4">
+              <Field label="Which offer" error={fieldErrors.special_offer_key}>
+                <select
+                  value={form.special_offer_key}
+                  onChange={(e) => update('special_offer_key', e.target.value as SpecialOfferKey | '')}
+                  className="input"
+                >
+                  <option value="">Choose an offer…</option>
+                  <option value="english_abacus">English / Abacus</option>
+                  <option value="phonics">Phonics</option>
+                </select>
+              </Field>
+            </div>
+          )}
+
+          {form.pricing_mode !== 'legacy' && (
+            <div className="mt-4 rounded-card border border-white/10 bg-white/[0.03] p-3 text-sm">
+              {(() => {
+                if (form.pricing_mode === 'monthly_group') {
+                  const perStudent = form.monthly_fee_override.trim() !== '' ? Number(form.monthly_fee_override) : pricingConfig.monthlyGroupFeePerStudent
+                  const batchSize = form.batch_size_override.trim() !== '' ? Number(form.batch_size_override) : pricingConfig.groupBatchSize
+                  if (!Number.isFinite(perStudent) || !Number.isFinite(batchSize)) return null
+                  const split = computeGroupBatchSplit(perStudent, batchSize, pricingConfig.revenueShare)
+                  return (
+                    <>
+                      <p className="font-medium text-parchment">
+                        {inr(perStudent)}/student · full batch ({batchSize}) = {inr(split.total)}
+                      </p>
+                      <p className="mt-1 text-slate-300">
+                        Tutor {inr(split.tutor)} · Marketing {inr(split.marketing)} · Management {inr(split.management)} · Company{' '}
+                        {inr(split.company)} · Saving {inr(split.saving)}
+                      </p>
+                    </>
+                  )
+                }
+                if (form.pricing_mode === 'one_to_one') {
+                  const fee = form.monthly_fee_override.trim() !== '' ? Number(form.monthly_fee_override) : pricingConfig.oneToOneMonthlyFee
+                  if (!Number.isFinite(fee)) return null
+                  const split = computeOneToOneSplit(fee, pricingConfig.revenueShare)
+                  return (
+                    <p className="text-slate-300">
+                      <span className="font-medium text-parchment">{inr(split.total)}/month</span> — Tutor {inr(split.tutor)} · Marketing{' '}
+                      {inr(split.marketing)} · Management {inr(split.management)} · Company {inr(split.company)} · Saving {inr(split.saving)}
+                    </p>
+                  )
+                }
+                if (form.pricing_mode === 'special_offer' && form.special_offer_key) {
+                  const offer = pricingConfig.specialOffers[form.special_offer_key === 'english_abacus' ? 'englishAbacus' : 'phonics']
+                  const split = computeSpecialOfferSplit(offer, pricingConfig.revenueShare)
+                  return (
+                    <p className="text-slate-300">
+                      <span className="font-medium text-parchment">{inr(split.total)}/month</span> (regular {inr(offer.regularPrice)}) — Tutor{' '}
+                      {inr(split.tutor)} · Marketing {inr(split.marketing)} · Management {inr(split.management)} · Company {inr(split.company)} ·
+                      Saving {inr(split.saving)}
+                    </p>
+                  )
+                }
+                return null
+              })()}
+              <p className="mt-2 text-xs text-slate-muted">
+                Computed from the current Admin → Pricing settings. Edit the underlying fee, batch size or
+                percentages there to change this for every course using this mode.
+              </p>
+            </div>
+          )}
+        </div>
 
         <div className="card p-4">
           <label className="flex items-center gap-2 text-sm">
@@ -489,8 +735,9 @@ export default function AdminCourseForm() {
             </p>
           )}
           <p className="mt-3 text-xs text-slate-muted">
-            This is the single source of truth for price. Changing it here updates what every
-            student sees immediately — nothing is hardcoded on the payment page.
+            {form.pricing_mode === 'legacy'
+              ? 'This is the single source of truth for price. Changing it here updates what every student sees immediately — nothing is hardcoded on the payment page.'
+              : 'Not used while Pricing model above is set to anything other than "Legacy" — the price shown to students for this course comes from the pricing model section instead.'}
           </p>
         </div>
 

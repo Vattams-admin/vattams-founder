@@ -6,6 +6,9 @@ import type { Course } from '@/types/database'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
 import { getCategoryLabel } from '@/lib/catalog'
 import { useSeo, SITE_URL } from '@/hooks/useSeo'
+import { DEFAULT_PRICING_CONFIG, type PricingConfig } from '@/lib/pricingModel'
+import { getPricingConfig } from '@/lib/pricingConfig'
+import { getEffectiveCoursePricing, describePricing } from '@/lib/coursePricing'
 
 type LoadState = 'loading' | 'loaded' | 'not-found' | 'error'
 
@@ -20,6 +23,15 @@ export default function CourseDetail() {
   const [course, setCourse] = useState<Course | null>(null)
   const [state, setState] = useState<LoadState>('loading')
   const [retryToken, setRetryToken] = useState(0)
+  const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  useEffect(() => {
+    let cancelled = false
+    getPricingConfig()
+      .then((c) => { if (!cancelled) setPricingConfig(c) })
+      .catch(() => { /* falls back to defaults */ })
+    return () => { cancelled = true }
+  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -127,7 +139,7 @@ export default function CourseDetail() {
     )
   }
 
-  const finalPrice = Math.max(course.base_fee - course.discount_amount, 0)
+  const pricing = getEffectiveCoursePricing(course, pricingConfig)
   const displayName = getCourseDisplayName(course.name)
   const categoryLabel = getCategoryLabel(course.category_id)
 
@@ -206,14 +218,25 @@ export default function CourseDetail() {
           <div className="card h-fit p-6">
             <div className="flex items-center justify-between">
               <span className="font-semibold text-parchment">
-                {course.is_free ? 'Free' : `₹${finalPrice.toLocaleString('en-IN')}`}
+                {pricing.mode === 'free' ? 'Free' : describePricing(pricing)}
               </span>
-              {course.discount_amount > 0 && !course.is_free && (
+              {pricing.mode === 'special_offer' && pricing.regularAmount != null && pricing.regularAmount !== pricing.amount && (
+                <span className="text-xs text-slate-muted line-through">
+                  ₹{pricing.regularAmount.toLocaleString('en-IN')}
+                </span>
+              )}
+              {(pricing.mode === 'legacy' || pricing.mode === 'competition_entry') && course.discount_amount > 0 && (
                 <span className="text-xs text-slate-muted line-through">
                   ₹{course.base_fee.toLocaleString('en-IN')}
                 </span>
               )}
             </div>
+            {pricing.isRecurring && (
+              <p className="mt-2 text-xs text-slate-muted">
+                Billed monthly. VATTAMS does not charge your card/UPI automatically — you&apos;ll submit each
+                month&apos;s payment yourself.
+              </p>
+            )}
 
             <Link to={`/pay/${course.id}`} className="btn-primary mt-4 flex w-full justify-center">
               {course.is_competition ? 'Register now' : 'Enrol now'}

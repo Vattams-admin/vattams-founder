@@ -5,6 +5,8 @@ import { firestore } from '@/lib/firebase'
 import { useSeo, SITE_URL } from '@/hooks/useSeo'
 import type { Course } from '@/types/database'
 import CourseCard from '@/components/CourseCard'
+import { DEFAULT_PRICING_CONFIG, type PricingConfig } from '@/lib/pricingModel'
+import { getPricingConfig } from '@/lib/pricingConfig'
 
 // NOTE ON DATA SOURCES (read this before touching this file again):
 // Courses are the only offering with a working data layer right now —
@@ -114,6 +116,17 @@ export default function Home() {
   })
 
   const [courses, setCourses] = useState<Course[] | null>(null)
+  // Fetched once, best-effort — see CourseCard's own fallback to
+  // DEFAULT_PRICING_CONFIG if this hasn't resolved yet or fails.
+  const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  useEffect(() => {
+    let cancelled = false
+    getPricingConfig()
+      .then((c) => { if (!cancelled) setPricingConfig(c) })
+      .catch(() => { /* CourseCard falls back to defaults */ })
+    return () => { cancelled = true }
+  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -225,7 +238,7 @@ export default function Home() {
             <EmptyState message="Featured courses will appear here as soon as they're published." />
           ) : (
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {courses.map((c) => <CourseCard key={c.id} course={c} />)}
+              {courses.map((c) => <CourseCard key={c.id} course={c} pricingConfig={pricingConfig} />)}
             </div>
           )}
         </div>

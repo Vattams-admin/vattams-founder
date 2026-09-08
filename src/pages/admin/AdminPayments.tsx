@@ -12,9 +12,19 @@ import {
 import { firestore } from '@/lib/firebase'
 import AdminNav from '@/components/AdminNav'
 import { useAdminAuth } from '@/hooks/useAdminAuth'
-import type { Payment } from '@/types/database'
+import type { Course, Payment } from '@/types/database'
 import { createAdminBroadcast, createNotification } from '@/lib/notifications'
 import { decideTutorRegistrationPayment } from '@/lib/tutorPayments'
+import { getPricingConfig } from '@/lib/pricingConfig'
+import { computeRevenueSplit, DEFAULT_PRICING_CONFIG, type PricingConfig } from '@/lib/pricingModel'
+import { resolveEffectivePricingMode } from '@/lib/coursePricing'
+import { assignStudentToBatchTx } from '@/lib/groupBatches'
+import { claimOfferSlotTx, consumeOfferMonthTx } from '@/lib/specialOfferEligibility'
+import { recordTutorEarningTx } from '@/lib/tutorEarnings'
+
+function inr(n: number): string {
+  return `₹${Math.round(n).toLocaleString('en-IN')}`
+}
 
 export default function AdminPayments() {
   const { adminUser } = useAdminAuth()
@@ -23,6 +33,19 @@ export default function AdminPayments() {
   const [error, setError] = useState<string | null>(null)
   const [loadError, setLoadError] = useState(false)
   const [rejectNotes, setRejectNotes] = useState<Record<string, string>>({})
+  // Loaded once for the per-row revenue-split preview below — purely
+  // informational (what WILL be recorded on approval); the actual
+  // authoritative split is computed fresh, inside the transaction, in
+  // decide() below.
+  const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  useEffect(() => {
+    let cancelled = false
+    getPricingConfig()
+      .then((c) => { if (!cancelled) setPricingConfig(c) })
+      .catch(() => { /* preview falls back to defaults */ })
+    return () => { cancelled = true }
+  }, [])
 
   async function load() {
     setLoadError(false)
@@ -84,15 +107,22 @@ export default function AdminPayments() {
     const studentId = payment.student_id
 
     try {
-      // Course slug lookup is read-only reference data (used only for the
-      // student notification's deep link) — not part of the authoritative
-      // state being changed, so it's fetched before the transaction rather
-      // than inside it.
+      // Course + pricing-config lookups are read-only reference data
+      // (used for the notification deep link, the tutor payout link,
+      // the batch size, and the revenue-share percentages) — not part
+      // of the authoritative state being changed, so they're fetched
+      // before the transaction rather than inside it, same as the
+      // existing courseSlug lookup this replaces.
       let courseSlug: string | null = null
+      let course: Course | null = null
       if (status === 'approved') {
         const courseSnap = await getDoc(doc(firestore, 'courses', courseId))
-        courseSlug = courseSnap.exists() ? (courseSnap.data().slug as string | undefined) ?? null : null
+        if (courseSnap.exists()) {
+          course = { id: courseSnap.id, ...courseSnap.data() } as Course
+          courseSlug = course.slug ?? null
+        }
       }
+      const pricingConfig = status === 'approved' ? await getPricingConfig() : null
 
       const enrolmentId = `${studentId}_${courseId}`
       const paymentRef = doc(firestore, 'payments', payment.id)
@@ -110,6 +140,24 @@ export default function AdminPayments() {
       // admin tab, or a double click that slipped past `busyId`), this
       // is a no-op instead of a duplicate enrolment write / duplicate
       // notifications.
+      //
+      // On approval, this is also where the approved commercial model
+      // actually gets connected to real records instead of only an
+      // admin preview:
+      //   - group-batch capacity (assignStudentToBatchTx) — race-safe
+      //     via Firestore transaction retry, never a client-side count
+      //   - special-offer first-N + N-month tracking
+      //     (claimOfferSlotTx on first approval, consumeOfferMonthTx on
+      //     every renewal) — race-safe the same way
+      //   - the 40/10/30/15/5 split, computed from this payment's
+      //     actual `amount` and the CURRENT admin-configured
+      //     percentages, snapshotted onto the payment + enrolment so a
+      //     later percentage change never rewrites history
+      //   - a tutor_earnings ledger row, if this course has an
+      //     assigned tutor (course.instructor_tutor_id)
+      //
+      // All reads happen before all writes, per Firestore transaction
+      // rules — see the inline ordering notes below.
       const result = await runTransaction(firestore, async (tx) => {
         const freshSnap = await tx.get(paymentRef)
         if (!freshSnap.exists()) {
@@ -119,6 +167,62 @@ export default function AdminPayments() {
           return { alreadyProcessed: true }
         }
 
+        let batchNumber: number | null = null
+        let revenueSplit: ReturnType<typeof computeRevenueSplit> | null = null
+        let mode = payment.pricing_mode_snapshot ?? null
+
+        if (status === 'approved') {
+          // Read #2 (still before any write in this transaction) — used
+          // to tell a first-time claim apart from a monthly renewal for
+          // the special-offer slot/month accounting below.
+          const enrolmentSnap = await tx.get(enrolmentRef)
+          const isRenewal = enrolmentSnap.exists() && enrolmentSnap.data().status === 'active'
+
+          if (!mode && course) {
+            mode = resolveEffectivePricingMode(course)
+          }
+
+          if (pricingConfig) {
+            revenueSplit = computeRevenueSplit(payment.amount, pricingConfig.revenueShare)
+          }
+
+          // From here on this callback only performs reads-then-writes
+          // through the helper functions below (each does its own
+          // tx.get() before its own tx.set()/tx.update()) — never a
+          // fresh tx.get() after a write, which the Firestore SDK
+          // rejects. Only one of the two branches below can apply
+          // (monthly_group and special_offer are mutually exclusive
+          // pricing modes), so their internal read/write pairs never
+          // interleave with each other.
+          if (mode === 'monthly_group' && pricingConfig) {
+            const batchSize = course?.batch_size_override ?? pricingConfig.groupBatchSize
+            const assignment = await assignStudentToBatchTx(tx, courseId, studentId, batchSize)
+            batchNumber = assignment.batchNumber
+          } else if (mode === 'special_offer' && payment.offer_key && pricingConfig) {
+            const offerConfig =
+              payment.offer_key === 'english_abacus' ? pricingConfig.specialOffers.englishAbacus : pricingConfig.specialOffers.phonics
+            if (isRenewal) {
+              await consumeOfferMonthTx(tx, payment.offer_key, studentId, offerConfig, payment.amount)
+            } else {
+              await claimOfferSlotTx(tx, payment.offer_key, studentId, offerConfig, payment.amount)
+            }
+          }
+
+          if (course?.instructor_tutor_id && revenueSplit && mode) {
+            recordTutorEarningTx(tx, {
+              paymentId: payment.id,
+              tutorId: course.instructor_tutor_id,
+              tutorName: course.instructor_name ?? null,
+              courseId,
+              courseName: payment.course_name,
+              studentId,
+              split: revenueSplit,
+              mode,
+              billingPeriod: payment.billing_period ?? null,
+            })
+          }
+        }
+
         tx.update(paymentRef, {
           status,
           verified_at: new Date().toISOString(),
@@ -126,7 +230,8 @@ export default function AdminPayments() {
           // reachable behind AdminRoute, which never renders children
           // until an authenticated admin is confirmed.
           verified_by: adminUser!.uid,
-          admin_notes: note
+          admin_notes: note,
+          ...(status === 'approved' ? { batch_number: batchNumber, revenue_split: revenueSplit } : {})
         })
 
         if (status === 'approved') {
@@ -143,7 +248,10 @@ export default function AdminPayments() {
               course_slug: courseSlug,
               status: 'active',
               enrolled_at: new Date().toISOString(),
-              created_at: serverTimestamp()
+              created_at: serverTimestamp(),
+              pricing_mode: mode,
+              billing_period: payment.billing_period ?? null,
+              batch_number: batchNumber
             },
             { merge: true }
           )
@@ -268,6 +376,17 @@ export default function AdminPayments() {
                   : `${r.student_name ?? 'Student'} — ${r.course_name ?? 'Course'}`}
               </p>
               <p className="text-slate-muted">₹{r.amount.toLocaleString('en-IN')} · UTR: {r.utr_reference}</p>
+              {r.payment_type !== 'tutor_registration' && (
+                <p className="mt-0.5 text-xs text-slate-muted">
+                  {r.pricing_mode_snapshot ? r.pricing_mode_snapshot.replace('_', ' ') : 'legacy'}
+                  {r.billing_period ? ` · ${r.billing_period}` : ''}
+                  {' · on approval: '}
+                  {(() => {
+                    const split = computeRevenueSplit(r.amount, pricingConfig.revenueShare)
+                    return `Tutor ${inr(split.tutor)} · Marketing ${inr(split.marketing)} · Mgmt ${inr(split.management)} · Co ${inr(split.company)} · Saving ${inr(split.saving)}`
+                  })()}
+                </p>
+              )}
               <p className="text-xs text-slate-muted">
                 Submitted {r.submitted_at ? new Date(r.submitted_at).toLocaleString('en-IN') : '—'}
               </p>

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom'
 import type { Course } from '@/types/database'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
 import { getCategoryLabel } from '@/lib/catalog'
+import { DEFAULT_PRICING_CONFIG, type PricingConfig } from '@/lib/pricingModel'
+import { getEffectiveCoursePricing, describePricing } from '@/lib/coursePricing'
 
 const FALLBACK_THEMES = [
   {
@@ -26,8 +28,13 @@ function fallbackIndex(seed: string) {
   return hash % FALLBACK_THEMES.length
 }
 
-export default function CourseCard({ course }: { course: Course }) {
-  const finalPrice = Math.max(course.base_fee - course.discount_amount, 0)
+export default function CourseCard({ course, pricingConfig }: { course: Course; pricingConfig?: PricingConfig }) {
+  // Falls back to the in-memory defaults when the caller hasn't fetched
+  // settings/pricing yet — keeps this component usable standalone (it
+  // never fetches network data itself) while still reflecting the
+  // approved monthly model instead of a stale base_fee for every course
+  // that doesn't opt out of it. See src/lib/coursePricing.ts.
+  const pricing = getEffectiveCoursePricing(course, pricingConfig ?? DEFAULT_PRICING_CONFIG)
   const displayName = getCourseDisplayName(course.name)
   const categoryLabel = getCategoryLabel(course.category_id)
   const theme = FALLBACK_THEMES[fallbackIndex(course.slug || displayName)]
@@ -116,10 +123,15 @@ export default function CourseCard({ course }: { course: Course }) {
           <div>
             <div className="flex items-baseline gap-2">
               <span className="text-[21px] font-extrabold tracking-[-0.02em] text-white">
-                {course.is_free ? 'Free' : `₹${finalPrice.toLocaleString('en-IN')}`}
+                {pricing.mode === 'free' ? 'Free' : describePricing(pricing)}
               </span>
 
-              {course.discount_amount > 0 && !course.is_free && (
+              {pricing.mode === 'special_offer' && pricing.regularAmount != null && pricing.regularAmount !== pricing.amount && (
+                <span className="text-xs text-white/35 line-through">
+                  ₹{pricing.regularAmount.toLocaleString('en-IN')}
+                </span>
+              )}
+              {(pricing.mode === 'legacy' || pricing.mode === 'competition_entry') && course.discount_amount > 0 && (
                 <span className="text-xs text-white/35 line-through">
                   ₹{course.base_fee.toLocaleString('en-IN')}
                 </span>

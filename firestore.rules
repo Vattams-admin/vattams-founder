@@ -181,12 +181,84 @@ service cloud.firestore {
     }
 
     // ------------------------------------------------------------------
+    // Approved commercial model (see src/lib/coursePricing.ts) —
+    // mirrored here in rules language so a client can never write a
+    // payment `amount` other than one this model actually allows,
+    // regardless of what Payment.tsx computed on the way in. Every
+    // helper below uses `.get(field, default)` (Firestore rules' safe
+    // map accessor) so the 55+ existing course documents that predate
+    // these fields never throw — they fall back to auto-classification,
+    // exactly like resolveEffectivePricingMode() does in application code.
+    function pricingSettings() {
+      return get(/databases/$(database)/documents/settings/pricing).data;
+    }
+
+    function resolvedPricingMode(course) {
+      let explicit = course.get('pricing_mode', null);
+      return explicit == 'legacy' ? 'legacy'
+        : explicit == 'monthly_group' ? 'monthly_group'
+        : explicit == 'one_to_one' ? 'one_to_one'
+        : explicit == 'special_offer' ? 'special_offer'
+        : (course.get('is_competition', false) == true ? 'competition_entry'
+           : (course.get('is_free', false) == true ? 'free' : 'monthly_group'));
+    }
+
+    function legacyAmount(course) {
+      return course.base_fee - course.discount_amount > 0 ? course.base_fee - course.discount_amount : 0;
+    }
+
+    function effectiveMonthlyGroupFee(course) {
+      let override = course.get('monthly_fee_override', null);
+      return override != null ? override : pricingSettings().get('monthlyGroupFeePerStudent', 10000);
+    }
+
+    function effectiveOneToOneFee(course) {
+      let override = course.get('monthly_fee_override', null);
+      return override != null ? override : pricingSettings().get('oneToOneMonthlyFee', 14000);
+    }
+
+    // Returns [offerPrice, regularPrice] — a create is accepted at
+    // EITHER value; which one is actually correct for this student
+    // (first-30 cap, 3-month window) is enforced authoritatively at
+    // admin-approval time (src/lib/specialOfferEligibility.ts), not
+    // here — rules only have the course + global-settings documents to
+    // work with, not a per-student eligibility lookup budget large
+    // enough to fully replicate that. This is a documented, deliberate
+    // scope boundary (see the pass's final report), not an oversight.
+    function effectiveSpecialOfferAmounts(course) {
+      let offers = pricingSettings().get('specialOffers', {});
+      let key = course.get('special_offer_key', 'phonics');
+      let offer = key == 'english_abacus' ? offers.get('englishAbacus', {}) : offers.get('phonics', {});
+      return [offer.get('offerPrice', 0), offer.get('regularPrice', 0)];
+    }
+
+    // A signed-in student's own Phonics free-competition-entry waiver,
+    // if any — lets a competition-entry payment legitimately be ₹0
+    // exactly once per student. Never trusts the client for whether
+    // the waiver applies; re-reads the student's own eligibility doc.
+    function hasUnusedFreeCompetitionEntry() {
+      let path = /databases/$(database)/documents/special_offer_eligibility/$('phonics_' + request.auth.uid);
+      return exists(path)
+        && get(path).data.get('free_competition_entry', false) == true
+        && get(path).data.get('free_competition_entry_used', false) == false;
+    }
+
     function paymentMatchesCourse(courseId, amount, courseName) {
       let course = get(/databases/$(database)/documents/courses/$(courseId)).data;
+      let mode = resolvedPricingMode(course);
       return course.is_published == true &&
         courseName == course.name &&
-        amount == (course.base_fee - course.discount_amount > 0 ? course.base_fee - course.discount_amount : 0);
+        (
+          (mode == 'competition_entry' && (amount == legacyAmount(course) || (amount == 0 && hasUnusedFreeCompetitionEntry()))) ||
+          (mode == 'legacy' && amount == legacyAmount(course)) ||
+          (mode == 'free' && amount == 0) ||
+          (mode == 'monthly_group' && amount == effectiveMonthlyGroupFee(course)) ||
+          (mode == 'one_to_one' && amount == effectiveOneToOneFee(course)) ||
+          (mode == 'special_offer' && amount in effectiveSpecialOfferAmounts(course))
+        );
     }
+
+
 
     // Courses (courses/{courseId}) — the catalog document itself had no
     // explicit rule anywhere in this file, so it fell through to the
@@ -201,11 +273,101 @@ service cloud.firestore {
       allow create, update, delete: if isAdmin();
     }
 
+    // Admin-configurable pricing/revenue-share settings singleton —
+    // see src/lib/pricingConfig.ts. Public read (same trust level as a
+    // published course's price: anyone can already see what a course
+    // costs) so a future pricing/checkout page can compute the same
+    // numbers the admin panel shows; only an admin may change it.
+    match /settings/pricing {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // ------------------------------------------------------------------
+    // Group-batch capacity (src/lib/groupBatches.ts) and special-offer
+    // eligibility (src/lib/specialOfferEligibility.ts) records. All
+    // writes happen exclusively from AdminPayments.tsx's approval
+    // transaction (an admin-authenticated context) — students never
+    // write these directly, matching the existing `enrolments`
+    // admin-only-write pattern above. Students may read their OWN
+    // membership/eligibility doc for transparency (e.g. a future "your
+    // plan" panel on the student dashboard).
+    // ------------------------------------------------------------------
+    match /course_batches/{batchId} {
+      allow read: if isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /course_batch_pointers/{courseId} {
+      allow read: if isAdmin();
+      allow write: if isAdmin();
+    }
+
+    match /course_batch_members/{memberId} {
+      allow read: if isAdmin() || isOwner(resource.data.student_id);
+      allow write: if isAdmin();
+    }
+
+    match /special_offer_counters/{offerKey} {
+      // Bug fix (this pass): peekOfferAvailability() in
+      // src/lib/specialOfferEligibility.ts is called from Payment.tsx —
+      // a STUDENT-facing checkout page — to show whether offer slots
+      // remain BEFORE that student has an eligibility record yet.
+      // Admin-only read made that call fail with permission-denied for
+      // every first-time visitor to a special-offer course, breaking
+      // checkout entirely. The doc only exposes a claimed-count integer
+      // (no PII), same trust level as settings/pricing above, so public
+      // read is safe. Writes still only ever happen from
+      // AdminPayments.tsx's approval transaction (admin-authenticated).
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /special_offer_eligibility/{eligibilityId} {
+      // Bug fix (this pass): `resource` is null for a document that
+      // doesn't exist yet — the overwhelmingly common case here, since
+      // most students never join a special offer. Evaluating
+      // `resource.data.student_id` in that case is a rules-engine error,
+      // which Firestore treats as DENIED — so before this fix, a
+      // getDoc() by a signed-in student on their own (nonexistent)
+      // eligibility doc failed with permission-denied instead of just
+      // returning "not found". That call happens unconditionally for
+      // EVERY competition-entry payment (Payment.tsx checks the
+      // student's Phonics record for the free-entry waiver) and for
+      // every special-offer course checkout — so this bug broke
+      // checkout broadly, not just for Phonics students. The
+      // `resource != null &&` guard short-circuits before the unsafe
+      // property access.
+      allow read: if isAdmin() || (resource != null && isOwner(resource.data.student_id));
+      allow write: if isAdmin()
+        // Narrow self-service exception: a student may flip their OWN
+        // one-time free-competition-entry waiver from unused to used —
+        // and only that single field, only false -> true. This is what
+        // lets Payment.tsx zero out a competition-entry payment exactly
+        // once without needing an admin round-trip, while the write
+        // itself still can't touch months_used/active/claimed counts.
+        || (
+          isOwner(resource.data.student_id)
+          && resource.data.get('free_competition_entry_used', false) == false
+          && request.resource.data.free_competition_entry_used == true
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['free_competition_entry_used'])
+        );
+    }
+
+    // Tutor payout ledger (src/lib/tutorEarnings.ts) — written only as
+    // part of an admin's payment-approval transaction. A tutor may read
+    // their own accrued-earnings records; nothing here lets a tutor (or
+    // student) edit or fabricate one.
+    match /tutor_earnings/{earningId} {
+      allow read: if isAdmin() || isOwner(resource.data.tutor_id);
+      allow write: if isAdmin();
+    }
+
     // Learning Materials (courses/{courseId}/materials/{materialId}) —
     // see src/lib/materials.ts. Supabase Storage now holds the actual file
     // bytes; this Firestore rule gates the material metadata itself, so
-    // students only discover a material's storage_path (used to request a
-    // signed download URL) after an active-enrolment + published check,
+    // students only discover a material's storage_path (used to request
+    // a signed download URL) after an active-enrolment + published check,
     // while admins can manage all material records regardless of publish
     // state.
     match /courses/{courseId}/materials/{materialId} {
@@ -428,29 +590,11 @@ service cloud.firestore {
       allow delete: if false;
     }
 
+
     match /certificates/{certificateId} {
       allow get: if true;
       allow list: if isAdmin() || request.query.limit <= 1;
       allow create, update: if isAdmin();
-      allow delete: if false;
-    }
-
-    // FCM web push tokens for signed-in Admin users. Doc ID is the
-    // token itself (enforced below), so a token can only ever be
-    // written once per document — no separate uniqueness check needed.
-    match /push_tokens/{tokenId} {
-      allow read: if isAdmin()
-        && resource.data.uid == request.auth.uid;
-
-      allow create: if isAdmin()
-        && request.resource.data.uid == request.auth.uid
-        && request.resource.data.token == tokenId;
-
-      allow update: if isAdmin()
-        && resource.data.uid == request.auth.uid
-        && request.resource.data.uid == request.auth.uid
-        && request.resource.data.token == tokenId;
-
       allow delete: if false;
     }
 

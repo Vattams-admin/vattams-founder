@@ -35,6 +35,36 @@ export interface Course {
   // /competitions instead, while still reusing the same courses
   // collection, pricing, and enrolment architecture.
   is_competition?: boolean
+  // ------------------------------------------------------------------
+  // New, additive pricing-model fields (approved revenue-share model —
+  // see src/lib/pricingModel.ts + src/lib/coursePricing.ts). IMPORTANT:
+  // an ABSENT pricing_mode is no longer treated as "legacy" — it's
+  // auto-classified instead (competition -> competition_entry, free ->
+  // free, everything else -> monthly_group). This is what makes the
+  // approved commercial model apply to all existing courses without
+  // editing all 55 seeded documents. 'legacy' is now something an admin
+  // must set EXPLICITLY to keep a specific course on the old one-time
+  // base_fee/discount_amount pricing — see resolveEffectivePricingMode()
+  // in src/lib/coursePricing.ts for the exact precedence rule.
+  // ------------------------------------------------------------------
+  pricing_mode?: 'legacy' | 'monthly_group' | 'one_to_one' | 'special_offer'
+  // Links this course to an approved tutor (tutors/{uid}) so the 40%
+  // tutor share of each approved payment can be recorded against a
+  // real payout ledger (src/lib/tutorEarnings.ts) instead of floating
+  // unattached to anyone. instructor_name (above) stays a free-text
+  // display label; this is the actual FK used for payouts.
+  instructor_tutor_id?: string | null
+  // Per-course override of the global monthly fee (settings/pricing).
+  // Leave unset to use the current admin-configured default for this
+  // pricing_mode (monthlyGroupFeePerStudent / oneToOneMonthlyFee).
+  monthly_fee_override?: number | null
+  // Only meaningful when pricing_mode is 'monthly_group'. Leave unset
+  // to use the admin-configured default group batch size.
+  batch_size_override?: number | null
+  // Only meaningful when pricing_mode is 'special_offer'. Points at
+  // which configured offer (settings/pricing.specialOffers) this
+  // course uses.
+  special_offer_key?: 'english_abacus' | 'phonics' | null
   created_at?: string
 }
 
@@ -59,6 +89,38 @@ export interface Payment {
   verified_by: string | null
   admin_notes: string | null
   created_at: string
+  // ------------------------------------------------------------------
+  // New, additive monthly-billing fields. Absent on every historical
+  // payment record (one-time legacy/competition/tutor-registration
+  // payments never set these) — nothing here is backfilled onto old
+  // docs. Set by Payment.tsx at creation time for a recurring course,
+  // and finalized by AdminPayments.tsx at approval time.
+  // ------------------------------------------------------------------
+  // Which pricing mode this specific payment was charged under —
+  // recorded on the payment itself so a later admin pricing-config
+  // change never rewrites the meaning of a historical payment.
+  pricing_mode_snapshot?: import('@/lib/coursePricing').EffectivePricingMode
+  // YYYY-MM this payment covers, for a recurring monthly course. Null
+  // for one-time (legacy/competition_entry/free) payments.
+  billing_period?: string | null
+  // Which special offer (if any) this payment was charged under.
+  offer_key?: 'english_abacus' | 'phonics' | null
+  // Which group batch this payment's student belongs to for this
+  // course (monthly_group mode only) — set at approval time by
+  // src/lib/groupBatches.ts.
+  batch_number?: number | null
+  // Snapshot of the 40/10/30/15/5 (or whatever the admin-configured
+  // percentages were at approval time) split of `amount`, computed at
+  // approval — see src/lib/pricingModel.ts computeRevenueSplit(). A
+  // snapshot, not a live computation, so a later change to Admin →
+  // Pricing percentages never silently rewrites a historical payout.
+  revenue_split?: {
+    tutor: number
+    marketing: number
+    management: number
+    company: number
+    saving: number
+  } | null
 }
 
 export interface Enrolment {
@@ -67,6 +129,13 @@ export interface Enrolment {
   course_id: string | null
   course_name: string | null
   course_slug: string | null
+  // Additive — mirrors the payment fields above, kept in sync at
+  // approval time (AdminPayments.tsx) so CourseLearn.tsx / the student
+  // dashboard can show which plan/batch/period is currently active
+  // without a second read of the underlying payment.
+  pricing_mode?: import('@/lib/coursePricing').EffectivePricingMode
+  billing_period?: string | null
+  batch_number?: number | null
   status: 'pending' | 'active' | 'revoked'
   enrolled_at: string | null
   created_at: string

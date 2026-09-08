@@ -9,6 +9,7 @@ import { getTutorOnboardingReadiness, type TutorOnboardingReadiness } from '@/li
 import { reviewTutorOnboardingDocument } from '@/lib/tutorOnboardingDocuments'
 import { REQUIRED_TUTOR_ONBOARDING_DOCUMENTS, type TutorOnboardingDocumentType } from '@/types/tutorOnboarding'
 import { onboardTutor } from '@/lib/onboarding'
+import { sumTutorEarnings } from '@/lib/tutorEarnings'
 
 type LoadState = 'loading' | 'loaded' | 'error'
 
@@ -71,6 +72,8 @@ export default function AdminTutors() {
     load()
   }, [])
 
+  const [earnings, setEarnings] = useState<{ total: number; count: number } | null>(null)
+
   async function loadDetail(tutor: AcademyTutor) {
     setDetailLoading(true)
     setOnboardResultMessage(null)
@@ -83,11 +86,23 @@ export default function AdminTutors() {
     } finally {
       setDetailLoading(false)
     }
+    // Best-effort, separate from the readiness load above so a failure
+    // here never blocks the onboarding-review UI — see sumTutorEarnings()
+    // in src/lib/tutorEarnings.ts (reads the tutor_earnings ledger
+    // written by AdminPayments.tsx on every approved course payment for
+    // a course with this tutor assigned).
+    try {
+      setEarnings(await sumTutorEarnings(tutor.id))
+    } catch (err) {
+      console.error('Failed to load tutor earnings:', err)
+      setEarnings(null)
+    }
   }
 
   function openDetail(tutor: AcademyTutor) {
     setSelected(tutor)
     setReadiness(null)
+    setEarnings(null)
     void loadDetail(tutor)
   }
 
@@ -401,6 +416,30 @@ export default function AdminTutors() {
               )}
               {!paymentByTutorId[selected.id] && (
                 <p className="mt-2 text-xs text-slate-muted">Tutor hasn&apos;t started the ₹500 payment yet.</p>
+              )}
+            </div>
+
+            {/* Course revenue earnings — accrued tutor_earnings ledger rows
+                (see src/lib/tutorEarnings.ts), written automatically by
+                AdminPayments.tsx whenever an approved course payment's
+                course has this tutor assigned (Course.instructor_tutor_id).
+                This is accrued, not yet-necessarily-paid-out — actually
+                transferring money to the tutor still happens outside the
+                app, same as the ₹500 registration fee above. */}
+            <div className="mt-6 border-t border-white/10 pt-4">
+              <h3 className="font-display text-sm uppercase tracking-wide text-gold">Course revenue (accrued)</h3>
+              {earnings === null ? (
+                <p className="mt-2 text-xs text-slate-muted">Loading…</p>
+              ) : earnings.count === 0 ? (
+                <p className="mt-2 text-xs text-slate-muted">
+                  No accrued course-payment earnings yet. This only fills in once a course lists this tutor as
+                  its assigned instructor (Admin → Courses) and a student payment for that course is approved.
+                </p>
+              ) : (
+                <p className="mt-2 text-sm">
+                  <span className="font-semibold text-gold-bright">₹{earnings.total.toLocaleString('en-IN')}</span>{' '}
+                  <span className="text-slate-muted">across {earnings.count} approved payment{earnings.count === 1 ? '' : 's'}</span>
+                </p>
               )}
             </div>
 

@@ -19,6 +19,9 @@ import { useAuth } from '@/hooks/useAuth'
 import type { Course, Payment } from '@/types/database'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
 import { createAdminBroadcast } from '@/lib/notifications'
+import { getPricingConfig } from '@/lib/pricingConfig'
+import { getEffectiveCoursePricing, resolveEffectivePricingMode, describePricing, type EffectiveCoursePricing } from '@/lib/coursePricing'
+import { getOfferEligibility, peekOfferAvailability, markFreeCompetitionEntryUsed } from '@/lib/specialOfferEligibility'
 
 const PAYEE_NAME = import.meta.env.VITE_UPI_PAYEE_NAME || 'VATTAMS ACADEMIA'
 const PAYEE_VPA = import.meta.env.VITE_UPI_VPA as string | undefined
@@ -32,6 +35,7 @@ export default function Payment() {
 
   const [course, setCourse] = useState<Course | null>(null)
   const [payment, setPayment] = useState<Payment | null>(null)
+  const [pricing, setPricing] = useState<EffectiveCoursePricing | null>(null)
   const [utr, setUtr] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -69,19 +73,73 @@ export default function Payment() {
         const courseData = { id: courseSnap.id, ...courseSnap.data() } as Course
         setCourse(courseData)
 
-        // Reuse an existing pending/submitted payment for this
-        // student+course instead of creating duplicates on every visit.
-        // Requires a composite index on (student_id, course_id, status,
-        // created_at) — Firestore will show a console link to create it
-        // the first time this query runs if it's missing.
-        const existingQuery = query(
-          collection(firestore, 'payments'),
+        // Effective price under the approved commercial model — see
+        // src/lib/coursePricing.ts. This replaces the old
+        // "always base_fee - discount_amount" assumption; most existing
+        // courses now resolve to the monthly group price automatically.
+        const pricingConfig = await getPricingConfig()
+        const mode = resolveEffectivePricingMode(courseData)
+
+        let specialOfferEligible = true
+        if (mode === 'special_offer') {
+          const offerKey = courseData.special_offer_key ?? 'phonics'
+          const offerConfig =
+            offerKey === 'english_abacus' ? pricingConfig.specialOffers.englishAbacus : pricingConfig.specialOffers.phonics
+          // If this student already has an enrolment (renewal visit),
+          // their real eligibility record is authoritative for display.
+          // Otherwise this is a best-effort "are slots still open" read
+          // — the actual claim/enforcement happens at admin-approval
+          // time (src/lib/specialOfferEligibility.ts), never here.
+          const existingElig = await getOfferEligibility(offerKey, user!.id)
+          specialOfferEligible = existingElig ? existingElig.active : await peekOfferAvailability(offerKey, offerConfig.offerMaxStudents)
+        }
+
+        let effectivePricing = getEffectiveCoursePricing(courseData, pricingConfig, { specialOfferEligible })
+
+        // Phonics "free entry fee for upcoming VATTAMS competitions" —
+        // a one-time waiver for competition entry, tracked on the
+        // student's Phonics eligibility record so it can only be used
+        // once. Only relevant for VATTAMS Competition entries
+        // (is_competition courses), which otherwise keep their normal
+        // one-time entry-fee price untouched.
+        let usingFreeCompetitionEntry = false
+        if (effectivePricing.mode === 'competition_entry') {
+          const phonicsElig = await getOfferEligibility('phonics', user!.id)
+          if (phonicsElig?.freeCompetitionEntry && !phonicsElig.freeCompetitionEntryUsed) {
+            usingFreeCompetitionEntry = true
+            effectivePricing = { ...effectivePricing, amount: 0, regularAmount: effectivePricing.amount }
+          }
+        }
+
+        if (cancelled) return
+        setPricing(effectivePricing)
+
+        // Reuse an existing pending/submitted payment instead of creating
+        // duplicates on every visit. For a one-time charge (legacy /
+        // competition_entry / free) this dedups across all time, same as
+        // before. For a recurring monthly charge it's scoped to THIS
+        // billing period only — a new month is a genuinely new charge,
+        // not a duplicate — so a past approved/rejected payment from an
+        // earlier month never blocks this month's payment page from
+        // working. Requires a composite index on
+        // (student_id, course_id, status, created_at) for the one-time
+        // shape, and additionally billing_period for the recurring
+        // shape — Firestore will show a console link to create whichever
+        // is missing the first time each query runs.
+        const baseConstraints = [
           where('student_id', '==', user!.id),
           where('course_id', '==', courseId),
           where('status', 'in', ['pending', 'submitted']),
-          orderBy('created_at', 'desc'),
-          limit(1)
-        )
+        ]
+        const existingQuery = effectivePricing.isRecurring
+          ? query(
+              collection(firestore, 'payments'),
+              ...baseConstraints,
+              where('billing_period', '==', effectivePricing.billingPeriod),
+              orderBy('created_at', 'desc'),
+              limit(1)
+            )
+          : query(collection(firestore, 'payments'), ...baseConstraints, orderBy('created_at', 'desc'), limit(1))
         const existingSnapshot = await getDocs(existingQuery)
         if (cancelled) return
 
@@ -91,7 +149,6 @@ export default function Payment() {
           return
         }
 
-        const amount = Math.max(courseData.base_fee - courseData.discount_amount, 0)
         const newPayment = {
           student_id: user!.id,
           course_id: courseId,
@@ -99,18 +156,30 @@ export default function Payment() {
           // render without a join — Firestore has none.
           course_name: courseData.name,
           student_name: user!.displayName ?? user!.email ?? null,
-          amount,
+          amount: effectivePricing.amount,
           status: 'pending' as const,
           utr_reference: null,
           submitted_at: null,
           verified_at: null,
           verified_by: null,
           admin_notes: null,
-          created_at: new Date().toISOString()
+          created_at: new Date().toISOString(),
+          pricing_mode_snapshot: effectivePricing.mode,
+          billing_period: effectivePricing.billingPeriod,
+          offer_key: effectivePricing.offerKey,
+          batch_number: null,
+          revenue_split: null
         }
         const createdRef = await addDoc(collection(firestore, 'payments'), newPayment)
         if (cancelled) return
         setPayment({ id: createdRef.id, ...newPayment } as Payment)
+
+        // Consume the one-time free-entry waiver only once the ₹0
+        // payment doc genuinely exists — never optimistically before
+        // the write succeeds.
+        if (usingFreeCompetitionEntry) {
+          void markFreeCompetitionEntryUsed('phonics', user!.id)
+        }
       } catch (err) {
         // Guards against anything that escapes the Firestore calls above
         // leaving this page stuck on "Loading payment details…" forever.
@@ -165,7 +234,7 @@ export default function Payment() {
     )
   }
 
-  if (!course || !payment) {
+  if (!course || !payment || !pricing) {
     return (
       <div className="mx-auto max-w-xl px-4 py-16 text-center text-slate-muted">
         <p>{error ?? 'Loading payment details…'}</p>
@@ -208,20 +277,46 @@ export default function Payment() {
           <span className="font-medium">{courseDisplayName}</span>
         </div>
         <div className="flex items-center justify-between p-4 text-sm">
-          <span className="text-slate-muted">Base fee</span>
-          <span>₹{course.base_fee.toLocaleString('en-IN')}</span>
+          <span className="text-slate-muted">Plan</span>
+          <span>{describePricing(pricing)}</span>
         </div>
-        {course.discount_amount > 0 && (
+        {(pricing.mode === 'legacy' || pricing.mode === 'competition_entry') && (
+          <>
+            <div className="flex items-center justify-between p-4 text-sm">
+              <span className="text-slate-muted">Base fee</span>
+              <span>₹{course.base_fee.toLocaleString('en-IN')}</span>
+            </div>
+            {course.discount_amount > 0 && (
+              <div className="flex items-center justify-between p-4 text-sm">
+                <span className="text-slate-muted">Discount</span>
+                <span className="text-success">-₹{course.discount_amount.toLocaleString('en-IN')}</span>
+              </div>
+            )}
+          </>
+        )}
+        {pricing.isRecurring && (
           <div className="flex items-center justify-between p-4 text-sm">
-            <span className="text-slate-muted">Discount</span>
-            <span className="text-success">-₹{course.discount_amount.toLocaleString('en-IN')}</span>
+            <span className="text-slate-muted">Billing period</span>
+            <span>{pricing.billingPeriod}</span>
+          </div>
+        )}
+        {pricing.mode === 'special_offer' && pricing.regularAmount != null && pricing.regularAmount !== pricing.amount && (
+          <div className="flex items-center justify-between p-4 text-sm">
+            <span className="text-slate-muted">Regular price</span>
+            <span className="line-through text-slate-muted">₹{pricing.regularAmount.toLocaleString('en-IN')}</span>
           </div>
         )}
         <div className="flex items-center justify-between p-4">
-          <span className="text-slate-muted">Final payable amount</span>
+          <span className="text-slate-muted">{pricing.isRecurring ? 'This month\u2019s payable amount' : 'Final payable amount'}</span>
           <span className="font-display text-xl text-gold-bright">₹{payment.amount.toLocaleString('en-IN')}</span>
         </div>
       </div>
+      {pricing.isRecurring && (
+        <p className="mt-2 text-xs text-slate-muted">
+          This is a monthly plan. You&apos;ll return to this page next month to submit the next payment — VATTAMS does not
+          charge your card/UPI automatically.
+        </p>
+      )}
 
       <div className="card mt-6 p-6 text-center">
         {upiLink ? (
