@@ -188,8 +188,6 @@ service cloud.firestore {
         amount == (course.base_fee - course.discount_amount > 0 ? course.base_fee - course.discount_amount : 0);
     }
 
-
-
     // Courses (courses/{courseId}) — the catalog document itself had no
     // explicit rule anywhere in this file, so it fell through to the
     // deny-all catch-all. Admin gets full CRUD; everyone else (including
@@ -206,8 +204,8 @@ service cloud.firestore {
     // Learning Materials (courses/{courseId}/materials/{materialId}) —
     // see src/lib/materials.ts. Supabase Storage now holds the actual file
     // bytes; this Firestore rule gates the material metadata itself, so
-    // students only discover a material's storage_path (used to request
-    // a signed download URL) after an active-enrolment + published check,
+    // students only discover a material's storage_path (used to request a
+    // signed download URL) after an active-enrolment + published check,
     // while admins can manage all material records regardless of publish
     // state.
     match /courses/{courseId}/materials/{materialId} {
@@ -430,11 +428,29 @@ service cloud.firestore {
       allow delete: if false;
     }
 
-
     match /certificates/{certificateId} {
       allow get: if true;
       allow list: if isAdmin() || request.query.limit <= 1;
       allow create, update: if isAdmin();
+      allow delete: if false;
+    }
+
+    // FCM web push tokens for signed-in Admin users. Doc ID is the
+    // token itself (enforced below), so a token can only ever be
+    // written once per document — no separate uniqueness check needed.
+    match /push_tokens/{tokenId} {
+      allow read: if isAdmin()
+        && resource.data.uid == request.auth.uid;
+
+      allow create: if isAdmin()
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.token == tokenId;
+
+      allow update: if isAdmin()
+        && resource.data.uid == request.auth.uid
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.token == tokenId;
+
       allow delete: if false;
     }
 

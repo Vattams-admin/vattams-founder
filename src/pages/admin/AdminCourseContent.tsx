@@ -10,6 +10,7 @@ import {
   orderBy,
   query,
   updateDoc,
+  where,
 } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import { supabase } from '@/lib/supabase'
@@ -130,13 +131,38 @@ export default function AdminCourseContent() {
     setError(null)
 
     try {
-      const courseSnap = await getDoc(doc(firestore, 'courses', courseId))
+      // Admin course links may use either the Firestore document ID
+      // or the stable course slug. Resolve both forms safely.
+      let courseSnap = await getDoc(doc(firestore, 'courses', courseId))
+
+      if (!courseSnap.exists()) {
+        const slugSnapshot = await getDocs(
+          query(
+            collection(firestore, 'courses'),
+            where('slug', '==', courseId)
+          )
+        )
+
+        if (!slugSnapshot.empty) {
+          courseSnap = slugSnapshot.docs[0]
+        }
+      }
 
       if (!courseSnap.exists()) {
         throw new Error('Course not found')
       }
 
-      setCourseName(String(courseSnap.data().name ?? 'Course'))
+      const courseData = courseSnap.data()
+      const resolvedCourseId = courseSnap.id
+      setCourseName(String(courseData.name ?? 'Course'))
+
+      // Course documents use their Firestore document ID, while the
+      // imported lesson package uses the course slug as course_id.
+      // Support both without changing existing lesson/module records.
+      const courseSlug = String(courseData.slug ?? '').trim()
+      const contentCourseIds = new Set(
+        [resolvedCourseId, courseSlug, courseId].filter(Boolean)
+      )
 
       const moduleSnapshot = await getDocs(
         query(
@@ -146,7 +172,7 @@ export default function AdminCourseContent() {
       )
 
       const moduleRows = moduleSnapshot.docs
-        .filter((item) => item.data().course_id === courseId)
+        .filter((item) => contentCourseIds.has(String(item.data().course_id ?? '')))
         .map((item) => ({
           id: item.id,
           title: String(item.data().title ?? ''),
@@ -161,7 +187,7 @@ export default function AdminCourseContent() {
       )
 
       const lessonRows = lessonSnapshot.docs
-        .filter((item) => item.data().course_id === courseId)
+        .filter((item) => contentCourseIds.has(String(item.data().course_id ?? '')))
         .map((item) => ({
           id: item.id,
           module_id: String(item.data().module_id ?? ''),

@@ -313,8 +313,17 @@ export default function AdminCourses() {
                 >
                   {course.is_featured ? 'Unfeature' : 'Feature'}
                 </button>
-                <Link to={`/admin/courses/${course.id}/materials`} className="btn-secondary text-xs">
-                  Manage content
+                <Link
+                  to={`/admin/courses/${course.id}/content`}
+                  className="btn-secondary text-xs"
+                >
+                  Course Content
+                </Link>
+                <Link
+                  to={`/admin/courses/${course.id}/materials`}
+                  className="btn-secondary text-xs"
+                >
+                  Learning Materials
                 </Link>
                 <Link to={`/admin/courses/${course.id}`} className="btn-secondary text-xs">
                   Edit
