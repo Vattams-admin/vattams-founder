@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import AdminPushNotifications from '@/components/admin/AdminPushNotifications'
 
 const adminSections = [
   {
@@ -61,6 +62,8 @@ export default function AdminDashboard() {
           </Link>
         ))}
       </div>
+
+      <AdminPushNotifications />
     </div>
   )
 }
