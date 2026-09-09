@@ -74,6 +74,15 @@ export interface SchoolTuitionPricing {
   groupBatchMaxSize: number
 }
 
+export interface CatalogCoursePricePlan {
+  regularPrice: number
+  launchDiscountPercent: number
+}
+
+export interface CatalogCoursePricing {
+  plans: Record<string, CatalogCoursePricePlan>
+}
+
 export interface PricingConfig {
   /** Per-student monthly fee for a group session. */
   monthlyGroupFeePerStudent: number
@@ -88,6 +97,7 @@ export interface PricingConfig {
     phonics: SpecialOfferConfig
   }
   schoolTuition: SchoolTuitionPricing
+  catalogCourses: CatalogCoursePricing
 }
 
 export const DEFAULT_PRICING_CONFIG: PricingConfig = {
@@ -150,8 +160,66 @@ export const DEFAULT_PRICING_CONFIG: PricingConfig = {
     groupBatchMinSize: 3,
     groupBatchMaxSize: 4,
   },
-}
+  catalogCourses: {
+    plans: {
+      // Competitive Exams — 30% launch discount
+      'competitive-exams:TNPSC Group I': { regularPrice: 7000, launchDiscountPercent: 30 },
+      'competitive-exams:TNPSC Group II / IIA': { regularPrice: 5000, launchDiscountPercent: 30 },
+      'competitive-exams:TNPSC Group IV / VAO': { regularPrice: 3000, launchDiscountPercent: 30 },
+      'competitive-exams:TNPSC Complete Package': { regularPrice: 10000, launchDiscountPercent: 30 },
+      'competitive-exams:SSC CGL': { regularPrice: 5000, launchDiscountPercent: 30 },
+      'competitive-exams:SSC CHSL': { regularPrice: 4000, launchDiscountPercent: 30 },
+      'competitive-exams:SSC MTS / GD': { regularPrice: 2500, launchDiscountPercent: 30 },
+      'competitive-exams:SSC Complete Package': { regularPrice: 7000, launchDiscountPercent: 30 },
+      'competitive-exams:Banking – IBPS': { regularPrice: 4500, launchDiscountPercent: 30 },
+      'competitive-exams:SBI Exams': { regularPrice: 4500, launchDiscountPercent: 30 },
+      'competitive-exams:RBI Exams': { regularPrice: 6000, launchDiscountPercent: 30 },
+      'competitive-exams:Banking Complete Package': { regularPrice: 7000, launchDiscountPercent: 30 },
+      'competitive-exams:RRB NTPC': { regularPrice: 4000, launchDiscountPercent: 30 },
+      'competitive-exams:Railway Group D': { regularPrice: 2500, launchDiscountPercent: 30 },
+      'competitive-exams:RRB ALP / Technician': { regularPrice: 3500, launchDiscountPercent: 30 },
+      'competitive-exams:Railway Complete Package': { regularPrice: 6000, launchDiscountPercent: 30 },
+      'competitive-exams:Police Exams': { regularPrice: 2500, launchDiscountPercent: 30 },
+      'competitive-exams:Defence Exams': { regularPrice: 3000, launchDiscountPercent: 30 },
+      'competitive-exams:TET – Tamil / English': { regularPrice: 3500, launchDiscountPercent: 30 },
+      'competitive-exams:TET Complete Package': { regularPrice: 5000, launchDiscountPercent: 30 },
+      'competitive-exams:UGC NET': { regularPrice: 6000, launchDiscountPercent: 30 },
+      'competitive-exams:SET': { regularPrice: 4500, launchDiscountPercent: 30 },
+      'competitive-exams:Teaching & School Jobs': { regularPrice: 3000, launchDiscountPercent: 30 },
 
+      // Academic & Skill — 50% launch discount
+      'academic-skill:College – Individual Subject': { regularPrice: 2500, launchDiscountPercent: 50 },
+      'academic-skill:College – Complete Subject Pack': { regularPrice: 5000, launchDiscountPercent: 50 },
+      'academic-skill:Competitive Foundation': { regularPrice: 3000, launchDiscountPercent: 50 },
+      'academic-skill:Computer Basics': { regularPrice: 1500, launchDiscountPercent: 50 },
+      'academic-skill:MS Office': { regularPrice: 2000, launchDiscountPercent: 50 },
+      'academic-skill:Programming Fundamentals': { regularPrice: 3000, launchDiscountPercent: 50 },
+      'academic-skill:Spoken English': { regularPrice: 2000, launchDiscountPercent: 50 },
+      'academic-skill:Soft Skills': { regularPrice: 2000, launchDiscountPercent: 50 },
+      'academic-skill:Certification – Basic': { regularPrice: 2000, launchDiscountPercent: 50 },
+      'academic-skill:Certification – Advanced': { regularPrice: 4000, launchDiscountPercent: 50 },
+
+        // VATTAMS Competitions — 20% launch discount
+        'vattams-competitions:Mathematics Challenge': { regularPrice: 500, launchDiscountPercent: 20 },
+        'vattams-competitions:Science Challenge': { regularPrice: 500, launchDiscountPercent: 20 },
+        'vattams-competitions:English Challenge': { regularPrice: 500, launchDiscountPercent: 20 },
+        'vattams-competitions:Computer Challenge': { regularPrice: 500, launchDiscountPercent: 20 },
+        'vattams-competitions:GK Challenge': { regularPrice: 500, launchDiscountPercent: 20 },
+        'vattams-competitions:Reasoning Challenge': { regularPrice: 500, launchDiscountPercent: 20 },
+        'vattams-competitions:India GK Championship': { regularPrice: 750, launchDiscountPercent: 20 },
+        'vattams-competitions:National Quiz Championship': { regularPrice: 750, launchDiscountPercent: 20 },
+        'vattams-competitions:AI & Technology Challenge': { regularPrice: 1000, launchDiscountPercent: 20 },
+        'vattams-competitions:International Knowledge Challenge': { regularPrice: 1000, launchDiscountPercent: 20 },
+        'vattams-competitions:National Mathematics Championship': { regularPrice: 1000, launchDiscountPercent: 20 },
+        'vattams-competitions:National Science Championship': { regularPrice: 1000, launchDiscountPercent: 20 },
+        'vattams-competitions:National English Championship': { regularPrice: 1000, launchDiscountPercent: 20 },
+        'vattams-competitions:National Aptitude Championship': { regularPrice: 1000, launchDiscountPercent: 20 },
+        'vattams-competitions:National Coding Challenge': { regularPrice: 1250, launchDiscountPercent: 20 },
+        'vattams-competitions:National AI Challenge': { regularPrice: 1250, launchDiscountPercent: 20 },
+        'vattams-competitions:Mega Inter-School Championship': { regularPrice: 1500, launchDiscountPercent: 20 },
+    },
+  },
+}
 export interface RevenueSplit {
   total: number
   tutor: number

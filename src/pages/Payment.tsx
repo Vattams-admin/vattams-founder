@@ -280,20 +280,26 @@ export default function Payment() {
           <span className="text-slate-muted">Plan</span>
           <span>{describePricing(pricing)}</span>
         </div>
-        {(pricing.mode === 'legacy' || pricing.mode === 'competition_entry') && (
-          <>
-            <div className="flex items-center justify-between p-4 text-sm">
-              <span className="text-slate-muted">Base fee</span>
-              <span>₹{course.base_fee.toLocaleString('en-IN')}</span>
-            </div>
-            {course.discount_amount > 0 && (
+          {pricing.mode === 'legacy' && (
+            <>
               <div className="flex items-center justify-between p-4 text-sm">
-                <span className="text-slate-muted">Discount</span>
-                <span className="text-success">-₹{course.discount_amount.toLocaleString('en-IN')}</span>
+                <span className="text-slate-muted">Base fee</span>
+                <span>₹{course.base_fee.toLocaleString('en-IN')}</span>
               </div>
-            )}
-          </>
-        )}
+              {course.discount_amount > 0 && (
+                <div className="flex items-center justify-between p-4 text-sm">
+                  <span className="text-slate-muted">Discount</span>
+                  <span className="text-success">-₹{course.discount_amount.toLocaleString('en-IN')}</span>
+                </div>
+              )}
+            </>
+          )}
+          {pricing.mode === 'competition_entry' && pricing.regularAmount != null && pricing.regularAmount !== pricing.amount && (
+            <div className="flex items-center justify-between p-4 text-sm">
+              <span className="text-slate-muted">Regular price</span>
+              <span className="line-through text-slate-muted">₹{pricing.regularAmount.toLocaleString('en-IN')}</span>
+            </div>
+          )}
         {pricing.isRecurring && (
           <div className="flex items-center justify-between p-4 text-sm">
             <span className="text-slate-muted">Billing period</span>

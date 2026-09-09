@@ -218,6 +218,19 @@ service cloud.firestore {
       return override != null ? override : pricingSettings().get('oneToOneMonthlyFee', 14000);
     }
 
+      function effectiveCatalogCourseAmounts(course) {
+        let catalogCourses = pricingSettings().get('catalogCourses', {});
+        let plans = catalogCourses.get('plans', {});
+        let categoryId = course.get('category_id', null);
+        let courseName = course.get('name', '');
+        let key = categoryId != null ? categoryId + ':' + courseName : '';
+        let plan = plans.get(key, {});
+        let regularPrice = plan.get('regularPrice', 0);
+        let discountPercent = plan.get('launchDiscountPercent', 0);
+        let launchPrice = regularPrice * (1 - discountPercent / 100);
+        return [regularPrice, launchPrice];
+      }
+
     // Returns [offerPrice, regularPrice] — a create is accepted at
     // EITHER value; which one is actually correct for this student
     // (first-30 cap, 3-month window) is enforced authoritatively at
@@ -264,10 +277,13 @@ service cloud.firestore {
       return course.is_published == true &&
         courseName == course.name &&
         (
-          (mode == 'competition_entry' && (amount == legacyAmount(course) || (amount == 0 && hasUnusedFreeCompetitionEntry()))) ||
+          (mode == 'competition_entry' && (amount == legacyAmount(course) || amount in effectiveCatalogCourseAmounts(course) || (amount == 0 && hasUnusedFreeCompetitionEntry()))) ||
           (mode == 'legacy' && amount == legacyAmount(course)) ||
           (mode == 'free' && amount == 0) ||
-          (mode == 'monthly_group' && amount == effectiveMonthlyGroupFee(course)) ||
+          (mode == 'monthly_group' && (
+        amount == effectiveMonthlyGroupFee(course) ||
+        amount in effectiveCatalogCourseAmounts(course)
+      )) ||
           (mode == 'one_to_one' && amount == effectiveOneToOneFee(course)) ||
           (mode == 'special_offer' && amount in effectiveSpecialOfferAmounts(course)) ||
           (mode == 'school_tuition' && amount in effectiveSchoolTuitionAmounts(course))

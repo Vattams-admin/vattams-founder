@@ -106,7 +106,20 @@ export function getEffectiveCoursePricing(
   const mode = resolveEffectivePricingMode(course)
   const revenueShare = config.revenueShare
 
-  if (mode === 'legacy' || mode === 'competition_entry') {
+  if (mode === 'legacy') {
+    const amount = Math.max(course.base_fee - course.discount_amount, 0)
+    return { mode, amount, isRecurring: false, billingPeriod: null, batchSize: null, revenueShare, offerKey: null, regularAmount: null }
+  }
+
+  if (mode === 'competition_entry') {
+    const catalogKey = course.category_id ? `${course.category_id}:${course.name}` : null
+    const catalogPlan = catalogKey ? config.catalogCourses.plans[catalogKey] : undefined
+
+    if (catalogPlan) {
+      const launchPrice = Math.round(catalogPlan.regularPrice * (1 - catalogPlan.launchDiscountPercent / 100))
+      return { mode, amount: launchPrice, isRecurring: false, billingPeriod: null, batchSize: null, revenueShare, offerKey: null, regularAmount: launchPrice !== catalogPlan.regularPrice ? catalogPlan.regularPrice : null }
+    }
+
     const amount = Math.max(course.base_fee - course.discount_amount, 0)
     return { mode, amount, isRecurring: false, billingPeriod: null, batchSize: null, revenueShare, offerKey: null, regularAmount: null }
   }
@@ -116,9 +129,38 @@ export function getEffectiveCoursePricing(
   }
 
   if (mode === 'monthly_group') {
-    const amount = course.monthly_fee_override ?? config.monthlyGroupFeePerStudent
+    const catalogKey = course.category_id ? `${course.category_id}:${course.name}` : null
+    const catalogPlan = catalogKey ? config.catalogCourses.plans[catalogKey] : undefined
+
+    const hasOverride = course.monthly_fee_override != null
+    const catalogLaunchPrice = catalogPlan
+      ? Math.round(
+          catalogPlan.regularPrice *
+            (1 - catalogPlan.launchDiscountPercent / 100),
+        )
+      : null
+
+    const amount = hasOverride
+      ? course.monthly_fee_override!
+      : catalogLaunchPrice ?? config.monthlyGroupFeePerStudent
+
+    const regularAmount =
+      !hasOverride && catalogPlan && catalogLaunchPrice !== catalogPlan.regularPrice
+        ? catalogPlan.regularPrice
+        : null
+
     const batchSize = course.batch_size_override ?? config.groupBatchSize
-    return { mode, amount, isRecurring: true, billingPeriod: currentBillingPeriod(), batchSize, revenueShare, offerKey: null, regularAmount: null }
+
+    return {
+      mode,
+      amount,
+      isRecurring: true,
+      billingPeriod: currentBillingPeriod(),
+      batchSize,
+      revenueShare,
+      offerKey: null,
+      regularAmount,
+    }
   }
 
   if (mode === 'one_to_one') {

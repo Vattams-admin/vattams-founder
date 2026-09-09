@@ -54,6 +54,14 @@ function mergeWithDefaults(data: Partial<PricingConfig> | undefined): PricingCon
           ...(data.schoolTuition?.plans ?? {}),
         },
       },
+      catalogCourses: {
+        ...DEFAULT_PRICING_CONFIG.catalogCourses,
+        ...(data.catalogCourses ?? {}),
+        plans: {
+          ...DEFAULT_PRICING_CONFIG.catalogCourses.plans,
+          ...(data.catalogCourses?.plans ?? {}),
+        },
+      },
   }
 }
 

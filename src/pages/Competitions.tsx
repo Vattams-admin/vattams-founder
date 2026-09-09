@@ -4,6 +4,9 @@ import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
+import { DEFAULT_PRICING_CONFIG, type PricingConfig } from '@/lib/pricingModel'
+import { getPricingConfig } from '@/lib/pricingConfig'
+import { getEffectiveCoursePricing } from '@/lib/coursePricing'
 
 type LoadState = 'loading' | 'loaded' | 'error'
 
@@ -18,6 +21,15 @@ export default function Competitions() {
   const [competitions, setCompetitions] = useState<Course[]>([])
   const [state, setState] = useState<LoadState>('loading')
   const [retryToken, setRetryToken] = useState(0)
+  const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  useEffect(() => {
+    let cancelled = false
+    getPricingConfig()
+      .then((config) => { if (!cancelled) setPricingConfig(config) })
+      .catch(() => { /* falls back to defaults */ })
+    return () => { cancelled = true }
+  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -91,7 +103,7 @@ export default function Competitions() {
         )}
 
         {state === 'loaded' && competitions.length === 0 && (
-          <div className="card p-10 text-center">
+            <div className="card p-10 text-center">
             <p className="font-display text-lg">No competitions open right now</p>
             <p className="mt-2 text-sm text-slate-muted">Check back soon, or explore courses in the meantime.</p>
             <Link to="/courses" className="btn-primary mt-6 inline-flex">
@@ -103,7 +115,8 @@ export default function Competitions() {
         {state === 'loaded' && competitions.length > 0 && (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {competitions.map((c) => {
-              const finalPrice = Math.max(c.base_fee - c.discount_amount, 0)
+              const pricing = getEffectiveCoursePricing(c, pricingConfig)
+              const finalPrice = pricing.amount
               return (
                 <Link key={c.id} to={`/courses/${c.slug}`} className="card group flex flex-col gap-2 p-5">
                   <h3 className="font-display text-lg leading-snug">{getCourseDisplayName(c.name)}</h3>
