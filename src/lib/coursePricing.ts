@@ -39,6 +39,7 @@ export type EffectivePricingMode =
   | 'monthly_group'
   | 'one_to_one'
   | 'special_offer'
+  | 'school_tuition'
 
 export type SpecialOfferKey = 'english_abacus' | 'phonics'
 
@@ -60,6 +61,7 @@ export function resolveEffectivePricingMode(course: Pick<Course, 'pricing_mode' 
   if (course.pricing_mode === 'monthly_group') return 'monthly_group'
   if (course.pricing_mode === 'one_to_one') return 'one_to_one'
   if (course.pricing_mode === 'special_offer') return 'special_offer'
+  if (course.pricing_mode === 'school_tuition') return 'school_tuition'
 
   // No explicit choice recorded — auto-classify instead of defaulting
   // to legacy. This is the actual fix for "must apply to ALL
@@ -96,7 +98,10 @@ export interface EffectiveCoursePricing {
 export function getEffectiveCoursePricing(
   course: Course,
   config: PricingConfig,
-  opts?: { specialOfferEligible?: boolean }
+  opts?: {
+    specialOfferEligible?: boolean
+    schoolTuitionLaunchEligible?: boolean
+  }
 ): EffectiveCoursePricing {
   const mode = resolveEffectivePricingMode(course)
   const revenueShare = config.revenueShare
@@ -119,6 +124,46 @@ export function getEffectiveCoursePricing(
   if (mode === 'one_to_one') {
     const amount = course.monthly_fee_override ?? config.oneToOneMonthlyFee
     return { mode, amount, isRecurring: true, billingPeriod: currentBillingPeriod(), batchSize: null, revenueShare, offerKey: null, regularAmount: null }
+  }
+
+  if (mode === 'school_tuition') {
+    const board = course.tuition_board
+    const session = course.tuition_session
+    const classBand = course.tuition_class_band
+
+    if (!board || !session || !classBand) {
+      throw new Error(
+        'School tuition course is missing its board, session, or class-band pricing configuration.',
+      )
+    }
+
+    const planKey = `${board}_${session}_${classBand}`
+    const plan = config.schoolTuition.plans[planKey]
+
+    if (!plan) {
+      throw new Error(`No school tuition pricing plan is configured for ${planKey}.`)
+    }
+
+    const launchEligible = opts?.schoolTuitionLaunchEligible ?? true
+    const launchPrice = Math.round(
+      plan.regularPrice * (1 - plan.launchDiscountPercent / 100),
+    )
+
+    const amount = launchEligible ? launchPrice : plan.regularPrice
+
+    return {
+      mode,
+      amount,
+      isRecurring: true,
+      billingPeriod: currentBillingPeriod(),
+      batchSize:
+        session === 'group'
+          ? config.schoolTuition.groupBatchMaxSize
+          : null,
+      revenueShare,
+      offerKey: null,
+      regularAmount: plan.regularPrice,
+    }
   }
 
   // 'special_offer'
@@ -159,6 +204,10 @@ export function describePricing(pricing: EffectiveCoursePricing): string {
     case 'special_offer':
       return pricing.regularAmount && pricing.regularAmount !== pricing.amount
         ? `${rupees}/month (offer, regular ₹${pricing.regularAmount.toLocaleString('en-IN')})`
+        : `${rupees}/month`
+    case 'school_tuition':
+      return pricing.regularAmount && pricing.regularAmount !== pricing.amount
+        ? `${rupees}/month (launch, regular ₹${pricing.regularAmount.toLocaleString('en-IN')})`
         : `${rupees}/month`
   }
 }

@@ -47,7 +47,12 @@ export interface Course {
   // base_fee/discount_amount pricing — see resolveEffectivePricingMode()
   // in src/lib/coursePricing.ts for the exact precedence rule.
   // ------------------------------------------------------------------
-  pricing_mode?: 'legacy' | 'monthly_group' | 'one_to_one' | 'special_offer'
+  pricing_mode?: 'legacy' | 'monthly_group' | 'one_to_one' | 'special_offer' | 'school_tuition'
+  // School tuition plan selectors. These are only used when pricing_mode is 'school_tuition'.
+  // The 4–6 and 6–8 bands intentionally remain separate, including class 6.
+  tuition_board?: 'cbse' | 'matric' | 'international' | null
+  tuition_session?: 'individual' | 'group' | null
+  tuition_class_band?: '1_3' | '4_6' | '6_8' | '9_10' | null
   // Links this course to an approved tutor (tutors/{uid}) so the 40%
   // tutor share of each approved payment can be recorded against a
   // real payout ledger (src/lib/tutorEarnings.ts) instead of floating

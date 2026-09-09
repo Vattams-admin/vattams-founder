@@ -52,6 +52,28 @@ export interface SpecialOfferConfig {
   isActive: boolean
 }
 
+export type SchoolTuitionBoard = 'cbse' | 'matric' | 'international'
+export type SchoolTuitionSession = 'individual' | 'group'
+export type SchoolTuitionClassBand = '1_3' | '4_6' | '6_8' | '9_10'
+
+export interface SchoolTuitionPlan {
+  regularPrice: number
+  launchDiscountPercent: number
+  testSeriesIncluded?: boolean
+}
+
+export interface SchoolTuitionPricing {
+  /** Student-facing school tuition master. */
+  plans: Record<string, SchoolTuitionPlan>
+  /** Launch offer applies to the first N students. */
+  launchMaxStudents: number
+  /** Launch price applies for this many monthly billing periods. */
+  launchDurationMonths: number
+  /** Group sessions are intended for batches of 3 or 4 students. */
+  groupBatchMinSize: number
+  groupBatchMaxSize: number
+}
+
 export interface PricingConfig {
   /** Per-student monthly fee for a group session. */
   monthlyGroupFeePerStudent: number
@@ -65,6 +87,7 @@ export interface PricingConfig {
     englishAbacus: SpecialOfferConfig
     phonics: SpecialOfferConfig
   }
+  schoolTuition: SchoolTuitionPricing
 }
 
 export const DEFAULT_PRICING_CONFIG: PricingConfig = {
@@ -89,6 +112,43 @@ export const DEFAULT_PRICING_CONFIG: PricingConfig = {
       includesFreeCompetitionEntry: true,
       isActive: true,
     },
+  },
+  schoolTuition: {
+    plans: {
+      cbse_individual_1_3: { regularPrice: 6000, launchDiscountPercent: 50 },
+      cbse_individual_4_6: { regularPrice: 7500, launchDiscountPercent: 50 },
+      cbse_individual_6_8: { regularPrice: 8000, launchDiscountPercent: 50 },
+      cbse_individual_9_10: { regularPrice: 20000, launchDiscountPercent: 50, testSeriesIncluded: true },
+
+      matric_individual_1_3: { regularPrice: 4000, launchDiscountPercent: 50 },
+      matric_individual_4_6: { regularPrice: 5500, launchDiscountPercent: 50 },
+      matric_individual_6_8: { regularPrice: 6000, launchDiscountPercent: 50 },
+      matric_individual_9_10: { regularPrice: 12500, launchDiscountPercent: 50 },
+
+      international_individual_1_3: { regularPrice: 12000, launchDiscountPercent: 50 },
+      international_individual_4_6: { regularPrice: 9500, launchDiscountPercent: 50 },
+      international_individual_6_8: { regularPrice: 13000, launchDiscountPercent: 50 },
+      international_individual_9_10: { regularPrice: 25000, launchDiscountPercent: 50 },
+
+      cbse_group_1_3: { regularPrice: 4000, launchDiscountPercent: 50 },
+      cbse_group_4_6: { regularPrice: 4500, launchDiscountPercent: 50 },
+      cbse_group_6_8: { regularPrice: 4000, launchDiscountPercent: 50 },
+      cbse_group_9_10: { regularPrice: 10000, launchDiscountPercent: 50, testSeriesIncluded: true },
+
+      matric_group_1_3: { regularPrice: 2500, launchDiscountPercent: 50 },
+      matric_group_4_6: { regularPrice: 4500, launchDiscountPercent: 50 },
+      matric_group_6_8: { regularPrice: 5000, launchDiscountPercent: 50 },
+      matric_group_9_10: { regularPrice: 8500, launchDiscountPercent: 50 },
+
+      international_group_1_3: { regularPrice: 9000, launchDiscountPercent: 50 },
+      international_group_4_6: { regularPrice: 7500, launchDiscountPercent: 50 },
+      international_group_6_8: { regularPrice: 9000, launchDiscountPercent: 50 },
+      international_group_9_10: { regularPrice: 15000, launchDiscountPercent: 50 },
+    },
+    launchMaxStudents: 50,
+    launchDurationMonths: 3,
+    groupBatchMinSize: 3,
+    groupBatchMaxSize: 4,
   },
 }
 

@@ -46,6 +46,14 @@ function mergeWithDefaults(data: Partial<PricingConfig> | undefined): PricingCon
         ...(data.specialOffers?.phonics ?? {}),
       },
     },
+      schoolTuition: {
+        ...DEFAULT_PRICING_CONFIG.schoolTuition,
+        ...(data.schoolTuition ?? {}),
+        plans: {
+          ...DEFAULT_PRICING_CONFIG.schoolTuition.plans,
+          ...(data.schoolTuition?.plans ?? {}),
+        },
+      },
   }
 }
 

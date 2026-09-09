@@ -64,6 +64,9 @@ interface FormState {
   monthly_fee_override: string
   batch_size_override: string
   special_offer_key: SpecialOfferKey | ''
+  tuition_board: 'cbse' | 'matric' | 'international' | ''
+  tuition_session: 'individual' | 'group' | ''
+  tuition_class_band: '1_3' | '4_6' | '6_8' | '9_10' | ''
 }
 
 const emptyForm: FormState = {
@@ -88,7 +91,10 @@ const emptyForm: FormState = {
   pricing_mode: 'legacy',
   monthly_fee_override: '',
   batch_size_override: '',
-  special_offer_key: ''
+  special_offer_key: '',
+  tuition_board: '',
+  tuition_session: '',
+  tuition_class_band: ''
 }
 
 function slugify(s: string) {
@@ -238,7 +244,10 @@ export default function AdminCourseForm() {
           pricing_mode: c.pricing_mode ?? 'legacy',
           monthly_fee_override: c.monthly_fee_override != null ? String(c.monthly_fee_override) : '',
           batch_size_override: c.batch_size_override != null ? String(c.batch_size_override) : '',
-          special_offer_key: c.special_offer_key ?? ''
+          special_offer_key: c.special_offer_key ?? '',
+          tuition_board: c.tuition_board ?? '',
+          tuition_session: c.tuition_session ?? '',
+          tuition_class_band: c.tuition_class_band ?? ''
         })
         setOriginalSlug(c.slug)
         setLoading(false)
@@ -300,6 +309,18 @@ export default function AdminCourseForm() {
     }
     if (form.pricing_mode === 'special_offer' && !form.special_offer_key) {
       errors.special_offer_key = 'Choose which configured special offer this course uses.'
+    }
+
+    if (form.pricing_mode === 'school_tuition') {
+      if (!form.tuition_board) {
+        errors.tuition_board = 'Choose the school tuition board.'
+      }
+      if (!form.tuition_session) {
+        errors.tuition_session = 'Choose Individual or Group session.'
+      }
+      if (!form.tuition_class_band) {
+        errors.tuition_class_band = 'Choose the class band.'
+      }
     }
 
     if (form.cover_image_url.trim() && !isPlausibleUrl(form.cover_image_url.trim())) {
@@ -378,7 +399,10 @@ export default function AdminCourseForm() {
         pricing_mode: form.pricing_mode,
         monthly_fee_override: form.monthly_fee_override.trim() === '' ? null : Number(form.monthly_fee_override),
         batch_size_override: form.batch_size_override.trim() === '' ? null : Number(form.batch_size_override),
-        special_offer_key: form.pricing_mode === 'special_offer' && form.special_offer_key ? form.special_offer_key : null
+        special_offer_key: form.pricing_mode === 'special_offer' && form.special_offer_key ? form.special_offer_key : null,
+        tuition_board: form.pricing_mode === 'school_tuition' && form.tuition_board ? form.tuition_board : null,
+        tuition_session: form.pricing_mode === 'school_tuition' && form.tuition_session ? form.tuition_session : null,
+        tuition_class_band: form.pricing_mode === 'school_tuition' && form.tuition_class_band ? form.tuition_class_band : null
       }
 
       if (isNew) {
@@ -591,6 +615,7 @@ export default function AdminCourseForm() {
               <option value="monthly_group">Monthly group session</option>
               <option value="one_to_one">One-to-one</option>
               <option value="special_offer">Special offer</option>
+              <option value="school_tuition">School Tuition</option>
             </select>
           </Field>
 
@@ -632,6 +657,49 @@ export default function AdminCourseForm() {
               </Field>
             </div>
           )}
+          {form.pricing_mode === 'school_tuition' && (
+            <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
+              <Field label="Board" error={fieldErrors.tuition_board}>
+                <select
+                  value={form.tuition_board}
+                  onChange={(e) => update('tuition_board', e.target.value as FormState['tuition_board'])}
+                  className="input"
+                >
+                  <option value="">Choose a board…</option>
+                  <option value="cbse">CBSE</option>
+                  <option value="matric">Matric</option>
+                  <option value="international">International</option>
+                </select>
+              </Field>
+
+              <Field label="Session" error={fieldErrors.tuition_session}>
+                <select
+                  value={form.tuition_session}
+                  onChange={(e) => update('tuition_session', e.target.value as FormState['tuition_session'])}
+                  className="input"
+                >
+                  <option value="">Choose session…</option>
+                  <option value="individual">Individual Class</option>
+                  <option value="group">Group Session (3–4 students)</option>
+                </select>
+              </Field>
+
+              <Field label="Class band" error={fieldErrors.tuition_class_band}>
+                <select
+                  value={form.tuition_class_band}
+                  onChange={(e) => update('tuition_class_band', e.target.value as FormState['tuition_class_band'])}
+                  className="input"
+                >
+                  <option value="">Choose class band…</option>
+                  <option value="1_3">Classes 1–3</option>
+                  <option value="4_6">Classes 4–6</option>
+                  <option value="6_8">Classes 6–8</option>
+                  <option value="9_10">Classes 9–10</option>
+                </select>
+              </Field>
+            </div>
+          )}
+
           {form.pricing_mode === 'special_offer' && (
             <div className="mt-4">
               <Field label="Which offer" error={fieldErrors.special_offer_key}>
@@ -679,6 +747,48 @@ export default function AdminCourseForm() {
                     </p>
                   )
                 }
+                if (
+                  form.pricing_mode === 'school_tuition' &&
+                  form.tuition_board &&
+                  form.tuition_session &&
+                  form.tuition_class_band
+                ) {
+                  const planKey = `${form.tuition_board}_${form.tuition_session}_${form.tuition_class_band}`
+                  const plan = pricingConfig.schoolTuition.plans[planKey]
+
+                  if (!plan) {
+                    return (
+                      <p className="text-slate-300">
+                        No configured school tuition price exists for this combination yet.
+                      </p>
+                    )
+                  }
+
+                  const regularPrice = plan.regularPrice
+                  const launchPrice = Math.round(
+                    regularPrice * (1 - plan.launchDiscountPercent / 100),
+                  )
+
+                  return (
+                    <>
+                      <p className="font-medium text-parchment">
+                        Regular {inr(regularPrice)}/month → Launch {inr(launchPrice)}/month
+                      </p>
+                      <p className="mt-1 text-slate-300">
+                        {plan.launchDiscountPercent}% OFF ·{' '}
+                        {form.tuition_session === 'group'
+                          ? 'Group batch: 3–4 students'
+                          : 'Individual Class'}
+                        {plan.testSeriesIncluded ? ' · Test series included' : ''}
+                      </p>
+                      <p className="mt-1 text-xs text-slate-muted">
+                        Launch offer: first {pricingConfig.schoolTuition.launchMaxStudents} students ·
+                        first {pricingConfig.schoolTuition.launchDurationMonths} months
+                      </p>
+                    </>
+                  )
+                }
+
                 if (form.pricing_mode === 'special_offer' && form.special_offer_key) {
                   const offer = pricingConfig.specialOffers[form.special_offer_key === 'english_abacus' ? 'englishAbacus' : 'phonics']
                   const split = computeSpecialOfferSplit(offer, pricingConfig.revenueShare)

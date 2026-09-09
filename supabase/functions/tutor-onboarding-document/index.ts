@@ -30,11 +30,15 @@ const FIREBASE_PROJECT_ID =
 
 const BUCKET = 'academia-tutor-onboarding-docs'
 
-const REQUIRED_DOCUMENT_TYPES = [
+const ALLOWED_DOCUMENT_TYPES = [
   'government_id',
   'qualification_certificate',
   'address_proof',
   'bank_proof',
+  'profile_photo',
+  'professional_certificate',
+  'experience_proof',
+  'other_supporting_document',
 ]
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
@@ -136,7 +140,7 @@ function validateStoragePath(path: string): ParsedPath | null {
 
   if (
     !isSafeSegment(tutorId) ||
-    !REQUIRED_DOCUMENT_TYPES.includes(documentType) ||
+    !ALLOWED_DOCUMENT_TYPES.includes(documentType) ||
     !isSafeFileName(fileName)
   ) {
     return null

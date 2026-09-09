@@ -5,6 +5,22 @@ import { doc, setDoc } from 'firebase/firestore'
 import { firebaseAuth, firestore } from '@/lib/firebase'
 import { friendlyAuthError } from '@/lib/authErrors'
 import { createAdminBroadcast } from '@/lib/notifications'
+import {
+  saveTutorOnboardingDocumentUpload,
+} from '@/lib/tutorOnboardingDocuments'
+import {
+  getTutorOnboardingStoragePath,
+  uploadTutorOnboardingDocument,
+} from '@/lib/tutorOnboardingStorage'
+import {
+  sanitizeFilename,
+  validateTutorDocumentFile,
+} from '@/lib/tutorDocumentValidation'
+import {
+  OPTIONAL_TUTOR_ONBOARDING_DOCUMENTS,
+  REQUIRED_TUTOR_ONBOARDING_DOCUMENTS,
+} from '@/types/tutorOnboarding'
+import type { TutorOnboardingDocumentType } from '@/types/tutorOnboarding'
 
 // Firebase Auth + a `tutors` Firestore collection, mirroring the
 // existing student registration pattern (Auth.tsx) — role fixed to
@@ -19,9 +35,38 @@ export default function TutorRegister() {
   const [qualification, setQualification] = useState('')
   const [expertise, setExpertise] = useState('')
   const [introduction, setIntroduction] = useState('')
+  const [selectedDocuments, setSelectedDocuments] = useState<
+    Partial<Record<TutorOnboardingDocumentType, File>>
+  >({})
+  const [uploadProgress, setUploadProgress] = useState<
+    Partial<Record<TutorOnboardingDocumentType, number>>
+  >({})
   const [error, setError] = useState<string | null>(null)
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+
+  function handleDocumentChange(
+    documentType: TutorOnboardingDocumentType,
+    file: File | undefined
+  ) {
+    if (!file) return
+
+    const validation = validateTutorDocumentFile(file)
+    if (!validation.ok) {
+      setError(validation.error)
+      return
+    }
+
+    setError(null)
+    setSelectedDocuments((current) => ({
+      ...current,
+      [documentType]: file,
+    }))
+    setUploadProgress((current) => ({
+      ...current,
+      [documentType]: 0,
+    }))
+  }
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -29,6 +74,19 @@ export default function TutorRegister() {
 
     if (password !== confirmPassword) {
       setError('Passwords do not match.')
+      return
+    }
+
+    const missingDocuments = REQUIRED_TUTOR_ONBOARDING_DOCUMENTS.filter(
+      (document) => !selectedDocuments[document.type]
+    )
+
+    if (missingDocuments.length > 0) {
+      setError(
+        `Please upload all required documents: ${missingDocuments
+          .map((document) => document.label)
+          .join(', ')}.`
+      )
       return
     }
 
@@ -69,6 +127,65 @@ export default function TutorRegister() {
         )
         setSubmitting(false)
         return
+      }
+
+      // Upload the selected onboarding documents to the private
+      // Supabase Storage bucket and persist only their metadata in
+      // Firestore. The Firebase user now exists, so the upload service
+      // can authenticate the owning tutor securely.
+      const documentsToUpload = [
+        ...REQUIRED_TUTOR_ONBOARDING_DOCUMENTS,
+        ...OPTIONAL_TUTOR_ONBOARDING_DOCUMENTS,
+      ]
+
+      for (const document of documentsToUpload) {
+        const file = selectedDocuments[document.type]
+        if (!file) continue
+
+        const safeFileName = sanitizeFilename(file.name)
+        const storagePath = getTutorOnboardingStoragePath(
+          user.uid,
+          document.type,
+          safeFileName
+        )
+
+        setUploadProgress((current) => ({
+          ...current,
+          [document.type]: 0,
+        }))
+
+        const upload = uploadTutorOnboardingDocument(
+          storagePath,
+          file,
+          (percent) =>
+            setUploadProgress((current) => ({
+              ...current,
+              [document.type]: percent,
+            }))
+        )
+
+        try {
+          await upload.promise
+          await saveTutorOnboardingDocumentUpload(
+            user.uid,
+            document.type,
+            storagePath,
+            safeFileName,
+            false
+          )
+        } catch (uploadErr) {
+          upload.cancel()
+          const message =
+            uploadErr instanceof Error
+              ? uploadErr.message
+              : 'Unknown upload error'
+
+          setError(
+            `Your account was created, but we could not upload your ${document.label}. ${message} Please check the file and try again.`
+          )
+          setSubmitting(false)
+          return
+        }
       }
 
       // No TUTOR notification type fits "your own application was
@@ -223,6 +340,97 @@ export default function TutorRegister() {
             onChange={(e) => setIntroduction(e.target.value)}
             className="mt-1 w-full rounded-card border border-white/15 bg-ink px-3 py-2 text-sm outline-none focus:border-gold"
           />
+        </div>
+
+        <div className="space-y-4 pt-2">
+          <div>
+            <h2 className="font-display text-lg">Required documents</h2>
+            <p className="mt-1 text-xs text-slate-muted">
+              Please upload all 5 required documents. PDF, PNG, JPG, or WEBP up to 10 MB each.
+            </p>
+          </div>
+
+          {REQUIRED_TUTOR_ONBOARDING_DOCUMENTS.map((document) => {
+            const file = selectedDocuments[document.type]
+            const progress = uploadProgress[document.type]
+
+            return (
+              <div
+                key={document.type}
+                className="rounded-card border border-white/10 bg-ink/60 p-3"
+              >
+                <label
+                  htmlFor={`document-${document.type}`}
+                  className="text-sm font-medium"
+                >
+                  {document.label} <span className="text-danger">*</span>
+                </label>
+                <p className="mt-1 text-xs text-slate-muted">{document.helpText}</p>
+                <input
+                  id={`document-${document.type}`}
+                  type="file"
+                  required
+                  accept=".pdf,.png,.jpg,.jpeg,.webp,application/pdf,image/png,image/jpeg,image/webp"
+                  onChange={(e) =>
+                    handleDocumentChange(document.type, e.target.files?.[0])
+                  }
+                  className="mt-2 block w-full text-xs"
+                />
+                {file && (
+                  <div className="mt-2 text-xs text-slate-muted">
+                    <p className="truncate">{file.name}</p>
+                    {typeof progress === 'number' && progress > 0 && progress < 100 && (
+                      <p className="mt-1">Uploading: {progress}%</p>
+                    )}
+                  </div>
+                )}
+              </div>
+            )
+          })}
+
+          <div className="pt-2">
+            <h2 className="font-display text-lg">Optional documents</h2>
+            <p className="mt-1 text-xs text-slate-muted">
+              These can strengthen your application but are not mandatory.
+            </p>
+          </div>
+
+          {OPTIONAL_TUTOR_ONBOARDING_DOCUMENTS.map((document) => {
+            const file = selectedDocuments[document.type]
+            const progress = uploadProgress[document.type]
+
+            return (
+              <div
+                key={document.type}
+                className="rounded-card border border-white/10 bg-ink/60 p-3"
+              >
+                <label
+                  htmlFor={`document-${document.type}`}
+                  className="text-sm font-medium"
+                >
+                  {document.label}
+                </label>
+                <p className="mt-1 text-xs text-slate-muted">{document.helpText}</p>
+                <input
+                  id={`document-${document.type}`}
+                  type="file"
+                  accept=".pdf,.png,.jpg,.jpeg,.webp,application/pdf,image/png,image/jpeg,image/webp"
+                  onChange={(e) =>
+                    handleDocumentChange(document.type, e.target.files?.[0])
+                  }
+                  className="mt-2 block w-full text-xs"
+                />
+                {file && (
+                  <div className="mt-2 text-xs text-slate-muted">
+                    <p className="truncate">{file.name}</p>
+                    {typeof progress === 'number' && progress > 0 && progress < 100 && (
+                      <p className="mt-1">Uploading: {progress}%</p>
+                    )}
+                  </div>
+                )}
+              </div>
+            )
+          })}
         </div>
 
         {error && <p className="text-sm text-danger">{error}</p>}

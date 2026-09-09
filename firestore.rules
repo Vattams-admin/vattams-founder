@@ -199,6 +199,7 @@ service cloud.firestore {
         : explicit == 'monthly_group' ? 'monthly_group'
         : explicit == 'one_to_one' ? 'one_to_one'
         : explicit == 'special_offer' ? 'special_offer'
+        : explicit == 'school_tuition' ? 'school_tuition'
         : (course.get('is_competition', false) == true ? 'competition_entry'
            : (course.get('is_free', false) == true ? 'free' : 'monthly_group'));
     }
@@ -232,12 +233,26 @@ service cloud.firestore {
       return [offer.get('offerPrice', 0), offer.get('regularPrice', 0)];
     }
 
-    // A signed-in student's own Phonics free-competition-entry waiver,
-    // if any — lets a competition-entry payment legitimately be ₹0
-    // exactly once per student. Never trusts the client for whether
-    // the waiver applies; re-reads the student's own eligibility doc.
-    function hasUnusedFreeCompetitionEntry() {
-      let path = /databases/$(database)/documents/special_offer_eligibility/$('phonics_' + request.auth.uid);
+    function effectiveSchoolTuitionAmounts(course) {
+      let schoolTuition = pricingSettings().get('schoolTuition', {});
+      let plans = schoolTuition.get('plans', {});
+      let board = course.get('tuition_board', null);
+      let session = course.get('tuition_session', null);
+      let classBand = course.get('tuition_class_band', null);
+      let planKey = board + '_' + session + '_' + classBand;
+      let plan = plans.get(planKey, {});
+      let regularPrice = plan.get('regularPrice', 0);
+      let discountPercent = plan.get('launchDiscountPercent', 50);
+      let launchPrice = regularPrice * (1 - discountPercent / 100);
+      return [regularPrice, launchPrice];
+    }
+
+  // A signed-in student's own Phonics free-competition-entry waiver,
+  // if any — lets a competition-entry payment legitimately be ₹0
+  // exactly once per student. Never trusts the client for whether
+  // the waiver applies; re-reads the student's own eligibility doc.
+  function hasUnusedFreeCompetitionEntry() {
+    let path = /databases/$(database)/documents/special_offer_eligibility/$('phonics_' + request.auth.uid);
       return exists(path)
         && get(path).data.get('free_competition_entry', false) == true
         && get(path).data.get('free_competition_entry_used', false) == false;
@@ -254,7 +269,8 @@ service cloud.firestore {
           (mode == 'free' && amount == 0) ||
           (mode == 'monthly_group' && amount == effectiveMonthlyGroupFee(course)) ||
           (mode == 'one_to_one' && amount == effectiveOneToOneFee(course)) ||
-          (mode == 'special_offer' && amount in effectiveSpecialOfferAmounts(course))
+          (mode == 'special_offer' && amount in effectiveSpecialOfferAmounts(course)) ||
+          (mode == 'school_tuition' && amount in effectiveSchoolTuitionAmounts(course))
         );
     }
 

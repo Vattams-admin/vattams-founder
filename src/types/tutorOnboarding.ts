@@ -19,6 +19,10 @@ export type TutorOnboardingDocumentType =
   | 'qualification_certificate'
   | 'address_proof'
   | 'bank_proof'
+  | 'profile_photo'
+  | 'professional_certificate'
+  | 'experience_proof'
+  | 'other_supporting_document'
 
 export type TutorOnboardingDocumentStatus = 'pending' | 'verified' | 'rejected'
 
@@ -48,6 +52,29 @@ export const REQUIRED_TUTOR_ONBOARDING_DOCUMENTS: TutorOnboardingDocumentDefinit
     type: 'bank_proof',
     label: 'Bank account proof',
     helpText: 'Cancelled cheque or bank passbook first page, for payouts.',
+  },
+  {
+    type: 'profile_photo',
+    label: 'Profile photo',
+    helpText: 'A recent clear passport-style photo of yourself.',
+  },
+]
+
+export const OPTIONAL_TUTOR_ONBOARDING_DOCUMENTS: TutorOnboardingDocumentDefinition[] = [
+  {
+    type: 'professional_certificate',
+    label: 'Professional / Teaching certificate',
+    helpText: 'Relevant professional, teaching, training, or subject certification.',
+  },
+  {
+    type: 'experience_proof',
+    label: 'Experience proof',
+    helpText: 'Experience certificate, employment proof, or similar evidence, if available.',
+  },
+  {
+    type: 'other_supporting_document',
+    label: 'Other supporting document',
+    helpText: 'Any additional document that supports your tutor application.',
   },
 ]
 
