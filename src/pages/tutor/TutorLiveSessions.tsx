@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState, type FormEvent } from 'react'
-import { Navigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
+import { ensureLiveRoom } from '@/lib/liveRoom'
 import {
   attachRecording,
   announceLiveNow,
@@ -70,6 +71,7 @@ function parseMaterials(raw: string): { name: string; url: string }[] {
 
 export default function TutorLiveSessions() {
   const { user, loading: authLoading } = useAuth()
+  const navigate = useNavigate()
   const [courses, setCourses] = useState<CourseOption[]>([])
   const [sessions, setSessions] = useState<LiveSession[]>([])
   const [loadState, setLoadState] = useState<'loading' | 'loaded' | 'error'>('loading')
@@ -230,6 +232,20 @@ export default function TutorLiveSessions() {
     }
   }
 
+  async function handleOpenClassroom(session: LiveSession) {
+    if (!user) return
+
+    try {
+      await ensureLiveRoom(session.id)
+      navigate(`/live-classroom/${session.id}`)
+    } catch (err) {
+      console.error('Failed to open live classroom:', err)
+      setFormErrors([
+        err instanceof Error ? err.message : String(err),
+      ])
+    }
+  }
+
   async function toggleAttendance(session: LiveSession) {
     if (expandedId === session.id) {
       setExpandedId(null)
@@ -299,6 +315,11 @@ export default function TutorLiveSessions() {
           {phase === 'live' && (
             <button onClick={() => handleAnnounceLive(session)} className="btn-secondary text-xs">
               Notify students: live now
+            </button>
+          )}
+          {session.status === 'published' && phase !== 'ended' && phase !== 'cancelled' && (
+            <button onClick={() => handleOpenClassroom(session)} className="btn-primary text-xs">
+              Open VATTAMS Classroom
             </button>
           )}
           {phase === 'ended' && !session.recording_url && (

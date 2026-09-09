@@ -53,6 +53,7 @@ const AdminRoute = lazy(() => import('@/components/AdminRoute'))
 const Notifications = lazy(() => import('@/pages/Notifications'))
 const AdminNotifications = lazy(() => import('@/pages/admin/AdminNotifications'))
 const LiveSession = lazy(() => import('@/pages/LiveSession'))
+const LiveClassroom = lazy(() => import('@/pages/live/LiveClassroom'))
 const TutorLiveSessions = lazy(() => import('@/pages/tutor/TutorLiveSessions'))
 const AdminLiveSessions = lazy(() => import('@/pages/admin/AdminLiveSessions'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
@@ -117,6 +118,7 @@ export default function App() {
                 live_sessions rule in firestore.rules), so it isn't
                 wrapped in a route guard here. */}
             <Route path="/live-session/:sessionId" element={<LiveSession />} />
+            <Route path="/live-classroom/:sessionId" element={<LiveClassroom />} />
             <Route path="/tutor/live-sessions" element={<TutorLiveSessions />} />
 
             <Route path="/admin" element={<AdminLogin />} />

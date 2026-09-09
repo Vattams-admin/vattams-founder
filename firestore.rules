@@ -370,7 +370,11 @@ service cloud.firestore {
       // checkout broadly, not just for Phonics students. The
       // `resource != null &&` guard short-circuits before the unsafe
       // property access.
-      allow read: if isAdmin() || (resource != null && isOwner(resource.data.student_id));
+      allow read: if isAdmin()
+        || (isSignedIn() && (
+          eligibilityId == ('phonics_' + request.auth.uid)
+          || eligibilityId == ('english_abacus_' + request.auth.uid)
+        ));
       allow write: if isAdmin()
         // Narrow self-service exception: a student may flip their OWN
         // one-time free-competition-entry waiver from unused to used —
@@ -663,6 +667,126 @@ service cloud.firestore {
         && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['is_read']);
 
       allow delete: if false;
+    }
+
+    match /live_rooms/{sessionId} {
+      // Room state belongs to an existing published live session.
+      // Students may only read rooms for courses they are actively enrolled in.
+      allow read: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+        || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+            && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+      // Only Admin or the tutor assigned to this session may create/update room state.
+      allow create: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+
+      allow delete: if isAdmin();
+
+      match /connections/{studentId} {
+          // Only the assigned tutor and owning student may read signaling state.
+          allow read: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+          // Student creates the initial offer connection.
+          allow create: if isAdmin()
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && request.resource.data.student_id == request.auth.uid
+                && request.resource.data.tutor_id == get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+          // Only the assigned tutor may write the answer.
+          // Connection identity and the original offer cannot be changed.
+          allow update: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer == resource.data.offer
+                && request.resource.data.answer is string);
+
+          allow delete: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (isSignedIn() && studentId == request.auth.uid);
+
+          match /student_ice/{candidateId} {
+            allow read: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+              || (isSignedIn() && studentId == request.auth.uid);
+
+            // Student may only append their own ICE candidates.
+            allow create: if isAdmin()
+              || (isSignedIn()
+                  && studentId == request.auth.uid
+                  && request.resource.data.from_user_id == request.auth.uid
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                  && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+            allow update: if false;
+
+            allow delete: if isAdmin()
+              || (isSignedIn() && studentId == request.auth.uid);
+          }
+
+          match /tutor_ice/{candidateId} {
+            allow read: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+              || (isSignedIn() && studentId == request.auth.uid);
+
+            // Only the assigned tutor may append tutor ICE candidates.
+            allow create: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
+                  && request.resource.data.from_user_id == request.auth.uid);
+
+            allow update: if false;
+
+            allow delete: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+          }
+        }
+
+        match /participants/{userId} {
+        // Room participants are visible only to authorized room members.
+        allow read: if isAdmin()
+          || (isApprovedTutor()
+              && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+          || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+              && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+        // A participant may create/update only their own presence document.
+        allow create, update: if isSignedIn()
+          && userId == request.auth.uid
+          && (
+            isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id))
+          );
+
+        allow delete: if isAdmin()
+          || (isSignedIn() && userId == request.auth.uid);
+      }
     }
 
     match /{document=**} {
