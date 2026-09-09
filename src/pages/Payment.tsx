@@ -185,7 +185,12 @@ export default function Payment() {
         // leaving this page stuck on "Loading payment details…" forever.
         if (cancelled) return
         console.error('Unexpected error loading payment page:', err)
-        setError(CONNECTION_ERROR)
+        const firebaseError = err as { code?: string; message?: string }
+      setError(
+        firebaseError.code || firebaseError.message
+          ? `DEBUG: ${firebaseError.code ?? 'unknown'} — ${firebaseError.message ?? 'No message'}`
+          : CONNECTION_ERROR
+      )
       }
     }
 
