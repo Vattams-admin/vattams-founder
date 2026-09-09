@@ -40,6 +40,7 @@ const RefundPolicy = lazy(() => import('@/pages/RefundPolicy'))
 const UdyamRegistration = lazy(() => import('@/pages/UdyamRegistration'))
 const AdminLogin = lazy(() => import('@/pages/admin/AdminLogin'))
 const AdminDashboard = lazy(() => import('@/pages/admin/AdminDashboard'))
+const AdminPricingBootstrap = lazy(() => import('@/pages/admin/AdminPricingBootstrap'))
 const AdminPayments = lazy(() => import('@/pages/admin/AdminPayments'))
 const AdminCourses = lazy(() => import('@/pages/admin/AdminCourses'))
 const AdminCourseForm = lazy(() => import('@/pages/admin/AdminCourseForm'))
@@ -131,6 +132,14 @@ export default function App() {
                 Supabase-backed `admins` table check. Not linked from any
                 public nav; only reachable if you know the URL. */}
             <Route path="/admin/login" element={<AdminLogin />} />
+            <Route
+              path="/admin/pricing-bootstrap"
+              element={
+                <AdminRoute>
+                  <AdminPricingBootstrap />
+                </AdminRoute>
+              }
+            />
             <Route path="/admin/payments" element={<AdminPayments />} />
             <Route path="/admin/courses" element={<AdminCourses />} />
             <Route path="/admin/courses/:id" element={<AdminCourseForm />} />
