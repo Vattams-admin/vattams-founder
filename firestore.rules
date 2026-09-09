@@ -227,7 +227,7 @@ service cloud.firestore {
         let plan = plans.get(key, {});
         let regularPrice = plan.get('regularPrice', 0);
         let discountPercent = plan.get('launchDiscountPercent', 0);
-        let launchPrice = regularPrice * (1 - discountPercent / 100);
+        let launchPrice = math.round(regularPrice * (1 - discountPercent / 100));
         return [regularPrice, launchPrice];
       }
 
@@ -256,7 +256,7 @@ service cloud.firestore {
       let plan = plans.get(planKey, {});
       let regularPrice = plan.get('regularPrice', 0);
       let discountPercent = plan.get('launchDiscountPercent', 50);
-      let launchPrice = regularPrice * (1 - discountPercent / 100);
+      let launchPrice = math.round(regularPrice * (1 - discountPercent / 100));
       return [regularPrice, launchPrice];
     }
 
