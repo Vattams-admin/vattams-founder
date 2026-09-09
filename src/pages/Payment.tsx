@@ -56,6 +56,7 @@ export default function Payment() {
     let cancelled = false
 
     async function init() {
+      let debugStage = 'starting'
       setError(null)
       setNotFound(false)
 
@@ -63,7 +64,8 @@ export default function Payment() {
         // `courseId` is the Firestore document id — same as CourseDetail.tsx
         // (`{ id: docSnap.id, ...docSnap.data() }`), so a direct doc get
         // is enough; no query needed like the slug-based pages.
-        const courseSnap = await getDoc(doc(firestore, 'courses', courseId as string))
+        debugStage = 'course read'
+      const courseSnap = await getDoc(doc(firestore, 'courses', courseId as string))
         if (cancelled) return
 
         if (!courseSnap.exists()) {
@@ -77,7 +79,8 @@ export default function Payment() {
         // src/lib/coursePricing.ts. This replaces the old
         // "always base_fee - discount_amount" assumption; most existing
         // courses now resolve to the monthly group price automatically.
-        const pricingConfig = await getPricingConfig()
+        debugStage = 'pricing config read'
+      const pricingConfig = await getPricingConfig()
         const mode = resolveEffectivePricingMode(courseData)
 
         let specialOfferEligible = true
@@ -104,7 +107,8 @@ export default function Payment() {
         // one-time entry-fee price untouched.
         let usingFreeCompetitionEntry = false
         if (effectivePricing.mode === 'competition_entry') {
-          const phonicsElig = await getOfferEligibility('phonics', user!.id)
+          debugStage = 'phonics eligibility read'
+      const phonicsElig = await getOfferEligibility('phonics', user!.id)
           if (phonicsElig?.freeCompetitionEntry && !phonicsElig.freeCompetitionEntryUsed) {
             usingFreeCompetitionEntry = true
             effectivePricing = { ...effectivePricing, amount: 0, regularAmount: effectivePricing.amount }
@@ -140,7 +144,8 @@ export default function Payment() {
               limit(1)
             )
           : query(collection(firestore, 'payments'), ...baseConstraints, orderBy('created_at', 'desc'), limit(1))
-        const existingSnapshot = await getDocs(existingQuery)
+        debugStage = 'existing payment query'
+      const existingSnapshot = await getDocs(existingQuery)
         if (cancelled) return
 
         if (!existingSnapshot.empty) {
@@ -170,7 +175,8 @@ export default function Payment() {
           batch_number: null,
           revenue_split: null
         }
-        const createdRef = await addDoc(collection(firestore, 'payments'), newPayment)
+        debugStage = 'payment create'
+      const createdRef = await addDoc(collection(firestore, 'payments'), newPayment)
         if (cancelled) return
         setPayment({ id: createdRef.id, ...newPayment } as Payment)
 
@@ -188,7 +194,7 @@ export default function Payment() {
         const firebaseError = err as { code?: string; message?: string }
       setError(
         firebaseError.code || firebaseError.message
-          ? `DEBUG: ${firebaseError.code ?? 'unknown'} — ${firebaseError.message ?? 'No message'}`
+          ? `DEBUG: ${debugStage} → ${firebaseError.code ?? 'unknown'} — ${firebaseError.message ?? 'No message'}`
           : CONNECTION_ERROR
       )
       }
