@@ -175,7 +175,7 @@ export default function Payment() {
           batch_number: null,
           revenue_split: null
         }
-        debugStage = 'payment create'
+        debugStage = `payment create | uid=${newPayment.student_id} | course=${newPayment.course_id} | amount=${newPayment.amount} | mode=${newPayment.pricing_mode_snapshot}`
       const createdRef = await addDoc(collection(firestore, 'payments'), newPayment)
         if (cancelled) return
         setPayment({ id: createdRef.id, ...newPayment } as Payment)
