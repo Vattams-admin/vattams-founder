@@ -1,0 +1,25 @@
+# VATTAMS ACADEMIA — Supabase project configuration.
+#
+# verify_jwt = false below is NOT a security weakening. By default,
+# Supabase's platform gateway requires every Edge Function request to
+# carry a Supabase-issued JWT, and rejects anything else with a 401
+# BEFORE the function's own code ever runs. Both functions listed here
+# were built from day one to authenticate with a FIREBASE ID token
+# instead (see each function's own jwtVerify()/JWKS check against
+# securetoken.google.com) — they were never meant to receive a
+# Supabase-issued token at all. Without this file, every request they
+# ever receive is being rejected twice: once by the platform gateway
+# (which doesn't understand a Firebase token and returns a generic,
+# no-`error`-field 401 the client can't distinguish from any other
+# failure), and the function's own auth code never even gets a chance
+# to run.
+#
+# This does not remove authentication — it removes a redundant,
+# mismatched check and lets the function's real (Firebase) check be the
+# only gate, exactly as it was designed.
+
+[functions.course-material]
+verify_jwt = false
+
+[functions.tutor-onboarding-document]
+verify_jwt = false
