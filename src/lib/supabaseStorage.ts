@@ -242,4 +242,3 @@ export function getCourseMaterialStoragePath(
   filename: string
 ): string {
   return storagePathForUpload(courseId, materialId, filename)
-}
