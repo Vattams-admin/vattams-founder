@@ -9,16 +9,21 @@
 // student; onboarding documents: admin or the owning tutor only) and
 // the task spec asks for tutor documents to be independently reviewable
 // without touching the course-material path.
+
 import { firebaseAuth } from '@/lib/firebase'
 import type { TutorOnboardingDocumentType } from '@/types/tutorOnboarding'
+
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined
+
 if (!SUPABASE_URL) {
   throw new Error(
     'VITE_SUPABASE_URL is missing. Add it to the environment, then restart Vite.'
   )
 }
+
 const SUPABASE_FUNCTION_URL = `${SUPABASE_URL}/functions/v1/tutor-onboarding-document`
 const BUCKET = 'academia-tutor-onboarding-docs'
+
 interface FunctionResponse {
   ok?: boolean
   url?: string
@@ -41,6 +46,14 @@ async function callFunction(body: Record<string, unknown>, signal?: AbortSignal)
     response = await fetch(SUPABASE_FUNCTION_URL, {
       method: 'POST',
       headers: {
+        // Required by Supabase's own gateway (Kong) to route the
+        // request to the function at all — separate from and in
+        // addition to the Authorization header below, which carries
+        // the Firebase ID token the function verifies itself. Confirmed
+        // present in src/pages/admin/AdminCourseContent.tsx's own
+        // hand-rolled call to this same function; missing here was an
+        // inconsistency, not a deliberate omission.
+        apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
@@ -128,7 +141,6 @@ export function uploadTutorOnboardingDocument(
       await uploadPromise
       if (settled) throw new Error('Upload canceled.')
       onProgress?.(100)
-
       // Private bucket — no public URL is ever produced. Only the
       // storage path is persisted (see saveTutorOnboardingDocumentUpload
       // in src/lib/tutorOnboardingDocuments.ts); a fresh signed download
@@ -139,7 +151,6 @@ export function uploadTutorOnboardingDocument(
       throw error
     }
   })()
-
   return {
     promise,
     cancel: () => {
@@ -149,7 +160,6 @@ export function uploadTutorOnboardingDocument(
     },
   }
 }
-
 export async function createTutorOnboardingDownloadUrl(storagePath: string): Promise<string> {
   const result = await callFunction({ action: 'create-download-url', path: storagePath })
   if (!result.url) {
