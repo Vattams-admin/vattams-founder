@@ -98,6 +98,7 @@ export default function App() {
             <Route path="/register" element={<Auth mode="register" />} />
             <Route path="/student/register" element={<StudentRegister />} />
             <Route path="/tutor/register" element={<TutorRegister />} />
+        <Route path="/tutor/payment" element={<TutorPayment />} />
 
             {/* Payment.tsx reads useParams<{ courseId }>() — the param
                 name here must match that, not "paymentId". */}
