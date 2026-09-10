@@ -1,18 +1,28 @@
+// src/lib/tutorOnboardingStorage.ts
+//
+// Mirrors src/lib/supabaseStorage.ts exactly (same Edge-Function-issues-
+// a-signed-URL pattern, same Firebase-ID-token auth), pointed at a
+// separate private bucket + Edge Function for tutor onboarding
+// documents instead of course materials. Kept as its own module rather
+// than parameterizing supabaseStorage.ts because the two buckets have
+// different authorization rules (course materials: admin or enrolled
+// student; onboarding documents: admin or the owning tutor only) and
+// the task spec asks for tutor documents to be independently reviewable
+// without touching the course-material path.
+
 import { firebaseAuth } from '@/lib/firebase'
+import type { TutorOnboardingDocumentType } from '@/types/tutorOnboarding'
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL
-const SUPABASE_FUNCTION_URL =
-  `${SUPABASE_URL}/functions/v1/course-material`
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined
 
-const DEFAULT_BUCKET =
-  import.meta.env.VITE_SUPABASE_STORAGE_BUCKET || 'academia-course-materials'
-
-export interface SupabaseUploadResult {
-  url: string
-  storagePath: string
-  size: number
-  mimeType: string
+if (!SUPABASE_URL) {
+  throw new Error(
+    'VITE_SUPABASE_URL is missing. Add it to the environment, then restart Vite.'
+  )
 }
+
+const SUPABASE_FUNCTION_URL = `${SUPABASE_URL}/functions/v1/tutor-onboarding-document`
+const BUCKET = 'academia-tutor-onboarding-docs'
 
 interface FunctionResponse {
   ok?: boolean
@@ -21,22 +31,19 @@ interface FunctionResponse {
   token?: string
   expires_in?: number
   error?: string
-  message?: string
-  details?: string
 }
 
 async function getFirebaseToken(): Promise<string> {
   const user = firebaseAuth.currentUser
-
   if (!user) {
-    throw new Error('You must be signed in to manage course materials.')
+    throw new Error('You must be signed in to manage onboarding documents.')
   }
-
   return user.getIdToken()
 }
 
-async function callCourseMaterialFunction(
-  body: Record<string, unknown>
+async function callFunction(
+  body: Record<string, unknown>,
+  signal?: AbortSignal
 ): Promise<FunctionResponse> {
   const token = await getFirebaseToken()
 
@@ -45,20 +52,40 @@ async function callCourseMaterialFunction(
     response = await fetch(SUPABASE_FUNCTION_URL, {
       method: 'POST',
       headers: {
+        // Required by Supabase's own gateway (Kong) to route the
+        // request to the function at all — separate from and in
+        // addition to the Authorization header below, which carries
+        // the Firebase ID token the function verifies itself. Confirmed
+        // present in src/pages/admin/AdminCourseContent.tsx's own
+        // hand-rolled call to this same function; missing here was an
+        // inconsistency, not a deliberate omission.
         apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
+      signal,
     })
   } catch (networkError) {
+    if (signal?.aborted) {
+      throw new Error('Upload canceled.')
+    }
+
+    // The raw fetch() call itself failed — no HTTP response was ever
+    // received, distinct from the !response.ok branch below (which
+    // means a response DID arrive, just a non-2xx one). This is what
+    // the browser reports as the generic "TypeError: Failed to fetch"
+    // for DNS failure, an unreachable/undeployed Edge Function, a CORS
+    // block, or the device being offline — none of which are
+    // distinguishable from each other client-side, but "service
+    // unreachable" is still far more actionable than the raw message.
     console.error(
-      '[supabaseStorage] Network-level failure calling course-material:',
+      '[tutorOnboardingStorage] Network-level failure calling tutor-onboarding-document:',
       networkError
     )
 
     throw new Error(
-      'Could not reach the course material service. Check your internet connection and try again — ' +
+      'Could not reach the document upload service. Check your internet connection and try again — ' +
         'if this keeps happening, the upload service itself may be temporarily unavailable.'
     )
   }
@@ -72,53 +99,45 @@ async function callCourseMaterialFunction(
   }
 
   if (!response.ok) {
-    if (import.meta.env.DEV && (data.details || data.message)) {
-      console.error('course-material function error:', {
-        status: response.status,
-        error: data.error,
-        message: data.message,
-        details: data.details,
-      })
-    }
-
     throw new Error(
-      data.error === 'UPLOAD_URL_FAILED'
-        ? data.message || 'Unable to create upload URL'
-        : data.error || `Course material service failed (${response.status}).`
+      data.error ||
+        `Onboarding document service failed (${response.status}).`
     )
   }
 
   return data
 }
 
-function storagePathForUpload(
-  courseId: string,
-  materialId: string,
-  filename: string
+export function getTutorOnboardingStoragePath(
+  tutorId: string,
+  documentType: TutorOnboardingDocumentType,
+  fileName: string
 ): string {
-  return `courses/${courseId}/materials/${materialId}/${filename}`
+  // Matches the spec's recommended pattern exactly:
+  // tutors/{tutorId}/onboarding/{documentId}/{safeFileName}
+  return `tutors/${tutorId}/onboarding/${documentType}/${fileName}`
 }
 
-export function uploadCourseMaterial(
+export function uploadTutorOnboardingDocument(
   storagePath: string,
   file: File,
   onProgress?: (percent: number) => void
 ): {
-  promise: Promise<SupabaseUploadResult>
+  promise: Promise<{ storagePath: string; size: number }>
   cancel: () => void
 } {
   const controller = new AbortController()
   let xhr: XMLHttpRequest | null = null
   let settled = false
 
-  const promise = (async (): Promise<SupabaseUploadResult> => {
+  const promise = (async () => {
     try {
       onProgress?.(0)
 
-      const result = await callCourseMaterialFunction({
-        action: 'create-upload-url',
-        path: storagePath,
-      })
+      const result = await callFunction(
+        { action: 'create-upload-url', path: storagePath },
+        controller.signal
+      )
 
       if (!result.token) {
         throw new Error('Upload authorization token was not returned.')
@@ -126,7 +145,7 @@ export function uploadCourseMaterial(
 
       const uploadUrl =
         `${SUPABASE_URL}/storage/v1/object/upload/sign/` +
-        `${encodeURIComponent(DEFAULT_BUCKET)}/${storagePath}?token=` +
+        `${encodeURIComponent(BUCKET)}/${storagePath}?token=` +
         encodeURIComponent(result.token)
 
       const request = new XMLHttpRequest()
@@ -152,25 +171,17 @@ export function uploadCourseMaterial(
           if (request.status >= 200 && request.status < 300) {
             resolve()
           } else {
-            reject(
-              new Error(
-                `Supabase Storage upload failed (${request.status}).`
-              )
-            )
+            reject(new Error(`Upload failed (${request.status}).`))
           }
         }
 
-        request.onerror = () => {
+        request.onerror = () =>
           reject(
-            new Error(
-              'Network error while uploading the course material.'
-            )
+            new Error('Network error while uploading the document.')
           )
-        }
 
-        request.onabort = () => {
+        request.onabort = () =>
           reject(new Error('Upload canceled.'))
-        }
 
         request.send(file)
       })
@@ -183,11 +194,13 @@ export function uploadCourseMaterial(
 
       onProgress?.(100)
 
+      // Private bucket — no public URL is ever produced. Only the
+      // storage path is persisted (see saveTutorOnboardingDocumentUpload
+      // in src/lib/tutorOnboardingDocuments.ts); a fresh signed download
+      // URL is generated on demand when a tutor/admin opens the file.
       return {
-        url: '',
         storagePath,
         size: file.size,
-        mimeType: file.type,
       }
     } catch (error) {
       if (controller.signal.aborted) {
@@ -201,8 +214,6 @@ export function uploadCourseMaterial(
   return {
     promise,
     cancel: () => {
-      if (settled) return
-
       settled = true
       controller.abort()
       xhr?.abort()
@@ -210,10 +221,10 @@ export function uploadCourseMaterial(
   }
 }
 
-export async function createCourseMaterialDownloadUrl(
+export async function createTutorOnboardingDownloadUrl(
   storagePath: string
 ): Promise<string> {
-  const result = await callCourseMaterialFunction({
+  const result = await callFunction({
     action: 'create-download-url',
     path: storagePath,
   })
@@ -223,23 +234,4 @@ export async function createCourseMaterialDownloadUrl(
   }
 
   return result.url
-}
-
-export async function deleteCourseMaterialFile(
-  storagePath: string | null
-): Promise<void> {
-  if (!storagePath) return
-
-  await callCourseMaterialFunction({
-    action: 'delete',
-    path: storagePath,
-  })
-}
-
-export function getCourseMaterialStoragePath(
-  courseId: string,
-  materialId: string,
-  filename: string
-): string {
-  return storagePathForUpload(courseId, materialId, filename)
 }
