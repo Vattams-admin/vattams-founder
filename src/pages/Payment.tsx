@@ -175,7 +175,7 @@ export default function Payment() {
           batch_number: null,
           revenue_split: null
         }
-        debugStage = `payment create | uid=${newPayment.student_id} | course=${newPayment.course_id} | amount=${newPayment.amount} | mode=${newPayment.pricing_mode_snapshot}`
+        debugStage = `payment create | uid=${newPayment.student_id} | course=${newPayment.course_id} | name=${courseData.name} | category=${courseData.category_id ?? 'null'} | competition=${courseData.is_competition} | free=${courseData.is_free} | override=${courseData.monthly_fee_override ?? 'null'} | amount=${newPayment.amount} | mode=${newPayment.pricing_mode_snapshot}`
       const createdRef = await addDoc(collection(firestore, 'payments'), newPayment)
         if (cancelled) return
         setPayment({ id: createdRef.id, ...newPayment } as Payment)
