@@ -130,6 +130,12 @@ export function useLiveWebRTC({
   )
   const localStreamRef = useRef<MediaStream | null>(null)
   const screenStreamRef = useRef<MediaStream | null>(null)
+  // Guards against the signalling effect re-running (e.g. when the
+  // `participants` list updates) while a negotiation for a given remote
+  // peer is already in flight. Without this, two concurrent
+  // createOffer()/setLocalDescription() (or createAnswer()/
+  // setLocalDescription()) calls can race on the same RTCPeerConnection.
+  const negotiatingRef = useRef(new Set<string>())
 
   const updateRemoteStream = useCallback(
     (remoteUserId: string, stream: MediaStream) => {
@@ -169,6 +175,11 @@ export function useLiveWebRTC({
       const existing = peersRef.current.get(remoteUserId)
       if (existing) return existing
 
+      console.log('[liveWebRTC] Creating peer connection', {
+        role: isTutor ? 'tutor' : 'student',
+        remoteUserId,
+      })
+
       const peer = new RTCPeerConnection(RTC_CONFIGURATION)
 
       const stream = localStreamRef.current
@@ -181,11 +192,17 @@ export function useLiveWebRTC({
       peer.ontrack = (event) => {
         const [streamFromPeer] = event.streams
         if (streamFromPeer) {
+          console.log('[liveWebRTC] Remote stream received', { remoteUserId })
           updateRemoteStream(remoteUserId, streamFromPeer)
         }
       }
 
       peer.onconnectionstatechange = () => {
+        console.log('[liveWebRTC] connectionState changed', {
+          remoteUserId,
+          connectionState: peer.connectionState,
+        })
+
         if (
           peer.connectionState === 'failed' ||
           peer.connectionState === 'closed'
@@ -199,8 +216,27 @@ export function useLiveWebRTC({
         }))
       }
 
+      peer.oniceconnectionstatechange = () => {
+        console.log('[liveWebRTC] iceConnectionState changed', {
+          remoteUserId,
+          iceConnectionState: peer.iceConnectionState,
+        })
+      }
+
+      peer.onsignalingstatechange = () => {
+        console.log('[liveWebRTC] signalingState changed', {
+          remoteUserId,
+          signalingState: peer.signalingState,
+        })
+      }
+
       peer.onicecandidate = async (event) => {
         if (!event.candidate) return
+
+        console.log('[liveWebRTC] ICE candidate created', {
+          role: isTutor ? 'tutor' : 'student',
+          remoteUserId,
+        })
 
         const candidate = {
           fromUserId: userId,
@@ -253,6 +289,8 @@ export function useLiveWebRTC({
       remoteUserId: string,
       candidate: RTCIceCandidateInit,
     ) => {
+      console.log('[liveWebRTC] ICE candidate received', { remoteUserId })
+
       const peer = peersRef.current.get(remoteUserId)
 
       if (!peer || !peer.remoteDescription) {
@@ -407,6 +445,10 @@ export function useLiveWebRTC({
   }, [startLocalMedia])
 
   useEffect(() => {
+    if (!sessionId || !userId || !tutorId) {
+      return
+    }
+
     const cleanups: Array<() => void> = []
 
     if (isTutor) {
@@ -427,23 +469,43 @@ export function useLiveWebRTC({
 
                   const peer = createPeer(studentId)
 
-                  if (connection.offer && peer.signalingState === 'stable') {
-                    await peer.setRemoteDescription(
-                      JSON.parse(connection.offer) as RTCSessionDescriptionInit,
-                    )
+                  if (
+                    connection.offer &&
+                    peer.signalingState === 'stable' &&
+                    !negotiatingRef.current.has(studentId)
+                  ) {
+                    console.log('[liveWebRTC] Offer received', {
+                      studentId,
+                      length: connection.offer.length,
+                    })
 
-                    await addPendingCandidates(studentId, peer)
+                    negotiatingRef.current.add(studentId)
 
-                    const answer = await peer.createAnswer()
-                    await peer.setLocalDescription(answer)
-
-                    if (peer.localDescription) {
-                      await writeAnswer(
-                        sessionId,
-                        studentId,
-                        tutorId,
-                        JSON.stringify(peer.localDescription),
+                    try {
+                      await peer.setRemoteDescription(
+                        JSON.parse(connection.offer) as RTCSessionDescriptionInit,
                       )
+
+                      await addPendingCandidates(studentId, peer)
+
+                      const answer = await peer.createAnswer()
+                      console.log('[liveWebRTC] Answer created', {
+                        studentId,
+                        type: answer.type,
+                      })
+                      await peer.setLocalDescription(answer)
+
+                      if (peer.localDescription) {
+                        await writeAnswer(
+                          sessionId,
+                          studentId,
+                          tutorId,
+                          JSON.stringify(peer.localDescription),
+                        )
+                        console.log('[liveWebRTC] Answer written', { studentId })
+                      }
+                    } finally {
+                      negotiatingRef.current.delete(studentId)
                     }
                   }
                 } catch (error) {
@@ -481,6 +543,11 @@ export function useLiveWebRTC({
 
           if (peer.signalingState !== 'have-local-offer') return
 
+          console.log('[liveWebRTC] Answer received', {
+            tutorId,
+            length: connection.answer.length,
+          })
+
           void (async () => {
             try {
               await peer.setRemoteDescription(
@@ -516,18 +583,32 @@ export function useLiveWebRTC({
           await startLocalMedia()
 
           const peer = createPeer(tutorId)
-          if (peer.signalingState !== 'stable') return
 
-          const offer = await peer.createOffer()
-          await peer.setLocalDescription(offer)
+          if (
+            peer.signalingState !== 'stable' ||
+            negotiatingRef.current.has(tutorId)
+          ) {
+            return
+          }
 
-          if (peer.localDescription) {
-            await writeOffer(
-              sessionId,
-              userId,
-              tutorId,
-              JSON.stringify(peer.localDescription),
-            )
+          negotiatingRef.current.add(tutorId)
+
+          try {
+            const offer = await peer.createOffer()
+            console.log('[liveWebRTC] Offer created', { tutorId, type: offer.type })
+            await peer.setLocalDescription(offer)
+
+            if (peer.localDescription) {
+              await writeOffer(
+                sessionId,
+                userId,
+                tutorId,
+                JSON.stringify(peer.localDescription),
+              )
+              console.log('[liveWebRTC] Offer written', { tutorId })
+            }
+          } finally {
+            negotiatingRef.current.delete(tutorId)
           }
         } catch (error) {
           console.error('[liveWebRTC] Failed to create student offer:', error)
