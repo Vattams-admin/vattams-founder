@@ -75,9 +75,17 @@ export default function LiveSessionPage() {
 
         setSession(found)
 
-        const existingAttendance = await getAttendanceForStudentSession(sessionId, user.id)
-        if (cancelled) return
-        setAttendance(existingAttendance)
+        try {
+          const existingAttendance = await getAttendanceForStudentSession(sessionId, user.id)
+          if (cancelled) return
+          setAttendance(existingAttendance)
+        } catch (err) {
+          // Attendance is optional join metadata. A missing or inaccessible
+          // first-time attendance document must not block live-session access.
+          console.warn('Attendance lookup unavailable:', err)
+          if (cancelled) return
+          setAttendance(null)
+        }
 
         setState('ready')
       } catch (err) {
