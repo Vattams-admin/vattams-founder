@@ -190,11 +190,20 @@ export function useLiveWebRTC({
       }
 
       peer.ontrack = (event) => {
-        const [streamFromPeer] = event.streams
-        if (streamFromPeer) {
-          console.log('[liveWebRTC] Remote stream received', { remoteUserId })
-          updateRemoteStream(remoteUserId, streamFromPeer)
+        const streamFromPeer = event.streams[0] ?? remoteStreamsRef.current.get(remoteUserId) ?? new MediaStream()
+
+        if (!event.streams[0]) {
+          streamFromPeer.addTrack(event.track)
         }
+
+        console.log('[liveWebRTC] Remote track received', {
+          remoteUserId,
+          trackKind: event.track.kind,
+          trackState: event.track.readyState,
+          streamTrackCount: streamFromPeer.getTracks().length,
+        })
+
+        updateRemoteStream(remoteUserId, streamFromPeer)
       }
 
       peer.onconnectionstatechange = () => {
