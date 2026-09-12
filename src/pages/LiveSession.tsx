@@ -100,18 +100,19 @@ export default function LiveSessionPage() {
     if (!session || !user) return
     setJoining(true)
     try {
-      // Self-reported only — see SessionAttendanceRecord.source in
-      // src/types/liveSession.ts. Never blocks opening the meeting link.
-      await recordStudentJoinClick(session.id, session.course_id, user.id, user.displayName ?? null)
+      await recordStudentJoinClick(
+        session.id,
+        session.course_id,
+        user.id,
+        user.displayName ?? null
+      )
     } catch (err) {
       console.error('Failed to record join click:', err)
     } finally {
       setJoining(false)
     }
 
-    if (session.meeting_url) {
-      window.open(session.meeting_url, '_blank', 'noopener,noreferrer')
-    }
+    navigate(`/live-classroom/${session.id}`)
   }
 
   if (state === 'loading' || authLoading) {
@@ -236,11 +237,10 @@ export default function LiveSessionPage() {
               {Math.round((end.getTime() - start.getTime()) / 60000)} min session
             </p>
             <p className="mt-4 text-xs text-slate-muted">
-              You are joining your VATTAMS ACADEMIA live class. The meeting opens in a new tab
-              {session.meeting_provider !== 'external' ? ` via ${session.meeting_provider.replace('_', ' ')}` : ''}.
+              Join your VATTAMS ACADEMIA live classroom.
             </p>
-            <button onClick={handleJoin} disabled={joining || !session.meeting_url} className="btn-primary mt-4">
-              {session.meeting_url ? 'Join Live Session' : 'Meeting link not available'}
+            <button onClick={handleJoin} disabled={joining} className="btn-primary mt-4">
+              Join Live Session
             </button>
             {attendance?.joined_at && (
               <p className="mt-2 text-xs text-slate-muted">
