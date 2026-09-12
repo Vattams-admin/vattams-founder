@@ -407,6 +407,10 @@ export function useLiveWebRTC({
   }, [startLocalMedia])
 
   useEffect(() => {
+    if (!sessionId || !userId || !tutorId) {
+      return
+    }
+
     const cleanups: Array<() => void> = []
 
     if (isTutor) {
