@@ -471,6 +471,7 @@ export function useLiveWebRTC({
 
                   if (
                     connection.offer &&
+                    connection.answer == null &&
                     peer.signalingState === 'stable' &&
                     !negotiatingRef.current.has(studentId)
                   ) {
