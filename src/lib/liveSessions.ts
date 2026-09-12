@@ -406,23 +406,34 @@ export async function recordStudentJoinClick(
   studentName: string | null
 ): Promise<void> {
   const id = attendanceDocId(sessionId, studentUid)
+  const attendanceRef = doc(firestore, ATTENDANCE, id)
   const now = new Date().toISOString()
 
-  await setDoc(
-    doc(firestore, ATTENDANCE, id),
-    {
-      session_id: sessionId,
-      course_id: courseId,
-      student_id: studentUid,
-      student_name: studentName,
-      status: 'present',
-      source: 'self_reported',
-      joined_at: now,
-      marked_by: null,
-      marked_at: null
-    },
-    { merge: true }
-  )
+  try {
+    const existing = await getDoc(attendanceRef)
+
+    if (existing.exists()) {
+      await updateDoc(attendanceRef, { joined_at: now })
+      return
+    }
+  } catch (err) {
+    // A first-time student's attendance document may not exist yet.
+    // The read can be denied because the read rule relies on resource.data.
+    // Fall through to the security-checked self-reported create below.
+    console.warn('Attendance lookup unavailable; attempting self-reported create:', err)
+  }
+
+  await setDoc(attendanceRef, {
+    session_id: sessionId,
+    course_id: courseId,
+    student_id: studentUid,
+    student_name: studentName,
+    status: 'present',
+    source: 'self_reported',
+    joined_at: now,
+    marked_by: null,
+    marked_at: null
+  })
 }
 
 /** Tutor/admin override of a student's attendance for a session. */
