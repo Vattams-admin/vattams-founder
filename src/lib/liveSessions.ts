@@ -406,25 +406,23 @@ export async function recordStudentJoinClick(
   studentName: string | null
 ): Promise<void> {
   const id = attendanceDocId(sessionId, studentUid)
-  const existing = await getDoc(doc(firestore, ATTENDANCE, id))
   const now = new Date().toISOString()
 
-  if (existing.exists()) {
-    await updateDoc(doc(firestore, ATTENDANCE, id), { joined_at: now })
-    return
-  }
-
-  await setDoc(doc(firestore, ATTENDANCE, id), {
-    session_id: sessionId,
-    course_id: courseId,
-    student_id: studentUid,
-    student_name: studentName,
-    status: 'present',
-    source: 'self_reported',
-    joined_at: now,
-    marked_by: null,
-    marked_at: null
-  })
+  await setDoc(
+    doc(firestore, ATTENDANCE, id),
+    {
+      session_id: sessionId,
+      course_id: courseId,
+      student_id: studentUid,
+      student_name: studentName,
+      status: 'present',
+      source: 'self_reported',
+      joined_at: now,
+      marked_by: null,
+      marked_at: null
+    },
+    { merge: true }
+  )
 }
 
 /** Tutor/admin override of a student's attendance for a session. */
