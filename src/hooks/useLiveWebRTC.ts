@@ -510,10 +510,12 @@ export function useLiveWebRTC({
 
       cleanups.push(cleanupConnection, cleanupIce)
 
-      const peer = createPeer(tutorId)
 
       void (async () => {
         try {
+          await startLocalMedia()
+
+          const peer = createPeer(tutorId)
           if (peer.signalingState !== 'stable') return
 
           const offer = await peer.createOffer()
