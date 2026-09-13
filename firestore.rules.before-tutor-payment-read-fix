@@ -227,7 +227,7 @@ service cloud.firestore {
         let plan = plans.get(key, {});
         let regularPrice = plan.get('regularPrice', 0);
         let discountPercent = plan.get('launchDiscountPercent', 0);
-        let launchPrice = math.round(regularPrice * (1 - discountPercent / 100.0));
+        let launchPrice = math.round(regularPrice * (1 - discountPercent / 100));
         return [regularPrice, launchPrice];
       }
 
@@ -256,7 +256,7 @@ service cloud.firestore {
       let plan = plans.get(planKey, {});
       let regularPrice = plan.get('regularPrice', 0);
       let discountPercent = plan.get('launchDiscountPercent', 50);
-      let launchPrice = math.round(regularPrice * (1 - discountPercent / 100.0));
+      let launchPrice = math.round(regularPrice * (1 - discountPercent / 100));
       return [regularPrice, launchPrice];
     }
 
@@ -632,16 +632,6 @@ service cloud.firestore {
       allow list: if isAdmin() || request.query.limit <= 1;
       allow create, update: if isAdmin();
       allow delete: if false;
-    }
-
-    match /push_tokens/{tokenId} {
-      // FCM registration tokens are private to the signed-in user.
-      // The token document ID must match the token field and the owner UID.
-      allow create, update: if isSignedIn()
-        && request.resource.data.uid == request.auth.uid
-        && request.resource.data.token == tokenId;
-
-      allow read, delete: if false;
     }
 
     match /notifications/{notificationId} {

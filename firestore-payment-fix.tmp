@@ -634,16 +634,6 @@ service cloud.firestore {
       allow delete: if false;
     }
 
-    match /push_tokens/{tokenId} {
-      // FCM registration tokens are private to the signed-in user.
-      // The token document ID must match the token field and the owner UID.
-      allow create, update: if isSignedIn()
-        && request.resource.data.uid == request.auth.uid
-        && request.resource.data.token == tokenId;
-
-      allow read, delete: if false;
-    }
-
     match /notifications/{notificationId} {
       function isOwnNotification() {
         return isSignedIn() && resource.data.recipient_uid == request.auth.uid;
