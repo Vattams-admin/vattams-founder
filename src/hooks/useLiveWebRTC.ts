@@ -594,6 +594,16 @@ export function useLiveWebRTC({
                         ) as RTCSessionDescriptionInit,
                       )
 
+                      // Explicitly keep the tutor's local media
+                      // bidirectional. This is important on mobile
+                      // browsers where the answer can otherwise end up
+                      // without a usable sending direction.
+                      peer.getTransceivers().forEach((transceiver) => {
+                        if (transceiver.sender.track) {
+                          transceiver.direction = 'sendrecv'
+                        }
+                      })
+
                       await addPendingCandidates(
                         studentId,
                         peer,
