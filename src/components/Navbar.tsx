@@ -22,11 +22,18 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
 
+  // ROLE-AWARE DASHBOARD LINK — this Navbar is shared by every signed-in
+  // visitor (see useUserRole.ts), so the persistent "Dashboard" link must
+  // not hardcode the student route. A Tutor clicking this from anywhere
+  // in the app (including right after leaving a live classroom) needs to
+  // land on their own dashboard, never the Student "Your learning" page.
+  // Reuses the same role lookup already used for the notification bell
+  // below, instead of adding a new source of truth.
+  const dashboardPath = role === 'tutor' ? '/tutor/dashboard' : '/dashboard'
   async function handleLogout() {
     await signOut(firebaseAuth)
     navigate('/')
   }
-
   return (
     <header className="sticky top-0 z-40 border-b border-white/5 bg-ink/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
@@ -36,7 +43,6 @@ export default function Navbar() {
             VATTAMS <span className="text-gold">ACADEMIA</span>
           </span>
         </Link>
-
         {/* Seven top-level items is intentional (per nav spec) — the full
             row only shows from xl up so it never feels cramped; below
             that, everything (including these links) lives in the mobile
@@ -57,12 +63,11 @@ export default function Navbar() {
             </NavLink>
           ))}
         </nav>
-
         <div className="hidden items-center gap-3 xl:flex">
           {loading ? null : user ? (
             <>
               <NotificationBell uid={user.id} role={role} />
-              <Link to="/dashboard" className="text-sm font-medium text-slate-muted hover:text-parchment">
+              <Link to={dashboardPath} className="text-sm font-medium text-slate-muted hover:text-parchment">
                 {user.displayName?.split(' ')[0] ?? 'Dashboard'}
               </Link>
               <button onClick={handleLogout} className="btn-secondary text-sm">
@@ -80,10 +85,15 @@ export default function Navbar() {
               <Link to="/student/register" className="btn-primary text-sm">
                 Student Registration
               </Link>
+              {/* Existing Firebase + admin_users Firestore auth flow
+                  (see useAdminAuth.ts / AdminRoute.tsx) — this only adds
+                  a visible entry point to it, no new auth system. */}
+              <Link to="/admin" className="text-sm font-medium text-slate-muted hover:text-parchment">
+                Admin Login
+              </Link>
             </>
           )}
         </div>
-
         <button
           className="rounded-card p-2 text-parchment xl:hidden"
           aria-label="Toggle menu"
@@ -95,7 +105,6 @@ export default function Navbar() {
           </svg>
         </button>
       </div>
-
       {menuOpen && (
         <div className="border-t border-white/5 bg-ink px-4 pb-4 xl:hidden">
           <nav className="flex flex-col gap-1 pt-2">
@@ -127,7 +136,7 @@ export default function Navbar() {
                     </Link>
                     <NotificationBell uid={user.id} role={role} />
                   </div>
-                  <Link to="/dashboard" onClick={() => setMenuOpen(false)} className="btn-secondary text-sm">
+                  <Link to={dashboardPath} onClick={() => setMenuOpen(false)} className="btn-secondary text-sm">
                     Dashboard
                   </Link>
                   <button
@@ -150,6 +159,13 @@ export default function Navbar() {
                   </Link>
                   <Link to="/tutor/register" onClick={() => setMenuOpen(false)} className="btn-secondary text-sm">
                     Become a Tutor
+                  </Link>
+                  <Link
+                    to="/admin"
+                    onClick={() => setMenuOpen(false)}
+                    className="text-center text-sm font-medium text-slate-muted hover:text-parchment"
+                  >
+                    Admin Login
                   </Link>
                 </>
               )}
