@@ -248,6 +248,21 @@ export function useLiveWebRTC({
 
       const peer = new RTCPeerConnection(RTC_CONFIGURATION)
 
+      setMediaState((current) => ({
+        ...current,
+        connectionState: 'new',
+      }))
+
+      console.log('[liveWebRTC] Peer created successfully', {
+        role: isTutor ? 'tutor' : 'student',
+        remoteUserId,
+        localStreamExists: Boolean(localStreamRef.current),
+        localAudioTracks:
+          localStreamRef.current?.getAudioTracks().length ?? 0,
+        localVideoTracks:
+          localStreamRef.current?.getVideoTracks().length ?? 0,
+      })
+
       const stream = localStreamRef.current
       if (stream) {
         stream.getTracks().forEach((track) => {
@@ -577,6 +592,17 @@ export function useLiveWebRTC({
 
     const cleanups: Array<() => void> = []
 
+    console.log('[liveWebRTC] Signalling effect started', {
+      role: isTutor ? 'tutor' : 'student',
+      sessionId,
+      userId,
+      tutorId,
+      participantCount: participants.length,
+      participantIds: participants.map(
+        (participant) => participant.user_id,
+      ),
+    })
+
     if (isTutor) {
       const studentIds = participants
         .filter(
@@ -816,10 +842,28 @@ export function useLiveWebRTC({
 
       void (async () => {
         try {
-          await startLocalMedia()
+          console.log('[liveWebRTC] Student negotiation starting', {
+            userId,
+            tutorId,
+            participantCount: participants.length,
+          })
+
+          const stream = await startLocalMedia()
+
+          console.log('[liveWebRTC] Student local media ready', {
+            hasStream: Boolean(stream),
+            audioTracks: stream?.getAudioTracks().length ?? 0,
+            videoTracks: stream?.getVideoTracks().length ?? 0,
+          })
 
           const peer =
             createPeer(tutorId)
+
+          console.log('[liveWebRTC] Student peer ready', {
+            tutorId,
+            signalingState: peer.signalingState,
+            connectionState: peer.connectionState,
+          })
 
           if (
             peer.signalingState !== 'stable' ||
@@ -835,6 +879,16 @@ export function useLiveWebRTC({
           )
 
           try {
+            console.log('[liveWebRTC] Creating student offer', {
+              tutorId,
+              signalingState: peer.signalingState,
+              connectionState: peer.connectionState,
+              senders: peer.getSenders().map((sender) => ({
+                kind: sender.track?.kind ?? null,
+                trackId: sender.track?.id ?? null,
+              })),
+            })
+
             const offer =
               await peer.createOffer()
 
