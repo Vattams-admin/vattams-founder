@@ -12,6 +12,43 @@ import type { LiveRoomParticipant } from '@/types/liveRoom'
 // now, but for production reliability get a private TURN server (e.g.
 // a Metered.ca or Twilio account, or self-hosted coturn) and swap
 // the credentials below.
+const waitForIceGatheringComplete = (
+  peer: RTCPeerConnection,
+  timeoutMs = 8000,
+): Promise<void> => {
+  if (peer.iceGatheringState === 'complete') {
+    return Promise.resolve()
+  }
+
+  return new Promise((resolve) => {
+    let finished = false
+
+    const finish = () => {
+      if (finished) return
+      finished = true
+      peer.removeEventListener(
+        'icegatheringstatechange',
+        handleStateChange,
+      )
+      clearTimeout(timeout)
+      resolve()
+    }
+
+    const handleStateChange = () => {
+      if (peer.iceGatheringState === 'complete') {
+        finish()
+      }
+    }
+
+    const timeout = window.setTimeout(finish, timeoutMs)
+
+    peer.addEventListener(
+      'icegatheringstatechange',
+      handleStateChange,
+    )
+  })
+}
+
 const RTC_CONFIGURATION: RTCConfiguration = {
   iceServers: [
     {
@@ -624,6 +661,8 @@ export function useLiveWebRTC({
                         answer,
                       )
 
+                      await waitForIceGatheringComplete(peer)
+
                       if (
                         peer.localDescription
                       ) {
@@ -810,6 +849,8 @@ export function useLiveWebRTC({
             await peer.setLocalDescription(
               offer,
             )
+
+            await waitForIceGatheringComplete(peer)
 
             if (peer.localDescription) {
               await writeOffer(
