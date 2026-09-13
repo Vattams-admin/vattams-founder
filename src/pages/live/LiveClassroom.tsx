@@ -28,87 +28,78 @@ export default function LiveClassroom() {
   const { user, loading: authLoading } = useAuth()
   const { role: userRole, loading: roleLoading } = useUserRole()
   const navigate = useNavigate()
-
   const [session, setSession] = useState<LiveSession | null>(null)
   const [state, setState] = useState<ViewState>('loading')
   const [now, setNow] = useState(() => new Date())
   const [participants, setParticipants] = useState<import('@/types/liveRoom').LiveRoomParticipant[]>([])
   const localVideoRef = useRef<HTMLVideoElement | null>(null)
   const remoteVideoRefs = useRef<Record<string, HTMLVideoElement | null>>({})
-
+  // ROLE-AWARE EXIT DESTINATION — root-cause fix.
+  // Every "leave the classroom" link on this page used to point at the
+  // hardcoded student route ('/dashboard'), regardless of who was
+  // signed in. A tutor exiting a live class was therefore always sent
+  // to the Student dashboard ("Your learning"). userRole comes from the
+  // same useUserRole() lookup already used below to decide the WebRTC
+  // role, so this reuses existing role detection instead of adding a
+  // new one. Computed above the early-return states (not_found /
+  // no_access / error) so those exits are role-aware too, not just the
+  // main "Leave classroom" buttons.
+  const dashboardPath = userRole === 'tutor' ? '/tutor/dashboard' : '/dashboard'
   useEffect(() => {
     if (authLoading || roleLoading) return
-
     if (!user) {
       navigate('/login', {
         state: { redirectTo: `/live-classroom/${sessionId}` },
       })
       return
     }
-
     if (!sessionId) {
       setState('not_found')
       return
     }
-
     let cancelled = false
-
     ;(async () => {
       setState('loading')
-
       try {
         const found = await getLiveSession(sessionId)
-
         if (cancelled) return
-
         if (!found) {
           setState('not_found')
           return
         }
-
         if (found.status !== 'published') {
           setState('no_access')
           return
         }
-
         const isTutor = userRole === 'tutor' && found.tutor_id === user.id
         const enrolled = isTutor
           ? true
           : await hasActiveEnrolment(user.id, found.course_id)
-
         if (cancelled) return
-
         if (!enrolled) {
           setState('no_access')
           return
         }
-
         setSession(found)
         setState('ready')
       } catch (err) {
         console.error('Failed to load live classroom:', err)
-
         if (!cancelled) {
           setState('error')
         }
       }
     })()
-
     return () => {
       cancelled = true
     }
   }, [sessionId, user, authLoading, roleLoading, userRole, navigate])
-
   useEffect(() => {
     const tick = setInterval(() => setNow(new Date()), 1000)
     return () => clearInterval(tick)
   }, [])
-
   useEffect(() => {
     if (!session || !sessionId || !user || roleLoading) return
-
     const isTutor = userRole === 'tutor'
-
     void ensureLiveRoom(sessionId)
       .then(() => joinLiveRoom(sessionId, {
         userId: user.id,
@@ -123,13 +114,11 @@ export default function LiveClassroom() {
       .catch((error) => {
         console.error('[LiveClassroom] Failed to join room:', error)
       })
-
     const unsubscribe = subscribeToLiveRoomParticipants(
       sessionId,
       setParticipants,
       (error) => console.error('[LiveClassroom] Participant listener error:', error),
     )
-
     return () => {
       unsubscribe()
       void leaveLiveRoom(sessionId, user.id).catch((error) => {
@@ -137,9 +126,7 @@ export default function LiveClassroom() {
       })
     }
   }, [session, sessionId, user, userRole, roleLoading])
-
   const isTutor = userRole === 'tutor'
-
   const {
     localStream,
     remoteStreams,
@@ -162,28 +149,22 @@ export default function LiveClassroom() {
     subscribeStudentIce: subscribeToStudentIceCandidates,
     subscribeTutorIce: subscribeToTutorIceCandidates,
   })
-
   useEffect(() => {
     const video = localVideoRef.current
     if (!video) return
-
     video.srcObject = localStream ?? null
-
     if (localStream) {
       void video.play().catch(() => undefined)
     }
   }, [localStream])
-
   useEffect(() => {
     remoteStreams.forEach(({ userId, stream }) => {
       const video = remoteVideoRefs.current[userId]
       if (!video) return
-
       video.srcObject = stream
       void video.play().catch(() => undefined)
     })
   }, [remoteStreams])
-
   if (state === 'loading' || authLoading) {
     return (
       <main className="min-h-screen bg-[#050b16] px-4 py-20 text-center text-slate-400">
@@ -191,7 +172,6 @@ export default function LiveClassroom() {
       </main>
     )
   }
-
   if (state === 'not_found') {
     return (
       <main className="min-h-screen bg-[#050b16] px-4 py-20 text-center text-white">
@@ -199,13 +179,12 @@ export default function LiveClassroom() {
         <p className="mt-3 text-sm text-slate-400">
           This live class does not exist or may have been removed.
         </p>
-        <Link to="/dashboard" className="btn-primary mt-6 inline-flex">
+        <Link to={dashboardPath} className="btn-primary mt-6 inline-flex">
           Back to dashboard
         </Link>
       </main>
     )
   }
-
   if (state === 'no_access') {
     return (
       <main className="min-h-screen bg-[#050b16] px-4 py-20 text-center text-white">
@@ -214,13 +193,12 @@ export default function LiveClassroom() {
           You do not have access to this live classroom. The class may not
           be published or you may not be actively enrolled in its course.
         </p>
-        <Link to="/dashboard" className="btn-primary mt-6 inline-flex">
+        <Link to={dashboardPath} className="btn-primary mt-6 inline-flex">
           Back to dashboard
         </Link>
       </main>
     )
   }
-
   if (state === 'error' || !session) {
     return (
       <main className="min-h-screen bg-[#050b16] px-4 py-20 text-center text-white">
@@ -238,9 +216,7 @@ export default function LiveClassroom() {
       </main>
     )
   }
-
   const phase = computeLiveSessionPhase(session, now)
-
   return (
     <main className="min-h-screen bg-[#050b16] text-white">
       <div className="mx-auto flex min-h-screen max-w-[1600px] flex-col px-3 py-3 sm:px-5 lg:px-6">
@@ -249,32 +225,26 @@ export default function LiveClassroom() {
             <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-cyan-300">
               VATTAMS ACADEMIA
             </p>
-
             <h1 className="mt-1 truncate text-sm font-semibold sm:text-base">
               {session.course_name ?? 'Live Classroom'}
             </h1>
-
             <p className="mt-0.5 truncate text-xs text-slate-400">
               {session.title}
               {session.topic ? ` · ${session.topic}` : ''}
             </p>
           </div>
-
           <div className="live-pill shrink-0 text-xs font-semibold">
             <span className="live-pulse" />
             {phase === 'live' ? 'Live' : phase.replace('_', ' ')}
           </div>
         </header>
-
         <section className="grid flex-1 gap-3 py-3 lg:grid-cols-[minmax(0,1fr)_320px]">
             <div className="live-glass relative min-h-[55vh] overflow-hidden rounded-3xl bg-black">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(56,189,248,.12),transparent_45%)]" />
-
               {remoteStreams.length > 0 ? (
                 <div className="relative z-10 grid min-h-[55vh] grid-cols-1 gap-2 p-2 sm:grid-cols-2">
                   {remoteStreams.map(({ userId }) => {
                     const participant = participants.find((item) => item.user_id === userId)
-
                     return (
                       <div
                         key={userId}
@@ -288,7 +258,6 @@ export default function LiveClassroom() {
                           playsInline
                           className="h-full w-full object-cover"
                         />
-
                         <div className="absolute bottom-3 left-3 rounded-full border border-white/10 bg-black/50 px-3 py-1.5 text-xs font-semibold backdrop-blur">
                           {participant?.display_name ?? 'Participant'}
                         </div>
@@ -302,13 +271,11 @@ export default function LiveClassroom() {
                     <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-white/10 bg-white/5 text-2xl shadow-2xl">
                       {session.tutor_name?.charAt(0).toUpperCase() ?? 'V'}
                     </div>
-
                     <h2 className="mt-5 text-xl font-semibold sm:text-2xl">
                       {session.tutor_name
                         ? `${session.tutor_name}'s classroom`
                         : "Your tutor's classroom"}
                     </h2>
-
                     <p className="mt-2 text-sm leading-6 text-slate-400">
                       {phase === 'live'
                         ? 'Waiting for the media connection…'
@@ -320,7 +287,6 @@ export default function LiveClassroom() {
                               ? 'This classroom has ended.'
                               : 'Classroom connection is being prepared.'}
                     </p>
-
                     <div className="mt-4 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left text-xs text-slate-400">
                       <div>Participants: {participants.length}</div>
                       <div className="mt-1">
@@ -333,7 +299,6 @@ export default function LiveClassroom() {
                   </div>
                 </div>
               )}
-
               {localStream && (
                 <div className="absolute bottom-3 right-3 z-20 h-28 w-40 overflow-hidden rounded-xl border border-white/20 bg-black shadow-2xl sm:h-36 sm:w-52">
                   <video
@@ -349,22 +314,18 @@ export default function LiveClassroom() {
                 </div>
               )}
             </div>
-
           <aside className="live-glass rounded-3xl p-4">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
               Classroom
             </p>
-
             <h2 className="mt-1 text-lg font-semibold">
               {session.title}
             </h2>
-
             {session.description && (
               <p className="mt-3 text-sm leading-6 text-slate-400">
                 {session.description}
               </p>
             )}
-
             <div className="mt-5 space-y-3">
               <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                 <p className="text-[11px] uppercase tracking-wider text-slate-500">
@@ -374,7 +335,6 @@ export default function LiveClassroom() {
                   {session.tutor_name ?? 'Your tutor'}
                 </p>
               </div>
-
               {session.topic && (
                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                   <p className="text-[11px] uppercase tracking-wider text-slate-500">
@@ -383,13 +343,11 @@ export default function LiveClassroom() {
                   <p className="mt-1 text-sm font-medium">{session.topic}</p>
                 </div>
               )}
-
               {session.materials.length > 0 && (
                 <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
                   <p className="text-[11px] uppercase tracking-wider text-slate-500">
                     Materials
                   </p>
-
                   <div className="mt-2 space-y-2">
                     {session.materials.map((material, index) => (
                       <a
@@ -406,16 +364,14 @@ export default function LiveClassroom() {
                 </div>
               )}
             </div>
-
             <Link
-              to="/dashboard"
+              to={dashboardPath}
               className="btn-secondary mt-4 flex w-full justify-center"
             >
               Leave classroom
             </Link>
           </aside>
         </section>
-
           {mediaError && (
             <div className="mb-2 rounded-2xl border border-amber-400/20 bg-amber-400/10 px-4 py-3 text-center text-xs leading-5 text-amber-200">
               {mediaError}
@@ -430,7 +386,6 @@ export default function LiveClassroom() {
           >
             {mediaState.microphoneEnabled ? '🎙 Mic' : '🔇 Mic'}
           </button>
-
           <button
             type="button"
             onClick={() => void toggleCamera()}
@@ -439,7 +394,6 @@ export default function LiveClassroom() {
           >
             {mediaState.cameraEnabled ? '◉ Camera' : '◌ Camera'}
           </button>
-
           <button
             type="button"
             onClick={() => void toggleScreenShare()}
@@ -448,9 +402,8 @@ export default function LiveClassroom() {
           >
             {mediaState.screenSharing ? '▣ Stop Share' : '▣ Share'}
           </button>
-
           <Link
-            to="/dashboard"
+            to={dashboardPath}
             className="rounded-xl border border-red-400/30 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-300"
           >
             Leave
@@ -458,5 +411,4 @@ export default function LiveClassroom() {
         </footer>
       </div>
     </main>
-  )
-}
+  
