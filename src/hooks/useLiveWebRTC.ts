@@ -1,9 +1,41 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { LiveRoomParticipant } from '@/types/liveRoom'
 
+// STUN alone cannot traverse carrier-grade NAT, which is what most
+// Android phones sit behind on mobile data — without a TURN relay,
+// ICE negotiation completes but no media ever flows, and the UI hangs
+// on "Waiting for the media connection…" indefinitely.
+//
+// These are the Open Relay Project's free, public TURN servers
+// (https://www.metered.ca/tools/openrelay/) — no signup required.
+// They're shared/rate-limited, so they're fine to unblock connectivity
+// now, but for production reliability get a private TURN server (e.g.
+// a Metered.ca or Twilio account, or self-hosted coturn) and swap
+// the credentials below.
 const RTC_CONFIGURATION: RTCConfiguration = {
   iceServers: [
     { urls: 'stun:stun.l.google.com:19302' },
+    { urls: 'stun:stun.relay.metered.ca:80' },
+    {
+      urls: 'turn:global.relay.metered.ca:80',
+      username: 'openrelayproject',
+      credential: 'openrelayproject',
+    },
+    {
+      urls: 'turn:global.relay.metered.ca:80?transport=tcp',
+      username: 'openrelayproject',
+      credential: 'openrelayproject',
+    },
+    {
+      urls: 'turn:global.relay.metered.ca:443',
+      username: 'openrelayproject',
+      credential: 'openrelayproject',
+    },
+    {
+      urls: 'turns:global.relay.metered.ca:443?transport=tcp',
+      username: 'openrelayproject',
+      credential: 'openrelayproject',
+    },
   ],
 }
 
@@ -69,7 +101,7 @@ interface UseLiveWebRTCOptions {
       answer: string | null
       updated_at: string
     } | null) => void,
-    onError?: (error: unknown) => void,
+    onError?: (error: unknown) => void
   ) => () => void
   subscribeStudentIce: (
     sessionId: string,
@@ -82,7 +114,7 @@ interface UseLiveWebRTCOptions {
       sdp_m_line_index: number | null
       created_at: string
     }) => void,
-    onError?: (error: unknown) => void,
+    onError?: (error: unknown) => void
   ) => () => void
   subscribeTutorIce: (
     sessionId: string,
@@ -95,7 +127,7 @@ interface UseLiveWebRTCOptions {
       sdp_m_line_index: number | null
       created_at: string
     }) => void,
-    onError?: (error: unknown) => void,
+    onError?: (error: unknown) => void
   ) => () => void
 }
 
@@ -130,6 +162,7 @@ export function useLiveWebRTC({
   )
   const localStreamRef = useRef<MediaStream | null>(null)
   const screenStreamRef = useRef<MediaStream | null>(null)
+
   // Guards against the signalling effect re-running (e.g. when the
   // `participants` list updates) while a negotiation for a given remote
   // peer is already in flight. Without this, two concurrent
@@ -162,9 +195,9 @@ export function useLiveWebRTC({
 
     setRemoteStreams(
       Array.from(remoteStreamsRef.current.entries()).map(
-        ([userId, stream]) => ({
+        ([userId, remoteStream]) => ({
           userId,
-          stream,
+          stream: remoteStream,
         }),
       ),
     )
@@ -190,7 +223,10 @@ export function useLiveWebRTC({
       }
 
       peer.ontrack = (event) => {
-        const streamFromPeer = event.streams[0] ?? remoteStreamsRef.current.get(remoteUserId) ?? new MediaStream()
+        const streamFromPeer =
+          event.streams[0] ??
+          remoteStreamsRef.current.get(remoteUserId) ??
+          new MediaStream()
 
         if (!event.streams[0]) {
           streamFromPeer.addTrack(event.track)
@@ -278,13 +314,17 @@ export function useLiveWebRTC({
 
   const addPendingCandidates = useCallback(
     async (remoteUserId: string, peer: RTCPeerConnection) => {
-      const pending = pendingCandidatesRef.current.get(remoteUserId) ?? []
+      const pending =
+        pendingCandidatesRef.current.get(remoteUserId) ?? []
 
       for (const candidate of pending) {
         try {
           await peer.addIceCandidate(candidate)
         } catch (error) {
-          console.error('[liveWebRTC] Failed to add pending ICE candidate:', error)
+          console.error(
+            '[liveWebRTC] Failed to add pending ICE candidate:',
+            error,
+          )
         }
       }
 
@@ -298,12 +338,16 @@ export function useLiveWebRTC({
       remoteUserId: string,
       candidate: RTCIceCandidateInit,
     ) => {
-      console.log('[liveWebRTC] ICE candidate received', { remoteUserId })
+      console.log('[liveWebRTC] ICE candidate received', {
+        remoteUserId,
+      })
 
       const peer = peersRef.current.get(remoteUserId)
 
       if (!peer || !peer.remoteDescription) {
-        const pending = pendingCandidatesRef.current.get(remoteUserId) ?? []
+        const pending =
+          pendingCandidatesRef.current.get(remoteUserId) ?? []
+
         pending.push(candidate)
         pendingCandidatesRef.current.set(remoteUserId, pending)
         return
@@ -312,7 +356,10 @@ export function useLiveWebRTC({
       try {
         await peer.addIceCandidate(candidate)
       } catch (error) {
-        console.error('[liveWebRTC] Failed to add ICE candidate:', error)
+        console.error(
+          '[liveWebRTC] Failed to add ICE candidate:',
+          error,
+        )
       }
     },
     [],
@@ -334,16 +381,25 @@ export function useLiveWebRTC({
 
       setMediaState((current) => ({
         ...current,
-        microphoneEnabled: stream.getAudioTracks().some((track) => track.enabled),
-        cameraEnabled: stream.getVideoTracks().some((track) => track.enabled),
+        microphoneEnabled: stream
+          .getAudioTracks()
+          .some((track) => track.enabled),
+        cameraEnabled: stream
+          .getVideoTracks()
+          .some((track) => track.enabled),
       }))
 
       return stream
     } catch (error) {
-      console.error('[liveWebRTC] Failed to access camera/microphone:', error)
+      console.error(
+        '[liveWebRTC] Failed to access camera/microphone:',
+        error,
+      )
+
       setMediaError(
         'Camera or microphone access was blocked. Please allow permissions and try again.',
       )
+
       return null
     }
   }, [])
@@ -353,6 +409,7 @@ export function useLiveWebRTC({
     if (!stream) return
 
     const enabled = !mediaState.microphoneEnabled
+
     stream.getAudioTracks().forEach((track) => {
       track.enabled = enabled
     })
@@ -368,6 +425,7 @@ export function useLiveWebRTC({
     if (!stream) return
 
     const enabled = !mediaState.cameraEnabled
+
     stream.getVideoTracks().forEach((track) => {
       track.enabled = enabled
     })
@@ -382,15 +440,22 @@ export function useLiveWebRTC({
     const peerEntries = Array.from(peersRef.current.entries())
 
     if (screenStreamRef.current) {
-      screenStreamRef.current.getTracks().forEach((track) => track.stop())
+      screenStreamRef.current
+        .getTracks()
+        .forEach((track) => track.stop())
+
       screenStreamRef.current = null
 
-      const cameraTrack = localStreamRef.current?.getVideoTracks()[0]
+      const cameraTrack =
+        localStreamRef.current?.getVideoTracks()[0]
+
       if (cameraTrack) {
         for (const [, peer] of peerEntries) {
           const sender = peer
             .getSenders()
-            .find((item) => item.track?.kind === 'video')
+            .find(
+              (item) => item.track?.kind === 'video',
+            )
 
           if (sender) {
             await sender.replaceTrack(cameraTrack)
@@ -402,16 +467,20 @@ export function useLiveWebRTC({
         ...current,
         screenSharing: false,
       }))
+
       return
     }
 
     try {
-      const displayStream = await navigator.mediaDevices.getDisplayMedia({
-        video: true,
-        audio: false,
-      })
+      const displayStream =
+        await navigator.mediaDevices.getDisplayMedia({
+          video: true,
+          audio: false,
+        })
 
-      const displayTrack = displayStream.getVideoTracks()[0]
+      const displayTrack =
+        displayStream.getVideoTracks()[0]
+
       if (!displayTrack) return
 
       screenStreamRef.current = displayStream
@@ -419,7 +488,9 @@ export function useLiveWebRTC({
       for (const [, peer] of peerEntries) {
         const sender = peer
           .getSenders()
-          .find((item) => item.track?.kind === 'video')
+          .find(
+            (item) => item.track?.kind === 'video',
+          )
 
         if (sender) {
           await sender.replaceTrack(displayTrack)
@@ -435,7 +506,10 @@ export function useLiveWebRTC({
         screenSharing: true,
       }))
     } catch (error) {
-      console.error('[liveWebRTC] Screen share failed:', error)
+      console.error(
+        '[liveWebRTC] Screen share failed:',
+        error,
+      )
     }
   }, [])
 
@@ -444,7 +518,9 @@ export function useLiveWebRTC({
 
     void startLocalMedia().then((stream) => {
       if (cancelled && stream) {
-        stream.getTracks().forEach((track) => track.stop())
+        stream
+          .getTracks()
+          .forEach((track) => track.stop())
       }
     })
 
@@ -462,11 +538,18 @@ export function useLiveWebRTC({
 
     if (isTutor) {
       const studentIds = participants
-        .filter((participant) => participant.role === 'student')
-        .map((participant) => participant.user_id)
+        .filter(
+          (participant) =>
+            participant.role === 'student',
+        )
+        .map(
+          (participant) =>
+            participant.user_id,
+        )
 
-        for (const studentId of studentIds) {
-          const cleanupConnection = subscribeConnection(
+      for (const studentId of studentIds) {
+        const cleanupConnection =
+          subscribeConnection(
             sessionId,
             studentId,
             (connection) => {
@@ -476,158 +559,277 @@ export function useLiveWebRTC({
                 try {
                   await startLocalMedia()
 
-                  const peer = createPeer(studentId)
+                  const peer =
+                    createPeer(studentId)
 
                   if (
                     connection.offer &&
                     connection.answer == null &&
                     peer.signalingState === 'stable' &&
-                    !negotiatingRef.current.has(studentId)
-                  ) {
-                    console.log('[liveWebRTC] Offer received', {
+                    !negotiatingRef.current.has(
                       studentId,
-                      length: connection.offer.length,
-                    })
+                    )
+                  ) {
+                    console.log(
+                      '[liveWebRTC] Offer received',
+                      {
+                        studentId,
+                        length:
+                          connection.offer.length,
+                      },
+                    )
 
-                    negotiatingRef.current.add(studentId)
+                    negotiatingRef.current.add(
+                      studentId,
+                    )
 
                     try {
                       await peer.setRemoteDescription(
-                        JSON.parse(connection.offer) as RTCSessionDescriptionInit,
+                        JSON.parse(
+                          connection.offer,
+                        ) as RTCSessionDescriptionInit,
                       )
 
-                      await addPendingCandidates(studentId, peer)
-
-                      const answer = await peer.createAnswer()
-                      console.log('[liveWebRTC] Answer created', {
+                      await addPendingCandidates(
                         studentId,
-                        type: answer.type,
-                      })
-                      await peer.setLocalDescription(answer)
+                        peer,
+                      )
 
-                      if (peer.localDescription) {
+                      const answer =
+                        await peer.createAnswer()
+
+                      console.log(
+                        '[liveWebRTC] Answer created',
+                        {
+                          studentId,
+                          type: answer.type,
+                        },
+                      )
+
+                      await peer.setLocalDescription(
+                        answer,
+                      )
+
+                      if (
+                        peer.localDescription
+                      ) {
                         await writeAnswer(
                           sessionId,
                           studentId,
                           tutorId,
-                          JSON.stringify(peer.localDescription),
+                          JSON.stringify(
+                            peer.localDescription,
+                          ),
                         )
-                        console.log('[liveWebRTC] Answer written', { studentId })
+
+                        console.log(
+                          '[liveWebRTC] Answer written',
+                          { studentId },
+                        )
                       }
                     } finally {
-                      negotiatingRef.current.delete(studentId)
+                      negotiatingRef.current.delete(
+                        studentId,
+                      )
                     }
                   }
                 } catch (error) {
-                  console.error('[liveWebRTC] Failed to process student offer:', error)
+                  console.error(
+                    '[liveWebRTC] Failed to process student offer:',
+                    error,
+                  )
                 }
               })()
             },
           )
 
-        const cleanupIce = subscribeStudentIce(
-          sessionId,
-          studentId,
-          (candidate) => {
-            if (candidate.from_user_id !== studentId) return
+        const cleanupIce =
+          subscribeStudentIce(
+            sessionId,
+            studentId,
+            (candidate) => {
+              if (
+                candidate.from_user_id !==
+                studentId
+              ) {
+                return
+              }
 
-            void handleRemoteCandidate(studentId, {
-              candidate: candidate.candidate,
-              sdpMid: candidate.sdp_mid,
-              sdpMLineIndex: candidate.sdp_m_line_index,
-            })
+              void handleRemoteCandidate(
+                studentId,
+                {
+                  candidate:
+                    candidate.candidate,
+                  sdpMid:
+                    candidate.sdp_mid,
+                  sdpMLineIndex:
+                    candidate.sdp_m_line_index,
+                },
+              )
+            },
+          )
+
+        cleanups.push(
+          cleanupConnection,
+          cleanupIce,
+        )
+      }
+    } else {
+      const cleanupConnection =
+        subscribeConnection(
+          sessionId,
+          userId,
+          (connection) => {
+            if (!connection?.answer) return
+
+            const peer =
+              peersRef.current.get(tutorId)
+
+            if (
+              !peer ||
+              peer.signalingState === 'closed'
+            ) {
+              return
+            }
+
+            if (
+              peer.signalingState !==
+              'have-local-offer'
+            ) {
+              return
+            }
+
+            console.log(
+              '[liveWebRTC] Answer received',
+              {
+                tutorId,
+                length:
+                  connection.answer.length,
+              },
+            )
+
+            void (async () => {
+              try {
+                await peer.setRemoteDescription(
+                  JSON.parse(
+                    connection.answer!,
+                  ) as RTCSessionDescriptionInit,
+                )
+
+                await addPendingCandidates(
+                  tutorId,
+                  peer,
+                )
+              } catch (error) {
+                console.error(
+                  '[liveWebRTC] Failed to process tutor answer:',
+                  error,
+                )
+              }
+            })()
           },
         )
 
-        cleanups.push(cleanupConnection, cleanupIce)
-      }
-    } else {
-      const cleanupConnection = subscribeConnection(
-        sessionId,
-        userId,
-        (connection) => {
-          if (!connection?.answer) return
-
-          const peer = peersRef.current.get(tutorId)
-          if (!peer || peer.signalingState === 'closed') return
-
-          if (peer.signalingState !== 'have-local-offer') return
-
-          console.log('[liveWebRTC] Answer received', {
-            tutorId,
-            length: connection.answer.length,
-          })
-
-          void (async () => {
-            try {
-              await peer.setRemoteDescription(
-                JSON.parse(connection.answer!) as RTCSessionDescriptionInit,
-              )
-              await addPendingCandidates(tutorId, peer)
-            } catch (error) {
-              console.error('[liveWebRTC] Failed to process tutor answer:', error)
+      const cleanupIce =
+        subscribeTutorIce(
+          sessionId,
+          userId,
+          (candidate) => {
+            if (
+              candidate.from_user_id !==
+              tutorId
+            ) {
+              return
             }
-          })()
-        },
+
+            void handleRemoteCandidate(
+              tutorId,
+              {
+                candidate:
+                  candidate.candidate,
+                sdpMid:
+                  candidate.sdp_mid,
+                sdpMLineIndex:
+                  candidate.sdp_m_line_index,
+              },
+            )
+          },
+        )
+
+      cleanups.push(
+        cleanupConnection,
+        cleanupIce,
       )
-
-      const cleanupIce = subscribeTutorIce(
-        sessionId,
-        userId,
-        (candidate) => {
-          if (candidate.from_user_id !== tutorId) return
-
-          void handleRemoteCandidate(tutorId, {
-            candidate: candidate.candidate,
-            sdpMid: candidate.sdp_mid,
-            sdpMLineIndex: candidate.sdp_m_line_index,
-          })
-        },
-      )
-
-      cleanups.push(cleanupConnection, cleanupIce)
-
 
       void (async () => {
         try {
           await startLocalMedia()
 
-          const peer = createPeer(tutorId)
+          const peer =
+            createPeer(tutorId)
 
           if (
             peer.signalingState !== 'stable' ||
-            negotiatingRef.current.has(tutorId)
+            negotiatingRef.current.has(
+              tutorId,
+            )
           ) {
             return
           }
 
-          negotiatingRef.current.add(tutorId)
+          negotiatingRef.current.add(
+            tutorId,
+          )
 
           try {
-            const offer = await peer.createOffer()
-            console.log('[liveWebRTC] Offer created', { tutorId, type: offer.type })
-            await peer.setLocalDescription(offer)
+            const offer =
+              await peer.createOffer()
+
+            console.log(
+              '[liveWebRTC] Offer created',
+              {
+                tutorId,
+                type: offer.type,
+              },
+            )
+
+            await peer.setLocalDescription(
+              offer,
+            )
 
             if (peer.localDescription) {
               await writeOffer(
                 sessionId,
                 userId,
                 tutorId,
-                JSON.stringify(peer.localDescription),
+                JSON.stringify(
+                  peer.localDescription,
+                ),
               )
-              console.log('[liveWebRTC] Offer written', { tutorId })
+
+              console.log(
+                '[liveWebRTC] Offer written',
+                { tutorId },
+              )
             }
           } finally {
-            negotiatingRef.current.delete(tutorId)
+            negotiatingRef.current.delete(
+              tutorId,
+            )
           }
         } catch (error) {
-          console.error('[liveWebRTC] Failed to create student offer:', error)
+          console.error(
+            '[liveWebRTC] Failed to create student offer:',
+            error,
+          )
         }
       })()
     }
 
     return () => {
-      cleanups.forEach((cleanup) => cleanup())
+      cleanups.forEach(
+        (cleanup) => cleanup(),
+      )
     }
   }, [
     addPendingCandidates,
@@ -648,11 +850,19 @@ export function useLiveWebRTC({
 
   useEffect(() => {
     return () => {
-      peersRef.current.forEach((peer) => peer.close())
+      peersRef.current.forEach(
+        (peer) => peer.close(),
+      )
+
       peersRef.current.clear()
 
-      screenStreamRef.current?.getTracks().forEach((track) => track.stop())
-      localStreamRef.current?.getTracks().forEach((track) => track.stop())
+      screenStreamRef.current
+        ?.getTracks()
+        .forEach((track) => track.stop())
+
+      localStreamRef.current
+        ?.getTracks()
+        .forEach((track) => track.stop())
 
       screenStreamRef.current = null
       localStreamRef.current = null
