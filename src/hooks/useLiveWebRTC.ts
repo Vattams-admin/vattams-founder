@@ -14,25 +14,21 @@ import type { LiveRoomParticipant } from '@/types/liveRoom'
 // the credentials below.
 const RTC_CONFIGURATION: RTCConfiguration = {
   iceServers: [
-    { urls: 'stun:stun.l.google.com:19302' },
-    { urls: 'stun:stun.relay.metered.ca:80' },
     {
-      urls: 'turn:global.relay.metered.ca:80',
+      urls: 'stun:openrelay.metered.ca:80',
+    },
+    {
+      urls: 'turn:openrelay.metered.ca:80',
       username: 'openrelayproject',
       credential: 'openrelayproject',
     },
     {
-      urls: 'turn:global.relay.metered.ca:80?transport=tcp',
+      urls: 'turn:openrelay.metered.ca:443',
       username: 'openrelayproject',
       credential: 'openrelayproject',
     },
     {
-      urls: 'turn:global.relay.metered.ca:443',
-      username: 'openrelayproject',
-      credential: 'openrelayproject',
-    },
-    {
-      urls: 'turns:global.relay.metered.ca:443?transport=tcp',
+      urls: 'turn:openrelay.metered.ca:443?transport=tcp',
       username: 'openrelayproject',
       credential: 'openrelayproject',
     },
