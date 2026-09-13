@@ -320,6 +320,16 @@ export default function LiveClassroom() {
                               ? 'This classroom has ended.'
                               : 'Classroom connection is being prepared.'}
                     </p>
+
+                    <div className="mt-4 rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left text-xs text-slate-400">
+                      <div>Participants: {participants.length}</div>
+                      <div className="mt-1">
+                        WebRTC: {mediaState.connectionState}
+                      </div>
+                      <div className="mt-1">
+                        Remote streams: {remoteStreams.length}
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
