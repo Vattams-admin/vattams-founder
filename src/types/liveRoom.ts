@@ -1,4 +1,4 @@
-export type LiveRoomParticipantRole = 'tutor' | 'student'
+export type LiveRoomParticipantRole = 'tutor' | 'student' | 'admin'
 
 export type LiveRoomParticipantStatus =
   | 'connecting'

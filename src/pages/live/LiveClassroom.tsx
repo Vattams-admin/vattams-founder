@@ -17,6 +17,7 @@ import {
 import { useLiveWebRTC } from '@/hooks/useLiveWebRTC'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { useAuth } from '@/hooks/useAuth'
+import { useAdminAuth } from '@/hooks/useAdminAuth'
 import { getLiveSession, hasActiveEnrolment } from '@/lib/liveSessions'
 import { computeLiveSessionPhase } from '@/types/liveSession'
 import type { LiveSession } from '@/types/liveSession'
@@ -27,6 +28,7 @@ export default function LiveClassroom() {
   const { sessionId } = useParams<{ sessionId: string }>()
   const { user, loading: authLoading } = useAuth()
   const { role: userRole, loading: roleLoading } = useUserRole()
+  const { isAdmin, loading: adminLoading } = useAdminAuth()
   const navigate = useNavigate()
 
   const [session, setSession] = useState<LiveSession | null>(null)
@@ -36,8 +38,24 @@ export default function LiveClassroom() {
   const localVideoRef = useRef<HTMLVideoElement | null>(null)
   const remoteVideoRefs = useRef<Record<string, HTMLVideoElement | null>>({})
 
+  // ROLE-AWARE EXIT DESTINATION — root-cause fix.
+  // Every "leave the classroom" link on this page used to point at the
+  // hardcoded student route ('/dashboard'), regardless of who was
+  // signed in. A tutor exiting a live class was therefore always sent
+  // to the Student dashboard ("Your learning"). userRole comes from the
+  // same useUserRole() lookup already used below to decide the WebRTC
+  // role, so this reuses existing role detection instead of adding a
+  // new one. Computed above the early-return states (not_found /
+  // no_access / error) so those exits are role-aware too, not just the
+  // main "Leave classroom" buttons.
+  const dashboardPath = isAdmin
+    ? '/admin/dashboard'
+    : userRole === 'tutor'
+      ? '/tutor/dashboard'
+      : '/dashboard'
+
   useEffect(() => {
-    if (authLoading || roleLoading) return
+    if (authLoading || roleLoading || adminLoading) return
 
     if (!user) {
       navigate('/login', {
@@ -71,8 +89,8 @@ export default function LiveClassroom() {
           return
         }
 
-        const isTutor = userRole === 'tutor' && found.tutor_id === user.id
-        const enrolled = isTutor
+        const isTutor = !isAdmin && userRole === 'tutor' && found.tutor_id === user.id
+        const enrolled = isAdmin || isTutor
           ? true
           : await hasActiveEnrolment(user.id, found.course_id)
 
@@ -97,7 +115,7 @@ export default function LiveClassroom() {
     return () => {
       cancelled = true
     }
-  }, [sessionId, user, authLoading, roleLoading, userRole, navigate])
+  }, [sessionId, user, authLoading, roleLoading, adminLoading, isAdmin, userRole, navigate])
 
   useEffect(() => {
     const tick = setInterval(() => setNow(new Date()), 1000)
@@ -105,15 +123,16 @@ export default function LiveClassroom() {
   }, [])
 
   useEffect(() => {
-    if (!session || !sessionId || !user || roleLoading) return
+    if (!session || !sessionId || !user || roleLoading || adminLoading) return
 
-    const isTutor = userRole === 'tutor'
+    const isTutor = !isAdmin && userRole === 'tutor'
+    const participantRole = isAdmin ? 'admin' : isTutor ? 'tutor' : 'student'
 
     void ensureLiveRoom(sessionId)
       .then(() => joinLiveRoom(sessionId, {
         userId: user.id,
-        displayName: user.displayName ?? (isTutor ? session.tutor_name : 'Student'),
-        role: isTutor ? 'tutor' : 'student',
+        displayName: user.displayName ?? (isTutor ? session.tutor_name : isAdmin ? 'Admin' : 'Student'),
+        role: participantRole,
       }))
       .then(() => {
         if (isTutor) {
@@ -136,9 +155,9 @@ export default function LiveClassroom() {
         console.error('[LiveClassroom] Failed to leave room:', error)
       })
     }
-  }, [session, sessionId, user, userRole, roleLoading])
+  }, [session, sessionId, user, userRole, roleLoading, adminLoading, isAdmin])
 
-  const isTutor = userRole === 'tutor'
+  const isTutor = !isAdmin && userRole === 'tutor'
 
   const {
     localStream,
@@ -151,6 +170,7 @@ export default function LiveClassroom() {
   } = useLiveWebRTC({
     sessionId: sessionId ?? '',
     userId: user?.id ?? '',
+    enabled: !isAdmin,
     tutorId: session?.tutor_id ?? '',
     isTutor,
     participants,
@@ -184,7 +204,7 @@ export default function LiveClassroom() {
     })
   }, [remoteStreams])
 
-  if (state === 'loading' || authLoading) {
+  if (state === 'loading' || authLoading || adminLoading || roleLoading) {
     return (
       <main className="min-h-screen bg-[#050b16] px-4 py-20 text-center text-slate-400">
         Loading classroom…
@@ -199,7 +219,7 @@ export default function LiveClassroom() {
         <p className="mt-3 text-sm text-slate-400">
           This live class does not exist or may have been removed.
         </p>
-        <Link to="/dashboard" className="btn-primary mt-6 inline-flex">
+        <Link to={dashboardPath} className="btn-primary mt-6 inline-flex">
           Back to dashboard
         </Link>
       </main>
@@ -214,7 +234,7 @@ export default function LiveClassroom() {
           You do not have access to this live classroom. The class may not
           be published or you may not be actively enrolled in its course.
         </p>
-        <Link to="/dashboard" className="btn-primary mt-6 inline-flex">
+        <Link to={dashboardPath} className="btn-primary mt-6 inline-flex">
           Back to dashboard
         </Link>
       </main>
@@ -359,6 +379,21 @@ export default function LiveClassroom() {
               {session.title}
             </h2>
 
+            {isAdmin && (
+              <div className="mt-4 rounded-2xl border border-gold/20 bg-gold/5 p-4">
+                <p className="text-[11px] uppercase tracking-wider text-gold">Admin observer</p>
+                <p className="mt-1 text-sm text-slate-300">You are monitoring this classroom without joining the WebRTC media connection.</p>
+                <p className="mt-3 text-xs text-slate-500">Participants: {participants.length}</p>
+                <div className="mt-2 space-y-1">
+                  {participants.map((participant) => (
+                    <p key={participant.user_id} className="text-xs text-slate-300">
+                      {participant.display_name ?? 'Participant'} · {participant.role}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {session.description && (
               <p className="mt-3 text-sm leading-6 text-slate-400">
                 {session.description}
@@ -408,7 +443,7 @@ export default function LiveClassroom() {
             </div>
 
             <Link
-              to="/dashboard"
+              to={dashboardPath}
               className="btn-secondary mt-4 flex w-full justify-center"
             >
               Leave classroom
@@ -422,35 +457,41 @@ export default function LiveClassroom() {
             </div>
           )}
         <footer className="live-glass flex flex-wrap items-center justify-center gap-3 rounded-2xl px-4 py-3">
-          <button
-            type="button"
-            onClick={() => void toggleMicrophone()}
-            className="btn-secondary min-w-24"
-            disabled={!localStream}
-          >
-            {mediaState.microphoneEnabled ? '🎙 Mic' : '🔇 Mic'}
-          </button>
+          {isAdmin ? (
+            <p className="text-sm font-semibold text-gold-bright">Admin observer mode — media controls are disabled.</p>
+          ) : (
+            <>
+              <button
+                type="button"
+                onClick={() => void toggleMicrophone()}
+                className="btn-secondary min-w-24"
+                disabled={!localStream}
+              >
+                {mediaState.microphoneEnabled ? '🎙 Mic' : '🔇 Mic'}
+              </button>
 
-          <button
-            type="button"
-            onClick={() => void toggleCamera()}
-            className="btn-secondary min-w-24"
-            disabled={!localStream}
-          >
-            {mediaState.cameraEnabled ? '◉ Camera' : '◌ Camera'}
-          </button>
+              <button
+                type="button"
+                onClick={() => void toggleCamera()}
+                className="btn-secondary min-w-24"
+                disabled={!localStream}
+              >
+                {mediaState.cameraEnabled ? '◉ Camera' : '◌ Camera'}
+              </button>
 
-          <button
-            type="button"
-            onClick={() => void toggleScreenShare()}
-            className="btn-secondary min-w-24"
-            disabled={!localStream}
-          >
-            {mediaState.screenSharing ? '▣ Stop Share' : '▣ Share'}
-          </button>
+              <button
+                type="button"
+                onClick={() => void toggleScreenShare()}
+                className="btn-secondary min-w-24"
+                disabled={!localStream}
+              >
+                {mediaState.screenSharing ? '▣ Stop Share' : '▣ Share'}
+              </button>
+            </>
+          )}
 
           <Link
-            to="/dashboard"
+            to={dashboardPath}
             className="rounded-xl border border-red-400/30 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-300"
           >
             Leave

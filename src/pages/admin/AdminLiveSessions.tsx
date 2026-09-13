@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import AdminNav from '@/components/AdminNav'
 import { cancelLiveSession, listAllSessions } from '@/lib/liveSessions'
 import { computeLiveSessionPhase, type LiveSession, type LiveSessionPhase } from '@/types/liveSession'
@@ -153,14 +154,24 @@ export default function AdminLiveSessions() {
                       </span>
                     </td>
                     <td className="py-2 text-right">
-                      {session.status === 'published' && phase !== 'ended' && phase !== 'cancelled' && (
-                        <button
-                          onClick={() => handleCancel(session)}
-                          className="rounded-card border border-danger/50 px-2 py-1 text-xs font-semibold text-danger"
-                        >
-                          Cancel
-                        </button>
-                      )}
+                      <div className="flex flex-wrap justify-end gap-2">
+                        {session.status === 'published' && phase !== 'ended' && phase !== 'cancelled' && (
+                          <Link
+                            to={`/live-classroom/${session.id}`}
+                            className="rounded-card border border-gold/50 px-2 py-1 text-xs font-semibold text-gold-bright hover:bg-gold/10"
+                          >
+                            Enter Classroom
+                          </Link>
+                        )}
+                        {session.status === 'published' && phase !== 'ended' && phase !== 'cancelled' && (
+                          <button
+                            onClick={() => handleCancel(session)}
+                            className="rounded-card border border-danger/50 px-2 py-1 text-xs font-semibold text-danger"
+                          >
+                            Cancel
+                          </button>
+                        )}
+                      </div>
                     </td>
                   </tr>
                 )

@@ -89,6 +89,7 @@ interface UseLiveWebRTCOptions {
   userId: string
   tutorId: string
   isTutor: boolean
+  enabled?: boolean
   participants: LiveRoomParticipant[]
   writeOffer: (
     sessionId: string,
@@ -169,6 +170,7 @@ export function useLiveWebRTC({
   userId,
   tutorId,
   isTutor,
+  enabled = true,
   participants,
   writeOffer,
   writeAnswer,
@@ -570,6 +572,8 @@ export function useLiveWebRTC({
   }, [])
 
   useEffect(() => {
+    if (!enabled) return
+
     let cancelled = false
 
     void startLocalMedia().then((stream) => {
@@ -583,10 +587,10 @@ export function useLiveWebRTC({
     return () => {
       cancelled = true
     }
-  }, [startLocalMedia])
+  }, [enabled, startLocalMedia])
 
   useEffect(() => {
-    if (!sessionId || !userId || !tutorId) {
+    if (!enabled || !sessionId || !userId || !tutorId) {
       return
     }
 
@@ -943,6 +947,7 @@ export function useLiveWebRTC({
   }, [
     addPendingCandidates,
     createPeer,
+    enabled,
     handleRemoteCandidate,
     isTutor,
     participants,
