@@ -1152,9 +1152,6 @@ useEffect(() => {
     peers.forEach(
       (peer) => peer.close(),
     )
-        (peer) => peer.close(),
-      )
-
       peers.clear()
 
       screenStreamRef.current
