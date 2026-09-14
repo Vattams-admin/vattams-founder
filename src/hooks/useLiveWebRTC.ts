@@ -209,6 +209,15 @@ export function useLiveWebRTC({
   const [connectionError, setConnectionError] = useState<string | null>(null)
   const [retryToken, setRetryToken] = useState(0)
 
+  // Auto-recovery for transient failures (flaky TURN relay, brief network
+  // blips, Wi-Fi<->LTE handover). Previously a 'failed'/'closed' state just
+  // tore the peer down and left the user staring at "Still trying to
+  // connect" until they noticed and tapped Retry — capped auto-retries
+  // give the connection a few unattended chances to recover first.
+  const autoRetryAttemptsRef = useRef(0)
+  const autoRetryTimerRef = useRef<number | null>(null)
+  const MAX_AUTO_RETRIES = 3
+
   const peersRef = useRef(new Map<string, RTCPeerConnection>())
   const remoteStreamsRef = useRef(new Map<string, MediaStream>())
   const pendingCandidatesRef = useRef(
@@ -269,6 +278,14 @@ export function useLiveWebRTC({
     setMediaState((current) => ({ ...current, connectionState: 'idle' }))
     setRetryToken((current) => current + 1)
   }, [removePeer])
+
+  // A manual tap on "Retry connection" means the user is actively trying
+  // again — give it the full auto-retry budget rather than one already
+  // partly (or fully) spent by earlier automatic attempts.
+  const retryConnectionManually = useCallback(() => {
+    autoRetryAttemptsRef.current = 0
+    retryConnection()
+  }, [retryConnection])
 
   const createPeer = useCallback(
     (remoteUserId: string) => {
@@ -338,11 +355,43 @@ export function useLiveWebRTC({
           connectionState: peer.connectionState,
         })
 
+        if (peer.connectionState === 'connected') {
+          // A real recovery, not just the initial handshake — reset the
+          // counter so a later, unrelated blip gets its own fresh budget
+          // of auto-retries instead of inheriting an exhausted one.
+          autoRetryAttemptsRef.current = 0
+        }
+
         if (
           peer.connectionState === 'failed' ||
           peer.connectionState === 'closed'
         ) {
           removePeer(remoteUserId)
+
+          if (autoRetryAttemptsRef.current < MAX_AUTO_RETRIES) {
+            autoRetryAttemptsRef.current += 1
+            const attempt = autoRetryAttemptsRef.current
+
+            console.log(
+              '[liveWebRTC] Connection dropped — auto-retrying',
+              { remoteUserId, attempt, maxAttempts: MAX_AUTO_RETRIES },
+            )
+
+            if (autoRetryTimerRef.current) {
+              window.clearTimeout(autoRetryTimerRef.current)
+            }
+
+            // Backoff (1.5s, 3s, 4.5s) instead of hammering the TURN
+            // server immediately, in case the drop was load-related.
+            autoRetryTimerRef.current = window.setTimeout(() => {
+              retryConnection()
+            }, attempt * 1500)
+          } else {
+            console.log(
+              '[liveWebRTC] Connection dropped — auto-retry budget exhausted, waiting for manual retry',
+              { remoteUserId },
+            )
+          }
         }
 
         setMediaState((current) => ({
@@ -396,6 +445,7 @@ export function useLiveWebRTC({
       addTutorIce,
       isTutor,
       removePeer,
+      retryConnection,
       sessionId,
       updateRemoteStream,
       userId,
@@ -1048,6 +1098,10 @@ export function useLiveWebRTC({
 
   useEffect(() => {
     return () => {
+      if (autoRetryTimerRef.current) {
+        window.clearTimeout(autoRetryTimerRef.current)
+      }
+
       peersRef.current.forEach(
         (peer) => peer.close(),
       )
@@ -1074,7 +1128,7 @@ export function useLiveWebRTC({
     mediaState,
     mediaError,
     connectionError,
-    retryConnection,
+    retryConnection: retryConnectionManually,
     startLocalMedia,
     toggleMicrophone,
     toggleCamera,
