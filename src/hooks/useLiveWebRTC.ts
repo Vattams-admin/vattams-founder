@@ -91,6 +91,7 @@ interface UseLiveWebRTCOptions {
   isTutor: boolean
   enabled?: boolean
   participants: LiveRoomParticipant[]
+  clearStudentConnection: (sessionId: string, studentId: string) => Promise<void>
   writeOffer: (
     sessionId: string,
     studentId: string,
@@ -172,6 +173,7 @@ export function useLiveWebRTC({
   isTutor,
   enabled = true,
   participants,
+  clearStudentConnection,
   writeOffer,
   writeAnswer,
   addStudentIce,
@@ -954,6 +956,28 @@ export function useLiveWebRTC({
             participantCount: participants.length,
           })
 
+          // A connection document is student-created on first join, but
+          // the Firestore rules intentionally do not allow the student
+          // to UPDATE that document. On a reload/retry, remove the old
+          // signalling state first so the next offer is a CREATE again.
+          // Do not repeat this cleanup when this effect merely re-runs
+          // because the participants array changed while an active peer
+          // already exists.
+          const existingPeer = peersRef.current.get(tutorId)
+          if (!existingPeer || existingPeer.signalingState === 'closed') {
+            console.log('[liveWebRTC] Clearing stale student signalling state', {
+              sessionId,
+              studentId: userId,
+              tutorId,
+            })
+            await clearStudentConnection(sessionId, userId)
+            console.log('[liveWebRTC] Student signalling cleanup complete', {
+              sessionId,
+              studentId: userId,
+              tutorId,
+            })
+          }
+
           const stream = await startLocalMedia()
 
           console.log('[liveWebRTC] Student local media ready', {
@@ -1049,6 +1073,7 @@ export function useLiveWebRTC({
   }, [
     addPendingCandidates,
     createPeer,
+    clearStudentConnection,
     enabled,
     handleRemoteCandidate,
     isTutor,
@@ -1076,6 +1101,25 @@ export function useLiveWebRTC({
   // signalling/ICE logic itself — it only starts a plain timer and, if
   // nothing has connected by the time it fires, turns the silent stall
   // into a visible, actionable message.
+useEffect(() => {
+  if (!enabled || !sessionId || !userId || !tutorId) return
+  if (remoteStreams.length > 0) return
+  if (mediaState.connectionState === 'connected') return
+
+  const timeoutMs = 20000
+  const timer = window.setTimeout(() => {
+    setConnectionError((current) =>
+      current ??
+      "Still trying to connect — this is taking longer than expected. " +
+        "Make sure your tutor has joined the class, then try again.",
+    )
+  }, timeoutMs)
+
+  return () => window.clearTimeout(timer)
+  // Re-armed by remoteStreams/connectionState changes (so it clears
+  // once media actually flows) and by retryToken (so hitting Retry
+  // gives the next attempt a fresh full timeout window).
+}, [enabled, sessionId, userId, tutorId, remoteStreams.length, mediaState.connectionState, retryToken])
   useEffect(() => {
     if (!enabled || !sessionId || !userId || !tutorId) return
     if (remoteStreams.length > 0) return
@@ -1097,16 +1141,21 @@ export function useLiveWebRTC({
   }, [enabled, sessionId, userId, tutorId, remoteStreams.length, mediaState.connectionState, retryToken])
 
   useEffect(() => {
+    const peers = peersRef.current
+    const remoteStreams = remoteStreamsRef.current
+
     return () => {
       if (autoRetryTimerRef.current) {
         window.clearTimeout(autoRetryTimerRef.current)
       }
 
-      peersRef.current.forEach(
+    peers.forEach(
+      (peer) => peer.close(),
+    )
         (peer) => peer.close(),
       )
 
-      peersRef.current.clear()
+      peers.clear()
 
       screenStreamRef.current
         ?.getTracks()
@@ -1118,7 +1167,7 @@ export function useLiveWebRTC({
 
       screenStreamRef.current = null
       localStreamRef.current = null
-      remoteStreamsRef.current.clear()
+      remoteStreams.clear()
     }
   }, [])
 

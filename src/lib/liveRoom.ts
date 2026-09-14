@@ -4,8 +4,10 @@ import {
   deleteDoc,
   doc,
   getDoc,
+  getDocs,
   onSnapshot,
   setDoc,
+  writeBatch,
   updateDoc,
   type Unsubscribe,
 } from 'firebase/firestore'
@@ -41,6 +43,32 @@ function studentIceCollection(sessionId: string, studentId: string) {
 
 function tutorIceCollection(sessionId: string, studentId: string) {
   return collection(connectionRef(sessionId, studentId), TUTOR_ICE)
+}
+
+export async function clearLiveRoomStudentConnection(
+  sessionId: string,
+  studentId: string,
+): Promise<void> {
+  const connection = connectionRef(sessionId, studentId)
+  const [studentIce, tutorIce] = await Promise.all([
+    getDocs(studentIceCollection(sessionId, studentId)),
+    getDocs(tutorIceCollection(sessionId, studentId)),
+  ])
+
+  const refs = [
+    ...studentIce.docs.map((snapshot) => snapshot.ref),
+    ...tutorIce.docs.map((snapshot) => snapshot.ref),
+    connection,
+  ]
+
+  // Firestore batches are limited to 500 writes. Delete in chunks so a
+  // reconnect cannot fail simply because a previous attempt accumulated
+  // more ICE candidates than one batch can contain.
+  for (let index = 0; index < refs.length; index += 500) {
+    const batch = writeBatch(firestore)
+    refs.slice(index, index + 500).forEach((ref) => batch.delete(ref))
+    await batch.commit()
+  }
 }
 
 export async function writeLiveRoomOffer(
