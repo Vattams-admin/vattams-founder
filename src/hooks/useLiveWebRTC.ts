@@ -91,6 +91,7 @@ interface UseLiveWebRTCOptions {
   isTutor: boolean
   enabled?: boolean
   participants: LiveRoomParticipant[]
+  clearStudentConnection: (sessionId: string, studentId: string) => Promise<void>
   writeOffer: (
     sessionId: string,
     studentId: string,
@@ -172,6 +173,7 @@ export function useLiveWebRTC({
   isTutor,
   enabled = true,
   participants,
+  clearStudentConnection,
   writeOffer,
   writeAnswer,
   addStudentIce,
@@ -189,6 +191,34 @@ export function useLiveWebRTC({
     connectionState: 'idle',
   })
   const [mediaError, setMediaError] = useState<string | null>(null)
+
+  // Root-cause fix for the classroom hanging on "Waiting for the media
+  // connection…" / WebRTC: idle forever with zero feedback. Two distinct
+  // situations produced that silent hang:
+  //  1) `tutorId` (from session.tutor_id) is missing/blank — the
+  //     signalling effect below has always required it and no-ops
+  //     otherwise; that's correct, but it used to do so *silently*, so a
+  //     session with incomplete tutor assignment looked identical to a
+  //     healthy one that just hadn't connected yet.
+  //  2) `tutorId` is present but negotiation (ICE/TURN, or the tutor
+  //     simply hasn't joined yet) never completes — previously there was
+  //     no timeout and no way to retry without leaving and re-entering
+  //     the page.
+  // `connectionError` surfaces both cases with an actionable message;
+  // `retryConnection` lets the signalling effect below be re-run
+  // on demand (e.g. after the tutor has joined, or a flaky network
+  // recovers) without a full page reload.
+  const [connectionError, setConnectionError] = useState<string | null>(null)
+  const [retryToken, setRetryToken] = useState(0)
+
+  // Auto-recovery for transient failures (flaky TURN relay, brief network
+  // blips, Wi-Fi<->LTE handover). Previously a 'failed'/'closed' state just
+  // tore the peer down and left the user staring at "Still trying to
+  // connect" until they noticed and tapped Retry — capped auto-retries
+  // give the connection a few unattended chances to recover first.
+  const autoRetryAttemptsRef = useRef(0)
+  const autoRetryTimerRef = useRef<number | null>(null)
+  const MAX_AUTO_RETRIES = 3
 
   const peersRef = useRef(new Map<string, RTCPeerConnection>())
   const remoteStreamsRef = useRef(new Map<string, MediaStream>())
@@ -237,6 +267,27 @@ export function useLiveWebRTC({
       ),
     )
   }, [])
+
+  // Manual escape hatch for "connection stalled and nothing is happening"
+  // (see the timeout watchdog effect below) — closes any existing/stuck
+  // peer connection(s) and bumps retryToken, which is in the signalling
+  // effect's dependency array, forcing a full fresh offer/answer cycle
+  // without requiring the admin/tutor/student to leave and re-enter the
+  // classroom page.
+  const retryConnection = useCallback(() => {
+    peersRef.current.forEach((_peer, remoteUserId) => removePeer(remoteUserId))
+    setConnectionError(null)
+    setMediaState((current) => ({ ...current, connectionState: 'idle' }))
+    setRetryToken((current) => current + 1)
+  }, [removePeer])
+
+  // A manual tap on "Retry connection" means the user is actively trying
+  // again — give it the full auto-retry budget rather than one already
+  // partly (or fully) spent by earlier automatic attempts.
+  const retryConnectionManually = useCallback(() => {
+    autoRetryAttemptsRef.current = 0
+    retryConnection()
+  }, [retryConnection])
 
   const createPeer = useCallback(
     (remoteUserId: string) => {
@@ -306,11 +357,43 @@ export function useLiveWebRTC({
           connectionState: peer.connectionState,
         })
 
+        if (peer.connectionState === 'connected') {
+          // A real recovery, not just the initial handshake — reset the
+          // counter so a later, unrelated blip gets its own fresh budget
+          // of auto-retries instead of inheriting an exhausted one.
+          autoRetryAttemptsRef.current = 0
+        }
+
         if (
           peer.connectionState === 'failed' ||
           peer.connectionState === 'closed'
         ) {
           removePeer(remoteUserId)
+
+          if (autoRetryAttemptsRef.current < MAX_AUTO_RETRIES) {
+            autoRetryAttemptsRef.current += 1
+            const attempt = autoRetryAttemptsRef.current
+
+            console.log(
+              '[liveWebRTC] Connection dropped — auto-retrying',
+              { remoteUserId, attempt, maxAttempts: MAX_AUTO_RETRIES },
+            )
+
+            if (autoRetryTimerRef.current) {
+              window.clearTimeout(autoRetryTimerRef.current)
+            }
+
+            // Backoff (1.5s, 3s, 4.5s) instead of hammering the TURN
+            // server immediately, in case the drop was load-related.
+            autoRetryTimerRef.current = window.setTimeout(() => {
+              retryConnection()
+            }, attempt * 1500)
+          } else {
+            console.log(
+              '[liveWebRTC] Connection dropped — auto-retry budget exhausted, waiting for manual retry',
+              { remoteUserId },
+            )
+          }
         }
 
         setMediaState((current) => ({
@@ -364,6 +447,7 @@ export function useLiveWebRTC({
       addTutorIce,
       isTutor,
       removePeer,
+      retryConnection,
       sessionId,
       updateRemoteStream,
       userId,
@@ -590,9 +674,29 @@ export function useLiveWebRTC({
   }, [enabled, startLocalMedia])
 
   useEffect(() => {
-    if (!enabled || !sessionId || !userId || !tutorId) {
+    if (!enabled) return
+
+    if (!sessionId || !userId || !tutorId) {
+      // `enabled` is true (this is a real participant, not the admin
+      // observer, who is deliberately excluded above), so a missing
+      // tutorId here means the live session record itself has no
+      // tutor_id (or an invalid one) — see src/lib/liveSessions.ts'
+      // toLiveSession(), which normalises a missing/non-string
+      // tutor_id to ''. Previously this just returned with no
+      // indication anything was wrong, leaving connectionState frozen
+      // at its initial 'idle' value forever.
+      if (sessionId && userId && !tutorId) {
+        console.error('[liveWebRTC] No tutor assigned to this session — cannot negotiate', {
+          sessionId,
+        })
+        setConnectionError(
+          "This class isn't linked to a tutor account, so it can't connect. Please contact support.",
+        )
+      }
       return
     }
+
+    setConnectionError(null)
 
     const cleanups: Array<() => void> = []
 
@@ -852,6 +956,28 @@ export function useLiveWebRTC({
             participantCount: participants.length,
           })
 
+          // A connection document is student-created on first join, but
+          // the Firestore rules intentionally do not allow the student
+          // to UPDATE that document. On a reload/retry, remove the old
+          // signalling state first so the next offer is a CREATE again.
+          // Do not repeat this cleanup when this effect merely re-runs
+          // because the participants array changed while an active peer
+          // already exists.
+          const existingPeer = peersRef.current.get(tutorId)
+          if (!existingPeer || existingPeer.signalingState === 'closed') {
+            console.log('[liveWebRTC] Clearing stale student signalling state', {
+              sessionId,
+              studentId: userId,
+              tutorId,
+            })
+            await clearStudentConnection(sessionId, userId)
+            console.log('[liveWebRTC] Student signalling cleanup complete', {
+              sessionId,
+              studentId: userId,
+              tutorId,
+            })
+          }
+
           const stream = await startLocalMedia()
 
           console.log('[liveWebRTC] Student local media ready', {
@@ -947,6 +1073,7 @@ export function useLiveWebRTC({
   }, [
     addPendingCandidates,
     createPeer,
+    clearStudentConnection,
     enabled,
     handleRemoteCandidate,
     isTutor,
@@ -960,15 +1087,54 @@ export function useLiveWebRTC({
     writeAnswer,
     writeOffer,
     startLocalMedia,
+    retryToken,
   ])
 
+  // Connection timeout watchdog. tutorId being present means the
+  // signalling effect above is actively trying to negotiate — but
+  // "actively trying" can still stall indefinitely in practice (TURN
+  // relay unreachable, the tutor hasn't opened the classroom yet, a
+  // dropped Firestore listener, etc.), and previously there was no
+  // timeout at all: the UI just said "Waiting for the media
+  // connection…" forever with no error and no way to retry short of
+  // leaving and re-entering the page. This does not touch the
+  // signalling/ICE logic itself — it only starts a plain timer and, if
+  // nothing has connected by the time it fires, turns the silent stall
+  // into a visible, actionable message.
   useEffect(() => {
+    if (!enabled || !sessionId || !userId || !tutorId) return
+    if (remoteStreams.length > 0) return
+    if (mediaState.connectionState === 'connected') return
+
+    const timeoutMs = 20000
+    const timer = window.setTimeout(() => {
+      setConnectionError((current) =>
+        current ??
+        "Still trying to connect — this is taking longer than expected. " +
+          "Make sure your tutor has joined the class, then try again.",
+      )
+    }, timeoutMs)
+
+    return () => window.clearTimeout(timer)
+    // Re-armed by remoteStreams/connectionState changes (so it clears
+    // once media actually flows) and by retryToken (so hitting Retry
+    // gives the next attempt a fresh full timeout window).
+  }, [enabled, sessionId, userId, tutorId, remoteStreams.length, mediaState.connectionState, retryToken])
+
+  useEffect(() => {
+    const peers = peersRef.current
+    const remoteStreams = remoteStreamsRef.current
+
     return () => {
-      peersRef.current.forEach(
+      if (autoRetryTimerRef.current) {
+        window.clearTimeout(autoRetryTimerRef.current)
+      }
+
+      peers.forEach(
         (peer) => peer.close(),
       )
 
-      peersRef.current.clear()
+      peers.clear()
 
       screenStreamRef.current
         ?.getTracks()
@@ -980,7 +1146,7 @@ export function useLiveWebRTC({
 
       screenStreamRef.current = null
       localStreamRef.current = null
-      remoteStreamsRef.current.clear()
+      remoteStreams.clear()
     }
   }, [])
 
@@ -989,6 +1155,8 @@ export function useLiveWebRTC({
     remoteStreams,
     mediaState,
     mediaError,
+    connectionError,
+    retryConnection: retryConnectionManually,
     startLocalMedia,
     toggleMicrophone,
     toggleCamera,
