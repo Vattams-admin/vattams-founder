@@ -22,6 +22,94 @@ import { getLiveSession, hasActiveEnrolment } from '@/lib/liveSessions'
 import { computeLiveSessionPhase } from '@/types/liveSession'
 import type { LiveSession } from '@/types/liveSession'
 
+// TEMPORARY ON-SCREEN DEBUG LOG.
+// There's no way to attach a laptop/DevTools to debug this on the actual
+// mobile devices being used to test the classroom, so this mirrors every
+// console.log/warn/error into an in-memory ring buffer that renders
+// directly on the page (see the "Debug log" panel below). This lets the
+// exact same [liveWebRTC]/[LiveClassroom] lines that would show in
+// DevTools be read (and screenshotted) straight off the phone. Patched
+// once at module scope — not inside the component — so it's active
+// before any of useLiveWebRTC's internal effects run, and so it keeps
+// capturing across remounts (e.g. Retry connection). Remove this whole
+// block (and the panel further down) once the real root cause is fixed
+// and confirmed stable.
+type DebugLogListener = (lines: string[]) => void
+const DEBUG_LOG_MAX_LINES = 200
+const debugLogLines: string[] = []
+const debugLogListeners = new Set<DebugLogListener>()
+
+function pushDebugLog(line: string) {
+  const timestamp = new Date().toLocaleTimeString()
+  debugLogLines.push(`${timestamp}  ${line}`)
+  if (debugLogLines.length > DEBUG_LOG_MAX_LINES) {
+    debugLogLines.splice(0, debugLogLines.length - DEBUG_LOG_MAX_LINES)
+  }
+  debugLogListeners.forEach((listener) => listener([...debugLogLines]))
+}
+
+function formatConsoleArgs(args: unknown[]): string {
+  return args
+    .map((arg) => {
+      if (typeof arg === 'string') return arg
+      try {
+        return JSON.stringify(arg)
+      } catch {
+        return String(arg)
+      }
+    })
+    .join(' ')
+}
+
+let debugConsolePatched = false
+function ensureDebugConsolePatched() {
+  if (debugConsolePatched) return
+  debugConsolePatched = true
+
+  const originalLog = console.log.bind(console)
+  const originalWarn = console.warn.bind(console)
+  const originalError = console.error.bind(console)
+
+  const relevant = (text: string) =>
+    text.includes('[liveWebRTC]') || text.includes('[LiveClassroom]')
+
+  console.log = (...args: unknown[]) => {
+    originalLog(...args)
+    const text = formatConsoleArgs(args)
+    if (relevant(text)) pushDebugLog(text)
+  }
+
+  console.warn = (...args: unknown[]) => {
+    originalWarn(...args)
+    const text = formatConsoleArgs(args)
+    if (relevant(text)) pushDebugLog(`WARN ${text}`)
+  }
+
+  console.error = (...args: unknown[]) => {
+    originalError(...args)
+    const text = formatConsoleArgs(args)
+    if (relevant(text)) pushDebugLog(`ERROR ${text}`)
+  }
+}
+
+ensureDebugConsolePatched()
+
+function useDebugLog(): string[] {
+  const [lines, setLines] = useState<string[]>(debugLogLines)
+
+  useEffect(() => {
+    const listener: DebugLogListener = (next) => setLines(next)
+    debugLogListeners.add(listener)
+    setLines([...debugLogLines])
+
+    return () => {
+      debugLogListeners.delete(listener)
+    }
+  }, [])
+
+  return lines
+}
+
 type ViewState = 'loading' | 'ready' | 'not_found' | 'no_access' | 'error'
 
 export default function LiveClassroom() {
@@ -37,6 +125,20 @@ export default function LiveClassroom() {
   const [participants, setParticipants] = useState<import('@/types/liveRoom').LiveRoomParticipant[]>([])
   const localVideoRef = useRef<HTMLVideoElement | null>(null)
   const remoteVideoRefs = useRef<Record<string, HTMLVideoElement | null>>({})
+  // Root-cause fix for the remote tile rendering but staying permanently
+  // black. Mobile Chrome (and others) only allow *unmuted* autoplay when
+  // it directly follows a user gesture — attaching srcObject in a React
+  // effect doesn't count, so play() on an unmuted <video> was silently
+  // rejected (the .catch(() => undefined) hid it). The remote stream was
+  // arriving fine — ontrack fired, the tile rendered — the <video>
+  // element itself just never started. Tracks which remote users still
+  // need a manual tap to unmute, for the ones where even the muted-first
+  // trick below doesn't get past the browser's autoplay gate.
+  const [remotesNeedingUnmute, setRemotesNeedingUnmute] = useState<
+    Record<string, boolean>
+  >({})
+  const debugLog = useDebugLog()
+  const [showDebugLog, setShowDebugLog] = useState(false)
 
   // ROLE-AWARE EXIT DESTINATION — root-cause fix.
   // Every "leave the classroom" link on this page used to point at the
@@ -202,9 +304,61 @@ export default function LiveClassroom() {
       if (!video) return
 
       video.srcObject = stream
-      void video.play().catch(() => undefined)
+
+      // Start muted — muted autoplay is always allowed — then unmute
+      // once playback has actually begun. Unmuting an element that's
+      // already playing does not re-trigger the autoplay gate, so this
+      // reliably gets audio flowing without needing a fresh tap.
+      video.muted = true
+
+      void video
+        .play()
+        .then(() => {
+          video.muted = false
+          setRemotesNeedingUnmute((current) => {
+            if (!current[userId]) return current
+            const next = { ...current }
+            delete next[userId]
+            return next
+          })
+        })
+        .catch((error) => {
+          console.error(
+            '[LiveClassroom] Remote video failed to play:',
+            { userId, error },
+          )
+          // Fall back to a manual "tap to unmute" affordance rather
+          // than leaving the tile silently black/soundless forever.
+          setRemotesNeedingUnmute((current) => ({
+            ...current,
+            [userId]: true,
+          }))
+        })
     })
   }, [remoteStreams])
+
+  const unmuteRemote = (userId: string) => {
+    const video = remoteVideoRefs.current[userId]
+    if (!video) return
+
+    video.muted = false
+    void video
+      .play()
+      .then(() => {
+        setRemotesNeedingUnmute((current) => {
+          if (!current[userId]) return current
+          const next = { ...current }
+          delete next[userId]
+          return next
+        })
+      })
+      .catch((error) => {
+        console.error(
+          '[LiveClassroom] Manual unmute failed:',
+          { userId, error },
+        )
+      })
+  }
 
   if (state === 'loading' || authLoading || adminLoading || roleLoading) {
     return (
@@ -314,6 +468,16 @@ export default function LiveClassroom() {
                         <div className="absolute bottom-3 left-3 rounded-full border border-white/10 bg-black/50 px-3 py-1.5 text-xs font-semibold backdrop-blur">
                           {participant?.display_name ?? 'Participant'}
                         </div>
+
+                        {remotesNeedingUnmute[userId] && (
+                          <button
+                            type="button"
+                            onClick={() => unmuteRemote(userId)}
+                            className="absolute inset-0 flex items-center justify-center bg-black/60 text-sm font-semibold text-white"
+                          >
+                            🔇 Tap to enable video/audio
+                          </button>
+                        )}
                       </div>
                     )
                   })}
@@ -352,6 +516,36 @@ export default function LiveClassroom() {
                         Remote streams: {remoteStreams.length}
                       </div>
                     </div>
+
+                    {/* TEMPORARY: on-screen debug log, see comment at top
+                        of file. Remove once the connection issue is
+                        confirmed fixed. */}
+                    <button
+                      type="button"
+                      onClick={() => setShowDebugLog((current) => !current)}
+                      className="btn-secondary mt-3 w-full px-4 py-1.5 text-xs"
+                    >
+                      {showDebugLog ? 'Hide debug log' : 'Show debug log'}
+                    </button>
+
+                    {showDebugLog && (
+                      <div className="mt-2 max-h-64 overflow-y-auto rounded-xl border border-white/10 bg-black/60 p-3 text-left">
+                        {debugLog.length === 0 ? (
+                          <p className="text-[11px] text-slate-500">
+                            No log lines captured yet.
+                          </p>
+                        ) : (
+                          debugLog.map((line, index) => (
+                            <p
+                              key={index}
+                              className="mb-1 whitespace-pre-wrap break-all font-mono text-[10px] leading-4 text-slate-300"
+                            >
+                              {line}
+                            </p>
+                          ))
+                        )}
+                      </div>
+                    )}
 
                     {connectionError && (
                       <div className="mt-4 rounded-xl border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-left text-xs leading-5 text-amber-200">
