@@ -461,6 +461,34 @@ export default function LiveClassroom() {
                         <video
                           ref={(element) => {
                             remoteVideoRefs.current[userId] = element
+
+                            if (!element) return
+
+                            const remote = remoteStreams.find((item) => item.userId === userId)
+                            if (!remote) return
+
+                            element.srcObject = remote.stream
+                            element.muted = true
+                            element.autoplay = true
+                            element.playsInline = true
+
+                            void element.play().catch((error) => {
+                              console.error(
+                                '[LiveClassroom] Remote video ref play failed:',
+                                {
+                                  userId,
+                                  streamId: remote.stream.id,
+                                  videoTracks: remote.stream.getVideoTracks().length,
+                                  audioTracks: remote.stream.getAudioTracks().length,
+                                  error,
+                                },
+                              )
+
+                              setRemotesNeedingUnmute((current) => ({
+                                ...current,
+                                [userId]: true,
+                              }))
+                            })
                           }}
                           autoPlay
                           playsInline
@@ -519,35 +547,10 @@ export default function LiveClassroom() {
                       </div>
                     </div>
 
-                    {/* TEMPORARY: on-screen debug log, see comment at top
-                        of file. Remove once the connection issue is
-                        confirmed fixed. */}
-                    <button
-                      type="button"
-                      onClick={() => setShowDebugLog((current) => !current)}
-                      className="btn-secondary mt-3 w-full px-4 py-1.5 text-xs"
-                    >
-                      {showDebugLog ? 'Hide debug log' : 'Show debug log'}
-                    </button>
-
-                    {showDebugLog && (
-                      <div className="mt-2 max-h-64 overflow-y-auto rounded-xl border border-white/10 bg-black/60 p-3 text-left">
-                        {debugLog.length === 0 ? (
-                          <p className="text-[11px] text-slate-500">
-                            No log lines captured yet.
-                          </p>
-                        ) : (
-                          debugLog.map((line, index) => (
-                            <p
-                              key={index}
-                              className="mb-1 whitespace-pre-wrap break-all font-mono text-[10px] leading-4 text-slate-300"
-                            >
-                              {line}
-                            </p>
-                          ))
-                        )}
-                      </div>
-                    )}
+                    {/* Debug log moved below the video grid — see the
+                        block right after </section> — so it stays
+                        reachable once a remote tile is showing, not just
+                        while still waiting for one. */}
 
                     {connectionError && (
                       <div className="mt-4 rounded-xl border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-left text-xs leading-5 text-amber-200">
@@ -661,6 +664,42 @@ export default function LiveClassroom() {
             </Link>
           </aside>
         </section>
+
+          {/* TEMPORARY: on-screen debug log, see comment at top of file.
+              Rendered here (outside the remoteStreams-empty/non-empty
+              branches above) so it's reachable in every state, including
+              once a remote tile is already showing — which is exactly
+              the state needed to diagnose a stuck "tap to enable" tile.
+              Remove this whole block once the root cause is confirmed
+              fixed. */}
+          <div className="mb-2">
+            <button
+              type="button"
+              onClick={() => setShowDebugLog((current) => !current)}
+              className="btn-secondary w-full px-4 py-1.5 text-xs"
+            >
+              {showDebugLog ? 'Hide debug log' : 'Show debug log'}
+            </button>
+
+            {showDebugLog && (
+              <div className="mt-2 max-h-64 overflow-y-auto rounded-xl border border-white/10 bg-black/60 p-3 text-left">
+                {debugLog.length === 0 ? (
+                  <p className="text-[11px] text-slate-500">
+                    No log lines captured yet.
+                  </p>
+                ) : (
+                  debugLog.map((line, index) => (
+                    <p
+                      key={index}
+                      className="mb-1 whitespace-pre-wrap break-all font-mono text-[10px] leading-4 text-slate-300"
+                    >
+                      {line}
+                    </p>
+                  ))
+                )}
+              </div>
+            )}
+          </div>
 
           {mediaError && (
             <div className="mb-2 rounded-2xl border border-amber-400/20 bg-amber-400/10 px-4 py-3 text-center text-xs leading-5 text-amber-200">
