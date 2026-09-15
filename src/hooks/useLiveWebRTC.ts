@@ -550,9 +550,12 @@ export function useLiveWebRTC({
     const stream = localStreamRef.current
     if (!stream) return
 
-    const enabled = !mediaState.microphoneEnabled
+    const audioTracks = stream.getAudioTracks()
+    if (audioTracks.length === 0) return
 
-    stream.getAudioTracks().forEach((track) => {
+    const enabled = !audioTracks[0].enabled
+
+    audioTracks.forEach((track) => {
       track.enabled = enabled
     })
 
@@ -560,7 +563,7 @@ export function useLiveWebRTC({
       ...current,
       microphoneEnabled: enabled,
     }))
-  }, [mediaState.microphoneEnabled])
+  }, [])
 
   const toggleCamera = useCallback(() => {
     const stream = localStreamRef.current
@@ -997,6 +1000,7 @@ export function useLiveWebRTC({
 
           if (
             peer.signalingState !== 'stable' ||
+            peer.connectionState === 'connected' ||
             negotiatingRef.current.has(
               tutorId,
             )
@@ -1120,26 +1124,6 @@ useEffect(() => {
   // once media actually flows) and by retryToken (so hitting Retry
   // gives the next attempt a fresh full timeout window).
 }, [enabled, sessionId, userId, tutorId, remoteStreams.length, mediaState.connectionState, retryToken])
-  useEffect(() => {
-    if (!enabled || !sessionId || !userId || !tutorId) return
-    if (remoteStreams.length > 0) return
-    if (mediaState.connectionState === 'connected') return
-
-    const timeoutMs = 20000
-    const timer = window.setTimeout(() => {
-      setConnectionError((current) =>
-        current ??
-        "Still trying to connect — this is taking longer than expected. " +
-          "Make sure your tutor has joined the class, then try again.",
-      )
-    }, timeoutMs)
-
-    return () => window.clearTimeout(timer)
-    // Re-armed by remoteStreams/connectionState changes (so it clears
-    // once media actually flows) and by retryToken (so hitting Retry
-    // gives the next attempt a fresh full timeout window).
-  }, [enabled, sessionId, userId, tutorId, remoteStreams.length, mediaState.connectionState, retryToken])
-
   useEffect(() => {
     const peers = peersRef.current
     const remoteStreams = remoteStreamsRef.current

@@ -116,6 +116,8 @@ type ViewState = 'loading' | 'ready' | 'not_found' | 'no_access' | 'error'
 export default function LiveClassroom() {
   const { sessionId } = useParams<{ sessionId: string }>()
   const { user, loading: authLoading } = useAuth()
+  const userId = user?.id
+  const userDisplayName = user?.displayName
   const { role: userRole, loading: roleLoading } = useUserRole()
   const { isAdmin, loading: adminLoading } = useAdminAuth()
   const navigate = useNavigate()
@@ -160,7 +162,7 @@ export default function LiveClassroom() {
   useEffect(() => {
     if (authLoading || roleLoading || adminLoading) return
 
-    if (!user) {
+    if (!userId) {
       navigate('/login', {
         state: { redirectTo: `/live-classroom/${sessionId}` },
       })
@@ -192,10 +194,10 @@ export default function LiveClassroom() {
           return
         }
 
-        const isTutor = !isAdmin && userRole === 'tutor' && found.tutor_id === user.id
+        const isTutor = !isAdmin && userRole === 'tutor' && found.tutor_id === userId
         const enrolled = isAdmin || isTutor
           ? true
-          : await hasActiveEnrolment(user.id, found.course_id)
+          : await hasActiveEnrolment(userId, found.course_id)
 
         if (cancelled) return
 
@@ -218,7 +220,7 @@ export default function LiveClassroom() {
     return () => {
       cancelled = true
     }
-  }, [sessionId, user, authLoading, roleLoading, adminLoading, isAdmin, userRole, navigate])
+  }, [sessionId, userId, authLoading, roleLoading, adminLoading, isAdmin, userRole, navigate])
 
   useEffect(() => {
     const tick = setInterval(() => setNow(new Date()), 1000)
@@ -226,15 +228,15 @@ export default function LiveClassroom() {
   }, [])
 
   useEffect(() => {
-    if (!session || !sessionId || !user || roleLoading || adminLoading) return
+    if (!session || !sessionId || !userId || roleLoading || adminLoading) return
 
     const isTutor = !isAdmin && userRole === 'tutor'
     const participantRole = isAdmin ? 'admin' : isTutor ? 'tutor' : 'student'
 
     void ensureLiveRoom(sessionId)
       .then(() => joinLiveRoom(sessionId, {
-        userId: user.id,
-        displayName: user.displayName ?? (isTutor ? session.tutor_name : isAdmin ? 'Admin' : 'Student'),
+        userId,
+        displayName: userDisplayName ?? (isTutor ? session.tutor_name : isAdmin ? 'Admin' : 'Student'),
         role: participantRole,
       }))
       .then(() => {
@@ -254,11 +256,11 @@ export default function LiveClassroom() {
 
     return () => {
       unsubscribe()
-      void leaveLiveRoom(sessionId, user.id).catch((error) => {
+      void leaveLiveRoom(sessionId, userId).catch((error) => {
         console.error('[LiveClassroom] Failed to leave room:', error)
       })
     }
-  }, [session, sessionId, user, userRole, roleLoading, adminLoading, isAdmin])
+  }, [session, sessionId, userId, userDisplayName, userRole, roleLoading, adminLoading, isAdmin])
 
   const isTutor = !isAdmin && userRole === 'tutor'
 
