@@ -5,7 +5,6 @@ import { firebaseAuth } from '@/lib/firebase'
 import { useAuth } from '@/hooks/useAuth'
 import { useUserRole } from '@/hooks/useUserRole'
 import NotificationBell from '@/components/NotificationBell'
-
 const navItems = [
   { to: '/', label: 'Home', end: true },
   { to: '/courses', label: 'Courses' },
@@ -15,13 +14,11 @@ const navItems = [
   { to: '/about', label: 'About' },
   { to: '/founder', label: 'Founder' }
 ]
-
 export default function Navbar() {
   const { user, loading } = useAuth()
   const { role } = useUserRole()
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
-
   // ROLE-AWARE DASHBOARD LINK — this Navbar is shared by every signed-in
   // visitor (see useUserRole.ts), so the persistent "Dashboard" link must
   // not hardcode the student route. A Tutor clicking this from anywhere
@@ -37,7 +34,11 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/5 bg-ink/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
-        <Link to="/" className="flex shrink-0 items-center gap-2.5" aria-label="VATTAMS ACADEMIA home">
+        <Link
+          to="/"
+          className="flex shrink-0 items-center gap-2.5"
+          aria-label="VATTAMS ACADEMIA home"
+        >
           <img src="/branding/logo.png" alt="" className="h-9 w-9 object-contain" />
           <span className="font-display text-base font-semibold leading-none tracking-wide text-parchment sm:text-lg">
             VATTAMS <span className="text-gold">ACADEMIA</span>
@@ -170,6 +171,9 @@ export default function Navbar() {
                 </>
               )}
             </div>
+            <p className="mt-3 border-t border-white/10 pt-3 text-xs text-slate-muted/70">
+              VATTAMS Academia, formerly known as LITTLE MOUNT ACADEMY.
+            </p>
           </nav>
         </div>
       )}
