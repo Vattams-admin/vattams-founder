@@ -1,0 +1,228 @@
+import { test, expect, type Page } from '@playwright/test'
+
+const requiredEnv = [
+  'E2E_TUTOR_EMAIL',
+  'E2E_TUTOR_PASSWORD',
+  'E2E_STUDENT_A_EMAIL',
+  'E2E_STUDENT_A_PASSWORD',
+  'E2E_STUDENT_B_EMAIL',
+  'E2E_STUDENT_B_PASSWORD',
+] as const
+
+function requireE2EAccounts() {
+  const missing = requiredEnv.filter((name) => !process.env[name])
+  if (missing.length > 0) {
+    throw new Error(`Missing GitHub Actions secrets: ${missing.join(', ')}`)
+  }
+
+  return {
+    tutor: {
+      email: process.env.E2E_TUTOR_EMAIL!,
+      password: process.env.E2E_TUTOR_PASSWORD!,
+    },
+    studentA: {
+      email: process.env.E2E_STUDENT_A_EMAIL!,
+      password: process.env.E2E_STUDENT_A_PASSWORD!,
+    },
+    studentB: {
+      email: process.env.E2E_STUDENT_B_EMAIL!,
+      password: process.env.E2E_STUDENT_B_PASSWORD!,
+    },
+  }
+}
+
+async function login(page: Page, email: string, password: string) {
+  await page.goto('/login', { waitUntil: 'domcontentloaded' })
+
+  await page.locator('#email').fill(email)
+  await page.locator('#password').fill(password)
+  await page.getByRole('button', { name: /sign in|login/i }).click()
+
+  await page.waitForURL(/\/(dashboard|tutor\/dashboard)(?:$|[?#])/, {
+    timeout: 30_000,
+  })
+}
+
+async function openLiveClassroomAsTutor(page: Page): Promise<string> {
+  await page.goto('/tutor/live-sessions', { waitUntil: 'domcontentloaded' })
+
+  const liveCard = page
+    .locator('.card')
+    .filter({ has: page.getByRole('button', { name: 'Open VATTAMS Classroom' }) })
+    .filter({ hasText: /live/i })
+    .first()
+
+  await expect(liveCard).toBeVisible({ timeout: 30_000 })
+
+  await liveCard
+    .getByRole('button', { name: 'Open VATTAMS Classroom' })
+    .click()
+
+  await page.waitForURL(/\/live-classroom\/[^/?#]+/, { timeout: 30_000 })
+
+  return new URL(page.url()).pathname.split('/').pop()!
+}
+
+async function joinAsStudent(page: Page, sessionId: string) {
+  await page.goto(`/live-session/${sessionId}`, {
+    waitUntil: 'domcontentloaded',
+  })
+
+  await expect(
+    page.getByRole('button', { name: 'Join Live Session' }),
+  ).toBeVisible({ timeout: 30_000 })
+
+  await page.getByRole('button', { name: 'Join Live Session' }).click()
+
+  await page.waitForURL(`/live-classroom/${sessionId}`, {
+    timeout: 30_000,
+  })
+}
+
+async function classroomMetrics(page: Page) {
+  return page.locator('main').evaluate((main) => {
+    const text = main.textContent ?? ''
+    const participants = text.match(/Participants:\s*(\d+)/)?.[1]
+    const remoteStreams = text.match(/Remote streams:\s*(\d+)/)?.[1]
+    const webRTC = text.match(/WebRTC:\s*([a-zA-Z_]+)/)?.[1]
+
+    return {
+      participants: Number(participants ?? NaN),
+      remoteStreams: Number(remoteStreams ?? NaN),
+      webRTC: webRTC ?? '',
+    }
+  })
+}
+
+test.describe('production live classroom', () => {
+  test('Tutor + Student A + Student B establish a live classroom', async ({
+    browser,
+  }) => {
+    const accounts = requireE2EAccounts()
+
+    const tutorContext = await browser.newContext({
+      permissions: ['camera', 'microphone'],
+    })
+    const studentAContext = await browser.newContext({
+      permissions: ['camera', 'microphone'],
+    })
+    const studentBContext = await browser.newContext({
+      permissions: ['camera', 'microphone'],
+    })
+
+    const tutor = await tutorContext.newPage()
+    const studentA = await studentAContext.newPage()
+    const studentB = await studentBContext.newPage()
+
+    try {
+      await login(tutor, accounts.tutor.email, accounts.tutor.password)
+
+      const sessionId = await openLiveClassroomAsTutor(tutor)
+
+      await expect(tutor.getByText('Live', { exact: true })).toBeVisible({
+        timeout: 30_000,
+      })
+
+      await joinAsStudent(studentA, sessionId)
+      await joinAsStudent(studentB, sessionId)
+
+      await expect
+        .poll(
+          async () => (await classroomMetrics(tutor)).participants,
+          { timeout: 45_000 },
+        )
+        .toBe(3)
+
+      await expect
+        .poll(
+          async () => (await classroomMetrics(studentA)).participants,
+          { timeout: 30_000 },
+        )
+        .toBe(3)
+
+      await expect
+        .poll(
+          async () => (await classroomMetrics(studentB)).participants,
+          { timeout: 30_000 },
+        )
+        .toBe(3)
+
+      await expect
+        .poll(
+          async () => (await classroomMetrics(tutor)).webRTC,
+          { timeout: 45_000 },
+        )
+        .toBe('connected')
+
+      await expect
+        .poll(
+          async () => (await classroomMetrics(studentA)).webRTC,
+          { timeout: 45_000 },
+        )
+        .toBe('connected')
+
+      await expect
+        .poll(
+          async () => (await classroomMetrics(studentB)).webRTC,
+          { timeout: 45_000 },
+        )
+        .toBe('connected')
+
+      await expect
+        .poll(
+          async () => (await classroomMetrics(tutor)).remoteStreams,
+          { timeout: 45_000 },
+        )
+        .toBeGreaterThanOrEqual(2)
+
+      await expect
+        .poll(
+          async () => (await classroomMetrics(studentA)).remoteStreams,
+          { timeout: 45_000 },
+        )
+        .toBeGreaterThanOrEqual(1)
+
+      await expect
+        .poll(
+          async () => (await classroomMetrics(studentB)).remoteStreams,
+          { timeout: 45_000 },
+        )
+        .toBeGreaterThanOrEqual(1)
+
+      const micButton = tutor.getByRole('button', { name: /Mic/ })
+      await expect(micButton).toBeEnabled()
+
+      const initialMicText = await micButton.innerText()
+      await micButton.click()
+
+      await expect
+        .poll(() => micButton.innerText(), { timeout: 5_000 })
+        .not.toBe(initialMicText)
+
+      await micButton.click()
+
+      await expect
+        .poll(() => micButton.innerText(), { timeout: 5_000 })
+        .toBe(initialMicText)
+
+      await pageStabilityCheck(tutor, 10_000)
+      await pageStabilityCheck(studentA, 10_000)
+      await pageStabilityCheck(studentB, 10_000)
+    } finally {
+      await Promise.allSettled([
+        tutorContext.close(),
+        studentAContext.close(),
+        studentBContext.close(),
+      ])
+    }
+  })
+})
+
+async function pageStabilityCheck(page: Page, durationMs: number) {
+  await expect
+    .poll(
+      async () => (await classroomMetrics(page)).webRTC,
+      { timeout: durationMs },
+    )
+    .toBe('connected')
+}
