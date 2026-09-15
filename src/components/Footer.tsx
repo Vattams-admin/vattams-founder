@@ -1,28 +1,23 @@
 import { Link } from 'react-router-dom'
-
 const platformLinks = [
   { to: '/courses', label: 'Courses' },
   { to: '/competitive-exams', label: 'Competitive Exams' },
   { to: '/competitions', label: 'Competitions' },
   { to: '/verify-certificate', label: 'Verify Certificate' }
 ]
-
 const companyLinks = [
   { to: '/about', label: 'About' },
   { to: '/founder', label: 'Founder' },
   { to: '/contact', label: 'Contact' }
 ]
-
 const legalLinks = [
   { to: '/privacy-policy', label: 'Privacy Policy' },
   { to: '/terms', label: 'Terms & Conditions' },
   { to: '/refund-policy', label: 'Refund Policy' },
   { to: '/udyam-registration', label: 'Udyam Registration' }
 ]
-
 export default function Footer() {
   const year = new Date().getFullYear()
-
   return (
     <footer className="border-t border-white/5 bg-navy-dark">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
@@ -40,6 +35,9 @@ export default function Footer() {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-muted">
               Courses, competitive exam preparation, competitions, and verifiable certification —
               built to one academic standard.
+            </p>
+            <p className="mt-3 max-w-xs text-xs leading-relaxed text-slate-muted/80">
+              VATTAMS Academia, formerly known as LITTLE MOUNT ACADEMY.
             </p>
           </div>
 
