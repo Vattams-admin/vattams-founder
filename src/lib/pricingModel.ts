@@ -217,6 +217,9 @@ export const DEFAULT_PRICING_CONFIG: PricingConfig = {
         'vattams-competitions:National Coding Challenge': { regularPrice: 1250, launchDiscountPercent: 20 },
         'vattams-competitions:National AI Challenge': { regularPrice: 1250, launchDiscountPercent: 20 },
         'vattams-competitions:Mega Inter-School Championship': { regularPrice: 1500, launchDiscountPercent: 20 },
+        'vattams-competitions:Indian Classical Literature & Wisdom Championship': { regularPrice: 1000, launchDiscountPercent: 20 },
+        'vattams-competitions:Indian Language Literature Masters Series': { regularPrice: 1000, launchDiscountPercent: 20 },
+        'vattams-competitions:Thirukkural Mastery Championship': { regularPrice: 750, launchDiscountPercent: 20 },
     },
   },
 }
