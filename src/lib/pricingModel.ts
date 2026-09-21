@@ -220,6 +220,10 @@ export const DEFAULT_PRICING_CONFIG: PricingConfig = {
         'vattams-competitions:Indian Classical Literature & Wisdom Championship': { regularPrice: 1000, launchDiscountPercent: 20 },
         'vattams-competitions:Indian Language Literature Masters Series': { regularPrice: 1000, launchDiscountPercent: 20 },
         'vattams-competitions:Thirukkural Mastery Championship': { regularPrice: 750, launchDiscountPercent: 20 },
+        'vattams-competitions:Fun with Maths Challenge': { regularPrice: 500, launchDiscountPercent: 20 },
+        'vattams-competitions:Azhagu Tamil Challenge': { regularPrice: 500, launchDiscountPercent: 20 },
+        'vattams-competitions:Handwriting Excellence Challenge': { regularPrice: 500, launchDiscountPercent: 20 },
+        'vattams-competitions:Spoken Hindi Challenge': { regularPrice: 500, launchDiscountPercent: 20 },
     },
   },
 }

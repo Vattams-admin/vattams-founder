@@ -119,6 +119,10 @@ const RAW_ITEMS = [
   ['Indian Classical Literature & Wisdom Championship', CATEGORY.VATTAMS_COMPETITIONS, 1000],
   ['Indian Language Literature Masters Series', CATEGORY.VATTAMS_COMPETITIONS, 1000],
   ['Thirukkural Mastery Championship', CATEGORY.VATTAMS_COMPETITIONS, 750],
+  ['Fun with Maths Challenge', CATEGORY.VATTAMS_COMPETITIONS, 500],
+  ['Azhagu Tamil Challenge', CATEGORY.VATTAMS_COMPETITIONS, 500],
+  ['Handwriting Excellence Challenge', CATEGORY.VATTAMS_COMPETITIONS, 500],
+  ['Spoken Hindi Challenge', CATEGORY.VATTAMS_COMPETITIONS, 500],
 ]
 
 export const CATALOG_ITEMS = RAW_ITEMS.map(([name, category, base_fee]) => {
