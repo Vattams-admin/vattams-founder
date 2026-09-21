@@ -874,6 +874,14 @@ service cloud.firestore {
       allow read, write: if isAdmin();
     }
 
+    // BOGO entitlements are created/consumed by the controlled backend.
+    // Students cannot manufacture or modify their own free-course entitlement.
+    match /bogo_entitlements/{entitlementId} {
+      allow read: if isAdmin()
+        || (isSignedIn() && resource.data.student_id == request.auth.uid);
+      allow create, update, delete: if isAdmin();
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

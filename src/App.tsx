@@ -169,6 +169,7 @@ export default function App() {
               }
             />
 
+
             {/* New in Phase 2 — guarded, unlike the existing /admin/*
                 routes above (see components/AdminRoute.tsx). */}
             <Route

@@ -21,6 +21,8 @@ import { resolveEffectivePricingMode } from '@/lib/coursePricing'
 import { assignStudentToBatchTx } from '@/lib/groupBatches'
 import { claimOfferSlotTx, consumeOfferMonthTx } from '@/lib/specialOfferEligibility'
 import { claimCatalogLaunchSlotTx } from '@/lib/catalogLaunchEligibility'
+import { createBogoEntitlementTx, BOGO_EXPIRY_ISO } from '@/lib/bogoEntitlement'
+import { getBogoRegularPrice } from '@/lib/bogoEligibility'
 import { recordTutorEarningTx } from '@/lib/tutorEarnings'
 
 function inr(n: number): string {
@@ -254,6 +256,37 @@ export default function AdminPayments() {
               mode,
               billingPeriod: payment.billing_period ?? null,
             })
+          }
+
+          // BOGO: create exactly one entitlement for the first
+          // approved paid purchase. Renewals do not create another
+          // BOGO entitlement.
+          if (
+            status === 'approved' &&
+            !isRenewal &&
+            payment.amount > 0 &&
+            course &&
+            pricingConfig
+          ) {
+            const purchasedRegularPrice = getBogoRegularPrice(
+              course,
+              pricingConfig,
+            )
+
+            if (purchasedRegularPrice > 0) {
+              createBogoEntitlementTx(
+                tx,
+                payment.id,
+                {
+                  paymentId: payment.id,
+                  studentId,
+                  purchasedCourseId: courseId,
+                  purchasedCourseName: course.name,
+                  purchasedRegularPrice,
+                  eligibleUntil: BOGO_EXPIRY_ISO,
+                },
+              )
+            }
           }
         }
 
