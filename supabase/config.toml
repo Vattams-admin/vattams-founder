@@ -23,3 +23,6 @@ verify_jwt = false
 
 [functions.tutor-onboarding-document]
 verify_jwt = false
+
+[functions.competition-scoring]
+verify_jwt = false
