@@ -857,6 +857,23 @@ service cloud.firestore {
       allow create, update, delete: if isAdmin();
     }
 
+    // ------------------------------------------------------------------
+    // Competition launch-discount counters
+    // Students may read the counter for checkout display only.
+    // Only admins may create/update/delete counters and eligibility records.
+    // The actual 50-slot decision is enforced inside the admin approval
+    // transaction by claimCatalogLaunchSlotTx().
+    // ------------------------------------------------------------------
+
+    match /catalog_launch_counters/{courseKey} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /catalog_launch_eligibility/{eligibilityId} {
+      allow read, write: if isAdmin();
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

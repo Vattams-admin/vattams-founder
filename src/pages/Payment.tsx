@@ -22,6 +22,7 @@ import { createAdminBroadcast } from '@/lib/notifications'
 import { getPricingConfig } from '@/lib/pricingConfig'
 import { getEffectiveCoursePricing, resolveEffectivePricingMode, describePricing, type EffectiveCoursePricing } from '@/lib/coursePricing'
 import { getOfferEligibility, peekOfferAvailability, markFreeCompetitionEntryUsed } from '@/lib/specialOfferEligibility'
+import { peekCatalogLaunchAvailability } from '@/lib/catalogLaunchEligibility'
 
 const PAYEE_NAME = import.meta.env.VITE_UPI_PAYEE_NAME || 'VATTAMS ACADEMIA'
 const PAYEE_VPA = import.meta.env.VITE_UPI_VPA as string | undefined
@@ -98,6 +99,31 @@ export default function Payment() {
         }
 
         let effectivePricing = getEffectiveCoursePricing(courseData, pricingConfig, { specialOfferEligible })
+
+        // Competition launch offer: the first 50 successful approvals
+        // receive the catalog launch price. This read is best-effort for
+        // checkout display only; AdminPayments.tsx enforces the cap
+        // authoritatively inside the approval transaction.
+        if (mode === 'competition_entry') {
+          const catalogKey = courseData.category_id
+            ? `${courseData.category_id}:${courseData.name}`
+            : null
+          const catalogPlan = catalogKey
+            ? pricingConfig.catalogCourses.plans[catalogKey]
+            : undefined
+
+          if (catalogKey && catalogPlan && catalogPlan.launchDiscountPercent > 0) {
+            const launchAvailable = await peekCatalogLaunchAvailability(catalogKey, 50)
+
+            if (!launchAvailable) {
+              effectivePricing = {
+                ...effectivePricing,
+                amount: catalogPlan.regularPrice,
+                regularAmount: null,
+              }
+            }
+          }
+        }
 
         // Phonics "free entry fee for upcoming VATTAMS competitions" —
         // a one-time waiver for competition entry, tracked on the
@@ -306,10 +332,22 @@ export default function Payment() {
             </>
           )}
           {pricing.mode === 'competition_entry' && pricing.regularAmount != null && pricing.regularAmount !== pricing.amount && (
-            <div className="flex items-center justify-between p-4 text-sm">
-              <span className="text-slate-muted">Regular price</span>
-              <span className="line-through text-slate-muted">₹{pricing.regularAmount.toLocaleString('en-IN')}</span>
-            </div>
+            <>
+              <div className="flex items-center justify-between p-4 text-sm">
+                <span className="text-slate-muted">Regular price</span>
+                <span className="line-through text-slate-muted">
+                  ₹{pricing.regularAmount.toLocaleString('en-IN')}
+                </span>
+              </div>
+              <div className="flex items-center justify-between px-4 pb-2 text-sm">
+                <span className="text-slate-muted">Launch offer</span>
+                <span className="font-semibold text-success">
+                  {Math.round(
+                    ((pricing.regularAmount - pricing.amount) / pricing.regularAmount) * 100,
+                  )}% OFF • First 50
+                </span>
+              </div>
+            </>
           )}
         {pricing.isRecurring && (
           <div className="flex items-center justify-between p-4 text-sm">

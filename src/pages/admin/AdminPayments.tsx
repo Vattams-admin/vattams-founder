@@ -20,6 +20,7 @@ import { computeRevenueSplit, DEFAULT_PRICING_CONFIG, type PricingConfig } from 
 import { resolveEffectivePricingMode } from '@/lib/coursePricing'
 import { assignStudentToBatchTx } from '@/lib/groupBatches'
 import { claimOfferSlotTx, consumeOfferMonthTx } from '@/lib/specialOfferEligibility'
+import { claimCatalogLaunchSlotTx } from '@/lib/catalogLaunchEligibility'
 import { recordTutorEarningTx } from '@/lib/tutorEarnings'
 
 function inr(n: number): string {
@@ -180,6 +181,39 @@ export default function AdminPayments() {
 
           if (!mode && course) {
             mode = resolveEffectivePricingMode(course)
+          }
+
+          // Competition launch discount: the first 50 successful
+          // approvals per competition/course receive the catalog
+          // launch price. The transaction helper is authoritative and
+          // race-safe; this is deliberately not a client-side count.
+          if (mode === 'competition_entry' && course && pricingConfig) {
+            const catalogKey = course.category_id
+              ? `${course.category_id}:${course.name}`
+              : null
+            const catalogPlan = catalogKey
+              ? pricingConfig.catalogCourses.plans[catalogKey]
+              : undefined
+
+            if (catalogKey && catalogPlan) {
+              const launchPrice = Math.round(
+                catalogPlan.regularPrice *
+                  (1 - catalogPlan.launchDiscountPercent / 100),
+              )
+
+              if (launchPrice < catalogPlan.regularPrice) {
+                await claimCatalogLaunchSlotTx(
+                  tx,
+                  catalogKey,
+                  courseId,
+                  studentId,
+                  catalogPlan.regularPrice,
+                  launchPrice,
+                  50,
+                  payment.amount,
+                )
+              }
+            }
           }
 
           if (pricingConfig) {
