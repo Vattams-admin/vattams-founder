@@ -36,7 +36,7 @@ async function login(page: Page, email: string, password: string) {
 
   await page.locator('#email').fill(email)
   await page.locator('#password').fill(password)
-  await page.getByRole('button', { name: /sign in|login/i }).click()
+  await page.getByRole('button', { name: /log in|sign in|login/i }).click()
 
   await page.waitForURL(/\/(dashboard|tutor\/dashboard)(?:$|[?#])/, {
     timeout: 30_000,
