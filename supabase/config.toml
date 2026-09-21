@@ -26,3 +26,6 @@ verify_jwt = false
 
 [functions.competition-scoring]
 verify_jwt = false
+
+[functions.bogo-claim]
+verify_jwt = false
