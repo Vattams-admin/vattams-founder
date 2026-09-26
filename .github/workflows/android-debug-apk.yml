@@ -57,6 +57,7 @@ jobs:
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
           VITE_SUPABASE_STORAGE_BUCKET: ${{ secrets.VITE_SUPABASE_STORAGE_BUCKET }}
           VITE_UPI_PAYEE_NAME: ${{ secrets.VITE_UPI_PAYEE_NAME }}
+          VITE_UPI_VPA: ${{ secrets.VITE_UPI_VPA }}
         run: npm run build
 
       - name: Sync Capacitor
