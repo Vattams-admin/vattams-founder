@@ -6,7 +6,6 @@ import {
   getDocs,
   query,
   where,
-  orderBy,
   setDoc,
 } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
@@ -280,22 +279,23 @@ export default function CourseLearn() {
         // ---------------------------------------------------------
         const moduleQuery = query(
           collection(firestore, 'course_modules'),
-          where('course_id', '==', course.id),
-          orderBy('sort_order', 'asc')
+          where('course_id', '==', course.id)
         )
 
         currentStep = 'Step 3: loading course modules'
         const moduleSnapshot = await getDocs(moduleQuery)
 
-        const moduleRows: Module[] = moduleSnapshot.docs.map((doc) => {
-          const data = doc.data()
+        const moduleRows: Module[] = moduleSnapshot.docs
+          .map((doc) => {
+            const data = doc.data()
 
-          return {
-            id: doc.id,
-            title: data.title ?? '',
-            sort_order: data.sort_order ?? 0,
-          }
-        })
+            return {
+              id: doc.id,
+              title: data.title ?? '',
+              sort_order: data.sort_order ?? 0,
+            }
+          })
+          .sort((a, b) => a.sort_order - b.sort_order)
 
         if (cancelled) return
 
@@ -308,8 +308,7 @@ export default function CourseLearn() {
           const lessonQuery = query(
             collection(firestore, 'course_lessons'),
             where('module_id', '==', module.id),
-            where('course_id', '==', course.id),
-            orderBy('sort_order', 'asc')
+            where('course_id', '==', course.id)
           )
 
           currentStep = `Step 4: loading lessons for module ${module.id}`
@@ -356,6 +355,15 @@ export default function CourseLearn() {
         )
 
         if (cancelled) return
+
+        lessonRows.sort((a, b) => {
+          const moduleOrder =
+            moduleRows.find((module) => module.id === a.module_id)?.sort_order ?? 0
+          const otherModuleOrder =
+            moduleRows.find((module) => module.id === b.module_id)?.sort_order ?? 0
+
+          return moduleOrder - otherModuleOrder || a.sort_order - b.sort_order
+        })
 
         // ---------------------------------------------------------
         // 6b. Course materials (Learning Materials module — separate
