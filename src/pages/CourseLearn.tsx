@@ -214,6 +214,7 @@ export default function CourseLearn() {
     const userId = user.uid
 
     async function load() {
+      let currentStep = 'initializing CourseLearn'
       try {
         setError(null)
         setDiagnosticError(null)
@@ -228,7 +229,7 @@ export default function CourseLearn() {
           where('is_published', '==', true)
         )
 
-        setDiagnosticError('Step 1: loading course')
+        currentStep = 'Step 1: loading course'
         const courseSnapshot = await getDocs(courseQuery)
 
         if (cancelled) return
@@ -258,7 +259,7 @@ export default function CourseLearn() {
           where('status', '==', 'active')
         )
 
-        setDiagnosticError('Step 2: checking active enrolment')
+        currentStep = 'Step 2: checking active enrolment'
         const enrolmentSnapshot = await getDocs(enrolmentQuery)
 
         if (cancelled) return
@@ -283,7 +284,7 @@ export default function CourseLearn() {
           orderBy('sort_order', 'asc')
         )
 
-        setDiagnosticError('Step 3: loading course modules')
+        currentStep = 'Step 3: loading course modules'
         const moduleSnapshot = await getDocs(moduleQuery)
 
         const moduleRows: Module[] = moduleSnapshot.docs.map((doc) => {
@@ -310,7 +311,7 @@ export default function CourseLearn() {
             orderBy('sort_order', 'asc')
           )
 
-          setDiagnosticError(`Step 4: loading lessons for module ${module.id}`)
+          currentStep = `Step 4: loading lessons for module ${module.id}`
           const lessonSnapshot = await getDocs(lessonQuery)
 
           lessonSnapshot.docs.forEach((lessonDoc) => {
@@ -338,7 +339,7 @@ export default function CourseLearn() {
           where('enrolment_id', '==', currentEnrolmentId)
         )
 
-        setDiagnosticError('Step 5: loading progress')
+        currentStep = 'Step 5: loading progress'
         const progressSnapshot = await getDocs(progressQuery)
 
         const progressRows: ProgressRow[] = progressSnapshot.docs.map(
@@ -361,7 +362,7 @@ export default function CourseLearn() {
         // subcollection) must not block the lesson view students
         // already have access to.
         // ---------------------------------------------------------
-        setDiagnosticError('Step 6: loading course materials')
+        currentStep = 'Step 6: loading course materials'
         const { rows: materialRows } = await listPublishedMaterials(course.id)
         if (!cancelled) setMaterials(materialRows)
 
@@ -401,8 +402,8 @@ export default function CourseLearn() {
         const firebaseError = err as { code?: string; message?: string }
         setDiagnosticError(
           firebaseError.code
-            ? `${firebaseError.code}: ${firebaseError.message ?? 'Unknown Firebase error'}`
-            : String(err)
+            ? `${currentStep} — ${firebaseError.code}: ${firebaseError.message ?? 'Unknown Firebase error'}`
+            : `${currentStep} — ${String(err)}`
         )
 
         if (cancelled) return
