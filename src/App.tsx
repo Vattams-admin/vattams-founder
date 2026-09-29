@@ -22,6 +22,7 @@ const StudentDashboard = lazy(() => import('@/pages/StudentDashboard'))
 const StudentIdCard = lazy(() => import('@/pages/StudentIdCard'))
 const StudentWelcomeLetter = lazy(() => import('@/pages/StudentWelcomeLetter'))
 const CourseLearn = lazy(() => import('@/pages/CourseLearn'))
+const CompetitionParticipant = lazy(() => import('@/pages/CompetitionParticipant'))
 const VerifyCertificate = lazy(() => import('@/pages/VerifyCertificate'))
 const Auth = lazy(() => import('@/pages/Auth'))
 const StudentRegister = lazy(() => import('@/pages/StudentRegister'))
@@ -112,6 +113,7 @@ export default function App() {
             <Route path="/student/id-card" element={<StudentIdCard />} />
             <Route path="/student/welcome-letter" element={<StudentWelcomeLetter />} />
             <Route path="/learn/:slug" element={<CourseLearn />} />
+                    <Route path="/competition/:slug" element={<CompetitionParticipant />} />
             <Route path="/notifications" element={<Notifications />} />
 
             {/* Phase 19 — Live Sessions. /live-session/:sessionId enforces

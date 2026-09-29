@@ -196,7 +196,7 @@ export default function StudentDashboard() {
                 <Link
                               to={
                                 courseMap[e.course_id ?? '']?.is_competition
-                                  ? `/courses/${e.course_slug}`
+                                  ? `/competition/${e.course_slug}`
                                   : `/learn/${e.course_slug}`
                               }
                               className="hover:text-gold-bright"
