@@ -198,6 +198,7 @@ export default function CourseLearn() {
     'loading' | 'no_access' | 'error' | 'ready'
   >('loading')
   const [retryToken, setRetryToken] = useState(0)
+  const [diagnosticError, setDiagnosticError] = useState<string | null>(null)
 
   useEffect(() => {
     if (authLoading) return
@@ -215,6 +216,7 @@ export default function CourseLearn() {
     async function load() {
       try {
         setError(null)
+        setDiagnosticError(null)
         setStatus('loading')
 
         // ---------------------------------------------------------
@@ -226,6 +228,7 @@ export default function CourseLearn() {
           where('is_published', '==', true)
         )
 
+        setDiagnosticError('Step 1: loading course')
         const courseSnapshot = await getDocs(courseQuery)
 
         if (cancelled) return
@@ -255,6 +258,7 @@ export default function CourseLearn() {
           where('status', '==', 'active')
         )
 
+        setDiagnosticError('Step 2: checking active enrolment')
         const enrolmentSnapshot = await getDocs(enrolmentQuery)
 
         if (cancelled) return
@@ -279,6 +283,7 @@ export default function CourseLearn() {
           orderBy('sort_order', 'asc')
         )
 
+        setDiagnosticError('Step 3: loading course modules')
         const moduleSnapshot = await getDocs(moduleQuery)
 
         const moduleRows: Module[] = moduleSnapshot.docs.map((doc) => {
@@ -305,6 +310,7 @@ export default function CourseLearn() {
             orderBy('sort_order', 'asc')
           )
 
+          setDiagnosticError(`Step 4: loading lessons for module ${module.id}`)
           const lessonSnapshot = await getDocs(lessonQuery)
 
           lessonSnapshot.docs.forEach((lessonDoc) => {
@@ -332,6 +338,7 @@ export default function CourseLearn() {
           where('enrolment_id', '==', currentEnrolmentId)
         )
 
+        setDiagnosticError('Step 5: loading progress')
         const progressSnapshot = await getDocs(progressQuery)
 
         const progressRows: ProgressRow[] = progressSnapshot.docs.map(
@@ -354,6 +361,7 @@ export default function CourseLearn() {
         // subcollection) must not block the lesson view students
         // already have access to.
         // ---------------------------------------------------------
+        setDiagnosticError('Step 6: loading course materials')
         const { rows: materialRows } = await listPublishedMaterials(course.id)
         if (!cancelled) setMaterials(materialRows)
 
@@ -389,6 +397,13 @@ export default function CourseLearn() {
         setStatus('ready')
       } catch (err) {
         console.error('CourseLearn Firebase error:', err)
+
+        const firebaseError = err as { code?: string; message?: string }
+        setDiagnosticError(
+          firebaseError.code
+            ? `${firebaseError.code}: ${firebaseError.message ?? 'Unknown Firebase error'}`
+            : String(err)
+        )
 
         if (cancelled) return
 
@@ -560,6 +575,11 @@ export default function CourseLearn() {
         <p className="mt-3 text-slate-muted">
           {error ?? 'Please check your internet connection and try again.'}
         </p>
+        {diagnosticError && (
+          <p className="mt-3 break-all text-xs text-slate-muted">
+            Diagnostic: {diagnosticError}
+          </p>
+        )}
 
         <button
           onClick={() => setRetryToken((t) => t + 1)}
