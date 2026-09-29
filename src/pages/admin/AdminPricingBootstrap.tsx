@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import AdminNav from '@/components/AdminNav'
 import AdminRoute from '@/components/AdminRoute'
-import { DEFAULT_PRICING_CONFIG } from '@/lib/pricingModel'
-import { savePricingConfig } from '@/lib/pricingConfig'
+import { getPricingConfig, savePricingConfig } from '@/lib/pricingConfig'
 
 export default function AdminPricingBootstrap() {
   const [status, setStatus] = useState<string | null>(null)
@@ -12,8 +11,25 @@ export default function AdminPricingBootstrap() {
     setBusy(true)
     setStatus(null)
     try {
-      await savePricingConfig(DEFAULT_PRICING_CONFIG)
-      setStatus('SUCCESS: settings/pricing has been created with the approved default pricing configuration.')
+      const current = await getPricingConfig()
+      const planKey = 'vattams-competitions:Thirukkural Mastery Championship'
+
+      const updated = {
+        ...current,
+        catalogCourses: {
+          ...current.catalogCourses,
+          plans: {
+            ...current.catalogCourses.plans,
+            [planKey]: {
+              regularPrice: 750,
+              launchDiscountPercent: 20,
+            },
+          },
+        },
+      }
+
+      await savePricingConfig(updated)
+      setStatus('SUCCESS: Thirukkural pricing synced safely to ₹750 regular / ₹600 launch price.')
     } catch (error) {
       console.error('Pricing bootstrap failed:', error)
       setStatus(`FAILED: ${error instanceof Error ? error.message : 'Unknown error'}`)
@@ -29,8 +45,8 @@ export default function AdminPricingBootstrap() {
         <div className="card p-6">
           <h1 className="font-display text-3xl text-gold">Pricing Configuration Bootstrap</h1>
           <p className="mt-3 text-sm text-slate-300">
-            One-time admin action to create the Firestore settings/pricing document
-            from DEFAULT_PRICING_CONFIG.
+            Safe admin action: preserves the existing settings/pricing document
+            and updates only the Thirukkural Mastery Championship pricing entry.
           </p>
 
           <button
@@ -39,7 +55,7 @@ export default function AdminPricingBootstrap() {
             disabled={busy}
             className="btn-primary mt-6 disabled:opacity-60"
           >
-            {busy ? 'Creating…' : 'Create Pricing Configuration'}
+            {busy ? 'Syncing…' : 'Sync Thirukkural Pricing'}
           </button>
 
           {status && (
