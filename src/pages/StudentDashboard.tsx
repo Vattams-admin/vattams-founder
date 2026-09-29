@@ -14,6 +14,7 @@ export default function StudentDashboard() {
   const { user, loading } = useAuth()
   const [enrolments, setEnrolments] = useState<Enrolment[]>([])
   const [enrolmentsState, setEnrolmentsState] = useState<SectionState>('loading')
+  const [enrolmentsError, setEnrolmentsError] = useState<string | null>(null)
   const [payments, setPayments] = useState<Payment[]>([])
   const [paymentsState, setPaymentsState] = useState<SectionState>('loading')
   const [nextLiveSession, setNextLiveSession] = useState<LiveSession | null>(null)
@@ -30,7 +31,13 @@ export default function StudentDashboard() {
       setEnrolmentsState('loaded')
     } catch (err) {
       console.error('Failed to load enrolments:', err)
+      const firebaseError = err as { code?: string; message?: string }
       setEnrolmentsState('error')
+      setEnrolmentsError(
+        firebaseError.code
+          ? `${firebaseError.code}: ${firebaseError.message ?? 'Unknown Firebase error'}`
+          : String(err)
+      )
     }
   }
 
@@ -143,6 +150,11 @@ export default function StudentDashboard() {
             <p className="text-sm text-danger">
               Unable to connect right now. Please check your internet connection and try again.
             </p>
+            {enrolmentsError && (
+              <p className="mt-1 break-all text-xs text-slate-muted">
+                Diagnostic: {enrolmentsError}
+              </p>
+            )}
             <button onClick={() => loadEnrolments(user.id)} className="btn-secondary text-xs">
               Retry
             </button>
