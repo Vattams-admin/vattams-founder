@@ -5,7 +5,7 @@ import { firebaseAuth, firestore } from '@/lib/firebase'
 import { getNextLiveSessionForStudent } from '@/lib/liveSessions'
 import type { LiveSession } from '@/types/liveSession'
 import { useAuth } from '@/hooks/useAuth'
-import type { Enrolment, Payment } from '@/types/database'
+import type { Course, Enrolment, Payment } from '@/types/database'
 import EmailVerificationBanner from '@/components/EmailVerificationBanner'
 
 type SectionState = 'loading' | 'loaded' | 'error'
@@ -13,6 +13,7 @@ type SectionState = 'loading' | 'loaded' | 'error'
 export default function StudentDashboard() {
   const { user, loading } = useAuth()
   const [enrolments, setEnrolments] = useState<Enrolment[]>([])
+  const [courseMap, setCourseMap] = useState<Record<string, Course>>({})
   const [enrolmentsState, setEnrolmentsState] = useState<SectionState>('loading')
   const [enrolmentsError, setEnrolmentsError] = useState<string | null>(null)
   const [payments, setPayments] = useState<Payment[]>([])
@@ -27,7 +28,30 @@ export default function StudentDashboard() {
       // doc when it's created (see AdminPayments.tsx) — no join needed.
       const q = query(collection(firestore, 'enrolments'), where('student_id', '==', userId))
       const snapshot = await getDocs(q)
-      setEnrolments(snapshot.docs.map((d) => ({ id: d.id, ...d.data() })) as Enrolment[])
+      const loadedEnrolments = snapshot.docs.map((d) => ({ id: d.id, ...d.data() })) as Enrolment[]
+      setEnrolments(loadedEnrolments)
+
+      const courseIds = [...new Set(
+        loadedEnrolments
+          .map((enrolment) => enrolment.course_id)
+          .filter((courseId): courseId is string => Boolean(courseId))
+      )]
+
+      if (courseIds.length > 0) {
+        const courseSnapshot = await getDocs(query(collection(firestore, 'courses'), where('is_published', '==', true)))
+        const courses = courseSnapshot.docs
+          .map((d) => ({ id: d.id, ...d.data() }) as Course)
+          .filter((course) => courseIds.includes(course.id))
+
+        const nextCourseMap: Record<string, Course> = {}
+        for (const course of courses) {
+          nextCourseMap[course.id] = course
+        }
+        setCourseMap(nextCourseMap)
+      } else {
+        setCourseMap({})
+      }
+
       setEnrolmentsState('loaded')
     } catch (err) {
       console.error('Failed to load enrolments:', err)
@@ -169,7 +193,16 @@ export default function StudentDashboard() {
           {enrolmentsState === 'loaded' && enrolments.map((e) => (
             <div key={e.id} className="card flex items-center justify-between p-4">
               {e.status === 'active' && e.course_slug ? (
-                <Link to={`/learn/${e.course_slug}`} className="hover:text-gold-bright">{e.course_name ?? 'Course'}</Link>
+                <Link
+                              to={
+                                courseMap[e.course_id ?? '']?.is_competition
+                                  ? `/courses/${e.course_slug}`
+                                  : `/learn/${e.course_slug}`
+                              }
+                              className="hover:text-gold-bright"
+                            >
+                              {e.course_name ?? 'Course'}
+                            </Link>
               ) : (
                 <span>{e.course_name ?? 'Course'}</span>
               )}
