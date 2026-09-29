@@ -308,6 +308,7 @@ export default function CourseLearn() {
           const lessonQuery = query(
             collection(firestore, 'course_lessons'),
             where('module_id', '==', module.id),
+            where('course_id', '==', course.id),
             orderBy('sort_order', 'asc')
           )
 
@@ -336,7 +337,8 @@ export default function CourseLearn() {
         // ---------------------------------------------------------
         const progressQuery = query(
           collection(firestore, 'course_progress'),
-          where('enrolment_id', '==', currentEnrolmentId)
+          where('enrolment_id', '==', currentEnrolmentId),
+          where('student_id', '==', userId)
         )
 
         currentStep = 'Step 5: loading progress'
