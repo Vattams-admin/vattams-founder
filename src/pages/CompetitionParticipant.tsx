@@ -10,7 +10,7 @@ import {
   setDoc,
   where,
 } from 'firebase/firestore'
-import { firestore } from '@/lib/firebase'
+import { firebaseAuth, firestore } from '@/lib/firebase'
 import { supabase } from '@/lib/supabase'
 import { useAuth } from '@/hooks/useAuth'
 import type { Course } from '@/types/database'
@@ -138,7 +138,12 @@ export default function CompetitionParticipant() {
     setErrorMessage('')
 
     try {
-      const token = await user.getIdToken()
+      const firebaseUser = firebaseAuth.currentUser
+    if (!firebaseUser) {
+      throw new Error('Your Firebase session has expired. Please sign in again.')
+    }
+
+    const token = await firebaseUser.getIdToken()
 
       const { data, error } = await supabase.functions.invoke(
         'competition-scoring',
@@ -310,6 +315,7 @@ export default function CompetitionParticipant() {
           query(
             collection(firestore, 'competition_questions'),
             where('course_id', '==', loadedCourse.id),
+            where('is_published', '==', true),
           ),
         )
 
