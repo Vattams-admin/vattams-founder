@@ -125,11 +125,11 @@ for (const row of rows) {
 }
 
 const invalidCounts = [...competitionCounts.entries()]
-  .filter(([, count]) => count !== 30);
+  .filter(([, count]) => count < 1);
 
 if (invalidCounts.length) {
   errors.push(
-    `competitions not containing exactly 30 questions: ${invalidCounts.length}`
+    `competitions containing no questions: ${invalidCounts.length}`
   );
 }
 
@@ -139,6 +139,16 @@ const invalidTypes = rows.filter(
 
 if (invalidTypes.length) {
   errors.push(`unsupported question types: ${invalidTypes.length}`);
+}
+
+const unreviewedRows = rows.filter(
+  (r) => r.review_status.trim().toLowerCase() !== "reviewed"
+);
+
+if (WRITE_MODE && unreviewedRows.length) {
+  errors.push(
+    `write blocked: ${unreviewedRows.length} questions are not review_status=reviewed`
+  );
 }
 
 const unpublishedCourses = [...coursesByName.entries()]
@@ -235,7 +245,7 @@ for (const row of rows) {
     source_reference: row.source_reference || null,
     copyright_status: row.copyright_status,
     review_status: row.review_status,
-    is_published: true,
+    is_published: row.review_status.trim().toLowerCase() === "reviewed",
   };
 
   const answerKeyData = {
