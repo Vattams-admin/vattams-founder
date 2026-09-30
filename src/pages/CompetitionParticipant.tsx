@@ -15,6 +15,7 @@ import { supabase } from '@/lib/supabase'
 import { useAuth } from '@/hooks/useAuth'
 import type { Course } from '@/types/database'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
+import LearningMaterialsSection from '@/components/materials/LearningMaterialsSection'
 
 type LoadState = 'loading' | 'loaded' | 'not-found' | 'error'
 type ViewState = 'access' | 'attempt' | 'result'
@@ -38,6 +39,7 @@ type CompetitionAttempt = {
   course_id: string
   status: 'in_progress' | 'submitted' | string
   started_at?: { toMillis?: () => number }
+  question_ids?: string[]
 }
 
 type CompetitionResult = {
@@ -45,6 +47,13 @@ type CompetitionResult = {
   maxScore: number
   answeredCount: number
 }
+
+const OFFICIAL_COMPETITION_QUESTION_IDS = [
+  ...Array.from({ length: 8 }, (_, i) => `TKR-REC-${String(i + 1).padStart(2, '0')}`),
+  ...Array.from({ length: 7 }, (_, i) => `TKR-ADH-${String(i + 1).padStart(2, '0')}`),
+  ...Array.from({ length: 8 }, (_, i) => `TKR-MEAN-${String(i + 1).padStart(2, '0')}`),
+  ...Array.from({ length: 7 }, (_, i) => `TKR-KNOW-${String(i + 1).padStart(2, '0')}`),
+] as const
 
 function formatTime(seconds: number) {
   const safe = Math.max(0, seconds)
@@ -103,11 +112,44 @@ export default function CompetitionParticipant() {
     try {
       const attemptRef = doc(collection(firestore, 'competition_attempts'))
 
+      const indexRef = doc(
+        firestore,
+        'competition_question_indexes',
+        course.id,
+      )
+
+      const indexSnapshot = await getDoc(indexRef)
+
+      if (!indexSnapshot.exists()) {
+        throw new Error(
+          'Competition question bank is not configured yet.',
+        )
+      }
+
+      const indexData = indexSnapshot.data()
+      const modules = indexData.modules as Record<string, unknown> | undefined
+      const perAttempt = Number(indexData.per_attempt) || 30
+
+      if (!modules || perAttempt !== 30) {
+        throw new Error(
+          'Competition question bank configuration is invalid.',
+        )
+      }
+
+      if (OFFICIAL_COMPETITION_QUESTION_IDS.length !== perAttempt) {
+        throw new Error(
+          'Official competition question configuration is invalid.',
+        )
+      }
+
+      const selectedQuestionIds = [...OFFICIAL_COMPETITION_QUESTION_IDS]
+
       await setDoc(attemptRef, {
         student_id: user.uid,
         course_id: course.id,
         status: 'in_progress',
         started_at: serverTimestamp(),
+        question_ids: selectedQuestionIds,
       })
 
       const attemptSnapshot = await getDoc(attemptRef)
@@ -311,34 +353,50 @@ export default function CompetitionParticipant() {
           return
         }
 
-        const questionSnapshot = await getDocs(
-          query(
-            collection(firestore, 'competition_questions'),
-            where('course_id', '==', loadedCourse.id),
-            where('is_published', '==', true),
-          ),
+        const indexRef = doc(
+          firestore,
+          'competition_question_indexes',
+          loadedCourse.id,
         )
+
+        const indexSnapshot = await getDoc(indexRef)
 
         if (cancelled) return
 
-        const loadedQuestions = questionSnapshot.docs
-          .map(
-            (questionDoc) =>
-              ({
-                id: questionDoc.id,
-                ...questionDoc.data(),
-              }) as CompetitionQuestion,
+        if (!indexSnapshot.exists()) {
+          throw new Error(
+            'Competition question bank is not configured yet.',
           )
-          .filter((question) => question.is_published !== false)
-          .sort((a, b) =>
-            a.question_id.localeCompare(b.question_id),
+        }
+
+        const indexData = indexSnapshot.data()
+        const totalQuestions = Number(indexData.total_questions) || 0
+        const perAttempt = Number(indexData.per_attempt) || 30
+        const modules = indexData.modules as Record<string, unknown> | undefined
+
+        if (
+          totalQuestions < perAttempt ||
+          perAttempt !== 30 ||
+          !modules ||
+          typeof modules !== 'object'
+        ) {
+          throw new Error(
+            'Competition question bank configuration is invalid.',
           )
+        }
 
-        setQuestions(loadedQuestions)
+        const allQuestionIds = Object.values(modules)
+          .filter(Array.isArray)
+          .flat()
+          .filter((id): id is string => typeof id === 'string')
 
-        if (loadedQuestions.length === 0) {
-          setState('loaded')
-          return
+        if (
+          allQuestionIds.length !== totalQuestions ||
+          new Set(allQuestionIds).size !== totalQuestions
+        ) {
+          throw new Error(
+            'Competition question bank index failed validation.',
+          )
         }
 
         const attemptSnapshot = await getDocs(
@@ -363,6 +421,70 @@ export default function CompetitionParticipant() {
         const activeAttempt = matchingAttempts.find(
           (attempt) => attempt.status === 'in_progress',
         )
+
+        let selectedQuestionIds: string[] = []
+
+        if (activeAttempt) {
+          selectedQuestionIds = Array.isArray(
+            activeAttempt.question_ids,
+          )
+            ? activeAttempt.question_ids.filter(
+                (id): id is string => typeof id === 'string',
+              )
+            : []
+
+          if (
+            selectedQuestionIds.length !== perAttempt ||
+            new Set(selectedQuestionIds).size !== perAttempt
+          ) {
+            throw new Error(
+              'This competition attempt has an invalid question set.',
+            )
+          }
+        } else {
+          if (OFFICIAL_COMPETITION_QUESTION_IDS.length !== perAttempt) {
+            throw new Error(
+              'Official competition question configuration is invalid.',
+            )
+          }
+
+          selectedQuestionIds = [...OFFICIAL_COMPETITION_QUESTION_IDS]
+        }
+
+        const questionSnapshot = await getDocs(
+          query(
+            collection(firestore, 'competition_questions'),
+            where('__name__', 'in', selectedQuestionIds),
+          ),
+        )
+
+        if (cancelled) return
+
+        const questionMap = new Map(
+          questionSnapshot.docs.map((questionDoc) => [
+            questionDoc.id,
+            {
+              id: questionDoc.id,
+              ...questionDoc.data(),
+            } as CompetitionQuestion,
+          ]),
+        )
+
+        const loadedQuestions = selectedQuestionIds
+          .map((questionId) => questionMap.get(questionId))
+          .filter(
+            (question): question is CompetitionQuestion =>
+              question !== undefined &&
+              question.is_published !== false,
+          )
+
+        if (loadedQuestions.length !== perAttempt) {
+          throw new Error(
+            `Unable to load all ${perAttempt} questions for this attempt.`,
+          )
+        }
+
+        setQuestions(loadedQuestions)
 
         if (activeAttempt) {
           const savedStart =
@@ -780,6 +902,22 @@ export default function CompetitionParticipant() {
               </div>
             )}
           </div>
+
+          <section className="mt-8">
+            <div className="mb-5">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                Preparation
+              </span>
+              <h2 className="mt-2 font-display text-2xl font-semibold">
+                Study Materials
+              </h2>
+              <p className="mt-2 text-sm text-slate-muted">
+                Prepare for this competition using the published study resources.
+              </p>
+            </div>
+
+            <LearningMaterialsSection courseId={course.id} />
+          </section>
 
           <div className="mt-6 flex flex-wrap gap-3">
             <Link to="/dashboard" className="btn-secondary">
