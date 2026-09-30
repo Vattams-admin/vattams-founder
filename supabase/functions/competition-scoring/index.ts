@@ -615,6 +615,120 @@ Deno.serve(async (req) => {
       )
     }
 
+    const questionIdsValue =
+      attempt.fields?.question_ids
+
+    const selectedQuestionIds =
+      Array.isArray(
+        questionIdsValue?.arrayValue?.values
+      )
+        ? questionIdsValue.arrayValue.values
+            .map(
+              (value: any) =>
+                value?.stringValue
+            )
+            .filter(
+              (value: unknown): value is string =>
+                typeof value === 'string' &&
+                value.length > 0
+            )
+        : []
+
+    if (
+      selectedQuestionIds.length !== 30 ||
+      new Set(selectedQuestionIds).size !== 30
+    ) {
+      return json(
+        {
+          error:
+            'Competition attempt has an invalid question set',
+        },
+        409
+      )
+    }
+
+    const selectedQuestionSet =
+      new Set(selectedQuestionIds)
+
+    // Thirukkural Mastery Championship uses one fixed official
+    // 30-question set. Keep this validation server-side so an
+    // altered client cannot submit a different 30-question set.
+    const officialThirukkuralQuestionIds = [
+      ...Array.from(
+        { length: 8 },
+        (_, i) =>
+          `TKR-REC-${String(i + 1).padStart(2, '0')}`
+      ),
+      ...Array.from(
+        { length: 7 },
+        (_, i) =>
+          `TKR-ADH-${String(i + 1).padStart(2, '0')}`
+      ),
+      ...Array.from(
+        { length: 8 },
+        (_, i) =>
+          `TKR-MEAN-${String(i + 1).padStart(2, '0')}`
+      ),
+      ...Array.from(
+        { length: 7 },
+        (_, i) =>
+          `TKR-KNOW-${String(i + 1).padStart(2, '0')}`
+      ),
+    ]
+
+    if (
+      stringField(
+        course,
+        'name'
+      ) === 'Thirukkural Mastery Championship'
+    ) {
+      const officialThirukkuralSet =
+        new Set(
+          officialThirukkuralQuestionIds
+        )
+
+      const isOfficialThirukkuralSet =
+        selectedQuestionIds.length ===
+          officialThirukkuralQuestionIds.length &&
+        new Set(selectedQuestionIds).size ===
+          officialThirukkuralQuestionIds.length &&
+        selectedQuestionIds.every(
+          (questionId) =>
+            officialThirukkuralSet.has(
+              questionId
+            )
+        )
+
+      if (!isOfficialThirukkuralSet) {
+        return json(
+          {
+            error:
+              'Thirukkural competition requires the official 30-question set',
+          },
+          409
+        )
+      }
+    }
+
+    for (
+      const submitted of
+      submittedAnswers
+    ) {
+      if (
+        !selectedQuestionSet.has(
+          submitted.questionId
+        )
+      ) {
+        return json(
+          {
+            error:
+              `Question ${submitted.questionId} does not belong to this attempt`,
+          },
+          400
+        )
+      }
+    }
+
     const questionRows =
       await firestoreRunQuery(
         {
@@ -625,63 +739,93 @@ Deno.serve(async (req) => {
             },
           ],
           where: {
-            fieldFilter: {
-              field: {
-                fieldPath:
-                  'course_id',
-              },
-              op: 'EQUAL',
-              value: {
-                stringValue:
-                  courseId,
-              },
+            compositeFilter: {
+              op: 'AND',
+              filters: [
+                {
+                  fieldFilter: {
+                    field: {
+                      fieldPath:
+                        'course_id',
+                    },
+                    op: 'EQUAL',
+                    value: {
+                      stringValue:
+                        courseId,
+                    },
+                  },
+                },
+                {
+                  fieldFilter: {
+                    field: {
+                      fieldPath:
+                        'is_published',
+                    },
+                    op: 'EQUAL',
+                    value: {
+                      booleanValue:
+                        true,
+                    },
+                  },
+                },
+                {
+                  fieldFilter: {
+                    field: {
+                      fieldPath:
+                        '__name__',
+                    },
+                    op: 'IN',
+                    value: {
+                      arrayValue: {
+                        values:
+                          selectedQuestionIds.map(
+                            (questionId) => ({
+                              referenceValue:
+                                `${firestoreBaseUrl()}/competition_questions/${questionId}`,
+                            }),
+                          ),
+                      },
+                    },
+                  },
+                },
+              ],
             },
           },
         },
         accessToken
       )
 
-    const questions =
-      questionRows
-        .map(
-          (row: any) =>
-            row.document
-        )
-        .filter(
-          (document: any) =>
-            Boolean(document) &&
-            booleanField(
-              document,
-              'is_published'
-            )
-        )
-
-    if (
-      questions.length === 0
-    ) {
-      return json(
-        {
-          error:
-            'No published competition questions found',
-        },
-        409
-      )
-    }
-
     const questionMap =
       new Map<string, any>()
 
     for (
-      const question of
-      questions
+      const row of questionRows
     ) {
+      const question =
+        row.document
+
+      if (
+        !question ||
+        !booleanField(
+          question,
+          'is_published'
+        )
+      ) {
+        continue
+      }
+
       const questionId =
         stringField(
           question,
           'question_id'
         )
 
-      if (questionId) {
+      if (
+        questionId &&
+        selectedQuestionSet.has(
+          questionId
+        )
+      ) {
         questionMap.set(
           questionId,
           question
@@ -689,23 +833,16 @@ Deno.serve(async (req) => {
       }
     }
 
-    for (
-      const submitted of
-      submittedAnswers
+    if (
+      questionMap.size !== 30
     ) {
-      if (
-        !questionMap.has(
-          submitted.questionId
-        )
-      ) {
-        return json(
-          {
-            error:
-              `Question ${submitted.questionId} does not belong to this competition`,
-          },
-          400
-        )
-      }
+      return json(
+        {
+          error:
+            'One or more questions in this attempt are unavailable',
+        },
+        409
+      )
     }
 
     let score = 0
@@ -713,11 +850,20 @@ Deno.serve(async (req) => {
     let answeredCount = 0
 
     for (
-      const [
-        questionId,
-        question,
-      ] of questionMap
+      const questionId of
+      selectedQuestionIds
     ) {
+      const question =
+        questionMap.get(
+          questionId
+        )
+
+      if (!question) {
+        throw new Error(
+          `Missing question ${questionId}`
+        )
+      }
+
       const marks =
         integerField(
           question,
