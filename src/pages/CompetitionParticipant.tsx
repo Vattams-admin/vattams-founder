@@ -622,7 +622,7 @@ export default function CompetitionParticipant() {
           Couldn&apos;t load this competition
         </p>
         <p className="mt-2 text-sm text-slate-muted">
-          Please refresh the page and try again.
+          {errorMessage || 'Please refresh the page and try again.'}
         </p>
       </div>
     )
