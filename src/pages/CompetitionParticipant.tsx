@@ -451,23 +451,24 @@ export default function CompetitionParticipant() {
           selectedQuestionIds = [...OFFICIAL_COMPETITION_QUESTION_IDS]
         }
 
-        const questionSnapshot = await getDocs(
-          query(
-            collection(firestore, 'competition_questions'),
-            where('__name__', 'in', selectedQuestionIds),
+        const questionSnapshots = await Promise.all(
+          selectedQuestionIds.map((questionId) =>
+            getDoc(doc(firestore, 'competition_questions', questionId)),
           ),
         )
 
         if (cancelled) return
 
         const questionMap = new Map(
-          questionSnapshot.docs.map((questionDoc) => [
-            questionDoc.id,
-            {
-              id: questionDoc.id,
-              ...questionDoc.data(),
-            } as CompetitionQuestion,
-          ]),
+          questionSnapshots
+            .filter((questionSnapshot) => questionSnapshot.exists())
+            .map((questionSnapshot) => [
+              questionSnapshot.id,
+              {
+                id: questionSnapshot.id,
+                ...questionSnapshot.data(),
+              } as CompetitionQuestion,
+            ]),
         )
 
         const loadedQuestions = selectedQuestionIds
