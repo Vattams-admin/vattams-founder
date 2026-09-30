@@ -16,6 +16,7 @@ import { useAuth } from '@/hooks/useAuth'
 import type { Course } from '@/types/database'
 import { getCourseDisplayName } from '@/lib/courseDisplay'
 import LearningMaterialsSection from '@/components/materials/LearningMaterialsSection'
+import CompetitionMockTest from '@/components/competition/CompetitionMockTest'
 
 type LoadState = 'loading' | 'loaded' | 'not-found' | 'error'
 type ViewState = 'access' | 'attempt' | 'result'
@@ -919,6 +920,8 @@ export default function CompetitionParticipant() {
 
             <LearningMaterialsSection courseId={course.id} />
           </section>
+
+          <CompetitionMockTest course={course} />
 
           <div className="mt-6 flex flex-wrap gap-3">
             <Link to="/dashboard" className="btn-secondary">

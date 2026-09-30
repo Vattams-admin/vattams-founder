@@ -814,6 +814,14 @@ service cloud.firestore {
       allow create, update, delete: if isAdmin();
     }
 
+    match /competition_question_indexes/{courseId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && hasActiveEnrolment(courseId));
+
+      allow create, update, delete: if isAdmin();
+    }
+
     match /competition_answer_keys/{questionId} {
       allow read, write: if isAdmin();
     }
@@ -847,6 +855,57 @@ service cloud.firestore {
               && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.student_id == request.auth.uid
               && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.status == 'in_progress');
       }
+    }
+
+    // ------------------------------------------------------------------
+    // Competition Mock Test system
+    // Separate from official competition attempts/results.
+    // Mock tests are practice only and never count as official attempts.
+    // ------------------------------------------------------------------
+
+    match /competition_mock_configs/{courseId} {
+      allow read: if isAdmin()
+        || (isSignedIn() && hasActiveEnrolment(courseId));
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_mock_attempts/{attemptId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create: if isSignedIn()
+        && request.resource.data.student_id == request.auth.uid
+        && request.resource.data.status == 'in_progress'
+        && hasActiveEnrolment(request.resource.data.course_id);
+
+      // Mock submission/scoring is performed by trusted backend.
+      allow update, delete: if isAdmin();
+
+      match /answers/{questionId} {
+        allow read: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid);
+
+        allow create, update: if isSignedIn()
+          && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid
+          && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.status == 'in_progress'
+          && request.resource.data.question_id == questionId;
+
+        allow delete: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.status == 'in_progress');
+      }
+    }
+
+    match /competition_mock_results/{resultId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create, update, delete: if isAdmin();
     }
 
     match /competition_results/{resultId} {
