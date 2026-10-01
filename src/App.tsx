@@ -45,6 +45,7 @@ const AdminPricingBootstrap = lazy(() => import('@/pages/admin/AdminPricingBoots
 const AdminPayments = lazy(() => import('@/pages/admin/AdminPayments'))
 const AdminCourses = lazy(() => import('@/pages/admin/AdminCourses'))
 const AdminCompetitions = lazy(() => import('@/pages/admin/AdminCompetitions'))
+const AdminCompetitionDetail = lazy(() => import('@/pages/admin/AdminCompetitionDetail'))
 const AdminCourseForm = lazy(() => import('@/pages/admin/AdminCourseForm'))
 const AdminCourseMaterials = lazy(() => import('@/pages/admin/AdminCourseMaterials'))
 const AdminCourseContent = lazy(() => import('@/pages/admin/AdminCourseContent'))
@@ -153,6 +154,14 @@ export default function App() {
               element={
                 <AdminRoute>
                   <AdminCompetitions />
+                </AdminRoute>
+              }
+            />
+            <Route
+              path="/admin/competitions/:id"
+              element={
+                <AdminRoute>
+                  <AdminCompetitionDetail />
                 </AdminRoute>
               }
             />
