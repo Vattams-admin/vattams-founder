@@ -44,6 +44,7 @@ const AdminDashboard = lazy(() => import('@/pages/admin/AdminDashboard'))
 const AdminPricingBootstrap = lazy(() => import('@/pages/admin/AdminPricingBootstrap'))
 const AdminPayments = lazy(() => import('@/pages/admin/AdminPayments'))
 const AdminCourses = lazy(() => import('@/pages/admin/AdminCourses'))
+const AdminCompetitions = lazy(() => import('@/pages/admin/AdminCompetitions'))
 const AdminCourseForm = lazy(() => import('@/pages/admin/AdminCourseForm'))
 const AdminCourseMaterials = lazy(() => import('@/pages/admin/AdminCourseMaterials'))
 const AdminCourseContent = lazy(() => import('@/pages/admin/AdminCourseContent'))
@@ -147,6 +148,14 @@ export default function App() {
             />
             <Route path="/admin/payments" element={<AdminPayments />} />
             <Route path="/admin/courses" element={<AdminCourses />} />
+            <Route
+              path="/admin/competitions"
+              element={
+                <AdminRoute>
+                  <AdminCompetitions />
+                </AdminRoute>
+              }
+            />
             <Route path="/admin/courses/:id" element={<AdminCourseForm />} />
             {/* Was already fully built (upload/replace/remove, validation,
                 progress) but had no <Route> at all — the actual root cause
