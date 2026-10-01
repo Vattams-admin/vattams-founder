@@ -463,6 +463,56 @@ export default function AdminCompetitionDetail() {
             </section>
 
             <section className="mt-8">
+              <h2 className="font-display text-2xl">Competition Management</h2>
+              <p className="mt-1 text-sm text-slate-muted">
+                Manage the competition using the existing Admin course and material tools.
+              </p>
+
+              <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <Link
+                  to={`/admin/courses/${competition.id}`}
+                  className="card p-5 transition hover:border-gold/40"
+                >
+                  <p className="font-display text-lg">Edit Competition</p>
+                  <p className="mt-1 text-sm text-slate-muted">
+                    Edit competition details, pricing, publishing, featured status,
+                    and age eligibility.
+                  </p>
+                  <span className="mt-4 inline-block text-sm text-gold">
+                    Open settings →
+                  </span>
+                </Link>
+
+                <Link
+                  to={`/admin/courses/${competition.id}/materials`}
+                  className="card p-5 transition hover:border-gold/40"
+                >
+                  <p className="font-display text-lg">Study Materials</p>
+                  <p className="mt-1 text-sm text-slate-muted">
+                    Upload, edit, publish, unpublish, and manage competition
+                    preparation materials.
+                  </p>
+                  <span className="mt-4 inline-block text-sm text-gold">
+                    Manage materials →
+                  </span>
+                </Link>
+
+                <Link
+                  to={`/admin/courses/${competition.id}/content`}
+                  className="card p-5 transition hover:border-gold/40"
+                >
+                  <p className="font-display text-lg">Course Content</p>
+                  <p className="mt-1 text-sm text-slate-muted">
+                    Open the existing content management area for this competition.
+                  </p>
+                  <span className="mt-4 inline-block text-sm text-gold">
+                    Open content →
+                  </span>
+                </Link>
+              </div>
+            </section>
+
+            <section className="mt-8">
               <h2 className="font-display text-2xl">Participants</h2>
 
               <div className="mt-4 grid gap-4 sm:grid-cols-4">
