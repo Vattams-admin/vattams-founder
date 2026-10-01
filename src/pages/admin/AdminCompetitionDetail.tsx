@@ -22,6 +22,33 @@ type ParticipantRow = {
   payment: Payment | null
 }
 
+type OfficialAttemptRow = {
+  id: string
+  student_id: string
+  status: string
+  question_ids: string[]
+  started_at?: string | null
+  submitted_at?: string | null
+  score?: number | null
+  max_score?: number | null
+  answered_count?: number | null
+}
+
+type MockAttemptRow = {
+  id: string
+  student_id: string
+  course_id: string
+  status: string
+  question_ids: string[]
+  started_at?: string | null
+  submitted_at?: string | null
+  scored_at?: string | null
+  score?: number | null
+  max_score?: number | null
+  answered_count?: number | null
+  is_mock?: boolean
+}
+
 function formatDate(value: string | null | undefined) {
   if (!value) return '—'
 
@@ -48,6 +75,10 @@ export default function AdminCompetitionDetail() {
   const [competition, setCompetition] = useState<Course | null>(null)
   const [enrolments, setEnrolments] = useState<Enrolment[]>([])
   const [payments, setPayments] = useState<Payment[]>([])
+  const [officialAttempts, setOfficialAttempts] = useState<OfficialAttemptRow[]>([])
+  const [officialResults, setOfficialResults] = useState<Record<string, Record<string, unknown>>>({})
+  const [mockAttempts, setMockAttempts] = useState<MockAttemptRow[]>([])
+  const [mockResults, setMockResults] = useState<Record<string, Record<string, unknown>>>({})
   const [state, setState] = useState<LoadState>('loading')
   const [loadError, setLoadError] =
     useState<ClassifiedFirestoreError | null>(null)
@@ -84,20 +115,108 @@ export default function AdminCompetitionDetail() {
         throw new Error('The selected course is not marked as a competition.')
       }
 
-      const [enrolmentSnapshot, paymentSnapshot] = await Promise.all([
-        getDocs(
-          query(
-            collection(firestore, 'enrolments'),
-            where('course_id', '==', id),
+      const [enrolmentSnapshot, paymentSnapshot, attemptSnapshot, mockAttemptSnapshot] =
+        await Promise.all([
+          getDocs(
+            query(
+              collection(firestore, 'enrolments'),
+              where('course_id', '==', id),
+            ),
           ),
-        ),
-        getDocs(
-          query(
-            collection(firestore, 'payments'),
-            where('course_id', '==', id),
+          getDocs(
+            query(
+              collection(firestore, 'payments'),
+              where('course_id', '==', id),
+            ),
           ),
-        ),
-      ])
+          getDocs(
+            query(
+              collection(firestore, 'competition_attempts'),
+              where('course_id', '==', id),
+            ),
+          ),
+          getDocs(
+            query(
+              collection(firestore, 'competition_mock_attempts'),
+              where('course_id', '==', id),
+            ),
+          ),
+        ])
+
+      const attempts = attemptSnapshot.docs.map(
+        (item) =>
+          ({
+            id: item.id,
+            ...item.data(),
+          }) as OfficialAttemptRow,
+      )
+
+      const mockAttemptsLoaded = mockAttemptSnapshot.docs.map(
+        (item) =>
+          ({
+            id: item.id,
+            ...item.data(),
+          }) as MockAttemptRow,
+      )
+
+      const mockResultSnapshots = await Promise.all(
+        mockAttemptsLoaded
+          .filter((attempt) => attempt.status === 'submitted')
+          .map(async (attempt) => {
+            const result = await getDoc(
+              doc(
+                firestore,
+                'competition_mock_results',
+                `${attempt.student_id}_${attempt.id}`,
+              ),
+            )
+
+            return [
+              attempt.id,
+              result.exists() ? result.data() : null,
+            ] as const
+          }),
+      )
+
+      const loadedMockResults: Record<string, Record<string, unknown>> = {}
+
+      for (const [attemptId, result] of mockResultSnapshots) {
+        if (result) {
+          loadedMockResults[attemptId] = result
+        }
+      }
+
+      const resultSnapshots = await Promise.all(
+        attempts
+          .filter((attempt) => attempt.status === 'submitted')
+          .map(async (attempt) => {
+            const result = await getDoc(
+              doc(
+                firestore,
+                'competition_results',
+                `${attempt.student_id}_${attempt.id}`,
+              ),
+            )
+
+            return [
+              attempt.id,
+              result.exists() ? result.data() : null,
+            ] as const
+          }),
+      )
+
+      const results: Record<string, Record<string, unknown>> = {}
+
+      for (const [attemptId, result] of resultSnapshots) {
+        if (result) {
+          results[attemptId] = result
+        }
+      }
+
+      setOfficialAttempts(attempts)
+      setOfficialResults(results)
+      setMockAttempts(mockAttemptsLoaded)
+      setMockResults(loadedMockResults)
 
       setCompetition(course)
 
@@ -203,6 +322,26 @@ export default function AdminCompetitionDetail() {
       revoked: enrolments.filter((item) => item.status === 'revoked').length,
     }),
     [enrolments],
+  )
+
+  const officialAttemptStats = useMemo(
+    () => ({
+      total: officialAttempts.length,
+      inProgress: officialAttempts.filter((item) => item.status === 'in_progress').length,
+      submitted: officialAttempts.filter((item) => item.status === 'submitted').length,
+      scored: officialAttempts.filter((item) => Boolean(officialResults[item.id])).length,
+    }),
+    [officialAttempts, officialResults],
+  )
+
+  const mockAttemptStats = useMemo(
+    () => ({
+      total: mockAttempts.length,
+      inProgress: mockAttempts.filter((item) => item.status === 'in_progress').length,
+      submitted: mockAttempts.filter((item) => item.status === 'submitted').length,
+      scored: mockAttempts.filter((item) => Boolean(mockResults[item.id])).length,
+    }),
+    [mockAttempts, mockResults],
   )
 
   const paymentStats = useMemo(
@@ -396,6 +535,288 @@ export default function AdminCompetitionDetail() {
                   </p>
                 </div>
               </div>
+            </section>
+
+            <section className="mt-8">
+              <h2 className="font-display text-2xl">Official Attempts & Results</h2>
+              <p className="mt-1 text-sm text-slate-muted">
+                Official competition attempts only. Mock Test activity is kept separate.
+              </p>
+
+              <div className="mt-4 grid gap-4 sm:grid-cols-4">
+                <div className="card p-5">
+                  <p className="text-xs text-slate-muted">Total Attempts</p>
+                  <p className="mt-2 font-display text-2xl">
+                    {officialAttemptStats.total}
+                  </p>
+                </div>
+
+                <div className="card p-5">
+                  <p className="text-xs text-slate-muted">In Progress</p>
+                  <p className="mt-2 font-display text-2xl text-gold">
+                    {officialAttemptStats.inProgress}
+                  </p>
+                </div>
+
+                <div className="card p-5">
+                  <p className="text-xs text-slate-muted">Submitted</p>
+                  <p className="mt-2 font-display text-2xl">
+                    {officialAttemptStats.submitted}
+                  </p>
+                </div>
+
+                <div className="card p-5">
+                  <p className="text-xs text-slate-muted">Scored</p>
+                  <p className="mt-2 font-display text-2xl text-success">
+                    {officialAttemptStats.scored}
+                  </p>
+                </div>
+              </div>
+
+              {officialAttempts.length === 0 ? (
+                <div className="card mt-4 p-8 text-center text-sm text-slate-muted">
+                  No official competition attempts yet.
+                </div>
+              ) : (
+                <div className="mt-4 overflow-x-auto card">
+                  <table className="min-w-[1100px] w-full text-left text-sm">
+                    <thead>
+                      <tr className="border-b border-white/10 text-xs uppercase tracking-wide text-slate-muted">
+                        <th className="px-4 py-3">Student</th>
+                        <th className="px-4 py-3">Attempt ID</th>
+                        <th className="px-4 py-3">Status</th>
+                        <th className="px-4 py-3">Started</th>
+                        <th className="px-4 py-3">Submitted</th>
+                        <th className="px-4 py-3">Score</th>
+                        <th className="px-4 py-3">Answered</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      {officialAttempts
+                        .slice()
+                        .sort((a, b) => {
+                          const aTime = a.started_at
+                            ? new Date(a.started_at).getTime()
+                            : 0
+                          const bTime = b.started_at
+                            ? new Date(b.started_at).getTime()
+                            : 0
+                          return bTime - aTime
+                        })
+                        .map((attempt) => {
+                          const result = officialResults[attempt.id]
+                          const score =
+                            typeof result?.score === 'number'
+                              ? result.score
+                              : attempt.score
+                          const maxScore =
+                            typeof result?.max_score === 'number'
+                              ? result.max_score
+                              : attempt.max_score
+                          const answeredCount =
+                            typeof result?.answered_count === 'number'
+                              ? result.answered_count
+                              : attempt.answered_count
+
+                          return (
+                            <tr
+                              key={attempt.id}
+                              className="border-b border-white/5 last:border-0"
+                            >
+                              <td className="px-4 py-4">
+                                <p className="font-medium">
+                                  {paymentsByStudent.get(attempt.student_id)?.student_name ??
+                                    'Student'}
+                                </p>
+                                <p className="mt-1 font-mono text-xs text-slate-muted">
+                                  {attempt.student_id}
+                                </p>
+                              </td>
+
+                              <td className="px-4 py-4 font-mono text-xs">
+                                {attempt.id}
+                              </td>
+
+                              <td className="px-4 py-4">
+                                <span
+                                  className={`rounded-full px-2 py-1 text-xs ${
+                                    attempt.status === 'submitted'
+                                      ? 'bg-success/20 text-success'
+                                      : 'bg-gold/20 text-gold'
+                                  }`}
+                                >
+                                  {attempt.status}
+                                </span>
+                              </td>
+
+                              <td className="px-4 py-4 text-xs text-slate-muted">
+                                {formatDate(attempt.started_at)}
+                              </td>
+
+                              <td className="px-4 py-4 text-xs text-slate-muted">
+                                {formatDate(attempt.submitted_at)}
+                              </td>
+
+                              <td className="px-4 py-4 font-medium">
+                                {score != null && maxScore != null
+                                  ? `${score} / ${maxScore}`
+                                  : '—'}
+                              </td>
+
+                              <td className="px-4 py-4">
+                                {answeredCount != null ? answeredCount : '—'}
+                              </td>
+                            </tr>
+                          )
+                        })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </section>
+
+            <section className="mt-8">
+              <h2 className="font-display text-2xl">Mock Test Management</h2>
+              <p className="mt-1 text-sm text-slate-muted">
+                Practice attempts only. These records are completely separate from
+                official competition attempts and results.
+              </p>
+
+              <div className="mt-4 grid gap-4 sm:grid-cols-4">
+                <div className="card p-5">
+                  <p className="text-xs text-slate-muted">Total Mock Attempts</p>
+                  <p className="mt-2 font-display text-2xl">
+                    {mockAttemptStats.total}
+                  </p>
+                </div>
+
+                <div className="card p-5">
+                  <p className="text-xs text-slate-muted">In Progress</p>
+                  <p className="mt-2 font-display text-2xl text-gold">
+                    {mockAttemptStats.inProgress}
+                  </p>
+                </div>
+
+                <div className="card p-5">
+                  <p className="text-xs text-slate-muted">Submitted</p>
+                  <p className="mt-2 font-display text-2xl">
+                    {mockAttemptStats.submitted}
+                  </p>
+                </div>
+
+                <div className="card p-5">
+                  <p className="text-xs text-slate-muted">Scored</p>
+                  <p className="mt-2 font-display text-2xl text-success">
+                    {mockAttemptStats.scored}
+                  </p>
+                </div>
+              </div>
+
+              {mockAttempts.length === 0 ? (
+                <div className="card mt-4 p-8 text-center text-sm text-slate-muted">
+                  No mock test attempts yet.
+                </div>
+              ) : (
+                <div className="mt-4 overflow-x-auto card">
+                  <table className="min-w-[1100px] w-full text-left text-sm">
+                    <thead>
+                      <tr className="border-b border-white/10 text-xs uppercase tracking-wide text-slate-muted">
+                        <th className="px-4 py-3">Student</th>
+                        <th className="px-4 py-3">Attempt ID</th>
+                        <th className="px-4 py-3">Status</th>
+                        <th className="px-4 py-3">Started</th>
+                        <th className="px-4 py-3">Submitted</th>
+                        <th className="px-4 py-3">Score</th>
+                        <th className="px-4 py-3">Answered</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      {mockAttempts
+                        .slice()
+                        .sort((a, b) => {
+                          const aTime = a.started_at
+                            ? new Date(a.started_at).getTime()
+                            : 0
+                          const bTime = b.started_at
+                            ? new Date(b.started_at).getTime()
+                            : 0
+                          return bTime - aTime
+                        })
+                        .map((attempt) => {
+                          const result = mockResults[attempt.id]
+
+                          const score =
+                            typeof result?.score === 'number'
+                              ? result.score
+                              : attempt.score
+
+                          const maxScore =
+                            typeof result?.max_score === 'number'
+                              ? result.max_score
+                              : attempt.max_score
+
+                          const answeredCount =
+                            typeof result?.answered_count === 'number'
+                              ? result.answered_count
+                              : attempt.answered_count
+
+                          return (
+                            <tr
+                              key={attempt.id}
+                              className="border-b border-white/5 last:border-0"
+                            >
+                              <td className="px-4 py-4">
+                                <p className="font-medium">
+                                  {paymentsByStudent.get(attempt.student_id)?.student_name ??
+                                    'Student'}
+                                </p>
+                                <p className="mt-1 font-mono text-xs text-slate-muted">
+                                  {attempt.student_id}
+                                </p>
+                              </td>
+
+                              <td className="px-4 py-4 font-mono text-xs">
+                                {attempt.id}
+                              </td>
+
+                              <td className="px-4 py-4">
+                                <span
+                                  className={`rounded-full px-2 py-1 text-xs ${
+                                    attempt.status === 'submitted'
+                                      ? 'bg-success/20 text-success'
+                                      : 'bg-gold/20 text-gold'
+                                  }`}
+                                >
+                                  {attempt.status}
+                                </span>
+                              </td>
+
+                              <td className="px-4 py-4 text-xs text-slate-muted">
+                                {formatDate(attempt.started_at)}
+                              </td>
+
+                              <td className="px-4 py-4 text-xs text-slate-muted">
+                                {formatDate(attempt.submitted_at)}
+                              </td>
+
+                              <td className="px-4 py-4 font-medium">
+                                {score != null && maxScore != null
+                                  ? `${score} / ${maxScore}`
+                                  : '—'}
+                              </td>
+
+                              <td className="px-4 py-4">
+                                {answeredCount != null ? answeredCount : '—'}
+                              </td>
+                            </tr>
+                          )
+                        })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </section>
 
             <section className="mt-8">
