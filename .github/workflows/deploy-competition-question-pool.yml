@@ -1,0 +1,29 @@
+name: Deploy Competition Question Pool
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'supabase/functions/competition-question-pool/**'
+      - '.github/workflows/deploy-competition-question-pool.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Deploy competition-question-pool
+        run: |
+          supabase functions deploy competition-question-pool \
+            --project-ref "$SUPABASE_PROJECT_ID"
+        env:
+          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+          SUPABASE_PROJECT_ID: ${{ secrets.SUPABASE_PROJECT_ID }}
