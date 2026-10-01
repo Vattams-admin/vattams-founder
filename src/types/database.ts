@@ -35,6 +35,10 @@ export interface Course {
   // /competitions instead, while still reusing the same courses
   // collection, pricing, and enrolment architecture.
   is_competition?: boolean
+  // Optional age eligibility for competition entries.
+  // Absent/null means the competition has no configured age restriction.
+  min_age?: number | null
+  max_age?: number | null
   // ------------------------------------------------------------------
   // New, additive pricing-model fields (approved revenue-share model —
   // see src/lib/pricingModel.ts + src/lib/coursePricing.ts). IMPORTANT:

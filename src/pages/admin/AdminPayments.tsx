@@ -24,7 +24,7 @@ import { claimCatalogLaunchSlotTx } from '@/lib/catalogLaunchEligibility'
 import { createBogoEntitlementTx, BOGO_EXPIRY_ISO } from '@/lib/bogoEntitlement'
 import { getBogoRegularPrice } from '@/lib/bogoEligibility'
 import { recordTutorEarningTx } from '@/lib/tutorEarnings'
-
+import { isAgeEligible } from '@/lib/ageEligibility'
 function inr(n: number): string {
   return `₹${Math.round(n).toLocaleString('en-IN')}`
 }
@@ -180,6 +180,46 @@ export default function AdminPayments() {
           // the special-offer slot/month accounting below.
           const enrolmentSnap = await tx.get(enrolmentRef)
           const isRenewal = enrolmentSnap.exists() && enrolmentSnap.data().status === 'active'
+
+          // Age eligibility applies only when the competition has an
+          // explicitly configured minimum or maximum age.
+          // Unrestricted competitions continue exactly as before.
+          if (course?.is_competition) {
+            const minAge = course.min_age ?? null
+            const maxAge = course.max_age ?? null
+
+            if (minAge != null || maxAge != null) {
+              const studentRef = doc(firestore, 'students', studentId)
+              const studentSnap = await tx.get(studentRef)
+
+              if (!studentSnap.exists()) {
+                throw new Error(
+                  'Student profile not found. Competition enrolment cannot be approved.',
+                )
+              }
+
+              const dateOfBirth = studentSnap.data().date_of_birth
+
+              if (typeof dateOfBirth !== 'string' || !dateOfBirth.trim()) {
+                throw new Error(
+                  'Date of birth is required for this age-restricted competition.',
+                )
+              }
+
+              if (!isAgeEligible(dateOfBirth, minAge, maxAge, new Date())) {
+                const range =
+                  minAge != null && maxAge != null
+                    ? `${minAge}-${maxAge}`
+                    : minAge != null
+                      ? `${minAge}+`
+                      : `up to ${maxAge}`
+
+                throw new Error(
+                  `Student is not eligible for this competition. Age requirement: ${range}.`,
+                )
+              }
+            }
+          }
 
           if (!mode && course) {
             mode = resolveEffectivePricingMode(course)

@@ -56,6 +56,8 @@ interface FormState {
   is_featured: boolean
   category_id: CatalogCategoryId | ''
   is_competition: boolean
+  min_age: string
+  max_age: string
   // New pricing-model fields — see Course type in src/types/database.ts.
   // 'legacy' preserves today's behavior exactly (base_fee/discount_amount
   // as a one-time fee); the other three opt into the approved
@@ -88,6 +90,8 @@ const emptyForm: FormState = {
   is_featured: false,
   category_id: '',
   is_competition: false,
+  min_age: '',
+  max_age: '',
   pricing_mode: 'legacy',
   monthly_fee_override: '',
   batch_size_override: '',
@@ -241,6 +245,8 @@ export default function AdminCourseForm() {
           is_featured: c.is_featured,
           category_id: (c.category_id as CatalogCategoryId | null) ?? '',
           is_competition: c.is_competition ?? false,
+          min_age: c.min_age != null ? String(c.min_age) : '',
+          max_age: c.max_age != null ? String(c.max_age) : '',
           pricing_mode: c.pricing_mode ?? 'legacy',
           monthly_fee_override: c.monthly_fee_override != null ? String(c.monthly_fee_override) : '',
           batch_size_override: c.batch_size_override != null ? String(c.batch_size_override) : '',
@@ -298,6 +304,37 @@ export default function AdminCourseForm() {
         form.discount_amount > form.base_fee
       ) {
         errors.discount_amount = 'Discount cannot exceed the base fee.'
+      }
+    }
+
+    if (form.is_competition) {
+      const minAgeText = form.min_age.trim()
+      const maxAgeText = form.max_age.trim()
+      const minAge = minAgeText === '' ? null : Number(minAgeText)
+      const maxAge = maxAgeText === '' ? null : Number(maxAgeText)
+
+      if (
+        minAgeText !== '' &&
+        (!Number.isInteger(minAge) || (minAge as number) < 0)
+      ) {
+        errors.min_age = 'Minimum age must be a whole number of 0 or more, or left blank.'
+      }
+
+      if (
+        maxAgeText !== '' &&
+        (!Number.isInteger(maxAge) || (maxAge as number) < 0)
+      ) {
+        errors.max_age = 'Maximum age must be a whole number of 0 or more, or left blank.'
+      }
+
+      if (
+        minAge !== null &&
+        maxAge !== null &&
+        Number.isInteger(minAge) &&
+        Number.isInteger(maxAge) &&
+        (minAge as number) > (maxAge as number)
+      ) {
+        errors.max_age = 'Maximum age cannot be less than the minimum age.'
       }
     }
 
@@ -395,6 +432,14 @@ export default function AdminCourseForm() {
         is_free: form.is_free,
         category_id: form.category_id || null,
         is_competition: form.is_competition,
+        min_age:
+          form.is_competition && form.min_age.trim() !== ''
+            ? Number(form.min_age)
+            : null,
+        max_age:
+          form.is_competition && form.max_age.trim() !== ''
+            ? Number(form.max_age)
+            : null,
         is_featured: form.is_featured,
         pricing_mode: form.pricing_mode,
         monthly_fee_override: form.monthly_fee_override.trim() === '' ? null : Number(form.monthly_fee_override),
@@ -547,7 +592,39 @@ export default function AdminCourseForm() {
         <p className="-mt-2 text-xs text-slate-muted">
           Competition entries are excluded from the public Courses page and listed on /competitions instead.
         </p>
-        <Field label="Instructor name">
+        {form.is_competition && (
+        <div className="grid grid-cols-2 gap-4">
+          <Field label="Minimum age">
+            <input
+              type="number"
+              min="0"
+              step="1"
+              value={form.min_age}
+              onChange={(e) => update('min_age', e.target.value)}
+              placeholder="No minimum"
+              className="input"
+            />
+          </Field>
+
+          <Field label="Maximum age">
+            <input
+              type="number"
+              min="0"
+              step="1"
+              value={form.max_age}
+              onChange={(e) => update('max_age', e.target.value)}
+              placeholder="No maximum"
+              className="input"
+            />
+          </Field>
+
+          <p className="col-span-2 -mt-2 text-xs text-slate-muted">
+            Leave both blank if this competition has no age restriction.
+          </p>
+        </div>
+      )}
+
+      <Field label="Instructor name">
           <input
             value={form.instructor_name}
             onChange={(e) => update('instructor_name', e.target.value)}

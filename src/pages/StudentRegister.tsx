@@ -14,6 +14,7 @@ import { createAdminBroadcast, createNotification } from '@/lib/notifications'
 // source of truth read by the admin panel (/admin/students).
 export default function StudentRegister() {
   const [fullName, setFullName] = useState('')
+  const [dateOfBirth, setDateOfBirth] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -55,6 +56,7 @@ export default function StudentRegister() {
         await setDoc(doc(firestore, 'students', user.uid), {
           id: user.uid,
           full_name: fullName,
+          date_of_birth: dateOfBirth,
           email: user.email ?? email,
           role: 'student',
           status: 'pending',
@@ -127,6 +129,24 @@ export default function StudentRegister() {
             onChange={(e) => setFullName(e.target.value)}
             className="mt-1 w-full rounded-card border border-white/15 bg-ink px-3 py-2 text-sm outline-none focus:border-gold"
           />
+        </div>
+
+        <div>
+          <label htmlFor="dateOfBirth" className="text-sm font-medium">
+            Date of birth
+          </label>
+          <input
+            id="dateOfBirth"
+            type="date"
+            required
+            autoComplete="bday"
+            value={dateOfBirth}
+            onChange={(e) => setDateOfBirth(e.target.value)}
+            className="mt-1 w-full rounded-card border border-white/15 bg-ink px-3 py-2 text-sm outline-none focus:border-gold"
+          />
+          <p className="mt-1 text-xs text-slate-muted">
+            Your date of birth may be used to determine eligibility for age-restricted competitions.
+          </p>
         </div>
 
         <div>
