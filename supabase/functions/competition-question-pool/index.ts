@@ -8,14 +8,12 @@ const SUPABASE_SECRET_KEYS = JSON.parse(
 
 const SUPABASE_SERVICE_ROLE_KEY =
   SUPABASE_SECRET_KEYS['default']
+
 const FIREBASE_PROJECT_ID =
   Deno.env.get('FIREBASE_PROJECT_ID') ||
   Deno.env.get('VITE_FIREBASE_PROJECT_ID')
 
 const BUCKET = 'academia-course-materials'
-const COURSE_ID = 'DNWt3cPE4ZSJG90CTC1e'
-const AGE_POOLS_PATH =
-  'competitions/thirukkural/objective/age-pools.json'
 
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
   throw new Error('Missing Supabase function environment variables')
@@ -27,13 +25,13 @@ if (!FIREBASE_PROJECT_ID) {
 
 const supabase = createClient(
   SUPABASE_URL,
-  SUPABASE_SERVICE_ROLE_KEY
+  SUPABASE_SERVICE_ROLE_KEY,
 )
 
 const firebaseJWKS = createRemoteJWKSet(
   new URL(
-    'https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com'
-  )
+    'https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com',
+  ),
 )
 
 const corsHeaders = {
@@ -51,38 +49,64 @@ type AgeBand =
 
 type AgePool = Record<string, string[]>
 
-const BLUEPRINTS: Record<
-  AgeBand,
-  readonly [string, number][]
+type CompetitionConfig = {
+  competition: string
+  course_id: string
+  age_pools_path: string
+  blueprints: Record<
+    AgeBand,
+    readonly [string, number][]
+  >
+}
+
+/*
+ * Only competitions that currently have a validated
+ * age-pool configuration are enabled here.
+ *
+ * Do not add a competition merely because it has
+ * 30 legacy Firestore questions. It must first have
+ * a proper four-band objective question pool.
+ */
+const COMPETITION_CONFIGS: Record<
+  string,
+  CompetitionConfig
 > = {
-  up_to_8: [
-    ['Complete second line', 15],
-    ['Identify Paal', 15],
-  ],
-  age_9_12: [
-    ['Complete second line', 5],
-    ['Identify Paal', 5],
-    ['Complete Kural', 8],
-    ['Identify Adhigaram', 3],
-    ['Identify Iyal', 3],
-    ['Chapter range', 6],
-  ],
-  age_13_15: [
-    ['Complete Kural', 5],
-    ['Identify Adhigaram', 5],
-    ['Identify Iyal', 4],
-    ['Chapter range', 2],
-    ['Source meaning identification', 7],
-    ['Identify source meaning', 7],
-  ],
-  age_16_plus: [
-    ['Complete Kural', 3],
-    ['Identify Adhigaram', 4],
-    ['Identify Iyal', 3],
-    ['Chapter range', 2],
-    ['Source meaning identification', 9],
-    ['Identify source meaning', 9],
-  ],
+  'DNWt3cPE4ZSJG90CTC1e': {
+    competition: 'Thirukkural Mastery Championship',
+    course_id: 'DNWt3cPE4ZSJG90CTC1e',
+    age_pools_path:
+      'competitions/thirukkural/objective/age-pools.json',
+    blueprints: {
+      up_to_8: [
+        ['Complete second line', 15],
+        ['Identify Paal', 15],
+      ],
+      age_9_12: [
+        ['Complete second line', 5],
+        ['Identify Paal', 5],
+        ['Complete Kural', 8],
+        ['Identify Adhigaram', 3],
+        ['Identify Iyal', 3],
+        ['Chapter range', 6],
+      ],
+      age_13_15: [
+        ['Complete Kural', 5],
+        ['Identify Adhigaram', 5],
+        ['Identify Iyal', 4],
+        ['Chapter range', 2],
+        ['Source meaning identification', 7],
+        ['Identify source meaning', 7],
+      ],
+      age_16_plus: [
+        ['Complete Kural', 3],
+        ['Identify Adhigaram', 4],
+        ['Identify Iyal', 3],
+        ['Chapter range', 2],
+        ['Source meaning identification', 9],
+        ['Identify source meaning', 9],
+      ],
+    },
+  },
 }
 
 function json(data: unknown, status = 200) {
@@ -96,26 +120,39 @@ function json(data: unknown, status = 200) {
 }
 
 function getBearerToken(req: Request): string | null {
-  const authorization = req.headers.get('Authorization') || ''
+  const authorization =
+    req.headers.get('Authorization') || ''
 
   if (!authorization.startsWith('Bearer ')) {
     return null
   }
 
-  return authorization.slice('Bearer '.length).trim() || null
+  return (
+    authorization
+      .slice('Bearer '.length)
+      .trim() || null
+  )
 }
 
-async function verifyFirebaseToken(token: string) {
+async function verifyFirebaseToken(
+  token: string,
+) {
   const issuer =
     `https://securetoken.google.com/${FIREBASE_PROJECT_ID}`
 
-  const { payload } = await jwtVerify(token, firebaseJWKS, {
-    issuer,
-    audience: FIREBASE_PROJECT_ID,
-  })
+  const { payload } = await jwtVerify(
+    token,
+    firebaseJWKS,
+    {
+      issuer,
+      audience: FIREBASE_PROJECT_ID,
+    },
+  )
 
   if (!payload.sub) {
-    throw new Error('Firebase token has no subject')
+    throw new Error(
+      'Firebase token has no subject',
+    )
   }
 
   return {
@@ -133,15 +170,16 @@ function firestoreBaseUrl() {
 
 async function firestoreGet(
   path: string,
-  firebaseToken: string
+  firebaseToken: string,
 ) {
   const response = await fetch(
     `${firestoreBaseUrl()}/${path}`,
     {
       headers: {
-        Authorization: `Bearer ${firebaseToken}`,
+        Authorization:
+          `Bearer ${firebaseToken}`,
       },
-    }
+    },
   )
 
   if (response.status === 404) {
@@ -154,11 +192,11 @@ async function firestoreGet(
     console.error(
       'Firestore GET failed:',
       response.status,
-      text
+      text,
     )
 
     throw new Error(
-      'Firestore authorization lookup failed'
+      'Firestore authorization lookup failed',
     )
   }
 
@@ -167,11 +205,11 @@ async function firestoreGet(
 
 async function isAdmin(
   uid: string,
-  firebaseToken: string
+  firebaseToken: string,
 ): Promise<boolean> {
   const document = await firestoreGet(
     `admins/${encodeURIComponent(uid)}`,
-    firebaseToken
+    firebaseToken,
   )
 
   if (!document?.fields) {
@@ -182,21 +220,27 @@ async function isAdmin(
 
   return (
     fields.is_active?.booleanValue === true &&
-    ['admin', 'super_admin', 'instructor'].includes(
-      fields.role?.stringValue ?? ''
+    [
+      'admin',
+      'super_admin',
+      'instructor',
+    ].includes(
+      fields.role?.stringValue ?? '',
     )
   )
 }
 
 async function isActiveStudent(
   uid: string,
-  firebaseToken: string
+  courseId: string,
+  firebaseToken: string,
 ): Promise<boolean> {
-  const enrolmentId = `${uid}_${COURSE_ID}`
+  const enrolmentId =
+    `${uid}_${courseId}`
 
   const document = await firestoreGet(
     `enrolments/${encodeURIComponent(enrolmentId)}`,
-    firebaseToken
+    firebaseToken,
   )
 
   if (!document?.fields) {
@@ -204,12 +248,13 @@ async function isActiveStudent(
   }
 
   return (
-    document.fields.status?.stringValue === 'active'
+    document.fields.status?.stringValue ===
+    'active'
   )
 }
 
 function getStudentDob(
-  document: any
+  document: any,
 ): string | null {
   const value =
     document?.fields?.date_of_birth?.stringValue
@@ -219,8 +264,11 @@ function getStudentDob(
     : null
 }
 
-function calculateAge(dateOfBirth: string): number | null {
-  const dob = new Date(`${dateOfBirth}T00:00:00`)
+function calculateAge(
+  dateOfBirth: string,
+): number | null {
+  const dob =
+    new Date(`${dateOfBirth}T00:00:00`)
 
   if (Number.isNaN(dob.getTime())) {
     return null
@@ -249,7 +297,9 @@ function calculateAge(dateOfBirth: string): number | null {
   return age >= 0 ? age : null
 }
 
-function getAgeBand(age: number): AgeBand | null {
+function getAgeBand(
+  age: number,
+): AgeBand | null {
   if (!Number.isInteger(age) || age < 0) {
     return null
   }
@@ -261,7 +311,9 @@ function getAgeBand(age: number): AgeBand | null {
   return 'age_16_plus'
 }
 
-function shuffle<T>(items: T[]): T[] {
+function shuffle<T>(
+  items: T[],
+): T[] {
   const result = [...items]
 
   for (
@@ -270,7 +322,7 @@ function shuffle<T>(items: T[]): T[] {
     i -= 1
   ) {
     const j = Math.floor(
-      Math.random() * (i + 1)
+      Math.random() * (i + 1),
     )
 
     ;[result[i], result[j]] =
@@ -282,9 +334,11 @@ function shuffle<T>(items: T[]): T[] {
 
 function selectQuestions(
   pools: AgePool,
-  ageBand: AgeBand
+  blueprint: readonly [
+    string,
+    number,
+  ][],
 ): string[] {
-  const blueprint = BLUEPRINTS[ageBand]
   const selected: string[] = []
 
   for (
@@ -294,18 +348,18 @@ function selectQuestions(
 
     if (!Array.isArray(pool)) {
       throw new Error(
-        `Missing age-pool subtopic: ${subtopic}`
+        `Missing age-pool subtopic: ${subtopic}`,
       )
     }
 
     if (pool.length < count) {
       throw new Error(
-        `Insufficient questions for ${subtopic}`
+        `Insufficient questions for ${subtopic}`,
       )
     }
 
     selected.push(
-      ...shuffle(pool).slice(0, count)
+      ...shuffle(pool).slice(0, count),
     )
   }
 
@@ -316,33 +370,69 @@ function selectQuestions(
     unique.size !== 30
   ) {
     throw new Error(
-      'Question selection did not produce 30 unique questions'
+      'Question selection did not produce 30 unique questions',
     )
   }
 
   return shuffle(selected)
 }
 
-async function loadAgePools(): Promise<AgePool> {
+async function loadAgePools(
+  path: string,
+): Promise<AgePool> {
   const { data, error } =
     await supabase.storage
       .from(BUCKET)
-      .download(AGE_POOLS_PATH)
+      .download(path)
 
   if (error) {
     console.error(
       'Age-pool download error:',
-      error.message
+      error.message,
     )
 
     throw new Error(
-      'Unable to load competition question pools'
+      'Unable to load competition question pools',
     )
   }
 
   return JSON.parse(
-    await data.text()
+    await data.text(),
   ) as AgePool
+}
+
+async function loadCompetition(
+  courseId: string,
+  firebaseToken: string,
+) {
+  return await firestoreGet(
+    `courses/${encodeURIComponent(courseId)}`,
+    firebaseToken,
+  )
+}
+
+function firestoreStringField(
+  document: any,
+  field: string,
+): string | null {
+  const value =
+    document?.fields?.[field]?.stringValue
+
+  return typeof value === 'string'
+    ? value
+    : null
+}
+
+function firestoreBooleanField(
+  document: any,
+  field: string,
+): boolean | null {
+  const value =
+    document?.fields?.[field]?.booleanValue
+
+  return typeof value === 'boolean'
+    ? value
+    : null
 }
 
 Deno.serve(async (req) => {
@@ -356,7 +446,7 @@ Deno.serve(async (req) => {
     if (req.method !== 'POST') {
       return json(
         { error: 'Method not allowed' },
-        405
+        405,
       )
     }
 
@@ -365,26 +455,107 @@ Deno.serve(async (req) => {
 
     if (!firebaseToken) {
       return json(
-        { error: 'Authentication required' },
-        401
+        {
+          error:
+            'Authentication required',
+        },
+        401,
       )
     }
 
     const firebaseUser =
       await verifyFirebaseToken(
-        firebaseToken
+        firebaseToken,
       )
 
-    const admin = await isAdmin(
-      firebaseUser.uid,
-      firebaseToken
-    )
+    let body: any = {}
 
-    if (!admin) {
+    try {
+      body = await req.json()
+    } catch {
+      body = {}
+    }
+
+    const courseId =
+      typeof body?.course_id === 'string'
+        ? body.course_id.trim()
+        : ''
+
+    if (!courseId) {
+      return json(
+        {
+          error:
+            'course_id is required.',
+        },
+        400,
+      )
+    }
+
+    const courseDocument =
+      await loadCompetition(
+        courseId,
+        firebaseToken,
+      )
+
+    if (!courseDocument?.fields) {
+      return json(
+        {
+          error:
+            'Competition course not found.',
+        },
+        404,
+      )
+    }
+
+    const isCompetition =
+      firestoreBooleanField(
+        courseDocument,
+        'is_competition',
+      )
+
+    if (isCompetition !== true) {
+      return json(
+        {
+          error:
+            'The selected course is not a competition.',
+        },
+        400,
+      )
+    }
+
+    const competitionName =
+      firestoreStringField(
+        courseDocument,
+        'name',
+      ) || 'Competition'
+
+    const config =
+      COMPETITION_CONFIGS[courseId]
+
+    if (!config) {
+      return json(
+        {
+          error:
+            'Question bank is not configured for this competition yet.',
+          course_id: courseId,
+          competition: competitionName,
+        },
+        409,
+      )
+    }
+
+    const adminUser =
+      await isAdmin(
+        firebaseUser.uid,
+        firebaseToken,
+      )
+
+    if (!adminUser) {
       const enrolled =
         await isActiveStudent(
           firebaseUser.uid,
-          firebaseToken
+          courseId,
+          firebaseToken,
         )
 
       if (!enrolled) {
@@ -393,7 +564,7 @@ Deno.serve(async (req) => {
             error:
               'You do not have access to this competition.',
           },
-          403
+          403,
         )
       }
     }
@@ -401,11 +572,13 @@ Deno.serve(async (req) => {
     const studentDocument =
       await firestoreGet(
         `students/${encodeURIComponent(firebaseUser.uid)}`,
-        firebaseToken
+        firebaseToken,
       )
 
     const dateOfBirth =
-      getStudentDob(studentDocument)
+      getStudentDob(
+        studentDocument,
+      )
 
     if (!dateOfBirth) {
       return json(
@@ -413,7 +586,7 @@ Deno.serve(async (req) => {
           error:
             'Date of birth is required for competition question selection.',
         },
-        400
+        400,
       )
     }
 
@@ -426,7 +599,7 @@ Deno.serve(async (req) => {
           error:
             'Student date of birth is invalid.',
         },
-        400
+        400,
       )
     }
 
@@ -439,12 +612,14 @@ Deno.serve(async (req) => {
           error:
             'Student age is not eligible.',
         },
-        400
+        400,
       )
     }
 
     const allAgePools =
-      await loadAgePools()
+      await loadAgePools(
+        config.age_pools_path,
+      )
 
     const pools =
       allAgePools[ageBand]
@@ -454,21 +629,41 @@ Deno.serve(async (req) => {
         {
           error:
             'Question pool is not configured for this age band.',
+          competition:
+            config.competition,
+          age_band: ageBand,
         },
-        500
+        409,
+      )
+    }
+
+    const blueprint =
+      config.blueprints[ageBand]
+
+    if (!blueprint) {
+      return json(
+        {
+          error:
+            'Question blueprint is not configured for this age band.',
+          competition:
+            config.competition,
+          age_band: ageBand,
+        },
+        409,
       )
     }
 
     const questionIds =
       selectQuestions(
         pools,
-        ageBand
+        blueprint,
       )
 
     return json({
       ok: true,
+      course_id: courseId,
       competition:
-        'Thirukkural Mastery Championship',
+        config.competition,
       age_band: ageBand,
       question_ids: questionIds,
       count: questionIds.length,
@@ -476,7 +671,7 @@ Deno.serve(async (req) => {
   } catch (error) {
     console.error(
       'competition-question-pool error:',
-      error
+      error,
     )
 
     return json(
@@ -486,7 +681,7 @@ Deno.serve(async (req) => {
             ? error.message
             : 'Internal server error',
       },
-      500
+      500,
     )
   }
 })

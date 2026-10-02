@@ -49,13 +49,6 @@ type CompetitionResult = {
   answeredCount: number
 }
 
-const OFFICIAL_COMPETITION_QUESTION_IDS = [
-  ...Array.from({ length: 8 }, (_, i) => `TKR-REC-${String(i + 1).padStart(2, '0')}`),
-  ...Array.from({ length: 7 }, (_, i) => `TKR-ADH-${String(i + 1).padStart(2, '0')}`),
-  ...Array.from({ length: 8 }, (_, i) => `TKR-MEAN-${String(i + 1).padStart(2, '0')}`),
-  ...Array.from({ length: 7 }, (_, i) => `TKR-KNOW-${String(i + 1).padStart(2, '0')}`),
-] as const
-
 function formatTime(seconds: number) {
   const safe = Math.max(0, seconds)
   const minutes = Math.floor(safe / 60)
@@ -105,45 +98,86 @@ export default function CompetitionParticipant() {
 
 
   const startAttempt = async () => {
-    if (!user || !course || questions.length === 0 || busy) return
+    if (!user || !course || busy) return
 
     setBusy(true)
     setErrorMessage('')
 
     try {
-      const attemptRef = doc(collection(firestore, 'competition_attempts'))
+      const firebaseUser = firebaseAuth.currentUser
 
-      const indexRef = doc(
-        firestore,
-        'competition_question_indexes',
-        course.id,
+      if (!firebaseUser) {
+        throw new Error(
+          'Your Firebase session has expired. Please sign in again.',
+        )
+      }
+
+      const token = await firebaseUser.getIdToken()
+
+      const { data, error } = await supabase.functions.invoke(
+        'competition-question-pool',
+        {
+          body: {
+            course_id: course.id,
+          },
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
       )
 
-      const indexSnapshot = await getDoc(indexRef)
+      if (error) {
+        throw error
+      }
 
-      if (!indexSnapshot.exists()) {
+      const selectedQuestionIds: string[] = Array.isArray(data?.question_ids)
+        ? data.question_ids.filter(
+            (id: unknown): id is string => typeof id === 'string',
+          )
+        : []
+
+      if (
+        selectedQuestionIds.length !== 30 ||
+        new Set(selectedQuestionIds).size !== 30
+      ) {
         throw new Error(
-          'Competition question bank is not configured yet.',
+          'Competition question pool returned an invalid question set.',
         )
       }
 
-      const indexData = indexSnapshot.data()
-      const modules = indexData.modules as Record<string, unknown> | undefined
-      const perAttempt = Number(indexData.per_attempt) || 30
+      const questionSnapshots = await Promise.all(
+        selectedQuestionIds.map((questionId: string) =>
+          getDoc(doc(firestore, 'competition_questions', questionId)),
+        ),
+      )
 
-      if (!modules || perAttempt !== 30) {
+      const questionMap = new Map(
+        questionSnapshots
+          .filter((questionSnapshot) => questionSnapshot.exists())
+          .map((questionSnapshot) => [
+            questionSnapshot.id,
+            {
+              id: questionSnapshot.id,
+              ...questionSnapshot.data(),
+            } as CompetitionQuestion,
+          ]),
+      )
+
+      const loadedQuestions = selectedQuestionIds
+        .map((questionId: string) => questionMap.get(questionId))
+        .filter(
+          (question: CompetitionQuestion | undefined): question is CompetitionQuestion =>
+            question !== undefined &&
+            question.is_published !== false,
+        )
+
+      if (loadedQuestions.length !== 30) {
         throw new Error(
-          'Competition question bank configuration is invalid.',
+          'Unable to load all 30 questions for this attempt.',
         )
       }
 
-      if (OFFICIAL_COMPETITION_QUESTION_IDS.length !== perAttempt) {
-        throw new Error(
-          'Official competition question configuration is invalid.',
-        )
-      }
-
-      const selectedQuestionIds = [...OFFICIAL_COMPETITION_QUESTION_IDS]
+      const attemptRef = doc(collection(firestore, 'competition_attempts'))
 
       await setDoc(attemptRef, {
         student_id: user.uid,
@@ -158,11 +192,18 @@ export default function CompetitionParticipant() {
       const savedStart =
         attemptData?.started_at?.toMillis?.() ?? Date.now()
 
+      setQuestions(loadedQuestions)
       setAttemptId(attemptRef.id)
       setStartedAtMs(savedStart)
       setAnswers({})
       setCurrentIndex(0)
-      setRemainingSeconds(totalSeconds)
+      setRemainingSeconds(
+        loadedQuestions.reduce(
+          (sum: number, question: CompetitionQuestion) =>
+            sum + Math.max(1, Number(question.time_seconds) || 60),
+          0,
+        ),
+      )
       setView('attempt')
     } catch (error) {
       console.error('Failed to start competition attempt:', error)
@@ -171,7 +212,6 @@ export default function CompetitionParticipant() {
       setBusy(false)
     }
   }
-
 
   const submitAttempt = async () => {
     if (!attemptId || !user || busy || autoSubmitRef.current) return
@@ -354,58 +394,13 @@ export default function CompetitionParticipant() {
           return
         }
 
-        const indexRef = doc(
-          firestore,
-          'competition_question_indexes',
-          loadedCourse.id,
-        )
-
-        const indexSnapshot = await getDoc(indexRef)
-
-        if (cancelled) return
-
-        if (!indexSnapshot.exists()) {
-          throw new Error(
-            'Competition question bank is not configured yet.',
-          )
-        }
-
-        const indexData = indexSnapshot.data()
-        const totalQuestions = Number(indexData.total_questions) || 0
-        const perAttempt = Number(indexData.per_attempt) || 30
-        const modules = indexData.modules as Record<string, unknown> | undefined
-
-        if (
-          totalQuestions < perAttempt ||
-          perAttempt !== 30 ||
-          !modules ||
-          typeof modules !== 'object'
-        ) {
-          throw new Error(
-            'Competition question bank configuration is invalid.',
-          )
-        }
-
-        const allQuestionIds = Object.values(modules)
-          .filter(Array.isArray)
-          .flat()
-          .filter((id): id is string => typeof id === 'string')
-
-        if (
-          allQuestionIds.length !== totalQuestions ||
-          new Set(allQuestionIds).size !== totalQuestions
-        ) {
-          throw new Error(
-            'Competition question bank index failed validation.',
-          )
-        }
-
         const attemptSnapshot = await getDocs(
           query(
             collection(firestore, 'competition_attempts'),
             where('student_id', '==', user.uid),
           ),
         )
+
 
         if (cancelled) return
 
@@ -435,25 +430,25 @@ export default function CompetitionParticipant() {
             : []
 
           if (
-            selectedQuestionIds.length !== perAttempt ||
-            new Set(selectedQuestionIds).size !== perAttempt
+            selectedQuestionIds.length !== 30 ||
+            new Set(selectedQuestionIds).size !== 30
           ) {
             throw new Error(
               'This competition attempt has an invalid question set.',
             )
           }
         } else {
-          if (OFFICIAL_COMPETITION_QUESTION_IDS.length !== perAttempt) {
-            throw new Error(
-              'Official competition question configuration is invalid.',
-            )
-          }
+          selectedQuestionIds = []
+        }
 
-          selectedQuestionIds = [...OFFICIAL_COMPETITION_QUESTION_IDS]
+        if (selectedQuestionIds.length === 0) {
+          setQuestions([])
+          setState('loaded')
+          return
         }
 
         const questionSnapshots = await Promise.all(
-          selectedQuestionIds.map((questionId) =>
+          selectedQuestionIds.map((questionId: string) =>
             getDoc(doc(firestore, 'competition_questions', questionId)),
           ),
         )
@@ -480,9 +475,9 @@ export default function CompetitionParticipant() {
               question.is_published !== false,
           )
 
-        if (loadedQuestions.length !== perAttempt) {
+        if (loadedQuestions.length !== 30) {
           throw new Error(
-            `Unable to load all ${perAttempt} questions for this attempt.`,
+            'Unable to load all 30 questions for this attempt.',
           )
         }
 
@@ -871,13 +866,12 @@ export default function CompetitionParticipant() {
             <h2 className="font-display text-lg">Competition access</h2>
 
             <p className="mt-2 text-sm text-slate-muted">
-              {questions.length > 0
+              {attemptId && questions.length > 0
                 ? `${questions.length} questions are ready for your attempt.`
-                : 'Competition questions are not currently available.'}
+                : 'Your age-appropriate 30-question paper will be generated when you start.'}
             </p>
 
-            {questions.length > 0 && (
-              <div className="mt-5 flex flex-wrap items-center justify-between gap-4 rounded-card border border-white/10 p-4">
+            <div className="mt-5 flex flex-wrap items-center justify-between gap-4 rounded-card border border-white/10 p-4">
                 <div>
                   <p className="text-sm font-medium">
                     {attemptId ? 'Resume your attempt' : 'Ready to start'}
@@ -902,7 +896,6 @@ export default function CompetitionParticipant() {
                       : 'Start Competition'}
                 </button>
               </div>
-            )}
           </div>
 
           <section className="mt-8">
