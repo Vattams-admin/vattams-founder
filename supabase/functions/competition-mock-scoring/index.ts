@@ -4,10 +4,21 @@ import {
   jwtVerify,
   SignJWT,
 } from "npm:jose@6";
+import { createClient } from "npm:@supabase/supabase-js@2";
 
 const FIREBASE_PROJECT_ID = Deno.env.get("FIREBASE_PROJECT_ID") || "";
 const FIREBASE_SERVICE_ACCOUNT_JSON =
   Deno.env.get("FIREBASE_SERVICE_ACCOUNT_JSON") || "";
+
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL") || "";
+const SUPABASE_SECRET_KEYS = JSON.parse(
+  Deno.env.get("SUPABASE_SECRET_KEYS") || "{}",
+);
+const SUPABASE_SERVICE_ROLE_KEY =
+  SUPABASE_SECRET_KEYS["default"] || "";
+const SUPABASE_BUCKET = "academia-course-materials";
+const THIRUKKURAL_ANSWER_KEYS_PATH =
+  "competitions/thirukkural/objective/answer-keys.private.json";
 
 if (!FIREBASE_PROJECT_ID) {
   throw new Error("Missing FIREBASE_PROJECT_ID");
@@ -18,6 +29,15 @@ if (!FIREBASE_SERVICE_ACCOUNT_JSON) {
 }
 
 const serviceAccount = JSON.parse(FIREBASE_SERVICE_ACCOUNT_JSON);
+
+if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
+  throw new Error("Missing Supabase function environment variables");
+}
+
+const supabase = createClient(
+  SUPABASE_URL,
+  SUPABASE_SERVICE_ROLE_KEY,
+);
 
 const firebaseJWKS = createRemoteJWKSet(
   new URL(
@@ -205,12 +225,62 @@ function firestoreResource(collection: string, id: string) {
   );
 }
 
-function answerKeyStringField(document: any, field: string) {
-  return document?.fields?.[field]?.stringValue ?? "";
+type StoredAnswerKey = {
+  answer: string;
+  correct_option_index: number;
+  explanation: string;
+};
+
+type StoredAnswerKeyBundle = Record<string, StoredAnswerKey>;
+
+let answerKeyBundlePromise: Promise<StoredAnswerKeyBundle> | null = null;
+
+async function loadAnswerKeyBundle(): Promise<StoredAnswerKeyBundle> {
+  if (!answerKeyBundlePromise) {
+    answerKeyBundlePromise = (async () => {
+      const { data, error } = await supabase.storage
+        .from(SUPABASE_BUCKET)
+        .download(THIRUKKURAL_ANSWER_KEYS_PATH);
+
+      if (error || !data) {
+        console.error(
+          "Supabase answer-key bundle download failed:",
+          error?.message || "No data returned",
+        );
+        throw new Error("Answer-key bundle is unavailable");
+      }
+
+      let parsed: unknown;
+
+      try {
+        parsed = JSON.parse(await data.text());
+      } catch {
+        throw new Error("Answer-key bundle is invalid JSON");
+      }
+
+      if (
+        !parsed ||
+        typeof parsed !== "object" ||
+        Array.isArray(parsed)
+      ) {
+        throw new Error("Answer-key bundle has an invalid format");
+      }
+
+      return parsed as StoredAnswerKeyBundle;
+    })();
+  }
+
+  try {
+    return await answerKeyBundlePromise;
+  } catch (error) {
+    answerKeyBundlePromise = null;
+    throw error;
+  }
 }
 
-function answerKeyIntegerField(document: any, field: string) {
-  return Number(document?.fields?.[field]?.integerValue ?? -1);
+async function loadAnswerKey(questionId: string) {
+  const bundle = await loadAnswerKeyBundle();
+  return bundle[questionId] ?? null;
 }
 
 async function loadAttempt(
@@ -323,15 +393,7 @@ async function loadQuestion(
   return question;
 }
 
-async function loadAnswerKey(
-  questionId: string,
-  accessToken: string,
-) {
-  return await firestoreGet(
-    `competition_answer_keys/${encodeURIComponent(questionId)}`,
-    accessToken,
-  );
-}
+
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -443,27 +505,18 @@ Deno.serve(async (req) => {
         );
       }
 
-      const answerKey = await loadAnswerKey(
-        questionId,
-        accessToken,
-      );
+      const answerKey = await loadAnswerKey(questionId);
 
-      if (!answerKey?.fields) {
+      if (!answerKey) {
         return json(
           { error: "Answer key is unavailable" },
           409,
         );
       }
 
-      const correctAnswer = answerKeyStringField(
-        answerKey,
-        "answer",
-      );
+      const correctAnswer = answerKey.answer;
 
-      const correctOptionIndex = answerKeyIntegerField(
-        answerKey,
-        "correct_option_index",
-      );
+      const correctOptionIndex = answerKey.correct_option_index;
 
       if (!correctAnswer) {
         return json(
@@ -503,10 +556,7 @@ Deno.serve(async (req) => {
         normalizeAnswer(submittedAnswer) ===
         normalizeAnswer(correctAnswer);
 
-      const explanation = answerKeyStringField(
-        answerKey,
-        "explanation",
-      );
+      const explanation = answerKey.explanation;
 
       return json({
         ok: true,
@@ -674,21 +724,15 @@ Deno.serve(async (req) => {
         answeredCount++;
       }
 
-      const answerKey = await loadAnswerKey(
-        questionId,
-        accessToken,
-      );
+      const answerKey = await loadAnswerKey(questionId);
 
-      if (!answerKey?.fields) {
+      if (!answerKey) {
         throw new Error(
           `Missing answer key for ${questionId}`,
         );
       }
 
-      const correctAnswer = answerKeyStringField(
-        answerKey,
-        "answer",
-      );
+      const correctAnswer = answerKey.answer;
 
       if (
         submitted &&
