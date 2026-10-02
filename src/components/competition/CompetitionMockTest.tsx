@@ -23,6 +23,7 @@ type MockQuestion = {
   question_type?: string;
   topic?: string;
   subtopic?: string;
+  options?: string[];
   marks: number;
   time_seconds: number;
   is_published?: boolean;
@@ -35,6 +36,13 @@ type MockAttempt = {
   status: "in_progress" | "submitted" | string;
   started_at?: { toMillis?: () => number };
   question_ids?: string[];
+};
+
+type QuestionFeedback = {
+  submitted: boolean;
+  correct: boolean;
+  correctAnswer: string;
+  explanation: string;
 };
 
 type MockResult = {
@@ -57,17 +65,6 @@ function formatTime(seconds: number) {
   return `${String(minutes).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
 }
 
-function shuffle<T>(items: T[]) {
-  const copy = [...items];
-
-  for (let index = copy.length - 1; index > 0; index -= 1) {
-    const randomIndex = Math.floor(Math.random() * (index + 1));
-    [copy[index], copy[randomIndex]] = [copy[randomIndex], copy[index]];
-  }
-
-  return copy;
-}
-
 export default function CompetitionMockTest({
   course,
 }: CompetitionMockTestProps) {
@@ -76,6 +73,9 @@ export default function CompetitionMockTest({
   const [attemptId, setAttemptId] = useState<string | null>(null);
   const [startedAtMs, setStartedAtMs] = useState<number | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [feedback, setFeedback] = useState<Record<string, QuestionFeedback>>(
+    {},
+  );
   const [currentIndex, setCurrentIndex] = useState(0);
   const [remainingSeconds, setRemainingSeconds] = useState(0);
   const [result, setResult] = useState<MockResult | null>(null);
@@ -94,15 +94,74 @@ export default function CompetitionMockTest({
   );
 
   const currentQuestion = questions[currentIndex];
+  const currentAnswer = currentQuestion
+    ? answers[currentQuestion.question_id] ?? ""
+    : "";
+  const currentFeedback = currentQuestion
+    ? feedback[currentQuestion.question_id]
+    : undefined;
 
   const answeredCount = questions.filter(
     (question) => (answers[question.question_id] ?? "").trim() !== "",
   ).length;
 
+  const loadQuestions = async (questionIds: string[]) => {
+    const snapshots = await Promise.all(
+      questionIds.map((questionId) =>
+        getDoc(doc(firestore, "competition_questions", questionId)),
+      ),
+    );
+
+    const loadedQuestions = snapshots
+      .map((snapshot) =>
+        snapshot.exists()
+          ? ({
+              id: snapshot.id,
+              ...snapshot.data(),
+            } as MockQuestion)
+          : null,
+      )
+      .filter(
+        (question): question is MockQuestion =>
+          question !== null &&
+          question.is_published !== false &&
+          question.course_id === course.id &&
+          question.question_type === "Multiple Choice" &&
+          Array.isArray(question.options) &&
+          question.options.length === 4 &&
+          new Set(question.options).size === 4 &&
+          question.options.every(
+            (option) => typeof option === "string" && option.trim() !== "",
+          ),
+      );
+
+    if (loadedQuestions.length !== MOCK_QUESTION_COUNT) {
+      throw new Error(
+        `Unable to load all ${MOCK_QUESTION_COUNT} selected mock questions.`,
+      );
+    }
+
+    const questionMap = new Map(
+      loadedQuestions.map((question) => [question.question_id, question]),
+    );
+
+    return questionIds.map((questionId) => {
+      const question = questionMap.get(questionId);
+
+      if (!question) {
+        throw new Error(`Selected mock question ${questionId} is unavailable.`);
+      }
+
+      return question;
+    });
+  };
+
   const loadExistingMockAttempt = async () => {
     const user = firebaseAuth.currentUser;
 
-    if (!user) return false;
+    if (!user) {
+      return false;
+    }
 
     const attemptSnapshot = await getDocs(
       query(
@@ -111,10 +170,12 @@ export default function CompetitionMockTest({
       ),
     );
 
-    const attempts = attemptSnapshot.docs.map((attemptDoc): MockAttempt => ({
-      id: attemptDoc.id,
-      ...(attemptDoc.data() as Omit<MockAttempt, "id">),
-    }));
+    const attempts = attemptSnapshot.docs.map(
+      (attemptDoc): MockAttempt => ({
+        id: attemptDoc.id,
+        ...(attemptDoc.data() as Omit<MockAttempt, "id">),
+      }),
+    );
 
     const activeAttempt = attempts.find(
       (attempt) =>
@@ -127,7 +188,7 @@ export default function CompetitionMockTest({
 
     const selectedQuestionIds = Array.isArray(activeAttempt.question_ids)
       ? activeAttempt.question_ids.filter(
-          (id): id is string => typeof id === "string" && /^TKR-FULL-/.test(id),
+          (id): id is string => typeof id === "string" && id.trim() !== "",
         )
       : [];
 
@@ -138,39 +199,7 @@ export default function CompetitionMockTest({
       throw new Error("This mock attempt has an invalid question set.");
     }
 
-    const questionSnapshots = await Promise.all(
-      selectedQuestionIds.map((questionId) =>
-        getDoc(doc(firestore, "competition_questions", questionId)),
-      ),
-    );
-
-    const questionMap = new Map(
-      questionSnapshots
-        .filter((snapshot) => snapshot.exists())
-        .map((snapshot) => [
-          snapshot.id,
-          {
-            id: snapshot.id,
-            ...snapshot.data(),
-          } as MockQuestion,
-        ]),
-    );
-
-    const loadedQuestions = selectedQuestionIds
-      .map((questionId) => questionMap.get(questionId))
-      .filter(
-        (question): question is MockQuestion =>
-          question !== undefined &&
-          question.is_published !== false &&
-          question.course_id === course.id &&
-          /^TKR-FULL-/.test(question.question_id),
-      );
-
-    if (loadedQuestions.length !== MOCK_QUESTION_COUNT) {
-      throw new Error(
-        `Unable to load all ${MOCK_QUESTION_COUNT} mock questions.`,
-      );
-    }
+    const loadedQuestions = await loadQuestions(selectedQuestionIds);
 
     const answerSnapshot = await getDocs(
       collection(
@@ -191,15 +220,19 @@ export default function CompetitionMockTest({
       }
     });
 
-    const savedStart = activeAttempt.started_at?.toMillis?.() ?? Date.now();
+    const savedStart =
+      activeAttempt.started_at?.toMillis?.() ?? Date.now();
 
     setQuestions(loadedQuestions);
     setAttemptId(activeAttempt.id);
     setStartedAtMs(savedStart);
     setAnswers(restoredAnswers);
+    setFeedback({});
     setCurrentIndex(0);
 
-    const elapsedSeconds = Math.floor((Date.now() - savedStart) / 1000);
+    const elapsedSeconds = Math.floor(
+      (Date.now() - savedStart) / 1000,
+    );
 
     setRemainingSeconds(
       Math.max(
@@ -213,14 +246,15 @@ export default function CompetitionMockTest({
     );
 
     setView("attempt");
-
     return true;
   };
 
   const startMockTest = async () => {
     const user = firebaseAuth.currentUser;
 
-    if (!user || busy) return;
+    if (!user || busy) {
+      return;
+    }
 
     setBusy(true);
     setErrorMessage("");
@@ -232,79 +266,57 @@ export default function CompetitionMockTest({
         return;
       }
 
-      const indexSnapshot = await getDoc(
-        doc(firestore, "competition_question_indexes", course.id),
+      const token = await user.getIdToken();
+
+      const { data, error } = await supabase.functions.invoke(
+        "competition-question-pool",
+        {
+          body: {
+            course_id: course.id,
+          },
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
       );
 
-      if (!indexSnapshot.exists()) {
-        throw new Error("Competition question bank is not configured yet.");
+      if (error) {
+        let detail = error.message || "Unable to select mock questions.";
+
+        try {
+          const context = (error as { context?: Response }).context;
+
+          if (context) {
+            const body = await context.clone().text();
+
+            if (body) {
+              detail += ` | HTTP ${context.status} | ${body}`;
+            }
+          }
+        } catch {
+          // Keep the original error when the response body cannot be read.
+        }
+
+        throw new Error(detail);
       }
 
-      const indexData = indexSnapshot.data();
-      const totalQuestions = Number(indexData.total_questions) || 0;
-      const perAttempt = Number(indexData.per_attempt) || MOCK_QUESTION_COUNT;
-      const modules = indexData.modules as Record<string, unknown> | undefined;
+      const questionIds = Array.isArray(data?.question_ids)
+        ? data.question_ids.filter(
+            (id: unknown): id is string =>
+              typeof id === "string" && id.trim() !== "",
+          )
+        : [];
 
       if (
-        totalQuestions < MOCK_QUESTION_COUNT ||
-        perAttempt !== MOCK_QUESTION_COUNT ||
-        !modules ||
-        typeof modules !== "object"
+        questionIds.length !== MOCK_QUESTION_COUNT ||
+        new Set(questionIds).size !== MOCK_QUESTION_COUNT
       ) {
-        throw new Error("Competition question bank configuration is invalid.");
-      }
-
-      const allQuestionIds = Object.values(modules)
-        .filter(Array.isArray)
-        .flat()
-        .filter(
-          (id): id is string => typeof id === "string" && /^TKR-FULL-/.test(id),
-        );
-
-      if (
-        allQuestionIds.length !== totalQuestions ||
-        new Set(allQuestionIds).size !== totalQuestions
-      ) {
-        throw new Error("Competition question bank index failed validation.");
-      }
-
-      const selectedQuestionIds = shuffle(allQuestionIds).slice(
-        0,
-        MOCK_QUESTION_COUNT,
-      );
-
-      if (selectedQuestionIds.length !== MOCK_QUESTION_COUNT) {
-        throw new Error("Unable to select enough questions for the mock test.");
-      }
-
-      const questionSnapshots = await Promise.all(
-        selectedQuestionIds.map((questionId) =>
-          getDoc(doc(firestore, "competition_questions", questionId)),
-        ),
-      );
-
-      const loadedQuestions = questionSnapshots
-        .map((snapshot) =>
-          snapshot.exists()
-            ? ({
-                id: snapshot.id,
-                ...snapshot.data(),
-              } as MockQuestion)
-            : null,
-        )
-        .filter(
-          (question): question is MockQuestion =>
-            question !== null &&
-            question.is_published !== false &&
-            question.course_id === course.id &&
-            /^TKR-FULL-/.test(question.question_id),
-        );
-
-      if (loadedQuestions.length !== MOCK_QUESTION_COUNT) {
         throw new Error(
-          `Unable to load all ${MOCK_QUESTION_COUNT} selected mock questions.`,
+          `Question pool returned an invalid set of ${questionIds.length} questions.`,
         );
       }
+
+      const loadedQuestions = await loadQuestions(questionIds);
 
       const attemptRef = doc(
         collection(firestore, "competition_mock_attempts"),
@@ -315,7 +327,7 @@ export default function CompetitionMockTest({
         course_id: course.id,
         status: "in_progress",
         started_at: serverTimestamp(),
-        question_ids: selectedQuestionIds,
+        question_ids: questionIds,
         is_mock: true,
       });
 
@@ -323,6 +335,7 @@ export default function CompetitionMockTest({
       setAttemptId(attemptRef.id);
       setStartedAtMs(Date.now());
       setAnswers({});
+      setFeedback({});
       setCurrentIndex(0);
 
       const mockTotalSeconds = loadedQuestions.reduce(
@@ -335,6 +348,7 @@ export default function CompetitionMockTest({
       setView("attempt");
     } catch (error) {
       console.error("Failed to start mock test:", error);
+
       setErrorMessage(
         error instanceof Error
           ? error.message
@@ -345,100 +359,10 @@ export default function CompetitionMockTest({
     }
   };
 
-  const submitMockTest = async () => {
-    if (!attemptId || !questions.length || busy || autoSubmitRef.current) {
-      return;
-    }
-
-    autoSubmitRef.current = true;
-    setBusy(true);
-    setErrorMessage("");
-
-    try {
-      const firebaseUser = firebaseAuth.currentUser;
-
-      if (!firebaseUser) {
-        throw new Error(
-          "Your Firebase session has expired. Please sign in again.",
-        );
-      }
-
-      const token = await firebaseUser.getIdToken();
-
-      const { data, error } = await supabase.functions.invoke(
-        "competition-mock-scoring",
-        {
-          body: {
-            attemptId,
-            answers: questions.map((question) => ({
-              questionId: question.question_id,
-              answer: answers[question.question_id] ?? "",
-            })),
-          },
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        },
-      );
-
-      if (error) {
-        throw error;
-      }
-
-      const scoreData = data as {
-        score?: number;
-        maxScore?: number;
-        answeredCount?: number;
-      };
-
-      setResult({
-        score: Number(scoreData.score) || 0,
-        maxScore: Number(scoreData.maxScore) || 0,
-        answeredCount: Number(scoreData.answeredCount) || answeredCount,
-      });
-
-      setView("result");
-    } catch (error) {
-      console.error("Failed to submit mock test:", error);
-      autoSubmitRef.current = false;
-      setErrorMessage(
-        error instanceof Error
-          ? error.message
-          : "Unable to submit the mock test. Please try again.",
-      );
-    } finally {
-      setBusy(false);
-    }
-  };
-
-  useEffect(() => {
-    if (view !== "attempt" || !attemptId || !startedAtMs || totalSeconds <= 0) {
-      return;
-    }
-
-    const updateTimer = () => {
-      const elapsedSeconds = Math.floor((Date.now() - startedAtMs) / 1000);
-
-      const remaining = Math.max(0, totalSeconds - elapsedSeconds);
-
-      setRemainingSeconds(remaining);
-
-      if (remaining === 0 && !autoSubmitRef.current) {
-        void submitMockTest();
-      }
-    };
-
-    updateTimer();
-
-    const timer = window.setInterval(updateTimer, 1000);
-
-    return () => {
-      window.clearInterval(timer);
-    };
-  }, [view, attemptId, startedAtMs, totalSeconds]);
-
   const saveAnswer = async (questionId: string, value: string) => {
-    if (!attemptId) return;
+    if (!attemptId || feedback[questionId]?.submitted) {
+      return;
+    }
 
     setAnswers((previous) => ({
       ...previous,
@@ -467,7 +391,212 @@ export default function CompetitionMockTest({
     }
   };
 
+  const submitAnswer = async () => {
+    if (
+      !attemptId ||
+      !currentQuestion ||
+      !currentAnswer ||
+      currentFeedback?.submitted ||
+      busy
+    ) {
+      return;
+    }
+
+    setBusy(true);
+    setErrorMessage("");
+
+    try {
+      const user = firebaseAuth.currentUser;
+
+      if (!user) {
+        throw new Error(
+          "Your Firebase session has expired. Please sign in again.",
+        );
+      }
+
+      const token = await user.getIdToken();
+
+      const { data, error } = await supabase.functions.invoke(
+        "competition-mock-scoring",
+        {
+          body: {
+            action: "check_answer",
+            attemptId,
+            questionId: currentQuestion.question_id,
+            answer: currentAnswer,
+          },
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      );
+
+      if (error) {
+        throw error;
+      }
+
+      setFeedback((previous) => ({
+        ...previous,
+        [currentQuestion.question_id]: {
+          submitted: true,
+          correct: Boolean(data?.correct),
+          correctAnswer: String(data?.correctAnswer || ""),
+          explanation: String(data?.explanation || ""),
+        },
+      }));
+    } catch (error) {
+      console.error("Failed to check mock answer:", error);
+
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : "Unable to check this answer. Please try again.",
+      );
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const submitMockTest = async () => {
+    if (
+      !attemptId ||
+      !questions.length ||
+      busy ||
+      autoSubmitRef.current
+    ) {
+      return;
+    }
+
+    autoSubmitRef.current = true;
+    setBusy(true);
+    setErrorMessage("");
+
+    try {
+      const firebaseUser = firebaseAuth.currentUser;
+
+      if (!firebaseUser) {
+        throw new Error(
+          "Your Firebase session has expired. Please sign in again.",
+        );
+      }
+
+      const token = await firebaseUser.getIdToken();
+
+      const { data, error } = await supabase.functions.invoke(
+        "competition-mock-scoring",
+        {
+          body: {
+            action: "submit_mock",
+            attemptId,
+            answers: questions.map((question) => ({
+              questionId: question.question_id,
+              answer: answers[question.question_id] ?? "",
+            })),
+          },
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      );
+
+      if (error) {
+        throw error;
+      }
+
+      setResult({
+        score: Number(data?.score) || 0,
+        maxScore: Number(data?.maxScore) || 0,
+        answeredCount: Number(data?.answeredCount) || 0,
+      });
+
+      setView("result");
+    } catch (error) {
+      console.error("Failed to submit mock test:", error);
+
+      autoSubmitRef.current = false;
+
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : "Unable to submit the mock test. Please try again.",
+      );
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  useEffect(() => {
+    if (
+      view !== "attempt" ||
+      !attemptId ||
+      startedAtMs === null ||
+      totalSeconds <= 0
+    ) {
+      return;
+    }
+
+    const updateTimer = () => {
+      const elapsedSeconds = Math.floor(
+        (Date.now() - startedAtMs) / 1000,
+      );
+
+      const remaining = Math.max(0, totalSeconds - elapsedSeconds);
+
+      setRemainingSeconds(remaining);
+
+      if (remaining === 0 && !autoSubmitRef.current) {
+        void submitMockTest();
+      }
+    };
+
+    updateTimer();
+
+    const timer = window.setInterval(updateTimer, 1000);
+
+    return () => {
+      window.clearInterval(timer);
+    };
+  }, [view, attemptId, startedAtMs, totalSeconds]);
+
+  if (view === "ready") {
+    return (
+      <section className="mt-8">
+        <div className="card p-6 sm:p-8">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+            Mock Test
+          </span>
+
+          <h2 className="mt-3 font-display text-2xl font-semibold">
+            {course.name}
+          </h2>
+
+          <p className="mt-4 text-sm leading-7 text-slate-muted">
+            Practice with 30 randomly selected objective questions from your
+            age-appropriate competition question pool.
+          </p>
+
+          {errorMessage && (
+            <div className="mt-5 rounded-card border border-danger/30 bg-danger/10 px-4 py-3 text-sm text-danger">
+              {errorMessage}
+            </div>
+          )}
+
+          <button
+            type="button"
+            onClick={() => void startMockTest()}
+            disabled={busy}
+            className="btn-primary mt-6 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {busy ? "Preparing Mock Test..." : "Start Mock Test"}
+          </button>
+        </div>
+      </section>
+    );
+  }
+
   if (view === "attempt" && currentQuestion) {
+    const options = currentQuestion.options ?? [];
+
     return (
       <section className="mt-8">
         <div className="card p-6 sm:p-8">
@@ -476,6 +605,7 @@ export default function CompetitionMockTest({
               <span className="text-xs font-semibold uppercase tracking-wide text-gold">
                 Mock Test
               </span>
+
               <h2 className="mt-2 font-display text-xl font-semibold">
                 {course.name}
               </h2>
@@ -499,6 +629,7 @@ export default function CompetitionMockTest({
             <span className="text-slate-muted">
               Question {currentIndex + 1} of {questions.length}
             </span>
+
             <span className="text-slate-muted">
               Answered {answeredCount}/{questions.length}
             </span>
@@ -509,9 +640,10 @@ export default function CompetitionMockTest({
               <span className="text-xs font-semibold uppercase tracking-wide text-gold">
                 {currentQuestion.topic || "Question"}
               </span>
+
               <span className="text-xs text-slate-muted">
-                {currentQuestion.marks} mark
-                {currentQuestion.marks === 1 ? "" : "s"}
+                {currentQuestion.marks}{" "}
+                {currentQuestion.marks === 1 ? "mark" : "marks"}
               </span>
             </div>
 
@@ -519,23 +651,92 @@ export default function CompetitionMockTest({
               {currentQuestion.question}
             </h3>
 
-            <label
-              htmlFor={`mock-answer-${currentQuestion.question_id}`}
-              className="mt-7 block text-sm font-medium"
-            >
-              Your answer
-            </label>
+            <div className="mt-7 space-y-3">
+              {options.map((option, index) => {
+                const selected = currentAnswer === option;
+                const isCorrect =
+                  currentFeedback?.submitted &&
+                  option === currentFeedback.correctAnswer;
 
-            <textarea
-              id={`mock-answer-${currentQuestion.question_id}`}
-              value={answers[currentQuestion.question_id] ?? ""}
-              onChange={(event) =>
-                void saveAnswer(currentQuestion.question_id, event.target.value)
-              }
-              placeholder="Type your answer here..."
-              rows={4}
-              className="mt-2 w-full rounded-card border border-white/10 bg-black/20 px-4 py-3 text-sm outline-none focus:border-gold/50"
-            />
+                const isWrongSelection =
+                  currentFeedback?.submitted &&
+                  selected &&
+                  !currentFeedback.correct;
+
+                return (
+                  <button
+                    key={`${currentQuestion.question_id}-${index}`}
+                    type="button"
+                    onClick={() =>
+                      void saveAnswer(
+                        currentQuestion.question_id,
+                        option,
+                      )
+                    }
+                    disabled={busy || currentFeedback?.submitted}
+                    className={`w-full rounded-card border px-4 py-4 text-left text-sm transition ${
+                      isCorrect
+                        ? "border-success/50 bg-success/10 text-success"
+                        : isWrongSelection
+                          ? "border-danger/50 bg-danger/10 text-danger"
+                          : selected
+                            ? "border-gold bg-gold/15 text-gold"
+                            : "border-white/10 bg-black/20 hover:border-gold/40"
+                    } disabled:cursor-not-allowed`}
+                  >
+                    <span className="mr-3 font-semibold">
+                      {String.fromCharCode(65 + index)}.
+                    </span>
+                    {option}
+                  </button>
+                );
+              })}
+            </div>
+
+            {!currentFeedback?.submitted && (
+              <button
+                type="button"
+                onClick={() => void submitAnswer()}
+                disabled={!currentAnswer || busy}
+                className="btn-primary mt-7 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {busy ? "Checking..." : "Submit Answer"}
+              </button>
+            )}
+
+            {currentFeedback?.submitted && (
+              <div
+                className={`mt-7 rounded-card border px-4 py-4 ${
+                  currentFeedback.correct
+                    ? "border-success/30 bg-success/10"
+                    : "border-danger/30 bg-danger/10"
+                }`}
+              >
+                <p
+                  className={`font-semibold ${
+                    currentFeedback.correct
+                      ? "text-success"
+                      : "text-danger"
+                  }`}
+                >
+                  {currentFeedback.correct ? "✓ Correct" : "✗ Wrong"}
+                </p>
+
+                <p className="mt-2 text-sm">
+                  <span className="font-semibold">Correct answer:</span>{" "}
+                  {currentFeedback.correctAnswer}
+                </p>
+
+                {currentFeedback.explanation && (
+                  <p className="mt-3 text-sm leading-7 text-slate-muted">
+                    <span className="font-semibold text-white">
+                      Explanation:
+                    </span>{" "}
+                    {currentFeedback.explanation}
+                  </p>
+                )}
+              </div>
+            )}
 
             <div className="mt-8 flex flex-wrap justify-between gap-3">
               <button
@@ -558,21 +759,24 @@ export default function CompetitionMockTest({
                         Math.min(questions.length - 1, index + 1),
                       )
                     }
-                    disabled={busy}
-                    className="btn-primary disabled:opacity-40"
+                    disabled={!currentFeedback?.submitted || busy}
+                    className="btn-primary disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     Next
                   </button>
                 )}
 
-                <button
-                  type="button"
-                  onClick={() => void submitMockTest()}
-                  disabled={busy}
-                  className="rounded-card border border-gold/40 bg-gold/15 px-4 py-2 text-sm font-semibold text-gold disabled:cursor-not-allowed disabled:opacity-50"
-                >
-                  {busy ? "Submitting..." : "Submit Mock Test"}
-                </button>
+                {currentIndex === questions.length - 1 &&
+                  currentFeedback?.submitted && (
+                    <button
+                      type="button"
+                      onClick={() => void submitMockTest()}
+                      disabled={busy}
+                      className="rounded-card border border-gold/40 bg-gold/15 px-4 py-2 text-sm font-semibold text-gold disabled:cursor-not-allowed disabled:opacity-50"
+                    >
+                      {busy ? "Submitting..." : "Finish Mock Test"}
+                    </button>
+                  )}
               </div>
             </div>
           </div>
@@ -581,6 +785,8 @@ export default function CompetitionMockTest({
             {questions.map((question, index) => {
               const answered =
                 (answers[question.question_id] ?? "").trim() !== "";
+              const checked =
+                feedback[question.question_id]?.submitted === true;
 
               return (
                 <button
@@ -590,9 +796,13 @@ export default function CompetitionMockTest({
                   className={`h-9 min-w-9 rounded-full border px-2 text-xs ${
                     index === currentIndex
                       ? "border-gold bg-gold/20 text-gold"
-                      : answered
-                        ? "border-success/40 bg-success/10 text-success"
-                        : "border-white/10 text-slate-muted"
+                      : checked
+                        ? feedback[question.question_id].correct
+                          ? "border-success/40 bg-success/10 text-success"
+                          : "border-danger/40 bg-danger/10 text-danger"
+                        : answered
+                          ? "border-gold/40 bg-gold/10 text-gold"
+                          : "border-white/10 text-slate-muted"
                   }`}
                 >
                   {index + 1}
@@ -618,77 +828,36 @@ export default function CompetitionMockTest({
           </h2>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-card border border-white/10 bg-white/5 p-5">
-              <p className="text-xs text-slate-muted">Score</p>
-              <p className="mt-2 text-2xl font-bold">{result.score}</p>
+            <div className="rounded-card border border-white/10 p-5">
+              <p className="text-sm text-slate-muted">Score</p>
+              <p className="mt-2 text-3xl font-bold text-gold">
+                {result.score}
+              </p>
             </div>
 
-            <div className="rounded-card border border-white/10 bg-white/5 p-5">
-              <p className="text-xs text-slate-muted">Maximum</p>
-              <p className="mt-2 text-2xl font-bold">{result.maxScore}</p>
+            <div className="rounded-card border border-white/10 p-5">
+              <p className="text-sm text-slate-muted">Maximum</p>
+              <p className="mt-2 text-3xl font-bold">
+                {result.maxScore}
+              </p>
             </div>
 
-            <div className="rounded-card border border-white/10 bg-white/5 p-5">
-              <p className="text-xs text-slate-muted">Answered</p>
-              <p className="mt-2 text-2xl font-bold">{result.answeredCount}</p>
+            <div className="rounded-card border border-white/10 p-5">
+              <p className="text-sm text-slate-muted">Answered</p>
+              <p className="mt-2 text-3xl font-bold">
+                {result.answeredCount}/{questions.length}
+              </p>
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={() => {
-              setView("ready");
-              setResult(null);
-              setAttemptId(null);
-              setQuestions([]);
-              setAnswers({});
-              setCurrentIndex(0);
-              setRemainingSeconds(0);
-              autoSubmitRef.current = false;
-            }}
-            className="btn-secondary mt-8"
-          >
-            Back to Mock Test
-          </button>
+          <p className="mt-7 text-sm leading-7 text-slate-muted">
+            Review your answers and explanations above while preparing for
+            the official competition.
+          </p>
         </div>
       </section>
     );
   }
 
-  return (
-    <section className="mt-8">
-      <div className="rounded-card border border-gold/20 bg-white/5 p-5">
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-              Practice
-            </p>
-            <h2 className="mt-2 font-display text-2xl font-semibold">
-              Mock Test
-            </h2>
-            <p className="mt-2 max-w-2xl text-sm text-slate-muted">
-              Practice with 30 randomly selected questions from the competition
-              question bank. Mock Test activity is separate from your official
-              competition attempt.
-            </p>
-          </div>
-
-          <button
-            type="button"
-            onClick={() => void startMockTest()}
-            disabled={busy}
-            className="btn-primary disabled:opacity-50"
-          >
-            {busy ? "Starting..." : "Start Mock Test"}
-          </button>
-        </div>
-
-        {errorMessage && (
-          <div className="mt-5 rounded-card border border-danger/30 bg-danger/10 px-4 py-3 text-sm text-danger">
-            {errorMessage}
-          </div>
-        )}
-      </div>
-    </section>
-  );
+  return null;
 }

@@ -6,7 +6,6 @@ import {
 } from "npm:jose@6";
 
 const FIREBASE_PROJECT_ID = Deno.env.get("FIREBASE_PROJECT_ID") || "";
-
 const FIREBASE_SERVICE_ACCOUNT_JSON =
   Deno.env.get("FIREBASE_SERVICE_ACCOUNT_JSON") || "";
 
@@ -69,7 +68,10 @@ async function verifyFirebaseUser(token: string) {
 }
 
 async function getGoogleAccessToken() {
-  const privateKey = await importPKCS8(serviceAccount.private_key, "RS256");
+  const privateKey = await importPKCS8(
+    serviceAccount.private_key,
+    "RS256",
+  );
 
   const now = Math.floor(Date.now() / 1000);
 
@@ -130,6 +132,8 @@ async function firestoreGet(path: string, accessToken: string) {
   }
 
   if (!response.ok) {
+    const text = await response.text();
+    console.error("Firestore GET failed:", response.status, text);
     throw new Error(`Firestore GET failed: ${response.status}`);
   }
 
@@ -161,6 +165,10 @@ function stringField(document: any, field: string) {
 
 function integerField(document: any, field: string) {
   return Number(document?.fields?.[field]?.integerValue ?? 0);
+}
+
+function booleanField(document: any, field: string) {
+  return document?.fields?.[field]?.booleanValue === true;
 }
 
 function arrayStringField(document: any, field: string) {
@@ -197,10 +205,133 @@ function firestoreResource(collection: string, id: string) {
   );
 }
 
-type SubmittedAnswer = {
-  questionId: string;
-  answer: string;
-};
+function answerKeyStringField(document: any, field: string) {
+  return document?.fields?.[field]?.stringValue ?? "";
+}
+
+function answerKeyIntegerField(document: any, field: string) {
+  return Number(document?.fields?.[field]?.integerValue ?? -1);
+}
+
+async function loadAttempt(
+  attemptId: string,
+  studentId: string,
+  accessToken: string,
+) {
+  const attempt = await firestoreGet(
+    `competition_mock_attempts/${encodeURIComponent(attemptId)}`,
+    accessToken,
+  );
+
+  if (!attempt?.fields) {
+    return {
+      error: json({ error: "Mock attempt not found" }, 404),
+    };
+  }
+
+  if (stringField(attempt, "student_id") !== studentId) {
+    return {
+      error: json(
+        { error: "This mock attempt does not belong to you" },
+        403,
+      ),
+    };
+  }
+
+  const courseId = stringField(attempt, "course_id");
+
+  if (!courseId || !isSafeId(courseId)) {
+    return {
+      error: json({ error: "Competition course is missing" }, 500),
+    };
+  }
+
+  const course = await firestoreGet(
+    `courses/${encodeURIComponent(courseId)}`,
+    accessToken,
+  );
+
+  if (!course?.fields) {
+    return {
+      error: json({ error: "Competition course not found" }, 404),
+    };
+  }
+
+  if (booleanField(course, "is_competition") === false) {
+    return {
+      error: json(
+        { error: "This course is not configured as a competition" },
+        409,
+      ),
+    };
+  }
+
+  const selectedQuestionIds = arrayStringField(
+    attempt,
+    "question_ids",
+  );
+
+  if (
+    selectedQuestionIds.length !== 30 ||
+    new Set(selectedQuestionIds).size !== 30
+  ) {
+    return {
+      error: json(
+        { error: "Mock attempt has an invalid question set" },
+        409,
+      ),
+    };
+  }
+
+  return {
+    attempt,
+    courseId,
+    selectedQuestionIds,
+  };
+}
+
+async function loadQuestion(
+  questionId: string,
+  courseId: string,
+  accessToken: string,
+) {
+  const question = await firestoreGet(
+    `competition_questions/${encodeURIComponent(questionId)}`,
+    accessToken,
+  );
+
+  if (!question?.fields) {
+    return null;
+  }
+
+  if (stringField(question, "course_id") !== courseId) {
+    return null;
+  }
+
+  if (stringField(question, "question_id") !== questionId) {
+    return null;
+  }
+
+  if (!booleanField(question, "is_published")) {
+    return null;
+  }
+
+  if (stringField(question, "question_type") !== "Multiple Choice") {
+    return null;
+  }
+
+  return question;
+}
+
+async function loadAnswerKey(
+  questionId: string,
+  accessToken: string,
+) {
+  return await firestoreGet(
+    `competition_answer_keys/${encodeURIComponent(questionId)}`,
+    accessToken,
+  );
+}
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -221,41 +352,226 @@ Deno.serve(async (req) => {
     }
 
     const studentId = await verifyFirebaseUser(firebaseToken);
-
     const body = await req.json();
 
+    const action = String(body.action || "").trim();
     const attemptId = String(body.attemptId || "").trim();
 
     if (!attemptId || !isSafeId(attemptId)) {
-      return json({ error: "Valid attemptId is required" }, 400);
+      return json(
+        { error: "Valid attemptId is required" },
+        400,
+      );
     }
 
-    if (!Array.isArray(body.answers)) {
-      return json({ error: "answers must be an array" }, 400);
+    if (
+      action !== "check_answer" &&
+      action !== "submit_mock"
+    ) {
+      return json(
+        {
+          error:
+            'action must be "check_answer" or "submit_mock"',
+        },
+        400,
+      );
     }
 
-    if (body.answers.length > 600) {
-      return json({ error: "Too many answers" }, 400);
-    }
+    const accessToken = await getGoogleAccessToken();
 
-    const submittedAnswers: SubmittedAnswer[] = body.answers.map(
-      (item: any) => ({
-        questionId: String(item?.questionId || "").trim(),
-        answer: String(item?.answer ?? "").trim(),
-      }),
+    const attemptData = await loadAttempt(
+      attemptId,
+      studentId,
+      accessToken,
     );
+
+    if ("error" in attemptData) {
+      return attemptData.error;
+    }
+
+    const {
+      attempt,
+      courseId,
+      selectedQuestionIds,
+    } = attemptData;
+
+    const selectedQuestionSet = new Set(selectedQuestionIds);
+
+    if (action === "check_answer") {
+      const questionId = String(
+        body.questionId || "",
+      ).trim();
+
+      const submittedAnswer = String(
+        body.answer ?? "",
+      ).trim();
+
+      if (!questionId || !isSafeId(questionId)) {
+        return json(
+          { error: "Valid questionId is required" },
+          400,
+        );
+      }
+
+      if (!selectedQuestionSet.has(questionId)) {
+        return json(
+          {
+            error:
+              "This question does not belong to the mock attempt",
+          },
+          400,
+        );
+      }
+
+      if (!submittedAnswer) {
+        return json(
+          { error: "An answer is required" },
+          400,
+        );
+      }
+
+      const question = await loadQuestion(
+        questionId,
+        courseId,
+        accessToken,
+      );
+
+      if (!question) {
+        return json(
+          { error: "Mock question is unavailable" },
+          409,
+        );
+      }
+
+      const answerKey = await loadAnswerKey(
+        questionId,
+        accessToken,
+      );
+
+      if (!answerKey?.fields) {
+        return json(
+          { error: "Answer key is unavailable" },
+          409,
+        );
+      }
+
+      const correctAnswer = answerKeyStringField(
+        answerKey,
+        "answer",
+      );
+
+      const correctOptionIndex = answerKeyIntegerField(
+        answerKey,
+        "correct_option_index",
+      );
+
+      if (!correctAnswer) {
+        return json(
+          { error: "Answer key is invalid" },
+          500,
+        );
+      }
+
+      const options = question?.fields?.options?.arrayValue?.values
+        ?.map((value: any) => value?.stringValue)
+        .filter(
+          (value: unknown): value is string =>
+            typeof value === "string",
+        ) ?? [];
+
+      if (
+        options.length !== 4 ||
+        new Set(options).size !== 4
+      ) {
+        return json(
+          { error: "Mock question options are invalid" },
+          409,
+        );
+      }
+
+      if (
+        correctOptionIndex >= 0 &&
+        correctOptionIndex >= options.length
+      ) {
+        return json(
+          { error: "Answer key option index is invalid" },
+          500,
+        );
+      }
+
+      const correct =
+        normalizeAnswer(submittedAnswer) ===
+        normalizeAnswer(correctAnswer);
+
+      const explanation = answerKeyStringField(
+        answerKey,
+        "explanation",
+      );
+
+      return json({
+        ok: true,
+        action: "check_answer",
+        questionId,
+        correct,
+        correctAnswer,
+        explanation,
+        correctOptionIndex:
+          correctOptionIndex >= 0
+            ? correctOptionIndex
+            : undefined,
+      });
+    }
+
+    const submittedAnswers = Array.isArray(body.answers)
+      ? body.answers.map((item: any) => ({
+          questionId: String(
+            item?.questionId || "",
+          ).trim(),
+          answer: String(
+            item?.answer ?? "",
+          ).trim(),
+        }))
+      : null;
+
+    if (!submittedAnswers) {
+      return json(
+        { error: "answers must be an array" },
+        400,
+      );
+    }
+
+    if (submittedAnswers.length > 30) {
+      return json(
+        { error: "Too many answers" },
+        400,
+      );
+    }
 
     const answerIds = new Set<string>();
 
     for (const item of submittedAnswers) {
       if (!isSafeId(item.questionId)) {
-        return json({ error: "Invalid question ID" }, 400);
+        return json(
+          { error: "Invalid question ID" },
+          400,
+        );
       }
 
       if (answerIds.has(item.questionId)) {
         return json(
           {
-            error: `Duplicate answer for ${item.questionId}`,
+            error:
+              `Duplicate answer for ${item.questionId}`,
+          },
+          400,
+        );
+      }
+
+      if (!selectedQuestionSet.has(item.questionId)) {
+        return json(
+          {
+            error:
+              `Question ${item.questionId} does not belong to this mock attempt`,
           },
           400,
         );
@@ -264,28 +580,7 @@ Deno.serve(async (req) => {
       answerIds.add(item.questionId);
     }
 
-    const accessToken = await getGoogleAccessToken();
-
-    const attempt = await firestoreGet(
-      `competition_mock_attempts/${encodeURIComponent(attemptId)}`,
-      accessToken,
-    );
-
-    if (!attempt?.fields) {
-      return json({ error: "Mock attempt not found" }, 404);
-    }
-
-    if (stringField(attempt, "student_id") !== studentId) {
-      return json(
-        {
-          error: "This mock attempt does not belong to you",
-        },
-        403,
-      );
-    }
-
     const status = stringField(attempt, "status");
-
     const resultId = `${studentId}_${attemptId}`;
 
     if (status !== "in_progress") {
@@ -298,9 +593,18 @@ Deno.serve(async (req) => {
         return json({
           ok: true,
           attemptId,
-          score: integerField(existingResult, "score"),
-          maxScore: integerField(existingResult, "max_score"),
-          answeredCount: integerField(existingResult, "answered_count"),
+          score: integerField(
+            existingResult,
+            "score",
+          ),
+          maxScore: integerField(
+            existingResult,
+            "max_score",
+          ),
+          answeredCount: integerField(
+            existingResult,
+            "answered_count",
+          ),
           submitted: true,
           alreadySubmitted: true,
         });
@@ -308,84 +612,23 @@ Deno.serve(async (req) => {
 
       return json(
         {
-          error: "This mock attempt has already been submitted",
+          error:
+            "This mock attempt has already been submitted",
         },
         409,
       );
-    }
-
-    const courseId = stringField(attempt, "course_id");
-
-    if (!courseId || !isSafeId(courseId)) {
-      return json({ error: "Competition course is missing" }, 500);
-    }
-
-    const course = await firestoreGet(
-      `courses/${encodeURIComponent(courseId)}`,
-      accessToken,
-    );
-
-    if (!course?.fields) {
-      return json({ error: "Competition course not found" }, 404);
-    }
-
-    if (stringField(course, "name") === "") {
-      return json({ error: "Competition course is invalid" }, 409);
-    }
-
-    const enrolmentId = `${studentId}_${courseId}`;
-
-    const enrolment = await firestoreGet(
-      `enrolments/${encodeURIComponent(enrolmentId)}`,
-      accessToken,
-    );
-
-    if (!enrolment?.fields || stringField(enrolment, "status") !== "active") {
-      return json({ error: "Active enrolment is required" }, 403);
-    }
-
-    const selectedQuestionIds = arrayStringField(attempt, "question_ids");
-
-    if (
-      selectedQuestionIds.length !== 30 ||
-      new Set(selectedQuestionIds).size !== 30 ||
-      selectedQuestionIds.some((questionId) => !/^TKR-FULL-/.test(questionId))
-    ) {
-      return json(
-        {
-          error: "Mock attempt has an invalid question set",
-        },
-        409,
-      );
-    }
-
-    const selectedQuestionSet = new Set(selectedQuestionIds);
-
-    for (const submitted of submittedAnswers) {
-      if (!selectedQuestionSet.has(submitted.questionId)) {
-        return json(
-          {
-            error: `Question ${submitted.questionId} does not belong to this mock attempt`,
-          },
-          400,
-        );
-      }
     }
 
     const questionMap = new Map<string, any>();
 
     for (const questionId of selectedQuestionIds) {
-      const question = await firestoreGet(
-        `competition_questions/${encodeURIComponent(questionId)}`,
+      const question = await loadQuestion(
+        questionId,
+        courseId,
         accessToken,
       );
 
-      if (
-        question?.fields &&
-        stringField(question, "course_id") === courseId &&
-        stringField(question, "question_id") === questionId &&
-        question.fields?.is_published?.booleanValue === true
-      ) {
+      if (question) {
         questionMap.set(questionId, question);
       }
     }
@@ -393,7 +636,8 @@ Deno.serve(async (req) => {
     if (questionMap.size !== 30) {
       return json(
         {
-          error: "One or more mock questions are unavailable",
+          error:
+            "One or more mock questions are unavailable",
         },
         409,
       );
@@ -407,10 +651,15 @@ Deno.serve(async (req) => {
       const question = questionMap.get(questionId);
 
       if (!question) {
-        throw new Error(`Missing question ${questionId}`);
+        throw new Error(
+          `Missing question ${questionId}`,
+        );
       }
 
-      const marks = integerField(question, "marks");
+      const marks = integerField(
+        question,
+        "marks",
+      );
 
       maxScore += marks;
 
@@ -418,24 +667,34 @@ Deno.serve(async (req) => {
         (item) => item.questionId === questionId,
       );
 
-      if (submitted && submitted.answer !== "") {
+      if (
+        submitted &&
+        submitted.answer.trim() !== ""
+      ) {
         answeredCount++;
       }
 
-      const answerKey = await firestoreGet(
-        `competition_answer_keys/${encodeURIComponent(questionId)}`,
+      const answerKey = await loadAnswerKey(
+        questionId,
         accessToken,
       );
 
       if (!answerKey?.fields) {
-        throw new Error(`Missing answer key for ${questionId}`);
+        throw new Error(
+          `Missing answer key for ${questionId}`,
+        );
       }
 
-      const correctAnswer = stringField(answerKey, "answer");
+      const correctAnswer = answerKeyStringField(
+        answerKey,
+        "answer",
+      );
 
       if (
         submitted &&
-        normalizeAnswer(submitted.answer) === normalizeAnswer(correctAnswer)
+        submitted.answer !== "" &&
+        normalizeAnswer(submitted.answer) ===
+          normalizeAnswer(correctAnswer)
       ) {
         score += marks;
       }
@@ -443,7 +702,10 @@ Deno.serve(async (req) => {
 
     const now = new Date().toISOString();
 
-    const resultName = firestoreResource("competition_mock_results", resultId);
+    const resultName = firestoreResource(
+      "competition_mock_results",
+      resultId,
+    );
 
     const attemptName = firestoreResource(
       "competition_mock_attempts",
@@ -451,7 +713,9 @@ Deno.serve(async (req) => {
     );
 
     if (!attempt.updateTime) {
-      throw new Error("Mock attempt has no updateTime");
+      throw new Error(
+        "Mock attempt has no updateTime",
+      );
     }
 
     const existingResult = await firestoreGet(
@@ -463,9 +727,18 @@ Deno.serve(async (req) => {
       return json({
         ok: true,
         attemptId,
-        score: integerField(existingResult, "score"),
-        maxScore: integerField(existingResult, "max_score"),
-        answeredCount: integerField(existingResult, "answered_count"),
+        score: integerField(
+          existingResult,
+          "score",
+        ),
+        maxScore: integerField(
+          existingResult,
+          "max_score",
+        ),
+        answeredCount: integerField(
+          existingResult,
+          "answered_count",
+        ),
         submitted: true,
         alreadySubmitted: true,
       });
@@ -492,7 +765,9 @@ Deno.serve(async (req) => {
               integerValue: String(maxScore),
             },
             answered_count: {
-              integerValue: String(answeredCount),
+              integerValue: String(
+                answeredCount,
+              ),
             },
             submitted_at: {
               timestampValue: now,
@@ -538,7 +813,10 @@ Deno.serve(async (req) => {
     ];
 
     try {
-      await firestoreCommit(writes, accessToken);
+      await firestoreCommit(
+        writes,
+        accessToken,
+      );
     } catch (commitError) {
       const committedResult = await firestoreGet(
         `competition_mock_results/${encodeURIComponent(resultId)}`,
@@ -549,9 +827,18 @@ Deno.serve(async (req) => {
         return json({
           ok: true,
           attemptId,
-          score: integerField(committedResult, "score"),
-          maxScore: integerField(committedResult, "max_score"),
-          answeredCount: integerField(committedResult, "answered_count"),
+          score: integerField(
+            committedResult,
+            "score",
+          ),
+          maxScore: integerField(
+            committedResult,
+            "max_score",
+          ),
+          answeredCount: integerField(
+            committedResult,
+            "answered_count",
+          ),
           submitted: true,
           alreadySubmitted: true,
         });
@@ -562,6 +849,7 @@ Deno.serve(async (req) => {
 
     return json({
       ok: true,
+      action: "submit_mock",
       attemptId,
       score,
       maxScore,
@@ -570,11 +858,17 @@ Deno.serve(async (req) => {
       alreadySubmitted: false,
     });
   } catch (error) {
-    console.error("competition-mock-scoring error:", error);
+    console.error(
+      "competition-mock-scoring error:",
+      error,
+    );
 
     return json(
       {
-        error: error instanceof Error ? error.message : "Mock scoring failed",
+        error:
+          error instanceof Error
+            ? error.message
+            : "Mock scoring failed",
       },
       500,
     );
