@@ -14,9 +14,7 @@ const SUPABASE_SECRET_KEYS = JSON.parse(
 const SUPABASE_SERVICE_ROLE_KEY =
   SUPABASE_SECRET_KEYS['default']
 
-const FIREBASE_PROJECT_ID =
-  Deno.env.get('FIREBASE_PROJECT_ID') ||
-  Deno.env.get('VITE_FIREBASE_PROJECT_ID')
+const FIREBASE_PROJECT_ID = 'vattams-academia'
 
 const FIREBASE_SERVICE_ACCOUNT_JSON =
   Deno.env.get('FIREBASE_SERVICE_ACCOUNT_JSON') || ''
