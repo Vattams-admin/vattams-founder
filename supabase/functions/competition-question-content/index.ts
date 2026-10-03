@@ -1,3 +1,7 @@
+import {
+  createRemoteJWKSet,
+  jwtVerify,
+} from "npm:jose@6";
 import { createClient } from "npm:@supabase/supabase-js@2";
 
 const corsHeaders = {
@@ -55,34 +59,40 @@ function getBearerToken(req: Request): string | null {
   return header.slice("Bearer ".length).trim() || null;
 }
 
+const FIREBASE_PROJECT_ID =
+  Deno.env.get("FIREBASE_PROJECT_ID") ||
+  Deno.env.get("VITE_FIREBASE_PROJECT_ID") ||
+  "";
+
+if (!FIREBASE_PROJECT_ID) {
+  throw new Error("Firebase project ID is unavailable");
+}
+
+const firebaseJWKS = createRemoteJWKSet(
+  new URL(
+    "https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com",
+  ),
+);
+
 async function verifyFirebaseToken(token: string) {
-  const response = await fetch(
-    "https://identitytoolkit.googleapis.com/v1/accounts:lookup",
+  const issuer =
+    `https://securetoken.google.com/${FIREBASE_PROJECT_ID}`;
+
+  const { payload } = await jwtVerify(
+    token,
+    firebaseJWKS,
     {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        idToken: token,
-      }),
+      issuer,
+      audience: FIREBASE_PROJECT_ID,
     },
   );
 
-  if (!response.ok) {
-    throw new Error("Invalid Firebase authentication token");
-  }
-
-  const data = await response.json();
-
-  const user = data?.users?.[0];
-
-  if (!user?.localId) {
-    throw new Error("Firebase user not found");
+  if (!payload.sub) {
+    throw new Error("Firebase token has no subject");
   }
 
   return {
-    uid: String(user.localId),
+    uid: payload.sub,
   };
 }
 
