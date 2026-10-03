@@ -834,6 +834,7 @@ service cloud.firestore {
       allow create: if isSignedIn()
         && request.resource.data.student_id == request.auth.uid
         && request.resource.data.status == 'in_progress'
+        && request.resource.data.course_id != 'DNWt3cPE4ZSJG90CTC1e'
         && hasActiveEnrolment(request.resource.data.course_id);
 
       // Student attempts are locked after creation.

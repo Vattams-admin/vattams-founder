@@ -650,64 +650,27 @@ Deno.serve(async (req) => {
     const selectedQuestionSet =
       new Set(selectedQuestionIds)
 
-    // Thirukkural Mastery Championship uses one fixed official
-    // 30-question set. Keep this validation server-side so an
-    // altered client cannot submit a different 30-question set.
-    const officialThirukkuralQuestionIds = [
-      ...Array.from(
-        { length: 8 },
-        (_, i) =>
-          `TKR-REC-${String(i + 1).padStart(2, '0')}`
-      ),
-      ...Array.from(
-        { length: 7 },
-        (_, i) =>
-          `TKR-ADH-${String(i + 1).padStart(2, '0')}`
-      ),
-      ...Array.from(
-        { length: 8 },
-        (_, i) =>
-          `TKR-MEAN-${String(i + 1).padStart(2, '0')}`
-      ),
-      ...Array.from(
-        { length: 7 },
-        (_, i) =>
-          `TKR-KNOW-${String(i + 1).padStart(2, '0')}`
-      ),
-    ]
-
+    // The question IDs saved in the attempt are the server-side
+    // source of truth. For Thirukkural, the paper is selected by
+    // the authenticated question-pool function and can therefore
+    // vary by participant age and random selection.
     if (
       stringField(
         course,
         'name'
-      ) === 'Thirukkural Mastery Championship'
+      ) === 'Thirukkural Mastery Championship' &&
+      selectedQuestionIds.some(
+        (questionId) =>
+          !questionId.startsWith('TKR-FULL-')
+      )
     ) {
-      const officialThirukkuralSet =
-        new Set(
-          officialThirukkuralQuestionIds
-        )
-
-      const isOfficialThirukkuralSet =
-        selectedQuestionIds.length ===
-          officialThirukkuralQuestionIds.length &&
-        new Set(selectedQuestionIds).size ===
-          officialThirukkuralQuestionIds.length &&
-        selectedQuestionIds.every(
-          (questionId) =>
-            officialThirukkuralSet.has(
-              questionId
-            )
-        )
-
-      if (!isOfficialThirukkuralSet) {
-        return json(
-          {
-            error:
-              'Thirukkural competition requires the official 30-question set',
-          },
-          409
-        )
-      }
+      return json(
+        {
+          error:
+            'Thirukkural competition contains an invalid question ID',
+        },
+        409
+      )
     }
 
     for (

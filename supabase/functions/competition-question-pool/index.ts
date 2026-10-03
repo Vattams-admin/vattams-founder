@@ -1,5 +1,10 @@
 import { createClient } from 'npm:@supabase/supabase-js@2'
-import { createRemoteJWKSet, jwtVerify } from 'npm:jose@6'
+import {
+  createRemoteJWKSet,
+  importPKCS8,
+  jwtVerify,
+  SignJWT,
+} from 'npm:jose@6'
 
 const SUPABASE_URL = Deno.env.get('SUPABASE_URL')!
 const SUPABASE_SECRET_KEYS = JSON.parse(
@@ -12,6 +17,17 @@ const SUPABASE_SERVICE_ROLE_KEY =
 const FIREBASE_PROJECT_ID =
   Deno.env.get('FIREBASE_PROJECT_ID') ||
   Deno.env.get('VITE_FIREBASE_PROJECT_ID')
+
+const FIREBASE_SERVICE_ACCOUNT_JSON =
+  Deno.env.get('FIREBASE_SERVICE_ACCOUNT_JSON') || ''
+
+if (!FIREBASE_SERVICE_ACCOUNT_JSON) {
+  throw new Error('Missing FIREBASE_SERVICE_ACCOUNT_JSON')
+}
+
+const serviceAccount = JSON.parse(
+  FIREBASE_SERVICE_ACCOUNT_JSON,
+)
 
 const BUCKET = 'academia-course-materials'
 
@@ -166,6 +182,92 @@ function firestoreBaseUrl() {
     encodeURIComponent(FIREBASE_PROJECT_ID) +
     '/databases/(default)/documents'
   )
+}
+
+async function getGoogleAccessToken() {
+  const privateKey = await importPKCS8(
+    serviceAccount.private_key,
+    'RS256',
+  )
+
+  const now = Math.floor(Date.now() / 1000)
+
+  const assertion = await new SignJWT({
+    scope: 'https://www.googleapis.com/auth/datastore',
+  })
+    .setProtectedHeader({
+      alg: 'RS256',
+      typ: 'JWT',
+    })
+    .setIssuer(serviceAccount.client_email)
+    .setAudience('https://oauth2.googleapis.com/token')
+    .setIssuedAt(now)
+    .setExpirationTime(now + 3600)
+    .sign(privateKey)
+
+  const response = await fetch(
+    'https://oauth2.googleapis.com/token',
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type':
+          'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({
+        grant_type:
+          'urn:ietf:params:oauth:grant-type:jwt-bearer',
+        assertion,
+      }),
+    },
+  )
+
+  if (!response.ok) {
+    throw new Error(
+      'Unable to obtain Firestore service access token',
+    )
+  }
+
+  const data = await response.json()
+
+  if (!data.access_token) {
+    throw new Error(
+      'Firestore service access token was not returned',
+    )
+  }
+
+  return data.access_token as string
+}
+
+async function firestoreCommit(
+  writes: unknown[],
+  accessToken: string,
+) {
+  const response = await fetch(
+    `${firestoreBaseUrl()}:commit`,
+    {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ writes }),
+    },
+  )
+
+  if (!response.ok) {
+    const text = await response.text()
+
+    console.error(
+      'Firestore attempt commit failed:',
+      text,
+    )
+
+    throw new Error(
+      'Unable to create competition attempt',
+    )
+  }
+
+  return await response.json()
 }
 
 async function firestoreGet(
@@ -659,12 +761,63 @@ Deno.serve(async (req) => {
         blueprint,
       )
 
+    const attemptId = crypto.randomUUID()
+    const firestoreAccessToken =
+      await getGoogleAccessToken()
+
+    const now = new Date().toISOString()
+
+    await firestoreCommit(
+      [
+        {
+          update: {
+            name:
+              `${firestoreBaseUrl()}/competition_attempts/${attemptId}`,
+            fields: {
+              student_id: {
+                stringValue:
+                  firebaseUser.uid,
+              },
+              course_id: {
+                stringValue:
+                  courseId,
+              },
+              status: {
+                stringValue:
+                  'in_progress',
+              },
+              started_at: {
+                timestampValue:
+                  now,
+              },
+              question_ids: {
+                arrayValue: {
+                  values: questionIds.map(
+                    (questionId) => ({
+                      stringValue:
+                        questionId,
+                    }),
+                  ),
+                },
+              },
+              age_band: {
+                stringValue:
+                  ageBand,
+              },
+            },
+          },
+        },
+      ],
+      firestoreAccessToken,
+    )
+
     return json({
       ok: true,
       course_id: courseId,
       competition:
         config.competition,
       age_band: ageBand,
+      attempt_id: attemptId,
       question_ids: questionIds,
       count: questionIds.length,
     })

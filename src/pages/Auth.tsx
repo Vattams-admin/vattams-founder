@@ -14,6 +14,7 @@ export default function Auth({
   mode: 'login' | 'register'
 }) {
   const [fullName, setFullName] = useState('')
+  const [dateOfBirth, setDateOfBirth] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
@@ -34,6 +35,12 @@ export default function Auth({
 
     try {
       if (mode === 'register') {
+        if (!dateOfBirth) {
+          setError('Date of birth is required.')
+          setSubmitting(false)
+          return
+        }
+
         const credential = await createUserWithEmailAndPassword(
           firebaseAuth,
           email,
@@ -46,6 +53,7 @@ export default function Auth({
           await setDoc(doc(firestore, 'students', user.uid), {
             id: user.uid,
             full_name: fullName,
+            date_of_birth: dateOfBirth,
             email: user.email ?? email,
             role: 'student',
             status: 'pending',
@@ -133,6 +141,26 @@ export default function Auth({
               required
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
+              className="mt-1 w-full rounded-card border border-white/15 bg-ink px-3 py-2 text-sm outline-none focus:border-gold"
+            />
+          </div>
+        )}
+
+        {mode === 'register' && (
+          <div>
+            <label
+              htmlFor="date-of-birth"
+              className="text-sm font-medium"
+            >
+              Date of birth
+            </label>
+
+            <input
+              id="date-of-birth"
+              type="date"
+              required
+              value={dateOfBirth}
+              onChange={(e) => setDateOfBirth(e.target.value)}
               className="mt-1 w-full rounded-card border border-white/15 bg-ink px-3 py-2 text-sm outline-none focus:border-gold"
             />
           </div>

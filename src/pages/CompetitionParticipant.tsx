@@ -127,7 +127,24 @@ export default function CompetitionParticipant() {
       )
 
       if (error) {
-        throw error
+        console.error('competition-question-pool error:', error)
+
+        let detail = error.message || 'Unknown Edge Function error'
+
+        try {
+          const context = (error as { context?: Response }).context
+
+          if (context) {
+            const body = await context.clone().text()
+            if (body) {
+              detail += ` | HTTP ${context.status} | ${body}`
+            }
+          }
+        } catch (diagnosticError) {
+          console.error('Unable to read Edge Function error body:', diagnosticError)
+        }
+
+        throw new Error(detail)
       }
 
       const selectedQuestionIds: string[] = Array.isArray(data?.question_ids)
@@ -177,23 +194,21 @@ export default function CompetitionParticipant() {
         )
       }
 
-      const attemptRef = doc(collection(firestore, 'competition_attempts'))
+      const serverAttemptId =
+        typeof data?.attempt_id === 'string'
+          ? data.attempt_id
+          : ''
 
-      await setDoc(attemptRef, {
-        student_id: user.uid,
-        course_id: course.id,
-        status: 'in_progress',
-        started_at: serverTimestamp(),
-        question_ids: selectedQuestionIds,
-      })
+      if (!serverAttemptId) {
+        throw new Error(
+          'Competition question pool did not create an attempt.',
+        )
+      }
 
-      const attemptSnapshot = await getDoc(attemptRef)
-      const attemptData = attemptSnapshot.data()
-      const savedStart =
-        attemptData?.started_at?.toMillis?.() ?? Date.now()
+      const savedStart = Date.now()
 
       setQuestions(loadedQuestions)
-      setAttemptId(attemptRef.id)
+      setAttemptId(serverAttemptId)
       setStartedAtMs(savedStart)
       setAnswers({})
       setCurrentIndex(0)

@@ -65,7 +65,7 @@ try {
       body.message || body.error || body.code || body,
     )
     process.exitCode = 1
-    return
+    throw new Error('Authenticated function request failed')
   }
 
   const ids = Array.isArray(body.question_ids)
