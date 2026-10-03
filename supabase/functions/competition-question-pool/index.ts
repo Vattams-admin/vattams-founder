@@ -154,23 +154,39 @@ async function verifyFirebaseToken(
   const issuer =
     `https://securetoken.google.com/${FIREBASE_PROJECT_ID}`
 
-  const { payload } = await jwtVerify(
-    token,
-    firebaseJWKS,
-    {
-      issuer,
-      audience: FIREBASE_PROJECT_ID,
-    },
-  )
-
-  if (!payload.sub) {
-    throw new Error(
-      'Firebase token has no subject',
+  try {
+    const { payload } = await jwtVerify(
+      token,
+      firebaseJWKS,
+      {
+        issuer,
+        audience: FIREBASE_PROJECT_ID,
+      },
     )
-  }
 
-  return {
-    uid: payload.sub,
+    if (!payload.sub) {
+      throw new Error(
+        'Firebase token has no subject',
+      )
+    }
+
+    return {
+      uid: payload.sub,
+    }
+  } catch (error) {
+    const details =
+      error instanceof Error
+        ? `${error.name}: ${error.message}`
+        : String(error)
+
+    console.error(
+      'Firebase JWT verification failed:',
+      details,
+    )
+
+    throw new Error(
+      `Firebase JWT verification failed: ${details}`,
+    )
   }
 }
 
