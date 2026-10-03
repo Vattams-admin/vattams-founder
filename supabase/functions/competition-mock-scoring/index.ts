@@ -17,8 +17,7 @@ const SUPABASE_SECRET_KEYS = JSON.parse(
 const SUPABASE_SERVICE_ROLE_KEY =
   SUPABASE_SECRET_KEYS["default"] || "";
 const SUPABASE_BUCKET = "academia-course-materials";
-const THIRUKKURAL_ANSWER_KEYS_PATH =
-  "competitions/thirukkural/objective/answer-keys.private.json";
+const COMPETITION_REGISTRY_PATH = "competitions/registry.json";
 
 if (!FIREBASE_PROJECT_ID) {
   throw new Error("Missing FIREBASE_PROJECT_ID");
@@ -233,14 +232,105 @@ type StoredAnswerKey = {
 
 type StoredAnswerKeyBundle = Record<string, StoredAnswerKey>;
 
-let answerKeyBundlePromise: Promise<StoredAnswerKeyBundle> | null = null;
+type CompetitionRegistryEntry = {
+  course_id: string;
+  competition: string;
+  slug: string;
+  question_bundle: string;
+  answer_key_bundle: string;
+  age_pools: string;
+  per_attempt: number;
+  enabled: boolean;
+};
 
-async function loadAnswerKeyBundle(): Promise<StoredAnswerKeyBundle> {
-  if (!answerKeyBundlePromise) {
-    answerKeyBundlePromise = (async () => {
+type CompetitionRegistry = {
+  version: number;
+  competitions: Record<string, CompetitionRegistryEntry>;
+};
+
+let competitionRegistryPromise: Promise<CompetitionRegistry> | null = null;
+
+async function loadCompetitionRegistry(): Promise<CompetitionRegistry> {
+  if (!competitionRegistryPromise) {
+    competitionRegistryPromise = (async () => {
       const { data, error } = await supabase.storage
         .from(SUPABASE_BUCKET)
-        .download(THIRUKKURAL_ANSWER_KEYS_PATH);
+        .download(COMPETITION_REGISTRY_PATH);
+
+      if (error || !data) {
+        console.error(
+          "Supabase competition registry download failed:",
+          error?.message || "No data returned",
+        );
+        throw new Error("Competition registry is unavailable");
+      }
+
+      let parsed: unknown;
+
+      try {
+        parsed = JSON.parse(await data.text());
+      } catch {
+        throw new Error("Competition registry is invalid JSON");
+      }
+
+      if (
+        !parsed ||
+        typeof parsed !== "object" ||
+        Array.isArray(parsed)
+      ) {
+        throw new Error("Competition registry has an invalid format");
+      }
+
+      return parsed as CompetitionRegistry;
+    })();
+  }
+
+  try {
+    return await competitionRegistryPromise;
+  } catch (error) {
+    competitionRegistryPromise = null;
+    throw error;
+  }
+}
+
+async function getCompetitionRegistryEntry(courseId: string) {
+  const registry = await loadCompetitionRegistry();
+  const entry = registry.competitions?.[courseId];
+
+  if (!entry || entry.enabled !== true) {
+    return null;
+  }
+
+  if (
+    entry.course_id !== courseId ||
+    !entry.question_bundle ||
+    !entry.answer_key_bundle
+  ) {
+    return null;
+  }
+
+  return entry;
+}
+
+let answerKeyBundlePromises =
+  new Map<string, Promise<StoredAnswerKeyBundle>>();
+
+async function loadAnswerKeyBundle(
+  courseId: string,
+): Promise<StoredAnswerKeyBundle> {
+  let promise = answerKeyBundlePromises.get(courseId);
+
+  if (!promise) {
+    promise = (async () => {
+      const entry = await getCompetitionRegistryEntry(courseId);
+
+      if (!entry) {
+        throw new Error("Competition is not configured");
+      }
+
+      const { data, error } = await supabase.storage
+        .from(SUPABASE_BUCKET)
+        .download(entry.answer_key_bundle);
 
       if (error || !data) {
         console.error(
@@ -268,18 +358,23 @@ async function loadAnswerKeyBundle(): Promise<StoredAnswerKeyBundle> {
 
       return parsed as StoredAnswerKeyBundle;
     })();
+
+    answerKeyBundlePromises.set(courseId, promise);
   }
 
   try {
-    return await answerKeyBundlePromise;
+    return await promise;
   } catch (error) {
-    answerKeyBundlePromise = null;
+    answerKeyBundlePromises.delete(courseId);
     throw error;
   }
 }
 
-async function loadAnswerKey(questionId: string) {
-  const bundle = await loadAnswerKeyBundle();
+async function loadAnswerKey(
+  questionId: string,
+  courseId: string,
+) {
+  const bundle = await loadAnswerKeyBundle(courseId);
   return bundle[questionId] ?? null;
 }
 
@@ -360,37 +455,140 @@ async function loadAttempt(
   };
 }
 
+type StoredQuestion = {
+  competition: string;
+  question_id: string;
+  course_id?: string;
+  question: string;
+  question_type: string;
+  options: string[];
+  marks: number;
+  time_seconds: number;
+  is_published?: boolean;
+};
+
+type StoredQuestionBundle = Record<string, StoredQuestion>;
+
+let questionBundlePromises =
+  new Map<string, Promise<StoredQuestionBundle>>();
+
+async function loadQuestionBundle(
+  courseId: string,
+): Promise<StoredQuestionBundle> {
+  let promise = questionBundlePromises.get(courseId);
+
+  if (!promise) {
+    promise = (async () => {
+      const entry = await getCompetitionRegistryEntry(courseId);
+
+      if (!entry) {
+        throw new Error("Competition is not configured");
+      }
+
+      const { data, error } = await supabase.storage
+        .from(SUPABASE_BUCKET)
+        .download(entry.question_bundle);
+
+      if (error || !data) {
+        console.error(
+          "Supabase question bundle download failed:",
+          error?.message || "No data returned",
+        );
+        throw new Error("Question bundle is unavailable");
+      }
+
+      let parsed: unknown;
+
+      try {
+        parsed = JSON.parse(await data.text());
+      } catch {
+        throw new Error("Question bundle is invalid JSON");
+      }
+
+      if (
+        !parsed ||
+        typeof parsed !== "object" ||
+        Array.isArray(parsed)
+      ) {
+        throw new Error("Question bundle has an invalid format");
+      }
+
+      return parsed as StoredQuestionBundle;
+    })();
+
+    questionBundlePromises.set(courseId, promise);
+  }
+
+  try {
+    return await promise;
+  } catch (error) {
+    questionBundlePromises.delete(courseId);
+    throw error;
+  }
+}
+
 async function loadQuestion(
   questionId: string,
   courseId: string,
-  accessToken: string,
+  _accessToken: string,
 ) {
-  const question = await firestoreGet(
-    `competition_questions/${encodeURIComponent(questionId)}`,
-    accessToken,
-  );
+  const bundle = await loadQuestionBundle(courseId);
+  const question = bundle[questionId];
 
-  if (!question?.fields) {
+  if (!question) {
     return null;
   }
 
-  if (stringField(question, "course_id") !== courseId) {
+  if (
+    question.course_id &&
+    question.course_id !== courseId
+  ) {
     return null;
   }
 
-  if (stringField(question, "question_id") !== questionId) {
+  if (question.question_id !== questionId) {
     return null;
   }
 
-  if (!booleanField(question, "is_published")) {
+  if (question.is_published === false) {
     return null;
   }
 
-  if (stringField(question, "question_type") !== "Multiple Choice") {
+  if (question.question_type !== "Multiple Choice") {
     return null;
   }
 
-  return question;
+  if (
+    !Array.isArray(question.options) ||
+    question.options.length !== 4 ||
+    new Set(question.options).size !== 4 ||
+    question.options.some(
+      (option) =>
+        typeof option !== "string" ||
+        option.trim() === "",
+    )
+  ) {
+    return null;
+  }
+
+  return {
+    fields: {
+      options: {
+        arrayValue: {
+          values: question.options.map((option) => ({
+            stringValue: option,
+          })),
+        },
+      },
+      marks: {
+        integerValue: String(
+          Number.isFinite(Number(question.marks))
+            ? Number(question.marks)
+            : 1,
+        ),
+      },
+    },
+  };
 }
 
 
@@ -505,7 +703,7 @@ Deno.serve(async (req) => {
         );
       }
 
-      const answerKey = await loadAnswerKey(questionId);
+      const answerKey = await loadAnswerKey(questionId, courseId);
 
       if (!answerKey) {
         return json(
@@ -724,7 +922,7 @@ Deno.serve(async (req) => {
         answeredCount++;
       }
 
-      const answerKey = await loadAnswerKey(questionId);
+      const answerKey = await loadAnswerKey(questionId, courseId);
 
       if (!answerKey) {
         throw new Error(
