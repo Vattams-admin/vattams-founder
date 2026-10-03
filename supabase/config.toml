@@ -35,3 +35,6 @@ verify_jwt = false
 
 [functions.competition-question-pool]
 verify_jwt = false
+
+[functions.competition-question-content]
+verify_jwt = false

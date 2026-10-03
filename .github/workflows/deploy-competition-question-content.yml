@@ -1,0 +1,27 @@
+name: Deploy Competition Question Content
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      PROJECT_ID: ljnfktzrjewqjxxchvud
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Deploy competition-question-content
+        run: |
+          supabase functions deploy competition-question-content \
+            --project-ref "$PROJECT_ID" \
+            --use-api
