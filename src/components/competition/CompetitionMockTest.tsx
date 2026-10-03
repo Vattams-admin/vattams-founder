@@ -2,8 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import {
   collection,
   doc,
-  getDoc,
-  getDocs,
+   getDocs,
   query,
   serverTimestamp,
   setDoc,
@@ -105,51 +104,88 @@ export default function CompetitionMockTest({
     (question) => (answers[question.question_id] ?? "").trim() !== "",
   ).length;
 
-  const loadQuestions = async (questionIds: string[]) => {
-    const snapshots = await Promise.all(
-      questionIds.map((questionId) =>
-        getDoc(doc(firestore, "competition_questions", questionId)),
-      ),
+  const loadQuestions = async (
+    questionIds: string[],
+    attemptId?: string,
+  ) => {
+    const user = firebaseAuth.currentUser;
+
+    if (!user) {
+      throw new Error(
+        "Your Firebase session has expired. Please sign in again.",
+      );
+    }
+
+    const token = await user.getIdToken();
+
+    const { data, error } = await supabase.functions.invoke(
+      "competition-question-content",
+      {
+        body: {
+          course_id: course.id,
+          question_ids: questionIds,
+          ...(attemptId ? { attempt_id: attemptId } : {}),
+        },
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
     );
 
-    const loadedQuestions = snapshots
-      .map((snapshot) =>
-        snapshot.exists()
-          ? ({
-              id: snapshot.id,
-              ...snapshot.data(),
-            } as MockQuestion)
-          : null,
-      )
-      .filter(
-        (question): question is MockQuestion =>
-          question !== null &&
-          question.is_published !== false &&
-          question.course_id === course.id &&
-          question.question_type === "Multiple Choice" &&
-          Array.isArray(question.options) &&
-          question.options.length === 4 &&
-          new Set(question.options).size === 4 &&
-          question.options.every(
-            (option) => typeof option === "string" && option.trim() !== "",
-          ),
-      );
+    if (error) {
+      let detail = error.message || "Unable to load mock questions.";
 
-    if (loadedQuestions.length !== MOCK_QUESTION_COUNT) {
+      try {
+        const context = (error as { context?: Response }).context;
+
+        if (context) {
+          const body = await context.clone().text();
+
+          if (body) {
+            detail += ` | HTTP ${context.status} | ${body}`;
+          }
+        }
+      } catch {
+        // Keep the original error when the response body cannot be read.
+      }
+
+      throw new Error(detail);
+    }
+
+    const returnedQuestions: MockQuestion[] = Array.isArray(data?.questions)
+      ? (data.questions as MockQuestion[])
+      : [];
+
+    if (returnedQuestions.length !== MOCK_QUESTION_COUNT) {
       throw new Error(
         `Unable to load all ${MOCK_QUESTION_COUNT} selected mock questions.`,
       );
     }
 
     const questionMap = new Map(
-      loadedQuestions.map((question) => [question.question_id, question]),
+      returnedQuestions.map((question: MockQuestion) => [
+        question.question_id,
+        question,
+      ]),
     );
 
     return questionIds.map((questionId) => {
       const question = questionMap.get(questionId);
 
-      if (!question) {
-        throw new Error(`Selected mock question ${questionId} is unavailable.`);
+      if (
+        !question ||
+        question.course_id !== course.id ||
+        question.question_type !== "Multiple Choice" ||
+        !Array.isArray(question.options) ||
+        question.options.length !== 4 ||
+        new Set(question.options).size !== 4 ||
+        question.options.some(
+          (option) => typeof option !== "string" || option.trim() === "",
+        )
+      ) {
+        throw new Error(
+          `Selected mock question ${questionId} is unavailable.`,
+        );
       }
 
       return question;
@@ -199,7 +235,10 @@ export default function CompetitionMockTest({
       throw new Error("This mock attempt has an invalid question set.");
     }
 
-    const loadedQuestions = await loadQuestions(selectedQuestionIds);
+    const loadedQuestions = await loadQuestions(
+      selectedQuestionIds,
+      activeAttempt.id,
+    );
 
     const answerSnapshot = await getDocs(
       collection(
