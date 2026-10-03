@@ -275,6 +275,24 @@ async function firestoreGet(
   }
 
   if (!response.ok) {
+    const responseText = await response.text();
+
+    console.error(
+      "Firestore GET failed:",
+      response.status,
+      responseText.slice(0, 300),
+    );
+
+    if (response.status === 429) {
+      const quotaError = new Error(
+        "Firestore quota or rate limit reached. Please try again later.",
+      );
+
+      (quotaError as Error & { httpStatus?: number }).httpStatus = 503;
+
+      throw quotaError;
+    }
+
     throw new Error(
       `Firestore GET failed: ${response.status}`,
     );
@@ -542,7 +560,7 @@ Deno.serve(async (req) => {
             ? error.message
             : "Unable to load competition content.",
       },
-      500,
+      (error as { httpStatus?: number })?.httpStatus ?? 500,
     );
   }
 });
