@@ -38,3 +38,6 @@ verify_jwt = false
 
 [functions.competition-question-content]
 verify_jwt = false
+
+[functions.competition-mock-attempt]
+verify_jwt = false

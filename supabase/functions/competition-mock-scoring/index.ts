@@ -1,41 +1,50 @@
 import {
   createRemoteJWKSet,
-  importPKCS8,
   jwtVerify,
-  SignJWT,
 } from "npm:jose@6";
 import { createClient } from "npm:@supabase/supabase-js@2";
 
-const FIREBASE_PROJECT_ID = Deno.env.get("FIREBASE_PROJECT_ID") || "";
-const FIREBASE_SERVICE_ACCOUNT_JSON =
-  Deno.env.get("FIREBASE_SERVICE_ACCOUNT_JSON") || "";
+const FIREBASE_PROJECT_ID =
+  Deno.env.get("FIREBASE_PROJECT_ID") ||
+  Deno.env.get("VITE_FIREBASE_PROJECT_ID") ||
+  "";
 
-const SUPABASE_URL = Deno.env.get("SUPABASE_URL") || "";
+const SUPABASE_URL =
+  Deno.env.get("SUPABASE_URL") || "";
+
 const SUPABASE_SECRET_KEYS = JSON.parse(
   Deno.env.get("SUPABASE_SECRET_KEYS") || "{}",
 );
+
 const SUPABASE_SERVICE_ROLE_KEY =
   SUPABASE_SECRET_KEYS["default"] || "";
-const SUPABASE_BUCKET = "academia-course-materials";
-const COMPETITION_REGISTRY_PATH = "competitions/registry.json";
+
+const SUPABASE_BUCKET =
+  "academia-course-materials";
+
+const COMPETITION_REGISTRY_PATH =
+  "competitions/registry.json";
 
 if (!FIREBASE_PROJECT_ID) {
   throw new Error("Missing FIREBASE_PROJECT_ID");
 }
 
-if (!FIREBASE_SERVICE_ACCOUNT_JSON) {
-  throw new Error("Missing FIREBASE_SERVICE_ACCOUNT_JSON");
-}
-
-const serviceAccount = JSON.parse(FIREBASE_SERVICE_ACCOUNT_JSON);
-
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-  throw new Error("Missing Supabase function environment variables");
+  throw new Error(
+    "Missing Supabase function environment variables",
+  );
 }
 
 const supabase = createClient(
   SUPABASE_URL,
   SUPABASE_SERVICE_ROLE_KEY,
+  {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+      detectSessionInUrl: false,
+    },
+  },
 );
 
 const firebaseJWKS = createRemoteJWKSet(
@@ -48,181 +57,73 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
     "authorization, x-client-info, apikey, content-type",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Methods":
+    "POST, OPTIONS",
 };
 
-function json(data: unknown, status = 200) {
+function json(
+  data: unknown,
+  status = 200,
+) {
   return new Response(JSON.stringify(data), {
     status,
     headers: {
       ...corsHeaders,
       "Content-Type": "application/json",
+      "Cache-Control": "no-store",
     },
   });
 }
 
-function getBearerToken(req: Request) {
-  const authorization = req.headers.get("Authorization") || "";
+function getBearerToken(
+  req: Request,
+) {
+  const authorization =
+    req.headers.get("Authorization") || "";
 
   if (!authorization.startsWith("Bearer ")) {
     return null;
   }
 
-  return authorization.slice("Bearer ".length).trim() || null;
+  return (
+    authorization
+      .slice("Bearer ".length)
+      .trim() || null
+  );
 }
 
-async function verifyFirebaseUser(token: string) {
-  const issuer = `https://securetoken.google.com/${FIREBASE_PROJECT_ID}`;
+async function verifyFirebaseUser(
+  token: string,
+) {
+  const issuer =
+    `https://securetoken.google.com/${FIREBASE_PROJECT_ID}`;
 
-  const { payload } = await jwtVerify(token, firebaseJWKS, {
-    issuer,
-    audience: FIREBASE_PROJECT_ID,
-  });
+  const { payload } =
+    await jwtVerify(token, firebaseJWKS, {
+      issuer,
+      audience: FIREBASE_PROJECT_ID,
+    });
 
   if (!payload.sub) {
-    throw new Error("Firebase token has no subject");
+    throw new Error(
+      "Firebase token has no subject",
+    );
   }
 
   return payload.sub;
 }
 
-async function getGoogleAccessToken() {
-  const privateKey = await importPKCS8(
-    serviceAccount.private_key,
-    "RS256",
-  );
-
-  const now = Math.floor(Date.now() / 1000);
-
-  const assertion = await new SignJWT({
-    scope: "https://www.googleapis.com/auth/datastore",
-  })
-    .setProtectedHeader({
-      alg: "RS256",
-      typ: "JWT",
-    })
-    .setIssuer(serviceAccount.client_email)
-    .setAudience("https://oauth2.googleapis.com/token")
-    .setIssuedAt(now)
-    .setExpirationTime(now + 3600)
-    .sign(privateKey);
-
-  const response = await fetch("https://oauth2.googleapis.com/token", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams({
-      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-      assertion,
-    }),
-  });
-
-  if (!response.ok) {
-    throw new Error("Unable to obtain Firestore service access token");
-  }
-
-  const data = await response.json();
-
-  if (!data.access_token) {
-    throw new Error("Firestore service access token was not returned");
-  }
-
-  return data.access_token as string;
-}
-
-function firestoreBaseUrl() {
+function isRecord(
+  value: unknown,
+): value is Record<string, any> {
   return (
-    "https://firestore.googleapis.com/v1/projects/" +
-    `${encodeURIComponent(FIREBASE_PROJECT_ID)}` +
-    "/databases/(default)/documents"
+    !!value &&
+    typeof value === "object" &&
+    !Array.isArray(value)
   );
 }
 
-async function firestoreGet(path: string, accessToken: string) {
-  const response = await fetch(`${firestoreBaseUrl()}/${path}`, {
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-    },
-  });
-
-  if (response.status === 404) {
-    return null;
-  }
-
-  if (!response.ok) {
-    const text = await response.text();
-    console.error("Firestore GET failed:", response.status, text);
-    throw new Error(`Firestore GET failed: ${response.status}`);
-  }
-
-  return await response.json();
-}
-
-async function firestoreCommit(writes: unknown[], accessToken: string) {
-  const response = await fetch(`${firestoreBaseUrl()}:commit`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${accessToken}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ writes }),
-  });
-
-  if (!response.ok) {
-    const text = await response.text();
-    console.error("Firestore commit failed:", text);
-    throw new Error("Unable to save mock test result");
-  }
-
-  return await response.json();
-}
-
-function stringField(document: any, field: string) {
-  return document?.fields?.[field]?.stringValue ?? "";
-}
-
-function integerField(document: any, field: string) {
-  return Number(document?.fields?.[field]?.integerValue ?? 0);
-}
-
-function booleanField(document: any, field: string) {
-  return document?.fields?.[field]?.booleanValue === true;
-}
-
-function arrayStringField(document: any, field: string) {
-  const values = document?.fields?.[field]?.arrayValue?.values;
-
-  if (!Array.isArray(values)) {
-    return [];
-  }
-
-  return values
-    .map((value: any) => value?.stringValue)
-    .filter(
-      (value: unknown): value is string =>
-        typeof value === "string" && value.length > 0,
-    );
-}
-
-function normalizeAnswer(value: unknown) {
-  return String(value ?? "")
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, " ");
-}
-
-function isSafeId(value: string) {
-  return /^[A-Za-z0-9_-]+$/.test(value);
-}
-
-function firestoreResource(collection: string, id: string) {
-  return (
-    `projects/${FIREBASE_PROJECT_ID}` +
-    `/databases/(default)/documents/` +
-    `${collection}/${encodeURIComponent(id)}`
-  );
-}
+type StoredQuestion = Record<string, any>;
 
 type StoredAnswerKey = {
   answer: string;
@@ -230,7 +131,8 @@ type StoredAnswerKey = {
   explanation: string;
 };
 
-type StoredAnswerKeyBundle = Record<string, StoredAnswerKey>;
+type StoredAnswerKeyBundle =
+  Record<string, StoredAnswerKey>;
 
 type CompetitionRegistryEntry = {
   course_id: string;
@@ -245,44 +147,74 @@ type CompetitionRegistryEntry = {
 
 type CompetitionRegistry = {
   version: number;
-  competitions: Record<string, CompetitionRegistryEntry>;
+  competitions: Record<
+    string,
+    CompetitionRegistryEntry
+  >;
 };
 
-let competitionRegistryPromise: Promise<CompetitionRegistry> | null = null;
+let competitionRegistryPromise:
+  Promise<CompetitionRegistry> | null = null;
+
+let questionBundlePromises =
+  new Map<
+    string,
+    Promise<Record<string, StoredQuestion>>
+  >();
+
+let answerKeyBundlePromises =
+  new Map<
+    string,
+    Promise<StoredAnswerKeyBundle>
+  >();
 
 async function loadCompetitionRegistry(): Promise<CompetitionRegistry> {
   if (!competitionRegistryPromise) {
-    competitionRegistryPromise = (async () => {
-      const { data, error } = await supabase.storage
-        .from(SUPABASE_BUCKET)
-        .download(COMPETITION_REGISTRY_PATH);
+    competitionRegistryPromise =
+      (async () => {
+        const { data, error } =
+          await supabase.storage
+            .from(SUPABASE_BUCKET)
+            .download(
+              COMPETITION_REGISTRY_PATH,
+            );
 
-      if (error || !data) {
-        console.error(
-          "Supabase competition registry download failed:",
-          error?.message || "No data returned",
-        );
-        throw new Error("Competition registry is unavailable");
-      }
+        if (error || !data) {
+          console.error(
+            "Supabase competition registry download failed:",
+            error?.message ||
+              "No data returned",
+          );
 
-      let parsed: unknown;
+          throw new Error(
+            "Competition registry is unavailable",
+          );
+        }
 
-      try {
-        parsed = JSON.parse(await data.text());
-      } catch {
-        throw new Error("Competition registry is invalid JSON");
-      }
+        let parsed: unknown;
 
-      if (
-        !parsed ||
-        typeof parsed !== "object" ||
-        Array.isArray(parsed)
-      ) {
-        throw new Error("Competition registry has an invalid format");
-      }
+        try {
+          parsed = JSON.parse(
+            await data.text(),
+          );
+        } catch {
+          throw new Error(
+            "Competition registry is invalid JSON",
+          );
+        }
 
-      return parsed as CompetitionRegistry;
-    })();
+        if (
+          !parsed ||
+          typeof parsed !== "object" ||
+          Array.isArray(parsed)
+        ) {
+          throw new Error(
+            "Competition registry has an invalid format",
+          );
+        }
+
+        return parsed as CompetitionRegistry;
+      })();
   }
 
   try {
@@ -293,9 +225,14 @@ async function loadCompetitionRegistry(): Promise<CompetitionRegistry> {
   }
 }
 
-async function getCompetitionRegistryEntry(courseId: string) {
-  const registry = await loadCompetitionRegistry();
-  const entry = registry.competitions?.[courseId];
+async function getCompetitionRegistryEntry(
+  courseId: string,
+) {
+  const registry =
+    await loadCompetitionRegistry();
+
+  const entry =
+    registry.competitions?.[courseId];
 
   if (!entry || entry.enabled !== true) {
     return null;
@@ -312,40 +249,153 @@ async function getCompetitionRegistryEntry(courseId: string) {
   return entry;
 }
 
-let answerKeyBundlePromises =
-  new Map<string, Promise<StoredAnswerKeyBundle>>();
-
-async function loadAnswerKeyBundle(
+async function loadQuestionBundle(
   courseId: string,
-): Promise<StoredAnswerKeyBundle> {
-  let promise = answerKeyBundlePromises.get(courseId);
+): Promise<Record<string, StoredQuestion>> {
+  let promise =
+    questionBundlePromises.get(courseId);
 
   if (!promise) {
     promise = (async () => {
-      const entry = await getCompetitionRegistryEntry(courseId);
+      const entry =
+        await getCompetitionRegistryEntry(
+          courseId,
+        );
 
       if (!entry) {
-        throw new Error("Competition is not configured");
+        throw new Error(
+          "Competition is not configured",
+        );
       }
 
-      const { data, error } = await supabase.storage
-        .from(SUPABASE_BUCKET)
-        .download(entry.answer_key_bundle);
+      const { data, error } =
+        await supabase.storage
+          .from(SUPABASE_BUCKET)
+          .download(
+            entry.question_bundle,
+          );
 
       if (error || !data) {
         console.error(
-          "Supabase answer-key bundle download failed:",
-          error?.message || "No data returned",
+          "Supabase question bundle download failed:",
+          error?.message ||
+            "No data returned",
         );
-        throw new Error("Answer-key bundle is unavailable");
+
+        throw new Error(
+          "Question bundle is unavailable",
+        );
       }
 
       let parsed: unknown;
 
       try {
-        parsed = JSON.parse(await data.text());
+        parsed = JSON.parse(
+          await data.text(),
+        );
       } catch {
-        throw new Error("Answer-key bundle is invalid JSON");
+        throw new Error(
+          "Question bundle is invalid JSON",
+        );
+      }
+
+      if (
+        !isRecord(parsed)
+      ) {
+        throw new Error(
+          "Question bundle has an invalid format",
+        );
+      }
+
+      /*
+       * The current production question bundle format is:
+       *
+       * {
+       *   course_id: "...",
+       *   questions: {
+       *     questionId: { ... }
+       *   }
+       * }
+       */
+      if (
+        parsed.course_id !== courseId ||
+        !isRecord(parsed.questions)
+      ) {
+        throw new Error(
+          "Question bundle is invalid",
+        );
+      }
+
+      return parsed.questions as Record<
+        string,
+        StoredQuestion
+      >;
+    })();
+
+    questionBundlePromises.set(
+      courseId,
+      promise,
+    );
+  }
+
+  try {
+    return await promise;
+  } catch (error) {
+    questionBundlePromises.delete(
+      courseId,
+    );
+    throw error;
+  }
+}
+
+async function loadAnswerKeyBundle(
+  courseId: string,
+): Promise<StoredAnswerKeyBundle> {
+  let promise =
+    answerKeyBundlePromises.get(courseId);
+
+  if (!promise) {
+    promise = (async () => {
+      const entry =
+        await getCompetitionRegistryEntry(
+          courseId,
+        );
+
+      if (!entry) {
+        throw new Error(
+          "Competition is not configured",
+        );
+      }
+
+      const { data, error } =
+        await supabase.storage
+          .from(SUPABASE_BUCKET)
+          .download(
+            entry.answer_key_bundle,
+          );
+
+      if (error || !data) {
+        console.error(
+          "Supabase answer-key bundle download failed:",
+          error?.message ||
+            "No data returned",
+        );
+
+        throw new Error(
+          "Answer-key bundle is unavailable",
+        );
+      }
+
+      let parsed: unknown;
+
+      try {
+        parsed = JSON.parse(
+          await data.text(),
+        );
+      } catch {
+        throw new Error(
+          "Answer-key bundle is invalid JSON",
+        );
       }
 
       if (
@@ -353,19 +403,26 @@ async function loadAnswerKeyBundle(
         typeof parsed !== "object" ||
         Array.isArray(parsed)
       ) {
-        throw new Error("Answer-key bundle has an invalid format");
+        throw new Error(
+          "Answer-key bundle has an invalid format",
+        );
       }
 
       return parsed as StoredAnswerKeyBundle;
     })();
 
-    answerKeyBundlePromises.set(courseId, promise);
+    answerKeyBundlePromises.set(
+      courseId,
+      promise,
+    );
   }
 
   try {
     return await promise;
   } catch (error) {
-    answerKeyBundlePromises.delete(courseId);
+    answerKeyBundlePromises.delete(
+      courseId,
+    );
     throw error;
   }
 }
@@ -374,224 +431,308 @@ async function loadAnswerKey(
   questionId: string,
   courseId: string,
 ) {
-  const bundle = await loadAnswerKeyBundle(courseId);
+  const bundle =
+    await loadAnswerKeyBundle(courseId);
+
   return bundle[questionId] ?? null;
+}
+
+function validQuestion(
+  question: StoredQuestion | undefined,
+  courseId: string,
+  questionId: string,
+) {
+  return (
+    !!question &&
+    question.question_id === questionId &&
+    question.course_id === courseId &&
+    question.question_type ===
+      "Multiple Choice" &&
+    Array.isArray(question.options) &&
+    question.options.length === 4 &&
+    new Set(question.options).size === 4 &&
+    question.options.every(
+      (option: unknown) =>
+        typeof option === "string" &&
+        option.trim() !== "",
+    )
+  );
+}
+
+function normalizeAnswer(
+  value: unknown,
+) {
+  return String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, " ");
+}
+
+function isSafeId(
+  value: string,
+) {
+  return /^[A-Za-z0-9_-]+$/.test(value);
+}
+
+function getSelectedQuestionIds(
+  attempt: any,
+): string[] {
+  const value = attempt?.question_ids;
+
+  if (Array.isArray(value)) {
+    return value
+      .map((item: unknown) =>
+        String(item),
+      )
+      .filter(Boolean);
+  }
+
+  /*
+   * question_ids is jsonb in the existing
+   * Postgres schema. Supabase normally returns
+   * it as a JavaScript array.
+   */
+  return [];
 }
 
 async function loadAttempt(
   attemptId: string,
   studentId: string,
-  accessToken: string,
 ) {
-  const attempt = await firestoreGet(
-    `competition_mock_attempts/${encodeURIComponent(attemptId)}`,
-    accessToken,
-  );
+  const { data, error } =
+    await supabase
+      .from("competition_mock_attempts")
+      .select(
+        [
+          "id",
+          "student_id",
+          "course_id",
+          "status",
+          "question_ids",
+          "is_mock",
+          "score",
+          "max_score",
+          "submitted_at",
+          "scored_at",
+        ].join(","),
+      )
+      .eq("id", attemptId)
+      .eq("student_id", studentId)
+      .eq("is_mock", true)
+      .maybeSingle();
 
-  if (!attempt?.fields) {
-    return {
-      error: json({ error: "Mock attempt not found" }, 404),
-    };
+  if (error) {
+    console.error(
+      "Mock attempt lookup failed:",
+      error,
+    );
+
+    throw new Error(
+      "Unable to load mock attempt",
+    );
   }
 
-  if (stringField(attempt, "student_id") !== studentId) {
+  if (!data) {
     return {
       error: json(
-        { error: "This mock attempt does not belong to you" },
-        403,
+        { error: "Mock attempt not found" },
+        404,
       ),
     };
   }
-
-  const courseId = stringField(attempt, "course_id");
-
-  if (!courseId || !isSafeId(courseId)) {
-    return {
-      error: json({ error: "Competition course is missing" }, 500),
-    };
-  }
-
-  const course = await firestoreGet(
-    `courses/${encodeURIComponent(courseId)}`,
-    accessToken,
-  );
-
-  if (!course?.fields) {
-    return {
-      error: json({ error: "Competition course not found" }, 404),
-    };
-  }
-
-  if (booleanField(course, "is_competition") === false) {
-    return {
-      error: json(
-        { error: "This course is not configured as a competition" },
-        409,
-      ),
-    };
-  }
-
-  const selectedQuestionIds = arrayStringField(
-    attempt,
-    "question_ids",
-  );
 
   if (
-    selectedQuestionIds.length !== 30 ||
-    new Set(selectedQuestionIds).size !== 30
+    !data.course_id ||
+    !isSafeId(String(data.course_id))
   ) {
     return {
       error: json(
-        { error: "Mock attempt has an invalid question set" },
+        {
+          error:
+            "Competition course is missing",
+        },
+        500,
+      ),
+    };
+  }
+
+  const selectedQuestionIds =
+    getSelectedQuestionIds(data);
+
+  if (
+    selectedQuestionIds.length !== 30 ||
+    new Set(selectedQuestionIds).size !== 30 ||
+    selectedQuestionIds.some(
+      (id) => !isSafeId(id),
+    )
+  ) {
+    return {
+      error: json(
+        {
+          error:
+            "Mock attempt has an invalid question set",
+        },
         409,
       ),
     };
   }
 
   return {
-    attempt,
-    courseId,
+    attempt: data,
+    courseId: String(
+      data.course_id,
+    ),
     selectedQuestionIds,
   };
 }
 
-type StoredQuestion = {
-  competition: string;
-  question_id: string;
-  course_id?: string;
-  question: string;
-  question_type: string;
-  options: string[];
-  marks: number;
-  time_seconds: number;
-  is_published?: boolean;
-};
+async function loadStoredAnswers(
+  attemptId: string,
+) {
+  const { data, error } =
+    await supabase
+      .from("competition_mock_answers")
+      .select(
+        [
+          "question_id",
+          "answer",
+          "is_correct",
+          "correct_answer",
+          "correct_option_index",
+          "explanation",
+          "marks_awarded",
+          "answered_at",
+        ].join(","),
+      )
+      .eq("attempt_id", attemptId);
 
-type StoredQuestionBundle = Record<string, StoredQuestion>;
+  if (error) {
+    console.error(
+      "Mock answer lookup failed:",
+      error,
+    );
 
-let questionBundlePromises =
-  new Map<string, Promise<StoredQuestionBundle>>();
-
-async function loadQuestionBundle(
-  courseId: string,
-): Promise<StoredQuestionBundle> {
-  let promise = questionBundlePromises.get(courseId);
-
-  if (!promise) {
-    promise = (async () => {
-      const entry = await getCompetitionRegistryEntry(courseId);
-
-      if (!entry) {
-        throw new Error("Competition is not configured");
-      }
-
-      const { data, error } = await supabase.storage
-        .from(SUPABASE_BUCKET)
-        .download(entry.question_bundle);
-
-      if (error || !data) {
-        console.error(
-          "Supabase question bundle download failed:",
-          error?.message || "No data returned",
-        );
-        throw new Error("Question bundle is unavailable");
-      }
-
-      let parsed: unknown;
-
-      try {
-        parsed = JSON.parse(await data.text());
-      } catch {
-        throw new Error("Question bundle is invalid JSON");
-      }
-
-      if (
-        !parsed ||
-        typeof parsed !== "object" ||
-        Array.isArray(parsed)
-      ) {
-        throw new Error("Question bundle has an invalid format");
-      }
-
-      return parsed as StoredQuestionBundle;
-    })();
-
-    questionBundlePromises.set(courseId, promise);
+    throw new Error(
+      "Unable to load mock answers",
+    );
   }
 
-  try {
-    return await promise;
-  } catch (error) {
-    questionBundlePromises.delete(courseId);
-    throw error;
-  }
+  return data ?? [];
 }
 
-async function loadQuestion(
-  questionId: string,
-  courseId: string,
-  _accessToken: string,
-) {
-  const bundle = await loadQuestionBundle(courseId);
-  const question = bundle[questionId];
-
-  if (!question) {
-    return null;
-  }
-
-  if (
-    question.course_id &&
-    question.course_id !== courseId
-  ) {
-    return null;
-  }
-
-  if (question.question_id !== questionId) {
-    return null;
-  }
-
-  if (question.is_published === false) {
-    return null;
-  }
-
-  if (question.question_type !== "Multiple Choice") {
-    return null;
-  }
-
-  if (
-    !Array.isArray(question.options) ||
-    question.options.length !== 4 ||
-    new Set(question.options).size !== 4 ||
-    question.options.some(
-      (option) =>
-        typeof option !== "string" ||
-        option.trim() === "",
-    )
-  ) {
-    return null;
-  }
-
+function answerResponse(row: any) {
   return {
-    fields: {
-      options: {
-        arrayValue: {
-          values: question.options.map((option) => ({
-            stringValue: option,
-          })),
-        },
-      },
-      marks: {
-        integerValue: String(
-          Number.isFinite(Number(question.marks))
-            ? Number(question.marks)
-            : 1,
-        ),
-      },
-    },
+    questionId: row.question_id,
+    answer: row.answer,
+    correct: row.is_correct === true,
+    correctAnswer:
+      row.correct_answer ?? "",
+    correctOptionIndex:
+      row.correct_option_index ===
+        null ||
+      row.correct_option_index ===
+        undefined
+        ? undefined
+        : row.correct_option_index,
+    explanation:
+      row.explanation ?? "",
+    marksAwarded: Number(
+      row.marks_awarded ?? 0,
+    ),
+    answeredAt:
+      row.answered_at ?? null,
   };
 }
 
+async function evaluateAnswer(
+  questionId: string,
+  courseId: string,
+  submittedAnswer: string,
+) {
+  const questions =
+    await loadQuestionBundle(courseId);
 
+  const question =
+    questions[questionId];
+
+  if (
+    !validQuestion(
+      question,
+      courseId,
+      questionId,
+    )
+  ) {
+    throw new Error(
+      "Mock question is unavailable",
+    );
+  }
+
+  const answerKey =
+    await loadAnswerKey(
+      questionId,
+      courseId,
+    );
+
+  if (!answerKey) {
+    throw new Error(
+      "Answer key is unavailable",
+    );
+  }
+
+  const correctAnswer =
+    String(answerKey.answer ?? "");
+
+  const correctOptionIndex =
+    Number(
+      answerKey.correct_option_index ??
+        -1,
+    );
+
+  const explanation =
+    String(
+      answerKey.explanation ?? "",
+    );
+
+  if (!correctAnswer) {
+    throw new Error(
+      "Answer key is invalid",
+    );
+  }
+
+  if (
+    correctOptionIndex >= 0 &&
+    correctOptionIndex >=
+      question!.options.length
+  ) {
+    throw new Error(
+      "Answer key option index is invalid",
+    );
+  }
+
+  const correct =
+    normalizeAnswer(
+      submittedAnswer,
+    ) ===
+    normalizeAnswer(
+      correctAnswer,
+    );
+
+  const marks =
+    Number(question!.marks ?? 0);
+
+  return {
+    correct,
+    correctAnswer,
+    correctOptionIndex:
+      correctOptionIndex >= 0
+        ? correctOptionIndex
+        : null,
+    explanation,
+    marksAwarded:
+      correct ? marks : 0,
+    marks,
+  };
+}
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") {
@@ -602,27 +743,42 @@ Deno.serve(async (req) => {
 
   try {
     if (req.method !== "POST") {
-      return json({ error: "Method not allowed" }, 405);
+      return json(
+        { error: "Method not allowed" },
+        405,
+      );
     }
 
-    const firebaseToken = getBearerToken(req);
+    const firebaseToken =
+      getBearerToken(req);
 
     if (!firebaseToken) {
-      return json({ error: "Authentication required" }, 401);
+      return json(
+        { error: "Authentication required" },
+        401,
+      );
     }
 
-    const studentId = await verifyFirebaseUser(firebaseToken);
-    const body = await req.json();
+    const studentId =
+      await verifyFirebaseUser(
+        firebaseToken,
+      );
 
-    const action = String(body.action || "").trim();
-    const attemptId = String(body.attemptId || "").trim();
+    let body: any = {};
 
-    if (!attemptId || !isSafeId(attemptId)) {
+    try {
+      body = await req.json();
+    } catch {
       return json(
-        { error: "Valid attemptId is required" },
+        { error: "Invalid JSON request body." },
         400,
       );
     }
+
+    const action =
+      typeof body?.action === "string"
+        ? body.action.trim()
+        : "";
 
     if (
       action !== "check_answer" &&
@@ -637,13 +793,31 @@ Deno.serve(async (req) => {
       );
     }
 
-    const accessToken = await getGoogleAccessToken();
+    const attemptId =
+      typeof body?.attemptId === "string"
+        ? body.attemptId.trim()
+        : "";
 
-    const attemptData = await loadAttempt(
-      attemptId,
-      studentId,
-      accessToken,
-    );
+    if (
+      !attemptId ||
+      !isSafeId(
+        attemptId.replaceAll("-", ""),
+      )
+    ) {
+      return json(
+        {
+          error:
+            "Valid attemptId is required",
+        },
+        400,
+      );
+    }
+
+    const attemptData =
+      await loadAttempt(
+        attemptId,
+        studentId,
+      );
 
     if ("error" in attemptData) {
       return attemptData.error;
@@ -655,25 +829,38 @@ Deno.serve(async (req) => {
       selectedQuestionIds,
     } = attemptData;
 
-    const selectedQuestionSet = new Set(selectedQuestionIds);
+    const selectedQuestionSet =
+      new Set(selectedQuestionIds);
 
     if (action === "check_answer") {
-      const questionId = String(
-        body.questionId || "",
-      ).trim();
+      const questionId =
+        typeof body?.questionId === "string"
+          ? body.questionId.trim()
+          : "";
 
-      const submittedAnswer = String(
-        body.answer ?? "",
-      ).trim();
+      const submittedAnswer =
+        String(
+          body?.answer ?? "",
+        ).trim();
 
-      if (!questionId || !isSafeId(questionId)) {
+      if (
+        !questionId ||
+        !isSafeId(questionId)
+      ) {
         return json(
-          { error: "Valid questionId is required" },
+          {
+            error:
+              "Valid questionId is required",
+          },
           400,
         );
       }
 
-      if (!selectedQuestionSet.has(questionId)) {
+      if (
+        !selectedQuestionSet.has(
+          questionId,
+        )
+      ) {
         return json(
           {
             error:
@@ -685,127 +872,247 @@ Deno.serve(async (req) => {
 
       if (!submittedAnswer) {
         return json(
-          { error: "An answer is required" },
+          {
+            error:
+              "An answer is required",
+          },
           400,
         );
       }
 
-      const question = await loadQuestion(
-        questionId,
-        courseId,
-        accessToken,
-      );
+      /*
+       * First answer wins.
+       * Once a row exists, never overwrite it.
+       */
+      const { data: existingAnswer,
+        error: existingAnswerError } =
+        await supabase
+          .from("competition_mock_answers")
+          .select(
+            [
+              "question_id",
+              "answer",
+              "is_correct",
+              "correct_answer",
+              "correct_option_index",
+              "explanation",
+              "marks_awarded",
+              "answered_at",
+            ].join(","),
+          )
+          .eq("attempt_id", attemptId)
+          .eq("question_id", questionId)
+          .maybeSingle();
 
-      if (!question) {
-        return json(
-          { error: "Mock question is unavailable" },
-          409,
+      if (existingAnswerError) {
+        console.error(
+          "Existing mock answer lookup failed:",
+          existingAnswerError,
+        );
+
+        throw new Error(
+          "Unable to load saved mock answer",
         );
       }
 
-      const answerKey = await loadAnswerKey(questionId, courseId);
-
-      if (!answerKey) {
-        return json(
-          { error: "Answer key is unavailable" },
-          409,
-        );
-      }
-
-      const correctAnswer = answerKey.answer;
-
-      const correctOptionIndex = answerKey.correct_option_index;
-
-      if (!correctAnswer) {
-        return json(
-          { error: "Answer key is invalid" },
-          500,
-        );
-      }
-
-      const options = question?.fields?.options?.arrayValue?.values
-        ?.map((value: any) => value?.stringValue)
-        .filter(
-          (value: unknown): value is string =>
-            typeof value === "string",
-        ) ?? [];
-
-      if (
-        options.length !== 4 ||
-        new Set(options).size !== 4
-      ) {
-        return json(
-          { error: "Mock question options are invalid" },
-          409,
-        );
+      if (existingAnswer) {
+        return json({
+          ok: true,
+          action: "check_answer",
+          ...answerResponse(
+            existingAnswer,
+          ),
+          alreadyAnswered: true,
+        });
       }
 
       if (
-        correctOptionIndex >= 0 &&
-        correctOptionIndex >= options.length
+        attempt.status !==
+        "in_progress"
       ) {
         return json(
-          { error: "Answer key option index is invalid" },
-          500,
+          {
+            error:
+              "This mock attempt has already been submitted",
+          },
+          409,
         );
       }
 
-      const correct =
-        normalizeAnswer(submittedAnswer) ===
-        normalizeAnswer(correctAnswer);
+      const evaluated =
+        await evaluateAnswer(
+          questionId,
+          courseId,
+          submittedAnswer,
+        );
 
-      const explanation = answerKey.explanation;
+      const now =
+        new Date().toISOString();
+
+      const { data: insertedAnswer,
+        error: insertAnswerError } =
+        await supabase
+          .from("competition_mock_answers")
+          .insert({
+            attempt_id: attemptId,
+            question_id: questionId,
+            answer: submittedAnswer,
+            is_correct:
+              evaluated.correct,
+            correct_answer:
+              evaluated.correctAnswer,
+            correct_option_index:
+              evaluated.correctOptionIndex,
+            explanation:
+              evaluated.explanation,
+            marks_awarded:
+              evaluated.marksAwarded,
+            answered_at: now,
+            updated_at: now,
+          })
+          .select(
+            [
+              "question_id",
+              "answer",
+              "is_correct",
+              "correct_answer",
+              "correct_option_index",
+              "explanation",
+              "marks_awarded",
+              "answered_at",
+            ].join(","),
+          )
+          .maybeSingle();
+
+      if (
+        !insertAnswerError &&
+        insertedAnswer
+      ) {
+        return json({
+          ok: true,
+          action: "check_answer",
+          ...answerResponse(
+            insertedAnswer,
+          ),
+          alreadyAnswered: false,
+        });
+      }
+
+      /*
+       * Two simultaneous requests can race.
+       * The unique constraint makes exactly one answer win.
+       */
+      if (
+        insertAnswerError?.code !==
+        "23505"
+      ) {
+        console.error(
+          "Mock answer insert failed:",
+          insertAnswerError,
+        );
+
+        throw new Error(
+          "Unable to save mock answer",
+        );
+      }
+
+      const { data: winningAnswer,
+        error: winningAnswerError } =
+        await supabase
+          .from("competition_mock_answers")
+          .select(
+            [
+              "question_id",
+              "answer",
+              "is_correct",
+              "correct_answer",
+              "correct_option_index",
+              "explanation",
+              "marks_awarded",
+              "answered_at",
+            ].join(","),
+          )
+          .eq("attempt_id", attemptId)
+          .eq("question_id", questionId)
+          .maybeSingle();
+
+      if (
+        winningAnswerError ||
+        !winningAnswer
+      ) {
+        throw new Error(
+          "Unable to resolve saved mock answer",
+        );
+      }
 
       return json({
         ok: true,
         action: "check_answer",
-        questionId,
-        correct,
-        correctAnswer,
-        explanation,
-        correctOptionIndex:
-          correctOptionIndex >= 0
-            ? correctOptionIndex
-            : undefined,
+        ...answerResponse(
+          winningAnswer,
+        ),
+        alreadyAnswered: true,
       });
     }
 
-    const submittedAnswers = Array.isArray(body.answers)
-      ? body.answers.map((item: any) => ({
-          questionId: String(
-            item?.questionId || "",
-          ).trim(),
-          answer: String(
-            item?.answer ?? "",
-          ).trim(),
-        }))
-      : null;
+    const submittedAnswers =
+      Array.isArray(body?.answers)
+        ? body.answers.map(
+            (item: any) => ({
+              questionId:
+                typeof item?.questionId ===
+                "string"
+                  ? item.questionId.trim()
+                  : "",
+              answer: String(
+                item?.answer ?? "",
+              ).trim(),
+            }),
+          )
+        : null;
 
     if (!submittedAnswers) {
       return json(
-        { error: "answers must be an array" },
+        {
+          error:
+            "answers must be an array",
+        },
         400,
       );
     }
 
-    if (submittedAnswers.length > 30) {
+    if (
+      submittedAnswers.length > 30
+    ) {
       return json(
         { error: "Too many answers" },
         400,
       );
     }
 
-    const answerIds = new Set<string>();
+    const answerIds =
+      new Set<string>();
 
-    for (const item of submittedAnswers) {
-      if (!isSafeId(item.questionId)) {
+    for (
+      const item of submittedAnswers
+    ) {
+      if (
+        !isSafeId(item.questionId)
+      ) {
         return json(
-          { error: "Invalid question ID" },
+          {
+            error:
+              "Invalid question ID",
+          },
           400,
         );
       }
 
-      if (answerIds.has(item.questionId)) {
+      if (
+        answerIds.has(
+          item.questionId,
+        )
+      ) {
         return json(
           {
             error:
@@ -815,7 +1122,11 @@ Deno.serve(async (req) => {
         );
       }
 
-      if (!selectedQuestionSet.has(item.questionId)) {
+      if (
+        !selectedQuestionSet.has(
+          item.questionId,
+        )
+      ) {
         return json(
           {
             error:
@@ -825,268 +1136,352 @@ Deno.serve(async (req) => {
         );
       }
 
-      answerIds.add(item.questionId);
+      answerIds.add(
+        item.questionId,
+      );
     }
 
-    const status = stringField(attempt, "status");
-    const resultId = `${studentId}_${attemptId}`;
-
-    if (status !== "in_progress") {
-      const existingResult = await firestoreGet(
-        `competition_mock_results/${encodeURIComponent(resultId)}`,
-        accessToken,
-      );
-
-      if (existingResult?.fields) {
-        return json({
-          ok: true,
+    /*
+     * Idempotent submit.
+     * If the attempt was already submitted,
+     * return the stored Postgres result.
+     */
+    if (
+      attempt.status !==
+      "in_progress"
+    ) {
+      const storedAnswers =
+        await loadStoredAnswers(
           attemptId,
-          score: integerField(
-            existingResult,
-            "score",
-          ),
-          maxScore: integerField(
-            existingResult,
-            "max_score",
-          ),
-          answeredCount: integerField(
-            existingResult,
-            "answered_count",
-          ),
-          submitted: true,
-          alreadySubmitted: true,
-        });
-      }
-
-      return json(
-        {
-          error:
-            "This mock attempt has already been submitted",
-        },
-        409,
-      );
-    }
-
-    const questionMap = new Map<string, any>();
-
-    for (const questionId of selectedQuestionIds) {
-      const question = await loadQuestion(
-        questionId,
-        courseId,
-        accessToken,
-      );
-
-      if (question) {
-        questionMap.set(questionId, question);
-      }
-    }
-
-    if (questionMap.size !== 30) {
-      return json(
-        {
-          error:
-            "One or more mock questions are unavailable",
-        },
-        409,
-      );
-    }
-
-    let score = 0;
-    let maxScore = 0;
-    let answeredCount = 0;
-
-    for (const questionId of selectedQuestionIds) {
-      const question = questionMap.get(questionId);
-
-      if (!question) {
-        throw new Error(
-          `Missing question ${questionId}`,
         );
-      }
 
-      const marks = integerField(
-        question,
-        "marks",
-      );
-
-      maxScore += marks;
-
-      const submitted = submittedAnswers.find(
-        (item) => item.questionId === questionId,
-      );
-
-      if (
-        submitted &&
-        submitted.answer.trim() !== ""
-      ) {
-        answeredCount++;
-      }
-
-      const answerKey = await loadAnswerKey(questionId, courseId);
-
-      if (!answerKey) {
-        throw new Error(
-          `Missing answer key for ${questionId}`,
-        );
-      }
-
-      const correctAnswer = answerKey.answer;
-
-      if (
-        submitted &&
-        submitted.answer !== "" &&
-        normalizeAnswer(submitted.answer) ===
-          normalizeAnswer(correctAnswer)
-      ) {
-        score += marks;
-      }
-    }
-
-    const now = new Date().toISOString();
-
-    const resultName = firestoreResource(
-      "competition_mock_results",
-      resultId,
-    );
-
-    const attemptName = firestoreResource(
-      "competition_mock_attempts",
-      attemptId,
-    );
-
-    if (!attempt.updateTime) {
-      throw new Error(
-        "Mock attempt has no updateTime",
-      );
-    }
-
-    const existingResult = await firestoreGet(
-      `competition_mock_results/${encodeURIComponent(resultId)}`,
-      accessToken,
-    );
-
-    if (existingResult?.fields) {
       return json({
         ok: true,
         attemptId,
-        score: integerField(
-          existingResult,
-          "score",
+        score: Number(
+          attempt.score ?? 0,
         ),
-        maxScore: integerField(
-          existingResult,
-          "max_score",
+        maxScore: Number(
+          attempt.max_score ?? 0,
         ),
-        answeredCount: integerField(
-          existingResult,
-          "answered_count",
-        ),
+        answeredCount:
+          storedAnswers.filter(
+            (row: any) =>
+              String(
+                row.answer ?? "",
+              ).trim() !== "",
+          ).length,
         submitted: true,
         alreadySubmitted: true,
       });
     }
 
-    const writes = [
-      {
-        update: {
-          name: resultName,
-          fields: {
-            student_id: {
-              stringValue: studentId,
-            },
-            attempt_id: {
-              stringValue: attemptId,
-            },
-            course_id: {
-              stringValue: courseId,
-            },
-            score: {
-              integerValue: String(score),
-            },
-            max_score: {
-              integerValue: String(maxScore),
-            },
-            answered_count: {
-              integerValue: String(
-                answeredCount,
-              ),
-            },
-            submitted_at: {
-              timestampValue: now,
-            },
-            scored_at: {
-              timestampValue: now,
-            },
-            is_mock: {
-              booleanValue: true,
-            },
-          },
-        },
-        currentDocument: {
-          exists: false,
-        },
-      },
-      {
-        update: {
-          name: attemptName,
-          fields: {
-            ...attempt.fields,
-            status: {
-              stringValue: "submitted",
-            },
-            score: {
-              integerValue: String(score),
-            },
-            max_score: {
-              integerValue: String(maxScore),
-            },
-            submitted_at: {
-              timestampValue: now,
-            },
-            scored_at: {
-              timestampValue: now,
-            },
-          },
-        },
-        currentDocument: {
-          updateTime: attempt.updateTime,
-        },
-      },
-    ];
-
-    try {
-      await firestoreCommit(
-        writes,
-        accessToken,
-      );
-    } catch (commitError) {
-      const committedResult = await firestoreGet(
-        `competition_mock_results/${encodeURIComponent(resultId)}`,
-        accessToken,
-      );
-
-      if (committedResult?.fields) {
-        return json({
-          ok: true,
-          attemptId,
-          score: integerField(
-            committedResult,
-            "score",
-          ),
-          maxScore: integerField(
-            committedResult,
-            "max_score",
-          ),
-          answeredCount: integerField(
-            committedResult,
-            "answered_count",
-          ),
-          submitted: true,
-          alreadySubmitted: true,
-        });
+    /*
+     * submit_mock can receive answers directly.
+     * Existing answer rows are never overwritten.
+     */
+    for (
+      const item of submittedAnswers
+    ) {
+      if (!item.answer) {
+        continue;
       }
 
-      throw commitError;
+      const { data: existingAnswer,
+        error: existingAnswerError } =
+        await supabase
+          .from("competition_mock_answers")
+          .select(
+            "question_id,answer",
+          )
+          .eq("attempt_id", attemptId)
+          .eq(
+            "question_id",
+            item.questionId,
+          )
+          .maybeSingle();
+
+      if (existingAnswerError) {
+        throw new Error(
+          "Unable to load saved mock answer",
+        );
+      }
+
+      if (existingAnswer) {
+        continue;
+      }
+
+      const evaluated =
+        await evaluateAnswer(
+          item.questionId,
+          courseId,
+          item.answer,
+        );
+
+      const now =
+        new Date().toISOString();
+
+      const { error:
+        insertAnswerError } =
+        await supabase
+          .from("competition_mock_answers")
+          .insert({
+            attempt_id: attemptId,
+            question_id:
+              item.questionId,
+            answer: item.answer,
+            is_correct:
+              evaluated.correct,
+            correct_answer:
+              evaluated.correctAnswer,
+            correct_option_index:
+              evaluated.correctOptionIndex,
+            explanation:
+              evaluated.explanation,
+            marks_awarded:
+              evaluated.marksAwarded,
+            answered_at: now,
+            updated_at: now,
+          });
+
+      if (
+        insertAnswerError &&
+        insertAnswerError.code !==
+          "23505"
+      ) {
+        console.error(
+          "Mock submit answer insert failed:",
+          insertAnswerError,
+        );
+
+        throw new Error(
+          "Unable to save mock answer",
+        );
+      }
+    }
+
+    const storedAnswers =
+      await loadStoredAnswers(
+        attemptId,
+      );
+
+    const questions =
+      await loadQuestionBundle(
+        courseId,
+      );
+
+    let maxScore = 0;
+
+    for (
+      const questionId of
+        selectedQuestionIds
+    ) {
+      const question =
+        questions[questionId];
+
+      if (
+        !validQuestion(
+          question,
+          courseId,
+          questionId,
+        )
+      ) {
+        return json(
+          {
+            error:
+              "One or more mock questions are unavailable",
+          },
+          409,
+        );
+      }
+
+      maxScore += Number(
+        question.marks ?? 0,
+      );
+    }
+
+    const score =
+      storedAnswers.reduce(
+        (
+          total: number,
+          row: any,
+        ) =>
+          total +
+          Number(
+            row.marks_awarded ?? 0,
+          ),
+        0,
+      );
+
+    const answeredCount =
+      storedAnswers.filter(
+        (row: any) =>
+          String(
+            row.answer ?? "",
+          ).trim() !== "",
+      ).length;
+
+    const now =
+      new Date().toISOString();
+
+    /*
+     * Atomic Postgres state transition:
+     *
+     * in_progress -> submitted
+     *
+     * Only one concurrent submit can
+     * successfully perform this update.
+     */
+    const {
+      data: updatedAttempt,
+      error: updateError,
+    } = await supabase
+      .from(
+        "competition_mock_attempts",
+      )
+      .update({
+        status: "submitted",
+        score,
+        max_score: maxScore,
+        submitted_at: now,
+        scored_at: now,
+        updated_at: now,
+      })
+      .eq("id", attemptId)
+      .eq(
+        "student_id",
+        studentId,
+      )
+      .eq(
+        "status",
+        "in_progress",
+      )
+      .select(
+        [
+          "id",
+          "score",
+          "max_score",
+          "submitted_at",
+          "scored_at",
+          "status",
+        ].join(","),
+      )
+      .maybeSingle();
+
+    if (updateError) {
+      console.error(
+        "Mock attempt submit update failed:",
+        updateError,
+      );
+
+      throw new Error(
+        "Unable to submit mock attempt",
+      );
+    }
+
+    if (!updatedAttempt) {
+      const {
+        data: committedAttempt,
+        error: committedError,
+      } = await supabase
+        .from(
+          "competition_mock_attempts",
+        )
+        .select(
+          [
+            "id",
+            "status",
+            "score",
+            "max_score",
+            "submitted_at",
+            "scored_at",
+          ].join(","),
+        )
+        .eq("id", attemptId)
+        .eq(
+          "student_id",
+          studentId,
+        )
+        .maybeSingle();
+
+      if (
+        committedError ||
+        !committedAttempt
+      ) {
+        throw new Error(
+          "Unable to resolve mock submission",
+        );
+      }
+
+      const finalAnswers =
+        await loadStoredAnswers(
+          attemptId,
+        );
+
+      return json({
+        ok: true,
+        attemptId,
+        score: Number(
+          committedAttempt.score ?? 0,
+        ),
+        maxScore: Number(
+          committedAttempt.max_score ??
+            0,
+        ),
+        answeredCount:
+          finalAnswers.filter(
+            (row: any) =>
+              String(
+                row.answer ?? "",
+              ).trim() !== "",
+          ).length,
+        submitted: true,
+        alreadySubmitted: true,
+      });
+    }
+
+    /*
+     * Preserve the existing Postgres result
+     * table for compatibility.
+     *
+     * The Mock Test flow no longer uses
+     * Postgres results.
+     */
+    const { error: resultError } =
+      await supabase
+        .from(
+          "competition_mock_results",
+        )
+        .upsert(
+          {
+            student_id: studentId,
+            attempt_id: attemptId,
+            course_id: courseId,
+            score,
+            max_score: maxScore,
+            answered_count:
+              answeredCount,
+            submitted_at: now,
+            scored_at: now,
+            is_mock: true,
+          },
+          {
+            onConflict:
+              "attempt_id",
+          },
+        );
+
+    if (resultError) {
+      /*
+       * The attempt is already submitted,
+       * so result compatibility failure
+       * must not turn a successful submission
+       * into a failed submission.
+       */
+      console.error(
+        "Mock result compatibility write failed:",
+        resultError,
+      );
     }
 
     return json({

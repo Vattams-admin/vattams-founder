@@ -247,86 +247,33 @@ function publicQuestion(question: StoredQuestion) {
   return result;
 }
 
-async function firestoreGet(
-  path: string,
-  firebaseToken: string,
-) {
-  const projectId =
-    Deno.env.get("FIREBASE_PROJECT_ID") ??
-    Deno.env.get("VITE_FIREBASE_PROJECT_ID");
-
-  if (!projectId) {
-    throw new Error("Firebase project ID is unavailable");
-  }
-
-  const response = await fetch(
-    `https://firestore.googleapis.com/v1/projects/${encodeURIComponent(
-      projectId,
-    )}/databases/(default)/documents/${path}`,
-    {
-      headers: {
-        Authorization: `Bearer ${firebaseToken}`,
-      },
-    },
-  );
-
-  if (response.status === 404) {
-    return null;
-  }
-
-  if (!response.ok) {
-    const responseText = await response.text();
-
-    console.error(
-      "Firestore GET failed:",
-      response.status,
-      responseText.slice(0, 300),
-    );
-
-    if (response.status === 429) {
-      const quotaError = new Error(
-        "Firestore quota or rate limit reached. Please try again later.",
-      );
-
-      (quotaError as Error & { httpStatus?: number }).httpStatus = 503;
-
-      throw quotaError;
-    }
-
-    throw new Error(
-      `Firestore GET failed: ${response.status}`,
-    );
-  }
-
-  return await response.json();
-}
-
-function firestoreStringField(
-  document: any,
-  field: string,
-): string | null {
-  const value = document?.fields?.[field]?.stringValue;
-
-  return typeof value === "string" ? value : null;
-}
-
-/*
- * Resume path only:
- * one Firestore read validates ownership, course and saved question IDs.
- */
 async function authorizeByAttempt(
   attemptId: string,
   uid: string,
   courseId: string,
   questionIds: string[],
-  firebaseToken: string,
 ): Promise<Response | null> {
-  const attempt = await firestoreGet(
-    `competition_mock_attempts/${encodeURIComponent(attemptId)}`,
-    firebaseToken,
-  );
+  const { data: attempt, error } =
+    await supabase
+      .from("competition_mock_attempts")
+      .select(
+        "id,student_id,course_id,status,question_ids,is_mock",
+      )
+      .eq("id", attemptId)
+      .eq("is_mock", true)
+      .maybeSingle();
 
-  if (!attempt?.fields) {
+  if (error) {
+    return json(
+      {
+        error:
+          `Mock attempt lookup failed: ${error.message}`,
+      },
+      500,
+    );
+  }
+
+  if (!attempt) {
     return json(
       { error: "Mock attempt not found." },
       404,
@@ -334,19 +281,19 @@ async function authorizeByAttempt(
   }
 
   if (
-    firestoreStringField(attempt, "student_id") !== uid ||
-    firestoreStringField(attempt, "course_id") !== courseId
+    attempt.student_id !== uid ||
+    attempt.course_id !== courseId
   ) {
     return json(
-      { error: "This mock attempt does not belong to you." },
+      {
+        error:
+          "This mock attempt does not belong to you.",
+      },
       403,
     );
   }
 
-  if (
-    firestoreStringField(attempt, "status") !==
-    "in_progress"
-  ) {
+  if (attempt.status !== "in_progress") {
     return json(
       {
         error:
@@ -356,30 +303,36 @@ async function authorizeByAttempt(
     );
   }
 
-  const saved = (
-    attempt.fields.question_ids?.arrayValue?.values ?? []
-  )
-    .map((value: any) => value?.stringValue)
-    .filter(
-      (value: unknown): value is string =>
-        typeof value === "string",
-    );
-
-  const requested = new Set(questionIds);
+  const saved = Array.isArray(attempt.question_ids)
+    ? attempt.question_ids
+    : [];
 
   if (
     saved.length !== QUESTION_COUNT ||
-    new Set(saved).size !== QUESTION_COUNT ||
-    saved.some((id) => !requested.has(id)) ||
-    requested.size !== QUESTION_COUNT
+    new Set(saved).size !== QUESTION_COUNT
   ) {
     return json(
       {
         error:
-          "Requested questions do not match the saved attempt.",
+          "Mock attempt has an invalid question set.",
       },
-      400,
+      409,
     );
+  }
+
+  const savedSet = new Set(saved);
+
+  for (const questionId of questionIds) {
+    if (!savedSet.has(questionId)) {
+      return json(
+        {
+          error:
+            "Requested question is not part of this mock attempt.",
+          question_id: questionId,
+        },
+        403,
+      );
+    }
   }
 
   return null;
@@ -483,10 +436,10 @@ Deno.serve(async (req) => {
      * - DOB / age-band validation
      * - exact 30-question selection
      *
-     * Therefore a fresh request does NOT repeat those Firestore reads.
+     * Therefore a fresh request does not repeat those checks.
      *
-     * A resumed request is different: the saved mock attempt is the
-     * source of truth and gets one Firestore authorization read.
+     * A resumed request uses the saved Postgres mock attempt
+     * as the source of truth.
      */
 
     if (attemptId) {
@@ -495,7 +448,6 @@ Deno.serve(async (req) => {
         firebaseUser.uid,
         courseId,
         questionIds,
-        firebaseToken,
       );
 
       if (denied) {

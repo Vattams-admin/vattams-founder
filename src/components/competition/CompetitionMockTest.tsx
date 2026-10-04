@@ -1,14 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import {
-  collection,
-  doc,
-   getDocs,
-  query,
-  serverTimestamp,
-  setDoc,
-  where,
-} from "firebase/firestore";
-import { firebaseAuth, firestore } from "@/lib/firebase";
+import { firebaseAuth } from "@/lib/firebase";
 import { supabase } from "@/lib/supabase";
 import type { Course } from "@/types/database";
 
@@ -28,14 +19,6 @@ type MockQuestion = {
   is_published?: boolean;
 };
 
-type MockAttempt = {
-  id: string;
-  student_id: string;
-  course_id: string;
-  status: "in_progress" | "submitted" | string;
-  started_at?: { toMillis?: () => number };
-  question_ids?: string[];
-};
 
 type QuestionFeedback = {
   submitted: boolean;
@@ -199,71 +182,80 @@ export default function CompetitionMockTest({
       return false;
     }
 
-    const attemptSnapshot = await getDocs(
-      query(
-        collection(firestore, "competition_mock_attempts"),
-        where("student_id", "==", user.uid),
-      ),
-    );
+    const token = await user.getIdToken();
 
-    const attempts = attemptSnapshot.docs.map(
-      (attemptDoc): MockAttempt => ({
-        id: attemptDoc.id,
-        ...(attemptDoc.data() as Omit<MockAttempt, "id">),
-      }),
-    );
+    const { data, error } =
+      await supabase.functions.invoke(
+        "competition-mock-attempt",
+        {
+          body: {
+            action: "start_or_resume",
+            course_id: course.id,
+          },
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      );
 
-    const activeAttempt = attempts.find(
-      (attempt) =>
-        attempt.course_id === course.id && attempt.status === "in_progress",
-    );
-
-    if (!activeAttempt) {
-      return false;
+    if (error) {
+      throw error;
     }
 
-    const selectedQuestionIds = Array.isArray(activeAttempt.question_ids)
-      ? activeAttempt.question_ids.filter(
-          (id): id is string => typeof id === "string" && id.trim() !== "",
+    const attemptId =
+      typeof data?.attempt_id === "string"
+        ? data.attempt_id
+        : "";
+
+    const questionIds = Array.isArray(data?.question_ids)
+      ? data.question_ids.filter(
+          (id: unknown): id is string =>
+            typeof id === "string" && id.trim() !== "",
         )
       : [];
 
     if (
-      selectedQuestionIds.length !== MOCK_QUESTION_COUNT ||
-      new Set(selectedQuestionIds).size !== MOCK_QUESTION_COUNT
+      !attemptId ||
+      questionIds.length !== MOCK_QUESTION_COUNT ||
+      new Set(questionIds).size !== MOCK_QUESTION_COUNT
     ) {
-      throw new Error("This mock attempt has an invalid question set.");
+      throw new Error(
+        "Mock Test returned an invalid attempt or question set.",
+      );
     }
 
-    const loadedQuestions = await loadQuestions(
-      selectedQuestionIds,
-      activeAttempt.id,
-    );
-
-    const answerSnapshot = await getDocs(
-      collection(
-        firestore,
-        "competition_mock_attempts",
-        activeAttempt.id,
-        "answers",
-      ),
-    );
+    const loadedQuestions =
+      await loadQuestions(
+        questionIds,
+        attemptId,
+      );
 
     const restoredAnswers: Record<string, string> = {};
 
-    answerSnapshot.docs.forEach((answerDoc) => {
-      const data = answerDoc.data();
-
-      if (typeof data.answer === "string") {
-        restoredAnswers[answerDoc.id] = data.answer;
+    if (Array.isArray(data?.answers)) {
+      for (const answer of data.answers) {
+        if (
+          typeof answer?.question_id === "string" &&
+          typeof answer?.answer === "string"
+        ) {
+          restoredAnswers[answer.question_id] =
+            answer.answer;
+        }
       }
-    });
+    }
+
+    const startedAtMs =
+      typeof data?.started_at === "string"
+        ? Date.parse(data.started_at)
+        : NaN;
 
     const savedStart =
-      activeAttempt.started_at?.toMillis?.() ?? Date.now();
+      Number.isFinite(startedAtMs)
+        ? startedAtMs
+        : Date.now();
 
     setQuestions(loadedQuestions);
-    setAttemptId(activeAttempt.id);
+    setAttemptId(attemptId);
     setStartedAtMs(savedStart);
     setAnswers(restoredAnswers);
     setFeedback({});
@@ -278,7 +270,11 @@ export default function CompetitionMockTest({
         0,
         loadedQuestions.reduce(
           (sum, question) =>
-            sum + Math.max(1, Number(question.time_seconds) || 60),
+            sum +
+            Math.max(
+              1,
+              Number(question.time_seconds) || 60,
+            ),
           0,
         ) - elapsedSeconds,
       ),
@@ -299,100 +295,33 @@ export default function CompetitionMockTest({
     setErrorMessage("");
 
     try {
-      const resumed = await loadExistingMockAttempt();
-
-      if (resumed) {
-        return;
-      }
-
-      const token = await user.getIdToken();
-
-      const { data, error } = await supabase.functions.invoke(
-        "competition-question-pool",
-        {
-          body: {
-            course_id: course.id,
-          },
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        },
-      );
-
-      if (error) {
-        let detail = error.message || "Unable to select mock questions.";
-
-        try {
-          const context = (error as { context?: Response }).context;
-
-          if (context) {
-            const body = await context.clone().text();
-
-            if (body) {
-              detail += ` | HTTP ${context.status} | ${body}`;
-            }
-          }
-        } catch {
-          // Keep the original error when the response body cannot be read.
-        }
-
-        throw new Error(detail);
-      }
-
-      const questionIds = Array.isArray(data?.question_ids)
-        ? data.question_ids.filter(
-            (id: unknown): id is string =>
-              typeof id === "string" && id.trim() !== "",
-          )
-        : [];
-
-      if (
-        questionIds.length !== MOCK_QUESTION_COUNT ||
-        new Set(questionIds).size !== MOCK_QUESTION_COUNT
-      ) {
-        throw new Error(
-          `Question pool returned an invalid set of ${questionIds.length} questions.`,
-        );
-      }
-
-      const loadedQuestions = await loadQuestions(questionIds);
-
-      const attemptRef = doc(
-        collection(firestore, "competition_mock_attempts"),
-      );
-
-      await setDoc(attemptRef, {
-        student_id: user.uid,
-        course_id: course.id,
-        status: "in_progress",
-        started_at: serverTimestamp(),
-        question_ids: questionIds,
-        is_mock: true,
-      });
-
-      setQuestions(loadedQuestions);
-      setAttemptId(attemptRef.id);
-      setStartedAtMs(Date.now());
-      setAnswers({});
-      setFeedback({});
-      setCurrentIndex(0);
-
-      const mockTotalSeconds = loadedQuestions.reduce(
-        (sum, question) =>
-          sum + Math.max(1, Number(question.time_seconds) || 60),
-        0,
-      );
-
-      setRemainingSeconds(mockTotalSeconds);
-      setView("attempt");
+      await loadExistingMockAttempt();
     } catch (error) {
-      console.error("Failed to start mock test:", error);
-
-      setErrorMessage(
+      let detail =
         error instanceof Error
           ? error.message
-          : "Unable to start the mock test. Please try again.",
-      );
+          : "Unable to start the mock test.";
+
+      try {
+        const context =
+          error as { context?: Response };
+
+        if (context.context) {
+          const body =
+            await context.context
+              .clone()
+              .text();
+
+          if (body) {
+            detail +=
+              ` | HTTP ${context.context.status} | ${body}`;
+          }
+        }
+      } catch {
+        // Keep the original error.
+      }
+
+      setErrorMessage(detail);
     } finally {
       setBusy(false);
     }
@@ -408,26 +337,6 @@ export default function CompetitionMockTest({
       [questionId]: value,
     }));
 
-    try {
-      await setDoc(
-        doc(
-          firestore,
-          "competition_mock_attempts",
-          attemptId,
-          "answers",
-          questionId,
-        ),
-        {
-          question_id: questionId,
-          answer: value,
-          updated_at: serverTimestamp(),
-        },
-        { merge: true },
-      );
-    } catch (error) {
-      console.error("Failed to save mock answer:", error);
-      setErrorMessage("Answer could not be saved. Please try again.");
-    }
   };
 
   const submitAnswer = async () => {
