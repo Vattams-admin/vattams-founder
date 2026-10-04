@@ -6,40 +6,38 @@
   },
   "module": {
     "id": "science-challenge-days-1-10",
-    "title": "Days 1–10 | Foundation Module",
-    "description": "First ten complete lessons; prepared for admin review before production publishing."
+    "title": "Days 1–10 | Competition Mastery Module",
+    "description": "Production candidate: authored topic-driven Science Challenge curriculum."
   },
   "lessons": [
     {
-      "title": "Challenge orientation & strategy",
-      "objective": "Understand the challenge format, scoring mindset, time management and preparation strategy.",
-      "core_teaching_content": "This challenge lesson develops challenge orientation & strategy for Science Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Scientific method and evidence",
+      "objective": "Plan fair investigations by identifying variables, controls, evidence and conclusions.",
+      "core_teaching_content": "Science relies on testable questions and evidence. A fair investigation changes one relevant variable while keeping important conditions controlled. Observations and measurements should be recorded clearly, then compared with the prediction. A conclusion should be based on evidence rather than whether the result matched the expectation. Repeated trials can improve confidence and reveal unusual results.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A learner tests whether light affects seedling growth. Light level is the independent variable, growth is the measured outcome, and water and seed type should be controlled.",
+        "A learner tests whether light affects seedling growth. Light level is the independent variable, growth is the measured outcome, and water and seed type should be controlled. Apply the same principle to a new situation and require evidence for the conclusion."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Design a simple investigation and label the question, prediction, variable changed, variables controlled, measurements and conclusion.",
+      "guided_practice": "Work through three scaffolded problems for Scientific method and evidence: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to identify evidence before confirming the conclusion.",
+      "independent_practice": [
+        "Identify the independent and dependent variable in three scenarios",
+        "Choose a suitable control",
+        "Decide which measurement would provide evidence for a stated question."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with at least six correct and a justified choice of variables.",
+      "student_task": "Write a complete investigation plan for one testable question.",
+      "tutor_guidance": "Guide the learner to identify evidence, variables, units and cause-and-effect relationships. Do not provide the answer before the learner states a testable reason. The sequence remains usable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
+        "Observation/data table",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain why changing several variables at once makes a conclusion weaker.",
+      "daily_flow": "Learn → Evidence Example → Guided Investigation → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "science-challenge",
       "course_name": "Science Challenge",
       "module_id": "science-challenge-days-1-10",
@@ -48,35 +46,34 @@
       "lesson_id": "science-challenge-days-1-10-day-1"
     },
     {
-      "title": "Concept sprint I",
-      "objective": "Master a high-value concept through examples and short challenge questions.",
-      "core_teaching_content": "This challenge lesson develops concept sprint i for Science Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Matter and material properties",
+      "objective": "Classify materials using observable properties and explain changes of state using particle ideas.",
+      "core_teaching_content": "Materials have properties that can be observed or measured, such as hardness, solubility, conductivity and melting point. Heating and cooling can change state without necessarily creating a new substance. Melting, freezing, evaporation and condensation describe changes between solid, liquid and gas. Use evidence from the situation rather than assuming that every visible change is a chemical reaction.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "Ice melting is a change of state. Dissolving salt in water produces a solution and the salt can be recovered by evaporation.",
+        "Ice melting is a change of state. Dissolving salt in water produces a solution and the salt can be recovered by evaporation. Apply the same principle to a new situation and require evidence for the conclusion."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Observe or model three materials and build a property table. Predict which material is suitable for a stated use and justify the choice.",
+      "guided_practice": "Work through three scaffolded problems for Matter and material properties: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to identify evidence before confirming the conclusion.",
+      "independent_practice": [
+        "Classify examples as solid, liquid or gas",
+        "Identify melting versus evaporation",
+        "Choose a material for electrical conduction",
+        "Explain why a dissolved substance may be recovered by evaporation."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with accurate state-change and property reasoning.",
+      "student_task": "Create a material-selection table for three everyday uses.",
+      "tutor_guidance": "Guide the learner to identify evidence, variables, units and cause-and-effect relationships. Do not provide the answer before the learner states a testable reason. The sequence remains usable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
+        "Observation/data table",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Describe one observation that distinguishes a physical change from evidence of a new substance.",
+      "daily_flow": "Learn → Evidence Example → Guided Investigation → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "science-challenge",
       "course_name": "Science Challenge",
       "module_id": "science-challenge-days-1-10",
@@ -85,35 +82,33 @@
       "lesson_id": "science-challenge-days-1-10-day-2"
     },
     {
-      "title": "Concept sprint II",
-      "objective": "Extend the concept and solve progressively harder problems.",
-      "core_teaching_content": "This challenge lesson develops concept sprint ii for Science Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Forces and energy",
+      "objective": "Reason about common forces and energy transfers using diagrams, observations and conservation ideas.",
+      "core_teaching_content": "A force can change motion or shape. Common forces include gravity, friction, pushes, pulls and support forces. Energy can be transferred between forms and through systems; it is not simply created or destroyed. Friction often converts useful motion energy into thermal energy. Competition questions require attention to direction, interaction and the evidence available rather than memorised labels alone.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A moving bicycle slows when brakes are applied because friction transfers energy mainly into thermal energy. Gravity acts downward on the bicycle.",
+        "A moving bicycle slows when brakes are applied because friction transfers energy mainly into thermal energy. Gravity acts downward on the bicycle. Apply the same principle to a new situation and require evidence for the conclusion."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Draw force arrows for an object in two situations and identify the likely energy transfer.",
+      "guided_practice": "Work through three scaffolded problems for Forces and energy: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to identify evidence before confirming the conclusion.",
+      "independent_practice": [
+        "Identify forces acting on a book, moving bicycle and falling object",
+        "Describe one energy transfer in each case",
+        "Predict how reducing friction changes motion."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint and correctly identify forces and energy transfers in at least six items.",
+      "student_task": "Create one labelled force diagram and one energy-transfer chain.",
+      "tutor_guidance": "Guide the learner to identify evidence, variables, units and cause-and-effect relationships. Do not provide the answer before the learner states a testable reason. The sequence remains usable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
+        "Observation/data table",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain the difference between a force changing motion and an energy transfer changing form.",
+      "daily_flow": "Learn → Evidence Example → Guided Investigation → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "science-challenge",
       "course_name": "Science Challenge",
       "module_id": "science-challenge-days-1-10",
@@ -122,35 +117,34 @@
       "lesson_id": "science-challenge-days-1-10-day-3"
     },
     {
-      "title": "Speed & accuracy",
-      "objective": "Balance speed with accuracy using a timed practice set.",
-      "core_teaching_content": "This challenge lesson develops speed & accuracy for Science Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Living systems and cells",
+      "objective": "Connect structures and functions in living systems and explain basic life processes from evidence.",
+      "core_teaching_content": "Living systems are organised from cells upward. Cells contain structures with specialised roles; plants and animals have different adaptations to obtain resources and survive. Photosynthesis uses light energy to build food from carbon dioxide and water, while respiration releases usable energy from food. When answering biology questions, connect a structure or process to its function instead of listing isolated facts.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A leaf is broad and contains chlorophyll, helping it capture light for photosynthesis. Roots absorb water and minerals and anchor the plant.",
+        "A leaf is broad and contains chlorophyll, helping it capture light for photosynthesis. Roots absorb water and minerals and anchor the plant. Apply the same principle to a new situation and require evidence for the conclusion."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Build a structure-function table for a plant and an animal, then explain two adaptations as responses to environmental needs.",
+      "guided_practice": "Work through three scaffolded problems for Living systems and cells: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to identify evidence before confirming the conclusion.",
+      "independent_practice": [
+        "Match cell structures to functions",
+        "Explain why leaves need light",
+        "Distinguish photosynthesis from respiration",
+        "Identify a suitable adaptation for a stated environment."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with at least six correct structure-function links.",
+      "student_task": "Create a labelled cell or plant-system diagram with functional annotations.",
+      "tutor_guidance": "Guide the learner to identify evidence, variables, units and cause-and-effect relationships. Do not provide the answer before the learner states a testable reason. The sequence remains usable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
+        "Observation/data table",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Write one cause-and-effect chain linking an environmental need to a biological adaptation.",
+      "daily_flow": "Learn → Evidence Example → Guided Investigation → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "science-challenge",
       "course_name": "Science Challenge",
       "module_id": "science-challenge-days-1-10",
@@ -159,35 +153,34 @@
       "lesson_id": "science-challenge-days-1-10-day-4"
     },
     {
-      "title": "Pattern recognition",
-      "objective": "Identify recurring patterns, clues and distractors in challenge questions.",
-      "core_teaching_content": "This challenge lesson develops pattern recognition for Science Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Earth, environment and resources",
+      "objective": "Explain basic Earth-system interactions and evaluate resource and environmental choices using evidence.",
+      "core_teaching_content": "Earth systems interact through air, water, land and living organisms. The water cycle moves water through evaporation, condensation, precipitation and collection. Human activities can change habitats, resource availability and pollution levels. Environmental reasoning should compare consequences and recognise trade-offs rather than treating every choice as having only one effect.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "Deforestation can reduce habitat and change water movement. A reforestation project may restore habitat but still requires suitable species and long-term care.",
+        "Deforestation can reduce habitat and change water movement. A reforestation project may restore habitat but still requires suitable species and long-term care. Apply the same principle to a new situation and require evidence for the conclusion."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Map the water cycle and annotate where energy from the Sun drives change. Then analyse one local resource-use decision.",
+      "guided_practice": "Work through three scaffolded problems for Earth, environment and resources: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to identify evidence before confirming the conclusion.",
+      "independent_practice": [
+        "Sequence water-cycle stages",
+        "Identify a likely effect of habitat loss",
+        "Compare renewable and non-renewable resources",
+        "Suggest one evidence-based way to reduce waste."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with accurate process sequencing and environmental reasoning.",
+      "student_task": "Create an evidence table for one environmental problem with cause, effect and possible response.",
+      "tutor_guidance": "Guide the learner to identify evidence, variables, units and cause-and-effect relationships. Do not provide the answer before the learner states a testable reason. The sequence remains usable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
+        "Observation/data table",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Identify one environmental claim that would require measurement or further evidence.",
+      "daily_flow": "Learn → Evidence Example → Guided Investigation → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "science-challenge",
       "course_name": "Science Challenge",
       "module_id": "science-challenge-days-1-10",
@@ -196,35 +189,33 @@
       "lesson_id": "science-challenge-days-1-10-day-5"
     },
     {
-      "title": "Elimination & verification",
-      "objective": "Use elimination, estimation or verification to reduce avoidable errors.",
-      "core_teaching_content": "This challenge lesson develops elimination & verification for Science Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Chemistry of everyday substances",
+      "objective": "Use particle and reaction evidence to distinguish mixtures, solutions and simple chemical changes.",
+      "core_teaching_content": "A mixture contains substances together without requiring a new substance to form. A solution is a mixture in which one substance is distributed through another. Chemical changes can produce substances with different properties; evidence may include a gas, temperature change, precipitate, colour change or other observable reaction. One observation alone should be interpreted in context.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "Salt water is a solution and can be separated by evaporation. Rusting changes iron into a different material and involves reaction with oxygen and moisture.",
+        "Salt water is a solution and can be separated by evaporation. Rusting changes iron into a different material and involves reaction with oxygen and moisture. Apply the same principle to a new situation and require evidence for the conclusion."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Compare three examples and decide whether each is a mixture, solution or likely chemical change, giving evidence.",
+      "guided_practice": "Work through three scaffolded problems for Chemistry of everyday substances: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to identify evidence before confirming the conclusion.",
+      "independent_practice": [
+        "Classify salt water, sand and water, melting ice and rusting iron",
+        "Choose a separation method for a simple mixture",
+        "Identify evidence that suggests a chemical reaction."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with at least six correct classifications and justified evidence.",
+      "student_task": "Create a decision tree for distinguishing physical mixtures from chemical changes.",
+      "tutor_guidance": "Guide the learner to identify evidence, variables, units and cause-and-effect relationships. Do not provide the answer before the learner states a testable reason. The sequence remains usable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
+        "Observation/data table",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain why 'it changed colour' is evidence to investigate rather than automatic proof of a chemical reaction.",
+      "daily_flow": "Learn → Evidence Example → Guided Investigation → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "science-challenge",
       "course_name": "Science Challenge",
       "module_id": "science-challenge-days-1-10",
@@ -233,35 +224,34 @@
       "lesson_id": "science-challenge-days-1-10-day-6"
     },
     {
-      "title": "Mixed challenge set",
-      "objective": "Solve a mixed set and classify questions by difficulty and confidence.",
-      "core_teaching_content": "This challenge lesson develops mixed challenge set for Science Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Physics, data and experiments",
+      "objective": "Interpret measurements, graphs and simple physical relationships while distinguishing observation from inference.",
+      "core_teaching_content": "Good scientific reasoning separates measured data from explanations. Tables and graphs should have labelled axes and appropriate units. Look for trends, outliers and relationships before claiming causation. Repeated measurements can improve reliability. In simple physical problems, identify known quantities, select a relationship that fits the situation, calculate with units, and check whether the result is plausible.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A graph of distance against time can reveal whether motion is steady. An isolated point far from the trend may be an outlier that deserves investigation.",
+        "A graph of distance against time can reveal whether motion is steady. An isolated point far from the trend may be an outlier that deserves investigation. Apply the same principle to a new situation and require evidence for the conclusion."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Create a small data table, graph it, identify the trend and propose one follow-up measurement.",
+      "guided_practice": "Work through three scaffolded problems for Physics, data and experiments: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to identify evidence before confirming the conclusion.",
+      "independent_practice": [
+        "Read a graph with labelled units",
+        "Identify an outlier",
+        "Calculate a simple rate from distance and time",
+        "Decide whether the evidence supports a stated claim."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with correct units and evidence-based interpretation.",
+      "student_task": "Create one graph from a small data set and write two supported observations.",
+      "tutor_guidance": "Guide the learner to identify evidence, variables, units and cause-and-effect relationships. Do not provide the answer before the learner states a testable reason. The sequence remains usable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
+        "Observation/data table",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain why a correlation in a small data set does not automatically prove causation.",
+      "daily_flow": "Learn → Evidence Example → Guided Investigation → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "science-challenge",
       "course_name": "Science Challenge",
       "module_id": "science-challenge-days-1-10",
@@ -270,35 +260,34 @@
       "lesson_id": "science-challenge-days-1-10-day-7"
     },
     {
-      "title": "Advanced application",
-      "objective": "Apply concepts to unfamiliar or multi-step situations.",
-      "core_teaching_content": "This challenge lesson develops advanced application for Science Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Scientific reasoning and problem solving",
+      "objective": "Evaluate competing explanations, use evidence to eliminate weak hypotheses and communicate uncertainty.",
+      "core_teaching_content": "Scientific reasoning is stronger when claims are linked explicitly to evidence. Start with the observations, generate possible explanations, identify predictions that differ between them, and test the most informative evidence. A good conclusion can include uncertainty or limitations. Avoid selecting an explanation merely because it sounds familiar; select the one best supported by the available evidence.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "If two plants differ in growth, possible causes include light, water or soil. A controlled comparison can help distinguish these explanations.",
+        "If two plants differ in growth, possible causes include light, water or soil. A controlled comparison can help distinguish these explanations. Apply the same principle to a new situation and require evidence for the conclusion."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Given two competing explanations, design the smallest useful test that could distinguish them.",
+      "guided_practice": "Work through three scaffolded problems for Scientific reasoning and problem solving: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to identify evidence before confirming the conclusion.",
+      "independent_practice": [
+        "Rank evidence by strength",
+        "Identify a missing control",
+        "Choose which additional observation would discriminate between two hypotheses",
+        "State a conclusion with an appropriate limitation."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with evidence-based justification for at least six items.",
+      "student_task": "Write a claim-evidence-reasoning response to a short science scenario.",
+      "tutor_guidance": "Guide the learner to identify evidence, variables, units and cause-and-effect relationships. Do not provide the answer before the learner states a testable reason. The sequence remains usable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
+        "Observation/data table",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Name one uncertainty in your conclusion and explain how a future test could reduce it.",
+      "daily_flow": "Learn → Evidence Example → Guided Investigation → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "science-challenge",
       "course_name": "Science Challenge",
       "module_id": "science-challenge-days-1-10",
@@ -307,78 +296,37 @@
       "lesson_id": "science-challenge-days-1-10-day-8"
     },
     {
-      "title": "Mock challenge",
-      "objective": "Complete a timed mini-mock and analyse every incorrect or guessed answer.",
-      "core_teaching_content": "This challenge lesson develops mock challenge for Science Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Integrated mini-mock",
+      "objective": "Apply mixed science knowledge and investigation reasoning under timed conditions, then convert errors into targeted revision.",
+      "core_teaching_content": "A mixed science assessment requires learners to switch between factual knowledge, evidence interpretation, calculations, diagrams and experimental design. Read carefully, identify what the question actually asks, and use evidence from the prompt. After the test, classify errors as knowledge gap, misread question, reasoning error, calculation or evidence misuse. Use the pattern to plan revision.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A question may combine a graph with a biology scenario; the correct response requires both accurate reading of the data and an understanding of the biological context.",
+        "A question may combine a graph with a biology scenario; the correct response requires both accurate reading of the data and an understanding of the biological context. Apply the same principle to a new situation and require evidence for the conclusion."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a mixed set under timed conditions. Afterward classify each missed or guessed item and redo representative questions without viewing the solution first.",
+      "guided_practice": "Work through three scaffolded problems for Integrated mini-mock: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to identify evidence before confirming the conclusion.",
+      "independent_practice": [
+        "Answer one investigation-design item, one matter question, one force question, one biology question and one data-interpretation item."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Report score, accuracy, time, unanswered items and error categories. Set a measurable target for the next attempt.",
+      "student_task": "Create a one-page Science Challenge revision plan with three strengths, three gaps and an action for each gap.",
+      "tutor_guidance": "Guide the learner to identify evidence, variables, units and cause-and-effect relationships. Do not provide the answer before the learner states a testable reason. The sequence remains usable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
+        "Observation/data table",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Write the single change most likely to improve your next attempt and support it with evidence from the mock.",
+      "daily_flow": "Learn → Evidence Example → Guided Investigation → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "science-challenge",
       "course_name": "Science Challenge",
       "module_id": "science-challenge-days-1-10",
       "day": 9,
       "sort_order": 9,
       "lesson_id": "science-challenge-days-1-10-day-9"
-    },
-    {
-      "title": "Review & competition plan",
-      "objective": "Build a revision sheet, error log and personal strategy for the next stage.",
-      "core_teaching_content": "This challenge lesson develops review & competition plan for Science Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
-      "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
-      ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
-      ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
-      "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
-        "Error-analysis log"
-      ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
-      "course_id": "science-challenge",
-      "course_name": "Science Challenge",
-      "module_id": "science-challenge-days-1-10",
-      "day": 10,
-      "sort_order": 10,
-      "lesson_id": "science-challenge-days-1-10-day-10"
     }
   ]
 }
