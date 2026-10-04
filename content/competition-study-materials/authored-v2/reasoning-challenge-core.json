@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "Reasoning Challenge",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_complete",
+  "status": "subject_specific_authoring_v1_in_progress",
   "age_bands": [
     "foundation",
     "developing",
@@ -20,38 +20,38 @@
       "subtopics": [
         {
           "title": "word analogy",
-          "teaching": "Learn word analogy as a core Analogy & Classification competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply word analogy to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar word analogy task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Word analogies compare the relationship between two words and apply the same relationship to another pair.",
+          "worked_example": "'Book : read :: food : eat' follows object-to-associated action.",
+          "pitfall": "Sharing a topic is not enough if the relationship differs.",
+          "mastery": "Identify the exact relation before selecting the answer."
         },
         {
           "title": "number analogy",
-          "teaching": "Learn number analogy as a core Analogy & Classification competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply number analogy to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar number analogy task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Number analogies use a mathematical relationship between one pair and apply it to another pair.",
+          "worked_example": "If 3 : 9 follows ×3, then 5 : 15 follows the same rule.",
+          "pitfall": "A rule that fits one pair but not the complete question is insufficient.",
+          "mastery": "Test the same operation consistently on all given pairs."
         },
         {
           "title": "figure analogy",
-          "teaching": "Learn figure analogy as a core Analogy & Classification competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply figure analogy to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar figure analogy task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Figure analogies compare transformations such as rotation, reflection, movement, addition or removal of elements.",
+          "worked_example": "If a dot moves clockwise by one position in the first transformation, apply the same movement to the second figure.",
+          "pitfall": "A visual answer may look similar without preserving the transformation.",
+          "mastery": "Track each changed feature systematically."
         },
         {
           "title": "classification",
-          "teaching": "Learn classification as a core Analogy & Classification competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply classification to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar classification task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Classification groups items according to a common property such as category, function, structure or numerical rule.",
+          "worked_example": "Triangle, square and circle can be grouped as geometric figures, while a number differs under that rule.",
+          "pitfall": "An item can fit multiple categories, so the intended rule must explain the full group.",
+          "mastery": "State and apply one consistent classification rule."
         },
         {
           "title": "odd one out",
-          "teaching": "Learn odd one out as a core Analogy & Classification competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply odd one out to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar odd one out task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Odd-one-out problems identify the item that breaks the relationship shared by the others.",
+          "worked_example": "2, 4, 6 and 9 differ because the first three are even while 9 is odd.",
+          "pitfall": "An alternative property may exist, so use the simplest rule supported by the set.",
+          "mastery": "Identify the majority rule before selecting the exception."
         }
       ]
     },
@@ -60,38 +60,38 @@
       "subtopics": [
         {
           "title": "number series",
-          "teaching": "Learn number series as a core Series competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply number series to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar number series task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Number series require finding the rule connecting consecutive terms, often using differences, ratios or alternating operations.",
+          "worked_example": "2, 5, 8, 11 increases by 3 each time, so the next term is 14.",
+          "pitfall": "Checking only the first two differences can miss an alternating pattern.",
+          "mastery": "Test the proposed rule across every transition."
         },
         {
           "title": "alphabet series",
-          "teaching": "Learn alphabet series as a core Series competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply alphabet series to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar alphabet series task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Alphabet series apply ordered letter positions, skips, reversals or repeated patterns.",
+          "worked_example": "A, C, E, G advances by two alphabet positions, giving I next.",
+          "pitfall": "Treating letters only as visual symbols can hide their positional pattern.",
+          "mastery": "Convert letters to positions when useful and verify the step pattern."
         },
         {
           "title": "mixed series",
-          "teaching": "Learn mixed series as a core Series competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply mixed series to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar mixed series task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Mixed series combine numbers, letters or symbols and may use separate interleaved rules.",
+          "worked_example": "A1, C3, E5 follows two linked progressions: letters advance by two and numbers increase by two.",
+          "pitfall": "A single-rule assumption may fail when two patterns alternate.",
+          "mastery": "Separate components and test each pattern independently."
         },
         {
           "title": "figure series",
-          "teaching": "Learn figure series as a core Series competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply figure series to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar figure series task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Figure series use repeated visual changes such as rotation, movement, count, shading or shape transformation.",
+          "worked_example": "If a triangle rotates 90 degrees clockwise at each step, the next figure continues the same rotation.",
+          "pitfall": "Focusing on shape alone can miss movement or shading changes.",
+          "mastery": "Track every changing attribute across the sequence."
         },
         {
           "title": "missing terms",
-          "teaching": "Learn missing terms as a core Series competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply missing terms to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar missing terms task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "A missing-term problem asks for the value or figure that preserves the established sequence rule.",
+          "worked_example": "In 4, 8, 16, ?, 64, each term doubles, so the missing value is 32.",
+          "pitfall": "Choosing a number that fits only one neighbour is not enough.",
+          "mastery": "Check the missing term against both preceding and following relationships."
         }
       ]
     },
@@ -100,38 +100,38 @@
       "subtopics": [
         {
           "title": "letter coding",
-          "teaching": "Learn letter coding as a core Coding & Decoding competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply letter coding to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar letter coding task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Letter coding maps letters to other letters using a defined transformation such as shifting alphabet positions.",
+          "worked_example": "If CAT becomes DBU by shifting every letter forward one place, DOG becomes EPH under the same rule.",
+          "pitfall": "A transformation should be applied consistently to every relevant character.",
+          "mastery": "Identify the letter-position rule and apply it uniformly."
         },
         {
           "title": "number coding",
-          "teaching": "Learn number coding as a core Coding & Decoding competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply number coding to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar number coding task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Number coding represents words or letters using numerical values based on a stated or discoverable rule.",
+          "worked_example": "If A=1, B=2 and C=3, then CAB can be represented as 3-1-2.",
+          "pitfall": "Different questions may use different coding schemes, so do not assume one universal code.",
+          "mastery": "Infer the coding rule from the examples before decoding."
         },
         {
           "title": "symbol coding",
-          "teaching": "Learn symbol coding as a core Coding & Decoding competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply symbol coding to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar symbol coding task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Symbol coding replaces letters, numbers or categories with symbols according to an established mapping.",
+          "worked_example": "If ▲ represents A and ● represents B, the coded form of AB is ▲●.",
+          "pitfall": "A symbol has no assumed meaning outside the rule given by the question.",
+          "mastery": "Build the mapping table and decode only after all relevant assignments are clear."
         },
         {
           "title": "transformations",
-          "teaching": "Learn transformations as a core Coding & Decoding competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply transformations to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar transformations task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Coding transformations may reverse order, shift positions, substitute values or combine multiple operations.",
+          "worked_example": "If a word is reversed and then each letter is shifted one position, both operations must be applied in that order.",
+          "pitfall": "Applying the right operations in the wrong order can produce a different code.",
+          "mastery": "Write each transformation as a separate step and preserve the sequence."
         },
         {
           "title": "coded relationships",
-          "teaching": "Learn coded relationships as a core Coding & Decoding competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply coded relationships to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar coded relationships task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Some coding questions encode relationships between words or objects rather than individual letters.",
+          "worked_example": "If one code indicates 'A is the parent of B,' decoding requires identifying the relationship represented rather than translating letters.",
+          "pitfall": "A familiar-looking code should not be interpreted without its examples.",
+          "mastery": "Use the given coded examples to reconstruct the relationship rule."
         }
       ]
     },
@@ -140,38 +140,38 @@
       "subtopics": [
         {
           "title": "family relations",
-          "teaching": "Learn family relations as a core Relations & Directions competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply family relations to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar family relations task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Family-relation problems represent kinship links such as parent, sibling, child, uncle, aunt and cousin.",
+          "worked_example": "If Ravi is Maya's brother and Maya is Arun's mother, Ravi is Arun's maternal uncle.",
+          "pitfall": "Gender and generation must both be tracked.",
+          "mastery": "Translate each relationship into a simple family tree before answering."
         },
         {
           "title": "blood relations",
-          "teaching": "Learn blood relations as a core Relations & Directions competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply blood relations to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar blood relations task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Blood-relation questions require combining multiple kinship statements while distinguishing direct and indirect relationships.",
+          "worked_example": "If A is B's mother and B is C's brother, A is C's mother if B and C share that parent as stated or implied by the problem.",
+          "pitfall": "Do not add unstated relationships merely because they are common in real life.",
+          "mastery": "Use only relationships supported by the question."
         },
         {
           "title": "directions",
-          "teaching": "Learn directions as a core Relations & Directions competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply directions to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar directions task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Direction problems use compass relationships such as north, south, east and west and may include turns.",
+          "worked_example": "If a person walks north and then turns right, the new direction is east.",
+          "pitfall": "Left and right depend on the person's current facing direction.",
+          "mastery": "Track orientation after every movement or turn."
         },
         {
           "title": "distance",
-          "teaching": "Learn distance as a core Relations & Directions competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply distance to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar distance task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Distance problems combine movements to determine displacement or total path length depending on the question.",
+          "worked_example": "Walking 3 km east and 4 km north gives a 5 km straight-line displacement using the 3-4-5 triangle, while the path travelled is 7 km.",
+          "pitfall": "Distance travelled and displacement are not always the same quantity.",
+          "mastery": "Determine which distance concept the question asks for before calculating."
         },
         {
           "title": "position problems",
-          "teaching": "Learn position problems as a core Relations & Directions competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply position problems to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar position problems task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Position problems determine relative location using rows, columns, directions or movement constraints.",
+          "worked_example": "If A is third from the left and B is immediately to A's right, B is fourth from the left.",
+          "pitfall": "A position stated from the right must be converted carefully when total positions are known.",
+          "mastery": "Represent positions on a line or grid and apply each constraint in order."
         }
       ]
     },
