@@ -70,10 +70,13 @@ const agePools = await storageJson('competitions/thirukkural/objective/age-pools
 
 const questions = questionBundle?.questions ?? {}
 check(questionBundle?.course_id === COURSE_ID, 'Question bundle course_id mismatch')
-check(Object.keys(questions).length === 9473, `Question bundle must contain 9473 questions; found ${Object.keys(questions).length}`)
-check(Object.keys(answerBundle).length === 9473, `Answer-key bundle must contain 9473 keys; found ${Object.keys(answerBundle).length}`)
+check(Object.keys(questions).length === 9563, `Question bundle must contain 9563 questions; found ${Object.keys(questions).length}`)
+check(Object.keys(answerBundle).length === 9563, `Answer-key bundle must contain 9563 keys; found ${Object.keys(answerBundle).length}`)
 
 const officialIds = [
+  ...Array.from({length:30}, (_,i)=>`TKR-U8-${String(i+1).padStart(2,'0')}`),
+  ...Array.from({length:30}, (_,i)=>`TKR-A9-12-${String(i+1).padStart(2,'0')}`),
+  ...Array.from({length:30}, (_,i)=>`TKR-A13-15-${String(i+1).padStart(2,'0')}`),
   ...Array.from({length:8}, (_,i)=>`TKR-REC-${String(i+1).padStart(2,'0')}`),
   ...Array.from({length:7}, (_,i)=>`TKR-ADH-${String(i+1).padStart(2,'0')}`),
   ...Array.from({length:8}, (_,i)=>`TKR-MEAN-${String(i+1).padStart(2,'0')}`),
@@ -91,7 +94,10 @@ for (const id of officialIds) {
     check(Array.isArray(q.options) && q.options.length === 4 && new Set(q.options).size === 4, `${id}: options invalid`)
   }
 }
-check(Object.keys(questions).filter(id => id.startsWith('TKR-REC-')).length >= 8, 'Official REC questions missing from bundle')
+check(officialIds.length === 120, 'Four official papers must contain 120 questions')
+for (const prefix of ['TKR-U8-','TKR-A9-12-','TKR-A13-15-']) {
+  check(Object.keys(questions).filter(id => id.startsWith(prefix)).length === 30, `Official paper ${prefix} must contain 30 questions`)
+}
 
 const blueprint = {
   up_to_8: [['Complete second line',15],['Identify Paal',15]],
@@ -123,7 +129,7 @@ console.log('Published materials:', materialsSnap.size)
 console.log('Active enrolments:', enrolmentsSnap.size)
 console.log('Question bundle:', Object.keys(questions).length)
 console.log('Answer-key bundle:', Object.keys(answerBundle).length)
-console.log('Official paper:', officialIds.length)
+console.log('Official papers: 4 x 30')
 console.log('Age bands:', Object.keys(blueprint).length)
 
 if (errors.length) {
