@@ -247,6 +247,21 @@ export function useLiveWebRTC({
           }),
         ),
       )
+
+      // Application-level media is the useful readiness signal for the
+      // classroom UI. Some Chromium/WebRTC environments can keep the
+      // aggregate RTCPeerConnection state at "connecting" even after both
+      // remote audio/video tracks are live. Once a complete remote media
+      // stream is received, surface the classroom as connected.
+      if (
+        stream.getAudioTracks().length > 0 &&
+        stream.getVideoTracks().length > 0
+      ) {
+        setMediaState((current) => ({
+          ...current,
+          connectionState: 'connected',
+        }))
+      }
     },
     [],
   )
@@ -355,9 +370,17 @@ export function useLiveWebRTC({
         console.log('[liveWebRTC] connectionState changed', {
           remoteUserId,
           connectionState: peer.connectionState,
+          iceConnectionState: peer.iceConnectionState,
+          hasRemoteMedia:
+            (remoteStreamsRef.current.get(remoteUserId)?.getAudioTracks().length ?? 0) > 0 &&
+            (remoteStreamsRef.current.get(remoteUserId)?.getVideoTracks().length ?? 0) > 0,
         })
 
-        if (peer.connectionState === 'connected') {
+        const hasRemoteMedia =
+          (remoteStreamsRef.current.get(remoteUserId)?.getAudioTracks().length ?? 0) > 0 &&
+          (remoteStreamsRef.current.get(remoteUserId)?.getVideoTracks().length ?? 0) > 0
+
+        if (peer.connectionState === 'connected' || hasRemoteMedia) {
           // A real recovery, not just the initial handshake — reset the
           // counter so a later, unrelated blip gets its own fresh budget
           // of auto-retries instead of inheriting an exhausted one.
@@ -1058,6 +1081,7 @@ export function useLiveWebRTC({
           if (
             peer.signalingState !== 'stable' ||
             peer.connectionState !== 'new' ||
+            peer.localDescription?.type === 'offer' ||
             peer.remoteDescription ||
             negotiatingRef.current.has(
               tutorId,
