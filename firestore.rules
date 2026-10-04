@@ -612,7 +612,14 @@ service cloud.firestore {
 
       // A tutor may only submit their own pending registration payment.
       // Admins retain the existing verification authority below.
-      allow update: if isAdmin() || (
+      allow update: if (
+        isAdmin()
+        && resource.data.status == 'submitted'
+        && request.resource.data.status in ['approved', 'rejected']
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'status', 'verified_at', 'verified_by', 'admin_notes', 'batch_number', 'revenue_split'
+        ])
+      ) || (
         isSignedIn()
         && resource.data.payment_type == 'tutor_registration'
         && resource.data.tutor_id == request.auth.uid
