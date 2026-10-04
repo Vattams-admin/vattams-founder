@@ -1,394 +1,144 @@
 import fs from "node:fs";
 
-const OFFICIAL = {
-  "TKR-REC-01": {
-    answer: "பகவன் முதற்றே உலகு.",
-    explanation: "Source Kural 1."
-  },
-  "TKR-REC-02": {
-    answer: "தெய்வத்துள் வைக்கப் படும்.",
-    explanation: "Source Kural 50."
-  },
-  "TKR-REC-03": {
-    answer: "கனிஇருப்பக் காய்கவர்ந் தற்று.",
-    explanation: "Source Kural 100."
-  },
-  "TKR-REC-04": {
-    answer: "மெலியார்மேல் செல்லு மிடத்து.",
-    explanation: "Source Kural 250."
-  },
-  "TKR-REC-05": {
-    answer: "காலாழ் களரில் நரியடும் கண்ணஞ்சா\nவேலாள் முகத்த களிறு.",
-    explanation: "Source Kural 500."
-  },
-  "TKR-REC-06": {
-    answer: "எனைமாட்சித் தாகியக் கண்ணும் வினைமாட்சி\nஇல்லார்கண் இல்லது அரண்.",
-    explanation: "Source Kural 750."
-  },
-  "TKR-REC-07": {
-    answer: "பண்பிலான் பெற்ற பெருஞ்செல்வம் நன்பால்\nகலந்தீமை யால்திரிந் தற்று.",
-    explanation: "Source Kural 1000."
-  },
-  "TKR-REC-08": {
-    answer: "துன்னாத் துறந்தாரை நெஞ்சத்து உடையேமா\nஇன்னும் இழத்தும் கவின்.",
-    explanation: "Source Kural 1250."
-  },
+const COURSE_ID = "DNWt3cPE4ZSJG90CTC1e";
 
-  "TKR-ADH-01": {
-    answer: "கடவுள் வாழ்த்து",
-    explanation: "Kural 10 belongs to the first Adhigaram."
+const PAPERS = {
+  up_to_8: {
+    prefix: "TKR-U8-",
+    ids: Array.from({ length: 30 }, (_, i) => `TKR-U8-${String(i + 1).padStart(2, "0")}`),
+    blueprint: [["Complete second line", 15], ["Identify Paal", 15]],
   },
-  "TKR-ADH-02": {
-    answer: "இனியவை கூறல்",
-    explanation: "Kural 100 belongs to the Adhigaram இனியவை கூறல்."
+  age_9_12: {
+    prefix: "TKR-A9-12-",
+    ids: Array.from({ length: 30 }, (_, i) => `TKR-A9-12-${String(i + 1).padStart(2, "0")}`),
+    blueprint: [["Complete second line", 5], ["Identify Paal", 5], ["Complete Kural", 8], ["Identify Adhigaram", 3], ["Identify Iyal", 3], ["Chapter range", 6]],
   },
-  "TKR-ADH-03": {
-    answer: "பயனில சொல்லாமை",
-    explanation: "Kural 200 belongs to the Adhigaram பயனில சொல்லாமை."
+  age_13_15: {
+    prefix: "TKR-A13-15-",
+    ids: Array.from({ length: 30 }, (_, i) => `TKR-A13-15-${String(i + 1).padStart(2, "0")}`),
+    blueprint: [["Complete Kural", 5], ["Identify Adhigaram", 5], ["Identify Iyal", 4], ["Chapter range", 2], ["Source meaning identification", 7], ["Identify source meaning", 7]],
   },
-  "TKR-ADH-04": {
-    answer: "இடனறிதல்",
-    explanation: "Kural 500 belongs to the Adhigaram இடனறிதல்."
+  age_16_plus: {
+    prefix: "",
+    ids: [
+      ...Array.from({ length: 8 }, (_, i) => `TKR-REC-${String(i + 1).padStart(2, "0")}`),
+      ...Array.from({ length: 7 }, (_, i) => `TKR-ADH-${String(i + 1).padStart(2, "0")}`),
+      ...Array.from({ length: 8 }, (_, i) => `TKR-MEAN-${String(i + 1).padStart(2, "0")}`),
+      ...Array.from({ length: 7 }, (_, i) => `TKR-KNOW-${String(i + 1).padStart(2, "0")}`),
+    ],
   },
-  "TKR-ADH-05": {
-    answer: "மன்னரைச் சேர்ந்து ஒழுகல்",
-    explanation: "Kural 700 belongs to the Adhigaram மன்னரைச் சேர்ந்து ஒழுகல்."
-  },
-  "TKR-ADH-06": {
-    answer: "பண்புடைமை",
-    explanation: "Kural 1000 belongs to the Adhigaram பண்புடைமை."
-  },
-  "TKR-ADH-07": {
-    answer: "ஊடலுவகை",
-    explanation: "Kural 1330 belongs to the final Adhigaram."
-  },
-
-  "TKR-MEAN-01": {
-    answer: "1",
-    explanation: "Meaning question for Kural 1."
-  },
-  "TKR-MEAN-02": {
-    answer: "20",
-    explanation: "Meaning question for Kural 20."
-  },
-  "TKR-MEAN-03": {
-    answer: "100",
-    explanation: "Meaning question for Kural 100."
-  },
-  "TKR-MEAN-04": {
-    answer: "250",
-    explanation: "Meaning question for Kural 250."
-  },
-  "TKR-MEAN-05": {
-    answer: "500",
-    explanation: "Meaning question for Kural 500."
-  },
-  "TKR-MEAN-06": {
-    answer: "750",
-    explanation: "Meaning question for Kural 750."
-  },
-  "TKR-MEAN-07": {
-    answer: "1000",
-    explanation: "Meaning question for Kural 1000."
-  },
-  "TKR-MEAN-08": {
-    answer: "1250",
-    explanation: "Meaning question for Kural 1250."
-  },
-
-  "TKR-KNOW-01": {
-    answer: "1330",
-    explanation: "Total number of Kurals."
-  },
-  "TKR-KNOW-02": {
-    answer: "133",
-    explanation: "Total number of Adhigarams."
-  },
-  "TKR-KNOW-03": {
-    answer: "3",
-    explanation: "Total number of Paal sections."
-  },
-  "TKR-KNOW-04": {
-    answer: "அறத்துப்பால், பொருட்பால், காமத்துப்பால்",
-    explanation: "The three Paal sections in order."
-  },
-  "TKR-KNOW-05": {
-    answer: "13",
-    explanation: "Total number of Iyal groups."
-  },
-  "TKR-KNOW-06": {
-    answer: "கடவுள் வாழ்த்து",
-    explanation: "First Adhigaram."
-  },
-  "TKR-KNOW-07": {
-    answer: "ஊடலுவகை",
-    explanation: "133rd Adhigaram."
-  }
 };
 
-const IDS = Object.keys(OFFICIAL);
-
-if (IDS.length !== 30) {
-  throw new Error(`Expected 30 official IDs, got ${IDS.length}`);
-}
-
-const publicQuestions = JSON.parse(
-  fs.readFileSync(
-    "data/thirukkural/full-bank/questions.public.json",
-    "utf8"
-  )
-);
-
-const privateKeys = JSON.parse(
-  fs.readFileSync(
-    "data/thirukkural/full-bank/answer-key.private.json",
-    "utf8"
-  )
-);
-
-const keyById = new Map(
-  privateKeys.map((k) => [k.question_id, k])
-);
-
-const publicById = new Map(
-  publicQuestions.map((q) => [q.question_id, q])
-);
-
-const OFFICIAL_KURAL_NUMBERS = [
-  1, 50, 100, 250, 500, 750, 1000, 1250,
-];
-
-function officialQuestionText(id) {
-  if (id.startsWith("TKR-REC-")) {
-    const index = Number(id.slice("TKR-REC-")) - 1;
-    const n = OFFICIAL_KURAL_NUMBERS[index];
-    const source = publicById.get(
-      `TKR-FULL-REC2-${String(n).padStart(4, "0")}`
-    );
-    return source?.question || `திருக்குறள் எண் ${n} இன் இரண்டாம் அடியைத் தேர்ந்தெடுக்கவும்.`;
-  }
-
-  if (id.startsWith("TKR-ADH-")) {
-    const numbers = [10, 100, 200, 500, 700, 1000, 1330];
-    const n = numbers[Number(id.slice("TKR-ADH-")) - 1];
-    const source = publicById.get(
-      `TKR-FULL-ADH-${String(n).padStart(4, "0")}`
-    );
-    return source?.question || `திருக்குறள் எண் ${n} எந்த அதிகாரத்தைச் சேர்ந்தது?`;
-  }
-
-  if (id.startsWith("TKR-MEAN-")) {
-    const numbers = [1, 20, 100, 250, 500, 750, 1000, 1250];
-    const n = numbers[Number(id.slice("TKR-MEAN-")) - 1];
-    const source = publicById.get(
-      `TKR-FULL-MEAN-${String(n).padStart(4, "0")}`
-    );
-    return source?.question || `கொடுக்கப்பட்டுள்ள மூல விளக்கம் எந்த திருக்குறளுக்குரியது? (குறள் ${n})`;
-  }
-
-  const knowledgeQuestions = {
-    "TKR-KNOW-01": "திருக்குறளில் மொத்தம் எத்தனை குறள்கள் உள்ளன?",
-    "TKR-KNOW-02": "திருக்குறளில் மொத்தம் எத்தனை அதிகாரங்கள் உள்ளன?",
-    "TKR-KNOW-03": "திருக்குறளில் மொத்தம் எத்தனை பால் பிரிவுகள் உள்ளன?",
-    "TKR-KNOW-04": "திருக்குறளின் மூன்று பால் பிரிவுகள் சரியான வரிசையில் எவை?",
-    "TKR-KNOW-05": "திருக்குறளில் மொத்தம் எத்தனை இயல் பிரிவுகள் உள்ளன?",
-    "TKR-KNOW-06": "திருக்குறளின் முதல் அதிகாரம் எது?",
-    "TKR-KNOW-07": "திருக்குறளின் 133-வது அதிகாரம் எது?",
-  };
-
-  return knowledgeQuestions[id] || "";
-}
+const publicQuestions = JSON.parse(fs.readFileSync("data/thirukkural/full-bank/questions.public.json", "utf8"));
+const privateKeys = JSON.parse(fs.readFileSync("data/thirukkural/full-bank/answer-key.private.json", "utf8"));
+const agePools = JSON.parse(fs.readFileSync("data/thirukkural/full-bank/objective/age-pools.json", "utf8"));
+const keyById = new Map(privateKeys.map((k) => [k.question_id, k]));
+const publicById = new Map(publicQuestions.map((q) => [q.question_id, q]));
 
 function unique(values) {
-  return [...new Set(
-    values
-      .filter(Boolean)
-      .map((x) => String(x).trim())
-  )];
+  return [...new Set(values.filter(Boolean).map((x) => String(x).trim()))];
 }
 
-function choose(correct, pool) {
-  const cleanCorrect = String(correct).trim();
-
-  const candidates = unique(pool)
-    .filter((x) => x !== cleanCorrect);
-
-  if (candidates.length < 3) {
-    throw new Error(
-      `Not enough distractors for answer: ${cleanCorrect}`
-    );
-  }
-
-  return [
-    cleanCorrect,
-    ...candidates.slice(0, 3)
-  ];
+function makeOptions(correct, pool) {
+  const answer = String(correct).trim();
+  const distractors = unique(pool).filter((x) => x !== answer).slice(0, 3);
+  if (distractors.length < 3) throw new Error(`Not enough distractors for answer: ${answer}`);
+  return [answer, ...distractors];
 }
 
-const rec2Pool = unique(
-  publicQuestions
-    .filter((q) =>
-      q.question_id?.startsWith("TKR-FULL-REC2-")
-    )
-    .map((q) => keyById.get(q.question_id)?.answer)
-);
-
-const recFullPool = unique(
-  publicQuestions
-    .filter((q) =>
-      q.question_id?.startsWith("TKR-FULL-REC-")
-    )
-    .map((q) => keyById.get(q.question_id)?.answer)
-);
-
-const adhNames = unique(
-  publicQuestions
-    .filter((q) =>
-      q.topic === "Structural Identification"
-    )
-    .map((q) => keyById.get(q.question_id)?.answer)
-);
-
-function makeOptions(id, answer) {
-  const correct = String(answer).trim();
-
-  if (id.startsWith("TKR-REC-")) {
-    const number = Number(
-      id.slice("TKR-REC-".length)
-    );
-
-    return number <= 4
-      ? choose(correct, rec2Pool)
-      : choose(correct, recFullPool);
-  }
-
-  if (id.startsWith("TKR-ADH-")) {
-    return choose(correct, adhNames);
-  }
-
-  if (id.startsWith("TKR-MEAN-")) {
-    const n = Number(correct);
-
-    return [
-      String(n),
-      String(n + 1),
-      String(n + 2),
-      String(n + 3)
-    ];
-  }
-
-  if (id === "TKR-KNOW-04") {
-    const permutations = [
-      "அறத்துப்பால், பொருட்பால், காமத்துப்பால்",
-      "அறத்துப்பால், காமத்துப்பால், பொருட்பால்",
-      "பொருட்பால், அறத்துப்பால், காமத்துப்பால்",
-      "பொருட்பால், காமத்துப்பால், அறத்துப்பால்",
-      "காமத்துப்பால், அறத்துப்பால், பொருட்பால்",
-      "காமத்துப்பால், பொருட்பால், அறத்துப்பால்"
-    ];
-
-    return [
-      correct,
-      ...permutations
-        .filter((x) => x !== correct)
-        .slice(0, 3)
-    ];
-  }
-
-  if (
-    id === "TKR-KNOW-01" ||
-    id === "TKR-KNOW-02" ||
-    id === "TKR-KNOW-03" ||
-    id === "TKR-KNOW-05"
-  ) {
-    const n = Number(correct);
-
-    return [
-      String(n),
-      String(n + 1),
-      String(n + 2),
-      String(n + 3)
-    ];
-  }
-
-  if (
-    id === "TKR-KNOW-06" ||
-    id === "TKR-KNOW-07"
-  ) {
-    return choose(correct, adhNames);
-  }
-
-  throw new Error(`Unsupported official ID: ${id}`);
+function sourceQuestion(id) {
+  const q = publicById.get(id);
+  const key = keyById.get(id);
+  if (!q || !key) throw new Error(`Missing reviewed source question/key: ${id}`);
+  if (q.review_status !== "reviewed") throw new Error(`${id}: source question is not reviewed`);
+  if (!Array.isArray(q.options) || q.options.length !== 4) throw new Error(`${id}: invalid source options`);
+  return { q, key };
 }
 
-const output = [];
-
-for (const id of IDS) {
-  const official = OFFICIAL[id];
-
-  const options = makeOptions(
-    id,
-    official.answer
-  );
-
-  if (options.length !== 4) {
-    throw new Error(
-      `${id}: expected 4 options, got ${options.length}`
-    );
+function buildAgeBand(band, spec) {
+  const selected = [];
+  for (const [topic, count] of spec.blueprint) {
+    const pool = agePools?.[band]?.[topic];
+    if (!Array.isArray(pool) || pool.length < count) throw new Error(`${band}/${topic}: insufficient reviewed pool`);
+    selected.push(...pool.slice(0, count));
   }
+  if (selected.length !== 30 || new Set(selected).size !== 30) throw new Error(`${band}: paper must resolve to 30 unique questions`);
 
-  if (new Set(options).size !== 4) {
-    throw new Error(
-      `${id}: duplicate options`
-    );
-  }
-
-  if (!options.includes(official.answer)) {
-    throw new Error(
-      `${id}: correct answer missing`
-    );
-  }
-
-  const question = officialQuestionText(id);
-
-  if (!question.trim()) {
-    throw new Error(`${id}: official question text is missing`);
-  }
-
-  output.push({
-    question_id: id,
-    course_id: "DNWt3cPE4ZSJG90CTC1e",
-    competition: "Thirukkural Mastery Championship",
-    question,
-    question_type: "Multiple Choice",
-    options,
-    answer: official.answer,
-    explanation: official.explanation,
-    marks: 1,
-    time_seconds: 60,
-    language: "Tamil",
-    review_status: "reviewed"
+  return selected.map((sourceId, index) => {
+    const { q, key } = sourceQuestion(sourceId);
+    const id = spec.ids[index];
+    return {
+      question_id: id,
+      course_id: COURSE_ID,
+      competition: "Thirukkural Mastery Championship",
+      age_band: band,
+      topic: q.topic || "",
+      subtopic: q.subtopic || "",
+      question: q.question,
+      question_type: "Multiple Choice",
+      options: q.options.map(String),
+      answer: String(key.answer).trim(),
+      explanation: key.explanation || q.explanation || "",
+      marks: 1,
+      time_seconds: Number(q.time_seconds) || 60,
+      language: q.language || "Tamil",
+      review_status: "reviewed",
+      source_question_id: sourceId,
+    };
   });
 }
 
-const outPath =
-  "data/thirukkural/full-bank/objective/official-30.objective.json";
+function build16Plus() {
+  const legacyIds = PAPERS.age_16_plus.ids;
+  const legacy = [];
+  const kuralNumbers = [1,50,100,250,500,750,1000,1250];
+  for (let i=0;i<8;i++) legacy.push([legacyIds[i], `TKR-FULL-REC2-${String(kuralNumbers[i]).padStart(4,"0")}`]);
+  const adhNumbers=[10,100,200,500,700,1000,1330];
+  for (let i=0;i<7;i++) legacy.push([legacyIds[8+i], `TKR-FULL-ADH-${String(adhNumbers[i]).padStart(4,"0")}`]);
+  const meanNumbers=[1,20,100,250,500,750,1000,1250];
+  for (let i=0;i<8;i++) legacy.push([legacyIds[15+i], `TKR-FULL-MEAN-${String(meanNumbers[i]).padStart(4,"0")}`]);
 
-fs.mkdirSync(
-  "data/thirukkural/full-bank/objective",
-  { recursive: true }
-);
+  const knowledge = [
+    ["TKR-KNOW-01","திருக்குறளில் மொத்தம் எத்தனை குறள்கள் உள்ளன?","1330"],
+    ["TKR-KNOW-02","திருக்குறளில் மொத்தம் எத்தனை அதிகாரங்கள் உள்ளன?","133"],
+    ["TKR-KNOW-03","திருக்குறளில் மொத்தம் எத்தனை பால் பிரிவுகள் உள்ளன?","3"],
+    ["TKR-KNOW-04","திருக்குறளின் மூன்று பால் பிரிவுகள் சரியான வரிசையில் எவை?","அறத்துப்பால், பொருட்பால், காமத்துப்பால்"],
+    ["TKR-KNOW-05","திருக்குறளில் மொத்தம் எத்தனை இயல் பிரிவுகள் உள்ளன?","13"],
+    ["TKR-KNOW-06","திருக்குறளின் முதல் அதிகாரம் எது?","கடவுள் வாழ்த்து"],
+    ["TKR-KNOW-07","திருக்குறளின் 133-வது அதிகாரம் எது?","ஊடலுவகை"],
+  ];
 
-fs.writeFileSync(
-  outPath,
-  JSON.stringify(output, null, 2),
-  "utf8"
-);
+  const out=[];
+  for (const [id, sourceId] of legacy) {
+    const {q,key}=sourceQuestion(sourceId);
+    out.push({...q, question_id:id, course_id:COURSE_ID, competition:"Thirukkural Mastery Championship", age_band:"age_16_plus", question:q.question, question_type:"Multiple Choice", options:q.options.map(String), answer:String(key.answer).trim(), explanation:key.explanation||q.explanation||"", marks:1, time_seconds:Number(q.time_seconds)||60, language:q.language||"Tamil", review_status:"reviewed"});
+  }
+  const adhNames=unique(publicQuestions.filter(q=>q.topic==="Structural Identification").map(q=>keyById.get(q.question_id)?.answer));
+  for (const [id,question,answer] of knowledge) {
+    let options;
+    if (id==="TKR-KNOW-04") options=[answer,"அறத்துப்பால், காமத்துப்பால், பொருட்பால்","பொருட்பால், அறத்துப்பால், காமத்துப்பால்","காமத்துப்பால், பொருட்பால், அறத்துப்பால்"];
+    else if (/^TKR-KNOW-0[1235]$/.test(id)) { const n=Number(answer); options=[answer,String(n+1),String(n+2),String(n+3)]; }
+    else options=makeOptions(answer,adhNames);
+    out.push({question_id:id,course_id:COURSE_ID,competition:"Thirukkural Mastery Championship",age_band:"age_16_plus",topic:"Knowledge",subtopic:"",question,question_type:"Multiple Choice",options,answer,explanation:"Approved Thirukkural knowledge item.",marks:1,time_seconds:60,language:"Tamil",review_status:"reviewed"});
+  }
+  return out;
+}
 
-console.log(
-  "OFFICIAL OBJECTIVE QUESTIONS:",
-  output.length
-);
-console.log("OUTPUT:", outPath);
-console.log("FIRESTORE READS: 0");
+const output = [
+  ...buildAgeBand("up_to_8", PAPERS.up_to_8),
+  ...buildAgeBand("age_9_12", PAPERS.age_9_12),
+  ...buildAgeBand("age_13_15", PAPERS.age_13_15),
+  ...build16Plus(),
+];
+
+if (output.length !== 120 || new Set(output.map(q=>q.question_id)).size !== 120) throw new Error("Official production set must contain 120 unique questions");
+for (const q of output) {
+  if (!q.question?.trim() || q.options.length!==4 || new Set(q.options).size!==4 || !q.options.includes(q.answer)) throw new Error(`${q.question_id}: invalid official question`);
+}
+const outPath="data/thirukkural/full-bank/objective/official-120.objective.json";
+fs.mkdirSync("data/thirukkural/full-bank/objective",{recursive:true});
+fs.writeFileSync(outPath,JSON.stringify(output,null,2),"utf8");
+console.log("OFFICIAL OBJECTIVE QUESTIONS:",output.length);
+console.log("PAPERS: up_to_8=30, age_9_12=30, age_13_15=30, age_16_plus=30");
+console.log("OUTPUT:",outPath);
 console.log("VALIDATION: PASS");
