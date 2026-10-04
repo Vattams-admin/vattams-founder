@@ -38,7 +38,7 @@ for (const q of publicQuestions) {
   if (q.question_type !== 'Multiple Choice') fail(`${q.question_id}: not Multiple Choice`)
   if (!Array.isArray(q.options) || q.options.length !== 4 || new Set(q.options.map(String)).size !== 4) fail(`${q.question_id}: invalid options`)
   if ('answer' in q || 'correct_answer' in q || 'correct_option_index' in q || 'explanation' in q) fail(`${q.question_id}: public bank leaks answer data`)
-  if (q.review_status !== 'draft' && q.review_status !== 'reviewed') fail(`${q.question_id}: invalid review_status`)
+  if (q.review_status !== 'reviewed') fail(`${q.question_id}: production requires review_status=reviewed`)
 }
 
 for (const k of privateKeys) {
