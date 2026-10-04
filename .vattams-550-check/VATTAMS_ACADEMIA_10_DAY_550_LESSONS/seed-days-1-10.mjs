@@ -1,5 +1,8 @@
 /**
- * VATTAMS ACADEMIA — Days 1–10 / 550 lesson seed
+ * LEGACY — VATTAMS ACADEMIA Days 1–10 / 550 lesson seed
+ * DO NOT USE FOR THE COMPETITION MODULE.
+ * Competition curricula now follow the scalable Thirukkural Mastery model.
+ * This script is retained only for historical/non-competition course migration.
  * Run from the repository after installing the existing Firebase Admin dependency.
  *
  * IMPORTANT:
