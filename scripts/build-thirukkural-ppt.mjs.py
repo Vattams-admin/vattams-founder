@@ -59,12 +59,12 @@ def add_card(slide, k, x, y, w, h):
     add_text(slide, x+0.08, y+0.05, 0.7, 0.3, f"குறள் {k['Number']}", 11, GOLD, True)
     # verse
     verse = f"{k['Line1']}\n{k['Line2']}"
-    add_text(slide, x+0.08, y+0.36, w-0.16, 0.78, verse, 16, NAVY, True)
+    add_text(slide, x+0.08, y+0.32, w-0.16, 0.58, verse, 14, NAVY, True)
     # meaning and explanation
     mv = k.get("mv") or ""
     sp = k.get("sp") or ""
-    add_text(slide, x+0.08, y+1.15, w-0.16, 0.92, "பொருள்: " + mv, 11.5, INK, False)
-    add_text(slide, x+0.08, y+2.03, w-0.16, h-2.12, "விளக்கம்: " + sp, 10.8, PURPLE, False)
+    add_text(slide, x+0.08, y+0.90, w-0.16, 0.42, "பொருள்: " + mv, 9.2, INK, False)
+    add_text(slide, x+0.08, y+1.28, w-0.16, h-1.34, "விளக்கம்: " + sp, 8.8, PURPLE, False)
 
 data = fetch(DATA_URL)["kural"]
 detail = fetch(DETAIL_URL)
