@@ -436,7 +436,10 @@ export function useLiveWebRTC({
 
         setMediaState((current) => ({
           ...current,
-          connectionState: peer.connectionState,
+          connectionState:
+            hasRemoteMedia || peer.connectionState === 'connected'
+              ? 'connected'
+              : peer.connectionState,
         }))
       }
 
