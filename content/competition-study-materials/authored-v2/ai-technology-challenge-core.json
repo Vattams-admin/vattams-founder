@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "AI & Technology Challenge",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_complete",
+  "status": "subject_specific_authoring_v1_in_progress",
   "age_bands": [
     "foundation",
     "developing",
@@ -20,38 +20,38 @@
       "subtopics": [
         {
           "title": "what AI is",
-          "teaching": "Master what AI is within AI Foundations for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative what AI is question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar what AI is questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Artificial intelligence refers to computer systems designed to perform tasks involving capabilities such as pattern recognition, prediction, language processing or decision support.",
+          "worked_example": "A recommendation system can rank items using patterns in user behaviour without having human-like understanding.",
+          "pitfall": "AI output is not automatically evidence of consciousness or human reasoning.",
+          "mastery": "Identify AI systems by the task they perform and distinguish automated pattern processing from human intelligence."
         },
         {
           "title": "AI history",
-          "teaching": "Master AI history within AI Foundations for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative AI history question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar AI history questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "AI has developed through multiple periods of research, including symbolic methods, expert systems, statistical learning and modern neural-network approaches.",
+          "worked_example": "Modern machine learning builds on decades of earlier work rather than appearing suddenly with generative AI.",
+          "pitfall": "A technology being newly popular does not mean its underlying research is entirely new.",
+          "mastery": "Place major AI developments in broad historical sequence and explain their significance."
         },
         {
           "title": "machine learning concepts",
-          "teaching": "Master machine learning concepts within AI Foundations for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative machine learning concepts question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar machine learning concepts questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Machine learning systems learn patterns from data to make predictions or decisions instead of requiring every rule to be explicitly programmed.",
+          "worked_example": "A classifier trained on labelled images can learn patterns associated with different categories.",
+          "pitfall": "A model can fail when its training data does not represent the situations encountered after deployment.",
+          "mastery": "Explain training, inference, features, labels and basic model limitations."
         },
         {
           "title": "models and data",
-          "teaching": "Master models and data within AI Foundations for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative models and data question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar models and data questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "An AI model is a learned computational representation, while data provides examples or information used during training, validation or inference.",
+          "worked_example": "Changing the training data can change a model's learned behaviour even when the model architecture remains the same.",
+          "pitfall": "More data is not automatically better if it is inaccurate, duplicated or unrepresentative.",
+          "mastery": "Explain how data and models interact and why data quality matters."
         },
         {
           "title": "AI applications",
-          "teaching": "Master AI applications within AI Foundations for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative AI applications question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar AI applications questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "AI applications include recommendation, speech recognition, computer vision, language processing, forecasting and decision support.",
+          "worked_example": "A speech-to-text system converts spoken language into text by processing audio patterns.",
+          "pitfall": "Calling every automated program AI can obscure the distinction between simple rules and learned systems.",
+          "mastery": "Identify appropriate AI applications and explain what task the system performs."
         }
       ]
     },
@@ -60,38 +60,38 @@
       "subtopics": [
         {
           "title": "data types",
-          "teaching": "Master data types within Data & Algorithms for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative data types question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar data types questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Data can be represented as numbers, text, categories, images, audio, video and other structured or unstructured forms.",
+          "worked_example": "A student's age is numeric data, while a course category may be categorical data; each requires appropriate handling.",
+          "pitfall": "Treating every value as the same type can produce invalid analysis.",
+          "mastery": "Classify common data types and select suitable representations."
         },
         {
           "title": "patterns",
-          "teaching": "Master patterns within Data & Algorithms for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative patterns question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar patterns questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Pattern recognition identifies regularities or relationships in data that may support prediction, classification or explanation.",
+          "worked_example": "If sales repeatedly increase during a particular season, the pattern may be useful for forecasting but does not prove the season is the only cause.",
+          "pitfall": "A correlation or repeated pattern does not automatically establish causation.",
+          "mastery": "Identify meaningful patterns and distinguish observation from causal explanation."
         },
         {
           "title": "algorithms",
-          "teaching": "Master algorithms within Data & Algorithms for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative algorithms question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar algorithms questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "An algorithm is a finite sequence of precise operations for transforming inputs into outputs or solving a problem.",
+          "worked_example": "A sorting algorithm receives a collection of values and produces them in a defined order according to its comparison rules.",
+          "pitfall": "An algorithm must handle valid input cases rather than only the example used to explain it.",
+          "mastery": "Describe, trace and compare simple algorithms using clear inputs and outputs."
         },
         {
           "title": "training data",
-          "teaching": "Master training data within Data & Algorithms for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative training data question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar training data questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Training data provides examples from which a machine-learning model learns patterns; its quality affects model behaviour.",
+          "worked_example": "If a face-recognition dataset underrepresents certain groups, performance may differ across those groups.",
+          "pitfall": "A large dataset can still be biased or poorly labelled.",
+          "mastery": "Evaluate training data for relevance, quality, representation and labelling."
         },
         {
           "title": "evaluation",
-          "teaching": "Master evaluation within Data & Algorithms for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative evaluation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar evaluation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Model evaluation measures how well a system performs against defined criteria on data appropriate for testing.",
+          "worked_example": "A classification model can be evaluated using held-out examples rather than only the data used for training.",
+          "pitfall": "High training accuracy does not guarantee strong performance on unseen cases.",
+          "mastery": "Explain why separate evaluation data and suitable metrics are important."
         }
       ]
     },
@@ -100,38 +100,38 @@
       "subtopics": [
         {
           "title": "text generation",
-          "teaching": "Master text generation within Generative AI for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative text generation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar text generation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Text-generation systems produce sequences of language based on patterns learned from training data and the current input context.",
+          "worked_example": "A language model can draft a summary from supplied notes, but the draft should be checked against the source material.",
+          "pitfall": "Fluent sentences can contain incorrect facts or unsupported claims.",
+          "mastery": "Use generated text as an assistive output and verify important information."
         },
         {
           "title": "image generation",
-          "teaching": "Master image generation within Generative AI for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative image generation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar image generation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Image-generation systems create images from learned patterns conditioned on prompts or other inputs.",
+          "worked_example": "A prompt describing a classroom scene can guide a generative system toward relevant objects and composition.",
+          "pitfall": "Generated images may contain visual inaccuracies, ambiguous text or unintended details.",
+          "mastery": "Evaluate generated images for factual, visual and contextual accuracy."
         },
         {
           "title": "multimodal systems",
-          "teaching": "Master multimodal systems within Generative AI for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative multimodal systems question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar multimodal systems questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Multimodal systems process or generate more than one type of information, such as text, images, audio or video.",
+          "worked_example": "A system can receive an image and a text question, then produce a textual explanation based on both inputs.",
+          "pitfall": "Supporting multiple modalities does not guarantee correct interpretation of every modality.",
+          "mastery": "Identify the inputs and outputs of a multimodal system and its limitations."
         },
         {
           "title": "prompt concepts",
-          "teaching": "Master prompt concepts within Generative AI for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative prompt concepts question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar prompt concepts questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "A prompt specifies an instruction, context, constraints or desired output that guides a generative AI system.",
+          "worked_example": "A prompt requesting a comparison with a specified audience, format and evidence requirement is more constrained than a vague request for 'tell me about it'.",
+          "pitfall": "Adding instructions cannot guarantee factual correctness.",
+          "mastery": "Construct clear prompts with relevant context, constraints and output requirements."
         },
         {
           "title": "limitations",
-          "teaching": "Master limitations within Generative AI for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative limitations question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar limitations questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Generative AI can hallucinate, reflect training-data biases, misunderstand ambiguous instructions and produce inconsistent outputs.",
+          "worked_example": "Two prompts asking the same factual question can produce different wording or even different claims, so important answers require verification.",
+          "pitfall": "Confident language is not proof of correctness.",
+          "mastery": "Identify common generative-AI failure modes and apply verification and human review."
         }
       ]
     },
@@ -140,38 +140,38 @@
       "subtopics": [
         {
           "title": "sensors",
-          "teaching": "Master sensors within Robotics & Automation for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative sensors question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar sensors questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Sensors detect physical or environmental information such as distance, light, temperature, pressure or motion and convert it into usable signals.",
+          "worked_example": "A robot using a distance sensor can detect an obstacle and trigger a change in movement.",
+          "pitfall": "A sensor measures a property; it does not by itself decide what action should follow.",
+          "mastery": "Match common sensors with the information they can measure."
         },
         {
           "title": "actuators",
-          "teaching": "Master actuators within Robotics & Automation for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative actuators question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar actuators questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Actuators convert control signals into physical action, such as movement, rotation, gripping or switching.",
+          "worked_example": "A motor can act as an actuator that turns an electrical control signal into mechanical motion.",
+          "pitfall": "A sensor and actuator perform different roles in a control system.",
+          "mastery": "Distinguish sensing from actuation and explain how they work together."
         },
         {
           "title": "control",
-          "teaching": "Master control within Robotics & Automation for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative control question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar control questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Control systems use inputs, decision logic and outputs to regulate behaviour toward a desired state.",
+          "worked_example": "A thermostat senses temperature and controls heating based on a chosen set point.",
+          "pitfall": "Changing the threshold changes when the actuator responds.",
+          "mastery": "Trace a simple feedback or control loop from sensor input to action."
         },
         {
           "title": "autonomous systems",
-          "teaching": "Master autonomous systems within Robotics & Automation for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative autonomous systems question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar autonomous systems questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "An autonomous system performs some actions with limited direct human control by sensing conditions and selecting responses according to programmed or learned rules.",
+          "worked_example": "A robot vacuum can map or sense its environment and adjust movement without a person steering every turn.",
+          "pitfall": "Autonomous does not mean independent of all human design, goals or constraints.",
+          "mastery": "Identify sensing, decision and action components in autonomous systems."
         },
         {
           "title": "real-world automation",
-          "teaching": "Master real-world automation within Robotics & Automation for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative real-world automation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar real-world automation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Real-world automation combines software, hardware, data and procedures to perform repeatable tasks with limited manual intervention.",
+          "worked_example": "An automated warehouse system can scan items, update inventory and route packages while using sensors and control logic.",
+          "pitfall": "Automating a flawed process can reproduce errors at greater speed and scale.",
+          "mastery": "Evaluate where automation is useful and where human checks remain necessary."
         }
       ]
     },
