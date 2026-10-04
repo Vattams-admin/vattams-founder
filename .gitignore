@@ -25,3 +25,9 @@ src_backup_before_supabase_remove/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Local shell / machine artifacts
+.bash_history
+.gitconfig
+.ssh/
+.vattams-*/
