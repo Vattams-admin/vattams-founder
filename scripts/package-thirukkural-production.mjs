@@ -56,7 +56,7 @@ fs.rmSync(out,{recursive:true,force:true})
 fs.mkdirSync(path.join(out,'competitions',slug,'objective'),{recursive:true})
 
 fs.writeFileSync(path.join(out,'competitions',slug,'objective','questions.private.json'),JSON.stringify({course_id:courseId,competition:'Thirukkural Mastery Championship',questions},null,2))
-fs.writeFileSync(path.join(out,'competitions',slug,'objective','answer-keys.private.json'),JSON.stringify({course_id:courseId,competition:'Thirukkural Mastery Championship',keys},null,2))
+fs.writeFileSync(path.join(out,'competitions',slug,'objective','answer-keys.private.json'),JSON.stringify(keys,null,2))
 fs.writeFileSync(path.join(out,'competitions',slug,'objective','age-pools.json'),JSON.stringify(agePools,null,2))
 
 const registry = {
