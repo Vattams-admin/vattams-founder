@@ -14,7 +14,7 @@ const SUPABASE_SERVICE_ROLE_KEY =
 const BUCKET = "academia-course-materials";
 const COURSE_ID = "DNWt3cPE4ZSJG90CTC1e";
 const ANSWER_BUNDLE =
-  "competitions/thirukkural/objective/official-30.answer-keys.private.json";
+  "competitions/thirukkural/objective/answer-keys.private.json";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
   auth: { persistSession: false, autoRefreshToken: false },
