@@ -1,4 +1,4 @@
-name: Validate Competition Study Materials
+name: Validate Competition Mastery Curricula
 
 on:
   workflow_dispatch:
@@ -12,11 +12,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
-      - name: Validate competition study-material packages
-        run: node .vattams-550-check/VATTAMS_ACADEMIA_10_DAY_550_LESSONS/validate-competition-study-materials.mjs
+      - name: Validate scalable competition curricula
+        run: node .vattams-550-check/VATTAMS_ACADEMIA_10_DAY_550_LESSONS/validate-competition-study-materials-v2.mjs
