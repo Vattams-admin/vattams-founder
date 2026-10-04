@@ -95,6 +95,7 @@ export default function CompetitionParticipant() {
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [currentIndex, setCurrentIndex] = useState(0)
   const [result, setResult] = useState<CompetitionResult | null>(null)
+  const [remainingSeconds, setRemainingSeconds] = useState(0)
   const [busy, setBusy] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
   const autoSubmitRef = useRef(false)
@@ -140,11 +141,9 @@ export default function CompetitionParticipant() {
       await loadQuestions(id, ids)
 
       setAttemptId(id)
-      setStartedAtMs(
-        typeof data?.started_at === 'string'
-          ? new Date(data.started_at).getTime()
-          : Date.now(),
-      )
+      const startMs = typeof data?.started_at === 'string' ? new Date(data.started_at).getTime() : Date.now()
+      setStartedAtMs(startMs)
+      setRemainingSeconds(totalSeconds)
       setAnswers({})
       setCurrentIndex(0)
       setView('attempt')
@@ -189,8 +188,10 @@ export default function CompetitionParticipant() {
 
     const updateTimer = () => {
       const elapsed = Math.floor((Date.now() - startedAtMs) / 1000)
-      if (totalSeconds - elapsed <= 0) {
-        setTimeout(() => void submitAttempt(), 0)
+      const remaining = Math.max(0, totalSeconds - elapsed)
+      setRemainingSeconds(remaining)
+      if (remaining === 0 && !autoSubmitRef.current) {
+        void submitAttempt()
       }
     }
 
@@ -232,7 +233,7 @@ export default function CompetitionParticipant() {
               </div>
               <div className="rounded-card border border-gold/20 bg-white/5 px-4 py-2 text-center">
                 <p className="text-[11px] text-slate-muted">Time</p>
-                <p className="mt-1 font-semibold">{formatTime(Math.max(0, totalSeconds - Math.floor((Date.now() - (startedAtMs || Date.now())) / 1000)))}</p>
+                <p className="mt-1 font-semibold">{formatTime(remainingSeconds)}</p>
               </div>
             </div>
           </div>
