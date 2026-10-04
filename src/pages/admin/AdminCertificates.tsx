@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { addDoc, collection, doc, getDocs, orderBy, query, updateDoc } from 'firebase/firestore'
+import { collection, doc, getDocs, orderBy, query, setDoc, updateDoc } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import AdminNav from '@/components/AdminNav'
 import type { Course } from '@/types/database'
@@ -21,7 +21,6 @@ type CertificateType = (typeof CERTIFICATE_TYPES)[number]
 interface Certificate {
   id: string
   certificate_code: string
-  student_id: string
   student_name: string
   course_id: string | null
   course_name: string | null
@@ -113,11 +112,6 @@ export default function AdminCertificates() {
     try {
       const payload = {
         certificate_code: generateCertificateCode(),
-        // student_id is the Firebase Auth uid — same identity payments
-        // and enrolments key off (user.id) — not the `students`
-        // collection's own doc id, so certificate ownership lines up
-        // with the rest of the app if a student ever looks these up.
-        student_id: selectedStudent.firebase_uid,
         // Denormalized, same pattern as payments/enrolments, so
         // VerifyCertificate.tsx never has to join.
         student_name: selectedStudent.full_name,
@@ -128,7 +122,11 @@ export default function AdminCertificates() {
         issued_at: new Date().toISOString(),
         is_valid: true
       }
-      await addDoc(collection(firestore, 'certificates'), payload)
+      // Use the public verification code as the document ID. This lets the
+      // public verification page perform a single-document get() rather
+      // than a collection query, so Firestore rules can safely allow public
+      // verification without exposing certificate enumeration.
+      await setDoc(doc(firestore, 'certificates', payload.certificate_code), payload)
 
       // Fired after the certificate write succeeds; never blocks or
       // fails issuance (see createNotification() in
