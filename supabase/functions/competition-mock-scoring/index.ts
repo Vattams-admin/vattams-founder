@@ -832,6 +832,49 @@ Deno.serve(async (req) => {
     const selectedQuestionSet =
       new Set(selectedQuestionIds);
 
+    // The browser timer is only UX. Enforce the same time limit on the
+    // server so a direct API call cannot continue an expired mock attempt.
+    const mockQuestions =
+      await loadQuestionBundle(courseId);
+    let allowedSeconds = 0;
+
+    for (const questionId of selectedQuestionIds) {
+      const question = mockQuestions[questionId];
+
+      if (!validQuestion(question, courseId, questionId)) {
+        return json(
+          { error: "One or more mock questions are unavailable" },
+          409,
+        );
+      }
+
+      allowedSeconds += Math.max(
+        1,
+        Number(question.time_seconds) || 60,
+      );
+    }
+
+    const startedAt =
+      new Date(String(attempt.started_at)).getTime();
+
+    if (!Number.isFinite(startedAt)) {
+      return json(
+        { error: "Mock attempt has an invalid start time." },
+        409,
+      );
+    }
+
+    const elapsedSeconds = Math.floor(
+      (Date.now() - startedAt) / 1000,
+    );
+
+    if (elapsedSeconds > allowedSeconds + 30) {
+      return json(
+        { error: "Mock test time has expired." },
+        409,
+      );
+    }
+
     if (action === "check_answer") {
       const questionId =
         typeof body?.questionId === "string"
