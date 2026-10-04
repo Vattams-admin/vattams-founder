@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "Computer Challenge",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_in_progress",
+  "status": "subject_specific_authoring_v1_complete",
   "age_bands": [
     "foundation",
     "developing",
@@ -220,38 +220,38 @@
       "subtopics": [
         {
           "title": "decomposition",
-          "teaching": "Learn decomposition as a core Computational Thinking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply decomposition to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar decomposition task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Decomposition breaks a complex problem into smaller, manageable parts that can be solved or tested separately.",
+          "worked_example": "A school-event app can be decomposed into registration, scheduling, notifications and results rather than solved as one large task.",
+          "pitfall": "Breaking a problem into parts is useful only if the parts still cover the original goal.",
+          "mastery": "Decompose a problem into logical components with clear responsibilities."
         },
         {
           "title": "pattern recognition",
-          "teaching": "Learn pattern recognition as a core Computational Thinking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply pattern recognition to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar pattern recognition task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Pattern recognition identifies repeated structures or relationships that can guide a solution.",
+          "worked_example": "If several tasks require the same validation steps, recognizing the pattern can lead to one reusable procedure.",
+          "pitfall": "A superficial similarity is not necessarily a useful computational pattern.",
+          "mastery": "Identify meaningful repetition and use it to simplify problem solving."
         },
         {
           "title": "abstraction",
-          "teaching": "Learn abstraction as a core Computational Thinking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply abstraction to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar abstraction task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Abstraction focuses on essential information while hiding unnecessary implementation detail.",
+          "worked_example": "A map represents roads and locations without showing every physical object along the route because those details are unnecessary for navigation.",
+          "pitfall": "Removing a detail that affects the problem can make an abstraction misleading.",
+          "mastery": "Choose the details that matter to the task and deliberately ignore the rest."
         },
         {
           "title": "logic",
-          "teaching": "Learn logic as a core Computational Thinking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply logic to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar logic task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Computational logic uses precise statements and operators such as AND, OR and NOT to make decisions.",
+          "worked_example": "A student may access a resource when enrolled AND logged in; either condition alone is insufficient.",
+          "pitfall": "Replacing AND with OR can change the set of users who satisfy a rule.",
+          "mastery": "Translate requirements into precise Boolean conditions and evaluate them correctly."
         },
         {
           "title": "algorithm design",
-          "teaching": "Learn algorithm design as a core Computational Thinking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply algorithm design to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar algorithm design task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Algorithm design turns a problem into a finite sequence of precise operations, considering inputs, outputs, conditions and efficiency.",
+          "worked_example": "A route-planning algorithm needs a starting point, destination, available connections and a rule for selecting routes.",
+          "pitfall": "An algorithm that works for one example but fails valid inputs is incomplete.",
+          "mastery": "Design, trace and test algorithms against normal and edge cases."
         }
       ]
     },
@@ -260,38 +260,38 @@
       "subtopics": [
         {
           "title": "AI concepts",
-          "teaching": "Learn AI concepts as a core AI & Emerging Technology competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply AI concepts to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar AI concepts task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Artificial intelligence describes systems designed to perform tasks that normally require aspects of human intelligence, such as recognition, prediction or language processing.",
+          "worked_example": "A recommendation system can use patterns in user behaviour to rank likely relevant items without possessing human-like understanding.",
+          "pitfall": "AI output should not automatically be treated as proof of reasoning or truth.",
+          "mastery": "Identify common AI applications and distinguish system behaviour from human understanding."
         },
         {
           "title": "machine learning basics",
-          "teaching": "Learn machine learning basics as a core AI & Emerging Technology competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply machine learning basics to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar machine learning basics task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Machine learning systems learn patterns from data to make predictions or decisions rather than receiving every rule explicitly.",
+          "worked_example": "A model trained on labelled images can learn patterns associated with categories such as cats and dogs.",
+          "pitfall": "A model can perform poorly when training data is limited, biased or unlike real-world inputs.",
+          "mastery": "Explain training data, learned patterns, predictions and basic limitations."
         },
         {
           "title": "generative AI",
-          "teaching": "Learn generative AI as a core AI & Emerging Technology competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply generative AI to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar generative AI task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Generative AI produces new text, images, audio, code or other content from learned patterns and a user's input.",
+          "worked_example": "A language model can generate a draft explanation from a prompt, but the generated claim still needs verification.",
+          "pitfall": "Fluent output can contain incorrect or invented information.",
+          "mastery": "Use generated content critically and verify important facts before relying on it."
         },
         {
           "title": "responsible AI",
-          "teaching": "Learn responsible AI as a core AI & Emerging Technology competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply responsible AI to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar responsible AI task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Responsible AI considers accuracy, fairness, privacy, transparency, safety, accountability and appropriate human oversight.",
+          "worked_example": "A school using an automated recommendation system should consider whether its data disadvantages particular students and provide a way to review decisions.",
+          "pitfall": "Automation does not remove responsibility from the people deploying or supervising a system.",
+          "mastery": "Identify risks and propose safeguards appropriate to the AI use case."
         },
         {
           "title": "automation",
-          "teaching": "Learn automation as a core AI & Emerging Technology competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply automation to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar automation task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Automation uses technology to perform repeatable tasks with limited manual intervention; it can improve consistency but can also reproduce errors.",
+          "worked_example": "An automated report can collect approved data and generate a standard summary each evening.",
+          "pitfall": "Automating a flawed rule can make the same mistake faster and at larger scale.",
+          "mastery": "Decide which tasks are suitable for automation and include checks for failures."
         }
       ]
     },
@@ -300,38 +300,38 @@
       "subtopics": [
         {
           "title": "data representation",
-          "teaching": "Learn data representation as a core Applied Computing competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply data representation to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar data representation task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Computers represent information using digital encodings; binary uses two symbols, 0 and 1, to represent data and instructions at a fundamental level.",
+          "worked_example": "The decimal number 5 is represented as 101 in binary because 1×4 + 0×2 + 1×1 = 5.",
+          "pitfall": "Binary is not a different value system for humans; it is one representation used by digital systems.",
+          "mastery": "Convert simple decimal values to binary and explain why digital systems use discrete representations."
         },
         {
           "title": "cyber awareness",
-          "teaching": "Learn cyber awareness as a core Applied Computing competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply cyber awareness to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar cyber awareness task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Cyber awareness means recognizing common threats, understanding safe behaviour and responding appropriately to suspicious activity.",
+          "worked_example": "If an unexpected attachment arrives from an unknown sender, avoid opening it and verify the source through a trusted channel.",
+          "pitfall": "Cybersecurity is not only the responsibility of specialist teams; everyday actions can create or reduce risk.",
+          "mastery": "Recognize common attack surfaces and choose safe responses without attempting unsafe experimentation."
         },
         {
           "title": "technology scenarios",
-          "teaching": "Learn technology scenarios as a core Applied Computing competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply technology scenarios to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar technology scenarios task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Applied computing requires matching technology to a real problem while considering users, cost, reliability, accessibility, privacy and security.",
+          "worked_example": "A school may choose a cloud collaboration system when simultaneous editing is more important than offline-only use, while still planning access controls.",
+          "pitfall": "The newest technology is not automatically the best solution.",
+          "mastery": "Evaluate technology choices against explicit requirements and constraints."
         },
         {
           "title": "digital workflows",
-          "teaching": "Learn digital workflows as a core Applied Computing competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply digital workflows to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar digital workflows task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "A digital workflow is a sequence of tools and actions that moves information from input through processing to an output or decision.",
+          "worked_example": "A school certificate workflow can collect approved data, validate it, generate a document and record completion.",
+          "pitfall": "Adding unnecessary tools can create duplicate data and more failure points.",
+          "mastery": "Map workflow stages, identify dependencies and reduce avoidable manual repetition."
         },
         {
           "title": "computing problem solving",
-          "teaching": "Learn computing problem solving as a core Applied Computing competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply computing problem solving to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar computing problem solving task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Computing problem solving combines requirements analysis, decomposition, algorithms, testing and iteration to produce a reliable solution.",
+          "worked_example": "For a timetable conflict, first define constraints, represent the data, generate candidate schedules and test each against the rules.",
+          "pitfall": "Coding immediately without understanding the problem can solve the wrong problem efficiently.",
+          "mastery": "Define the problem, constraints, inputs and success criteria before selecting a technical solution."
         }
       ]
     }
