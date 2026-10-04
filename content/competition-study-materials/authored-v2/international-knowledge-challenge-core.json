@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "International Knowledge Challenge",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_complete",
+  "status": "subject_specific_authoring_v1_in_progress",
   "age_bands": [
     "foundation",
     "developing",
@@ -20,38 +20,38 @@
       "subtopics": [
         {
           "title": "countries and capitals",
-          "teaching": "Master countries and capitals within World Geography for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative countries and capitals question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar countries and capitals questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Country-capital knowledge requires precise pairing of sovereign states and their recognized capital cities, while allowing for cases where a country has multiple capital functions or a capital changed historically.",
+          "worked_example": "A question may contrast a country's constitutional capital with another city that is its commercial center; identify the capital rather than choosing the more famous city.",
+          "pitfall": "Do not assume the largest or best-known city is the capital.",
+          "mastery": "Correctly pair countries and capitals and explain exceptions when a capital has special constitutional or administrative status."
         },
         {
           "title": "continents",
-          "teaching": "Master continents within World Geography for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative continents question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar continents questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Continents are large geographic divisions used to organize the world's landmasses. Different educational systems use slightly different conventions, so the convention in the question should be recognized.",
+          "worked_example": "A quiz may ask whether a transcontinental country belongs to Europe, Asia, or both; the answer depends on the geographic convention being applied.",
+          "pitfall": "Treating continent boundaries as universally identical can create errors for transcontinental regions.",
+          "mastery": "Classify countries and major regions using a stated continental convention and explain common boundary cases."
         },
         {
           "title": "physical geography",
-          "teaching": "Master physical geography within World Geography for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative physical geography question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar physical geography questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Physical geography studies natural features and processes such as mountains, rivers, deserts, plateaus, oceans and tectonic landforms.",
+          "worked_example": "A mountain-range question can be solved by linking the range to its location and neighboring countries rather than relying only on memorized names.",
+          "pitfall": "Confusing a river, mountain range, basin and country can make otherwise familiar facts unusable.",
+          "mastery": "Identify major physical features and connect each feature to its location and geographic significance."
         },
         {
           "title": "maps",
-          "teaching": "Master maps within World Geography for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative maps question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar maps questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Maps represent geographic information using symbols, scale, direction, coordinates and thematic conventions. Reading a map requires interpreting the representation rather than merely recognizing place names.",
+          "worked_example": "On a map with a scale bar, a student can estimate the distance between two cities by comparing the measured map distance with the scale.",
+          "pitfall": "Map direction, scale and projection can change how a feature appears; visual size is not always actual size.",
+          "mastery": "Use legends, scale, coordinates and orientation to interpret a world map and answer location questions."
         },
         {
           "title": "climate zones",
-          "teaching": "Master climate zones within World Geography for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative climate zones question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar climate zones questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Climate zones describe long-term patterns of temperature, precipitation and atmospheric conditions. Latitude, altitude, oceans, winds and relief influence climate.",
+          "worked_example": "A tropical region near the equator generally receives strong solar energy, while altitude can make a highland location much cooler than nearby lowlands.",
+          "pitfall": "Weather on one day is not the same thing as a climate classification.",
+          "mastery": "Distinguish weather from climate and explain the major factors that shape broad climate zones."
         }
       ]
     },
@@ -60,38 +60,38 @@
       "subtopics": [
         {
           "title": "ancient civilizations",
-          "teaching": "Master ancient civilizations within World History for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative ancient civilizations question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar ancient civilizations questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Ancient civilizations developed complex settlements, institutions, technologies, belief systems and cultural traditions in regions including Mesopotamia, Egypt, the Indus Valley, China, Greece and Rome.",
+          "worked_example": "Comparing river-valley civilizations can reveal how water access, agriculture and trade supported urban development.",
+          "pitfall": "Do not reduce a civilization to a single monument or ruler when the question concerns broader social development.",
+          "mastery": "Compare ancient civilizations using geography, economy, governance, technology and cultural evidence."
         },
         {
           "title": "medieval world",
-          "teaching": "Master medieval world within World History for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative medieval world question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar medieval world questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Medieval history covers diverse societies and periods across Europe, Asia, Africa and the Middle East rather than one uniform global era.",
+          "worked_example": "A comparative question can connect trade routes, Islamic scholarship, African kingdoms, Asian states and European political structures within the same broad period.",
+          "pitfall": "The medieval world was not isolated or culturally uniform; different regions developed simultaneously and interacted through trade and migration.",
+          "mastery": "Place major medieval developments in regional context and explain connections among societies."
         },
         {
           "title": "modern history",
-          "teaching": "Master modern history within World History for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative modern history question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar modern history questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Modern history includes major political, economic, scientific and social transformations from the early modern period into the contemporary era.",
+          "worked_example": "The spread of industrialization changed production, transportation and urban life and also affected global trade and imperial competition.",
+          "pitfall": "Avoid treating a single invention or event as the sole cause of a complex historical transformation.",
+          "mastery": "Explain major modern transformations and connect them to multiple causes and consequences."
         },
         {
           "title": "major events",
-          "teaching": "Master major events within World History for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative major events question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar major events questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Major historical events should be studied through what happened, when and where it happened, who was involved, and what changed afterward.",
+          "worked_example": "A question about a world war can be solved by separating its immediate trigger from the longer political and economic conditions that shaped the conflict.",
+          "pitfall": "Memorizing an event name without its sequence or consequences makes chronology questions difficult.",
+          "mastery": "Place major world events in sequence and identify their principal causes, participants and consequences."
         },
         {
           "title": "historical causation",
-          "teaching": "Master historical causation within World History for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative historical causation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar historical causation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Historical causation examines how multiple conditions, decisions and events combine to produce an outcome. Causes can be immediate, underlying, enabling or contributing.",
+          "worked_example": "A revolution may have a triggering event but also deeper economic, political and social causes that developed over years.",
+          "pitfall": "The first event mentioned in a textbook is not necessarily the only or most important cause.",
+          "mastery": "Distinguish trigger, underlying cause and consequence and construct a defensible causal explanation."
         }
       ]
     },
@@ -100,38 +100,38 @@
       "subtopics": [
         {
           "title": "UN",
-          "teaching": "Master UN within Global Institutions for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative UN question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar UN questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "The United Nations is an international organization founded after the Second World War to provide a forum for cooperation on peace, security, development, humanitarian issues and other global concerns.",
+          "worked_example": "A question may ask which UN body or process is associated with a particular function, requiring attention to institutional roles rather than treating the UN as one undifferentiated body.",
+          "pitfall": "Do not assume every international program or agency is directly the same institution as the UN Secretariat.",
+          "mastery": "Explain the UN's broad purpose and distinguish major parts of its institutional system at an appropriate level."
         },
         {
           "title": "WHO",
-          "teaching": "Master WHO within Global Institutions for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative WHO question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar WHO questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "The World Health Organization is a specialized United Nations agency focused on international public health, including coordination, standards, technical guidance and health emergencies.",
+          "worked_example": "A global health question may distinguish WHO coordination and guidance from the responsibility of individual national health authorities to implement policies.",
+          "pitfall": "Do not treat a WHO recommendation as automatically being a law in every country.",
+          "mastery": "Describe WHO's international public-health role and distinguish coordination from national implementation."
         },
         {
           "title": "UNESCO",
-          "teaching": "Master UNESCO within Global Institutions for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative UNESCO question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar UNESCO questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "UNESCO is a UN specialized agency working in education, science, culture, communication and information, including international cooperation around cultural and natural heritage.",
+          "worked_example": "A heritage question can ask why a site receives international recognition while the site itself remains located and managed within a country.",
+          "pitfall": "Do not assume UNESCO owns every site it recognizes or that recognition removes national responsibility.",
+          "mastery": "Identify UNESCO's major fields of work and explain the purpose of international heritage cooperation."
         },
         {
           "title": "international cooperation",
-          "teaching": "Master international cooperation within Global Institutions for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative international cooperation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar international cooperation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "International cooperation occurs when countries and institutions coordinate across borders to address shared problems such as health, climate, security, science or trade.",
+          "worked_example": "A disease outbreak may require countries to share information, coordinate surveillance and align public-health responses even though each government retains domestic authority.",
+          "pitfall": "International cooperation does not mean participating countries have identical policies or surrender all sovereignty.",
+          "mastery": "Explain why cross-border problems require cooperation and identify what coordination can and cannot accomplish."
         },
         {
           "title": "global agreements",
-          "teaching": "Master global agreements within Global Institutions for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative global agreements question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar global agreements questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "International agreements establish commitments, rules or shared objectives among participating states and organizations. Their scope, obligations and implementation mechanisms vary.",
+          "worked_example": "A climate agreement may establish shared goals while countries use different domestic policies to pursue them.",
+          "pitfall": "Signing or announcing an agreement should not automatically be interpreted as proof that every obligation has already been fully implemented.",
+          "mastery": "Read an international agreement question carefully and distinguish goals, commitments, parties and implementation."
         }
       ]
     },
@@ -140,38 +140,38 @@
       "subtopics": [
         {
           "title": "languages",
-          "teaching": "Master languages within World Cultures for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative languages question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar languages questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Languages are systems of communication with histories, structures, communities and geographic distributions. Language families and official-language policies help explain global linguistic diversity.",
+          "worked_example": "A country may have several widely used or officially recognized languages, so identifying one language does not necessarily exclude others.",
+          "pitfall": "Do not assume that a language is spoken only in the country most strongly associated with it.",
+          "mastery": "Identify major language families and explain the difference between official status, majority use and geographic spread."
         },
         {
           "title": "arts",
-          "teaching": "Master arts within World Cultures for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative arts question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar arts questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "World arts include visual art, architecture, music, dance, theatre, crafts and other creative traditions shaped by historical and cultural contexts.",
+          "worked_example": "A monument or artistic style can be identified more accurately by considering its materials, period, region and cultural purpose together.",
+          "pitfall": "Do not judge an unfamiliar artistic tradition only through the conventions of another culture.",
+          "mastery": "Recognize major global art forms and connect examples to their cultural and historical context."
         },
         {
           "title": "festivals",
-          "teaching": "Master festivals within World Cultures for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative festivals question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar festivals questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Festivals can express religious, seasonal, historical, national or community traditions and often combine food, music, ritual, art and public gatherings.",
+          "worked_example": "A festival may be celebrated across several countries or communities, so its cultural identity should be understood from its traditions rather than one location alone.",
+          "pitfall": "Do not assume every festival is purely religious or that a festival's modern celebration has remained unchanged over time.",
+          "mastery": "Identify the cultural purpose of major festivals and distinguish shared traditions from country-specific practices."
         },
         {
           "title": "heritage",
-          "teaching": "Master heritage within World Cultures for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative heritage question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar heritage questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Cultural and natural heritage includes places, practices, objects and environments valued for their historical, cultural or environmental significance and passed between generations.",
+          "worked_example": "A heritage site can be important because of architecture, archaeological evidence, cultural practice or natural features, depending on the category.",
+          "pitfall": "Heritage significance is not determined only by age or popularity.",
+          "mastery": "Explain why a heritage item is significant and distinguish tangible, intangible, cultural and natural heritage."
         },
         {
           "title": "cultural diversity",
-          "teaching": "Master cultural diversity within World Cultures for International Knowledge Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative cultural diversity question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar cultural diversity questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Cultural diversity describes the coexistence of different languages, traditions, beliefs, arts, social practices and identities within and across societies.",
+          "worked_example": "A multilingual country can contain several cultural communities whose traditions contribute to a shared national society without becoming identical.",
+          "pitfall": "Treating one group's customs as the universal norm can distort comparisons between cultures.",
+          "mastery": "Compare cultures respectfully using evidence, distinguish variation from stereotypes, and explain why internal diversity matters."
         }
       ]
     },
