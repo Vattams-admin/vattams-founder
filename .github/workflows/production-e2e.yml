@@ -40,16 +40,27 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
+      - name: Provision isolated Firebase E2E accounts and live session
+        env:
+          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "$FIREBASE_SERVICE_ACCOUNT_JSON"
+          node scripts/provision-production-e2e-v2.mjs
+
       - name: Run production smoke tests
         run: npx playwright test
         env:
           PLAYWRIGHT_BASE_URL: https://academia.vattams.net
-          E2E_TUTOR_EMAIL: ${{ secrets.E2E_TUTOR_EMAIL }}
-          E2E_TUTOR_PASSWORD: ${{ secrets.E2E_TUTOR_PASSWORD }}
-          E2E_STUDENT_A_EMAIL: ${{ secrets.E2E_STUDENT_A_EMAIL }}
-          E2E_STUDENT_A_PASSWORD: ${{ secrets.E2E_STUDENT_A_PASSWORD }}
-          E2E_STUDENT_B_EMAIL: ${{ secrets.E2E_STUDENT_B_EMAIL }}
-          E2E_STUDENT_B_PASSWORD: ${{ secrets.E2E_STUDENT_B_PASSWORD }}
+
+      - name: Cleanup isolated Firebase E2E data
+        if: always()
+        env:
+          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set -euo pipefail
+          test -n "$FIREBASE_SERVICE_ACCOUNT_JSON"
+          node scripts/provision-production-e2e-v2.mjs --cleanup
 
       - name: Upload Playwright report
         if: always()
