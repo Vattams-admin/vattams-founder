@@ -1,0 +1,339 @@
+{
+  "schema_version": "3.1.0",
+  "course": "National AI Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "subject_specific_authoring_v1_complete",
+  "age_bands": [
+    "foundation",
+    "developing",
+    "advanced",
+    "championship"
+  ],
+  "learning_paths": [
+    "core_mastery",
+    "practice_and_revision",
+    "mock_test_preparation"
+  ],
+  "domains": [
+    {
+      "name": "AI Concepts",
+      "subtopics": [
+        {
+          "title": "AI domains",
+          "teaching": "Master AI domains within AI Concepts for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative AI domains question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar AI domains task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "machine learning",
+          "teaching": "Master machine learning within AI Concepts for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative machine learning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar machine learning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "deep learning concepts",
+          "teaching": "Master deep learning concepts within AI Concepts for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative deep learning concepts question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar deep learning concepts task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "models",
+          "teaching": "Master models within AI Concepts for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative models question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar models task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "AI applications",
+          "teaching": "Master AI applications within AI Concepts for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative AI applications question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar AI applications task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Data Literacy",
+      "subtopics": [
+        {
+          "title": "datasets",
+          "teaching": "Master datasets within Data Literacy for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative datasets question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar datasets task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "features and labels",
+          "teaching": "Master features and labels within Data Literacy for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative features and labels question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar features and labels task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "data quality",
+          "teaching": "Master data quality within Data Literacy for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative data quality question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar data quality task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "bias in data",
+          "teaching": "Master bias in data within Data Literacy for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative bias in data question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar bias in data task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "data preparation",
+          "teaching": "Master data preparation within Data Literacy for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative data preparation question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar data preparation task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Machine Learning Reasoning",
+      "subtopics": [
+        {
+          "title": "classification",
+          "teaching": "Master classification within Machine Learning Reasoning for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative classification question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar classification task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "regression",
+          "teaching": "Master regression within Machine Learning Reasoning for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative regression question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar regression task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "training and testing",
+          "teaching": "Master training and testing within Machine Learning Reasoning for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative training and testing question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar training and testing task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "overfitting intuition",
+          "teaching": "Master overfitting intuition within Machine Learning Reasoning for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative overfitting intuition question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar overfitting intuition task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "evaluation metrics",
+          "teaching": "Master evaluation metrics within Machine Learning Reasoning for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative evaluation metrics question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar evaluation metrics task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Generative AI",
+      "subtopics": [
+        {
+          "title": "language models",
+          "teaching": "Master language models within Generative AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative language models question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar language models task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "image models",
+          "teaching": "Master image models within Generative AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative image models question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar image models task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "multimodal AI",
+          "teaching": "Master multimodal AI within Generative AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative multimodal AI question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar multimodal AI task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "prompting",
+          "teaching": "Master prompting within Generative AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative prompting question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar prompting task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "hallucination and verification",
+          "teaching": "Master hallucination and verification within Generative AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative hallucination and verification question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar hallucination and verification task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Computer Vision & Language",
+      "subtopics": [
+        {
+          "title": "image recognition",
+          "teaching": "Master image recognition within Computer Vision & Language for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative image recognition question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar image recognition task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "text processing",
+          "teaching": "Master text processing within Computer Vision & Language for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative text processing question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar text processing task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "speech",
+          "teaching": "Master speech within Computer Vision & Language for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative speech question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar speech task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "pattern recognition",
+          "teaching": "Master pattern recognition within Computer Vision & Language for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative pattern recognition question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar pattern recognition task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "applications",
+          "teaching": "Master applications within Computer Vision & Language for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative applications question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar applications task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Robotics & Agents",
+      "subtopics": [
+        {
+          "title": "sensing",
+          "teaching": "Master sensing within Robotics & Agents for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative sensing question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar sensing task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "planning",
+          "teaching": "Master planning within Robotics & Agents for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative planning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar planning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "control",
+          "teaching": "Master control within Robotics & Agents for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative control question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar control task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "agents",
+          "teaching": "Master agents within Robotics & Agents for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative agents question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar agents task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "automation",
+          "teaching": "Master automation within Robotics & Agents for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative automation question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar automation task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Responsible AI",
+      "subtopics": [
+        {
+          "title": "fairness",
+          "teaching": "Master fairness within Responsible AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative fairness question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar fairness task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "privacy",
+          "teaching": "Master privacy within Responsible AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative privacy question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar privacy task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "safety",
+          "teaching": "Master safety within Responsible AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative safety question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar safety task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "transparency",
+          "teaching": "Master transparency within Responsible AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative transparency question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar transparency task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "human oversight",
+          "teaching": "Master human oversight within Responsible AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative human oversight question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar human oversight task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "AI Problem Solving",
+      "subtopics": [
+        {
+          "title": "case studies",
+          "teaching": "Master case studies within AI Problem Solving for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative case studies question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar case studies task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "model selection",
+          "teaching": "Master model selection within AI Problem Solving for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative model selection question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar model selection task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "data-to-decision workflows",
+          "teaching": "Master data-to-decision workflows within AI Problem Solving for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative data-to-decision workflows question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar data-to-decision workflows task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "trade-offs",
+          "teaching": "Master trade-offs within AI Problem Solving for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative trade-offs question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar trade-offs task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "system reasoning",
+          "teaching": "Master system reasoning within AI Problem Solving for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative system reasoning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar system reasoning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    }
+  ]
+}
