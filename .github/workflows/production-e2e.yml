@@ -40,6 +40,19 @@ jobs:
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
 
+      - name: Cleanup previous failed E2E provisioning
+        env:
+          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
+          E2E_TUTOR_EMAIL: e2e-tutor-37202984907@vattams-e2e.test
+          E2E_STUDENT_A_EMAIL: e2e-student-a-37202984907@vattams-e2e.test
+          E2E_STUDENT_B_EMAIL: e2e-student-b-37202984907@vattams-e2e.test
+          E2E_SESSION_ID: pO7n0obaGzi2NY2QYM0C
+          E2E_COURSE_ID: e2e-live-course-37202984907
+        run: |
+          set -euo pipefail
+          test -n "$FIREBASE_SERVICE_ACCOUNT_JSON"
+          node scripts/provision-production-e2e-v2.mjs --cleanup
+
       - name: Provision isolated Firebase E2E accounts and live session
         env:
           FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
