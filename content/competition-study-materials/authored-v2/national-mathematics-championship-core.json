@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "National Mathematics Championship",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_complete",
+  "status": "subject_specific_authoring_v1_in_progress",
   "age_bands": [
     "foundation",
     "developing",
@@ -20,38 +20,38 @@
       "subtopics": [
         {
           "title": "divisibility",
-          "teaching": "Master divisibility within Advanced Number Theory for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative divisibility challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar divisibility problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Divisibility problems use exact integer structure: if a divides b, then b is an integer multiple of a. Factorization, divisibility tests and modular reasoning help expose hidden structure.",
+          "worked_example": "To test whether 3 divides 4,872, add its digits: 4+8+7+2=21, which is divisible by 3, so 4,872 is divisible by 3.",
+          "pitfall": "A divisibility test is not interchangeable with another test; the digit-sum rule for 3 does not prove divisibility by 8.",
+          "mastery": "Use divisibility rules and factor structure to solve unfamiliar integer problems and justify each step."
         },
         {
           "title": "remainders",
-          "teaching": "Master remainders within Advanced Number Theory for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative remainders challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar remainders problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Remainder arithmetic studies what remains after division and can simplify large-number problems by working modulo a convenient integer.",
+          "worked_example": "For the last digit of 7^n, work modulo 10 and observe the repeating cycle 7, 9, 3, 1.",
+          "pitfall": "Reducing a number modulo m does not mean replacing it with an unrelated value; operations must respect modular equivalence.",
+          "mastery": "Choose an appropriate modulus, identify cycles, and calculate remainders without expanding unnecessarily large powers."
         },
         {
           "title": "prime structures",
-          "teaching": "Master prime structures within Advanced Number Theory for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative prime structures challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar prime structures problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Prime numbers are integers greater than 1 with exactly two positive divisors. Prime factorization provides a canonical way to analyze divisibility, gcd, lcm and divisor counts.",
+          "worked_example": "The factorization 360=2^3×3^2×5 reveals its divisor structure and makes related questions easier.",
+          "pitfall": "Treating 1 as prime or assuming every composite number has only two factors leads to structural errors.",
+          "mastery": "Factor integers into primes and use exponents to derive divisor and divisibility properties."
         },
         {
           "title": "gcd and lcm",
-          "teaching": "Master gcd and lcm within Advanced Number Theory for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative gcd and lcm challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar gcd and lcm problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "The greatest common divisor captures the largest shared factor, while the least common multiple captures the smallest positive shared multiple. Prime exponents give a systematic method for both.",
+          "worked_example": "For 84=2^2×3×7 and 126=2×3^2×7, the gcd uses minimum exponents and the lcm uses maximum exponents.",
+          "pitfall": "Using maximum exponents for gcd or minimum exponents for lcm reverses the underlying rule.",
+          "mastery": "Compute gcd and lcm efficiently and apply them to scheduling, grouping and integer-structure problems."
         },
         {
           "title": "number patterns",
-          "teaching": "Master number patterns within Advanced Number Theory for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative number patterns challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar number patterns problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Number patterns can arise from arithmetic relationships, modular cycles, factor structure, recursive rules or digit operations. The goal is to identify a rule that explains all supplied terms.",
+          "worked_example": "For 2, 5, 10, 17, 26, the differences are 3, 5, 7, 9, suggesting n²+1 for the nth term.",
+          "pitfall": "Matching only the first two or three terms can support many false rules.",
+          "mastery": "Test a proposed pattern against multiple terms and derive a rule that can be justified rather than guessed."
         }
       ]
     },
@@ -60,38 +60,38 @@
       "subtopics": [
         {
           "title": "fractions and ratios",
-          "teaching": "Master fractions and ratios within Advanced Arithmetic for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative fractions and ratios challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar fractions and ratios problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Fractions represent quantities as a ratio of integers, while ratios compare quantities using consistent units. Competition problems often require scaling, simplification and equivalent representations.",
+          "worked_example": "If 3/5 of a quantity is 24, multiply by 5/3 to recover the whole quantity: 40.",
+          "pitfall": "Adding numerators and denominators separately does not generally preserve fraction equivalence.",
+          "mastery": "Move confidently among fractions, ratios and whole quantities while tracking units and scale factors."
         },
         {
           "title": "percentages",
-          "teaching": "Master percentages within Advanced Arithmetic for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative percentages challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar percentages problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Percentage problems describe relative change using a base quantity. Successive percentage changes must be applied to the updated value rather than simply added.",
+          "worked_example": "A 20% increase followed by a 20% decrease multiplies a quantity by 1.2×0.8=0.96, producing a net 4% decrease.",
+          "pitfall": "A percentage change is meaningless without identifying the quantity used as the base.",
+          "mastery": "Solve successive-change and reverse-percentage problems by explicitly identifying the base amount."
         },
         {
           "title": "rates",
-          "teaching": "Master rates within Advanced Arithmetic for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative rates challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar rates problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "A rate compares quantities measured in different units, such as distance per time, work per hour or cost per item. Unit consistency is essential.",
+          "worked_example": "If a cyclist travels 36 km in 2 hours, the average speed is 18 km/h; converting minutes or seconds incorrectly would change the result.",
+          "pitfall": "Adding rates from different tasks without considering how the tasks combine can produce incorrect answers.",
+          "mastery": "Set up rate equations with consistent units and distinguish average rate from component rates."
         },
         {
           "title": "proportional reasoning",
-          "teaching": "Master proportional reasoning within Advanced Arithmetic for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative proportional reasoning challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar proportional reasoning problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Direct proportion means one quantity changes by a constant factor with another, while inverse proportion means their product remains constant under stated conditions.",
+          "worked_example": "If four identical machines complete a fixed job in 6 hours under ideal assumptions, doubling the machines suggests half the time: 3 hours.",
+          "pitfall": "Not every relationship that increases together is directly proportional.",
+          "mastery": "Identify the relationship type, state its assumptions and use scaling factors correctly."
         },
         {
           "title": "integer problems",
-          "teaching": "Master integer problems within Advanced Arithmetic for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative integer problems challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar integer problems problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Integer problems use whole-number constraints, signs, parity, divisibility and bounds. The discrete nature of integers often provides stronger restrictions than continuous algebra alone.",
+          "worked_example": "If two integers have an odd sum, one must be even and the other odd, because equal parity would produce an even sum.",
+          "pitfall": "Solving an integer problem over all real numbers can produce answers that violate the original domain.",
+          "mastery": "Use parity, bounds, divisibility and integer constraints to eliminate impossible cases."
         }
       ]
     },
@@ -100,38 +100,38 @@
       "subtopics": [
         {
           "title": "expressions",
-          "teaching": "Master expressions within Algebra for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative expressions challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar expressions problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Algebraic expressions combine constants, variables and operations according to a precise order and structure. Simplification preserves value while revealing useful forms.",
+          "worked_example": "Expanding (x+3)(x+5) gives x²+8x+15, which can then be compared with other expressions.",
+          "pitfall": "Combining unlike terms such as x and x² as though they were the same changes the expression.",
+          "mastery": "Simplify, expand and factor expressions accurately and explain why each transformation preserves value."
         },
         {
           "title": "equations",
-          "teaching": "Master equations within Algebra for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative equations challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar equations problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "An equation asserts equality between two expressions. Solving means finding values that satisfy the equality while respecting restrictions introduced by operations.",
+          "worked_example": "For 3x+5=20, subtract 5 and divide by 3 to obtain x=5, then substitute back to verify.",
+          "pitfall": "Multiplying or dividing by an expression that could be zero can introduce or lose solutions if restrictions are ignored.",
+          "mastery": "Solve equations systematically, state domain restrictions and verify candidate solutions."
         },
         {
           "title": "inequalities",
-          "teaching": "Master inequalities within Algebra for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative inequalities challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar inequalities problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Inequalities compare quantities and describe sets of possible values rather than usually one exact answer. Multiplying or dividing by a negative reverses the inequality sign.",
+          "worked_example": "From -2x>6, division by -2 gives x<-3, with the inequality direction reversed.",
+          "pitfall": "Solving an inequality like an equation without reversing the sign under a negative multiplier gives the wrong solution set.",
+          "mastery": "Solve linear and basic nonlinear inequalities and represent the resulting solution region correctly."
         },
         {
           "title": "identities",
-          "teaching": "Master identities within Algebra for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative identities challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar identities problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "An algebraic identity is true for every value in its stated domain, unlike an equation that may hold only for particular values. Standard identities can transform difficult expressions.",
+          "worked_example": "The identity (a+b)^2=a²+2ab+b² follows by expansion and holds for all real a and b.",
+          "pitfall": "Confusing an identity with a conditional equation can lead to incorrect assumptions about when it is valid.",
+          "mastery": "Recognize, prove and apply common algebraic identities in unfamiliar competition problems."
         },
         {
           "title": "algebraic problem solving",
-          "teaching": "Master algebraic problem solving within Algebra for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative algebraic problem solving challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar algebraic problem solving problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Competition algebra often requires translating a verbal condition into variables, selecting a useful representation and combining several constraints before solving.",
+          "worked_example": "If a rectangle has perimeter 30 and length is twice its width, writing 2(2w+w)=30 reduces the problem to one variable.",
+          "pitfall": "Choosing variables without defining what they represent can produce equations that encode the wrong situation.",
+          "mastery": "Translate a multi-condition problem into algebra, solve it, and interpret the result in the original context."
         }
       ]
     },
@@ -140,38 +140,38 @@
       "subtopics": [
         {
           "title": "angles",
-          "teaching": "Master angles within Geometry for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative angles challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar angles problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Angle relationships arise from lines, intersections, polygons and parallel-line configurations. Recognizing invariant relationships can reduce a diagram to a few equations.",
+          "worked_example": "If two adjacent angles form a straight line and one is 68°, the other is 112° because their sum is 180°.",
+          "pitfall": "A diagram drawn approximately is not proof that two angles are equal or lines are parallel.",
+          "mastery": "Use angle sums and parallel-line relationships to derive unknown angles from stated facts."
         },
         {
           "title": "triangles",
-          "teaching": "Master triangles within Geometry for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative triangles challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar triangles problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Triangles obey angle-sum and side relationships, including isosceles properties, congruence, similarity and the Pythagorean theorem in right triangles.",
+          "worked_example": "A right triangle with legs 6 and 8 has hypotenuse 10 by the Pythagorean theorem.",
+          "pitfall": "The Pythagorean theorem applies only to right triangles, and visual appearance is not enough to establish congruence.",
+          "mastery": "Select appropriate triangle theorems and justify the relationship before calculating."
         },
         {
           "title": "polygons",
-          "teaching": "Master polygons within Geometry for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative polygons challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar polygons problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "For an n-sided polygon, the sum of interior angles is (n−2)×180°. Regular polygons add equal-angle and symmetry constraints.",
+          "worked_example": "A regular hexagon has interior-angle sum 720°, so each interior angle is 120°.",
+          "pitfall": "The interior-angle sum is not the measure of one angle in a regular polygon.",
+          "mastery": "Use polygon angle formulas and symmetry to solve multi-step geometry problems."
         },
         {
           "title": "circles",
-          "teaching": "Master circles within Geometry for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative circles challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar circles problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Circle geometry uses radius, diameter, circumference, area, arcs, chords, tangents and angle relationships. The same radius and central-angle structure often unlocks competition problems.",
+          "worked_example": "A circle with radius 7 has circumference 14π and area 49π; the formulas use the same radius but describe different quantities.",
+          "pitfall": "Confusing circumference with area or radius with diameter creates systematic factor errors.",
+          "mastery": "Apply circle formulas and basic angle, chord and tangent relationships while tracking what each quantity represents."
         },
         {
           "title": "area and geometry proofs",
-          "teaching": "Master area and geometry proofs within Geometry for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative area and geometry proofs challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar area and geometry proofs problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Area methods combine formulas, decomposition, rearrangement and sometimes similarity or algebra. Geometry proofs require a logically ordered chain from given facts to the desired conclusion.",
+          "worked_example": "A complex polygon can be split into rectangles and triangles, while a proof may establish equal areas by showing two triangles share a base and have equal heights.",
+          "pitfall": "A numerical diagram is not proof; measurements or visual symmetry cannot replace stated geometric reasons.",
+          "mastery": "Calculate composite areas and write short proofs in which every conclusion follows from a stated theorem, definition or given fact."
         }
       ]
     },
