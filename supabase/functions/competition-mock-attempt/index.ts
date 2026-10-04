@@ -812,6 +812,7 @@ function jsonResponse(
     {
       status,
       headers: {
+        ...corsHeaders(),
         "Content-Type":
           "application/json",
       },
