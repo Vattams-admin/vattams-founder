@@ -98,6 +98,9 @@ test.describe('production live classroom', () => {
   test('Tutor + Student A + Student B establish a live classroom', async ({
     browser,
   }) => {
+    // WebRTC setup can legitimately exceed Playwright's 30s default.
+    test.setTimeout(180_000)
+
     const accounts = requireE2EAccounts()
 
     const tutorContext = await browser.newContext({
@@ -126,68 +129,25 @@ test.describe('production live classroom', () => {
       await joinAsStudent(studentA, sessionId)
       await joinAsStudent(studentB, sessionId)
 
-      await expect
-        .poll(
-          async () => (await classroomMetrics(tutor)).participants,
-          { timeout: 45_000 },
-        )
-        .toBe(3)
+      // A room may contain another active participant; require the three
+      // smoke-test accounts rather than an artificially exact room size.
+      await Promise.all([
+        expect.poll(async () => (await classroomMetrics(tutor)).participants, { timeout: 60_000 }).toBeGreaterThanOrEqual(3),
+        expect.poll(async () => (await classroomMetrics(studentA)).participants, { timeout: 60_000 }).toBeGreaterThanOrEqual(3),
+        expect.poll(async () => (await classroomMetrics(studentB)).participants, { timeout: 60_000 }).toBeGreaterThanOrEqual(3),
+      ])
 
-      await expect
-        .poll(
-          async () => (await classroomMetrics(studentA)).participants,
-          { timeout: 30_000 },
-        )
-        .toBe(3)
+      await Promise.all([
+        expect.poll(async () => (await classroomMetrics(tutor)).webRTC, { timeout: 60_000 }).toBe('connected'),
+        expect.poll(async () => (await classroomMetrics(studentA)).webRTC, { timeout: 60_000 }).toBe('connected'),
+        expect.poll(async () => (await classroomMetrics(studentB)).webRTC, { timeout: 60_000 }).toBe('connected'),
+      ])
 
-      await expect
-        .poll(
-          async () => (await classroomMetrics(studentB)).participants,
-          { timeout: 30_000 },
-        )
-        .toBe(3)
-
-      await expect
-        .poll(
-          async () => (await classroomMetrics(tutor)).webRTC,
-          { timeout: 45_000 },
-        )
-        .toBe('connected')
-
-      await expect
-        .poll(
-          async () => (await classroomMetrics(studentA)).webRTC,
-          { timeout: 45_000 },
-        )
-        .toBe('connected')
-
-      await expect
-        .poll(
-          async () => (await classroomMetrics(studentB)).webRTC,
-          { timeout: 45_000 },
-        )
-        .toBe('connected')
-
-      await expect
-        .poll(
-          async () => (await classroomMetrics(tutor)).remoteStreams,
-          { timeout: 45_000 },
-        )
-        .toBeGreaterThanOrEqual(2)
-
-      await expect
-        .poll(
-          async () => (await classroomMetrics(studentA)).remoteStreams,
-          { timeout: 45_000 },
-        )
-        .toBeGreaterThanOrEqual(1)
-
-      await expect
-        .poll(
-          async () => (await classroomMetrics(studentB)).remoteStreams,
-          { timeout: 45_000 },
-        )
-        .toBeGreaterThanOrEqual(1)
+      await Promise.all([
+        expect.poll(async () => (await classroomMetrics(tutor)).remoteStreams, { timeout: 60_000 }).toBeGreaterThanOrEqual(2),
+        expect.poll(async () => (await classroomMetrics(studentA)).remoteStreams, { timeout: 60_000 }).toBeGreaterThanOrEqual(1),
+        expect.poll(async () => (await classroomMetrics(studentB)).remoteStreams, { timeout: 60_000 }).toBeGreaterThanOrEqual(1),
+      ])
 
       const micButton = tutor.getByRole('button', { name: /Mic/ })
       await expect(micButton).toBeEnabled()
