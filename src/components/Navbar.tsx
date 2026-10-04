@@ -139,7 +139,7 @@ export default function Navbar() {
                     </Link>
                     <NotificationBell uid={user.id} role={role} />
                   </div>
-                  {roleLoading || !dashboardPath ? (
+                  {roleLoading || roleError || !dashboardPath ? (
                     <div className="btn-secondary text-sm text-center" aria-live="polite">
                       Loading…
                     </div>
@@ -186,3 +186,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
+  )
+}
