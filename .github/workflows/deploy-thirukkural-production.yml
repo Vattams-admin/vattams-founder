@@ -41,11 +41,6 @@ jobs:
       - name: Apply database migrations
         run: supabase db push
 
-      - name: Setup Supabase CLI
-        uses: supabase/setup-cli@v1
-        with:
-          version: latest
-
       - name: Deploy Thirukkural runtime functions
         run: |
           supabase functions deploy competition-mock-attempt --project-ref "$SUPABASE_PROJECT_ID" --use-api
