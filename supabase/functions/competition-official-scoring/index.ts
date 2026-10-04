@@ -87,7 +87,7 @@ Deno.serve(async (request) => {
 
     const { data: attempt, error: attemptError } = await supabase
       .from("competition_attempts")
-      .select("id,student_id,course_id,status,question_ids")
+      .select("id,student_id,course_id,status,started_at,question_ids")
       .eq("id", attemptId)
       .maybeSingle();
 
