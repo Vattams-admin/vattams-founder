@@ -44,7 +44,16 @@ self.addEventListener('notificationclick', function (event) {
   event.notification.close()
 
   var targetUrl = (event.notification.data && event.notification.data.url) || '/'
-  var targetAbsoluteUrl = new URL(targetUrl, self.location.origin).href
+  var targetAbsoluteUrl = self.location.origin + '/'
+
+  try {
+    var parsedTargetUrl = new URL(targetUrl, self.location.origin)
+    if (parsedTargetUrl.origin === self.location.origin) {
+      targetAbsoluteUrl = parsedTargetUrl.href
+    }
+  } catch (err) {
+    // Invalid notification URLs fall back to the app root.
+  }
 
   event.waitUntil(
     self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(function (clientList) {
