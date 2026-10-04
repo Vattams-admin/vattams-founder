@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "competitions": {
+    "DNWt3cPE4ZSJG90CTC1e": {
+      "course_id": "DNWt3cPE4ZSJG90CTC1e",
+      "competition": "Thirukkural Mastery Championship",
+      "slug": "thirukkural",
+      "question_bundle": "competitions/thirukkural/objective/questions.private.json",
+      "answer_key_bundle": "competitions/thirukkural/objective/answer-keys.private.json",
+      "age_pools": "competitions/thirukkural/objective/age-pools.json",
+      "per_attempt": 30,
+      "enabled": true
+    }
+  }
+}
