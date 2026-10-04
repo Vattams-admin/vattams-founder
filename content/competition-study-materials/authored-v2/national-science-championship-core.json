@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "National Science Championship",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_complete",
+  "status": "subject_specific_authoring_v1_in_progress",
   "age_bands": [
     "foundation",
     "developing",
@@ -20,38 +20,38 @@
       "subtopics": [
         {
           "title": "Observation and scientific questions",
-          "teaching": "Study Observation and scientific questions as a core Scientific Inquiry & Measurement concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Observation and scientific questions situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Observation and scientific questions independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Separate direct observations from inferences: record what is actually seen, measured, heard, or detected before proposing an explanation. A strong scientific question identifies a measurable feature and can be investigated with evidence.",
+          "worked_example": "Example: A plant near a window grows taller than one kept in shade. Identify the observation, then frame the testable question: how does light exposure affect plant growth?",
+          "pitfall": "Do not treat an inference such as 'the plant grew because it was healthier' as an observation; also avoid questions whose answers cannot be measured or compared.",
+          "mastery": "Mastery: classify observations and inferences, turn observations into testable questions, identify measurable variables, and justify why a proposed question can be investigated."
         },
         {
           "title": "Variables and fair tests",
-          "teaching": "Study Variables and fair tests as a core Scientific Inquiry & Measurement concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Variables and fair tests situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Variables and fair tests independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Distinguish the independent variable being deliberately changed, the dependent variable being measured, and controlled variables kept consistent. A fair test changes one relevant factor while using repeatable measurement.",
+          "worked_example": "Example: To test whether water temperature changes dissolving time, vary temperature, measure dissolving time, and keep solute mass, water volume, container, and stirring method consistent.",
+          "pitfall": "Changing several factors at once makes a result ambiguous; an uncontrolled variable can provide an alternative explanation for the observed effect.",
+          "mastery": "Mastery: identify variables in an investigation, design a controlled comparison, predict how confounding variables affect results, and defend whether a test is fair."
         },
         {
           "title": "Measurement and units",
-          "teaching": "Study Measurement and units as a core Scientific Inquiry & Measurement concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Measurement and units situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Measurement and units independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Use appropriate instruments, scales, units, and precision when measuring length, mass, time, temperature, volume, and other quantities. Record numerical values with their units and distinguish accuracy from precision.",
+          "worked_example": "Example: Measure a liquid at eye level using a graduated cylinder and report the reading in millilitres; compare repeated readings rather than silently choosing the most convenient value.",
+          "pitfall": "Mixing units, reading a scale from the wrong viewpoint, or reporting a measurement without a unit can make an otherwise correct calculation scientifically unusable.",
+          "mastery": "Mastery: select an appropriate instrument and unit, read scales correctly, convert common units, assess measurement quality, and report results with suitable precision."
         },
         {
           "title": "Tables graphs and evidence",
-          "teaching": "Study Tables graphs and evidence as a core Scientific Inquiry & Measurement concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Tables graphs and evidence situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Tables graphs and evidence independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Translate raw observations into tables and graphs that preserve labels, units, scales, and independent/dependent variables. Look for trends, comparisons, outliers, and limits of what the data actually supports.",
+          "worked_example": "Example: Plot temperature against dissolving time, label both axes with units, then determine whether the data show a consistent relationship rather than relying on one unusual trial.",
+          "pitfall": "A graph can exaggerate or hide a pattern through a misleading scale; correlation in a data set does not automatically establish causation.",
+          "mastery": "Mastery: construct or interpret a correctly labelled table or graph, identify trends and anomalies, estimate values from data, and distinguish supported conclusions from overclaims."
         },
         {
           "title": "Claims explanations and conclusions",
-          "teaching": "Study Claims explanations and conclusions as a core Scientific Inquiry & Measurement concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Claims explanations and conclusions situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Claims explanations and conclusions independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Build conclusions from evidence: state the claim, identify the relevant data, and explain how the evidence supports it. Distinguish a measured result from an explanation of why the result occurred.",
+          "worked_example": "Example: If three controlled trials show faster dissolving at higher temperatures, a supported claim is that temperature affected dissolving time under the tested conditions; the evidence should be cited explicitly.",
+          "pitfall": "A conclusion that simply repeats the claim without evidence is weak, while claiming universal truth from a small experiment goes beyond the data.",
+          "mastery": "Mastery: connect claims to specific evidence, distinguish explanation from description, recognize unsupported conclusions, and qualify claims when the evidence is limited."
         }
       ]
     },
@@ -60,38 +60,38 @@
       "subtopics": [
         {
           "title": "States and properties of matter",
-          "teaching": "Study States and properties of matter as a core Matter & Materials concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative States and properties of matter situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain States and properties of matter independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Compare solids, liquids, and gases using particle arrangement, motion, shape, and volume. Connect observable properties such as density, compressibility, and flow to the particle model.",
+          "worked_example": "Example: A gas fills its container because its particles are widely spaced and moving freely, while a liquid keeps nearly fixed volume but takes the container's shape.",
+          "pitfall": "Do not say that particles themselves become larger when a material is heated; heating primarily changes particle motion and spacing in the model.",
+          "mastery": "Mastery: classify states from observable behavior, use particle reasoning to explain properties, compare compressibility and volume, and predict changes under altered conditions."
         },
         {
           "title": "Physical and chemical changes",
-          "teaching": "Study Physical and chemical changes as a core Matter & Materials concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Physical and chemical changes situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Physical and chemical changes independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Distinguish physical changes, where composition remains the same, from chemical changes that form new substances. Use evidence such as gas formation, precipitate formation, lasting colour change, or energy change carefully rather than treating every visible change as chemical.",
+          "worked_example": "Example: Melting ice is a physical change because water remains H2O; rusting iron is chemical because new iron oxide substances form.",
+          "pitfall": "Size or shape changes alone do not prove a chemical reaction, and a temperature change alone should be interpreted in context rather than used as an automatic label.",
+          "mastery": "Mastery: classify unfamiliar changes, cite evidence for the classification, distinguish reversible physical changes from chemical reactions, and explain the conclusion using composition."
         },
         {
           "title": "Mixtures and separation",
-          "teaching": "Study Mixtures and separation as a core Matter & Materials concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Mixtures and separation situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Mixtures and separation independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Recognize mixtures as combinations whose components retain their identities, then select separation methods from differences in physical properties such as particle size, solubility, boiling point, or magnetism.",
+          "worked_example": "Example: Separate sand and salt by adding water to dissolve the salt, filtering out sand, then evaporating the water to recover salt.",
+          "pitfall": "Choosing a method without considering the relevant property can fail; filtration cannot remove dissolved salt from water.",
+          "mastery": "Mastery: identify mixture components, choose and sequence suitable separation techniques, explain the property each method exploits, and predict the separated products."
         },
         {
           "title": "Materials and their uses",
-          "teaching": "Study Materials and their uses as a core Matter & Materials concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Materials and their uses situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Materials and their uses independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Relate material choice to measurable properties such as strength, hardness, flexibility, conductivity, transparency, thermal insulation, and resistance to corrosion. A useful material is selected because its properties fit the function.",
+          "worked_example": "Example: Copper is used for electrical wiring because it conducts electricity well and can be drawn into wire; plastic insulation around it reduces unwanted current paths.",
+          "pitfall": "A material's common use does not mean it has every desirable property; selection is usually a trade-off among performance, safety, cost, and durability.",
+          "mastery": "Mastery: infer material properties from uses, select suitable materials for a design constraint, compare trade-offs, and justify a choice with evidence about properties."
         },
         {
           "title": "Particle model reasoning",
-          "teaching": "Study Particle model reasoning as a core Matter & Materials concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Particle model reasoning situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Particle model reasoning independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Use particle diagrams and models to explain diffusion, compression, expansion, melting, evaporation, and condensation. Treat the model as a representation that explains observations rather than as a literal picture of particles.",
+          "worked_example": "Example: When perfume spreads through a room, particles move through the available space and mix with air; the spreading is faster when particle motion increases.",
+          "pitfall": "Particles in a solid are not motionless, and gaps between particles should not be confused with visible empty spaces of macroscopic size.",
+          "mastery": "Mastery: use particle-level reasoning to explain macroscopic changes, interpret diagrams, predict effects of heating or compression, and identify where a model has limitations."
         }
       ]
     },
@@ -100,38 +100,38 @@
       "subtopics": [
         {
           "title": "Motion and speed",
-          "teaching": "Study Motion and speed as a core Forces & Motion concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Motion and speed situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Motion and speed independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Describe motion using distance, time, direction, and speed. Calculate speed as distance divided by time and compare motions using consistent units.",
+          "worked_example": "Example: A cyclist travelling 120 m in 20 s has speed 6 m/s. A distance-time graph with a steeper straight line represents faster constant motion.",
+          "pitfall": "Do not confuse distance with speed, or average speed with instantaneous speed; unit mismatches can also produce incorrect comparisons.",
+          "mastery": "Mastery: calculate and compare speeds, interpret distance-time data, convert units when needed, and explain changes in motion from evidence."
         },
         {
           "title": "Forces and interactions",
-          "teaching": "Study Forces and interactions as a core Forces & Motion concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Forces and interactions situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Forces and interactions independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Treat a force as an interaction that can change motion or shape. Identify pushes and pulls, represent forces with direction and relative magnitude, and reason about balanced versus unbalanced forces.",
+          "worked_example": "Example: A book resting on a table has downward gravitational force and an upward support force; if these balance, its motion does not change.",
+          "pitfall": "An object moving at constant velocity does not require a net forward force; balanced forces can act while motion continues unchanged.",
+          "mastery": "Mastery: identify interacting objects and forces, determine whether forces are balanced, predict changes in motion, and justify predictions with force diagrams or descriptions."
         },
         {
           "title": "Friction and resistance",
-          "teaching": "Study Friction and resistance as a core Forces & Motion concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Friction and resistance situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Friction and resistance independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Explain friction and fluid resistance as forces that oppose relative motion. Their size depends on interacting surfaces, conditions, shape, speed, and other factors.",
+          "worked_example": "Example: Bicycle brakes increase friction at the wheel, while lubricating a bearing reduces unwanted friction. Streamlined shapes reduce air resistance at higher speeds.",
+          "pitfall": "Friction is not always harmful: it enables walking, braking, and gripping. Also distinguish useful friction from energy lost as heat.",
+          "mastery": "Mastery: predict how changing surfaces or shape affects resistance, identify useful and unwanted friction, and explain design choices using force and energy reasoning."
         },
         {
           "title": "Gravity mass and weight",
-          "teaching": "Study Gravity mass and weight as a core Forces & Motion concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Gravity mass and weight situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Gravity mass and weight independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Distinguish mass, the amount of matter, from weight, the gravitational force on that mass. Weight changes with gravitational field strength while mass remains the same.",
+          "worked_example": "Example: An astronaut's mass is essentially unchanged when moving from Earth to the Moon, but the astronaut's weight is lower because lunar gravity is weaker.",
+          "pitfall": "Mass and weight are not interchangeable quantities; mass is measured in kilograms, whereas weight is a force measured in newtons.",
+          "mastery": "Mastery: distinguish mass from weight, compare weight in different gravitational fields, use W = mg where appropriate, and track units correctly."
         },
         {
           "title": "Simple machines",
-          "teaching": "Study Simple machines as a core Forces & Motion concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Simple machines situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Simple machines independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Study levers, pulleys, wheels and axles, inclined planes, wedges, and screws as devices that trade force, distance, or direction to make tasks easier. Mechanical advantage describes how input and output forces compare.",
+          "worked_example": "Example: A ramp lets a person raise a load using a smaller force over a longer distance; the machine changes the force-distance trade-off rather than creating energy.",
+          "pitfall": "Calling a machine 'easier' does not mean it eliminates work or energy requirements; real machines also lose energy through friction.",
+          "mastery": "Mastery: identify simple machines in real devices, predict force and direction changes, compare mechanical advantage, and explain the trade-off between force and distance."
         }
       ]
     },
@@ -140,38 +140,38 @@
       "subtopics": [
         {
           "title": "Forms and transfer of energy",
-          "teaching": "Study Forms and transfer of energy as a core Energy & Waves concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Forms and transfer of energy situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Forms and transfer of energy independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Recognize kinetic, gravitational, elastic, thermal, chemical, electrical, light, and sound energy as useful descriptions of energy stores or transfers. Track where energy moves or changes form in a system.",
+          "worked_example": "Example: In a torch, chemical energy in the battery is transferred through an electrical circuit and becomes light and thermal energy at the lamp.",
+          "pitfall": "Energy is not simply 'used up'; it is transferred or transformed, although some becomes dispersed as thermal energy and may be less useful.",
+          "mastery": "Mastery: identify energy stores and pathways, trace transformations in multi-step systems, explain useful versus dissipated energy, and apply conservation reasoning."
         },
         {
           "title": "Heat and temperature",
-          "teaching": "Study Heat and temperature as a core Energy & Waves concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Heat and temperature situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Heat and temperature independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Distinguish temperature, which indicates how hot or cold a system is, from thermal energy transferred because of a temperature difference. Explain conduction, convection, and radiation as different transfer mechanisms.",
+          "worked_example": "Example: A metal spoon placed in hot soup becomes warm mainly through conduction, while warm fluid circulating in a pan demonstrates convection.",
+          "pitfall": "A larger object at the same temperature can contain more thermal energy than a smaller object; temperature and thermal energy are therefore not synonyms.",
+          "mastery": "Mastery: distinguish temperature from heat transfer, identify transfer mechanisms, predict how insulation changes transfer, and explain observations using particle and energy models."
         },
         {
           "title": "Light and reflection",
-          "teaching": "Study Light and reflection as a core Energy & Waves concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Light and reflection situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Light and reflection independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Treat light as electromagnetic radiation that travels through transparent media and reflects from surfaces. Apply the law of reflection: the angle of incidence equals the angle of reflection, measured from the normal.",
+          "worked_example": "Example: A plane mirror forms a virtual image with predictable geometry; drawing the normal at the point of incidence helps determine the reflected ray.",
+          "pitfall": "Angles in reflection are measured from the normal, not from the mirror surface. A virtual image is not a beam of light actually converging behind the mirror.",
+          "mastery": "Mastery: construct ray diagrams, predict reflected directions, distinguish regular and diffuse reflection, and explain image properties from ray geometry."
         },
         {
           "title": "Sound and vibration",
-          "teaching": "Study Sound and vibration as a core Energy & Waves concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Sound and vibration situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Sound and vibration independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Explain sound as a mechanical wave produced by vibrations and transmitted through a material medium. Relate frequency to pitch and amplitude to perceived loudness while recognizing that speed depends on the medium.",
+          "worked_example": "Example: A vibrating guitar string produces pressure variations in surrounding air; changing string frequency changes pitch.",
+          "pitfall": "Sound cannot propagate through a vacuum, and loudness should not be confused with frequency: they describe different aspects of a wave.",
+          "mastery": "Mastery: connect vibration to sound production, compare pitch and amplitude, predict propagation through different media, and interpret basic wave representations."
         },
         {
           "title": "Electricity and circuits",
-          "teaching": "Study Electricity and circuits as a core Energy & Waves concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Electricity and circuits situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Electricity and circuits independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Model a circuit as a complete conducting path containing sources, components, and connections. Distinguish series and parallel arrangements and reason about current paths, potential difference, resistance, and electrical energy.",
+          "worked_example": "Example: Two lamps in parallel can continue operating if one branch is opened because each branch still provides a complete path to the source.",
+          "pitfall": "Current is not 'used up' by a component, and an open circuit cannot carry sustained current simply because a battery is present.",
+          "mastery": "Mastery: identify complete and incomplete circuits, compare series and parallel behavior, predict component changes, and interpret simple circuit diagrams using correct electrical terminology."
         }
       ]
     },
