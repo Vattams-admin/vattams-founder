@@ -80,7 +80,7 @@ export default function Auth({
         return
       }
 
-      const credential = await signInWithEmailAndPassword(
+      await signInWithEmailAndPassword(
         firebaseAuth,
         email,
         password
