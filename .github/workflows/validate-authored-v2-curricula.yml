@@ -1,0 +1,19 @@
+name: Validate Authored V2 Curricula
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "content/competition-study-materials/authored-v2/**"
+      - "scripts/validate-authored-v2-curricula.mjs"
+      - "scripts/catalog-data.mjs"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/validate-authored-v2-curricula.mjs
