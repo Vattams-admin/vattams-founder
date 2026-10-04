@@ -274,23 +274,6 @@ export default function LiveClassroom() {
 
   const isTutor = !isAdmin && userRole === 'tutor'
 
-  useEffect(() => {
-    if (!sessionId || !userId || isAdmin) return
-
-    const status =
-      mediaState.connectionState === 'connected'
-        ? 'connected'
-        : mediaState.connectionState === 'disconnected'
-          ? 'disconnected'
-          : mediaState.connectionState === 'failed'
-            ? 'reconnecting'
-            : 'connecting'
-
-    void updateLiveRoomParticipant(sessionId, userId, { status }).catch((error) => {
-      console.error('[LiveClassroom] Failed to update participant status:', error)
-    })
-  }, [sessionId, userId, isAdmin, mediaState.connectionState])
-
   const {
     localStream,
     remoteStreams,
@@ -317,6 +300,23 @@ export default function LiveClassroom() {
     subscribeStudentIce: subscribeToStudentIceCandidates,
     subscribeTutorIce: subscribeToTutorIceCandidates,
   })
+
+  useEffect(() => {
+    if (!sessionId || !userId || isAdmin) return
+
+    const status =
+      mediaState.connectionState === 'connected'
+        ? 'connected'
+        : mediaState.connectionState === 'disconnected'
+          ? 'disconnected'
+          : mediaState.connectionState === 'failed'
+            ? 'reconnecting'
+            : 'connecting'
+
+    void updateLiveRoomParticipant(sessionId, userId, { status }).catch((error) => {
+      console.error('[LiveClassroom] Failed to update participant status:', error)
+    })
+  }, [sessionId, userId, isAdmin, mediaState.connectionState])
 
   useEffect(() => {
     const video = localVideoRef.current
