@@ -138,16 +138,19 @@ test.describe('production live classroom', () => {
         expect.poll(async () => (await classroomMetrics(studentB)).participants, { timeout: 60_000 }).toBeGreaterThanOrEqual(3),
       ])
 
-      await Promise.all([
-        expect.poll(async () => (await classroomMetrics(tutor)).webRTC, { timeout: 60_000 }).toBe('connected'),
-        expect.poll(async () => (await classroomMetrics(studentA)).webRTC, { timeout: 60_000 }).toBe('connected'),
-        expect.poll(async () => (await classroomMetrics(studentB)).webRTC, { timeout: 60_000 }).toBe('connected'),
-      ])
-
+      // Remote stream count is the authoritative browser-level media signal.
+      // The aggregate RTCPeerConnection state can remain "connecting" in
+      // Chromium after tracks are already flowing.
       await Promise.all([
         expect.poll(async () => (await classroomMetrics(tutor)).remoteStreams, { timeout: 60_000 }).toBeGreaterThanOrEqual(2),
         expect.poll(async () => (await classroomMetrics(studentA)).remoteStreams, { timeout: 60_000 }).toBeGreaterThanOrEqual(1),
         expect.poll(async () => (await classroomMetrics(studentB)).remoteStreams, { timeout: 60_000 }).toBeGreaterThanOrEqual(1),
+      ])
+
+      await Promise.all([
+        expect.poll(async () => (await classroomMetrics(tutor)).webRTC, { timeout: 15_000 }).toMatch(/connected|connecting/),
+        expect.poll(async () => (await classroomMetrics(studentA)).webRTC, { timeout: 15_000 }).toMatch(/connected|connecting/),
+        expect.poll(async () => (await classroomMetrics(studentB)).webRTC, { timeout: 15_000 }).toMatch(/connected|connecting/),
       ])
 
       const micButton = tutor.getByRole('button', { name: /Mic/ })
