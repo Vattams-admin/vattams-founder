@@ -138,6 +138,8 @@ export interface Enrolment {
   course_id: string | null
   course_name: string | null
   course_slug: string | null
+  // Exact payment that authorized this enrolment; immutable authorization provenance.
+  payment_id?: string | null
   // Additive — mirrors the payment fields above, kept in sync at
   // approval time (AdminPayments.tsx) so CourseLearn.tsx / the student
   // dashboard can show which plan/batch/period is currently active
