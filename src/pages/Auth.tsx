@@ -4,7 +4,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from 'firebase/auth'
-import { doc, getDoc, setDoc } from 'firebase/firestore'
+import { doc, setDoc } from 'firebase/firestore'
 import { firebaseAuth, firestore } from '@/lib/firebase'
 import { friendlyAuthError } from '@/lib/authErrors'
 
@@ -86,21 +86,10 @@ export default function Auth({
         password
       )
 
-      try {
-        const tutorSnap = await getDoc(
-          doc(firestore, 'tutors', credential.user.uid)
-        )
-
-        if (tutorSnap.exists()) {
-          navigate(redirectTo === '/dashboard' ? '/tutor/dashboard' : redirectTo)
-          return
-        }
-      } catch (tutorCheckErr) {
-        // Non-tutor accounts may be denied access to the tutors collection.
-        // In that case, preserve the existing student login flow.
-        console.debug('Tutor profile check skipped:', tutorCheckErr)
-      }
-
+      // Authentication must not depend on a Firestore profile lookup.
+      // This keeps Firebase login reliable even when Firestore is degraded.
+      // Tutor users can continue directly to /tutor/dashboard; tutor/admin
+      // protected routes perform their own authorization checks.
       navigate(redirectTo)
     } catch (err) {
       setError(friendlyAuthError(err, mode === 'register' ? 'create your account' : 'sign in'))
