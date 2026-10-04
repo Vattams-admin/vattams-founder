@@ -51,8 +51,10 @@ service cloud.firestore {
     // client, see src/lib/onboarding.ts) or another admin action may
     // touch these.
     function tutorIdentityFieldsUnchanged() {
-      return request.resource.data.employee_code == resource.data.employee_code &&
+      return request.resource.data.id == resource.data.id &&
+        request.resource.data.employee_code == resource.data.employee_code &&
         request.resource.data.tutor_id == resource.data.tutor_id &&
+        request.resource.data.role == resource.data.role &&
         request.resource.data.status == resource.data.status &&
         request.resource.data.onboarding_status == resource.data.onboarding_status;
     }
@@ -75,8 +77,10 @@ service cloud.firestore {
     }
 
     function studentIdentityFieldsUnchanged() {
-      return request.resource.data.student_code == resource.data.student_code &&
+      return request.resource.data.id == resource.data.id &&
+        request.resource.data.student_code == resource.data.student_code &&
         request.resource.data.student_id == resource.data.student_id &&
+        request.resource.data.role == resource.data.role &&
         request.resource.data.status == resource.data.status &&
         request.resource.data.onboarding_status == resource.data.onboarding_status;
     }
