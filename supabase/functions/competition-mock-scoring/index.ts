@@ -153,9 +153,6 @@ type CompetitionRegistry = {
   >;
 };
 
-let competitionRegistryPromise:
-  Promise<CompetitionRegistry> | null = null;
-
 let questionBundlePromises =
   new Map<
     string,
@@ -169,60 +166,12 @@ let answerKeyBundlePromises =
   >();
 
 async function loadCompetitionRegistry(): Promise<CompetitionRegistry> {
-  if (!competitionRegistryPromise) {
-    competitionRegistryPromise =
-      (async () => {
-        const { data, error } =
-          await supabase.storage
-            .from(SUPABASE_BUCKET)
-            .download(
-              COMPETITION_REGISTRY_PATH,
-            );
-
-        if (error || !data) {
-          console.error(
-            "Supabase competition registry download failed:",
-            error?.message ||
-              "No data returned",
-          );
-
-          throw new Error(
-            "Competition registry is unavailable",
-          );
-        }
-
-        let parsed: unknown;
-
-        try {
-          parsed = JSON.parse(
-            await data.text(),
-          );
-        } catch {
-          throw new Error(
-            "Competition registry is invalid JSON",
-          );
-        }
-
-        if (
-          !parsed ||
-          typeof parsed !== "object" ||
-          Array.isArray(parsed)
-        ) {
-          throw new Error(
-            "Competition registry has an invalid format",
-          );
-        }
-
-        return parsed as CompetitionRegistry;
-      })();
-  }
-
-  try {
-    return await competitionRegistryPromise;
-  } catch (error) {
-    competitionRegistryPromise = null;
-    throw error;
-  }
+  const { data, error } = await supabase.storage.from(SUPABASE_BUCKET).download(COMPETITION_REGISTRY_PATH);
+  if (error || !data) throw new Error("Competition registry is unavailable");
+  let parsed: unknown;
+  try { parsed = JSON.parse(await data.text()); } catch { throw new Error("Competition registry is invalid JSON"); }
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) throw new Error("Competition registry has an invalid format");
+  return parsed as CompetitionRegistry;
 }
 
 async function getCompetitionRegistryEntry(
