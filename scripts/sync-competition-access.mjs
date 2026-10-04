@@ -72,10 +72,28 @@ if (!fs.existsSync(firebaseCredentials)) {
   );
 }
 
-if (!fs.existsSync(registryPath)) {
-  throw new Error(
-    `Competition registry not found: ${registryPath}`,
-  );
+async function loadRegistry() {
+  if (fs.existsSync(registryPath)) {
+    return JSON.parse(fs.readFileSync(registryPath, "utf8"));
+  }
+
+  if (!supabase) {
+    throw new Error(
+      `Competition registry not found: ${registryPath}`,
+    );
+  }
+
+  const { data, error } = await supabase.storage
+    .from("academia-course-materials")
+    .download("competitions/registry.json");
+
+  if (error || !data) {
+    throw new Error(
+      `Competition registry not found locally and could not be loaded from Supabase Storage: ${error?.message || "missing file"}`,
+    );
+  }
+
+  return JSON.parse(await data.text());
 }
 
 const serviceAccount =
@@ -108,13 +126,7 @@ const supabase =
       )
     : null;
 
-const registry =
-  JSON.parse(
-    fs.readFileSync(
-      registryPath,
-      "utf8",
-    ),
-  );
+const registry = await loadRegistry();
 
 const competitions =
   Object.values(
