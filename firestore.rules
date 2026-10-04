@@ -487,8 +487,16 @@ service cloud.firestore {
             && resource.data.tutor_id == request.auth.uid
             && request.resource.data.tutor_id == resource.data.tutor_id
             && request.resource.data.course_id == resource.data.course_id
-            && (!('meeting_url' in request.resource.data) || request.resource.data.meeting_url == null || request.resource.data.meeting_url.matches('^https?://[^\\s]+
-
+            && request.resource.data.created_by == resource.data.created_by
+            && request.resource.data.created_at == resource.data.created_at
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+              'title', 'topic', 'description', 'batch_label', 'start_time', 'end_time',
+              'meeting_provider', 'meeting_url', 'recording_url', 'session_notes',
+              'materials', 'status', 'cancelled_reason', 'cancelled_at',
+              'reschedule_history', 'updated_at'
+            ])
+            && (!('meeting_url' in request.resource.data) || request.resource.data.meeting_url == null || request.resource.data.meeting_url.matches('^https?://[^\\s]+$'))
+            && (!('recording_url' in request.resource.data) || request.resource.data.recording_url == null || request.resource.data.recording_url.matches('^https?://[^\\s]+$')))
       allow delete: if isAdmin();
     }
 
