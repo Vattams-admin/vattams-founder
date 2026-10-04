@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "AI & Technology Challenge",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_in_progress",
+  "status": "subject_specific_authoring_v1_complete",
   "age_bands": [
     "foundation",
     "developing",
@@ -180,38 +180,38 @@
       "subtopics": [
         {
           "title": "hardware",
-          "teaching": "Master hardware within Computing Systems for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative hardware question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar hardware questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Computer hardware is the physical equipment used to sense, process, store or communicate information. Important components include processors, memory, storage devices, input/output devices and specialized accelerators.",
+          "worked_example": "A phone combines a processor, memory, storage, cameras and network hardware to run applications and communicate with other systems.",
+          "pitfall": "A faster processor alone does not guarantee a faster application; memory, storage, software and workload also matter.",
+          "mastery": "Identify major hardware components and explain their roles in an AI-enabled computing system."
         },
         {
           "title": "software",
-          "teaching": "Master software within Computing Systems for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative software question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar software questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Software is the set of programs and instructions that tell hardware what operations to perform. Operating systems, applications, libraries and drivers form different layers of software.",
+          "worked_example": "An operating system manages hardware resources while an AI application uses software libraries to load a model and process input.",
+          "pitfall": "Software is not the physical device itself, and installing more software does not increase hardware capacity.",
+          "mastery": "Distinguish hardware from software and explain how software layers cooperate to deliver a computing task."
         },
         {
           "title": "networks",
-          "teaching": "Master networks within Computing Systems for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative networks question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar networks questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "A computer network connects devices so they can exchange data using defined communication protocols. Networks may be local or wide-area and can use wired or wireless links.",
+          "worked_example": "A student's browser can request a learning resource from a server over the internet using network protocols.",
+          "pitfall": "A network connection does not mean that every device or service is automatically trusted or secure.",
+          "mastery": "Explain the basic path of data between a client and service and identify the role of protocols."
         },
         {
           "title": "cloud concepts",
-          "teaching": "Master cloud concepts within Computing Systems for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative cloud concepts question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar cloud concepts questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Cloud computing provides computing resources such as storage, servers, databases and processing through network-accessible infrastructure rather than requiring every resource to run locally.",
+          "worked_example": "An application can store large course files in cloud storage while a remote service performs processing when requested.",
+          "pitfall": "Cloud computing does not mean data has no physical location or that availability is guaranteed without limits.",
+          "mastery": "Distinguish local computing from cloud services and identify common cloud resources."
         },
         {
           "title": "edge computing",
-          "teaching": "Master edge computing within Computing Systems for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative edge computing question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar edge computing questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Edge computing places processing closer to where data is produced, reducing the need to send every input to a distant central service and potentially improving response time.",
+          "worked_example": "A factory camera can perform an initial safety check on an edge device and send only relevant events to a central system.",
+          "pitfall": "Edge processing does not automatically eliminate the need for networks, cloud services or security controls.",
+          "mastery": "Explain when edge processing can reduce latency and compare it with centralized processing."
         }
       ]
     },
@@ -220,38 +220,38 @@
       "subtopics": [
         {
           "title": "bias",
-          "teaching": "Master bias within AI Safety & Ethics for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative bias question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar bias questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Algorithmic bias can arise when data, labels, model design, measurement or deployment conditions systematically produce poorer outcomes for some groups or situations.",
+          "worked_example": "A recognition system trained on a narrow population may perform differently when used with people whose characteristics were underrepresented in training data.",
+          "pitfall": "Bias is not limited to intentional discrimination; technical choices and incomplete data can also create unequal outcomes.",
+          "mastery": "Identify potential sources of bias in an AI pipeline and propose a way to investigate them."
         },
         {
           "title": "privacy",
-          "teaching": "Master privacy within AI Safety & Ethics for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative privacy question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar privacy questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Privacy concerns how personal information is collected, used, stored, shared and protected. AI systems can create additional risks when sensitive data is processed at scale or used for inference.",
+          "worked_example": "A learning application should collect only the student information needed for its stated function and restrict access to authorized users.",
+          "pitfall": "Data being technically available does not mean it is appropriate to collect or reuse for another purpose.",
+          "mastery": "Explain data minimization, purpose limitation and access control in an AI system."
         },
         {
           "title": "fairness",
-          "teaching": "Master fairness within AI Safety & Ethics for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative fairness question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar fairness questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Fairness in AI concerns whether system design and outcomes treat relevant people or groups appropriately according to the task and context. There is no single fairness rule for every application.",
+          "worked_example": "A scholarship screening system may need evaluation across relevant groups to check whether error rates differ materially.",
+          "pitfall": "Equal treatment at the input stage does not automatically guarantee equal outcomes after a model is deployed.",
+          "mastery": "Describe why fairness must be evaluated in context and identify evidence needed to assess an AI system."
         },
         {
           "title": "misinformation",
-          "teaching": "Master misinformation within AI Safety & Ethics for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative misinformation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar misinformation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Misinformation is false or misleading information that can spread through human or automated systems. Generative tools can increase the speed and scale of producing convincing but inaccurate content.",
+          "worked_example": "An AI-generated post may combine a real photograph with a false claim about when or where it was taken.",
+          "pitfall": "Visual polish, confident language or many shares are not evidence that a claim is true.",
+          "mastery": "Apply source checking, cross-verification and provenance reasoning before accepting or sharing questionable AI-assisted content."
         },
         {
           "title": "human oversight",
-          "teaching": "Master human oversight within AI Safety & Ethics for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative human oversight question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar human oversight questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Human oversight means people remain responsible for monitoring, reviewing or intervening in AI-assisted decisions when the consequences warrant it.",
+          "worked_example": "A teacher can review an AI-generated assessment report before using it to guide a student's learning plan.",
+          "pitfall": "Calling a system 'automated' does not transfer responsibility for consequential decisions to the machine.",
+          "mastery": "Identify where human review should occur in an AI workflow and explain what the reviewer must verify."
         }
       ]
     },
@@ -260,38 +260,38 @@
       "subtopics": [
         {
           "title": "IoT",
-          "teaching": "Master IoT within Emerging Technologies for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative IoT question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar IoT questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "The Internet of Things connects physical objects equipped with sensors, processing and communication capabilities so they can collect, exchange or act on data.",
+          "worked_example": "A smart irrigation controller can use soil-moisture measurements and network connectivity to adjust watering.",
+          "pitfall": "An internet-connected device is not automatically secure or useful simply because it can transmit data.",
+          "mastery": "Describe the sensing, connectivity and action cycle of an IoT device."
         },
         {
           "title": "AR and VR",
-          "teaching": "Master AR and VR within Emerging Technologies for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative AR and VR question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar AR and VR questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Augmented reality overlays digital information on a user's view of the physical world, while virtual reality creates an immersive computer-generated environment.",
+          "worked_example": "An AR learning app can place labels over a real laboratory object, whereas a VR lesson can place the learner inside a simulated environment.",
+          "pitfall": "AR and VR are not interchangeable; their interaction models and hardware requirements differ.",
+          "mastery": "Compare AR and VR and select the appropriate technology for a stated learning or training scenario."
         },
         {
           "title": "quantum concepts",
-          "teaching": "Master quantum concepts within Emerging Technologies for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative quantum concepts question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar quantum concepts questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Quantum computing uses quantum-mechanical phenomena to represent and manipulate information in ways that differ from classical bits. Qubits can exist in superposition and can be entangled.",
+          "worked_example": "A classical bit is represented as 0 or 1, while a qubit can be prepared in a quantum state involving amplitudes for both basis states.",
+          "pitfall": "A qubit being in superposition does not mean it simply stores every possible answer for free or that quantum computers are faster for every task.",
+          "mastery": "Explain bits versus qubits, superposition and entanglement at a conceptual level without treating them as magic speed multipliers."
         },
         {
           "title": "blockchain basics",
-          "teaching": "Master blockchain basics within Emerging Technologies for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative blockchain basics question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar blockchain basics questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "A blockchain is a distributed ledger in which records are grouped into blocks and linked using cryptographic mechanisms, with network rules governing how new records are accepted.",
+          "worked_example": "A blockchain network can maintain a shared transaction history across participating nodes without relying on one ordinary database server.",
+          "pitfall": "Blockchain does not make information automatically true, private or legally valid; the ledger records what the network accepts.",
+          "mastery": "Explain the shared-ledger concept and distinguish immutability claims from the accuracy of the original input."
         },
         {
           "title": "future technologies",
-          "teaching": "Master future technologies within Emerging Technologies for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative future technologies question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar future technologies questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Emerging technologies should be evaluated by their capabilities, maturity, costs, risks, infrastructure requirements and likely applications rather than by novelty alone.",
+          "worked_example": "A new computing technology may be promising in research but still require years of engineering before it becomes practical at large scale.",
+          "pitfall": "A technology being described as 'next generation' is not evidence that it is ready for widespread deployment.",
+          "mastery": "Assess a proposed technology using evidence about readiness, benefit, limitations and risk."
         }
       ]
     },
@@ -300,38 +300,38 @@
       "subtopics": [
         {
           "title": "technology scenarios",
-          "teaching": "Master technology scenarios within Applied Technology Reasoning for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative technology scenarios question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar technology scenarios questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Technology reasoning starts by identifying the goal, users, inputs, constraints, outputs and risks before choosing a tool or architecture.",
+          "worked_example": "For an online learning service, a requirement for low-latency live interaction points toward real-time communication infrastructure rather than ordinary file storage alone.",
+          "pitfall": "Choosing a fashionable technology before defining the problem can create unnecessary complexity.",
+          "mastery": "Break a real-world technology scenario into requirements, constraints and candidate solution components."
         },
         {
           "title": "system design thinking",
-          "teaching": "Master system design thinking within Applied Technology Reasoning for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative system design thinking question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar system design thinking questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "System design organizes components and interfaces so a complete service can meet functional, performance, reliability, security and usability requirements.",
+          "worked_example": "A learning platform may separate authentication, application data, media storage and real-time communication because each has different responsibilities.",
+          "pitfall": "A system with many components is not automatically well designed; unnecessary coupling can make failures harder to isolate.",
+          "mastery": "Draw a simple component-level design and explain data flow, responsibilities and failure boundaries."
         },
         {
           "title": "AI problem solving",
-          "teaching": "Master AI problem solving within Applied Technology Reasoning for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative AI problem solving question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar AI problem solving questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "AI problem solving involves defining the task, determining whether AI is appropriate, identifying data and evaluation criteria, selecting a method and planning validation and monitoring.",
+          "worked_example": "For classifying student questions, a team can first define the categories and success criteria before collecting representative examples and testing a model.",
+          "pitfall": "Starting with a model before defining the problem can produce impressive output that does not solve the intended task.",
+          "mastery": "Turn a real problem into an AI task specification with inputs, outputs, data, metric and validation plan."
         },
         {
           "title": "trade-offs",
-          "teaching": "Master trade-offs within Applied Technology Reasoning for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative trade-offs question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar trade-offs questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Technology decisions involve trade-offs among accuracy, speed, cost, privacy, reliability, maintainability, energy use and user experience. Improving one dimension can sometimes worsen another.",
+          "worked_example": "Processing sensitive data locally may improve privacy but require more capable devices, while sending it to a server may simplify centralized processing but increase data-transfer concerns.",
+          "pitfall": "There is rarely one universally best technology independent of requirements.",
+          "mastery": "Compare at least two solution options using explicit criteria and justify the choice for a stated scenario."
         },
         {
           "title": "case analysis",
-          "teaching": "Master case analysis within Applied Technology Reasoning for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
-          "worked_example": "Worked example: analyse a representative case analysis question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
-          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
-          "mastery": "Mastery: answer unfamiliar case analysis questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+          "teaching": "Case analysis evaluates a technology in its real context by combining requirements, evidence, system behaviour, benefits, limitations, risks and stakeholder impact.",
+          "worked_example": "A school considering an AI study assistant should evaluate accuracy, student privacy, teacher oversight, accessibility, cost and failure handling before adoption.",
+          "pitfall": "A case study based only on successful demonstrations can hide failure modes and operational costs.",
+          "mastery": "Analyze a technology case systematically and reach a justified recommendation supported by stated evidence."
         }
       ]
     }
