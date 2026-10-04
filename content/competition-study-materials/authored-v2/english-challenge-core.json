@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "English Challenge",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_in_progress",
+  "status": "subject_specific_authoring_v1_complete",
   "age_bands": [
     "foundation",
     "developing",
@@ -140,38 +140,38 @@
       "subtopics": [
         {
           "title": "punctuation",
-          "teaching": "Learn punctuation as a core Usage & Editing competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply punctuation to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar punctuation task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Punctuation marks clarify sentence boundaries, pauses, relationships and meaning.",
+          "worked_example": "'Let's eat, Grandma' uses a comma to address Grandma; removing it changes the reading.",
+          "pitfall": "Do not insert commas merely wherever speech pauses.",
+          "mastery": "Choose punctuation from grammatical structure and intended meaning."
         },
         {
           "title": "capitalization",
-          "teaching": "Learn capitalization as a core Usage & Editing competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply capitalization to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar capitalization task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Capital letters begin sentences and proper nouns and appear in established uses such as titles and the pronoun I.",
+          "worked_example": "'Monday' is capitalized because it names a day, while 'month' is normally lowercase generically.",
+          "pitfall": "Capitalizing a common noun does not make it a proper noun.",
+          "mastery": "Apply capitalization rules consistently."
         },
         {
           "title": "common usage errors",
-          "teaching": "Learn common usage errors as a core Usage & Editing competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply common usage errors to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar common usage errors task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Common errors include agreement, homophones, tense consistency and faulty pronoun reference.",
+          "worked_example": "'Their going to school' should be 'They're going to school'; their is possessive.",
+          "pitfall": "A word can sound right while being grammatically wrong.",
+          "mastery": "Identify the error and explain the context-appropriate correction."
         },
         {
           "title": "sentence correction",
-          "teaching": "Learn sentence correction as a core Usage & Editing competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply sentence correction to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar sentence correction task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Sentence correction checks grammar, meaning, agreement, tense, word choice and completeness.",
+          "worked_example": "'Neither the teacher nor the students were ready' uses agreement with the nearer plural subject.",
+          "pitfall": "A correction that changes intended meaning is not successful.",
+          "mastery": "Make the smallest accurate correction while preserving meaning."
         },
         {
           "title": "passage editing",
-          "teaching": "Learn passage editing as a core Usage & Editing competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply passage editing to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar passage editing task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Passage editing checks connected text for consistency, punctuation, spelling, grammar and clarity.",
+          "worked_example": "A passage can have individually correct sentences but inconsistent tense across sentences.",
+          "pitfall": "Editing is not rewriting every sentence.",
+          "mastery": "Edit systematically while preserving the intended message and voice."
         }
       ]
     },
@@ -180,38 +180,38 @@
       "subtopics": [
         {
           "title": "sentence construction",
-          "teaching": "Learn sentence construction as a core Writing Skills competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply sentence construction to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar sentence construction task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Strong sentences have a clear subject, purposeful verb and relevant information.",
+          "worked_example": "'The team practised after school because the final was near' combines a main clause and reason clause.",
+          "pitfall": "Longer sentences are not automatically better.",
+          "mastery": "Construct complete sentences and vary structure when useful."
         },
         {
           "title": "paragraph organization",
-          "teaching": "Learn paragraph organization as a core Writing Skills competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply paragraph organization to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar paragraph organization task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "A coherent paragraph develops one controlling idea through a topic sentence, relevant support and an appropriate close or transition.",
+          "worked_example": "A paragraph about healthy sleep can state importance, give two benefits and connect them to daily habits.",
+          "pitfall": "Unrelated facts do not form a coherent paragraph.",
+          "mastery": "Arrange ideas logically and keep details connected to the main point."
         },
         {
           "title": "descriptive writing",
-          "teaching": "Learn descriptive writing as a core Writing Skills competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply descriptive writing to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar descriptive writing task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Descriptive writing uses precise sensory details and carefully selected vocabulary to create a focused impression.",
+          "worked_example": "Instead of 'The market was nice,' mention bright signs, spice smells and vendors' voices.",
+          "pitfall": "Many adjectives without relevant detail can remain vague.",
+          "mastery": "Use specific sensory evidence and precise nouns and verbs."
         },
         {
           "title": "narrative writing",
-          "teaching": "Learn narrative writing as a core Writing Skills competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply narrative writing to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar narrative writing task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Narrative writing presents connected events and may include characters, setting, conflict, actions and resolution.",
+          "worked_example": "A story can establish a lost notebook, show the search and resolve the problem when it is found.",
+          "pitfall": "A sequence without connection or purpose feels like a list.",
+          "mastery": "Build coherent sequence with cause-and-effect and resolution."
         },
         {
           "title": "persuasive expression",
-          "teaching": "Learn persuasive expression as a core Writing Skills competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply persuasive expression to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar persuasive expression task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Persuasive writing states a position and supports it with reasons and evidence while considering the audience.",
+          "worked_example": "A recycling proposal can state the claim, give evidence, address convenience and propose action.",
+          "pitfall": "Persuasion is not repeated opinion or exaggerated language.",
+          "mastery": "State a clear claim and support it with relevant evidence and tone."
         }
       ]
     },
@@ -220,38 +220,38 @@
       "subtopics": [
         {
           "title": "character and setting",
-          "teaching": "Learn character and setting as a core Literary Understanding competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply character and setting to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar character and setting task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Character refers to people or beings in a story; setting establishes when and where events occur and can influence behaviour.",
+          "worked_example": "A character crossing a flooded village faces different choices from one in a safe city, showing setting's effect.",
+          "pitfall": "Setting includes time, atmosphere and social conditions, not only location.",
+          "mastery": "Use textual details to explain character and setting relationships."
         },
         {
           "title": "plot conflict and resolution",
-          "teaching": "Learn plot conflict and resolution as a core Literary Understanding competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply plot conflict and resolution to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar plot conflict and resolution task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Plot is a sequence of connected events; conflict creates tension and resolution addresses the central problem.",
+          "worked_example": "Two friends disagree, face consequences and reconcile: interpersonal conflict drives later events.",
+          "pitfall": "The most dramatic event is not always the resolution.",
+          "mastery": "Trace the problem, turning points and outcome with evidence."
         },
         {
           "title": "theme and message",
-          "teaching": "Learn theme and message as a core Literary Understanding competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply theme and message to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar theme and message task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Theme is a broader idea about life or experience developed by a text; a message communicates what the text suggests about it.",
+          "worked_example": "Repeated choices showing honesty despite difficulty may support a theme about integrity.",
+          "pitfall": "Theme should not be reduced to one plot detail.",
+          "mastery": "Infer theme from repeated patterns, choices, consequences and ending."
         },
         {
           "title": "figurative language",
-          "teaching": "Learn figurative language as a core Literary Understanding competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply figurative language to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar figurative language task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Figurative language communicates beyond literal meaning through devices such as simile, metaphor, personification and hyperbole.",
+          "worked_example": "'The classroom was a zoo' is metaphor for disorder or noise, not literal animals.",
+          "pitfall": "Literal interpretation can obscure intended effect.",
+          "mastery": "Identify the device and explain its contextual effect."
         },
         {
           "title": "poetry interpretation",
-          "teaching": "Learn poetry interpretation as a core Literary Understanding competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply poetry interpretation to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar poetry interpretation task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Poetry communicates through imagery, sound, rhythm, word choice, repetition, structure and figurative language.",
+          "worked_example": "Repeated darkness followed by morning may support an interpretation of difficulty followed by hope.",
+          "pitfall": "Interpretation must be grounded in the poem rather than personal association alone.",
+          "mastery": "Support interpretations with specific textual patterns."
         }
       ]
     },
@@ -260,38 +260,38 @@
       "subtopics": [
         {
           "title": "functional texts",
-          "teaching": "Learn functional texts as a core Communication competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply functional texts to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar functional texts task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Functional texts serve practical purposes, including forms, schedules, emails, advertisements, menus and notices.",
+          "worked_example": "A timetable organizes times and locations so a reader can act quickly.",
+          "pitfall": "Reading a functional text like a story can hide key constraints.",
+          "mastery": "Extract purpose, key information, constraints and required action."
         },
         {
           "title": "instructions and notices",
-          "teaching": "Learn instructions and notices as a core Communication competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply instructions and notices to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar instructions and notices task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Instructions specify procedures; notices communicate information, rules, changes or warnings.",
+          "worked_example": "A laboratory notice may state a safety rule while instructions provide the procedure steps.",
+          "pitfall": "A notice does not necessarily contain every task step.",
+          "mastery": "Identify sequence, conditions, prohibitions and actions."
         },
         {
           "title": "formal and informal language",
-          "teaching": "Learn formal and informal language as a core Communication competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply formal and informal language to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar formal and informal language task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Formal language suits official, academic or professional contexts; informal language suits familiar conversation.",
+          "worked_example": "A request to a principal normally uses respectful formal register, unlike a message to a close friend.",
+          "pitfall": "Formal does not mean unnecessarily complicated.",
+          "mastery": "Match register to audience, purpose and situation."
         },
         {
           "title": "dialogue comprehension",
-          "teaching": "Learn dialogue comprehension as a core Communication competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply dialogue comprehension to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar dialogue comprehension task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Dialogue reveals information through words, responses and implied intentions.",
+          "worked_example": "Repeatedly avoiding a direct question can imply discomfort even without stating it.",
+          "pitfall": "Literal words may not reveal full conversational intention.",
+          "mastery": "Track speakers, explicit information, implied meaning and attitude."
         },
         {
           "title": "information synthesis",
-          "teaching": "Learn information synthesis as a core Communication competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply information synthesis to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar information synthesis task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Synthesis combines relevant points from different parts or sources to form a supported conclusion.",
+          "worked_example": "A timetable gives event times and a notice gives eligibility; together they determine which event a student can attend.",
+          "pitfall": "Listing facts without explaining their relationship is not synthesis.",
+          "mastery": "Combine complementary evidence and state the supported conclusion."
         }
       ]
     },
@@ -300,38 +300,38 @@
       "subtopics": [
         {
           "title": "analogy",
-          "teaching": "Learn analogy as a core Verbal Reasoning competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply analogy to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar analogy task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "An analogy compares relationships between pairs or groups of words; the relationship matters more than topic.",
+          "worked_example": "'Bird : nest :: bee : hive' is animal to typical home.",
+          "pitfall": "Broad association is not the same as an equivalent relationship.",
+          "mastery": "Identify the precise first relationship before testing options."
         },
         {
           "title": "classification",
-          "teaching": "Learn classification as a core Verbal Reasoning competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply classification to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar classification task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Classification groups items by a defining property or identifies an item that does not belong.",
+          "worked_example": "Apple, mango and banana can be fruits while carrot differs under that rule.",
+          "pitfall": "An item may fit multiple categories, so infer the intended rule from the set.",
+          "mastery": "State the rule and test every option against it."
         },
         {
           "title": "sentence completion",
-          "teaching": "Learn sentence completion as a core Verbal Reasoning competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply sentence completion to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar sentence completion task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Sentence completion depends on grammar, meaning, logical relationships and context.",
+          "worked_example": "'The road was flooded, so the match was ___' supports 'cancelled' or 'postponed' depending on options.",
+          "pitfall": "Grammatical fit alone is insufficient if meaning conflicts.",
+          "mastery": "Use grammar and contextual logic together."
         },
         {
           "title": "word relationships",
-          "teaching": "Learn word relationships as a core Verbal Reasoning competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply word relationships to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar word relationships task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Word relationships include part-whole, category-member, function, degree, cause-effect and opposites.",
+          "worked_example": "'Page : book' is part-to-whole; 'teacher : school' can be person-to-workplace.",
+          "pitfall": "Common association does not guarantee the same relationship.",
+          "mastery": "Name the relationship and preserve its direction."
         },
         {
           "title": "verbal puzzles",
-          "teaching": "Learn verbal puzzles as a core Verbal Reasoning competency in English Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply verbal puzzles to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar verbal puzzles task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Verbal puzzles combine vocabulary, ordering, clues and logical constraints.",
+          "worked_example": "If A is before B and B before C, A-B-C follows even without a direct A-C clue.",
+          "pitfall": "Guessing before applying constraints causes errors.",
+          "mastery": "Extract every constraint and eliminate arrangements that violate any clue."
         }
       ]
     }
