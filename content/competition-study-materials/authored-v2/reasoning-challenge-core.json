@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "Reasoning Challenge",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_in_progress",
+  "status": "subject_specific_authoring_v1_complete",
   "age_bands": [
     "foundation",
     "developing",
@@ -180,38 +180,38 @@
       "subtopics": [
         {
           "title": "rank problems",
-          "teaching": "Learn rank problems as a core Ordering & Ranking competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply rank problems to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar rank problems task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Rank problems determine an item's position from the top, bottom, left or right using stated relationships.",
+          "worked_example": "If a student is 7th from the top and there are 20 students, the same student is 14th from the bottom.",
+          "pitfall": "Use total count plus one when converting opposite ranks.",
+          "mastery": "Convert ranks carefully and check the total-position relationship."
         },
         {
           "title": "comparison chains",
-          "teaching": "Learn comparison chains as a core Ordering & Ranking competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply comparison chains to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar comparison chains task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Comparison chains combine statements such as taller than, older than or faster than to establish an order.",
+          "worked_example": "If A>B and B>C, then A>C by transitivity for the stated comparison.",
+          "pitfall": "A chain cannot reverse direction without evidence.",
+          "mastery": "Build the chain explicitly before selecting a relative position."
         },
         {
           "title": "arrangements",
-          "teaching": "Learn arrangements as a core Ordering & Ranking competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply arrangements to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar arrangements task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Arrangement problems place people or objects in positions subject to constraints such as adjacency, fixed positions or exclusions.",
+          "worked_example": "If A must sit beside B and C must be at an end, place the fixed constraint first and test remaining positions.",
+          "pitfall": "Starting with unconstrained items can create unnecessary cases.",
+          "mastery": "Place the strongest constraints first and verify every condition."
         },
         {
           "title": "scheduling",
-          "teaching": "Learn scheduling as a core Ordering & Ranking competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply scheduling to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar scheduling task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Scheduling problems assign activities to time slots while respecting order, availability or separation rules.",
+          "worked_example": "If a meeting must occur before lunch and another event must follow it, place the dependency before filling free slots.",
+          "pitfall": "A schedule that fits one condition but violates another is invalid.",
+          "mastery": "Represent time slots explicitly and test every scheduling constraint."
         },
         {
           "title": "ordering constraints",
-          "teaching": "Learn ordering constraints as a core Ordering & Ranking competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply ordering constraints to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar ordering constraints task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Ordering constraints specify relative positions such as before, after, immediately before or between.",
+          "worked_example": "If A is before B and C is immediately after B, the sequence A-B-C must preserve both relationships.",
+          "pitfall": "'Before' does not mean immediately before unless stated.",
+          "mastery": "Distinguish strict order from adjacency and apply each constraint exactly."
         }
       ]
     },
@@ -220,38 +220,38 @@
       "subtopics": [
         {
           "title": "statements and conclusions",
-          "teaching": "Learn statements and conclusions as a core Logical Deduction competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply statements and conclusions to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar statements and conclusions task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Statement-and-conclusion questions ask whether a conclusion necessarily follows from the information given.",
+          "worked_example": "If all registered students have IDs and Ravi is a registered student, Ravi has an ID follows directly.",
+          "pitfall": "A conclusion that is merely possible is weaker than one logically guaranteed.",
+          "mastery": "Use only the stated premises and test whether the conclusion must be true."
         },
         {
           "title": "syllogisms",
-          "teaching": "Learn syllogisms as a core Logical Deduction competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply syllogisms to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar syllogisms task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Syllogisms use categorical statements to determine what logically follows from relationships between groups.",
+          "worked_example": "If all A are B and all B are C, then all A are C.",
+          "pitfall": "The reverse conclusion that all C are A does not follow.",
+          "mastery": "Represent group relationships and avoid reversing one-way statements."
         },
         {
           "title": "cause and effect",
-          "teaching": "Learn cause and effect as a core Logical Deduction competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply cause and effect to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar cause and effect task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Cause-and-effect reasoning identifies whether one event plausibly produces another and distinguishes it from simple sequence or association.",
+          "worked_example": "If a machine stops because its power supply fails, the power failure is a stated cause of the shutdown.",
+          "pitfall": "Two events occurring together do not automatically prove causation.",
+          "mastery": "Look for explicit mechanisms or evidence before claiming cause and effect."
         },
         {
           "title": "assumptions",
-          "teaching": "Learn assumptions as a core Logical Deduction competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply assumptions to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar assumptions task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "An assumption is an unstated idea that must be accepted for a statement or argument to work.",
+          "worked_example": "A school proposes online registration because it assumes students can access the registration system.",
+          "pitfall": "An assumption is not simply another fact mentioned in the argument.",
+          "mastery": "Identify the missing condition on which the argument depends."
         },
         {
           "title": "decision logic",
-          "teaching": "Learn decision logic as a core Logical Deduction competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply decision logic to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar decision logic task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Decision logic applies explicit rules and constraints to choose among alternatives.",
+          "worked_example": "If a trip requires a valid ID AND parental permission, missing either requirement prevents eligibility.",
+          "pitfall": "Replacing AND with OR changes the decision rule.",
+          "mastery": "Translate every condition into a logical test before deciding."
         }
       ]
     },
@@ -260,38 +260,38 @@
       "subtopics": [
         {
           "title": "seating arrangements",
-          "teaching": "Learn seating arrangements as a core Puzzles competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply seating arrangements to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar seating arrangements task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Seating puzzles require placing people around rows or circles while respecting adjacency, opposition and positional constraints.",
+          "worked_example": "In a row, if A sits immediately left of B, the pair can be treated as a block before considering other placements.",
+          "pitfall": "Circular arrangements require attention to relative positions rather than an arbitrary first seat.",
+          "mastery": "Draw the arrangement and apply fixed or strongest constraints first."
         },
         {
           "title": "distribution",
-          "teaching": "Learn distribution as a core Puzzles competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply distribution to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar distribution task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Distribution puzzles allocate objects, people or quantities across groups subject to totals, limits or uniqueness rules.",
+          "worked_example": "If 12 books are distributed equally among 3 shelves, each shelf receives 4 books.",
+          "pitfall": "A distribution can satisfy the total while violating a per-group limit.",
+          "mastery": "Track totals and every stated minimum, maximum or equality constraint."
         },
         {
           "title": "matching",
-          "teaching": "Learn matching as a core Puzzles competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply matching to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar matching task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Matching puzzles pair items from different categories using positive and negative clues.",
+          "worked_example": "If Ravi studies Maths and Priya does not study Science, the remaining subject assignments can be narrowed by elimination.",
+          "pitfall": "One matching clue should not be applied to unrelated categories.",
+          "mastery": "Create a grid or table and mark confirmed and impossible pairings."
         },
         {
           "title": "calendar and clock logic",
-          "teaching": "Learn calendar and clock logic as a core Puzzles competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply calendar and clock logic to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar calendar and clock logic task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Calendar and clock puzzles use dates, weekdays, elapsed time, angles or cyclic patterns to derive answers.",
+          "worked_example": "If a meeting starts at 2:35 and lasts 50 minutes, it ends at 3:25; clock-angle questions require converting time into hand positions.",
+          "pitfall": "A 24-hour day and a 12-hour clock cycle use different representations of the same time.",
+          "mastery": "Track units and cycles carefully and distinguish elapsed time from displayed clock time."
         },
         {
           "title": "multi-condition puzzles",
-          "teaching": "Learn multi-condition puzzles as a core Puzzles competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply multi-condition puzzles to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar multi-condition puzzles task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Multi-condition puzzles combine several constraints, so a valid solution must satisfy all of them simultaneously.",
+          "worked_example": "If A must be before B, C cannot sit beside D, and E must occupy the third position, start with the fixed position and eliminate arrangements violating either relation.",
+          "pitfall": "Solving conditions one at a time without checking their interaction can produce false candidates.",
+          "mastery": "List every condition and verify the final arrangement against each one."
         }
       ]
     },
@@ -300,38 +300,38 @@
       "subtopics": [
         {
           "title": "figure patterns",
-          "teaching": "Learn figure patterns as a core Non-Verbal Reasoning competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply figure patterns to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar figure patterns task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Figure-pattern questions identify visual changes in shape, position, count, orientation, shading or size.",
+          "worked_example": "If a shaded triangle rotates 90 degrees clockwise at each step while the number of dots stays constant, both features form the pattern.",
+          "pitfall": "A pattern may contain more than one simultaneous change.",
+          "mastery": "Track each visual attribute separately before predicting the next figure."
         },
         {
           "title": "mirror images",
-          "teaching": "Learn mirror images as a core Non-Verbal Reasoning competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply mirror images to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar mirror images task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "A mirror image reverses left and right across the mirror line while preserving top and bottom orientation.",
+          "worked_example": "A word's mirror image has its left-right order reversed relative to the vertical mirror.",
+          "pitfall": "A vertical mirror does not swap top and bottom.",
+          "mastery": "Apply the correct axis of reflection before selecting an image."
         },
         {
           "title": "water images",
-          "teaching": "Learn water images as a core Non-Verbal Reasoning competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply water images to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar water images task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "A water image reflects a figure across a horizontal line, reversing top and bottom while preserving left and right.",
+          "worked_example": "A capital letter's water image changes its vertical orientation but does not exchange its left and right sides.",
+          "pitfall": "Confusing water reflection with a mirror reflection gives the wrong orientation.",
+          "mastery": "Identify the reflection axis and track which dimensions reverse."
         },
         {
           "title": "embedded figures",
-          "teaching": "Learn embedded figures as a core Non-Verbal Reasoning competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply embedded figures to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar embedded figures task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Embedded-figure questions ask whether a target shape appears within a more complex figure, possibly rotated or hidden among overlapping lines.",
+          "worked_example": "A small triangle may be present as part of several intersecting segments even when no separate triangle is drawn.",
+          "pitfall": "Extra lines do not invalidate a target shape if the required structure remains present.",
+          "mastery": "Trace the target's defining edges systematically rather than judging by overall appearance."
         },
         {
           "title": "paper folding",
-          "teaching": "Learn paper folding as a core Non-Verbal Reasoning competency in Reasoning Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
-          "worked_example": "Worked example: apply paper folding to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
-          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
-          "mastery": "Mastery: solve an unfamiliar paper folding task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+          "teaching": "Paper-folding problems predict the positions of holes or cuts after a folded sheet is unfolded by reversing each fold.",
+          "worked_example": "A hole punched through two folded layers may appear as corresponding holes symmetrically placed when the paper is fully opened.",
+          "pitfall": "Unfolding reverses the folds in reverse order.",
+          "mastery": "Track fold axes and reflect each mark across every fold line."
         }
       ]
     }
