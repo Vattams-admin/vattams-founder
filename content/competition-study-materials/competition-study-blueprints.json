@@ -69,64 +69,118 @@
         {
           "id": "domain-1",
           "title": "number sense & estimation",
-          "subtopics": [],
-          "expansion_required": true
+          "subtopics": [
+            "place value and magnitude",
+            "ordering and comparing numbers",
+            "rounding and estimation",
+            "factors multiples primes and divisibility",
+            "mental calculation and plausibility checks"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
           "title": "fractions, ratios & proportion",
-          "subtopics": [],
-          "expansion_required": true
+          "subtopics": [
+            "equivalent fractions and simplification",
+            "fraction operations",
+            "ratios and equivalent ratios",
+            "proportion and scaling",
+            "percentages and real-world applications"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
           "title": "algebraic reasoning",
-          "subtopics": [],
-          "expansion_required": true
+          "subtopics": [
+            "variables and expressions",
+            "simplifying expressions",
+            "equations and unknowns",
+            "inequalities and constraints",
+            "algebraic word problems"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
           "title": "geometry & measurement",
-          "subtopics": [],
-          "expansion_required": true
+          "subtopics": [
+            "lines angles and angle relationships",
+            "triangles quadrilaterals and polygons",
+            "perimeter area and composite figures",
+            "volume units and measurement conversion",
+            "coordinate geometry and spatial reasoning"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
           "title": "patterns & sequences",
-          "subtopics": [],
-          "expansion_required": true
+          "subtopics": [
+            "arithmetic patterns",
+            "geometric patterns",
+            "recursive rules",
+            "visual and numerical sequences",
+            "pattern-based problem solving"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
           "title": "data & probability",
-          "subtopics": [],
-          "expansion_required": true
+          "subtopics": [
+            "tables charts and graphs",
+            "mean median mode and range",
+            "data comparison and interpretation",
+            "basic probability",
+            "counting outcomes and probability reasoning"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
           "title": "logical problem solving",
-          "subtopics": [],
-          "expansion_required": true
+          "subtopics": [
+            "classification and mathematical logic",
+            "working backwards",
+            "case analysis and systematic listing",
+            "invariants and constraints",
+            "non-routine mathematical puzzles"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
           "title": "multi-step word problems",
-          "subtopics": [],
-          "expansion_required": true
+          "subtopics": [
+            "translate language into mathematics",
+            "identify relevant and irrelevant information",
+            "multi-operation problems",
+            "rates time distance and work",
+            "check solutions against constraints"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-9",
           "title": "speed, accuracy & verification",
-          "subtopics": [],
-          "expansion_required": true
+          "subtopics": [
+            "efficient calculation strategies",
+            "estimation before exact calculation",
+            "answer-choice elimination",
+            "error classification and correction",
+            "timed mixed-problem practice"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Mathematics Challenge now has a complete domain/subtopic map. Each subtopic requires authored study resources, worked examples, guided practice, independent practice, assessment, revision mapping, and question-bank mapping."
     },
     "Science Challenge": {
       "age_bands": [
