@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { collection, getDocs, limit, query, where } from 'firebase/firestore'
+import { doc, getDoc } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { CertificateVerification } from '@/types/database'
 
@@ -17,19 +17,11 @@ export default function VerifyCertificate() {
     setResult(null)
     setConnectionError(false)
     try {
-      // Replaces the old verify_certificate() RPC. That RPC joined
-      // students + courses server-side for a minimal, non-sensitive
-      // projection; here the `certificates` collection already stores
-      // student_name / course_name directly on each doc (same
-      // denormalize-at-write pattern as payments/enrolments), so a
-      // plain query by certificate_code is enough — no join, and no
-      // student contact info is read or exposed either way.
-      const q = query(
-        collection(firestore, 'certificates'),
-        where('certificate_code', '==', code.trim()),
-        limit(1)
-      )
-      const snapshot = await getDocs(q)
+      // Certificate codes are document IDs, so public verification is a
+      // single-document read. This avoids granting public collection-list
+      // access just to support code lookup and prevents certificate
+      // enumeration through a broad query.
+      const snapshot = await getDoc(doc(firestore, 'certificates', code.trim()))
 
       if (snapshot.empty) {
         setResult('not_found')
