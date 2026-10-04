@@ -178,7 +178,10 @@ function isRecord(value: unknown): value is Record<string, any> {
 async function loadCompetitionSlug(
   courseId: string,
 ): Promise<string | null> {
-  const registry = await loadStorageJson(REGISTRY_PATH);
+  const { data, error } = await supabase.storage.from(SUPABASE_BUCKET).download(REGISTRY_PATH);
+  if (error || !data) throw new Error("Competition registry is unavailable");
+  let registry: unknown;
+  try { registry = JSON.parse(await data.text()); } catch { throw new Error("Competition registry is invalid"); }
 
   if (!isRecord(registry)) {
     throw new Error("Competition registry is invalid");
@@ -188,6 +191,7 @@ async function loadCompetitionSlug(
 
   if (
     !isRecord(entry) ||
+    entry.enabled !== true ||
     typeof entry.slug !== "string" ||
     !/^[a-z0-9-]+$/.test(entry.slug)
   ) {
@@ -403,8 +407,11 @@ Deno.serve(async (req) => {
       );
     }
 
+    if (!attemptId) {
+      return json({ error: "attempt_id is required." }, 400);
+    }
+
     if (
-      attemptId &&
       !/^[A-Za-z0-9_-]+$/.test(attemptId)
     ) {
       return json(
@@ -442,17 +449,15 @@ Deno.serve(async (req) => {
      * as the source of truth.
      */
 
-    if (attemptId) {
-      const denied = await authorizeByAttempt(
-        attemptId,
-        firebaseUser.uid,
-        courseId,
-        questionIds,
-      );
+    const denied = await authorizeByAttempt(
+      attemptId,
+      firebaseUser.uid,
+      courseId,
+      questionIds,
+    );
 
-      if (denied) {
-        return denied;
-      }
+    if (denied) {
+      return denied;
     }
 
     const slug = await loadCompetitionSlug(courseId);
