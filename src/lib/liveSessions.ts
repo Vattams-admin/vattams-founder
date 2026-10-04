@@ -265,6 +265,10 @@ export async function cancelLiveSession(session: LiveSession, reason: string | n
 }
 
 export async function attachRecording(session: LiveSession, recordingUrl: string): Promise<void> {
+  if (!isValidUrl(recordingUrl)) {
+    throw new Error('Recording URL must be a valid http(s) link.')
+  }
+
   await updateDoc(doc(firestore, SESSIONS, session.id), {
     recording_url: recordingUrl,
     updated_at: new Date().toISOString()
