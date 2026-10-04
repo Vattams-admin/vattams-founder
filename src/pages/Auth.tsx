@@ -23,9 +23,13 @@ export default function Auth({
   const navigate = useNavigate()
   const location = useLocation()
 
+  const requestedRedirect = (location.state as { redirectTo?: unknown })?.redirectTo
   const redirectTo =
-    (location.state as { redirectTo?: string })?.redirectTo ??
-    '/dashboard'
+    typeof requestedRedirect === 'string' &&
+    requestedRedirect.startsWith('/') &&
+    !requestedRedirect.startsWith('//')
+      ? requestedRedirect
+      : '/dashboard'
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
