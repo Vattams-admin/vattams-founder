@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "Mathematics Challenge",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1",
+  "status": "subject_specific_authoring_v1_complete",
   "age_bands": [
     "foundation",
     "developing",
@@ -133,6 +133,246 @@
           "Identify the unknown and units before writing the equation.",
           "Check the solution against the original story, including units and non-negative constraints."
         ]
+      ]
+    },
+    {
+      "name": "Geometry & Measurement",
+      "subtopics": [
+        {
+          "title": "Angles and relationships",
+          "teaching": "Use straight-line, around-a-point, vertically opposite and triangle angle facts to determine unknown angles.",
+          "worked_example": "Angles on a straight line total 180°, so an angle of 127° leaves 53°.",
+          "pitfall": "Diagrams are not necessarily drawn to scale; use stated mathematical relationships.",
+          "mastery": "Combine multiple angle facts and verify the final angle against the geometry."
+        },
+        {
+          "title": "Perimeter and area",
+          "teaching": "Calculate perimeter and area of standard and composite figures and distinguish the two measures.",
+          "worked_example": "An 8 cm by 5 cm rectangle has area 40 cm² and perimeter 26 cm.",
+          "pitfall": "Perimeter measures boundary length; area measures covered surface.",
+          "mastery": "Decompose composite figures and check units: cm for perimeter, cm² for area."
+        },
+        {
+          "title": "Triangles and polygons",
+          "teaching": "Classify polygons and apply side and angle properties to solve problems.",
+          "worked_example": "An equilateral triangle has three equal sides and three 60° angles.",
+          "pitfall": "A quadrilateral has interior-angle sum 360°.",
+          "mastery": "Use known properties rather than visual appearance to justify classification."
+        },
+        {
+          "title": "Volume and measurement",
+          "teaching": "Calculate volume and convert length, area and volume units consistently.",
+          "worked_example": "A 4×3×2 cm cuboid has volume 24 cm³.",
+          "pitfall": "Area uses squared units and volume uses cubed units.",
+          "mastery": "Convert units before combining quantities and check dimensional consistency."
+        },
+        {
+          "title": "Coordinates and spatial reasoning",
+          "teaching": "Plot and interpret coordinates and reason about movement, symmetry and position.",
+          "worked_example": "The point (3,-2) is three units right and two units below the origin.",
+          "pitfall": "The first coordinate is horizontal and the second vertical.",
+          "mastery": "Use coordinate changes and symmetry to solve unfamiliar spatial problems."
+        }
+      ]
+    },
+    {
+      "name": "Patterns & Sequences",
+      "subtopics": [
+        {
+          "title": "Arithmetic patterns",
+          "teaching": "Identify constant differences and use them to predict later terms.",
+          "worked_example": "4,7,10,13 has constant difference 3.",
+          "pitfall": "Do not infer a rule from only one transition.",
+          "mastery": "Represent the rule by position and verify it on several terms."
+        },
+        {
+          "title": "Geometric patterns",
+          "teaching": "Recognise constant multiplicative change and distinguish it from additive change.",
+          "worked_example": "2,6,18,54 multiplies by 3 each time.",
+          "pitfall": "A constant ratio differs from a constant difference.",
+          "mastery": "Test the ratio across consecutive terms before generalising."
+        },
+        {
+          "title": "Recursive rules",
+          "teaching": "Describe how each term is generated from an earlier term.",
+          "worked_example": "In 2,5,8,11 each term is the previous term plus 3.",
+          "pitfall": "A recursive rule describes progression but may not directly give the nth term.",
+          "mastery": "Trace from the initial value and verify every generated term."
+        },
+        {
+          "title": "Visual patterns",
+          "teaching": "Translate growing diagrams into numerical relationships.",
+          "worked_example": "If each stage adds four tiles, stage totals can be modelled from that structural change.",
+          "pitfall": "Counting only an outer edge can miss repeated internal units.",
+          "mastery": "Make a stage-number table before proposing a general rule."
+        },
+        {
+          "title": "Pattern-based reasoning",
+          "teaching": "Use patterns to discover, test and justify general relationships.",
+          "worked_example": "Test small cases to expose a possible invariant before proving it.",
+          "pitfall": "A pattern seen in three cases is evidence, not proof.",
+          "mastery": "Use algebra, parity or structural reasoning to justify the generalisation."
+        }
+      ]
+    },
+    {
+      "name": "Data & Probability",
+      "subtopics": [
+        {
+          "title": "Tables and graphs",
+          "teaching": "Read values, scales, categories and trends accurately from common data displays.",
+          "worked_example": "Always inspect the axis scale before comparing bar heights.",
+          "pitfall": "A visual gap can exaggerate a numerical difference.",
+          "mastery": "Extract exact values before calculating or drawing conclusions."
+        },
+        {
+          "title": "Averages and spread",
+          "teaching": "Calculate and interpret mean, median, mode and range.",
+          "worked_example": "For 2,4,4,10 the mean is 5 while the median is 4.",
+          "pitfall": "Extreme values can move the mean substantially.",
+          "mastery": "Choose the statistic that matches the question and dataset."
+        },
+        {
+          "title": "Basic probability",
+          "teaching": "Represent likelihood and calculate simple probabilities from defined sample spaces.",
+          "worked_example": "A fair die has probability 3/6=1/2 of producing an even number.",
+          "pitfall": "Probability lies from 0 to 1 inclusive.",
+          "mastery": "Define equally likely outcomes before forming the probability ratio."
+        },
+        {
+          "title": "Counting outcomes",
+          "teaching": "Systematically count possible outcomes without omissions or duplicates.",
+          "worked_example": "Two coin tosses have HH, HT, TH and TT when order matters.",
+          "pitfall": "HT and TH are different ordered outcomes.",
+          "mastery": "Use tables, lists or tree diagrams to make the sample space explicit."
+        },
+        {
+          "title": "Evidence from data",
+          "teaching": "Make conclusions supported by data while recognising limits.",
+          "worked_example": "A higher average does not mean every individual observation is higher.",
+          "pitfall": "A small association does not establish causation.",
+          "mastery": "State the evidence and avoid claims stronger than the dataset supports."
+        }
+      ]
+    },
+    {
+      "name": "Logical Problem Solving",
+      "subtopics": [
+        {
+          "title": "Working backwards",
+          "teaching": "Reverse a sequence of operations to recover an unknown starting value.",
+          "worked_example": "If doubling a number and adding 7 gives 31, subtract 7 then divide by 2.",
+          "pitfall": "Reverse operations in the opposite order from the original.",
+          "mastery": "Run the original process forward to verify the recovered value."
+        },
+        {
+          "title": "Systematic case analysis",
+          "teaching": "Break constrained problems into complete, non-overlapping cases.",
+          "worked_example": "List possible integer values under each condition rather than guessing.",
+          "pitfall": "Overlapping cases can double-count solutions.",
+          "mastery": "Define cases and show that every valid possibility is included exactly once."
+        },
+        {
+          "title": "Invariants and constraints",
+          "teaching": "Identify properties that remain unchanged during a process.",
+          "worked_example": "A move may change token positions while preserving the total number of tokens.",
+          "pitfall": "A proposed final state violating an invariant is impossible.",
+          "mastery": "Test parity, totals, colour counts or other conserved quantities."
+        },
+        {
+          "title": "Mathematical classification",
+          "teaching": "Classify objects using explicit mathematical properties.",
+          "worked_example": "Even and odd are complementary integer classifications, while prime and composite concern factors.",
+          "pitfall": "A visual resemblance is not a mathematical classification rule.",
+          "mastery": "State the defining property and test it consistently."
+        },
+        {
+          "title": "Non-routine puzzles",
+          "teaching": "Combine several ideas when no standard procedure is immediately obvious.",
+          "worked_example": "Try small cases, represent the structure, identify constraints and then generalise.",
+          "pitfall": "Blind trial-and-error can miss solutions.",
+          "mastery": "Record failed approaches and use them to narrow the remaining possibilities."
+        }
+      ]
+    },
+    {
+      "name": "Multi-step Word Problems",
+      "subtopics": [
+        {
+          "title": "Translate language into mathematics",
+          "teaching": "Identify quantities, relationships, units and operations in written situations.",
+          "worked_example": "“Three times as many” represents multiplication by 3.",
+          "pitfall": "Separate essential quantities from decorative information.",
+          "mastery": "Write a short mathematical model before calculating."
+        },
+        {
+          "title": "Rates, time and distance",
+          "teaching": "Use speed, distance and time relationships with consistent units.",
+          "worked_example": "At 60 km/h for 2.5 hours, distance is 150 km.",
+          "pitfall": "Hours and minutes must be reconciled before applying a rate.",
+          "mastery": "Check both magnitude and unit of the result."
+        },
+        {
+          "title": "Combined work rates",
+          "teaching": "Model jointly completed tasks by adding rates rather than completion times.",
+          "worked_example": "Rates of 1/4 and 1/6 job per hour combine to 5/12 job per hour.",
+          "pitfall": "Adding completion times reverses the relationship.",
+          "mastery": "Express each worker as a fraction of one job per unit time."
+        },
+        {
+          "title": "Multi-operation problems",
+          "teaching": "Plan sequential operations while preserving units and the meaning of intermediate quantities.",
+          "worked_example": "A shopping problem may require discount, tax and final-total calculations in a specific order.",
+          "pitfall": "Applying a percentage to the wrong base can produce a plausible number.",
+          "mastery": "Annotate each intermediate result and compare it with the story."
+        },
+        {
+          "title": "Solution verification",
+          "teaching": "Check a word-problem answer against every stated condition.",
+          "worked_example": "A fractional number of required whole objects can signal a modelling error.",
+          "pitfall": "A correct arithmetic result can still answer the wrong question.",
+          "mastery": "Substitute the result back into the situation and verify all constraints."
+        }
+      ]
+    },
+    {
+      "name": "Speed, Accuracy & Verification",
+      "subtopics": [
+        {
+          "title": "Efficient calculation",
+          "teaching": "Choose valid transformations that reduce calculation without sacrificing exactness.",
+          "worked_example": "48×25 can be evaluated as 48×100÷4=1200.",
+          "pitfall": "A shortcut is useful only when its transformation preserves the value.",
+          "mastery": "Compare with an estimate or inverse operation."
+        },
+        {
+          "title": "Estimation before exact work",
+          "teaching": "Predict the scale and reasonable range of an answer before detailed calculation.",
+          "worked_example": "198×51 should be near 200×50, or 10,000.",
+          "pitfall": "A result far outside the estimated range is immediately suspicious.",
+          "mastery": "Use upper and lower estimates to create a reasonableness band."
+        },
+        {
+          "title": "Answer-choice elimination",
+          "teaching": "Reject options using parity, magnitude, units and constraints.",
+          "worked_example": "If the exact answer must be even, odd choices can be eliminated with a reason.",
+          "pitfall": "Elimination is not guessing; each rejection requires evidence.",
+          "mastery": "Directly verify the remaining candidate."
+        },
+        {
+          "title": "Error classification",
+          "teaching": "Distinguish interpretation, method, arithmetic and verification errors.",
+          "worked_example": "A copied digit error differs from choosing the wrong formula.",
+          "pitfall": "Changing only the final number may leave the misconception intact.",
+          "mastery": "Identify the first incorrect step and repair it."
+        },
+        {
+          "title": "Timed mixed practice",
+          "teaching": "Balance speed with accuracy across unfamiliar mathematics problems.",
+          "worked_example": "Allocate time by difficulty and return to marked questions.",
+          "pitfall": "Rushing increases avoidable reading and arithmetic errors.",
+          "mastery": "Track accuracy, skipped questions and error types after each timed set."
+        }
       ]
     }
   ]
