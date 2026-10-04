@@ -664,7 +664,7 @@ service cloud.firestore {
       // may only move to 'submitted' — or (b) an admin verifying
       // (approve/reject), which AdminPayments.tsx does alongside the
       // enrolment write below.
-      allow update: if isAdmin() || (
+      allow update: if (
         isSignedIn() && resource.data.student_id == request.auth.uid
         && resource.data.status == 'pending'
         && request.resource.data.status == 'submitted'
