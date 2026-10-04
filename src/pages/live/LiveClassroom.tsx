@@ -248,9 +248,7 @@ export default function LiveClassroom() {
         }
 
         heartbeatTimer = window.setInterval(() => {
-          void updateLiveRoomParticipant(sessionId, userId, {
-            status: 'connecting',
-          }).catch((error) => {
+          void updateLiveRoomParticipant(sessionId, userId, {}).catch((error) => {
             console.error('[LiveClassroom] Participant heartbeat failed:', error)
           })
         }, 15_000)
