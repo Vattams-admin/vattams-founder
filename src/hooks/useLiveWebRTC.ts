@@ -475,6 +475,7 @@ export function useLiveWebRTC({
       sessionId,
       updateRemoteStream,
       userId,
+      clearStudentConnection,
     ],
   )
 
@@ -739,6 +740,21 @@ export function useLiveWebRTC({
     })
 
     if (isTutor) {
+      const activeStudentIds = new Set(
+        participants
+          .filter((participant) => participant.role === 'student')
+          .map((participant) => participant.user_id),
+      )
+
+      for (const remoteUserId of peersRef.current.keys()) {
+        if (!activeStudentIds.has(remoteUserId)) {
+          console.log('[liveWebRTC] Removing peer for departed student', {
+            remoteUserId,
+          })
+          removePeer(remoteUserId)
+        }
+      }
+
       const studentIds = participants
         .filter(
           (participant) =>
