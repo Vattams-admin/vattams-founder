@@ -436,9 +436,9 @@ service cloud.firestore {
         && request.resource.data.status == 'active'
         && request.resource.data.payment_id is string
         && exists(/databases/$(database)/documents/payments/$(request.resource.data.payment_id))
-        && get(/databases/$(database)/documents/payments/$(request.resource.data.payment_id)).data.status == 'approved'
-        && get(/databases/$(database)/documents/payments/$(request.resource.data.payment_id)).data.student_id == request.resource.data.student_id
-        && get(/databases/$(database)/documents/payments/$(request.resource.data.payment_id)).data.course_id == request.resource.data.course_id;
+        && getAfter(/databases/$(database)/documents/payments/$(request.resource.data.payment_id)).data.status == 'approved'
+        && getAfter(/databases/$(database)/documents/payments/$(request.resource.data.payment_id)).data.student_id == request.resource.data.student_id
+        && getAfter(/databases/$(database)/documents/payments/$(request.resource.data.payment_id)).data.course_id == request.resource.data.course_id;
 
       // Identity and payment provenance are immutable. Access can only move
       // from active to revoked; a revoked record cannot be reactivated.
