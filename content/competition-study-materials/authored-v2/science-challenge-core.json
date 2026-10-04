@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "Science Challenge",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_complete",
+  "status": "subject_specific_authoring_v1_in_progress",
   "age_bands": [
     "foundation",
     "developing",
@@ -20,38 +20,38 @@
       "subtopics": [
         {
           "title": "Observation and scientific questions",
-          "teaching": "Study Observation and scientific questions as a core Scientific Inquiry & Measurement concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Observation and scientific questions situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Observation and scientific questions independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "An observation records what is detected with senses or instruments; an inference explains what the observation may mean.",
+          "worked_example": "Example: a metal strip becomes longer when heated. Observation: its length increased. Inference: heating caused expansion.",
+          "pitfall": "Do not treat an explanation as an observation.",
+          "mastery": "Mastery: separate observations, inferences and testable questions in an unfamiliar investigation."
         },
         {
           "title": "Variables and fair tests",
-          "teaching": "Study Variables and fair tests as a core Scientific Inquiry & Measurement concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Variables and fair tests situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Variables and fair tests independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "An independent variable is deliberately changed, the dependent variable is measured, and controlled variables are kept constant.",
+          "worked_example": "Example: to test how water temperature affects dissolving time, change temperature, measure time, and keep solute mass and water volume constant.",
+          "pitfall": "Changing several factors at once prevents a fair conclusion.",
+          "mastery": "Mastery: design a fair test and identify independent, dependent and controlled variables."
         },
         {
           "title": "Measurement and units",
-          "teaching": "Study Measurement and units as a core Scientific Inquiry & Measurement concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Measurement and units situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Measurement and units independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Choose an instrument and unit appropriate to the quantity: balance for mass, thermometer for temperature, ruler for length and stopwatch for time.",
+          "worked_example": "Example: record 25.0 cm rather than 25 cm when the instrument supports that precision.",
+          "pitfall": "Do not mix units such as centimetres and metres without conversion.",
+          "mastery": "Mastery: select instruments, record suitable precision and convert units correctly."
         },
         {
           "title": "Tables graphs and evidence",
-          "teaching": "Study Tables graphs and evidence as a core Scientific Inquiry & Measurement concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Tables graphs and evidence situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Tables graphs and evidence independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Tables organise measured values; graphs reveal patterns, trends and anomalies that may be harder to see in raw data.",
+          "worked_example": "Example: plot temperature on the horizontal axis and dissolving time on the vertical axis when temperature is the independent variable.",
+          "pitfall": "A graph scale must be read before comparing points.",
+          "mastery": "Mastery: extract values, identify trends and use evidence without claiming more than the data shows."
         },
         {
           "title": "Claims explanations and conclusions",
-          "teaching": "Study Claims explanations and conclusions as a core Scientific Inquiry & Measurement concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Claims explanations and conclusions situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Claims explanations and conclusions independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "A scientific claim should be supported by evidence and connected to reasoning that explains why the evidence supports it.",
+          "worked_example": "Example: if repeated trials show faster dissolving at higher temperatures, a cautious conclusion is that temperature affected dissolving rate under those conditions.",
+          "pitfall": "One unusual result should be examined rather than automatically discarded.",
+          "mastery": "Mastery: write evidence-based conclusions and distinguish supported claims from speculation."
         }
       ]
     },
