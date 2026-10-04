@@ -36,10 +36,10 @@ const courseId = 'DNWt3cPE4ZSJG90CTC1e'
 const slug = 'thirukkural'
 const publicBank = required(path.join(root,'data/thirukkural/full-bank/objective/questions.objective.public.json'))
 const privateBank = required(path.join(root,'data/thirukkural/full-bank/objective/answer-key.objective.private.json'))
-const official = required(path.join(root,'data/thirukkural/full-bank/objective/official-30.objective.json'))
+const official = required(path.join(root,'data/thirukkural/full-bank/objective/official-120.objective.json'))
 const agePools = required(path.join(root,'data/thirukkural/full-bank/objective/age-pools.json'))
 
-if (publicBank.length !== 9443 || privateBank.length !== 9443 || official.length !== 30) throw new Error('Thirukkural production bundle counts are invalid')
+if (publicBank.length !== 9443 || privateBank.length !== 9443 || official.length !== 120) throw new Error('Thirukkural production bundle counts are invalid')
 if (publicBank.some(q => q.review_status !== 'reviewed')) throw new Error('Production packaging blocked: all 9443 Mock Test questions must be review_status=reviewed')
 
 const questions = {}
@@ -50,7 +50,7 @@ const keys = {}
 for (const k of privateBank) keys[k.question_id] = cleanKey(k)
 for (const q of official) keys[q.question_id] = cleanKey(q)
 
-if (Object.keys(questions).length !== 9473 || Object.keys(keys).length !== 9473) throw new Error('Combined production bundle must contain 9473 unique question IDs')
+if (Object.keys(questions).length !== 9563 || Object.keys(keys).length !== 9563) throw new Error('Combined production bundle must contain 9563 unique question IDs')
 
 fs.rmSync(out,{recursive:true,force:true})
 fs.mkdirSync(path.join(out,'competitions',slug,'objective'),{recursive:true})
@@ -97,5 +97,5 @@ fs.writeFileSync(path.join(out,'MANIFEST.json'),JSON.stringify({
 
 console.log('THIRUKKURAL PRODUCTION PACKAGE READY')
 console.log('Output:', path.relative(root,out))
-console.log('Combined questions:', Object.keys(questions).length)
+console.log('Combined questions:', Object.keys(questions).length)\nconsole.log('Official papers: 4 x 30')
 console.log('Combined answer keys:', Object.keys(keys).length)
