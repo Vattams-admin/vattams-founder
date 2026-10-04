@@ -1,0 +1,139 @@
+{
+  "schema_version": "3.1.0",
+  "course": "Mathematics Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "subject_specific_authoring_v1",
+  "age_bands": [
+    "foundation",
+    "developing",
+    "advanced",
+    "championship"
+  ],
+  "learning_paths": [
+    "core_mastery",
+    "practice_and_revision",
+    "mock_test_preparation"
+  ],
+  "domains": [
+    {
+      "name": "Number Sense & Estimation",
+      "subtopics": [
+        [
+          "Place value and magnitude",
+          "Read, compose and compare whole numbers and decimals by place value; use powers of ten to explain magnitude.",
+          "Compare 4,080 and 4,008 by examining the hundreds and tens places.",
+          "A common error is treating 0 as having no structural role; in 4,080 it preserves the tens place.",
+          "Estimate sums and products before calculating exactly; reject answers whose size is impossible."
+        ],
+        [
+          "Rounding and estimation",
+          "Round integers and decimals to stated place values and use estimation to predict reasonable answers.",
+          "Round 7,496 to the nearest hundred: 7,500 because the tens digit is 9.",
+          "When estimating 398×21, use 400×20=8,000 as a reasonableness benchmark.",
+          "Use compatible numbers, bounds and reverse checks to verify numerical answers."
+        ],
+        [
+          "Factors, multiples and primes",
+          "Identify factors, multiples, primes, composite numbers, common factors and common multiples.",
+          "For 36, factor pairs are 1×36, 2×18, 3×12 and 4×9.",
+          "A number divisible by 6 must be divisible by both 2 and 3.",
+          "Apply divisibility rules, prime factorisation, GCD and LCM in unfamiliar problems."
+        ],
+        [
+          "Mental calculation strategies",
+          "Choose efficient mental methods for addition, subtraction, multiplication, division and percentage calculations.",
+          "Use 25×16 as 100÷4×16=400 rather than repeated addition.",
+          "Watch for carrying and place-value errors when splitting numbers mentally.",
+          "Select a method, estimate first, calculate, then verify using an inverse operation."
+        ],
+        [
+          "Number properties and puzzles",
+          "Use parity, divisibility, remainders and numerical structure to solve non-routine problems.",
+          "If an integer is odd, adding another odd integer produces an even result.",
+          "A remainder must be smaller than the divisor; this gives an immediate validity check.",
+          "Combine parity and divisibility constraints to eliminate impossible cases before calculation."
+        ]
+      ]
+    },
+    {
+      "name": "Fractions, Ratios & Proportion",
+      "subtopics": [
+        [
+          "Equivalent fractions and simplification",
+          "Generate equivalent fractions, reduce fractions using common factors, and compare fractions reliably.",
+          "3/4 and 9/12 represent the same quantity because both simplify to 3/4.",
+          "Do not compare denominators alone; convert to common denominators or benchmark against 1/2 and 1.",
+          "Solve comparison and ordering problems involving mixed numbers and improper fractions."
+        ],
+        [
+          "Fraction operations",
+          "Add, subtract, multiply and divide fractions while explaining why each operation works.",
+          "For 2/3+1/6, rewrite 2/3 as 4/6, giving 5/6.",
+          "Division by a fraction asks how many groups of that size fit into the dividend.",
+          "Use inverse operations and magnitude estimates to detect impossible fraction results."
+        ],
+        [
+          "Ratios and equivalent ratios",
+          "Interpret ratios as comparisons and scale them without changing the underlying relationship.",
+          "A 2:3 ratio becomes 8:12 when both parts are multiplied by 4.",
+          "A ratio is not automatically a fraction of the whole; distinguish comparison from total share.",
+          "Solve missing-value, mixture and scale problems using tables, unit rates or equivalent ratios."
+        ],
+        [
+          "Proportion and scaling",
+          "Recognise proportional relationships and apply scale factors to quantities, diagrams and rates.",
+          "If 3 notebooks cost ₹90, the unit price is ₹30 and 7 cost ₹210 under the same rate.",
+          "A proportional relationship keeps the same multiplicative scale factor.",
+          "Test whether a relationship is truly proportional before applying cross-multiplication."
+        ],
+        [
+          "Percentages in context",
+          "Convert between fractions, decimals and percentages and apply percentage change to real situations.",
+          "15% of ₹800 is ₹120, so the discounted price is ₹680.",
+          "A 20% increase followed by a 20% decrease does not return to the starting value.",
+          "Solve discount, tax, comparison and percentage-change problems with explicit base quantities."
+        ]
+      ]
+    },
+    {
+      "name": "Algebraic Reasoning",
+      "subtopics": [
+        [
+          "Variables and expressions",
+          "Represent unknown quantities with variables and translate verbal descriptions into algebraic expressions.",
+          "Five more than x is x+5; five times x is 5x.",
+          "Do not confuse addition with multiplication when translating phrases.",
+          "Evaluate expressions for given values and explain the role of each term."
+        ],
+        [
+          "Simplifying expressions",
+          "Combine like terms and use distributive reasoning to simplify algebraic expressions.",
+          "3x+5x becomes 8x because both terms contain the same variable quantity.",
+          "2(x+3) means two groups of both x and 3, so it becomes 2x+6.",
+          "Check simplification by substituting a numerical value for x before and after."
+        ],
+        [
+          "Equations and unknowns",
+          "Solve one- and multi-step equations while preserving equality.",
+          "For 3x+5=20, subtract 5 then divide by 3 to obtain x=5.",
+          "Performing the same operation on both sides preserves equality.",
+          "Substitute the solution back into the original equation to verify it."
+        ],
+        [
+          "Inequalities and constraints",
+          "Interpret inequality symbols and solve simple constrained problems.",
+          "x>4 includes every number greater than 4, not 4 itself.",
+          "Boundary values determine whether an inequality is strict or inclusive.",
+          "Translate word constraints into inequalities and test candidate values."
+        ],
+        [
+          "Algebraic word problems",
+          "Build equations from real situations involving unknowns, rates, totals and comparisons.",
+          "If three equal notebooks and a ₹20 pen cost ₹140, represent the notebook price as x and solve 3x+20=140.",
+          "Identify the unknown and units before writing the equation.",
+          "Check the solution against the original story, including units and non-negative constraints."
+        ]
+      ]
+    }
+  ]
+}
