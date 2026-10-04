@@ -13,7 +13,7 @@
     {
       "title": "Computer fundamentals and hardware",
       "objective": "Explain how core computer components work together to accept input, process information, store data and produce output.",
-      "core_teaching_content": "A computer system combines hardware and software. Input devices provide data, the processor executes instructions, memory holds data needed during active work, and storage keeps information persistently. Output devices present results. Performance questions often require distinguishing temporary working memory from long-term storage and identifying the role of each component in a system.",
+      "core_teaching_content": "A computer system combines hardware and software. Input devices provide data, the processor executes instructions, memory holds data needed during active work, and storage keeps information persistently. Output devices present results. Performance questions often require distinguishing temporary working memory from long-term storage and identifying the role of each component in a system. When diagnosing or designing a solution, state the evidence that supports the choice and test edge cases before accepting the result. Distinguish closely related concepts such as memory versus storage, local networking versus internet services, and an algorithm's correctness versus its efficiency. Record the reasoning so it can be repeated.",
       "examples": [
         "A keyboard supplies input, the CPU processes instructions, RAM holds active data and programs, an SSD stores files persistently, and a display presents visual output.",
         "A keyboard supplies input, the CPU processes instructions, RAM holds active data and programs, an SSD stores files persistently, and a display presents visual output. Apply the same concept to a different computing scenario and require the learner to justify the choice."
@@ -49,7 +49,7 @@
     {
       "title": "Operating systems and files",
       "objective": "Use operating-system concepts to manage files, folders, applications and permissions safely and logically.",
-      "core_teaching_content": "An operating system manages hardware resources and provides services for applications and users. Files are stored in folders and identified by names and formats. Extensions often indicate the type of content or application associated with a file. Good file management uses meaningful names, predictable folders, backups and appropriate permissions rather than relying on the desktop as permanent storage.",
+      "core_teaching_content": "An operating system manages hardware resources and provides services for applications and users. Files are stored in folders and identified by names and formats. Extensions often indicate the type of content or application associated with a file. Good file management uses meaningful names, predictable folders, backups and appropriate permissions rather than relying on the desktop as permanent storage. When diagnosing or designing a solution, state the evidence that supports the choice and test edge cases before accepting the result. Distinguish closely related concepts such as memory versus storage, local networking versus internet services, and an algorithm's correctness versus its efficiency. Record the reasoning so it can be repeated.",
       "examples": [
         "A project folder might contain separate folders for source files, exported documents and backups, making retrieval and version control easier.",
         "A project folder might contain separate folders for source files, exported documents and backups, making retrieval and version control easier. Apply the same concept to a different computing scenario and require the learner to justify the choice."
@@ -86,7 +86,7 @@
     {
       "title": "Data representation and storage",
       "objective": "Explain how computers represent, store and move digital information and apply basic binary reasoning.",
-      "core_teaching_content": "Computers represent information using discrete states. Binary uses two symbols, 0 and 1, and combinations of bits can represent numbers and encoded information. Larger units such as bytes group bits. Text, images, audio and other media require encoding and storage formats. A larger file may require more storage or bandwidth, but the exact size depends on representation and compression.",
+      "core_teaching_content": "Computers represent information using discrete states. Binary uses two symbols, 0 and 1, and combinations of bits can represent numbers and encoded information. Larger units such as bytes group bits. Text, images, audio and other media require encoding and storage formats. A larger file may require more storage or bandwidth, but the exact size depends on representation and compression. When diagnosing or designing a solution, state the evidence that supports the choice and test edge cases before accepting the result. Distinguish closely related concepts such as memory versus storage, local networking versus internet services, and an algorithm's correctness versus its efficiency. Record the reasoning so it can be repeated.",
       "examples": [
         "Eight binary bits form one byte. The decimal number 5 is represented as 00000101 in an eight-bit unsigned representation.",
         "Eight binary bits form one byte. The decimal number 5 is represented as 00000101 in an eight-bit unsigned representation. Apply the same concept to a different computing scenario and require the learner to justify the choice."
@@ -122,7 +122,7 @@
     {
       "title": "Networks and internet fundamentals",
       "objective": "Explain how devices communicate across networks and distinguish local networking, internet services and common addressing concepts.",
-      "core_teaching_content": "A network connects devices so they can exchange data and share resources. Local networks connect nearby devices, while the internet is an interconnected global network. Routers forward traffic between networks; switches connect devices within a local network. Domain names provide human-readable names that resolve through DNS to network addresses. Reliable answers distinguish a service from the device or protocol delivering it.",
+      "core_teaching_content": "A network connects devices so they can exchange data and share resources. Local networks connect nearby devices, while the internet is an interconnected global network. Routers forward traffic between networks; switches connect devices within a local network. Domain names provide human-readable names that resolve through DNS to network addresses. Reliable answers distinguish a service from the device or protocol delivering it. When diagnosing or designing a solution, state the evidence that supports the choice and test edge cases before accepting the result. Distinguish closely related concepts such as memory versus storage, local networking versus internet services, and an algorithm's correctness versus its efficiency. Record the reasoning so it can be repeated.",
       "examples": [
         "A home router can connect phones and computers to a local network and provide a path to internet services, while DNS helps translate a website name into an address.",
         "A home router can connect phones and computers to a local network and provide a path to internet services, while DNS helps translate a website name into an address. Apply the same concept to a different computing scenario and require the learner to justify the choice."
@@ -158,7 +158,7 @@
     {
       "title": "Cybersecurity and safe digital behaviour",
       "objective": "Recognise common cybersecurity threats and choose practical controls that reduce account, device and data risk.",
-      "core_teaching_content": "Cybersecurity protects confidentiality, integrity and availability. Common threats include phishing, credential theft, malicious software, unsafe links and weak authentication. Strong unique passwords, multi-factor authentication, software updates, backups and cautious handling of links and attachments reduce risk. Security decisions should consider both the threat and the control that addresses it.",
+      "core_teaching_content": "Cybersecurity protects confidentiality, integrity and availability. Common threats include phishing, credential theft, malicious software, unsafe links and weak authentication. Strong unique passwords, multi-factor authentication, software updates, backups and cautious handling of links and attachments reduce risk. Security decisions should consider both the threat and the control that addresses it. When diagnosing or designing a solution, state the evidence that supports the choice and test edge cases before accepting the result. Distinguish closely related concepts such as memory versus storage, local networking versus internet services, and an algorithm's correctness versus its efficiency. Record the reasoning so it can be repeated.",
       "examples": [
         "A convincing message asking for an urgent password reset may be phishing. Checking the destination independently rather than using the embedded link reduces the risk of credential theft.",
         "A convincing message asking for an urgent password reset may be phishing. Checking the destination independently rather than using the embedded link reduces the risk of credential theft. Apply the same concept to a different computing scenario and require the learner to justify the choice."
@@ -193,7 +193,7 @@
     {
       "title": "Productivity, data and digital workflows",
       "objective": "Use structured digital workflows to create, organise, analyse and present information accurately.",
-      "core_teaching_content": "Productivity software supports documents, spreadsheets, presentations and structured data. Good workflows separate raw data from calculated results, use clear labels and validate inputs before drawing conclusions. Spreadsheets are useful for repeated calculations and sorting, while documents and presentations communicate conclusions. Accuracy depends on checking formulas, units, dates and source information rather than trusting formatting alone.",
+      "core_teaching_content": "Productivity software supports documents, spreadsheets, presentations and structured data. Good workflows separate raw data from calculated results, use clear labels and validate inputs before drawing conclusions. Spreadsheets are useful for repeated calculations and sorting, while documents and presentations communicate conclusions. Accuracy depends on checking formulas, units, dates and source information rather than trusting formatting alone. When diagnosing or designing a solution, state the evidence that supports the choice and test edge cases before accepting the result. Distinguish closely related concepts such as memory versus storage, local networking versus internet services, and an algorithm's correctness versus its efficiency. Record the reasoning so it can be repeated.",
       "examples": [
         "A spreadsheet can calculate totals from raw scores, but the formula and source values should be checked before publishing a ranking.",
         "A spreadsheet can calculate totals from raw scores, but the formula and source values should be checked before publishing a ranking. Apply the same concept to a different computing scenario and require the learner to justify the choice."
@@ -229,7 +229,7 @@
     {
       "title": "Algorithms and computational thinking",
       "objective": "Break problems into precise steps, identify patterns and conditions, and compare simple algorithms for correctness and efficiency.",
-      "core_teaching_content": "An algorithm is a finite sequence of instructions for solving a problem. Computational thinking uses decomposition, pattern recognition, abstraction and algorithm design. Conditions allow decisions, loops repeat actions, and variables store changing values. A correct algorithm produces the intended result for valid inputs; efficiency considers how much work or resource it needs.",
+      "core_teaching_content": "An algorithm is a finite sequence of instructions for solving a problem. Computational thinking uses decomposition, pattern recognition, abstraction and algorithm design. Conditions allow decisions, loops repeat actions, and variables store changing values. A correct algorithm produces the intended result for valid inputs; efficiency considers how much work or resource it needs. When diagnosing or designing a solution, state the evidence that supports the choice and test edge cases before accepting the result. Distinguish closely related concepts such as memory versus storage, local networking versus internet services, and an algorithm's correctness versus its efficiency. Record the reasoning so it can be repeated.",
       "examples": [
         "To find the largest of three numbers, initialise a current maximum, compare each value, and replace the maximum when a larger value appears.",
         "To find the largest of three numbers, initialise a current maximum, compare each value, and replace the maximum when a larger value appears. Apply the same concept to a different computing scenario and require the learner to justify the choice."
@@ -266,7 +266,7 @@
     {
       "title": "Troubleshooting and systems reasoning",
       "objective": "Diagnose common computer problems by gathering evidence, isolating causes and applying the least risky appropriate fix.",
-      "core_teaching_content": "Troubleshooting should be systematic rather than random. Define the symptom, reproduce it safely, check simple causes first, change one relevant factor at a time, and verify the result. Consider power, connectivity, configuration, software state and hardware. Keep records of changes so a failed intervention can be reversed. Escalate when the issue involves permissions, sensitive data or hardware risk beyond the user's role.",
+      "core_teaching_content": "Troubleshooting should be systematic rather than random. Define the symptom, reproduce it safely, check simple causes first, change one relevant factor at a time, and verify the result. Consider power, connectivity, configuration, software state and hardware. Keep records of changes so a failed intervention can be reversed. Escalate when the issue involves permissions, sensitive data or hardware risk beyond the user's role. When diagnosing or designing a solution, state the evidence that supports the choice and test edge cases before accepting the result. Distinguish closely related concepts such as memory versus storage, local networking versus internet services, and an algorithm's correctness versus its efficiency. Record the reasoning so it can be repeated.",
       "examples": [
         "If a computer cannot access one website but other sites work, checking the site, browser, DNS and network path is more informative than immediately reinstalling the operating system.",
         "If a computer cannot access one website but other sites work, checking the site, browser, DNS and network path is more informative than immediately reinstalling the operating system. Apply the same concept to a different computing scenario and require the learner to justify the choice."
@@ -302,7 +302,7 @@
     {
       "title": "Integrated computer mini-mock",
       "objective": "Apply hardware, software, networking, cybersecurity, data and algorithm concepts under timed competition conditions and convert errors into targeted revision.",
-      "core_teaching_content": "A strong computer-competition attempt requires switching between conceptual knowledge, diagrams, data representation, algorithms and cybersecurity scenarios. Read every question for the exact task and eliminate options that confuse related concepts. After the attempt, classify mistakes as knowledge gaps, misread requirements, reasoning errors or careless execution. Revision should target the observed error pattern.",
+      "core_teaching_content": "A strong computer-competition attempt requires switching between conceptual knowledge, diagrams, data representation, algorithms and cybersecurity scenarios. Read every question for the exact task and eliminate options that confuse related concepts. After the attempt, classify mistakes as knowledge gaps, misread requirements, reasoning errors or careless execution. Revision should target the observed error pattern. When diagnosing or designing a solution, state the evidence that supports the choice and test edge cases before accepting the result. Distinguish closely related concepts such as memory versus storage, local networking versus internet services, and an algorithm's correctness versus its efficiency. Record the reasoning so it can be repeated.",
       "examples": [
         "A question about a slow application may involve memory, storage, network access or software state; the best answer depends on the evidence supplied rather than a memorised claim that one component is always responsible.",
         "A question about a slow application may involve memory, storage, network access or software state; the best answer depends on the evidence supplied rather than a memorised claim that one component is always responsible. Apply the same concept to a different computing scenario and require the learner to justify the choice."
@@ -332,6 +332,40 @@
       "day": 9,
       "sort_order": 9,
       "lesson_id": "computer-challenge-days-1-10-day-9"
+    },
+    {
+      "title": "Integrated computer mini-mock",
+      "objective": "Apply the full Computer Challenge syllabus under timed conditions, manage uncertainty and convert errors into a targeted revision plan.",
+      "core_teaching_content": "An integrated mock requires switching between topics without losing accuracy. Read the task carefully, classify the problem, select the relevant principle, and verify the answer against the evidence or constraints. After the attempt, classify errors by knowledge gap, misreading, reasoning, calculation or careless execution. Use the pattern to plan targeted revision. When diagnosing or designing a solution, state the evidence that supports the choice and test edge cases before accepting the result. Distinguish closely related concepts such as memory versus storage, local networking versus internet services, and an algorithm's correctness versus its efficiency. Record the reasoning so it can be repeated.",
+      "examples": [
+        "Complete a mixed Computer Challenge item set and explain the principle behind each selected answer.",
+        "Review a tempting distractor from the mock and explain precisely why it fails."
+      ],
+      "practical_activity": "Complete a timed integrated Computer Challenge simulation, then perform a structured error review.",
+      "guided_practice": "Model one mixed problem, jointly solve a second, and require an independent third problem with a written justification.",
+      "independent_practice": [
+        "Complete three mixed questions under time pressure.",
+        "Redo two missed questions without looking at the answer.",
+        "Write one measurable target for the next attempt."
+      ],
+      "assessment_checkpoint": "Complete an eight-item integrated checkpoint and record score, time, uncertain items and error categories.",
+      "student_task": "Create a one-page revision plan with three strengths, three gaps and an action for each gap.",
+      "tutor_guidance": "Coach time management and evidence-based review. Focus revision on error patterns rather than simply repeating the full syllabus.",
+      "materials_requirement": [
+        "VATTAMS study notes",
+        "Mixed question set",
+        "Timer",
+        "Error-analysis log"
+      ],
+      "reflection_completion": "State which error pattern cost the most marks and the specific action that will reduce it.",
+      "daily_flow": "Review → Timed Mock → Error Analysis → Targeted Revision → Reflection",
+      "status": "ready_for_production",
+      "course_id": "computer-challenge",
+      "course_name": "Computer Challenge",
+      "module_id": "computer-challenge-days-1-10",
+      "day": 10,
+      "sort_order": 10,
+      "lesson_id": "computer-challenge-days-1-10-day-10"
     }
   ]
 }
