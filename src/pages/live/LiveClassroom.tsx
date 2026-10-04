@@ -396,7 +396,12 @@ export default function LiveClassroom() {
   if (state === 'loading' || authLoading || adminLoading || roleLoading || roleError) {
     return (
       <main className="min-h-screen bg-[#050b16] px-4 py-20 text-center text-slate-400">
-        Loading classroom…
+        {roleError ? 'Unable to determine your account role. Please refresh and try again.' : 'Loading classroom…'}
+        {roleError && (
+          <button type="button" onClick={() => window.location.reload()} className="btn-primary mt-6">
+            Retry
+          </button>
+        )}
       </main>
     )
   }
