@@ -176,15 +176,15 @@ Deno.serve(async (request) => {
     if (request.method !== "POST") return json({ error: "Method not allowed" }, 405);
 
     const studentId = await verifyFirebaseUser(request);
+    const dob = await getAccess(studentId);
+    if (!dob) return json({ error: "You do not have access to this competition." }, 403);
+
     const existing = await activeAttempt(studentId);
     if (existing) {
       return json({ ok: true, course_id: COURSE_ID, competition: COMPETITION,
         attempt_id: existing.id, status: existing.status, started_at: existing.started_at,
         question_ids: existing.question_ids });
     }
-
-    const dob = await getAccess(studentId);
-    if (!dob) return json({ error: "You do not have access to this competition." }, 403);
 
     const age = calculateAge(dob);
     if (age < 0 || age > 120) return json({ error: "Invalid date of birth." }, 400);
