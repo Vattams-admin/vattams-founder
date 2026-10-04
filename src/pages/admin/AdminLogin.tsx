@@ -32,6 +32,26 @@ function friendlyFirebaseError(err: unknown): string {
   }
 }
 
+type AdminLoginLocationState = {
+  notice?: string
+  redirectTo?: string
+}
+
+function getAdminReturnPath(state: AdminLoginLocationState | null): string {
+  const redirectTo = state?.redirectTo
+  // Only honor internal admin destinations. This prevents auth state from
+  // becoming an open redirect while preserving pathname + query + hash.
+  if (
+    typeof redirectTo === 'string' &&
+    redirectTo.startsWith('/admin/') &&
+    !redirectTo.startsWith('/admin/login')
+  ) {
+    return redirectTo
+  }
+
+  return '/admin/dashboard'
+}
+
 export default function AdminLogin() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -42,25 +62,27 @@ export default function AdminLogin() {
   const navigate = useNavigate()
   const location = useLocation()
   const { adminUser, isAdmin, loading, profileError } = useAdminAuth()
+  const locationState = (location.state as AdminLoginLocationState | null) ?? null
+  const returnPath = getAdminReturnPath(locationState)
 
   // A notice can arrive from AdminRoute (e.g. "please sign in", "not an
   // admin") via redirect state.
   useEffect(() => {
-    const state = location.state as { notice?: string } | null
-    if (state?.notice) setNotice(state.notice)
-  }, [location.state])
+    if (locationState?.notice) setNotice(locationState.notice)
+  }, [locationState?.notice])
 
   // Already signed in as a confirmed admin (e.g. session restored after
-  // refresh) — skip the login form entirely instead of asking them to
-  // sign in again.
+  // refresh) — return to the protected destination that sent the user here.
+  // Direct visits to /admin or /admin/login have no return destination and
+  // consistently land on the dashboard.
   useEffect(() => {
     if (!loading && adminUser && isAdmin) {
-      navigate('/admin/payments', { replace: true })
+      navigate(returnPath, { replace: true })
     }
-  }, [loading, adminUser, isAdmin, navigate])
+  }, [loading, adminUser, isAdmin, navigate, returnPath])
 
   // Session exists but we couldn't confirm admin status because of a
-  // network/Supabase error — don't silently show an empty login form as
+  // network/Firestore error — don't silently show an empty login form as
   // if they were signed out; tell them what actually happened.
   useEffect(() => {
     if (!loading && adminUser && !isAdmin && profileError) {
@@ -91,8 +113,6 @@ export default function AdminLogin() {
       )
       credentialUser = credential.user
     } catch (err) {
-      // Real Firebase Auth failure (bad password, unknown email, etc.) —
-      // the account was never signed in, so there's nothing to roll back.
       console.error('Admin login: Firebase sign-in failed.', err)
       setError(friendlyFirebaseError(err))
       setSubmitting(false)
@@ -100,17 +120,11 @@ export default function AdminLogin() {
     }
 
     if (!credentialUser) {
-      // Unreachable in practice (the catch above always returns), but
-      // keeps credentialUser.email below from being used unnarrowed.
       setSubmitting(false)
       return
     }
 
     try {
-      // Membership in the admin_users/{uid} Firestore document (active +
-      // a valid admin role) is what grants admin access — not merely
-      // having a Firebase account. Look up by the uid Firebase just
-      // verified.
       const profile = await getAdminProfile(credentialUser.uid)
       if (!profile) {
         await firebaseSignOut(firebaseAuth)
@@ -119,14 +133,8 @@ export default function AdminLogin() {
         return
       }
 
-      navigate('/admin/dashboard')
+      navigate(returnPath, { replace: true })
     } catch (err) {
-      // Firebase login succeeded, but confirming admin status against
-      // Firestore failed (offline, security rules blocking the read,
-      // etc.). This is not "wrong password" and not "not an admin" —
-      // it's a connection problem, so say that plainly without exposing
-      // internal error details on screen. Full details go to the
-      // console for support.
       console.error('Admin login: signed in to Firebase, but the admin_users lookup failed.', err)
       await firebaseSignOut(firebaseAuth).catch(() => {})
       setError('Signed in, but unable to verify admin access right now. Please try again.')
