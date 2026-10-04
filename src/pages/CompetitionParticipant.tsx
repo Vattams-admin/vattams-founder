@@ -40,7 +40,7 @@ const competitionCourse: Course = {
   slug: THIRUKKURAL_SLUG,
   subject: 'Thirukkural',
   short_description: 'Official Thirukkural competition',
-  description: 'Official 30-question Thirukkural Mastery Championship.',
+  description: 'Official age-specific Thirukkural Mastery Championship with four fixed 30-question papers.',
   level: null,
   duration_text: null,
   instructor_name: null,
