@@ -2,6 +2,13 @@ name: Deploy Mock Test Database
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "supabase/migrations/**"
+      - "supabase/config.toml"
+      - ".github/workflows/deploy-mock-test-database.yml"
 
 jobs:
   migrate:
