@@ -496,7 +496,1389 @@ service cloud.firestore {
               'reschedule_history', 'updated_at'
             ])
             && (!('meeting_url' in request.resource.data) || request.resource.data.meeting_url == null || request.resource.data.meeting_url.matches('^https?://[^\\s]+$'))
-            && (!('recording_url' in request.resource.data) || request.resource.data.recording_url == null || request.resource.data.recording_url.matches('^https?://[^\\s]+$')))
+            && (!('recording_url' in request.resource.data) || request.resource.data.recording_url == null || request.resource.data.recording_url.matches('^https?://[^\\s]+ if isAdmin();
+    }
+
+    match /session_attendance/{attendanceId} {
+      // Doc id convention: `${session_id}_${student_id}` (mirrors
+      // enrolments' `${student_id}_${course_id}` pattern).
+      allow read: if isAdmin()
+        || isOwner(resource.data.student_id)
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid);
+
+      // A student may create ONLY their own self-reported join record,
+      // for a session they're actually enrolled in and that is
+      // currently published — never a status other than 'present' and
+      // never a source other than 'self_reported' (a tutor/admin
+      // override always goes through the branches below instead).
+      allow create: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(request.resource.data.student_id)
+          && attendanceId == request.resource.data.session_id + '_' + request.auth.uid
+          && request.resource.data.source == 'self_reported'
+          && request.resource.data.status == 'present'
+          && hasActiveEnrolment(request.resource.data.course_id)
+          && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.status == 'published'
+        );
+
+      // Updates: a student may only ever touch their own `joined_at` on
+      // their own self-reported row (repeated join clicks); everything
+      // else (status corrections, marking other students) is a
+      // tutor/admin action.
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(resource.data.student_id)
+          && resource.data.source == 'self_reported'
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['joined_at'])
+        );
+
+      allow delete: if isAdmin();
+    }
+
+    // Everything else (payments, certificates, notifications, ...) is
+    // intentionally NOT covered here — see the warning at the top of
+    // this file. Merge in your existing rules for those collections
+    // before deploying.
+    match /payments/{paymentId} {
+      // A student reads only their own payments (StudentDashboard.tsx);
+      // an admin reads all (AdminPayments.tsx).
+      allow read: if isAdmin()
+        || (isSignedIn() && (
+          resource.data.student_id == request.auth.uid
+          || resource.data.tutor_id == request.auth.uid
+        ));
+
+      // Tutor registration payments are deterministic: one payment document
+      // per tutor, always exactly ₹500.
+      allow create: if isSignedIn()
+        && paymentId == ('tutor_registration_' + request.auth.uid)
+        && request.resource.data.payment_type == 'tutor_registration'
+        && request.resource.data.tutor_id == request.auth.uid
+        && request.resource.data.tutor_name is string
+        && request.resource.data.student_id == null
+        && request.resource.data.course_id == null
+        && request.resource.data.course_name == null
+        && request.resource.data.amount == 500
+        && request.resource.data.status == 'pending'
+        && request.resource.data.verified_at == null
+        && request.resource.data.verified_by == null
+        && request.resource.data.keys().hasAll([
+          'payment_type',
+          'tutor_id',
+          'tutor_name',
+          'student_id',
+          'course_id',
+          'course_name',
+          'amount',
+          'status',
+          'verified_at',
+          'verified_by',
+          'utr_reference',
+          'submitted_at',
+          'created_at'
+        ]);
+
+      // A tutor may only submit their own pending registration payment.
+      // Admins retain the existing verification authority below.
+      allow update: if isAdmin() || (
+        isSignedIn()
+        && resource.data.payment_type == 'tutor_registration'
+        && resource.data.tutor_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      ) || (
+        isSignedIn()
+        && resource.data.payment_type != 'tutor_registration'
+        && resource.data.student_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      );
+
+      // Payment.tsx creates its own pending payment doc from
+      // course.base_fee/discount_amount it just read from Firestore —
+      // but a client calling the SDK directly isn't bound by what the
+      // UI actually read, so `amount` and `course_name` are re-derived
+      // here from the *server's* course document, not trusted from the
+      // request. A forged amount (or a course_id pointing at an
+      // unpublished/nonexistent course) is rejected outright.
+      allow create: if isSignedIn()
+        && request.resource.data.student_id == request.auth.uid
+        && request.resource.data.status == 'pending'
+        && request.resource.data.verified_at == null
+        && request.resource.data.verified_by == null
+        && request.resource.data.course_id is string
+        && paymentMatchesCourse(request.resource.data.course_id, request.resource.data.amount, request.resource.data.course_name);
+
+      // Update: either (a) the owning student submitting their UTR —
+      // only utr_reference/status/submitted_at may change, and status
+      // may only move to 'submitted' — or (b) an admin verifying
+      // (approve/reject), which AdminPayments.tsx does alongside the
+      // enrolment write below.
+      allow update: if isAdmin() || (
+        isSignedIn() && resource.data.student_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      );
+
+      allow delete: if false;
+    }
+
+
+    match /certificates/{certificateId} {
+      allow get: if true;
+      allow list: if isAdmin() || request.query.limit <= 1;
+      allow create, update: if isAdmin();
+      allow delete: if false;
+    }
+
+    match /push_tokens/{tokenId} {
+      // FCM registration tokens are private to the signed-in user.
+      // The token document ID must match the token field and the owner UID.
+      allow create, update: if isSignedIn()
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.token == tokenId;
+
+      allow read, delete: if false;
+    }
+
+    match /notifications/{notificationId} {
+      function isOwnNotification() {
+        return isSignedIn() && resource.data.recipient_uid == request.auth.uid;
+      }
+      function isAdminBroadcast() {
+        return resource.data.recipient_uid == null && resource.data.recipient_role == 'admin';
+      }
+      function isTutorBroadcast() {
+        return resource.data.recipient_uid == null && resource.data.recipient_role == 'tutor';
+      }
+
+      allow read: if isOwnNotification()
+        || (isAdminBroadcast() && isAdmin())
+        || (isTutorBroadcast() && isApprovedTutor());
+
+      allow create: if isSignedIn() && request.resource.data.is_read == false
+        && request.resource.data.keys().hasAll(['recipient_uid','recipient_role','type','title','message','is_read','created_at'])
+        && (
+          isAdmin()
+          || (request.resource.data.recipient_uid == request.auth.uid
+              && request.resource.data.type == 'registration_success')
+          || (request.resource.data.recipient_uid == null
+              && request.resource.data.recipient_role == 'admin'
+              && request.resource.data.type in ['new_student_registration', 'new_enrollment', 'tutor_activity', 'payment_received'])
+          || (request.resource.data.recipient_uid == request.auth.uid
+              && request.resource.data.recipient_role == 'tutor'
+              && request.resource.data.type == 'tutor_payment_status')
+        );
+
+      allow update: if (isOwnNotification() || (isAdminBroadcast() && isAdmin()) || (isTutorBroadcast() && isApprovedTutor()))
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['is_read']);
+
+      allow delete: if false;
+    }
+
+    match /live_rooms/{sessionId} {
+      // Room state belongs to an existing published live session.
+      // Students may only read rooms for courses they are actively enrolled in.
+      allow read: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+        || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+            && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+      // Only Admin or the tutor assigned to this session may create/update room state.
+      allow create: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+
+      allow delete: if isAdmin();
+
+      match /connections/{studentId} {
+          // Only the assigned tutor and owning student may read signaling state.
+          allow read: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+          // Student creates the initial offer connection.
+          allow create: if isAdmin()
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && request.resource.data.student_id == request.auth.uid
+                && request.resource.data.tutor_id == get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+          // Only the assigned tutor may write the answer.
+          // Connection identity and the original offer cannot be changed.
+          allow update: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer == resource.data.offer
+                && request.resource.data.answer is string);
+
+          allow delete: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (isSignedIn() && studentId == request.auth.uid);
+
+          match /student_ice/{candidateId} {
+            allow read: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+              || (isSignedIn() && studentId == request.auth.uid);
+
+            // Student may only append their own ICE candidates.
+            allow create: if isAdmin()
+              || (isSignedIn()
+                  && studentId == request.auth.uid
+                  && request.resource.data.from_user_id == request.auth.uid
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                  && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+            allow update: if false;
+
+            allow delete: if isAdmin()
+              || (isSignedIn() && studentId == request.auth.uid);
+          }
+
+          match /tutor_ice/{candidateId} {
+            allow read: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+              || (isSignedIn() && studentId == request.auth.uid);
+
+            // Only the assigned tutor may append tutor ICE candidates.
+            allow create: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
+                  && request.resource.data.from_user_id == request.auth.uid);
+
+            allow update: if false;
+
+            allow delete: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+          }
+        }
+
+        match /participants/{userId} {
+        // Room participants are visible only to authorized room members.
+        allow read: if isAdmin()
+          || (isApprovedTutor()
+              && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+          || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+              && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+        // A participant may create/update only their own presence document.
+        allow create, update: if isSignedIn()
+          && userId == request.auth.uid
+          && (
+            isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id))
+          );
+
+        allow delete: if isAdmin()
+          || (isSignedIn() && userId == request.auth.uid);
+      }
+    }
+
+    // ------------------------------------------------------------------
+    // Competition system
+    // Students must have an active enrolment in the competition course.
+    // Answer keys remain server-side only.
+    // ------------------------------------------------------------------
+
+    match /competition_questions/{questionId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.is_published == true
+            && hasActiveEnrolment(resource.data.course_id));
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_question_indexes/{courseId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && hasActiveEnrolment(courseId));
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_answer_keys/{questionId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /competition_attempts/{attemptId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create: if isSignedIn()
+        && request.resource.data.student_id == request.auth.uid
+        && request.resource.data.status == 'in_progress'
+        && request.resource.data.course_id != 'DNWt3cPE4ZSJG90CTC1e'
+        && hasActiveEnrolment(request.resource.data.course_id);
+
+      // Student attempts are locked after creation.
+      // Submission/scoring is performed by the trusted backend.
+      allow update, delete: if isAdmin();
+
+      match /answers/{questionId} {
+        allow read: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.student_id == request.auth.uid);
+
+        allow create, update: if isSignedIn()
+          && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.student_id == request.auth.uid
+          && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.status == 'in_progress'
+          && request.resource.data.question_id == questionId;
+
+        allow delete: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.student_id == request.auth.uid
+              && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.status == 'in_progress');
+      }
+    }
+
+    // ------------------------------------------------------------------
+    // Competition Mock Test system
+    // Separate from official competition attempts/results.
+    // Mock tests are practice only and never count as official attempts.
+    // ------------------------------------------------------------------
+
+    match /competition_mock_configs/{courseId} {
+      allow read: if isAdmin()
+        || (isSignedIn() && hasActiveEnrolment(courseId));
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_mock_attempts/{attemptId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create: if isSignedIn()
+        && request.resource.data.student_id == request.auth.uid
+        && request.resource.data.status == 'in_progress'
+        && hasActiveEnrolment(request.resource.data.course_id);
+
+      // Mock submission/scoring is performed by trusted backend.
+      allow update, delete: if isAdmin();
+
+      match /answers/{questionId} {
+        allow read: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid);
+
+        allow create, update: if isSignedIn()
+          && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid
+          && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.status == 'in_progress'
+          && request.resource.data.question_id == questionId;
+
+        allow delete: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.status == 'in_progress');
+      }
+    }
+
+    match /competition_mock_results/{resultId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_results/{resultId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    // ------------------------------------------------------------------
+    // Competition launch-discount counters
+    // Students may read the counter for checkout display only.
+    // Only admins may create/update/delete counters and eligibility records.
+    // The actual 50-slot decision is enforced inside the admin approval
+    // transaction by claimCatalogLaunchSlotTx().
+    // ------------------------------------------------------------------
+
+    match /catalog_launch_counters/{courseKey} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /catalog_launch_eligibility/{eligibilityId} {
+      allow read, write: if isAdmin();
+    }
+
+    // BOGO entitlements are created/consumed by the controlled backend.
+    // Students cannot manufacture or modify their own free-course entitlement.
+    match /bogo_entitlements/{entitlementId} {
+      allow read: if isAdmin()
+        || (isSignedIn() && resource.data.student_id == request.auth.uid);
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+))
+            && (!('recording_url' in request.resource.data) || request.resource.data.recording_url == null || request.resource.data.recording_url.matches('^https?://[^\\s]+
+
+      allow delete: if isAdmin();
+    }
+
+    match /session_attendance/{attendanceId} {
+      // Doc id convention: `${session_id}_${student_id}` (mirrors
+      // enrolments' `${student_id}_${course_id}` pattern).
+      allow read: if isAdmin()
+        || isOwner(resource.data.student_id)
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid);
+
+      // A student may create ONLY their own self-reported join record,
+      // for a session they're actually enrolled in and that is
+      // currently published — never a status other than 'present' and
+      // never a source other than 'self_reported' (a tutor/admin
+      // override always goes through the branches below instead).
+      allow create: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(request.resource.data.student_id)
+          && attendanceId == request.resource.data.session_id + '_' + request.auth.uid
+          && request.resource.data.source == 'self_reported'
+          && request.resource.data.status == 'present'
+          && hasActiveEnrolment(request.resource.data.course_id)
+          && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.status == 'published'
+        );
+
+      // Updates: a student may only ever touch their own `joined_at` on
+      // their own self-reported row (repeated join clicks); everything
+      // else (status corrections, marking other students) is a
+      // tutor/admin action.
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(resource.data.student_id)
+          && resource.data.source == 'self_reported'
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['joined_at'])
+        );
+
+      allow delete: if isAdmin();
+    }
+
+    // Everything else (payments, certificates, notifications, ...) is
+    // intentionally NOT covered here — see the warning at the top of
+    // this file. Merge in your existing rules for those collections
+    // before deploying.
+    match /payments/{paymentId} {
+      // A student reads only their own payments (StudentDashboard.tsx);
+      // an admin reads all (AdminPayments.tsx).
+      allow read: if isAdmin()
+        || (isSignedIn() && (
+          resource.data.student_id == request.auth.uid
+          || resource.data.tutor_id == request.auth.uid
+        ));
+
+      // Tutor registration payments are deterministic: one payment document
+      // per tutor, always exactly ₹500.
+      allow create: if isSignedIn()
+        && paymentId == ('tutor_registration_' + request.auth.uid)
+        && request.resource.data.payment_type == 'tutor_registration'
+        && request.resource.data.tutor_id == request.auth.uid
+        && request.resource.data.tutor_name is string
+        && request.resource.data.student_id == null
+        && request.resource.data.course_id == null
+        && request.resource.data.course_name == null
+        && request.resource.data.amount == 500
+        && request.resource.data.status == 'pending'
+        && request.resource.data.verified_at == null
+        && request.resource.data.verified_by == null
+        && request.resource.data.keys().hasAll([
+          'payment_type',
+          'tutor_id',
+          'tutor_name',
+          'student_id',
+          'course_id',
+          'course_name',
+          'amount',
+          'status',
+          'verified_at',
+          'verified_by',
+          'utr_reference',
+          'submitted_at',
+          'created_at'
+        ]);
+
+      // A tutor may only submit their own pending registration payment.
+      // Admins retain the existing verification authority below.
+      allow update: if isAdmin() || (
+        isSignedIn()
+        && resource.data.payment_type == 'tutor_registration'
+        && resource.data.tutor_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      ) || (
+        isSignedIn()
+        && resource.data.payment_type != 'tutor_registration'
+        && resource.data.student_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      );
+
+      // Payment.tsx creates its own pending payment doc from
+      // course.base_fee/discount_amount it just read from Firestore —
+      // but a client calling the SDK directly isn't bound by what the
+      // UI actually read, so `amount` and `course_name` are re-derived
+      // here from the *server's* course document, not trusted from the
+      // request. A forged amount (or a course_id pointing at an
+      // unpublished/nonexistent course) is rejected outright.
+      allow create: if isSignedIn()
+        && request.resource.data.student_id == request.auth.uid
+        && request.resource.data.status == 'pending'
+        && request.resource.data.verified_at == null
+        && request.resource.data.verified_by == null
+        && request.resource.data.course_id is string
+        && paymentMatchesCourse(request.resource.data.course_id, request.resource.data.amount, request.resource.data.course_name);
+
+      // Update: either (a) the owning student submitting their UTR —
+      // only utr_reference/status/submitted_at may change, and status
+      // may only move to 'submitted' — or (b) an admin verifying
+      // (approve/reject), which AdminPayments.tsx does alongside the
+      // enrolment write below.
+      allow update: if isAdmin() || (
+        isSignedIn() && resource.data.student_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      );
+
+      allow delete: if false;
+    }
+
+
+    match /certificates/{certificateId} {
+      allow get: if true;
+      allow list: if isAdmin() || request.query.limit <= 1;
+      allow create, update: if isAdmin();
+      allow delete: if false;
+    }
+
+    match /push_tokens/{tokenId} {
+      // FCM registration tokens are private to the signed-in user.
+      // The token document ID must match the token field and the owner UID.
+      allow create, update: if isSignedIn()
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.token == tokenId;
+
+      allow read, delete: if false;
+    }
+
+    match /notifications/{notificationId} {
+      function isOwnNotification() {
+        return isSignedIn() && resource.data.recipient_uid == request.auth.uid;
+      }
+      function isAdminBroadcast() {
+        return resource.data.recipient_uid == null && resource.data.recipient_role == 'admin';
+      }
+      function isTutorBroadcast() {
+        return resource.data.recipient_uid == null && resource.data.recipient_role == 'tutor';
+      }
+
+      allow read: if isOwnNotification()
+        || (isAdminBroadcast() && isAdmin())
+        || (isTutorBroadcast() && isApprovedTutor());
+
+      allow create: if isSignedIn() && request.resource.data.is_read == false
+        && request.resource.data.keys().hasAll(['recipient_uid','recipient_role','type','title','message','is_read','created_at'])
+        && (
+          isAdmin()
+          || (request.resource.data.recipient_uid == request.auth.uid
+              && request.resource.data.type == 'registration_success')
+          || (request.resource.data.recipient_uid == null
+              && request.resource.data.recipient_role == 'admin'
+              && request.resource.data.type in ['new_student_registration', 'new_enrollment', 'tutor_activity', 'payment_received'])
+          || (request.resource.data.recipient_uid == request.auth.uid
+              && request.resource.data.recipient_role == 'tutor'
+              && request.resource.data.type == 'tutor_payment_status')
+        );
+
+      allow update: if (isOwnNotification() || (isAdminBroadcast() && isAdmin()) || (isTutorBroadcast() && isApprovedTutor()))
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['is_read']);
+
+      allow delete: if false;
+    }
+
+    match /live_rooms/{sessionId} {
+      // Room state belongs to an existing published live session.
+      // Students may only read rooms for courses they are actively enrolled in.
+      allow read: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+        || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+            && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+      // Only Admin or the tutor assigned to this session may create/update room state.
+      allow create: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+
+      allow delete: if isAdmin();
+
+      match /connections/{studentId} {
+          // Only the assigned tutor and owning student may read signaling state.
+          allow read: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+          // Student creates the initial offer connection.
+          allow create: if isAdmin()
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && request.resource.data.student_id == request.auth.uid
+                && request.resource.data.tutor_id == get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+          // Only the assigned tutor may write the answer.
+          // Connection identity and the original offer cannot be changed.
+          allow update: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer == resource.data.offer
+                && request.resource.data.answer is string);
+
+          allow delete: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (isSignedIn() && studentId == request.auth.uid);
+
+          match /student_ice/{candidateId} {
+            allow read: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+              || (isSignedIn() && studentId == request.auth.uid);
+
+            // Student may only append their own ICE candidates.
+            allow create: if isAdmin()
+              || (isSignedIn()
+                  && studentId == request.auth.uid
+                  && request.resource.data.from_user_id == request.auth.uid
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                  && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+            allow update: if false;
+
+            allow delete: if isAdmin()
+              || (isSignedIn() && studentId == request.auth.uid);
+          }
+
+          match /tutor_ice/{candidateId} {
+            allow read: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+              || (isSignedIn() && studentId == request.auth.uid);
+
+            // Only the assigned tutor may append tutor ICE candidates.
+            allow create: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
+                  && request.resource.data.from_user_id == request.auth.uid);
+
+            allow update: if false;
+
+            allow delete: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+          }
+        }
+
+        match /participants/{userId} {
+        // Room participants are visible only to authorized room members.
+        allow read: if isAdmin()
+          || (isApprovedTutor()
+              && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+          || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+              && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+        // A participant may create/update only their own presence document.
+        allow create, update: if isSignedIn()
+          && userId == request.auth.uid
+          && (
+            isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id))
+          );
+
+        allow delete: if isAdmin()
+          || (isSignedIn() && userId == request.auth.uid);
+      }
+    }
+
+    // ------------------------------------------------------------------
+    // Competition system
+    // Students must have an active enrolment in the competition course.
+    // Answer keys remain server-side only.
+    // ------------------------------------------------------------------
+
+    match /competition_questions/{questionId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.is_published == true
+            && hasActiveEnrolment(resource.data.course_id));
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_question_indexes/{courseId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && hasActiveEnrolment(courseId));
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_answer_keys/{questionId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /competition_attempts/{attemptId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create: if isSignedIn()
+        && request.resource.data.student_id == request.auth.uid
+        && request.resource.data.status == 'in_progress'
+        && request.resource.data.course_id != 'DNWt3cPE4ZSJG90CTC1e'
+        && hasActiveEnrolment(request.resource.data.course_id);
+
+      // Student attempts are locked after creation.
+      // Submission/scoring is performed by the trusted backend.
+      allow update, delete: if isAdmin();
+
+      match /answers/{questionId} {
+        allow read: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.student_id == request.auth.uid);
+
+        allow create, update: if isSignedIn()
+          && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.student_id == request.auth.uid
+          && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.status == 'in_progress'
+          && request.resource.data.question_id == questionId;
+
+        allow delete: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.student_id == request.auth.uid
+              && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.status == 'in_progress');
+      }
+    }
+
+    // ------------------------------------------------------------------
+    // Competition Mock Test system
+    // Separate from official competition attempts/results.
+    // Mock tests are practice only and never count as official attempts.
+    // ------------------------------------------------------------------
+
+    match /competition_mock_configs/{courseId} {
+      allow read: if isAdmin()
+        || (isSignedIn() && hasActiveEnrolment(courseId));
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_mock_attempts/{attemptId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create: if isSignedIn()
+        && request.resource.data.student_id == request.auth.uid
+        && request.resource.data.status == 'in_progress'
+        && hasActiveEnrolment(request.resource.data.course_id);
+
+      // Mock submission/scoring is performed by trusted backend.
+      allow update, delete: if isAdmin();
+
+      match /answers/{questionId} {
+        allow read: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid);
+
+        allow create, update: if isSignedIn()
+          && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid
+          && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.status == 'in_progress'
+          && request.resource.data.question_id == questionId;
+
+        allow delete: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.status == 'in_progress');
+      }
+    }
+
+    match /competition_mock_results/{resultId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_results/{resultId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    // ------------------------------------------------------------------
+    // Competition launch-discount counters
+    // Students may read the counter for checkout display only.
+    // Only admins may create/update/delete counters and eligibility records.
+    // The actual 50-slot decision is enforced inside the admin approval
+    // transaction by claimCatalogLaunchSlotTx().
+    // ------------------------------------------------------------------
+
+    match /catalog_launch_counters/{courseKey} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /catalog_launch_eligibility/{eligibilityId} {
+      allow read, write: if isAdmin();
+    }
+
+    // BOGO entitlements are created/consumed by the controlled backend.
+    // Students cannot manufacture or modify their own free-course entitlement.
+    match /bogo_entitlements/{entitlementId} {
+      allow read: if isAdmin()
+        || (isSignedIn() && resource.data.student_id == request.auth.uid);
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+)));
+
+      allow delete: if isAdmin();
+    }
+
+    match /session_attendance/{attendanceId} {
+      // Doc id convention: `${session_id}_${student_id}` (mirrors
+      // enrolments' `${student_id}_${course_id}` pattern).
+      allow read: if isAdmin()
+        || isOwner(resource.data.student_id)
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid);
+
+      // A student may create ONLY their own self-reported join record,
+      // for a session they're actually enrolled in and that is
+      // currently published — never a status other than 'present' and
+      // never a source other than 'self_reported' (a tutor/admin
+      // override always goes through the branches below instead).
+      allow create: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(request.resource.data.student_id)
+          && attendanceId == request.resource.data.session_id + '_' + request.auth.uid
+          && request.resource.data.source == 'self_reported'
+          && request.resource.data.status == 'present'
+          && hasActiveEnrolment(request.resource.data.course_id)
+          && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.status == 'published'
+        );
+
+      // Updates: a student may only ever touch their own `joined_at` on
+      // their own self-reported row (repeated join clicks); everything
+      // else (status corrections, marking other students) is a
+      // tutor/admin action.
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid)
+        || (
+          isOwner(resource.data.student_id)
+          && resource.data.source == 'self_reported'
+          && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['joined_at'])
+        );
+
+      allow delete: if isAdmin();
+    }
+
+    // Everything else (payments, certificates, notifications, ...) is
+    // intentionally NOT covered here — see the warning at the top of
+    // this file. Merge in your existing rules for those collections
+    // before deploying.
+    match /payments/{paymentId} {
+      // A student reads only their own payments (StudentDashboard.tsx);
+      // an admin reads all (AdminPayments.tsx).
+      allow read: if isAdmin()
+        || (isSignedIn() && (
+          resource.data.student_id == request.auth.uid
+          || resource.data.tutor_id == request.auth.uid
+        ));
+
+      // Tutor registration payments are deterministic: one payment document
+      // per tutor, always exactly ₹500.
+      allow create: if isSignedIn()
+        && paymentId == ('tutor_registration_' + request.auth.uid)
+        && request.resource.data.payment_type == 'tutor_registration'
+        && request.resource.data.tutor_id == request.auth.uid
+        && request.resource.data.tutor_name is string
+        && request.resource.data.student_id == null
+        && request.resource.data.course_id == null
+        && request.resource.data.course_name == null
+        && request.resource.data.amount == 500
+        && request.resource.data.status == 'pending'
+        && request.resource.data.verified_at == null
+        && request.resource.data.verified_by == null
+        && request.resource.data.keys().hasAll([
+          'payment_type',
+          'tutor_id',
+          'tutor_name',
+          'student_id',
+          'course_id',
+          'course_name',
+          'amount',
+          'status',
+          'verified_at',
+          'verified_by',
+          'utr_reference',
+          'submitted_at',
+          'created_at'
+        ]);
+
+      // A tutor may only submit their own pending registration payment.
+      // Admins retain the existing verification authority below.
+      allow update: if isAdmin() || (
+        isSignedIn()
+        && resource.data.payment_type == 'tutor_registration'
+        && resource.data.tutor_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      ) || (
+        isSignedIn()
+        && resource.data.payment_type != 'tutor_registration'
+        && resource.data.student_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      );
+
+      // Payment.tsx creates its own pending payment doc from
+      // course.base_fee/discount_amount it just read from Firestore —
+      // but a client calling the SDK directly isn't bound by what the
+      // UI actually read, so `amount` and `course_name` are re-derived
+      // here from the *server's* course document, not trusted from the
+      // request. A forged amount (or a course_id pointing at an
+      // unpublished/nonexistent course) is rejected outright.
+      allow create: if isSignedIn()
+        && request.resource.data.student_id == request.auth.uid
+        && request.resource.data.status == 'pending'
+        && request.resource.data.verified_at == null
+        && request.resource.data.verified_by == null
+        && request.resource.data.course_id is string
+        && paymentMatchesCourse(request.resource.data.course_id, request.resource.data.amount, request.resource.data.course_name);
+
+      // Update: either (a) the owning student submitting their UTR —
+      // only utr_reference/status/submitted_at may change, and status
+      // may only move to 'submitted' — or (b) an admin verifying
+      // (approve/reject), which AdminPayments.tsx does alongside the
+      // enrolment write below.
+      allow update: if isAdmin() || (
+        isSignedIn() && resource.data.student_id == request.auth.uid
+        && resource.data.status == 'pending'
+        && request.resource.data.status == 'submitted'
+        && request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['utr_reference', 'status', 'submitted_at'])
+      );
+
+      allow delete: if false;
+    }
+
+
+    match /certificates/{certificateId} {
+      allow get: if true;
+      allow list: if isAdmin() || request.query.limit <= 1;
+      allow create, update: if isAdmin();
+      allow delete: if false;
+    }
+
+    match /push_tokens/{tokenId} {
+      // FCM registration tokens are private to the signed-in user.
+      // The token document ID must match the token field and the owner UID.
+      allow create, update: if isSignedIn()
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.token == tokenId;
+
+      allow read, delete: if false;
+    }
+
+    match /notifications/{notificationId} {
+      function isOwnNotification() {
+        return isSignedIn() && resource.data.recipient_uid == request.auth.uid;
+      }
+      function isAdminBroadcast() {
+        return resource.data.recipient_uid == null && resource.data.recipient_role == 'admin';
+      }
+      function isTutorBroadcast() {
+        return resource.data.recipient_uid == null && resource.data.recipient_role == 'tutor';
+      }
+
+      allow read: if isOwnNotification()
+        || (isAdminBroadcast() && isAdmin())
+        || (isTutorBroadcast() && isApprovedTutor());
+
+      allow create: if isSignedIn() && request.resource.data.is_read == false
+        && request.resource.data.keys().hasAll(['recipient_uid','recipient_role','type','title','message','is_read','created_at'])
+        && (
+          isAdmin()
+          || (request.resource.data.recipient_uid == request.auth.uid
+              && request.resource.data.type == 'registration_success')
+          || (request.resource.data.recipient_uid == null
+              && request.resource.data.recipient_role == 'admin'
+              && request.resource.data.type in ['new_student_registration', 'new_enrollment', 'tutor_activity', 'payment_received'])
+          || (request.resource.data.recipient_uid == request.auth.uid
+              && request.resource.data.recipient_role == 'tutor'
+              && request.resource.data.type == 'tutor_payment_status')
+        );
+
+      allow update: if (isOwnNotification() || (isAdminBroadcast() && isAdmin()) || (isTutorBroadcast() && isApprovedTutor()))
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['is_read']);
+
+      allow delete: if false;
+    }
+
+    match /live_rooms/{sessionId} {
+      // Room state belongs to an existing published live session.
+      // Students may only read rooms for courses they are actively enrolled in.
+      allow read: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+        || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+            && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+      // Only Admin or the tutor assigned to this session may create/update room state.
+      allow create: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+
+      allow update: if isAdmin()
+        || (isApprovedTutor()
+            && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+
+      allow delete: if isAdmin();
+
+      match /connections/{studentId} {
+          // Only the assigned tutor and owning student may read signaling state.
+          allow read: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+          // Student creates the initial offer connection.
+          allow create: if isAdmin()
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && request.resource.data.student_id == request.auth.uid
+                && request.resource.data.tutor_id == get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+          // Only the assigned tutor may write the answer.
+          // Connection identity and the original offer cannot be changed.
+          allow update: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer == resource.data.offer
+                && request.resource.data.answer is string);
+
+          allow delete: if isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (isSignedIn() && studentId == request.auth.uid);
+
+          match /student_ice/{candidateId} {
+            allow read: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+              || (isSignedIn() && studentId == request.auth.uid);
+
+            // Student may only append their own ICE candidates.
+            allow create: if isAdmin()
+              || (isSignedIn()
+                  && studentId == request.auth.uid
+                  && request.resource.data.from_user_id == request.auth.uid
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                  && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+            allow update: if false;
+
+            allow delete: if isAdmin()
+              || (isSignedIn() && studentId == request.auth.uid);
+          }
+
+          match /tutor_ice/{candidateId} {
+            allow read: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+              || (isSignedIn() && studentId == request.auth.uid);
+
+            // Only the assigned tutor may append tutor ICE candidates.
+            allow create: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
+                  && request.resource.data.from_user_id == request.auth.uid);
+
+            allow update: if false;
+
+            allow delete: if isAdmin()
+              || (isApprovedTutor()
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+          }
+        }
+
+        match /participants/{userId} {
+        // Room participants are visible only to authorized room members.
+        allow read: if isAdmin()
+          || (isApprovedTutor()
+              && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+          || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+              && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
+
+        // A participant may create/update only their own presence document.
+        allow create, update: if isSignedIn()
+          && userId == request.auth.uid
+          && (
+            isAdmin()
+            || (isApprovedTutor()
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+            || (get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id))
+          );
+
+        allow delete: if isAdmin()
+          || (isSignedIn() && userId == request.auth.uid);
+      }
+    }
+
+    // ------------------------------------------------------------------
+    // Competition system
+    // Students must have an active enrolment in the competition course.
+    // Answer keys remain server-side only.
+    // ------------------------------------------------------------------
+
+    match /competition_questions/{questionId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.is_published == true
+            && hasActiveEnrolment(resource.data.course_id));
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_question_indexes/{courseId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && hasActiveEnrolment(courseId));
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_answer_keys/{questionId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /competition_attempts/{attemptId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create: if isSignedIn()
+        && request.resource.data.student_id == request.auth.uid
+        && request.resource.data.status == 'in_progress'
+        && request.resource.data.course_id != 'DNWt3cPE4ZSJG90CTC1e'
+        && hasActiveEnrolment(request.resource.data.course_id);
+
+      // Student attempts are locked after creation.
+      // Submission/scoring is performed by the trusted backend.
+      allow update, delete: if isAdmin();
+
+      match /answers/{questionId} {
+        allow read: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.student_id == request.auth.uid);
+
+        allow create, update: if isSignedIn()
+          && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.student_id == request.auth.uid
+          && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.status == 'in_progress'
+          && request.resource.data.question_id == questionId;
+
+        allow delete: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.student_id == request.auth.uid
+              && get(/databases/$(database)/documents/competition_attempts/$(attemptId)).data.status == 'in_progress');
+      }
+    }
+
+    // ------------------------------------------------------------------
+    // Competition Mock Test system
+    // Separate from official competition attempts/results.
+    // Mock tests are practice only and never count as official attempts.
+    // ------------------------------------------------------------------
+
+    match /competition_mock_configs/{courseId} {
+      allow read: if isAdmin()
+        || (isSignedIn() && hasActiveEnrolment(courseId));
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_mock_attempts/{attemptId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create: if isSignedIn()
+        && request.resource.data.student_id == request.auth.uid
+        && request.resource.data.status == 'in_progress'
+        && hasActiveEnrolment(request.resource.data.course_id);
+
+      // Mock submission/scoring is performed by trusted backend.
+      allow update, delete: if isAdmin();
+
+      match /answers/{questionId} {
+        allow read: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid);
+
+        allow create, update: if isSignedIn()
+          && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid
+          && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.status == 'in_progress'
+          && request.resource.data.question_id == questionId;
+
+        allow delete: if isAdmin()
+          || (isSignedIn()
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.student_id == request.auth.uid
+              && get(/databases/$(database)/documents/competition_mock_attempts/$(attemptId)).data.status == 'in_progress');
+      }
+    }
+
+    match /competition_mock_results/{resultId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /competition_results/{resultId} {
+      allow read: if isAdmin()
+        || (isSignedIn()
+            && resource.data.student_id == request.auth.uid);
+
+      allow create, update, delete: if isAdmin();
+    }
+
+    // ------------------------------------------------------------------
+    // Competition launch-discount counters
+    // Students may read the counter for checkout display only.
+    // Only admins may create/update/delete counters and eligibility records.
+    // The actual 50-slot decision is enforced inside the admin approval
+    // transaction by claimCatalogLaunchSlotTx().
+    // ------------------------------------------------------------------
+
+    match /catalog_launch_counters/{courseKey} {
+      allow read: if isSignedIn();
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /catalog_launch_eligibility/{eligibilityId} {
+      allow read, write: if isAdmin();
+    }
+
+    // BOGO entitlements are created/consumed by the controlled backend.
+    // Students cannot manufacture or modify their own free-course entitlement.
+    match /bogo_entitlements/{entitlementId} {
+      allow read: if isAdmin()
+        || (isSignedIn() && resource.data.student_id == request.auth.uid);
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+)));
       allow delete: if isAdmin();
     }
 
