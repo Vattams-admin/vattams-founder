@@ -41,3 +41,12 @@ verify_jwt = false
 
 [functions.competition-mock-attempt]
 verify_jwt = false
+
+[functions.competition-official-attempt]
+verify_jwt = false
+
+[functions.competition-official-question-content]
+verify_jwt = false
+
+[functions.competition-official-scoring]
+verify_jwt = false
