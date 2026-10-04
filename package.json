@@ -14,7 +14,8 @@
     "prebuild": "node scripts/generate-sitemap.mjs",
     "thirukkural:validate": "node scripts/validate-thirukkural-production.mjs",
     "thirukkural:package": "node scripts/package-thirukkural-production.mjs",
-    "thirukkural:audit": "node scripts/audit-thirukkural-production.mjs"
+    "thirukkural:audit": "node scripts/audit-thirukkural-production.mjs",
+    "thirukkural:repair-course": "node scripts/repair-thirukkural-course.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
