@@ -547,6 +547,15 @@ async function startOrResume(
   studentId: string,
   courseId: string,
 ) {
+  const competition =
+    await getCompetition(courseId);
+
+  const access =
+    await resolveAccess(
+      studentId,
+      courseId,
+    );
+
   const existing =
     await findActiveAttempt(
       studentId,
@@ -556,15 +565,6 @@ async function startOrResume(
   if (existing) {
     return attemptResponse(existing);
   }
-
-  const competition =
-    await getCompetition(courseId);
-
-  const access =
-    await resolveAccess(
-      studentId,
-      courseId,
-    );
 
   if (!access.dateOfBirth) {
     throw new Error(
