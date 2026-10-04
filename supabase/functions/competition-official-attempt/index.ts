@@ -75,6 +75,15 @@ function paperForAge(age: number): { ageBand: keyof typeof OFFICIAL_PAPERS; ques
   return { ageBand: "age_16_plus", questionIds: OFFICIAL_PAPERS.age_16_plus };
 }
 
+async function competitionEnabled() {
+  const { data, error } = await supabase.storage
+    .from("academia-course-materials")
+    .download(REGISTRY_BUNDLE);
+  if (error || !data) throw new Error("Competition registry is unavailable.");
+  const registry = JSON.parse(await data.text());
+  return registry?.competitions?.[COURSE_ID]?.enabled === true;
+}
+
 async function getAccess(studentId: string) {
   const { data, error } = await supabase.from("competition_access_cache")
     .select("student_id,course_id,is_admin,enrolment_active,date_of_birth,checked_at")
@@ -120,6 +129,9 @@ Deno.serve(async (request) => {
   try {
     if (request.method !== "POST") return json({ error: "Method not allowed" }, 405);
     const studentId = await verifyFirebaseUser(request);
+    if (!(await competitionEnabled())) {
+      return json({ error: "Competition is not enabled." }, 409);
+    }
     const access = await getAccess(studentId);
     if (!access) return json({ error: "You do not have access to this competition." }, 403);
 
