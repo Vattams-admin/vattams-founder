@@ -27,8 +27,13 @@ export default function StudentRegister() {
   // Preserves any redirect chain handed off from a page like Payment.tsx
   // (which bounces unauthenticated students to /login with a redirectTo,
   // and /login forwards it here) — existing dashboard route is the default.
+  const requestedRedirect = (location.state as { redirectTo?: unknown })?.redirectTo
   const redirectTo =
-    (location.state as { redirectTo?: string })?.redirectTo ?? '/dashboard'
+    typeof requestedRedirect === 'string' &&
+    requestedRedirect.startsWith('/') &&
+    !requestedRedirect.startsWith('//')
+      ? requestedRedirect
+      : '/dashboard'
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
