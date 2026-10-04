@@ -355,6 +355,16 @@ function selectQuestions(
   return shuffle(selected);
 }
 
+class MockAccessError extends Error {
+  status: number;
+
+  constructor(message: string, status = 403) {
+    super(message);
+    this.name = "MockAccessError";
+    this.status = status;
+  }
+}
+
 async function getCachedAccess(
   studentId: string,
   courseId: string,
@@ -376,7 +386,9 @@ async function getCachedAccess(
   }
 
   if (!data) {
-    return null;
+    throw new MockAccessError(
+      "Your competition access is not activated yet. Please try again shortly.",
+    );
   }
 
   const checkedAt =
@@ -386,161 +398,52 @@ async function getCachedAccess(
     Date.now() - checkedAt;
 
   if (
+    !Number.isFinite(checkedAt) ||
+    checkedAt > Date.now() + 60_000
+  ) {
+    throw new MockAccessError(
+      "Your competition access information is out of date. Please try again shortly.",
+    );
+  }
+
+  if (
     ageMs >
     CACHE_TTL_HOURS * 60 * 60 * 1000
   ) {
-    return null;
+    throw new MockAccessError(
+      "Your competition access information is out of date. Please try again shortly.",
+    );
+  }
+
+  if (
+    !data.date_of_birth ||
+    (!data.is_admin && !data.enrolment_active)
+  ) {
+    throw new MockAccessError(
+      "You do not have access to this competition.",
+    );
+  }
+
+  const dateOfBirth = new Date(
+    `${String(data.date_of_birth)}T00:00:00.000Z`,
+  );
+  const now = new Date();
+  const oldestAllowed = new Date(now);
+  oldestAllowed.setUTCFullYear(
+    oldestAllowed.getUTCFullYear() - 120,
+  );
+
+  if (
+    !Number.isFinite(dateOfBirth.getTime()) ||
+    dateOfBirth > now ||
+    dateOfBirth < oldestAllowed
+  ) {
+    throw new MockAccessError(
+      "You do not have access to this competition.",
+    );
   }
 
   return data;
-}
-
-function getFirebaseServiceAccount() {
-  const raw =
-    Deno.env.get("FIREBASE_SERVICE_ACCOUNT") ||
-    Deno.env.get("FIREBASE_SERVICE_ACCOUNT_JSON") ||
-    "";
-
-  if (!raw) {
-    throw new Error(
-      "Firebase service account configuration missing",
-    );
-  }
-
-  return JSON.parse(raw);
-}
-
-function base64UrlDecode(value: string): Uint8Array {
-  const padded =
-    value
-      .replace(/-/g, "+")
-      .replace(/_/g, "/")
-      .padEnd(
-        Math.ceil(value.length / 4) * 4,
-        "=",
-      );
-
-  const binary = atob(padded);
-
-  return Uint8Array.from(
-    binary,
-    (char) => char.charCodeAt(0),
-  );
-}
-
-async function firestoreGet(path: string) {
-  const account = getFirebaseServiceAccount();
-
-  const now = Math.floor(Date.now() / 1000);
-
-  const header = btoa(
-    JSON.stringify({
-      alg: "RS256",
-      typ: "JWT",
-    }),
-  )
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/, "");
-
-  const payload = btoa(
-    JSON.stringify({
-      iss: account.client_email,
-      sub: account.client_email,
-      aud: "https://firestore.googleapis.com/",
-      iat: now,
-      exp: now + 3600,
-    }),
-  )
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/, "");
-
-  const signingInput = `${header}.${payload}`;
-
-  const keyData = base64UrlDecode(
-    account.private_key
-      .replace(
-        "-----BEGIN PRIVATE KEY-----",
-        "",
-      )
-      .replace(
-        "-----END PRIVATE KEY-----",
-        "",
-      )
-      .replace(/\s/g, ""),
-  );
-
-  const cryptoKey =
-    await crypto.subtle.importKey(
-      "pkcs8",
-      keyData,
-      {
-        name: "RSASSA-PKCS1-v1_5",
-        hash: "SHA-256",
-      },
-      false,
-      ["sign"],
-    );
-
-  const signature =
-    await crypto.subtle.sign(
-      "RSASSA-PKCS1-v1_5",
-      cryptoKey,
-      new TextEncoder().encode(signingInput),
-    );
-
-  const signatureText =
-    btoa(
-      String.fromCharCode(
-        ...new Uint8Array(signature),
-      ),
-    )
-      .replace(/\+/g, "-")
-      .replace(/\//g, "_")
-      .replace(/=+$/, "");
-
-  const response = await fetch(
-    `https://firestore.googleapis.com/v1/projects/${FIREBASE_PROJECT_ID}/databases/(default)/documents/${path}`,
-    {
-      headers: {
-        Authorization:
-          `Bearer ${signingInput}.${signatureText}`,
-      },
-    },
-  );
-
-  if (response.status === 404) {
-    return null;
-  }
-
-  if (!response.ok) {
-    throw new Error(
-      `Firestore access check failed: ${response.status}`,
-    );
-  }
-
-  const document = await response.json();
-  const fields = document.fields || {};
-  const result: Record<string, unknown> = {};
-
-  for (const [key, value] of Object.entries(fields)) {
-    const field = value as Record<string, unknown>;
-
-    if ("stringValue" in field) {
-      result[key] = field.stringValue;
-    } else if ("booleanValue" in field) {
-      result[key] = field.booleanValue;
-    } else if ("integerValue" in field) {
-      result[key] = Number(field.integerValue);
-    } else if ("timestampValue" in field) {
-      result[key] = field.timestampValue;
-    } else {
-      result[key] = null;
-    }
-  }
-
-  return result;
 }
 
 async function resolveAccess(
@@ -553,93 +456,9 @@ async function resolveAccess(
       courseId,
     );
 
-  if (cached) {
-    if (
-      cached.is_admin ||
-      cached.enrolment_active
-    ) {
-      return {
-        dateOfBirth:
-          cached.date_of_birth,
-      };
-    }
-
-    throw new Error(
-      "You do not have access to this competition",
-    );
-  }
-
-  const admin =
-    await firestoreGet(
-      `admins/${studentId}`,
-    );
-
-  const enrolment =
-    await firestoreGet(
-      `enrolments/${studentId}_${courseId}`,
-    );
-
-  const student =
-    await firestoreGet(
-      `students/${studentId}`,
-    );
-
-  const isAdmin =
-    admin !== null &&
-    admin.is_active === true &&
-    [
-      "admin",
-      "super_admin",
-      "instructor",
-    ].includes(
-      typeof admin.role === "string"
-        ? admin.role
-        : "",
-    );
-
-  const enrolmentActive =
-    enrolment !== null &&
-    enrolment.status === "active";
-
-  const dateOfBirth =
-    typeof student?.date_of_birth === "string"
-      ? student.date_of_birth
-      : typeof student?.dob === "string"
-        ? student.dob
-        : null;
-
-  const { error } =
-    await supabase
-      .from("competition_access_cache")
-      .upsert(
-        {
-          student_id: studentId,
-          course_id: courseId,
-          is_admin: isAdmin,
-          enrolment_active: enrolmentActive,
-          date_of_birth: dateOfBirth,
-          checked_at: new Date().toISOString(),
-        },
-        {
-          onConflict:
-            "student_id,course_id",
-        },
-      );
-
-  if (error) {
-    throw new Error(
-      `Access cache write failed: ${error.message}`,
-    );
-  }
-
-  if (!isAdmin && !enrolmentActive) {
-    throw new Error(
-      "You do not have access to this competition",
-    );
-  }
-
   return {
-    dateOfBirth,
+    dateOfBirth:
+      cached.date_of_birth,
   };
 }
 
@@ -895,6 +714,11 @@ Deno.serve(async (request) => {
       error,
     );
 
+    const status =
+      error instanceof MockAccessError
+        ? error.status
+        : 400;
+
     return jsonResponse(
       {
         error:
@@ -902,7 +726,7 @@ Deno.serve(async (request) => {
             ? error.message
             : "Unable to start Mock Test",
       },
-      400,
+      status,
     );
   }
 });
