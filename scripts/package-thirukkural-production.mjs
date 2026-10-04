@@ -40,6 +40,7 @@ const official = required(path.join(root,'data/thirukkural/full-bank/objective/o
 const agePools = required(path.join(root,'data/thirukkural/full-bank/objective/age-pools.json'))
 
 if (publicBank.length !== 9443 || privateBank.length !== 9443 || official.length !== 30) throw new Error('Thirukkural production bundle counts are invalid')
+if (publicBank.some(q => q.review_status !== 'reviewed')) throw new Error('Production packaging blocked: all 9443 Mock Test questions must be review_status=reviewed')
 
 const questions = {}
 for (const q of publicBank) questions[q.question_id] = cleanQuestion(q, courseId)
