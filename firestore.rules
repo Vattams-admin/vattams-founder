@@ -616,9 +616,16 @@ service cloud.firestore {
         isAdmin()
         && resource.data.status == 'submitted'
         && request.resource.data.status in ['approved', 'rejected']
-        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
-          'status', 'verified_at', 'verified_by', 'admin_notes', 'batch_number', 'revenue_split'
-        ])
+        && (
+          (resource.data.payment_type == 'tutor_registration'
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+              'status', 'verified_at', 'verified_by', 'admin_notes'
+            ]))
+          || (resource.data.payment_type != 'tutor_registration'
+            && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+              'status', 'verified_at', 'verified_by', 'admin_notes', 'batch_number', 'revenue_split'
+            ]))
+        )
       ) || (
         isSignedIn()
         && resource.data.payment_type == 'tutor_registration'
