@@ -1,0 +1,339 @@
+{
+  "schema_version": "3.1.0",
+  "course": "Computer Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "subject_specific_authoring_v1_complete",
+  "age_bands": [
+    "foundation",
+    "developing",
+    "advanced",
+    "championship"
+  ],
+  "learning_paths": [
+    "core_mastery",
+    "practice_and_revision",
+    "mock_test_preparation"
+  ],
+  "domains": [
+    {
+      "name": "Digital Foundations",
+      "subtopics": [
+        {
+          "title": "computer components",
+          "teaching": "Learn computer components as a core Digital Foundations competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply computer components to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar computer components task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "input output and storage",
+          "teaching": "Learn input output and storage as a core Digital Foundations competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply input output and storage to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar input output and storage task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "operating systems",
+          "teaching": "Learn operating systems as a core Digital Foundations competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply operating systems to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar operating systems task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "files and folders",
+          "teaching": "Learn files and folders as a core Digital Foundations competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply files and folders to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar files and folders task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "digital devices",
+          "teaching": "Learn digital devices as a core Digital Foundations competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply digital devices to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar digital devices task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        }
+      ]
+    },
+    {
+      "name": "Internet & Networking",
+      "subtopics": [
+        {
+          "title": "web browsers and search",
+          "teaching": "Learn web browsers and search as a core Internet & Networking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply web browsers and search to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar web browsers and search task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "network basics",
+          "teaching": "Learn network basics as a core Internet & Networking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply network basics to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar network basics task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "URLs and domains",
+          "teaching": "Learn URLs and domains as a core Internet & Networking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply URLs and domains to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar URLs and domains task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "connectivity",
+          "teaching": "Learn connectivity as a core Internet & Networking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply connectivity to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar connectivity task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "online communication",
+          "teaching": "Learn online communication as a core Internet & Networking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply online communication to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar online communication task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        }
+      ]
+    },
+    {
+      "name": "Digital Safety",
+      "subtopics": [
+        {
+          "title": "passwords and authentication",
+          "teaching": "Learn passwords and authentication as a core Digital Safety competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply passwords and authentication to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar passwords and authentication task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "privacy and personal data",
+          "teaching": "Learn privacy and personal data as a core Digital Safety competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply privacy and personal data to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar privacy and personal data task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "phishing and scams",
+          "teaching": "Learn phishing and scams as a core Digital Safety competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply phishing and scams to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar phishing and scams task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "device security",
+          "teaching": "Learn device security as a core Digital Safety competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply device security to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar device security task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "digital citizenship",
+          "teaching": "Learn digital citizenship as a core Digital Safety competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply digital citizenship to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar digital citizenship task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        }
+      ]
+    },
+    {
+      "name": "Productivity & Information",
+      "subtopics": [
+        {
+          "title": "documents",
+          "teaching": "Learn documents as a core Productivity & Information competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply documents to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar documents task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "spreadsheets",
+          "teaching": "Learn spreadsheets as a core Productivity & Information competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply spreadsheets to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar spreadsheets task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "presentations",
+          "teaching": "Learn presentations as a core Productivity & Information competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply presentations to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar presentations task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "search strategies",
+          "teaching": "Learn search strategies as a core Productivity & Information competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply search strategies to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar search strategies task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "source evaluation",
+          "teaching": "Learn source evaluation as a core Productivity & Information competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply source evaluation to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar source evaluation task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        }
+      ]
+    },
+    {
+      "name": "Programming Foundations",
+      "subtopics": [
+        {
+          "title": "algorithms",
+          "teaching": "Learn algorithms as a core Programming Foundations competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply algorithms to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar algorithms task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "variables",
+          "teaching": "Learn variables as a core Programming Foundations competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply variables to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar variables task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "conditions",
+          "teaching": "Learn conditions as a core Programming Foundations competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply conditions to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar conditions task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "loops",
+          "teaching": "Learn loops as a core Programming Foundations competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply loops to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar loops task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "debugging",
+          "teaching": "Learn debugging as a core Programming Foundations competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply debugging to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar debugging task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        }
+      ]
+    },
+    {
+      "name": "Computational Thinking",
+      "subtopics": [
+        {
+          "title": "decomposition",
+          "teaching": "Learn decomposition as a core Computational Thinking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply decomposition to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar decomposition task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "pattern recognition",
+          "teaching": "Learn pattern recognition as a core Computational Thinking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply pattern recognition to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar pattern recognition task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "abstraction",
+          "teaching": "Learn abstraction as a core Computational Thinking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply abstraction to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar abstraction task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "logic",
+          "teaching": "Learn logic as a core Computational Thinking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply logic to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar logic task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "algorithm design",
+          "teaching": "Learn algorithm design as a core Computational Thinking competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply algorithm design to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar algorithm design task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        }
+      ]
+    },
+    {
+      "name": "AI & Emerging Technology",
+      "subtopics": [
+        {
+          "title": "AI concepts",
+          "teaching": "Learn AI concepts as a core AI & Emerging Technology competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply AI concepts to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar AI concepts task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "machine learning basics",
+          "teaching": "Learn machine learning basics as a core AI & Emerging Technology competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply machine learning basics to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar machine learning basics task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "generative AI",
+          "teaching": "Learn generative AI as a core AI & Emerging Technology competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply generative AI to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar generative AI task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "responsible AI",
+          "teaching": "Learn responsible AI as a core AI & Emerging Technology competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply responsible AI to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar responsible AI task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "automation",
+          "teaching": "Learn automation as a core AI & Emerging Technology competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply automation to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar automation task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        }
+      ]
+    },
+    {
+      "name": "Applied Computing",
+      "subtopics": [
+        {
+          "title": "data representation",
+          "teaching": "Learn data representation as a core Applied Computing competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply data representation to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar data representation task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "cyber awareness",
+          "teaching": "Learn cyber awareness as a core Applied Computing competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply cyber awareness to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar cyber awareness task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "technology scenarios",
+          "teaching": "Learn technology scenarios as a core Applied Computing competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply technology scenarios to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar technology scenarios task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "digital workflows",
+          "teaching": "Learn digital workflows as a core Applied Computing competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply digital workflows to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar digital workflows task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        },
+        {
+          "title": "computing problem solving",
+          "teaching": "Learn computing problem solving as a core Applied Computing competency in Computer Challenge. Build the underlying concept, then practise recognition, application, error detection and transfer to unfamiliar questions. Students should explain the reasoning, distinguish strong evidence from distractors, and verify the answer against the wording and constraints.",
+          "worked_example": "Worked example: apply computing problem solving to a representative problem, identify the decisive clue or rule, work through the reasoning, and verify the result.",
+          "pitfall": "Common pitfall: selecting a familiar-looking answer without checking the exact wording, relationship, sequence, evidence or constraint required by the question.",
+          "mastery": "Mastery: solve an unfamiliar computing problem solving task independently, explain the reasoning, reject a plausible distractor with evidence, and verify the final answer."
+        }
+      ]
+    }
+  ]
+}
