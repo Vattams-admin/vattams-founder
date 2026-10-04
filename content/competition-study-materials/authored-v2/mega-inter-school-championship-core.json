@@ -1,0 +1,379 @@
+{
+  "schema_version": "3.1.0",
+  "course": "Mega Inter-School Championship",
+  "model": "thirukkural_mastery_reference",
+  "status": "subject_specific_authoring_v1_complete",
+  "age_bands": [
+    "foundation",
+    "developing",
+    "advanced",
+    "championship"
+  ],
+  "learning_paths": [
+    "core_mastery",
+    "practice_and_revision",
+    "mock_test_preparation"
+  ],
+  "domains": [
+    {
+      "name": "Mathematics",
+      "subtopics": [
+        {
+          "title": "number sense",
+          "teaching": "Master number sense within Mathematics for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative number sense question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar number sense task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "arithmetic",
+          "teaching": "Master arithmetic within Mathematics for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative arithmetic question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar arithmetic task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "algebra",
+          "teaching": "Master algebra within Mathematics for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative algebra question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar algebra task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "geometry",
+          "teaching": "Master geometry within Mathematics for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative geometry question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar geometry task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "advanced problem solving",
+          "teaching": "Master advanced problem solving within Mathematics for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative advanced problem solving question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar advanced problem solving task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Science",
+      "subtopics": [
+        {
+          "title": "physics",
+          "teaching": "Master physics within Science for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative physics question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar physics task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "chemistry",
+          "teaching": "Master chemistry within Science for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative chemistry question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar chemistry task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "biology",
+          "teaching": "Master biology within Science for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative biology question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar biology task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "Earth science",
+          "teaching": "Master Earth science within Science for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative Earth science question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar Earth science task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "scientific reasoning",
+          "teaching": "Master scientific reasoning within Science for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative scientific reasoning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar scientific reasoning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "English",
+      "subtopics": [
+        {
+          "title": "reading",
+          "teaching": "Master reading within English for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative reading question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar reading task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "vocabulary",
+          "teaching": "Master vocabulary within English for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative vocabulary question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar vocabulary task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "grammar",
+          "teaching": "Master grammar within English for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative grammar question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar grammar task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "literature",
+          "teaching": "Master literature within English for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative literature question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar literature task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "verbal reasoning",
+          "teaching": "Master verbal reasoning within English for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative verbal reasoning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar verbal reasoning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "General Knowledge",
+      "subtopics": [
+        {
+          "title": "India",
+          "teaching": "Master India within General Knowledge for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative India question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar India task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "world",
+          "teaching": "Master world within General Knowledge for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative world question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar world task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "history",
+          "teaching": "Master history within General Knowledge for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative history question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar history task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "geography",
+          "teaching": "Master geography within General Knowledge for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative geography question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar geography task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "culture",
+          "teaching": "Master culture within General Knowledge for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative culture question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar culture task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Reasoning",
+      "subtopics": [
+        {
+          "title": "series",
+          "teaching": "Master series within Reasoning for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative series question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar series task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "analogy",
+          "teaching": "Master analogy within Reasoning for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative analogy question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar analogy task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "logic",
+          "teaching": "Master logic within Reasoning for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative logic question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar logic task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "puzzles",
+          "teaching": "Master puzzles within Reasoning for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative puzzles question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar puzzles task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "non-verbal reasoning",
+          "teaching": "Master non-verbal reasoning within Reasoning for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative non-verbal reasoning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar non-verbal reasoning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Technology",
+      "subtopics": [
+        {
+          "title": "computing",
+          "teaching": "Master computing within Technology for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative computing question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar computing task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "internet",
+          "teaching": "Master internet within Technology for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative internet question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar internet task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "AI",
+          "teaching": "Master AI within Technology for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative AI question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar AI task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "cyber safety",
+          "teaching": "Master cyber safety within Technology for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative cyber safety question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar cyber safety task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "digital society",
+          "teaching": "Master digital society within Technology for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative digital society question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar digital society task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Current Awareness",
+      "subtopics": [
+        {
+          "title": "science news",
+          "teaching": "Master science news within Current Awareness for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative science news question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar science news task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "sports",
+          "teaching": "Master sports within Current Awareness for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative sports question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar sports task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "major events",
+          "teaching": "Master major events within Current Awareness for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative major events question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar major events task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "institutions",
+          "teaching": "Master institutions within Current Awareness for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative institutions question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar institutions task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "fact verification",
+          "teaching": "Master fact verification within Current Awareness for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative fact verification question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar fact verification task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Interdisciplinary Challenges",
+      "subtopics": [
+        {
+          "title": "data reasoning",
+          "teaching": "Master data reasoning within Interdisciplinary Challenges for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative data reasoning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar data reasoning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "cross-domain clues",
+          "teaching": "Master cross-domain clues within Interdisciplinary Challenges for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative cross-domain clues question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar cross-domain clues task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "integrated scenarios",
+          "teaching": "Master integrated scenarios within Interdisciplinary Challenges for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative integrated scenarios question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar integrated scenarios task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "case analysis",
+          "teaching": "Master case analysis within Interdisciplinary Challenges for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative case analysis question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar case analysis task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "championship rounds",
+          "teaching": "Master championship rounds within Interdisciplinary Challenges for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative championship rounds question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar championship rounds task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    },
+    {
+      "name": "Competition Mastery",
+      "subtopics": [
+        {
+          "title": "mixed sets",
+          "teaching": "Master mixed sets within Competition Mastery for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative mixed sets question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar mixed sets task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "time management",
+          "teaching": "Master time management within Competition Mastery for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative time management question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar time management task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "elimination",
+          "teaching": "Master elimination within Competition Mastery for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative elimination question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar elimination task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "accuracy",
+          "teaching": "Master accuracy within Competition Mastery for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative accuracy question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar accuracy task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        },
+        {
+          "title": "final review",
+          "teaching": "Master final review within Competition Mastery for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
+          "worked_example": "Worked example: analyse a representative final review question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
+          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
+          "mastery": "Mastery: solve an unfamiliar final review task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+        }
+      ]
+    }
+  ]
+}
