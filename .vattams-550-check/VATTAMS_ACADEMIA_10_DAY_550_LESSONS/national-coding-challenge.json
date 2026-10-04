@@ -6,40 +6,36 @@
   },
   "module": {
     "id": "national-coding-challenge-days-1-10",
-    "title": "Days 1–10 | Foundation Module",
-    "description": "First ten complete lessons; prepared for admin review before production publishing."
+    "title": "Days 1–10 | Competition Mastery Module"
   },
   "lessons": [
     {
-      "title": "Challenge orientation & strategy",
-      "objective": "Understand the challenge format, scoring mindset, time management and preparation strategy.",
-      "core_teaching_content": "This challenge lesson develops challenge orientation & strategy for National Coding Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Problem decomposition",
+      "objective": "Build competition-ready understanding of problem decomposition and apply it accurately to unfamiliar challenges.",
+      "core_teaching_content": "Coding challenges are solved by decomposing requirements, choosing data representations, writing precise control flow and testing edge cases. Variables hold values, conditions branch execution, loops repeat work, and functions isolate reusable logic. Focus specifically on problem decomposition. Identify the core concepts, common misconceptions, evidence or procedure required, and the verification step that protects against error. Move from recognition to application: identify what the task tests, choose an appropriate method, execute it carefully, and check the result against the original requirements. Keep an error log that describes the underlying reasoning failure.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A National Coding Challenge task on problem decomposition should begin by identifying the defining clue or requirement before selecting the method.",
+        "Create a new problem decomposition scenario with one plausible distractor and explain why the preferred answer or solution satisfies the requirements."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a focused National Coding Challenge activity on problem decomposition using a worked problem, diagram, table, passage, code trace or comparison as appropriate.",
+      "guided_practice": "Work through three scaffolded tasks on problem decomposition: model the first, prompt the second, and require an independent solution to the third with explicit justification.",
+      "independent_practice": [
+        "Solve three unfamiliar problem decomposition questions or tasks without viewing solutions.",
+        "Create and complete one new challenge using the lesson principle.",
+        "Analyse one error and write the rule or strategy that would prevent it next time."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item National Coding Challenge checkpoint on problem decomposition; target at least six correct and justify uncertain responses.",
+      "student_task": "Produce one finished National Coding Challenge task demonstrating problem decomposition and document the reasoning, evidence or performance criteria used.",
+      "tutor_guidance": "Coach for precise terminology, evidence and independent verification. Ask learners to explain the method before confirming the answer. Suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
+        "VATTAMS study notes",
+        "Challenge questions",
+        "Answer/performance sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Record one strength, one recurring error and one measurable action for improving problem decomposition.",
+      "daily_flow": "Learn → Worked Example → Guided Challenge → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "national-coding-challenge",
       "course_name": "National Coding Challenge",
       "module_id": "national-coding-challenge-days-1-10",
@@ -48,35 +44,32 @@
       "lesson_id": "national-coding-challenge-days-1-10-day-1"
     },
     {
-      "title": "Concept sprint I",
-      "objective": "Master a high-value concept through examples and short challenge questions.",
-      "core_teaching_content": "This challenge lesson develops concept sprint i for National Coding Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Variables & data types",
+      "objective": "Build competition-ready understanding of variables & data types and apply it accurately to unfamiliar challenges.",
+      "core_teaching_content": "Coding challenges are solved by decomposing requirements, choosing data representations, writing precise control flow and testing edge cases. Variables hold values, conditions branch execution, loops repeat work, and functions isolate reusable logic. Focus specifically on variables & data types. Identify the core concepts, common misconceptions, evidence or procedure required, and the verification step that protects against error. Move from recognition to application: identify what the task tests, choose an appropriate method, execute it carefully, and check the result against the original requirements. Keep an error log that describes the underlying reasoning failure.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A National Coding Challenge task on variables & data types should begin by identifying the defining clue or requirement before selecting the method.",
+        "Create a new variables & data types scenario with one plausible distractor and explain why the preferred answer or solution satisfies the requirements."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a focused National Coding Challenge activity on variables & data types using a worked problem, diagram, table, passage, code trace or comparison as appropriate.",
+      "guided_practice": "Work through three scaffolded tasks on variables & data types: model the first, prompt the second, and require an independent solution to the third with explicit justification.",
+      "independent_practice": [
+        "Solve three unfamiliar variables & data types questions or tasks without viewing solutions.",
+        "Create and complete one new challenge using the lesson principle.",
+        "Analyse one error and write the rule or strategy that would prevent it next time."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item National Coding Challenge checkpoint on variables & data types; target at least six correct and justify uncertain responses.",
+      "student_task": "Produce one finished National Coding Challenge task demonstrating variables & data types and document the reasoning, evidence or performance criteria used.",
+      "tutor_guidance": "Coach for precise terminology, evidence and independent verification. Ask learners to explain the method before confirming the answer. Suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
+        "VATTAMS study notes",
+        "Challenge questions",
+        "Answer/performance sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Record one strength, one recurring error and one measurable action for improving variables & data types.",
+      "daily_flow": "Learn → Worked Example → Guided Challenge → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "national-coding-challenge",
       "course_name": "National Coding Challenge",
       "module_id": "national-coding-challenge-days-1-10",
@@ -85,35 +78,32 @@
       "lesson_id": "national-coding-challenge-days-1-10-day-2"
     },
     {
-      "title": "Concept sprint II",
-      "objective": "Extend the concept and solve progressively harder problems.",
-      "core_teaching_content": "This challenge lesson develops concept sprint ii for National Coding Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Conditions",
+      "objective": "Build competition-ready understanding of conditions and apply it accurately to unfamiliar challenges.",
+      "core_teaching_content": "Coding challenges are solved by decomposing requirements, choosing data representations, writing precise control flow and testing edge cases. Variables hold values, conditions branch execution, loops repeat work, and functions isolate reusable logic. Focus specifically on conditions. Identify the core concepts, common misconceptions, evidence or procedure required, and the verification step that protects against error. Move from recognition to application: identify what the task tests, choose an appropriate method, execute it carefully, and check the result against the original requirements. Keep an error log that describes the underlying reasoning failure.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A National Coding Challenge task on conditions should begin by identifying the defining clue or requirement before selecting the method.",
+        "Create a new conditions scenario with one plausible distractor and explain why the preferred answer or solution satisfies the requirements."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a focused National Coding Challenge activity on conditions using a worked problem, diagram, table, passage, code trace or comparison as appropriate.",
+      "guided_practice": "Work through three scaffolded tasks on conditions: model the first, prompt the second, and require an independent solution to the third with explicit justification.",
+      "independent_practice": [
+        "Solve three unfamiliar conditions questions or tasks without viewing solutions.",
+        "Create and complete one new challenge using the lesson principle.",
+        "Analyse one error and write the rule or strategy that would prevent it next time."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item National Coding Challenge checkpoint on conditions; target at least six correct and justify uncertain responses.",
+      "student_task": "Produce one finished National Coding Challenge task demonstrating conditions and document the reasoning, evidence or performance criteria used.",
+      "tutor_guidance": "Coach for precise terminology, evidence and independent verification. Ask learners to explain the method before confirming the answer. Suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
+        "VATTAMS study notes",
+        "Challenge questions",
+        "Answer/performance sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Record one strength, one recurring error and one measurable action for improving conditions.",
+      "daily_flow": "Learn → Worked Example → Guided Challenge → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "national-coding-challenge",
       "course_name": "National Coding Challenge",
       "module_id": "national-coding-challenge-days-1-10",
@@ -122,35 +112,32 @@
       "lesson_id": "national-coding-challenge-days-1-10-day-3"
     },
     {
-      "title": "Speed & accuracy",
-      "objective": "Balance speed with accuracy using a timed practice set.",
-      "core_teaching_content": "This challenge lesson develops speed & accuracy for National Coding Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Loops",
+      "objective": "Build competition-ready understanding of loops and apply it accurately to unfamiliar challenges.",
+      "core_teaching_content": "Coding challenges are solved by decomposing requirements, choosing data representations, writing precise control flow and testing edge cases. Variables hold values, conditions branch execution, loops repeat work, and functions isolate reusable logic. Focus specifically on loops. Identify the core concepts, common misconceptions, evidence or procedure required, and the verification step that protects against error. Move from recognition to application: identify what the task tests, choose an appropriate method, execute it carefully, and check the result against the original requirements. Keep an error log that describes the underlying reasoning failure.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A National Coding Challenge task on loops should begin by identifying the defining clue or requirement before selecting the method.",
+        "Create a new loops scenario with one plausible distractor and explain why the preferred answer or solution satisfies the requirements."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a focused National Coding Challenge activity on loops using a worked problem, diagram, table, passage, code trace or comparison as appropriate.",
+      "guided_practice": "Work through three scaffolded tasks on loops: model the first, prompt the second, and require an independent solution to the third with explicit justification.",
+      "independent_practice": [
+        "Solve three unfamiliar loops questions or tasks without viewing solutions.",
+        "Create and complete one new challenge using the lesson principle.",
+        "Analyse one error and write the rule or strategy that would prevent it next time."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item National Coding Challenge checkpoint on loops; target at least six correct and justify uncertain responses.",
+      "student_task": "Produce one finished National Coding Challenge task demonstrating loops and document the reasoning, evidence or performance criteria used.",
+      "tutor_guidance": "Coach for precise terminology, evidence and independent verification. Ask learners to explain the method before confirming the answer. Suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
+        "VATTAMS study notes",
+        "Challenge questions",
+        "Answer/performance sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Record one strength, one recurring error and one measurable action for improving loops.",
+      "daily_flow": "Learn → Worked Example → Guided Challenge → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "national-coding-challenge",
       "course_name": "National Coding Challenge",
       "module_id": "national-coding-challenge-days-1-10",
@@ -159,35 +146,32 @@
       "lesson_id": "national-coding-challenge-days-1-10-day-4"
     },
     {
-      "title": "Pattern recognition",
-      "objective": "Identify recurring patterns, clues and distractors in challenge questions.",
-      "core_teaching_content": "This challenge lesson develops pattern recognition for National Coding Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Functions & modularity",
+      "objective": "Build competition-ready understanding of functions & modularity and apply it accurately to unfamiliar challenges.",
+      "core_teaching_content": "Coding challenges are solved by decomposing requirements, choosing data representations, writing precise control flow and testing edge cases. Variables hold values, conditions branch execution, loops repeat work, and functions isolate reusable logic. Focus specifically on functions & modularity. Identify the core concepts, common misconceptions, evidence or procedure required, and the verification step that protects against error. Move from recognition to application: identify what the task tests, choose an appropriate method, execute it carefully, and check the result against the original requirements. Keep an error log that describes the underlying reasoning failure.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A National Coding Challenge task on functions & modularity should begin by identifying the defining clue or requirement before selecting the method.",
+        "Create a new functions & modularity scenario with one plausible distractor and explain why the preferred answer or solution satisfies the requirements."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a focused National Coding Challenge activity on functions & modularity using a worked problem, diagram, table, passage, code trace or comparison as appropriate.",
+      "guided_practice": "Work through three scaffolded tasks on functions & modularity: model the first, prompt the second, and require an independent solution to the third with explicit justification.",
+      "independent_practice": [
+        "Solve three unfamiliar functions & modularity questions or tasks without viewing solutions.",
+        "Create and complete one new challenge using the lesson principle.",
+        "Analyse one error and write the rule or strategy that would prevent it next time."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item National Coding Challenge checkpoint on functions & modularity; target at least six correct and justify uncertain responses.",
+      "student_task": "Produce one finished National Coding Challenge task demonstrating functions & modularity and document the reasoning, evidence or performance criteria used.",
+      "tutor_guidance": "Coach for precise terminology, evidence and independent verification. Ask learners to explain the method before confirming the answer. Suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
+        "VATTAMS study notes",
+        "Challenge questions",
+        "Answer/performance sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Record one strength, one recurring error and one measurable action for improving functions & modularity.",
+      "daily_flow": "Learn → Worked Example → Guided Challenge → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "national-coding-challenge",
       "course_name": "National Coding Challenge",
       "module_id": "national-coding-challenge-days-1-10",
@@ -196,35 +180,32 @@
       "lesson_id": "national-coding-challenge-days-1-10-day-5"
     },
     {
-      "title": "Elimination & verification",
-      "objective": "Use elimination, estimation or verification to reduce avoidable errors.",
-      "core_teaching_content": "This challenge lesson develops elimination & verification for National Coding Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Arrays & strings",
+      "objective": "Build competition-ready understanding of arrays & strings and apply it accurately to unfamiliar challenges.",
+      "core_teaching_content": "Coding challenges are solved by decomposing requirements, choosing data representations, writing precise control flow and testing edge cases. Variables hold values, conditions branch execution, loops repeat work, and functions isolate reusable logic. Focus specifically on arrays & strings. Identify the core concepts, common misconceptions, evidence or procedure required, and the verification step that protects against error. Move from recognition to application: identify what the task tests, choose an appropriate method, execute it carefully, and check the result against the original requirements. Keep an error log that describes the underlying reasoning failure.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A National Coding Challenge task on arrays & strings should begin by identifying the defining clue or requirement before selecting the method.",
+        "Create a new arrays & strings scenario with one plausible distractor and explain why the preferred answer or solution satisfies the requirements."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a focused National Coding Challenge activity on arrays & strings using a worked problem, diagram, table, passage, code trace or comparison as appropriate.",
+      "guided_practice": "Work through three scaffolded tasks on arrays & strings: model the first, prompt the second, and require an independent solution to the third with explicit justification.",
+      "independent_practice": [
+        "Solve three unfamiliar arrays & strings questions or tasks without viewing solutions.",
+        "Create and complete one new challenge using the lesson principle.",
+        "Analyse one error and write the rule or strategy that would prevent it next time."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item National Coding Challenge checkpoint on arrays & strings; target at least six correct and justify uncertain responses.",
+      "student_task": "Produce one finished National Coding Challenge task demonstrating arrays & strings and document the reasoning, evidence or performance criteria used.",
+      "tutor_guidance": "Coach for precise terminology, evidence and independent verification. Ask learners to explain the method before confirming the answer. Suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
+        "VATTAMS study notes",
+        "Challenge questions",
+        "Answer/performance sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Record one strength, one recurring error and one measurable action for improving arrays & strings.",
+      "daily_flow": "Learn → Worked Example → Guided Challenge → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "national-coding-challenge",
       "course_name": "National Coding Challenge",
       "module_id": "national-coding-challenge-days-1-10",
@@ -233,35 +214,32 @@
       "lesson_id": "national-coding-challenge-days-1-10-day-6"
     },
     {
-      "title": "Mixed challenge set",
-      "objective": "Solve a mixed set and classify questions by difficulty and confidence.",
-      "core_teaching_content": "This challenge lesson develops mixed challenge set for National Coding Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Algorithms & complexity intuition",
+      "objective": "Build competition-ready understanding of algorithms & complexity intuition and apply it accurately to unfamiliar challenges.",
+      "core_teaching_content": "Coding challenges are solved by decomposing requirements, choosing data representations, writing precise control flow and testing edge cases. Variables hold values, conditions branch execution, loops repeat work, and functions isolate reusable logic. Focus specifically on algorithms & complexity intuition. Identify the core concepts, common misconceptions, evidence or procedure required, and the verification step that protects against error. Move from recognition to application: identify what the task tests, choose an appropriate method, execute it carefully, and check the result against the original requirements. Keep an error log that describes the underlying reasoning failure.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A National Coding Challenge task on algorithms & complexity intuition should begin by identifying the defining clue or requirement before selecting the method.",
+        "Create a new algorithms & complexity intuition scenario with one plausible distractor and explain why the preferred answer or solution satisfies the requirements."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a focused National Coding Challenge activity on algorithms & complexity intuition using a worked problem, diagram, table, passage, code trace or comparison as appropriate.",
+      "guided_practice": "Work through three scaffolded tasks on algorithms & complexity intuition: model the first, prompt the second, and require an independent solution to the third with explicit justification.",
+      "independent_practice": [
+        "Solve three unfamiliar algorithms & complexity intuition questions or tasks without viewing solutions.",
+        "Create and complete one new challenge using the lesson principle.",
+        "Analyse one error and write the rule or strategy that would prevent it next time."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item National Coding Challenge checkpoint on algorithms & complexity intuition; target at least six correct and justify uncertain responses.",
+      "student_task": "Produce one finished National Coding Challenge task demonstrating algorithms & complexity intuition and document the reasoning, evidence or performance criteria used.",
+      "tutor_guidance": "Coach for precise terminology, evidence and independent verification. Ask learners to explain the method before confirming the answer. Suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
+        "VATTAMS study notes",
+        "Challenge questions",
+        "Answer/performance sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Record one strength, one recurring error and one measurable action for improving algorithms & complexity intuition.",
+      "daily_flow": "Learn → Worked Example → Guided Challenge → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "national-coding-challenge",
       "course_name": "National Coding Challenge",
       "module_id": "national-coding-challenge-days-1-10",
@@ -270,35 +248,32 @@
       "lesson_id": "national-coding-challenge-days-1-10-day-7"
     },
     {
-      "title": "Advanced application",
-      "objective": "Apply concepts to unfamiliar or multi-step situations.",
-      "core_teaching_content": "This challenge lesson develops advanced application for National Coding Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Debugging & testing",
+      "objective": "Build competition-ready understanding of debugging & testing and apply it accurately to unfamiliar challenges.",
+      "core_teaching_content": "Coding challenges are solved by decomposing requirements, choosing data representations, writing precise control flow and testing edge cases. Variables hold values, conditions branch execution, loops repeat work, and functions isolate reusable logic. Focus specifically on debugging & testing. Identify the core concepts, common misconceptions, evidence or procedure required, and the verification step that protects against error. Move from recognition to application: identify what the task tests, choose an appropriate method, execute it carefully, and check the result against the original requirements. Keep an error log that describes the underlying reasoning failure.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A National Coding Challenge task on debugging & testing should begin by identifying the defining clue or requirement before selecting the method.",
+        "Create a new debugging & testing scenario with one plausible distractor and explain why the preferred answer or solution satisfies the requirements."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a focused National Coding Challenge activity on debugging & testing using a worked problem, diagram, table, passage, code trace or comparison as appropriate.",
+      "guided_practice": "Work through three scaffolded tasks on debugging & testing: model the first, prompt the second, and require an independent solution to the third with explicit justification.",
+      "independent_practice": [
+        "Solve three unfamiliar debugging & testing questions or tasks without viewing solutions.",
+        "Create and complete one new challenge using the lesson principle.",
+        "Analyse one error and write the rule or strategy that would prevent it next time."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item National Coding Challenge checkpoint on debugging & testing; target at least six correct and justify uncertain responses.",
+      "student_task": "Produce one finished National Coding Challenge task demonstrating debugging & testing and document the reasoning, evidence or performance criteria used.",
+      "tutor_guidance": "Coach for precise terminology, evidence and independent verification. Ask learners to explain the method before confirming the answer. Suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
+        "VATTAMS study notes",
+        "Challenge questions",
+        "Answer/performance sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Record one strength, one recurring error and one measurable action for improving debugging & testing.",
+      "daily_flow": "Learn → Worked Example → Guided Challenge → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "national-coding-challenge",
       "course_name": "National Coding Challenge",
       "module_id": "national-coding-challenge-days-1-10",
@@ -307,35 +282,32 @@
       "lesson_id": "national-coding-challenge-days-1-10-day-8"
     },
     {
-      "title": "Mock challenge",
-      "objective": "Complete a timed mini-mock and analyse every incorrect or guessed answer.",
-      "core_teaching_content": "This challenge lesson develops mock challenge for National Coding Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Code reading & optimisation",
+      "objective": "Build competition-ready understanding of code reading & optimisation and apply it accurately to unfamiliar challenges.",
+      "core_teaching_content": "Coding challenges are solved by decomposing requirements, choosing data representations, writing precise control flow and testing edge cases. Variables hold values, conditions branch execution, loops repeat work, and functions isolate reusable logic. Focus specifically on code reading & optimisation. Identify the core concepts, common misconceptions, evidence or procedure required, and the verification step that protects against error. Move from recognition to application: identify what the task tests, choose an appropriate method, execute it carefully, and check the result against the original requirements. Keep an error log that describes the underlying reasoning failure.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A National Coding Challenge task on code reading & optimisation should begin by identifying the defining clue or requirement before selecting the method.",
+        "Create a new code reading & optimisation scenario with one plausible distractor and explain why the preferred answer or solution satisfies the requirements."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a focused National Coding Challenge activity on code reading & optimisation using a worked problem, diagram, table, passage, code trace or comparison as appropriate.",
+      "guided_practice": "Work through three scaffolded tasks on code reading & optimisation: model the first, prompt the second, and require an independent solution to the third with explicit justification.",
+      "independent_practice": [
+        "Solve three unfamiliar code reading & optimisation questions or tasks without viewing solutions.",
+        "Create and complete one new challenge using the lesson principle.",
+        "Analyse one error and write the rule or strategy that would prevent it next time."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item National Coding Challenge checkpoint on code reading & optimisation; target at least six correct and justify uncertain responses.",
+      "student_task": "Produce one finished National Coding Challenge task demonstrating code reading & optimisation and document the reasoning, evidence or performance criteria used.",
+      "tutor_guidance": "Coach for precise terminology, evidence and independent verification. Ask learners to explain the method before confirming the answer. Suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
+        "VATTAMS study notes",
+        "Challenge questions",
+        "Answer/performance sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Record one strength, one recurring error and one measurable action for improving code reading & optimisation.",
+      "daily_flow": "Learn → Worked Example → Guided Challenge → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "national-coding-challenge",
       "course_name": "National Coding Challenge",
       "module_id": "national-coding-challenge-days-1-10",
@@ -344,35 +316,32 @@
       "lesson_id": "national-coding-challenge-days-1-10-day-9"
     },
     {
-      "title": "Review & competition plan",
-      "objective": "Build a revision sheet, error log and personal strategy for the next stage.",
-      "core_teaching_content": "This challenge lesson develops review & competition plan for National Coding Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Coding challenge simulation",
+      "objective": "Build competition-ready understanding of coding challenge simulation and apply it accurately to unfamiliar challenges.",
+      "core_teaching_content": "Coding challenges are solved by decomposing requirements, choosing data representations, writing precise control flow and testing edge cases. Variables hold values, conditions branch execution, loops repeat work, and functions isolate reusable logic. Focus specifically on coding challenge simulation. Identify the core concepts, common misconceptions, evidence or procedure required, and the verification step that protects against error. Move from recognition to application: identify what the task tests, choose an appropriate method, execute it carefully, and check the result against the original requirements. Keep an error log that describes the underlying reasoning failure.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A National Coding Challenge task on coding challenge simulation should begin by identifying the defining clue or requirement before selecting the method.",
+        "Create a new coding challenge simulation scenario with one plausible distractor and explain why the preferred answer or solution satisfies the requirements."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a focused National Coding Challenge activity on coding challenge simulation using a worked problem, diagram, table, passage, code trace or comparison as appropriate.",
+      "guided_practice": "Work through three scaffolded tasks on coding challenge simulation: model the first, prompt the second, and require an independent solution to the third with explicit justification.",
+      "independent_practice": [
+        "Solve three unfamiliar coding challenge simulation questions or tasks without viewing solutions.",
+        "Create and complete one new challenge using the lesson principle.",
+        "Analyse one error and write the rule or strategy that would prevent it next time."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item National Coding Challenge checkpoint on coding challenge simulation; target at least six correct and justify uncertain responses.",
+      "student_task": "Produce one finished National Coding Challenge task demonstrating coding challenge simulation and document the reasoning, evidence or performance criteria used.",
+      "tutor_guidance": "Coach for precise terminology, evidence and independent verification. Ask learners to explain the method before confirming the answer. Suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
+        "VATTAMS study notes",
+        "Challenge questions",
+        "Answer/performance sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Record one strength, one recurring error and one measurable action for improving coding challenge simulation.",
+      "daily_flow": "Learn → Worked Example → Guided Challenge → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "national-coding-challenge",
       "course_name": "National Coding Challenge",
       "module_id": "national-coding-challenge-days-1-10",
