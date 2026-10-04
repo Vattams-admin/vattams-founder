@@ -29,7 +29,8 @@ type CompetitionResult = {
 }
 
 const THIRUKKURAL_COURSE_ID = 'DNWt3cPE4ZSJG90CTC1e'
-const THIRUKKURAL_SLUG = 'thirukkural'
+const THIRUKKURAL_SLUG = 'thirukkural-mastery-championship'
+const THIRUKKURAL_LEGACY_SLUG = 'thirukkural'
 const THIRUKKURAL_NAME = 'Thirukkural Mastery Championship'
 
 const competitionCourse: Course = {
@@ -100,7 +101,7 @@ export default function CompetitionParticipant() {
   const [errorMessage, setErrorMessage] = useState('')
   const autoSubmitRef = useRef(false)
 
-  const course = slug === THIRUKKURAL_SLUG ? competitionCourse : null
+  const course = slug === THIRUKKURAL_SLUG || slug === THIRUKKURAL_LEGACY_SLUG ? competitionCourse : null
 
   const totalSeconds = useMemo(
     () => questions.reduce((sum, q) => sum + Math.max(1, Number(q.time_seconds) || 60), 0),
