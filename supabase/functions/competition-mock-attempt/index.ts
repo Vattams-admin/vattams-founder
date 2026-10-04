@@ -89,9 +89,6 @@ type MockAnswerRow = {
   marks_awarded: number | null;
 };
 
-let registryPromise:
-  Promise<CompetitionRegistry> | null = null;
-
 async function verifyFirebaseToken(
   authorization: string | null,
 ): Promise<string> {
@@ -126,26 +123,9 @@ async function verifyFirebaseToken(
 }
 
 async function loadCompetitionRegistry(): Promise<CompetitionRegistry> {
-  if (!registryPromise) {
-    registryPromise = (async () => {
-      const { data, error } =
-        await supabase.storage
-          .from(SUPABASE_BUCKET)
-          .download("competitions/registry.json");
-
-      if (error || !data) {
-        throw new Error(
-          `Unable to load competition registry: ${error?.message || "missing file"}`,
-        );
-      }
-
-      return JSON.parse(
-        await data.text(),
-      ) as CompetitionRegistry;
-    })();
-  }
-
-  return registryPromise;
+  const { data, error } = await supabase.storage.from(SUPABASE_BUCKET).download("competitions/registry.json");
+  if (error || !data) throw new Error(`Unable to load competition registry: ${error?.message || "missing file"}`);
+  return JSON.parse(await data.text()) as CompetitionRegistry;
 }
 
 async function getCompetition(
