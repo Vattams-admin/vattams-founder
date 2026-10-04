@@ -6,40 +6,38 @@
   },
   "module": {
     "id": "mathematics-challenge-days-1-10",
-    "title": "Days 1–10 | Foundation Module",
-    "description": "First ten complete lessons; prepared for admin review before production publishing."
+    "title": "Days 1–10 | Competition Mastery Module",
+    "description": "Production candidate: authored topic-driven curriculum."
   },
   "lessons": [
     {
-      "title": "Challenge orientation & strategy",
-      "objective": "Understand the challenge format, scoring mindset, time management and preparation strategy.",
-      "core_teaching_content": "This challenge lesson develops challenge orientation & strategy for Mathematics Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Number sense and estimation",
+      "objective": "Use place value, factors, rounding and estimation to judge whether a numerical answer is reasonable.",
+      "core_teaching_content": "Estimate before calculating. Compare place values, choose convenient rounded numbers, and use the estimate as a reasonableness check rather than as a replacement for exact calculation. In competition questions, estimation can eliminate impossible options quickly. Always compare the size and units of the estimate with the final answer.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "Estimate 398 times 21 using 400 times 21. Then compare with the exact result.",
+        "Estimate 398 times 21 using 400 times 21. Then compare with the exact result. Extend the same idea to a new context and require the learner to justify the method."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Estimate the answer first, solve selected questions exactly, and explain any large difference.",
+      "guided_practice": "Work through three scaffolded problems for Number sense and estimation: first with full prompts, second with one prompt, and third independently. Require the learner to explain the chosen method before confirming the answer.",
+      "independent_practice": [
+        "Estimate 48 times 19",
+        "Estimate 7992 divided by 81",
+        "A class has 29 rows of 18 seats; estimate the total before calculating",
+        "Explain a place-value error between 6250 and 6520."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with at least six correct and explain every estimate that differs materially from the exact result.",
+      "student_task": "Create a personal three-step estimation checklist.",
+      "tutor_guidance": "Ask for reasoning, check assumptions and units, and use questions rather than giving the answer. The activity is designed to remain useful for self-learning without a tutor.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Record which estimation habit helped you catch an error.",
+      "daily_flow": "Learn → Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "mathematics-challenge",
       "course_name": "Mathematics Challenge",
       "module_id": "mathematics-challenge-days-1-10",
@@ -48,35 +46,33 @@
       "lesson_id": "mathematics-challenge-days-1-10-day-1"
     },
     {
-      "title": "Concept sprint I",
-      "objective": "Master a high-value concept through examples and short challenge questions.",
-      "core_teaching_content": "This challenge lesson develops concept sprint i for Mathematics Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Fractions, ratios and proportion",
+      "objective": "Compare, simplify and apply fractions and ratios in unfamiliar competition problems.",
+      "core_teaching_content": "Fractions describe parts of a whole; ratios compare quantities. Simplify with common factors and compare fractions using benchmarks, common denominators, or cross-multiplication. In proportional situations identify the scale factor before calculating. Keep units and the direction of comparison consistent.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "Compare 5/8 and 3/5 by cross-multiplication. A recipe uses 2 cups for 5 people; find the amount for 15 people.",
+        "Compare 5/8 and 3/5 by cross-multiplication. A recipe uses 2 cups for 5 people; find the amount for 15 people. Extend the same idea to a new context and require the learner to justify the method."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Solve a ratio using a scale-factor table, then change one quantity and predict the effect.",
+      "guided_practice": "Work through three scaffolded problems for Fractions, ratios and proportion: first with full prompts, second with one prompt, and third independently. Require the learner to explain the chosen method before confirming the answer.",
+      "independent_practice": [
+        "Compare 7/12 and 5/8",
+        "Simplify 42:56",
+        "A map scale is 1 cm to 8 km; find the distance for 4.5 cm",
+        "Express 18/24 as a simplified fraction."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with at least six correct and show the scale factor where relevant.",
+      "student_task": "Write and solve one real-world ratio problem.",
+      "tutor_guidance": "Ask for reasoning, check assumptions and units, and use questions rather than giving the answer. The activity is designed to remain useful for self-learning without a tutor.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain how a ratio comparison differs from a fraction of a whole.",
+      "daily_flow": "Learn → Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "mathematics-challenge",
       "course_name": "Mathematics Challenge",
       "module_id": "mathematics-challenge-days-1-10",
@@ -85,35 +81,33 @@
       "lesson_id": "mathematics-challenge-days-1-10-day-2"
     },
     {
-      "title": "Concept sprint II",
-      "objective": "Extend the concept and solve progressively harder problems.",
-      "core_teaching_content": "This challenge lesson develops concept sprint ii for Mathematics Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Algebraic reasoning",
+      "objective": "Translate verbal relationships into equations and solve unknown-value problems with verification.",
+      "core_teaching_content": "Algebra represents unknown quantities using symbols. Identify what is known and unknown, translate the relationship carefully, preserve equality while solving, and substitute the result back into the original statement. Competition questions often hide algebra inside words, tables, or patterns, so the translation step is as important as the calculation.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "Translate 'a number increased by 7 is 19' into an equation. Four notebooks and a 20-rupee pen cost 140 rupees; form an equation.",
+        "Translate 'a number increased by 7 is 19' into an equation. Four notebooks and a 20-rupee pen cost 140 rupees; form an equation. Extend the same idea to a new context and require the learner to justify the method."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Underline known quantities and circle the unknown before writing equations for three word problems.",
+      "guided_practice": "Work through three scaffolded problems for Algebraic reasoning: first with full prompts, second with one prompt, and third independently. Require the learner to explain the chosen method before confirming the answer.",
+      "independent_practice": [
+        "Solve 5x=45",
+        "Solve x+18=31",
+        "Two consecutive numbers total 41; find them",
+        "A rectangle has perimeter 30 cm and length 9 cm; form an equation for its width."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint and substitute two answers back into their original equations.",
+      "student_task": "Create one real-life equation and solve it.",
+      "tutor_guidance": "Ask for reasoning, check assumptions and units, and use questions rather than giving the answer. The activity is designed to remain useful for self-learning without a tutor.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Identify one wording clue that helped you choose the operation.",
+      "daily_flow": "Learn → Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "mathematics-challenge",
       "course_name": "Mathematics Challenge",
       "module_id": "mathematics-challenge-days-1-10",
@@ -122,35 +116,33 @@
       "lesson_id": "mathematics-challenge-days-1-10-day-3"
     },
     {
-      "title": "Speed & accuracy",
-      "objective": "Balance speed with accuracy using a timed practice set.",
-      "core_teaching_content": "This challenge lesson develops speed & accuracy for Mathematics Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Geometry and measurement",
+      "objective": "Apply perimeter, area, angle and unit relationships accurately.",
+      "core_teaching_content": "Perimeter measures boundary length while area measures surface covered. Use straight-line angles totaling 180 degrees and angles around a point totaling 360 degrees. Convert units before combining measurements. For unfamiliar shapes, draw and label the figure and decompose it into familiar parts. Attach correct square units to area and linear units to perimeter.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A 12 cm by 7 cm rectangle has perimeter 38 cm and area 84 square cm. Two adjacent angles on a straight line sum to 180 degrees.",
+        "A 12 cm by 7 cm rectangle has perimeter 38 cm and area 84 square cm. Two adjacent angles on a straight line sum to 180 degrees. Extend the same idea to a new context and require the learner to justify the method."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Draw a composite shape, label all measures, split it into familiar shapes, and calculate the requested measure.",
+      "guided_practice": "Work through three scaffolded problems for Geometry and measurement: first with full prompts, second with one prompt, and third independently. Require the learner to explain the chosen method before confirming the answer.",
+      "independent_practice": [
+        "Find the area of a 9 by 6 rectangle",
+        "A square has perimeter 36 cm; find its area",
+        "Angles around a point are 90, 110, 75 and x; find x",
+        "Convert 2.4 m to centimetres."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with no unit errors.",
+      "student_task": "Make a geometry card with one perimeter, one area and one angle problem.",
+      "tutor_guidance": "Ask for reasoning, check assumptions and units, and use questions rather than giving the answer. The activity is designed to remain useful for self-learning without a tutor.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain how drawing the diagram changed your solution.",
+      "daily_flow": "Learn → Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "mathematics-challenge",
       "course_name": "Mathematics Challenge",
       "module_id": "mathematics-challenge-days-1-10",
@@ -159,35 +151,33 @@
       "lesson_id": "mathematics-challenge-days-1-10-day-4"
     },
     {
-      "title": "Pattern recognition",
-      "objective": "Identify recurring patterns, clues and distractors in challenge questions.",
-      "core_teaching_content": "This challenge lesson develops pattern recognition for Mathematics Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Patterns and sequences",
+      "objective": "Identify sequence rules and justify predicted terms instead of guessing from a short pattern.",
+      "core_teaching_content": "Compare consecutive terms. A constant difference suggests an additive rule; a constant multiplier suggests a multiplicative rule. More complex sequences may alternate operations. Test a proposed rule against several terms because matching only two terms is insufficient. State the rule clearly and verify the predicted term.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "For 4, 7, 10, 13 the difference is 3, so the next terms are 16 and 19. For 3, 6, 12, 24 the multiplier is 2, so the next term is 48.",
+        "For 4, 7, 10, 13 the difference is 3, so the next terms are 16 and 19. For 3, 6, 12, 24 the multiplier is 2, so the next term is 48. Extend the same idea to a new context and require the learner to justify the method."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Test two possible rules against every supplied term and reject any rule that fails one of the terms.",
+      "guided_practice": "Work through three scaffolded problems for Patterns and sequences: first with full prompts, second with one prompt, and third independently. Require the learner to explain the chosen method before confirming the answer.",
+      "independent_practice": [
+        "Find the next two terms in 5,9,13,17",
+        "Find the next term in 2,6,18,54",
+        "Describe 1,4,9,16",
+        "Create a sequence with difference 7."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint and justify each predicted term.",
+      "student_task": "Create one additive and one multiplicative sequence with answer keys.",
+      "tutor_guidance": "Ask for reasoning, check assumptions and units, and use questions rather than giving the answer. The activity is designed to remain useful for self-learning without a tutor.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain how you verified that your rule was not accidental.",
+      "daily_flow": "Learn → Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "mathematics-challenge",
       "course_name": "Mathematics Challenge",
       "module_id": "mathematics-challenge-days-1-10",
@@ -196,35 +186,33 @@
       "lesson_id": "mathematics-challenge-days-1-10-day-5"
     },
     {
-      "title": "Elimination & verification",
-      "objective": "Use elimination, estimation or verification to reduce avoidable errors.",
-      "core_teaching_content": "This challenge lesson develops elimination & verification for Mathematics Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Data and probability",
+      "objective": "Interpret tables and simple data and calculate basic averages and probabilities.",
+      "core_teaching_content": "Read the title, variable, units and scale before calculating. Mean is total divided by count; median is the middle ordered value; mode is the most frequent. For equally likely outcomes, probability is favourable outcomes divided by total outcomes and lies between zero and one. Distinguish evidence from assumptions when interpreting data.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "For 6,8,8,10,13 the mean is 9, median 8 and mode 8. A bag with 3 red and 7 blue counters has red probability 3/10.",
+        "For 6,8,8,10,13 the mean is 9, median 8 and mode 8. A bag with 3 red and 7 blue counters has red probability 3/10. Extend the same idea to a new context and require the learner to justify the method."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Calculate mean, median and mode for a small data set, then add an extreme value and observe which measure changes.",
+      "guided_practice": "Work through three scaffolded problems for Data and probability: first with full prompts, second with one prompt, and third independently. Require the learner to explain the chosen method before confirming the answer.",
+      "independent_practice": [
+        "Find the mean of 4,6,7,9",
+        "Find the median of 3,5,5,8,12",
+        "Find the probability of an even number on a fair die",
+        "State the success rate for 18 successes in 30 trials."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with accurate scale and unit interpretation.",
+      "student_task": "Create a five-value data set with a chosen mean and prove it.",
+      "tutor_guidance": "Ask for reasoning, check assumptions and units, and use questions rather than giving the answer. The activity is designed to remain useful for self-learning without a tutor.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Describe one way a misleading scale could distort interpretation.",
+      "daily_flow": "Learn → Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "mathematics-challenge",
       "course_name": "Mathematics Challenge",
       "module_id": "mathematics-challenge-days-1-10",
@@ -233,35 +221,33 @@
       "lesson_id": "mathematics-challenge-days-1-10-day-6"
     },
     {
-      "title": "Mixed challenge set",
-      "objective": "Solve a mixed set and classify questions by difficulty and confidence.",
-      "core_teaching_content": "This challenge lesson develops mixed challenge set for Mathematics Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Logical problem solving",
+      "objective": "Use constraints, organised cases and elimination to solve unfamiliar logic problems.",
+      "core_teaching_content": "Start by listing what must be true, what cannot be true, and which choices remain. Tables and ordered lists reduce missed cases. Reject a candidate only when a stated condition eliminates it. For multiple conditions, test a final candidate against every condition. If several solutions remain, report that rather than inventing an unstated rule.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A three-digit code has a final digit of 5; the first digit is even and the second is greater than the first. Generate candidates systematically.",
+        "A three-digit code has a final digit of 5; the first digit is even and the second is greater than the first. Generate candidates systematically. Extend the same idea to a new context and require the learner to justify the method."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Build a constraint table for an ordering problem and cross out candidates only with explicit evidence.",
+      "guided_practice": "Work through three scaffolded problems for Logical problem solving: first with full prompts, second with one prompt, and third independently. Require the learner to explain the chosen method before confirming the answer.",
+      "independent_practice": [
+        "List numbers greater than 20 and less than 40 divisible by 6",
+        "Arrange A, B and C with A before B",
+        "Determine surviving colours under two stated conditions",
+        "Identify a missing constraint when multiple answers remain."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with an explicit elimination argument for each solution.",
+      "student_task": "Write a four-clue logic puzzle and verify its solution.",
+      "tutor_guidance": "Ask for reasoning, check assumptions and units, and use questions rather than giving the answer. The activity is designed to remain useful for self-learning without a tutor.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain which constraint reduced the search space most effectively.",
+      "daily_flow": "Learn → Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "mathematics-challenge",
       "course_name": "Mathematics Challenge",
       "module_id": "mathematics-challenge-days-1-10",
@@ -270,35 +256,33 @@
       "lesson_id": "mathematics-challenge-days-1-10-day-7"
     },
     {
-      "title": "Advanced application",
-      "objective": "Apply concepts to unfamiliar or multi-step situations.",
-      "core_teaching_content": "This challenge lesson develops advanced application for Mathematics Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Multi-step word problems",
+      "objective": "Plan multi-stage calculations by identifying the target, intermediate values, operations and units.",
+      "core_teaching_content": "Read for meaning before calculating. Identify the final quantity requested and work backwards to determine intermediate values. Do not automatically perform operations in sentence order. Label intermediate results and keep units attached. After solving, estimate the final scale and reread the question to confirm that the requested quantity was actually found.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A school buys 8 packs of 24 notebooks and distributes 35. First find 192, then subtract 35 to get 157 notebooks remaining.",
+        "A school buys 8 packs of 24 notebooks and distributes 35. First find 192, then subtract 35 to get 157 notebooks remaining. Extend the same idea to a new context and require the learner to justify the method."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Annotate a word problem into known values, target value and intermediate values before calculating.",
+      "guided_practice": "Work through three scaffolded problems for Multi-step word problems: first with full prompts, second with one prompt, and third independently. Require the learner to explain the chosen method before confirming the answer.",
+      "independent_practice": [
+        "A shop has 12 boxes of 15 items and sells 47",
+        "A bus travels 42 km each way for 3 round trips",
+        "A 500-rupee budget is reduced by 125 and split among 5 teams",
+        "A class has 6 groups of 7 with 5 absent."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item checkpoint with working shown for every multi-step problem.",
+      "student_task": "Write a complete two-stage problem and underline its intermediate quantity.",
+      "tutor_guidance": "Ask for reasoning, check assumptions and units, and use questions rather than giving the answer. The activity is designed to remain useful for self-learning without a tutor.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain how you chose the operation order.",
+      "daily_flow": "Learn → Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "mathematics-challenge",
       "course_name": "Mathematics Challenge",
       "module_id": "mathematics-challenge-days-1-10",
@@ -307,35 +291,31 @@
       "lesson_id": "mathematics-challenge-days-1-10-day-8"
     },
     {
-      "title": "Mock challenge",
-      "objective": "Complete a timed mini-mock and analyse every incorrect or guessed answer.",
-      "core_teaching_content": "This challenge lesson develops mock challenge for Mathematics Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Speed, accuracy and verification",
+      "objective": "Improve timed performance while using verification methods to catch avoidable errors.",
+      "core_teaching_content": "Competition performance depends on accuracy and decision quality. Separate quick wins, standard problems and high-effort problems. Use estimation, substitution, inverse operations, unit checks or a second method to verify uncertain answers. If a question consumes too much time, mark it and move on rather than sacrificing the whole paper. Return later if time remains.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "Solve 48 times 25 mentally and verify using a second method. Substitute x=7 into an equation to test whether it is a valid solution.",
+        "Solve 48 times 25 mentally and verify using a second method. Substitute x=7 into an equation to test whether it is a valid solution. Extend the same idea to a new context and require the learner to justify the method."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Run two short timed rounds with different pacing strategies and compare accuracy, skipped items and corrected errors.",
+      "guided_practice": "Work through three scaffolded problems for Speed, accuracy and verification: first with full prompts, second with one prompt, and third independently. Require the learner to explain the chosen method before confirming the answer.",
+      "independent_practice": [
+        "Complete a five-item timed set",
+        "Verify one multiplication with decomposition, estimate a geometry answer, and identify one question worth postponing."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete a ten-item timed checkpoint targeting at least 80 percent accuracy and record verification used on uncertain answers.",
+      "student_task": "Create a pacing plan with a first-pass strategy, skip rule and final check routine.",
+      "tutor_guidance": "Ask for reasoning, check assumptions and units, and use questions rather than giving the answer. The activity is designed to remain useful for self-learning without a tutor.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Choose the verification method that catches your most common error and give evidence.",
+      "daily_flow": "Learn → Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "mathematics-challenge",
       "course_name": "Mathematics Challenge",
       "module_id": "mathematics-challenge-days-1-10",
@@ -344,35 +324,31 @@
       "lesson_id": "mathematics-challenge-days-1-10-day-9"
     },
     {
-      "title": "Review & competition plan",
-      "objective": "Build a revision sheet, error log and personal strategy for the next stage.",
-      "core_teaching_content": "This challenge lesson develops review & competition plan for Mathematics Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Integrated mini-mock",
+      "objective": "Apply mixed mathematics skills under timed conditions and turn errors into a targeted revision plan.",
+      "core_teaching_content": "A mixed assessment requires method selection because the topic is not announced. Classify questions by likely difficulty, manage time deliberately, and analyse errors afterward. Categorise each miss as concept misunderstanding, calculation error, misreading, weak estimation, or time pressure. A score alone is not a diagnosis. Use the error pattern to select the next revision priority and then redo representative questions.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A fraction-proportion item tests relationship recognition; a geometry item with the wrong unit tests unit discipline. Explain the reasoning, not just the final answer.",
+        "A fraction-proportion item tests relationship recognition; a geometry item with the wrong unit tests unit discipline. Explain the reasoning, not just the final answer. Extend the same idea to a new context and require the learner to justify the method."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a mixed timed set, classify every missed or guessed item, and redo selected questions without viewing the solution first.",
+      "guided_practice": "Work through three scaffolded problems for Integrated mini-mock: first with full prompts, second with one prompt, and third independently. Require the learner to explain the chosen method before confirming the answer.",
+      "independent_practice": [
+        "Solve one fraction item, one equation, one geometry item and one sequence item",
+        "Then choose one error category and design a corrective practice question."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Report score, accuracy, time used, unanswered items and error categories. Set a measurable next-attempt target.",
+      "student_task": "Create a one-page revision plan with three strengths, three gaps and an action for each gap.",
+      "tutor_guidance": "Ask for reasoning, check assumptions and units, and use questions rather than giving the answer. The activity is designed to remain useful for self-learning without a tutor.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Write the single change most likely to improve your next attempt and cite evidence from the mock.",
+      "daily_flow": "Learn → Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "mathematics-challenge",
       "course_name": "Mathematics Challenge",
       "module_id": "mathematics-challenge-days-1-10",
