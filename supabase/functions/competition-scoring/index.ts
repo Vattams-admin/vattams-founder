@@ -540,6 +540,20 @@ Deno.serve(async (req) => {
         'course_id'
       )
 
+    // The production competition runtime has migrated to the dedicated
+    // competition-official-* functions. This legacy scorer must not accept
+    // newly fabricated Firestore attempts, because those attempts are no
+    // longer created by the current participant application.
+    if (!booleanField(attempt, 'backend_created')) {
+      return json(
+        {
+          error:
+            'This competition scoring endpoint is retired. Please use the current official competition flow.',
+        },
+        410
+      )
+    }
+
     if (
       !courseId ||
       !isSafeId(courseId)
