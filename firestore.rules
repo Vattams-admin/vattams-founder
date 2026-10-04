@@ -677,8 +677,10 @@ service cloud.firestore {
 
 
     match /certificates/{certificateId} {
+      // Public verification is a direct get() by the certificate code,
+      // which is also the document ID. Collection enumeration is admin-only.
       allow get: if true;
-      allow list: if isAdmin() || request.query.limit <= 1;
+      allow list: if isAdmin();
       allow create, update: if isAdmin();
       allow delete: if false;
     }
