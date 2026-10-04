@@ -7,6 +7,7 @@ const KEYS = JSON.parse(Deno.env.get("SUPABASE_SECRET_KEYS") || "{}");
 const SERVICE_KEY = KEYS["default"] || "";
 const BUCKET = "academia-course-materials";
 const COURSE_ID = "DNWt3cPE4ZSJG90CTC1e";
+const REGISTRY_BUNDLE = "competitions/registry.json";
 const QUESTION_BUNDLE = "competitions/thirukkural/objective/questions.private.json";
 const supabase = createClient(SUPABASE_URL, SERVICE_KEY, { auth: { persistSession:false, autoRefreshToken:false }});
 const firebaseJWKS = createRemoteJWKSet(new URL("https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com"));
@@ -20,6 +21,13 @@ async function uid(req:Request){
   if(typeof payload.sub!=="string"||!payload.sub) throw new Error("Invalid Firebase token");
   return payload.sub;
 }
+async function competitionEnabled(){
+  const { data, error } = await supabase.storage.from(BUCKET).download(REGISTRY_BUNDLE);
+  if (error || !data) throw new Error("Competition registry is unavailable.");
+  const registry = JSON.parse(await data.text());
+  return registry?.competitions?.[COURSE_ID]?.enabled === true;
+}
+
 async function loadBundle(){
   const {data,error}=await supabase.storage.from(BUCKET).download(QUESTION_BUNDLE);
   if(error||!data) throw new Error("Competition question bundle is unavailable.");
@@ -37,6 +45,7 @@ Deno.serve(async(req)=>{
   try{
     if(req.method!=="POST") return json({error:"Method not allowed"},405);
     const studentId=await uid(req);
+    if (!(await competitionEnabled())) return json({error:"Competition is not enabled."},409);
     const body=await req.json();
     const attemptId=typeof body?.attempt_id==="string"?body.attempt_id.trim():"";
     if(!attemptId) return json({error:"attempt_id is required."},400);
