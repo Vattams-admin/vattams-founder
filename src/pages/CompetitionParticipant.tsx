@@ -97,6 +97,7 @@ export default function CompetitionParticipant() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [result, setResult] = useState<CompetitionResult | null>(null)
   const [remainingSeconds, setRemainingSeconds] = useState(0)
+  const [officialAgeBand, setOfficialAgeBand] = useState('')
   const [busy, setBusy] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
   const autoSubmitRef = useRef(false)
@@ -132,6 +133,7 @@ export default function CompetitionParticipant() {
         course_id: course.id,
       })
       const id = typeof data?.attempt_id === 'string' ? data.attempt_id : ''
+      const ageBand = typeof data?.age_band === 'string' ? data.age_band : ''
       const ids = Array.isArray(data?.question_ids)
         ? data.question_ids.filter((x: unknown): x is string => typeof x === 'string')
         : []
@@ -142,6 +144,7 @@ export default function CompetitionParticipant() {
       await loadQuestions(id, ids)
 
       setAttemptId(id)
+      setOfficialAgeBand(ageBand)
       const startMs = typeof data?.started_at === 'string' ? new Date(data.started_at).getTime() : Date.now()
       setStartedAtMs(startMs)
       setRemainingSeconds(totalSeconds)
@@ -229,7 +232,7 @@ export default function CompetitionParticipant() {
           <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6">
             <div className="flex items-center justify-between gap-4">
               <div>
-                <span className="rounded-full border border-gold/30 px-2 py-0.5 text-[11px] uppercase tracking-wide text-gold">Official Competition</span>
+                <span className="rounded-full border border-gold/30 px-2 py-0.5 text-[11px] uppercase tracking-wide text-gold">Official Competition</span>\n                {officialAgeBand && <span className="ml-2 rounded-full border border-white/10 px-2 py-0.5 text-[11px] uppercase tracking-wide text-slate-muted">{officialAgeBand.replaceAll("_", " ")}</span>}
                 <h1 className="mt-3 font-display text-2xl font-semibold">{course.name}</h1>
               </div>
               <div className="rounded-card border border-gold/20 bg-white/5 px-4 py-2 text-center">
@@ -336,7 +339,7 @@ export default function CompetitionParticipant() {
           <div className="rounded-card border border-gold/15 bg-white/5 p-5">
             <h2 className="font-display text-lg">Official Competition</h2>
             <p className="mt-2 text-sm text-slate-muted">
-              The official paper contains the approved 30-question Thirukkural set. During the competition, only the questions and options are shown. Correct answers and explanations are not revealed.
+              The official competition uses an age-appropriate paper: 30 questions for your age band. Each of the four age bands has its own fixed 30-question paper. During the competition, only the questions and options are shown. Correct answers and explanations are not revealed.
             </p>
             <button type="button" onClick={() => void startAttempt()} disabled={busy} className="btn-primary mt-5 disabled:opacity-50">
               {busy ? 'Starting...' : 'Start Competition'}
