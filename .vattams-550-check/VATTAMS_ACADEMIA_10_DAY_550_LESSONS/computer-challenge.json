@@ -6,40 +6,39 @@
   },
   "module": {
     "id": "computer-challenge-days-1-10",
-    "title": "Days 1–10 | Foundation Module",
-    "description": "First ten complete lessons; prepared for admin review before production publishing."
+    "title": "Days 1–10 | Competition Mastery Module",
+    "description": "Production candidate: authored topic-driven Computer Challenge curriculum."
   },
   "lessons": [
     {
-      "title": "Challenge orientation & strategy",
-      "objective": "Understand the challenge format, scoring mindset, time management and preparation strategy.",
-      "core_teaching_content": "This challenge lesson develops challenge orientation & strategy for Computer Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Computer fundamentals and hardware",
+      "objective": "Explain how core computer components work together to accept input, process information, store data and produce output.",
+      "core_teaching_content": "A computer system combines hardware and software. Input devices provide data, the processor executes instructions, memory holds data needed during active work, and storage keeps information persistently. Output devices present results. Performance questions often require distinguishing temporary working memory from long-term storage and identifying the role of each component in a system.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A keyboard supplies input, the CPU processes instructions, RAM holds active data and programs, an SSD stores files persistently, and a display presents visual output.",
+        "A keyboard supplies input, the CPU processes instructions, RAM holds active data and programs, an SSD stores files persistently, and a display presents visual output. Apply the same concept to a different computing scenario and require the learner to justify the choice."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Label the input, processing, memory, storage and output stages for three everyday computing tasks.",
+      "guided_practice": "Work through three scaffolded Computer Challenge problems for Computer fundamentals and hardware: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to state the evidence or rule used before confirming the answer.",
+      "independent_practice": [
+        "Match components to functions",
+        "Distinguish RAM from storage",
+        "Identify an input device and output device",
+        "Predict which component is relevant to a stated task."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item hardware checkpoint with at least six correct functional matches.",
+      "student_task": "Create a labelled block diagram showing how data moves through a computer system.",
+      "tutor_guidance": "Ask learners to distinguish closely related computing concepts before answering. Encourage diagrams, traces and evidence-based diagnosis instead of memorised labels. The sequence remains suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
+        "Diagrams/data tables",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain why turning off a computer can remove information from RAM while files remain on storage.",
+      "daily_flow": "Learn → Worked Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "computer-challenge",
       "course_name": "Computer Challenge",
       "module_id": "computer-challenge-days-1-10",
@@ -48,35 +47,35 @@
       "lesson_id": "computer-challenge-days-1-10-day-1"
     },
     {
-      "title": "Concept sprint I",
-      "objective": "Master a high-value concept through examples and short challenge questions.",
-      "core_teaching_content": "This challenge lesson develops concept sprint i for Computer Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Operating systems and files",
+      "objective": "Use operating-system concepts to manage files, folders, applications and permissions safely and logically.",
+      "core_teaching_content": "An operating system manages hardware resources and provides services for applications and users. Files are stored in folders and identified by names and formats. Extensions often indicate the type of content or application associated with a file. Good file management uses meaningful names, predictable folders, backups and appropriate permissions rather than relying on the desktop as permanent storage.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A project folder might contain separate folders for source files, exported documents and backups, making retrieval and version control easier.",
+        "A project folder might contain separate folders for source files, exported documents and backups, making retrieval and version control easier. Apply the same concept to a different computing scenario and require the learner to justify the choice."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Design a folder structure for a school competition project and explain the naming convention.",
+      "guided_practice": "Work through three scaffolded Computer Challenge problems for Operating systems and files: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to state the evidence or rule used before confirming the answer.",
+      "independent_practice": [
+        "Identify the purpose of an operating system",
+        "Distinguish file from folder",
+        "Choose an appropriate file type",
+        "Detect a confusing filename",
+        "Decide where a backup should be stored."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item operating-system and file-management checkpoint with at least six correct.",
+      "student_task": "Create a sample project folder hierarchy with five meaningful filenames.",
+      "tutor_guidance": "Ask learners to distinguish closely related computing concepts before answering. Encourage diagrams, traces and evidence-based diagnosis instead of memorised labels. The sequence remains suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
+        "Diagrams/data tables",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain why file extensions and version names can reduce accidental overwrites.",
+      "daily_flow": "Learn → Worked Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "computer-challenge",
       "course_name": "Computer Challenge",
       "module_id": "computer-challenge-days-1-10",
@@ -85,35 +84,34 @@
       "lesson_id": "computer-challenge-days-1-10-day-2"
     },
     {
-      "title": "Concept sprint II",
-      "objective": "Extend the concept and solve progressively harder problems.",
-      "core_teaching_content": "This challenge lesson develops concept sprint ii for Computer Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Data representation and storage",
+      "objective": "Explain how computers represent, store and move digital information and apply basic binary reasoning.",
+      "core_teaching_content": "Computers represent information using discrete states. Binary uses two symbols, 0 and 1, and combinations of bits can represent numbers and encoded information. Larger units such as bytes group bits. Text, images, audio and other media require encoding and storage formats. A larger file may require more storage or bandwidth, but the exact size depends on representation and compression.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "Eight binary bits form one byte. The decimal number 5 is represented as 00000101 in an eight-bit unsigned representation.",
+        "Eight binary bits form one byte. The decimal number 5 is represented as 00000101 in an eight-bit unsigned representation. Apply the same concept to a different computing scenario and require the learner to justify the choice."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Convert small decimal numbers to binary and back. Compare two file sizes and reason about storage requirements.",
+      "guided_practice": "Work through three scaffolded Computer Challenge problems for Data representation and storage: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to state the evidence or rule used before confirming the answer.",
+      "independent_practice": [
+        "Convert numbers up to 15 between decimal and four-bit binary",
+        "Identify how many bits are in a byte",
+        "Compare file sizes",
+        "Explain why compression can reduce storage requirements."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item data-representation checkpoint with at least six correct conversions or explanations.",
+      "student_task": "Build a small binary place-value table and use it to solve five conversions.",
+      "tutor_guidance": "Ask learners to distinguish closely related computing concepts before answering. Encourage diagrams, traces and evidence-based diagnosis instead of memorised labels. The sequence remains suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
+        "Diagrams/data tables",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain how the same digital storage principle can support very different types of media.",
+      "daily_flow": "Learn → Worked Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "computer-challenge",
       "course_name": "Computer Challenge",
       "module_id": "computer-challenge-days-1-10",
@@ -122,35 +120,34 @@
       "lesson_id": "computer-challenge-days-1-10-day-3"
     },
     {
-      "title": "Speed & accuracy",
-      "objective": "Balance speed with accuracy using a timed practice set.",
-      "core_teaching_content": "This challenge lesson develops speed & accuracy for Computer Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Networks and internet fundamentals",
+      "objective": "Explain how devices communicate across networks and distinguish local networking, internet services and common addressing concepts.",
+      "core_teaching_content": "A network connects devices so they can exchange data and share resources. Local networks connect nearby devices, while the internet is an interconnected global network. Routers forward traffic between networks; switches connect devices within a local network. Domain names provide human-readable names that resolve through DNS to network addresses. Reliable answers distinguish a service from the device or protocol delivering it.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A home router can connect phones and computers to a local network and provide a path to internet services, while DNS helps translate a website name into an address.",
+        "A home router can connect phones and computers to a local network and provide a path to internet services, while DNS helps translate a website name into an address. Apply the same concept to a different computing scenario and require the learner to justify the choice."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Draw a simple home-network diagram showing devices, router, local network and internet service.",
+      "guided_practice": "Work through three scaffolded Computer Challenge problems for Networks and internet fundamentals: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to state the evidence or rule used before confirming the answer.",
+      "independent_practice": [
+        "Identify router versus switch roles",
+        "Explain DNS at a high level",
+        "Distinguish local and internet communication",
+        "Trace a simplified request from a device to a website."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item networking checkpoint with at least six correct explanations.",
+      "student_task": "Draw and annotate a small network topology for a school computer lab.",
+      "tutor_guidance": "Ask learners to distinguish closely related computing concepts before answering. Encourage diagrams, traces and evidence-based diagnosis instead of memorised labels. The sequence remains suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
+        "Diagrams/data tables",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain why knowing a website's domain name is different from knowing the network address used to reach it.",
+      "daily_flow": "Learn → Worked Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "computer-challenge",
       "course_name": "Computer Challenge",
       "module_id": "computer-challenge-days-1-10",
@@ -159,35 +156,33 @@
       "lesson_id": "computer-challenge-days-1-10-day-4"
     },
     {
-      "title": "Pattern recognition",
-      "objective": "Identify recurring patterns, clues and distractors in challenge questions.",
-      "core_teaching_content": "This challenge lesson develops pattern recognition for Computer Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Cybersecurity and safe digital behaviour",
+      "objective": "Recognise common cybersecurity threats and choose practical controls that reduce account, device and data risk.",
+      "core_teaching_content": "Cybersecurity protects confidentiality, integrity and availability. Common threats include phishing, credential theft, malicious software, unsafe links and weak authentication. Strong unique passwords, multi-factor authentication, software updates, backups and cautious handling of links and attachments reduce risk. Security decisions should consider both the threat and the control that addresses it.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A convincing message asking for an urgent password reset may be phishing. Checking the destination independently rather than using the embedded link reduces the risk of credential theft.",
+        "A convincing message asking for an urgent password reset may be phishing. Checking the destination independently rather than using the embedded link reduces the risk of credential theft. Apply the same concept to a different computing scenario and require the learner to justify the choice."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Review five mock messages and identify warning signs without opening links or attachments.",
+      "guided_practice": "Work through three scaffolded Computer Challenge problems for Cybersecurity and safe digital behaviour: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to state the evidence or rule used before confirming the answer.",
+      "independent_practice": [
+        "Choose a suitable control for phishing, stolen passwords, lost devices and ransomware",
+        "Identify suspicious message features",
+        "Decide when to report rather than respond."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item cybersecurity checkpoint with at least six correct threat-control matches.",
+      "student_task": "Create a personal five-point digital-safety checklist suitable for a student account.",
+      "tutor_guidance": "Ask learners to distinguish closely related computing concepts before answering. Encourage diagrams, traces and evidence-based diagnosis instead of memorised labels. The sequence remains suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
+        "Diagrams/data tables",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain why multi-factor authentication can reduce account risk even if a password is exposed.",
+      "daily_flow": "Learn → Worked Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "computer-challenge",
       "course_name": "Computer Challenge",
       "module_id": "computer-challenge-days-1-10",
@@ -196,35 +191,34 @@
       "lesson_id": "computer-challenge-days-1-10-day-5"
     },
     {
-      "title": "Elimination & verification",
-      "objective": "Use elimination, estimation or verification to reduce avoidable errors.",
-      "core_teaching_content": "This challenge lesson develops elimination & verification for Computer Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Productivity, data and digital workflows",
+      "objective": "Use structured digital workflows to create, organise, analyse and present information accurately.",
+      "core_teaching_content": "Productivity software supports documents, spreadsheets, presentations and structured data. Good workflows separate raw data from calculated results, use clear labels and validate inputs before drawing conclusions. Spreadsheets are useful for repeated calculations and sorting, while documents and presentations communicate conclusions. Accuracy depends on checking formulas, units, dates and source information rather than trusting formatting alone.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A spreadsheet can calculate totals from raw scores, but the formula and source values should be checked before publishing a ranking.",
+        "A spreadsheet can calculate totals from raw scores, but the formula and source values should be checked before publishing a ranking. Apply the same concept to a different computing scenario and require the learner to justify the choice."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Design a small spreadsheet workflow from raw competition scores to a validated summary.",
+      "guided_practice": "Work through three scaffolded Computer Challenge problems for Productivity, data and digital workflows: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to state the evidence or rule used before confirming the answer.",
+      "independent_practice": [
+        "Identify raw versus derived data",
+        "Choose a suitable tool for a task",
+        "Spot an inconsistent formula",
+        "Select an appropriate chart for a simple comparison."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item productivity and data-workflow checkpoint with at least six correct decisions.",
+      "student_task": "Create a small data table and specify the fields, validation checks and final output.",
+      "tutor_guidance": "Ask learners to distinguish closely related computing concepts before answering. Encourage diagrams, traces and evidence-based diagnosis instead of memorised labels. The sequence remains suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
+        "Diagrams/data tables",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain why changing a source value can affect a derived result and why validation is necessary.",
+      "daily_flow": "Learn → Worked Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "computer-challenge",
       "course_name": "Computer Challenge",
       "module_id": "computer-challenge-days-1-10",
@@ -233,35 +227,35 @@
       "lesson_id": "computer-challenge-days-1-10-day-6"
     },
     {
-      "title": "Mixed challenge set",
-      "objective": "Solve a mixed set and classify questions by difficulty and confidence.",
-      "core_teaching_content": "This challenge lesson develops mixed challenge set for Computer Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Algorithms and computational thinking",
+      "objective": "Break problems into precise steps, identify patterns and conditions, and compare simple algorithms for correctness and efficiency.",
+      "core_teaching_content": "An algorithm is a finite sequence of instructions for solving a problem. Computational thinking uses decomposition, pattern recognition, abstraction and algorithm design. Conditions allow decisions, loops repeat actions, and variables store changing values. A correct algorithm produces the intended result for valid inputs; efficiency considers how much work or resource it needs.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "To find the largest of three numbers, initialise a current maximum, compare each value, and replace the maximum when a larger value appears.",
+        "To find the largest of three numbers, initialise a current maximum, compare each value, and replace the maximum when a larger value appears. Apply the same concept to a different computing scenario and require the learner to justify the choice."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Write pseudocode for a simple search, sorting or decision task and test it with normal and edge-case inputs.",
+      "guided_practice": "Work through three scaffolded Computer Challenge problems for Algorithms and computational thinking: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to state the evidence or rule used before confirming the answer.",
+      "independent_practice": [
+        "Trace a short algorithm",
+        "Identify a missing condition",
+        "Predict loop output",
+        "Decompose a larger task into steps",
+        "Find an input that exposes an error."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item algorithm-tracing checkpoint with at least six correct traces or diagnoses.",
+      "student_task": "Write and manually test pseudocode for finding the largest value in a list.",
+      "tutor_guidance": "Ask learners to distinguish closely related computing concepts before answering. Encourage diagrams, traces and evidence-based diagnosis instead of memorised labels. The sequence remains suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
+        "Diagrams/data tables",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain why testing only one normal input cannot establish that an algorithm is correct.",
+      "daily_flow": "Learn → Worked Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "computer-challenge",
       "course_name": "Computer Challenge",
       "module_id": "computer-challenge-days-1-10",
@@ -270,35 +264,34 @@
       "lesson_id": "computer-challenge-days-1-10-day-7"
     },
     {
-      "title": "Advanced application",
-      "objective": "Apply concepts to unfamiliar or multi-step situations.",
-      "core_teaching_content": "This challenge lesson develops advanced application for Computer Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Troubleshooting and systems reasoning",
+      "objective": "Diagnose common computer problems by gathering evidence, isolating causes and applying the least risky appropriate fix.",
+      "core_teaching_content": "Troubleshooting should be systematic rather than random. Define the symptom, reproduce it safely, check simple causes first, change one relevant factor at a time, and verify the result. Consider power, connectivity, configuration, software state and hardware. Keep records of changes so a failed intervention can be reversed. Escalate when the issue involves permissions, sensitive data or hardware risk beyond the user's role.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "If a computer cannot access one website but other sites work, checking the site, browser, DNS and network path is more informative than immediately reinstalling the operating system.",
+        "If a computer cannot access one website but other sites work, checking the site, browser, DNS and network path is more informative than immediately reinstalling the operating system. Apply the same concept to a different computing scenario and require the learner to justify the choice."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Build a troubleshooting decision tree for a device that cannot connect to the internet.",
+      "guided_practice": "Work through three scaffolded Computer Challenge problems for Troubleshooting and systems reasoning: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to state the evidence or rule used before confirming the answer.",
+      "independent_practice": [
+        "Match symptoms to likely causes",
+        "Choose the safest first test",
+        "Identify an unnecessary risky action",
+        "Decide when to escalate a hardware or security issue."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an eight-item troubleshooting checkpoint with at least six evidence-based choices.",
+      "student_task": "Write a five-step troubleshooting procedure for one common computer problem.",
+      "tutor_guidance": "Ask learners to distinguish closely related computing concepts before answering. Encourage diagrams, traces and evidence-based diagnosis instead of memorised labels. The sequence remains suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
+        "Diagrams/data tables",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Explain why changing several settings simultaneously makes troubleshooting harder.",
+      "daily_flow": "Learn → Worked Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "computer-challenge",
       "course_name": "Computer Challenge",
       "module_id": "computer-challenge-days-1-10",
@@ -307,78 +300,38 @@
       "lesson_id": "computer-challenge-days-1-10-day-8"
     },
     {
-      "title": "Mock challenge",
-      "objective": "Complete a timed mini-mock and analyse every incorrect or guessed answer.",
-      "core_teaching_content": "This challenge lesson develops mock challenge for Computer Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
+      "title": "Integrated computer mini-mock",
+      "objective": "Apply hardware, software, networking, cybersecurity, data and algorithm concepts under timed competition conditions and convert errors into targeted revision.",
+      "core_teaching_content": "A strong computer-competition attempt requires switching between conceptual knowledge, diagrams, data representation, algorithms and cybersecurity scenarios. Read every question for the exact task and eliminate options that confuse related concepts. After the attempt, classify mistakes as knowledge gaps, misread requirements, reasoning errors or careless execution. Revision should target the observed error pattern.",
       "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
+        "A question about a slow application may involve memory, storage, network access or software state; the best answer depends on the evidence supplied rather than a memorised claim that one component is always responsible.",
+        "A question about a slow application may involve memory, storage, network access or software state; the best answer depends on the evidence supplied rather than a memorised claim that one component is always responsible. Apply the same concept to a different computing scenario and require the learner to justify the choice."
       ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
+      "practical_activity": "Complete a mixed timed set, record uncertain items and review each error using an evidence-first diagnosis.",
+      "guided_practice": "Work through three scaffolded Computer Challenge problems for Integrated computer mini-mock: model the first, prompt the second, and require independent reasoning on the third. Ask the learner to state the evidence or rule used before confirming the answer.",
+      "independent_practice": [
+        "Answer one hardware, one networking, one binary, one cybersecurity, one algorithm and one troubleshooting item",
+        "Explain the principle behind each answer."
       ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
+      "assessment_checkpoint": "Complete an integrated checkpoint and record accuracy, time, guessed items and error categories.",
+      "student_task": "Create a one-page Computer Challenge revision plan with three strengths, three gaps and one measurable next-attempt target.",
+      "tutor_guidance": "Ask learners to distinguish closely related computing concepts before answering. Encourage diagrams, traces and evidence-based diagnosis instead of memorised labels. The sequence remains suitable for self-learning.",
       "materials_requirement": [
-        "Challenge question set",
-        "Timer",
+        "VATTAMS study notes",
+        "Practice questions",
+        "Diagrams/data tables",
         "Answer sheet",
         "Error-analysis log"
       ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
+      "reflection_completion": "Identify the error category with the greatest improvement opportunity and define one concrete practice action.",
+      "daily_flow": "Learn → Worked Example → Guided Practice → Independent Practice → Check → Reflect",
+      "status": "ready_for_production",
       "course_id": "computer-challenge",
       "course_name": "Computer Challenge",
       "module_id": "computer-challenge-days-1-10",
       "day": 9,
       "sort_order": 9,
       "lesson_id": "computer-challenge-days-1-10-day-9"
-    },
-    {
-      "title": "Review & competition plan",
-      "objective": "Build a revision sheet, error log and personal strategy for the next stage.",
-      "core_teaching_content": "This challenge lesson develops review & competition plan for Computer Challenge. Begin with a short strategy briefing, then use progressively harder questions. Learners should justify methods, manage time and review errors.",
-      "examples": [
-        "Warm-up: one accessible question to activate the relevant concept.",
-        "Challenge example: tutor models a multi-step solution and identifies distractors.",
-        "Transfer challenge: learner solves a novel problem under a short time limit."
-      ],
-      "practical_activity": "Challenge ladder: warm-up → standard → advanced → one stretch question.",
-      "guided_practice": "Solve two questions with the tutor, requiring the learner to state the strategy before answering.",
-      "independent_practice": "Complete a timed set and classify each question as Easy / Medium / Hard after attempting it.",
-      "questions": [
-        "What clue helped you choose the strategy?",
-        "Which distractor or trap could mislead a learner?",
-        "Can you solve the problem using another valid method?",
-        "How would you improve your time without sacrificing accuracy?"
-      ],
-      "assessment_checkpoint": "10-question timed checkpoint; target 70%+ accuracy and a written explanation for all errors.",
-      "student_task": "Prepare a personal challenge card with one solved example, one unsolved question and your strategy.",
-      "tutor_guidance": "Encourage reasoning, pacing and verification; never reward guessing over justified answers.",
-      "materials_requirement": [
-        "Challenge question set",
-        "Timer",
-        "Answer sheet",
-        "Error-analysis log"
-      ],
-      "reflection_completion": "Write the strategy that worked best today and the one habit you will change in the next challenge.",
-      "daily_flow": "Learn → Example → Practise → Check → Reflect",
-      "status": "draft_ready_for_admin_review",
-      "course_id": "computer-challenge",
-      "course_name": "Computer Challenge",
-      "module_id": "computer-challenge-days-1-10",
-      "day": 10,
-      "sort_order": 10,
-      "lesson_id": "computer-challenge-days-1-10-day-10"
     }
   ]
 }
