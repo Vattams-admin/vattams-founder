@@ -20,38 +20,38 @@
       "subtopics": [
         {
           "title": "what AI is",
-          "teaching": "Artificial intelligence refers to computer systems designed to perform tasks involving capabilities such as pattern recognition, prediction, language processing or decision support.",
-          "worked_example": "A recommendation system can rank items using patterns in user behaviour without having human-like understanding.",
-          "pitfall": "AI output is not automatically evidence of consciousness or human reasoning.",
-          "mastery": "Identify AI systems by the task they perform and distinguish automated pattern processing from human intelligence."
+          "teaching": "Artificial intelligence is the design of computer systems that perform tasks requiring capabilities such as perception, prediction, language processing, planning or decision support.",
+          "worked_example": "A spam filter classifies messages using learned patterns; it does not need human-like consciousness to perform the task.",
+          "pitfall": "Do not equate fluent output with human understanding or consciousness.",
+          "mastery": "Define AI in terms of capabilities and distinguish an AI task from ordinary fixed automation."
         },
         {
           "title": "AI history",
-          "teaching": "AI has developed through multiple periods of research, including symbolic methods, expert systems, statistical learning and modern neural-network approaches.",
-          "worked_example": "Modern machine learning builds on decades of earlier work rather than appearing suddenly with generative AI.",
-          "pitfall": "A technology being newly popular does not mean its underlying research is entirely new.",
-          "mastery": "Place major AI developments in broad historical sequence and explain their significance."
+          "teaching": "AI research has passed through symbolic reasoning, expert systems, statistical machine learning, deep learning and today's foundation and generative models.",
+          "worked_example": "An expert system can be viewed as an earlier approach based on encoded rules, while a neural model learns patterns from examples.",
+          "pitfall": "Do not describe generative AI as if the field began only when chatbots became popular.",
+          "mastery": "Sequence major AI eras and explain how the dominant approach changed."
         },
         {
           "title": "machine learning concepts",
-          "teaching": "Machine learning systems learn patterns from data to make predictions or decisions instead of requiring every rule to be explicitly programmed.",
-          "worked_example": "A classifier trained on labelled images can learn patterns associated with different categories.",
-          "pitfall": "A model can fail when its training data does not represent the situations encountered after deployment.",
-          "mastery": "Explain training, inference, features, labels and basic model limitations."
+          "teaching": "Machine learning enables a system to learn patterns from data so that its behaviour can generalize to new examples. Common learning settings include supervised, unsupervised and reinforcement learning.",
+          "worked_example": "A model trained on labelled images of cats and dogs can learn to classify a new image it has not seen during training.",
+          "pitfall": "Memorizing training examples is not the same as learning a pattern that generalizes.",
+          "mastery": "Match a problem to an appropriate learning setting and explain training versus inference."
         },
         {
           "title": "models and data",
-          "teaching": "An AI model is a learned computational representation, while data provides examples or information used during training, validation or inference.",
-          "worked_example": "Changing the training data can change a model's learned behaviour even when the model architecture remains the same.",
-          "pitfall": "More data is not automatically better if it is inaccurate, duplicated or unrepresentative.",
-          "mastery": "Explain how data and models interact and why data quality matters."
+          "teaching": "A model is a learned mathematical representation used to transform inputs into predictions, classifications, rankings or generated outputs. Data quality, representation and coverage strongly affect what the model can learn.",
+          "worked_example": "A handwriting classifier may fail on an unfamiliar script style if its training data contains only one narrow writing pattern.",
+          "pitfall": "A larger dataset does not automatically produce a better model if the data is noisy, biased or poorly labelled.",
+          "mastery": "Explain the relationship among data, model parameters, training and inference."
         },
         {
           "title": "AI applications",
-          "teaching": "AI applications include recommendation, speech recognition, computer vision, language processing, forecasting and decision support.",
-          "worked_example": "A speech-to-text system converts spoken language into text by processing audio patterns.",
-          "pitfall": "Calling every automated program AI can obscure the distinction between simple rules and learned systems.",
-          "mastery": "Identify appropriate AI applications and explain what task the system performs."
+          "teaching": "AI is used in recommendation, search, translation, speech recognition, medical decision support, fraud detection, education and many other domains.",
+          "worked_example": "A learning platform can recommend practice topics from a student's previous performance while leaving the final learning decision to the student or teacher.",
+          "pitfall": "Calling every digital feature AI can hide whether a rule-based system or learned model is actually being used.",
+          "mastery": "Identify the AI component in a real application and state what input, output and decision it supports."
         }
       ]
     },
@@ -60,38 +60,38 @@
       "subtopics": [
         {
           "title": "data types",
-          "teaching": "Data can be represented as numbers, text, categories, images, audio, video and other structured or unstructured forms.",
-          "worked_example": "A student's age is numeric data, while a course category may be categorical data; each requires appropriate handling.",
-          "pitfall": "Treating every value as the same type can produce invalid analysis.",
-          "mastery": "Classify common data types and select suitable representations."
+          "teaching": "Computing systems work with structured data such as tables and numerical values, semi-structured data such as JSON, and unstructured data such as images, audio and free text.",
+          "worked_example": "A student record may contain structured marks, while an uploaded essay is unstructured text that can be processed by language tools.",
+          "pitfall": "Treating all data as interchangeable can lead to unsuitable storage, preprocessing or modelling choices.",
+          "mastery": "Classify common data formats and explain why representation matters to an AI system."
         },
         {
           "title": "patterns",
-          "teaching": "Pattern recognition identifies regularities or relationships in data that may support prediction, classification or explanation.",
-          "worked_example": "If sales repeatedly increase during a particular season, the pattern may be useful for forecasting but does not prove the season is the only cause.",
-          "pitfall": "A correlation or repeated pattern does not automatically establish causation.",
-          "mastery": "Identify meaningful patterns and distinguish observation from causal explanation."
+          "teaching": "Algorithms and models detect useful regularities such as frequency, correlation, sequence and similarity. A pattern is valuable only when it generalizes beyond the examples used to discover it.",
+          "worked_example": "A model may notice that certain words frequently occur in positive product reviews and use that pattern for sentiment classification.",
+          "pitfall": "A correlation in a dataset does not by itself prove that one factor causes another.",
+          "mastery": "Recognize meaningful patterns while distinguishing correlation, coincidence and causation."
         },
         {
           "title": "algorithms",
-          "teaching": "An algorithm is a finite sequence of precise operations for transforming inputs into outputs or solving a problem.",
-          "worked_example": "A sorting algorithm receives a collection of values and produces them in a defined order according to its comparison rules.",
-          "pitfall": "An algorithm must handle valid input cases rather than only the example used to explain it.",
-          "mastery": "Describe, trace and compare simple algorithms using clear inputs and outputs."
+          "teaching": "An algorithm is a finite, ordered procedure for solving a problem or transforming input into output. Good algorithmic thinking emphasizes clear steps, inputs, conditions, repetition and termination.",
+          "worked_example": "A binary search repeatedly halves a sorted search space rather than checking every item one by one.",
+          "pitfall": "A procedure that has no clear stopping condition or assumes an unsorted input without stating it is incomplete.",
+          "mastery": "Write or describe a stepwise algorithm and trace its behaviour on a small input."
         },
         {
           "title": "training data",
-          "teaching": "Training data provides examples from which a machine-learning model learns patterns; its quality affects model behaviour.",
-          "worked_example": "If a face-recognition dataset underrepresents certain groups, performance may differ across those groups.",
-          "pitfall": "A large dataset can still be biased or poorly labelled.",
-          "mastery": "Evaluate training data for relevance, quality, representation and labelling."
+          "teaching": "Training data provides examples from which a machine-learning model learns. Labels may be supplied by people or generated by a defined process, and representative coverage is critical.",
+          "worked_example": "If an image classifier is trained mostly on bright, front-facing photos, it may perform poorly on dark or side-view images.",
+          "pitfall": "More examples cannot fully correct a training set that systematically omits important cases.",
+          "mastery": "Explain how training examples influence model behaviour and identify gaps in a dataset."
         },
         {
           "title": "evaluation",
-          "teaching": "Model evaluation measures how well a system performs against defined criteria on data appropriate for testing.",
-          "worked_example": "A classification model can be evaluated using held-out examples rather than only the data used for training.",
-          "pitfall": "High training accuracy does not guarantee strong performance on unseen cases.",
-          "mastery": "Explain why separate evaluation data and suitable metrics are important."
+          "teaching": "Model evaluation measures how well a system performs on data reserved for testing rather than merely showing performance on training examples. Metrics should match the task and its risks.",
+          "worked_example": "For a classifier, accuracy may be useful, while precision and recall can reveal different error patterns when false positives and false negatives have unequal costs.",
+          "pitfall": "A high training score alone is not evidence that a model generalizes well.",
+          "mastery": "Explain train/test separation and choose an evaluation measure appropriate to a stated task."
         }
       ]
     },
@@ -100,38 +100,38 @@
       "subtopics": [
         {
           "title": "text generation",
-          "teaching": "Text-generation systems produce sequences of language based on patterns learned from training data and the current input context.",
-          "worked_example": "A language model can draft a summary from supplied notes, but the draft should be checked against the source material.",
-          "pitfall": "Fluent sentences can contain incorrect facts or unsupported claims.",
-          "mastery": "Use generated text as an assistive output and verify important information."
+          "teaching": "Text-generation systems produce sequences of tokens based on patterns learned from large language datasets. They can draft, summarize, transform and answer questions, but their output still requires verification.",
+          "worked_example": "A language model can turn bullet points into a structured explanation by predicting a plausible sequence of words.",
+          "pitfall": "Confident wording does not guarantee that a generated statement is factually correct.",
+          "mastery": "Describe how text generation works at a high level and identify when human verification is necessary."
         },
         {
           "title": "image generation",
-          "teaching": "Image-generation systems create images from learned patterns conditioned on prompts or other inputs.",
-          "worked_example": "A prompt describing a classroom scene can guide a generative system toward relevant objects and composition.",
-          "pitfall": "Generated images may contain visual inaccuracies, ambiguous text or unintended details.",
-          "mastery": "Evaluate generated images for factual, visual and contextual accuracy."
+          "teaching": "Image-generation systems create images from learned representations of visual patterns, often conditioned on text or other inputs.",
+          "worked_example": "A text prompt describing a science laboratory can be transformed into a generated illustration whose visual details are synthesized by the model.",
+          "pitfall": "A generated image should not automatically be treated as a photograph or documentary evidence.",
+          "mastery": "Distinguish generated imagery from captured imagery and identify appropriate verification needs."
         },
         {
           "title": "multimodal systems",
-          "teaching": "Multimodal systems process or generate more than one type of information, such as text, images, audio or video.",
-          "worked_example": "A system can receive an image and a text question, then produce a textual explanation based on both inputs.",
-          "pitfall": "Supporting multiple modalities does not guarantee correct interpretation of every modality.",
-          "mastery": "Identify the inputs and outputs of a multimodal system and its limitations."
+          "teaching": "Multimodal AI combines or coordinates information from different modalities such as text, images, audio and video so a system can reason or generate across them.",
+          "worked_example": "A model may inspect a chart image and answer a question about the labels while also using a written instruction.",
+          "pitfall": "Combining modalities does not guarantee that the system correctly understands every visual or audio detail.",
+          "mastery": "Identify the modalities involved in an AI task and explain why combining them can be useful."
         },
         {
           "title": "prompt concepts",
-          "teaching": "A prompt specifies an instruction, context, constraints or desired output that guides a generative AI system.",
-          "worked_example": "A prompt requesting a comparison with a specified audience, format and evidence requirement is more constrained than a vague request for 'tell me about it'.",
-          "pitfall": "Adding instructions cannot guarantee factual correctness.",
-          "mastery": "Construct clear prompts with relevant context, constraints and output requirements."
+          "teaching": "A prompt is an instruction or input that guides a generative model. Clear goals, relevant context, constraints, examples and an explicit output format can improve usefulness and consistency.",
+          "worked_example": "Instead of asking for 'a quiz', a prompt can specify the age group, topic, number of questions, difficulty and required answer format.",
+          "pitfall": "Adding unnecessary instructions or contradictory constraints can make an output less reliable.",
+          "mastery": "Construct a clear prompt with goal, context, constraints and expected output."
         },
         {
           "title": "limitations",
-          "teaching": "Generative AI can hallucinate, reflect training-data biases, misunderstand ambiguous instructions and produce inconsistent outputs.",
-          "worked_example": "Two prompts asking the same factual question can produce different wording or even different claims, so important answers require verification.",
-          "pitfall": "Confident language is not proof of correctness.",
-          "mastery": "Identify common generative-AI failure modes and apply verification and human review."
+          "teaching": "Generative AI can produce inaccurate claims, fabricated citations, incomplete reasoning, biased outputs or unsafe recommendations. Reliability depends on the task, input, model and verification process.",
+          "worked_example": "A student can use AI to draft practice questions but should check facts against authoritative study material before publishing them.",
+          "pitfall": "Treating a fluent response as automatically true is a major reliability error.",
+          "mastery": "List common generative-AI failure modes and select a verification strategy."
         }
       ]
     },
@@ -140,38 +140,38 @@
       "subtopics": [
         {
           "title": "sensors",
-          "teaching": "Sensors detect physical or environmental information such as distance, light, temperature, pressure or motion and convert it into usable signals.",
-          "worked_example": "A robot using a distance sensor can detect an obstacle and trigger a change in movement.",
-          "pitfall": "A sensor measures a property; it does not by itself decide what action should follow.",
-          "mastery": "Match common sensors with the information they can measure."
+          "teaching": "Sensors convert physical conditions such as light, temperature, distance, pressure or motion into measurable signals that a computing system can process.",
+          "worked_example": "A robot can use a distance sensor to estimate how close an obstacle is before deciding whether to move.",
+          "pitfall": "A sensor reading is a measurement with limitations and noise, not a perfect description of the environment.",
+          "mastery": "Explain the input role of sensors and identify how measurement errors can affect an automated system."
         },
         {
           "title": "actuators",
-          "teaching": "Actuators convert control signals into physical action, such as movement, rotation, gripping or switching.",
-          "worked_example": "A motor can act as an actuator that turns an electrical control signal into mechanical motion.",
-          "pitfall": "A sensor and actuator perform different roles in a control system.",
-          "mastery": "Distinguish sensing from actuation and explain how they work together."
+          "teaching": "Actuators convert control signals into physical action, such as moving a motor, opening a valve or changing a robotic joint position.",
+          "worked_example": "A robot controller can command a motor to rotate a wheel after its sensors indicate that the path is clear.",
+          "pitfall": "Confusing sensing with actuation makes it difficult to reason about the control loop.",
+          "mastery": "Distinguish sensors, controllers and actuators and trace information from measurement to action."
         },
         {
           "title": "control",
-          "teaching": "Control systems use inputs, decision logic and outputs to regulate behaviour toward a desired state.",
-          "worked_example": "A thermostat senses temperature and controls heating based on a chosen set point.",
-          "pitfall": "Changing the threshold changes when the actuator responds.",
-          "mastery": "Trace a simple feedback or control loop from sensor input to action."
+          "teaching": "A control system repeatedly observes a state, compares it with a desired condition and changes an actuator command to influence the outcome. Feedback allows the system to correct deviations.",
+          "worked_example": "A smart fan can measure room temperature and adjust its speed to move toward a target temperature.",
+          "pitfall": "An open-loop action that never checks the result cannot automatically compensate for changing conditions.",
+          "mastery": "Describe a feedback loop using sensor input, controller decision and actuator output."
         },
         {
           "title": "autonomous systems",
-          "teaching": "An autonomous system performs some actions with limited direct human control by sensing conditions and selecting responses according to programmed or learned rules.",
-          "worked_example": "A robot vacuum can map or sense its environment and adjust movement without a person steering every turn.",
-          "pitfall": "Autonomous does not mean independent of all human design, goals or constraints.",
-          "mastery": "Identify sensing, decision and action components in autonomous systems."
+          "teaching": "An autonomous system can perceive its environment, make decisions according to programmed or learned policies and act with limited direct human control.",
+          "worked_example": "A warehouse robot can detect obstacles, plan a route and adjust movement while transporting an item.",
+          "pitfall": "Autonomous does not mean infallible or independent of human responsibility.",
+          "mastery": "Break an autonomous task into perception, decision and action stages and identify where human oversight may be needed."
         },
         {
           "title": "real-world automation",
-          "teaching": "Real-world automation combines software, hardware, data and procedures to perform repeatable tasks with limited manual intervention.",
-          "worked_example": "An automated warehouse system can scan items, update inventory and route packages while using sensors and control logic.",
-          "pitfall": "Automating a flawed process can reproduce errors at greater speed and scale.",
-          "mastery": "Evaluate where automation is useful and where human checks remain necessary."
+          "teaching": "Automation applies computing or control logic to repeatable physical or digital tasks, while intelligent automation may add perception, prediction or adaptive decision-making.",
+          "worked_example": "A warehouse can automatically route packages using barcode scans and conveyor controls, while an AI layer could predict congestion and adjust routing.",
+          "pitfall": "Automation and AI are not synonyms; a fixed rule can automate a task without machine learning.",
+          "mastery": "Distinguish rule-based automation from AI-enabled automation and identify the control flow in a real system."
         }
       ]
     },
