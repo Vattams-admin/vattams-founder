@@ -910,11 +910,10 @@ service cloud.firestore {
         || (isSignedIn()
             && resource.data.student_id == request.auth.uid);
 
-      allow create: if isSignedIn()
-        && request.resource.data.student_id == request.auth.uid
-        && request.resource.data.status == 'in_progress'
-        && request.resource.data.course_id != 'DNWt3cPE4ZSJG90CTC1e'
-        && hasActiveEnrolment(request.resource.data.course_id);
+      // Legacy Firestore competition attempts are no longer created by
+      // the production participant flow. The official runtime uses the
+      // dedicated Supabase functions and service-role persistence.
+      allow create: if isAdmin();
 
       // Student attempts are locked after creation.
       // Submission/scoring is performed by the trusted backend.
@@ -955,10 +954,9 @@ service cloud.firestore {
         || (isSignedIn()
             && resource.data.student_id == request.auth.uid);
 
-      allow create: if isSignedIn()
-        && request.resource.data.student_id == request.auth.uid
-        && request.resource.data.status == 'in_progress'
-        && hasActiveEnrolment(request.resource.data.course_id);
+      // Legacy Firestore mock attempts are no longer created by the
+      // production participant flow. Mock Test persistence is server-side.
+      allow create: if isAdmin();
 
       // Mock submission/scoring is performed by trusted backend.
       allow update, delete: if isAdmin();
