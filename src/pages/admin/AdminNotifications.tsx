@@ -14,6 +14,16 @@ function timeLabel(iso: string): string {
   return d.toLocaleString('en-IN', { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' })
 }
 
+function isSafeInternalPath(actionUrl: string): boolean {
+  if (!actionUrl.startsWith('/') || actionUrl.startsWith('//')) return false
+  if (/^[\u0000-\u001f]/.test(actionUrl)) return false
+  try {
+    return new URL(actionUrl, window.location.origin).origin === window.location.origin
+  } catch {
+    return false
+  }
+}
+
 function Row({ notification, onOpen }: { notification: AppNotification; onOpen: (n: AppNotification) => void }) {
   const meta = NOTIFICATION_TYPE_META[notification.type] ?? { label: 'Update' }
   return (
@@ -61,7 +71,7 @@ export default function AdminNotifications() {
 
   function handleOpen(n: AppNotification) {
     if (!n.is_read) markAsRead(n.id)
-    if (n.action_url) navigate(n.action_url)
+    if (n.action_url && isSafeInternalPath(n.action_url)) navigate(n.action_url)
   }
 
   return (
