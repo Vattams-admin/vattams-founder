@@ -1,0 +1,32 @@
+name: Generate VATTAMS Thirukkural PPT
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PowerPoint generator
+        run: python -m pip install --upgrade pip python-pptx
+
+      - name: Generate full Thirukkural PPT
+        run: |
+          mkdir -p artifacts
+          python scripts/build-thirukkural-ppt.mjs.py
+          test -s artifacts/VATTAMS_Academia_Thirukkural_1330_Full.pptx
+
+      - name: Upload PPT
+        uses: actions/upload-artifact@v4
+        with:
+          name: VATTAMS-Academia-Thirukkural-1330-PPT
+          path: artifacts/VATTAMS_Academia_Thirukkural_1330_Full.pptx
+          retention-days: 30
