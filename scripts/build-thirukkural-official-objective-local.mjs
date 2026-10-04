@@ -150,6 +150,55 @@ const keyById = new Map(
   privateKeys.map((k) => [k.question_id, k])
 );
 
+const publicById = new Map(
+  publicQuestions.map((q) => [q.question_id, q])
+);
+
+const OFFICIAL_KURAL_NUMBERS = [
+  1, 50, 100, 250, 500, 750, 1000, 1250,
+];
+
+function officialQuestionText(id) {
+  if (id.startsWith("TKR-REC-")) {
+    const index = Number(id.slice("TKR-REC-")) - 1;
+    const n = OFFICIAL_KURAL_NUMBERS[index];
+    const source = publicById.get(
+      `TKR-FULL-REC2-${String(n).padStart(4, "0")}`
+    );
+    return source?.question || `திருக்குறள் எண் ${n} இன் இரண்டாம் அடியைத் தேர்ந்தெடுக்கவும்.`;
+  }
+
+  if (id.startsWith("TKR-ADH-")) {
+    const numbers = [10, 100, 200, 500, 700, 1000, 1330];
+    const n = numbers[Number(id.slice("TKR-ADH-")) - 1];
+    const source = publicById.get(
+      `TKR-FULL-ADH-${String(n).padStart(4, "0")}`
+    );
+    return source?.question || `திருக்குறள் எண் ${n} எந்த அதிகாரத்தைச் சேர்ந்தது?`;
+  }
+
+  if (id.startsWith("TKR-MEAN-")) {
+    const numbers = [1, 20, 100, 250, 500, 750, 1000, 1250];
+    const n = numbers[Number(id.slice("TKR-MEAN-")) - 1];
+    const source = publicById.get(
+      `TKR-FULL-MEAN-${String(n).padStart(4, "0")}`
+    );
+    return source?.question || `கொடுக்கப்பட்டுள்ள மூல விளக்கம் எந்த திருக்குறளுக்குரியது? (குறள் ${n})`;
+  }
+
+  const knowledgeQuestions = {
+    "TKR-KNOW-01": "திருக்குறளில் மொத்தம் எத்தனை குறள்கள் உள்ளன?",
+    "TKR-KNOW-02": "திருக்குறளில் மொத்தம் எத்தனை அதிகாரங்கள் உள்ளன?",
+    "TKR-KNOW-03": "திருக்குறளில் மொத்தம் எத்தனை பால் பிரிவுகள் உள்ளன?",
+    "TKR-KNOW-04": "திருக்குறளின் மூன்று பால் பிரிவுகள் சரியான வரிசையில் எவை?",
+    "TKR-KNOW-05": "திருக்குறளில் மொத்தம் எத்தனை இயல் பிரிவுகள் உள்ளன?",
+    "TKR-KNOW-06": "திருக்குறளின் முதல் அதிகாரம் எது?",
+    "TKR-KNOW-07": "திருக்குறளின் 133-வது அதிகாரம் எது?",
+  };
+
+  return knowledgeQuestions[id] || "";
+}
+
 function unique(values) {
   return [...new Set(
     values
@@ -300,12 +349,25 @@ for (const id of IDS) {
     );
   }
 
+  const question = officialQuestionText(id);
+
+  if (!question.trim()) {
+    throw new Error(`${id}: official question text is missing`);
+  }
+
   output.push({
     question_id: id,
+    course_id: "DNWt3cPE4ZSJG90CTC1e",
+    competition: "Thirukkural Mastery Championship",
+    question,
     question_type: "Multiple Choice",
     options,
     answer: official.answer,
-    explanation: official.explanation
+    explanation: official.explanation,
+    marks: 1,
+    time_seconds: 60,
+    language: "Tamil",
+    review_status: "reviewed"
   });
 }
 
