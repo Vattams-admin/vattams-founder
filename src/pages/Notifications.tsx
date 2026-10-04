@@ -37,7 +37,7 @@ function groupByDay(notifications: AppNotification[]): { label: string; rows: Ap
 
 function isSafeInternalPath(actionUrl: string): boolean {
   if (!actionUrl.startsWith('/') || actionUrl.startsWith('//')) return false
-  if (/^[\\u0000-\\u001f]/.test(actionUrl)) return false
+  if (/^[\u0000-\u001f]/.test(actionUrl)) return false
 
   try {
     const resolved = new URL(actionUrl, window.location.origin)
