@@ -35,6 +35,18 @@ function groupByDay(notifications: AppNotification[]): { label: string; rows: Ap
   return Array.from(groups.entries()).map(([label, rows]) => ({ label, rows }))
 }
 
+function isSafeInternalPath(actionUrl: string): boolean {
+  if (!actionUrl.startsWith('/') || actionUrl.startsWith('//')) return false
+  if (/^[\\u0000-\\u001f]/.test(actionUrl)) return false
+
+  try {
+    const resolved = new URL(actionUrl, window.location.origin)
+    return resolved.origin === window.location.origin
+  } catch {
+    return false
+  }
+}
+
 function Row({ notification, onOpen }: { notification: AppNotification; onOpen: (n: AppNotification) => void }) {
   const meta = NOTIFICATION_TYPE_META[notification.type] ?? { label: 'Update' }
   return (
@@ -85,7 +97,7 @@ export default function Notifications() {
 
   function handleOpen(n: AppNotification) {
     if (!n.is_read) markAsRead(n.id)
-    if (n.action_url) navigate(n.action_url)
+    if (n.action_url && isSafeInternalPath(n.action_url)) navigate(n.action_url)
   }
 
   return (
