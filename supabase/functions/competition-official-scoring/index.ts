@@ -13,6 +13,8 @@ const SUPABASE_SERVICE_ROLE_KEY =
   SUPABASE_SECRET_KEYS["default"] || "";
 const BUCKET = "academia-course-materials";
 const COURSE_ID = "DNWt3cPE4ZSJG90CTC1e";
+const QUESTION_BUNDLE =
+  "competitions/thirukkural/objective/questions.private.json";
 const ANSWER_BUNDLE =
   "competitions/thirukkural/objective/answer-keys.private.json";
 
@@ -51,6 +53,16 @@ async function uid(request: Request) {
   );
   if (typeof payload.sub !== "string" || !payload.sub) throw new Error("Invalid Firebase token");
   return payload.sub;
+}
+
+async function loadQuestions() {
+  const { data, error } = await supabase.storage.from(BUCKET).download(QUESTION_BUNDLE);
+  if (error || !data) throw new Error("Official question bundle is unavailable.");
+  const parsed = JSON.parse(await data.text());
+  if (!parsed || parsed.course_id !== COURSE_ID || !parsed.questions || typeof parsed.questions !== "object") {
+    throw new Error("Official question bundle is invalid.");
+  }
+  return parsed.questions as Record<string, { time_seconds?: number }>;
 }
 
 async function loadKeys() {
@@ -99,6 +111,20 @@ Deno.serve(async (request) => {
     const questionIds = Array.isArray(attempt.question_ids) ? attempt.question_ids : [];
     if (questionIds.length !== 30 || new Set(questionIds).size !== 30) {
       return json({ error: "Competition attempt has an invalid question set." }, 409);
+    }
+
+    const questionBundle = await loadQuestions();
+    let allowedSeconds = 0;
+    for (const questionId of questionIds) {
+      const question = questionBundle[questionId];
+      if (!question) return json({ error: `Missing question content for ${questionId}` }, 409);
+      allowedSeconds += Math.max(1, Number(question.time_seconds) || 60);
+    }
+    const startedAt = new Date(String(attempt.started_at)).getTime();
+    if (!Number.isFinite(startedAt)) return json({ error: "Competition attempt has an invalid start time." }, 409);
+    const elapsedSeconds = Math.floor((Date.now() - startedAt) / 1000);
+    if (elapsedSeconds > allowedSeconds + 30) {
+      return json({ error: "Competition time has expired." }, 409);
     }
 
     const answerMap = new Map<string, string>();
@@ -175,7 +201,17 @@ Deno.serve(async (request) => {
           .select("score,max_score,answered_count")
           .eq("attempt_id", attemptId)
           .maybeSingle();
-        if (existing) return json({ ok: true, ...existing, submitted: true, alreadySubmitted: true });
+        if (existing) {
+          await supabase.from("competition_attempts").update({
+            status: "submitted",
+            score: existing.score,
+            max_score: existing.max_score,
+            submitted_at: now,
+            scored_at: now,
+            updated_at: now,
+          }).eq("id", attemptId).eq("student_id", studentId);
+          return json({ ok: true, ...existing, submitted: true, alreadySubmitted: true });
+        }
       }
       throw new Error(`Unable to save competition result: ${resultError.message}`);
     }
