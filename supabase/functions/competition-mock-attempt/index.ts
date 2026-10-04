@@ -661,7 +661,12 @@ async function findActiveAttempt(
 
   if (error) {
     throw new Error(
-      `Attempt lookup failed: ${error.message}`,
+      `Attempt lookup failed: ${JSON.stringify({
+        message: error.message,
+        code: error.code,
+        details: error.details,
+        hint: error.hint,
+      })}`,
     );
   }
 
