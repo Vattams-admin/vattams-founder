@@ -88,10 +88,10 @@ fs.writeFileSync(path.join(out,'MANIFEST.json'),JSON.stringify({
   competition:'Thirukkural Mastery Championship',
   course_id:courseId,
   slug,
-  question_count:9473,
+  question_count:9563,
   mock_question_count:9443,
-  official_question_count:30,
-  per_attempt:30,
+  official_question_count:120,
+  per_attempt:30,\n  official_papers: 4,
   files:manifest,
 },null,2))
 
