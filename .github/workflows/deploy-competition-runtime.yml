@@ -33,7 +33,7 @@ jobs:
       - name: Deploy Mock Test functions
         run: |
           set -euo pipefail
-          for fn in             competition-mock-attempt             competition-mock-question-content             competition-mock-scoring
+          for fn in             competition-mock-attempt             competition-question-content             competition-mock-scoring
           do
             supabase functions deploy "$fn"               --project-ref "$PROJECT_ID"               --use-api
           done
