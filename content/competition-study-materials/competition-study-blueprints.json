@@ -197,65 +197,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "scientific method & variables",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Scientific inquiry & measurement",
+          "subtopics": [
+            "observation and variables",
+            "measurement and units",
+            "fair tests and controls",
+            "data interpretation",
+            "evidence and conclusions"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "matter & measurement",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Matter & materials",
+          "subtopics": [
+            "states and properties",
+            "physical and chemical changes",
+            "mixtures and separation",
+            "materials and their uses",
+            "particle reasoning"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "forces & energy",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Forces & motion",
+          "subtopics": [
+            "motion and speed",
+            "pushes pulls and friction",
+            "gravity and weight",
+            "simple machines",
+            "energy in motion"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "living systems",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Energy & heat",
+          "subtopics": [
+            "forms of energy",
+            "heat transfer",
+            "light and sound",
+            "electricity and circuits",
+            "energy conservation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "Earth & environment",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Living systems",
+          "subtopics": [
+            "cells and organization",
+            "plants and photosynthesis",
+            "animals and adaptation",
+            "human body systems",
+            "ecosystems"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "chemistry in everyday life",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Earth & environment",
+          "subtopics": [
+            "rocks and minerals",
+            "water cycle",
+            "weather and climate",
+            "natural resources",
+            "environmental stewardship"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "physics in everyday life",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Space science",
+          "subtopics": [
+            "solar system",
+            "Earth Moon and Sun",
+            "stars and galaxies",
+            "space observation",
+            "scale and scientific models"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "data interpretation & experiments",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "scientific reasoning & misconceptions",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Scientific reasoning",
+          "subtopics": [
+            "classification",
+            "cause and effect",
+            "experiment design",
+            "claim evidence reasoning",
+            "non-routine science problems"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "English Challenge": {
       "age_bands": [
@@ -272,65 +314,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "vocabulary in context",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Reading comprehension",
+          "subtopics": [
+            "main idea",
+            "details and evidence",
+            "inference",
+            "sequence and cause",
+            "tone and purpose"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "grammar & sentence control",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Vocabulary",
+          "subtopics": [
+            "context clues",
+            "synonyms and antonyms",
+            "word families",
+            "roots prefixes and suffixes",
+            "precision in word choice"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "reading comprehension",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Grammar",
+          "subtopics": [
+            "parts of speech",
+            "sentence structure",
+            "subject verb agreement",
+            "tenses",
+            "pronouns and modifiers"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "main idea & inference",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Usage & editing",
+          "subtopics": [
+            "punctuation",
+            "capitalization",
+            "common errors",
+            "sentence correction",
+            "editing passages"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "sequencing & coherence",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Writing skills",
+          "subtopics": [
+            "sentence building",
+            "paragraph organization",
+            "descriptive writing",
+            "narrative writing",
+            "persuasive expression"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "word relationships",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Literary understanding",
+          "subtopics": [
+            "characters and setting",
+            "plot and conflict",
+            "figurative language",
+            "poetry comprehension",
+            "theme and message"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "editing & error detection",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Communication",
+          "subtopics": [
+            "listening-style comprehension",
+            "functional language",
+            "formal and informal usage",
+            "instructions",
+            "everyday communication"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "short response & evidence",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "speed, accuracy & distractors",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Language reasoning",
+          "subtopics": [
+            "analogy",
+            "classification",
+            "odd-one-out",
+            "logical sentence completion",
+            "verbal puzzles"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "Computer Challenge": {
       "age_bands": [
@@ -347,65 +431,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "digital fundamentals",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Digital foundations",
+          "subtopics": [
+            "computer components",
+            "input output storage",
+            "operating systems",
+            "files and folders",
+            "digital devices"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "hardware & operating systems",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Internet & networking",
+          "subtopics": [
+            "web and browsers",
+            "networks and connectivity",
+            "URLs and domains",
+            "safe online communication",
+            "basic networking concepts"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "files, data & storage",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Digital safety",
+          "subtopics": [
+            "passwords and authentication",
+            "privacy and personal data",
+            "phishing and scams",
+            "device security",
+            "responsible digital citizenship"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "internet & networking",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Productivity & information",
+          "subtopics": [
+            "documents and formatting",
+            "spreadsheets basics",
+            "presentations",
+            "search strategies",
+            "information evaluation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "cyber safety",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Programming foundations",
+          "subtopics": [
+            "algorithms",
+            "variables and data",
+            "conditions",
+            "loops",
+            "debugging"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "productivity tools",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Computational thinking",
+          "subtopics": [
+            "decomposition",
+            "patterns",
+            "abstraction",
+            "logic",
+            "problem solving"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "algorithms & logic",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "AI & emerging technology",
+          "subtopics": [
+            "AI concepts",
+            "machine learning basics",
+            "responsible AI",
+            "automation",
+            "technology in society"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "data representation",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "troubleshooting & digital reasoning",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Applied computing",
+          "subtopics": [
+            "data representation",
+            "cyber awareness",
+            "technology scenarios",
+            "digital workflows",
+            "computing challenge problems"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "GK Challenge": {
       "age_bands": [
@@ -422,65 +548,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "India: geography & polity basics",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "India",
+          "subtopics": [
+            "states and capitals",
+            "national symbols",
+            "constitution basics",
+            "landmarks",
+            "Indian institutions"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "history & culture",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "World knowledge",
+          "subtopics": [
+            "countries and capitals",
+            "continents and oceans",
+            "landmarks",
+            "international organizations",
+            "world records"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "science & everyday knowledge",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "History & culture",
+          "subtopics": [
+            "Indian history",
+            "world history",
+            "civilizations",
+            "arts and heritage",
+            "important personalities"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "economy & institutions",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Geography",
+          "subtopics": [
+            "physical features",
+            "climate",
+            "rivers and mountains",
+            "maps",
+            "human geography"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "sports & achievements",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Science & technology",
+          "subtopics": [
+            "everyday science",
+            "space",
+            "inventions",
+            "technology milestones",
+            "scientific personalities"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "arts, literature & heritage",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Sports",
+          "subtopics": [
+            "major sports",
+            "tournaments",
+            "rules and terms",
+            "sporting personalities",
+            "records and awards"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "world geography & organisations",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Current-awareness skills",
+          "subtopics": [
+            "news categories",
+            "public institutions",
+            "major events",
+            "fact verification",
+            "time-sensitive knowledge"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "current-affairs reasoning framework",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "fact verification & distractors",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "General reasoning",
+          "subtopics": [
+            "classification",
+            "analogy",
+            "sequences",
+            "odd one out",
+            "mixed GK reasoning"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "Reasoning Challenge": {
       "age_bands": [
@@ -497,65 +665,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "analogy & classification",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Analogy & classification",
+          "subtopics": [
+            "word analogy",
+            "number analogy",
+            "figure analogy",
+            "classification",
+            "odd one out"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "number and alphabet series",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Series",
+          "subtopics": [
+            "number series",
+            "alphabet series",
+            "mixed series",
+            "figure series",
+            "missing terms"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "coding-decoding",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Coding & decoding",
+          "subtopics": [
+            "letter coding",
+            "number coding",
+            "symbol coding",
+            "pattern transformations",
+            "coded relationships"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "direction & spatial reasoning",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Relations & directions",
+          "subtopics": [
+            "family relations",
+            "blood relations",
+            "directions",
+            "distance",
+            "position problems"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "blood relations & ordering",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Ordering & ranking",
+          "subtopics": [
+            "rank problems",
+            "comparison chains",
+            "arrangements",
+            "scheduling",
+            "ordering constraints"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "syllogisms & statements",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Logical deduction",
+          "subtopics": [
+            "statements and conclusions",
+            "syllogisms",
+            "cause effect",
+            "assumptions",
+            "decision logic"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "patterns & visual logic",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Puzzles",
+          "subtopics": [
+            "seating arrangements",
+            "distribution",
+            "matching",
+            "calendar and clock logic",
+            "multi-condition puzzles"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "data sufficiency",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "speed, elimination & verification",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Non-verbal reasoning",
+          "subtopics": [
+            "figure patterns",
+            "mirror and water images",
+            "embedded figures",
+            "paper folding",
+            "visual sequences"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "India GK Championship": {
       "age_bands": [
@@ -572,65 +782,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "constitutional framework",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Indian polity",
+          "subtopics": [
+            "constitution",
+            "parliament",
+            "executive",
+            "judiciary",
+            "constitutional bodies"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
           "title": "Indian geography",
-          "subtopics": [],
-          "expansion_required": true
+          "subtopics": [
+            "states and borders",
+            "rivers",
+            "mountains",
+            "climate",
+            "resources"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "ancient & medieval heritage",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Indian history",
+          "subtopics": [
+            "ancient India",
+            "medieval India",
+            "modern India",
+            "freedom movement",
+            "post-independence"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "modern India",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Indian culture",
+          "subtopics": [
+            "languages",
+            "literature",
+            "classical arts",
+            "festivals",
+            "heritage sites"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "economy & public institutions",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Indian economy",
+          "subtopics": [
+            "basic economic concepts",
+            "agriculture",
+            "industry",
+            "banking",
+            "public finance"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "science, space & technology",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Science & space India",
+          "subtopics": [
+            "Indian scientists",
+            "ISRO",
+            "space missions",
+            "research institutions",
+            "technology achievements"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "environment & biodiversity",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "National institutions & awards",
+          "subtopics": [
+            "national bodies",
+            "civil services",
+            "awards",
+            "sports honors",
+            "important offices"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "culture, languages & literature",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "integrated India reasoning",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "India current affairs",
+          "subtopics": [
+            "government initiatives",
+            "major events",
+            "national appointments",
+            "summits",
+            "fact verification"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "National Quiz Championship": {
       "age_bands": [
@@ -647,65 +899,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "question interpretation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "India & world",
+          "subtopics": [
+            "national facts",
+            "world geography",
+            "capitals",
+            "landmarks",
+            "international organizations"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "history & civilisation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "History & civilization",
+          "subtopics": [
+            "ancient civilizations",
+            "Indian history",
+            "world history",
+            "heritage",
+            "historical personalities"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "science & discovery",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Science & nature",
+          "subtopics": [
+            "life science",
+            "physical science",
+            "Earth science",
+            "space",
+            "environment"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "geography & world knowledge",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Technology",
+          "subtopics": [
+            "computing",
+            "internet",
+            "AI",
+            "inventions",
+            "digital society"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "arts, literature & media",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Culture & literature",
+          "subtopics": [
+            "Indian literature",
+            "world literature",
+            "arts",
+            "music",
+            "languages"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "sports & records",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Sports & records",
+          "subtopics": [
+            "sports knowledge",
+            "competitions",
+            "athletes",
+            "records",
+            "rules"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "technology & innovation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Society & institutions",
+          "subtopics": [
+            "civics",
+            "economics",
+            "organizations",
+            "awards",
+            "public life"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "institutions & society",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "quiz strategy & uncertainty management",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Quiz mastery",
+          "subtopics": [
+            "rapid recall",
+            "cross-domain clues",
+            "elimination",
+            "source verification",
+            "mixed championship rounds"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "AI & Technology Challenge": {
       "age_bands": [
@@ -722,65 +1016,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "AI concepts & terminology",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "AI foundations",
+          "subtopics": [
+            "what AI is",
+            "AI history",
+            "machine learning concepts",
+            "models and data",
+            "AI applications"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "machine learning intuition",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Data & algorithms",
+          "subtopics": [
+            "data types",
+            "patterns",
+            "algorithms",
+            "training data",
+            "evaluation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "data and model quality",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Generative AI",
+          "subtopics": [
+            "text generation",
+            "image generation",
+            "multimodal systems",
+            "prompt concepts",
+            "limitations"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "generative AI",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Robotics & automation",
+          "subtopics": [
+            "sensors",
+            "actuators",
+            "control",
+            "autonomous systems",
+            "real-world automation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "computer vision & language",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Computing systems",
+          "subtopics": [
+            "hardware",
+            "software",
+            "networks",
+            "cloud concepts",
+            "edge computing"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "automation & robotics",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "AI safety & ethics",
+          "subtopics": [
+            "bias",
+            "privacy",
+            "fairness",
+            "misinformation",
+            "human oversight"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "AI safety & ethics",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Emerging technologies",
+          "subtopics": [
+            "IoT",
+            "AR VR",
+            "quantum concepts",
+            "blockchain basics",
+            "future technologies"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "privacy, bias & responsible use",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "technology reasoning & evaluation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Applied technology reasoning",
+          "subtopics": [
+            "technology scenarios",
+            "system design thinking",
+            "AI problem solving",
+            "trade-offs",
+            "case analysis"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "International Knowledge Challenge": {
       "age_bands": [
@@ -797,65 +1133,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "world geography",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "World geography",
+          "subtopics": [
+            "countries and capitals",
+            "continents",
+            "physical geography",
+            "maps",
+            "climate zones"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "global history",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "World history",
+          "subtopics": [
+            "ancient civilizations",
+            "medieval world",
+            "modern history",
+            "major events",
+            "historical causation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "science & discovery",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Global institutions",
+          "subtopics": [
+            "UN",
+            "WHO",
+            "UNESCO",
+            "international cooperation",
+            "global agreements"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "cultures & languages",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "World cultures",
+          "subtopics": [
+            "languages",
+            "religions as cultural knowledge",
+            "arts",
+            "festivals",
+            "heritage"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "international organisations",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Science & exploration",
+          "subtopics": [
+            "space",
+            "oceans",
+            "Earth science",
+            "major discoveries",
+            "exploration"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "economics & global society",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Global economy & society",
+          "subtopics": [
+            "trade",
+            "currencies",
+            "development",
+            "population",
+            "globalization"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "arts & literature",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Sports & achievements",
+          "subtopics": [
+            "international tournaments",
+            "records",
+            "athletes",
+            "sports geography",
+            "major awards"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "technology & global innovation",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "source evaluation & global reasoning",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Global current awareness",
+          "subtopics": [
+            "major world events",
+            "summits",
+            "international appointments",
+            "fact verification",
+            "cross-source reasoning"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "National Mathematics Championship": {
       "age_bands": [
@@ -872,65 +1250,119 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "advanced number theory foundations",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Advanced number theory",
+          "subtopics": [
+            "divisibility",
+            "remainders",
+            "prime structures",
+            "gcd and lcm",
+            "number patterns"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "algebraic structures & equations",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Advanced arithmetic",
+          "subtopics": [
+            "fractions and ratios",
+            "percentages",
+            "rates",
+            "proportional reasoning",
+            "integer problems"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "geometry & proof intuition",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Algebra",
+          "subtopics": [
+            "expressions",
+            "equations",
+            "inequalities",
+            "identities",
+            "algebraic problem solving"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "combinatorics",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Geometry",
+          "subtopics": [
+            "angles",
+            "triangles",
+            "polygons",
+            "circles",
+            "area and geometry proofs"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "probability & counting",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Combinatorics",
+          "subtopics": [
+            "counting principles",
+            "arrangements",
+            "selections",
+            "casework",
+            "inclusion exclusion basics"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "sequences & functional patterns",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Sequences & patterns",
+          "subtopics": [
+            "arithmetic sequences",
+            "geometric sequences",
+            "recurrences",
+            "visual patterns",
+            "pattern proofs"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "inequalities & optimisation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Probability & data",
+          "subtopics": [
+            "sample spaces",
+            "probability rules",
+            "expected outcomes",
+            "data analysis",
+            "conditional reasoning"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "non-routine problem solving",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Olympiad problem solving",
+          "subtopics": [
+            "invariants",
+            "extremal reasoning",
+            "working backwards",
+            "construction",
+            "multi-step proofs"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-9",
-          "title": "contest strategy & proof checking",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Competition strategy",
+          "subtopics": [
+            "estimation",
+            "time allocation",
+            "answer verification",
+            "error analysis",
+            "mixed championship sets"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "National Science Championship": {
       "age_bands": [
@@ -947,65 +1379,119 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "experimental design",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Scientific method",
+          "subtopics": [
+            "hypothesis",
+            "variables",
+            "experimental controls",
+            "measurement uncertainty",
+            "evidence evaluation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "physics principles",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Physics",
+          "subtopics": [
+            "motion",
+            "forces",
+            "energy",
+            "electricity",
+            "waves and optics"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "chemistry principles",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Chemistry",
+          "subtopics": [
+            "matter",
+            "atomic structure",
+            "reactions",
+            "acids and bases",
+            "materials"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "biology & genetics",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Biology",
+          "subtopics": [
+            "cells",
+            "genetics basics",
+            "body systems",
+            "ecology",
+            "evolution and adaptation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "Earth & space science",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Earth science",
+          "subtopics": [
+            "geology",
+            "weather",
+            "climate",
+            "water systems",
+            "natural hazards"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "energy & systems",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Astronomy",
+          "subtopics": [
+            "solar system",
+            "stars",
+            "galaxies",
+            "space exploration",
+            "cosmic scale"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "materials & reactions",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Environmental science",
+          "subtopics": [
+            "ecosystems",
+            "biodiversity",
+            "resources",
+            "pollution",
+            "sustainability"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "scientific data analysis",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Data-driven science",
+          "subtopics": [
+            "graphs",
+            "tables",
+            "models",
+            "experimental data",
+            "scientific argumentation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-9",
-          "title": "cross-disciplinary reasoning",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Championship reasoning",
+          "subtopics": [
+            "integrated science",
+            "unfamiliar scenarios",
+            "multi-step deduction",
+            "experiment interpretation",
+            "evidence-based conclusions"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "National English Championship": {
       "age_bands": [
@@ -1022,65 +1508,119 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "advanced vocabulary",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Advanced reading",
+          "subtopics": [
+            "inference",
+            "author purpose",
+            "tone",
+            "argument structure",
+            "evidence evaluation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "grammar & usage",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Advanced vocabulary",
+          "subtopics": [
+            "roots",
+            "context precision",
+            "collocations",
+            "nuance",
+            "academic vocabulary"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "close reading",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Grammar mastery",
+          "subtopics": [
+            "complex sentences",
+            "clauses",
+            "agreement",
+            "modifiers",
+            "tense consistency"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "argument & evidence",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Editing & usage",
+          "subtopics": [
+            "error identification",
+            "sentence transformation",
+            "punctuation",
+            "style",
+            "passage editing"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "literary devices",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Literature",
+          "subtopics": [
+            "theme",
+            "characterization",
+            "imagery",
+            "poetic devices",
+            "comparative interpretation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "tone & register",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Writing",
+          "subtopics": [
+            "argument",
+            "narrative",
+            "descriptive",
+            "summary",
+            "structured response"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "editing & precision",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Verbal reasoning",
+          "subtopics": [
+            "analogies",
+            "logical completion",
+            "word relationships",
+            "classification",
+            "verbal puzzles"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "synthesis & comparison",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Communication & comprehension",
+          "subtopics": [
+            "functional texts",
+            "instructions",
+            "notices",
+            "dialogues",
+            "information synthesis"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-9",
-          "title": "contest strategy & distractors",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Championship language strategy",
+          "subtopics": [
+            "time management",
+            "elimination",
+            "evidence selection",
+            "precision checking",
+            "mixed language sets"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "National Aptitude Championship": {
       "age_bands": [
@@ -1097,65 +1637,119 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "quantitative aptitude",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Quantitative aptitude",
+          "subtopics": [
+            "number operations",
+            "percentages",
+            "ratio proportion",
+            "averages",
+            "profit loss"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "percentages & proportional reasoning",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Algebraic aptitude",
+          "subtopics": [
+            "equations",
+            "inequalities",
+            "sequences",
+            "functions basics",
+            "algebraic word problems"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "averages & mixtures",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Arithmetic applications",
+          "subtopics": [
+            "time work",
+            "speed distance",
+            "mixtures",
+            "ages",
+            "commercial arithmetic"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "time, work & rates",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Data interpretation",
+          "subtopics": [
+            "tables",
+            "bar charts",
+            "line graphs",
+            "pie charts",
+            "caselet data"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "data interpretation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Logical reasoning",
+          "subtopics": [
+            "deduction",
+            "arrangements",
+            "coding",
+            "relations",
+            "syllogisms"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "logical reasoning",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Analytical reasoning",
+          "subtopics": [
+            "constraints",
+            "case analysis",
+            "decision making",
+            "scheduling",
+            "optimization"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "verbal aptitude",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Probability & counting",
+          "subtopics": [
+            "basic probability",
+            "counting",
+            "arrangements",
+            "selection",
+            "expected outcomes"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "estimation & mental calculation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Data sufficiency",
+          "subtopics": [
+            "information adequacy",
+            "statement analysis",
+            "condition testing",
+            "elimination",
+            "multi-step sufficiency"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-9",
-          "title": "speed strategy & error analysis",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Aptitude strategy",
+          "subtopics": [
+            "speed calculation",
+            "estimation",
+            "shortcut validation",
+            "time allocation",
+            "accuracy review"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "National Coding Challenge": {
       "age_bands": [
@@ -1172,65 +1766,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "problem decomposition",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Programming fundamentals",
+          "subtopics": [
+            "variables",
+            "types",
+            "input output",
+            "operators",
+            "expressions"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "variables & data types",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Control flow",
+          "subtopics": [
+            "conditions",
+            "nested conditions",
+            "loops",
+            "iteration patterns",
+            "loop tracing"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "conditions",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Functions & modularity",
+          "subtopics": [
+            "functions",
+            "parameters",
+            "return values",
+            "scope",
+            "decomposition"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "loops",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Data structures",
+          "subtopics": [
+            "arrays",
+            "strings",
+            "stacks",
+            "queues",
+            "maps and sets"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "functions & modularity",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Algorithms",
+          "subtopics": [
+            "searching",
+            "sorting",
+            "two pointers",
+            "prefix ideas",
+            "recursion basics"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "arrays & strings",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Problem solving",
+          "subtopics": [
+            "problem decomposition",
+            "constraints",
+            "edge cases",
+            "complexity intuition",
+            "debugging"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "algorithms & complexity intuition",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Code correctness",
+          "subtopics": [
+            "tracing",
+            "test cases",
+            "failure diagnosis",
+            "boundary conditions",
+            "verification"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "debugging & testing",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "code reading & optimisation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Applied coding",
+          "subtopics": [
+            "simulation",
+            "text processing",
+            "mathematical coding",
+            "data handling",
+            "challenge problems"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "National AI Challenge": {
       "age_bands": [
@@ -1247,65 +1883,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "AI foundations",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "AI concepts",
+          "subtopics": [
+            "AI domains",
+            "machine learning",
+            "deep learning concepts",
+            "models",
+            "AI applications"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "machine learning workflows",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Data literacy",
+          "subtopics": [
+            "datasets",
+            "features",
+            "labels",
+            "data quality",
+            "bias in data"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "data preparation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Machine learning reasoning",
+          "subtopics": [
+            "classification",
+            "regression",
+            "training testing",
+            "overfitting intuition",
+            "evaluation metrics"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "model evaluation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Generative AI",
+          "subtopics": [
+            "language models",
+            "image models",
+            "multimodal AI",
+            "prompting",
+            "hallucination"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "generative models",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Computer vision & language",
+          "subtopics": [
+            "images",
+            "text processing",
+            "speech",
+            "pattern recognition",
+            "applications"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "NLP & vision",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Robotics & agents",
+          "subtopics": [
+            "sensing",
+            "planning",
+            "control",
+            "agents",
+            "automation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "agents & automation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Responsible AI",
+          "subtopics": [
+            "fairness",
+            "privacy",
+            "safety",
+            "transparency",
+            "human oversight"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "ethics, safety & governance",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "AI project reasoning",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "AI problem solving",
+          "subtopics": [
+            "case studies",
+            "model selection",
+            "data-to-decision workflows",
+            "trade-offs",
+            "system reasoning"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "Mega Inter-School Championship": {
       "age_bands": [
@@ -1322,65 +2000,119 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "cross-domain reasoning",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Mathematics",
+          "subtopics": [
+            "number sense",
+            "arithmetic",
+            "algebra",
+            "geometry",
+            "advanced problem solving"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "mathematics & quantitative thinking",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Science",
+          "subtopics": [
+            "physics",
+            "chemistry",
+            "biology",
+            "Earth science",
+            "scientific reasoning"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "science & technology",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "English",
+          "subtopics": [
+            "reading",
+            "vocabulary",
+            "grammar",
+            "literature",
+            "verbal reasoning"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "language & communication",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "General knowledge",
+          "subtopics": [
+            "India",
+            "world",
+            "history",
+            "geography",
+            "culture"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "India & world knowledge",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Reasoning",
+          "subtopics": [
+            "series",
+            "analogy",
+            "logic",
+            "puzzles",
+            "non-verbal reasoning"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "logic & problem solving",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Technology",
+          "subtopics": [
+            "computing",
+            "internet",
+            "AI",
+            "cyber safety",
+            "digital society"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "culture, arts & sports",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Current awareness",
+          "subtopics": [
+            "science news",
+            "sports",
+            "major events",
+            "institutions",
+            "fact verification"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "data interpretation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Interdisciplinary challenges",
+          "subtopics": [
+            "data reasoning",
+            "cross-domain clues",
+            "integrated scenarios",
+            "case analysis",
+            "championship rounds"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-9",
-          "title": "competition strategy & resilience",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Competition mastery",
+          "subtopics": [
+            "mixed sets",
+            "time management",
+            "elimination",
+            "accuracy",
+            "final review"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "Indian Classical Literature & Wisdom Championship": {
       "age_bands": [
@@ -1397,65 +2129,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "Sangam literature foundations",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Sanskrit & classical foundations",
+          "subtopics": [
+            "classical literary traditions",
+            "epic traditions",
+            "ethical literature",
+            "major texts",
+            "literary concepts"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "ethical thought in classical texts",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Tamil classical literature",
+          "subtopics": [
+            "Sangam literature",
+            "epic works",
+            "ethical texts",
+            "bhakti literature",
+            "literary heritage"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "epics & narrative traditions",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Indian epics & narratives",
+          "subtopics": [
+            "Ramayana traditions",
+            "Mahabharata traditions",
+            "Puranic narratives",
+            "character themes",
+            "ethical dilemmas"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "Tamil literary forms",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Philosophy & ethics",
+          "subtopics": [
+            "dharma",
+            "virtue",
+            "duty",
+            "self-discipline",
+            "wisdom traditions"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "classical commentators & ideas",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Poetics & literary forms",
+          "subtopics": [
+            "meter",
+            "rhetorical devices",
+            "genres",
+            "oral traditions",
+            "interpretation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "poetry interpretation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Classical knowledge systems",
+          "subtopics": [
+            "Ayurveda concepts",
+            "astronomy traditions",
+            "mathematics heritage",
+            "architecture",
+            "education traditions"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "wisdom traditions across India",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Comparative wisdom",
+          "subtopics": [
+            "shared ethical themes",
+            "cross-text comparison",
+            "context and interpretation",
+            "values",
+            "reasoned reflection"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "comparative literary reasoning",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "text-based evidence & interpretation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Texts & authors",
+          "subtopics": [
+            "authors and works",
+            "quotable ideas",
+            "historical context",
+            "schools and traditions",
+            "source awareness"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "Indian Language Literature Masters Series": {
       "age_bands": [
@@ -1472,65 +2246,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "language families & literary traditions",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Indian language families",
+          "subtopics": [
+            "language families",
+            "scripts",
+            "regional distribution",
+            "historical development",
+            "language diversity"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "Tamil literary heritage",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Tamil literature",
+          "subtopics": [
+            "Sangam",
+            "Bhakti",
+            "modern literature",
+            "genres",
+            "major authors"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "Sanskrit literary traditions",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Hindi literature",
+          "subtopics": [
+            "Bhakti",
+            "Riti",
+            "modern periods",
+            "genres",
+            "major authors"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "regional Indian literatures",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Sanskrit literature",
+          "subtopics": [
+            "epics",
+            "classical poetry",
+            "drama",
+            "major authors",
+            "literary traditions"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "poetry & prosody",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Regional literatures",
+          "subtopics": [
+            "Telugu",
+            "Kannada",
+            "Malayalam",
+            "Bengali and eastern traditions",
+            "other Indian literatures"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "prose, drama & narrative",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Literary forms",
+          "subtopics": [
+            "poetry",
+            "short fiction",
+            "novel",
+            "drama",
+            "prose traditions"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "translation & comparative reading",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Literary analysis",
+          "subtopics": [
+            "theme",
+            "style",
+            "imagery",
+            "context",
+            "comparative reading"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "authors, works & movements",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "textual interpretation & source discipline",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Language and culture",
+          "subtopics": [
+            "scripts",
+            "translation",
+            "linguistic identity",
+            "oral traditions",
+            "heritage preservation"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "Thirukkural Mastery Championship": {
       "age_bands": [
@@ -1547,65 +2363,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "Thirukkural structure & authorship tradition",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Aram mastery",
+          "subtopics": [
+            "virtue and character",
+            "self-control",
+            "gratitude",
+            "truthfulness",
+            "compassion"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "Aram: virtue and conduct",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Porul mastery",
+          "subtopics": [
+            "leadership",
+            "governance",
+            "justice",
+            "friendship",
+            "social responsibility"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "Aram: relationships & self-discipline",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Inbam mastery",
+          "subtopics": [
+            "love themes",
+            "emotional states",
+            "separation",
+            "union",
+            "poetic voice"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "Porul: leadership & governance",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Kural structure & language",
+          "subtopics": [
+            "adhikaram structure",
+            "couplets",
+            "vocabulary",
+            "literary devices",
+            "meaning analysis"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "Porul: social and economic wisdom",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Context & interpretation",
+          "subtopics": [
+            "situation-based meaning",
+            "ethical application",
+            "comparison",
+            "inference",
+            "misconception correction"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "Inbam: love and human experience",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Memory & recognition",
+          "subtopics": [
+            "kural identification",
+            "opening phrase recognition",
+            "meaning recall",
+            "theme recognition",
+            "authorial structure"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "kural meaning & context",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Comparative wisdom",
+          "subtopics": [
+            "cross-kural comparison",
+            "theme clusters",
+            "ethical tensions",
+            "modern applications",
+            "reasoned interpretation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "memorisation, couplet identification & application",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "interpretation, distractors & evidence",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Championship practice",
+          "subtopics": [
+            "mixed kural sets",
+            "age-band progression",
+            "timed recall",
+            "explanation quality",
+            "mastery review"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "Fun with Maths Challenge": {
       "age_bands": [
@@ -1622,65 +2480,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "number games & mental maths",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Math play foundations",
+          "subtopics": [
+            "counting games",
+            "number patterns",
+            "mental math games",
+            "estimation games",
+            "math vocabulary"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "patterns & sequences",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Puzzles & riddles",
+          "subtopics": [
+            "number riddles",
+            "logic grids",
+            "magic squares",
+            "missing numbers",
+            "visual puzzles"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "fractions in play",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Shapes & space",
+          "subtopics": [
+            "shape recognition",
+            "symmetry",
+            "angles in play",
+            "area puzzles",
+            "spatial challenges"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "geometry puzzles",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Patterns",
+          "subtopics": [
+            "repeating patterns",
+            "growing patterns",
+            "sequence games",
+            "rule finding",
+            "pattern creation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "measurement challenges",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Fractions & sharing",
+          "subtopics": [
+            "equal shares",
+            "fraction games",
+            "ratio puzzles",
+            "money fractions",
+            "proportion play"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "logic grids",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Measurement",
+          "subtopics": [
+            "length",
+            "mass",
+            "time",
+            "capacity",
+            "measurement estimation"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "estimation & strategy",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Data games",
+          "subtopics": [
+            "picture graphs",
+            "simple charts",
+            "probability games",
+            "survey puzzles",
+            "data stories"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "multi-step puzzles",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "speed rounds & verification",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Challenge rounds",
+          "subtopics": [
+            "mixed puzzles",
+            "speed rounds",
+            "strategy",
+            "explanation",
+            "mastery games"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "Azhagu Tamil Challenge": {
       "age_bands": [
@@ -1697,65 +2597,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "Tamil vocabulary & word formation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Tamil language foundations",
+          "subtopics": [
+            "letters and sounds",
+            "uyir mei structure",
+            "word formation",
+            "spelling",
+            "vocabulary"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "grammar foundations",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Grammar",
+          "subtopics": [
+            "sol vagai",
+            "word relationships",
+            "tense and usage",
+            "sentence structure",
+            "grammar correction"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "proverbs & idioms",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Literature & poetry",
+          "subtopics": [
+            "Tamil poems",
+            "prose",
+            "literary themes",
+            "poetic devices",
+            "authors and works"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "classical and modern vocabulary",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Thirukkural & ethics",
+          "subtopics": [
+            "selected kurals",
+            "meaning",
+            "themes",
+            "ethical applications",
+            "recognition"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "reading comprehension",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Vocabulary mastery",
+          "subtopics": [
+            "synonyms",
+            "antonyms",
+            "idioms",
+            "proverbs",
+            "context usage"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "poetry appreciation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Reading comprehension",
+          "subtopics": [
+            "main idea",
+            "details",
+            "inference",
+            "sequence",
+            "message"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "literary devices",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Writing & expression",
+          "subtopics": [
+            "sentence construction",
+            "paragraphs",
+            "description",
+            "creative expression",
+            "editing"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "spelling & usage",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "language reasoning & distractors",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Tamil reasoning",
+          "subtopics": [
+            "analogies",
+            "classification",
+            "word puzzles",
+            "letter patterns",
+            "language logic"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "Handwriting Excellence Challenge": {
       "age_bands": [
@@ -1772,65 +2714,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "letter formation & baseline control",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Writing foundations",
+          "subtopics": [
+            "posture and grip",
+            "paper position",
+            "writing rhythm",
+            "letter formation",
+            "stroke control"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "spacing & word shape",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Letter and word formation",
+          "subtopics": [
+            "consistent shapes",
+            "spacing",
+            "joins",
+            "proportion",
+            "word alignment"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "size, slant & consistency",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Line and baseline control",
+          "subtopics": [
+            "baseline",
+            "height",
+            "slant",
+            "margins",
+            "line consistency"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "stroke discipline",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Speed & legibility",
+          "subtopics": [
+            "writing pace",
+            "controlled speed",
+            "fatigue management",
+            "continuous writing",
+            "legibility checks"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "speed without loss of legibility",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Copying accuracy",
+          "subtopics": [
+            "faithful copying",
+            "punctuation",
+            "capitalization",
+            "word accuracy",
+            "layout"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "paragraph presentation",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Presentation",
+          "subtopics": [
+            "heading styles",
+            "paragraph spacing",
+            "page organization",
+            "clean corrections",
+            "visual neatness"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "copying accuracy",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Language writing",
+          "subtopics": [
+            "English handwriting",
+            "Tamil handwriting",
+            "mixed scripts",
+            "numerals and symbols",
+            "functional writing"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "editing and self-assessment",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "presentation under time pressure",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Assessment & refinement",
+          "subtopics": [
+            "self-audit",
+            "error classification",
+            "before-after comparison",
+            "timed samples",
+            "mastery portfolio"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     },
     "Spoken Hindi Challenge": {
       "age_bands": [
@@ -1847,65 +2831,107 @@
       "domains": [
         {
           "id": "domain-1",
-          "title": "greetings & introductions",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Hindi foundations",
+          "subtopics": [
+            "sounds and pronunciation",
+            "basic vocabulary",
+            "greetings",
+            "numbers",
+            "common expressions"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-2",
-          "title": "everyday vocabulary",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Everyday communication",
+          "subtopics": [
+            "introductions",
+            "family",
+            "school",
+            "shopping",
+            "travel"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-3",
-          "title": "sentence patterns",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Grammar for speaking",
+          "subtopics": [
+            "gender",
+            "number",
+            "pronouns",
+            "verb forms",
+            "sentence patterns"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-4",
-          "title": "question and response",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Vocabulary expansion",
+          "subtopics": [
+            "daily verbs",
+            "descriptive words",
+            "connectors",
+            "question words",
+            "topic vocabulary"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-5",
-          "title": "pronunciation & listening",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Listening comprehension",
+          "subtopics": [
+            "key words",
+            "instructions",
+            "dialogues",
+            "short passages",
+            "speaker intent"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-6",
-          "title": "daily-life dialogues",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Conversation skills",
+          "subtopics": [
+            "turn taking",
+            "asking questions",
+            "responding",
+            "clarification",
+            "polite speech"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-7",
-          "title": "grammar in spoken context",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Functional Hindi",
+          "subtopics": [
+            "directions",
+            "appointments",
+            "requests",
+            "announcements",
+            "real-world scenarios"
+          ],
+          "expansion_required": false
         },
         {
           "id": "domain-8",
-          "title": "description and short narration",
-          "subtopics": [],
-          "expansion_required": true
-        },
-        {
-          "id": "domain-9",
-          "title": "fluency, accuracy & confidence",
-          "subtopics": [],
-          "expansion_required": true
+          "title": "Fluency & confidence",
+          "subtopics": [
+            "pronunciation repair",
+            "sentence expansion",
+            "role play",
+            "storytelling",
+            "timed speaking"
+          ],
+          "expansion_required": false
         }
       ],
       "capstone": {
         "included": true,
         "type": "competition_specific_mock_and_mastery_review"
       },
-      "content_status": "authoring_required",
-      "notes": "This domain list is a curriculum starting point. Each domain must be expanded into its own subtopics, study resources, practice bank, assessment and revision path; it is not a 10-lesson syllabus."
+      "content_status": "blueprint_ready_for_authoring",
+      "notes": "Competition-specific domain/subtopic map established using the Thirukkural Mastery reference architecture; this is not a fixed-day syllabus. Each subtopic requires authored resources, practice, assessment, revision and question-bank mapping."
     }
   }
 }
