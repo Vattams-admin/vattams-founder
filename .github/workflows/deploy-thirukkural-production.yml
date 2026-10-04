@@ -2,21 +2,6 @@ name: Deploy Thirukkural Production
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - "supabase/functions/competition-official-attempt/**"
-      - "supabase/functions/competition-official-question-content/**"
-      - "supabase/functions/competition-official-scoring/**"
-      - "supabase/functions/competition-mock-attempt/**"
-      - "supabase/functions/competition-mock-scoring/**"
-      - "supabase/functions/competition-question-content/**"
-      - "scripts/build-thirukkural-**"
-      - "scripts/validate-thirukkural-production.mjs"
-      - "scripts/package-thirukkural-production.mjs"
-      - "data/thirukkural/**"
-      - ".github/workflows/deploy-thirukkural-production.yml"
 
 jobs:
   production:
@@ -44,6 +29,11 @@ jobs:
 
       - name: Build Thirukkural production package
         run: npm run thirukkural:package
+
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
 
       - name: Link Supabase
         run: supabase link --project-ref "$SUPABASE_PROJECT_ID"
