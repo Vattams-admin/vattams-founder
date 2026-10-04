@@ -16,7 +16,7 @@ const navItems = [
 ]
 export default function Navbar() {
   const { user, loading } = useAuth()
-  const { role } = useUserRole()
+  const { role, loading: roleLoading } = useUserRole()
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
   // ROLE-AWARE DASHBOARD LINK — this Navbar is shared by every signed-in
@@ -24,9 +24,12 @@ export default function Navbar() {
   // not hardcode the student route. A Tutor clicking this from anywhere
   // in the app (including right after leaving a live classroom) needs to
   // land on their own dashboard, never the Student "Your learning" page.
-  // Reuses the same role lookup already used for the notification bell
-  // below, instead of adding a new source of truth.
-  const dashboardPath = role === 'tutor' ? '/tutor/dashboard' : '/dashboard'
+  // While the role lookup is unresolved, do not guess "student" — guessing
+  // would silently reroute a tutor to the wrong dashboard.
+  const dashboardPath =
+    role === 'tutor' ? '/tutor/dashboard' :
+    role === 'student' ? '/dashboard' :
+    null
   async function handleLogout() {
     await signOut(firebaseAuth)
     navigate('/')
@@ -44,10 +47,6 @@ export default function Navbar() {
             VATTAMS <span className="text-gold">ACADEMIA</span>
           </span>
         </Link>
-        {/* Seven top-level items is intentional (per nav spec) — the full
-            row only shows from xl up so it never feels cramped; below
-            that, everything (including these links) lives in the mobile
-            menu instead of squeezing into a narrower bar. */}
         <nav className="hidden items-center gap-5 xl:flex">
           {navItems.map((item) => (
             <NavLink
@@ -68,9 +67,15 @@ export default function Navbar() {
           {loading ? null : user ? (
             <>
               <NotificationBell uid={user.id} role={role} />
-              <Link to={dashboardPath} className="text-sm font-medium text-slate-muted hover:text-parchment">
-                {user.displayName?.split(' ')[0] ?? 'Dashboard'}
-              </Link>
+              {roleLoading || !dashboardPath ? (
+                <span className="text-sm font-medium text-slate-muted" aria-live="polite">
+                  Loading…
+                </span>
+              ) : (
+                <Link to={dashboardPath} className="text-sm font-medium text-slate-muted hover:text-parchment">
+                  {user.displayName?.split(' ')[0] ?? 'Dashboard'}
+                </Link>
+              )}
               <button onClick={handleLogout} className="btn-secondary text-sm">
                 Log out
               </button>
@@ -86,9 +91,6 @@ export default function Navbar() {
               <Link to="/student/register" className="btn-primary text-sm">
                 Student Registration
               </Link>
-              {/* Existing Firebase + admin_users Firestore auth flow
-                  (see useAdminAuth.ts / AdminRoute.tsx) — this only adds
-                  a visible entry point to it, no new auth system. */}
               <Link to="/admin" className="text-sm font-medium text-slate-muted hover:text-parchment">
                 Admin Login
               </Link>
@@ -137,9 +139,15 @@ export default function Navbar() {
                     </Link>
                     <NotificationBell uid={user.id} role={role} />
                   </div>
-                  <Link to={dashboardPath} onClick={() => setMenuOpen(false)} className="btn-secondary text-sm">
-                    Dashboard
-                  </Link>
+                  {roleLoading || !dashboardPath ? (
+                    <div className="btn-secondary text-sm text-center" aria-live="polite">
+                      Loading…
+                    </div>
+                  ) : (
+                    <Link to={dashboardPath} onClick={() => setMenuOpen(false)} className="btn-secondary text-sm">
+                      Dashboard
+                    </Link>
+                  )}
                   <button
                     onClick={() => {
                       setMenuOpen(false)
@@ -178,5 +186,3 @@ export default function Navbar() {
         </div>
       )}
     </header>
-  )
-}
