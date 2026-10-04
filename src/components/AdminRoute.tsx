@@ -17,10 +17,11 @@ export default function AdminRoute({ children }: { children: ReactNode }) {
   }
 
   if (!adminUser) {
+    const returnTo = `${location.pathname}${location.search}${location.hash}`
     return (
       <Navigate
         to="/admin/login"
-        state={{ notice: 'Please sign in to continue.', redirectTo: location.pathname }}
+        state={{ notice: 'Please sign in to continue.', redirectTo: returnTo }}
         replace
       />
     )
