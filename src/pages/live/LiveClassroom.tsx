@@ -4,6 +4,7 @@ import {
   ensureLiveRoom,
   joinLiveRoom,
   leaveLiveRoom,
+  updateLiveRoomParticipant,
   setLiveRoomStatus,
   subscribeToLiveRoomParticipants,
   clearLiveRoomStudentConnection,
@@ -233,16 +234,26 @@ export default function LiveClassroom() {
     const isTutor = !isAdmin && userRole === 'tutor'
     const participantRole = isAdmin ? 'admin' : isTutor ? 'tutor' : 'student'
 
+    let heartbeatTimer: number | null = null
+
     void ensureLiveRoom(sessionId)
       .then(() => joinLiveRoom(sessionId, {
         userId,
         displayName: userDisplayName ?? (isTutor ? session.tutor_name : isAdmin ? 'Admin' : 'Student'),
         role: participantRole,
       }))
-      .then(() => {
+      .then(async () => {
         if (isTutor) {
-          return setLiveRoomStatus(sessionId, 'live')
+          await setLiveRoomStatus(sessionId, 'live')
         }
+
+        heartbeatTimer = window.setInterval(() => {
+          void updateLiveRoomParticipant(sessionId, userId, {
+            status: 'connecting',
+          }).catch((error) => {
+            console.error('[LiveClassroom] Participant heartbeat failed:', error)
+          })
+        }, 15_000)
       })
       .catch((error) => {
         console.error('[LiveClassroom] Failed to join room:', error)
@@ -256,6 +267,7 @@ export default function LiveClassroom() {
 
     return () => {
       unsubscribe()
+      if (heartbeatTimer) window.clearInterval(heartbeatTimer)
       void leaveLiveRoom(sessionId, userId).catch((error) => {
         console.error('[LiveClassroom] Failed to leave room:', error)
       })
@@ -263,6 +275,23 @@ export default function LiveClassroom() {
   }, [session, sessionId, userId, userDisplayName, userRole, roleLoading, adminLoading, isAdmin])
 
   const isTutor = !isAdmin && userRole === 'tutor'
+
+  useEffect(() => {
+    if (!sessionId || !userId || isAdmin) return
+
+    const status =
+      mediaState.connectionState === 'connected'
+        ? 'connected'
+        : mediaState.connectionState === 'disconnected'
+          ? 'disconnected'
+          : mediaState.connectionState === 'failed'
+            ? 'reconnecting'
+            : 'connecting'
+
+    void updateLiveRoomParticipant(sessionId, userId, { status }).catch((error) => {
+      console.error('[LiveClassroom] Failed to update participant status:', error)
+    })
+  }, [sessionId, userId, isAdmin, mediaState.connectionState])
 
   const {
     localStream,
