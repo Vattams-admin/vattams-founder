@@ -2,201 +2,145 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html { scroll-behavior: smooth; }
-  body {
-    @apply bg-ink text-parchment antialiased;
-    background:
-      radial-gradient(circle at 8% 0%, rgba(232,200,119,.08), transparent 28rem),
-      radial-gradient(circle at 92% 12%, rgba(47,93,154,.14), transparent 30rem),
-      #0B1730;
-  }
-  h1, h2, h3, h4 { @apply font-display text-parchment; }
-  ::selection { background: rgba(232,200,119,.24); color: #fffaf0; }
-  :focus-visible { outline: 2px solid theme('colors.gold.bright'); outline-offset: 3px; }
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
-  }
-}
-
-@layer components {
-  .rule-gold { @apply border-t border-gold/30; }
-
-  .btn-primary {
-    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 font-body text-sm font-semibold text-ink transition-all duration-200;
-    background: linear-gradient(135deg, #E8C877 0%, #C9A24B 55%, #A9822F 100%);
-    box-shadow: 0 10px 28px rgba(201,162,75,.16), inset 0 1px 0 rgba(255,255,255,.35);
-  }
-  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 14px 34px rgba(201,162,75,.23), inset 0 1px 0 rgba(255,255,255,.42); }
-
-  .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-xl border px-5 py-3 font-body text-sm font-semibold text-parchment transition-all duration-200;
-    border-color: rgba(232,200,119,.32);
-    background: rgba(18,42,78,.52);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
-  }
-  .btn-secondary:hover { transform: translateY(-1px); border-color: rgba(232,200,119,.7); background: rgba(28,58,102,.7); }
-
-  .card {
-    @apply rounded-2xl border;
-    border-color: rgba(232,200,119,.16);
-    background:
-      linear-gradient(145deg, rgba(28,58,102,.86), rgba(13,30,57,.92));
-    box-shadow: 0 16px 42px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.045);
-    transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
-  }
-  .card:hover { border-color: rgba(232,200,119,.3); box-shadow: 0 20px 50px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.06); }
-
-  .input {
-    @apply w-full rounded-xl border bg-ink/70 px-3.5 py-3 text-sm outline-none transition-all;
-    border-color: rgba(255,255,255,.12);
-  }
-  .input:focus { border-color: rgba(232,200,119,.72); box-shadow: 0 0 0 3px rgba(232,200,119,.08); }
-
-  .premium-section { position: relative; overflow: hidden; }
-  .premium-section::before { content:""; position:absolute; inset:0; pointer-events:none; background: linear-gradient(180deg, rgba(255,255,255,.015), transparent 35%); }
-  .eyebrow { @apply text-[11px] font-semibold uppercase tracking-[.34em] text-gold; }
-  .gold-text { background: linear-gradient(90deg,#F2D58D,#C9A24B); -webkit-background-clip:text; background-clip:text; color:transparent; }
-}
-
-/* Shared shell polish: the visual language now carries across public, student,
-   tutor and admin surfaces without changing their data or navigation logic. */
-header.sticky {
-  background: rgba(7,17,34,.82) !important;
-  border-bottom-color: rgba(232,200,119,.18) !important;
-  box-shadow: 0 10px 35px rgba(0,0,0,.12);
-}
-footer {
-  background: linear-gradient(180deg, #081120 0%, #050b16 100%) !important;
-}
-
-@media (max-width: 640px) {
-  .btn-primary, .btn-secondary { min-height: 44px; }
-}
-
-/* Form controls inherit the same institutional finish even where a page uses
-   native select/textarea elements rather than the shared .input class. */
-select, textarea {
-  border-radius: .75rem;
-  border-color: rgba(255,255,255,.12) !important;
-  background-color: rgba(11,23,48,.78) !important;
-  color: #F6F2E7;
-}
-select:focus, textarea:focus {
-  border-color: rgba(232,200,119,.72) !important;
-  box-shadow: 0 0 0 3px rgba(232,200,119,.08);
-}
-
-/* A restrained lift for dense management screens without changing their
-   existing layout or functionality. */
-main a:not(.btn-primary):not(.btn-secondary) { transition: color .2s ease, opacity .2s ease; }
-button { transition: transform .2s ease, border-color .2s ease, background-color .2s ease, box-shadow .2s ease; }
-button:hover:not(:disabled) { transform: translateY(-1px); }
-
 /* =========================================================
-   VATTAMS ACADEMIA — MODERN EDTECH VISUAL SYSTEM V2
-   Visual-only layer. No application/data logic changes.
+   VATTAMS ACADEMIA — INTERNATIONAL PREMIUM DESIGN SYSTEM
+   Visual layer only. Application/data/navigation logic untouched.
    ========================================================= */
 
 @layer base {
+  :root {
+    color-scheme: dark;
+    --va-bg: #050B17;
+    --va-surface: #0B1426;
+    --va-surface-2: #101D33;
+    --va-border: rgba(148, 163, 184, .14);
+    --va-text: #F4F7FC;
+    --va-muted: #9AA9BF;
+    --va-blue: #3B82F6;
+    --va-cyan: #22D3EE;
+    --va-gold: #E8C877;
+  }
+
   html {
-    background: #07111f;
+    scroll-behavior: smooth;
+    background: var(--va-bg);
   }
 
   body {
     @apply antialiased;
+    min-width: 320px;
+    color: var(--va-text);
     background:
-      radial-gradient(900px 500px at 8% -5%, rgba(37,99,235,.20), transparent 62%),
-      radial-gradient(700px 500px at 100% 8%, rgba(6,182,212,.12), transparent 60%),
-      linear-gradient(180deg, #07111f 0%, #0a1730 48%, #07111f 100%);
-    color: #eef4ff;
+      radial-gradient(900px 520px at 5% -8%, rgba(59,130,246,.17), transparent 62%),
+      radial-gradient(760px 520px at 98% 8%, rgba(34,211,238,.10), transparent 60%),
+      radial-gradient(700px 500px at 50% 100%, rgba(79,70,229,.08), transparent 62%),
+      linear-gradient(180deg, #050B17 0%, #081326 48%, #050B17 100%);
   }
 
-  h1, h2, h3, h4,
-  .font-display {
-    font-family:
-      Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-      "Segoe UI", sans-serif !important;
-    letter-spacing: -0.035em;
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    letter-spacing: -.035em;
   }
 
-  h1 {
-    font-weight: 850;
-  }
-
-  h2 {
-    font-weight: 800;
-  }
-
-  h3, h4 {
-    font-weight: 750;
-  }
+  h1 { font-weight: 850; }
+  h2 { font-weight: 800; }
+  h3, h4 { font-weight: 750; }
 
   ::selection {
-    background: rgba(34,211,238,.28);
-    color: #ffffff;
+    background: rgba(34,211,238,.25);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--va-cyan);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
 @layer components {
   .btn-primary {
-    border: 1px solid rgba(255,255,255,.12);
+    @apply inline-flex items-center justify-center px-5 py-3 text-sm font-semibold;
+    min-height: 46px;
+    border: 1px solid rgba(255,255,255,.14);
     border-radius: 14px;
-    background:
-      linear-gradient(135deg, #38bdf8 0%, #2563eb 52%, #4f46e5 100%);
-    color: white;
-    box-shadow:
-      0 12px 32px rgba(37,99,235,.28),
-      inset 0 1px 0 rgba(255,255,255,.28);
+    color: #fff;
+    background: linear-gradient(135deg, #38BDF8 0%, #2563EB 52%, #4F46E5 100%);
+    box-shadow: 0 12px 30px rgba(37,99,235,.25), inset 0 1px 0 rgba(255,255,255,.28);
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
   }
 
-  .btn-primary:hover {
+  .btn-primary:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow:
-      0 18px 42px rgba(37,99,235,.38),
-      0 0 28px rgba(34,211,238,.12),
-      inset 0 1px 0 rgba(255,255,255,.35);
+    filter: brightness(1.05);
+    box-shadow: 0 18px 42px rgba(37,99,235,.34), 0 0 28px rgba(34,211,238,.10), inset 0 1px 0 rgba(255,255,255,.34);
   }
 
   .btn-secondary {
+    @apply inline-flex items-center justify-center px-5 py-3 text-sm font-semibold;
+    min-height: 46px;
+    border: 1px solid rgba(125,211,252,.20);
     border-radius: 14px;
-    border-color: rgba(125,211,252,.24);
+    color: #EAF3FF;
     background: rgba(255,255,255,.045);
-    color: #eef6ff;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.045);
     backdrop-filter: blur(14px);
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
   }
 
-  .btn-secondary:hover {
-    border-color: rgba(103,232,249,.48);
-    background: rgba(34,211,238,.08);
+  .btn-secondary:hover:not(:disabled) {
     transform: translateY(-2px);
+    border-color: rgba(103,232,249,.45);
+    background: rgba(34,211,238,.08);
   }
 
   .card {
-    border-color: rgba(148,163,184,.14);
+    @apply border;
+    position: relative;
+    border-color: var(--va-border);
     border-radius: 22px;
     background:
-      linear-gradient(145deg, rgba(30,52,88,.72), rgba(10,25,49,.88));
-    box-shadow:
-      0 18px 55px rgba(0,0,0,.22),
-      inset 0 1px 0 rgba(255,255,255,.055);
+      linear-gradient(145deg, rgba(19,35,60,.82), rgba(7,17,33,.94));
+    box-shadow: 0 18px 55px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.045);
+    transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
   }
 
   .card:hover {
-    border-color: rgba(103,232,249,.24);
-    box-shadow:
-      0 24px 70px rgba(0,0,0,.30),
-      0 0 35px rgba(37,99,235,.07),
-      inset 0 1px 0 rgba(255,255,255,.07);
+    border-color: rgba(103,232,249,.22);
+    box-shadow: 0 24px 70px rgba(0,0,0,.30), 0 0 35px rgba(37,99,235,.07), inset 0 1px 0 rgba(255,255,255,.065);
+  }
+
+  .input {
+    @apply w-full px-3.5 py-3 text-sm outline-none;
+    border: 1px solid rgba(148,163,184,.16);
+    border-radius: 13px;
+    color: var(--va-text);
+    background: rgba(5,15,30,.68);
+    transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+
+  .input:focus {
+    border-color: rgba(34,211,238,.65);
+    background: rgba(5,15,30,.82);
+    box-shadow: 0 0 0 3px rgba(34,211,238,.09);
   }
 
   .eyebrow {
-    color: #67e8f9;
+    @apply text-[11px] font-semibold uppercase;
+    color: #67E8F9;
     letter-spacing: .28em;
   }
 
   .gold-text {
-    background: linear-gradient(90deg, #67e8f9 0%, #60a5fa 55%, #e8c877 100%);
+    background: linear-gradient(90deg, #67E8F9 0%, #60A5FA 52%, #E8C877 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -208,35 +152,26 @@ button:hover:not(:disabled) { transform: translateY(-1px); }
   }
 
   .premium-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
     background:
       radial-gradient(circle at 15% 20%, rgba(59,130,246,.08), transparent 25rem),
       radial-gradient(circle at 85% 70%, rgba(6,182,212,.06), transparent 24rem);
   }
-
-  .input {
-    border-color: rgba(148,163,184,.16);
-    background: rgba(5,15,30,.62);
-    border-radius: 13px;
-  }
-
-  .input:focus {
-    border-color: rgba(34,211,238,.65);
-    box-shadow: 0 0 0 3px rgba(34,211,238,.09);
-  }
 }
 
-/* Modern public-site shell */
+/* Premium navigation shell */
 header.sticky {
-  background: rgba(5,14,28,.82) !important;
+  background: rgba(5,12,25,.78) !important;
   border-bottom: 1px solid rgba(148,163,184,.12) !important;
-  box-shadow:
-    0 10px 40px rgba(0,0,0,.18),
-    inset 0 -1px 0 rgba(255,255,255,.025);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 12px 40px rgba(0,0,0,.18), inset 0 -1px 0 rgba(255,255,255,.025);
+  backdrop-filter: blur(22px) saturate(140%);
+  -webkit-backdrop-filter: blur(22px) saturate(140%);
 }
 
-/* Make common public content feel lighter and more spacious */
+/* Soft global content lighting */
 main {
   position: relative;
 }
@@ -245,14 +180,28 @@ main::before {
   content: "";
   position: fixed;
   inset: 0;
-  pointer-events: none;
   z-index: -1;
+  pointer-events: none;
   background:
-    radial-gradient(500px 300px at 0% 35%, rgba(37,99,235,.055), transparent 70%),
-    radial-gradient(500px 300px at 100% 65%, rgba(6,182,212,.045), transparent 70%);
+    radial-gradient(520px 320px at 0% 35%, rgba(37,99,235,.045), transparent 70%),
+    radial-gradient(520px 320px at 100% 65%, rgba(6,182,212,.035), transparent 70%);
 }
 
-/* Modern course-grid cards */
+/* Hero/grid utility used by the homepage */
+.bg-grid-glow {
+  background-image:
+    linear-gradient(rgba(148,163,184,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148,163,184,.045) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+.shadow-glow {
+  box-shadow: 0 20px 65px rgba(37,99,235,.16), 0 0 32px rgba(34,211,238,.06);
+}
+
+/* Course cards */
 .course-card {
   position: relative;
   isolation: isolate;
@@ -263,10 +212,9 @@ main::before {
   position: absolute;
   inset: 1px;
   pointer-events: none;
-  border-radius: 23px;
+  border-radius: 21px;
   opacity: 0;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,.07), transparent 35%);
+  background: linear-gradient(135deg, rgba(255,255,255,.075), transparent 35%);
   transition: opacity .3s ease;
 }
 
@@ -275,16 +223,14 @@ main::before {
 }
 
 /* Native controls */
-select,
-textarea {
+select, textarea {
   border-radius: 13px;
   border-color: rgba(148,163,184,.16) !important;
   background-color: rgba(5,15,30,.78) !important;
-  color: #eef4ff;
+  color: #EEF4FF;
 }
 
-select:focus,
-textarea:focus {
+select:focus, textarea:focus {
   border-color: rgba(34,211,238,.65) !important;
   box-shadow: 0 0 0 3px rgba(34,211,238,.08);
 }
@@ -297,37 +243,19 @@ footer {
   border-top: 1px solid rgba(148,163,184,.10);
 }
 
-/* Mobile-first refinements */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 @media (max-width: 640px) {
-  body {
-    overflow-x: hidden;
-  }
+  body { overflow-x: hidden; }
 
-  h1 {
-    letter-spacing: -0.045em;
-  }
+  h1 { letter-spacing: -.045em; }
 
-  .btn-primary,
-  .btn-secondary {
+  .btn-primary, .btn-secondary {
     min-height: 48px;
     border-radius: 14px;
   }
 
-  .course-card {
-    border-radius: 22px;
-  }
-
-  .course-card > div:first-child {
-    aspect-ratio: 16 / 9;
-  }
-}
-
-/* Respect reduced-motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .course-card,
-  .course-card::after,
-  .btn-primary,
-  .btn-secondary {
-    transition: none !important;
-  }
+  .course-card { border-radius: 22px; }
 }
