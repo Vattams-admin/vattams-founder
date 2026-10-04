@@ -452,11 +452,27 @@ service cloud.firestore {
       // separately re-derived here (lesson_id is opaque to this rule);
       // the enrolment_id ownership + active-status check is what the
       // spec's fabricated-enrolment test case requires.
-      allow read: if isAdmin() || isOwner(resource.data.student_id);
+      allow read: if isAdmin()
+        || (
+          isOwner(resource.data.student_id)
+          && get(/databases/$(database)/documents/enrolments/$(resource.data.enrolment_id)).data.student_id == request.auth.uid
+          && get(/databases/$(database)/documents/enrolments/$(resource.data.enrolment_id)).data.status == 'active'
+        );
 
-      allow create, update: if isAdmin()
+      allow create: if isAdmin()
         || (
           isOwner(request.resource.data.student_id)
+          && progressId == request.resource.data.enrolment_id + '_' + request.resource.data.lesson_id
+          && get(/databases/$(database)/documents/enrolments/$(request.resource.data.enrolment_id)).data.student_id == request.auth.uid
+          && get(/databases/$(database)/documents/enrolments/$(request.resource.data.enrolment_id)).data.status == 'active'
+        );
+
+      allow update: if isAdmin()
+        || (
+          isOwner(resource.data.student_id)
+          && request.resource.data.student_id == resource.data.student_id
+          && request.resource.data.enrolment_id == resource.data.enrolment_id
+          && request.resource.data.lesson_id == resource.data.lesson_id
           && progressId == request.resource.data.enrolment_id + '_' + request.resource.data.lesson_id
           && get(/databases/$(database)/documents/enrolments/$(request.resource.data.enrolment_id)).data.student_id == request.auth.uid
           && get(/databases/$(database)/documents/enrolments/$(request.resource.data.enrolment_id)).data.status == 'active'
