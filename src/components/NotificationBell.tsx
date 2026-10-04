@@ -45,6 +45,16 @@ function TypeIcon({ icon }: { icon: string }) {
   }
 }
 
+function isSafeInternalPath(actionUrl: string): boolean {
+  if (!actionUrl.startsWith('/') || actionUrl.startsWith('//')) return false
+  if (/^[\u0000-\u001f]/.test(actionUrl)) return false
+  try {
+    return new URL(actionUrl, window.location.origin).origin === window.location.origin
+  } catch {
+    return false
+  }
+}
+
 function timeAgo(iso: string): string {
   const then = new Date(iso).getTime()
   if (Number.isNaN(then)) return ''
@@ -132,7 +142,7 @@ export default function NotificationBell({
   function handleOpenNotification(n: AppNotification) {
     if (!n.is_read) markAsRead(n.id)
     setOpen(false)
-    if (n.action_url) navigate(n.action_url)
+    if (n.action_url && isSafeInternalPath(n.action_url)) navigate(n.action_url)
   }
 
   const notificationsHref = role === 'admin' ? '/admin/notifications' : '/notifications'
