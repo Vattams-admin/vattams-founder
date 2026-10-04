@@ -119,7 +119,7 @@ export default function LiveClassroom() {
   const { user, loading: authLoading } = useAuth()
   const userId = user?.id
   const userDisplayName = user?.displayName
-  const { role: userRole, loading: roleLoading } = useUserRole()
+  const { role: userRole, loading: roleLoading, error: roleError } = useUserRole()
   const { isAdmin, loading: adminLoading } = useAdminAuth()
   const navigate = useNavigate()
 
@@ -162,6 +162,8 @@ export default function LiveClassroom() {
 
   useEffect(() => {
     if (authLoading || roleLoading || adminLoading) return
+
+    if (roleError) return
 
     if (!userId) {
       navigate('/login', {
@@ -221,7 +223,7 @@ export default function LiveClassroom() {
     return () => {
       cancelled = true
     }
-  }, [sessionId, userId, authLoading, roleLoading, adminLoading, isAdmin, userRole, navigate])
+  }, [sessionId, userId, authLoading, roleLoading, roleError, adminLoading, isAdmin, userRole, navigate])
 
   useEffect(() => {
     const tick = setInterval(() => setNow(new Date()), 1000)
@@ -391,7 +393,7 @@ export default function LiveClassroom() {
       })
   }
 
-  if (state === 'loading' || authLoading || adminLoading || roleLoading) {
+  if (state === 'loading' || authLoading || adminLoading || roleLoading || roleError) {
     return (
       <main className="min-h-screen bg-[#050b16] px-4 py-20 text-center text-slate-400">
         Loading classroom…
