@@ -10,6 +10,11 @@ on:
       - "playwright.config.ts"
       - "package.json"
       - "package-lock.json"
+      - "src/pages/CompetitionParticipant.tsx"
+      - "src/components/competition/**"
+      - "src/components/materials/**"
+      - "supabase/functions/competition-official-*/**"
+      - "supabase/functions/competition-mock-*/**"
       - ".github/workflows/production-e2e.yml"
 
 jobs:
