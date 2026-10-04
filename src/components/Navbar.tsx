@@ -16,7 +16,7 @@ const navItems = [
 ]
 export default function Navbar() {
   const { user, loading } = useAuth()
-  const { role, loading: roleLoading } = useUserRole()
+  const { role, loading: roleLoading, error: roleError } = useUserRole()
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
   // ROLE-AWARE DASHBOARD LINK — this Navbar is shared by every signed-in
@@ -67,7 +67,7 @@ export default function Navbar() {
           {loading ? null : user ? (
             <>
               <NotificationBell uid={user.id} role={role} />
-              {roleLoading || !dashboardPath ? (
+              {roleLoading || roleError || !dashboardPath ? (
                 <span className="text-sm font-medium text-slate-muted" aria-live="polite">
                   Loading…
                 </span>
