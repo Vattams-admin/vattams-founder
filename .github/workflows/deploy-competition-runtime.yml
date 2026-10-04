@@ -2,14 +2,6 @@ name: Deploy Competition Runtime
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - "supabase/functions/competition-official-*/**"
-      - "supabase/functions/competition-mock-*/**"
-      - "supabase/migrations/**"
-      - ".github/workflows/deploy-competition-runtime.yml"
 
 jobs:
   deploy:
