@@ -336,7 +336,7 @@ export default function CompetitionParticipant() {
           <div className="rounded-card border border-gold/15 bg-white/5 p-5">
             <h2 className="font-display text-lg">Official Competition</h2>
             <p className="mt-2 text-sm text-slate-muted">
-              30 questions are selected randomly according to your age band. During the competition, only the questions and options are shown. Correct answers and explanations are not revealed.
+              The official paper contains the approved 30-question Thirukkural set. During the competition, only the questions and options are shown. Correct answers and explanations are not revealed.
             </p>
             <button type="button" onClick={() => void startAttempt()} disabled={busy} className="btn-primary mt-5 disabled:opacity-50">
               {busy ? 'Starting...' : 'Start Competition'}
