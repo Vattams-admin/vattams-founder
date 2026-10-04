@@ -1,0 +1,339 @@
+{
+  "schema_version": "3.1.0",
+  "course": "National Coding Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "subject_specific_authoring_v1_complete",
+  "age_bands": [
+    "foundation",
+    "developing",
+    "advanced",
+    "championship"
+  ],
+  "learning_paths": [
+    "core_mastery",
+    "practice_and_revision",
+    "mock_test_preparation"
+  ],
+  "domains": [
+    {
+      "name": "Programming Fundamentals",
+      "subtopics": [
+        {
+          "title": "variables",
+          "teaching": "Master variables within Programming Fundamentals for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative variables challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar variables problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "types",
+          "teaching": "Master types within Programming Fundamentals for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative types challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar types problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "input output",
+          "teaching": "Master input output within Programming Fundamentals for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative input output challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar input output problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "operators",
+          "teaching": "Master operators within Programming Fundamentals for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative operators challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar operators problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "expressions",
+          "teaching": "Master expressions within Programming Fundamentals for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative expressions challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar expressions problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Control Flow",
+      "subtopics": [
+        {
+          "title": "conditions",
+          "teaching": "Master conditions within Control Flow for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative conditions challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar conditions problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "nested conditions",
+          "teaching": "Master nested conditions within Control Flow for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative nested conditions challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar nested conditions problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "loops",
+          "teaching": "Master loops within Control Flow for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative loops challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar loops problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "iteration patterns",
+          "teaching": "Master iteration patterns within Control Flow for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative iteration patterns challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar iteration patterns problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "loop tracing",
+          "teaching": "Master loop tracing within Control Flow for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative loop tracing challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar loop tracing problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Functions & Modularity",
+      "subtopics": [
+        {
+          "title": "functions",
+          "teaching": "Master functions within Functions & Modularity for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative functions challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar functions problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "parameters",
+          "teaching": "Master parameters within Functions & Modularity for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative parameters challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar parameters problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "return values",
+          "teaching": "Master return values within Functions & Modularity for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative return values challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar return values problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "scope",
+          "teaching": "Master scope within Functions & Modularity for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative scope challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar scope problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "decomposition",
+          "teaching": "Master decomposition within Functions & Modularity for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative decomposition challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar decomposition problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Data Structures",
+      "subtopics": [
+        {
+          "title": "arrays",
+          "teaching": "Master arrays within Data Structures for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative arrays challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar arrays problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "strings",
+          "teaching": "Master strings within Data Structures for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative strings challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar strings problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "stacks",
+          "teaching": "Master stacks within Data Structures for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative stacks challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar stacks problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "queues",
+          "teaching": "Master queues within Data Structures for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative queues challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar queues problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "maps and sets",
+          "teaching": "Master maps and sets within Data Structures for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative maps and sets challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar maps and sets problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Algorithms",
+      "subtopics": [
+        {
+          "title": "searching",
+          "teaching": "Master searching within Algorithms for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative searching challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar searching problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "sorting",
+          "teaching": "Master sorting within Algorithms for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative sorting challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar sorting problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "two pointers",
+          "teaching": "Master two pointers within Algorithms for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative two pointers challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar two pointers problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "prefix ideas",
+          "teaching": "Master prefix ideas within Algorithms for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative prefix ideas challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar prefix ideas problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "recursion basics",
+          "teaching": "Master recursion basics within Algorithms for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative recursion basics challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar recursion basics problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Problem Solving",
+      "subtopics": [
+        {
+          "title": "problem decomposition",
+          "teaching": "Master problem decomposition within Problem Solving for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative problem decomposition challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar problem decomposition problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "constraints",
+          "teaching": "Master constraints within Problem Solving for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative constraints challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar constraints problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "edge cases",
+          "teaching": "Master edge cases within Problem Solving for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative edge cases challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar edge cases problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "complexity intuition",
+          "teaching": "Master complexity intuition within Problem Solving for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative complexity intuition challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar complexity intuition problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "debugging",
+          "teaching": "Master debugging within Problem Solving for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative debugging challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar debugging problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Code Correctness",
+      "subtopics": [
+        {
+          "title": "tracing",
+          "teaching": "Master tracing within Code Correctness for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative tracing challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar tracing problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "test cases",
+          "teaching": "Master test cases within Code Correctness for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative test cases challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar test cases problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "failure diagnosis",
+          "teaching": "Master failure diagnosis within Code Correctness for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative failure diagnosis challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar failure diagnosis problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "boundary conditions",
+          "teaching": "Master boundary conditions within Code Correctness for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative boundary conditions challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar boundary conditions problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "verification",
+          "teaching": "Master verification within Code Correctness for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative verification challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar verification problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Applied Coding",
+      "subtopics": [
+        {
+          "title": "simulation",
+          "teaching": "Master simulation within Applied Coding for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative simulation challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar simulation problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "text processing",
+          "teaching": "Master text processing within Applied Coding for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative text processing challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar text processing problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "mathematical coding",
+          "teaching": "Master mathematical coding within Applied Coding for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative mathematical coding challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar mathematical coding problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "data handling",
+          "teaching": "Master data handling within Applied Coding for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative data handling challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar data handling problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "challenge problems",
+          "teaching": "Master challenge problems within Applied Coding for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative challenge problems challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar challenge problems problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    }
+  ]
+}
