@@ -316,10 +316,12 @@ export function useLiveWebRTC({
 
       const peer = new RTCPeerConnection(RTC_CONFIGURATION)
 
-      setMediaState((current) => ({
-        ...current,
-        connectionState: 'new',
-      }))
+      if (remoteStreamsRef.current.size === 0) {
+        setMediaState((current) => ({
+          ...current,
+          connectionState: 'new',
+        }))
+      }
 
       console.log('[liveWebRTC] Peer created successfully', {
         role: isTutor ? 'tutor' : 'student',
@@ -379,8 +381,13 @@ export function useLiveWebRTC({
         const hasRemoteMedia =
           (remoteStreamsRef.current.get(remoteUserId)?.getAudioTracks().length ?? 0) > 0 &&
           (remoteStreamsRef.current.get(remoteUserId)?.getVideoTracks().length ?? 0) > 0
+        const hasAnyRemoteMedia = Array.from(remoteStreamsRef.current.values()).some(
+          (stream) =>
+            stream.getAudioTracks().length > 0 &&
+            stream.getVideoTracks().length > 0,
+        )
 
-        if (peer.connectionState === 'connected' || hasRemoteMedia) {
+        if (peer.connectionState === 'connected' || hasAnyRemoteMedia) {
           // A real recovery, not just the initial handshake — reset the
           // counter so a later, unrelated blip gets its own fresh budget
           // of auto-retries instead of inheriting an exhausted one.
@@ -437,7 +444,7 @@ export function useLiveWebRTC({
         setMediaState((current) => ({
           ...current,
           connectionState:
-            hasRemoteMedia || peer.connectionState === 'connected'
+            hasAnyRemoteMedia || peer.connectionState === 'connected'
               ? 'connected'
               : peer.connectionState,
         }))
