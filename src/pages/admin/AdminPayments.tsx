@@ -353,6 +353,7 @@ export default function AdminPayments() {
               course_id: courseId,
               course_name: payment.course_name,
               course_slug: courseSlug,
+              payment_id: payment.id,
               status: 'active',
               enrolled_at: new Date().toISOString(),
               created_at: serverTimestamp(),
