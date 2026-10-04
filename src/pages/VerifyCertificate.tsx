@@ -23,11 +23,11 @@ export default function VerifyCertificate() {
       // enumeration through a broad query.
       const snapshot = await getDoc(doc(firestore, 'certificates', code.trim()))
 
-      if (snapshot.empty) {
+      if (!snapshot.exists()) {
         setResult('not_found')
         return
       }
-      setResult(snapshot.docs[0].data() as CertificateVerification)
+      setResult(snapshot.data() as CertificateVerification)
     } catch (err) {
       // A Firestore/network error is not the same thing as "no
       // certificate found for this code" — don't tell someone their
