@@ -34,7 +34,7 @@ if (!Number.isInteger(maxReads) || maxReads < 1) {
 
 const registryPath =
   process.env.COMPETITION_REGISTRY_PATH ||
-  ".tmp-competition-registry/registry.json";
+  "config/competition-registry.json";
 
 const firebaseCredentials =
   process.env.GOOGLE_APPLICATION_CREDENTIALS;
