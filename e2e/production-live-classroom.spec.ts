@@ -12,7 +12,7 @@ const requiredEnv = [
 function requireE2EAccounts() {
   const missing = requiredEnv.filter((name) => !process.env[name])
   if (missing.length > 0) {
-    throw new Error(`Missing GitHub Actions secrets: ${missing.join(', ')}`)
+    throw new Error(`Missing E2E account environment variables: ${missing.join(', ')}`)
   }
 
   return {
@@ -63,7 +63,8 @@ async function openLiveClassroomAsTutor(page: Page): Promise<string> {
   return new URL(page.url()).pathname.split('/').pop()!
 }
 
-async function joinAsStudent(page: Page, sessionId: string) {
+async function joinAsStudent(page: Page, sessionId: string, email: string, password: string) {
+  await login(page, email, password)
   await page.goto(`/live-session/${sessionId}`, {
     waitUntil: 'domcontentloaded',
   })
@@ -126,8 +127,8 @@ test.describe('production live classroom', () => {
         timeout: 30_000,
       })
 
-      await joinAsStudent(studentA, sessionId)
-      await joinAsStudent(studentB, sessionId)
+      await joinAsStudent(studentA, sessionId, accounts.studentA.email, accounts.studentA.password)
+      await joinAsStudent(studentB, sessionId, accounts.studentB.email, accounts.studentB.password)
 
       // A room may contain another active participant; require the three
       // smoke-test accounts rather than an artificially exact room size.
