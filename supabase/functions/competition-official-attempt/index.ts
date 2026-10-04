@@ -10,7 +10,8 @@ const SUPABASE_SERVICE_ROLE_KEY = SUPABASE_SECRET_KEYS["default"] || "";
 const COURSE_ID = "DNWt3cPE4ZSJG90CTC1e";
 const COMPETITION = "Thirukkural Mastery Championship";
 const PER_ATTEMPT = 30;
-const CACHE_TTL_HOURS = 12;
+// Access sync runs every 30 minutes; keep the authorization cache bounded to 1 hour so revocations cannot remain effective for half a day.
+const CACHE_TTL_HOURS = 1;
 
 const OFFICIAL_PAPERS = {
   up_to_8: Array.from({ length: 30 }, (_, i) => `TKR-U8-${String(i + 1).padStart(2, "0")}`),
