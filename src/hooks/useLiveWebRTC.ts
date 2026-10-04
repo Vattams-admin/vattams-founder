@@ -1057,7 +1057,8 @@ export function useLiveWebRTC({
 
           if (
             peer.signalingState !== 'stable' ||
-            peer.connectionState === 'connected' ||
+            peer.connectionState !== 'new' ||
+            peer.remoteDescription ||
             negotiatingRef.current.has(
               tutorId,
             )
