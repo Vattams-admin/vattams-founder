@@ -17,11 +17,19 @@ const COURSE_ID = "DNWt3cPE4ZSJG90CTC1e";
 const COMPETITION = "Thirukkural Mastery Championship";
 const PER_ATTEMPT = 30;
 const CACHE_TTL_HOURS = 12;
-const AGE_POOLS_PATH =
-  "competitions/thirukkural/objective/age-pools.json";
+
+const OFFICIAL_QUESTION_IDS = [
+  ...Array.from({ length: 8 }, (_, i) => `TKR-REC-${String(i + 1).padStart(2, "0")}`),
+  ...Array.from({ length: 7 }, (_, i) => `TKR-ADH-${String(i + 1).padStart(2, "0")}`),
+  ...Array.from({ length: 8 }, (_, i) => `TKR-MEAN-${String(i + 1).padStart(2, "0")}`),
+  ...Array.from({ length: 7 }, (_, i) => `TKR-KNOW-${String(i + 1).padStart(2, "0")}`),
+];
+
+if (OFFICIAL_QUESTION_IDS.length !== PER_ATTEMPT || new Set(OFFICIAL_QUESTION_IDS).size !== PER_ATTEMPT) {
+  throw new Error("Invalid official Thirukkural question set");
+}
 
 type AgeBand = "up_to_8" | "age_9_12" | "age_13_15" | "age_16_plus";
-type AgePoolQuestion = string | { id?: string; question_id?: string; [key: string]: unknown };
 type AgePools = Record<string, Record<string, AgePoolQuestion[]>>;
 
 const BLUEPRINT: Record<AgeBand, Array<[string, number]>> = {
@@ -189,9 +197,7 @@ Deno.serve(async (request) => {
     const age = calculateAge(dob);
     if (age < 0 || age > 120) return json({ error: "Invalid date of birth." }, 400);
 
-    const ageBand = getAgeBand(age);
-    const agePools = await loadAgePools();
-    const questionIds = selectQuestions(agePools, ageBand);
+    const questionIds = [...OFFICIAL_QUESTION_IDS];
 
     const { data, error } = await supabase.from("competition_attempts").insert({
       student_id: studentId,
@@ -212,7 +218,7 @@ Deno.serve(async (request) => {
     }
 
     return json({ ok: true, course_id: COURSE_ID, competition: COMPETITION,
-      age_band: ageBand, attempt_id: data.id, status: data.status,
+      attempt_id: data.id, status: data.status,
       started_at: data.started_at, question_ids: data.question_ids, count: PER_ATTEMPT });
   } catch (error) {
     console.error("competition-official-attempt error:", error);
