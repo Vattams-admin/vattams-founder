@@ -81,7 +81,7 @@ async function joinAsStudent(page: Page, sessionId: string, email: string, passw
 }
 
 async function classroomMetrics(page: Page) {
-  return page.locator('main').evaluate((main) => {
+  return page.locator('main').filter({ hasText: 'Participants:' }).first().evaluate((main) => {
     const text = main.textContent ?? ''
     const participants = text.match(/Participants:\s*(\d+)/)?.[1]
     const remoteStreams = text.match(/Remote streams:\s*(\d+)/)?.[1]
