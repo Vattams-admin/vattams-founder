@@ -370,6 +370,21 @@ export function useLiveWebRTC({
         ) {
           removePeer(remoteUserId)
 
+          if (isTutor) {
+            // The student is the authoritative offerer. If the tutor-side
+            // peer fails, clear only this student's signalling state so the
+            // student can observe the deleted connection document and start
+            // a fresh offer/ICE cycle. Retrying only on the tutor side cannot
+            // recover because Firestore intentionally prevents the tutor
+            // from creating a student connection document.
+            void clearStudentConnection(sessionId, remoteUserId).catch((error) => {
+              console.error(
+                '[liveWebRTC] Failed to clear failed tutor signalling state:',
+                error,
+              )
+            })
+          }
+
           if (autoRetryAttemptsRef.current < MAX_AUTO_RETRIES) {
             autoRetryAttemptsRef.current += 1
             const attempt = autoRetryAttemptsRef.current
@@ -406,6 +421,15 @@ export function useLiveWebRTC({
         console.log('[liveWebRTC] iceConnectionState changed', {
           remoteUserId,
           iceConnectionState: peer.iceConnectionState,
+        })
+      }
+
+      peer.onicecandidateerror = (event) => {
+        console.error('[liveWebRTC] ICE server error', {
+          remoteUserId,
+          errorCode: event.errorCode,
+          errorText: event.errorText,
+          url: event.url,
         })
       }
 
@@ -870,7 +894,24 @@ export function useLiveWebRTC({
           sessionId,
           userId,
           (connection) => {
-            if (!connection?.answer) return
+            if (!connection) {
+              const peer = peersRef.current.get(tutorId)
+
+              // A tutor-side failure/reconnect clears this document. The
+              // student treats that deletion as a deterministic restart
+              // signal rather than waiting for a stale answer forever.
+              if (peer && peer.connectionState !== 'connected') {
+                console.log('[liveWebRTC] Signalling document cleared — restarting student negotiation', {
+                  tutorId,
+                })
+                removePeer(tutorId)
+                setConnectionError(null)
+                setRetryToken((current) => current + 1)
+              }
+              return
+            }
+
+            if (!connection.answer) return
 
             const peer =
               peersRef.current.get(tutorId)
