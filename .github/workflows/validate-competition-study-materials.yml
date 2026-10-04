@@ -1,0 +1,22 @@
+name: Validate Competition Study Materials
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate competition study-material packages
+        run: node .vattams-550-check/VATTAMS_ACADEMIA_10_DAY_550_LESSONS/validate-competition-study-materials.mjs
