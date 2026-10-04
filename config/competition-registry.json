@@ -9,7 +9,13 @@
       "answer_key_bundle": "competitions/thirukkural/objective/answer-keys.private.json",
       "age_pools": "competitions/thirukkural/objective/age-pools.json",
       "per_attempt": 30,
-      "enabled": true
+      "enabled": true,
+      "official_papers": {
+        "up_to_8": "TKR-U8",
+        "age_9_12": "TKR-A9-12",
+        "age_13_15": "TKR-A13-15",
+        "age_16_plus": "TKR-REC/ADH/MEAN/KNOW"
+      }
     }
   }
 }
