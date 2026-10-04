@@ -1,0 +1,379 @@
+{
+  "schema_version": "3.1.0",
+  "course": "National Aptitude Championship",
+  "model": "thirukkural_mastery_reference",
+  "status": "subject_specific_authoring_v1_complete",
+  "age_bands": [
+    "foundation",
+    "developing",
+    "advanced",
+    "championship"
+  ],
+  "learning_paths": [
+    "core_mastery",
+    "practice_and_revision",
+    "mock_test_preparation"
+  ],
+  "domains": [
+    {
+      "name": "Quantitative Aptitude",
+      "subtopics": [
+        {
+          "title": "number operations",
+          "teaching": "Master number operations within Quantitative Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative number operations challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar number operations problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "percentages",
+          "teaching": "Master percentages within Quantitative Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative percentages challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar percentages problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "ratio proportion",
+          "teaching": "Master ratio proportion within Quantitative Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative ratio proportion challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar ratio proportion problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "averages",
+          "teaching": "Master averages within Quantitative Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative averages challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar averages problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "profit loss",
+          "teaching": "Master profit loss within Quantitative Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative profit loss challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar profit loss problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Algebraic Aptitude",
+      "subtopics": [
+        {
+          "title": "equations",
+          "teaching": "Master equations within Algebraic Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative equations challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar equations problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "inequalities",
+          "teaching": "Master inequalities within Algebraic Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative inequalities challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar inequalities problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "sequences",
+          "teaching": "Master sequences within Algebraic Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative sequences challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar sequences problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "functions basics",
+          "teaching": "Master functions basics within Algebraic Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative functions basics challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar functions basics problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "algebraic word problems",
+          "teaching": "Master algebraic word problems within Algebraic Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative algebraic word problems challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar algebraic word problems problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Arithmetic Applications",
+      "subtopics": [
+        {
+          "title": "time work",
+          "teaching": "Master time work within Arithmetic Applications for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative time work challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar time work problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "speed distance",
+          "teaching": "Master speed distance within Arithmetic Applications for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative speed distance challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar speed distance problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "mixtures",
+          "teaching": "Master mixtures within Arithmetic Applications for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative mixtures challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar mixtures problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "ages",
+          "teaching": "Master ages within Arithmetic Applications for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative ages challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar ages problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "commercial arithmetic",
+          "teaching": "Master commercial arithmetic within Arithmetic Applications for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative commercial arithmetic challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar commercial arithmetic problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Data Interpretation",
+      "subtopics": [
+        {
+          "title": "tables",
+          "teaching": "Master tables within Data Interpretation for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative tables challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar tables problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "bar charts",
+          "teaching": "Master bar charts within Data Interpretation for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative bar charts challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar bar charts problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "line graphs",
+          "teaching": "Master line graphs within Data Interpretation for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative line graphs challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar line graphs problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "pie charts",
+          "teaching": "Master pie charts within Data Interpretation for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative pie charts challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar pie charts problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "caselet data",
+          "teaching": "Master caselet data within Data Interpretation for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative caselet data challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar caselet data problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Logical Reasoning",
+      "subtopics": [
+        {
+          "title": "deduction",
+          "teaching": "Master deduction within Logical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative deduction challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar deduction problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "arrangements",
+          "teaching": "Master arrangements within Logical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative arrangements challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar arrangements problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "coding",
+          "teaching": "Master coding within Logical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative coding challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar coding problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "relations",
+          "teaching": "Master relations within Logical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative relations challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar relations problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "syllogisms",
+          "teaching": "Master syllogisms within Logical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative syllogisms challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar syllogisms problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Analytical Reasoning",
+      "subtopics": [
+        {
+          "title": "constraints",
+          "teaching": "Master constraints within Analytical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative constraints challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar constraints problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "case analysis",
+          "teaching": "Master case analysis within Analytical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative case analysis challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar case analysis problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "decision making",
+          "teaching": "Master decision making within Analytical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative decision making challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar decision making problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "scheduling",
+          "teaching": "Master scheduling within Analytical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative scheduling challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar scheduling problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "optimization",
+          "teaching": "Master optimization within Analytical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative optimization challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar optimization problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Probability & Counting",
+      "subtopics": [
+        {
+          "title": "basic probability",
+          "teaching": "Master basic probability within Probability & Counting for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative basic probability challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar basic probability problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "counting",
+          "teaching": "Master counting within Probability & Counting for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative counting challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar counting problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "arrangements",
+          "teaching": "Master arrangements within Probability & Counting for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative arrangements challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar arrangements problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "selection",
+          "teaching": "Master selection within Probability & Counting for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative selection challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar selection problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "expected outcomes",
+          "teaching": "Master expected outcomes within Probability & Counting for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative expected outcomes challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar expected outcomes problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Data Sufficiency",
+      "subtopics": [
+        {
+          "title": "information adequacy",
+          "teaching": "Master information adequacy within Data Sufficiency for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative information adequacy challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar information adequacy problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "statement analysis",
+          "teaching": "Master statement analysis within Data Sufficiency for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative statement analysis challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar statement analysis problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "condition testing",
+          "teaching": "Master condition testing within Data Sufficiency for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative condition testing challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar condition testing problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "elimination",
+          "teaching": "Master elimination within Data Sufficiency for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative elimination challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar elimination problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "multi-step sufficiency",
+          "teaching": "Master multi-step sufficiency within Data Sufficiency for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative multi-step sufficiency challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar multi-step sufficiency problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    },
+    {
+      "name": "Aptitude Strategy",
+      "subtopics": [
+        {
+          "title": "speed calculation",
+          "teaching": "Master speed calculation within Aptitude Strategy for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative speed calculation challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar speed calculation problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "estimation",
+          "teaching": "Master estimation within Aptitude Strategy for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative estimation challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar estimation problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "shortcut validation",
+          "teaching": "Master shortcut validation within Aptitude Strategy for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative shortcut validation challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar shortcut validation problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "time allocation",
+          "teaching": "Master time allocation within Aptitude Strategy for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative time allocation challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar time allocation problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        },
+        {
+          "title": "accuracy review",
+          "teaching": "Master accuracy review within Aptitude Strategy for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
+          "worked_example": "Worked example: solve a representative accuracy review challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
+          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
+          "mastery": "Mastery: independently solve an unfamiliar accuracy review problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+        }
+      ]
+    }
+  ]
+}
