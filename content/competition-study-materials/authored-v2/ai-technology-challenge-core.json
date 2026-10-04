@@ -1,0 +1,339 @@
+{
+  "schema_version": "3.1.0",
+  "course": "AI & Technology Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "subject_specific_authoring_v1_complete",
+  "age_bands": [
+    "foundation",
+    "developing",
+    "advanced",
+    "championship"
+  ],
+  "learning_paths": [
+    "core_mastery",
+    "practice_and_revision",
+    "mock_test_preparation"
+  ],
+  "domains": [
+    {
+      "name": "AI Foundations",
+      "subtopics": [
+        {
+          "title": "what AI is",
+          "teaching": "Master what AI is within AI Foundations for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative what AI is question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar what AI is questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "AI history",
+          "teaching": "Master AI history within AI Foundations for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative AI history question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar AI history questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "machine learning concepts",
+          "teaching": "Master machine learning concepts within AI Foundations for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative machine learning concepts question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar machine learning concepts questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "models and data",
+          "teaching": "Master models and data within AI Foundations for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative models and data question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar models and data questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "AI applications",
+          "teaching": "Master AI applications within AI Foundations for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative AI applications question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar AI applications questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        }
+      ]
+    },
+    {
+      "name": "Data & Algorithms",
+      "subtopics": [
+        {
+          "title": "data types",
+          "teaching": "Master data types within Data & Algorithms for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative data types question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar data types questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "patterns",
+          "teaching": "Master patterns within Data & Algorithms for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative patterns question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar patterns questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "algorithms",
+          "teaching": "Master algorithms within Data & Algorithms for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative algorithms question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar algorithms questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "training data",
+          "teaching": "Master training data within Data & Algorithms for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative training data question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar training data questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "evaluation",
+          "teaching": "Master evaluation within Data & Algorithms for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative evaluation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar evaluation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        }
+      ]
+    },
+    {
+      "name": "Generative AI",
+      "subtopics": [
+        {
+          "title": "text generation",
+          "teaching": "Master text generation within Generative AI for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative text generation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar text generation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "image generation",
+          "teaching": "Master image generation within Generative AI for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative image generation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar image generation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "multimodal systems",
+          "teaching": "Master multimodal systems within Generative AI for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative multimodal systems question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar multimodal systems questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "prompt concepts",
+          "teaching": "Master prompt concepts within Generative AI for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative prompt concepts question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar prompt concepts questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "limitations",
+          "teaching": "Master limitations within Generative AI for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative limitations question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar limitations questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        }
+      ]
+    },
+    {
+      "name": "Robotics & Automation",
+      "subtopics": [
+        {
+          "title": "sensors",
+          "teaching": "Master sensors within Robotics & Automation for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative sensors question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar sensors questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "actuators",
+          "teaching": "Master actuators within Robotics & Automation for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative actuators question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar actuators questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "control",
+          "teaching": "Master control within Robotics & Automation for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative control question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar control questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "autonomous systems",
+          "teaching": "Master autonomous systems within Robotics & Automation for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative autonomous systems question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar autonomous systems questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "real-world automation",
+          "teaching": "Master real-world automation within Robotics & Automation for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative real-world automation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar real-world automation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        }
+      ]
+    },
+    {
+      "name": "Computing Systems",
+      "subtopics": [
+        {
+          "title": "hardware",
+          "teaching": "Master hardware within Computing Systems for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative hardware question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar hardware questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "software",
+          "teaching": "Master software within Computing Systems for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative software question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar software questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "networks",
+          "teaching": "Master networks within Computing Systems for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative networks question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar networks questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "cloud concepts",
+          "teaching": "Master cloud concepts within Computing Systems for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative cloud concepts question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar cloud concepts questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "edge computing",
+          "teaching": "Master edge computing within Computing Systems for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative edge computing question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar edge computing questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        }
+      ]
+    },
+    {
+      "name": "AI Safety & Ethics",
+      "subtopics": [
+        {
+          "title": "bias",
+          "teaching": "Master bias within AI Safety & Ethics for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative bias question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar bias questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "privacy",
+          "teaching": "Master privacy within AI Safety & Ethics for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative privacy question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar privacy questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "fairness",
+          "teaching": "Master fairness within AI Safety & Ethics for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative fairness question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar fairness questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "misinformation",
+          "teaching": "Master misinformation within AI Safety & Ethics for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative misinformation question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar misinformation questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "human oversight",
+          "teaching": "Master human oversight within AI Safety & Ethics for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative human oversight question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar human oversight questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        }
+      ]
+    },
+    {
+      "name": "Emerging Technologies",
+      "subtopics": [
+        {
+          "title": "IoT",
+          "teaching": "Master IoT within Emerging Technologies for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative IoT question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar IoT questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "AR and VR",
+          "teaching": "Master AR and VR within Emerging Technologies for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative AR and VR question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar AR and VR questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "quantum concepts",
+          "teaching": "Master quantum concepts within Emerging Technologies for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative quantum concepts question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar quantum concepts questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "blockchain basics",
+          "teaching": "Master blockchain basics within Emerging Technologies for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative blockchain basics question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar blockchain basics questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "future technologies",
+          "teaching": "Master future technologies within Emerging Technologies for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative future technologies question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar future technologies questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        }
+      ]
+    },
+    {
+      "name": "Applied Technology Reasoning",
+      "subtopics": [
+        {
+          "title": "technology scenarios",
+          "teaching": "Master technology scenarios within Applied Technology Reasoning for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative technology scenarios question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar technology scenarios questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "system design thinking",
+          "teaching": "Master system design thinking within Applied Technology Reasoning for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative system design thinking question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar system design thinking questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "AI problem solving",
+          "teaching": "Master AI problem solving within Applied Technology Reasoning for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative AI problem solving question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar AI problem solving questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "trade-offs",
+          "teaching": "Master trade-offs within Applied Technology Reasoning for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative trade-offs question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar trade-offs questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        },
+        {
+          "title": "case analysis",
+          "teaching": "Master case analysis within Applied Technology Reasoning for AI & Technology Challenge by learning the defining facts and concepts, then applying them through comparison, interpretation, elimination and evidence-based reasoning. Students should distinguish stable knowledge from time-sensitive claims and verify the exact scope of each question.",
+          "worked_example": "Worked example: analyse a representative case analysis question, identify the decisive fact or relationship, eliminate misleading alternatives, and verify the answer against the question wording.",
+          "pitfall": "Common pitfall: choosing a familiar fact that is related to the topic but does not satisfy the precise question, date, location, institution or definition.",
+          "mastery": "Mastery: answer unfamiliar case analysis questions accurately, explain the decisive evidence or concept, reject a plausible distractor, and identify when a fact requires current-source verification."
+        }
+      ]
+    }
+  ]
+}
