@@ -147,8 +147,8 @@ export default function App() {
                 </AdminRoute>
               }
             />
-            <Route path="/admin/payments" element={<AdminPayments />} />
-            <Route path="/admin/courses" element={<AdminCourses />} />
+            <Route path="/admin/payments" element={<AdminRoute><AdminPayments /></AdminRoute>} />
+            <Route path="/admin/courses" element={<AdminRoute><AdminCourses /></AdminRoute>} />
             <Route
               path="/admin/competitions"
               element={
@@ -165,7 +165,7 @@ export default function App() {
                 </AdminRoute>
               }
             />
-            <Route path="/admin/courses/:id" element={<AdminCourseForm />} />
+            <Route path="/admin/courses/:id" element={<AdminRoute><AdminCourseForm /></AdminRoute>} />
             {/* Was already fully built (upload/replace/remove, validation,
                 progress) but had no <Route> at all — the actual root cause
                 of "Course Edit doesn't offer a PDF upload option". See
