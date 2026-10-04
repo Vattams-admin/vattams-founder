@@ -514,7 +514,12 @@ service cloud.firestore {
       // override always goes through the branches below instead).
       allow create: if isAdmin()
         || (isApprovedTutor()
-            && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.tutor_id == request.auth.uid)
+            && attendanceId == request.resource.data.session_id + '_' + request.resource.data.student_id
+            && request.resource.data.source == 'tutor_marked'
+            && request.resource.data.marked_by == request.auth.uid
+            && request.resource.data.status in ['present', 'late', 'partial', 'absent', 'excused']
+            && get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.tutor_id == request.auth.uid
+            && request.resource.data.course_id == get(/databases/$(database)/documents/live_sessions/$(request.resource.data.session_id)).data.course_id)
         || (
           isOwner(request.resource.data.student_id)
           && attendanceId == request.resource.data.session_id + '_' + request.auth.uid
@@ -530,7 +535,13 @@ service cloud.firestore {
       // tutor/admin action.
       allow update: if isAdmin()
         || (isApprovedTutor()
-            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid)
+            && get(/databases/$(database)/documents/live_sessions/$(resource.data.session_id)).data.tutor_id == request.auth.uid
+            && request.resource.data.session_id == resource.data.session_id
+            && request.resource.data.course_id == resource.data.course_id
+            && request.resource.data.student_id == resource.data.student_id
+            && request.resource.data.source == 'tutor_marked'
+            && request.resource.data.marked_by == request.auth.uid
+            && request.resource.data.status in ['present', 'late', 'partial', 'absent', 'excused'])
         || (
           isOwner(resource.data.student_id)
           && resource.data.source == 'self_reported'
