@@ -81,9 +81,9 @@ async function provision() {
     `E2E_STUDENT_A_EMAIL=${studentAEmail}`, `E2E_STUDENT_A_PASSWORD=${password}`,
     `E2E_STUDENT_B_EMAIL=${studentBEmail}`, `E2E_STUDENT_B_PASSWORD=${password}`,
     `E2E_SESSION_ID=${sessionRef.id}`, `E2E_COURSE_ID=${courseId}`,
-  ].join('\\n')
+  ].join('\n')
 
-  if (process.env.GITHUB_ENV) appendFileSync(process.env.GITHUB_ENV, env + '\\n')
+  if (process.env.GITHUB_ENV) appendFileSync(process.env.GITHUB_ENV, env + '\n')
   console.log(`Provisioned production E2E session ${sessionRef.id}`)
   console.log(`E2E accounts: ${tutorEmail}, ${studentAEmail}, ${studentBEmail}`)
 }
