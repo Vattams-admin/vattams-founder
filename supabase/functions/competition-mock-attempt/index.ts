@@ -533,13 +533,22 @@ async function attemptResponse(
   const answers =
     await loadAnswers(attempt.id);
 
+  // During an in-progress attempt, never return scoring metadata to the
+  // student. These rows also contain the answer key/explanation fields
+  // used by the scoring service. Returning them here would disclose the
+  // answers on resume before the student submits each question.
+  const studentAnswers = answers.map((answer) => ({
+    question_id: answer.question_id,
+    answer: answer.answer,
+  }));
+
   return {
     attempt_id: attempt.id,
     course_id: attempt.course_id,
     status: attempt.status,
     started_at: attempt.started_at,
     question_ids: attempt.question_ids || [],
-    answers,
+    answers: studentAnswers,
   };
 }
 
