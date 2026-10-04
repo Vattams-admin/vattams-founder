@@ -24,6 +24,7 @@ const PARTICIPANTS = 'participants'
 const CONNECTIONS = 'connections'
 const STUDENT_ICE = 'student_ice'
 const TUTOR_ICE = 'tutor_ice'
+const PRESENCE_STALE_MS = 45_000
 
 function roomRef(sessionId: string) {
   return doc(firestore, ROOMS, sessionId)
@@ -402,8 +403,13 @@ export function subscribeToLiveRoomParticipants(
   return onSnapshot(
     collection(roomRef(sessionId), PARTICIPANTS),
     (snapshot) => {
+      const now = Date.now()
       const participants = snapshot.docs
         .map((item) => toParticipant(item.id, item.data()))
+        .filter((participant) => {
+          const lastSeen = Date.parse(participant.last_seen_at)
+          return !Number.isFinite(lastSeen) || now - lastSeen <= PRESENCE_STALE_MS
+        })
         .sort((a, b) => {
           if (a.role !== b.role) return a.role === 'tutor' ? -1 : 1
           return a.display_name?.localeCompare(b.display_name ?? '') ?? 0
