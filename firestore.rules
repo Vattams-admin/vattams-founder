@@ -427,15 +427,35 @@ service cloud.firestore {
     // now so the client fix is actually reachable.
     // ------------------------------------------------------------------
     match /enrolments/{enrolmentId} {
-      // Doc id convention: `${student_id}_${course_id}` (see
-      // AdminPayments.tsx / hasActiveEnrolment() above). A student may
-      // read only their own; nothing about enrolment status/course
-      // assignment is student-writable — that's exclusively the
-      // admin-verified payment approval flow.
+      // Enrolments are access-control records. Every newly-created active
+      // record must be bound to the exact payment that authorized access.
       allow read: if isAdmin() || isOwner(resource.data.student_id);
-      allow create, update, delete: if isAdmin();
-    }
 
+      allow create: if isAdmin()
+        && enrolmentId == request.resource.data.student_id + '_' + request.resource.data.course_id
+        && request.resource.data.status == 'active'
+        && request.resource.data.payment_id is string
+        && exists(/databases/$(database)/documents/payments/$(request.resource.data.payment_id))
+        && get(/databases/$(database)/documents/payments/$(request.resource.data.payment_id)).data.status == 'approved'
+        && get(/databases/$(database)/documents/payments/$(request.resource.data.payment_id)).data.student_id == request.resource.data.student_id
+        && get(/databases/$(database)/documents/payments/$(request.resource.data.payment_id)).data.course_id == request.resource.data.course_id;
+
+      // Identity and payment provenance are immutable. Access can only move
+      // from active to revoked; a revoked record cannot be reactivated.
+      allow update: if isAdmin()
+        && request.resource.data.student_id == resource.data.student_id
+        && request.resource.data.course_id == resource.data.course_id
+        && request.resource.data.payment_id == resource.data.payment_id
+        && request.resource.data.status in ['active', 'revoked']
+        && !(resource.data.status == 'revoked' && request.resource.data.status == 'active')
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly([
+          'course_name', 'course_slug', 'pricing_mode', 'billing_period',
+          'batch_number', 'status', 'enrolled_at', 'created_at'
+        ]);
+
+      // Never delete authorization records; revocation preserves the audit trail.
+      allow delete: if false;
+    }
     match /course_modules/{moduleId} {
       allow read: if isAdmin() || hasActiveEnrolment(resource.data.course_id);
       allow create, update, delete: if isAdmin();
