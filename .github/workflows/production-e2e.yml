@@ -2,13 +2,26 @@ name: Production E2E
 
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Deploy Cloudflare"]
-    types: [completed]
+  push:
+    branches:
+      - main
+    paths:
+      - "e2e/**"
+      - "playwright.config.ts"
+      - "package.json"
+      - "package-lock.json"
+      - "src/pages/CompetitionParticipant.tsx"
+      - "src/pages/live/LiveClassroom.tsx"
+      - "src/hooks/useLiveWebRTC.ts"
+      - "src/lib/liveRoom.ts"
+      - "src/components/competition/**"
+      - "src/components/materials/**"
+      - "supabase/functions/competition-official-*/**"
+      - "supabase/functions/competition-mock-*/**"
+      - ".github/workflows/production-e2e.yml"
 
 jobs:
   production-e2e:
-    if: ${{ github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main') }}
     runs-on: ubuntu-latest
 
     steps:
@@ -26,6 +39,9 @@ jobs:
 
       - name: Install Playwright Chromium
         run: npx playwright install --with-deps chromium
+
+      - name: Wait for Cloudflare deployment to settle
+        run: sleep 240
 
       - name: Cleanup previous failed E2E provisioning
         env:
