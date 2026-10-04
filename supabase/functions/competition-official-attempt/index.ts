@@ -9,6 +9,7 @@ const SUPABASE_SERVICE_ROLE_KEY = SUPABASE_SECRET_KEYS["default"] || "";
 
 const COURSE_ID = "DNWt3cPE4ZSJG90CTC1e";
 const COMPETITION = "Thirukkural Mastery Championship";
+const REGISTRY_BUNDLE = "competitions/registry.json";
 const PER_ATTEMPT = 30;
 // Access sync runs every 30 minutes; keep the authorization cache bounded to 1 hour so revocations cannot remain effective for half a day.
 const CACHE_TTL_HOURS = 1;
