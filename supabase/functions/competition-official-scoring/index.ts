@@ -13,6 +13,7 @@ const SUPABASE_SERVICE_ROLE_KEY =
   SUPABASE_SECRET_KEYS["default"] || "";
 const BUCKET = "academia-course-materials";
 const COURSE_ID = "DNWt3cPE4ZSJG90CTC1e";
+const REGISTRY_BUNDLE = "competitions/registry.json";
 const QUESTION_BUNDLE =
   "competitions/thirukkural/objective/questions.private.json";
 const ANSWER_BUNDLE =
@@ -55,6 +56,13 @@ async function uid(request: Request) {
   return payload.sub;
 }
 
+async function competitionEnabled() {
+  const { data, error } = await supabase.storage.from(BUCKET).download(REGISTRY_BUNDLE);
+  if (error || !data) throw new Error("Competition registry is unavailable.");
+  const registry = JSON.parse(await data.text());
+  return registry?.competitions?.[COURSE_ID]?.enabled === true;
+}
+
 async function loadQuestions() {
   const { data, error } = await supabase.storage.from(BUCKET).download(QUESTION_BUNDLE);
   if (error || !data) throw new Error("Official question bundle is unavailable.");
@@ -79,6 +87,7 @@ Deno.serve(async (request) => {
   if (request.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
   try {
     const studentId = await uid(request);
+    if (!(await competitionEnabled())) return json({ error: "Competition is not enabled." }, 409);
     const body = await request.json();
     const attemptId = typeof body?.attempt_id === "string" ? body.attempt_id.trim() : "";
     const submitted = Array.isArray(body?.answers) ? body.answers : [];
