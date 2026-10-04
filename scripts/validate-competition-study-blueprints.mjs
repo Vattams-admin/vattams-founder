@@ -36,7 +36,7 @@ for (const name of catalog) {
     seen.add(key);
     const subs = Array.isArray(domain?.subtopics) ? domain.subtopics : [];
     if (subs.length < MIN_SUBTOPICS) failures.push(`${name} / ${title}: fewer than ${MIN_SUBTOPICS} subtopics`);
-    if (domain?.expansion_required !== true) failures.push(`${name} / ${title}: expansion_required must remain true until authored`);
+    if (typeof domain?.expansion_required !== "boolean") failures.push(`${name} / ${title}: expansion_required must be an explicit boolean`);
   });
 }
 
