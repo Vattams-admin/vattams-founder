@@ -55,11 +55,13 @@ type CompetitionRegistry = {
   competitions: Record<string, CompetitionRegistryEntry>;
 };
 
-type AgePoolQuestion = {
-  id?: string;
-  question_id?: string;
-  [key: string]: unknown;
-};
+type AgePoolQuestion =
+  | string
+  | {
+      id?: string;
+      question_id?: string;
+      [key: string]: unknown;
+    };
 
 type AgePools = Record<
   string,
@@ -282,11 +284,24 @@ const BLUEPRINT: Record<
 function getQuestionId(
   question: AgePoolQuestion,
 ): string {
+  // The generated Thirukkural age-pools.json stores question IDs
+  // directly as strings. Keep compatibility with object-form pools
+  // so older bundles cannot break the Mock Test runtime.
+  if (typeof question === "string") {
+    const id = question.trim();
+
+    if (!id) {
+      throw new Error("Age pool contains question without ID");
+    }
+
+    return id;
+  }
+
   const id =
     typeof question.id === "string"
-      ? question.id
+      ? question.id.trim()
       : typeof question.question_id === "string"
-        ? question.question_id
+        ? question.question_id.trim()
         : "";
 
   if (!id) {
