@@ -378,9 +378,6 @@ export function useLiveWebRTC({
             (remoteStreamsRef.current.get(remoteUserId)?.getVideoTracks().length ?? 0) > 0,
         })
 
-        const hasRemoteMedia =
-          (remoteStreamsRef.current.get(remoteUserId)?.getAudioTracks().length ?? 0) > 0 &&
-          (remoteStreamsRef.current.get(remoteUserId)?.getVideoTracks().length ?? 0) > 0
         const hasAnyRemoteMedia = Array.from(remoteStreamsRef.current.values()).some(
           (stream) =>
             stream.getAudioTracks().length > 0 &&
