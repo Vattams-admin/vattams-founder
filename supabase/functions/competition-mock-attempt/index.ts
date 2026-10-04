@@ -20,7 +20,8 @@ const SUPABASE_SERVICE_ROLE_KEY =
   SUPABASE_SECRET_KEYS["default"] || "";
 
 const SUPABASE_BUCKET = "academia-course-materials";
-const CACHE_TTL_HOURS = 12;
+// Access sync runs every 30 minutes; keep the authorization cache bounded to 1 hour so revocations cannot remain effective for half a day.
+const CACHE_TTL_HOURS = 1;
 
 const supabase = createClient(
   SUPABASE_URL,
