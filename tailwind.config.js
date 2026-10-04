@@ -1,40 +1,41 @@
 /** @type {import('tailwindcss').Config} */
-// Design tokens for VATTAMS ACADEMIA.
-// Palette pulled from the brand crest (deep navy + gold, on parchment) —
-// not a generic AI-default palette. Serif display carries the "academy"
-// authority; Inter carries body/data legibility.
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        ink: '#0B1730',       // primary background, near-black navy
+        ink: '#050B17',
         navy: {
-          DEFAULT: '#122A4E',
-          light: '#1C3A66',
-          dark: '#081120'
+          DEFAULT: '#0B1426',
+          light: '#13233C',
+          dark: '#07111F'
+        },
+        azure: {
+          DEFAULT: '#3B82F6',
+          bright: '#67E8F9',
+          dark: '#1D4ED8'
         },
         gold: {
           DEFAULT: '#C9A24B',
           bright: '#E8C877',
           muted: '#8A6F32'
         },
-        parchment: '#F6F2E7',  // primary text on dark surfaces
+        parchment: '#F4F7FC',
         slate: {
-          muted: '#93A1B8'
+          muted: '#9AA9BF'
         },
-        success: '#3F8F6F',
-        danger: '#B5544A'
+        success: '#34D399',
+        danger: '#FB7185'
       },
       fontFamily: {
-        display: ['"Fraunces"', 'ui-serif', 'Georgia', 'serif'],
-        body: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        display: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
       },
       borderRadius: {
-        card: '0.375rem'
+        card: '0.875rem'
       },
       boxShadow: {
-        crest: '0 1px 0 0 rgba(201,162,75,0.35)'
+        glow: '0 20px 65px rgba(37,99,235,.16), 0 0 32px rgba(34,211,238,.06)'
       }
     }
   },
