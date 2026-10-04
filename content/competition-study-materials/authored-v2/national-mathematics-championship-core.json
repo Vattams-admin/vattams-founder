@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "National Mathematics Championship",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_in_progress",
+  "status": "subject_specific_authoring_v1_complete",
   "age_bands": [
     "foundation",
     "developing",
@@ -180,38 +180,38 @@
       "subtopics": [
         {
           "title": "counting principles",
-          "teaching": "Master counting principles within Combinatorics for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative counting principles challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar counting principles problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Combinatorics begins by deciding whether choices are independent, sequential, grouped or overlapping. The multiplication principle counts successive choices, while the addition principle combines mutually exclusive cases.",
+          "worked_example": "If a meal has 3 starters and 4 main courses and one of each is chosen, there are 3×4=12 possible meals.",
+          "pitfall": "Multiplying counts that are not independent or adding cases that overlap can double-count outcomes.",
+          "mastery": "Choose and justify an addition or multiplication structure before calculating a total."
         },
         {
           "title": "arrangements",
-          "teaching": "Master arrangements within Combinatorics for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative arrangements challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar arrangements problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Arrangements count ordered outcomes. Permutations are appropriate when position matters, while repeated or restricted elements require additional care.",
+          "worked_example": "Three distinct books can be arranged on a shelf in 3!=6 orders.",
+          "pitfall": "Treating an ordered arrangement as an unordered selection loses positional information.",
+          "mastery": "Determine whether order matters and count arrangements with repeated or restricted positions correctly."
         },
         {
           "title": "selections",
-          "teaching": "Master selections within Combinatorics for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative selections challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar selections problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Selections count groups where order does not matter. Binomial coefficients provide a systematic method for choosing a fixed number from a larger set.",
+          "worked_example": "Choosing 2 students from 5 gives C(5,2)=10 groups because the pair {A,B} is the same selection as {B,A}.",
+          "pitfall": "Counting the same group in different orders creates duplicates.",
+          "mastery": "Distinguish combinations from permutations and solve selection problems with stated restrictions."
         },
         {
           "title": "casework",
-          "teaching": "Master casework within Combinatorics for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative casework challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar casework problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Casework partitions a problem into distinct, exhaustive cases and solves each case without overlap. Good casework reduces complexity rather than multiplying possibilities blindly.",
+          "worked_example": "A digit problem can be split into cases based on whether the first digit is zero, even or odd, provided the cases are mutually exclusive and cover every allowed outcome.",
+          "pitfall": "Missing a case or allowing two cases to overlap causes an incorrect total.",
+          "mastery": "Design a complete, non-overlapping case split and combine the results accurately."
         },
         {
           "title": "inclusion exclusion basics",
-          "teaching": "Master inclusion exclusion basics within Combinatorics for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative inclusion exclusion basics challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar inclusion exclusion basics problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Inclusion-exclusion corrects double counting when sets overlap. For two sets, the size of their union equals the sum of their sizes minus the intersection.",
+          "worked_example": "If 18 students like chess, 12 like coding and 5 like both, then 25 like at least one: 18+12−5.",
+          "pitfall": "Adding set sizes without subtracting the overlap counts shared members twice.",
+          "mastery": "Identify overlaps and apply inclusion-exclusion to small multi-set counting problems."
         }
       ]
     },
@@ -220,38 +220,38 @@
       "subtopics": [
         {
           "title": "arithmetic sequences",
-          "teaching": "Master arithmetic sequences within Sequences & Patterns for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative arithmetic sequences challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar arithmetic sequences problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "An arithmetic sequence has a constant common difference. Its nth term is a+(n−1)d and its partial sum can be found from the first and last terms.",
+          "worked_example": "For 7, 11, 15, 19,... the common difference is 4, so the 10th term is 7+9×4=43.",
+          "pitfall": "Using the first term as though it were the zeroth term shifts the index and produces an off-by-one error.",
+          "mastery": "Find terms and sums of arithmetic sequences and translate between recursive and explicit descriptions."
         },
         {
           "title": "geometric sequences",
-          "teaching": "Master geometric sequences within Sequences & Patterns for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative geometric sequences challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar geometric sequences problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "A geometric sequence has a constant common ratio. Its nth term scales multiplicatively rather than by a fixed difference.",
+          "worked_example": "For 3, 6, 12, 24,... the ratio is 2 and the 6th term is 3×2^5=96.",
+          "pitfall": "A constant difference does not imply a geometric sequence, and the ratio must be defined where division is valid.",
+          "mastery": "Identify common ratios and calculate terms or finite sums of geometric sequences."
         },
         {
           "title": "recurrences",
-          "teaching": "Master recurrences within Sequences & Patterns for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative recurrences challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar recurrences problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "A recurrence defines terms from earlier terms. Solving or analyzing it requires tracking the initial conditions as well as the update rule.",
+          "worked_example": "The Fibonacci sequence uses a_n=a_(n−1)+a_(n−2) with initial terms 0 and 1; both the recurrence and starting values are necessary.",
+          "pitfall": "A recurrence without initial conditions may not determine a unique sequence.",
+          "mastery": "Generate terms accurately and reason from a recurrence while preserving its initial conditions."
         },
         {
           "title": "visual patterns",
-          "teaching": "Master visual patterns within Sequences & Patterns for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative visual patterns challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar visual patterns problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Visual patterns encode numerical relationships through shapes, grids, tiles or growing arrangements. Translating the visual structure into a count often reveals a sequence or formula.",
+          "worked_example": "A row of joined squares may use one new edge-sharing square at each step, allowing the number of tiles or exposed sides to be expressed as a function of the step number.",
+          "pitfall": "Guessing from the first few drawings without identifying what changes between stages can lead to the wrong rule.",
+          "mastery": "Translate a visual growth rule into a numerical sequence or formula and justify the pattern."
         },
         {
           "title": "pattern proofs",
-          "teaching": "Master pattern proofs within Sequences & Patterns for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative pattern proofs challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar pattern proofs problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "A pattern becomes mathematically reliable when the rule is justified rather than merely observed. Induction, algebraic derivation or structural reasoning can provide that justification.",
+          "worked_example": "To justify 1+3+5+...+(2n−1)=n², one can show the next odd number converts n² into (n+1)².",
+          "pitfall": "Checking many examples provides evidence but does not by itself prove a statement for every allowed n.",
+          "mastery": "Distinguish observation from proof and justify a general pattern using an appropriate method."
         }
       ]
     },
@@ -260,38 +260,38 @@
       "subtopics": [
         {
           "title": "sample spaces",
-          "teaching": "Master sample spaces within Probability & Data for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative sample spaces challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar sample spaces problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "A sample space lists or characterizes all possible outcomes of a random experiment. Correct probability calculations depend on defining the relevant outcomes and their weights.",
+          "worked_example": "For one fair coin and one fair die, the sample space has 2×6=12 equally likely elementary outcomes.",
+          "pitfall": "Ignoring an outcome or treating unequal outcomes as equally likely can distort the probability.",
+          "mastery": "Define a complete sample space and determine whether its outcomes are equally likely before calculating."
         },
         {
           "title": "probability rules",
-          "teaching": "Master probability rules within Probability & Data for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative probability rules challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar probability rules problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Probability values lie between 0 and 1. Complement, addition and multiplication rules allow compound events to be calculated when their relationships are understood.",
+          "worked_example": "For any event A, P(not A)=1−P(A). If two events are mutually exclusive, P(A or B)=P(A)+P(B).",
+          "pitfall": "Using the multiplication rule merely because two events occur in the same question ignores whether they are independent or conditional.",
+          "mastery": "Select the correct probability rule based on event relationships and justify its use."
         },
         {
           "title": "expected outcomes",
-          "teaching": "Master expected outcomes within Probability & Data for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative expected outcomes challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar expected outcomes problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Expected value is the probability-weighted average of possible numerical outcomes. It describes long-run average behaviour, not a guaranteed result of one trial.",
+          "worked_example": "For a fair six-sided die, the expected roll is (1+2+3+4+5+6)/6=3.5 even though 3.5 cannot appear on one roll.",
+          "pitfall": "Expected value should not be interpreted as the outcome that must occur or even the most likely single outcome.",
+          "mastery": "Calculate and interpret expected values as long-run averages and distinguish them from actual outcomes."
         },
         {
           "title": "data analysis",
-          "teaching": "Master data analysis within Probability & Data for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative data analysis challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar data analysis problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Data analysis involves organizing, summarizing and interpreting numerical information using measures such as mean, median, range and appropriate charts.",
+          "worked_example": "For 2, 3, 3, 8, 14, the median is 3 while the mean is 6, illustrating how an extreme value can pull the mean upward.",
+          "pitfall": "Averages can hide spread or skew, and a chart can mislead if its scale is distorted.",
+          "mastery": "Choose appropriate summaries and interpret center, spread and outliers rather than relying on one statistic."
         },
         {
           "title": "conditional reasoning",
-          "teaching": "Master conditional reasoning within Probability & Data for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative conditional reasoning challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar conditional reasoning problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Conditional probability measures the chance of an event given that another event is known to have occurred. The new information can change the relevant sample space.",
+          "worked_example": "If a card is known to be a face card, the probability it is a king is 4/12=1/3 because only the 12 face cards remain relevant.",
+          "pitfall": "Using the original sample space after receiving new information ignores the condition.",
+          "mastery": "Update the sample space or use P(A|B)=P(A and B)/P(B) to solve conditional problems."
         }
       ]
     },
@@ -300,38 +300,38 @@
       "subtopics": [
         {
           "title": "invariants",
-          "teaching": "Master invariants within Olympiad Problem Solving for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative invariants challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar invariants problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "An invariant is a quantity or property that remains unchanged under every allowed move of a process. It can prove that a target state is impossible even when many moves are possible.",
+          "worked_example": "If an operation always changes a number by an even amount, its parity remains invariant, so an odd starting value can never become even.",
+          "pitfall": "A quantity that changes during a move is not an invariant merely because it often looks similar.",
+          "mastery": "Identify a property preserved by every legal operation and use it to constrain reachable states."
         },
         {
           "title": "extremal reasoning",
-          "teaching": "Master extremal reasoning within Olympiad Problem Solving for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative extremal reasoning challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar extremal reasoning problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Extremal reasoning focuses on a largest, smallest, earliest or otherwise extreme object because its properties can force constraints on the rest of a configuration.",
+          "worked_example": "In a finite set of integers, choosing the smallest counterexample can allow a proof to show that a still smaller counterexample must exist, producing a contradiction.",
+          "pitfall": "Selecting an arbitrary example instead of a genuinely extreme one removes the key logical leverage.",
+          "mastery": "Identify a useful extremal object and derive a contradiction or structural conclusion from its extremal property."
         },
         {
           "title": "working backwards",
-          "teaching": "Master working backwards within Olympiad Problem Solving for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative working backwards challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar working backwards problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Working backwards starts from the required final condition and reverses valid operations to recover possible starting states or necessary intermediate states.",
+          "worked_example": "If a number is doubled and then 5 is added to obtain 23, reverse the operations: 23−5=18 and 18÷2=9.",
+          "pitfall": "Reversing operations in the wrong order or ignoring non-reversible steps can create false solutions.",
+          "mastery": "Reverse a sequence of operations carefully and verify the recovered starting state by running the original process forward."
         },
         {
           "title": "construction",
-          "teaching": "Master construction within Olympiad Problem Solving for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative construction challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar construction problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Constructive problems ask for an explicit object satisfying given conditions rather than only proving that one exists. A successful construction must be checked against every constraint.",
+          "worked_example": "To show that a required arrangement exists, build a specific arrangement and verify each adjacency or counting condition.",
+          "pitfall": "Producing an example that satisfies most but not all constraints is not a valid construction.",
+          "mastery": "Build explicit examples systematically and verify every required condition."
         },
         {
           "title": "multi-step proofs",
-          "teaching": "Master multi-step proofs within Olympiad Problem Solving for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative multi-step proofs challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar multi-step proofs problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Competition proofs often combine definitions, lemmas, algebraic transformations and contradiction or induction. Each step must follow from established facts.",
+          "worked_example": "A geometry proof might first establish two triangles are similar, then use corresponding ratios to derive the requested length.",
+          "pitfall": "Skipping the justification for a crucial intermediate claim can make a proof appear plausible while leaving a logical gap.",
+          "mastery": "Organize a multi-step proof into justified claims and ensure the conclusion follows from the chain of evidence."
         }
       ]
     },
@@ -340,38 +340,38 @@
       "subtopics": [
         {
           "title": "estimation",
-          "teaching": "Master estimation within Competition Strategy for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative estimation challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar estimation problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Estimation provides a fast reasonableness check and can sometimes eliminate answer choices before exact calculation. It relies on controlled rounding and scale awareness.",
+          "worked_example": "To estimate 49.8×20.2, round to about 50×20=1000 before checking an exact result.",
+          "pitfall": "Rounding in inconsistent directions or too aggressively can produce an estimate that is not useful.",
+          "mastery": "Choose sensible approximations, estimate the scale of an answer and use the estimate to detect implausible results."
         },
         {
           "title": "time allocation",
-          "teaching": "Master time allocation within Competition Strategy for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative time allocation challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar time allocation problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Competition time management means allocating effort according to question difficulty, scoring value and remaining time rather than spending too long on one obstacle.",
+          "worked_example": "If a paper contains easy, medium and difficult questions, securing the easy marks first can leave more time for high-value problems later.",
+          "pitfall": "Spending most of the available time on the first difficult question can reduce the total score even if that question is eventually solved.",
+          "mastery": "Use a deliberate first pass, mark uncertain problems and redistribute time based on progress."
         },
         {
           "title": "answer verification",
-          "teaching": "Master answer verification within Competition Strategy for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative answer verification challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar answer verification problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Verification checks whether a solution satisfies the original conditions and whether arithmetic, units, signs and logical assumptions are consistent.",
+          "worked_example": "After solving x=5, substitute it into the original equation rather than checking only the transformed equation.",
+          "pitfall": "A calculation can be internally consistent yet answer a different question because of an incorrect interpretation.",
+          "mastery": "Substitute, estimate, inspect units and reread the original condition before finalizing an answer."
         },
         {
           "title": "error analysis",
-          "teaching": "Master error analysis within Competition Strategy for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative error analysis challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar error analysis problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Error analysis identifies where a solution first diverged from valid reasoning and distinguishes conceptual mistakes from arithmetic or transcription errors.",
+          "worked_example": "If a student applies the correct formula but substitutes the wrong value, the repair is different from choosing an invalid theorem in the first place.",
+          "pitfall": "Fixing only the final number without locating the first invalid step can leave the underlying misconception unchanged.",
+          "mastery": "Locate the first incorrect step, classify the error and state the correct reasoning that replaces it."
         },
         {
           "title": "mixed championship sets",
-          "teaching": "Master mixed championship sets within Competition Strategy for National Mathematics Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative mixed championship sets challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar mixed championship sets problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Mixed sets require switching among number theory, algebra, geometry, combinatorics, probability and proof without being told the topic in advance. The key skill is rapid problem classification.",
+          "worked_example": "A mixed paper may place a modular arithmetic problem beside a geometry proof; first identify the governing structure before selecting a method.",
+          "pitfall": "Continuing with the method used on the previous question can bias the solver toward the wrong mathematical tool.",
+          "mastery": "Classify unfamiliar problems quickly, select an appropriate strategy, solve rigorously and verify the result."
         }
       ]
     }
