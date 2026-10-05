@@ -145,6 +145,17 @@ test.describe('production live classroom', () => {
     const studentA = await studentAContext.newPage()
     const studentB = await studentBContext.newPage()
 
+    for (const [label, page] of [['tutor', tutor], ['studentA', studentA], ['studentB', studentB]] as const) {
+      page.on('console', (message) => {
+        if (message.type() === 'error' || message.text().includes('[liveWebRTC]')) {
+          console.log(`[browser:${label}:${message.type()}] ${message.text()}`)
+        }
+      })
+      page.on('pageerror', (error) => {
+        console.log(`[browser:${label}:pageerror] ${error.message}`)
+      })
+    }
+
     try {
       await login(tutor, accounts.tutor.email, accounts.tutor.password)
 
