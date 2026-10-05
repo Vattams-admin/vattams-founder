@@ -22,7 +22,7 @@ function requireText(label, source, pattern) {
   if (!source.includes(pattern)) failures.push(label)
 }
 
-requireText('homepage title', index, '<title>VATTAMS ACADEMIA — Courses, Exams &amp; Competitions</title>')
+requireText('homepage title', index, '<title>VATTAMS ACADEMIA — Courses, Exams & Competitions</title>')
 requireText('homepage description', index, 'name="description"')
 requireText('homepage canonical', index, 'href="https://academia.vattams.net/"')
 requireText('homepage robots', index, 'name="robots" content="index, follow"')
@@ -34,7 +34,6 @@ requireText('robots admin', robots, 'Disallow: /admin')
 requireText('competitive exam route', app, 'path="/competitive-exams"')
 requireText('SEO canonical normalization', seo, 'replace(/\\/+$/, \'\')')
 requireText('sitemap competitive exams', generator, "{ path: '/competitive-exams'")
-requireText('sitemap excludes registrations', generator, "{ path: '/student/register'")
 requireText('sitemap includes published competitions', generator, 'course.slug')
 
 if (/<loc>https:\/\/academia\.vattams\.net\/(login|dashboard|pay\/|admin|learn\/|student\/register|tutor\/register)/.test(sitemap)) {
