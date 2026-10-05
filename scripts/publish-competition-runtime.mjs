@@ -89,15 +89,33 @@ for (const entry of entries) {
     throw new Error(`${entry.slug}: runtime banks are below production minimum`);
   }
 
+  // Official questions may intentionally overlap the reviewed public bank.
+  // Merge by question_id while rejecting conflicting definitions.
   const questions = {};
   for (const q of [...publicBank, ...officialBank]) {
-    if (!q?.question_id || questions[q.question_id]) throw new Error(`${entry.slug}: duplicate question_id ${q?.question_id || ""}`);
-    questions[q.question_id] = cleanQuestion(q, entry.course_id, entry.competition);
+    if (!q?.question_id) throw new Error(`${entry.slug}: question missing question_id`);
+    const cleaned = cleanQuestion(q, entry.course_id, entry.competition);
+    const existing = questions[q.question_id];
+    if (existing) {
+      if (JSON.stringify(existing) !== JSON.stringify(cleaned)) {
+        throw new Error(`${entry.slug}: conflicting question_id ${q.question_id} between runtime sources`);
+      }
+      continue;
+    }
+    questions[q.question_id] = cleaned;
   }
   const keys = {};
   for (const q of [...privateBank, ...officialBank]) {
-    if (!q?.question_id || keys[q.question_id]) throw new Error(`${entry.slug}: duplicate answer key ${q?.question_id || ""}`);
-    keys[q.question_id] = cleanKey(q);
+    if (!q?.question_id) throw new Error(`${entry.slug}: answer key missing question_id`);
+    const cleaned = cleanKey(q);
+    const existing = keys[q.question_id];
+    if (existing) {
+      if (JSON.stringify(existing) !== JSON.stringify(cleaned)) {
+        throw new Error(`${entry.slug}: conflicting answer key ${q.question_id} between runtime sources`);
+      }
+      continue;
+    }
+    keys[q.question_id] = cleaned;
   }
 
   const requiredBands = ["up_to_8", "age_9_12", "age_13_15", "age_16_plus"];
