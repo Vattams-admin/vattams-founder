@@ -67,60 +67,93 @@ type CompetitionConfig = {
   competition: string
   course_id: string
   age_pools_path: string
-  blueprints: Record<
-    AgeBand,
-    readonly [string, number][]
-  >
+  blueprints: Record<AgeBand, readonly [string, number][]>
 }
 
-/*
- * Only competitions that currently have a validated
- * age-pool configuration are enabled here.
- *
- * Do not add a competition merely because it has
- * 30 legacy Firestore questions. It must first have
- * a proper four-band objective question pool.
- */
-const COMPETITION_CONFIGS: Record<
-  string,
-  CompetitionConfig
-> = {
-  'DNWt3cPE4ZSJG90CTC1e': {
-    competition: 'Thirukkural Mastery Championship',
-    course_id: 'DNWt3cPE4ZSJG90CTC1e',
-    age_pools_path:
-      'competitions/thirukkural/objective/age-pools.json',
-    blueprints: {
-      up_to_8: [
-        ['Complete second line', 15],
-        ['Identify Paal', 15],
-      ],
-      age_9_12: [
-        ['Complete second line', 5],
-        ['Identify Paal', 5],
-        ['Complete Kural', 8],
-        ['Identify Adhigaram', 3],
-        ['Identify Iyal', 3],
-        ['Chapter range', 6],
-      ],
-      age_13_15: [
-        ['Complete Kural', 5],
-        ['Identify Adhigaram', 5],
-        ['Identify Iyal', 4],
-        ['Chapter range', 2],
-        ['Source meaning identification', 7],
-        ['Identify source meaning', 7],
-      ],
-      age_16_plus: [
-        ['Complete Kural', 3],
-        ['Identify Adhigaram', 4],
-        ['Identify Iyal', 3],
-        ['Chapter range', 2],
-        ['Source meaning identification', 9],
-        ['Identify source meaning', 9],
-      ],
-    },
-  },
+type Registry = {
+  version: number
+  competitions: Record<string, {
+    course_id: string
+    competition: string
+    slug: string
+    age_pools: string
+    selection_blueprint?: Record<AgeBand, readonly [string, number][]>
+    per_attempt?: number
+    enabled?: boolean
+  }>
+}
+
+async function loadRegistry(): Promise<Registry> {
+  const { data, error } = await supabase.storage
+    .from(BUCKET)
+    .download('competitions/registry.json')
+
+  if (error) {
+    console.error('Competition registry download error:', error.message)
+    throw new Error('Unable to load competition runtime registry')
+  }
+
+  const registry = JSON.parse(await data.text()) as Registry
+  if (!registry?.competitions || typeof registry.competitions !== 'object') {
+    throw new Error('Competition runtime registry is invalid')
+  }
+  return registry
+}
+
+function normalizeBlueprint(
+  value: unknown,
+  competition: string,
+): Record<AgeBand, readonly [string, number][]> {
+  if (!value || typeof value !== 'object') {
+    throw new Error(`Missing selection blueprint for ${competition}`)
+  }
+
+  const blueprint = value as Record<string, unknown>
+  const bands: AgeBand[] = ['up_to_8', 'age_9_12', 'age_13_15', 'age_16_plus']
+  const result = {} as Record<AgeBand, readonly [string, number][]>
+
+  for (const band of bands) {
+    const entries = blueprint[band]
+    if (!Array.isArray(entries) || entries.length === 0) {
+      throw new Error(`Missing selection blueprint for ${competition}/${band}`)
+    }
+
+    const normalized = entries.map((pair) => {
+      if (!Array.isArray(pair) || pair.length !== 2 || typeof pair[0] !== 'string') {
+        throw new Error(`Invalid selection blueprint for ${competition}/${band}`)
+      }
+      const count = Number(pair[1])
+      if (!Number.isInteger(count) || count <= 0) {
+        throw new Error(`Invalid selection count for ${competition}/${band}`)
+      }
+      return [pair[0], count] as [string, number]
+    })
+
+    if (normalized.reduce((sum, pair) => sum + pair[1], 0) !== 30) {
+      throw new Error(`Selection blueprint for ${competition}/${band} must total 30`)
+    }
+
+    result[band] = normalized
+  }
+
+  return result
+}
+
+async function loadCompetitionConfig(courseId: string): Promise<CompetitionConfig | null> {
+  const registry = await loadRegistry()
+  const entry = registry.competitions[courseId]
+
+  if (!entry || entry.enabled !== true) return null
+  if (entry.course_id !== courseId) throw new Error(`Registry course_id mismatch for ${courseId}`)
+  if (!entry.age_pools) throw new Error(`Missing age_pools for ${entry.competition}`)
+  if ((entry.per_attempt ?? 30) !== 30) throw new Error(`Invalid per_attempt for ${entry.competition}`)
+
+  return {
+    competition: entry.competition,
+    course_id: entry.course_id,
+    age_pools_path: entry.age_pools,
+    blueprints: normalizeBlueprint(entry.selection_blueprint, entry.competition),
+  }
 }
 
 function json(data: unknown, status = 200) {
