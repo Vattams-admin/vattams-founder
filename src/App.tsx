@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import { useSeo } from '@/hooks/useSeo'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Home from '@/pages/Home'
@@ -62,6 +63,32 @@ const TutorLiveSessions = lazy(() => import('@/pages/tutor/TutorLiveSessions'))
 const AdminLiveSessions = lazy(() => import('@/pages/admin/AdminLiveSessions'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 
+function PrivateRouteSeoGuard() {
+  const { pathname } = useLocation()
+  const privateRoute =
+    pathname === '/login' ||
+    pathname === '/register' ||
+    pathname.startsWith('/student/') ||
+    pathname.startsWith('/tutor/') ||
+    pathname.startsWith('/admin') ||
+    pathname.startsWith('/dashboard') ||
+    pathname.startsWith('/learn/') ||
+    pathname.startsWith('/pay/') ||
+    pathname.startsWith('/competition/') ||
+    pathname.startsWith('/notifications') ||
+    pathname.startsWith('/live-session/') ||
+    pathname.startsWith('/live-classroom/')
+
+  useSeo({
+    title: 'VATTAMS ACADEMIA',
+    description: 'Private VATTAMS ACADEMIA application area.',
+    path: pathname,
+    noindex: privateRoute,
+  })
+
+  return null
+}
+
 function PageFallback() {
   return (
     <div className="flex min-h-[50vh] items-center justify-center">
@@ -75,6 +102,7 @@ export default function App() {
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <main className="flex-1">
+        <PrivateRouteSeoGuard />
         <Suspense fallback={<PageFallback />}>
           <Routes>
             <Route path="/" element={<Home />} />
