@@ -41,6 +41,12 @@ jobs:
           for slug in mathematics-challenge science-challenge english-challenge computer-challenge gk-challenge reasoning-challenge india-gk-championship national-quiz-championship ai-technology-challenge international-knowledge-challenge national-mathematics-championship national-science-championship national-english-championship national-aptitude-championship national-coding-challenge national-ai-challenge mega-inter-school-championship indian-classical-literature-wisdom-championship indian-language-literature-masters-series thirukkural fun-with-maths-challenge azhagu-tamil-challenge handwriting-excellence-challenge spoken-hindi-challenge; do
             node scripts/validate-competition-mcq-bank.mjs --slug "$slug"
           done
+      - name: Publish validated runtime packages to Supabase Storage
+        env:
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/publish-competition-runtime.mjs
+
       - name: Commit prepared sources and generated registry
         run: |
           git config user.name "github-actions[bot]"
