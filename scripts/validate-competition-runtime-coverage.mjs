@@ -43,6 +43,18 @@ for (const course of competitions) {
     missing.push({ name: course.name, slug: course.slug, reason: 'enabled must be true' })
   }
 
+  const officialPapers = entry.official_papers
+  if (!officialPapers || typeof officialPapers !== 'object') {
+    missing.push({ name: course.name, slug: course.slug, reason: 'missing official_papers' })
+  } else {
+    for (const band of ['up_to_8', 'age_9_12', 'age_13_15', 'age_16_plus']) {
+      const ids = officialPapers[band]
+      if (!Array.isArray(ids) || ids.length !== 30 || new Set(ids).size !== 30 || ids.some((id) => typeof id !== 'string' || !id.trim())) {
+        missing.push({ name: course.name, slug: course.slug, reason: `official_papers.${band} must contain exactly 30 unique IDs` })
+      }
+    }
+  }
+
   const blueprint = entry.selection_blueprint
   if (!blueprint || typeof blueprint !== 'object') {
     missing.push({ name: course.name, slug: course.slug, reason: 'missing selection_blueprint' })
