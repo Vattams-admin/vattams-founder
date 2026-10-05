@@ -1,0 +1,47 @@
+name: Validate Competition MCQ Banks
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "data/competitions/**/full-bank/objective/**"
+      - "scripts/validate-competition-mcq-bank.mjs"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        slug:
+          - mathematics-challenge
+          - science-challenge
+          - english-challenge
+          - computer-challenge
+          - gk-challenge
+          - reasoning-challenge
+          - india-gk-championship
+          - national-quiz-championship
+          - ai-technology-challenge
+          - international-knowledge-challenge
+          - national-mathematics-championship
+          - national-science-championship
+          - national-english-championship
+          - national-aptitude-championship
+          - national-coding-challenge
+          - national-ai-challenge
+          - mega-inter-school-championship
+          - indian-classical-literature-wisdom-championship
+          - indian-language-literature-masters-series
+          - thirukkural-mastery-championship
+          - fun-with-maths-challenge
+          - azhagu-tamil-challenge
+          - handwriting-excellence-challenge
+          - spoken-hindi-challenge
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate MCQ bank
+        run: node scripts/validate-competition-mcq-bank.mjs --slug "${{ matrix.slug }}"
