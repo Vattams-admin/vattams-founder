@@ -95,6 +95,33 @@ async function classroomMetrics(page: Page) {
   })
 }
 
+test('public shell recovers from offline to online', async ({ browser }) => {
+  const context = await browser.newContext()
+  const page = await context.newPage()
+
+  try {
+    await page.goto('/', { waitUntil: 'domcontentloaded' })
+    await context.setOffline(true)
+
+    await expect(
+      page.getByRole('status', {
+        name: /you are offline/i,
+      }),
+    ).toBeVisible({ timeout: 10_000 })
+
+    await context.setOffline(false)
+
+    await expect(
+      page.getByRole('status', {
+        name: /you are offline/i,
+      }),
+    ).toBeHidden({ timeout: 10_000 })
+  } finally {
+    await context.close()
+  }
+})
+
+
 test.describe('production live classroom', () => {
   test('Tutor + Student A + Student B establish a live classroom', async ({
     browser,
