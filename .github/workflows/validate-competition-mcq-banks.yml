@@ -44,21 +44,12 @@ jobs:
           - spoken-hindi-challenge
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
       - name: Prepare runtime source
-        continue-on-error: true
+        if: matrix.slug != 'thirukkural'
         run: node scripts/prepare-competition-runtime-sources.mjs --slug "${{ matrix.slug }}"
-      - name: Validate MCQ bank
-        continue-on-error: true
+      - name: Validate standardized MCQ bank
+        if: matrix.slug != 'thirukkural'
         run: node scripts/validate-competition-mcq-bank.mjs --slug "${{ matrix.slug }}"
-      - name: Upload diagnostic artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: mcq-diagnostic-${{ matrix.slug }}
-          path: |
-            prep-output.txt
-            validate-output.txt
-          if-no-files-found: ignore
+      - name: Validate Thirukkural production package
+        if: matrix.slug == 'thirukkural'
+        run: node scripts/validate-thirukkural-production.mjs
