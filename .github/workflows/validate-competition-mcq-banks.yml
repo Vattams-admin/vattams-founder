@@ -38,7 +38,7 @@ jobs:
             fi
             echo >> reports/competition-mcq-validation-report.txt
           done
-          exit $rc
+          echo "$rc" > reports/competition-mcq-validation-exit-code.txt
       - name: Commit validation report
         if: always()
         run: |
@@ -48,3 +48,10 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "Record competition MCQ validation report [skip ci]"
           git push
+      - name: Enforce validation gate
+        run: |
+          rc=$(cat reports/competition-mcq-validation-exit-code.txt)
+          if [ "$rc" -ne 0 ]; then
+            echo "Competition MCQ validation failed."
+            exit 1
+          fi
