@@ -334,6 +334,46 @@
           "mastery": "Select appropriate concepts, evidence and calculations to solve multi-step science problems."
         }
       ]
+    },
+    {
+      "name": "Science Competition Mastery",
+      "subtopics": [
+        {
+          "title": "experimental design strategy",
+          "teaching": "Select variables, controls, measurements, and evidence that can answer a scientific question reliably.",
+          "worked_example": "To test whether light affects plant growth, keep plant type, water, soil, and time controlled while changing only light exposure.",
+          "pitfall": "Pitfall: changing several variables at once and then attributing the result to only one factor.",
+          "mastery": "Design or evaluate a fair test and identify the evidence needed for a conclusion."
+        },
+        {
+          "title": "evidence and claim reasoning",
+          "teaching": "Separate observations from explanations and judge whether evidence actually supports a scientific claim.",
+          "worked_example": "If two materials show different heating rates, compare repeated measurements before claiming one material always heats faster.",
+          "pitfall": "Pitfall: treating a single observation as proof of a universal rule.",
+          "mastery": "Use evidence to support, qualify, or reject a scientific claim."
+        },
+        {
+          "title": "data interpretation and anomalies",
+          "teaching": "Read tables, graphs, patterns, and repeated measurements while distinguishing trends from anomalies.",
+          "worked_example": "If most measurements rise steadily but one value is far outside the pattern, check for recording or experimental error before ignoring it.",
+          "pitfall": "Pitfall: deleting an unusual value simply because it disagrees with the expected result.",
+          "mastery": "Interpret scientific data and explain how an anomalous result affects confidence."
+        },
+        {
+          "title": "integrated science scenarios",
+          "teaching": "Combine concepts from physics, chemistry, biology, Earth science, environment, and space science to explain unfamiliar situations.",
+          "worked_example": "A climate scenario can require interpreting energy transfer, atmospheric composition, water cycling, and biological effects together.",
+          "pitfall": "Pitfall: applying one familiar science fact without considering interactions among systems.",
+          "mastery": "Build a coherent explanation using evidence from multiple scientific domains."
+        },
+        {
+          "title": "science championship round",
+          "teaching": "Practice timed mixed science challenges with classification, calculation, evidence evaluation, and final verification.",
+          "worked_example": "In a timed round, classify the question first, choose the relevant scientific principle, eliminate unsupported options, and verify the final conclusion.",
+          "pitfall": "Pitfall: selecting an answer from a familiar keyword without checking whether the full scenario supports it.",
+          "mastery": "Solve mixed science challenges accurately under time pressure and justify conclusions with scientific reasoning."
+        }
+      ]
     }
   ]
 }
