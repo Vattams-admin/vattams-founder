@@ -4,6 +4,7 @@ import { useSeo } from '@/hooks/useSeo'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Home from '@/pages/Home'
+import NetworkStatus from '@/components/NetworkStatus'
 
 // Route-level code splitting keeps the initial bundle lean — only Home +
 // shell load eagerly; everything else loads on navigation.
@@ -101,6 +102,7 @@ function PageFallback() {
 export default function App() {
   return (
     <div className="flex min-h-screen flex-col">
+      <NetworkStatus />
       <Navbar />
       <main className="flex-1">
         <PrivateRouteSeoGuard />
