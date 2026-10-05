@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "seed:catalog": "node scripts/seed-catalog.mjs",
     "seed:catalog:dry-run": "node scripts/seed-catalog.mjs --dry-run",
-    "prebuild": "node scripts/generate-sitemap.mjs",
+    "prebuild": "node scripts/validate-seo.mjs && node scripts/generate-sitemap.mjs",
     "thirukkural:validate": "node scripts/validate-thirukkural-production.mjs",
     "thirukkural:package": "node scripts/package-thirukkural-production.mjs",
     "thirukkural:audit": "node scripts/audit-thirukkural-production.mjs",
