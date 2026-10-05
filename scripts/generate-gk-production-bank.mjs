@@ -189,3 +189,5 @@ fs.writeFileSync(path.join(base,'selection-blueprint.json'),JSON.stringify(bluep
 console.log(`Generated ${mock.length} reviewed mock MCQs and ${official.length} official MCQs.`)
 
 // Production regeneration trigger: authored GK bank v1.
+
+// Trigger regeneration after workflow orchestration fix.
