@@ -1,3 +1,4 @@
+import { useSeo, SITE_URL } from '@/hooks/useSeo'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
@@ -18,6 +19,12 @@ type LoadState = 'loading' | 'loaded' | 'error'
 // each entry still links into the existing /courses/:slug detail page
 // and /pay/:courseId flow — nothing new was built for enrolment/payment.
 export default function Competitions() {
+  useSeo({
+    title: 'Academic Competitions | VATTAMS ACADEMIA',
+    description: 'Explore VATTAMS ACADEMIA academic competitions and knowledge championships with structured preparation, mock tests and verifiable certificates.',
+    path: '/competitions',
+    jsonLd: { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'VATTAMS ACADEMIA Academic Competitions', url: `${SITE_URL}/competitions`, isPartOf: { '@type': 'WebSite', name: 'VATTAMS ACADEMIA', url: SITE_URL } },
+  })
   const [competitions, setCompetitions] = useState<Course[]>([])
   const [state, setState] = useState<LoadState>('loading')
   const [retryToken, setRetryToken] = useState(0)
