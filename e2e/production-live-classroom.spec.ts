@@ -102,6 +102,7 @@ test('public shell recovers from offline to online', async ({ browser }) => {
   try {
     await page.goto('/', { waitUntil: 'domcontentloaded' })
     await context.setOffline(true)
+    await page.evaluate(() => window.dispatchEvent(new Event('offline')))
 
     await expect(
       page.getByRole('status', {
@@ -110,6 +111,7 @@ test('public shell recovers from offline to online', async ({ browser }) => {
     ).toBeVisible({ timeout: 10_000 })
 
     await context.setOffline(false)
+    await page.evaluate(() => window.dispatchEvent(new Event('online')))
 
     await expect(
       page.getByRole('status', {
