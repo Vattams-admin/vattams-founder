@@ -598,6 +598,11 @@ async function startOrResume(
       competition.age_pools,
     );
 
+  const blueprintByAgeBand = getBlueprint(
+    competition,
+    agePools,
+  );
+
   const questionIds =
     selectQuestions(
       agePools,
