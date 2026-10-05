@@ -2,7 +2,7 @@ import LegalPage from '@/components/LegalPage'
 
 export default function Terms() {
   return (
-    <LegalPage title="Terms &amp; Conditions">
+    <LegalPage noindex title="Terms &amp; Conditions">
       <p>
         By creating an account or enrolling in a course, exam programme, or competition on VATTAMS
         ACADEMIA, you agree to use the platform for personal learning purposes and not to share
