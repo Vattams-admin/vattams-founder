@@ -13,7 +13,8 @@ const SITE_URL = 'https://academia.vattams.net'
 const STATIC_ROUTES = [
   { path: '/', changefreq: 'weekly', priority: '1.0' },
   { path: '/courses', changefreq: 'daily', priority: '0.9' },
-  { path: '/competitions', changefreq: 'weekly', priority: '0.6' },
+  { path: '/competitions', changefreq: 'weekly', priority: '0.8' },
+  { path: '/competitive-exams', changefreq: 'weekly', priority: '0.9' },
   { path: '/verify-certificate', changefreq: 'monthly', priority: '0.5' },
   { path: '/about', changefreq: 'monthly', priority: '0.6' },
   { path: '/founder', changefreq: 'monthly', priority: '0.5' },
@@ -21,8 +22,6 @@ const STATIC_ROUTES = [
   { path: '/privacy-policy', changefreq: 'yearly', priority: '0.2' },
   { path: '/terms', changefreq: 'yearly', priority: '0.2' },
   { path: '/refund-policy', changefreq: 'yearly', priority: '0.2' },
-  { path: '/student/register', changefreq: 'monthly', priority: '0.6' },
-  { path: '/tutor/register', changefreq: 'monthly', priority: '0.6' },
 ]
 
 function loadDotEnvLocal() {
@@ -96,7 +95,7 @@ async function main() {
 
   const courseRoutes = snapshot.docs
     .map((doc) => doc.data())
-    .filter((course) => !course.is_competition && course.slug)
+     .filter((course) => course.slug)
     .map((course) => ({
       path: `/courses/${course.slug}`,
       changefreq: 'weekly',
@@ -122,7 +121,7 @@ ${entries}
   writeFileSync(outPath, xml, 'utf8')
 
   console.log(
-    `Wrote ${STATIC_ROUTES.length} static + ${courseRoutes.length} course URLs to public/sitemap.xml`,
+    `Wrote ${STATIC_ROUTES.length} static + ${courseRoutes.length} published course URLs to public/sitemap.xml`,
   )
 }
 
