@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "International Knowledge Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/international-knowledge-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "World Geography",
+      "subtopics": [
+        {
+          "title": "countries and capitals",
+          "study_materials": {
+            "objective": "Build mastery of countries and capitals in World Geography for International Knowledge Challenge.",
+            "teaching_content": "Country-capital knowledge requires precise pairing of sovereign states and their recognized capital cities, while allowing for cases where a country has multiple capital functions or a capital changed historically.",
+            "worked_examples": [
+              "A question may contrast a country's constitutional capital with another city that is its commercial center; identify the capital rather than choosing the more famous city."
+            ],
+            "pitfall": "Do not assume the largest or best-known city is the capital.",
+            "mastery_check": "Correctly pair countries and capitals and explain exceptions when a capital has special constitutional or administrative status.",
+            "revision": "Revise countries and capitals through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "continents",
+          "study_materials": {
+            "objective": "Build mastery of continents in World Geography for International Knowledge Challenge.",
+            "teaching_content": "Continents are large geographic divisions used to organize the world's landmasses. Different educational systems use slightly different conventions, so the convention in the question should be recognized.",
+            "worked_examples": [
+              "A quiz may ask whether a transcontinental country belongs to Europe, Asia, or both; the answer depends on the geographic convention being applied."
+            ],
+            "pitfall": "Treating continent boundaries as universally identical can create errors for transcontinental regions.",
+            "mastery_check": "Classify countries and major regions using a stated continental convention and explain common boundary cases.",
+            "revision": "Revise continents through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "physical geography",
+          "study_materials": {
+            "objective": "Build mastery of physical geography in World Geography for International Knowledge Challenge.",
+            "teaching_content": "Physical geography studies natural features and processes such as mountains, rivers, deserts, plateaus, oceans and tectonic landforms.",
+            "worked_examples": [
+              "A mountain-range question can be solved by linking the range to its location and neighboring countries rather than relying only on memorized names."
+            ],
+            "pitfall": "Confusing a river, mountain range, basin and country can make otherwise familiar facts unusable.",
+            "mastery_check": "Identify major physical features and connect each feature to its location and geographic significance.",
+            "revision": "Revise physical geography through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "maps",
+          "study_materials": {
+            "objective": "Build mastery of maps in World Geography for International Knowledge Challenge.",
+            "teaching_content": "Maps represent geographic information using symbols, scale, direction, coordinates and thematic conventions. Reading a map requires interpreting the representation rather than merely recognizing place names.",
+            "worked_examples": [
+              "On a map with a scale bar, a student can estimate the distance between two cities by comparing the measured map distance with the scale."
+            ],
+            "pitfall": "Map direction, scale and projection can change how a feature appears; visual size is not always actual size.",
+            "mastery_check": "Use legends, scale, coordinates and orientation to interpret a world map and answer location questions.",
+            "revision": "Revise maps through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "climate zones",
+          "study_materials": {
+            "objective": "Build mastery of climate zones in World Geography for International Knowledge Challenge.",
+            "teaching_content": "Climate zones describe long-term patterns of temperature, precipitation and atmospheric conditions. Latitude, altitude, oceans, winds and relief influence climate.",
+            "worked_examples": [
+              "A tropical region near the equator generally receives strong solar energy, while altitude can make a highland location much cooler than nearby lowlands."
+            ],
+            "pitfall": "Weather on one day is not the same thing as a climate classification.",
+            "mastery_check": "Distinguish weather from climate and explain the major factors that shape broad climate zones.",
+            "revision": "Revise climate zones through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "World History",
+      "subtopics": [
+        {
+          "title": "ancient civilizations",
+          "study_materials": {
+            "objective": "Build mastery of ancient civilizations in World History for International Knowledge Challenge.",
+            "teaching_content": "Ancient civilizations developed complex settlements, institutions, technologies, belief systems and cultural traditions in regions including Mesopotamia, Egypt, the Indus Valley, China, Greece and Rome.",
+            "worked_examples": [
+              "Comparing river-valley civilizations can reveal how water access, agriculture and trade supported urban development."
+            ],
+            "pitfall": "Do not reduce a civilization to a single monument or ruler when the question concerns broader social development.",
+            "mastery_check": "Compare ancient civilizations using geography, economy, governance, technology and cultural evidence.",
+            "revision": "Revise ancient civilizations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "medieval world",
+          "study_materials": {
+            "objective": "Build mastery of medieval world in World History for International Knowledge Challenge.",
+            "teaching_content": "Medieval history covers diverse societies and periods across Europe, Asia, Africa and the Middle East rather than one uniform global era.",
+            "worked_examples": [
+              "A comparative question can connect trade routes, Islamic scholarship, African kingdoms, Asian states and European political structures within the same broad period."
+            ],
+            "pitfall": "The medieval world was not isolated or culturally uniform; different regions developed simultaneously and interacted through trade and migration.",
+            "mastery_check": "Place major medieval developments in regional context and explain connections among societies.",
+            "revision": "Revise medieval world through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "modern history",
+          "study_materials": {
+            "objective": "Build mastery of modern history in World History for International Knowledge Challenge.",
+            "teaching_content": "Modern history includes major political, economic, scientific and social transformations from the early modern period into the contemporary era.",
+            "worked_examples": [
+              "The spread of industrialization changed production, transportation and urban life and also affected global trade and imperial competition."
+            ],
+            "pitfall": "Avoid treating a single invention or event as the sole cause of a complex historical transformation.",
+            "mastery_check": "Explain major modern transformations and connect them to multiple causes and consequences.",
+            "revision": "Revise modern history through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "major events",
+          "study_materials": {
+            "objective": "Build mastery of major events in World History for International Knowledge Challenge.",
+            "teaching_content": "Major historical events should be studied through what happened, when and where it happened, who was involved, and what changed afterward.",
+            "worked_examples": [
+              "A question about a world war can be solved by separating its immediate trigger from the longer political and economic conditions that shaped the conflict."
+            ],
+            "pitfall": "Memorizing an event name without its sequence or consequences makes chronology questions difficult.",
+            "mastery_check": "Place major world events in sequence and identify their principal causes, participants and consequences.",
+            "revision": "Revise major events through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "historical causation",
+          "study_materials": {
+            "objective": "Build mastery of historical causation in World History for International Knowledge Challenge.",
+            "teaching_content": "Historical causation examines how multiple conditions, decisions and events combine to produce an outcome. Causes can be immediate, underlying, enabling or contributing.",
+            "worked_examples": [
+              "A revolution may have a triggering event but also deeper economic, political and social causes that developed over years."
+            ],
+            "pitfall": "The first event mentioned in a textbook is not necessarily the only or most important cause.",
+            "mastery_check": "Distinguish trigger, underlying cause and consequence and construct a defensible causal explanation.",
+            "revision": "Revise historical causation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Global Institutions",
+      "subtopics": [
+        {
+          "title": "UN",
+          "study_materials": {
+            "objective": "Build mastery of UN in Global Institutions for International Knowledge Challenge.",
+            "teaching_content": "The United Nations is an international organization founded after the Second World War to provide a forum for cooperation on peace, security, development, humanitarian issues and other global concerns.",
+            "worked_examples": [
+              "A question may ask which UN body or process is associated with a particular function, requiring attention to institutional roles rather than treating the UN as one undifferentiated body."
+            ],
+            "pitfall": "Do not assume every international program or agency is directly the same institution as the UN Secretariat.",
+            "mastery_check": "Explain the UN's broad purpose and distinguish major parts of its institutional system at an appropriate level.",
+            "revision": "Revise UN through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "WHO",
+          "study_materials": {
+            "objective": "Build mastery of WHO in Global Institutions for International Knowledge Challenge.",
+            "teaching_content": "The World Health Organization is a specialized United Nations agency focused on international public health, including coordination, standards, technical guidance and health emergencies.",
+            "worked_examples": [
+              "A global health question may distinguish WHO coordination and guidance from the responsibility of individual national health authorities to implement policies."
+            ],
+            "pitfall": "Do not treat a WHO recommendation as automatically being a law in every country.",
+            "mastery_check": "Describe WHO's international public-health role and distinguish coordination from national implementation.",
+            "revision": "Revise WHO through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "UNESCO",
+          "study_materials": {
+            "objective": "Build mastery of UNESCO in Global Institutions for International Knowledge Challenge.",
+            "teaching_content": "UNESCO is a UN specialized agency working in education, science, culture, communication and information, including international cooperation around cultural and natural heritage.",
+            "worked_examples": [
+              "A heritage question can ask why a site receives international recognition while the site itself remains located and managed within a country."
+            ],
+            "pitfall": "Do not assume UNESCO owns every site it recognizes or that recognition removes national responsibility.",
+            "mastery_check": "Identify UNESCO's major fields of work and explain the purpose of international heritage cooperation.",
+            "revision": "Revise UNESCO through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "international cooperation",
+          "study_materials": {
+            "objective": "Build mastery of international cooperation in Global Institutions for International Knowledge Challenge.",
+            "teaching_content": "International cooperation occurs when countries and institutions coordinate across borders to address shared problems such as health, climate, security, science or trade.",
+            "worked_examples": [
+              "A disease outbreak may require countries to share information, coordinate surveillance and align public-health responses even though each government retains domestic authority."
+            ],
+            "pitfall": "International cooperation does not mean participating countries have identical policies or surrender all sovereignty.",
+            "mastery_check": "Explain why cross-border problems require cooperation and identify what coordination can and cannot accomplish.",
+            "revision": "Revise international cooperation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "global agreements",
+          "study_materials": {
+            "objective": "Build mastery of global agreements in Global Institutions for International Knowledge Challenge.",
+            "teaching_content": "International agreements establish commitments, rules or shared objectives among participating states and organizations. Their scope, obligations and implementation mechanisms vary.",
+            "worked_examples": [
+              "A climate agreement may establish shared goals while countries use different domestic policies to pursue them."
+            ],
+            "pitfall": "Signing or announcing an agreement should not automatically be interpreted as proof that every obligation has already been fully implemented.",
+            "mastery_check": "Read an international agreement question carefully and distinguish goals, commitments, parties and implementation.",
+            "revision": "Revise global agreements through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "World Cultures",
+      "subtopics": [
+        {
+          "title": "languages",
+          "study_materials": {
+            "objective": "Build mastery of languages in World Cultures for International Knowledge Challenge.",
+            "teaching_content": "Languages are systems of communication with histories, structures, communities and geographic distributions. Language families and official-language policies help explain global linguistic diversity.",
+            "worked_examples": [
+              "A country may have several widely used or officially recognized languages, so identifying one language does not necessarily exclude others."
+            ],
+            "pitfall": "Do not assume that a language is spoken only in the country most strongly associated with it.",
+            "mastery_check": "Identify major language families and explain the difference between official status, majority use and geographic spread.",
+            "revision": "Revise languages through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "arts",
+          "study_materials": {
+            "objective": "Build mastery of arts in World Cultures for International Knowledge Challenge.",
+            "teaching_content": "World arts include visual art, architecture, music, dance, theatre, crafts and other creative traditions shaped by historical and cultural contexts.",
+            "worked_examples": [
+              "A monument or artistic style can be identified more accurately by considering its materials, period, region and cultural purpose together."
+            ],
+            "pitfall": "Do not judge an unfamiliar artistic tradition only through the conventions of another culture.",
+            "mastery_check": "Recognize major global art forms and connect examples to their cultural and historical context.",
+            "revision": "Revise arts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "festivals",
+          "study_materials": {
+            "objective": "Build mastery of festivals in World Cultures for International Knowledge Challenge.",
+            "teaching_content": "Festivals can express religious, seasonal, historical, national or community traditions and often combine food, music, ritual, art and public gatherings.",
+            "worked_examples": [
+              "A festival may be celebrated across several countries or communities, so its cultural identity should be understood from its traditions rather than one location alone."
+            ],
+            "pitfall": "Do not assume every festival is purely religious or that a festival's modern celebration has remained unchanged over time.",
+            "mastery_check": "Identify the cultural purpose of major festivals and distinguish shared traditions from country-specific practices.",
+            "revision": "Revise festivals through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "heritage",
+          "study_materials": {
+            "objective": "Build mastery of heritage in World Cultures for International Knowledge Challenge.",
+            "teaching_content": "Cultural and natural heritage includes places, practices, objects and environments valued for their historical, cultural or environmental significance and passed between generations.",
+            "worked_examples": [
+              "A heritage site can be important because of architecture, archaeological evidence, cultural practice or natural features, depending on the category."
+            ],
+            "pitfall": "Heritage significance is not determined only by age or popularity.",
+            "mastery_check": "Explain why a heritage item is significant and distinguish tangible, intangible, cultural and natural heritage.",
+            "revision": "Revise heritage through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "cultural diversity",
+          "study_materials": {
+            "objective": "Build mastery of cultural diversity in World Cultures for International Knowledge Challenge.",
+            "teaching_content": "Cultural diversity describes the coexistence of different languages, traditions, beliefs, arts, social practices and identities within and across societies.",
+            "worked_examples": [
+              "A multilingual country can contain several cultural communities whose traditions contribute to a shared national society without becoming identical."
+            ],
+            "pitfall": "Treating one group's customs as the universal norm can distort comparisons between cultures.",
+            "mastery_check": "Compare cultures respectfully using evidence, distinguish variation from stereotypes, and explain why internal diversity matters.",
+            "revision": "Revise cultural diversity through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Science & Exploration",
+      "subtopics": [
+        {
+          "title": "space",
+          "study_materials": {
+            "objective": "Build mastery of space in Science & Exploration for International Knowledge Challenge.",
+            "teaching_content": "Space science studies objects and processes beyond Earth, including stars, planets, galaxies, gravity, orbits and the space environment.",
+            "worked_examples": [
+              "A planet remains in orbit because its forward motion and gravitational attraction combine to produce an orbital path rather than simply falling straight into the star."
+            ],
+            "pitfall": "Do not confuse a planet's apparent movement in the sky with its actual orbit or assume all celestial objects produce their own light.",
+            "mastery_check": "Explain basic relationships among stars, planets, gravity and orbits and apply them to unfamiliar questions.",
+            "revision": "Revise space through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "oceans",
+          "study_materials": {
+            "objective": "Build mastery of oceans in Science & Exploration for International Knowledge Challenge.",
+            "teaching_content": "Oceanography examines Earth's interconnected oceans, including their physical properties, circulation, ecosystems, resources and influence on climate.",
+            "worked_examples": [
+              "Ocean currents redistribute heat and can affect regional climates, marine ecosystems and navigation."
+            ],
+            "pitfall": "Treating the oceans as isolated bodies of water misses their connected circulation and shared environmental processes.",
+            "mastery_check": "Identify major oceans and explain how currents, temperature, salinity and marine ecosystems are connected.",
+            "revision": "Revise oceans through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Earth science",
+          "study_materials": {
+            "objective": "Build mastery of Earth science in Science & Exploration for International Knowledge Challenge.",
+            "teaching_content": "Earth science integrates geology, meteorology, oceanography and related fields to explain Earth's structure, surface processes, atmosphere and changing environment.",
+            "worked_examples": [
+              "Plate movement can create earthquakes, volcanoes and mountain-building over geological timescales."
+            ],
+            "pitfall": "A geological process that occurs slowly over millions of years should not be interpreted using the timescale of a single human lifetime.",
+            "mastery_check": "Connect Earth's internal processes, surface features and atmospheric systems using evidence and timescale.",
+            "revision": "Revise Earth science through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "major discoveries",
+          "study_materials": {
+            "objective": "Build mastery of major discoveries in Science & Exploration for International Knowledge Challenge.",
+            "teaching_content": "Scientific discoveries emerge through observation, measurement, experimentation, reasoning and repeated verification. Their importance often comes from changing how a field explains evidence.",
+            "worked_examples": [
+              "A new observation can challenge an existing explanation and lead researchers to test a revised hypothesis with additional evidence."
+            ],
+            "pitfall": "A discovery is not established merely because one person proposes an interesting idea.",
+            "mastery_check": "Distinguish hypothesis, evidence, discovery and scientific consensus and explain how major findings become accepted.",
+            "revision": "Revise major discoveries through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "exploration",
+          "study_materials": {
+            "objective": "Build mastery of exploration in Science & Exploration for International Knowledge Challenge.",
+            "teaching_content": "Exploration expands knowledge of unfamiliar environments through systematic observation, instruments, mapping, sampling and human or robotic missions.",
+            "worked_examples": [
+              "A planetary probe can collect measurements from a distant world and transmit data for scientists to analyze on Earth."
+            ],
+            "pitfall": "Exploration is not simply travel; scientific value depends on the quality and interpretation of observations.",
+            "mastery_check": "Explain how exploration missions convert observations into scientific knowledge and identify their constraints.",
+            "revision": "Revise exploration through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Global Economy & Society",
+      "subtopics": [
+        {
+          "title": "trade",
+          "study_materials": {
+            "objective": "Build mastery of trade in Global Economy & Society for International Knowledge Challenge.",
+            "teaching_content": "International trade is the exchange of goods and services across borders. Trade can involve imports, exports, supply chains, tariffs, transport and agreements.",
+            "worked_examples": [
+              "A country may import raw materials, add value through manufacturing and export finished products to another market."
+            ],
+            "pitfall": "A country having a trade relationship with another does not mean every product crosses the border directly between those two countries.",
+            "mastery_check": "Trace a simple international supply chain and distinguish imports, exports and trade barriers.",
+            "revision": "Revise trade through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "currencies",
+          "study_materials": {
+            "objective": "Build mastery of currencies in Global Economy & Society for International Knowledge Challenge.",
+            "teaching_content": "Currencies are units of money issued and managed under national or monetary-system frameworks. Exchange rates describe the relative value of one currency against another and can change over time.",
+            "worked_examples": [
+              "If a traveller exchanges Indian rupees for euros, the amount received depends on the applicable exchange rate and fees at that time."
+            ],
+            "pitfall": "An exchange rate is not a permanent conversion constant, and quoted rates can differ from the final amount received.",
+            "mastery_check": "Interpret basic exchange-rate questions and distinguish currency value from prices, fees and purchasing power.",
+            "revision": "Revise currencies through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "development",
+          "study_materials": {
+            "objective": "Build mastery of development in Global Economy & Society for International Knowledge Challenge.",
+            "teaching_content": "Development describes changes in economic, social and human conditions and can be assessed using multiple indicators such as income, health, education, infrastructure and living standards.",
+            "worked_examples": [
+              "Two countries with similar average income can differ substantially in health, education or access to essential services."
+            ],
+            "pitfall": "A single economic indicator cannot fully describe the well-being or development of a society.",
+            "mastery_check": "Compare development using multiple indicators and explain why averages can hide internal differences.",
+            "revision": "Revise development through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "population",
+          "study_materials": {
+            "objective": "Build mastery of population in Global Economy & Society for International Knowledge Challenge.",
+            "teaching_content": "Population studies examine size, distribution, density, age structure, migration, birth rates, death rates and urbanization.",
+            "worked_examples": [
+              "A country can have a large total population but relatively low population density if people are distributed across a very large area."
+            ],
+            "pitfall": "Population size alone does not reveal where people live, how old they are or how quickly the population is changing.",
+            "mastery_check": "Interpret population measures and explain how demographic structure affects societies and services.",
+            "revision": "Revise population through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "globalization",
+          "study_materials": {
+            "objective": "Build mastery of globalization in Global Economy & Society for International Knowledge Challenge.",
+            "teaching_content": "Globalization describes growing cross-border connections among economies, societies, technologies, cultures and information networks.",
+            "worked_examples": [
+              "A product may be designed in one country, manufactured using components from several others and sold globally through digital and physical distribution."
+            ],
+            "pitfall": "Globalization does not mean all societies become identical or that every benefit and cost is distributed equally.",
+            "mastery_check": "Explain interconnected global supply, communication and cultural flows and evaluate both benefits and trade-offs.",
+            "revision": "Revise globalization through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sports & Achievements",
+      "subtopics": [
+        {
+          "title": "international tournaments",
+          "study_materials": {
+            "objective": "Build mastery of international tournaments in Sports & Achievements for International Knowledge Challenge.",
+            "teaching_content": "International tournaments bring teams or athletes from multiple countries together under defined rules, qualification systems and competition formats.",
+            "worked_examples": [
+              "A tournament question may require distinguishing a world championship from a continental championship and identifying the governing body or competition cycle."
+            ],
+            "pitfall": "Do not assume every international event is a world championship or that the host country is the winner.",
+            "mastery_check": "Identify the scope, format and geographic level of major international sports competitions.",
+            "revision": "Revise international tournaments through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "records",
+          "study_materials": {
+            "objective": "Build mastery of records in Sports & Achievements for International Knowledge Challenge.",
+            "teaching_content": "Sports records are measured achievements defined by a particular event, discipline, ruleset and governing authority, and records can change when new performances occur.",
+            "worked_examples": [
+              "A record question should specify the event and category because a fastest time in one distance is not comparable with a record in another."
+            ],
+            "pitfall": "A famous performance is not automatically an official record; the relevant governing rules and category matter.",
+            "mastery_check": "Interpret record claims precisely and distinguish official records from informal or context-dependent achievements.",
+            "revision": "Revise records through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "athletes",
+          "study_materials": {
+            "objective": "Build mastery of athletes in Sports & Achievements for International Knowledge Challenge.",
+            "teaching_content": "Athletes are individuals whose performances, careers and achievements can be studied through their sport, discipline, country or team representation and verified results.",
+            "worked_examples": [
+              "A quiz may ask which athlete achieved a particular milestone, requiring the milestone and sport to be matched rather than relying only on name recognition."
+            ],
+            "pitfall": "An athlete's nationality, team affiliation and competition representation can differ in complex cases, so the question wording matters.",
+            "mastery_check": "Identify notable athletes from reliable achievement evidence and avoid confusing similarly named people or different sporting disciplines.",
+            "revision": "Revise athletes through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sports geography",
+          "study_materials": {
+            "objective": "Build mastery of sports geography in Sports & Achievements for International Knowledge Challenge.",
+            "teaching_content": "Sports geography examines how sports, teams, events and participation vary across countries and regions and how climate, culture, infrastructure and history influence that distribution.",
+            "worked_examples": [
+              "A sport may have strong cultural roots in one region while also developing major professional competitions elsewhere."
+            ],
+            "pitfall": "A sport being popular in one country does not make it exclusive to that country.",
+            "mastery_check": "Connect major sports to their international distribution and explain geographic factors influencing participation.",
+            "revision": "Revise sports geography through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "major awards",
+          "study_materials": {
+            "objective": "Build mastery of major awards in Sports & Achievements for International Knowledge Challenge.",
+            "teaching_content": "Major sports awards recognize achievements such as outstanding performance, championship success, leadership or fair play, usually under defined eligibility and selection rules.",
+            "worked_examples": [
+              "An award question should distinguish an individual performance award from a team championship or a career honor."
+            ],
+            "pitfall": "The most famous player in a competition is not necessarily the recipient of every award associated with it.",
+            "mastery_check": "Identify the purpose and scope of major sports awards and verify recipient claims against the relevant awarding body.",
+            "revision": "Revise major awards through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Global Current Awareness",
+      "subtopics": [
+        {
+          "title": "major world events",
+          "study_materials": {
+            "objective": "Build mastery of major world events in Global Current Awareness for International Knowledge Challenge.",
+            "teaching_content": "Current-awareness questions about major world events require attention to what happened, where, when, who was involved and why the event matters internationally.",
+            "worked_examples": [
+              "A major election, natural disaster, conflict, scientific announcement or international agreement should be summarized with its verified date and principal facts before drawing conclusions."
+            ],
+            "pitfall": "A viral headline can omit context or combine an old event with a new claim.",
+            "mastery_check": "Separate event facts from commentary and verify time, place and source before answering.",
+            "revision": "Revise major world events through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "summits",
+          "study_materials": {
+            "objective": "Build mastery of summits in Global Current Awareness for International Knowledge Challenge.",
+            "teaching_content": "International summits bring leaders or representatives together to discuss shared issues, coordinate positions or announce initiatives. The participants and agenda determine what the meeting actually represents.",
+            "worked_examples": [
+              "A summit may focus on climate, economic cooperation or regional security, and its declarations may contain goals rather than immediately enforceable laws."
+            ],
+            "pitfall": "Do not treat every summit statement as a binding international treaty.",
+            "mastery_check": "Identify the purpose, participants, host and outcomes of a summit and distinguish declarations from binding commitments.",
+            "revision": "Revise summits through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "international appointments",
+          "study_materials": {
+            "objective": "Build mastery of international appointments in Global Current Awareness for International Knowledge Challenge.",
+            "teaching_content": "International appointments may refer to elections, selections or formal appointments to leadership roles in global organizations or institutions. These positions can change over time.",
+            "worked_examples": [
+              "A current-awareness question about an agency head must be answered using the relevant organization's current official information rather than an outdated biography."
+            ],
+            "pitfall": "A person previously holding a prestigious role may no longer hold it, so historical knowledge can become stale.",
+            "mastery_check": "Verify current officeholders using authoritative institutional sources and include the relevant date when needed.",
+            "revision": "Revise international appointments through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "fact verification",
+          "study_materials": {
+            "objective": "Build mastery of fact verification in Global Current Awareness for International Knowledge Challenge.",
+            "teaching_content": "Fact verification checks whether a claim is supported by reliable evidence, accurate context and an appropriate source. Verification is especially important for fast-changing international news.",
+            "worked_examples": [
+              "If two posts report different casualty figures or appointment dates, compare their publication time, source, evidence and later official updates before selecting an answer."
+            ],
+            "pitfall": "Popularity, repetition and high engagement are not substitutes for evidence.",
+            "mastery_check": "Verify claims using authoritative sources, publication dates, corroboration and precise wording.",
+            "revision": "Revise fact verification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "cross-source reasoning",
+          "study_materials": {
+            "objective": "Build mastery of cross-source reasoning in Global Current Awareness for International Knowledge Challenge.",
+            "teaching_content": "Cross-source reasoning compares multiple sources to determine what they jointly support, where they disagree and which source has the strongest authority for the claim.",
+            "worked_examples": [
+              "For a current international appointment, an official organization page can establish the officeholder while reputable reporting can provide context about the appointment process."
+            ],
+            "pitfall": "Two sources repeating the same unsourced claim are not independent confirmation.",
+            "mastery_check": "Reconcile sources by authority, recency, independence, evidence and claim scope, then state only what the evidence supports.",
+            "revision": "Revise cross-source reasoning through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "International Knowledge Mastery",
+      "subtopics": [
+        {
+          "title": "global clue extraction",
+          "study_materials": {
+            "objective": "Build mastery of global clue extraction in International Knowledge Mastery for International Knowledge Challenge.",
+            "teaching_content": "Extract decisive country, institution, culture, science or geography clues from international knowledge questions. Progress from recognition to independent application and unfamiliar championship scenarios.",
+            "worked_examples": [
+              "Work a representative global clue extraction task step by step, identify the decisive principle, explain the choice, and verify the result."
+            ],
+            "pitfall": "Do not rely on a familiar keyword or an unchecked calculation; test the answer against every stated condition.",
+            "mastery_check": "Independently solve an unfamiliar global clue extraction challenge, explain the reasoning, correct a plausible error, and verify the final result.",
+            "revision": "Revise global clue extraction through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "cross-domain world reasoning",
+          "study_materials": {
+            "objective": "Build mastery of cross-domain world reasoning in International Knowledge Mastery for International Knowledge Challenge.",
+            "teaching_content": "Combine history, geography, science, culture, organizations and sports to solve unfamiliar global questions. Progress from recognition to independent application and unfamiliar championship scenarios.",
+            "worked_examples": [
+              "Work a representative cross-domain world reasoning task step by step, identify the decisive principle, explain the choice, and verify the result."
+            ],
+            "pitfall": "Do not rely on a familiar keyword or an unchecked calculation; test the answer against every stated condition.",
+            "mastery_check": "Independently solve an unfamiliar cross-domain world reasoning challenge, explain the reasoning, correct a plausible error, and verify the final result.",
+            "revision": "Revise cross-domain world reasoning through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "source and date verification",
+          "study_materials": {
+            "objective": "Build mastery of source and date verification in International Knowledge Mastery for International Knowledge Challenge.",
+            "teaching_content": "Check dates, official sources, definitions and context before accepting a global current-affairs or record claim. Progress from recognition to independent application and unfamiliar championship scenarios.",
+            "worked_examples": [
+              "Work a representative source and date verification task step by step, identify the decisive principle, explain the choice, and verify the result."
+            ],
+            "pitfall": "Do not rely on a familiar keyword or an unchecked calculation; test the answer against every stated condition.",
+            "mastery_check": "Independently solve an unfamiliar source and date verification challenge, explain the reasoning, correct a plausible error, and verify the final result.",
+            "revision": "Revise source and date verification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated international scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated international scenarios in International Knowledge Mastery for International Knowledge Challenge.",
+            "teaching_content": "Solve layered global scenarios where location, chronology, institutions and evidence interact. Progress from recognition to independent application and unfamiliar championship scenarios.",
+            "worked_examples": [
+              "Work a representative integrated international scenarios task step by step, identify the decisive principle, explain the choice, and verify the result."
+            ],
+            "pitfall": "Do not rely on a familiar keyword or an unchecked calculation; test the answer against every stated condition.",
+            "mastery_check": "Independently solve an unfamiliar integrated international scenarios challenge, explain the reasoning, correct a plausible error, and verify the final result.",
+            "revision": "Revise integrated international scenarios through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "international knowledge championship round",
+          "study_materials": {
+            "objective": "Build mastery of international knowledge championship round in International Knowledge Mastery for International Knowledge Challenge.",
+            "teaching_content": "Perform timed mixed international knowledge challenges using recall, elimination and verification. Progress from recognition to independent application and unfamiliar championship scenarios.",
+            "worked_examples": [
+              "Work a representative international knowledge championship round task step by step, identify the decisive principle, explain the choice, and verify the result."
+            ],
+            "pitfall": "Do not rely on a familiar keyword or an unchecked calculation; test the answer against every stated condition.",
+            "mastery_check": "Independently solve an unfamiliar international knowledge championship round challenge, explain the reasoning, correct a plausible error, and verify the final result.",
+            "revision": "Revise international knowledge championship round through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "INTERNATIO-MOCK-01",
+      "focus": "core curriculum and topic-wise preparation"
+    },
+    {
+      "id": "INTERNATIO-MOCK-02",
+      "focus": "advanced mixed-domain preparation"
+    },
+    {
+      "id": "INTERNATIO-MOCK-03",
+      "focus": "full championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "International Knowledge Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
