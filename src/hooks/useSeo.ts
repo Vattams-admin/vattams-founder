@@ -68,8 +68,9 @@ export function useSeo(options: SeoOptions) {
     const fullTitle = !title ? SITE_NAME : title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`
     document.title = fullTitle
 
-    const canonicalPath = path ?? window.location.pathname
-    const canonicalUrl = `${SITE_URL}${canonicalPath}`
+    const canonicalPath = (path ?? window.location.pathname).split('?')[0].split('#')[0] || '/'
+    const normalizedPath = canonicalPath === '/' ? '/' : canonicalPath.replace(/\/+$/, '')
+    const canonicalUrl = `${SITE_URL}${normalizedPath}`
 
     if (description) {
       setMetaByAttr('name', 'description', description)
@@ -85,10 +86,12 @@ export function useSeo(options: SeoOptions) {
     setMetaByAttr('property', 'og:url', canonicalUrl)
     setMetaByAttr('property', 'og:site_name', SITE_NAME)
     setMetaByAttr('property', 'og:image', image)
+    setMetaByAttr('property', 'og:image:alt', `${fullTitle} — VATTAMS ACADEMIA`)
 
     setMetaByAttr('name', 'twitter:card', 'summary_large_image')
     setMetaByAttr('name', 'twitter:title', fullTitle)
     setMetaByAttr('name', 'twitter:image', image)
+    setMetaByAttr('name', 'twitter:image:alt', `${fullTitle} — VATTAMS ACADEMIA`)
 
     let scriptEl: HTMLScriptElement | null = null
     if (jsonLd) {
