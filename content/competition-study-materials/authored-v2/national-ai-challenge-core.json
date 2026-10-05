@@ -180,38 +180,38 @@
       "subtopics": [
         {
           "title": "image recognition",
-          "teaching": "Master image recognition within Computer Vision & Language for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative image recognition question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar image recognition task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach image recognition as extracting visual patterns to assign labels, detect objects, or identify structures. Distinguish the image itself from the features or representations used by a model.",
+          "worked_example": "A vision system can inspect an image and classify it as containing a bicycle, but classification does not necessarily tell where the bicycle is; object detection would add location information.",
+          "pitfall": "Pitfall: assuming image classification, object detection, and image segmentation are identical tasks or that recognition proves every visible detail is correctly understood.",
+          "mastery": "Mastery: identify the visual task being performed, distinguish output types, and explain what evidence in the image supports or limits the prediction."
         },
         {
           "title": "text processing",
-          "teaching": "Master text processing within Computer Vision & Language for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative text processing question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar text processing task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach AI text processing through tokenization, classification, extraction, summarization, translation, and other transformations. Connect the chosen task to the structure of the input and desired output.",
+          "worked_example": "A sentiment classifier may process a review and predict positive, neutral, or negative sentiment; a summarizer instead produces a shorter text preserving important information.",
+          "pitfall": "Pitfall: treating every language task as generation or assuming a fluent output preserves every fact from the source.",
+          "mastery": "Mastery: identify the text-processing task, predict the appropriate output form, and evaluate whether important information or meaning has been preserved."
         },
         {
           "title": "speech",
-          "teaching": "Master speech within Computer Vision & Language for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative speech question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar speech task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach speech AI as processing acoustic signals for tasks such as recognition, transcription, synthesis, or speaker-related analysis. Separate speech content from audio characteristics.",
+          "worked_example": "A speech-to-text system can convert an audio sentence into written words, while text-to-speech starts from text and generates spoken audio.",
+          "pitfall": "Pitfall: confusing speech recognition with speech synthesis or assuming accents, noise, and background sounds cannot affect recognition quality.",
+          "mastery": "Mastery: distinguish speech input/output tasks, identify relevant sources of error, and explain where human review may be needed."
         },
         {
           "title": "pattern recognition",
-          "teaching": "Master pattern recognition within Computer Vision & Language for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative pattern recognition question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar pattern recognition task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach pattern recognition as identifying recurring structures in data and using them to categorize, predict, or detect anomalies. Patterns must be supported by data rather than assumed from coincidence.",
+          "worked_example": "A model may learn that certain combinations of sensor readings often precede equipment failure, then flag a new reading pattern for attention.",
+          "pitfall": "Pitfall: treating correlation as proof of causation or assuming a pattern learned in one environment will always hold in another.",
+          "mastery": "Mastery: identify the observed pattern, distinguish correlation from causation, and reason about whether the pattern is likely to generalize."
         },
         {
           "title": "applications",
-          "teaching": "Master applications within Computer Vision & Language for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative applications question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar applications task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach combined vision-and-language applications by examining the input modalities, target task, expected output, and limitations. Consider multimodal evidence rather than relying on one channel blindly.",
+          "worked_example": "An accessibility assistant might combine a camera image with a user's spoken question to describe an object, requiring both visual interpretation and language understanding.",
+          "pitfall": "Pitfall: assuming multimodal output is automatically more accurate or ignoring errors in either input modality.",
+          "mastery": "Mastery: map an application to its modalities and task, identify failure points, and propose suitable verification or human fallback."
         }
       ]
     },
@@ -220,38 +220,38 @@
       "subtopics": [
         {
           "title": "sensing",
-          "teaching": "Master sensing within Robotics & Agents for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative sensing question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar sensing task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach sensing as acquiring information about an environment through cameras, microphones, distance sensors, touch, position sensors, or other inputs. Sensors provide measurements, not perfect knowledge.",
+          "worked_example": "A robot vacuum can use distance sensors to detect an obstacle and adjust its path; a noisy reading may still require repeated measurements or filtering.",
+          "pitfall": "Pitfall: treating a sensor reading as exact reality or ignoring blind spots, noise, calibration, and environmental conditions.",
+          "mastery": "Mastery: identify what a sensor can and cannot observe, reason about uncertainty, and connect measurements to safe downstream decisions."
         },
         {
           "title": "planning",
-          "teaching": "Master planning within Robotics & Agents for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative planning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar planning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach planning as selecting a sequence of actions to reach a goal under constraints. Explain that plans depend on the robot's available actions, environment model, and objectives.",
+          "worked_example": "A delivery robot planning a route may compare several paths while considering distance, blocked roads, battery limits, and the destination.",
+          "pitfall": "Pitfall: choosing the shortest path without considering constraints or assuming the environment remains unchanged while the plan executes.",
+          "mastery": "Mastery: formulate goals and constraints, compare candidate action sequences, and recognize when replanning is required."
         },
         {
           "title": "control",
-          "teaching": "Master control within Robotics & Agents for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative control question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar control task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach control as continuously adjusting actions based on observed state so a system moves toward a desired target. Distinguish high-level planning from low-level corrective behavior.",
+          "worked_example": "A robot arm moving toward a target can compare its current position with the desired position and make small corrections until the error is reduced.",
+          "pitfall": "Pitfall: assuming a single command is enough despite disturbances, sensor error, or changing state.",
+          "mastery": "Mastery: explain the feedback loop of observe, compare, act, and re-observe, and identify why feedback improves control."
         },
         {
           "title": "agents",
-          "teaching": "Master agents within Robotics & Agents for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative agents question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar agents task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach an AI agent as a system that observes relevant information, selects actions according to an objective, and receives new information from the environment. Emphasize state, actions, goals, and feedback.",
+          "worked_example": "A game-playing agent observes the current board, evaluates legal moves, selects an action, then observes the resulting board before acting again.",
+          "pitfall": "Pitfall: calling every chatbot or automated script an autonomous agent without checking whether it has meaningful action selection and environment feedback.",
+          "mastery": "Mastery: identify an agent's observations, actions, objective, and feedback loop, and reason about how changing one component changes behavior."
         },
         {
           "title": "automation",
-          "teaching": "Master automation within Robotics & Agents for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative automation question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar automation task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach automation as using software or machines to execute defined processes, while distinguishing deterministic workflows from adaptive AI-based systems. The right level of automation depends on risk and variability.",
+          "worked_example": "An invoice workflow can automatically extract fields, validate totals, and route exceptions to a person; automation does not require every step to be handled by AI.",
+          "pitfall": "Pitfall: equating automation with AI or removing human review from a process simply because some steps can be automated.",
+          "mastery": "Mastery: separate automation from AI, identify suitable automated steps, and design sensible exception and human-review paths."
         }
       ]
     },
@@ -260,38 +260,38 @@
       "subtopics": [
         {
           "title": "fairness",
-          "teaching": "Master fairness within Responsible AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative fairness question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar fairness task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach fairness as evaluating whether an AI system produces unjust or materially unequal outcomes across relevant groups. Fairness depends on context, measurement, and the consequences of errors.",
+          "worked_example": "If a screening model has much higher false-negative rates for one group, comparing group-level outcomes can reveal a fairness concern even when overall accuracy looks strong.",
+          "pitfall": "Pitfall: assuming one fairness metric can settle every ethical question or that identical treatment always produces fair outcomes.",
+          "mastery": "Mastery: identify affected groups and outcome differences, select meaningful comparisons, and explain why fairness requires context-specific evaluation."
         },
         {
           "title": "privacy",
-          "teaching": "Master privacy within Responsible AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative privacy question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar privacy task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach AI privacy through data minimization, purpose limitation, access control, secure handling, and awareness of sensitive information. Ask whether each collected datum is necessary for the stated task.",
+          "worked_example": "A learning app may need a student's quiz responses to personalize practice but should not collect unrelated personal information simply because storage is available.",
+          "pitfall": "Pitfall: assuming data becomes harmless because it is stored digitally or because a model, rather than a person, processes it.",
+          "mastery": "Mastery: identify unnecessary or sensitive collection, propose privacy-preserving handling, and explain why access and retention should be limited."
         },
         {
           "title": "safety",
-          "teaching": "Master safety within Responsible AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative safety question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar safety task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach AI safety as preventing, detecting, and reducing harmful behavior or failures. Consider misuse, unexpected outputs, operational hazards, and the severity of possible errors.",
+          "worked_example": "A classroom AI assistant should have safeguards against unsafe instructions, protect student data, and provide escalation when it cannot reliably answer a high-risk question.",
+          "pitfall": "Pitfall: judging safety only from normal demonstrations or assuming a system is safe because harmful behavior has not yet been observed.",
+          "mastery": "Mastery: identify plausible failure and misuse modes, rank them by impact, and propose safeguards, testing, and fallback procedures."
         },
         {
           "title": "transparency",
-          "teaching": "Master transparency within Responsible AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative transparency question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar transparency task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach transparency as making relevant system behavior, limitations, data practices, and decision factors understandable to appropriate users. Transparency should help people make informed decisions, not merely expose technical jargon.",
+          "worked_example": "If an AI recommendation is based on several measurable inputs, a useful explanation can state the major factors and limitations rather than simply displaying a confidence number.",
+          "pitfall": "Pitfall: confusing transparency with revealing every internal model parameter or presenting a polished explanation that is not faithful to the actual system.",
+          "mastery": "Mastery: explain what users need to know to evaluate an AI output and distinguish meaningful explanation from decorative technical detail."
         },
         {
           "title": "human oversight",
-          "teaching": "Master human oversight within Responsible AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative human oversight question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar human oversight task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach human oversight as maintaining accountable human control where AI errors or actions can materially affect people. Define when humans review, override, escalate, or stop a system.",
+          "worked_example": "For an AI-assisted scholarship screening workflow, a trained reviewer can examine flagged applications and override an incorrect recommendation before a final decision.",
+          "pitfall": "Pitfall: placing a human nominally in the loop but giving them too little time, information, authority, or independence to meaningfully review the output.",
+          "mastery": "Mastery: design a human-review point with clear responsibility, sufficient evidence, override authority, and escalation for uncertain or harmful cases."
         }
       ]
     },
@@ -300,38 +300,38 @@
       "subtopics": [
         {
           "title": "case studies",
-          "teaching": "Master case studies within AI Problem Solving for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative case studies question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar case studies task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach case studies as structured analysis of a real or realistic AI problem: objective, stakeholders, data, method, evaluation, risks, deployment, and outcomes. Use evidence rather than judging from the technology label.",
+          "worked_example": "For a crop-disease assistant, analyze farmer needs, image quality, model performance across crops, connectivity constraints, false diagnoses, and the role of agricultural experts before recommending deployment.",
+          "pitfall": "Pitfall: selecting a model before defining the problem or treating a successful laboratory result as proof of real-world usefulness.",
+          "mastery": "Mastery: evaluate an AI case end to end, identify missing evidence, compare risks and benefits, and justify a deployment recommendation."
         },
         {
           "title": "model selection",
-          "teaching": "Master model selection within AI Problem Solving for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative model selection question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar model selection task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach model selection as matching a method to the task, data, constraints, performance needs, interpretability requirements, and operational environment. Bigger or newer is not automatically better.",
+          "worked_example": "For a small tabular prediction task, a simpler model may be preferable if it meets accuracy requirements and is easier to interpret and maintain than a large neural network.",
+          "pitfall": "Pitfall: choosing a model by popularity, benchmark reputation, or complexity without checking the actual task and constraints.",
+          "mastery": "Mastery: compare candidate approaches against explicit criteria and justify the selected model with task-specific evidence."
         },
         {
           "title": "data-to-decision workflows",
-          "teaching": "Master data-to-decision workflows within AI Problem Solving for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative data-to-decision workflows question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar data-to-decision workflows task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach an AI workflow as a chain from problem definition and data collection through preparation, modeling, evaluation, deployment, monitoring, and human decision-making. Errors can enter at every stage.",
+          "worked_example": "A fraud workflow collects transactions, prepares features, scores risk, sends high-risk cases for review, records outcomes, and monitors whether performance changes as fraud patterns evolve.",
+          "pitfall": "Pitfall: optimizing only the model while ignoring poor data collection, weak evaluation, unusable outputs, or missing post-deployment monitoring.",
+          "mastery": "Mastery: map the complete data-to-decision pipeline, identify failure points, and specify checks at each important stage."
         },
         {
           "title": "trade-offs",
-          "teaching": "Master trade-offs within AI Problem Solving for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative trade-offs question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar trade-offs task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach AI trade-offs by comparing accuracy, latency, cost, privacy, interpretability, robustness, energy use, and human workload according to the application. There is rarely one universally best system.",
+          "worked_example": "A real-time assistant may choose a smaller model because slightly lower accuracy is acceptable when response speed, device cost, and privacy matter more.",
+          "pitfall": "Pitfall: maximizing one metric while ignoring constraints or downstream consequences that make the system unsuitable.",
+          "mastery": "Mastery: identify competing objectives, rank them for a stated context, and defend a balanced design choice."
         },
         {
           "title": "system reasoning",
-          "teaching": "Master system reasoning within AI Problem Solving for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative system reasoning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar system reasoning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach system reasoning as examining how models, data pipelines, interfaces, users, safeguards, and external conditions interact. A locally correct component can still produce a poor overall system.",
+          "worked_example": "A recommendation engine may predict accurately but create harmful outcomes if the interface hides uncertainty, the data reflects historical imbalance, or users over-trust automated rankings.",
+          "pitfall": "Pitfall: evaluating a single model in isolation while ignoring feedback loops, human behavior, integration failures, and changing environments.",
+          "mastery": "Mastery: reason across the complete AI system, identify interactions and feedback loops, and propose tests that evaluate real-world behavior rather than one component alone."
         }
       ]
     }
