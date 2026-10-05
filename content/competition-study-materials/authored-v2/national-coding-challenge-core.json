@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "National Coding Challenge",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_in_progress",
+  "status": "subject_specific_authoring_v1_complete",
   "age_bands": [
     "foundation",
     "developing",
@@ -180,38 +180,38 @@
       "subtopics": [
         {
           "title": "searching",
-          "teaching": "Master searching within Algorithms for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative searching challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar searching problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach linear search for arbitrary sequences and binary search only when the data is ordered. Compare the work performed by each method and make the precondition for binary search explicit.",
+          "worked_example": "For sorted [2,5,8,11,14,19], searching for 11 with binary search checks the middle region, then narrows to the target. On an unsorted list, linear search is the safe direct method.",
+          "pitfall": "Pitfall: applying binary search to unsorted data, or returning failure before all valid candidates have been examined.",
+          "mastery": "Mastery: choose a search method from the data's properties, trace its decisions, handle absent and boundary targets, and justify the choice."
         },
         {
           "title": "sorting",
-          "teaching": "Master sorting within Algorithms for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative sorting challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar sorting problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach sorting as arranging data according to a comparison rule. Contrast simple comparison-based methods conceptually and emphasize preserving the required order and handling duplicates.",
+          "worked_example": "Sorting [7,2,7,4] in ascending order gives [2,4,7,7]. A stable method can preserve the original order of equal records when records carry additional fields.",
+          "pitfall": "Pitfall: sorting in the wrong direction, losing associated data, or assuming duplicate values are automatically removed by sorting.",
+          "mastery": "Mastery: select an appropriate sorting approach for the constraints, trace key comparisons or passes, preserve required data, and verify sortedness."
         },
         {
           "title": "two pointers",
-          "teaching": "Master two pointers within Algorithms for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative two pointers challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar two pointers problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach two-pointer techniques for sequences where moving two indices can avoid repeated work. Explain common patterns such as opposite ends and a slow/fast pair, and state the invariant that justifies each movement.",
+          "worked_example": "In sorted [1,3,4,7,9], to find a pair summing to 10, start at both ends: 1+9=10, so the pair is found immediately; otherwise the sum determines which pointer can move safely.",
+          "pitfall": "Pitfall: moving the wrong pointer without using the ordering invariant, or applying the technique when the required ordering/property is absent.",
+          "mastery": "Mastery: identify when two pointers reduce repeated scanning, maintain the pointer invariant, and prove that no valid candidate is skipped."
         },
         {
           "title": "prefix ideas",
-          "teaching": "Master prefix ideas within Algorithms for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative prefix ideas challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar prefix ideas problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach prefix sums and related prefix state as a way to answer repeated range questions after one preprocessing pass. Define exactly what each prefix position represents.",
+          "worked_example": "For values [3,5,2,6], prefix sums [3,8,10,16] allow the sum from index 1 through 3 to be obtained as 16-3=13 in a zero-based prefix convention with an initial zero.",
+          "pitfall": "Pitfall: mixing inclusive and exclusive endpoints or forgetting the extra initial zero used by the common prefix-sum formulation.",
+          "mastery": "Mastery: construct the correct prefix representation, answer range queries with precise endpoints, and test empty, single-element, and full-range cases."
         },
         {
           "title": "recursion basics",
-          "teaching": "Master recursion basics within Algorithms for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative recursion basics challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar recursion basics problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach recursion through a base case, a smaller recursive subproblem, and progress toward termination. Trace the call stack rather than treating recursion as mysterious repetition.",
+          "worked_example": "A factorial function can define fact(1)=1 and fact(n)=n*fact(n-1). Thus fact(4)=4*3*2*1=24, with the calls returning in reverse order.",
+          "pitfall": "Pitfall: missing or unreachable base cases, recursive calls that do not reduce the problem, or confusing call order with return order.",
+          "mastery": "Mastery: identify base and recursive cases, trace the call stack, prove progress toward termination, and recognize when an iterative approach is simpler."
         }
       ]
     },
@@ -220,38 +220,38 @@
       "subtopics": [
         {
           "title": "problem decomposition",
-          "teaching": "Master problem decomposition within Problem Solving for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative problem decomposition challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar problem decomposition problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach decomposition as converting a problem statement into smaller transformations: parse, represent, compute, validate, and output. Name intermediate data explicitly before coding.",
+          "worked_example": "For a frequency task, split the work into reading tokens, normalizing each token, updating a frequency map, and selecting the required result. Each step can be tested separately.",
+          "pitfall": "Pitfall: coding immediately from the story without identifying inputs, outputs, constraints, and intermediate state.",
+          "mastery": "Mastery: turn an unfamiliar statement into a sequence of precise subproblems, define their data flow, and identify which part should be solved first."
         },
         {
           "title": "constraints",
-          "teaching": "Master constraints within Problem Solving for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative constraints challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar constraints problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach constraints as algorithm-selection evidence. Estimate how input size affects repeated loops, memory use, and whether preprocessing or a faster structure is necessary.",
+          "worked_example": "If n can reach 100,000, an O(n²) pairwise scan may perform about 10 billion comparisons in the worst case, while an O(n log n) strategy is dramatically more practical.",
+          "pitfall": "Pitfall: solving the sample correctly while ignoring the stated maximum input size, causing time or memory failure on judge data.",
+          "mastery": "Mastery: read constraints before choosing an approach, estimate growth qualitatively, and reject methods whose resource needs are incompatible with the limits."
         },
         {
           "title": "edge cases",
-          "teaching": "Master edge cases within Problem Solving for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative edge cases challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar edge cases problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach edge cases as inputs at or just beyond structural boundaries: empty collections, one item, equal values, minimum/maximum limits, duplicates, and impossible outcomes.",
+          "worked_example": "A maximum-value search over [42] should return 42; an empty-input variant should follow the problem's stated contract rather than assuming an element exists.",
+          "pitfall": "Pitfall: writing logic that only works for the sample's typical case and crashes or returns a wrong result at a boundary.",
+          "mastery": "Mastery: systematically derive edge cases from the specification and include them in both mental tracing and targeted tests."
         },
         {
           "title": "complexity intuition",
-          "teaching": "Master complexity intuition within Problem Solving for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative complexity intuition challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar complexity intuition problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach time and space complexity as growth estimates rather than exact stopwatch measurements. Compare constant, logarithmic, linear, n log n, and quadratic patterns through their dominant operations.",
+          "worked_example": "For n=1,000, a linear pass is about 1,000 iterations, while a quadratic pairwise process can approach 1,000,000 comparisons. The difference grows rapidly as n increases.",
+          "pitfall": "Pitfall: judging an algorithm only from a small sample or ignoring nested loops and hidden repeated work inside helper functions.",
+          "mastery": "Mastery: estimate dominant growth from code structure, compare candidate approaches, and explain why a method should or should not scale to the constraints."
         },
         {
           "title": "debugging",
-          "teaching": "Master debugging within Problem Solving for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative debugging challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar debugging problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach debugging as hypothesis-driven diagnosis: reproduce the failure, isolate the smallest failing case, inspect state changes, identify the violated assumption, patch one cause, and retest.",
+          "worked_example": "If a sum is too large only when the first element is negative, test a one-element negative case and inspect accumulator initialization before changing unrelated loop logic.",
+          "pitfall": "Pitfall: changing several lines at once or fixing the visible output without identifying the state or assumption that caused the error.",
+          "mastery": "Mastery: localize a bug using traces and minimal tests, explain its root cause, apply a targeted fix, and confirm that old cases still pass."
         }
       ]
     },
@@ -260,38 +260,38 @@
       "subtopics": [
         {
           "title": "tracing",
-          "teaching": "Master tracing within Code Correctness for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative tracing challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar tracing problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach code tracing as executing statements mentally or with a trace table while recording only state relevant to the output. Follow branches, loop updates, calls, and returns in order.",
+          "worked_example": "For x=2, then repeat three times with x=x+2, the recorded states are 2,4,6,8; the final value is 8 and the intermediate states explain how it was reached.",
+          "pitfall": "Pitfall: skipping a branch or loop iteration because the final result seems obvious, especially when a variable is changed in multiple places.",
+          "mastery": "Mastery: trace unfamiliar code line by line at the relevant state changes and use the trace to justify the exact output."
         },
         {
           "title": "test cases",
-          "teaching": "Master test cases within Code Correctness for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative test cases challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar test cases problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach test cases as deliberate evidence: include normal, boundary, duplicate, empty/singleton, and invalid/impossible cases when the specification permits them. Each test should target a possible failure mode.",
+          "worked_example": "For a function that returns the larger of two numbers, test (5,3), (3,5), (4,4), and the allowed minimum values rather than testing only one ordering.",
+          "pitfall": "Pitfall: relying on one happy-path sample or choosing tests that all exercise the same branch.",
+          "mastery": "Mastery: design a compact but high-value test set that covers requirements, boundaries, and likely implementation mistakes."
         },
         {
           "title": "failure diagnosis",
-          "teaching": "Master failure diagnosis within Code Correctness for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative failure diagnosis challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar failure diagnosis problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach diagnosis by separating syntax/build errors, runtime failures, wrong-answer logic, and resource failures. Read the symptom first, then trace backward to the smallest violated assumption.",
+          "worked_example": "If the program compiles but fails only on large inputs, inspect algorithmic complexity and memory growth before rewriting basic syntax.",
+          "pitfall": "Pitfall: treating every failure as a coding typo or changing the algorithm without confirming what category of failure occurred.",
+          "mastery": "Mastery: classify failures correctly, connect symptoms to likely causes, and produce a targeted fix supported by a reproducing case."
         },
         {
           "title": "boundary conditions",
-          "teaching": "Master boundary conditions within Code Correctness for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative boundary conditions challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar boundary conditions problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach boundary conditions as the exact transition points where loop limits, ranges, indices, or validity rules change. Make inclusive/exclusive choices explicit in code.",
+          "worked_example": "For an array of length n, the last zero-based index is n-1. A loop `i<n` visits valid positions; `i<=n` attempts one invalid position.",
+          "pitfall": "Pitfall: using a mathematically correct-looking boundary that does not match the programming representation.",
+          "mastery": "Mastery: identify every relevant boundary, test values immediately below/at/above it, and implement limits without off-by-one errors."
         },
         {
           "title": "verification",
-          "teaching": "Master verification within Code Correctness for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative verification challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar verification problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach verification as independently checking that a program satisfies the specification, not merely that it produces the expected sample. Use invariants, alternative calculations, and adversarial tests.",
+          "worked_example": "After sorting an array, verify that every adjacent pair is nondecreasing and that the output contains the same multiset of values as the input; both properties support correctness.",
+          "pitfall": "Pitfall: confirming only the final sample output or using the same flawed reasoning to verify the program that produced the result.",
+          "mastery": "Mastery: state a correctness property, test it independently, and explain evidence that the implementation preserves the required behavior."
         }
       ]
     },
@@ -300,38 +300,38 @@
       "subtopics": [
         {
           "title": "simulation",
-          "teaching": "Master simulation within Applied Coding for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative simulation challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar simulation problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach simulation as maintaining program state exactly as the problem describes each event or operation. Identify state variables, event order, and transition rules before coding.",
+          "worked_example": "For a counter starting at 10, events +3, -2, +5 produce states 10→13→11→16. Applying events in a different order changes the result, so ordering is part of the specification.",
+          "pitfall": "Pitfall: skipping an event, applying simultaneous-looking operations in the wrong order, or updating a state variable from stale rather than current data.",
+          "mastery": "Mastery: translate event rules into deterministic state transitions, trace every event, and validate the final state against small hand-worked cases."
         },
         {
           "title": "text processing",
-          "teaching": "Master text processing within Applied Coding for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative text processing challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar text processing problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach text processing through tokenization, normalization, character scanning, and exact output rules. Decide whether case, whitespace, punctuation, and Unicode distinctions matter from the specification.",
+          "worked_example": "To count vowels in `Code`, scan C-o-d-e and count o and e, giving 2. If the task is case-insensitive, normalize case before testing characters.",
+          "pitfall": "Pitfall: accidentally counting punctuation, mishandling spaces, or applying case-sensitive logic when the specification treats letters uniformly.",
+          "mastery": "Mastery: transform and inspect text according to explicit rules, handle empty and whitespace-heavy inputs, and preserve required output formatting."
         },
         {
           "title": "mathematical coding",
-          "teaching": "Master mathematical coding within Applied Coding for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative mathematical coding challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar mathematical coding problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach mathematical coding by translating a mathematical definition into integer-safe program operations. Check divisibility, overflow, rounding, and boundary behavior rather than copying formulas blindly.",
+          "worked_example": "To compute the sum of the first n positive integers, use n*(n+1)/2 when the language and constraints safely support the intermediate product; for large values, choose a representation that avoids overflow.",
+          "pitfall": "Pitfall: floating-point arithmetic for exact integer answers, incorrect operator precedence, or overflow before division reduces the value.",
+          "mastery": "Mastery: convert definitions into robust code, validate with small cases, and account for numeric limits and exactness."
         },
         {
           "title": "data handling",
-          "teaching": "Master data handling within Applied Coding for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative data handling challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar data handling problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach data handling as a pipeline: parse records, choose an appropriate representation, transform or aggregate them, and emit the required result. Preserve associations between related fields.",
+          "worked_example": "For records `(id,score)`, a map from id to score supports direct lookup while an array of records preserves input order; the choice depends on whether lookup or ordering is required.",
+          "pitfall": "Pitfall: losing field associations, assuming input order is sorted, or converting values to text when later arithmetic is required.",
+          "mastery": "Mastery: choose representations from access needs, preserve data integrity through transformations, and verify both values and required ordering."
         },
         {
           "title": "challenge problems",
-          "teaching": "Master challenge problems within Applied Coding for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative challenge problems challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar challenge problems problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Teach championship challenge solving as a disciplined cycle: understand the statement, derive the invariant or key observation, choose an algorithm, prove it on representative cases, implement, and stress-test boundaries.",
+          "worked_example": "For a duplicate-detection task, a set provides a direct membership invariant: before inserting a value, membership tells whether it has already appeared. The approach avoids repeated pairwise comparisons.",
+          "pitfall": "Pitfall: coding the first plausible pattern without proving why it covers all cases, especially when constraints require a less obvious optimization.",
+          "mastery": "Mastery: independently derive a viable approach for unfamiliar problems, justify correctness and complexity, implement cleanly, and verify with adversarial tests."
         }
       ]
     }
