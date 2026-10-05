@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
-import { firebaseAuth } from '@/lib/firebase'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { firebaseAuth, firestore } from '@/lib/firebase'
 import { supabase } from '@/lib/supabase'
 import { useAuth } from '@/hooks/useAuth'
 import type { Course } from '@/types/database'
@@ -88,6 +89,8 @@ async function invokeOfficial(name: string, body: Record<string, unknown>) {
 export default function CompetitionParticipant() {
   const { slug } = useParams<{ slug: string }>()
   const { user, loading } = useAuth()
+  const [resolvedCourse, setResolvedCourse] = useState<Course | null>(null)
+  const [courseLoading, setCourseLoading] = useState(true)
 
   const [view, setView] = useState<ViewState>('access')
   const [questions, setQuestions] = useState<CompetitionQuestion[]>([])
@@ -102,7 +105,39 @@ export default function CompetitionParticipant() {
   const [errorMessage, setErrorMessage] = useState('')
   const autoSubmitRef = useRef(false)
 
-  const course = slug === THIRUKKURAL_SLUG || slug === THIRUKKURAL_LEGACY_SLUG ? competitionCourse : null
+  const isThirukkural = slug === THIRUKKURAL_SLUG || slug === THIRUKKURAL_LEGACY_SLUG
+  const course = isThirukkural ? competitionCourse : resolvedCourse
+
+  useEffect(() => {
+    let cancelled = false
+    async function loadCompetition() {
+      if (!slug || isThirukkural) {
+        setResolvedCourse(null)
+        setCourseLoading(false)
+        return
+      }
+      setCourseLoading(true)
+      try {
+        const snapshot = await getDocs(query(
+          collection(firestore, 'courses'),
+          where('slug', '==', slug),
+          where('is_published', '==', true),
+          where('is_competition', '==', true),
+        ))
+        if (cancelled) return
+        setResolvedCourse(snapshot.empty ? null : ({ id: snapshot.docs[0].id, ...snapshot.docs[0].data() } as Course))
+      } catch (error) {
+        if (!cancelled) {
+          console.error('Failed to load competition:', error)
+          setResolvedCourse(null)
+        }
+      } finally {
+        if (!cancelled) setCourseLoading(false)
+      }
+    }
+    void loadCompetition()
+    return () => { cancelled = true }
+  }, [slug, isThirukkural])
 
   const totalSeconds = useMemo(
     () => questions.reduce((sum, q) => sum + Math.max(1, Number(q.time_seconds) || 60), 0),
@@ -214,6 +249,10 @@ export default function CompetitionParticipant() {
 
   if (!user) {
     return <Navigate to="/login" state={{ redirectTo: `/competition/${slug}` }} replace />
+  }
+
+  if (courseLoading) {
+    return <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6"><div className="card h-64 animate-pulse" /></div>
   }
 
   if (!course) {
@@ -336,15 +375,24 @@ export default function CompetitionParticipant() {
         <div className="card p-6">
           {errorMessage && <div className="mb-5 rounded-card border border-danger/30 bg-danger/10 p-4 text-sm text-danger">{errorMessage}</div>}
 
-          <div className="rounded-card border border-gold/15 bg-white/5 p-5">
-            <h2 className="font-display text-lg">Official Competition</h2>
-            <p className="mt-2 text-sm text-slate-muted">
-              The official competition uses an age-appropriate paper: 30 questions for your age band. Each of the four age bands has its own fixed 30-question paper. During the competition, only the questions and options are shown. Correct answers and explanations are not revealed.
-            </p>
-            <button type="button" onClick={() => void startAttempt()} disabled={busy} className="btn-primary mt-5 disabled:opacity-50">
-              {busy ? 'Starting...' : 'Start Competition'}
-            </button>
-          </div>
+          {isThirukkural ? (
+            <div className="rounded-card border border-gold/15 bg-white/5 p-5">
+              <h2 className="font-display text-lg">Official Competition</h2>
+              <p className="mt-2 text-sm text-slate-muted">
+                The official competition uses an age-appropriate paper: 30 questions for your age band. Each of the four age bands has its own fixed 30-question paper. During the competition, only the questions and options are shown. Correct answers and explanations are not revealed.
+              </p>
+              <button type="button" onClick={() => void startAttempt()} disabled={busy} className="btn-primary mt-5 disabled:opacity-50">
+                {busy ? 'Starting...' : 'Start Competition'}
+              </button>
+            </div>
+          ) : (
+            <div className="rounded-card border border-gold/15 bg-white/5 p-5">
+              <h2 className="font-display text-lg">Competition Preparation</h2>
+              <p className="mt-2 text-sm text-slate-muted">
+                Study Materials and Mock Tests are available for this competition. The official competition attempt is kept separate from preparation and will appear here when its official paper is published.
+              </p>
+            </div>
+          )}
 
           <section className="mt-8">
             <div className="mb-5">
