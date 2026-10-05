@@ -32,6 +32,17 @@ if (!Array.isArray(privateBank)) throw new Error("Private answer key must be an 
 if (!pools || typeof pools !== "object") throw new Error("Invalid age-pools.json");
 if (!blueprint || typeof blueprint !== "object") throw new Error("Explicit selection-blueprint.json is required");
 
+const SCAFFOLD_PATTERNS = [
+  /an unrelated concept/i,
+  /a reversed interpretation/i,
+  /a random guess/i,
+  /the core concept represented by/i,
+  /apply .+ correctly in an appropriate context/i,
+  /complete a representative/i,
+  /key rule, clue, language feature or performance criterion/i,
+];
+const hasScaffold = (value) => SCAFFOLD_PATTERNS.some((pattern) => pattern.test(String(value ?? "")));
+
 const validateMcq = (q, label) => {
   if (!q.question_id || !q.question || !q.age_band || !q.topic || !q.subtopic) throw new Error(`${label}: missing identity/curriculum mapping`);
   if (!Array.isArray(q.options) || q.options.length !== 4 || q.options.some(v => typeof v !== "string" || !v.trim())) {
@@ -43,6 +54,8 @@ const validateMcq = (q, label) => {
   if (typeof q.answer !== "string" || !q.answer.trim()) throw new Error(`${label}: answer is required`);
   if (typeof q.explanation !== "string" || q.explanation.trim().length < 12) throw new Error(`${label}: explanation is required`);
   if (q.review_status !== "reviewed") throw new Error(`${label}: review_status must be reviewed before production packaging`);
+  const text = [q.question, ...(q.options || []), q.answer, q.explanation, q.topic, q.subtopic].join(" ");
+  if (hasScaffold(text)) throw new Error(`${label}: scaffold/template content detected; production MCQ must be subject-authored`);
 };
 
 const ids = new Set();
