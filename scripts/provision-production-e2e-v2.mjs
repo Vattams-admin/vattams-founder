@@ -3,6 +3,7 @@ import { appendFileSync } from 'node:fs'
 import { cert, getApps, initializeApp } from 'firebase-admin/app'
 import { getAuth } from 'firebase-admin/auth'
 import { getFirestore } from 'firebase-admin/firestore'
+import { createClient } from '@supabase/supabase-js'
 
 const serviceAccountJson = process.env.FIREBASE_SERVICE_ACCOUNT_JSON
 if (!serviceAccountJson) throw new Error('FIREBASE_SERVICE_ACCOUNT_JSON is required.')
@@ -16,6 +17,12 @@ const runId = process.env.GITHUB_RUN_ID || randomUUID().replace(/-/g, '').slice(
 const emailDomain = 'vattams-e2e.test'
 const password = `VattamsE2E!${runId}Aa`
 const courseId = `e2e-live-course-${runId}`
+const competitionCourseId = 'DNWt3cPE4ZSJG90CTC1e'
+const supabaseUrl = process.env.SUPABASE_URL || ''
+const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ''
+const supabase = supabaseUrl && supabaseServiceRoleKey
+  ? createClient(supabaseUrl, supabaseServiceRoleKey, { auth: { persistSession: false, autoRefreshToken: false } })
+  : null
 
 async function getOrCreateUser(email, displayName) {
   try {
@@ -60,6 +67,10 @@ async function provision() {
       student_id: student.uid, course_id: courseId, status: 'active',
       enrolled_at: now.toISOString(), source: 'production-e2e',
     }, { merge: true })
+    batch.set(db.collection('enrolments').doc(`${student.uid}_${competitionCourseId}`), {
+      student_id: student.uid, course_id: competitionCourseId, status: 'active',
+      enrolled_at: now.toISOString(), source: 'production-e2e-competition',
+    }, { merge: true })
   }
 
   batch.set(sessionRef, {
@@ -75,6 +86,20 @@ async function provision() {
   })
 
   await batch.commit()
+
+  if (!supabase) throw new Error('SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required for competition E2E provisioning.')
+  const cacheRows = [studentA, studentB].map(student => ({
+    student_id: student.uid,
+    course_id: competitionCourseId,
+    is_admin: false,
+    enrolment_active: true,
+    date_of_birth: '2005-01-01',
+    checked_at: new Date().toISOString(),
+  }))
+  const { error: cacheError } = await supabase
+    .from('competition_access_cache')
+    .upsert(cacheRows, { onConflict: 'student_id,course_id' })
+  if (cacheError) throw new Error(`Competition access cache provisioning failed: ${cacheError.message}`)
 
   const env = [
     `E2E_TUTOR_EMAIL=${tutorEmail}`, `E2E_TUTOR_PASSWORD=${password}`,
@@ -107,6 +132,23 @@ async function cleanup() {
     if (!snap.empty) {
       const batch = db.batch()
       for (const item of snap.docs) batch.delete(item.ref)
+      await batch.commit()
+    }
+  }
+
+  if (supabase) {
+    const studentIds = []
+    for (const email of emails.filter(Boolean)) {
+      try { studentIds.push((await auth.getUserByEmail(email)).uid) } catch {}
+    }
+    if (studentIds.length) {
+      const { error } = await supabase.from('competition_access_cache').delete().eq('course_id', competitionCourseId).in('student_id', studentIds)
+      if (error) throw new Error(`Competition access cache cleanup failed: ${error.message}`)
+    }
+    const competitionSnap = await db.collection('enrolments').where('course_id', '==', competitionCourseId).get()
+    if (!competitionSnap.empty) {
+      const batch = db.batch()
+      for (const item of competitionSnap.docs) batch.delete(item.ref)
       await batch.commit()
     }
   }
