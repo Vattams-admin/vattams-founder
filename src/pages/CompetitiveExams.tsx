@@ -42,12 +42,11 @@ export default function CompetitiveExams() {
         const snapshot = await getDocs(query(
           collection(firestore, 'courses'),
           where('is_published', '==', true),
-          where('category_id', '==', 'competitive-exams'),
         ))
         if (cancelled) return
         const rows = snapshot.docs
           .map((doc) => ({ id: doc.id, ...doc.data() }) as Course)
-          .filter((course) => !course.is_competition)
+          .filter((course) => !course.is_competition && course.category_id === 'competitive-exams')
           .sort((a, b) => a.name.localeCompare(b.name))
         setCourses(rows)
         setState('loaded')
