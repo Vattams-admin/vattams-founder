@@ -679,7 +679,7 @@ Deno.serve(async (req) => {
       ) || 'Competition'
 
     const config =
-      COMPETITION_CONFIGS[courseId]
+      await loadCompetitionConfig(courseId)
 
     if (!config) {
       return json(
