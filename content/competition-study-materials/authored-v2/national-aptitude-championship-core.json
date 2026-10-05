@@ -161,17 +161,17 @@
         },
         {
           "title": "pie charts",
-          "teaching": "Master pie charts within Data Interpretation for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative pie charts challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar pie charts problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Convert sector angles or percentages into quantities by treating the full circle as 360°. Practise finding a sector share, comparing sectors, recovering a missing sector, and moving between angle, fraction, percentage, and total quantity. Always confirm that all sectors sum to the whole.",
+          "worked_example": "Worked example: A 90° sector represents 25% of a 480-student total, so it represents 120 students. Verify 90/360 = 1/4 and 480/4 = 120.",
+          "pitfall": "Common pitfall: treating the sector angle as the percentage itself, or using the wrong total when converting a sector into a quantity.",
+          "mastery": "Mastery: extract proportional information from pie charts, convert between angles and percentages, calculate missing sectors, and verify that sector totals reconcile with the complete dataset."
         },
         {
           "title": "caselet data",
-          "teaching": "Master caselet data within Data Interpretation for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative caselet data challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar caselet data problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Read caselet data as a compact dataset embedded in prose. Extract entities, quantities, units, and conditions into a structured table before calculating. Practise multi-step comparisons, ratios, percentages, totals, and conditional selections without adding facts not stated in the caselet.",
+          "worked_example": "Worked example: A school has 240 students; 40% are in Class A, and 25% of Class A participate in a quiz. Class A has 96 students and 24 participate. Verify each percentage against its correct base.",
+          "pitfall": "Common pitfall: using the overall total as the base for a percentage that refers only to a subgroup, or overlooking a condition introduced in the caselet.",
+          "mastery": "Mastery: extract a multi-variable dataset from prose, choose the correct base and units, complete chained inferences, and identify the stated facts supporting the conclusion."
         }
       ]
     },
