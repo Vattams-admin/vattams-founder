@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "National Quiz Championship",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/national-quiz-championship-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "India & World",
+      "subtopics": [
+        {
+          "title": "national facts",
+          "study_materials": {
+            "objective": "Build mastery of national facts in India & World for National Quiz Championship.",
+            "teaching_content": "National facts cover verified information about a country's geography, government, symbols, history and institutions.",
+            "worked_examples": [
+              "India's Constitution came into force on 26 January 1950, while its Constitution was adopted on 26 November 1949."
+            ],
+            "pitfall": "Adoption and commencement are distinct dates and should not be conflated.",
+            "mastery_check": "Recall national facts precisely and distinguish closely related dates or institutions.",
+            "revision": "Revise national facts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "world geography",
+          "study_materials": {
+            "objective": "Build mastery of world geography in India & World for National Quiz Championship.",
+            "teaching_content": "World geography includes continents, oceans, countries, physical features, climates and human settlement patterns.",
+            "worked_examples": [
+              "The Pacific Ocean is the largest ocean, while Asia is the largest continent by area under common geographic classifications."
+            ],
+            "pitfall": "Largest and deepest, or continent and country, are different categories of comparison.",
+            "mastery_check": "Compare geographic entities using the property named in the question.",
+            "revision": "Revise world geography through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "capitals",
+          "study_materials": {
+            "objective": "Build mastery of capitals in India & World for National Quiz Championship.",
+            "teaching_content": "A capital is a designated political or administrative centre and is not always the largest or best-known city.",
+            "worked_examples": [
+              "Canberra is Australia's capital, while Sydney is its largest city by population."
+            ],
+            "pitfall": "Familiarity with a city does not prove that it is the capital.",
+            "mastery_check": "Recall country-capital pairs and distinguish capitals from major cities.",
+            "revision": "Revise capitals through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "landmarks",
+          "study_materials": {
+            "objective": "Build mastery of landmarks in India & World for National Quiz Championship.",
+            "teaching_content": "Landmarks may be natural, architectural, historical or cultural and are often identified through location and distinctive features.",
+            "worked_examples": [
+              "The Eiffel Tower is a landmark of Paris, while the Taj Mahal is in Agra, India."
+            ],
+            "pitfall": "A landmark's country can be confused with its city when several facts are remembered together.",
+            "mastery_check": "Connect major landmarks with correct locations and broad significance.",
+            "revision": "Revise landmarks through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "international organizations",
+          "study_materials": {
+            "objective": "Build mastery of international organizations in India & World for National Quiz Championship.",
+            "teaching_content": "International organizations coordinate cooperation in areas such as health, peace, finance, development and culture.",
+            "worked_examples": [
+              "The WHO focuses on international public health, while UNESCO works in areas including education, science and culture."
+            ],
+            "pitfall": "Organizations may cooperate on the same issue but have different mandates.",
+            "mastery_check": "Match major organizations with their principal functions.",
+            "revision": "Revise international organizations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "History & Civilizations",
+      "subtopics": [
+        {
+          "title": "ancient civilizations",
+          "study_materials": {
+            "objective": "Build mastery of ancient civilizations in History & Civilizations for National Quiz Championship.",
+            "teaching_content": "Ancient civilizations can be identified through archaeological evidence, writing systems, cities, technology, governance and cultural practices.",
+            "worked_examples": [
+              "The Indus Valley Civilization is associated with planned cities and sophisticated drainage systems."
+            ],
+            "pitfall": "A single artifact is rarely enough to define an entire civilization.",
+            "mastery_check": "Connect major civilizations with distinctive evidence and broad chronology.",
+            "revision": "Revise ancient civilizations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Indian history",
+          "study_materials": {
+            "objective": "Build mastery of Indian history in History & Civilizations for National Quiz Championship.",
+            "teaching_content": "Indian history includes ancient, medieval and modern periods with many regional and political traditions.",
+            "worked_examples": [
+              "The Mauryan Empire, Mughal Empire and Indian independence movement belong to different historical periods and political contexts."
+            ],
+            "pitfall": "Chronology prevents mixing people and events from unrelated periods.",
+            "mastery_check": "Place major Indian events and figures in broad chronological order.",
+            "revision": "Revise Indian history through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "world history",
+          "study_materials": {
+            "objective": "Build mastery of world history in History & Civilizations for National Quiz Championship.",
+            "teaching_content": "World history includes political, economic, scientific and social transformations across regions and centuries.",
+            "worked_examples": [
+              "The Industrial Revolution changed production and urbanization, while the World Wars reshaped twentieth-century international relations."
+            ],
+            "pitfall": "A historical event's causes and consequences should be separated from later interpretations.",
+            "mastery_check": "Identify major world events and their broad historical significance.",
+            "revision": "Revise world history through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "heritage",
+          "study_materials": {
+            "objective": "Build mastery of heritage in History & Civilizations for National Quiz Championship.",
+            "teaching_content": "Heritage includes tangible places and objects as well as cultural traditions passed between generations.",
+            "worked_examples": [
+              "Ajanta and Ellora contain important rock-cut heritage associated with multiple religious and artistic traditions."
+            ],
+            "pitfall": "A heritage site's importance may involve several periods rather than one event.",
+            "mastery_check": "Identify major heritage examples and their cultural or historical context.",
+            "revision": "Revise heritage through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "historical personalities",
+          "study_materials": {
+            "objective": "Build mastery of historical personalities in History & Civilizations for National Quiz Championship.",
+            "teaching_content": "Historical personalities are associated with documented achievements, leadership, discoveries or cultural contributions.",
+            "worked_examples": [
+              "Mahatma Gandhi is associated with India's independence movement and non-violent mass political action."
+            ],
+            "pitfall": "A quotation circulating online is not reliable evidence of authorship.",
+            "mastery_check": "Match personalities with verified contributions and historical contexts.",
+            "revision": "Revise historical personalities through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Science & Nature",
+      "subtopics": [
+        {
+          "title": "life science",
+          "study_materials": {
+            "objective": "Build mastery of life science in Science & Nature for National Quiz Championship.",
+            "teaching_content": "Life science studies organisms, cells, heredity, body systems, ecosystems and biological processes.",
+            "worked_examples": [
+              "Plants use photosynthesis to convert light energy into chemical energy, while animals obtain energy through food."
+            ],
+            "pitfall": "Photosynthesis and respiration are related but are not the same process.",
+            "mastery_check": "Distinguish major biological processes and apply them to familiar examples.",
+            "revision": "Revise life science through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "physical science",
+          "study_materials": {
+            "objective": "Build mastery of physical science in Science & Nature for National Quiz Championship.",
+            "teaching_content": "Physical science includes concepts from physics and chemistry such as matter, forces, energy, motion and reactions.",
+            "worked_examples": [
+              "Speed can be calculated as distance divided by time, while mass and weight represent different physical quantities."
+            ],
+            "pitfall": "A formula should be used only when its variables match the quantity being asked.",
+            "mastery_check": "Apply basic physical and chemical concepts to everyday situations.",
+            "revision": "Revise physical science through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Earth science",
+          "study_materials": {
+            "objective": "Build mastery of Earth science in Science & Nature for National Quiz Championship.",
+            "teaching_content": "Earth science examines rocks, minerals, atmosphere, water, weather, climate and geological processes.",
+            "worked_examples": [
+              "The water cycle includes evaporation, condensation, precipitation, infiltration and runoff."
+            ],
+            "pitfall": "Weather describes short-term atmospheric conditions while climate concerns long-term patterns.",
+            "mastery_check": "Connect Earth processes with observable environmental phenomena.",
+            "revision": "Revise Earth science through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "space",
+          "study_materials": {
+            "objective": "Build mastery of space in Science & Nature for National Quiz Championship.",
+            "teaching_content": "Space science studies planets, moons, stars, galaxies and the interactions among them.",
+            "worked_examples": [
+              "Earth orbits the Sun and the Moon orbits Earth; the Sun is a star."
+            ],
+            "pitfall": "A galaxy is a much larger system than a planetary system.",
+            "mastery_check": "Classify major space objects and explain basic Earth-Sun-Moon relationships.",
+            "revision": "Revise space through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "environment",
+          "study_materials": {
+            "objective": "Build mastery of environment in Science & Nature for National Quiz Championship.",
+            "teaching_content": "Environmental science examines interactions among organisms, resources, pollution, climate and human activity.",
+            "worked_examples": [
+              "Reducing waste and protecting habitats can help lower environmental pressure and conserve resources."
+            ],
+            "pitfall": "Recycling alone does not remove the environmental cost of producing and transporting materials.",
+            "mastery_check": "Identify environmental problems and evaluate practical conservation responses.",
+            "revision": "Revise environment through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Technology",
+      "subtopics": [
+        {
+          "title": "computing",
+          "study_materials": {
+            "objective": "Build mastery of computing in Technology for National Quiz Championship.",
+            "teaching_content": "Computing systems process information using hardware, software, memory, storage and networks.",
+            "worked_examples": [
+              "RAM holds data for active work while persistent storage retains files when power is removed."
+            ],
+            "pitfall": "Storage capacity and processing speed are different properties.",
+            "mastery_check": "Identify core computing concepts and distinguish hardware roles.",
+            "revision": "Revise computing through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "internet",
+          "study_materials": {
+            "objective": "Build mastery of internet in Technology for National Quiz Championship.",
+            "teaching_content": "The internet connects networks worldwide, while web browsers and search engines are tools used to access and locate online information.",
+            "worked_examples": [
+              "A browser retrieves a webpage, while a search engine helps locate relevant indexed pages."
+            ],
+            "pitfall": "The internet, web and search engine are related but not synonymous.",
+            "mastery_check": "Distinguish major internet concepts and tools.",
+            "revision": "Revise internet through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "AI",
+          "study_materials": {
+            "objective": "Build mastery of AI in Technology for National Quiz Championship.",
+            "teaching_content": "Artificial intelligence includes systems designed to perform tasks involving prediction, recognition, language or decision-making.",
+            "worked_examples": [
+              "A generative AI system can produce text or images, but fluent output can still contain errors."
+            ],
+            "pitfall": "AI output should be checked rather than treated as automatically factual.",
+            "mastery_check": "Identify common AI uses and basic limitations.",
+            "revision": "Revise AI through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "inventions",
+          "study_materials": {
+            "objective": "Build mastery of inventions in Technology for National Quiz Championship.",
+            "teaching_content": "Inventions apply ideas to solve practical problems and often build on earlier knowledge or technologies.",
+            "worked_examples": [
+              "The telephone, printing press and semiconductor technologies each changed how people communicated or processed information."
+            ],
+            "pitfall": "Technological development is often cumulative rather than the work of one isolated moment.",
+            "mastery_check": "Connect major inventions with their broad purpose and impact.",
+            "revision": "Revise inventions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "digital society",
+          "study_materials": {
+            "objective": "Build mastery of digital society in Technology for National Quiz Championship.",
+            "teaching_content": "Digital society concerns how technology affects communication, education, work, privacy, security and participation.",
+            "worked_examples": [
+              "Digital platforms can increase access to information while also creating risks such as misinformation and privacy loss."
+            ],
+            "pitfall": "Technology's benefits do not remove the need for responsible use.",
+            "mastery_check": "Evaluate common social effects of digital technology.",
+            "revision": "Revise digital society through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Culture & Literature",
+      "subtopics": [
+        {
+          "title": "Indian literature",
+          "study_materials": {
+            "objective": "Build mastery of Indian literature in Culture & Literature for National Quiz Championship.",
+            "teaching_content": "Indian literature includes classical, medieval and modern works in many languages and traditions.",
+            "worked_examples": [
+              "The Ramayana and Mahabharata have influenced literature and culture across many Indian languages and regions."
+            ],
+            "pitfall": "A major work may exist in multiple versions and adaptations.",
+            "mastery_check": "Connect major Indian works with their broad literary and cultural traditions.",
+            "revision": "Revise Indian literature through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "world literature",
+          "study_materials": {
+            "objective": "Build mastery of world literature in Culture & Literature for National Quiz Championship.",
+            "teaching_content": "World literature includes works from diverse languages, periods and cultures that have influenced global literary traditions.",
+            "worked_examples": [
+              "Shakespeare's plays belong to the English Renaissance tradition, while Homer's epics belong to ancient Greek literary tradition."
+            ],
+            "pitfall": "Literary influence and original language are separate facts.",
+            "mastery_check": "Identify major world works, authors and broad literary contexts.",
+            "revision": "Revise world literature through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "arts",
+          "study_materials": {
+            "objective": "Build mastery of arts in Culture & Literature for National Quiz Championship.",
+            "teaching_content": "Arts include visual and performing traditions such as painting, sculpture, theatre, dance and crafts.",
+            "worked_examples": [
+              "Indian classical dance traditions such as Bharatanatyam and Kathak have distinct historical and performance conventions."
+            ],
+            "pitfall": "A folk tradition and a classical tradition should not be treated as identical categories.",
+            "mastery_check": "Recognize major art forms and associate them with appropriate traditions.",
+            "revision": "Revise arts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "music",
+          "study_materials": {
+            "objective": "Build mastery of music in Culture & Literature for National Quiz Championship.",
+            "teaching_content": "Music knowledge includes composers, performers, instruments, genres, traditions and characteristic forms.",
+            "worked_examples": [
+              "The sitar is strongly associated with North Indian classical music traditions, while the veena has important South Indian classical traditions."
+            ],
+            "pitfall": "An instrument's presence in one tradition does not make it exclusive to that tradition.",
+            "mastery_check": "Identify major instruments, musicians and broad musical traditions.",
+            "revision": "Revise music through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "languages",
+          "study_materials": {
+            "objective": "Build mastery of languages in Culture & Literature for National Quiz Championship.",
+            "teaching_content": "Languages belong to different families and have distinct scripts, histories and geographic distributions.",
+            "worked_examples": [
+              "Tamil is a major Dravidian language with a long literary tradition, while Hindi belongs to the Indo-Aryan branch of the Indo-European family."
+            ],
+            "pitfall": "Language, script and official status are different concepts.",
+            "mastery_check": "Distinguish language families, scripts and official-language arrangements.",
+            "revision": "Revise languages through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sports & Records",
+      "subtopics": [
+        {
+          "title": "sports knowledge",
+          "study_materials": {
+            "objective": "Build mastery of sports knowledge in Sports & Records for National Quiz Championship.",
+            "teaching_content": "Sports knowledge includes objectives, scoring systems, equipment, playing areas and basic terminology across major sports.",
+            "worked_examples": [
+              "In cricket, a batter scores runs while the fielding side seeks dismissals and controls scoring opportunities."
+            ],
+            "pitfall": "A sport's terminology should not be transferred automatically to another sport.",
+            "mastery_check": "Identify the basic structure and terminology of major sports.",
+            "revision": "Revise sports knowledge through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "competitions",
+          "study_materials": {
+            "objective": "Build mastery of competitions in Sports & Records for National Quiz Championship.",
+            "teaching_content": "Competitions differ in format, eligibility, participants and scoring, including leagues, knockout tournaments and multi-sport events.",
+            "worked_examples": [
+              "The Olympic Games are a multi-sport event, while a league typically involves repeated fixtures across a season."
+            ],
+            "pitfall": "A championship name alone does not establish its competition format.",
+            "mastery_check": "Match major competitions with their sport and broad format.",
+            "revision": "Revise competitions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "athletes",
+          "study_materials": {
+            "objective": "Build mastery of athletes in Sports & Records for National Quiz Championship.",
+            "teaching_content": "Athletes become notable through documented achievements, records, medals, titles or sustained performance in their sports.",
+            "worked_examples": [
+              "Neeraj Chopra is associated with javelin throw and India's Olympic athletics success."
+            ],
+            "pitfall": "A famous athlete should be matched using verified sporting achievements rather than unrelated celebrity information.",
+            "mastery_check": "Associate prominent athletes with their sport and major achievements.",
+            "revision": "Revise athletes through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "records",
+          "study_materials": {
+            "objective": "Build mastery of records in Sports & Records for National Quiz Championship.",
+            "teaching_content": "A sports record is a measured achievement under defined event rules and record-keeping standards.",
+            "worked_examples": [
+              "A record time in a sprint must specify the event, distance and valid measurement conditions."
+            ],
+            "pitfall": "A tournament win, medal and individual record are different achievements.",
+            "mastery_check": "Distinguish records from titles, medals and match results.",
+            "revision": "Revise records through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "rules",
+          "study_materials": {
+            "objective": "Build mastery of rules in Sports & Records for National Quiz Championship.",
+            "teaching_content": "Sports rules define legal actions, scoring, boundaries, equipment and penalties and may be updated by governing bodies.",
+            "worked_examples": [
+              "In football, a goal counts only when the ball legally crosses the goal line under the applicable rules."
+            ],
+            "pitfall": "A rule from one version or sport should not be assumed to apply universally.",
+            "mastery_check": "Use the relevant sport's rules when evaluating a play or result.",
+            "revision": "Revise rules through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Society & Institutions",
+      "subtopics": [
+        {
+          "title": "civics",
+          "study_materials": {
+            "objective": "Build mastery of civics in Society & Institutions for National Quiz Championship.",
+            "teaching_content": "Civics covers how citizens, government institutions, rights, duties and public decision-making interact.",
+            "worked_examples": [
+              "Voting in elections is one form of civic participation, while public institutions perform defined governmental functions."
+            ],
+            "pitfall": "Citizenship rights and civic responsibilities are related but not identical concepts.",
+            "mastery_check": "Distinguish citizens' roles from institutional responsibilities.",
+            "revision": "Revise civics through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "economics",
+          "study_materials": {
+            "objective": "Build mastery of economics in Society & Institutions for National Quiz Championship.",
+            "teaching_content": "Economics studies production, distribution, consumption, markets, resources and choices under scarcity.",
+            "worked_examples": [
+              "If a resource is limited and demand increases, its price may rise when other conditions remain similar."
+            ],
+            "pitfall": "Economic outcomes usually depend on multiple interacting factors.",
+            "mastery_check": "Apply basic economic concepts to simple real-world scenarios.",
+            "revision": "Revise economics through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "organizations",
+          "study_materials": {
+            "objective": "Build mastery of organizations in Society & Institutions for National Quiz Championship.",
+            "teaching_content": "Organizations are structured groups with defined purposes, memberships and responsibilities, including public, international, educational and professional bodies.",
+            "worked_examples": [
+              "The United Nations and World Health Organization are organizations with different memberships, mandates and areas of work."
+            ],
+            "pitfall": "An organization can collaborate with another without having the same purpose.",
+            "mastery_check": "Identify an organization's purpose and distinguish it from similarly named bodies.",
+            "revision": "Revise organizations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "awards",
+          "study_materials": {
+            "objective": "Build mastery of awards in Society & Institutions for National Quiz Championship.",
+            "teaching_content": "Awards recognize achievement or service according to defined criteria and may be civilian, academic, scientific, cultural or sporting.",
+            "worked_examples": [
+              "The Nobel Prizes recognize achievements across specified fields, while the Bharat Ratna is India's highest civilian award."
+            ],
+            "pitfall": "An award's prestige does not mean all awards use the same selection process.",
+            "mastery_check": "Match major awards with their fields and broad purpose.",
+            "revision": "Revise awards through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "public life",
+          "study_materials": {
+            "objective": "Build mastery of public life in Society & Institutions for National Quiz Championship.",
+            "teaching_content": "Public life includes elections, institutions, civic participation, public policy, media and community responsibilities.",
+            "worked_examples": [
+              "A public official's statement should be distinguished from an enacted law or formally issued government order."
+            ],
+            "pitfall": "Public discussion can contain claims that require verification.",
+            "mastery_check": "Separate official decisions, public statements, commentary and unverified claims.",
+            "revision": "Revise public life through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Quiz Mastery",
+      "subtopics": [
+        {
+          "title": "rapid recall",
+          "study_materials": {
+            "objective": "Build mastery of rapid recall in Quiz Mastery for National Quiz Championship.",
+            "teaching_content": "Rapid recall requires retrieving precise facts quickly while avoiding confusion between closely related names, dates, places and categories.",
+            "worked_examples": [
+              "When two capitals or two historical dates are easily confused, grouping them by country or event can strengthen retrieval."
+            ],
+            "pitfall": "Speed without accuracy creates avoidable quiz errors.",
+            "mastery_check": "Use compact associations and verify the exact fact before answering.",
+            "revision": "Revise rapid recall through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "cross-domain clues",
+          "study_materials": {
+            "objective": "Build mastery of cross-domain clues in Quiz Mastery for National Quiz Championship.",
+            "teaching_content": "Cross-domain questions combine clues from different subjects such as geography, history, science, culture or sports.",
+            "worked_examples": [
+              "A clue about a city, a monument and a historical ruler may jointly identify one Indian landmark."
+            ],
+            "pitfall": "Solving from only one clue can lead to a plausible but incorrect answer.",
+            "mastery_check": "Combine all clues and look for the single answer satisfying them.",
+            "revision": "Revise cross-domain clues through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "elimination",
+          "study_materials": {
+            "objective": "Build mastery of elimination in Quiz Mastery for National Quiz Championship.",
+            "teaching_content": "Elimination removes options that contradict known facts, categories or relationships before choosing among the remaining answers.",
+            "worked_examples": [
+              "If three options are capitals of the wrong countries, geographic knowledge can eliminate them before the final comparison."
+            ],
+            "pitfall": "Elimination is weaker when based only on vague familiarity.",
+            "mastery_check": "State why each rejected option fails and then compare the remaining candidates.",
+            "revision": "Revise elimination through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "source verification",
+          "study_materials": {
+            "objective": "Build mastery of source verification in Quiz Mastery for National Quiz Championship.",
+            "teaching_content": "Source verification checks factual claims against authoritative or credible evidence, especially for current or disputed information.",
+            "worked_examples": [
+              "For a claim about a government announcement, an official government release is stronger primary evidence than an unsourced social-media post."
+            ],
+            "pitfall": "A professional-looking webpage is not automatically authoritative.",
+            "mastery_check": "Check source identity, date, evidence and agreement before accepting a claim.",
+            "revision": "Revise source verification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mixed championship rounds",
+          "study_materials": {
+            "objective": "Build mastery of mixed championship rounds in Quiz Mastery for National Quiz Championship.",
+            "teaching_content": "Mixed championship rounds require switching efficiently among recall, reasoning, interpretation and source evaluation.",
+            "worked_examples": [
+              "A round may move from a capital-city question to a science concept and then to a historical chronology question, requiring a different solving strategy each time."
+            ],
+            "pitfall": "Using one solving method for every question can waste time or produce errors.",
+            "mastery_check": "Identify the question type quickly, choose the appropriate method and review uncertain answers strategically.",
+            "revision": "Revise mixed championship rounds through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Quiz Competition Mastery",
+      "subtopics": [
+        {
+          "title": "quiz clue extraction",
+          "study_materials": {
+            "objective": "Build mastery of quiz clue extraction in Quiz Competition Mastery for National Quiz Championship.",
+            "teaching_content": "Master quiz clue extraction within Quiz Competition Mastery for National Quiz Championship. Apply National Quiz knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative quiz clue extraction task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the quiz clue extraction task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar quiz clue extraction challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise quiz clue extraction through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "rapid recall and elimination",
+          "study_materials": {
+            "objective": "Build mastery of rapid recall and elimination in Quiz Competition Mastery for National Quiz Championship.",
+            "teaching_content": "Master rapid recall and elimination within Quiz Competition Mastery for National Quiz Championship. Apply National Quiz knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative rapid recall and elimination task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the rapid recall and elimination task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar rapid recall and elimination challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise rapid recall and elimination through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "multi-domain question reasoning",
+          "study_materials": {
+            "objective": "Build mastery of multi-domain question reasoning in Quiz Competition Mastery for National Quiz Championship.",
+            "teaching_content": "Master multi-domain question reasoning within Quiz Competition Mastery for National Quiz Championship. Apply National Quiz knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative multi-domain question reasoning task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the multi-domain question reasoning task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar multi-domain question reasoning challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise multi-domain question reasoning through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated quiz championship scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated quiz championship scenarios in Quiz Competition Mastery for National Quiz Championship.",
+            "teaching_content": "Master integrated quiz championship scenarios within Quiz Competition Mastery for National Quiz Championship. Apply National Quiz knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative integrated quiz championship scenarios task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the integrated quiz championship scenarios task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar integrated quiz championship scenarios challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise integrated quiz championship scenarios through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "national quiz championship round",
+          "study_materials": {
+            "objective": "Build mastery of national quiz championship round in Quiz Competition Mastery for National Quiz Championship.",
+            "teaching_content": "Master national quiz championship round within Quiz Competition Mastery for National Quiz Championship. Apply National Quiz knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative national quiz championship round task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the national quiz championship round task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar national quiz championship round challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise national quiz championship round through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "NATIONAL-QUI-MOCK-01",
+      "focus": "core curriculum mastery and topic-wise practice"
+    },
+    {
+      "id": "NATIONAL-QUI-MOCK-02",
+      "focus": "advanced mixed-domain preparation"
+    },
+    {
+      "id": "NATIONAL-QUI-MOCK-03",
+      "focus": "full championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "National Quiz Championship official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
