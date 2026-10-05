@@ -334,6 +334,46 @@
           "mastery": "Mastery: independently derive a viable approach for unfamiliar problems, justify correctness and complexity, implement cleanly, and verify with adversarial tests."
         }
       ]
+    },
+    {
+      "name": "Coding Competition Mastery",
+      "subtopics": [
+        {
+          "title": "algorithm selection",
+          "teaching": "Teach competitors to select an algorithm from input size, structure, required output, and constraints rather than from memorized labels.",
+          "worked_example": "A sorted array with repeated lookup requests may favor binary search because the ordering constraint reduces the search space.",
+          "pitfall": "Pitfall: choosing an advanced algorithm without checking whether the input structure supports it.",
+          "mastery": "Select a suitable algorithm and justify it from the problem constraints."
+        },
+        {
+          "title": "optimization reasoning",
+          "teaching": "Teach optimization by identifying the repeated work in a correct solution, then replacing it with a more efficient representation or operation.",
+          "worked_example": "If the same range sum is requested many times, preprocessing prefix sums can avoid recomputing every element for each query.",
+          "pitfall": "Pitfall: optimizing code before establishing correctness or improving a step that is not the actual bottleneck.",
+          "mastery": "Recognize repeated work and propose a justified improvement without breaking correctness."
+        },
+        {
+          "title": "competitive debugging",
+          "teaching": "Teach debugging as systematic isolation: reproduce the failure, inspect assumptions, test boundaries, and reduce the input to the smallest failing case.",
+          "worked_example": "If a solution fails only when the target equals the first element, inspect initialization and boundary handling before changing the whole algorithm.",
+          "pitfall": "Pitfall: patching individual outputs without identifying the underlying invariant or faulty assumption.",
+          "mastery": "Use a minimal failing case to locate and correct the actual defect."
+        },
+        {
+          "title": "integrated coding scenarios",
+          "teaching": "Teach end-to-end coding problems by combining parsing, data structures, algorithms, edge-case handling, and output formatting under explicit constraints.",
+          "worked_example": "A contest task may require reading records, grouping them by key, sorting each group, and producing a deterministic report.",
+          "pitfall": "Pitfall: solving the central algorithm while overlooking input format, duplicate data, empty cases, or exact output requirements.",
+          "mastery": "Build a complete solution that satisfies algorithmic, input, output, and edge-case constraints together."
+        },
+        {
+          "title": "championship coding round",
+          "teaching": "Practice mixed coding challenges under time pressure with deliberate triage, test-first verification, and disciplined submission review.",
+          "worked_example": "In a timed round, solve a high-confidence implementation first, then return to the harder problem with its constraints already translated into a plan.",
+          "pitfall": "Pitfall: spending most of the contest repeatedly rewriting one difficult solution without a verified intermediate result.",
+          "mastery": "Manage time, implement reliably, test strategically, and submit only after checking critical boundaries."
+        }
+      ]
     }
   ]
 }
