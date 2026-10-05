@@ -91,3 +91,4 @@ console.log(`RESULT: PASS — ${slug}: ${publicBank.length} reviewed mock MCQs, 
 // Validate after deterministic runtime source preparation.\n
 // Trigger isolated runtime preparation diagnostics.\n
 // Trigger independent 24-competition matrix gate.\n
+// Trigger per-competition diagnostic issue publication.\n
