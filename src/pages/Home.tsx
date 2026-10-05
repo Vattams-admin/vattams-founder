@@ -94,7 +94,7 @@ const journeySteps = [
 
 export default function Home() {
   useSeo({
-    title: 'VATTAMS ACADEMIA | Courses, Competitive Exams, Competitions & Certifications',
+    title: 'VATTAMS ACADEMIA — Courses, Exams & Competitions',
     description:
       'VATTAMS ACADEMIA is an India-focused education platform offering structured courses, competitive exam preparation, academic competitions, and verifiable certificates.',
     path: '/',
