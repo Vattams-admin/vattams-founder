@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "Thirukkural Mastery Championship",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/thirukkural-mastery-championship-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Aram Mastery",
+      "subtopics": [
+        {
+          "title": "virtue and character",
+          "study_materials": {
+            "objective": "Build mastery of virtue and character in Aram Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master virtue and character within Aram Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative virtue and character task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar virtue and character task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise virtue and character through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "self-control",
+          "study_materials": {
+            "objective": "Build mastery of self-control in Aram Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master self-control within Aram Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative self-control task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar self-control task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise self-control through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "gratitude",
+          "study_materials": {
+            "objective": "Build mastery of gratitude in Aram Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master gratitude within Aram Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative gratitude task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar gratitude task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise gratitude through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "truthfulness",
+          "study_materials": {
+            "objective": "Build mastery of truthfulness in Aram Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master truthfulness within Aram Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative truthfulness task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar truthfulness task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise truthfulness through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "compassion",
+          "study_materials": {
+            "objective": "Build mastery of compassion in Aram Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master compassion within Aram Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative compassion task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar compassion task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise compassion through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Porul Mastery",
+      "subtopics": [
+        {
+          "title": "leadership",
+          "study_materials": {
+            "objective": "Build mastery of leadership in Porul Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master leadership within Porul Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative leadership task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar leadership task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise leadership through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "governance",
+          "study_materials": {
+            "objective": "Build mastery of governance in Porul Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master governance within Porul Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative governance task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar governance task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise governance through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "justice",
+          "study_materials": {
+            "objective": "Build mastery of justice in Porul Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master justice within Porul Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative justice task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar justice task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise justice through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "friendship",
+          "study_materials": {
+            "objective": "Build mastery of friendship in Porul Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master friendship within Porul Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative friendship task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar friendship task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise friendship through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "social responsibility",
+          "study_materials": {
+            "objective": "Build mastery of social responsibility in Porul Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master social responsibility within Porul Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative social responsibility task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar social responsibility task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise social responsibility through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Inbam Mastery",
+      "subtopics": [
+        {
+          "title": "love themes",
+          "study_materials": {
+            "objective": "Build mastery of love themes in Inbam Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master love themes within Inbam Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative love themes task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar love themes task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise love themes through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "emotional states",
+          "study_materials": {
+            "objective": "Build mastery of emotional states in Inbam Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master emotional states within Inbam Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative emotional states task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar emotional states task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise emotional states through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "separation",
+          "study_materials": {
+            "objective": "Build mastery of separation in Inbam Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master separation within Inbam Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative separation task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar separation task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise separation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "union",
+          "study_materials": {
+            "objective": "Build mastery of union in Inbam Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master union within Inbam Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative union task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar union task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise union through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "poetic voice",
+          "study_materials": {
+            "objective": "Build mastery of poetic voice in Inbam Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Master poetic voice within Inbam Mastery for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative poetic voice task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar poetic voice task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise poetic voice through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Kural Structure & Language",
+      "subtopics": [
+        {
+          "title": "adhikaram structure",
+          "study_materials": {
+            "objective": "Build mastery of adhikaram structure in Kural Structure & Language for Thirukkural Mastery Championship.",
+            "teaching_content": "Master adhikaram structure within Kural Structure & Language for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative adhikaram structure task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar adhikaram structure task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise adhikaram structure through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "couplets",
+          "study_materials": {
+            "objective": "Build mastery of couplets in Kural Structure & Language for Thirukkural Mastery Championship.",
+            "teaching_content": "Master couplets within Kural Structure & Language for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative couplets task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar couplets task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise couplets through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "vocabulary",
+          "study_materials": {
+            "objective": "Build mastery of vocabulary in Kural Structure & Language for Thirukkural Mastery Championship.",
+            "teaching_content": "Master vocabulary within Kural Structure & Language for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative vocabulary task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar vocabulary task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise vocabulary through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "literary devices",
+          "study_materials": {
+            "objective": "Build mastery of literary devices in Kural Structure & Language for Thirukkural Mastery Championship.",
+            "teaching_content": "Master literary devices within Kural Structure & Language for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative literary devices task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar literary devices task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise literary devices through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "meaning analysis",
+          "study_materials": {
+            "objective": "Build mastery of meaning analysis in Kural Structure & Language for Thirukkural Mastery Championship.",
+            "teaching_content": "Master meaning analysis within Kural Structure & Language for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative meaning analysis task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar meaning analysis task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise meaning analysis through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Context & Interpretation",
+      "subtopics": [
+        {
+          "title": "situation-based meaning",
+          "study_materials": {
+            "objective": "Build mastery of situation-based meaning in Context & Interpretation for Thirukkural Mastery Championship.",
+            "teaching_content": "Master situation-based meaning within Context & Interpretation for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative situation-based meaning task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar situation-based meaning task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise situation-based meaning through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "ethical application",
+          "study_materials": {
+            "objective": "Build mastery of ethical application in Context & Interpretation for Thirukkural Mastery Championship.",
+            "teaching_content": "Master ethical application within Context & Interpretation for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative ethical application task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar ethical application task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise ethical application through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "comparison",
+          "study_materials": {
+            "objective": "Build mastery of comparison in Context & Interpretation for Thirukkural Mastery Championship.",
+            "teaching_content": "Master comparison within Context & Interpretation for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative comparison task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar comparison task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise comparison through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "inference",
+          "study_materials": {
+            "objective": "Build mastery of inference in Context & Interpretation for Thirukkural Mastery Championship.",
+            "teaching_content": "Master inference within Context & Interpretation for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative inference task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar inference task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise inference through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "misconception correction",
+          "study_materials": {
+            "objective": "Build mastery of misconception correction in Context & Interpretation for Thirukkural Mastery Championship.",
+            "teaching_content": "Master misconception correction within Context & Interpretation for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative misconception correction task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar misconception correction task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise misconception correction through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Memory & Recognition",
+      "subtopics": [
+        {
+          "title": "kural identification",
+          "study_materials": {
+            "objective": "Build mastery of kural identification in Memory & Recognition for Thirukkural Mastery Championship.",
+            "teaching_content": "Master kural identification within Memory & Recognition for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative kural identification task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar kural identification task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise kural identification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "opening phrase recognition",
+          "study_materials": {
+            "objective": "Build mastery of opening phrase recognition in Memory & Recognition for Thirukkural Mastery Championship.",
+            "teaching_content": "Master opening phrase recognition within Memory & Recognition for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative opening phrase recognition task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar opening phrase recognition task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise opening phrase recognition through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "meaning recall",
+          "study_materials": {
+            "objective": "Build mastery of meaning recall in Memory & Recognition for Thirukkural Mastery Championship.",
+            "teaching_content": "Master meaning recall within Memory & Recognition for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative meaning recall task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar meaning recall task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise meaning recall through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "theme recognition",
+          "study_materials": {
+            "objective": "Build mastery of theme recognition in Memory & Recognition for Thirukkural Mastery Championship.",
+            "teaching_content": "Master theme recognition within Memory & Recognition for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative theme recognition task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar theme recognition task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise theme recognition through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "authorial structure",
+          "study_materials": {
+            "objective": "Build mastery of authorial structure in Memory & Recognition for Thirukkural Mastery Championship.",
+            "teaching_content": "Master authorial structure within Memory & Recognition for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative authorial structure task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar authorial structure task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise authorial structure through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Comparative Wisdom",
+      "subtopics": [
+        {
+          "title": "cross-kural comparison",
+          "study_materials": {
+            "objective": "Build mastery of cross-kural comparison in Comparative Wisdom for Thirukkural Mastery Championship.",
+            "teaching_content": "Master cross-kural comparison within Comparative Wisdom for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative cross-kural comparison task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar cross-kural comparison task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise cross-kural comparison through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "theme clusters",
+          "study_materials": {
+            "objective": "Build mastery of theme clusters in Comparative Wisdom for Thirukkural Mastery Championship.",
+            "teaching_content": "Master theme clusters within Comparative Wisdom for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative theme clusters task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar theme clusters task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise theme clusters through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "ethical tensions",
+          "study_materials": {
+            "objective": "Build mastery of ethical tensions in Comparative Wisdom for Thirukkural Mastery Championship.",
+            "teaching_content": "Master ethical tensions within Comparative Wisdom for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative ethical tensions task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar ethical tensions task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise ethical tensions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "modern applications",
+          "study_materials": {
+            "objective": "Build mastery of modern applications in Comparative Wisdom for Thirukkural Mastery Championship.",
+            "teaching_content": "Master modern applications within Comparative Wisdom for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative modern applications task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar modern applications task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise modern applications through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "reasoned interpretation",
+          "study_materials": {
+            "objective": "Build mastery of reasoned interpretation in Comparative Wisdom for Thirukkural Mastery Championship.",
+            "teaching_content": "Master reasoned interpretation within Comparative Wisdom for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative reasoned interpretation task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar reasoned interpretation task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise reasoned interpretation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Championship Practice",
+      "subtopics": [
+        {
+          "title": "mixed kural sets",
+          "study_materials": {
+            "objective": "Build mastery of mixed kural sets in Championship Practice for Thirukkural Mastery Championship.",
+            "teaching_content": "Master mixed kural sets within Championship Practice for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative mixed kural sets task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar mixed kural sets task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise mixed kural sets through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "age-band progression",
+          "study_materials": {
+            "objective": "Build mastery of age-band progression in Championship Practice for Thirukkural Mastery Championship.",
+            "teaching_content": "Master age-band progression within Championship Practice for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative age-band progression task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar age-band progression task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise age-band progression through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "timed recall",
+          "study_materials": {
+            "objective": "Build mastery of timed recall in Championship Practice for Thirukkural Mastery Championship.",
+            "teaching_content": "Master timed recall within Championship Practice for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative timed recall task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar timed recall task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise timed recall through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "explanation quality",
+          "study_materials": {
+            "objective": "Build mastery of explanation quality in Championship Practice for Thirukkural Mastery Championship.",
+            "teaching_content": "Master explanation quality within Championship Practice for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative explanation quality task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar explanation quality task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise explanation quality through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mastery review",
+          "study_materials": {
+            "objective": "Build mastery of mastery review in Championship Practice for Thirukkural Mastery Championship.",
+            "teaching_content": "Master mastery review within Championship Practice for Thirukkural Mastery Championship. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative mastery review task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar mastery review task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise mastery review through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Thirukkural Competition Mastery",
+      "subtopics": [
+        {
+          "title": "kural retrieval strategy",
+          "study_materials": {
+            "objective": "Build mastery of kural retrieval strategy in Thirukkural Competition Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Retrieve the correct Thirukkural from distinctive words, theme, chapter context and known couplet structure rather than isolated memorisation.",
+            "worked_examples": [
+              "Given a clue about a couplet's opening phrase and ethical theme, narrow the chapter first, then verify the exact couplet."
+            ],
+            "pitfall": "Do not select a familiar couplet merely because one word matches the clue.",
+            "mastery_check": "Identify the intended Kural from layered clues and verify the exact wording or reference.",
+            "revision": "Revise kural retrieval strategy through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "adhikaram mapping",
+          "study_materials": {
+            "objective": "Build mastery of adhikaram mapping in Thirukkural Competition Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Map a Kural to the correct adhikaram by distinguishing the chapter's central idea from related ethical themes.",
+            "worked_examples": [
+              "Compare two closely related chapters and use the specific action or virtue emphasized in the clue to select the correct adhikaram."
+            ],
+            "pitfall": "Related virtues can appear in several chapters, so a broad theme alone is insufficient.",
+            "mastery_check": "Assign unfamiliar clues to the correct adhikaram using precise thematic evidence.",
+            "revision": "Revise adhikaram mapping through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "meaning and context verification",
+          "study_materials": {
+            "objective": "Build mastery of meaning and context verification in Thirukkural Competition Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Interpret Kural meaning using the couplet's context, vocabulary and ethical intent while avoiding unsupported modern paraphrases.",
+            "worked_examples": [
+              "Separate literal wording from the broader ethical message before choosing the closest interpretation."
+            ],
+            "pitfall": "A plausible-sounding paraphrase may change the original meaning.",
+            "mastery_check": "Choose and explain the interpretation that best matches the Kural's wording and context.",
+            "revision": "Revise meaning and context verification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated thirukkural scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated thirukkural scenarios in Thirukkural Competition Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Combine Kural recall, adhikaram knowledge, meaning, authorial context and distractor analysis in unfamiliar competition questions.",
+            "worked_examples": [
+              "Use a theme clue, a partial phrase and two answer choices to identify the Kural and reject a near-match from another chapter."
+            ],
+            "pitfall": "Solving only one clue can lead to a near-match distractor.",
+            "mastery_check": "Solve multi-clue Thirukkural scenarios with explicit verification.",
+            "revision": "Revise integrated thirukkural scenarios through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "thirukkural championship round",
+          "study_materials": {
+            "objective": "Build mastery of thirukkural championship round in Thirukkural Competition Mastery for Thirukkural Mastery Championship.",
+            "teaching_content": "Apply speed, precision, recall, interpretation and distractor control in a timed mixed Thirukkural challenge.",
+            "worked_examples": [
+              "Answer high-confidence recall items first, then return to meaning and context questions and verify close choices."
+            ],
+            "pitfall": "Spending too long on one uncertain Kural reduces accuracy across the full paper.",
+            "mastery_check": "Complete a mixed Thirukkural set accurately under time pressure with deliberate final review.",
+            "revision": "Revise thirukkural championship round through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "TKR-MOCK-01",
+      "focus": "Kural recall, adhikaram and meaning preparation"
+    },
+    {
+      "id": "TKR-MOCK-02",
+      "focus": "advanced meaning, context and distractor reasoning"
+    },
+    {
+      "id": "TKR-MOCK-03",
+      "focus": "full Thirukkural championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "Thirukkural Mastery Championship official 30-question competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
