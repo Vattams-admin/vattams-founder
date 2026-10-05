@@ -87,3 +87,4 @@ console.log(`RESULT: PASS — ${slug}: ${publicBank.length} reviewed mock MCQs, 
 // Trigger report workflow after enabling contents write permission.\n
 // Persist report before final production gate failure.\n
 // Trigger CI summary diagnostics.\n
+// Trigger published CI failure report.\n
