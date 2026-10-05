@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
-import { getFirestore } from 'firebase/firestore'
+import { getFirestore, initializeFirestore, persistentLocalCache, persistentMultipleTabManager } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -42,6 +42,6 @@ if (missingFirebaseEnvVars.length > 0) {
 const app = initializeApp(firebaseConfig)
 
 export const firebaseAuth = getAuth(app)
-export const firestore = getFirestore(app)
+// Keep recently-read Firestore data available during slow/intermittent connectivity.\n// If IndexedDB persistence is unavailable, fall back to the normal Firestore client.\nlet firestore\ntry {\n  firestore = initializeFirestore(app, {\n    localCache: persistentLocalCache({\n      tabManager: persistentMultipleTabManager(),\n    }),\n  })\n} catch {\n  firestore = getFirestore(app)\n}\n\nexport { firestore }
 
 export default app
