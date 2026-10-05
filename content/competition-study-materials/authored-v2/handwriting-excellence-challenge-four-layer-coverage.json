@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "Handwriting Excellence Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/handwriting-excellence-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Writing Foundations",
+      "subtopics": [
+        {
+          "title": "posture and grip",
+          "study_materials": {
+            "objective": "Build mastery of posture and grip in Writing Foundations.",
+            "teaching_content": "Master posture and grip within Writing Foundations for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative posture and grip task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar posture and grip task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise posture and grip using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "paper position",
+          "study_materials": {
+            "objective": "Build mastery of paper position in Writing Foundations.",
+            "teaching_content": "Master paper position within Writing Foundations for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative paper position task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar paper position task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise paper position using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "writing rhythm",
+          "study_materials": {
+            "objective": "Build mastery of writing rhythm in Writing Foundations.",
+            "teaching_content": "Master writing rhythm within Writing Foundations for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative writing rhythm task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar writing rhythm task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise writing rhythm using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "letter formation",
+          "study_materials": {
+            "objective": "Build mastery of letter formation in Writing Foundations.",
+            "teaching_content": "Master letter formation within Writing Foundations for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative letter formation task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar letter formation task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise letter formation using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "stroke control",
+          "study_materials": {
+            "objective": "Build mastery of stroke control in Writing Foundations.",
+            "teaching_content": "Master stroke control within Writing Foundations for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative stroke control task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar stroke control task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise stroke control using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Letter & Word Formation",
+      "subtopics": [
+        {
+          "title": "consistent shapes",
+          "study_materials": {
+            "objective": "Build mastery of consistent shapes in Letter & Word Formation.",
+            "teaching_content": "Master consistent shapes within Letter & Word Formation for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative consistent shapes task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar consistent shapes task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise consistent shapes using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "spacing",
+          "study_materials": {
+            "objective": "Build mastery of spacing in Letter & Word Formation.",
+            "teaching_content": "Master spacing within Letter & Word Formation for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative spacing task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar spacing task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise spacing using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "joins",
+          "study_materials": {
+            "objective": "Build mastery of joins in Letter & Word Formation.",
+            "teaching_content": "Master joins within Letter & Word Formation for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative joins task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar joins task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise joins using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "proportion",
+          "study_materials": {
+            "objective": "Build mastery of proportion in Letter & Word Formation.",
+            "teaching_content": "Master proportion within Letter & Word Formation for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative proportion task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar proportion task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise proportion using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "word alignment",
+          "study_materials": {
+            "objective": "Build mastery of word alignment in Letter & Word Formation.",
+            "teaching_content": "Master word alignment within Letter & Word Formation for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative word alignment task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar word alignment task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise word alignment using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Line & Baseline Control",
+      "subtopics": [
+        {
+          "title": "baseline",
+          "study_materials": {
+            "objective": "Build mastery of baseline in Line & Baseline Control.",
+            "teaching_content": "Master baseline within Line & Baseline Control for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative baseline task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar baseline task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise baseline using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "height",
+          "study_materials": {
+            "objective": "Build mastery of height in Line & Baseline Control.",
+            "teaching_content": "Master height within Line & Baseline Control for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative height task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar height task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise height using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "slant",
+          "study_materials": {
+            "objective": "Build mastery of slant in Line & Baseline Control.",
+            "teaching_content": "Master slant within Line & Baseline Control for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative slant task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar slant task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise slant using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "margins",
+          "study_materials": {
+            "objective": "Build mastery of margins in Line & Baseline Control.",
+            "teaching_content": "Master margins within Line & Baseline Control for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative margins task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar margins task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise margins using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "line consistency",
+          "study_materials": {
+            "objective": "Build mastery of line consistency in Line & Baseline Control.",
+            "teaching_content": "Master line consistency within Line & Baseline Control for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative line consistency task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar line consistency task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise line consistency using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Speed & Legibility",
+      "subtopics": [
+        {
+          "title": "writing pace",
+          "study_materials": {
+            "objective": "Build mastery of writing pace in Speed & Legibility.",
+            "teaching_content": "Master writing pace within Speed & Legibility for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative writing pace task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar writing pace task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise writing pace using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "controlled speed",
+          "study_materials": {
+            "objective": "Build mastery of controlled speed in Speed & Legibility.",
+            "teaching_content": "Master controlled speed within Speed & Legibility for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative controlled speed task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar controlled speed task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise controlled speed using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "fatigue management",
+          "study_materials": {
+            "objective": "Build mastery of fatigue management in Speed & Legibility.",
+            "teaching_content": "Master fatigue management within Speed & Legibility for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative fatigue management task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar fatigue management task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise fatigue management using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "continuous writing",
+          "study_materials": {
+            "objective": "Build mastery of continuous writing in Speed & Legibility.",
+            "teaching_content": "Master continuous writing within Speed & Legibility for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative continuous writing task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar continuous writing task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise continuous writing using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "legibility checks",
+          "study_materials": {
+            "objective": "Build mastery of legibility checks in Speed & Legibility.",
+            "teaching_content": "Master legibility checks within Speed & Legibility for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative legibility checks task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar legibility checks task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise legibility checks using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Copying Accuracy",
+      "subtopics": [
+        {
+          "title": "faithful copying",
+          "study_materials": {
+            "objective": "Build mastery of faithful copying in Copying Accuracy.",
+            "teaching_content": "Master faithful copying within Copying Accuracy for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative faithful copying task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar faithful copying task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise faithful copying using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "punctuation",
+          "study_materials": {
+            "objective": "Build mastery of punctuation in Copying Accuracy.",
+            "teaching_content": "Master punctuation within Copying Accuracy for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative punctuation task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar punctuation task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise punctuation using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "capitalization",
+          "study_materials": {
+            "objective": "Build mastery of capitalization in Copying Accuracy.",
+            "teaching_content": "Master capitalization within Copying Accuracy for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative capitalization task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar capitalization task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise capitalization using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "word accuracy",
+          "study_materials": {
+            "objective": "Build mastery of word accuracy in Copying Accuracy.",
+            "teaching_content": "Master word accuracy within Copying Accuracy for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative word accuracy task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar word accuracy task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise word accuracy using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "layout",
+          "study_materials": {
+            "objective": "Build mastery of layout in Copying Accuracy.",
+            "teaching_content": "Master layout within Copying Accuracy for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative layout task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar layout task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise layout using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Presentation",
+      "subtopics": [
+        {
+          "title": "heading styles",
+          "study_materials": {
+            "objective": "Build mastery of heading styles in Presentation.",
+            "teaching_content": "Master heading styles within Presentation for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative heading styles task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar heading styles task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise heading styles using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "paragraph spacing",
+          "study_materials": {
+            "objective": "Build mastery of paragraph spacing in Presentation.",
+            "teaching_content": "Master paragraph spacing within Presentation for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative paragraph spacing task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar paragraph spacing task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise paragraph spacing using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "page organization",
+          "study_materials": {
+            "objective": "Build mastery of page organization in Presentation.",
+            "teaching_content": "Master page organization within Presentation for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative page organization task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar page organization task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise page organization using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "clean corrections",
+          "study_materials": {
+            "objective": "Build mastery of clean corrections in Presentation.",
+            "teaching_content": "Master clean corrections within Presentation for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative clean corrections task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar clean corrections task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise clean corrections using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "visual neatness",
+          "study_materials": {
+            "objective": "Build mastery of visual neatness in Presentation.",
+            "teaching_content": "Master visual neatness within Presentation for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative visual neatness task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar visual neatness task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise visual neatness using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Language Writing",
+      "subtopics": [
+        {
+          "title": "English handwriting",
+          "study_materials": {
+            "objective": "Build mastery of English handwriting in Language Writing.",
+            "teaching_content": "Master English handwriting within Language Writing for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative English handwriting task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar English handwriting task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise English handwriting using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Tamil handwriting",
+          "study_materials": {
+            "objective": "Build mastery of Tamil handwriting in Language Writing.",
+            "teaching_content": "Master Tamil handwriting within Language Writing for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative Tamil handwriting task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar Tamil handwriting task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise Tamil handwriting using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mixed scripts",
+          "study_materials": {
+            "objective": "Build mastery of mixed scripts in Language Writing.",
+            "teaching_content": "Master mixed scripts within Language Writing for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative mixed scripts task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar mixed scripts task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise mixed scripts using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "numerals and symbols",
+          "study_materials": {
+            "objective": "Build mastery of numerals and symbols in Language Writing.",
+            "teaching_content": "Master numerals and symbols within Language Writing for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative numerals and symbols task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar numerals and symbols task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise numerals and symbols using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "functional writing",
+          "study_materials": {
+            "objective": "Build mastery of functional writing in Language Writing.",
+            "teaching_content": "Master functional writing within Language Writing for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative functional writing task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar functional writing task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise functional writing using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Assessment & Refinement",
+      "subtopics": [
+        {
+          "title": "self-audit",
+          "study_materials": {
+            "objective": "Build mastery of self-audit in Assessment & Refinement.",
+            "teaching_content": "Master self-audit within Assessment & Refinement for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative self-audit task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar self-audit task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise self-audit using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "error classification",
+          "study_materials": {
+            "objective": "Build mastery of error classification in Assessment & Refinement.",
+            "teaching_content": "Master error classification within Assessment & Refinement for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative error classification task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar error classification task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise error classification using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "before-after comparison",
+          "study_materials": {
+            "objective": "Build mastery of before-after comparison in Assessment & Refinement.",
+            "teaching_content": "Master before-after comparison within Assessment & Refinement for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative before-after comparison task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar before-after comparison task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise before-after comparison using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "timed samples",
+          "study_materials": {
+            "objective": "Build mastery of timed samples in Assessment & Refinement.",
+            "teaching_content": "Master timed samples within Assessment & Refinement for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative timed samples task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar timed samples task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise timed samples using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mastery portfolio",
+          "study_materials": {
+            "objective": "Build mastery of mastery portfolio in Assessment & Refinement.",
+            "teaching_content": "Master mastery portfolio within Assessment & Refinement for Handwriting Excellence Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative mastery portfolio task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar mastery portfolio task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise mastery portfolio using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Handwriting Competition Mastery",
+      "subtopics": [
+        {
+          "title": "stroke analysis and correction",
+          "study_materials": {
+            "objective": "Build mastery of stroke analysis and correction in Handwriting Competition Mastery.",
+            "teaching_content": "Analyze individual strokes and joins to distinguish shape, pressure, spacing, slant, and alignment problems before correcting them.",
+            "worked_examples": [
+              "If lowercase letters drift above the baseline, isolate the downstroke and retrace it slowly while maintaining the same baseline reference."
+            ],
+            "pitfall": "Pitfall: rewriting the whole word repeatedly without identifying which stroke pattern causes the inconsistency.",
+            "mastery_check": "Identify a specific handwriting defect and apply a targeted correction.",
+            "revision": "Revise stroke analysis and correction using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "consistency under pressure",
+          "study_materials": {
+            "objective": "Build mastery of consistency under pressure in Handwriting Competition Mastery.",
+            "teaching_content": "Maintain letter size, spacing, baseline, slant, and pressure while writing longer passages instead of improving only isolated letters.",
+            "worked_examples": [
+              "Compare the first, middle, and final lines of a timed paragraph to identify whether letter height or spacing changes with fatigue."
+            ],
+            "pitfall": "Pitfall: judging handwriting only from the neatest opening lines.",
+            "mastery_check": "Sustain consistent handwriting characteristics across a complete timed sample.",
+            "revision": "Revise consistency under pressure using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "speed-quality balance",
+          "study_materials": {
+            "objective": "Build mastery of speed-quality balance in Handwriting Competition Mastery.",
+            "teaching_content": "Increase writing speed gradually while preserving the features that make handwriting readable, controlled, and well spaced.",
+            "worked_examples": [
+              "Record a short sample at normal pace, increase speed slightly, and compare legibility before choosing a sustainable pace."
+            ],
+            "pitfall": "Pitfall: treating maximum speed as success even when readability and alignment deteriorate.",
+            "mastery_check": "Choose and maintain a writing pace that balances speed and legibility.",
+            "revision": "Revise speed-quality balance using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "copying and presentation accuracy",
+          "study_materials": {
+            "objective": "Build mastery of copying and presentation accuracy in Handwriting Competition Mastery.",
+            "teaching_content": "Reproduce source text accurately while preserving punctuation, capitalization, spacing, margins, paragraph structure, and overall page organization.",
+            "worked_examples": [
+              "Copy a model paragraph and verify each word, punctuation mark, heading, and line break against the source before submission."
+            ],
+            "pitfall": "Pitfall: producing attractive handwriting while silently changing words or punctuation from the source.",
+            "mastery_check": "Complete an accurate, clean, well-organized copy that matches the required source and layout.",
+            "revision": "Revise copying and presentation accuracy using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "championship writing round",
+          "study_materials": {
+            "objective": "Build mastery of championship writing round in Handwriting Competition Mastery.",
+            "teaching_content": "Prepare for timed handwriting assessment through deliberate warm-up, controlled execution, systematic self-checking, and clean final presentation.",
+            "worked_examples": [
+              "Before a timed round, perform brief stroke and spacing practice, then write the assigned passage and reserve time for a final legibility and accuracy check."
+            ],
+            "pitfall": "Pitfall: using the final seconds to rewrite large sections instead of correcting only clear errors.",
+            "mastery_check": "Produce a polished timed sample that meets accuracy, consistency, speed, and presentation criteria.",
+            "revision": "Revise championship writing round using a sample, self-audit, correction and mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "self-audit",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "HEC-MOCK-01",
+      "focus": "writing foundations, formation and baseline control"
+    },
+    {
+      "id": "HEC-MOCK-02",
+      "focus": "speed, copying accuracy and presentation"
+    },
+    {
+      "id": "HEC-MOCK-03",
+      "focus": "timed handwriting championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "Handwriting Excellence Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
