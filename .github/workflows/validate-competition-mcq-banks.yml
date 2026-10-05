@@ -9,76 +9,45 @@ on:
       - "scripts/prepare-competition-runtime-sources.mjs"
 
 permissions:
-  contents: write
-  issues: write
+  contents: read
 
 jobs:
   validate:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        slug:
+          - mathematics-challenge
+          - science-challenge
+          - english-challenge
+          - computer-challenge
+          - gk-challenge
+          - reasoning-challenge
+          - india-gk-championship
+          - national-quiz-championship
+          - ai-technology-challenge
+          - international-knowledge-challenge
+          - national-mathematics-championship
+          - national-science-championship
+          - national-english-championship
+          - national-aptitude-championship
+          - national-coding-challenge
+          - national-ai-challenge
+          - mega-inter-school-championship
+          - indian-classical-literature-wisdom-championship
+          - indian-language-literature-masters-series
+          - thirukkural
+          - fun-with-maths-challenge
+          - azhagu-tamil-challenge
+          - handwriting-excellence-challenge
+          - spoken-hindi-challenge
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Prepare reviewed competition runtime sources
-        shell: bash
-        run: |
-          set +e
-          mkdir -p reports
-          : > reports/competition-runtime-prep-report.txt
-          prep_rc=0
-          for slug in mathematics-challenge science-challenge english-challenge computer-challenge gk-challenge reasoning-challenge india-gk-championship national-quiz-championship ai-technology-challenge international-knowledge-challenge national-mathematics-championship national-science-championship national-english-championship national-aptitude-championship national-coding-challenge national-ai-challenge mega-inter-school-championship indian-classical-literature-wisdom-championship indian-language-literature-masters-series thirukkural fun-with-maths-challenge azhagu-tamil-challenge handwriting-excellence-challenge spoken-hindi-challenge; do
-            echo "===== $slug =====" >> reports/competition-runtime-prep-report.txt
-            node scripts/prepare-competition-runtime-sources.mjs --slug "$slug" >> reports/competition-runtime-prep-report.txt 2>&1
-            status=$?
-            if [ $status -eq 0 ]; then echo "STATUS: PASS" >> reports/competition-runtime-prep-report.txt; else echo "STATUS: FAIL ($status)" >> reports/competition-runtime-prep-report.txt; prep_rc=1; fi
-            echo >> reports/competition-runtime-prep-report.txt
-          done
-          echo "$prep_rc" > reports/competition-runtime-prep-exit-code.txt
-          cat reports/competition-runtime-prep-report.txt >> "$GITHUB_STEP_SUMMARY"
-      - name: Validate all 24 MCQ banks and write failure report
-        id: validate
-        shell: bash
-        run: |
-          set +e
-          mkdir -p reports
-          : > reports/competition-mcq-validation-report.txt
-          rc=0
-          for slug in mathematics-challenge science-challenge english-challenge computer-challenge gk-challenge reasoning-challenge india-gk-championship national-quiz-championship ai-technology-challenge international-knowledge-challenge national-mathematics-championship national-science-championship national-english-championship national-aptitude-championship national-coding-challenge national-ai-challenge mega-inter-school-championship indian-classical-literature-wisdom-championship indian-language-literature-masters-series thirukkural fun-with-maths-challenge azhagu-tamil-challenge handwriting-excellence-challenge spoken-hindi-challenge; do
-            echo "===== $slug =====" >> reports/competition-mcq-validation-report.txt
-            node scripts/validate-competition-mcq-bank.mjs --slug "$slug" >> reports/competition-mcq-validation-report.txt 2>&1
-            status=$?
-            if [ $status -eq 0 ]; then
-              echo "STATUS: PASS" >> reports/competition-mcq-validation-report.txt
-            else
-              echo "STATUS: FAIL ($status)" >> reports/competition-mcq-validation-report.txt
-              rc=1
-            fi
-            echo >> reports/competition-mcq-validation-report.txt
-          done
-          echo "$rc" > reports/competition-mcq-validation-exit-code.txt
-          cat reports/competition-mcq-validation-report.txt >> "$GITHUB_STEP_SUMMARY"
-      - name: Commit validation report
-        if: always()
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reports/competition-mcq-validation-report.txt reports/competition-runtime-prep-report.txt reports/competition-runtime-prep-exit-code.txt
-          git diff --cached --quiet && exit 0
-          git commit -m "Record competition MCQ validation report [skip ci]"
-          git push
-      - name: Publish validation report
-        if: always()
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh issue create --title "CI Competition MCQ Validation ${{ github.run_id }}" --body-file reports/competition-mcq-validation-report.txt
-
-      - name: Enforce validation gate
-        run: |
-          rc=$(cat reports/competition-mcq-validation-exit-code.txt)
-          prep_rc=$(cat reports/competition-runtime-prep-exit-code.txt)
-          if [ "$rc" -ne 0 ] || [ "$prep_rc" -ne 0 ]; then
-            echo "Competition MCQ validation failed."
-            exit 1
-          fi
+      - name: Prepare runtime source
+        run: node scripts/prepare-competition-runtime-sources.mjs --slug "${{ matrix.slug }}"
+      - name: Validate MCQ bank
+        run: node scripts/validate-competition-mcq-bank.mjs --slug "${{ matrix.slug }}"
