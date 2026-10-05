@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "Mega Inter-School Championship",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_complete",
+  "status": "subject_specific_authoring_v1_in_progress",
   "age_bands": [
     "foundation",
     "developing",
@@ -20,38 +20,38 @@
       "subtopics": [
         {
           "title": "number sense",
-          "teaching": "Build number sense through place value, factors, multiples, divisibility, estimation, comparison, and magnitude. Championship questions often reward recognizing structure before calculating.",
-          "worked_example": "For 398+602, noticing that the numbers complement to 1,000 gives the answer immediately. For 49×51, the difference-of-squares structure gives 2,499.",
-          "pitfall": "Pitfall: performing long calculations when a numerical relationship gives a faster exact route, or rounding when an exact answer is required.",
-          "mastery": "Mastery: estimate and compare quantities, recognize useful numerical structure, and choose efficient exact or approximate methods appropriately."
+          "teaching": "Build number sense through place value, magnitude, factors, multiples, estimation, parity, and numerical relationships. Emphasize choosing efficient mental representations before calculating.",
+          "worked_example": "For 48×25, recognize 25=100/4, so 48×25=4,800/4=1,200. The structure is more useful than carrying out 48 repeated additions.",
+          "pitfall": "Pitfall: performing long calculations without estimating first, which makes large errors harder to notice.",
+          "mastery": "Mastery: compare magnitudes, estimate intelligently, exploit number relationships, and justify efficient calculation strategies."
         },
         {
           "title": "arithmetic",
-          "teaching": "Develop arithmetic fluency with fractions, decimals, percentages, ratios, averages, profit/loss, and multi-step calculations. Emphasize units and order of operations.",
-          "worked_example": "A price of ₹800 discounted by 15% becomes ₹680; adding 18% tax afterward gives ₹802.40. The second percentage applies to the discounted price, not the original.",
-          "pitfall": "Pitfall: applying successive percentages to the wrong base or mixing units and operations in multi-step problems.",
-          "mastery": "Mastery: solve multi-stage arithmetic accurately, explain the base of each percentage or ratio, and estimate the result before finalizing it."
+          "teaching": "Develop fluency with fractions, decimals, percentages, ratios, rates, averages, and proportional reasoning, including multi-step applications.",
+          "worked_example": "A ₹800 item discounted by 15% costs ₹680 because the discount is ₹120. Calculating 15% of 800 before subtracting prevents confusion between discount amount and final price.",
+          "pitfall": "Pitfall: adding percentages that apply sequentially or confusing a percentage change with percentage points.",
+          "mastery": "Mastery: solve multi-step arithmetic problems, track units and quantities, and verify answers through estimation or an alternative method."
         },
         {
           "title": "algebra",
-          "teaching": "Use symbols to represent unknowns and relationships, then simplify, substitute, factor, and solve while preserving equality. Translate words into equations before manipulating them.",
-          "worked_example": "If 3x+5=20, subtracting 5 gives 3x=15 and dividing by 3 gives x=5. Substitution back into the original equation verifies the solution.",
-          "pitfall": "Pitfall: changing one side of an equation without making the equivalent change to the other, or losing a solution while simplifying.",
-          "mastery": "Mastery: translate verbal relationships into algebraic form, solve systematically, and verify solutions against the original conditions."
+          "teaching": "Teach algebra as representing unknown quantities and relationships with symbols. Focus on simplifying expressions, solving equations, and translating verbal conditions into equations.",
+          "worked_example": "If 3x+7=25, subtract 7 to obtain 3x=18 and divide by 3 to get x=6; substituting 6 back gives 25 and verifies the solution.",
+          "pitfall": "Pitfall: performing an operation on one side of an equation without applying the equivalent operation to the other side.",
+          "mastery": "Mastery: translate, manipulate, solve, and verify algebraic relationships in unfamiliar competition problems."
         },
         {
           "title": "geometry",
-          "teaching": "Reason with angles, triangles, polygons, circles, perimeter, area, and spatial relationships. Draw or mentally construct the relevant figure before selecting a formula.",
-          "worked_example": "A triangle with angles 50° and 60° has third angle 70° because the interior angles sum to 180°. The result can then constrain any later geometry step.",
-          "pitfall": "Pitfall: using a formula without checking which length, angle, or shape the given information actually describes.",
-          "mastery": "Mastery: identify geometric relationships, choose justified formulas or theorems, and verify dimensions and boundary conditions."
+          "teaching": "Develop geometric reasoning through angle relationships, triangles, quadrilaterals, circles, perimeter, area, and spatial relationships. Prefer properties and diagrams over formula memorization alone.",
+          "worked_example": "A triangle with angles 48° and 67° has third angle 65° because triangle angles sum to 180°. The result can be checked because all three angles must be positive and total 180°.",
+          "pitfall": "Pitfall: using a formula for the wrong quantity or assuming a diagram is drawn to scale when the statement does not guarantee it.",
+          "mastery": "Mastery: identify relevant geometric properties, construct a reliable solution, and verify dimensions, units, and boundary cases."
         },
         {
           "title": "advanced problem solving",
-          "teaching": "Approach championship mathematics through observation, invariants, cases, working backward, and strategic simplification rather than brute force alone.",
-          "worked_example": "To solve a problem involving consecutive integers with a fixed sum, use their structure around the average instead of testing many combinations individually.",
-          "pitfall": "Pitfall: committing to the first computational route without checking for symmetry, parity, invariants, or a simpler representation.",
-          "mastery": "Mastery: identify the key mathematical idea in an unfamiliar problem, justify it, test edge cases, and present a concise verifiable solution."
+          "teaching": "Teach non-routine mathematical solving through pattern spotting, invariants, case analysis, working backward, and strategic experimentation. Require an explanation for why the method covers all cases.",
+          "worked_example": "To determine whether a number is divisible by 9, use the invariant that its digit sum has the same remainder modulo 9; 7,245 has digit sum 18, so it is divisible by 9.",
+          "pitfall": "Pitfall: finding one example that works and treating it as proof, or using brute force without checking whether a structural shortcut exists.",
+          "mastery": "Mastery: select a suitable strategy for unfamiliar problems, prove or justify the key observation, and check completeness of the solution."
         }
       ]
     },
@@ -60,38 +60,38 @@
       "subtopics": [
         {
           "title": "physics",
-          "teaching": "Connect physics questions to observable quantities such as force, motion, energy, heat, light, electricity, and simple machines. Identify the relevant law before inserting numbers.",
-          "worked_example": "If a constant force acts in the same direction as motion, work increases with force and displacement. Doubling the displacement while keeping force constant doubles the work.",
-          "pitfall": "Pitfall: mixing units or applying a formula without checking direction, conditions, or whether the quantity is scalar or vector in the intended context.",
-          "mastery": "Mastery: identify the governing physical principle, track units and conditions, and predict how changing one quantity affects another."
+          "teaching": "Teach physics through observable quantities, forces, motion, energy, light, sound, and simple cause-effect relationships. Encourage diagrams and unit checks before calculation.",
+          "worked_example": "If a 2 kg object accelerates at 3 m/s², F=ma gives 6 N. The units kg·m/s² confirm that the result is a force.",
+          "pitfall": "Pitfall: mixing units or choosing a formula because it contains familiar numbers rather than because its conditions match the situation.",
+          "mastery": "Mastery: identify relevant physical principles, calculate or reason with units, and explain whether the result is physically plausible."
         },
         {
           "title": "chemistry",
-          "teaching": "Reason about matter through particles, elements, compounds, mixtures, physical and chemical changes, reactions, acids/bases, and observable properties.",
-          "worked_example": "Melting ice changes physical state without creating a new substance, while iron reacting with oxygen produces a new material with different properties.",
-          "pitfall": "Pitfall: treating every visible change as a chemical reaction or confusing a mixture with a compound.",
-          "mastery": "Mastery: classify substances and changes from evidence, explain particle-level reasoning, and distinguish observation from unsupported inference."
+          "teaching": "Teach chemistry through properties of matter, atoms, elements, compounds, mixtures, reactions, acids/bases, and conservation of mass at an age-appropriate competition level.",
+          "worked_example": "If iron reacts with sulfur to form iron sulfide, the product has properties different from either reactant; forming a compound is not simply mixing the original substances.",
+          "pitfall": "Pitfall: confusing physical mixtures with chemical compounds or assuming a reaction destroys atoms rather than rearranging them.",
+          "mastery": "Mastery: classify substances and changes, interpret simple reactions, and use conservation ideas to reject impossible explanations."
         },
         {
           "title": "biology",
-          "teaching": "Connect biological questions to cell structure, life processes, organisms, systems, heredity, ecology, and adaptation. Prefer causal relationships over isolated memorization.",
-          "worked_example": "Plants use photosynthesis to convert light energy into stored chemical energy; the process depends on suitable light, carbon dioxide, water, and cellular machinery.",
-          "pitfall": "Pitfall: confusing a structure's location with its function or assuming one example represents every organism.",
-          "mastery": "Mastery: explain biological processes as connected systems, identify function from structure, and apply principles to unfamiliar examples."
+          "teaching": "Teach biology through cells, organisms, body systems, ecosystems, heredity, adaptation, and interdependence. Connect structures to functions rather than memorizing isolated names.",
+          "worked_example": "Red blood cells are specialized for oxygen transport; their structure supports the function by maximizing useful surface area and accommodating hemoglobin.",
+          "pitfall": "Pitfall: treating a biological structure as if it has only one function or ignoring relationships between organism and environment.",
+          "mastery": "Mastery: explain structure-function relationships, interpret biological scenarios, and connect observations to appropriate principles."
         },
         {
           "title": "Earth science",
-          "teaching": "Reason about Earth's systems through rocks, water, atmosphere, weather, climate, resources, and planetary processes. Distinguish short-term weather from longer-term climate patterns.",
-          "worked_example": "A weather forecast describes expected atmospheric conditions over a short period, whereas climate summarizes patterns over much longer timescales.",
-          "pitfall": "Pitfall: treating one unusual weather event as proof of a climate trend or confusing Earth's layers and their processes.",
-          "mastery": "Mastery: interpret Earth-system evidence, distinguish timescales, and connect observable events to underlying processes."
+          "teaching": "Teach Earth science through rocks, landforms, weather, climate, water cycles, natural hazards, and Earth's changing systems. Distinguish short-term weather from long-term climate patterns.",
+          "worked_example": "A week of unusually heavy rain is a weather event; a long-term shift in regional rainfall patterns is evidence relevant to climate. The time scale matters.",
+          "pitfall": "Pitfall: using one weather event as proof of a long-term climate trend.",
+          "mastery": "Mastery: interpret Earth-system evidence across time scales and explain interactions among atmosphere, water, land, and human activity."
         },
         {
           "title": "scientific reasoning",
-          "teaching": "Use hypotheses, variables, evidence, controls, measurement, patterns, and conclusions to evaluate scientific claims. Ask what evidence would actually distinguish competing explanations.",
-          "worked_example": "If two fertilizers are compared, keep relevant conditions controlled and compare plant growth using repeated measurements rather than judging from one plant.",
-          "pitfall": "Pitfall: changing several variables at once or treating correlation from a small observation as proof of causation.",
-          "mastery": "Mastery: identify variables and controls, evaluate evidence quality, and select conclusions that are supported without overclaiming."
+          "teaching": "Teach scientific reasoning through observations, hypotheses, variables, controls, evidence, measurement, and conclusions. Separate what an experiment shows from what it merely suggests.",
+          "worked_example": "If plants receiving more light grow taller, a controlled comparison should keep relevant factors such as water and soil consistent before attributing the difference to light.",
+          "pitfall": "Pitfall: changing several variables at once or concluding causation from an uncontrolled correlation.",
+          "mastery": "Mastery: identify variables, evaluate evidence, design fair comparisons, and distinguish supported conclusions from speculation."
         }
       ]
     },
@@ -100,38 +100,38 @@
       "subtopics": [
         {
           "title": "reading",
-          "teaching": "Read for main idea, supporting evidence, inference, tone, purpose, sequence, and author's viewpoint. Answers should be anchored in the passage rather than general knowledge.",
-          "worked_example": "If a passage states that a town planted trees to reduce summer heat, an inference about shade and cooling is supported; an unrelated claim about tourism is not unless the text supports it.",
-          "pitfall": "Pitfall: choosing an answer because it sounds generally true instead of checking whether the passage actually establishes it.",
-          "mastery": "Mastery: distinguish stated facts from inferences, cite decisive textual clues mentally, and eliminate distractors that exceed the passage."
+          "teaching": "Teach close reading by identifying main idea, supporting evidence, inference, tone, purpose, sequence, and the distinction between stated and implied information.",
+          "worked_example": "If a passage says a character rereads the instructions before beginning and checks each step, an inference of carefulness is supported by repeated behavior rather than by a direct label.",
+          "pitfall": "Pitfall: choosing an answer that is generally true but not supported by the passage.",
+          "mastery": "Mastery: locate decisive textual evidence, distinguish inference from fact, and eliminate attractive distractors that exceed the passage."
         },
         {
           "title": "vocabulary",
-          "teaching": "Build vocabulary through context, word roots, prefixes, suffixes, collocations, synonyms, antonyms, and register. Infer meaning from surrounding evidence before relying on memory.",
-          "worked_example": "In “The glass was fragile, so it was wrapped carefully,” fragile most likely means easily broken because the second clause supplies a contextual clue.",
-          "pitfall": "Pitfall: choosing a familiar dictionary meaning that does not fit the sentence's context or grammatical role.",
-          "mastery": "Mastery: infer unfamiliar word meaning from multiple clues and distinguish close synonyms by context and usage."
+          "teaching": "Build vocabulary through context, word parts, synonyms, antonyms, collocations, and register. Use surrounding clues before relying on memorized definitions.",
+          "worked_example": "In “The lake was tranquil, with barely a ripple,” tranquil can be inferred as calm because the surrounding description supplies a direct contextual clue.",
+          "pitfall": "Pitfall: selecting a familiar meaning that does not fit the sentence's grammatical or contextual role.",
+          "mastery": "Mastery: infer unfamiliar word meanings from context, distinguish close synonyms, and justify the selected meaning precisely."
         },
         {
           "title": "grammar",
-          "teaching": "Apply agreement, tense, articles, pronouns, modifiers, clauses, punctuation, and sentence structure. Diagnose why an option is correct rather than relying on what merely sounds familiar.",
-          "worked_example": "“Neither the teacher nor the students were late” requires attention to the grammatical structure and intended agreement; identifying the controlling subject pattern prevents guesswork.",
-          "pitfall": "Pitfall: applying one simplistic agreement rule to every compound construction or ignoring the sentence's actual structure.",
-          "mastery": "Mastery: identify grammatical relationships, correct errors precisely, and explain the rule governing the correction."
+          "teaching": "Develop competition grammar through parts of speech, subject-verb agreement, tense, pronouns, modifiers, clauses, sentence structure, and punctuation.",
+          "worked_example": "In “Neither the coach nor the players were late,” the verb agrees with the nearer plural subject under the common rule used in this construction.",
+          "pitfall": "Pitfall: choosing agreement from the nearest word without first identifying the sentence structure and applicable rule.",
+          "mastery": "Mastery: diagnose grammatical errors, explain the governing rule, and produce a corrected sentence without introducing a new error."
         },
         {
           "title": "literature",
-          "teaching": "Read literary passages for theme, characterization, imagery, symbolism, tone, narrative perspective, and form. Separate what the text suggests from interpretations unsupported by its details.",
-          "worked_example": "If repeated storm imagery accompanies a character's conflict, it may reinforce tension or uncertainty, but the interpretation should be supported by the surrounding language.",
-          "pitfall": "Pitfall: treating a possible symbolic reading as certain without textual evidence or confusing author, narrator, and character viewpoints.",
-          "mastery": "Mastery: support literary interpretations with textual clues and distinguish explicit content from defensible inference."
+          "teaching": "Teach literary understanding through character, setting, theme, imagery, metaphor, narrative perspective, conflict, and evidence-based interpretation.",
+          "worked_example": "If a poem repeatedly compares dawn with renewal, the recurring image can support a theme of new beginnings, but the interpretation should be anchored in the poem's actual language.",
+          "pitfall": "Pitfall: treating a personal reaction as the only valid interpretation or naming a literary device without explaining its effect.",
+          "mastery": "Mastery: identify literary techniques, connect them to meaning, and support interpretations with textual evidence."
         },
         {
           "title": "verbal reasoning",
-          "teaching": "Solve verbal analogies, classifications, sequences, statement relationships, and word-based deductions by identifying the exact relation rather than a superficial association.",
-          "worked_example": "In “bird: nest :: bee: ?”, hive matches because both pairs express an organism and its typical dwelling. A generic object associated with bees would not express the same relation.",
-          "pitfall": "Pitfall: finding a relationship that fits the first pair but not checking whether it transfers consistently to the second.",
-          "mastery": "Mastery: state the underlying verbal relation, test it across all elements, and reject distractors that match only superficially."
+          "teaching": "Develop verbal reasoning through analogies, sentence relationships, classification, cause-effect, assumptions, conclusions, and precise word relationships.",
+          "worked_example": "If “seed is to tree” describes development from an origin to a mature form, the best analogous pair should preserve that relationship rather than merely sharing a topic.",
+          "pitfall": "Pitfall: choosing an option because the words look similar while the underlying relationship differs.",
+          "mastery": "Mastery: identify the exact relationship, test each option against it, and reject near-matches systematically."
         }
       ]
     },
@@ -140,38 +140,38 @@
       "subtopics": [
         {
           "title": "India",
-          "teaching": "Develop India-focused knowledge across geography, polity, economy, science, culture, institutions, symbols, and major achievements. Link facts to their precise context and avoid near-match distractors.",
-          "worked_example": "If a question asks for India's national aquatic animal, the Ganges river dolphin is the precise fact; nearby facts about national symbols should not be substituted.",
-          "pitfall": "Pitfall: confusing national symbols, offices, institutions, states, or schemes with similarly named or related items.",
-          "mastery": "Mastery: retrieve precise India facts, distinguish closely related alternatives, and verify the exact wording and context of a question."
+          "teaching": "Build India-focused knowledge across constitutional basics, geography, history, science, culture, institutions, symbols, and major achievements, emphasizing distinctions that commonly create close alternatives.",
+          "worked_example": "If a question asks for the longest river flowing entirely within India, the wording “entirely within India” changes which candidates qualify; geographic qualifiers must be read carefully.",
+          "pitfall": "Pitfall: answering from a familiar association without checking the exact qualifier, date, region, or category in the question.",
+          "mastery": "Mastery: retrieve and cross-check India facts while paying attention to scope, terminology, dates, and category boundaries."
         },
         {
           "title": "world",
-          "teaching": "Build world knowledge across countries, capitals, landmarks, languages, organizations, discoveries, and major global facts. Use geographic and institutional relationships to support recall.",
-          "worked_example": "The headquarters of the United Nations is in New York City, while several specialized agencies are headquartered elsewhere; the organization named in the question determines the answer.",
-          "pitfall": "Pitfall: substituting a famous city or organization for the exact entity asked about.",
-          "mastery": "Mastery: identify the precise global entity from contextual clues and distinguish closely related countries, cities, institutions, and facts."
+          "teaching": "Build world knowledge across continents, countries, capitals, landmarks, global organizations, cultures, science, and major achievements. Use geographic and institutional relationships to organize facts.",
+          "worked_example": "The headquarters location of an international organization and the country that hosts it are related facts but not necessarily interchangeable with its founding country or membership.",
+          "pitfall": "Pitfall: conflating capital cities, headquarters, founding locations, and member states.",
+          "mastery": "Mastery: distinguish closely related global facts, organize them by category, and verify answers against the exact wording."
         },
         {
           "title": "history",
-          "teaching": "Study history through chronology, cause and effect, continuity, change, movements, leaders, and consequences. Place facts on a timeline rather than memorizing isolated names.",
-          "worked_example": "If two events are given, determine which occurred first and ask how the earlier event influenced the later one; chronology can eliminate otherwise plausible options.",
-          "pitfall": "Pitfall: matching a famous person to an event without checking the period or confusing cause with consequence.",
-          "mastery": "Mastery: order events accurately, connect causes to outcomes, and use chronology to eliminate historically impossible choices."
+          "teaching": "Teach historical reasoning through chronology, causation, continuity, change, people, movements, and primary/secondary evidence. Avoid treating isolated dates as the whole explanation.",
+          "worked_example": "If two events occurred close together, temporal order alone does not prove one caused the other; causal claims need evidence about mechanisms and context.",
+          "pitfall": "Pitfall: confusing chronological sequence with causation or mixing people and events from neighboring periods.",
+          "mastery": "Mastery: place events accurately, identify causal evidence, and distinguish direct facts from interpretations."
         },
         {
           "title": "geography",
-          "teaching": "Reason with maps, physical features, climate, resources, population, regions, and location relationships. Use latitude, direction, neighboring regions, and physical processes as supporting clues.",
-          "worked_example": "A river flowing from a highland toward the sea generally follows decreasing elevation; combining that with map position can help identify an unfamiliar river system.",
-          "pitfall": "Pitfall: relying on a memorized location without checking scale, direction, neighboring features, or physical geography.",
-          "mastery": "Mastery: infer geographic relationships from multiple clues and distinguish physical, political, and human geography."
+          "teaching": "Build geographic reasoning through location, physical features, climate, resources, population, maps, and spatial relationships. Use qualifiers such as coastal, landlocked, northern, largest, and highest precisely.",
+          "worked_example": "A country can be geographically large but have a smaller population than another country; area and population are different measures that should not be conflated.",
+          "pitfall": "Pitfall: substituting a well-known geographic fact for the exact metric asked.",
+          "mastery": "Mastery: interpret geographic descriptions, compare the correct measurement, and use spatial clues to eliminate distractors."
         },
         {
           "title": "culture",
-          "teaching": "Approach culture through languages, literature, music, dance, festivals, heritage, crafts, food traditions, and monuments with respect for regional specificity.",
-          "worked_example": "A classical dance form can be linked to its historical and regional tradition, but a question about a specific form should not be answered with a merely related Indian art form.",
-          "pitfall": "Pitfall: treating broad cultural labels as interchangeable or assigning a tradition to the wrong region or community.",
-          "mastery": "Mastery: identify cultural traditions precisely, connect them to context, and avoid stereotypes or overgeneralizations."
+          "teaching": "Teach culture through languages, literature, arts, festivals, heritage, traditions, foodways, and institutions while avoiding stereotypes. Distinguish origin, practice, region, and modern recognition.",
+          "worked_example": "A festival may be celebrated across many regions even when its historical origin is associated with a particular community or place; celebration geography and origin are separate facts.",
+          "pitfall": "Pitfall: treating a cultural practice as exclusive to one group when it has wider regional or historical expression.",
+          "mastery": "Mastery: identify cultural facts accurately, distinguish origin from present-day practice, and answer with respectful, precise terminology."
         }
       ]
     },
@@ -180,38 +180,38 @@
       "subtopics": [
         {
           "title": "series",
-          "teaching": "Master series within Reasoning for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative series question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar series task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach numerical, alphabetic, and mixed series by testing simple transformations first: differences, ratios, alternating rules, position-based patterns, and grouped terms.",
+          "worked_example": "In 3, 6, 12, 24, each term doubles, so the next is 48. Before choosing a rule, check whether it consistently explains all supplied terms.",
+          "pitfall": "Pitfall: inventing a complex pattern that fits only the last two terms.",
+          "mastery": "Mastery: derive the simplest rule supported by the full sequence, test it on every term, and distinguish ambiguity from a uniquely supported answer."
         },
         {
           "title": "analogy",
-          "teaching": "Master analogy within Reasoning for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative analogy question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar analogy task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach analogy questions by identifying the relationship in the first pair and applying the same relationship to the second pair. Relationships may involve function, part-whole, degree, cause, or transformation.",
+          "worked_example": "“Thermometer : temperature” represents an instrument-to-measurement relationship, so the answer should preserve that functional relationship rather than merely naming another scientific object.",
+          "pitfall": "Pitfall: matching the subject area instead of the relationship between the two terms.",
+          "mastery": "Mastery: state the first-pair relationship explicitly, test candidate options against it, and choose the closest structural match."
         },
         {
           "title": "logic",
-          "teaching": "Master logic within Reasoning for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative logic question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar logic task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach logical reasoning through statements, conditions, implications, contradictions, and valid conclusions. Separate what must be true from what could merely be true.",
+          "worked_example": "If all A are B and all B are C, then all A are C. But the reverse claim—that all C are A—does not follow without additional information.",
+          "pitfall": "Pitfall: reversing implications or treating a possible conclusion as a necessary one.",
+          "mastery": "Mastery: translate statements into precise relationships, derive only justified conclusions, and identify counterexamples to invalid inferences."
         },
         {
           "title": "puzzles",
-          "teaching": "Master puzzles within Reasoning for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative puzzles question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar puzzles task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach puzzles by converting narrative constraints into tables, diagrams, ordering rules, or sets. Apply the strongest constraints first and eliminate impossible arrangements systematically.",
+          "worked_example": "If four students must stand in an order with Ravi before Meena and Arun immediately after Ravi, place the Ravi-Arun block first and test the remaining positions against the other clues.",
+          "pitfall": "Pitfall: guessing an arrangement and stopping when it satisfies only some clues.",
+          "mastery": "Mastery: represent constraints clearly, propagate consequences, eliminate contradictions, and prove that the selected arrangement satisfies every condition."
         },
         {
           "title": "non-verbal reasoning",
-          "teaching": "Master non-verbal reasoning within Reasoning for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative non-verbal reasoning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar non-verbal reasoning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Develop visual reasoning through rotation, reflection, sequence changes, shape composition, symmetry, counting, and spatial transformation. Track one transformation at a time.",
+          "worked_example": "If each figure rotates 90° clockwise while adding one dot, the next figure must reflect both changes; checking orientation and dot count prevents choosing an option matching only one feature.",
+          "pitfall": "Pitfall: focusing on color or overall appearance while missing the actual invariant or transformation.",
+          "mastery": "Mastery: isolate visual transformations, compare multiple features, and verify that the chosen figure satisfies the complete pattern."
         }
       ]
     },
