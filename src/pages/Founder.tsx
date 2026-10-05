@@ -1,4 +1,6 @@
+import { useSeo } from '@/hooks/useSeo'
 export default function Founder() {
+  useSeo({ title: 'Founder & CEO — VATTAMS ACADEMIA', description: 'Meet Venkatesan Ponniah, Founder & CEO of VATTAMS ACADEMIA, and learn about the vision behind the education platform.', path: '/founder' })
   return (
     <div>
       <section className="relative overflow-hidden border-b border-white/5">
