@@ -10,11 +10,15 @@ import { firebaseAuth, firestore } from '@/lib/firebase'
 import { friendlyAuthError } from '@/lib/authErrors'
 
 export default function Auth({
-  useSeo({ title: 'Auth', description: 'Account access', noindex: true })
   mode,
 }: {
   mode: 'login' | 'register'
 }) {
+  useSeo({
+    title: mode === 'login' ? 'Log in' : 'Create your account',
+    description: 'Secure VATTAMS ACADEMIA account access for students and tutors.',
+    noindex: true,
+  })
   const [fullName, setFullName] = useState('')
   const [dateOfBirth, setDateOfBirth] = useState('')
   const [email, setEmail] = useState('')
