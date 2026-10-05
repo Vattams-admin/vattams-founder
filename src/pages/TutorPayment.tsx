@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 // src/pages/TutorPayment.tsx
 //
 // Tutor equivalent of src/pages/Payment.tsx: same UPI/QR/UTR pattern,
@@ -20,6 +21,7 @@ const PAYEE_VPA = import.meta.env.VITE_UPI_VPA as string | undefined
 const CONNECTION_ERROR = 'Unable to connect right now. Please check your internet connection and try again.'
 
 export default function TutorPayment() {
+  useSeo({ title: 'Tutor Payment', description: 'Tutor registration payment', noindex: true })
   const { user, loading } = useAuth()
   const navigate = useNavigate()
 
