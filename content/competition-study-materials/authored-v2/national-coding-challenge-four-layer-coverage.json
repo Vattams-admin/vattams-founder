@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "National Coding Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/national-coding-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Programming Fundamentals",
+      "subtopics": [
+        {
+          "title": "variables",
+          "study_materials": {
+            "objective": "Build mastery of variables in Programming Fundamentals.",
+            "teaching_content": "Teach variables as named program state. Distinguish declaration, initialization, reassignment, and reading the current value; emphasize that an update changes later computations but not earlier ones.",
+            "worked_examples": [
+              "If score=12, then score=score+5 and score=score*2 produces 34. The second expression reads the already-updated value 17."
+            ],
+            "pitfall": "Pitfall: treating an assignment like an equation that must be solved, or reasoning from the original value after it has been reassigned.",
+            "mastery_check": "Mastery: trace every variable state in a short program, explain update order, and choose a clear representation for the required state.",
+            "revision": "Review variables using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "types",
+          "study_materials": {
+            "objective": "Build mastery of types in Programming Fundamentals.",
+            "teaching_content": "Teach integers, floating-point values, booleans, characters, and strings through the operations and representations they support. Connect type choice to input parsing and output.",
+            "worked_examples": [
+              "If a=7 and b=\"7\", a+2 is numeric addition while b+\"2\" is string concatenation. The same visible digit can represent different data."
+            ],
+            "pitfall": "Pitfall: assuming conversion is automatic or harmless, especially when numeric text, integer division, or floating-point precision is involved.",
+            "mastery_check": "Mastery: identify the type of each value, predict type-sensitive operations, and select safe conversions for a coding task.",
+            "revision": "Review types using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "input output",
+          "study_materials": {
+            "objective": "Build mastery of input output in Programming Fundamentals.",
+            "teaching_content": "Teach the input-process-output contract used by programming judges: parse exactly the required values, compute from them, and emit only the specified output.",
+            "worked_examples": [
+              "For input `8 5`, a sum program should parse two numbers, calculate 13, and print `13`; adding `Answer:` may violate an exact-output requirement."
+            ],
+            "pitfall": "Pitfall: wrong token order, unparsed text, missing multiple test cases, or extra formatting not requested by the problem.",
+            "mastery_check": "Mastery: translate an input/output specification into reliable parsing, processing, and exact output for normal and boundary cases.",
+            "revision": "Review input output using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "operators",
+          "study_materials": {
+            "objective": "Build mastery of operators in Programming Fundamentals.",
+            "teaching_content": "Teach arithmetic, comparison, logical, assignment, and remainder operators by their semantics and precedence. Use parentheses when intent would otherwise be unclear.",
+            "worked_examples": [
+              "For a=17 and b=5, a%b is 2, a>b is true, and (a+b)*2 is 44. Each operator has a different role in the program's logic."
+            ],
+            "pitfall": "Pitfall: confusing `=` with equality, using the wrong logical connector, or overlooking integer-division/remainder behavior in the chosen language.",
+            "mastery_check": "Mastery: select and combine operators correctly, predict results, and explain precedence and type effects in unfamiliar expressions.",
+            "revision": "Review operators using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "expressions",
+          "study_materials": {
+            "objective": "Build mastery of expressions in Programming Fundamentals.",
+            "teaching_content": "Teach expressions as evaluated combinations of values and operators. Trace precedence, associativity, conversions, and intermediate values instead of guessing the final result.",
+            "worked_examples": [
+              "With x=3 and y=4, `x+y*2` is 11, while `(x+y)*2` is 14. Parentheses change the evaluation tree, not merely the formatting."
+            ],
+            "pitfall": "Pitfall: evaluating every expression strictly left-to-right or ignoring operand types and implicit conversions.",
+            "mastery_check": "Mastery: evaluate complex expressions accurately, rewrite them without changing meaning, and use intermediate values to debug surprising results.",
+            "revision": "Review expressions using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Control Flow",
+      "subtopics": [
+        {
+          "title": "conditions",
+          "study_materials": {
+            "objective": "Build mastery of conditions in Control Flow.",
+            "teaching_content": "Teach boolean conditions as precise tests that determine a branch. Translate inclusive/exclusive language directly into comparisons and combine predicates deliberately.",
+            "worked_examples": [
+              "To accept ages from 10 through 15 inclusive, require age>=10 and age<=15. Testing 10, 15, 9, and 16 confirms the boundaries."
+            ],
+            "pitfall": "Pitfall: replacing AND with OR, or using `<` where the specification includes the boundary.",
+            "mastery_check": "Mastery: convert natural-language requirements into correct predicates and validate them with boundary and counterexample tests.",
+            "revision": "Review conditions using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "nested conditions",
+          "study_materials": {
+            "objective": "Build mastery of nested conditions in Control Flow.",
+            "teaching_content": "Teach chained and nested decisions as mutually understandable cases. Order tests so every valid input reaches the intended branch and no branch becomes accidentally unreachable.",
+            "worked_examples": [
+              "For scores below 40, 40–59, and 60+, checking the lower boundary of each range makes 40 pass and 60 distinction without overlap."
+            ],
+            "pitfall": "Pitfall: overlapping conditions, unreachable branches, and missing cases caused by inconsistent boundary definitions.",
+            "mastery_check": "Mastery: design complete branch structures, trace every case, and prove that important boundary values receive exactly one intended outcome.",
+            "revision": "Review nested conditions using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "loops",
+          "study_materials": {
+            "objective": "Build mastery of loops in Control Flow.",
+            "teaching_content": "Teach loops through initialization, condition, body, and update. Students should identify what changes each iteration and why termination is guaranteed.",
+            "worked_examples": [
+              "A loop with i=1, condition i<=5, and i=i+1 visits 1,2,3,4,5 and stops before 6, so it executes five times."
+            ],
+            "pitfall": "Pitfall: off-by-one limits, forgetting the update, or changing the control variable in a way that prevents termination.",
+            "mastery_check": "Mastery: design terminating loops, calculate iteration counts, and trace state changes for unfamiliar inputs.",
+            "revision": "Review loops using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "iteration patterns",
+          "study_materials": {
+            "objective": "Build mastery of iteration patterns in Control Flow.",
+            "teaching_content": "Teach reusable iteration patterns: counting, accumulation, filtering, searching, and building output. Choose the pattern from the task rather than forcing every problem into one template.",
+            "worked_examples": [
+              "To find the sum of even values in [3,8,5,6], inspect each item once and add only 8 and 6, producing 14."
+            ],
+            "pitfall": "Pitfall: initializing an accumulator incorrectly, filtering after instead of before the update, or skipping an element.",
+            "mastery_check": "Mastery: recognize the correct iteration pattern, maintain loop invariants, and verify that every required item is handled exactly once.",
+            "revision": "Review iteration patterns using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "loop tracing",
+          "study_materials": {
+            "objective": "Build mastery of loop tracing in Control Flow.",
+            "teaching_content": "Teach trace tables for loops with columns for iteration, control variables, relevant state, and output. For nested loops, reset inner state whenever the outer iteration changes it.",
+            "worked_examples": [
+              "For i=1..3 and j=1..2, pairs are (1,1),(1,2),(2,1),(2,2),(3,1),(3,2): six inner executions."
+            ],
+            "pitfall": "Pitfall: counting only outer iterations or assuming an inner variable continues from the previous outer iteration when it is reinitialized.",
+            "mastery_check": "Mastery: produce accurate trace tables, predict output and execution counts, and use tracing to locate the first incorrect state.",
+            "revision": "Review loop tracing using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Functions & Modularity",
+      "subtopics": [
+        {
+          "title": "functions",
+          "study_materials": {
+            "objective": "Build mastery of functions in Functions & Modularity.",
+            "teaching_content": "Teach functions as named units with a clear input/output contract and limited responsibility. Explain how reusable functions reduce duplication and make tests focused.",
+            "worked_examples": [
+              "A `square(n)` function returning n*n gives square(4)=16 and square(9)=81; the caller can reuse the same logic without copying it."
+            ],
+            "pitfall": "Pitfall: mixing unrelated responsibilities into one function or assuming a function changes external state when it only returns a value.",
+            "mastery_check": "Mastery: define, call, trace, and test focused functions while explaining their contract and side effects.",
+            "revision": "Review functions using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "parameters",
+          "study_materials": {
+            "objective": "Build mastery of parameters in Functions & Modularity.",
+            "teaching_content": "Teach parameters as the local inputs declared by a function and distinguish them from arguments supplied by the caller. Emphasize order, arity, and meaning.",
+            "worked_examples": [
+              "`area(width,height)` called as `area(5,3)` returns 15; `area(3,5)` is numerically equal here, but argument order matters whenever parameters have different semantics."
+            ],
+            "pitfall": "Pitfall: wrong argument order, wrong number of arguments, or assuming a parameter is automatically the same storage location as a caller variable.",
+            "mastery_check": "Mastery: map arguments to parameters correctly and diagnose arity, ordering, and scope mistakes.",
+            "revision": "Review parameters using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "return values",
+          "study_materials": {
+            "objective": "Build mastery of return values in Functions & Modularity.",
+            "teaching_content": "Teach return values as data flowing back to the caller, distinct from printing or other side effects. Show how returned values can participate in larger expressions.",
+            "worked_examples": [
+              "If `double(n)` returns 2*n, then `total=double(6)+1` gives 13. Printing 12 inside the function would not provide a value for the addition."
+            ],
+            "pitfall": "Pitfall: confusing console output with a returned value or expecting statements after `return` to execute.",
+            "mastery_check": "Mastery: trace returned data through composed calls and distinguish computation from presentation.",
+            "revision": "Review return values using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "scope",
+          "study_materials": {
+            "objective": "Build mastery of scope in Functions & Modularity.",
+            "teaching_content": "Teach local, outer, and nested scope as rules for name visibility. Explain shadowing and why keeping state local reduces accidental coupling.",
+            "worked_examples": [
+              "If outer x=5 and a function creates local x=10, reading x inside the function can yield 10 while the outer x remains 5 after the call, depending on the language's scope rules."
+            ],
+            "pitfall": "Pitfall: assuming equal names always refer to the same variable or that a local variable remains accessible after its scope ends.",
+            "mastery_check": "Mastery: identify which binding a name refers to at each point and predict state changes across function boundaries.",
+            "revision": "Review scope using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "decomposition",
+          "study_materials": {
+            "objective": "Build mastery of decomposition in Functions & Modularity.",
+            "teaching_content": "Teach decomposition as splitting a problem along meaningful transformations and responsibilities. Each part should have a clear interface and be independently testable.",
+            "worked_examples": [
+              "For marks processing, separate parsing, total calculation, average calculation, classification, and output formatting; each stage receives understandable data from the previous one."
+            ],
+            "pitfall": "Pitfall: arbitrary fragmentation or functions with overlapping responsibilities that obscure the data flow.",
+            "mastery_check": "Mastery: decompose an unfamiliar coding problem into coherent modules, define their contracts, and explain the complete data flow.",
+            "revision": "Review decomposition using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Data Structures",
+      "subtopics": [
+        {
+          "title": "arrays",
+          "study_materials": {
+            "objective": "Build mastery of arrays in Data Structures.",
+            "teaching_content": "Teach arrays as ordered indexed collections. Cover traversal, updates, aggregation, searching, and bounds while keeping index conventions explicit.",
+            "worked_examples": [
+              "For [4,7,2,9], zero-based indices 0–3 identify the four elements. A loop `i=0` while `i<4` visits each element once."
+            ],
+            "pitfall": "Pitfall: confusing human positions with zero-based indices or using the array length as a valid final index.",
+            "mastery_check": "Mastery: traverse, update, search, and aggregate arrays without out-of-range access and with correct boundary reasoning.",
+            "revision": "Review arrays using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "strings",
+          "study_materials": {
+            "objective": "Build mastery of strings in Data Structures.",
+            "teaching_content": "Teach strings as ordered character sequences. Practise indexing, comparison, concatenation, counting, searching, and transformation while distinguishing characters from whole strings.",
+            "worked_examples": [
+              "For `\"VATTAMS\"`, the length is 7 and the first character is at index 0 in a zero-based model. Counting vowels requires inspecting each character against the chosen vowel set."
+            ],
+            "pitfall": "Pitfall: invalid indices, case mismatches, or assuming string mutation works like array mutation in every language.",
+            "mastery_check": "Mastery: process strings reliably, handle empty/single-character inputs, and produce exact expected text.",
+            "revision": "Review strings using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "stacks",
+          "study_materials": {
+            "objective": "Build mastery of stacks in Data Structures.",
+            "teaching_content": "Teach stacks as last-in-first-out structures with push, pop, and peek. Connect the LIFO invariant to undo, delimiter matching, and depth-first processing.",
+            "worked_examples": [
+              "Push A, B, C; popping repeatedly returns C, B, A. The newest available item is always removed first."
+            ],
+            "pitfall": "Pitfall: treating a stack as FIFO or popping an empty stack without handling underflow.",
+            "mastery_check": "Mastery: simulate stack operations, identify LIFO applications, and handle empty-state transitions safely.",
+            "revision": "Review stacks using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "queues",
+          "study_materials": {
+            "objective": "Build mastery of queues in Data Structures.",
+            "teaching_content": "Teach queues as first-in-first-out structures with enqueue and dequeue. Track front and rear conceptually and handle empty and single-item transitions.",
+            "worked_examples": [
+              "Enqueue A, B, C; dequeues return A, B, C. This models a service line because the earliest waiting item is processed first."
+            ],
+            "pitfall": "Pitfall: reversing insertion/removal order or mishandling the transition from one item to empty.",
+            "mastery_check": "Mastery: simulate FIFO operations accurately and select a queue when arrival order must be preserved.",
+            "revision": "Review queues using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "maps and sets",
+          "study_materials": {
+            "objective": "Build mastery of maps and sets in Data Structures.",
+            "teaching_content": "Teach maps as key-to-value structures and sets as uniqueness/membership structures. Choose them when direct lookup or duplicate detection is more useful than repeated scanning.",
+            "worked_examples": [
+              "Insert IDs 101, 102, 101 into a set: the set still contains two unique IDs. A map can associate `101` with its latest score."
+            ],
+            "pitfall": "Pitfall: expecting set indexing, assuming map iteration order without a language guarantee, or failing to handle a missing key.",
+            "mastery_check": "Mastery: select the right structure for lookup or uniqueness, simulate updates, and reason about missing keys and duplicates.",
+            "revision": "Review maps and sets using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Algorithms",
+      "subtopics": [
+        {
+          "title": "searching",
+          "study_materials": {
+            "objective": "Build mastery of searching in Algorithms.",
+            "teaching_content": "Teach linear search for arbitrary sequences and binary search only when the data is ordered. Compare the work performed by each method and make the precondition for binary search explicit.",
+            "worked_examples": [
+              "For sorted [2,5,8,11,14,19], searching for 11 with binary search checks the middle region, then narrows to the target. On an unsorted list, linear search is the safe direct method."
+            ],
+            "pitfall": "Pitfall: applying binary search to unsorted data, or returning failure before all valid candidates have been examined.",
+            "mastery_check": "Mastery: choose a search method from the data's properties, trace its decisions, handle absent and boundary targets, and justify the choice.",
+            "revision": "Review searching using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sorting",
+          "study_materials": {
+            "objective": "Build mastery of sorting in Algorithms.",
+            "teaching_content": "Teach sorting as arranging data according to a comparison rule. Contrast simple comparison-based methods conceptually and emphasize preserving the required order and handling duplicates.",
+            "worked_examples": [
+              "Sorting [7,2,7,4] in ascending order gives [2,4,7,7]. A stable method can preserve the original order of equal records when records carry additional fields."
+            ],
+            "pitfall": "Pitfall: sorting in the wrong direction, losing associated data, or assuming duplicate values are automatically removed by sorting.",
+            "mastery_check": "Mastery: select an appropriate sorting approach for the constraints, trace key comparisons or passes, preserve required data, and verify sortedness.",
+            "revision": "Review sorting using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "two pointers",
+          "study_materials": {
+            "objective": "Build mastery of two pointers in Algorithms.",
+            "teaching_content": "Teach two-pointer techniques for sequences where moving two indices can avoid repeated work. Explain common patterns such as opposite ends and a slow/fast pair, and state the invariant that justifies each movement.",
+            "worked_examples": [
+              "In sorted [1,3,4,7,9], to find a pair summing to 10, start at both ends: 1+9=10, so the pair is found immediately; otherwise the sum determines which pointer can move safely."
+            ],
+            "pitfall": "Pitfall: moving the wrong pointer without using the ordering invariant, or applying the technique when the required ordering/property is absent.",
+            "mastery_check": "Mastery: identify when two pointers reduce repeated scanning, maintain the pointer invariant, and prove that no valid candidate is skipped.",
+            "revision": "Review two pointers using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "prefix ideas",
+          "study_materials": {
+            "objective": "Build mastery of prefix ideas in Algorithms.",
+            "teaching_content": "Teach prefix sums and related prefix state as a way to answer repeated range questions after one preprocessing pass. Define exactly what each prefix position represents.",
+            "worked_examples": [
+              "For values [3,5,2,6], prefix sums [3,8,10,16] allow the sum from index 1 through 3 to be obtained as 16-3=13 in a zero-based prefix convention with an initial zero."
+            ],
+            "pitfall": "Pitfall: mixing inclusive and exclusive endpoints or forgetting the extra initial zero used by the common prefix-sum formulation.",
+            "mastery_check": "Mastery: construct the correct prefix representation, answer range queries with precise endpoints, and test empty, single-element, and full-range cases.",
+            "revision": "Review prefix ideas using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "recursion basics",
+          "study_materials": {
+            "objective": "Build mastery of recursion basics in Algorithms.",
+            "teaching_content": "Teach recursion through a base case, a smaller recursive subproblem, and progress toward termination. Trace the call stack rather than treating recursion as mysterious repetition.",
+            "worked_examples": [
+              "A factorial function can define fact(1)=1 and fact(n)=n*fact(n-1). Thus fact(4)=4*3*2*1=24, with the calls returning in reverse order."
+            ],
+            "pitfall": "Pitfall: missing or unreachable base cases, recursive calls that do not reduce the problem, or confusing call order with return order.",
+            "mastery_check": "Mastery: identify base and recursive cases, trace the call stack, prove progress toward termination, and recognize when an iterative approach is simpler.",
+            "revision": "Review recursion basics using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Problem Solving",
+      "subtopics": [
+        {
+          "title": "problem decomposition",
+          "study_materials": {
+            "objective": "Build mastery of problem decomposition in Problem Solving.",
+            "teaching_content": "Teach decomposition as converting a problem statement into smaller transformations: parse, represent, compute, validate, and output. Name intermediate data explicitly before coding.",
+            "worked_examples": [
+              "For a frequency task, split the work into reading tokens, normalizing each token, updating a frequency map, and selecting the required result. Each step can be tested separately."
+            ],
+            "pitfall": "Pitfall: coding immediately from the story without identifying inputs, outputs, constraints, and intermediate state.",
+            "mastery_check": "Mastery: turn an unfamiliar statement into a sequence of precise subproblems, define their data flow, and identify which part should be solved first.",
+            "revision": "Review problem decomposition using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "constraints",
+          "study_materials": {
+            "objective": "Build mastery of constraints in Problem Solving.",
+            "teaching_content": "Teach constraints as algorithm-selection evidence. Estimate how input size affects repeated loops, memory use, and whether preprocessing or a faster structure is necessary.",
+            "worked_examples": [
+              "If n can reach 100,000, an O(n²) pairwise scan may perform about 10 billion comparisons in the worst case, while an O(n log n) strategy is dramatically more practical."
+            ],
+            "pitfall": "Pitfall: solving the sample correctly while ignoring the stated maximum input size, causing time or memory failure on judge data.",
+            "mastery_check": "Mastery: read constraints before choosing an approach, estimate growth qualitatively, and reject methods whose resource needs are incompatible with the limits.",
+            "revision": "Review constraints using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "edge cases",
+          "study_materials": {
+            "objective": "Build mastery of edge cases in Problem Solving.",
+            "teaching_content": "Teach edge cases as inputs at or just beyond structural boundaries: empty collections, one item, equal values, minimum/maximum limits, duplicates, and impossible outcomes.",
+            "worked_examples": [
+              "A maximum-value search over [42] should return 42; an empty-input variant should follow the problem's stated contract rather than assuming an element exists."
+            ],
+            "pitfall": "Pitfall: writing logic that only works for the sample's typical case and crashes or returns a wrong result at a boundary.",
+            "mastery_check": "Mastery: systematically derive edge cases from the specification and include them in both mental tracing and targeted tests.",
+            "revision": "Review edge cases using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "complexity intuition",
+          "study_materials": {
+            "objective": "Build mastery of complexity intuition in Problem Solving.",
+            "teaching_content": "Teach time and space complexity as growth estimates rather than exact stopwatch measurements. Compare constant, logarithmic, linear, n log n, and quadratic patterns through their dominant operations.",
+            "worked_examples": [
+              "For n=1,000, a linear pass is about 1,000 iterations, while a quadratic pairwise process can approach 1,000,000 comparisons. The difference grows rapidly as n increases."
+            ],
+            "pitfall": "Pitfall: judging an algorithm only from a small sample or ignoring nested loops and hidden repeated work inside helper functions.",
+            "mastery_check": "Mastery: estimate dominant growth from code structure, compare candidate approaches, and explain why a method should or should not scale to the constraints.",
+            "revision": "Review complexity intuition using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "debugging",
+          "study_materials": {
+            "objective": "Build mastery of debugging in Problem Solving.",
+            "teaching_content": "Teach debugging as hypothesis-driven diagnosis: reproduce the failure, isolate the smallest failing case, inspect state changes, identify the violated assumption, patch one cause, and retest.",
+            "worked_examples": [
+              "If a sum is too large only when the first element is negative, test a one-element negative case and inspect accumulator initialization before changing unrelated loop logic."
+            ],
+            "pitfall": "Pitfall: changing several lines at once or fixing the visible output without identifying the state or assumption that caused the error.",
+            "mastery_check": "Mastery: localize a bug using traces and minimal tests, explain its root cause, apply a targeted fix, and confirm that old cases still pass.",
+            "revision": "Review debugging using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Code Correctness",
+      "subtopics": [
+        {
+          "title": "tracing",
+          "study_materials": {
+            "objective": "Build mastery of tracing in Code Correctness.",
+            "teaching_content": "Teach code tracing as executing statements mentally or with a trace table while recording only state relevant to the output. Follow branches, loop updates, calls, and returns in order.",
+            "worked_examples": [
+              "For x=2, then repeat three times with x=x+2, the recorded states are 2,4,6,8; the final value is 8 and the intermediate states explain how it was reached."
+            ],
+            "pitfall": "Pitfall: skipping a branch or loop iteration because the final result seems obvious, especially when a variable is changed in multiple places.",
+            "mastery_check": "Mastery: trace unfamiliar code line by line at the relevant state changes and use the trace to justify the exact output.",
+            "revision": "Review tracing using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "test cases",
+          "study_materials": {
+            "objective": "Build mastery of test cases in Code Correctness.",
+            "teaching_content": "Teach test cases as deliberate evidence: include normal, boundary, duplicate, empty/singleton, and invalid/impossible cases when the specification permits them. Each test should target a possible failure mode.",
+            "worked_examples": [
+              "For a function that returns the larger of two numbers, test (5,3), (3,5), (4,4), and the allowed minimum values rather than testing only one ordering."
+            ],
+            "pitfall": "Pitfall: relying on one happy-path sample or choosing tests that all exercise the same branch.",
+            "mastery_check": "Mastery: design a compact but high-value test set that covers requirements, boundaries, and likely implementation mistakes.",
+            "revision": "Review test cases using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "failure diagnosis",
+          "study_materials": {
+            "objective": "Build mastery of failure diagnosis in Code Correctness.",
+            "teaching_content": "Teach diagnosis by separating syntax/build errors, runtime failures, wrong-answer logic, and resource failures. Read the symptom first, then trace backward to the smallest violated assumption.",
+            "worked_examples": [
+              "If the program compiles but fails only on large inputs, inspect algorithmic complexity and memory growth before rewriting basic syntax."
+            ],
+            "pitfall": "Pitfall: treating every failure as a coding typo or changing the algorithm without confirming what category of failure occurred.",
+            "mastery_check": "Mastery: classify failures correctly, connect symptoms to likely causes, and produce a targeted fix supported by a reproducing case.",
+            "revision": "Review failure diagnosis using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "boundary conditions",
+          "study_materials": {
+            "objective": "Build mastery of boundary conditions in Code Correctness.",
+            "teaching_content": "Teach boundary conditions as the exact transition points where loop limits, ranges, indices, or validity rules change. Make inclusive/exclusive choices explicit in code.",
+            "worked_examples": [
+              "For an array of length n, the last zero-based index is n-1. A loop `i<n` visits valid positions; `i<=n` attempts one invalid position."
+            ],
+            "pitfall": "Pitfall: using a mathematically correct-looking boundary that does not match the programming representation.",
+            "mastery_check": "Mastery: identify every relevant boundary, test values immediately below/at/above it, and implement limits without off-by-one errors.",
+            "revision": "Review boundary conditions using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "verification",
+          "study_materials": {
+            "objective": "Build mastery of verification in Code Correctness.",
+            "teaching_content": "Teach verification as independently checking that a program satisfies the specification, not merely that it produces the expected sample. Use invariants, alternative calculations, and adversarial tests.",
+            "worked_examples": [
+              "After sorting an array, verify that every adjacent pair is nondecreasing and that the output contains the same multiset of values as the input; both properties support correctness."
+            ],
+            "pitfall": "Pitfall: confirming only the final sample output or using the same flawed reasoning to verify the program that produced the result.",
+            "mastery_check": "Mastery: state a correctness property, test it independently, and explain evidence that the implementation preserves the required behavior.",
+            "revision": "Review verification using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Applied Coding",
+      "subtopics": [
+        {
+          "title": "simulation",
+          "study_materials": {
+            "objective": "Build mastery of simulation in Applied Coding.",
+            "teaching_content": "Teach simulation as maintaining program state exactly as the problem describes each event or operation. Identify state variables, event order, and transition rules before coding.",
+            "worked_examples": [
+              "For a counter starting at 10, events +3, -2, +5 produce states 10→13→11→16. Applying events in a different order changes the result, so ordering is part of the specification."
+            ],
+            "pitfall": "Pitfall: skipping an event, applying simultaneous-looking operations in the wrong order, or updating a state variable from stale rather than current data.",
+            "mastery_check": "Mastery: translate event rules into deterministic state transitions, trace every event, and validate the final state against small hand-worked cases.",
+            "revision": "Review simulation using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "text processing",
+          "study_materials": {
+            "objective": "Build mastery of text processing in Applied Coding.",
+            "teaching_content": "Teach text processing through tokenization, normalization, character scanning, and exact output rules. Decide whether case, whitespace, punctuation, and Unicode distinctions matter from the specification.",
+            "worked_examples": [
+              "To count vowels in `Code`, scan C-o-d-e and count o and e, giving 2. If the task is case-insensitive, normalize case before testing characters."
+            ],
+            "pitfall": "Pitfall: accidentally counting punctuation, mishandling spaces, or applying case-sensitive logic when the specification treats letters uniformly.",
+            "mastery_check": "Mastery: transform and inspect text according to explicit rules, handle empty and whitespace-heavy inputs, and preserve required output formatting.",
+            "revision": "Review text processing using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mathematical coding",
+          "study_materials": {
+            "objective": "Build mastery of mathematical coding in Applied Coding.",
+            "teaching_content": "Teach mathematical coding by translating a mathematical definition into integer-safe program operations. Check divisibility, overflow, rounding, and boundary behavior rather than copying formulas blindly.",
+            "worked_examples": [
+              "To compute the sum of the first n positive integers, use n*(n+1)/2 when the language and constraints safely support the intermediate product; for large values, choose a representation that avoids overflow."
+            ],
+            "pitfall": "Pitfall: floating-point arithmetic for exact integer answers, incorrect operator precedence, or overflow before division reduces the value.",
+            "mastery_check": "Mastery: convert definitions into robust code, validate with small cases, and account for numeric limits and exactness.",
+            "revision": "Review mathematical coding using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "data handling",
+          "study_materials": {
+            "objective": "Build mastery of data handling in Applied Coding.",
+            "teaching_content": "Teach data handling as a pipeline: parse records, choose an appropriate representation, transform or aggregate them, and emit the required result. Preserve associations between related fields.",
+            "worked_examples": [
+              "For records `(id,score)`, a map from id to score supports direct lookup while an array of records preserves input order; the choice depends on whether lookup or ordering is required."
+            ],
+            "pitfall": "Pitfall: losing field associations, assuming input order is sorted, or converting values to text when later arithmetic is required.",
+            "mastery_check": "Mastery: choose representations from access needs, preserve data integrity through transformations, and verify both values and required ordering.",
+            "revision": "Review data handling using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "challenge problems",
+          "study_materials": {
+            "objective": "Build mastery of challenge problems in Applied Coding.",
+            "teaching_content": "Teach championship challenge solving as a disciplined cycle: understand the statement, derive the invariant or key observation, choose an algorithm, prove it on representative cases, implement, and stress-test boundaries.",
+            "worked_examples": [
+              "For a duplicate-detection task, a set provides a direct membership invariant: before inserting a value, membership tells whether it has already appeared. The approach avoids repeated pairwise comparisons."
+            ],
+            "pitfall": "Pitfall: coding the first plausible pattern without proving why it covers all cases, especially when constraints require a less obvious optimization.",
+            "mastery_check": "Mastery: independently derive a viable approach for unfamiliar problems, justify correctness and complexity, implement cleanly, and verify with adversarial tests.",
+            "revision": "Review challenge problems using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Coding Competition Mastery",
+      "subtopics": [
+        {
+          "title": "algorithm selection",
+          "study_materials": {
+            "objective": "Build mastery of algorithm selection in Coding Competition Mastery.",
+            "teaching_content": "Teach competitors to select an algorithm from input size, structure, required output, and constraints rather than from memorized labels.",
+            "worked_examples": [
+              "A sorted array with repeated lookup requests may favor binary search because the ordering constraint reduces the search space."
+            ],
+            "pitfall": "Pitfall: choosing an advanced algorithm without checking whether the input structure supports it.",
+            "mastery_check": "Select a suitable algorithm and justify it from the problem constraints.",
+            "revision": "Review algorithm selection using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "optimization reasoning",
+          "study_materials": {
+            "objective": "Build mastery of optimization reasoning in Coding Competition Mastery.",
+            "teaching_content": "Teach optimization by identifying the repeated work in a correct solution, then replacing it with a more efficient representation or operation.",
+            "worked_examples": [
+              "If the same range sum is requested many times, preprocessing prefix sums can avoid recomputing every element for each query."
+            ],
+            "pitfall": "Pitfall: optimizing code before establishing correctness or improving a step that is not the actual bottleneck.",
+            "mastery_check": "Recognize repeated work and propose a justified improvement without breaking correctness.",
+            "revision": "Review optimization reasoning using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "competitive debugging",
+          "study_materials": {
+            "objective": "Build mastery of competitive debugging in Coding Competition Mastery.",
+            "teaching_content": "Teach debugging as systematic isolation: reproduce the failure, inspect assumptions, test boundaries, and reduce the input to the smallest failing case.",
+            "worked_examples": [
+              "If a solution fails only when the target equals the first element, inspect initialization and boundary handling before changing the whole algorithm."
+            ],
+            "pitfall": "Pitfall: patching individual outputs without identifying the underlying invariant or faulty assumption.",
+            "mastery_check": "Use a minimal failing case to locate and correct the actual defect.",
+            "revision": "Review competitive debugging using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated coding scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated coding scenarios in Coding Competition Mastery.",
+            "teaching_content": "Teach end-to-end coding problems by combining parsing, data structures, algorithms, edge-case handling, and output formatting under explicit constraints.",
+            "worked_examples": [
+              "A contest task may require reading records, grouping them by key, sorting each group, and producing a deterministic report."
+            ],
+            "pitfall": "Pitfall: solving the central algorithm while overlooking input format, duplicate data, empty cases, or exact output requirements.",
+            "mastery_check": "Build a complete solution that satisfies algorithmic, input, output, and edge-case constraints together.",
+            "revision": "Review integrated coding scenarios using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "championship coding round",
+          "study_materials": {
+            "objective": "Build mastery of championship coding round in Coding Competition Mastery.",
+            "teaching_content": "Practice mixed coding challenges under time pressure with deliberate triage, test-first verification, and disciplined submission review.",
+            "worked_examples": [
+              "In a timed round, solve a high-confidence implementation first, then return to the harder problem with its constraints already translated into a plan."
+            ],
+            "pitfall": "Pitfall: spending most of the contest repeatedly rewriting one difficult solution without a verified intermediate result.",
+            "mastery_check": "Manage time, implement reliably, test strategically, and submit only after checking critical boundaries.",
+            "revision": "Review championship coding round using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "implementation",
+              "reasoning",
+              "debugging",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "NCC-MOCK-01",
+      "focus": "fundamentals and core algorithms"
+    },
+    {
+      "id": "NCC-MOCK-02",
+      "focus": "advanced problem solving and debugging"
+    },
+    {
+      "id": "NCC-MOCK-03",
+      "focus": "championship coding simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "National Coding Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
