@@ -31,6 +31,7 @@ export interface SeoOptions {
   type?: 'website' | 'article'
   image?: string
   jsonLd?: Record<string, unknown> | Record<string, unknown>[]
+  enabled?: boolean
 }
 
 function setMetaByAttr(attr: 'name' | 'property', key: string, content: string) {
@@ -62,9 +63,12 @@ export function useSeo(options: SeoOptions) {
     type = 'website',
     image = DEFAULT_OG_IMAGE,
     jsonLd,
+    enabled = true,
   } = options
 
   useEffect(() => {
+    if (!enabled) return
+
     const fullTitle = !title ? SITE_NAME : title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`
     document.title = fullTitle
 
@@ -106,5 +110,5 @@ export function useSeo(options: SeoOptions) {
       scriptEl?.remove()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [title, description, path, noindex, type, image, JSON.stringify(jsonLd)])
+  }, [title, description, path, noindex, type, image, enabled, JSON.stringify(jsonLd)])
 }
