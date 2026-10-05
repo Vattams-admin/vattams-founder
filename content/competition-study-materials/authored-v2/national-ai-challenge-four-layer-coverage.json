@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "National AI Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/national-ai-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "AI Concepts",
+      "subtopics": [
+        {
+          "title": "AI domains",
+          "study_materials": {
+            "objective": "Build mastery of AI domains in AI Concepts.",
+            "teaching_content": "Teach major AI domains by separating tasks such as perception, language, prediction, generation, planning, and decision support. Emphasize that AI is an umbrella field containing multiple methods rather than one single technology.",
+            "worked_examples": [
+              "A spam filter classifies messages, a speech recognizer converts audio to text, and a generative model creates new content. Their goals differ even though all can be described as AI applications."
+            ],
+            "pitfall": "Pitfall: treating every automated rule-based program as machine learning, or assuming AI, machine learning, and generative AI are interchangeable terms.",
+            "mastery_check": "Mastery: classify an unfamiliar AI system by its task, identify the relevant AI subfield, and explain why the classification fits.",
+            "revision": "Review AI domains using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "machine learning",
+          "study_materials": {
+            "objective": "Build mastery of machine learning in AI Concepts.",
+            "teaching_content": "Teach machine learning as systems that learn patterns from data to make predictions or decisions rather than relying only on explicitly written rules. Distinguish learning from simple deterministic automation.",
+            "worked_examples": [
+              "A model trained on labelled images can learn patterns associated with cats and dogs and then predict a class for a new image; the prediction is learned from examples rather than a hand-written rule for every image."
+            ],
+            "pitfall": "Pitfall: assuming a model understands a task like a human or that more training data automatically guarantees better predictions.",
+            "mastery_check": "Mastery: explain what is learned, identify the role of training data, and distinguish machine-learning behavior from fixed-rule automation.",
+            "revision": "Review machine learning using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "deep learning concepts",
+          "study_materials": {
+            "objective": "Build mastery of deep learning concepts in AI Concepts.",
+            "teaching_content": "Teach deep learning as machine learning based on multi-layer neural networks that learn representations from data. Connect layers, learned features, parameters, and training without requiring implementation-level mathematics first.",
+            "worked_examples": [
+              "In image recognition, early network layers may respond to simple visual patterns while deeper layers combine them into more complex representations useful for classification."
+            ],
+            "pitfall": "Pitfall: assuming every neural network is automatically accurate or that deep learning removes the need for suitable data and evaluation.",
+            "mastery_check": "Mastery: explain why depth can support hierarchical representations and identify the data, training, and evaluation conditions still required.",
+            "revision": "Review deep learning concepts using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "models",
+          "study_materials": {
+            "objective": "Build mastery of models in AI Concepts.",
+            "teaching_content": "Teach an AI model as a learned computational representation used to transform inputs into outputs according to a task. Distinguish the model itself from its training data, parameters, prompt, and deployed application.",
+            "worked_examples": [
+              "A model trained to classify plant images takes image features as input and produces class scores or a predicted label. The application may then turn that prediction into a user-facing result."
+            ],
+            "pitfall": "Pitfall: treating a model as a database that simply retrieves memorized answers or assuming the same model is equally suitable for every task.",
+            "mastery_check": "Mastery: identify model inputs, outputs, learned behavior, and intended task, then justify whether a model is appropriate for a stated use case.",
+            "revision": "Review models using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "AI applications",
+          "study_materials": {
+            "objective": "Build mastery of AI applications in AI Concepts.",
+            "teaching_content": "Teach AI applications by mapping a real-world goal to the data, prediction/generation task, human role, and risks involved. Evaluate usefulness rather than labeling an application as good merely because it uses AI.",
+            "worked_examples": [
+              "A hospital triage-support system might prioritize cases from clinical inputs, but a qualified professional should remain responsible for decisions where errors have serious consequences."
+            ],
+            "pitfall": "Pitfall: confusing an impressive demonstration with a reliable deployment or ignoring accuracy, privacy, bias, safety, and human oversight.",
+            "mastery_check": "Mastery: analyze an AI application end to end, identify benefits and limitations, and propose an appropriate human decision boundary.",
+            "revision": "Review AI applications using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Data Literacy",
+      "subtopics": [
+        {
+          "title": "datasets",
+          "study_materials": {
+            "objective": "Build mastery of datasets in Data Literacy.",
+            "teaching_content": "Teach datasets as collections of examples or records used for analysis or model development. Identify rows, variables, labels when present, and the difference between representative coverage and raw quantity.",
+            "worked_examples": [
+              "A dataset for house-price prediction might contain records with area, location, bedrooms, and sale price. The first three can be input variables while price is the target."
+            ],
+            "pitfall": "Pitfall: assuming a large dataset is automatically representative, clean, or suitable for the intended prediction task.",
+            "mastery_check": "Mastery: describe dataset structure, identify its role in a task, and question whether its coverage and quality support the intended conclusion.",
+            "revision": "Review datasets using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "features and labels",
+          "study_materials": {
+            "objective": "Build mastery of features and labels in Data Literacy.",
+            "teaching_content": "Teach features as input attributes and labels as target answers in supervised learning. Use examples to show that the same field can play different roles depending on the task.",
+            "worked_examples": [
+              "For email classification, message length and selected text features can be inputs while spam/not-spam is the label. In a different task, the same email may be used without a label."
+            ],
+            "pitfall": "Pitfall: calling every column a label or leaking the target into the input features during training.",
+            "mastery_check": "Mastery: identify features and labels for unfamiliar tasks and detect when a proposed feature would improperly reveal the target.",
+            "revision": "Review features and labels using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "data quality",
+          "study_materials": {
+            "objective": "Build mastery of data quality in Data Literacy.",
+            "teaching_content": "Teach data quality through accuracy, completeness, consistency, relevance, timeliness, and duplicate/error detection. Explain that model quality is constrained by the information supplied to it.",
+            "worked_examples": [
+              "If a temperature dataset contains one entry of 250°C where the sensor range is -20°C to 60°C, that outlier should be investigated before training or analysis."
+            ],
+            "pitfall": "Pitfall: deleting unusual records automatically instead of checking whether they are errors or legitimate rare cases.",
+            "mastery_check": "Mastery: diagnose common data-quality problems, select appropriate cleaning actions, and explain how each problem could affect results.",
+            "revision": "Review data quality using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "bias in data",
+          "study_materials": {
+            "objective": "Build mastery of bias in data in Data Literacy.",
+            "teaching_content": "Teach data bias as systematic imbalance or distortion in collected or labelled information. Distinguish sampling bias, measurement bias, and historical patterns from random noise.",
+            "worked_examples": [
+              "If a face-recognition dataset contains far more images from one demographic group than others, performance measured only on the majority group may hide poorer performance elsewhere."
+            ],
+            "pitfall": "Pitfall: assuming a model is neutral because the algorithm is mathematical, or treating fairness as something that can be solved solely by adding more rows.",
+            "mastery_check": "Mastery: identify likely sources of dataset bias, predict who may be affected, and propose collection or evaluation steps that expose the problem.",
+            "revision": "Review bias in data using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "data preparation",
+          "study_materials": {
+            "objective": "Build mastery of data preparation in Data Literacy.",
+            "teaching_content": "Teach preparation as making raw data usable while preserving the information needed for the task. Cover cleaning, encoding, normalization where appropriate, splitting data, and preventing leakage.",
+            "worked_examples": [
+              "For a mixed dataset, categorical values may need consistent encoding, missing values need an explicit policy, and train/test separation must happen so test information does not influence training."
+            ],
+            "pitfall": "Pitfall: applying transformations using the full dataset before the split, thereby leaking information from evaluation data into training.",
+            "mastery_check": "Mastery: design a preparation pipeline that is reproducible, task-appropriate, and resistant to leakage and inconsistent preprocessing.",
+            "revision": "Review data preparation using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Machine Learning Reasoning",
+      "subtopics": [
+        {
+          "title": "classification",
+          "study_materials": {
+            "objective": "Build mastery of classification in Machine Learning Reasoning.",
+            "teaching_content": "Teach classification as predicting one or more discrete categories from input data. Explain class boundaries, examples, and why a predicted class is not the same as certainty.",
+            "worked_examples": [
+              "A model classifying fruit from measurements might predict apple, orange, or banana. If two fruits have similar measurements, the output should be interpreted as a model prediction with uncertainty rather than a guaranteed fact."
+            ],
+            "pitfall": "Pitfall: confusing classification with continuous-value prediction or assuming the most frequent class is automatically the correct choice.",
+            "mastery_check": "Mastery: recognize classification tasks, identify inputs and classes, interpret predictions cautiously, and choose appropriate evaluation questions.",
+            "revision": "Review classification using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "regression",
+          "study_materials": {
+            "objective": "Build mastery of regression in Machine Learning Reasoning.",
+            "teaching_content": "Teach regression as predicting a numeric quantity, often continuous, from input variables. Emphasize that predictions are estimates and can be evaluated by the size and pattern of errors.",
+            "worked_examples": [
+              "A model can estimate delivery time as 32 minutes from distance, traffic, and time of day. The output is a number rather than a category such as fast or slow."
+            ],
+            "pitfall": "Pitfall: converting every numeric output into a classification problem or interpreting a predicted value as exact ground truth.",
+            "mastery_check": "Mastery: distinguish regression from classification, interpret numeric predictions, and reason about residual error and useful evaluation.",
+            "revision": "Review regression using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "training and testing",
+          "study_materials": {
+            "objective": "Build mastery of training and testing in Machine Learning Reasoning.",
+            "teaching_content": "Teach training as fitting model behavior from training data and testing as evaluating on data not used for fitting. Explain why independent evaluation estimates generalization better than reusing training examples.",
+            "worked_examples": [
+              "A model that memorizes 1,000 training examples can achieve near-perfect training accuracy but still perform poorly on new examples; a held-out test set exposes that gap."
+            ],
+            "pitfall": "Pitfall: tuning repeatedly against the test set until it effectively becomes another training set, or reporting training accuracy as proof of generalization.",
+            "mastery_check": "Mastery: explain the purpose of train/test separation, identify leakage, and interpret differences between training and unseen performance.",
+            "revision": "Review training and testing using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "overfitting intuition",
+          "study_materials": {
+            "objective": "Build mastery of overfitting intuition in Machine Learning Reasoning.",
+            "teaching_content": "Teach overfitting as learning accidental details of training data so strongly that performance on new data suffers. Contrast it with underfitting, where the model is too simple to capture useful structure.",
+            "worked_examples": [
+              "A model that predicts every training example correctly but makes poor predictions on new examples may have memorized noise rather than learned general patterns."
+            ],
+            "pitfall": "Pitfall: assuming a more complex model is always better because it fits training data more closely.",
+            "mastery_check": "Mastery: recognize overfitting from train-versus-test behavior, identify likely causes, and explain why simpler models or stronger validation may generalize better.",
+            "revision": "Review overfitting intuition using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "evaluation metrics",
+          "study_materials": {
+            "objective": "Build mastery of evaluation metrics in Machine Learning Reasoning.",
+            "teaching_content": "Teach evaluation metrics as task-specific measurements of model behavior. Explain why accuracy alone can be misleading for imbalanced classes and introduce precision, recall, and error-based thinking at an intuitive level.",
+            "worked_examples": [
+              "If only 1% of transactions are fraudulent, a model that always predicts legitimate can reach 99% accuracy while detecting zero fraud. A fraud system therefore needs metrics that reflect the costly positive class."
+            ],
+            "pitfall": "Pitfall: selecting a metric because its number is highest without asking which errors matter to the application.",
+            "mastery_check": "Mastery: choose and interpret metrics according to the task, class balance, and consequences of false positives and false negatives.",
+            "revision": "Review evaluation metrics using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Generative AI",
+      "subtopics": [
+        {
+          "title": "language models",
+          "study_materials": {
+            "objective": "Build mastery of language models in Generative AI.",
+            "teaching_content": "Teach language models as systems that estimate and generate sequences of language tokens from learned patterns. Explain that fluent text does not by itself guarantee factual accuracy.",
+            "worked_examples": [
+              "A language model can complete `The capital of France is...` with a likely continuation based on learned patterns, but the generated statement still needs verification when factual accuracy matters."
+            ],
+            "pitfall": "Pitfall: treating fluent generation as evidence that the model has checked a fact or possesses a human-like source of truth.",
+            "mastery_check": "Mastery: explain token-based language generation at an appropriate level, distinguish fluency from factual reliability, and identify when verification is required.",
+            "revision": "Review language models using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "image models",
+          "study_materials": {
+            "objective": "Build mastery of image models in Generative AI.",
+            "teaching_content": "Teach generative image models as systems that learn visual patterns and can produce or transform images from conditioning information such as text or reference inputs.",
+            "worked_examples": [
+              "A text prompt describing a red bicycle beside a lake can condition an image-generation system to create a new visual matching those concepts; the result is generated rather than retrieved as a single stored photograph."
+            ],
+            "pitfall": "Pitfall: assuming generated details are guaranteed to be physically accurate or that every visual element corresponds to a real source image.",
+            "mastery_check": "Mastery: distinguish generation from retrieval, reason about conditioning, and identify visual details that require human verification.",
+            "revision": "Review image models using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "multimodal AI",
+          "study_materials": {
+            "objective": "Build mastery of multimodal AI in Generative AI.",
+            "teaching_content": "Teach multimodal AI as systems that work across more than one modality, such as text, images, audio, or video. Focus on how combining modalities can change the information available to a task.",
+            "worked_examples": [
+              "A system given a photograph and a written question can use visual content plus language to answer a query about objects in the image."
+            ],
+            "pitfall": "Pitfall: assuming multimodal means equally reliable across every modality or that combining inputs automatically resolves ambiguity.",
+            "mastery_check": "Mastery: identify the modalities involved, explain their complementary roles, and evaluate where missing or ambiguous information could affect the result.",
+            "revision": "Review multimodal AI using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "prompting",
+          "study_materials": {
+            "objective": "Build mastery of prompting in Generative AI.",
+            "teaching_content": "Teach prompting as specifying task, context, constraints, desired format, and relevant examples so a generative model has clearer instructions. Emphasize iteration and verification rather than magical wording.",
+            "worked_examples": [
+              "Instead of `Explain photosynthesis`, a prompt can request a 100-word explanation for a Grade 6 learner with three key terms and one analogy, making the expected output more constrained."
+            ],
+            "pitfall": "Pitfall: assuming a better prompt guarantees a correct answer or hiding uncertainty by asking the model to sound confident.",
+            "mastery_check": "Mastery: construct precise prompts, compare outputs against the stated requirements, and add verification steps for factual or high-stakes content.",
+            "revision": "Review prompting using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "hallucination and verification",
+          "study_materials": {
+            "objective": "Build mastery of hallucination and verification in Generative AI.",
+            "teaching_content": "Teach hallucination as confident-looking generated content that is unsupported, incorrect, or invented. Verification means checking claims against reliable evidence appropriate to the task.",
+            "worked_examples": [
+              "If a model supplies a plausible-looking historical citation, verify the title, author, date, and source independently before using it in educational material."
+            ],
+            "pitfall": "Pitfall: accepting a citation, statistic, quotation, or named source merely because it is specific and confidently presented.",
+            "mastery_check": "Mastery: identify claims requiring verification, check them against appropriate sources, and clearly separate verified information from model-generated uncertainty.",
+            "revision": "Review hallucination and verification using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Computer Vision & Language",
+      "subtopics": [
+        {
+          "title": "image recognition",
+          "study_materials": {
+            "objective": "Build mastery of image recognition in Computer Vision & Language.",
+            "teaching_content": "Teach image recognition as extracting visual patterns to assign labels, detect objects, or identify structures. Distinguish the image itself from the features or representations used by a model.",
+            "worked_examples": [
+              "A vision system can inspect an image and classify it as containing a bicycle, but classification does not necessarily tell where the bicycle is; object detection would add location information."
+            ],
+            "pitfall": "Pitfall: assuming image classification, object detection, and image segmentation are identical tasks or that recognition proves every visible detail is correctly understood.",
+            "mastery_check": "Mastery: identify the visual task being performed, distinguish output types, and explain what evidence in the image supports or limits the prediction.",
+            "revision": "Review image recognition using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "text processing",
+          "study_materials": {
+            "objective": "Build mastery of text processing in Computer Vision & Language.",
+            "teaching_content": "Teach AI text processing through tokenization, classification, extraction, summarization, translation, and other transformations. Connect the chosen task to the structure of the input and desired output.",
+            "worked_examples": [
+              "A sentiment classifier may process a review and predict positive, neutral, or negative sentiment; a summarizer instead produces a shorter text preserving important information."
+            ],
+            "pitfall": "Pitfall: treating every language task as generation or assuming a fluent output preserves every fact from the source.",
+            "mastery_check": "Mastery: identify the text-processing task, predict the appropriate output form, and evaluate whether important information or meaning has been preserved.",
+            "revision": "Review text processing using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "speech",
+          "study_materials": {
+            "objective": "Build mastery of speech in Computer Vision & Language.",
+            "teaching_content": "Teach speech AI as processing acoustic signals for tasks such as recognition, transcription, synthesis, or speaker-related analysis. Separate speech content from audio characteristics.",
+            "worked_examples": [
+              "A speech-to-text system can convert an audio sentence into written words, while text-to-speech starts from text and generates spoken audio."
+            ],
+            "pitfall": "Pitfall: confusing speech recognition with speech synthesis or assuming accents, noise, and background sounds cannot affect recognition quality.",
+            "mastery_check": "Mastery: distinguish speech input/output tasks, identify relevant sources of error, and explain where human review may be needed.",
+            "revision": "Review speech using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "pattern recognition",
+          "study_materials": {
+            "objective": "Build mastery of pattern recognition in Computer Vision & Language.",
+            "teaching_content": "Teach pattern recognition as identifying recurring structures in data and using them to categorize, predict, or detect anomalies. Patterns must be supported by data rather than assumed from coincidence.",
+            "worked_examples": [
+              "A model may learn that certain combinations of sensor readings often precede equipment failure, then flag a new reading pattern for attention."
+            ],
+            "pitfall": "Pitfall: treating correlation as proof of causation or assuming a pattern learned in one environment will always hold in another.",
+            "mastery_check": "Mastery: identify the observed pattern, distinguish correlation from causation, and reason about whether the pattern is likely to generalize.",
+            "revision": "Review pattern recognition using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "applications",
+          "study_materials": {
+            "objective": "Build mastery of applications in Computer Vision & Language.",
+            "teaching_content": "Teach combined vision-and-language applications by examining the input modalities, target task, expected output, and limitations. Consider multimodal evidence rather than relying on one channel blindly.",
+            "worked_examples": [
+              "An accessibility assistant might combine a camera image with a user's spoken question to describe an object, requiring both visual interpretation and language understanding."
+            ],
+            "pitfall": "Pitfall: assuming multimodal output is automatically more accurate or ignoring errors in either input modality.",
+            "mastery_check": "Mastery: map an application to its modalities and task, identify failure points, and propose suitable verification or human fallback.",
+            "revision": "Review applications using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Robotics & Agents",
+      "subtopics": [
+        {
+          "title": "sensing",
+          "study_materials": {
+            "objective": "Build mastery of sensing in Robotics & Agents.",
+            "teaching_content": "Teach sensing as acquiring information about an environment through cameras, microphones, distance sensors, touch, position sensors, or other inputs. Sensors provide measurements, not perfect knowledge.",
+            "worked_examples": [
+              "A robot vacuum can use distance sensors to detect an obstacle and adjust its path; a noisy reading may still require repeated measurements or filtering."
+            ],
+            "pitfall": "Pitfall: treating a sensor reading as exact reality or ignoring blind spots, noise, calibration, and environmental conditions.",
+            "mastery_check": "Mastery: identify what a sensor can and cannot observe, reason about uncertainty, and connect measurements to safe downstream decisions.",
+            "revision": "Review sensing using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "planning",
+          "study_materials": {
+            "objective": "Build mastery of planning in Robotics & Agents.",
+            "teaching_content": "Teach planning as selecting a sequence of actions to reach a goal under constraints. Explain that plans depend on the robot's available actions, environment model, and objectives.",
+            "worked_examples": [
+              "A delivery robot planning a route may compare several paths while considering distance, blocked roads, battery limits, and the destination."
+            ],
+            "pitfall": "Pitfall: choosing the shortest path without considering constraints or assuming the environment remains unchanged while the plan executes.",
+            "mastery_check": "Mastery: formulate goals and constraints, compare candidate action sequences, and recognize when replanning is required.",
+            "revision": "Review planning using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "control",
+          "study_materials": {
+            "objective": "Build mastery of control in Robotics & Agents.",
+            "teaching_content": "Teach control as continuously adjusting actions based on observed state so a system moves toward a desired target. Distinguish high-level planning from low-level corrective behavior.",
+            "worked_examples": [
+              "A robot arm moving toward a target can compare its current position with the desired position and make small corrections until the error is reduced."
+            ],
+            "pitfall": "Pitfall: assuming a single command is enough despite disturbances, sensor error, or changing state.",
+            "mastery_check": "Mastery: explain the feedback loop of observe, compare, act, and re-observe, and identify why feedback improves control.",
+            "revision": "Review control using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "agents",
+          "study_materials": {
+            "objective": "Build mastery of agents in Robotics & Agents.",
+            "teaching_content": "Teach an AI agent as a system that observes relevant information, selects actions according to an objective, and receives new information from the environment. Emphasize state, actions, goals, and feedback.",
+            "worked_examples": [
+              "A game-playing agent observes the current board, evaluates legal moves, selects an action, then observes the resulting board before acting again."
+            ],
+            "pitfall": "Pitfall: calling every chatbot or automated script an autonomous agent without checking whether it has meaningful action selection and environment feedback.",
+            "mastery_check": "Mastery: identify an agent's observations, actions, objective, and feedback loop, and reason about how changing one component changes behavior.",
+            "revision": "Review agents using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "automation",
+          "study_materials": {
+            "objective": "Build mastery of automation in Robotics & Agents.",
+            "teaching_content": "Teach automation as using software or machines to execute defined processes, while distinguishing deterministic workflows from adaptive AI-based systems. The right level of automation depends on risk and variability.",
+            "worked_examples": [
+              "An invoice workflow can automatically extract fields, validate totals, and route exceptions to a person; automation does not require every step to be handled by AI."
+            ],
+            "pitfall": "Pitfall: equating automation with AI or removing human review from a process simply because some steps can be automated.",
+            "mastery_check": "Mastery: separate automation from AI, identify suitable automated steps, and design sensible exception and human-review paths.",
+            "revision": "Review automation using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Responsible AI",
+      "subtopics": [
+        {
+          "title": "fairness",
+          "study_materials": {
+            "objective": "Build mastery of fairness in Responsible AI.",
+            "teaching_content": "Teach fairness as evaluating whether an AI system produces unjust or materially unequal outcomes across relevant groups. Fairness depends on context, measurement, and the consequences of errors.",
+            "worked_examples": [
+              "If a screening model has much higher false-negative rates for one group, comparing group-level outcomes can reveal a fairness concern even when overall accuracy looks strong."
+            ],
+            "pitfall": "Pitfall: assuming one fairness metric can settle every ethical question or that identical treatment always produces fair outcomes.",
+            "mastery_check": "Mastery: identify affected groups and outcome differences, select meaningful comparisons, and explain why fairness requires context-specific evaluation.",
+            "revision": "Review fairness using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "privacy",
+          "study_materials": {
+            "objective": "Build mastery of privacy in Responsible AI.",
+            "teaching_content": "Teach AI privacy through data minimization, purpose limitation, access control, secure handling, and awareness of sensitive information. Ask whether each collected datum is necessary for the stated task.",
+            "worked_examples": [
+              "A learning app may need a student's quiz responses to personalize practice but should not collect unrelated personal information simply because storage is available."
+            ],
+            "pitfall": "Pitfall: assuming data becomes harmless because it is stored digitally or because a model, rather than a person, processes it.",
+            "mastery_check": "Mastery: identify unnecessary or sensitive collection, propose privacy-preserving handling, and explain why access and retention should be limited.",
+            "revision": "Review privacy using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "safety",
+          "study_materials": {
+            "objective": "Build mastery of safety in Responsible AI.",
+            "teaching_content": "Teach AI safety as preventing, detecting, and reducing harmful behavior or failures. Consider misuse, unexpected outputs, operational hazards, and the severity of possible errors.",
+            "worked_examples": [
+              "A classroom AI assistant should have safeguards against unsafe instructions, protect student data, and provide escalation when it cannot reliably answer a high-risk question."
+            ],
+            "pitfall": "Pitfall: judging safety only from normal demonstrations or assuming a system is safe because harmful behavior has not yet been observed.",
+            "mastery_check": "Mastery: identify plausible failure and misuse modes, rank them by impact, and propose safeguards, testing, and fallback procedures.",
+            "revision": "Review safety using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "transparency",
+          "study_materials": {
+            "objective": "Build mastery of transparency in Responsible AI.",
+            "teaching_content": "Teach transparency as making relevant system behavior, limitations, data practices, and decision factors understandable to appropriate users. Transparency should help people make informed decisions, not merely expose technical jargon.",
+            "worked_examples": [
+              "If an AI recommendation is based on several measurable inputs, a useful explanation can state the major factors and limitations rather than simply displaying a confidence number."
+            ],
+            "pitfall": "Pitfall: confusing transparency with revealing every internal model parameter or presenting a polished explanation that is not faithful to the actual system.",
+            "mastery_check": "Mastery: explain what users need to know to evaluate an AI output and distinguish meaningful explanation from decorative technical detail.",
+            "revision": "Review transparency using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "human oversight",
+          "study_materials": {
+            "objective": "Build mastery of human oversight in Responsible AI.",
+            "teaching_content": "Teach human oversight as maintaining accountable human control where AI errors or actions can materially affect people. Define when humans review, override, escalate, or stop a system.",
+            "worked_examples": [
+              "For an AI-assisted scholarship screening workflow, a trained reviewer can examine flagged applications and override an incorrect recommendation before a final decision."
+            ],
+            "pitfall": "Pitfall: placing a human nominally in the loop but giving them too little time, information, authority, or independence to meaningfully review the output.",
+            "mastery_check": "Mastery: design a human-review point with clear responsibility, sufficient evidence, override authority, and escalation for uncertain or harmful cases.",
+            "revision": "Review human oversight using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI Problem Solving",
+      "subtopics": [
+        {
+          "title": "case studies",
+          "study_materials": {
+            "objective": "Build mastery of case studies in AI Problem Solving.",
+            "teaching_content": "Teach case studies as structured analysis of a real or realistic AI problem: objective, stakeholders, data, method, evaluation, risks, deployment, and outcomes. Use evidence rather than judging from the technology label.",
+            "worked_examples": [
+              "For a crop-disease assistant, analyze farmer needs, image quality, model performance across crops, connectivity constraints, false diagnoses, and the role of agricultural experts before recommending deployment."
+            ],
+            "pitfall": "Pitfall: selecting a model before defining the problem or treating a successful laboratory result as proof of real-world usefulness.",
+            "mastery_check": "Mastery: evaluate an AI case end to end, identify missing evidence, compare risks and benefits, and justify a deployment recommendation.",
+            "revision": "Review case studies using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "model selection",
+          "study_materials": {
+            "objective": "Build mastery of model selection in AI Problem Solving.",
+            "teaching_content": "Teach model selection as matching a method to the task, data, constraints, performance needs, interpretability requirements, and operational environment. Bigger or newer is not automatically better.",
+            "worked_examples": [
+              "For a small tabular prediction task, a simpler model may be preferable if it meets accuracy requirements and is easier to interpret and maintain than a large neural network."
+            ],
+            "pitfall": "Pitfall: choosing a model by popularity, benchmark reputation, or complexity without checking the actual task and constraints.",
+            "mastery_check": "Mastery: compare candidate approaches against explicit criteria and justify the selected model with task-specific evidence.",
+            "revision": "Review model selection using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "data-to-decision workflows",
+          "study_materials": {
+            "objective": "Build mastery of data-to-decision workflows in AI Problem Solving.",
+            "teaching_content": "Teach an AI workflow as a chain from problem definition and data collection through preparation, modeling, evaluation, deployment, monitoring, and human decision-making. Errors can enter at every stage.",
+            "worked_examples": [
+              "A fraud workflow collects transactions, prepares features, scores risk, sends high-risk cases for review, records outcomes, and monitors whether performance changes as fraud patterns evolve."
+            ],
+            "pitfall": "Pitfall: optimizing only the model while ignoring poor data collection, weak evaluation, unusable outputs, or missing post-deployment monitoring.",
+            "mastery_check": "Mastery: map the complete data-to-decision pipeline, identify failure points, and specify checks at each important stage.",
+            "revision": "Review data-to-decision workflows using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "trade-offs",
+          "study_materials": {
+            "objective": "Build mastery of trade-offs in AI Problem Solving.",
+            "teaching_content": "Teach AI trade-offs by comparing accuracy, latency, cost, privacy, interpretability, robustness, energy use, and human workload according to the application. There is rarely one universally best system.",
+            "worked_examples": [
+              "A real-time assistant may choose a smaller model because slightly lower accuracy is acceptable when response speed, device cost, and privacy matter more."
+            ],
+            "pitfall": "Pitfall: maximizing one metric while ignoring constraints or downstream consequences that make the system unsuitable.",
+            "mastery_check": "Mastery: identify competing objectives, rank them for a stated context, and defend a balanced design choice.",
+            "revision": "Review trade-offs using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "system reasoning",
+          "study_materials": {
+            "objective": "Build mastery of system reasoning in AI Problem Solving.",
+            "teaching_content": "Teach system reasoning as examining how models, data pipelines, interfaces, users, safeguards, and external conditions interact. A locally correct component can still produce a poor overall system.",
+            "worked_examples": [
+              "A recommendation engine may predict accurately but create harmful outcomes if the interface hides uncertainty, the data reflects historical imbalance, or users over-trust automated rankings."
+            ],
+            "pitfall": "Pitfall: evaluating a single model in isolation while ignoring feedback loops, human behavior, integration failures, and changing environments.",
+            "mastery_check": "Mastery: reason across the complete AI system, identify interactions and feedback loops, and propose tests that evaluate real-world behavior rather than one component alone.",
+            "revision": "Review system reasoning using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI Competition Mastery",
+      "subtopics": [
+        {
+          "title": "AI challenge strategy",
+          "study_materials": {
+            "objective": "Build mastery of AI challenge strategy in AI Competition Mastery.",
+            "teaching_content": "Apply AI concepts under competition conditions by classifying the task, identifying the relevant model or principle, and eliminating unsupported options.",
+            "worked_examples": [
+              "For an AI scenario, first identify whether it concerns data, prediction, generation, vision, language, or agents before choosing the answer."
+            ],
+            "pitfall": "Pitfall: selecting a familiar AI term without matching it to the task.",
+            "mastery_check": "Classify unfamiliar AI challenge questions quickly and justify the selected principle.",
+            "revision": "Review AI challenge strategy using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "model comparison",
+          "study_materials": {
+            "objective": "Build mastery of model comparison in AI Competition Mastery.",
+            "teaching_content": "Compare AI approaches using task fit, data needs, performance, interpretability, cost, latency, and safety rather than assuming the newest model is best.",
+            "worked_examples": [
+              "A small classification task with limited labeled data may favor a simpler approach over a larger general model."
+            ],
+            "pitfall": "Pitfall: choosing by model popularity instead of requirements.",
+            "mastery_check": "Compare candidate approaches against explicit constraints and defend the best fit.",
+            "revision": "Review model comparison using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "AI evaluation and verification",
+          "study_materials": {
+            "objective": "Build mastery of AI evaluation and verification in AI Competition Mastery.",
+            "teaching_content": "Evaluate AI outputs with task-appropriate metrics, test cases, human review, and source verification. Treat confidence as different from correctness.",
+            "worked_examples": [
+              "A generated factual answer should be checked against reliable sources rather than accepted because it sounds fluent."
+            ],
+            "pitfall": "Pitfall: equating fluent output or high confidence with truth.",
+            "mastery_check": "Select suitable evaluation and verification methods and identify unsupported outputs.",
+            "revision": "Review AI evaluation and verification using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated AI scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated AI scenarios in AI Competition Mastery.",
+            "teaching_content": "Solve end-to-end AI scenarios by connecting data, model choice, deployment, user impact, monitoring, and governance.",
+            "worked_examples": [
+              "A school AI tool requires data preparation, a suitable model, privacy controls, human oversight, and post-deployment monitoring."
+            ],
+            "pitfall": "Pitfall: optimizing the model while ignoring data quality, users, or operational constraints.",
+            "mastery_check": "Trace an AI system from problem definition through deployment and responsible monitoring.",
+            "revision": "Review integrated AI scenarios using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "championship simulation",
+          "study_materials": {
+            "objective": "Build mastery of championship simulation in AI Competition Mastery.",
+            "teaching_content": "Practice mixed AI questions under time pressure with deliberate switching between conceptual recall, quantitative reasoning, case analysis, and ethical judgment.",
+            "worked_examples": [
+              "A timed set can move from dataset bias to model evaluation to a generative-AI verification scenario; the method should reset for each question."
+            ],
+            "pitfall": "Pitfall: carrying the previous question's assumptions into a different AI task.",
+            "mastery_check": "Maintain accuracy under mixed difficulty, manage time, and verify high-risk answers before submission.",
+            "revision": "Review championship simulation using the concept, example, pitfall and mastery criterion."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "NAI-MOCK-01",
+      "focus": "core AI concepts and data reasoning"
+    },
+    {
+      "id": "NAI-MOCK-02",
+      "focus": "advanced AI reasoning and case analysis"
+    },
+    {
+      "id": "NAI-MOCK-03",
+      "focus": "championship mixed AI simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "National AI Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
