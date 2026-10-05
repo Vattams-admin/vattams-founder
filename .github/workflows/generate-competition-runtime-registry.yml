@@ -49,6 +49,7 @@ jobs:
           for slug in mathematics-challenge science-challenge english-challenge computer-challenge gk-challenge reasoning-challenge india-gk-championship national-quiz-championship ai-technology-challenge international-knowledge-challenge national-mathematics-championship national-science-championship national-english-championship national-aptitude-championship national-coding-challenge national-ai-challenge mega-inter-school-championship indian-classical-literature-wisdom-championship indian-language-literature-masters-series thirukkural-mastery-championship fun-with-maths-challenge azhagu-tamil-challenge handwriting-excellence-challenge spoken-hindi-challenge; do
             node scripts/validate-competition-mcq-bank.mjs --slug "$slug"
           done
+          node scripts/validate-thirukkural-production.mjs
       - name: Publish validated runtime packages to Supabase Storage
         env:
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
