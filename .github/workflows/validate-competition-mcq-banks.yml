@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   validate:
@@ -49,6 +50,13 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "Record competition MCQ validation report [skip ci]"
           git push
+      - name: Publish validation report
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create --title "CI Competition MCQ Validation ${{ github.run_id }}" --body-file reports/competition-mcq-validation-report.txt
+
       - name: Enforce validation gate
         run: |
           rc=$(cat reports/competition-mcq-validation-exit-code.txt)
