@@ -731,6 +731,14 @@ export function useLiveWebRTC({
     }
   }, [enabled, startLocalMedia])
 
+  const participantSignalKey = isTutor
+    ? participants
+        .filter((participant) => participant.role === 'student')
+        .map((participant) => participant.user_id)
+        .sort()
+        .join('|')
+    : ''
+
   useEffect(() => {
     if (!enabled) return
 
@@ -1170,7 +1178,7 @@ export function useLiveWebRTC({
     enabled,
     handleRemoteCandidate,
     isTutor,
-    participants,
+    participantSignalKey,
     sessionId,
     subscribeConnection,
     subscribeStudentIce,
