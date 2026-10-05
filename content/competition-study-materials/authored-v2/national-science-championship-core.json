@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "National Science Championship",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_in_progress",
+  "status": "subject_specific_authoring_v1_complete",
   "age_bands": [
     "foundation",
     "developing",
@@ -180,38 +180,38 @@
       "subtopics": [
         {
           "title": "Cells and organization",
-          "teaching": "Study Cells and organization as a core Living Systems concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Cells and organization situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Cells and organization independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Explain cells as the basic structural and functional units of living organisms. Distinguish common features of plant and animal cells and relate specialized structures to their functions.",
+          "worked_example": "Example: A plant cell has a cell wall for support, a cell membrane controlling exchange, chloroplasts for photosynthesis, and a large vacuole that helps maintain internal pressure.",
+          "pitfall": "A cell is not simply a tiny version of an entire organism; specialized cells differ in structure and function, and not every cell contains chloroplasts or a cell wall.",
+          "mastery": "Mastery: identify major cell structures, connect each structure to function, compare plant and animal cells, and explain why specialization improves organism function."
         },
         {
           "title": "Plant structures and functions",
-          "teaching": "Study Plant structures and functions as a core Living Systems concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Plant structures and functions situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Plant structures and functions independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Relate roots, stems, leaves, flowers, fruits, and seeds to their roles in transport, support, photosynthesis, reproduction, and survival. Connect structure to function rather than memorizing isolated labels.",
+          "worked_example": "Example: Leaf veins distribute water and minerals to leaf tissues and transport sugars away, while broad leaf surfaces provide area for capturing light.",
+          "pitfall": "Roots do more than anchor plants: they also absorb water and minerals. Leaves are not the only structures involved in plant transport.",
+          "mastery": "Mastery: identify plant structures from diagrams or descriptions, explain their functions, trace water and food movement, and predict effects of structural changes."
         },
         {
           "title": "Human body systems",
-          "teaching": "Study Human body systems as a core Living Systems concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Human body systems situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Human body systems independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Study major human systems as coordinated networks: digestive, respiratory, circulatory, nervous, skeletal, muscular, and excretory systems. Emphasize how systems cooperate to maintain life.",
+          "worked_example": "Example: During exercise, muscles need more oxygen; breathing and heart rate increase so the respiratory and circulatory systems can deliver oxygen and remove carbon dioxide more rapidly.",
+          "pitfall": "Body systems should not be treated as isolated units. For example, digestion releases nutrients, but circulation transports those nutrients to cells.",
+          "mastery": "Mastery: identify system functions, trace substances through multiple systems, explain system interactions, and predict consequences when one part is impaired."
         },
         {
           "title": "Animal adaptation",
-          "teaching": "Study Animal adaptation as a core Living Systems concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Animal adaptation situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Animal adaptation independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Distinguish inherited adaptations from temporary responses or learned behaviors. Structural, physiological, and behavioral adaptations increase survival or reproductive success in particular environments.",
+          "worked_example": "Example: A camel's adaptations help conserve water and function in hot, dry environments; these traits are useful because they address environmental pressures.",
+          "pitfall": "An individual animal does not develop a genetic adaptation simply because it needs one during its lifetime. Adaptations become common through inheritance and selection across generations.",
+          "mastery": "Mastery: classify adaptation types, connect traits to environmental pressures, distinguish adaptation from acclimatization, and explain how a trait can improve survival."
         },
         {
           "title": "Ecosystems and food webs",
-          "teaching": "Study Ecosystems and food webs as a core Living Systems concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Ecosystems and food webs situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Ecosystems and food webs independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Model ecosystems as interacting living organisms and their physical environment. Use producers, consumers, decomposers, food chains, and food webs to track energy flow and matter cycling.",
+          "worked_example": "Example: In a pond, algae are producers, small animals may consume algae, fish consume smaller organisms, and decomposers recycle nutrients from dead material.",
+          "pitfall": "Energy does not cycle through a food web in the same way matter does; energy is transferred between organisms and ultimately dispersed as heat.",
+          "mastery": "Mastery: identify trophic roles, trace feeding relationships, predict population effects after a change, and distinguish energy flow from nutrient cycling."
         }
       ]
     },
@@ -220,38 +220,38 @@
       "subtopics": [
         {
           "title": "Rocks and minerals",
-          "teaching": "Study Rocks and minerals as a core Earth & Environment concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Rocks and minerals situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Rocks and minerals independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Distinguish minerals from rocks and classify rocks by how they form: igneous from cooling magma or lava, sedimentary from deposited and lithified sediments, and metamorphic from heat and pressure altering existing rock.",
+          "worked_example": "Example: Sandstone forms when deposited sediment becomes compacted and cemented; marble forms when limestone undergoes metamorphism.",
+          "pitfall": "A rock type is defined by its formation history, not simply by colour or hardness. Metamorphic change does not normally mean the material completely melts.",
+          "mastery": "Mastery: identify rocks from formation clues, distinguish rocks from minerals, describe the rock cycle, and infer formation processes from evidence."
         },
         {
           "title": "Water cycle",
-          "teaching": "Study Water cycle as a core Earth & Environment concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Water cycle situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Water cycle independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Track water through evaporation, transpiration, condensation, precipitation, infiltration, runoff, storage, and collection. Energy from the Sun drives much of the surface water cycle.",
+          "worked_example": "Example: Water evaporates from a lake, water vapour cools and condenses into cloud droplets, and precipitation returns water to land or water bodies.",
+          "pitfall": "Water is not created when clouds form; condensation changes water vapour into liquid droplets. The amount and pathway of water can also vary with local conditions.",
+          "mastery": "Mastery: sequence water-cycle processes, identify energy transfers, explain phase changes, and predict how land use or temperature changes can alter water pathways."
         },
         {
           "title": "Weather and climate",
-          "teaching": "Study Weather and climate as a core Earth & Environment concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Weather and climate situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Weather and climate independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Distinguish weather as short-term atmospheric conditions from climate as long-term patterns. Use temperature, precipitation, humidity, wind, pressure, and cloud conditions as evidence for weather descriptions.",
+          "worked_example": "Example: A city experiencing an unusually heavy rainstorm describes a weather event; the long-term frequency and seasonal rainfall pattern contribute to its climate.",
+          "pitfall": "A single hot day does not establish a climate trend. Climate conclusions require observations over much longer periods and broader patterns.",
+          "mastery": "Mastery: distinguish weather from climate, interpret basic weather data, identify atmospheric variables, and evaluate whether evidence supports a short-term or long-term claim."
         },
         {
           "title": "Natural resources",
-          "teaching": "Study Natural resources as a core Earth & Environment concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Natural resources situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Natural resources independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Classify renewable and non-renewable resources and evaluate how extraction and use affect ecosystems, communities, and future availability. Resource decisions involve efficiency, conservation, and trade-offs.",
+          "worked_example": "Example: Solar energy is renewable on human timescales, while coal is non-renewable because its formation occurs over geological timescales.",
+          "pitfall": "Renewable does not mean unlimited or impact-free; a renewable resource can be depleted or damaged if use exceeds its natural recovery rate.",
+          "mastery": "Mastery: classify resources, compare sustainability strategies, evaluate trade-offs, and recommend resource-use choices supported by environmental evidence."
         },
         {
           "title": "Pollution and sustainability",
-          "teaching": "Study Pollution and sustainability as a core Earth & Environment concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Pollution and sustainability situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Pollution and sustainability independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Analyze air, water, soil, noise, and other pollution in terms of sources, effects, pathways, prevention, and remediation. Sustainability aims to meet present needs while maintaining ecological and resource capacity.",
+          "worked_example": "Example: Excess fertilizer runoff can increase nutrient levels in water, promote algal growth, reduce dissolved oxygen, and stress aquatic organisms.",
+          "pitfall": "Treating pollution only after it appears is not always the best strategy; source reduction and prevention can avoid downstream impacts.",
+          "mastery": "Mastery: trace a pollution pathway, distinguish cause from consequence, compare mitigation strategies, and justify a sustainable intervention."
         }
       ]
     },
@@ -260,38 +260,38 @@
       "subtopics": [
         {
           "title": "Earth Moon and Sun",
-          "teaching": "Study Earth Moon and Sun as a core Space Science concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Earth Moon and Sun situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Earth Moon and Sun independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Use the relative motions and positions of Earth, Moon, and Sun to explain day and night, seasons, lunar phases, and eclipses. Distinguish rotation from revolution.",
+          "worked_example": "Example: The Moon's phases occur because we see different portions of its sunlit half as the Moon orbits Earth; they are not caused by Earth's shadow except during a lunar eclipse.",
+          "pitfall": "A common misconception is that seasons result mainly from Earth being closer to the Sun. Earth's axial tilt changes the angle and duration of sunlight received.",
+          "mastery": "Mastery: use diagrams to explain phases, eclipses, seasons, and day-night cycles, distinguish rotation from revolution, and predict observations from orbital positions."
         },
         {
           "title": "Solar system",
-          "teaching": "Study Solar system as a core Space Science concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Solar system situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Solar system independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Compare the Sun, planets, dwarf planets, moons, asteroids, and comets using size, composition, orbit, and location. Use orbital relationships rather than memorized order alone.",
+          "worked_example": "Example: The inner planets are generally rocky and smaller, while the outer planets are much larger; gas and ice giants have very different compositions from terrestrial planets.",
+          "pitfall": "Not every object orbiting the Sun is a planet. Planet classification depends on defined criteria, and a body's appearance alone is insufficient.",
+          "mastery": "Mastery: classify solar-system bodies, compare terrestrial and giant planets, interpret orbital diagrams, and explain why different objects occupy different categories."
         },
         {
           "title": "Stars and galaxies",
-          "teaching": "Study Stars and galaxies as a core Space Science concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Stars and galaxies situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Stars and galaxies independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Understand stars as enormous self-gravitating bodies whose light and energy arise from processes within them. Galaxies contain stars, gas, dust, and other matter held together by gravity.",
+          "worked_example": "Example: The Sun is a star in the Milky Way. Its apparent brightness from Earth does not mean it is the largest or most luminous star; distance strongly affects apparent brightness.",
+          "pitfall": "A galaxy is not a single star, and a constellation is not necessarily a physically connected group of nearby stars; apparent patterns can result from viewing geometry.",
+          "mastery": "Mastery: distinguish stars, galaxies, and constellations, compare apparent and intrinsic properties, and explain how distance affects observations."
         },
         {
           "title": "Space observation",
-          "teaching": "Study Space observation as a core Space Science concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Space observation situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Space observation independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Interpret evidence gathered from telescopes, spacecraft, spectra, imaging, and repeated observations. Recognize that instruments extend human senses and allow measurements across wavelengths and distances.",
+          "worked_example": "Example: A telescope image can reveal surface or cloud patterns that cannot be resolved by unaided vision, while spectral information can provide clues about composition and motion.",
+          "pitfall": "A photograph is not the only kind of astronomical evidence, and image colour may be processed to represent wavelengths or intensity rather than literal visible colour.",
+          "mastery": "Mastery: identify what an observation or instrument can reveal, distinguish evidence from interpretation, compare observation methods, and infer reasonable conclusions from astronomical data."
         },
         {
           "title": "Scale and scientific models",
-          "teaching": "Study Scale and scientific models as a core Space Science concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Scale and scientific models situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Scale and scientific models independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Use scale models to represent distances, sizes, timescales, and structures that are too large, small, or slow to observe directly. Evaluate what a model preserves and what it simplifies.",
+          "worked_example": "Example: A classroom solar-system model may preserve relative order but cannot preserve both planet sizes and orbital distances at the same physical scale.",
+          "pitfall": "A model is not a perfect copy of reality. A diagram can be scientifically useful even when dimensions, colours, or motion are deliberately simplified.",
+          "mastery": "Mastery: interpret scaled representations, calculate or compare scale relationships, identify model limitations, and choose an appropriate model for a scientific question."
         }
       ]
     },
@@ -300,38 +300,38 @@
       "subtopics": [
         {
           "title": "Classification and patterns",
-          "teaching": "Study Classification and patterns as a core Scientific Reasoning concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Classification and patterns situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Classification and patterns independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Classify scientific objects or observations using explicit shared characteristics, then use patterns to generate or test predictions. Good classification rules should be consistent and evidence-based.",
+          "worked_example": "Example: Group materials by conductivity, state, or magnetic response depending on the question; the useful classification depends on the property being investigated.",
+          "pitfall": "A pattern is not established merely because two examples match. Reliable classification requires a stated criterion, and exceptions should be examined rather than ignored.",
+          "mastery": "Mastery: identify classification rules, detect meaningful patterns in data, extend a pattern cautiously, and explain why a proposed category or prediction is justified."
         },
         {
           "title": "Cause and effect",
-          "teaching": "Study Cause and effect as a core Scientific Reasoning concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Cause and effect situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Cause and effect independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Distinguish correlation, mechanism, and causation. A causal explanation should identify a plausible mechanism and evidence from controlled comparisons or converging observations.",
+          "worked_example": "Example: If plants receiving adequate light consistently grow more in a controlled investigation, light exposure can be considered a candidate cause of the measured difference under those conditions.",
+          "pitfall": "Two variables changing together does not prove that one caused the other; a third variable or reverse relationship may explain the association.",
+          "mastery": "Mastery: identify candidate causes, recognize confounding variables, distinguish correlation from causation, and evaluate whether evidence supports a causal claim."
         },
         {
           "title": "Experimental data interpretation",
-          "teaching": "Study Experimental data interpretation as a core Scientific Reasoning concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Experimental data interpretation situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Experimental data interpretation independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Read experimental data by checking variables, units, repeats, uncertainty, controls, trends, and anomalies before forming a conclusion. Compare evidence with the original question rather than forcing data to fit a prediction.",
+          "worked_example": "Example: If repeated trials cluster around similar values while one trial is far outside the pattern, flag the outlier and investigate possible procedural or measurement causes before discarding it.",
+          "pitfall": "An outlier should not automatically be deleted, and a small numerical difference is not necessarily meaningful without considering measurement uncertainty and experimental variation.",
+          "mastery": "Mastery: extract trends from repeated data, recognize anomalies, compare groups fairly, consider uncertainty, and state conclusions that match the strength of the evidence."
         },
         {
           "title": "Model evaluation",
-          "teaching": "Study Model evaluation as a core Scientific Reasoning concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Model evaluation situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Model evaluation independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Evaluate a scientific model by asking whether it explains observations, makes useful predictions, matches evidence, and remains clear about its assumptions and limitations. Models can be diagrams, physical objects, equations, simulations, or conceptual frameworks.",
+          "worked_example": "Example: A particle model explains why gases compress more easily than solids, but it does not reproduce every molecular detail; its value depends on the question being asked.",
+          "pitfall": "A model is not 'wrong' merely because it simplifies reality. The key question is whether its simplifications prevent it from explaining or predicting the phenomenon under consideration.",
+          "mastery": "Mastery: compare models against evidence, identify assumptions and limitations, decide which model better fits a purpose, and justify model choice with testable reasoning."
         },
         {
           "title": "Integrated science problems",
-          "teaching": "Study Integrated science problems as a core Scientific Reasoning concept in National Science Championship. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
-          "worked_example": "Worked example: analyse a representative Integrated science problems situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology.",
-          "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
-          "mastery": "Mastery: explain Integrated science problems independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion."
+          "teaching": "Solve multi-concept problems by identifying the relevant scientific domains, extracting known quantities and evidence, selecting principles, and checking whether the final answer fits the physical or biological context.",
+          "worked_example": "Example: A question about plant growth may require cell function, photosynthesis, measurement, graph interpretation, and experimental design; solve each linked part before forming the integrated conclusion.",
+          "pitfall": "Do not apply the first familiar formula or fact automatically. Integrated problems often contain distractors and require connecting concepts across disciplines.",
+          "mastery": "Mastery: decompose unfamiliar multi-step problems, combine evidence from multiple science domains, reject irrelevant information, and communicate a justified final conclusion."
         }
       ]
     }
