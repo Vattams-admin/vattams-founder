@@ -81,9 +81,7 @@ export default function App() {
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:slug" element={<CourseDetail />} />
 
-            {/* No competition data source exists yet (no table, no
-                collection, no admin UI) — this route is an honest
-                "coming soon" placeholder, not the full feature. */}
+            {/* Public discovery pages: competitions and competitive-exam programmes. */}
             <Route path="/competitions" element={<Competitions />} />
             <Route path="/competitive-exams" element={<CompetitiveExams />} />
 
@@ -234,9 +232,7 @@ export default function App() {
               }
             />
 
-            {/* Exam-taking UI, competitions backend, materials, assignments,
-                certificate issuance etc. are the next build passes — see
-                docs/PHASE-MASTER-MATRIX.md */}
+            {/* Authenticated learning, assessment, live-session and admin routes are intentionally not indexable. */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
