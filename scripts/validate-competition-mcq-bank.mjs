@@ -80,3 +80,5 @@ for (const band of ["up_to_8","age_9_12","age_13_15","age_16_plus"]) {
   if (total !== 30) throw new Error(`${band}: blueprint must select exactly 30 questions`);
 }
 console.log(`RESULT: PASS — ${slug}: ${publicBank.length} reviewed mock MCQs, ${official.length} official MCQs, 4 age pools, explicit 30-question blueprint`);
+
+// Validation run after GK authored-bank replacement.
