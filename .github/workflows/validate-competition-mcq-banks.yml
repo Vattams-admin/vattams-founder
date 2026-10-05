@@ -39,6 +39,7 @@ jobs:
             echo >> reports/competition-mcq-validation-report.txt
           done
           echo "$rc" > reports/competition-mcq-validation-exit-code.txt
+          cat reports/competition-mcq-validation-report.txt >> "$GITHUB_STEP_SUMMARY"
       - name: Commit validation report
         if: always()
         run: |
