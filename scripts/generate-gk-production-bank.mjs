@@ -187,3 +187,5 @@ fs.writeFileSync(path.join(base,'official.objective.json'),JSON.stringify(offici
 fs.writeFileSync(path.join(base,'age-pools.json'),JSON.stringify(agePools,null,2)+'\n')
 fs.writeFileSync(path.join(base,'selection-blueprint.json'),JSON.stringify(blueprint,null,2)+'\n')
 console.log(`Generated ${mock.length} reviewed mock MCQs and ${official.length} official MCQs.`)
+
+// Production regeneration trigger: authored GK bank v1.
