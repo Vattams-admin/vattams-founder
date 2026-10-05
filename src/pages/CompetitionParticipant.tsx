@@ -375,24 +375,15 @@ export default function CompetitionParticipant() {
         <div className="card p-6">
           {errorMessage && <div className="mb-5 rounded-card border border-danger/30 bg-danger/10 p-4 text-sm text-danger">{errorMessage}</div>}
 
-          {isThirukkural ? (
-            <div className="rounded-card border border-gold/15 bg-white/5 p-5">
-              <h2 className="font-display text-lg">Official Competition</h2>
-              <p className="mt-2 text-sm text-slate-muted">
-                The official competition uses an age-appropriate paper: 30 questions for your age band. Each of the four age bands has its own fixed 30-question paper. During the competition, only the questions and options are shown. Correct answers and explanations are not revealed.
-              </p>
-              <button type="button" onClick={() => void startAttempt()} disabled={busy} className="btn-primary mt-5 disabled:opacity-50">
-                {busy ? 'Starting...' : 'Start Competition'}
-              </button>
-            </div>
-          ) : (
-            <div className="rounded-card border border-gold/15 bg-white/5 p-5">
-              <h2 className="font-display text-lg">Competition Preparation</h2>
-              <p className="mt-2 text-sm text-slate-muted">
-                Study Materials and Mock Tests are available for this competition. The official competition attempt is kept separate from preparation and will appear here when its official paper is published.
-              </p>
-            </div>
-          )}
+          <div className="rounded-card border border-gold/15 bg-white/5 p-5">
+            <h2 className="font-display text-lg">Official Competition</h2>
+            <p className="mt-2 text-sm text-slate-muted">
+              The official competition uses an age-appropriate fixed paper of 30 questions. Your official attempt is separate from Study Materials and Mock Tests; correct answers and explanations are not revealed during the attempt.
+            </p>
+            <button type="button" onClick={() => void startAttempt()} disabled={busy} className="btn-primary mt-5 disabled:opacity-50">
+              {busy ? 'Starting...' : 'Start Competition'}
+            </button>
+          </div>
 
           <section className="mt-8">
             <div className="mb-5">
