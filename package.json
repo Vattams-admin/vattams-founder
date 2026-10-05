@@ -18,7 +18,8 @@
     "thirukkural:repair-course": "node scripts/repair-thirukkural-course.mjs",
     "thirukkural:build-official": "node scripts/build-thirukkural-official-objective.mjs",
     "thirukkural:production-gate": "npm run thirukkural:build-official && npm run thirukkural:validate && npm run thirukkural:package",
-    "competition:package": "node scripts/package-competition-runtime.mjs"
+    "competition:package": "node scripts/package-competition-runtime.mjs",
+    "seo:validate": "node scripts/validate-seo.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
