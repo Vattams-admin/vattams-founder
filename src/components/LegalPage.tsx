@@ -1,14 +1,25 @@
+import { useSeo } from '@/hooks/useSeo'
+
 export default function LegalPage({
   title,
   eyebrow = 'Legal',
   intro,
+  noindex = false,
   children
 }: {
   title: string
   eyebrow?: string
   intro?: React.ReactNode
+  noindex?: boolean
   children: React.ReactNode
 }) {
+  useSeo({
+    title,
+    description: intro ? `${title} — VATTAMS ACADEMIA` : `${title} for VATTAMS ACADEMIA students, tutors and platform users.`,
+    path: window.location.pathname,
+    noindex,
+  })
+
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
       <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">{eyebrow}</p>
