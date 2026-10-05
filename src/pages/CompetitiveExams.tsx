@@ -1,0 +1,108 @@
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { collection, getDocs, query, where } from 'firebase/firestore'
+import { firestore } from '@/lib/firebase'
+import type { Course } from '@/types/database'
+import CourseCard from '@/components/CourseCard'
+import { useSeo, SITE_URL } from '@/hooks/useSeo'
+import { DEFAULT_PRICING_CONFIG, type PricingConfig } from '@/lib/pricingModel'
+import { getPricingConfig } from '@/lib/pricingConfig'
+
+export default function CompetitiveExams() {
+  useSeo({
+    title: 'Competitive Exam Preparation | TNPSC, SSC, Banking & More',
+    description: 'Explore VATTAMS ACADEMIA competitive exam preparation for TNPSC, SSC, Banking, Railway, Police, Defence, UGC NET/SET, TET and other major exams.',
+    path: '/competitive-exams',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Competitive Exam Preparation',
+      url: `${SITE_URL}/competitive-exams`,
+      description: 'Competitive exam preparation programmes from VATTAMS ACADEMIA.',
+      isPartOf: { '@type': 'WebSite', name: 'VATTAMS ACADEMIA', url: SITE_URL },
+    },
+  })
+
+  const [courses, setCourses] = useState<Course[]>([])
+  const [state, setState] = useState<'loading' | 'loaded' | 'error'>('loading')
+  const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  useEffect(() => {
+    let cancelled = false
+    getPricingConfig().then((config) => {
+      if (!cancelled) setPricingConfig(config)
+    }).catch(() => {})
+    return () => { cancelled = true }
+  }, [])
+
+  useEffect(() => {
+    let cancelled = false
+    async function load() {
+      try {
+        const snapshot = await getDocs(query(
+          collection(firestore, 'courses'),
+          where('is_published', '==', true),
+          where('category_id', '==', 'competitive-exams'),
+        ))
+        if (cancelled) return
+        const rows = snapshot.docs
+          .map((doc) => ({ id: doc.id, ...doc.data() }) as Course)
+          .filter((course) => !course.is_competition)
+          .sort((a, b) => a.name.localeCompare(b.name))
+        setCourses(rows)
+        setState('loaded')
+      } catch (error) {
+        console.error('Failed to load competitive exam programmes:', error)
+        if (!cancelled) setState('error')
+      }
+    }
+    load()
+    return () => { cancelled = true }
+  }, [])
+
+  return (
+    <div>
+      <section className="relative overflow-hidden border-b border-white/5">
+        <div className="pointer-events-none absolute inset-0 bg-grid-glow" />
+        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20">
+          <p className="eyebrow">Competitive Exams</p>
+          <h1 className="mt-4 max-w-3xl font-display text-3xl font-semibold leading-tight sm:text-5xl">
+            Competitive exam preparation built for serious learners
+          </h1>
+          <p className="mt-4 max-w-2xl text-parchment/90">
+            Explore structured preparation programmes for TNPSC, SSC, Banking, Railway, Police,
+            Defence, UGC NET/SET, TET and other competitive examinations.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        {state === 'loading' && (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[...Array(6)].map((_, i) => <div key={i} className="card h-72 animate-pulse" />)}
+          </div>
+        )}
+        {state === 'error' && (
+          <div className="card p-8 text-center">
+            <h2 className="font-display text-xl">Couldn’t load programmes</h2>
+            <p className="mt-2 text-sm text-slate-muted">Please refresh and try again.</p>
+          </div>
+        )}
+        {state === 'loaded' && courses.length === 0 && (
+          <div className="card p-8 text-center">
+            <h2 className="font-display text-xl">No competitive exam programmes are published yet</h2>
+            <p className="mt-2 text-sm text-slate-muted">Explore the full course catalogue while new programmes are added.</p>
+            <Link to="/courses" className="btn-primary mt-5 inline-flex">Explore Courses</Link>
+          </div>
+        )}
+        {state === 'loaded' && courses.length > 0 && (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {courses.map((course) => (
+              <CourseCard key={course.id} course={course} pricingConfig={pricingConfig} />
+            ))}
+          </div>
+        )}
+      </section>
+    </div>
+  )
+}
