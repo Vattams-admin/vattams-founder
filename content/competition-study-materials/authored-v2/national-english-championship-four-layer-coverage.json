@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "National English Championship",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/national-english-championship-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Advanced Reading",
+      "subtopics": [
+        {
+          "title": "inference",
+          "study_materials": {
+            "objective": "Build mastery of inference in Advanced Reading for National English Championship.",
+            "teaching_content": "Infer meaning from explicit textual evidence plus reasonable implications. Distinguish what a passage states from what it strongly suggests, and use surrounding details to constrain interpretation.",
+            "worked_examples": [
+              "Example: If a character repeatedly checks the empty station clock and watches the road, infer that the character is waiting for someone rather than merely describing the setting."
+            ],
+            "pitfall": "Do not select an inference that is merely possible; the best answer must be supported by multiple clues and should not contradict the passage.",
+            "mastery_check": "Mastery: make evidence-based inferences, cite the clues that support them, reject unsupported interpretations, and distinguish inference from fact.",
+            "revision": "Revise inference through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "author purpose",
+          "study_materials": {
+            "objective": "Build mastery of author purpose in Advanced Reading for National English Championship.",
+            "teaching_content": "Identify why an author chose to write a passage: to inform, explain, persuade, entertain, compare, criticize, reflect, or achieve another specific communicative goal. Use the whole passage rather than one sentence.",
+            "worked_examples": [
+              "Example: A passage presents statistics, addresses a common objection, and ends with a recommendation; its primary purpose is likely persuasion supported by evidence."
+            ],
+            "pitfall": "Do not confuse topic with purpose. A passage about recycling is not necessarily written merely 'about recycling'; its purpose may be to persuade readers to change behaviour.",
+            "mastery_check": "Mastery: identify primary and secondary purposes, connect purpose to textual choices, and reject answers that describe only the topic.",
+            "revision": "Revise author purpose through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "tone",
+          "study_materials": {
+            "objective": "Build mastery of tone in Advanced Reading for National English Championship.",
+            "teaching_content": "Identify tone from diction, imagery, syntax, attitude, and context. Distinguish the author's attitude toward the subject from the emotional reaction a reader might have.",
+            "worked_examples": [
+              "Example: Words such as 'remarkable,' 'carefully designed,' and 'promising' create an approving or optimistic tone rather than a neutral one."
+            ],
+            "pitfall": "Do not label tone from a single emotionally charged word; consider whether the passage as a whole is formal, skeptical, admiring, humorous, critical, urgent, or restrained.",
+            "mastery_check": "Mastery: justify tone with precise language evidence, distinguish closely related tones, and explain how wording creates the identified attitude.",
+            "revision": "Revise tone through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "argument structure",
+          "study_materials": {
+            "objective": "Build mastery of argument structure in Advanced Reading for National English Championship.",
+            "teaching_content": "Trace an argument through claim, reasons, evidence, assumptions, counterclaims, and conclusion. Determine how each part contributes to the writer's overall position.",
+            "worked_examples": [
+              "Example: A writer claims school gardens improve learning, supports the claim with two studies, answers a cost objection, and concludes with a recommendation; those moves form a structured argument."
+            ],
+            "pitfall": "Do not treat every statement as a main claim. Examples and statistics may support a claim without being the argument's central position.",
+            "mastery_check": "Mastery: map an argument, identify supporting and opposing components, evaluate logical connections, and explain how structure strengthens or weakens the case.",
+            "revision": "Revise argument structure through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "evidence evaluation",
+          "study_materials": {
+            "objective": "Build mastery of evidence evaluation in Advanced Reading for National English Championship.",
+            "teaching_content": "Evaluate whether evidence is relevant, sufficient, credible, representative, and correctly connected to a claim. Distinguish direct evidence from anecdote, assumption, and opinion.",
+            "worked_examples": [
+              "Example: One student's experience may illustrate a possibility but cannot by itself establish that an educational policy works for all students."
+            ],
+            "pitfall": "Do not equate a precise number with strong evidence. Data can still be irrelevant, biased, outdated, or interpreted beyond what it supports.",
+            "mastery_check": "Mastery: match evidence to claims, identify weaknesses in support, recognize overgeneralization, and select the strongest evidence for a conclusion.",
+            "revision": "Revise evidence evaluation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Advanced Vocabulary",
+      "subtopics": [
+        {
+          "title": "roots",
+          "study_materials": {
+            "objective": "Build mastery of roots in Advanced Vocabulary for National English Championship.",
+            "teaching_content": "Use common Greek and Latin roots to infer the meanings of unfamiliar English words while checking the result against context. Recognize that roots provide clues, not complete definitions.",
+            "worked_examples": [
+              "Example: The root 'bio' relates to life, so 'biography' concerns a person's life; context confirms the precise meaning."
+            ],
+            "pitfall": "Do not assume every word containing similar letters shares the same root or meaning; historical spelling and borrowed forms can mislead.",
+            "mastery_check": "Mastery: identify useful roots, infer plausible meanings, verify them in context, and distinguish root clues from full dictionary definitions.",
+            "revision": "Revise roots through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "context precision",
+          "study_materials": {
+            "objective": "Build mastery of context precision in Advanced Vocabulary for National English Championship.",
+            "teaching_content": "Choose the vocabulary meaning that fits the exact context, register, grammatical role, and nuance of a sentence. Compare near-synonyms rather than accepting the first broadly related definition.",
+            "worked_examples": [
+              "Example: 'economical' means avoiding waste or expense, while 'economic' relates more generally to the economy; context determines the correct choice."
+            ],
+            "pitfall": "A synonym can be broadly similar but still wrong because of connotation, collocation, register, or part of speech.",
+            "mastery_check": "Mastery: distinguish near-synonyms, use context precisely, explain why alternatives fail, and select vocabulary appropriate to meaning and register.",
+            "revision": "Revise context precision through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "collocations",
+          "study_materials": {
+            "objective": "Build mastery of collocations in Advanced Vocabulary for National English Championship.",
+            "teaching_content": "Learn natural word partnerships such as 'make a decision,' 'strong evidence,' and 'deeply concerned.' Collocations are conventional combinations that fluent English tends to prefer.",
+            "worked_examples": [
+              "Example: Both 'strong evidence' and 'powerful evidence' may be understandable, but 'strong evidence' is the standard collocation in formal English."
+            ],
+            "pitfall": "Do not translate word combinations directly from another language or assume any grammatically possible adjective-noun pairing is equally natural.",
+            "mastery_check": "Mastery: identify common collocations, complete them accurately, detect unnatural combinations, and apply them in original sentences.",
+            "revision": "Revise collocations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "nuance",
+          "study_materials": {
+            "objective": "Build mastery of nuance in Advanced Vocabulary for National English Championship.",
+            "teaching_content": "Distinguish fine differences in meaning, connotation, intensity, and attitude between related words. Use context to determine which shade of meaning the writer intends.",
+            "worked_examples": [
+              "Example: 'confident,' 'assertive,' 'arrogant,' and 'conceited' all relate to self-assurance but differ substantially in evaluation and intensity."
+            ],
+            "pitfall": "Do not treat near-synonyms as interchangeable when the emotional or social implication changes the message.",
+            "mastery_check": "Mastery: compare nuanced vocabulary choices, explain connotations, rank degrees of meaning, and select wording that matches a precise communicative intention.",
+            "revision": "Revise nuance through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "academic vocabulary",
+          "study_materials": {
+            "objective": "Build mastery of academic vocabulary in Advanced Vocabulary for National English Championship.",
+            "teaching_content": "Interpret and use formal vocabulary common in analytical and educational writing, including terms such as analyze, infer, contrast, evaluate, significant, and consequently.",
+            "worked_examples": [
+              "Example: 'Evaluate the evidence' asks for a judgment based on criteria and evidence, not simply a summary of what the evidence says."
+            ],
+            "pitfall": "Do not substitute everyday words automatically when a question depends on the technical distinction between academic command terms.",
+            "mastery_check": "Mastery: understand academic command vocabulary, distinguish related terms, and apply them accurately when reading or responding.",
+            "revision": "Revise academic vocabulary through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Grammar Mastery",
+      "subtopics": [
+        {
+          "title": "complex sentences",
+          "study_materials": {
+            "objective": "Build mastery of complex sentences in Grammar Mastery for National English Championship.",
+            "teaching_content": "Analyze complex sentences by identifying independent and dependent clauses and understanding how subordination expresses relationships such as cause, condition, contrast, and time.",
+            "worked_examples": [
+              "Example: In 'Although the route was longer, we arrived early because traffic was light,' the clauses express contrast and cause within one sentence."
+            ],
+            "pitfall": "Do not mistake sentence length for complexity; a long list can be simple, while a short sentence may contain meaningful subordination.",
+            "mastery_check": "Mastery: parse complex structures, identify clause relationships, preserve meaning when rewriting, and explain punctuation choices.",
+            "revision": "Revise complex sentences through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "clauses",
+          "study_materials": {
+            "objective": "Build mastery of clauses in Grammar Mastery for National English Championship.",
+            "teaching_content": "Distinguish independent clauses, which can stand as complete sentences, from dependent clauses introduced by subordinators or relative markers. Identify noun, adjective, and adverb clause functions.",
+            "worked_examples": [
+              "Example: In 'I know that the team won,' the clause 'that the team won' functions as the object of 'know.'"
+            ],
+            "pitfall": "A dependent clause may contain a subject and verb but still be incomplete in meaning or grammatical function when separated from the main clause.",
+            "mastery_check": "Mastery: identify clause boundaries and types, explain their functions, and combine or separate clauses without creating fragments or faulty structures.",
+            "revision": "Revise clauses through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "agreement",
+          "study_materials": {
+            "objective": "Build mastery of agreement in Grammar Mastery for National English Championship.",
+            "teaching_content": "Apply subject-verb and pronoun-antecedent agreement by identifying the true grammatical subject rather than being distracted by nearby nouns.",
+            "worked_examples": [
+              "Example: 'The collection of rare books is valuable' takes 'is' because 'collection' is the singular subject, not 'books.'"
+            ],
+            "pitfall": "Do not match the verb to the closest noun automatically; intervening phrases and compound structures can hide the grammatical subject.",
+            "mastery_check": "Mastery: identify agreement relationships in complex sentences, correct errors, and explain why the grammatical subject controls the form.",
+            "revision": "Revise agreement through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "modifiers",
+          "study_materials": {
+            "objective": "Build mastery of modifiers in Grammar Mastery for National English Championship.",
+            "teaching_content": "Place modifiers close to the words they logically describe so that meaning is clear and unintended interpretations are avoided. Recognize misplaced and dangling modifiers.",
+            "worked_examples": [
+              "Example: 'Walking through the museum, Maya noticed the sculpture' clearly makes Maya the person walking; a dangling version would wrongly suggest the sculpture was walking."
+            ],
+            "pitfall": "Do not judge a modifier only by whether the sentence sounds familiar; check who or what the modifier logically describes.",
+            "mastery_check": "Mastery: identify modifier errors, repair ambiguous constructions, and explain how placement changes meaning.",
+            "revision": "Revise modifiers through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "tense consistency",
+          "study_materials": {
+            "objective": "Build mastery of tense consistency in Grammar Mastery for National English Championship.",
+            "teaching_content": "Maintain logical tense relationships across a passage while allowing deliberate shifts for changes in time, reported speech, or general truths.",
+            "worked_examples": [
+              "Example: 'She entered the room and noticed that the lights were off' uses past forms consistently for linked past events."
+            ],
+            "pitfall": "Do not force every verb into the same tense when the time relationship genuinely changes; consistency means logical alignment, not mechanical uniformity.",
+            "mastery_check": "Mastery: identify unjustified tense shifts, preserve intended time relationships, and edit paragraphs for coherent tense use.",
+            "revision": "Revise tense consistency through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Editing & Usage",
+      "subtopics": [
+        {
+          "title": "error identification",
+          "study_materials": {
+            "objective": "Build mastery of error identification in Editing & Usage for National English Championship.",
+            "teaching_content": "Edit systematically for grammar, usage, word choice, punctuation, agreement, tense, and sentence structure. Read the complete sentence before deciding which segment contains the error.",
+            "worked_examples": [
+              "Example: In 'Neither of the answers are correct,' identify the singular subject 'neither' and correct the verb to 'is.'"
+            ],
+            "pitfall": "Do not select an error simply because a phrase sounds unusual; verify it against the grammatical rule and the intended meaning.",
+            "mastery_check": "Mastery: locate errors efficiently, name the underlying rule, distinguish real errors from acceptable variation, and produce a corrected sentence.",
+            "revision": "Revise error identification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sentence transformation",
+          "study_materials": {
+            "objective": "Build mastery of sentence transformation in Editing & Usage for National English Championship.",
+            "teaching_content": "Transform sentences while preserving their essential meaning, tense, logical relationships, and required grammatical information. Common transformations include active/passive, direct/indirect speech, joining clauses, and changing degree or structure.",
+            "worked_examples": [
+              "Example: 'People speak English worldwide' can become 'English is spoken worldwide' without changing the core proposition."
+            ],
+            "pitfall": "Do not change tense, emphasis, negation, or meaning accidentally while altering the grammatical form.",
+            "mastery_check": "Mastery: perform multiple transformation types accurately, preserve meaning, and explain the grammatical changes made.",
+            "revision": "Revise sentence transformation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "punctuation",
+          "study_materials": {
+            "objective": "Build mastery of punctuation in Editing & Usage for National English Championship.",
+            "teaching_content": "Use punctuation to clarify sentence boundaries, relationships, lists, quotations, and emphasis. Understand the functions of commas, semicolons, colons, apostrophes, quotation marks, and dashes.",
+            "worked_examples": [
+              "Example: A semicolon can join closely related independent clauses when no coordinating conjunction is used; a colon can introduce an explanation or list after a complete clause."
+            ],
+            "pitfall": "Do not use commas simply where a reader might pause. Punctuation follows grammatical structure as well as rhythm and style.",
+            "mastery_check": "Mastery: correct punctuation in complex sentences, explain each mark's function, and distinguish grammatical necessity from optional stylistic punctuation.",
+            "revision": "Revise punctuation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "style",
+          "study_materials": {
+            "objective": "Build mastery of style in Editing & Usage for National English Championship.",
+            "teaching_content": "Analyze style as the combined effect of diction, sentence structure, imagery, formality, rhythm, and rhetorical choices. Style should be described with evidence rather than vague labels.",
+            "worked_examples": [
+              "Example: Short sentences, direct verbs, and concrete nouns can create a brisk, accessible style, while longer periodic sentences and formal diction can create a reflective or academic style."
+            ],
+            "pitfall": "Do not confuse style with tone. Tone is the writer's attitude; style is the characteristic way that attitude and ideas are expressed.",
+            "mastery_check": "Mastery: identify distinctive stylistic features, connect them to textual effects, compare styles across passages, and support judgments with precise evidence.",
+            "revision": "Revise style through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "passage editing",
+          "study_materials": {
+            "objective": "Build mastery of passage editing in Editing & Usage for National English Championship.",
+            "teaching_content": "Edit a complete passage by checking meaning, grammar, cohesion, word choice, punctuation, and consistency together. Read beyond individual sentences so that corrections improve the passage as a whole.",
+            "worked_examples": [
+              "Example: When editing a paragraph, first locate the main idea and sentence relationships, then correct agreement and punctuation, remove repetition, and replace vague wording without changing the intended message."
+            ],
+            "pitfall": "Do not correct every unusual expression automatically; some variation is intentional. An edit is valid when it improves correctness or clarity while preserving meaning and context.",
+            "mastery_check": "Mastery: edit multi-sentence passages accurately, prioritize errors, preserve the writer's intended meaning, and explain the rule or clarity improvement behind each major correction.",
+            "revision": "Revise passage editing through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Literature",
+      "subtopics": [
+        {
+          "title": "theme",
+          "study_materials": {
+            "objective": "Build mastery of theme in Literature for National English Championship.",
+            "teaching_content": "Identify a text's theme as a central idea about life, society, values, or experience rather than a one-word topic. Track recurring events, conflicts, images, and outcomes to infer the theme.",
+            "worked_examples": [
+              "Example: A story in which a proud character learns to accept help after repeated failures may develop the theme that humility can enable growth."
+            ],
+            "pitfall": "Do not confuse theme with plot or topic. 'Friendship' is a topic; a statement such as 'trust is strengthened by honest communication' expresses a theme.",
+            "mastery_check": "Mastery: distinguish topic from theme, trace supporting details, compare themes across texts, and formulate a precise thematic statement.",
+            "revision": "Revise theme through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "characterization",
+          "study_materials": {
+            "objective": "Build mastery of characterization in Literature for National English Championship.",
+            "teaching_content": "Analyze characterization through direct description and indirect evidence from actions, dialogue, thoughts, relationships, and reactions. Consider how a character changes or remains consistent.",
+            "worked_examples": [
+              "Example: A character who quietly returns a lost wallet despite needing money is characterized through action as honest and principled."
+            ],
+            "pitfall": "Do not infer a permanent trait from one isolated action without considering context and repeated evidence.",
+            "mastery_check": "Mastery: infer character traits from textual evidence, explain motivations, trace development, and distinguish explicit description from supported inference.",
+            "revision": "Revise characterization through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "imagery",
+          "study_materials": {
+            "objective": "Build mastery of imagery in Literature for National English Championship.",
+            "teaching_content": "Analyze imagery as language that creates sensory or conceptual impressions. Identify the senses or associations involved and explain how imagery contributes to mood, setting, theme, or meaning.",
+            "worked_examples": [
+              "Example: Describing rain as 'silver threads against the dark roofs' creates visual imagery that can make an ordinary scene feel delicate or reflective."
+            ],
+            "pitfall": "Do not label every descriptive adjective as imagery; explain the sensory or figurative effect and its role in the passage.",
+            "mastery_check": "Mastery: identify significant imagery, explain its effect, connect images to larger meanings, and compare imagery across texts.",
+            "revision": "Revise imagery through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "poetic devices",
+          "study_materials": {
+            "objective": "Build mastery of poetic devices in Literature for National English Championship.",
+            "teaching_content": "Recognize and interpret devices such as metaphor, simile, personification, alliteration, repetition, contrast, rhyme, and symbolism. Focus on the effect of the device, not just its name.",
+            "worked_examples": [
+              "Example: Repetition of a key phrase at the beginning of successive lines can emphasize an idea and create rhythm or insistence."
+            ],
+            "pitfall": "Do not identify a device without explaining why the poet uses it; a correct label alone does not establish interpretation.",
+            "mastery_check": "Mastery: identify relevant devices accurately, explain their effects, and integrate device analysis into a coherent interpretation.",
+            "revision": "Revise poetic devices through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "comparative interpretation",
+          "study_materials": {
+            "objective": "Build mastery of comparative interpretation in Literature for National English Championship.",
+            "teaching_content": "Compare two texts by establishing a meaningful criterion such as theme, character, imagery, viewpoint, or treatment of an idea. Support similarities and differences with evidence from both texts.",
+            "worked_examples": [
+              "Example: Two poems may both present nature as powerful, but one may emphasize comfort while the other presents nature as unpredictable and threatening."
+            ],
+            "pitfall": "Do not write two separate summaries and call them comparison. Each paragraph should establish a relationship between the texts.",
+            "mastery_check": "Mastery: construct balanced comparisons, select evidence from both texts, explain significance, and reach a nuanced comparative conclusion.",
+            "revision": "Revise comparative interpretation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Writing",
+      "subtopics": [
+        {
+          "title": "argument",
+          "study_materials": {
+            "objective": "Build mastery of argument in Writing for National English Championship.",
+            "teaching_content": "Construct an argument with a clear claim, logically ordered reasons, relevant evidence, explanation, and an appropriate conclusion. Anticipate reasonable counterarguments when the task requires persuasion.",
+            "worked_examples": [
+              "Example: To argue for a school reading program, state the claim, present evidence about reading benefits, explain how the evidence supports the claim, address a practical objection, and conclude with a specific recommendation."
+            ],
+            "pitfall": "Do not substitute strong language for reasoning. A persuasive paragraph needs a defensible claim and evidence connected by explanation.",
+            "mastery_check": "Mastery: develop a coherent evidence-based argument, organize reasoning, address counterclaims, and maintain an appropriate formal or persuasive register.",
+            "revision": "Revise argument through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "narrative",
+          "study_materials": {
+            "objective": "Build mastery of narrative in Writing for National English Championship.",
+            "teaching_content": "Build a narrative around purposeful characters, setting, conflict, sequence, and resolution. Use viewpoint, pacing, dialogue, and sensory detail to make events meaningful rather than merely listing them.",
+            "worked_examples": [
+              "Example: A story about a lost key becomes engaging when the search reveals a character's fear of disappointing a parent and the resolution changes that relationship."
+            ],
+            "pitfall": "Do not overload a narrative with events that do not affect the conflict. Each major event should contribute to tension, character, or resolution.",
+            "mastery_check": "Mastery: sustain a coherent plot, develop character and setting, control pacing and viewpoint, and produce a satisfying resolution.",
+            "revision": "Revise narrative through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "descriptive",
+          "study_materials": {
+            "objective": "Build mastery of descriptive in Writing for National English Championship.",
+            "teaching_content": "Create vivid description by selecting precise nouns, verbs, sensory details, comparisons, and spatial organization. Description should guide the reader's attention and create a deliberate impression.",
+            "worked_examples": [
+              "Example: Instead of saying a market was 'busy,' describe overlapping voices, bright fabric stalls, warm spice smells, and narrow paths between shoppers."
+            ],
+            "pitfall": "Do not pile up adjectives without purpose. Precise verbs and selected sensory details usually create stronger description than long lists of modifiers.",
+            "mastery_check": "Mastery: create a consistent descriptive effect, select purposeful sensory details, organize space clearly, and vary sentence structure for impact.",
+            "revision": "Revise descriptive through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "summary",
+          "study_materials": {
+            "objective": "Build mastery of summary in Writing for National English Championship.",
+            "teaching_content": "Condense a source by selecting its central ideas and essential supporting points while preserving the original meaning. Use concise paraphrase rather than copying sentences or adding personal opinions.",
+            "worked_examples": [
+              "Example: A long passage about water conservation can be reduced to its main problem, two key causes, and the author's proposed solution if those elements drive the passage."
+            ],
+            "pitfall": "Do not include every example or minor detail, and do not introduce information that the source does not contain.",
+            "mastery_check": "Mastery: identify central ideas, prioritize information, paraphrase accurately, maintain objectivity, and produce a concise coherent summary.",
+            "revision": "Revise summary through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "structured response",
+          "study_materials": {
+            "objective": "Build mastery of structured response in Writing for National English Championship.",
+            "teaching_content": "Organize a response so that each paragraph has a clear purpose, evidence or explanation, and a link to the question. Use introductions and conclusions proportionately rather than padding the answer.",
+            "worked_examples": [
+              "Example: A literature response can state an interpretation, analyze two quotations or details, explain their significance, and conclude by returning to the central interpretation."
+            ],
+            "pitfall": "Do not treat structure as a set of empty headings. Organization is effective only when ideas progress logically and each piece of evidence is explained.",
+            "mastery_check": "Mastery: plan and produce coherent multi-paragraph responses, maintain focus, integrate evidence, and adapt structure to the task.",
+            "revision": "Revise structured response through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Verbal Reasoning",
+      "subtopics": [
+        {
+          "title": "analogies",
+          "study_materials": {
+            "objective": "Build mastery of analogies in Verbal Reasoning for National English Championship.",
+            "teaching_content": "Solve verbal analogies by identifying the precise relationship between the first pair and applying the same relationship to the second pair. Common relationships include function, degree, category, part-whole, cause-effect, and contrast.",
+            "worked_examples": [
+              "Example: 'thermometer : temperature :: compass : direction' works because each instrument measures or indicates the second concept."
+            ],
+            "pitfall": "Do not choose an option merely because the words are related; the type and direction of the relationship must match.",
+            "mastery_check": "Mastery: identify relationship types, preserve relationship direction, reject near-matches, and solve unfamiliar analogies with justification.",
+            "revision": "Revise analogies through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "logical completion",
+          "study_materials": {
+            "objective": "Build mastery of logical completion in Verbal Reasoning for National English Championship.",
+            "teaching_content": "Complete statements or arguments by preserving their logical constraints, grammatical structure, and contextual meaning. Determine what must follow rather than what could merely follow.",
+            "worked_examples": [
+              "Example: If every member of a club has an ID and Priya is a member, the logically valid completion is that Priya has an ID."
+            ],
+            "pitfall": "Do not add assumptions not given in the question. A plausible real-world statement may still be logically unsupported.",
+            "mastery_check": "Mastery: distinguish necessary from possible conclusions, track premises accurately, and complete verbal logic without importing unstated assumptions.",
+            "revision": "Revise logical completion through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "word relationships",
+          "study_materials": {
+            "objective": "Build mastery of word relationships in Verbal Reasoning for National English Championship.",
+            "teaching_content": "Analyze semantic relationships such as synonymy, antonymy, category membership, part-whole, function, degree, and cause-effect. The exact relationship matters more than broad association.",
+            "worked_examples": [
+              "Example: 'puppy : dog' expresses a young-to-adult relationship, while 'wheel : bicycle' is part-to-whole."
+            ],
+            "pitfall": "Do not treat any two associated words as equivalent relationship pairs; specify what connects them and preserve direction.",
+            "mastery_check": "Mastery: identify precise semantic relations, classify pair types, and apply the same relation consistently to new word pairs.",
+            "revision": "Revise word relationships through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "classification",
+          "study_materials": {
+            "objective": "Build mastery of classification in Verbal Reasoning for National English Championship.",
+            "teaching_content": "Classify words or concepts using a clear shared criterion, then identify the item that does not belong or the category that best fits. Test each option against the same rule.",
+            "worked_examples": [
+              "Example: violin, cello, and flute are instruments, but flute differs from the first two if the criterion is stringed instruments."
+            ],
+            "pitfall": "Do not change the classification rule midway to justify an attractive answer. The strongest solution uses one consistent criterion that fits the set.",
+            "mastery_check": "Mastery: infer classification rules, handle overlapping categories, identify exceptions, and explain why each selected item fits or does not fit.",
+            "revision": "Revise classification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "verbal puzzles",
+          "study_materials": {
+            "objective": "Build mastery of verbal puzzles in Verbal Reasoning for National English Championship.",
+            "teaching_content": "Solve verbal puzzles by translating wording into explicit constraints, organizing information, and testing possibilities systematically. Useful representations include tables, ordering lists, and simple condition sets.",
+            "worked_examples": [
+              "Example: For a puzzle about four speakers with different presentation times, write the time slots and place each constraint before testing the remaining possibilities."
+            ],
+            "pitfall": "Do not rely on intuition when several conditions interact; one missed constraint can make a seemingly reasonable answer invalid.",
+            "mastery_check": "Mastery: extract constraints, choose an efficient representation, eliminate impossible cases, and justify the unique or best-supported solution.",
+            "revision": "Revise verbal puzzles through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Communication & Comprehension",
+      "subtopics": [
+        {
+          "title": "functional texts",
+          "study_materials": {
+            "objective": "Build mastery of functional texts in Communication & Comprehension for National English Championship.",
+            "teaching_content": "Read practical texts such as forms, schedules, advertisements, emails, menus, announcements, and notices for purpose, audience, key details, conditions, and implied actions.",
+            "worked_examples": [
+              "Example: A timetable question may require combining departure time, platform information, and a stated transfer condition rather than locating one isolated number."
+            ],
+            "pitfall": "Do not assume the most prominent detail is the answer. Check headings, footnotes, conditions, dates, and units of information.",
+            "mastery_check": "Mastery: extract actionable information, integrate multiple details, identify audience and purpose, and answer practical questions precisely.",
+            "revision": "Revise functional texts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "instructions",
+          "study_materials": {
+            "objective": "Build mastery of instructions in Communication & Comprehension for National English Championship.",
+            "teaching_content": "Interpret instructions by identifying sequence, conditions, exceptions, required materials, and the exact action expected at each step. Preserve order when order affects the result.",
+            "worked_examples": [
+              "Example: In a multi-step experiment, heating before adding a reagent may be essential; reversing the steps can change the outcome."
+            ],
+            "pitfall": "Do not skim command words such as 'before,' 'unless,' 'only,' or 'except'; these small terms often determine the correct interpretation.",
+            "mastery_check": "Mastery: follow and paraphrase procedures accurately, detect conditional requirements, identify missing or conflicting steps, and predict outcomes from instructions.",
+            "revision": "Revise instructions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "notices",
+          "study_materials": {
+            "objective": "Build mastery of notices in Communication & Comprehension for National English Championship.",
+            "teaching_content": "Read notices for essential information including event, audience, date, time, location, eligibility, restrictions, and required action. Distinguish central instructions from decorative language.",
+            "worked_examples": [
+              "Example: A competition notice may state that registration closes Friday and that participants must bring identification; both details affect what the reader must do."
+            ],
+            "pitfall": "Do not infer eligibility or deadlines from general wording when the notice gives explicit conditions elsewhere.",
+            "mastery_check": "Mastery: identify all action-critical details, infer the intended audience and purpose, and distinguish mandatory requirements from optional information.",
+            "revision": "Revise notices through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "dialogues",
+          "study_materials": {
+            "objective": "Build mastery of dialogues in Communication & Comprehension for National English Championship.",
+            "teaching_content": "Interpret dialogues by tracking speakers, turn-taking, implied meaning, register, intention, and how each response relates to what came before. Dialogue often communicates indirectly.",
+            "worked_examples": [
+              "Example: If one speaker says 'The room is rather warm' and the other opens a window, the exchange implies a request even though no direct request was made."
+            ],
+            "pitfall": "Do not interpret each line in isolation; tone, relationship, and previous turns can change the meaning of a response.",
+            "mastery_check": "Mastery: identify speaker intention, infer implied requests or attitudes, track conversational logic, and distinguish literal from pragmatic meaning.",
+            "revision": "Revise dialogues through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "information synthesis",
+          "study_materials": {
+            "objective": "Build mastery of information synthesis in Communication & Comprehension for National English Championship.",
+            "teaching_content": "Synthesize information by combining relevant points from multiple sentences or sources into a single supported conclusion. Remove repetition and distinguish agreement, contrast, and complementary evidence.",
+            "worked_examples": [
+              "Example: If one paragraph reports increased rainfall and another reports flooding after drainage changes, synthesis should connect the environmental and infrastructure evidence rather than merely list both facts."
+            ],
+            "pitfall": "Do not merge claims that conflict without acknowledging the conflict, and do not add conclusions that none of the sources support.",
+            "mastery_check": "Mastery: integrate information accurately, reconcile or flag differences, select the strongest combined evidence, and formulate a concise supported conclusion.",
+            "revision": "Revise information synthesis through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Championship Language Strategy",
+      "subtopics": [
+        {
+          "title": "time management",
+          "study_materials": {
+            "objective": "Build mastery of time management in Championship Language Strategy for National English Championship.",
+            "teaching_content": "Allocate competition time according to question difficulty, marks, and uncertainty. Use planned checkpoints, avoid spending disproportionate time on one item, and reserve time for review.",
+            "worked_examples": [
+              "Example: A candidate can complete high-confidence questions first, mark uncertain items, then return to longer inference or reasoning questions with remaining time."
+            ],
+            "pitfall": "Do not turn time management into rushing. Accuracy, deliberate checking, and knowing when to move on are part of efficient performance.",
+            "mastery_check": "Mastery: create a realistic time plan, adjust pacing during a test, prioritize effectively, and use remaining time for targeted review.",
+            "revision": "Revise time management through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "elimination",
+          "study_materials": {
+            "objective": "Build mastery of elimination in Championship Language Strategy for National English Championship.",
+            "teaching_content": "Eliminate answer choices using textual evidence, grammar, logic, meaning, and contradiction before choosing among the survivors. Elimination is strongest when each rejected option has a specific reason.",
+            "worked_examples": [
+              "Example: In a reading question, remove an option contradicted by the passage, one that answers a different question, and one that makes an unsupported absolute claim before comparing the remaining choices."
+            ],
+            "pitfall": "Do not eliminate an option simply because it sounds unfamiliar; unfamiliar wording can still be correct.",
+            "mastery_check": "Mastery: apply systematic elimination, identify distractor types, justify exclusions, and combine elimination with positive evidence for the final choice.",
+            "revision": "Revise elimination through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "evidence selection",
+          "study_materials": {
+            "objective": "Build mastery of evidence selection in Championship Language Strategy for National English Championship.",
+            "teaching_content": "Select the smallest set of details that directly supports the answer or interpretation. Prefer precise, relevant evidence over decorative or loosely related quotations.",
+            "worked_examples": [
+              "Example: To support a claim that a character becomes more confident, choose a later action or statement showing changed behavior rather than a descriptive detail about the setting."
+            ],
+            "pitfall": "Do not choose evidence merely because it contains the same vocabulary as the question; relevance and explanatory value matter more than word overlap.",
+            "mastery_check": "Mastery: select strong evidence efficiently, explain its relevance, distinguish primary from weak support, and integrate evidence into a reasoned answer.",
+            "revision": "Revise evidence selection through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "precision checking",
+          "study_materials": {
+            "objective": "Build mastery of precision checking in Championship Language Strategy for National English Championship.",
+            "teaching_content": "Perform a final accuracy check for wording, tense, agreement, punctuation, logical consistency, units of meaning, and whether every answer actually addresses the question asked.",
+            "worked_examples": [
+              "Example: After selecting an inference answer, reread the passage and verify that the answer is supported without an absolute claim that the text never establishes."
+            ],
+            "pitfall": "Do not change a correct answer during review without a concrete reason. Checking should target identifiable errors rather than creating doubt for its own sake.",
+            "mastery_check": "Mastery: detect subtle errors efficiently, verify answer-question alignment, and make evidence-based corrections during review.",
+            "revision": "Revise precision checking through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mixed language sets",
+          "study_materials": {
+            "objective": "Build mastery of mixed language sets in Championship Language Strategy for National English Championship.",
+            "teaching_content": "Handle a mixed set containing reading, vocabulary, grammar, editing, reasoning, and communication items by switching methods deliberately rather than using one strategy for every question.",
+            "worked_examples": [
+              "Example: A vocabulary item may require contextual meaning, a grammar item a structural check, and a reading item evidence retrieval; classify the task before solving it."
+            ],
+            "pitfall": "Do not let the method from one question type carry over automatically to another. Identify the skill being tested first.",
+            "mastery_check": "Mastery: classify question types quickly, select the appropriate solving method, maintain accuracy across switches, and review the weakest category strategically.",
+            "revision": "Revise mixed language sets through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "NATIONAL-E-MOCK-01",
+      "focus": "core curriculum and topic-wise preparation"
+    },
+    {
+      "id": "NATIONAL-E-MOCK-02",
+      "focus": "advanced mixed-domain preparation"
+    },
+    {
+      "id": "NATIONAL-E-MOCK-03",
+      "focus": "full championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "National English Championship official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
