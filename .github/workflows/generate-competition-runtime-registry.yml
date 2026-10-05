@@ -9,6 +9,7 @@ on:
       - "scripts/generate-competition-runtime-registry.mjs"
       - "scripts/prepare-competition-runtime-sources.mjs"
       - "scripts/validate-competition-runtime-coverage.mjs"
+      - "scripts/publish-competition-runtime.mjs"
       - "data/competitions/**/full-bank/objective/**"
       - ".github/workflows/generate-competition-runtime-registry.yml"
 
