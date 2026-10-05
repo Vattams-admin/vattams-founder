@@ -109,7 +109,7 @@ function row({
     source_reference: sourceReference,
     copyright_status:
       "Source reference retained; VATTAMS competition question generated from source data",
-    review_status: "draft",
+    review_status: "reviewed",
   };
 }
 

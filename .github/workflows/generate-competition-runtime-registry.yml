@@ -11,6 +11,7 @@ on:
       - "scripts/validate-competition-runtime-coverage.mjs"
       - "scripts/publish-competition-runtime.mjs"
       - "data/competitions/**/full-bank/objective/**"
+      - "data/thirukkural/**"
       - ".github/workflows/generate-competition-runtime-registry.yml"
 
 permissions:
@@ -26,6 +27,12 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - name: Build reviewed Thirukkural production source package
+        run: |
+          node scripts/build-thirukkural-full-bank.mjs
+          python3 scripts/build-thirukkural-objective-bank.py
+          node scripts/build-thirukkural-age-pools.mjs
+          node scripts/build-thirukkural-official-objective-local.mjs
       - name: Prepare reviewed competition runtime sources
         run: node scripts/prepare-competition-runtime-sources.mjs
       - name: Generate registry from Firestore course IDs
