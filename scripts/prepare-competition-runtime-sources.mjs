@@ -74,6 +74,7 @@ for (const slug of targetSlugs) {
   const poolsPath = path.join(dir, "age-pools.json");
   const blueprintPath = path.join(dir, "selection-blueprint.json");
 
+  // Thirukkural source recovery: rebuild from restored reviewed source before runtime materialization.
   // Thirukkural keeps its reviewed production bank in the dedicated
   // data/thirukkural tree. Materialize that same reviewed source into the
   // common competition runtime layout; do not synthesize or alter questions.
