@@ -21,7 +21,21 @@ jobs:
         with:
           node-version: 22
       - name: Prepare reviewed competition runtime sources
-        run: node scripts/prepare-competition-runtime-sources.mjs
+        shell: bash
+        run: |
+          set +e
+          mkdir -p reports
+          : > reports/competition-runtime-prep-report.txt
+          prep_rc=0
+          for slug in mathematics-challenge science-challenge english-challenge computer-challenge gk-challenge reasoning-challenge india-gk-championship national-quiz-championship ai-technology-challenge international-knowledge-challenge national-mathematics-championship national-science-championship national-english-championship national-aptitude-championship national-coding-challenge national-ai-challenge mega-inter-school-championship indian-classical-literature-wisdom-championship indian-language-literature-masters-series thirukkural fun-with-maths-challenge azhagu-tamil-challenge handwriting-excellence-challenge spoken-hindi-challenge; do
+            echo "===== $slug =====" >> reports/competition-runtime-prep-report.txt
+            node scripts/prepare-competition-runtime-sources.mjs --slug "$slug" >> reports/competition-runtime-prep-report.txt 2>&1
+            status=$?
+            if [ $status -eq 0 ]; then echo "STATUS: PASS" >> reports/competition-runtime-prep-report.txt; else echo "STATUS: FAIL ($status)" >> reports/competition-runtime-prep-report.txt; prep_rc=1; fi
+            echo >> reports/competition-runtime-prep-report.txt
+          done
+          echo "$prep_rc" > reports/competition-runtime-prep-exit-code.txt
+          cat reports/competition-runtime-prep-report.txt >> "$GITHUB_STEP_SUMMARY"
       - name: Validate all 24 MCQ banks and write failure report
         id: validate
         shell: bash
@@ -49,7 +63,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add reports/competition-mcq-validation-report.txt
+          git add reports/competition-mcq-validation-report.txt reports/competition-runtime-prep-report.txt reports/competition-runtime-prep-exit-code.txt
           git diff --cached --quiet && exit 0
           git commit -m "Record competition MCQ validation report [skip ci]"
           git push
@@ -63,7 +77,8 @@ jobs:
       - name: Enforce validation gate
         run: |
           rc=$(cat reports/competition-mcq-validation-exit-code.txt)
-          if [ "$rc" -ne 0 ]; then
+          prep_rc=$(cat reports/competition-runtime-prep-exit-code.txt)
+          if [ "$rc" -ne 0 ] || [ "$prep_rc" -ne 0 ]; then
             echo "Competition MCQ validation failed."
             exit 1
           fi
