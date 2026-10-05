@@ -25,11 +25,8 @@ Disallow: /student/id-card
 Disallow: /student/welcome-letter
 Disallow: /admin/
 
-# /verify and /competitive-exams are duplicates of /verify-certificate
-# and /competitions respectively (same component mounted at two paths —
-# see App.tsx). Not blocked here: blocking via Disallow would stop
-# crawlers from ever seeing the <link rel="canonical"> those pages set
-# back to their canonical counterpart, which is the correct way to
-# resolve this kind of duplicate.
+# /verify is a duplicate alias of /verify-certificate and is intentionally
+# left crawlable so its canonical tag can consolidate signals.
+# /competitive-exams is a dedicated, indexable landing page.
 
 Sitemap: https://academia.vattams.net/sitemap.xml
