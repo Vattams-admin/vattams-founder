@@ -91,11 +91,13 @@ fs.writeFileSync(path.join(out,'MANIFEST.json'),JSON.stringify({
   question_count:9563,
   mock_question_count:9443,
   official_question_count:120,
-  per_attempt:30,\n  official_papers: 4,
+  per_attempt:30,
+  official_papers: 4,
   files:manifest,
 },null,2))
 
 console.log('THIRUKKURAL PRODUCTION PACKAGE READY')
 console.log('Output:', path.relative(root,out))
-console.log('Combined questions:', Object.keys(questions).length)\nconsole.log('Official papers: 4 x 30')
+console.log('Combined questions:', Object.keys(questions).length)
+console.log('Official papers: 4 x 30')
 console.log('Combined answer keys:', Object.keys(keys).length)
