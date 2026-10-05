@@ -78,7 +78,7 @@ for (const slug of targetSlugs) {
   // Thirukkural keeps its reviewed production bank in the dedicated
   // data/thirukkural tree. Materialize that same reviewed source into the
   // common competition runtime layout; do not synthesize or alter questions.
-  if (slug === "thirukkural" && !fs.existsSync(publicPath)) {
+  if (slug === "thirukkural-mastery-championship" && !fs.existsSync(publicPath)) {
     const sourceDir = path.join(root, "data", "thirukkural", "full-bank", "objective");
     const sourceFiles = [
       ["questions.objective.public.json", "questions.objective.public.json"],
