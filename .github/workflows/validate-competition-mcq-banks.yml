@@ -7,6 +7,12 @@ on:
       - "data/competitions/**/full-bank/objective/**"
       - "scripts/validate-competition-mcq-bank.mjs"
       - "scripts/prepare-competition-runtime-sources.mjs"
+      - "scripts/build-thirukkural-full-bank.mjs"
+      - "scripts/build-thirukkural-objective-bank.py"
+      - "scripts/build-thirukkural-age-pools.mjs"
+      - "scripts/build-thirukkural-official-objective-local.mjs"
+      - "scripts/validate-thirukkural-production.mjs"
+      - "data/thirukkural/**"
 
 permissions:
   contents: read
@@ -50,6 +56,13 @@ jobs:
       - name: Validate standardized MCQ bank
         if: matrix.slug != 'thirukkural'
         run: node scripts/validate-competition-mcq-bank.mjs --slug "${{ matrix.slug }}"
+      - name: Build Thirukkural production package
+        if: matrix.slug == 'thirukkural'
+        run: |
+          node scripts/build-thirukkural-full-bank.mjs
+          python3 scripts/build-thirukkural-objective-bank.py
+          node scripts/build-thirukkural-age-pools.mjs
+          node scripts/build-thirukkural-official-objective-local.mjs
       - name: Validate Thirukkural production package
         if: matrix.slug == 'thirukkural'
         run: node scripts/validate-thirukkural-production.mjs
