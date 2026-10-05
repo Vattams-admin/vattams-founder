@@ -7,6 +7,9 @@ on:
       - "data/competitions/**/full-bank/objective/**"
       - "scripts/validate-competition-mcq-bank.mjs"
 
+permissions:
+  contents: write
+
 jobs:
   validate:
     runs-on: ubuntu-latest
