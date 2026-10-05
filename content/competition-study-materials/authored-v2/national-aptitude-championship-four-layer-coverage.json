@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "National Aptitude Championship",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/national-aptitude-championship-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Quantitative Aptitude",
+      "subtopics": [
+        {
+          "title": "number operations",
+          "study_materials": {
+            "objective": "Build mastery of number operations in Quantitative Aptitude for National Aptitude Championship.",
+            "teaching_content": "Build fluency with integers, order of operations, divisibility, factors, multiples, and remainder reasoning. For championship aptitude questions, choose the shortest valid route while preserving exactness; compare direct calculation with factorisation or modular reasoning when useful. Train students to estimate first, track signs and place value, and verify answers against the original expression.",
+            "worked_examples": [
+              "Worked example: Evaluate 48 ÷ 6 × (7 − 3) + 5. Resolve the bracket first, then division and multiplication from left to right: 4 × 4 + 5 = 21. Verify by substituting the intermediate value back into the original expression and checking that no operation-order shortcut changed the meaning."
+            ],
+            "pitfall": "Common pitfall: performing multiplication before division regardless of position, or treating subtraction as if it were associative. Another frequent error is losing a negative sign during a multi-step simplification.",
+            "mastery_check": "Mastery: independently simplify unfamiliar mixed-operation expressions, explain why the chosen order is valid, detect sign or precedence traps, and verify the result with an independent estimate or reverse check.",
+            "revision": "Revise number operations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "percentages",
+          "study_materials": {
+            "objective": "Build mastery of percentages in Quantitative Aptitude for National Aptitude Championship.",
+            "teaching_content": "Treat percentages as multiplicative relationships rather than isolated formulas. Practise percentage increase/decrease, successive changes, reverse percentages, and percentage-point versus percentage-change distinctions. Championship problems should be translated into a base quantity before calculation so the reference value remains explicit.",
+            "worked_examples": [
+              "Worked example: A price of ₹800 rises by 15% and then falls by 15%. The increase gives ₹920; the decrease is 15% of ₹920, giving ₹782. The final value is therefore 2.25% below the original, showing why equal successive percentage changes do not cancel."
+            ],
+            "pitfall": "Common pitfall: taking both percentage changes from the original base. In reverse-percentage questions, dividing by the stated percentage instead of dividing by the multiplier is also a common error.",
+            "mastery_check": "Mastery: solve direct, reverse, successive-change, and comparison percentage problems, identify the correct base quantity, distinguish percentage points from percent change, and justify the final relationship.",
+            "revision": "Revise percentages through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "ratio proportion",
+          "study_materials": {
+            "objective": "Build mastery of ratio proportion in Quantitative Aptitude for National Aptitude Championship.",
+            "teaching_content": "Develop ratio reasoning by reducing ratios, scaling equivalent ratios, combining linked ratios, and using proportional relationships. Students should label what each ratio part represents and preserve units when moving between quantities. Competition problems often become simpler when the common multiplier is identified before any arithmetic.",
+            "worked_examples": [
+              "Worked example: If boys:girls = 3:5 and there are 32 students, the total ratio parts are 8, so each part is 4. There are 12 boys and 20 girls. Check that 12:20 reduces to 3:5 and that the total remains 32."
+            ],
+            "pitfall": "Common pitfall: adding ratio terms to the quantities directly or comparing ratios with different totals without normalising them. Unit mismatch can also make a seemingly correct proportion invalid.",
+            "mastery_check": "Mastery: translate verbal relationships into ratios, combine compatible ratios, solve missing quantities, test proportionality, and verify the result by reconstructing the original ratio.",
+            "revision": "Revise ratio proportion through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "averages",
+          "study_materials": {
+            "objective": "Build mastery of averages in Quantitative Aptitude for National Aptitude Championship.",
+            "teaching_content": "Use averages as balance points: total = average × number of observations. Practise missing-value problems, combined averages, changes after adding or removing observations, and weighted situations. Encourage total-based reasoning because it is faster and less error-prone than repeatedly averaging partial groups.",
+            "worked_examples": [
+              "Worked example: The average of 6 scores is 14, so their total is 84. If a seventh score is 21, the new total is 105 and the new average is 15. Verify by checking 15 × 7 = 105."
+            ],
+            "pitfall": "Common pitfall: averaging two group averages without weighting by group size. Another error is forgetting that adding one observation changes both the total and the count.",
+            "mastery_check": "Mastery: solve missing-score, combined-average, replacement, and weighted-average problems, choose total-based reasoning where appropriate, and validate the final average against plausible minimum and maximum values.",
+            "revision": "Revise averages through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "profit loss",
+          "study_materials": {
+            "objective": "Build mastery of profit loss in Quantitative Aptitude for National Aptitude Championship.",
+            "teaching_content": "Model commercial arithmetic from cost price, selling price, marked price, discount, profit, and loss. Keep the reference base explicit: profit or loss percentage is normally measured against cost price, while discount percentage is measured against marked price. Use multiplier reasoning for chained changes.",
+            "worked_examples": [
+              "Worked example: An item costing ₹600 is sold at a 20% profit, so the selling price is ₹720. If the marked price was ₹800, the discount is ₹80, or 10% of the marked price. Each percentage is tied to its correct base."
+            ],
+            "pitfall": "Common pitfall: calculating profit percentage on selling price or discount percentage on cost price. Mixing marked price and selling price in a single formula without identifying the base causes systematic errors.",
+            "mastery_check": "Mastery: solve profit, loss, discount, marked-price, and reverse-price problems, state the base for every percentage, and verify the answer by reconstructing cost and selling relationships.",
+            "revision": "Revise profit loss through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Algebraic Aptitude",
+      "subtopics": [
+        {
+          "title": "equations",
+          "study_materials": {
+            "objective": "Build mastery of equations in Algebraic Aptitude for National Aptitude Championship.",
+            "teaching_content": "Translate aptitude word conditions into linear or simple nonlinear equations, isolate variables systematically, and use substitution to verify solutions. Emphasise choosing a useful variable definition before manipulating the equation, especially in age, price, mixture, and count problems.",
+            "worked_examples": [
+              "Worked example: Three times a number plus 7 equals 31. Let the number be x: 3x + 7 = 31, so 3x = 24 and x = 8. Substitution gives 3(8)+7 = 31, confirming the solution."
+            ],
+            "pitfall": "Common pitfall: changing a sign when moving a term across the equality, or dividing only one part of an expression. In word problems, an algebraically valid equation can still represent the wrong quantities.",
+            "mastery_check": "Mastery: form equations from unfamiliar statements, solve them cleanly, reject extraneous or impossible values where relevant, and verify by substituting into the original condition.",
+            "revision": "Revise equations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "inequalities",
+          "study_materials": {
+            "objective": "Build mastery of inequalities in Algebraic Aptitude for National Aptitude Championship.",
+            "teaching_content": "Reason with ranges rather than single values. Practise translating words such as at least, at most, greater than, and less than; reversing an inequality when multiplying or dividing by a negative; and combining bounds. Aptitude questions often test whether an endpoint is included.",
+            "worked_examples": [
+              "Worked example: Solve 3x − 5 ≤ 10. Adding 5 gives 3x ≤ 15, hence x ≤ 5. If instead the final step divided by −3, the inequality direction would reverse. Test x = 5 and x = 6 to verify the boundary."
+            ],
+            "pitfall": "Common pitfall: forgetting to reverse the inequality when multiplying or dividing by a negative, or confusing “at least” with “greater than.”",
+            "mastery_check": "Mastery: translate verbal constraints into inequalities, solve compound bounds, handle negative multipliers correctly, identify included endpoints, and test boundary cases.",
+            "revision": "Revise inequalities through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sequences",
+          "study_materials": {
+            "objective": "Build mastery of sequences in Algebraic Aptitude for National Aptitude Championship.",
+            "teaching_content": "Recognise arithmetic, geometric, alternating, recursive, and difference-based patterns without assuming that the first visible pattern is the intended rule. Compare successive differences or ratios, then derive a rule that predicts later terms and explain why competing patterns fail.",
+            "worked_examples": [
+              "Worked example: For 4, 7, 10, 13, ... the constant difference is 3, so the nth term is 4 + 3(n−1) = 3n+1. The 10th term is 31. Verify the rule against the first several terms before extending it."
+            ],
+            "pitfall": "Common pitfall: spotting a superficial pattern from only two or three terms and treating it as unique. Always test a proposed rule against all supplied terms.",
+            "mastery_check": "Mastery: identify the governing structure of unfamiliar sequences, derive missing terms or a general rule, distinguish plausible alternatives, and justify the pattern using multiple checks.",
+            "revision": "Revise sequences through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "functions basics",
+          "study_materials": {
+            "objective": "Build mastery of functions basics in Algebraic Aptitude for National Aptitude Championship.",
+            "teaching_content": "Understand a function as a rule mapping each permitted input to exactly one output. Practise substitution, evaluating compositions, identifying input restrictions, and reading simple functional relationships. Keep the distinction between f(x), the input x, and the resulting output explicit.",
+            "worked_examples": [
+              "Worked example: If f(x)=2x+3, then f(4)=11. For f(f(1)), first calculate f(1)=5, then f(5)=13. The two steps show why composition is not the same as doubling the input."
+            ],
+            "pitfall": "Common pitfall: replacing the function symbol with multiplication, or evaluating a composition in the wrong order. Domain restrictions can also make an otherwise algebraic expression invalid.",
+            "mastery_check": "Mastery: evaluate and compose simple functions, identify valid inputs, translate verbal rules into functions, and explain each substitution step without confusing input and output.",
+            "revision": "Revise functions basics through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "algebraic word problems",
+          "study_materials": {
+            "objective": "Build mastery of algebraic word problems in Algebraic Aptitude for National Aptitude Championship.",
+            "teaching_content": "Convert verbal relationships into variables, equations, and constraints before calculating. Focus on ages, consecutive integers, prices, counts, and comparison statements. Encourage a two-pass process: model the situation first, then solve and check whether the numerical result fits the story.",
+            "worked_examples": [
+              "Worked example: Two consecutive integers have sum 57. Let the first be n and the next n+1. Then 2n+1=57, so n=28 and the integers are 28 and 29. Check both the sum and the consecutive condition."
+            ],
+            "pitfall": "Common pitfall: assigning variables without defining them clearly, or solving the equation but accepting a value that violates the original story constraints such as positivity or integer status.",
+            "mastery_check": "Mastery: construct an accurate algebraic model from unfamiliar wording, solve under stated constraints, and verify both the equation and the real-world interpretation.",
+            "revision": "Revise algebraic word problems through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Arithmetic Applications",
+      "subtopics": [
+        {
+          "title": "time work",
+          "study_materials": {
+            "objective": "Build mastery of time work in Arithmetic Applications for National Aptitude Championship.",
+            "teaching_content": "Model work-rate problems using rate = work/time and combined rate addition. Choose a common unit of work, such as one whole job, and represent each worker's contribution per unit time. Use reciprocal reasoning rather than adding completion times.",
+            "worked_examples": [
+              "Worked example: If A completes a job in 6 hours and B in 3 hours, their rates are 1/6 and 1/3 job per hour. Together they work at 1/2 job per hour, so the job takes 2 hours. Verify by checking that A completes 1/3 and B 2/3 of the job in two hours."
+            ],
+            "pitfall": "Common pitfall: adding 6 + 3 or averaging completion times. A second error is forgetting that rates, not times, combine directly.",
+            "mastery_check": "Mastery: solve single-worker, combined-worker, efficiency-change, and partial-work problems by defining rates explicitly and checking that the combined work equals one complete job.",
+            "revision": "Revise time work through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "speed distance",
+          "study_materials": {
+            "objective": "Build mastery of speed distance in Arithmetic Applications for National Aptitude Championship.",
+            "teaching_content": "Use distance = speed × time with consistent units, then extend to relative speed, average speed, trains, and journeys with stops. Separate distance travelled from elapsed time and identify whether average speed requires total distance divided by total time.",
+            "worked_examples": [
+              "Worked example: A car travels 120 km at 60 km/h and returns 120 km at 40 km/h. Total distance is 240 km and total time is 2+3=5 hours, so average speed is 48 km/h—not the arithmetic mean of 60 and 40."
+            ],
+            "pitfall": "Common pitfall: averaging speeds directly when journey distances or times differ. Unit mismatch, especially km/h versus m/s, is another frequent source of wrong answers.",
+            "mastery_check": "Mastery: solve journey, relative-speed, average-speed, and unit-conversion problems, state the time and distance basis, and verify dimensional consistency.",
+            "revision": "Revise speed distance through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mixtures",
+          "study_materials": {
+            "objective": "Build mastery of mixtures in Arithmetic Applications for National Aptitude Championship.",
+            "teaching_content": "Treat mixtures through weighted averages, conservation of quantity, and concentration. Track both total amount and amount of the active component. For replacement problems, account for the quantity removed before calculating the new concentration.",
+            "worked_examples": [
+              "Worked example: Mix 2 L of 30% solution with 3 L of 50% solution. Active quantity is 0.6+1.5=2.1 L in 5 L, giving 42% concentration. Check that 42% lies between 30% and 50%."
+            ],
+            "pitfall": "Common pitfall: averaging concentrations without weighting by quantities, or forgetting that removing a mixture removes both solvent and solute in the same proportion.",
+            "mastery_check": "Mastery: solve concentration, weighted-mixture, replacement, and target-concentration problems while tracking component quantities and checking that results remain physically plausible.",
+            "revision": "Revise mixtures through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "ages",
+          "study_materials": {
+            "objective": "Build mastery of ages in Arithmetic Applications for National Aptitude Championship.",
+            "teaching_content": "Represent ages with variables and preserve how age differences stay constant over time while ratios change. Translate “after,” “before,” and “times as old” statements carefully, then solve and test the timeline at the requested date.",
+            "worked_examples": [
+              "Worked example: A father is 4 times his son's age and their total is 50. Let the son's age be x; then 5x=50, so x=10 and the father is 40. Five years later they are 15 and 45, still 30 years apart but no longer in a 4:1 ratio."
+            ],
+            "pitfall": "Common pitfall: treating an age ratio as if it remains constant over time. Another error is applying “years ago” to one person's age but not the other's.",
+            "mastery_check": "Mastery: model age relationships at different times, solve ratio and difference conditions, and verify the resulting ages against every time statement.",
+            "revision": "Revise ages through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "commercial arithmetic",
+          "study_materials": {
+            "objective": "Build mastery of commercial arithmetic in Arithmetic Applications for National Aptitude Championship.",
+            "teaching_content": "Integrate tax, discount, markup, commission, simple interest, and successive commercial changes while keeping each percentage's base explicit. Use multipliers to reduce chained calculations and distinguish quoted rates from final effective changes.",
+            "worked_examples": [
+              "Worked example: A ₹1,000 marked price receives 10% discount, then 5% tax on the discounted price. Discounted price is ₹900; tax is ₹45; final payable amount is ₹945. The tax is not 5% of the original marked price."
+            ],
+            "pitfall": "Common pitfall: applying every percentage to the original price or treating successive percentage changes as additive. Always identify the base before calculating.",
+            "mastery_check": "Mastery: solve multi-stage commercial problems involving discounts, taxes, markup, commission, and interest, state each percentage base, and reconstruct the transaction to verify the final amount.",
+            "revision": "Revise commercial arithmetic through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Data Interpretation",
+      "subtopics": [
+        {
+          "title": "tables",
+          "study_materials": {
+            "objective": "Build mastery of tables in Data Interpretation for National Aptitude Championship.",
+            "teaching_content": "Read tabular data by identifying headings, units, row/column relationships, totals, and changes before calculating. Practise direct lookup, comparisons, ratios, percentage change, and multi-column aggregation. Championship questions reward careful extraction as much as arithmetic.",
+            "worked_examples": [
+              "Worked example: If a table lists quarterly sales as 120, 150, 135, and 195 units, the annual total is 600. The increase from Q1 to Q4 is 75 units, or 62.5% relative to Q1. Verify both calculations directly from the table."
+            ],
+            "pitfall": "Common pitfall: reading a value from the wrong row or unit column, or calculating a percentage from the wrong comparison base.",
+            "mastery_check": "Mastery: extract relevant values from dense tables, combine rows or columns accurately, compute comparisons and changes, and explain which table entries support the answer.",
+            "revision": "Revise tables through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "bar charts",
+          "study_materials": {
+            "objective": "Build mastery of bar charts in Data Interpretation for National Aptitude Championship.",
+            "teaching_content": "Interpret bar-chart scale, categories, frequency, grouped bars, and comparative differences. Read the axis before reading the bar height, especially when the scale skips values. Convert visual comparisons into exact arithmetic only after identifying the correct categories.",
+            "worked_examples": [
+              "Worked example: If a bar chart uses 10-unit intervals and category A reaches 70 while B reaches 50, A exceeds B by 20 units and is 40% higher than B. The percentage base is B's value, not A's."
+            ],
+            "pitfall": "Common pitfall: assuming each gridline equals one unit when the axis scale is larger, or confusing absolute difference with percentage increase.",
+            "mastery_check": "Mastery: accurately read scaled bars, compare categories, calculate totals and percentage differences, and verify that the numerical result matches the chart's visual ordering.",
+            "revision": "Revise bar charts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "line graphs",
+          "study_materials": {
+            "objective": "Build mastery of line graphs in Data Interpretation for National Aptitude Championship.",
+            "teaching_content": "Use line graphs to track change over ordered intervals, identify trends, peaks, troughs, rates of change, and interpolated comparisons when the graph supports them. Distinguish a value at a point from the change between two points.",
+            "worked_examples": [
+              "Worked example: A graph shows monthly sales rising from 80 in January to 120 in March. The absolute increase is 40, while the percentage increase from January is 50%. If February is 100, the trend is a steady +20 per month."
+            ],
+            "pitfall": "Common pitfall: confusing slope or change with the actual value, or calculating percentage change from the later value instead of the starting value.",
+            "mastery_check": "Mastery: read exact values from line graphs, calculate changes and rates, identify trend reversals, and justify conclusions using the correct interval and baseline.",
+            "revision": "Revise line graphs through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "pie charts",
+          "study_materials": {
+            "objective": "Build mastery of pie charts in Data Interpretation for National Aptitude Championship.",
+            "teaching_content": "Convert sector angles or percentages into quantities by treating the full circle as 360°. Practise finding a sector share, comparing sectors, recovering a missing sector, and moving between angle, fraction, percentage, and total quantity. Always confirm that all sectors sum to the whole.",
+            "worked_examples": [
+              "Worked example: A 90° sector represents 25% of a 480-student total, so it represents 120 students. Verify 90/360 = 1/4 and 480/4 = 120."
+            ],
+            "pitfall": "Common pitfall: treating the sector angle as the percentage itself, or using the wrong total when converting a sector into a quantity.",
+            "mastery_check": "Mastery: extract proportional information from pie charts, convert between angles and percentages, calculate missing sectors, and verify that sector totals reconcile with the complete dataset.",
+            "revision": "Revise pie charts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "caselet data",
+          "study_materials": {
+            "objective": "Build mastery of caselet data in Data Interpretation for National Aptitude Championship.",
+            "teaching_content": "Read caselet data as a compact dataset embedded in prose. Extract entities, quantities, units, and conditions into a structured table before calculating. Practise multi-step comparisons, ratios, percentages, totals, and conditional selections without adding facts not stated in the caselet.",
+            "worked_examples": [
+              "Worked example: A school has 240 students; 40% are in Class A, and 25% of Class A participate in a quiz. Class A has 96 students and 24 participate. Verify each percentage against its correct base."
+            ],
+            "pitfall": "Common pitfall: using the overall total as the base for a percentage that refers only to a subgroup, or overlooking a condition introduced in the caselet.",
+            "mastery_check": "Mastery: extract a multi-variable dataset from prose, choose the correct base and units, complete chained inferences, and identify the stated facts supporting the conclusion.",
+            "revision": "Revise caselet data through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Logical Reasoning",
+      "subtopics": [
+        {
+          "title": "deduction",
+          "study_materials": {
+            "objective": "Build mastery of deduction in Logical Reasoning for National Aptitude Championship.",
+            "teaching_content": "Use premises as constraints and derive only conclusions that must follow. Distinguish certainty from possibility and test a proposed conclusion against counterexamples.",
+            "worked_examples": [
+              "If every mentor is trained and Ravi is a mentor, Ravi must be trained. But “some trained people are mentors” does not imply every trained person is a mentor."
+            ],
+            "pitfall": "Do not reverse an implication or treat a statement about some members as a statement about all members.",
+            "mastery_check": "Derive necessary conclusions from unfamiliar premises, distinguish necessary from possible claims, construct counterexamples to reject invalid conclusions, and explain the logical direction used.",
+            "revision": "Revise deduction through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "arrangements",
+          "study_materials": {
+            "objective": "Build mastery of arrangements in Logical Reasoning for National Aptitude Championship.",
+            "teaching_content": "Represent ordering problems with slots, fixed positions, adjacency rules, and exclusions before placing items. Start with the strongest constraints, then fill flexible positions.",
+            "worked_examples": [
+              "Five students A, B, C, D, E stand in a row. If A must be before C and B must be adjacent to D, place the constrained pair first and enumerate only compatible placements."
+            ],
+            "pitfall": "Do not count arrangements that violate fixed-position or adjacency conditions, or multiply choices that become dependent after a placement.",
+            "mastery_check": "Model ordering constraints, choose an efficient placement order, count valid arrangements, and verify each candidate against every condition.",
+            "revision": "Revise arrangements through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "coding",
+          "study_materials": {
+            "objective": "Build mastery of coding in Logical Reasoning for National Aptitude Championship.",
+            "teaching_content": "Infer symbol, letter, number, reversal, and position-shift rules from multiple input-output examples; verify the rule on every supplied pair before applying it to a new item.",
+            "worked_examples": [
+              "If CAT becomes DBU by shifting each letter one position forward, DOG becomes EPH. Check C→D, A→B, T→U before applying the same transformation."
+            ],
+            "pitfall": "Do not infer a code from one letter pair or ignore position-specific transformations.",
+            "mastery_check": "Infer a transformation from multiple examples, apply it consistently, and verify the encoded or decoded result character by character.",
+            "revision": "Revise coding through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "relations",
+          "study_materials": {
+            "objective": "Build mastery of relations in Logical Reasoning for National Aptitude Championship.",
+            "teaching_content": "Model relationship questions as a graph of people or objects. Keep direction and generation explicit, then trace the shortest valid chain to the requested relationship.",
+            "worked_examples": [
+              "If A is B's sister, B is C's son, and C is D's daughter, A is D's granddaughter. Trace each link and verify generation and gender."
+            ],
+            "pitfall": "Do not reverse parent-child relationships or collapse a multi-step chain without checking every link.",
+            "mastery_check": "Traverse unfamiliar relationship chains accurately, preserve direction and generation, and justify the final relationship from each stated link.",
+            "revision": "Revise relations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "syllogisms",
+          "study_materials": {
+            "objective": "Build mastery of syllogisms in Logical Reasoning for National Aptitude Championship.",
+            "teaching_content": "Translate categorical statements into set relationships and derive only conclusions that necessarily follow. Distinguish containment from converse claims.",
+            "worked_examples": [
+              "All poets are readers; all readers are learners; therefore all poets are learners. The reverse conclusion is not justified."
+            ],
+            "pitfall": "Do not reverse an implication or treat an all-statement as automatically reversible.",
+            "mastery_check": "Represent premises as set relationships, identify necessary conclusions, and reject converse or overgeneralised claims.",
+            "revision": "Revise syllogisms through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Analytical Reasoning",
+      "subtopics": [
+        {
+          "title": "constraints",
+          "study_materials": {
+            "objective": "Build mastery of constraints in Analytical Reasoning for National Aptitude Championship.",
+            "teaching_content": "Convert every rule into an explicit restriction on values, positions, or pairings. Apply the strongest constraints first and propagate consequences.",
+            "worked_examples": [
+              "Four tasks occupy four slots; A must be before C and B cannot be first. Place the strongest restriction first, then test only assignments satisfying both."
+            ],
+            "pitfall": "Do not satisfy one constraint while silently violating another.",
+            "mastery_check": "Translate verbal rules into constraints, propagate consequences, and verify a candidate against every rule.",
+            "revision": "Revise constraints through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "case analysis",
+          "study_materials": {
+            "objective": "Build mastery of case analysis in Analytical Reasoning for National Aptitude Championship.",
+            "teaching_content": "Split problems into mutually exclusive cases when a condition creates different solution paths. Make cases exhaustive and recombine only after solving each branch.",
+            "worked_examples": [
+              "For an integer that is either even or odd, analyse both cases separately and confirm that every integer belongs to exactly one case."
+            ],
+            "pitfall": "Do not overlap cases or omit a possible case.",
+            "mastery_check": "Create exhaustive non-overlapping cases, solve each branch, and recombine only conclusions supported across all cases.",
+            "revision": "Revise case analysis through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "decision making",
+          "study_materials": {
+            "objective": "Build mastery of decision making in Analytical Reasoning for National Aptitude Championship.",
+            "teaching_content": "Separate mandatory requirements from preferences and rank only feasible alternatives. Use the stated criteria rather than intuition.",
+            "worked_examples": [
+              "If a candidate must meet a minimum score and qualification, eliminate failures first; compare experience only among candidates who qualify."
+            ],
+            "pitfall": "Do not rank an attractive option that violates a mandatory requirement.",
+            "mastery_check": "Distinguish constraints from preferences, eliminate infeasible choices, and justify the final decision from the stated criteria.",
+            "revision": "Revise decision making through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "scheduling",
+          "study_materials": {
+            "objective": "Build mastery of scheduling in Analytical Reasoning for National Aptitude Championship.",
+            "teaching_content": "Represent tasks on a timeline and encode duration, precedence, availability, and non-overlap rules. Place fixed or highly constrained tasks first.",
+            "worked_examples": [
+              "A two-hour task must precede a one-hour review and neither may overlap a fixed meeting. Place the fixed meeting, then fit the dependent pair into a remaining window."
+            ],
+            "pitfall": "Do not place a dependent task before its prerequisite or ignore task duration.",
+            "mastery_check": "Build valid timelines from all constraints, detect conflicts, and justify why the final schedule is feasible.",
+            "revision": "Revise scheduling through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "optimization",
+          "study_materials": {
+            "objective": "Build mastery of optimization in Analytical Reasoning for National Aptitude Championship.",
+            "teaching_content": "Define the quantity to maximise or minimise and list constraints. Derive an upper or lower bound before testing feasible candidates.",
+            "worked_examples": [
+              "To maximise items under a fixed budget, divide the budget by the cheapest allowed unit to get an upper bound, then test whether that bound is attainable."
+            ],
+            "pitfall": "Do not select the largest-looking candidate without proving that no better feasible value exists.",
+            "mastery_check": "Define objective and constraints, derive useful bounds, test feasible candidates efficiently, and justify optimality.",
+            "revision": "Revise optimization through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Probability & Counting",
+      "subtopics": [
+        {
+          "title": "basic probability",
+          "study_materials": {
+            "objective": "Build mastery of basic probability in Probability & Counting for National Aptitude Championship.",
+            "teaching_content": "Define the sample space and event before calculating. Use favourable-over-total only when outcomes are equally likely; otherwise use the appropriate weighted or conditional model.",
+            "worked_examples": [
+              "For a fair die, the probability of an even result is 3/6=1/2 because the equally likely outcomes are 1 through 6 and the event is 2,4,6."
+            ],
+            "pitfall": "Do not use favourable-over-total when outcomes are not equally likely or when the sample space is incomplete.",
+            "mastery_check": "Define a valid probability model, calculate the event probability, and explain why the model and result are valid.",
+            "revision": "Revise basic probability through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "counting",
+          "study_materials": {
+            "objective": "Build mastery of counting in Probability & Counting for National Aptitude Championship.",
+            "teaching_content": "Use addition for disjoint alternatives and multiplication for sequential choices. Decide whether cases overlap and whether order matters before counting.",
+            "worked_examples": [
+              "A code with 2 choices for its first character and 3 independent choices for its second has 2×3=6 possibilities; restrictions may require subtracting invalid cases."
+            ],
+            "pitfall": "Do not multiply dependent choices or double-count overlapping cases.",
+            "mastery_check": "Choose the correct counting principle, handle restrictions, and verify that every valid case is counted exactly once.",
+            "revision": "Revise counting through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "arrangements",
+          "study_materials": {
+            "objective": "Build mastery of arrangements in Probability & Counting for National Aptitude Championship.",
+            "teaching_content": "In probability and counting, first decide whether an arrangement treats order as meaningful. Use permutations for ordered assignments and combinations for unordered selections, then incorporate restrictions.",
+            "worked_examples": [
+              "Choosing 2 students from 5 gives 10 unordered selections. Assigning captain and vice-captain instead gives 5×4=20 ordered assignments because the roles differ."
+            ],
+            "pitfall": "Do not confuse an unordered selection with a role-based arrangement, or ignore exclusions after choosing the counting formula.",
+            "mastery_check": "Identify whether order matters, select the appropriate counting model, incorporate restrictions, and justify the result without double-counting.",
+            "revision": "Revise arrangements through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "selection",
+          "study_materials": {
+            "objective": "Build mastery of selection in Probability & Counting for National Aptitude Championship.",
+            "teaching_content": "Use combinations for unordered selection and permutations when roles or order matter. Handle exclusions and required members explicitly.",
+            "worked_examples": [
+              "Choosing 2 students from 5 gives C(5,2)=10. If captain and vice-captain roles are assigned, order matters and there are 5×4=20 assignments."
+            ],
+            "pitfall": "Do not use permutations for an unordered group or combinations when distinct roles make order meaningful.",
+            "mastery_check": "Identify whether order matters, incorporate restrictions, and justify the counting method.",
+            "revision": "Revise selection through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "expected outcomes",
+          "study_materials": {
+            "objective": "Build mastery of expected outcomes in Probability & Counting for National Aptitude Championship.",
+            "teaching_content": "Compute expected value as a probability-weighted average and check that all outcome probabilities form a complete distribution. Distinguish expectation from the most likely outcome.",
+            "worked_examples": [
+              "A game paying ₹10 with probability 0.3 and ₹0 otherwise has expected payout 0.3×10=₹3; ₹3 is an average over repeated trials, not a guaranteed payout."
+            ],
+            "pitfall": "Do not interpret expected value as the most likely single result or forget probability weights.",
+            "mastery_check": "Compute weighted outcomes accurately, verify probabilities sum to one, and distinguish expected value from individual outcomes.",
+            "revision": "Revise expected outcomes through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Data Sufficiency",
+      "subtopics": [
+        {
+          "title": "information adequacy",
+          "study_materials": {
+            "objective": "Build mastery of information adequacy in Data Sufficiency for National Aptitude Championship.",
+            "teaching_content": "Ask whether the information determines a unique answer, not merely whether it provides some information. Test each statement alone and then together.",
+            "worked_examples": [
+              "If x+3=8, x is uniquely 5. A statement such as x>0 is insufficient because many positive values remain possible."
+            ],
+            "pitfall": "Do not choose a statement simply because it looks informative; test uniqueness explicitly.",
+            "mastery_check": "Test statements independently and together, use counterexamples for insufficiency, and stop when the target is uniquely determined.",
+            "revision": "Revise information adequacy through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "statement analysis",
+          "study_materials": {
+            "objective": "Build mastery of statement analysis in Data Sufficiency for National Aptitude Championship.",
+            "teaching_content": "Translate every statement into precise constraints, preserving words such as exactly, at least, at most, only, and unless. Do not import unstated assumptions.",
+            "worked_examples": [
+              "If exactly three candidates passed, the statement alone does not identify which three; additional constraints are required."
+            ],
+            "pitfall": "Do not weaken exact wording or replace logical conditions with everyday assumptions.",
+            "mastery_check": "Translate statements precisely and derive only conclusions directly supported by the stated conditions.",
+            "revision": "Revise statement analysis through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "condition testing",
+          "study_materials": {
+            "objective": "Build mastery of condition testing in Data Sufficiency for National Aptitude Championship.",
+            "teaching_content": "Determine whether a condition is necessary, sufficient, both, or neither for the target. Use examples and counterexamples to test logical strength.",
+            "worked_examples": [
+              "Divisibility by 4 is sufficient for being even, but not necessary because 6 is even and not divisible by 4."
+            ],
+            "pitfall": "Do not confuse an implication with its converse or treat a sufficient condition as necessary.",
+            "mastery_check": "Classify conditions correctly and justify the classification with valid examples or counterexamples.",
+            "revision": "Revise condition testing through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "elimination",
+          "study_materials": {
+            "objective": "Build mastery of elimination in Data Sufficiency for National Aptitude Championship.",
+            "teaching_content": "Reject answer choices using decisive contradictions with the stated rules or calculations. Eliminate before doing unnecessary full calculations.",
+            "worked_examples": [
+              "If an option assigns a negative age, it is immediately impossible under ordinary age constraints and can be discarded."
+            ],
+            "pitfall": "Do not eliminate an option merely because it looks unlikely; identify the exact condition it violates.",
+            "mastery_check": "Use decisive contradictions efficiently and document why each rejected option cannot satisfy the problem.",
+            "revision": "Revise elimination through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "multi-step sufficiency",
+          "study_materials": {
+            "objective": "Build mastery of multi-step sufficiency in Data Sufficiency for National Aptitude Championship.",
+            "teaching_content": "Combine constraints sequentially while preserving exactly what each statement establishes. Test whether the target becomes unique and stop once sufficiency is reached.",
+            "worked_examples": [
+              "If a+b=10 and a−b=2, the two statements together give a=6 and b=4; either statement alone is insufficient."
+            ],
+            "pitfall": "Do not stop after one statement or assume that two statements necessarily produce a unique solution.",
+            "mastery_check": "Combine information systematically, test uniqueness, and identify the earliest point at which the target is determined.",
+            "revision": "Revise multi-step sufficiency through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Aptitude Strategy",
+      "subtopics": [
+        {
+          "title": "speed calculation",
+          "study_materials": {
+            "objective": "Build mastery of speed calculation in Aptitude Strategy for National Aptitude Championship.",
+            "teaching_content": "Develop reliable mental methods for fractions, percentages, squares, products, and unit conversions. Simplify exact expressions before using decimals.",
+            "worked_examples": [
+              "25% of 360 is one quarter of 360, so 90. The fraction form is faster and less error-prone than a decimal calculation."
+            ],
+            "pitfall": "Do not use lengthy decimal arithmetic when an exact simplification is obvious.",
+            "mastery_check": "Perform common calculations accurately, choose efficient transformations, and use inverse checks or estimates to catch slips.",
+            "revision": "Revise speed calculation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "estimation",
+          "study_materials": {
+            "objective": "Build mastery of estimation in Aptitude Strategy for National Aptitude Championship.",
+            "teaching_content": "Round strategically to create a useful bound or close estimate while preserving the decision boundary. Use estimation as an error detector when exact precision is required.",
+            "worked_examples": [
+              "49.8×20.1 is close to 50×20=1000, so an exact result far from 1000 signals a likely error."
+            ],
+            "pitfall": "Do not round so aggressively that nearby answer choices become indistinguishable.",
+            "mastery_check": "Choose meaningful approximations, preserve the relevant decision boundary, and use estimates to validate exact work.",
+            "revision": "Revise estimation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "shortcut validation",
+          "study_materials": {
+            "objective": "Build mastery of shortcut validation in Aptitude Strategy for National Aptitude Championship.",
+            "teaching_content": "Treat a shortcut as a claim that needs justification. Derive the algebraic reason, test ordinary cases and edge cases, and state when the shortcut applies.",
+            "worked_examples": [
+              "99×37=(100−1)×37=3700−37=3663. The shortcut works because 99=100−1."
+            ],
+            "pitfall": "Do not memorise a pattern without knowing its conditions or extend it beyond the algebra that proves it.",
+            "mastery_check": "Derive shortcuts, validate them against representative and edge cases, and state their conditions of validity.",
+            "revision": "Revise shortcut validation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "time allocation",
+          "study_materials": {
+            "objective": "Build mastery of time allocation in Aptitude Strategy for National Aptitude Championship.",
+            "teaching_content": "Allocate test time according to expected score, confidence, and solution cost. Use a first pass for high-confidence items and protect time for review.",
+            "worked_examples": [
+              "In a 30-minute section, answer short high-confidence questions first, flag a long puzzle, then reserve the final minutes for checking."
+            ],
+            "pitfall": "Do not let one difficult problem consume time needed for several easier questions.",
+            "mastery_check": "Sequence questions strategically, flag expensive items, and preserve a verification window.",
+            "revision": "Revise time allocation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "accuracy review",
+          "study_materials": {
+            "objective": "Build mastery of accuracy review in Aptitude Strategy for National Aptitude Championship.",
+            "teaching_content": "Use a targeted final check for signs, units, copied values, operation order, interpretation, and plausibility. Prioritise errors that can change the answer.",
+            "worked_examples": [
+              "Before submission, check whether a numerical answer has correct units, sign, scale, and consistency with the original condition."
+            ],
+            "pitfall": "Do not reread passively; use a repeatable checklist that targets common failure modes.",
+            "mastery_check": "Apply a systematic review checklist, correct high-impact errors, and avoid introducing new errors during the final check.",
+            "revision": "Revise accuracy review through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "NATIONAL-A-MOCK-01",
+      "focus": "core curriculum and topic-wise preparation"
+    },
+    {
+      "id": "NATIONAL-A-MOCK-02",
+      "focus": "advanced mixed-domain preparation"
+    },
+    {
+      "id": "NATIONAL-A-MOCK-03",
+      "focus": "full championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "National Aptitude Championship official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
