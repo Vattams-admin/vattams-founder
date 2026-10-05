@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
@@ -28,6 +29,7 @@ import type { TutorOnboardingDocumentType } from '@/types/tutorOnboarding'
 // source of truth for tutor applications; the admin panel
 // (/admin/tutors) reads directly from this same collection.
 export default function TutorRegister() {
+  useSeo({ title: 'Tutor Registration', description: 'Apply to teach at VATTAMS ACADEMIA', noindex: true })
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
