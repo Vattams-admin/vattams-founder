@@ -19,9 +19,7 @@ const STATIC_ROUTES = [
   { path: '/about', changefreq: 'monthly', priority: '0.6' },
   { path: '/founder', changefreq: 'monthly', priority: '0.5' },
   { path: '/contact', changefreq: 'monthly', priority: '0.5' },
-  { path: '/privacy-policy', changefreq: 'yearly', priority: '0.2' },
-  { path: '/terms', changefreq: 'yearly', priority: '0.2' },
-  { path: '/refund-policy', changefreq: 'yearly', priority: '0.2' },
+  { path: '/udyam-registration', changefreq: 'yearly', priority: '0.4' },
 ]
 
 function loadDotEnvLocal() {
