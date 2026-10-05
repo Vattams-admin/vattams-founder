@@ -334,6 +334,46 @@
           "mastery": "Mastery: perform or solve an unfamiliar mastery games task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria."
         }
       ]
+    },
+    {
+      "name": "Maths Competition Mastery",
+      "subtopics": [
+        {
+          "title": "strategy selection",
+          "teaching": "Choose a representation or method by inspecting what the puzzle asks, what information is given, and which relationships are easiest to expose.",
+          "worked_example": "For a number puzzle with repeated clues, organize the known values in a table before calculating so hidden relationships become visible.",
+          "pitfall": "Pitfall: calculating immediately without first identifying the structure of the puzzle.",
+          "mastery": "Explain why a chosen method makes the challenge simpler and apply it correctly."
+        },
+        {
+          "title": "multi-step reasoning",
+          "teaching": "Break playful mathematics challenges into short linked steps and keep intermediate results visible so each deduction can be checked.",
+          "worked_example": "A three-stage sharing puzzle can be solved by finding the total first, applying the first share, then checking the remaining amount before the final share.",
+          "pitfall": "Pitfall: carrying an unchecked intermediate result into later steps.",
+          "mastery": "Solve a multi-step challenge while showing and verifying each important deduction."
+        },
+        {
+          "title": "error spotting",
+          "teaching": "Compare a proposed solution with the original conditions, test simple cases, and locate the first step where the reasoning stops matching the puzzle.",
+          "worked_example": "If a pattern solution predicts the next term but fails when the same rule is tested on an earlier term, revisit the assumed rule.",
+          "pitfall": "Pitfall: changing the final answer without identifying which assumption caused the error.",
+          "mastery": "Find and explain the first incorrect step in a worked mathematics puzzle."
+        },
+        {
+          "title": "mixed maths challenges",
+          "teaching": "Combine arithmetic, patterns, geometry, measurement, data, and logical reasoning in unfamiliar contexts rather than treating each skill as isolated.",
+          "worked_example": "A treasure-map challenge may combine coordinates, distance comparisons, shape clues, and a final arithmetic code.",
+          "pitfall": "Pitfall: using a familiar operation just because it appears in the story instead of matching the operation to the evidence.",
+          "mastery": "Select and combine multiple mathematical ideas to solve an unfamiliar challenge."
+        },
+        {
+          "title": "championship puzzle round",
+          "teaching": "Practice timed mixed challenges with deliberate question selection, clean working, estimation checks, and final-answer verification.",
+          "worked_example": "In a timed round, secure direct points first, mark a harder puzzle, then return with the remaining time and verify every selected answer.",
+          "pitfall": "Pitfall: spending too long on one puzzle and losing easy marks elsewhere.",
+          "mastery": "Complete a mixed challenge accurately under time pressure and justify the final answers."
+        }
+      ]
     }
   ]
 }
