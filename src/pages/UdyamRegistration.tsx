@@ -1,6 +1,8 @@
+import { useSeo } from '@/hooks/useSeo'
 import LegalPage from '@/components/LegalPage'
 
 export default function UdyamRegistration() {
+  useSeo({ title: 'Udyam Registration — VATTAMS ACADEMIA', description: 'View VATTAMS ACADEMIA business registration information and the published Udyam Registration Certificate.', path: '/udyam-registration' })
   return (
     <LegalPage
       title="Udyam Registration"
