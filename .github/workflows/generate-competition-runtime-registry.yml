@@ -7,6 +7,7 @@ on:
     paths:
       - "scripts/catalog-data.mjs"
       - "scripts/generate-competition-runtime-registry.mjs"
+      - "scripts/validate-competition-runtime-coverage.mjs"
       - "data/competitions/**/full-bank/objective/**"
       - ".github/workflows/generate-competition-runtime-registry.yml"
 
