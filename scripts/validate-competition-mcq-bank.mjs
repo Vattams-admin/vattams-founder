@@ -90,3 +90,4 @@ console.log(`RESULT: PASS — ${slug}: ${publicBank.length} reviewed mock MCQs, 
 // Trigger published CI failure report.\n
 // Validate after deterministic runtime source preparation.\n
 // Trigger isolated runtime preparation diagnostics.\n
+// Trigger independent 24-competition matrix gate.\n
