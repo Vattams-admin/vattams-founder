@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "English Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/english-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Reading Comprehension",
+      "subtopics": [
+        {
+          "title": "main idea and supporting evidence",
+          "study_materials": {
+            "objective": "Build mastery of main idea and supporting evidence in Reading Comprehension.",
+            "teaching_content": "The main idea is the central point of a passage; supporting evidence includes details, examples, reasons or facts that develop that point.",
+            "worked_examples": [
+              "If a passage explains how regular reading improves vocabulary and then gives several examples, the vocabulary benefit is the main idea and the examples are supporting evidence."
+            ],
+            "pitfall": "A vivid detail is not automatically the main idea.",
+            "mastery_check": "State the central idea and select details that directly support it.",
+            "revision": "Revise main idea and supporting evidence through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "inference from explicit clues",
+          "study_materials": {
+            "objective": "Build mastery of inference from explicit clues in Reading Comprehension.",
+            "teaching_content": "An inference is a reasonable conclusion supported by clues in the text rather than a sentence copied directly from it.",
+            "worked_examples": [
+              "If a character carries an umbrella, wears a raincoat and avoids puddles, rain is a reasonable inference even if the passage never says 'it is raining.'"
+            ],
+            "pitfall": "An inference must be supported by textual evidence, not personal imagination.",
+            "mastery_check": "Make inferences by combining explicit clues and rejecting unsupported assumptions.",
+            "revision": "Revise inference from explicit clues through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sequence cause and effect",
+          "study_materials": {
+            "objective": "Build mastery of sequence cause and effect in Reading Comprehension.",
+            "teaching_content": "Sequence identifies the order of events; cause explains why something happens and effect describes what follows.",
+            "worked_examples": [
+              "A storm causes a power cut, which then causes a computer to shut down: the storm is an earlier cause and the shutdown is a later effect."
+            ],
+            "pitfall": "The first event in a passage is not necessarily the cause of every later event.",
+            "mastery_check": "Trace chronological order and distinguish causes from consequences.",
+            "revision": "Revise sequence cause and effect through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "author purpose and tone",
+          "study_materials": {
+            "objective": "Build mastery of author purpose and tone in Reading Comprehension.",
+            "teaching_content": "Author purpose describes why a text was written, such as to inform, explain, persuade or entertain. Tone describes the writer's attitude.",
+            "worked_examples": [
+              "A notice giving exam timings mainly informs, while an advertisement encouraging readers to buy a product aims to persuade."
+            ],
+            "pitfall": "Purpose and tone are related but not identical.",
+            "mastery_check": "Identify purpose from content and tone from word choice and attitude.",
+            "revision": "Revise author purpose and tone through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "fact opinion and interpretation",
+          "study_materials": {
+            "objective": "Build mastery of fact opinion and interpretation in Reading Comprehension.",
+            "teaching_content": "A fact can be checked against evidence; an opinion expresses a judgment or belief; an interpretation explains meaning from available evidence.",
+            "worked_examples": [
+              "'The library opens at 9 a.m.' is checkable, while 'The library is the best place in town' is an opinion."
+            ],
+            "pitfall": "An opinion can sound confident without becoming a fact.",
+            "mastery_check": "Classify statements and justify the classification from the wording and evidence.",
+            "revision": "Revise fact opinion and interpretation through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vocabulary",
+      "subtopics": [
+        {
+          "title": "context clues",
+          "study_materials": {
+            "objective": "Build mastery of context clues in Vocabulary.",
+            "teaching_content": "Context clues are nearby words or sentences that help determine an unfamiliar word's meaning.",
+            "worked_examples": [
+              "In 'The glass was fragile, so it broke when dropped,' the consequence supplies a clue that fragile means easily broken."
+            ],
+            "pitfall": "Choosing the most familiar dictionary meaning can be wrong when context points to another sense.",
+            "mastery_check": "Infer word meaning using surrounding evidence before selecting an option.",
+            "revision": "Revise context clues through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "synonyms and antonyms",
+          "study_materials": {
+            "objective": "Build mastery of synonyms and antonyms in Vocabulary.",
+            "teaching_content": "Synonyms have similar meanings and antonyms have contrasting meanings, but the relationship depends on context and part of speech.",
+            "worked_examples": [
+              "'Rapid' and 'swift' are close synonyms when describing movement; 'rapid' and 'slow' are contrasts."
+            ],
+            "pitfall": "Words that look related are not necessarily interchangeable in every sentence.",
+            "mastery_check": "Select a synonym or antonym that fits both meaning and grammatical use.",
+            "revision": "Revise synonyms and antonyms through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "word families",
+          "study_materials": {
+            "objective": "Build mastery of word families in Vocabulary.",
+            "teaching_content": "A word family contains related forms built around a common base, often changing part of speech or grammatical function.",
+            "worked_examples": [
+              "Decide, decision and decisive share a base idea but serve different grammatical roles."
+            ],
+            "pitfall": "Related words can differ in meaning enough that replacing one with another changes the sentence.",
+            "mastery_check": "Use word-family relationships to infer meaning and choose the correct form.",
+            "revision": "Revise word families through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "roots prefixes and suffixes",
+          "study_materials": {
+            "objective": "Build mastery of roots prefixes and suffixes in Vocabulary.",
+            "teaching_content": "Roots carry core meaning while prefixes and suffixes modify meaning or grammatical role.",
+            "worked_examples": [
+              "'Un-' can reverse meaning in words such as unhappy; '-less' can indicate absence, as in careless."
+            ],
+            "pitfall": "A prefix or suffix does not always give a complete definition without context.",
+            "mastery_check": "Break unfamiliar words into meaningful parts and test the resulting meaning against context.",
+            "revision": "Revise roots prefixes and suffixes through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "precision in word choice",
+          "study_materials": {
+            "objective": "Build mastery of precision in word choice in Vocabulary.",
+            "teaching_content": "Precise word choice selects the word that conveys the intended meaning, strength and tone most accurately.",
+            "worked_examples": [
+              "'Stroll' suggests a relaxed walk, while 'march' suggests purposeful movement; both relate to walking but are not interchangeable."
+            ],
+            "pitfall": "Using a broad synonym can remove an important distinction.",
+            "mastery_check": "Choose vocabulary based on meaning, context, intensity and tone.",
+            "revision": "Revise precision in word choice through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Grammar",
+      "subtopics": [
+        {
+          "title": "parts of speech",
+          "study_materials": {
+            "objective": "Build mastery of parts of speech in Grammar.",
+            "teaching_content": "Parts of speech describe grammatical roles such as noun, verb, adjective, adverb, pronoun, preposition and conjunction.",
+            "worked_examples": [
+              "In 'The bright bird flew quickly,' bird is a noun, bright an adjective, flew a verb and quickly an adverb."
+            ],
+            "pitfall": "A word's part of speech can depend on how it functions in a sentence.",
+            "mastery_check": "Identify words by their function in the sentence, not by memorized appearance alone.",
+            "revision": "Revise parts of speech through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sentence structure",
+          "study_materials": {
+            "objective": "Build mastery of sentence structure in Grammar.",
+            "teaching_content": "A complete sentence normally expresses a complete thought and contains an appropriate subject and predicate; clauses can be independent or dependent.",
+            "worked_examples": [
+              "'Because the rain stopped' is dependent and incomplete by itself, while 'The match resumed' is an independent clause."
+            ],
+            "pitfall": "Adding a capital letter and full stop does not turn a fragment into a complete sentence.",
+            "mastery_check": "Identify sentence boundaries and distinguish complete clauses from fragments.",
+            "revision": "Revise sentence structure through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "subject verb agreement",
+          "study_materials": {
+            "objective": "Build mastery of subject verb agreement in Grammar.",
+            "teaching_content": "The finite verb must agree with its subject in number and person.",
+            "worked_examples": [
+              "'The list of names is on the desk' uses is because list, not names, is the subject."
+            ],
+            "pitfall": "A nearby plural noun can distract from the true singular subject.",
+            "mastery_check": "Locate the grammatical subject before choosing the verb form.",
+            "revision": "Revise subject verb agreement through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "verb tenses",
+          "study_materials": {
+            "objective": "Build mastery of verb tenses in Grammar.",
+            "teaching_content": "Verb tense locates an action in time and can show relationships between events.",
+            "worked_examples": [
+              "'She finished the work before the teacher arrived' uses past forms to show two completed events, with before establishing their order."
+            ],
+            "pitfall": "Changing tense without a reason can make time relationships unclear.",
+            "mastery_check": "Choose tense from the intended time reference and relationship between actions.",
+            "revision": "Revise verb tenses through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "pronouns and modifiers",
+          "study_materials": {
+            "objective": "Build mastery of pronouns and modifiers in Grammar.",
+            "teaching_content": "Pronouns replace nouns; modifiers describe or limit words. Both should have clear references and logical placement.",
+            "worked_examples": [
+              "In 'After reading the book, Maya wrote a review,' Maya is the person who read the book, so the modifier is logically attached."
+            ],
+            "pitfall": "A misplaced modifier can accidentally suggest that the wrong subject performed an action.",
+            "mastery_check": "Use clear pronoun references and place modifiers next to the words they logically describe.",
+            "revision": "Revise pronouns and modifiers through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Usage & Editing",
+      "subtopics": [
+        {
+          "title": "punctuation",
+          "study_materials": {
+            "objective": "Build mastery of punctuation in Usage & Editing.",
+            "teaching_content": "Punctuation marks clarify sentence boundaries, pauses, relationships and meaning.",
+            "worked_examples": [
+              "'Let's eat, Grandma' uses a comma to address Grandma; removing it changes the reading."
+            ],
+            "pitfall": "Do not insert commas merely wherever speech pauses.",
+            "mastery_check": "Choose punctuation from grammatical structure and intended meaning.",
+            "revision": "Revise punctuation through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "capitalization",
+          "study_materials": {
+            "objective": "Build mastery of capitalization in Usage & Editing.",
+            "teaching_content": "Capital letters begin sentences and proper nouns and appear in established uses such as titles and the pronoun I.",
+            "worked_examples": [
+              "'Monday' is capitalized because it names a day, while 'month' is normally lowercase generically."
+            ],
+            "pitfall": "Capitalizing a common noun does not make it a proper noun.",
+            "mastery_check": "Apply capitalization rules consistently.",
+            "revision": "Revise capitalization through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "common usage errors",
+          "study_materials": {
+            "objective": "Build mastery of common usage errors in Usage & Editing.",
+            "teaching_content": "Common errors include agreement, homophones, tense consistency and faulty pronoun reference.",
+            "worked_examples": [
+              "'Their going to school' should be 'They're going to school'; their is possessive."
+            ],
+            "pitfall": "A word can sound right while being grammatically wrong.",
+            "mastery_check": "Identify the error and explain the context-appropriate correction.",
+            "revision": "Revise common usage errors through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sentence correction",
+          "study_materials": {
+            "objective": "Build mastery of sentence correction in Usage & Editing.",
+            "teaching_content": "Sentence correction checks grammar, meaning, agreement, tense, word choice and completeness.",
+            "worked_examples": [
+              "'Neither the teacher nor the students were ready' uses agreement with the nearer plural subject."
+            ],
+            "pitfall": "A correction that changes intended meaning is not successful.",
+            "mastery_check": "Make the smallest accurate correction while preserving meaning.",
+            "revision": "Revise sentence correction through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "passage editing",
+          "study_materials": {
+            "objective": "Build mastery of passage editing in Usage & Editing.",
+            "teaching_content": "Passage editing checks connected text for consistency, punctuation, spelling, grammar and clarity.",
+            "worked_examples": [
+              "A passage can have individually correct sentences but inconsistent tense across sentences."
+            ],
+            "pitfall": "Editing is not rewriting every sentence.",
+            "mastery_check": "Edit systematically while preserving the intended message and voice.",
+            "revision": "Revise passage editing through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Writing Skills",
+      "subtopics": [
+        {
+          "title": "sentence construction",
+          "study_materials": {
+            "objective": "Build mastery of sentence construction in Writing Skills.",
+            "teaching_content": "Strong sentences have a clear subject, purposeful verb and relevant information.",
+            "worked_examples": [
+              "'The team practised after school because the final was near' combines a main clause and reason clause."
+            ],
+            "pitfall": "Longer sentences are not automatically better.",
+            "mastery_check": "Construct complete sentences and vary structure when useful.",
+            "revision": "Revise sentence construction through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "paragraph organization",
+          "study_materials": {
+            "objective": "Build mastery of paragraph organization in Writing Skills.",
+            "teaching_content": "A coherent paragraph develops one controlling idea through a topic sentence, relevant support and an appropriate close or transition.",
+            "worked_examples": [
+              "A paragraph about healthy sleep can state importance, give two benefits and connect them to daily habits."
+            ],
+            "pitfall": "Unrelated facts do not form a coherent paragraph.",
+            "mastery_check": "Arrange ideas logically and keep details connected to the main point.",
+            "revision": "Revise paragraph organization through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "descriptive writing",
+          "study_materials": {
+            "objective": "Build mastery of descriptive writing in Writing Skills.",
+            "teaching_content": "Descriptive writing uses precise sensory details and carefully selected vocabulary to create a focused impression.",
+            "worked_examples": [
+              "Instead of 'The market was nice,' mention bright signs, spice smells and vendors' voices."
+            ],
+            "pitfall": "Many adjectives without relevant detail can remain vague.",
+            "mastery_check": "Use specific sensory evidence and precise nouns and verbs.",
+            "revision": "Revise descriptive writing through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "narrative writing",
+          "study_materials": {
+            "objective": "Build mastery of narrative writing in Writing Skills.",
+            "teaching_content": "Narrative writing presents connected events and may include characters, setting, conflict, actions and resolution.",
+            "worked_examples": [
+              "A story can establish a lost notebook, show the search and resolve the problem when it is found."
+            ],
+            "pitfall": "A sequence without connection or purpose feels like a list.",
+            "mastery_check": "Build coherent sequence with cause-and-effect and resolution.",
+            "revision": "Revise narrative writing through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "persuasive expression",
+          "study_materials": {
+            "objective": "Build mastery of persuasive expression in Writing Skills.",
+            "teaching_content": "Persuasive writing states a position and supports it with reasons and evidence while considering the audience.",
+            "worked_examples": [
+              "A recycling proposal can state the claim, give evidence, address convenience and propose action."
+            ],
+            "pitfall": "Persuasion is not repeated opinion or exaggerated language.",
+            "mastery_check": "State a clear claim and support it with relevant evidence and tone.",
+            "revision": "Revise persuasive expression through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Literary Understanding",
+      "subtopics": [
+        {
+          "title": "character and setting",
+          "study_materials": {
+            "objective": "Build mastery of character and setting in Literary Understanding.",
+            "teaching_content": "Character refers to people or beings in a story; setting establishes when and where events occur and can influence behaviour.",
+            "worked_examples": [
+              "A character crossing a flooded village faces different choices from one in a safe city, showing setting's effect."
+            ],
+            "pitfall": "Setting includes time, atmosphere and social conditions, not only location.",
+            "mastery_check": "Use textual details to explain character and setting relationships.",
+            "revision": "Revise character and setting through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "plot conflict and resolution",
+          "study_materials": {
+            "objective": "Build mastery of plot conflict and resolution in Literary Understanding.",
+            "teaching_content": "Plot is a sequence of connected events; conflict creates tension and resolution addresses the central problem.",
+            "worked_examples": [
+              "Two friends disagree, face consequences and reconcile: interpersonal conflict drives later events."
+            ],
+            "pitfall": "The most dramatic event is not always the resolution.",
+            "mastery_check": "Trace the problem, turning points and outcome with evidence.",
+            "revision": "Revise plot conflict and resolution through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "theme and message",
+          "study_materials": {
+            "objective": "Build mastery of theme and message in Literary Understanding.",
+            "teaching_content": "Theme is a broader idea about life or experience developed by a text; a message communicates what the text suggests about it.",
+            "worked_examples": [
+              "Repeated choices showing honesty despite difficulty may support a theme about integrity."
+            ],
+            "pitfall": "Theme should not be reduced to one plot detail.",
+            "mastery_check": "Infer theme from repeated patterns, choices, consequences and ending.",
+            "revision": "Revise theme and message through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "figurative language",
+          "study_materials": {
+            "objective": "Build mastery of figurative language in Literary Understanding.",
+            "teaching_content": "Figurative language communicates beyond literal meaning through devices such as simile, metaphor, personification and hyperbole.",
+            "worked_examples": [
+              "'The classroom was a zoo' is metaphor for disorder or noise, not literal animals."
+            ],
+            "pitfall": "Literal interpretation can obscure intended effect.",
+            "mastery_check": "Identify the device and explain its contextual effect.",
+            "revision": "Revise figurative language through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "poetry interpretation",
+          "study_materials": {
+            "objective": "Build mastery of poetry interpretation in Literary Understanding.",
+            "teaching_content": "Poetry communicates through imagery, sound, rhythm, word choice, repetition, structure and figurative language.",
+            "worked_examples": [
+              "Repeated darkness followed by morning may support an interpretation of difficulty followed by hope."
+            ],
+            "pitfall": "Interpretation must be grounded in the poem rather than personal association alone.",
+            "mastery_check": "Support interpretations with specific textual patterns.",
+            "revision": "Revise poetry interpretation through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Communication",
+      "subtopics": [
+        {
+          "title": "functional texts",
+          "study_materials": {
+            "objective": "Build mastery of functional texts in Communication.",
+            "teaching_content": "Functional texts serve practical purposes, including forms, schedules, emails, advertisements, menus and notices.",
+            "worked_examples": [
+              "A timetable organizes times and locations so a reader can act quickly."
+            ],
+            "pitfall": "Reading a functional text like a story can hide key constraints.",
+            "mastery_check": "Extract purpose, key information, constraints and required action.",
+            "revision": "Revise functional texts through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "instructions and notices",
+          "study_materials": {
+            "objective": "Build mastery of instructions and notices in Communication.",
+            "teaching_content": "Instructions specify procedures; notices communicate information, rules, changes or warnings.",
+            "worked_examples": [
+              "A laboratory notice may state a safety rule while instructions provide the procedure steps."
+            ],
+            "pitfall": "A notice does not necessarily contain every task step.",
+            "mastery_check": "Identify sequence, conditions, prohibitions and actions.",
+            "revision": "Revise instructions and notices through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "formal and informal language",
+          "study_materials": {
+            "objective": "Build mastery of formal and informal language in Communication.",
+            "teaching_content": "Formal language suits official, academic or professional contexts; informal language suits familiar conversation.",
+            "worked_examples": [
+              "A request to a principal normally uses respectful formal register, unlike a message to a close friend."
+            ],
+            "pitfall": "Formal does not mean unnecessarily complicated.",
+            "mastery_check": "Match register to audience, purpose and situation.",
+            "revision": "Revise formal and informal language through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "dialogue comprehension",
+          "study_materials": {
+            "objective": "Build mastery of dialogue comprehension in Communication.",
+            "teaching_content": "Dialogue reveals information through words, responses and implied intentions.",
+            "worked_examples": [
+              "Repeatedly avoiding a direct question can imply discomfort even without stating it."
+            ],
+            "pitfall": "Literal words may not reveal full conversational intention.",
+            "mastery_check": "Track speakers, explicit information, implied meaning and attitude.",
+            "revision": "Revise dialogue comprehension through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "information synthesis",
+          "study_materials": {
+            "objective": "Build mastery of information synthesis in Communication.",
+            "teaching_content": "Synthesis combines relevant points from different parts or sources to form a supported conclusion.",
+            "worked_examples": [
+              "A timetable gives event times and a notice gives eligibility; together they determine which event a student can attend."
+            ],
+            "pitfall": "Listing facts without explaining their relationship is not synthesis.",
+            "mastery_check": "Combine complementary evidence and state the supported conclusion.",
+            "revision": "Revise information synthesis through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Verbal Reasoning",
+      "subtopics": [
+        {
+          "title": "analogy",
+          "study_materials": {
+            "objective": "Build mastery of analogy in Verbal Reasoning.",
+            "teaching_content": "An analogy compares relationships between pairs or groups of words; the relationship matters more than topic.",
+            "worked_examples": [
+              "'Bird : nest :: bee : hive' is animal to typical home."
+            ],
+            "pitfall": "Broad association is not the same as an equivalent relationship.",
+            "mastery_check": "Identify the precise first relationship before testing options.",
+            "revision": "Revise analogy through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "classification",
+          "study_materials": {
+            "objective": "Build mastery of classification in Verbal Reasoning.",
+            "teaching_content": "Classification groups items by a defining property or identifies an item that does not belong.",
+            "worked_examples": [
+              "Apple, mango and banana can be fruits while carrot differs under that rule."
+            ],
+            "pitfall": "An item may fit multiple categories, so infer the intended rule from the set.",
+            "mastery_check": "State the rule and test every option against it.",
+            "revision": "Revise classification through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sentence completion",
+          "study_materials": {
+            "objective": "Build mastery of sentence completion in Verbal Reasoning.",
+            "teaching_content": "Sentence completion depends on grammar, meaning, logical relationships and context.",
+            "worked_examples": [
+              "'The road was flooded, so the match was ___' supports 'cancelled' or 'postponed' depending on options."
+            ],
+            "pitfall": "Grammatical fit alone is insufficient if meaning conflicts.",
+            "mastery_check": "Use grammar and contextual logic together.",
+            "revision": "Revise sentence completion through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "word relationships",
+          "study_materials": {
+            "objective": "Build mastery of word relationships in Verbal Reasoning.",
+            "teaching_content": "Word relationships include part-whole, category-member, function, degree, cause-effect and opposites.",
+            "worked_examples": [
+              "'Page : book' is part-to-whole; 'teacher : school' can be person-to-workplace."
+            ],
+            "pitfall": "Common association does not guarantee the same relationship.",
+            "mastery_check": "Name the relationship and preserve its direction.",
+            "revision": "Revise word relationships through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "verbal puzzles",
+          "study_materials": {
+            "objective": "Build mastery of verbal puzzles in Verbal Reasoning.",
+            "teaching_content": "Verbal puzzles combine vocabulary, ordering, clues and logical constraints.",
+            "worked_examples": [
+              "If A is before B and B before C, A-B-C follows even without a direct A-C clue."
+            ],
+            "pitfall": "Guessing before applying constraints causes errors.",
+            "mastery_check": "Extract every constraint and eliminate arrangements that violate any clue.",
+            "revision": "Revise verbal puzzles through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "English Competition Mastery",
+      "subtopics": [
+        {
+          "title": "language challenge strategy",
+          "study_materials": {
+            "objective": "Build mastery of language challenge strategy in English Competition Mastery.",
+            "teaching_content": "Identify whether an English challenge tests comprehension, vocabulary, grammar, editing, literature, communication, or reasoning before selecting a method.",
+            "worked_examples": [
+              "For a sentence-correction question, first identify whether the issue concerns agreement, tense, word choice, punctuation, or structure."
+            ],
+            "pitfall": "Pitfall: changing a sentence because it sounds unfamiliar without identifying a specific language rule.",
+            "mastery_check": "Classify the tested English skill and apply an evidence-based solving method.",
+            "revision": "Revise language challenge strategy through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "contextual meaning reasoning",
+          "study_materials": {
+            "objective": "Build mastery of contextual meaning reasoning in English Competition Mastery.",
+            "teaching_content": "Infer word and phrase meaning from surrounding sentences, tone, grammar, and textual evidence rather than relying only on the most familiar definition.",
+            "worked_examples": [
+              "A word with several meanings should be interpreted using the sentence and paragraph that surround it."
+            ],
+            "pitfall": "Pitfall: selecting a dictionary meaning that conflicts with the passage context.",
+            "mastery_check": "Justify an interpretation using clear textual evidence.",
+            "revision": "Revise contextual meaning reasoning through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "editing and error diagnosis",
+          "study_materials": {
+            "objective": "Build mastery of editing and error diagnosis in English Competition Mastery.",
+            "teaching_content": "Locate the first meaningful error in grammar, usage, punctuation, spelling, or sentence structure and explain the correction.",
+            "worked_examples": [
+              "When a sentence contains a tense mismatch, identify the time reference and then correct the verb form consistently."
+            ],
+            "pitfall": "Pitfall: correcting style preferences when the actual problem is grammatical or usage-based.",
+            "mastery_check": "Identify, explain, and correct an English language error accurately.",
+            "revision": "Revise editing and error diagnosis through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated English challenges",
+          "study_materials": {
+            "objective": "Build mastery of integrated English challenges in English Competition Mastery.",
+            "teaching_content": "Combine reading, vocabulary, grammar, literary interpretation, writing, and verbal reasoning in unfamiliar formats.",
+            "worked_examples": [
+              "A passage challenge may require identifying its main idea, interpreting a phrase, correcting an error, and selecting the strongest supporting sentence."
+            ],
+            "pitfall": "Pitfall: solving each clue independently when the passage provides connected evidence.",
+            "mastery_check": "Combine multiple English skills to solve an integrated challenge.",
+            "revision": "Revise integrated English challenges through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "English championship round",
+          "study_materials": {
+            "objective": "Build mastery of English championship round in English Competition Mastery.",
+            "teaching_content": "Practice timed mixed English challenges with careful reading, elimination, evidence checks, and final accuracy review.",
+            "worked_examples": [
+              "Answer direct vocabulary and grammar questions first, then spend remaining time on longer comprehension and reasoning items."
+            ],
+            "pitfall": "Pitfall: choosing an answer from a familiar keyword without rereading the relevant context.",
+            "mastery_check": "Complete a mixed English challenge accurately under time pressure and justify difficult answers from language evidence.",
+            "revision": "Revise English championship round through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "EC-MOCK-01",
+      "focus": "reading, vocabulary, grammar and usage"
+    },
+    {
+      "id": "EC-MOCK-02",
+      "focus": "writing, literature, communication and verbal reasoning"
+    },
+    {
+      "id": "EC-MOCK-03",
+      "focus": "mixed English championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "English Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
