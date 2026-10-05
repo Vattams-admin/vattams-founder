@@ -1,0 +1,2105 @@
+{
+  "schema_version": "1.0.0",
+  "course": "Mega Inter-School Championship",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/mega-inter-school-championship-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate from study materials and mock tests"
+  },
+  "domains": [
+    {
+      "name": "Mathematics",
+      "subtopics": [
+        {
+          "title": "number sense",
+          "study_materials": {
+            "objective": "Build mastery of number sense in Mathematics from concept to application and verification.",
+            "teaching_content": "Teach number sense through magnitude, place value, factors, multiples, divisibility, estimation, fractions, and flexible representations. Emphasize choosing a useful representation before calculating.",
+            "worked_examples": [
+              "To compare 7/12 and 5/8, use denominator 24: 14/24 versus 15/24, so 5/8 is larger. An estimate also suggests both are a little above one-half."
+            ],
+            "pitfall": "Pitfall: comparing numerators or denominators independently, or trusting an exact calculation without checking whether its magnitude is plausible.",
+            "mastery_check": "Mastery: compare and estimate unfamiliar quantities, switch representations strategically, and justify the result with both calculation and magnitude reasoning.",
+            "revision": "Review number sense using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "arithmetic",
+          "study_materials": {
+            "objective": "Build mastery of arithmetic in Mathematics from concept to application and verification.",
+            "teaching_content": "Teach multi-step arithmetic with fractions, decimals, percentages, ratios, averages, rates, and unit conversion. Track the base quantity whenever a percentage changes.",
+            "worked_examples": [
+              "A ₹1,000 item discounted 20% costs ₹800; adding 10% tax to the discounted price gives ₹880, because the tax base is ₹800."
+            ],
+            "pitfall": "Pitfall: applying every percentage to the original amount or combining quantities expressed in incompatible units.",
+            "mastery_check": "Mastery: solve multi-step numerical problems accurately, preserve units and percentage bases, and verify results using estimation.",
+            "revision": "Review arithmetic using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "algebra",
+          "study_materials": {
+            "objective": "Build mastery of algebra in Mathematics from concept to application and verification.",
+            "teaching_content": "Teach algebra as a language for unknown quantities and relationships. Cover expressions, equations, substitution, patterns, and equivalent transformations while preserving equality.",
+            "worked_examples": [
+              "For 4x-7=21, add 7 to both sides to get 4x=28, then divide by 4 to obtain x=7; substitution confirms 28-7=21."
+            ],
+            "pitfall": "Pitfall: performing an operation on only one side or combining unlike algebraic terms as though they were similar.",
+            "mastery_check": "Mastery: translate verbal relationships into algebra, manipulate equations safely, recognize useful patterns, and verify solutions.",
+            "revision": "Review algebra using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "geometry",
+          "study_materials": {
+            "objective": "Build mastery of geometry in Mathematics from concept to application and verification.",
+            "teaching_content": "Teach geometric reasoning through properties of angles, triangles, polygons, circles, perimeter, area, volume, symmetry, and spatial relationships. Choose formulas from the diagram rather than memory alone.",
+            "worked_examples": [
+              "A rectangle 12 cm by 5 cm has perimeter 34 cm and area 60 cm². The different units and formulas make clear that perimeter measures boundary length while area measures surface."
+            ],
+            "pitfall": "Pitfall: substituting a dimension into the wrong formula or confusing perimeter, area, and volume.",
+            "mastery_check": "Mastery: extract relevant measurements from diagrams, select the governing property, calculate accurately, and explain why the result fits the figure.",
+            "revision": "Review geometry using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "advanced problem solving",
+          "study_materials": {
+            "objective": "Build mastery of advanced problem solving in Mathematics from concept to application and verification.",
+            "teaching_content": "Teach championship mathematics through invariants, parity, bounds, symmetry, case analysis, backward reasoning, and constructive thinking. Encourage students to reduce the search space before calculating.",
+            "worked_examples": [
+              "In a puzzle asking whether a target sum can be formed from restricted numbers, parity can immediately rule out impossible cases before any enumeration begins."
+            ],
+            "pitfall": "Pitfall: starting exhaustive casework before checking structural constraints, causing unnecessary work or missed cases.",
+            "mastery_check": "Mastery: identify a decisive invariant, bound, or symmetry, reduce the problem to manageable cases, and justify why the remaining cases are complete.",
+            "revision": "Review advanced problem solving using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Science",
+      "subtopics": [
+        {
+          "title": "physics",
+          "study_materials": {
+            "objective": "Build mastery of physics in Science from concept to application and verification.",
+            "teaching_content": "Teach physics through measurable quantities, units, forces, motion, energy, heat, light, sound, and electricity. Connect equations to physical meaning and conditions.",
+            "worked_examples": [
+              "A cyclist traveling 18 km in 1.5 hours has average speed 12 km/h. The unit calculation also checks that the result represents distance divided by time."
+            ],
+            "pitfall": "Pitfall: inserting numbers into formulas without checking units, direction, or whether the formula's physical conditions apply.",
+            "mastery_check": "Mastery: identify the governing physical principle, calculate with consistent units, interpret the result, and test whether it is physically plausible.",
+            "revision": "Review physics using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "chemistry",
+          "study_materials": {
+            "objective": "Build mastery of chemistry in Science from concept to application and verification.",
+            "teaching_content": "Teach chemistry through particles, elements, compounds, mixtures, physical changes, chemical reactions, acids, bases, and conservation of matter. Link observations to particle-level explanations.",
+            "worked_examples": [
+              "Dissolving salt in water produces a mixture that can be separated by evaporation; no new substance is required for the dissolving step."
+            ],
+            "pitfall": "Pitfall: calling every visible change chemical or confusing a compound, whose composition is fixed, with a mixture of substances.",
+            "mastery_check": "Mastery: classify substances and changes, explain observations using particle reasoning, and identify evidence for a chemical reaction.",
+            "revision": "Review chemistry using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "biology",
+          "study_materials": {
+            "objective": "Build mastery of biology in Science from concept to application and verification.",
+            "teaching_content": "Teach biology through cells, body systems, reproduction, heredity, ecosystems, adaptation, and structure-function relationships. Connect individual organisms to larger systems.",
+            "worked_examples": [
+              "Leaves capture light for photosynthesis while roots absorb water and minerals; the different structures support complementary plant functions."
+            ],
+            "pitfall": "Pitfall: memorizing organ names without explaining their functions or treating an ecosystem component in isolation.",
+            "mastery_check": "Mastery: explain biological processes using structure, function, interaction, and environmental context.",
+            "revision": "Review biology using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Earth science",
+          "study_materials": {
+            "objective": "Build mastery of Earth science in Science from concept to application and verification.",
+            "teaching_content": "Teach Earth science as interacting systems involving rocks, soil, water, atmosphere, weather, climate, landforms, and natural hazards. Use cycles and timescales to connect observations.",
+            "worked_examples": [
+              "Water can evaporate, condense into clouds, precipitate, and return through runoff or infiltration, linking several parts of one cycle."
+            ],
+            "pitfall": "Pitfall: treating weather as identical to climate or describing a cycle as a one-way sequence without recognizing continuous movement of matter.",
+            "mastery_check": "Mastery: connect Earth processes across timescales, interpret observations, and distinguish short-term conditions from long-term patterns.",
+            "revision": "Review Earth science using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "scientific reasoning",
+          "study_materials": {
+            "objective": "Build mastery of scientific reasoning in Science from concept to application and verification.",
+            "teaching_content": "Teach scientific reasoning through observations, variables, hypotheses, controls, measurements, evidence, uncertainty, and appropriately limited conclusions. Separate correlation from causation.",
+            "worked_examples": [
+              "To test whether fertilizer affects plant growth, keep plant type, light, soil, and water comparable while varying fertilizer and measuring growth using the same method."
+            ],
+            "pitfall": "Pitfall: changing several variables at once or claiming a causal effect from an uncontrolled observation.",
+            "mastery_check": "Mastery: design and critique fair tests, identify evidence quality, and state conclusions that match what the data actually supports.",
+            "revision": "Review scientific reasoning using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "English",
+      "subtopics": [
+        {
+          "title": "reading",
+          "study_materials": {
+            "objective": "Build mastery of reading in English from concept to application and verification.",
+            "teaching_content": "Teach close reading through main idea, evidence, inference, sequence, purpose, tone, comparison, and author choices. Treat the passage as the primary evidence source.",
+            "worked_examples": [
+              "If a passage describes repeated delays followed by a revised timetable and improved punctuality, evidence supports an inference about schedule changes improving reliability."
+            ],
+            "pitfall": "Pitfall: selecting an option because it sounds generally sensible when the passage does not support it.",
+            "mastery_check": "Mastery: locate decisive textual evidence, distinguish explicit claims from inference, and reject attractive but unsupported distractors.",
+            "revision": "Review reading using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "vocabulary",
+          "study_materials": {
+            "objective": "Build mastery of vocabulary in English from concept to application and verification.",
+            "teaching_content": "Teach vocabulary through context clues, roots, affixes, synonyms, antonyms, collocations, and shades of meaning. Require the sentence context to determine the intended sense.",
+            "worked_examples": [
+              "In “The path was arduous, so the hikers rested often,” the consequence suggests arduous means difficult or tiring rather than simply long."
+            ],
+            "pitfall": "Pitfall: choosing the most familiar dictionary meaning without checking how the word functions in context.",
+            "mastery_check": "Mastery: infer meaning precisely, compare close alternatives, and use newly learned words accurately in context.",
+            "revision": "Review vocabulary using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "grammar",
+          "study_materials": {
+            "objective": "Build mastery of grammar in English from concept to application and verification.",
+            "teaching_content": "Teach sentence structure, agreement, tense, clauses, modifiers, punctuation, and parallelism by identifying the grammatical relationship before applying a rule.",
+            "worked_examples": [
+              "In “Neither the captain nor the players were ready,” the structure requires attention to the paired subjects and the intended agreement rather than choosing a verb by sound alone."
+            ],
+            "pitfall": "Pitfall: applying a remembered grammar rule without identifying the sentence structure or the role of each phrase.",
+            "mastery_check": "Mastery: diagnose and correct errors, explain the governing rule, and construct clear grammatical sentences.",
+            "revision": "Review grammar using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "literature",
+          "study_materials": {
+            "objective": "Build mastery of literature in English from concept to application and verification.",
+            "teaching_content": "Teach literary understanding through character, setting, conflict, theme, imagery, figurative language, symbolism, and narrative voice. Support interpretation with textual evidence.",
+            "worked_examples": [
+              "If a character repeatedly avoids a difficult conversation and the narration describes hesitation, the pattern can support an interpretation of fear or uncertainty."
+            ],
+            "pitfall": "Pitfall: treating a personal reaction as the only valid theme or interpreting figurative language literally without contextual evidence.",
+            "mastery_check": "Mastery: identify literary techniques, compare plausible interpretations, and support conclusions with relevant evidence.",
+            "revision": "Review literature using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "verbal reasoning",
+          "study_materials": {
+            "objective": "Build mastery of verbal reasoning in English from concept to application and verification.",
+            "teaching_content": "Teach verbal reasoning through analogies, classifications, sentence completion, inference, and precise word relationships. State the relationship before evaluating answer choices.",
+            "worked_examples": [
+              "In “seed : plant :: egg : chick,” the relation is an early developmental stage leading toward the later organism; the exact options must preserve that relation."
+            ],
+            "pitfall": "Pitfall: choosing a loosely associated word instead of one that preserves the precise relationship.",
+            "mastery_check": "Mastery: formulate the underlying relationship, test every plausible option, and reject choices that match only by surface association.",
+            "revision": "Review verbal reasoning using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "General Knowledge",
+      "subtopics": [
+        {
+          "title": "India",
+          "study_materials": {
+            "objective": "Build mastery of India in General Knowledge from concept to application and verification.",
+            "teaching_content": "Teach Indian knowledge across geography, polity, history, institutions, science, culture, symbols, and achievements. Distinguish stable facts from information that can change over time.",
+            "worked_examples": [
+              "A question about the national emblem tests a stable civic fact, whereas a question about a current office-holder requires date-aware verification."
+            ],
+            "pitfall": "Pitfall: treating changing facts as permanent or confusing institutions that have similar names but different roles.",
+            "mastery_check": "Mastery: retrieve precise Indian facts, identify whether a fact is time-sensitive, and match the exact institution, place, person, or event requested.",
+            "revision": "Review India using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "world",
+          "study_materials": {
+            "objective": "Build mastery of world in General Knowledge from concept to application and verification.",
+            "teaching_content": "Teach world knowledge through countries, capitals, landmarks, organizations, cultures, geography, science, and global events, connecting facts rather than memorizing isolated pairs.",
+            "worked_examples": [
+              "The Amazon Basin spans multiple countries and connects questions about South American geography, rivers, climate, and biodiversity."
+            ],
+            "pitfall": "Pitfall: confusing a capital with its country, a region with a continent, or a geographic feature with the political unit containing it.",
+            "mastery_check": "Mastery: connect world facts accurately, resolve location relationships, and verify precise names and institutional roles when needed.",
+            "revision": "Review world using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "history",
+          "study_materials": {
+            "objective": "Build mastery of history in General Knowledge from concept to application and verification.",
+            "teaching_content": "Teach history through chronology, causes, consequences, movements, civilizations, inventions, and evidence. Use timelines to test whether proposed causal relationships are historically possible.",
+            "worked_examples": [
+              "A timeline showing an invention before a later industrial change can support a possible influence, but chronology alone does not prove that it caused the change."
+            ],
+            "pitfall": "Pitfall: treating temporal sequence as proof of causation or placing events in the wrong period.",
+            "mastery_check": "Mastery: sequence events, distinguish correlation from supported causation, and explain conclusions using historical evidence.",
+            "revision": "Review history using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "geography",
+          "study_materials": {
+            "objective": "Build mastery of geography in General Knowledge from concept to application and verification.",
+            "teaching_content": "Teach geography through maps, physical features, climate, resources, population, regions, scale, and spatial relationships. Combine multiple clues instead of relying on one memorized fact.",
+            "worked_examples": [
+              "Latitude affects climate, but altitude, ocean currents, relief, and local geography can modify conditions at a particular location."
+            ],
+            "pitfall": "Pitfall: assuming one geographic variable determines every local condition or confusing map distance with real-world distance without considering scale.",
+            "mastery_check": "Mastery: interpret spatial evidence, combine geographic factors, and explain regional patterns accurately.",
+            "revision": "Review geography using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "culture",
+          "study_materials": {
+            "objective": "Build mastery of culture in General Knowledge from concept to application and verification.",
+            "teaching_content": "Teach cultural knowledge through languages, literature, art, music, architecture, food, festivals, traditions, and heritage with regional and historical context. Avoid reducing living cultures to stereotypes.",
+            "worked_examples": [
+              "A classical dance form can be associated with a particular region and tradition while still having evolved through later practice and interpretation."
+            ],
+            "pitfall": "Pitfall: assigning a tradition to the wrong community or treating a diverse culture as a single uniform practice.",
+            "mastery_check": "Mastery: identify cultural facts precisely, distinguish historical origin from later development, and reason respectfully from context.",
+            "revision": "Review culture using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reasoning",
+      "subtopics": [
+        {
+          "title": "series",
+          "study_materials": {
+            "objective": "Build mastery of series in Reasoning from concept to application and verification.",
+            "teaching_content": "Teach number and letter series by identifying the transformation between consecutive terms, testing it across the whole sequence, and checking whether alternating positions follow separate rules.",
+            "worked_examples": [
+              "In 2, 5, 11, 23, the rule is multiply by 2 and add 1, giving 47 next; verifying each transition is stronger than guessing from the final pair."
+            ],
+            "pitfall": "Pitfall: fitting a rule to only two terms or ignoring an alternating pattern.",
+            "mastery_check": "Mastery: identify a consistent rule, test every transition, and reject rules that require unexplained exceptions.",
+            "revision": "Review series using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "analogy",
+          "study_materials": {
+            "objective": "Build mastery of analogy in Reasoning from concept to application and verification.",
+            "teaching_content": "Teach analogies by identifying the precise relation between the first pair before applying it to the second pair. Relations may involve function, part-whole, sequence, degree, or category.",
+            "worked_examples": [
+              "For “book : read :: song : listen”, the relation is object-to-typical action, not merely two culturally related words."
+            ],
+            "pitfall": "Pitfall: choosing an option that is associated with the word but does not preserve the same relationship.",
+            "mastery_check": "Mastery: state the relation explicitly, apply it consistently, and compare all plausible choices.",
+            "revision": "Review analogy using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "logic",
+          "study_materials": {
+            "objective": "Build mastery of logic in Reasoning from concept to application and verification.",
+            "teaching_content": "Teach logical reasoning through statements, conditions, implications, contradictions, and valid conclusions. Separate what must be true from what could be true.",
+            "worked_examples": [
+              "If all A are B and no B are C, then no A can be C; the conclusion follows through the two stated relationships."
+            ],
+            "pitfall": "Pitfall: reversing an implication or treating a possible conclusion as a necessary one.",
+            "mastery_check": "Mastery: derive only conclusions supported by the premises and identify invalid inferences.",
+            "revision": "Review logic using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "puzzles",
+          "study_materials": {
+            "objective": "Build mastery of puzzles in Reasoning from concept to application and verification.",
+            "teaching_content": "Teach puzzles by translating the story into constraints, tables, diagrams, or ordered cases before making deductions.",
+            "worked_examples": [
+              "For a seating puzzle, record fixed positions first, then apply adjacency and ordering clues to eliminate impossible arrangements systematically."
+            ],
+            "pitfall": "Pitfall: holding too many relationships mentally and making an unsupported placement early.",
+            "mastery_check": "Mastery: formalize constraints, propagate deductions, and prove that the remaining arrangement satisfies every clue.",
+            "revision": "Review puzzles using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "non-verbal reasoning",
+          "study_materials": {
+            "objective": "Build mastery of non-verbal reasoning in Reasoning from concept to application and verification.",
+            "teaching_content": "Teach visual reasoning through rotations, reflections, symmetry, odd-one-out patterns, shape transformations, and spatial relationships.",
+            "worked_examples": [
+              "If a figure is rotated 90° clockwise, track each distinctive corner or mark to determine its new position rather than relying on overall visual similarity."
+            ],
+            "pitfall": "Pitfall: confusing rotation with reflection or matching a shape by appearance while ignoring orientation.",
+            "mastery_check": "Mastery: describe the transformation precisely, apply it consistently, and eliminate options using invariant features.",
+            "revision": "Review non-verbal reasoning using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Technology",
+      "subtopics": [
+        {
+          "title": "computing",
+          "study_materials": {
+            "objective": "Build mastery of computing in Technology from concept to application and verification.",
+            "teaching_content": "Teach computing through hardware, software, data, algorithms, operating systems, and networks, focusing on how components work together to solve tasks.",
+            "worked_examples": [
+              "A word processor uses input devices, memory, processor instructions, storage, and an operating system to turn keystrokes into a saved document."
+            ],
+            "pitfall": "Pitfall: treating hardware and software as interchangeable or assuming storage and memory serve the same purpose.",
+            "mastery_check": "Mastery: identify the role of computing components in an unfamiliar scenario and explain how they cooperate.",
+            "revision": "Review computing using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "internet",
+          "study_materials": {
+            "objective": "Build mastery of internet in Technology from concept to application and verification.",
+            "teaching_content": "Teach the internet as interconnected networks using addressing, routing, protocols, and services. Distinguish the internet itself from individual web services and apps.",
+            "worked_examples": [
+              "When a student opens a website, a device sends requests through networks to a server and receives data back; the web is one service built on internet infrastructure."
+            ],
+            "pitfall": "Pitfall: treating the internet, web, browser, and search engine as synonyms.",
+            "mastery_check": "Mastery: trace a simple online interaction and distinguish the roles of device, network, protocol, browser, and service.",
+            "revision": "Review internet using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "AI",
+          "study_materials": {
+            "objective": "Build mastery of AI in Technology from concept to application and verification.",
+            "teaching_content": "Teach AI at an inter-school level through prediction, classification, generation, perception, and decision support, while distinguishing AI from ordinary fixed rules.",
+            "worked_examples": [
+              "A recommendation system can infer likely interests from interaction patterns, while a fixed menu simply displays predefined choices."
+            ],
+            "pitfall": "Pitfall: calling every automated feature AI or assuming an AI output is necessarily correct.",
+            "mastery_check": "Mastery: identify whether a scenario uses AI, state the task it performs, and explain an appropriate limitation or verification step.",
+            "revision": "Review AI using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "cyber safety",
+          "study_materials": {
+            "objective": "Build mastery of cyber safety in Technology from concept to application and verification.",
+            "teaching_content": "Teach cyber safety through strong authentication, phishing awareness, software updates, privacy, secure sharing, malware awareness, and safe recovery practices.",
+            "worked_examples": [
+              "A message claiming an urgent account problem and asking for a password link is a phishing warning sign; verify through the official service instead of following the message."
+            ],
+            "pitfall": "Pitfall: trusting a message because it uses familiar logos, urgency, or personal details.",
+            "mastery_check": "Mastery: recognize common attack signals and choose safe actions that protect accounts, devices, and information.",
+            "revision": "Review cyber safety using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "digital society",
+          "study_materials": {
+            "objective": "Build mastery of digital society in Technology from concept to application and verification.",
+            "teaching_content": "Teach digital society through digital identity, accessibility, online behavior, misinformation, platform effects, intellectual property, and responsible technology use.",
+            "worked_examples": [
+              "A viral post can spread widely before its claim is checked, so responsible participation includes evaluating evidence before forwarding it."
+            ],
+            "pitfall": "Pitfall: assuming popularity proves truth or ignoring how digital systems affect people who have different access or needs.",
+            "mastery_check": "Mastery: analyze a digital-life scenario from technical, social, and ethical perspectives and justify responsible behavior.",
+            "revision": "Review digital society using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Current Awareness",
+      "subtopics": [
+        {
+          "title": "science news",
+          "study_materials": {
+            "objective": "Build mastery of science news in Current Awareness from concept to application and verification.",
+            "teaching_content": "Teach science-news awareness by identifying the discovery or mission, organization, evidence, significance, and date, while separating reported findings from headlines or speculation.",
+            "worked_examples": [
+              "A report about a new space mission should be checked for the mission's objective, agency, launch or milestone date, and what scientists actually measured."
+            ],
+            "pitfall": "Pitfall: treating a headline's strongest wording as equivalent to the underlying scientific result.",
+            "mastery_check": "Mastery: extract the key verified facts from a science report and distinguish evidence from promotional or speculative language.",
+            "revision": "Review science news using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sports",
+          "study_materials": {
+            "objective": "Build mastery of sports in Current Awareness from concept to application and verification.",
+            "teaching_content": "Build sports awareness through competitions, rules, records, teams, athletes, venues, and major results, with attention to the exact event and year.",
+            "worked_examples": [
+              "A record belongs to a particular sport, event, category, and date; identifying only the athlete is insufficient when several records are associated with the same person."
+            ],
+            "pitfall": "Pitfall: mixing different editions, formats, or event categories when recalling a sports fact.",
+            "mastery_check": "Mastery: answer sports-current-awareness questions using precise event, athlete/team, year, and record qualifiers.",
+            "revision": "Review sports using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "major events",
+          "study_materials": {
+            "objective": "Build mastery of major events in Current Awareness from concept to application and verification.",
+            "teaching_content": "Teach major-event awareness through who, what, where, when, why, and consequence. Build timelines so similarly named events are not conflated.",
+            "worked_examples": [
+              "For a major international summit, distinguish the host location, participating leaders or institutions, stated agenda, and resulting announcement rather than treating the event name as the whole fact."
+            ],
+            "pitfall": "Pitfall: confusing an announcement date with the event date or repeating an unverified claim about an outcome.",
+            "mastery_check": "Mastery: reconstruct the essential facts of a major event and verify the exact qualifier requested.",
+            "revision": "Review major events using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "institutions",
+          "study_materials": {
+            "objective": "Build mastery of institutions in Current Awareness from concept to application and verification.",
+            "teaching_content": "Teach institutional awareness through purpose, headquarters or location, leadership where relevant, membership, and major functions. Similar names should be separated by mandate.",
+            "worked_examples": [
+              "Two international organizations may both work on development but have different mandates, membership structures, and responsibilities; the function in the question determines the answer."
+            ],
+            "pitfall": "Pitfall: choosing an institution from a familiar name without checking its actual mandate.",
+            "mastery_check": "Mastery: distinguish institutions by function, structure, and role and apply those distinctions to unfamiliar questions.",
+            "revision": "Review institutions using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "fact verification",
+          "study_materials": {
+            "objective": "Build mastery of fact verification in Current Awareness from concept to application and verification.",
+            "teaching_content": "Teach fact verification as checking a claim against reliable evidence, date, source, wording, and context. Compare independent evidence before accepting a striking claim.",
+            "worked_examples": [
+              "If a post claims a record was broken, verify the official competition record or authoritative report, confirm the date and category, and check that the number refers to the same event."
+            ],
+            "pitfall": "Pitfall: trusting a screenshot, viral post, or repeated claim as proof.",
+            "mastery_check": "Mastery: identify what evidence a claim requires, verify it using appropriate sources, and reject claims whose qualifiers do not match.",
+            "revision": "Review fact verification using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Interdisciplinary Challenges",
+      "subtopics": [
+        {
+          "title": "data reasoning",
+          "study_materials": {
+            "objective": "Build mastery of data reasoning in Interdisciplinary Challenges from concept to application and verification.",
+            "teaching_content": "Teach data reasoning by extracting quantities, units, trends, comparisons, and relationships before drawing conclusions. Tables and charts should be read literally before interpretation.",
+            "worked_examples": [
+              "If a chart shows enrollment rising from 200 to 260, the increase is 60 students or 30%; the percentage requires dividing by the original 200."
+            ],
+            "pitfall": "Pitfall: comparing percentages with different bases or inferring causation from a visible trend alone.",
+            "mastery_check": "Mastery: calculate and interpret data accurately, identify the correct comparison base, and separate observation from inference.",
+            "revision": "Review data reasoning using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "cross-domain clues",
+          "study_materials": {
+            "objective": "Build mastery of cross-domain clues in Interdisciplinary Challenges from concept to application and verification.",
+            "teaching_content": "Teach cross-domain clues by combining evidence from different subjects without allowing one clue to override a stronger contradiction. Build a candidate set and eliminate systematically.",
+            "worked_examples": [
+              "A scenario mentioning a monsoon region, a historical port, and a crop can combine geography, history, and agriculture clues to identify a location more reliably than any one clue alone."
+            ],
+            "pitfall": "Pitfall: anchoring on the first recognizable clue and ignoring evidence from another domain.",
+            "mastery_check": "Mastery: integrate clues from multiple disciplines, rank their evidential strength, and justify the final identification.",
+            "revision": "Review cross-domain clues using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated scenarios in Interdisciplinary Challenges from concept to application and verification.",
+            "teaching_content": "Teach integrated scenarios by decomposing a real-world situation into scientific, mathematical, language, social, and technological questions before solving each part.",
+            "worked_examples": [
+              "A school plans a solar installation: students may calculate energy use, interpret weather data, evaluate environmental effects, compare costs, and communicate a recommendation."
+            ],
+            "pitfall": "Pitfall: solving one component correctly while ignoring constraints imposed by the rest of the scenario.",
+            "mastery_check": "Mastery: connect multiple subject methods into one coherent solution and explain how each result affects the final decision.",
+            "revision": "Review integrated scenarios using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "case analysis",
+          "study_materials": {
+            "objective": "Build mastery of case analysis in Interdisciplinary Challenges from concept to application and verification.",
+            "teaching_content": "Teach case analysis through context, stakeholders, evidence, alternatives, constraints, and consequences. Require conclusions to be supported by the case rather than by outside assumptions.",
+            "worked_examples": [
+              "A school considering a digital learning tool should examine cost, accessibility, learning evidence, privacy, teacher workload, and student outcomes before choosing it."
+            ],
+            "pitfall": "Pitfall: selecting the most impressive option without weighing evidence, trade-offs, and affected stakeholders.",
+            "mastery_check": "Mastery: identify the central decision, compare alternatives against explicit criteria, and defend a balanced conclusion.",
+            "revision": "Review case analysis using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "championship rounds",
+          "study_materials": {
+            "objective": "Build mastery of championship rounds in Interdisciplinary Challenges from concept to application and verification.",
+            "teaching_content": "Teach championship rounds as mixed-domain challenges requiring rapid identification of the subject principle, disciplined elimination, and a final verification pass.",
+            "worked_examples": [
+              "A round may move from a number pattern to a science fact and then a data chart; the winning strategy is to reset the reasoning method for each question rather than carry assumptions across subjects."
+            ],
+            "pitfall": "Pitfall: spending disproportionate time on one difficult question or using the previous question's reasoning style for a different domain.",
+            "mastery_check": "Mastery: switch methods quickly, preserve accuracy under mixed difficulty, and verify high-risk answers before submission.",
+            "revision": "Review championship rounds using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Competition Mastery",
+      "subtopics": [
+        {
+          "title": "mixed sets",
+          "study_materials": {
+            "objective": "Build mastery of mixed sets in Competition Mastery from concept to application and verification.",
+            "teaching_content": "Teach mixed-set practice as deliberate switching among domains, with students first identifying the question type before selecting a method. Track errors by domain rather than only by total score.",
+            "worked_examples": [
+              "A 10-question set might require algebra, reading inference, science reasoning, and geography; classify each question first, then apply the matching strategy."
+            ],
+            "pitfall": "Pitfall: beginning calculations or recall before determining what the question actually tests.",
+            "mastery_check": "Mastery: classify mixed questions quickly, select the correct reasoning tool, and maintain accuracy across subject changes.",
+            "revision": "Review mixed sets using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "time management",
+          "study_materials": {
+            "objective": "Build mastery of time management in Competition Mastery from concept to application and verification.",
+            "teaching_content": "Teach time management through triage: answer high-confidence questions first, mark uncertain items, allocate time according to value and difficulty, and reserve a final checking window.",
+            "worked_examples": [
+              "In a 30-minute round, spending 8 minutes on one hard puzzle can crowd out several easier questions; a deliberate pass structure protects the total score."
+            ],
+            "pitfall": "Pitfall: equating persistence with productivity or repeatedly rereading a question without changing the solving approach.",
+            "mastery_check": "Mastery: plan a time budget, recognize when to move on, and finish with enough time for targeted review.",
+            "revision": "Review time management using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "elimination",
+          "study_materials": {
+            "objective": "Build mastery of elimination in Competition Mastery from concept to application and verification.",
+            "teaching_content": "Teach elimination as evidence-based removal of options that violate facts, logic, units, grammar, or the question's exact qualifier. Never eliminate merely because an option feels unfamiliar.",
+            "worked_examples": [
+              "If a geometry option gives an angle sum other than 180° for a triangle, it can be rejected immediately before comparing the remaining choices."
+            ],
+            "pitfall": "Pitfall: eliminating an option because it is uncommon rather than because it contradicts evidence.",
+            "mastery_check": "Mastery: state the specific reason each rejected option fails and use elimination only where the evidence supports it.",
+            "revision": "Review elimination using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "accuracy",
+          "study_materials": {
+            "objective": "Build mastery of accuracy in Competition Mastery from concept to application and verification.",
+            "teaching_content": "Teach accuracy as a process: read qualifiers, calculate carefully, check units, compare with estimates, and distinguish answer selection from explanation. Accuracy is protected by repeatable habits.",
+            "worked_examples": [
+              "If a percentage calculation gives a result larger than the original quantity when the task describes a discount, an estimate exposes the likely error before submission."
+            ],
+            "pitfall": "Pitfall: changing a correct answer during review without new evidence or skipping a final check because the reasoning felt easy.",
+            "mastery_check": "Mastery: apply a consistent verification checklist and correct errors based on evidence rather than anxiety or guesswork.",
+            "revision": "Review accuracy using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "final review",
+          "study_materials": {
+            "objective": "Build mastery of final review in Competition Mastery from concept to application and verification.",
+            "teaching_content": "Teach final review as targeted verification of boundaries, unanswered items, calculations, copied values, units, and question qualifiers. Review should prioritize high-risk errors rather than rereading everything equally.",
+            "worked_examples": [
+              "If an answer depends on whether a range is inclusive, revisit that boundary explicitly; a single symbol can change the result."
+            ],
+            "pitfall": "Pitfall: spending the entire review time rereading already-certain answers while leaving flagged questions unchecked.",
+            "mastery_check": "Mastery: perform a focused final audit, resolve flagged uncertainties, and submit only after checking the highest-impact error risks.",
+            "revision": "Review final review using the concept, example, pitfall, and mastery criterion above."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ],
+            "types": [
+              "application",
+              "reasoning",
+              "distractor analysis",
+              "timed challenge"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "MIS-MOCK-01",
+      "focus": "core cross-domain coverage"
+    },
+    {
+      "id": "MIS-MOCK-02",
+      "focus": "advanced reasoning and mixed-domain application"
+    },
+    {
+      "id": "MIS-MOCK-03",
+      "focus": "championship simulation and final verification"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "Mega Inter-School Championship official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
