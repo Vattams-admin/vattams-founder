@@ -180,17 +180,17 @@
       "subtopics": [
         {
           "title": "deduction",
-          "teaching": "Master deduction within Logical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative deduction challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar deduction problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Use premises as constraints and derive only conclusions that must follow. Distinguish certainty from possibility and test a proposed conclusion against counterexamples.",
+          "worked_example": "If every mentor is trained and Ravi is a mentor, Ravi must be trained. But “some trained people are mentors” does not imply every trained person is a mentor.",
+          "pitfall": "Do not reverse an implication or treat a statement about some members as a statement about all members.",
+          "mastery": "Derive necessary conclusions from unfamiliar premises, distinguish necessary from possible claims, construct counterexamples to reject invalid conclusions, and explain the logical direction used."
         },
         {
           "title": "arrangements",
-          "teaching": "Master arrangements within Logical Reasoning for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative arrangements challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar arrangements problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Represent ordering problems with slots, fixed positions, adjacency rules, and exclusions before placing items. Start with the strongest constraints, then fill flexible positions.",
+          "worked_example": "Five students A, B, C, D, E stand in a row. If A must be before C and B must be adjacent to D, place the constrained pair first and enumerate only compatible placements.",
+          "pitfall": "Do not count arrangements that violate fixed-position or adjacency conditions, or multiply choices that become dependent after a placement.",
+          "mastery": "Model ordering constraints, choose an efficient placement order, count valid arrangements, and verify each candidate against every condition."
         },
         {
           "title": "coding",
@@ -274,10 +274,10 @@
         },
         {
           "title": "arrangements",
-          "teaching": "Master arrangements within Probability & Counting for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative arrangements challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar arrangements problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "In probability and counting, first decide whether an arrangement treats order as meaningful. Use permutations for ordered assignments and combinations for unordered selections, then incorporate restrictions.",
+          "worked_example": "Choosing 2 students from 5 gives 10 unordered selections. Assigning captain and vice-captain instead gives 5×4=20 ordered assignments because the roles differ.",
+          "pitfall": "Do not confuse an unordered selection with a role-based arrangement, or ignore exclusions after choosing the counting formula.",
+          "mastery": "Identify whether order matters, select the appropriate counting model, incorporate restrictions, and justify the result without double-counting."
         },
         {
           "title": "selection",
