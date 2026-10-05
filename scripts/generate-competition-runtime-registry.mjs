@@ -59,6 +59,10 @@ for (const item of competitions) {
 
   const blueprint = readJson(blueprintPath);
   const pools = readJson(poolsPath);
+  const officialBank = readJson(officialPath);
+  if (!Array.isArray(officialBank) || officialBank.length < 30) {
+    throw new Error(item.name + ": official bank must contain at least 30 questions");
+  }
   for (const band of ["up_to_8", "age_9_12", "age_13_15", "age_16_plus"]) {
     if (!Array.isArray(blueprint[band]) || blueprint[band].length === 0) {
       throw new Error(`${item.name}: missing selection blueprint for ${band}`);
@@ -68,6 +72,18 @@ for (const item of competitions) {
     if (!pools[band] || typeof pools[band] !== "object") {
       throw new Error(`${item.name}: missing age pool ${band}`);
     }
+  }
+
+  const officialPapers = {};
+  for (const band of ["up_to_8", "age_9_12", "age_13_15", "age_16_plus"]) {
+    const ids = officialBank
+      .filter((q) => q?.age_band === band && typeof q?.question_id === "string")
+      .map((q) => q.question_id);
+    const unique = [...new Set(ids)];
+    if (unique.length < 30) {
+      throw new Error(item.name + ": official bank has only " + unique.length + " unique questions for " + band + "; need 30");
+    }
+    officialPapers[band] = unique.slice(0, 30);
   }
 
   const prior = previous[courseId] || Object.values(previous).find((x) => x.slug === item.slug);
@@ -80,9 +96,9 @@ for (const item of competitions) {
     age_pools: `competitions/${item.slug}/objective/age-pools.json`,
     per_attempt: 30,
     selection_blueprint: blueprint,
+    official_papers: officialPapers,
     enabled: true,
   };
-  if (prior?.official_papers) entry.official_papers = prior.official_papers;
   registry.competitions[courseId] = entry;
 }
 
