@@ -94,6 +94,24 @@ function paperForAge(age: number, papers: Record<AgeBand, string[]>) {
   return { ageBand: "age_16_plus" as const, questionIds: papers.age_16_plus };
 }
 
+async function getAccessForCompetition(studentId: string, courseId: string, competition: RegistryEntry) {
+  const { data, error } = await supabase.from("competition_access_cache")
+    .select("student_id,course_id,is_admin,enrolment_active,date_of_birth,checked_at")
+    .eq("student_id", studentId).eq("course_id", courseId).maybeSingle();
+  if (error) throw new Error(`Access lookup failed: ${error.message}`);
+  if (!data || (!data.is_admin && !data.enrolment_active) || !data.date_of_birth) return false;
+  const checked = new Date(data.checked_at).getTime();
+  if (!Number.isFinite(checked) || checked > Date.now() + 60_000 || Date.now() - checked > CACHE_TTL_HOURS * 60 * 60 * 1000) return false;
+  const dob = new Date(`${String(data.date_of_birth)}T00:00:00.000Z`);
+  const now = new Date();
+  const oldest = new Date(now);
+  oldest.setUTCFullYear(oldest.getUTCFullYear() - 120);
+  if (!Number.isFinite(dob.getTime()) || dob > now || dob < oldest) return false;
+  const age = ageOnToday(String(data.date_of_birth));
+  if (age < 0 || age > 120) return false;
+  return { dob: String(data.date_of_birth), ...paperForAge(age, competition.official_papers as Record<AgeBand, string[]>) };
+}
+
 async function activeAttempt(studentId: string, courseId: string) {
   const { data, error } = await supabase.from("competition_attempts")
     .select("id,student_id,course_id,status,started_at,question_ids")
@@ -122,7 +140,7 @@ Deno.serve(async (request) => {
     const existing = await activeAttempt(studentId, courseId);
     if (existing) {
       if (validQuestionSet(existing.question_ids, access.questionIds)) {
-        return { ok: true, course_id: courseId, competition: competition.competition, attempt_id: existing.id, status: existing.status, started_at: existing.started_at, question_ids: existing.question_ids, count: PER_ATTEMPT, age_band: access.ageBand };
+        return json({ ok: true, course_id: courseId, competition: competition.competition, attempt_id: existing.id, status: existing.status, started_at: existing.started_at, question_ids: existing.question_ids, count: PER_ATTEMPT, age_band: access.ageBand });
       }
       await supabase.from("competition_attempts").update({
         status: "submitted", submitted_at: new Date().toISOString(), updated_at: new Date().toISOString(),
