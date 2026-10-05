@@ -6,9 +6,34 @@ on:
     paths:
       - "data/competitions/**/full-bank/objective/**"
       - "scripts/validate-competition-mcq-bank.mjs"
+      - "scripts/generate-gk-production-bank.mjs"
+
+permissions:
+  contents: write
 
 jobs:
+  generate-gk:
+    if: github.event_name == 'workflow_dispatch' || contains(toJson(github.event.commits), 'scripts/generate-gk-production-bank.mjs')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Generate authored GK bank
+        run: node scripts/generate-gk-production-bank.mjs
+      - name: Commit generated GK production data
+        run: |
+          git config user.name "VATTAMS Academia Bot"
+          git config user.email "vattamsacademia@gmail.com"
+          git add data/competitions/gk-challenge/full-bank/objective/
+          git diff --cached --quiet && exit 0
+          git commit -m "Replace GK Challenge scaffold bank with authored MCQs"
+          git push
+
   validate:
+    needs: generate-gk
+    if: always() && (needs.generate-gk.result == 'success' || needs.generate-gk.result == 'skipped')
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -39,6 +64,10 @@ jobs:
           - spoken-hindi-challenge
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Refresh main after generation
+        run: git pull --ff-only origin main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
