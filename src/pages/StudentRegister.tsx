@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
@@ -13,6 +14,7 @@ import { createAdminBroadcast, createNotification } from '@/lib/notifications'
 // unambiguously a student record going forward. This is also the single
 // source of truth read by the admin panel (/admin/students).
 export default function StudentRegister() {
+  useSeo({ title: 'Student Registration', description: 'Create a VATTAMS ACADEMIA student account', noindex: true })
   const [fullName, setFullName] = useState('')
   const [dateOfBirth, setDateOfBirth] = useState('')
   const [email, setEmail] = useState('')
