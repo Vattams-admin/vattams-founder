@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "Science Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/science-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Scientific Inquiry & Measurement",
+      "subtopics": [
+        {
+          "title": "Observation and scientific questions",
+          "study_materials": {
+            "objective": "Build mastery of Observation and scientific questions in Scientific Inquiry & Measurement.",
+            "teaching_content": "An observation records what is detected with senses or instruments; an inference explains what the observation may mean.",
+            "worked_examples": [
+              "Example: a metal strip becomes longer when heated. Observation: its length increased. Inference: heating caused expansion."
+            ],
+            "pitfall": "Do not treat an explanation as an observation.",
+            "mastery_check": "Mastery: separate observations, inferences and testable questions in an unfamiliar investigation.",
+            "revision": "Revise Observation and scientific questions through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Variables and fair tests",
+          "study_materials": {
+            "objective": "Build mastery of Variables and fair tests in Scientific Inquiry & Measurement.",
+            "teaching_content": "An independent variable is deliberately changed, the dependent variable is measured, and controlled variables are kept constant.",
+            "worked_examples": [
+              "Example: to test how water temperature affects dissolving time, change temperature, measure time, and keep solute mass and water volume constant."
+            ],
+            "pitfall": "Changing several factors at once prevents a fair conclusion.",
+            "mastery_check": "Mastery: design a fair test and identify independent, dependent and controlled variables.",
+            "revision": "Revise Variables and fair tests through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Measurement and units",
+          "study_materials": {
+            "objective": "Build mastery of Measurement and units in Scientific Inquiry & Measurement.",
+            "teaching_content": "Choose an instrument and unit appropriate to the quantity: balance for mass, thermometer for temperature, ruler for length and stopwatch for time.",
+            "worked_examples": [
+              "Example: record 25.0 cm rather than 25 cm when the instrument supports that precision."
+            ],
+            "pitfall": "Do not mix units such as centimetres and metres without conversion.",
+            "mastery_check": "Mastery: select instruments, record suitable precision and convert units correctly.",
+            "revision": "Revise Measurement and units through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Tables graphs and evidence",
+          "study_materials": {
+            "objective": "Build mastery of Tables graphs and evidence in Scientific Inquiry & Measurement.",
+            "teaching_content": "Tables organise measured values; graphs reveal patterns, trends and anomalies that may be harder to see in raw data.",
+            "worked_examples": [
+              "Example: plot temperature on the horizontal axis and dissolving time on the vertical axis when temperature is the independent variable."
+            ],
+            "pitfall": "A graph scale must be read before comparing points.",
+            "mastery_check": "Mastery: extract values, identify trends and use evidence without claiming more than the data shows.",
+            "revision": "Revise Tables graphs and evidence through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Claims explanations and conclusions",
+          "study_materials": {
+            "objective": "Build mastery of Claims explanations and conclusions in Scientific Inquiry & Measurement.",
+            "teaching_content": "A scientific claim should be supported by evidence and connected to reasoning that explains why the evidence supports it.",
+            "worked_examples": [
+              "Example: if repeated trials show faster dissolving at higher temperatures, a cautious conclusion is that temperature affected dissolving rate under those conditions."
+            ],
+            "pitfall": "One unusual result should be examined rather than automatically discarded.",
+            "mastery_check": "Mastery: write evidence-based conclusions and distinguish supported claims from speculation.",
+            "revision": "Revise Claims explanations and conclusions through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Matter & Materials",
+      "subtopics": [
+        {
+          "title": "States and properties of matter",
+          "study_materials": {
+            "objective": "Build mastery of States and properties of matter in Matter & Materials.",
+            "teaching_content": "Matter has mass and occupies space. Solids keep a definite shape, liquids keep a definite volume but take the container's shape, and gases spread to fill their container.",
+            "worked_examples": [
+              "A 100 mL liquid transferred to a different shaped vessel still occupies about the same volume."
+            ],
+            "pitfall": "A gas is not weightless simply because it is invisible.",
+            "mastery_check": "Mastery: compare states using shape, volume, compressibility and particle arrangement.",
+            "revision": "Revise States and properties of matter through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Physical and chemical changes",
+          "study_materials": {
+            "objective": "Build mastery of Physical and chemical changes in Matter & Materials.",
+            "teaching_content": "A physical change alters form or state without creating a new substance; a chemical change produces new substances with different properties.",
+            "worked_examples": [
+              "Melting ice is physical because water remains H2O; rusting iron is chemical because new iron oxides form."
+            ],
+            "pitfall": "Bubbles alone do not prove a chemical reaction because boiling also produces bubbles.",
+            "mastery_check": "Mastery: classify unfamiliar changes and justify the classification using evidence.",
+            "revision": "Revise Physical and chemical changes through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Mixtures and separation",
+          "study_materials": {
+            "objective": "Build mastery of Mixtures and separation in Matter & Materials.",
+            "teaching_content": "A mixture contains substances that retain their identities and can often be separated using physical properties such as particle size, solubility or boiling point.",
+            "worked_examples": [
+              "Sand can be removed from water by filtration; dissolved salt can be recovered by evaporation."
+            ],
+            "pitfall": "Filtration cannot remove salt that is dissolved in water.",
+            "mastery_check": "Mastery: choose and justify a separation method from the properties of the mixture.",
+            "revision": "Revise Mixtures and separation through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Materials and their uses",
+          "study_materials": {
+            "objective": "Build mastery of Materials and their uses in Matter & Materials.",
+            "teaching_content": "Materials are selected for properties suited to a purpose: copper conducts electricity well, glass is transparent, rubber is flexible and waterproof.",
+            "worked_examples": [
+              "Copper is useful in electrical wires because it combines high conductivity with workable ductility."
+            ],
+            "pitfall": "The strongest material is not automatically the best material for every application.",
+            "mastery_check": "Mastery: match material properties to practical uses and explain trade-offs.",
+            "revision": "Revise Materials and their uses through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Particle model reasoning",
+          "study_materials": {
+            "objective": "Build mastery of Particle model reasoning in Matter & Materials.",
+            "teaching_content": "The particle model explains macroscopic behaviour by considering how particles are arranged and move. Heating generally increases particle kinetic energy.",
+            "worked_examples": [
+              "When a solid is heated, particles vibrate more strongly and may eventually overcome attractions enough for melting."
+            ],
+            "pitfall": "Particles do not become larger when a substance is heated; their motion changes.",
+            "mastery_check": "Mastery: use particle reasoning to explain changes of state, diffusion and compression.",
+            "revision": "Revise Particle model reasoning through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Forces & Motion",
+      "subtopics": [
+        {
+          "title": "Motion and speed",
+          "study_materials": {
+            "objective": "Build mastery of Motion and speed in Forces & Motion.",
+            "teaching_content": "Speed describes how much distance is covered per unit time: speed = distance ÷ time.",
+            "worked_examples": [
+              "A cyclist travelling 120 m in 20 s has an average speed of 6 m/s."
+            ],
+            "pitfall": "A larger distance does not mean a greater speed unless the time interval is considered.",
+            "mastery_check": "Mastery: calculate, compare and interpret speeds with correct units.",
+            "revision": "Revise Motion and speed through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Forces and interactions",
+          "study_materials": {
+            "objective": "Build mastery of Forces and interactions in Forces & Motion.",
+            "teaching_content": "A force is a push or pull that can change an object's motion or shape. Forces occur through interactions between objects.",
+            "worked_examples": [
+              "A book resting on a table experiences gravity downward and a support force upward."
+            ],
+            "pitfall": "An object moving at constant velocity can still have forces acting on it if they balance.",
+            "mastery_check": "Mastery: identify interacting objects and the direction of forces in simple systems.",
+            "revision": "Revise Forces and interactions through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Friction and resistance",
+          "study_materials": {
+            "objective": "Build mastery of Friction and resistance in Forces & Motion.",
+            "teaching_content": "Friction and fluid resistance oppose relative motion. They can be useful, such as providing grip, or unwanted, such as causing energy loss.",
+            "worked_examples": [
+              "Tyre tread increases grip by improving interaction with the road; lubricants reduce friction between moving surfaces."
+            ],
+            "pitfall": "Removing all friction is not always desirable because walking and braking depend on friction.",
+            "mastery_check": "Mastery: predict how changing surfaces or conditions affects motion.",
+            "revision": "Revise Friction and resistance through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Gravity mass and weight",
+          "study_materials": {
+            "objective": "Build mastery of Gravity mass and weight in Forces & Motion.",
+            "teaching_content": "Study Gravity mass and weight as a core Forces & Motion concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
+            "worked_examples": [
+              "Worked example: analyse a representative Gravity mass and weight situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology."
+            ],
+            "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
+            "mastery_check": "Mastery: explain Gravity mass and weight independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion.",
+            "revision": "Revise Gravity mass and weight through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Simple machines",
+          "study_materials": {
+            "objective": "Build mastery of Simple machines in Forces & Motion.",
+            "teaching_content": "Study Simple machines as a core Forces & Motion concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
+            "worked_examples": [
+              "Worked example: analyse a representative Simple machines situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology."
+            ],
+            "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
+            "mastery_check": "Mastery: explain Simple machines independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion.",
+            "revision": "Revise Simple machines through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Energy & Waves",
+      "subtopics": [
+        {
+          "title": "Forms and transfer of energy",
+          "study_materials": {
+            "objective": "Build mastery of Forms and transfer of energy in Energy & Waves.",
+            "teaching_content": "Study Forms and transfer of energy as a core Energy & Waves concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
+            "worked_examples": [
+              "Worked example: analyse a representative Forms and transfer of energy situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology."
+            ],
+            "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
+            "mastery_check": "Mastery: explain Forms and transfer of energy independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion.",
+            "revision": "Revise Forms and transfer of energy through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Heat and temperature",
+          "study_materials": {
+            "objective": "Build mastery of Heat and temperature in Energy & Waves.",
+            "teaching_content": "Temperature indicates how hot or cold a system is, while thermal energy concerns the internal energy associated with particle motion and interactions.",
+            "worked_examples": [
+              "A metal spoon and a cup of hot water can have different temperatures and different amounts of thermal energy because their masses differ."
+            ],
+            "pitfall": "Temperature and heat are not interchangeable terms.",
+            "mastery_check": "Mastery: distinguish temperature from thermal energy and predict heating or cooling changes.",
+            "revision": "Revise Heat and temperature through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Light and reflection",
+          "study_materials": {
+            "objective": "Build mastery of Light and reflection in Energy & Waves.",
+            "teaching_content": "Light travels in straight lines through a uniform medium and can be reflected when it meets a surface.",
+            "worked_examples": [
+              "A plane mirror forms an image with the angle of reflection equal to the angle of incidence."
+            ],
+            "pitfall": "The reflected ray is not automatically perpendicular to the mirror.",
+            "mastery_check": "Mastery: trace rays and apply the law of reflection to unfamiliar diagrams.",
+            "revision": "Revise Light and reflection through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Sound and vibration",
+          "study_materials": {
+            "objective": "Build mastery of Sound and vibration in Energy & Waves.",
+            "teaching_content": "Sound is produced by vibrating sources and travels through a material medium as a mechanical wave.",
+            "worked_examples": [
+              "A vibrating ruler overhanging a table produces sound because its vibration disturbs the surrounding air."
+            ],
+            "pitfall": "Sound cannot propagate through a vacuum because there is no material medium.",
+            "mastery_check": "Mastery: connect frequency and vibration to pitch and explain why sound needs a medium.",
+            "revision": "Revise Sound and vibration through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Electricity and circuits",
+          "study_materials": {
+            "objective": "Build mastery of Electricity and circuits in Energy & Waves.",
+            "teaching_content": "Study Electricity and circuits as a core Energy & Waves concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
+            "worked_examples": [
+              "Worked example: analyse a representative Electricity and circuits situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology."
+            ],
+            "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
+            "mastery_check": "Mastery: explain Electricity and circuits independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion.",
+            "revision": "Revise Electricity and circuits through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Living Systems",
+      "subtopics": [
+        {
+          "title": "Cells and organization",
+          "study_materials": {
+            "objective": "Build mastery of Cells and organization in Living Systems.",
+            "teaching_content": "Study Cells and organization as a core Living Systems concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
+            "worked_examples": [
+              "Worked example: analyse a representative Cells and organization situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology."
+            ],
+            "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
+            "mastery_check": "Mastery: explain Cells and organization independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion.",
+            "revision": "Revise Cells and organization through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Plant structures and functions",
+          "study_materials": {
+            "objective": "Build mastery of Plant structures and functions in Living Systems.",
+            "teaching_content": "Study Plant structures and functions as a core Living Systems concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
+            "worked_examples": [
+              "Worked example: analyse a representative Plant structures and functions situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology."
+            ],
+            "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
+            "mastery_check": "Mastery: explain Plant structures and functions independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion.",
+            "revision": "Revise Plant structures and functions through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Human body systems",
+          "study_materials": {
+            "objective": "Build mastery of Human body systems in Living Systems.",
+            "teaching_content": "Study Human body systems as a core Living Systems concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
+            "worked_examples": [
+              "Worked example: analyse a representative Human body systems situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology."
+            ],
+            "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
+            "mastery_check": "Mastery: explain Human body systems independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion.",
+            "revision": "Revise Human body systems through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Animal adaptation",
+          "study_materials": {
+            "objective": "Build mastery of Animal adaptation in Living Systems.",
+            "teaching_content": "Study Animal adaptation as a core Living Systems concept in Science Challenge. Establish the vocabulary and observable features first, then connect the concept to evidence, models and applications. Students should distinguish observation from inference, explain cause and effect where supported, interpret data, identify common misconceptions, and verify conclusions against the evidence rather than relying on memorised statements.",
+            "worked_examples": [
+              "Worked example: analyse a representative Animal adaptation situation, identify the relevant scientific principle or evidence, reason through the steps, and state the conclusion with appropriate units or terminology."
+            ],
+            "pitfall": "Common pitfall: choosing an answer because it sounds scientifically familiar without checking the exact conditions, evidence, scale, units or causal relationship in the question.",
+            "mastery_check": "Mastery: explain Animal adaptation independently, apply it to an unfamiliar scenario, interpret supporting evidence, reject a plausible distractor with a reason, and justify the final conclusion.",
+            "revision": "Revise Animal adaptation through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Ecosystems and food webs",
+          "study_materials": {
+            "objective": "Build mastery of Ecosystems and food webs in Living Systems.",
+            "teaching_content": "An ecosystem includes organisms interacting with each other and with their physical environment. Food webs show interconnected feeding relationships and energy transfer.",
+            "worked_examples": [
+              "If a predator population falls, prey numbers may rise and affect organisms at other trophic levels."
+            ],
+            "pitfall": "A food web is not a simple list because one organism can have several feeding relationships.",
+            "mastery_check": "Mastery: predict population changes from disruptions to a food web.",
+            "revision": "Revise Ecosystems and food webs through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Earth & Environment",
+      "subtopics": [
+        {
+          "title": "Rocks and minerals",
+          "study_materials": {
+            "objective": "Build mastery of Rocks and minerals in Earth & Environment.",
+            "teaching_content": "Rocks are mixtures of minerals, while a mineral has a characteristic chemical composition and crystal structure.",
+            "worked_examples": [
+              "Quartz and feldspar are common minerals found in many rocks; identifying minerals can use properties such as hardness, streak and luster."
+            ],
+            "pitfall": "A rock and a mineral are not interchangeable terms.",
+            "mastery_check": "Identify the difference between rocks and minerals and use observable properties for basic identification.",
+            "revision": "Revise Rocks and minerals through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Water cycle",
+          "study_materials": {
+            "objective": "Build mastery of Water cycle in Earth & Environment.",
+            "teaching_content": "Water circulates through evaporation, condensation, precipitation, collection, infiltration and runoff.",
+            "worked_examples": [
+              "After rain, some water infiltrates soil while some flows over land as runoff; both pathways affect water availability."
+            ],
+            "pitfall": "Evaporation does not destroy water; it changes liquid water into water vapour.",
+            "mastery_check": "Sequence major water-cycle processes and explain how water moves between reservoirs.",
+            "revision": "Revise Water cycle through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Weather and climate",
+          "study_materials": {
+            "objective": "Build mastery of Weather and climate in Earth & Environment.",
+            "teaching_content": "Weather describes atmospheric conditions over short periods; climate describes long-term patterns in a region.",
+            "worked_examples": [
+              "A weekly forecast describes weather, while a multi-decade temperature record can be used to study climate."
+            ],
+            "pitfall": "A single storm cannot by itself establish a climate pattern.",
+            "mastery_check": "Distinguish weather observations from climate evidence and interpret simple records.",
+            "revision": "Revise Weather and climate through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Natural resources",
+          "study_materials": {
+            "objective": "Build mastery of Natural resources in Earth & Environment.",
+            "teaching_content": "Natural resources include materials and energy sources obtained from Earth. Renewable resources can replenish on useful timescales, while non-renewable resources are finite on human timescales.",
+            "worked_examples": [
+              "Sunlight is renewable; coal forms extremely slowly and is therefore non-renewable for practical human use."
+            ],
+            "pitfall": "Renewable does not mean unlimited or impact-free.",
+            "mastery_check": "Classify resources and explain why conservation matters.",
+            "revision": "Revise Natural resources through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Pollution and sustainability",
+          "study_materials": {
+            "objective": "Build mastery of Pollution and sustainability in Earth & Environment.",
+            "teaching_content": "Pollution can affect air, water and soil and may harm organisms. Sustainability involves reducing waste and using resources responsibly over time.",
+            "worked_examples": [
+              "Treating wastewater before release can reduce harmful substances entering rivers."
+            ],
+            "pitfall": "A solution is stronger when it addresses the source of pollution rather than only its visible effects.",
+            "mastery_check": "Connect pollution sources with impacts and propose evidence-based prevention measures.",
+            "revision": "Revise Pollution and sustainability through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Space Science",
+      "subtopics": [
+        {
+          "title": "Earth Moon and Sun",
+          "study_materials": {
+            "objective": "Build mastery of Earth Moon and Sun in Space Science.",
+            "teaching_content": "Earth orbits the Sun and the Moon orbits Earth. Their relative positions explain observable phenomena including lunar phases.",
+            "worked_examples": [
+              "During a lunar phase, sunlight still illuminates half of the Moon; the visible fraction changes with orbital position."
+            ],
+            "pitfall": "Moon phases are not caused by Earth's shadow except during a lunar eclipse.",
+            "mastery_check": "Use a simple model to explain phases and eclipses.",
+            "revision": "Revise Earth Moon and Sun through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Solar system",
+          "study_materials": {
+            "objective": "Build mastery of Solar system in Space Science.",
+            "teaching_content": "The Solar System includes the Sun and objects gravitationally bound to it, including planets, dwarf planets, moons, asteroids and comets.",
+            "worked_examples": [
+              "A planet orbits the Sun and meets the accepted criteria for planetary classification; moons instead orbit planets or other bodies."
+            ],
+            "pitfall": "Calling every large space object a planet is incorrect.",
+            "mastery_check": "Classify common Solar System objects using defining features.",
+            "revision": "Revise Solar system through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Stars and galaxies",
+          "study_materials": {
+            "objective": "Build mastery of Stars and galaxies in Space Science.",
+            "teaching_content": "Stars emit their own light and are separated by enormous distances. Galaxies are large systems containing stars, gas, dust and other matter.",
+            "worked_examples": [
+              "The Sun is one star in the Milky Way; its apparent brightness to us is strongly affected by its distance."
+            ],
+            "pitfall": "A galaxy is vastly larger than an individual planetary system.",
+            "mastery_check": "Compare the hierarchy from star and planetary system to galaxy.",
+            "revision": "Revise Stars and galaxies through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Space observation",
+          "study_materials": {
+            "objective": "Build mastery of Space observation in Space Science.",
+            "teaching_content": "Astronomers infer properties of distant objects from light, spectra, apparent motion and changes in brightness.",
+            "worked_examples": [
+              "A spectrum can provide evidence about composition because elements interact with specific wavelengths of light."
+            ],
+            "pitfall": "Observation does not mean physically travelling to the object being studied.",
+            "mastery_check": "Connect astronomical claims to the observations that support them.",
+            "revision": "Revise Space observation through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Scale and scientific models",
+          "study_materials": {
+            "objective": "Build mastery of Scale and scientific models in Space Science.",
+            "teaching_content": "Space distances and sizes are too large to experience directly, so models and scaled diagrams help compare relationships.",
+            "worked_examples": [
+              "A model may exaggerate sizes or distances to make relationships visible; that does not make it physically to scale in every dimension."
+            ],
+            "pitfall": "A useful model is not automatically an exact copy of reality.",
+            "mastery_check": "Evaluate what a space model represents accurately and what it simplifies.",
+            "revision": "Revise Scale and scientific models through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Scientific Reasoning",
+      "subtopics": [
+        {
+          "title": "Classification and patterns",
+          "study_materials": {
+            "objective": "Build mastery of Classification and patterns in Scientific Reasoning.",
+            "teaching_content": "Classification groups objects or observations using shared characteristics; patterns are repeated relationships that can help generate testable explanations.",
+            "worked_examples": [
+              "If several unknown samples share hardness, colour and reaction to acid, those observations can support a provisional grouping."
+            ],
+            "pitfall": "A classification based on one accidental similarity may be unreliable.",
+            "mastery_check": "Use multiple relevant characteristics to classify observations and identify patterns.",
+            "revision": "Revise Classification and patterns through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Cause and effect",
+          "study_materials": {
+            "objective": "Build mastery of Cause and effect in Scientific Reasoning.",
+            "teaching_content": "A cause is a factor that contributes to an outcome; correlation alone does not prove that one variable caused another.",
+            "worked_examples": [
+              "If plant growth changes when light level is deliberately varied while other conditions are controlled, the evidence is stronger for a causal relationship."
+            ],
+            "pitfall": "Two variables changing together does not automatically establish causation.",
+            "mastery_check": "Distinguish evidence for causation from simple association.",
+            "revision": "Revise Cause and effect through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Experimental data interpretation",
+          "study_materials": {
+            "objective": "Build mastery of Experimental data interpretation in Scientific Reasoning.",
+            "teaching_content": "Data should be examined for trends, variation, unusual values and whether the evidence answers the original question.",
+            "worked_examples": [
+              "Repeated measurements that cluster closely provide more confidence in precision than a single measurement."
+            ],
+            "pitfall": "A convenient value should not be selected merely because it supports a preferred conclusion.",
+            "mastery_check": "Interpret tables and graphs using all relevant data and acknowledge uncertainty.",
+            "revision": "Revise Experimental data interpretation through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Model evaluation",
+          "study_materials": {
+            "objective": "Build mastery of Model evaluation in Scientific Reasoning.",
+            "teaching_content": "A scientific model is a representation used to explain or predict a system. Models are judged by how well they match evidence and where they have limitations.",
+            "worked_examples": [
+              "A particle model explains many properties of matter but does not show every microscopic interaction in detail."
+            ],
+            "pitfall": "A model's usefulness does not require it to reproduce every feature of reality.",
+            "mastery_check": "Identify strengths, limitations and evidence for improving a model.",
+            "revision": "Revise Model evaluation through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Integrated science problems",
+          "study_materials": {
+            "objective": "Build mastery of Integrated science problems in Scientific Reasoning.",
+            "teaching_content": "Complex science questions can require combining ideas from measurement, matter, forces, energy, life science, Earth science and space science.",
+            "worked_examples": [
+              "A question about why a wet surface cools can involve evaporation, energy transfer, measurement and environmental conditions."
+            ],
+            "pitfall": "Using a familiar formula without identifying the relevant variables can produce an irrelevant answer.",
+            "mastery_check": "Select appropriate concepts, evidence and calculations to solve multi-step science problems.",
+            "revision": "Revise Integrated science problems through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Science Competition Mastery",
+      "subtopics": [
+        {
+          "title": "experimental design strategy",
+          "study_materials": {
+            "objective": "Build mastery of experimental design strategy in Science Competition Mastery.",
+            "teaching_content": "Select variables, controls, measurements, and evidence that can answer a scientific question reliably.",
+            "worked_examples": [
+              "To test whether light affects plant growth, keep plant type, water, soil, and time controlled while changing only light exposure."
+            ],
+            "pitfall": "Pitfall: changing several variables at once and then attributing the result to only one factor.",
+            "mastery_check": "Design or evaluate a fair test and identify the evidence needed for a conclusion.",
+            "revision": "Revise experimental design strategy through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "evidence and claim reasoning",
+          "study_materials": {
+            "objective": "Build mastery of evidence and claim reasoning in Science Competition Mastery.",
+            "teaching_content": "Separate observations from explanations and judge whether evidence actually supports a scientific claim.",
+            "worked_examples": [
+              "If two materials show different heating rates, compare repeated measurements before claiming one material always heats faster."
+            ],
+            "pitfall": "Pitfall: treating a single observation as proof of a universal rule.",
+            "mastery_check": "Use evidence to support, qualify, or reject a scientific claim.",
+            "revision": "Revise evidence and claim reasoning through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "data interpretation and anomalies",
+          "study_materials": {
+            "objective": "Build mastery of data interpretation and anomalies in Science Competition Mastery.",
+            "teaching_content": "Read tables, graphs, patterns, and repeated measurements while distinguishing trends from anomalies.",
+            "worked_examples": [
+              "If most measurements rise steadily but one value is far outside the pattern, check for recording or experimental error before ignoring it."
+            ],
+            "pitfall": "Pitfall: deleting an unusual value simply because it disagrees with the expected result.",
+            "mastery_check": "Interpret scientific data and explain how an anomalous result affects confidence.",
+            "revision": "Revise data interpretation and anomalies through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated science scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated science scenarios in Science Competition Mastery.",
+            "teaching_content": "Combine concepts from physics, chemistry, biology, Earth science, environment, and space science to explain unfamiliar situations.",
+            "worked_examples": [
+              "A climate scenario can require interpreting energy transfer, atmospheric composition, water cycling, and biological effects together."
+            ],
+            "pitfall": "Pitfall: applying one familiar science fact without considering interactions among systems.",
+            "mastery_check": "Build a coherent explanation using evidence from multiple scientific domains.",
+            "revision": "Revise integrated science scenarios through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "science championship round",
+          "study_materials": {
+            "objective": "Build mastery of science championship round in Science Competition Mastery.",
+            "teaching_content": "Practice timed mixed science challenges with classification, calculation, evidence evaluation, and final verification.",
+            "worked_examples": [
+              "In a timed round, classify the question first, choose the relevant scientific principle, eliminate unsupported options, and verify the final conclusion."
+            ],
+            "pitfall": "Pitfall: selecting an answer from a familiar keyword without checking whether the full scenario supports it.",
+            "mastery_check": "Solve mixed science challenges accurately under time pressure and justify conclusions with scientific reasoning.",
+            "revision": "Revise science championship round through scientific examples, practice, evidence checks and a mastery review."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "evidence reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "SC-MOCK-01",
+      "focus": "scientific inquiry, matter, forces and energy"
+    },
+    {
+      "id": "SC-MOCK-02",
+      "focus": "life science, Earth, space and scientific reasoning"
+    },
+    {
+      "id": "SC-MOCK-03",
+      "focus": "mixed science championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "Science Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
