@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   generate-gk:
-    if: github.event_name == 'workflow_dispatch' || contains(toJson(github.event.commits), 'scripts/generate-gk-production-bank.mjs')
+    if: true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
