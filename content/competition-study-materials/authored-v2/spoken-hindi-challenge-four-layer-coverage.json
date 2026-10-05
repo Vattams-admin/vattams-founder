@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "Spoken Hindi Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/spoken-hindi-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Hindi Foundations",
+      "subtopics": [
+        {
+          "title": "sounds and pronunciation",
+          "study_materials": {
+            "objective": "Build mastery of sounds and pronunciation in Hindi Foundations.",
+            "teaching_content": "Master sounds and pronunciation within Hindi Foundations for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative sounds and pronunciation task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar sounds and pronunciation task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise sounds and pronunciation with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "basic vocabulary",
+          "study_materials": {
+            "objective": "Build mastery of basic vocabulary in Hindi Foundations.",
+            "teaching_content": "Master basic vocabulary within Hindi Foundations for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative basic vocabulary task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar basic vocabulary task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise basic vocabulary with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "greetings",
+          "study_materials": {
+            "objective": "Build mastery of greetings in Hindi Foundations.",
+            "teaching_content": "Master greetings within Hindi Foundations for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative greetings task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar greetings task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise greetings with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "numbers",
+          "study_materials": {
+            "objective": "Build mastery of numbers in Hindi Foundations.",
+            "teaching_content": "Master numbers within Hindi Foundations for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative numbers task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar numbers task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise numbers with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "common expressions",
+          "study_materials": {
+            "objective": "Build mastery of common expressions in Hindi Foundations.",
+            "teaching_content": "Master common expressions within Hindi Foundations for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative common expressions task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar common expressions task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise common expressions with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Everyday Communication",
+      "subtopics": [
+        {
+          "title": "introductions",
+          "study_materials": {
+            "objective": "Build mastery of introductions in Everyday Communication.",
+            "teaching_content": "Master introductions within Everyday Communication for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative introductions task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar introductions task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise introductions with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "family",
+          "study_materials": {
+            "objective": "Build mastery of family in Everyday Communication.",
+            "teaching_content": "Master family within Everyday Communication for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative family task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar family task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise family with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "school",
+          "study_materials": {
+            "objective": "Build mastery of school in Everyday Communication.",
+            "teaching_content": "Master school within Everyday Communication for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative school task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar school task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise school with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "shopping",
+          "study_materials": {
+            "objective": "Build mastery of shopping in Everyday Communication.",
+            "teaching_content": "Master shopping within Everyday Communication for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative shopping task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar shopping task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise shopping with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "travel",
+          "study_materials": {
+            "objective": "Build mastery of travel in Everyday Communication.",
+            "teaching_content": "Master travel within Everyday Communication for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative travel task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar travel task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise travel with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Grammar for Speaking",
+      "subtopics": [
+        {
+          "title": "gender",
+          "study_materials": {
+            "objective": "Build mastery of gender in Grammar for Speaking.",
+            "teaching_content": "Master gender within Grammar for Speaking for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative gender task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar gender task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise gender with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "number",
+          "study_materials": {
+            "objective": "Build mastery of number in Grammar for Speaking.",
+            "teaching_content": "Master number within Grammar for Speaking for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative number task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar number task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise number with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "pronouns",
+          "study_materials": {
+            "objective": "Build mastery of pronouns in Grammar for Speaking.",
+            "teaching_content": "Master pronouns within Grammar for Speaking for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative pronouns task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar pronouns task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise pronouns with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "verb forms",
+          "study_materials": {
+            "objective": "Build mastery of verb forms in Grammar for Speaking.",
+            "teaching_content": "Master verb forms within Grammar for Speaking for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative verb forms task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar verb forms task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise verb forms with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sentence patterns",
+          "study_materials": {
+            "objective": "Build mastery of sentence patterns in Grammar for Speaking.",
+            "teaching_content": "Master sentence patterns within Grammar for Speaking for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative sentence patterns task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar sentence patterns task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise sentence patterns with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vocabulary Expansion",
+      "subtopics": [
+        {
+          "title": "daily verbs",
+          "study_materials": {
+            "objective": "Build mastery of daily verbs in Vocabulary Expansion.",
+            "teaching_content": "Master daily verbs within Vocabulary Expansion for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative daily verbs task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar daily verbs task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise daily verbs with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "descriptive words",
+          "study_materials": {
+            "objective": "Build mastery of descriptive words in Vocabulary Expansion.",
+            "teaching_content": "Master descriptive words within Vocabulary Expansion for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative descriptive words task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar descriptive words task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise descriptive words with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "connectors",
+          "study_materials": {
+            "objective": "Build mastery of connectors in Vocabulary Expansion.",
+            "teaching_content": "Master connectors within Vocabulary Expansion for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative connectors task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar connectors task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise connectors with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "question words",
+          "study_materials": {
+            "objective": "Build mastery of question words in Vocabulary Expansion.",
+            "teaching_content": "Master question words within Vocabulary Expansion for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative question words task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar question words task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise question words with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "topic vocabulary",
+          "study_materials": {
+            "objective": "Build mastery of topic vocabulary in Vocabulary Expansion.",
+            "teaching_content": "Master topic vocabulary within Vocabulary Expansion for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative topic vocabulary task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar topic vocabulary task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise topic vocabulary with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Listening Comprehension",
+      "subtopics": [
+        {
+          "title": "key words",
+          "study_materials": {
+            "objective": "Build mastery of key words in Listening Comprehension.",
+            "teaching_content": "Master key words within Listening Comprehension for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative key words task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar key words task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise key words with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "instructions",
+          "study_materials": {
+            "objective": "Build mastery of instructions in Listening Comprehension.",
+            "teaching_content": "Master instructions within Listening Comprehension for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative instructions task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar instructions task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise instructions with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "dialogues",
+          "study_materials": {
+            "objective": "Build mastery of dialogues in Listening Comprehension.",
+            "teaching_content": "Master dialogues within Listening Comprehension for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative dialogues task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar dialogues task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise dialogues with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "short passages",
+          "study_materials": {
+            "objective": "Build mastery of short passages in Listening Comprehension.",
+            "teaching_content": "Master short passages within Listening Comprehension for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative short passages task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar short passages task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise short passages with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "speaker intent",
+          "study_materials": {
+            "objective": "Build mastery of speaker intent in Listening Comprehension.",
+            "teaching_content": "Master speaker intent within Listening Comprehension for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative speaker intent task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar speaker intent task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise speaker intent with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Conversation Skills",
+      "subtopics": [
+        {
+          "title": "turn taking",
+          "study_materials": {
+            "objective": "Build mastery of turn taking in Conversation Skills.",
+            "teaching_content": "Master turn taking within Conversation Skills for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative turn taking task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar turn taking task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise turn taking with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "asking questions",
+          "study_materials": {
+            "objective": "Build mastery of asking questions in Conversation Skills.",
+            "teaching_content": "Master asking questions within Conversation Skills for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative asking questions task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar asking questions task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise asking questions with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "responding",
+          "study_materials": {
+            "objective": "Build mastery of responding in Conversation Skills.",
+            "teaching_content": "Master responding within Conversation Skills for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative responding task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar responding task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise responding with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "clarification",
+          "study_materials": {
+            "objective": "Build mastery of clarification in Conversation Skills.",
+            "teaching_content": "Master clarification within Conversation Skills for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative clarification task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar clarification task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise clarification with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "polite speech",
+          "study_materials": {
+            "objective": "Build mastery of polite speech in Conversation Skills.",
+            "teaching_content": "Master polite speech within Conversation Skills for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative polite speech task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar polite speech task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise polite speech with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Functional Hindi",
+      "subtopics": [
+        {
+          "title": "directions",
+          "study_materials": {
+            "objective": "Build mastery of directions in Functional Hindi.",
+            "teaching_content": "Master directions within Functional Hindi for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative directions task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar directions task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise directions with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "appointments",
+          "study_materials": {
+            "objective": "Build mastery of appointments in Functional Hindi.",
+            "teaching_content": "Master appointments within Functional Hindi for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative appointments task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar appointments task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise appointments with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "requests",
+          "study_materials": {
+            "objective": "Build mastery of requests in Functional Hindi.",
+            "teaching_content": "Master requests within Functional Hindi for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative requests task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar requests task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise requests with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "announcements",
+          "study_materials": {
+            "objective": "Build mastery of announcements in Functional Hindi.",
+            "teaching_content": "Master announcements within Functional Hindi for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative announcements task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar announcements task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise announcements with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "real-world scenarios",
+          "study_materials": {
+            "objective": "Build mastery of real-world scenarios in Functional Hindi.",
+            "teaching_content": "Master real-world scenarios within Functional Hindi for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative real-world scenarios task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar real-world scenarios task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise real-world scenarios with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Fluency & Confidence",
+      "subtopics": [
+        {
+          "title": "pronunciation repair",
+          "study_materials": {
+            "objective": "Build mastery of pronunciation repair in Fluency & Confidence.",
+            "teaching_content": "Master pronunciation repair within Fluency & Confidence for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative pronunciation repair task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar pronunciation repair task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise pronunciation repair with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sentence expansion",
+          "study_materials": {
+            "objective": "Build mastery of sentence expansion in Fluency & Confidence.",
+            "teaching_content": "Master sentence expansion within Fluency & Confidence for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative sentence expansion task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar sentence expansion task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise sentence expansion with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "role play",
+          "study_materials": {
+            "objective": "Build mastery of role play in Fluency & Confidence.",
+            "teaching_content": "Master role play within Fluency & Confidence for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative role play task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar role play task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise role play with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "storytelling",
+          "study_materials": {
+            "objective": "Build mastery of storytelling in Fluency & Confidence.",
+            "teaching_content": "Master storytelling within Fluency & Confidence for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative storytelling task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar storytelling task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise storytelling with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "timed speaking",
+          "study_materials": {
+            "objective": "Build mastery of timed speaking in Fluency & Confidence.",
+            "teaching_content": "Master timed speaking within Fluency & Confidence for Spoken Hindi Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative timed speaking task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar timed speaking task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise timed speaking with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Hindi Speaking Competition Mastery",
+      "subtopics": [
+        {
+          "title": "conversation strategy",
+          "study_materials": {
+            "objective": "Build mastery of conversation strategy in Hindi Speaking Competition Mastery.",
+            "teaching_content": "Choose language appropriate to the listener, situation, purpose, and level of formality before responding.",
+            "worked_examples": [
+              "A request to a teacher should use a respectful form, while the same information can be phrased more casually with a close friend."
+            ],
+            "pitfall": "Pitfall: using the same tone and expression for every listener.",
+            "mastery_check": "Select and deliver an appropriate Hindi response for a given social context.",
+            "revision": "Revise conversation strategy with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "meaning from spoken context",
+          "study_materials": {
+            "objective": "Build mastery of meaning from spoken context in Hindi Speaking Competition Mastery.",
+            "teaching_content": "Use key words, tone, grammar, and surrounding dialogue to infer what a Hindi speaker intends when not every word is familiar.",
+            "worked_examples": [
+              "If a speaker gives a time, place, and action together, use those clues to infer the requested plan even when one vocabulary item is unknown."
+            ],
+            "pitfall": "Pitfall: stopping comprehension completely because of one unfamiliar word.",
+            "mastery_check": "Infer the main meaning and speaker intention from contextual Hindi clues.",
+            "revision": "Revise meaning from spoken context with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "pronunciation and repair",
+          "study_materials": {
+            "objective": "Build mastery of pronunciation and repair in Hindi Speaking Competition Mastery.",
+            "teaching_content": "Identify unclear sounds, syllable stress, vowel length, and word endings, then repair them through slow repetition and controlled re-speaking.",
+            "worked_examples": [
+              "When a listener repeatedly mishears a word, isolate the difficult sound, say the word slowly, then place it back into the full sentence."
+            ],
+            "pitfall": "Pitfall: repeating the same unclear pronunciation faster instead of changing the practice method.",
+            "mastery_check": "Detect a pronunciation issue and improve intelligibility through targeted practice.",
+            "revision": "Revise pronunciation and repair with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated speaking scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated speaking scenarios in Hindi Speaking Competition Mastery.",
+            "teaching_content": "Combine listening, vocabulary, grammar, turn-taking, clarification, and polite speech in realistic Hindi conversations.",
+            "worked_examples": [
+              "A travel dialogue can require understanding a question, giving directions, asking for clarification, and confirming the destination."
+            ],
+            "pitfall": "Pitfall: memorizing isolated sentences without adapting them to the actual conversation.",
+            "mastery_check": "Sustain a context-appropriate Hindi exchange while responding to changing conversational cues.",
+            "revision": "Revise integrated speaking scenarios with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Hindi speaking championship round",
+          "study_materials": {
+            "objective": "Build mastery of Hindi speaking championship round in Hindi Speaking Competition Mastery.",
+            "teaching_content": "Practice timed speaking challenges with clear pronunciation, relevant responses, controlled pace, active listening, and confident recovery from mistakes.",
+            "worked_examples": [
+              "In a timed role-play, listen fully, answer directly, ask one useful clarification when necessary, and continue without abandoning the conversation after a minor error."
+            ],
+            "pitfall": "Pitfall: focusing so heavily on perfect grammar that the response becomes delayed or disconnected.",
+            "mastery_check": "Complete a timed Hindi speaking task with understandable pronunciation, relevant content, and confident conversational control.",
+            "revision": "Revise Hindi speaking championship round with listening, speaking, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "listening",
+              "error correction",
+              "speaking challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "SHC-MOCK-01",
+      "focus": "Hindi foundations, everyday communication and grammar"
+    },
+    {
+      "id": "SHC-MOCK-02",
+      "focus": "listening, conversation and functional Hindi"
+    },
+    {
+      "id": "SHC-MOCK-03",
+      "focus": "timed Hindi speaking championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "Spoken Hindi Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
