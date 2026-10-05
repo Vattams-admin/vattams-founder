@@ -89,3 +89,4 @@ console.log(`RESULT: PASS — ${slug}: ${publicBank.length} reviewed mock MCQs, 
 // Trigger CI summary diagnostics.\n
 // Trigger published CI failure report.\n
 // Validate after deterministic runtime source preparation.\n
+// Trigger isolated runtime preparation diagnostics.\n
