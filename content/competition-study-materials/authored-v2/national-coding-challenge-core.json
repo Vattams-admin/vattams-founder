@@ -168,10 +168,10 @@
         },
         {
           "title": "maps and sets",
-          "teaching": "Master maps and sets within Data Structures for National Coding Challenge. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative maps and sets challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar maps and sets problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Use maps for key-to-value lookup and sets for uniqueness or membership testing. Choose them when direct lookup or duplicate detection is more appropriate than repeated linear scanning.",
+          "worked_example": "Insert student IDs into a set to determine whether an ID has appeared before; repeated insertion leaves the set with one copy. A map such as score[id]=value associates each ID with its latest score.",
+          "pitfall": "Confusing set membership with indexed access, assuming map keys are ordered when the language does not guarantee it, or ignoring missing-key behaviour.",
+          "mastery": "Choose maps or sets based on the required operation, simulate insertion and lookup correctly, handle missing keys and duplicates, and explain why the structure fits the problem."
         }
       ]
     },
