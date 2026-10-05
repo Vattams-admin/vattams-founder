@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "National Aptitude Championship",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_complete",
+  "status": "subject_specific_authoring_v1_in_progress",
   "age_bands": [
     "foundation",
     "developing",
@@ -20,38 +20,38 @@
       "subtopics": [
         {
           "title": "number operations",
-          "teaching": "Master number operations within Quantitative Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative number operations challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar number operations problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Build fluency with integers, order of operations, divisibility, factors, multiples, and remainder reasoning. For championship aptitude questions, choose the shortest valid route while preserving exactness; compare direct calculation with factorisation or modular reasoning when useful. Train students to estimate first, track signs and place value, and verify answers against the original expression.",
+          "worked_example": "Worked example: Evaluate 48 ÷ 6 × (7 − 3) + 5. Resolve the bracket first, then division and multiplication from left to right: 4 × 4 + 5 = 21. Verify by substituting the intermediate value back into the original expression and checking that no operation-order shortcut changed the meaning.",
+          "pitfall": "Common pitfall: performing multiplication before division regardless of position, or treating subtraction as if it were associative. Another frequent error is losing a negative sign during a multi-step simplification.",
+          "mastery": "Mastery: independently simplify unfamiliar mixed-operation expressions, explain why the chosen order is valid, detect sign or precedence traps, and verify the result with an independent estimate or reverse check."
         },
         {
           "title": "percentages",
-          "teaching": "Master percentages within Quantitative Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative percentages challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar percentages problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Treat percentages as multiplicative relationships rather than isolated formulas. Practise percentage increase/decrease, successive changes, reverse percentages, and percentage-point versus percentage-change distinctions. Championship problems should be translated into a base quantity before calculation so the reference value remains explicit.",
+          "worked_example": "Worked example: A price of ₹800 rises by 15% and then falls by 15%. The increase gives ₹920; the decrease is 15% of ₹920, giving ₹782. The final value is therefore 2.25% below the original, showing why equal successive percentage changes do not cancel.",
+          "pitfall": "Common pitfall: taking both percentage changes from the original base. In reverse-percentage questions, dividing by the stated percentage instead of dividing by the multiplier is also a common error.",
+          "mastery": "Mastery: solve direct, reverse, successive-change, and comparison percentage problems, identify the correct base quantity, distinguish percentage points from percent change, and justify the final relationship."
         },
         {
           "title": "ratio proportion",
-          "teaching": "Master ratio proportion within Quantitative Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative ratio proportion challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar ratio proportion problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Develop ratio reasoning by reducing ratios, scaling equivalent ratios, combining linked ratios, and using proportional relationships. Students should label what each ratio part represents and preserve units when moving between quantities. Competition problems often become simpler when the common multiplier is identified before any arithmetic.",
+          "worked_example": "Worked example: If boys:girls = 3:5 and there are 32 students, the total ratio parts are 8, so each part is 4. There are 12 boys and 20 girls. Check that 12:20 reduces to 3:5 and that the total remains 32.",
+          "pitfall": "Common pitfall: adding ratio terms to the quantities directly or comparing ratios with different totals without normalising them. Unit mismatch can also make a seemingly correct proportion invalid.",
+          "mastery": "Mastery: translate verbal relationships into ratios, combine compatible ratios, solve missing quantities, test proportionality, and verify the result by reconstructing the original ratio."
         },
         {
           "title": "averages",
-          "teaching": "Master averages within Quantitative Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative averages challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar averages problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Use averages as balance points: total = average × number of observations. Practise missing-value problems, combined averages, changes after adding or removing observations, and weighted situations. Encourage total-based reasoning because it is faster and less error-prone than repeatedly averaging partial groups.",
+          "worked_example": "Worked example: The average of 6 scores is 14, so their total is 84. If a seventh score is 21, the new total is 105 and the new average is 15. Verify by checking 15 × 7 = 105.",
+          "pitfall": "Common pitfall: averaging two group averages without weighting by group size. Another error is forgetting that adding one observation changes both the total and the count.",
+          "mastery": "Mastery: solve missing-score, combined-average, replacement, and weighted-average problems, choose total-based reasoning where appropriate, and validate the final average against plausible minimum and maximum values."
         },
         {
           "title": "profit loss",
-          "teaching": "Master profit loss within Quantitative Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative profit loss challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar profit loss problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Model commercial arithmetic from cost price, selling price, marked price, discount, profit, and loss. Keep the reference base explicit: profit or loss percentage is normally measured against cost price, while discount percentage is measured against marked price. Use multiplier reasoning for chained changes.",
+          "worked_example": "Worked example: An item costing ₹600 is sold at a 20% profit, so the selling price is ₹720. If the marked price was ₹800, the discount is ₹80, or 10% of the marked price. Each percentage is tied to its correct base.",
+          "pitfall": "Common pitfall: calculating profit percentage on selling price or discount percentage on cost price. Mixing marked price and selling price in a single formula without identifying the base causes systematic errors.",
+          "mastery": "Mastery: solve profit, loss, discount, marked-price, and reverse-price problems, state the base for every percentage, and verify the answer by reconstructing cost and selling relationships."
         }
       ]
     },
@@ -60,38 +60,38 @@
       "subtopics": [
         {
           "title": "equations",
-          "teaching": "Master equations within Algebraic Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative equations challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar equations problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Translate aptitude word conditions into linear or simple nonlinear equations, isolate variables systematically, and use substitution to verify solutions. Emphasise choosing a useful variable definition before manipulating the equation, especially in age, price, mixture, and count problems.",
+          "worked_example": "Worked example: Three times a number plus 7 equals 31. Let the number be x: 3x + 7 = 31, so 3x = 24 and x = 8. Substitution gives 3(8)+7 = 31, confirming the solution.",
+          "pitfall": "Common pitfall: changing a sign when moving a term across the equality, or dividing only one part of an expression. In word problems, an algebraically valid equation can still represent the wrong quantities.",
+          "mastery": "Mastery: form equations from unfamiliar statements, solve them cleanly, reject extraneous or impossible values where relevant, and verify by substituting into the original condition."
         },
         {
           "title": "inequalities",
-          "teaching": "Master inequalities within Algebraic Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative inequalities challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar inequalities problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Reason with ranges rather than single values. Practise translating words such as at least, at most, greater than, and less than; reversing an inequality when multiplying or dividing by a negative; and combining bounds. Aptitude questions often test whether an endpoint is included.",
+          "worked_example": "Worked example: Solve 3x − 5 ≤ 10. Adding 5 gives 3x ≤ 15, hence x ≤ 5. If instead the final step divided by −3, the inequality direction would reverse. Test x = 5 and x = 6 to verify the boundary.",
+          "pitfall": "Common pitfall: forgetting to reverse the inequality when multiplying or dividing by a negative, or confusing “at least” with “greater than.”",
+          "mastery": "Mastery: translate verbal constraints into inequalities, solve compound bounds, handle negative multipliers correctly, identify included endpoints, and test boundary cases."
         },
         {
           "title": "sequences",
-          "teaching": "Master sequences within Algebraic Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative sequences challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar sequences problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Recognise arithmetic, geometric, alternating, recursive, and difference-based patterns without assuming that the first visible pattern is the intended rule. Compare successive differences or ratios, then derive a rule that predicts later terms and explain why competing patterns fail.",
+          "worked_example": "Worked example: For 4, 7, 10, 13, ... the constant difference is 3, so the nth term is 4 + 3(n−1) = 3n+1. The 10th term is 31. Verify the rule against the first several terms before extending it.",
+          "pitfall": "Common pitfall: spotting a superficial pattern from only two or three terms and treating it as unique. Always test a proposed rule against all supplied terms.",
+          "mastery": "Mastery: identify the governing structure of unfamiliar sequences, derive missing terms or a general rule, distinguish plausible alternatives, and justify the pattern using multiple checks."
         },
         {
           "title": "functions basics",
-          "teaching": "Master functions basics within Algebraic Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative functions basics challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar functions basics problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Understand a function as a rule mapping each permitted input to exactly one output. Practise substitution, evaluating compositions, identifying input restrictions, and reading simple functional relationships. Keep the distinction between f(x), the input x, and the resulting output explicit.",
+          "worked_example": "Worked example: If f(x)=2x+3, then f(4)=11. For f(f(1)), first calculate f(1)=5, then f(5)=13. The two steps show why composition is not the same as doubling the input.",
+          "pitfall": "Common pitfall: replacing the function symbol with multiplication, or evaluating a composition in the wrong order. Domain restrictions can also make an otherwise algebraic expression invalid.",
+          "mastery": "Mastery: evaluate and compose simple functions, identify valid inputs, translate verbal rules into functions, and explain each substitution step without confusing input and output."
         },
         {
           "title": "algebraic word problems",
-          "teaching": "Master algebraic word problems within Algebraic Aptitude for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative algebraic word problems challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar algebraic word problems problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Convert verbal relationships into variables, equations, and constraints before calculating. Focus on ages, consecutive integers, prices, counts, and comparison statements. Encourage a two-pass process: model the situation first, then solve and check whether the numerical result fits the story.",
+          "worked_example": "Worked example: Two consecutive integers have sum 57. Let the first be n and the next n+1. Then 2n+1=57, so n=28 and the integers are 28 and 29. Check both the sum and the consecutive condition.",
+          "pitfall": "Common pitfall: assigning variables without defining them clearly, or solving the equation but accepting a value that violates the original story constraints such as positivity or integer status.",
+          "mastery": "Mastery: construct an accurate algebraic model from unfamiliar wording, solve under stated constraints, and verify both the equation and the real-world interpretation."
         }
       ]
     },
@@ -100,38 +100,38 @@
       "subtopics": [
         {
           "title": "time work",
-          "teaching": "Master time work within Arithmetic Applications for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative time work challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar time work problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Model work-rate problems using rate = work/time and combined rate addition. Choose a common unit of work, such as one whole job, and represent each worker's contribution per unit time. Use reciprocal reasoning rather than adding completion times.",
+          "worked_example": "Worked example: If A completes a job in 6 hours and B in 3 hours, their rates are 1/6 and 1/3 job per hour. Together they work at 1/2 job per hour, so the job takes 2 hours. Verify by checking that A completes 1/3 and B 2/3 of the job in two hours.",
+          "pitfall": "Common pitfall: adding 6 + 3 or averaging completion times. A second error is forgetting that rates, not times, combine directly.",
+          "mastery": "Mastery: solve single-worker, combined-worker, efficiency-change, and partial-work problems by defining rates explicitly and checking that the combined work equals one complete job."
         },
         {
           "title": "speed distance",
-          "teaching": "Master speed distance within Arithmetic Applications for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative speed distance challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar speed distance problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Use distance = speed × time with consistent units, then extend to relative speed, average speed, trains, and journeys with stops. Separate distance travelled from elapsed time and identify whether average speed requires total distance divided by total time.",
+          "worked_example": "Worked example: A car travels 120 km at 60 km/h and returns 120 km at 40 km/h. Total distance is 240 km and total time is 2+3=5 hours, so average speed is 48 km/h—not the arithmetic mean of 60 and 40.",
+          "pitfall": "Common pitfall: averaging speeds directly when journey distances or times differ. Unit mismatch, especially km/h versus m/s, is another frequent source of wrong answers.",
+          "mastery": "Mastery: solve journey, relative-speed, average-speed, and unit-conversion problems, state the time and distance basis, and verify dimensional consistency."
         },
         {
           "title": "mixtures",
-          "teaching": "Master mixtures within Arithmetic Applications for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative mixtures challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar mixtures problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Treat mixtures through weighted averages, conservation of quantity, and concentration. Track both total amount and amount of the active component. For replacement problems, account for the quantity removed before calculating the new concentration.",
+          "worked_example": "Worked example: Mix 2 L of 30% solution with 3 L of 50% solution. Active quantity is 0.6+1.5=2.1 L in 5 L, giving 42% concentration. Check that 42% lies between 30% and 50%.",
+          "pitfall": "Common pitfall: averaging concentrations without weighting by quantities, or forgetting that removing a mixture removes both solvent and solute in the same proportion.",
+          "mastery": "Mastery: solve concentration, weighted-mixture, replacement, and target-concentration problems while tracking component quantities and checking that results remain physically plausible."
         },
         {
           "title": "ages",
-          "teaching": "Master ages within Arithmetic Applications for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative ages challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar ages problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Represent ages with variables and preserve how age differences stay constant over time while ratios change. Translate “after,” “before,” and “times as old” statements carefully, then solve and test the timeline at the requested date.",
+          "worked_example": "Worked example: A father is 4 times his son's age and their total is 50. Let the son's age be x; then 5x=50, so x=10 and the father is 40. Five years later they are 15 and 45, still 30 years apart but no longer in a 4:1 ratio.",
+          "pitfall": "Common pitfall: treating an age ratio as if it remains constant over time. Another error is applying “years ago” to one person's age but not the other's.",
+          "mastery": "Mastery: model age relationships at different times, solve ratio and difference conditions, and verify the resulting ages against every time statement."
         },
         {
           "title": "commercial arithmetic",
-          "teaching": "Master commercial arithmetic within Arithmetic Applications for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative commercial arithmetic challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar commercial arithmetic problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Integrate tax, discount, markup, commission, simple interest, and successive commercial changes while keeping each percentage's base explicit. Use multipliers to reduce chained calculations and distinguish quoted rates from final effective changes.",
+          "worked_example": "Worked example: A ₹1,000 marked price receives 10% discount, then 5% tax on the discounted price. Discounted price is ₹900; tax is ₹45; final payable amount is ₹945. The tax is not 5% of the original marked price.",
+          "pitfall": "Common pitfall: applying every percentage to the original price or treating successive percentage changes as additive. Always identify the base before calculating.",
+          "mastery": "Mastery: solve multi-stage commercial problems involving discounts, taxes, markup, commission, and interest, state each percentage base, and reconstruct the transaction to verify the final amount."
         }
       ]
     },
@@ -140,24 +140,24 @@
       "subtopics": [
         {
           "title": "tables",
-          "teaching": "Master tables within Data Interpretation for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative tables challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar tables problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Read tabular data by identifying headings, units, row/column relationships, totals, and changes before calculating. Practise direct lookup, comparisons, ratios, percentage change, and multi-column aggregation. Championship questions reward careful extraction as much as arithmetic.",
+          "worked_example": "Worked example: If a table lists quarterly sales as 120, 150, 135, and 195 units, the annual total is 600. The increase from Q1 to Q4 is 75 units, or 62.5% relative to Q1. Verify both calculations directly from the table.",
+          "pitfall": "Common pitfall: reading a value from the wrong row or unit column, or calculating a percentage from the wrong comparison base.",
+          "mastery": "Mastery: extract relevant values from dense tables, combine rows or columns accurately, compute comparisons and changes, and explain which table entries support the answer."
         },
         {
           "title": "bar charts",
-          "teaching": "Master bar charts within Data Interpretation for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative bar charts challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar bar charts problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Interpret bar-chart scale, categories, frequency, grouped bars, and comparative differences. Read the axis before reading the bar height, especially when the scale skips values. Convert visual comparisons into exact arithmetic only after identifying the correct categories.",
+          "worked_example": "Worked example: If a bar chart uses 10-unit intervals and category A reaches 70 while B reaches 50, A exceeds B by 20 units and is 40% higher than B. The percentage base is B's value, not A's.",
+          "pitfall": "Common pitfall: assuming each gridline equals one unit when the axis scale is larger, or confusing absolute difference with percentage increase.",
+          "mastery": "Mastery: accurately read scaled bars, compare categories, calculate totals and percentage differences, and verify that the numerical result matches the chart's visual ordering."
         },
         {
           "title": "line graphs",
-          "teaching": "Master line graphs within Data Interpretation for National Aptitude Championship. Establish the underlying rule or algorithm, trace representative cases, analyse edge conditions, and practise transfer to unfamiliar competition problems. Students should justify the method, identify why plausible alternatives fail, and verify the result rather than relying on pattern matching alone.",
-          "worked_example": "Worked example: solve a representative line graphs challenge step by step, state the governing rule or algorithm, test an edge case, and verify the final result.",
-          "pitfall": "Common pitfall: applying a familiar formula or algorithm without checking constraints, boundary conditions, units, ordering, or whether the chosen method actually matches the problem.",
-          "mastery": "Mastery: independently solve an unfamiliar line graphs problem, explain the method, handle an edge case, reject a plausible wrong approach, and verify the final answer or output."
+          "teaching": "Use line graphs to track change over ordered intervals, identify trends, peaks, troughs, rates of change, and interpolated comparisons when the graph supports them. Distinguish a value at a point from the change between two points.",
+          "worked_example": "Worked example: A graph shows monthly sales rising from 80 in January to 120 in March. The absolute increase is 40, while the percentage increase from January is 50%. If February is 100, the trend is a steady +20 per month.",
+          "pitfall": "Common pitfall: confusing slope or change with the actual value, or calculating percentage change from the later value instead of the starting value.",
+          "mastery": "Mastery: read exact values from line graphs, calculate changes and rates, identify trend reversals, and justify conclusions using the correct interval and baseline."
         },
         {
           "title": "pie charts",
