@@ -1,5 +1,8 @@
 name: Android Debug APK
 
+permissions:
+  contents: read
+
 # Builds an installable debug APK (no signing needed) so it can be
 # downloaded from the Actions run and sideloaded straight onto a phone
 # for testing — no Android Studio or local SDK required.
