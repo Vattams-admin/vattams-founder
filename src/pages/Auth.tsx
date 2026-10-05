@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import {
@@ -9,6 +10,7 @@ import { firebaseAuth, firestore } from '@/lib/firebase'
 import { friendlyAuthError } from '@/lib/authErrors'
 
 export default function Auth({
+  useSeo({ title: 'Auth', description: 'Account access', noindex: true })
   mode,
 }: {
   mode: 'login' | 'register'
