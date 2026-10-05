@@ -50,6 +50,14 @@ jobs:
             node scripts/validate-competition-mcq-bank.mjs --slug "$slug"
           done
           node scripts/validate-thirukkural-production.mjs
+      - name: Verify publisher inputs
+        env:
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          test -n "$SUPABASE_URL"
+          test -n "$SUPABASE_SERVICE_ROLE_KEY"
+          echo "Supabase publisher credentials are available to the runner"
       - name: Publish validated runtime packages to Supabase Storage
         env:
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
