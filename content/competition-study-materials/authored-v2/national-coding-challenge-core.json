@@ -20,38 +20,38 @@
       "subtopics": [
         {
           "title": "variables",
-          "teaching": "Teach variables as named storage whose values can change during execution. Focus on assignment versus comparison, update order, and choosing representations that match the problem. Trace each assignment sequentially before using the current value.",
-          "worked_example": "If x starts at 5 and the program executes x = x + 3 followed by x = x * 2, the final value is 16. The second statement uses the updated value 8, not the original 5.",
-          "pitfall": "Confusing assignment with comparison or mentally applying later updates to the original value instead of the current value.",
-          "mastery": "Trace variable state after every assignment, explain evaluation order, and independently determine the final state of unfamiliar short programs."
+          "teaching": "Teach variables as named program state. Distinguish declaration, initialization, reassignment, and reading the current value; emphasize that an update changes later computations but not earlier ones.",
+          "worked_example": "If score=12, then score=score+5 and score=score*2 produces 34. The second expression reads the already-updated value 17.",
+          "pitfall": "Pitfall: treating an assignment like an equation that must be solved, or reasoning from the original value after it has been reassigned.",
+          "mastery": "Mastery: trace every variable state in a short program, explain update order, and choose a clear representation for the required state."
         },
         {
           "title": "types",
-          "teaching": "Explain primitive data types through the operations they support and the information they preserve. Distinguish integers, floating-point values, booleans, and strings, and recognise when implicit conversion can alter a result.",
-          "worked_example": "If a=7 and b=\"7\", numeric addition a+2 produces 9 while string concatenation b+\"2\" produces \"72\". The representation determines the operation.",
-          "pitfall": "Assuming text and numeric values behave identically, or overlooking conversion and precision when values cross type boundaries.",
-          "mastery": "Choose suitable representations, predict type-sensitive operations, identify unsafe conversions, and explain why the resulting value has its observed type."
+          "teaching": "Teach integers, floating-point values, booleans, characters, and strings through the operations and representations they support. Connect type choice to input parsing and output.",
+          "worked_example": "If a=7 and b=\"7\", a+2 is numeric addition while b+\"2\" is string concatenation. The same visible digit can represent different data.",
+          "pitfall": "Pitfall: assuming conversion is automatic or harmless, especially when numeric text, integer division, or floating-point precision is involved.",
+          "mastery": "Mastery: identify the type of each value, predict type-sensitive operations, and select safe conversions for a coding task."
         },
         {
           "title": "input output",
-          "teaching": "Build programs around an explicit input-process-output pipeline. Parse the required values, preserve their order and units, compute the requested result, and format output exactly as specified.",
-          "worked_example": "For input 8 5, a program that reads two integers and prints their sum should parse both values, compute 13, and emit exactly the expected representation. Extra labels can make an otherwise correct solution fail a strict judge.",
-          "pitfall": "Common pitfall: reading values in the wrong order, mixing text with numbers, or printing explanatory text when the output format requires only the answer.",
-          "mastery": "Mastery: translate a problem's input/output contract into reliable parsing and exact output, including multiple values and edge-format cases."
+          "teaching": "Teach the input-process-output contract used by programming judges: parse exactly the required values, compute from them, and emit only the specified output.",
+          "worked_example": "For input `8 5`, a sum program should parse two numbers, calculate 13, and print `13`; adding `Answer:` may violate an exact-output requirement.",
+          "pitfall": "Pitfall: wrong token order, unparsed text, missing multiple test cases, or extra formatting not requested by the problem.",
+          "mastery": "Mastery: translate an input/output specification into reliable parsing, processing, and exact output for normal and boundary cases."
         },
         {
           "title": "operators",
-          "teaching": "Use arithmetic, comparison, logical, and remainder operators according to their semantics and precedence. Prefer explicit parentheses when a mixed expression could be misunderstood.",
-          "worked_example": "For a=11 and b=4, a%b is 3, while a/b may be integer or fractional depending on the language. The comparison a>b is boolean and should not be confused with arithmetic division.",
-          "pitfall": "Common pitfall: assuming division or remainder behaves identically across languages, or overlooking operator precedence in mixed expressions.",
-          "mastery": "Mastery: predict operator results, choose the correct operator for a condition, and use parentheses or type-aware reasoning to eliminate ambiguity."
+          "teaching": "Teach arithmetic, comparison, logical, assignment, and remainder operators by their semantics and precedence. Use parentheses when intent would otherwise be unclear.",
+          "worked_example": "For a=17 and b=5, a%b is 2, a>b is true, and (a+b)*2 is 44. Each operator has a different role in the program's logic.",
+          "pitfall": "Pitfall: confusing `=` with equality, using the wrong logical connector, or overlooking integer-division/remainder behavior in the chosen language.",
+          "mastery": "Mastery: select and combine operators correctly, predict results, and explain precedence and type effects in unfamiliar expressions."
         },
         {
           "title": "expressions",
-          "teaching": "Evaluate expressions by respecting precedence, associativity, and operand types. Break complex expressions into meaningful intermediate values when tracing code or debugging.",
-          "worked_example": "For x=3, y=4, the expression x + y * 2 evaluates to 11 because multiplication occurs before addition; (x+y)*2 instead gives 14.",
-          "pitfall": "Common pitfall: evaluating strictly left-to-right or mentally changing grouping without parentheses.",
-          "mastery": "Mastery: trace mixed expressions accurately, explain why grouping changes the result, and simplify or rewrite expressions without changing their meaning."
+          "teaching": "Teach expressions as evaluated combinations of values and operators. Trace precedence, associativity, conversions, and intermediate values instead of guessing the final result.",
+          "worked_example": "With x=3 and y=4, `x+y*2` is 11, while `(x+y)*2` is 14. Parentheses change the evaluation tree, not merely the formatting.",
+          "pitfall": "Pitfall: evaluating every expression strictly left-to-right or ignoring operand types and implicit conversions.",
+          "mastery": "Mastery: evaluate complex expressions accurately, rewrite them without changing meaning, and use intermediate values to debug surprising results."
         }
       ]
     },
@@ -60,38 +60,38 @@
       "subtopics": [
         {
           "title": "conditions",
-          "teaching": "Use boolean conditions to select execution paths. Combine comparisons with logical operators and ensure the condition directly represents the requirement in the problem statement.",
-          "worked_example": "To test whether n is between 10 and 20 inclusive, use n>=10 and n<=20. A value such as 10 must pass because both boundaries are included.",
-          "pitfall": "Common pitfall: using strict inequalities when the boundary is allowed, or confusing logical AND with OR.",
-          "mastery": "Mastery: translate verbal conditions into precise boolean expressions, test boundary values, and predict the selected branch for unfamiliar inputs."
+          "teaching": "Teach boolean conditions as precise tests that determine a branch. Translate inclusive/exclusive language directly into comparisons and combine predicates deliberately.",
+          "worked_example": "To accept ages from 10 through 15 inclusive, require age>=10 and age<=15. Testing 10, 15, 9, and 16 confirms the boundaries.",
+          "pitfall": "Pitfall: replacing AND with OR, or using `<` where the specification includes the boundary.",
+          "mastery": "Mastery: convert natural-language requirements into correct predicates and validate them with boundary and counterexample tests."
         },
         {
           "title": "nested conditions",
-          "teaching": "Structure nested decisions so each branch represents a clearly defined case. Order tests from broad constraints to specific exceptions and ensure every relevant path has a defined outcome.",
-          "worked_example": "If a score below 40 is fail, 40–59 is pass, and 60 or above is distinction, test the highest or lowest boundaries consistently so 40 and 60 fall into the intended categories.",
-          "pitfall": "Common pitfall: overlapping conditions that make a later branch unreachable, or leaving a boundary value unclassified.",
-          "mastery": "Mastery: design and trace nested or chained conditions, prove branch coverage for stated cases, and resolve boundary values correctly."
+          "teaching": "Teach chained and nested decisions as mutually understandable cases. Order tests so every valid input reaches the intended branch and no branch becomes accidentally unreachable.",
+          "worked_example": "For scores below 40, 40–59, and 60+, checking the lower boundary of each range makes 40 pass and 60 distinction without overlap.",
+          "pitfall": "Pitfall: overlapping conditions, unreachable branches, and missing cases caused by inconsistent boundary definitions.",
+          "mastery": "Mastery: design complete branch structures, trace every case, and prove that important boundary values receive exactly one intended outcome."
         },
         {
           "title": "loops",
-          "teaching": "Use loops when an operation must repeat under a predictable rule. Identify initialization, continuation condition, update step, and loop body before tracing iterations.",
-          "worked_example": "A loop starting i=1, repeating while i<=5, and increasing i by 1 executes exactly five times. Listing i values 1,2,3,4,5 makes the stopping condition explicit.",
-          "pitfall": "Common pitfall: off-by-one errors caused by mismatched starting values and termination conditions, or forgetting to update the loop variable.",
-          "mastery": "Mastery: determine iteration counts, trace state changes, and design loops that terminate exactly when the problem requires."
+          "teaching": "Teach loops through initialization, condition, body, and update. Students should identify what changes each iteration and why termination is guaranteed.",
+          "worked_example": "A loop with i=1, condition i<=5, and i=i+1 visits 1,2,3,4,5 and stops before 6, so it executes five times.",
+          "pitfall": "Pitfall: off-by-one limits, forgetting the update, or changing the control variable in a way that prevents termination.",
+          "mastery": "Mastery: design terminating loops, calculate iteration counts, and trace state changes for unfamiliar inputs."
         },
         {
           "title": "iteration patterns",
-          "teaching": "Recognise common patterns such as fixed-count loops, accumulation, filtering, nested iteration, and state updates. Select the simplest pattern that covers every required item once.",
-          "worked_example": "To sum an array, initialise total=0 and add each element once. The accumulator changes after every iteration while the input elements remain unchanged.",
-          "pitfall": "Common pitfall: initialising an accumulator incorrectly, skipping the first or last element, or updating the wrong state inside the loop.",
-          "mastery": "Mastery: identify an appropriate iteration pattern, maintain correct state across iterations, and verify that every required item is processed exactly as intended."
+          "teaching": "Teach reusable iteration patterns: counting, accumulation, filtering, searching, and building output. Choose the pattern from the task rather than forcing every problem into one template.",
+          "worked_example": "To find the sum of even values in [3,8,5,6], inspect each item once and add only 8 and 6, producing 14.",
+          "pitfall": "Pitfall: initializing an accumulator incorrectly, filtering after instead of before the update, or skipping an element.",
+          "mastery": "Mastery: recognize the correct iteration pattern, maintain loop invariants, and verify that every required item is handled exactly once."
         },
         {
           "title": "loop tracing",
-          "teaching": "Trace loops with a compact table of iteration number, control variable, relevant state, and output. For nested loops, separate outer and inner state rather than mentally merging them.",
-          "worked_example": "For i from 1 to 3 and j from 1 to 2, the inner body executes 6 times. Listing each pair (1,1),(1,2),(2,1),(2,2),(3,1),(3,2) verifies the count.",
-          "pitfall": "Common pitfall: counting only outer iterations or assuming the inner variable continues from its previous value when it is reinitialised.",
-          "mastery": "Mastery: trace single and nested loops accurately, predict output and iteration counts, and use a trace table to diagnose disagreements."
+          "teaching": "Teach trace tables for loops with columns for iteration, control variables, relevant state, and output. For nested loops, reset inner state whenever the outer iteration changes it.",
+          "worked_example": "For i=1..3 and j=1..2, pairs are (1,1),(1,2),(2,1),(2,2),(3,1),(3,2): six inner executions.",
+          "pitfall": "Pitfall: counting only outer iterations or assuming an inner variable continues from the previous outer iteration when it is reinitialized.",
+          "mastery": "Mastery: produce accurate trace tables, predict output and execution counts, and use tracing to locate the first incorrect state."
         }
       ]
     },
@@ -100,38 +100,38 @@
       "subtopics": [
         {
           "title": "functions",
-          "teaching": "Use functions to package a coherent operation behind a clear name and contract. A good function should have predictable inputs, outputs, and side effects, making repeated logic easier to test.",
-          "worked_example": "A function square(n) returning n*n turns the repeated operation into a reusable unit: square(4)=16 and square(7)=49.",
-          "pitfall": "Common pitfall: hiding unrelated work inside a function or assuming a function changes external state when it only returns a value.",
-          "mastery": "Mastery: define focused functions, identify their input/output contract, call them correctly, and explain how modularity reduces duplication and testing effort."
+          "teaching": "Teach functions as named units with a clear input/output contract and limited responsibility. Explain how reusable functions reduce duplication and make tests focused.",
+          "worked_example": "A `square(n)` function returning n*n gives square(4)=16 and square(9)=81; the caller can reuse the same logic without copying it.",
+          "pitfall": "Pitfall: mixing unrelated responsibilities into one function or assuming a function changes external state when it only returns a value.",
+          "mastery": "Mastery: define, call, trace, and test focused functions while explaining their contract and side effects."
         },
         {
           "title": "parameters",
-          "teaching": "Treat parameters as the function's local inputs and distinguish them from variables in the caller. Match arguments to parameters according to the language's calling rules.",
-          "worked_example": "A function area(width,height) returning width*height called as area(5,3) produces 15. Swapping the arguments changes the result when the parameters have different meanings.",
-          "pitfall": "Common pitfall: passing arguments in the wrong order or assuming a parameter automatically refers to a caller variable in every language.",
-          "mastery": "Mastery: map arguments to parameters correctly, reason about local values, and identify errors caused by arity or ordering mismatches."
+          "teaching": "Teach parameters as the local inputs declared by a function and distinguish them from arguments supplied by the caller. Emphasize order, arity, and meaning.",
+          "worked_example": "`area(width,height)` called as `area(5,3)` returns 15; `area(3,5)` is numerically equal here, but argument order matters whenever parameters have different semantics.",
+          "pitfall": "Pitfall: wrong argument order, wrong number of arguments, or assuming a parameter is automatically the same storage location as a caller variable.",
+          "mastery": "Mastery: map arguments to parameters correctly and diagnose arity, ordering, and scope mistakes."
         },
         {
           "title": "return values",
-          "teaching": "Use return values to communicate a function's computed result back to its caller. Distinguish returning a value from printing it, and preserve the returned value when later computation depends on it.",
-          "worked_example": "If double(n) returns 2*n, then total=double(6)+1 gives 13. Printing 12 inside double without returning it cannot supply a value for the addition.",
-          "pitfall": "Common pitfall: confusing console output with a returned result or forgetting that execution after return may not run.",
-          "mastery": "Mastery: predict and use return values, distinguish output side effects from data flow, and compose functions safely."
+          "teaching": "Teach return values as data flowing back to the caller, distinct from printing or other side effects. Show how returned values can participate in larger expressions.",
+          "worked_example": "If `double(n)` returns 2*n, then `total=double(6)+1` gives 13. Printing 12 inside the function would not provide a value for the addition.",
+          "pitfall": "Pitfall: confusing console output with a returned value or expecting statements after `return` to execute.",
+          "mastery": "Mastery: trace returned data through composed calls and distinguish computation from presentation."
         },
         {
           "title": "scope",
-          "teaching": "Understand scope as the region where a name can be accessed. Keep local state local unless shared state is deliberately part of the design, and identify shadowing when names repeat.",
-          "worked_example": "If a function defines local x=10 while the outer program has x=5, the function's local x does not automatically overwrite the outer x. After the function returns, the outer x remains 5 unless explicitly changed.",
-          "pitfall": "Common pitfall: assuming identically named variables always refer to the same storage or expecting a local variable to exist outside its scope.",
-          "mastery": "Mastery: trace variable visibility across nested scopes, identify shadowing, and predict which value a reference resolves to."
+          "teaching": "Teach local, outer, and nested scope as rules for name visibility. Explain shadowing and why keeping state local reduces accidental coupling.",
+          "worked_example": "If outer x=5 and a function creates local x=10, reading x inside the function can yield 10 while the outer x remains 5 after the call, depending on the language's scope rules.",
+          "pitfall": "Pitfall: assuming equal names always refer to the same variable or that a local variable remains accessible after its scope ends.",
+          "mastery": "Mastery: identify which binding a name refers to at each point and predict state changes across function boundaries."
         },
         {
           "title": "decomposition",
-          "teaching": "Break a large problem into smaller functions or steps with clear responsibilities. Decompose around meaningful transformations rather than arbitrary chunks, and make each component testable independently.",
-          "worked_example": "For a marks-processing problem, separate read input, calculate total, calculate average, classify result, and format output. Each step can then be checked without tracing the whole program at once.",
-          "pitfall": "Common pitfall: creating functions with overlapping responsibilities or splitting code so finely that the data flow becomes harder to follow.",
-          "mastery": "Mastery: decompose unfamiliar problems into coherent modules, define interfaces between them, and explain how each module contributes to the final result."
+          "teaching": "Teach decomposition as splitting a problem along meaningful transformations and responsibilities. Each part should have a clear interface and be independently testable.",
+          "worked_example": "For marks processing, separate parsing, total calculation, average calculation, classification, and output formatting; each stage receives understandable data from the previous one.",
+          "pitfall": "Pitfall: arbitrary fragmentation or functions with overlapping responsibilities that obscure the data flow.",
+          "mastery": "Mastery: decompose an unfamiliar coding problem into coherent modules, define their contracts, and explain the complete data flow."
         }
       ]
     },
@@ -140,38 +140,38 @@
       "subtopics": [
         {
           "title": "arrays",
-          "teaching": "Treat arrays as ordered collections indexed from a defined starting position. Practise traversal, update, aggregation, and safe index calculation while respecting the language's bounds.",
-          "worked_example": "For [4,7,2,9], the first element is at index 0 in a zero-based language and the last is at index 3. A loop using i from 0 while i<4 visits every element exactly once.",
-          "pitfall": "Common pitfall: mixing one-based human positions with zero-based indices, causing off-by-one or out-of-range access.",
-          "mastery": "Mastery: access and traverse arrays safely, update selected elements, aggregate values, and reason correctly about indices and bounds."
+          "teaching": "Teach arrays as ordered indexed collections. Cover traversal, updates, aggregation, searching, and bounds while keeping index conventions explicit.",
+          "worked_example": "For [4,7,2,9], zero-based indices 0–3 identify the four elements. A loop `i=0` while `i<4` visits each element once.",
+          "pitfall": "Pitfall: confusing human positions with zero-based indices or using the array length as a valid final index.",
+          "mastery": "Mastery: traverse, update, search, and aggregate arrays without out-of-range access and with correct boundary reasoning."
         },
         {
           "title": "strings",
-          "teaching": "Treat strings as ordered character sequences and distinguish characters from whole strings. Practise indexing, concatenation, comparison, searching, and transformation according to the language's string model.",
-          "worked_example": "For the string \"VATTAMS\", length is 7 and the first character in a zero-based language is at index 0. Checking each character lets a program count vowels without changing the original string.",
-          "pitfall": "Common pitfall: using an invalid index, confusing character comparison with string comparison, or assuming string mutation behaves like array mutation.",
-          "mastery": "Mastery: process strings character by character or with appropriate library operations, handle empty and single-character cases, and verify exact output."
+          "teaching": "Teach strings as ordered character sequences. Practise indexing, comparison, concatenation, counting, searching, and transformation while distinguishing characters from whole strings.",
+          "worked_example": "For `\"VATTAMS\"`, the length is 7 and the first character is at index 0 in a zero-based model. Counting vowels requires inspecting each character against the chosen vowel set.",
+          "pitfall": "Pitfall: invalid indices, case mismatches, or assuming string mutation works like array mutation in every language.",
+          "mastery": "Mastery: process strings reliably, handle empty/single-character inputs, and produce exact expected text."
         },
         {
           "title": "stacks",
-          "teaching": "Model a stack with last-in-first-out behaviour. Core operations push, pop, and peek should preserve the invariant that the most recently inserted available item is removed first.",
-          "worked_example": "Push A, then B, then C; successive pops return C, B, A. This makes a stack suitable for undo operations, expression matching, and depth-first processing.",
-          "pitfall": "Common pitfall: treating a stack as FIFO or popping from an empty structure without handling the underflow case.",
-          "mastery": "Mastery: simulate stack operations, choose a stack when LIFO behaviour fits the problem, and handle empty-state boundaries safely."
+          "teaching": "Teach stacks as last-in-first-out structures with push, pop, and peek. Connect the LIFO invariant to undo, delimiter matching, and depth-first processing.",
+          "worked_example": "Push A, B, C; popping repeatedly returns C, B, A. The newest available item is always removed first.",
+          "pitfall": "Pitfall: treating a stack as FIFO or popping an empty stack without handling underflow.",
+          "mastery": "Mastery: simulate stack operations, identify LIFO applications, and handle empty-state transitions safely."
         },
         {
           "title": "queues",
-          "teaching": "Model a queue with first-in-first-out behaviour. Track insertion and removal ends clearly and consider empty and single-element transitions when simulating operations.",
-          "worked_example": "Enqueue A, B, C; successive dequeues return A, B, C. A service line is a natural queue because the earliest arrival is served first.",
-          "pitfall": "Common pitfall: reversing insertion/removal order or mishandling the transition from one remaining element to an empty queue.",
-          "mastery": "Mastery: simulate queue operations accurately, identify FIFO applications, and handle empty and single-item boundary states."
+          "teaching": "Teach queues as first-in-first-out structures with enqueue and dequeue. Track front and rear conceptually and handle empty and single-item transitions.",
+          "worked_example": "Enqueue A, B, C; dequeues return A, B, C. This models a service line because the earliest waiting item is processed first.",
+          "pitfall": "Pitfall: reversing insertion/removal order or mishandling the transition from one item to empty.",
+          "mastery": "Mastery: simulate FIFO operations accurately and select a queue when arrival order must be preserved."
         },
         {
           "title": "maps and sets",
-          "teaching": "Use maps for key-to-value lookup and sets for uniqueness or membership testing. Choose them when direct lookup or duplicate detection is more appropriate than repeated linear scanning.",
-          "worked_example": "Insert student IDs into a set to determine whether an ID has appeared before; repeated insertion leaves the set with one copy. A map such as score[id]=value associates each ID with its latest score.",
-          "pitfall": "Confusing set membership with indexed access, assuming map keys are ordered when the language does not guarantee it, or ignoring missing-key behaviour.",
-          "mastery": "Choose maps or sets based on the required operation, simulate insertion and lookup correctly, handle missing keys and duplicates, and explain why the structure fits the problem."
+          "teaching": "Teach maps as key-to-value structures and sets as uniqueness/membership structures. Choose them when direct lookup or duplicate detection is more useful than repeated scanning.",
+          "worked_example": "Insert IDs 101, 102, 101 into a set: the set still contains two unique IDs. A map can associate `101` with its latest score.",
+          "pitfall": "Pitfall: expecting set indexing, assuming map iteration order without a language guarantee, or failing to handle a missing key.",
+          "mastery": "Mastery: select the right structure for lookup or uniqueness, simulate updates, and reason about missing keys and duplicates."
         }
       ]
     },
