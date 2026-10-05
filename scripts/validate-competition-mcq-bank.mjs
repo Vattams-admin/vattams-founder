@@ -88,3 +88,4 @@ console.log(`RESULT: PASS — ${slug}: ${publicBank.length} reviewed mock MCQs, 
 // Persist report before final production gate failure.\n
 // Trigger CI summary diagnostics.\n
 // Trigger published CI failure report.\n
+// Validate after deterministic runtime source preparation.\n
