@@ -10,7 +10,7 @@ const slugs = [
   "national-science-championship","national-english-championship","national-aptitude-championship",
   "national-coding-challenge","national-ai-challenge","mega-inter-school-championship",
   "indian-classical-literature-wisdom-championship","indian-language-literature-masters-series",
-  "thirukkural","fun-with-maths-challenge","azhagu-tamil-challenge",
+  "thirukkural-mastery-championship","fun-with-maths-challenge","azhagu-tamil-challenge",
   "handwriting-excellence-challenge","spoken-hindi-challenge",
 ];
 const requestedSlug = process.argv.includes("--slug") ? process.argv[process.argv.indexOf("--slug") + 1] : "";
