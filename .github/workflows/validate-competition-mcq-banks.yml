@@ -6,6 +6,7 @@ on:
     paths:
       - "data/competitions/**/full-bank/objective/**"
       - "scripts/validate-competition-mcq-bank.mjs"
+      - "scripts/prepare-competition-runtime-sources.mjs"
 
 permissions:
   contents: write
@@ -19,6 +20,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Prepare reviewed competition runtime sources
+        run: node scripts/prepare-competition-runtime-sources.mjs
       - name: Validate all 24 MCQ banks and write failure report
         id: validate
         shell: bash
