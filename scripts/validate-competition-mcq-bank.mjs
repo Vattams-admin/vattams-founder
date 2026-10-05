@@ -94,3 +94,4 @@ console.log(`RESULT: PASS — ${slug}: ${publicBank.length} reviewed mock MCQs, 
 // Trigger per-competition diagnostic issue publication.\n
 // Trigger artifact-backed per-competition diagnostics.\n
 // Trigger minimal artifact-backed diagnostics.\n
+// Trigger production matrix after restoring authored competition packages.
