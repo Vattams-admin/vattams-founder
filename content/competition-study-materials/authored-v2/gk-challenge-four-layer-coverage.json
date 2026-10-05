@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "GK Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/gk-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "India",
+      "subtopics": [
+        {
+          "title": "states and capitals",
+          "study_materials": {
+            "objective": "Build mastery of states and capitals in India for GK Challenge.",
+            "teaching_content": "India is a union of states and union territories, and each state has a designated capital for its government.",
+            "worked_examples": [
+              "Tamil Nadu's capital is Chennai, while Karnataka's capital is Bengaluru."
+            ],
+            "pitfall": "A capital is not necessarily the largest or most populous city.",
+            "mastery_check": "Recall state-capital pairs accurately and distinguish states from union territories.",
+            "revision": "Revise states and capitals through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "national symbols",
+          "study_materials": {
+            "objective": "Build mastery of national symbols in India for GK Challenge.",
+            "teaching_content": "India has officially recognized national symbols representing national identity and heritage.",
+            "worked_examples": [
+              "The national animal is the Bengal tiger, the national bird is the Indian peacock, and the national flower is the lotus."
+            ],
+            "pitfall": "Popular cultural associations are not automatically official national symbols.",
+            "mastery_check": "Distinguish officially recognized symbols from commonly associated cultural icons.",
+            "revision": "Revise national symbols through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "constitution basics",
+          "study_materials": {
+            "objective": "Build mastery of constitution basics in India for GK Challenge.",
+            "teaching_content": "The Constitution of India establishes the framework of government, rights, duties and institutional relationships.",
+            "worked_examples": [
+              "It came into force on 26 January 1950, observed as Republic Day."
+            ],
+            "pitfall": "The Constitution is distinct from an ordinary law because it provides the foundational legal framework.",
+            "mastery_check": "Recall key constitutional features and distinguish them from ordinary administrative facts.",
+            "revision": "Revise constitution basics through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "landmarks",
+          "study_materials": {
+            "objective": "Build mastery of landmarks in India for GK Challenge.",
+            "teaching_content": "Indian landmarks reflect architectural, historical, religious and cultural heritage.",
+            "worked_examples": [
+              "The Taj Mahal in Agra is a major Mughal-era monument commissioned by Shah Jahan and associated with Mumtaz Mahal."
+            ],
+            "pitfall": "A landmark's city and architectural or historical context should not be confused.",
+            "mastery_check": "Identify major Indian landmarks, locations and broad significance.",
+            "revision": "Revise landmarks through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "institutions",
+          "study_materials": {
+            "objective": "Build mastery of institutions in India for GK Challenge.",
+            "teaching_content": "India's public institutions have distinct constitutional, legislative, judicial, financial or administrative functions.",
+            "worked_examples": [
+              "The Supreme Court is the highest court of India, while Parliament is the central legislative institution."
+            ],
+            "pitfall": "An institution's popular reputation does not define its formal role.",
+            "mastery_check": "Match important institutions with their primary functions.",
+            "revision": "Revise institutions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "World Knowledge",
+      "subtopics": [
+        {
+          "title": "countries and capitals",
+          "study_materials": {
+            "objective": "Build mastery of countries and capitals in World Knowledge for GK Challenge.",
+            "teaching_content": "Countries have capital cities that serve as important administrative or political centres; the largest city is not always the capital.",
+            "worked_examples": [
+              "Australia's capital is Canberra rather than Sydney; Brazil's capital is Brasília rather than Rio de Janeiro."
+            ],
+            "pitfall": "Assuming the largest city is the capital causes common errors.",
+            "mastery_check": "Recall country-capital pairs and distinguish capitals from major commercial cities.",
+            "revision": "Revise countries and capitals through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "continents and oceans",
+          "study_materials": {
+            "objective": "Build mastery of continents and oceans in World Knowledge for GK Challenge.",
+            "teaching_content": "Continents are large land divisions and oceans are major bodies of salt water.",
+            "worked_examples": [
+              "In the seven-continent model, Asia, Africa and Europe are separate continents; the Pacific is the largest ocean."
+            ],
+            "pitfall": "Geographic conventions can vary, so the framework in a question matters.",
+            "mastery_check": "Classify major land and water divisions using the stated convention.",
+            "revision": "Revise continents and oceans through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "landmarks",
+          "study_materials": {
+            "objective": "Build mastery of landmarks in World Knowledge for GK Challenge.",
+            "teaching_content": "World landmarks represent ancient civilizations, architecture, religion, engineering or natural heritage.",
+            "worked_examples": [
+              "The Great Wall of China is an extensive historic defensive structure associated with successive Chinese states and dynasties."
+            ],
+            "pitfall": "A modern national location does not identify the civilization or period of every part of a landmark.",
+            "mastery_check": "Connect famous landmarks with locations and broad significance.",
+            "revision": "Revise landmarks through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "international organizations",
+          "study_materials": {
+            "objective": "Build mastery of international organizations in World Knowledge for GK Challenge.",
+            "teaching_content": "International organizations coordinate cooperation in areas such as peace, health, finance, education and development.",
+            "worked_examples": [
+              "The United Nations provides a forum for international cooperation, while WHO focuses on international public health."
+            ],
+            "pitfall": "Organizations may overlap in interests but have different mandates.",
+            "mastery_check": "Match major organizations with their principal roles.",
+            "revision": "Revise international organizations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "world records",
+          "study_materials": {
+            "objective": "Build mastery of world records in World Knowledge for GK Challenge.",
+            "teaching_content": "Records describe exceptional measured achievements and require defined measurement criteria.",
+            "worked_examples": [
+              "A record claim should specify what was measured, under what rules and over what period."
+            ],
+            "pitfall": "A viral claim is not a verified record merely because it is widely repeated.",
+            "mastery_check": "Evaluate record claims using definitions, measurements and authoritative evidence.",
+            "revision": "Revise world records through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "History & Culture",
+      "subtopics": [
+        {
+          "title": "Indian history",
+          "study_materials": {
+            "objective": "Build mastery of Indian history in History & Culture for GK Challenge.",
+            "teaching_content": "Indian history includes ancient, medieval and modern periods with many regional kingdoms, empires, movements and political developments.",
+            "worked_examples": [
+              "The Mauryan Empire, Gupta period, Delhi Sultanates, Mughal Empire and independence movement belong to different historical contexts."
+            ],
+            "pitfall": "Names from different periods should not be combined without chronology.",
+            "mastery_check": "Place major Indian developments in broad chronological order and identify significance.",
+            "revision": "Revise Indian history through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "world history",
+          "study_materials": {
+            "objective": "Build mastery of world history in History & Culture for GK Challenge.",
+            "teaching_content": "World history examines interactions among civilizations, states, economies, technologies and social movements.",
+            "worked_examples": [
+              "The Industrial Revolution transformed production and urban life, while the two World Wars reshaped twentieth-century international politics."
+            ],
+            "pitfall": "Historical events should be understood in their time and context.",
+            "mastery_check": "Identify major world events, periods and broad consequences.",
+            "revision": "Revise world history through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "civilizations",
+          "study_materials": {
+            "objective": "Build mastery of civilizations in History & Culture for GK Challenge.",
+            "teaching_content": "Civilizations develop distinctive systems of settlement, governance, technology, writing, trade and culture.",
+            "worked_examples": [
+              "The Indus Valley Civilization is known for planned urban settlements, drainage systems and evidence from Harappa and Mohenjo-daro."
+            ],
+            "pitfall": "A civilization should be identified from multiple evidence types rather than one artifact.",
+            "mastery_check": "Connect major civilizations with characteristic achievements and evidence.",
+            "revision": "Revise civilizations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "arts and heritage",
+          "study_materials": {
+            "objective": "Build mastery of arts and heritage in History & Culture for GK Challenge.",
+            "teaching_content": "Arts and heritage include architecture, sculpture, painting, music, dance, crafts, literature and traditions passed through generations.",
+            "worked_examples": [
+              "Bharatanatyam and Kathak have distinct historical and performance traditions within Indian classical dance."
+            ],
+            "pitfall": "A modern performance inspired by a tradition is not necessarily identical to its historical form.",
+            "mastery_check": "Recognize major cultural forms and connect them with traditions or regions.",
+            "revision": "Revise arts and heritage through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "important personalities",
+          "study_materials": {
+            "objective": "Build mastery of important personalities in History & Culture for GK Challenge.",
+            "teaching_content": "Historical personalities are best understood through documented contributions, context and influence.",
+            "worked_examples": [
+              "Mahatma Gandhi's leadership in India's freedom movement emphasized non-violent resistance and mass participation."
+            ],
+            "pitfall": "A personality can have multiple roles and interpretations across contexts.",
+            "mastery_check": "Identify important figures and accurately associate them with major contributions.",
+            "revision": "Revise important personalities through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Geography",
+      "subtopics": [
+        {
+          "title": "physical features",
+          "study_materials": {
+            "objective": "Build mastery of physical features in Geography for GK Challenge.",
+            "teaching_content": "Physical geography studies natural features such as mountains, plateaus, plains, deserts, valleys and coastlines.",
+            "worked_examples": [
+              "The Himalayas form a major mountain system in South Asia, while the Deccan Plateau covers much of peninsular India."
+            ],
+            "pitfall": "A plateau is elevated land with a relatively level surface, not simply another word for mountain.",
+            "mastery_check": "Classify major physical features and relate them to locations.",
+            "revision": "Revise physical features through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "climate",
+          "study_materials": {
+            "objective": "Build mastery of climate in Geography for GK Challenge.",
+            "teaching_content": "Climate describes long-term atmospheric patterns, while weather describes short-term conditions.",
+            "worked_examples": [
+              "Monsoon patterns strongly influence seasonal rainfall across much of South Asia."
+            ],
+            "pitfall": "One unusually rainy week does not define a region's climate.",
+            "mastery_check": "Distinguish weather from climate and identify major climate influences.",
+            "revision": "Revise climate through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "rivers and mountains",
+          "study_materials": {
+            "objective": "Build mastery of rivers and mountains in Geography for GK Challenge.",
+            "teaching_content": "Rivers and mountain systems shape landscapes, agriculture, settlement and transport.",
+            "worked_examples": [
+              "The Ganga is a major river system of northern India, while the Himalayas form a major mountain barrier to the north."
+            ],
+            "pitfall": "A river's source, course and mouth are different geographic concepts.",
+            "mastery_check": "Locate major rivers and mountain ranges and describe basic relationships.",
+            "revision": "Revise rivers and mountains through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "maps",
+          "study_materials": {
+            "objective": "Build mastery of maps in Geography for GK Challenge.",
+            "teaching_content": "Maps represent locations and spatial relationships using symbols, scale, directions and coordinates.",
+            "worked_examples": [
+              "Map scale relates measured map distance to real-world distance."
+            ],
+            "pitfall": "Map symbols should be interpreted using the map legend.",
+            "mastery_check": "Use legends, scale, directions and coordinates to extract geographic information.",
+            "revision": "Revise maps through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "human geography",
+          "study_materials": {
+            "objective": "Build mastery of human geography in Geography for GK Challenge.",
+            "teaching_content": "Human geography studies how people, settlements, economies and cultures interact with places and environments.",
+            "worked_examples": [
+              "Population density compares people with the area they occupy and varies greatly between regions."
+            ],
+            "pitfall": "A large population does not necessarily mean high density if the area is also very large.",
+            "mastery_check": "Interpret basic population, settlement and human-environment patterns.",
+            "revision": "Revise human geography through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Science & Technology",
+      "subtopics": [
+        {
+          "title": "everyday science",
+          "study_materials": {
+            "objective": "Build mastery of everyday science in Science & Technology for GK Challenge.",
+            "teaching_content": "Everyday science applies concepts from physics, chemistry and biology to familiar observations and processes.",
+            "worked_examples": [
+              "A metal spoon feels colder than a wooden spoon in the same room because metal conducts heat away from the hand more readily."
+            ],
+            "pitfall": "A colder-feeling material is not necessarily at a lower temperature.",
+            "mastery_check": "Explain everyday observations using an appropriate scientific principle.",
+            "revision": "Revise everyday science through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "space",
+          "study_materials": {
+            "objective": "Build mastery of space in Science & Technology for GK Challenge.",
+            "teaching_content": "Space science studies objects and processes beyond Earth, including planets, stars, galaxies and their interactions.",
+            "worked_examples": [
+              "Earth orbits the Sun, while the Moon orbits Earth; these motions help explain seasons and lunar phases."
+            ],
+            "pitfall": "The Sun is a star, not a planet.",
+            "mastery_check": "Identify major space objects and basic Earth-Sun-Moon relationships.",
+            "revision": "Revise space through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "inventions",
+          "study_materials": {
+            "objective": "Build mastery of inventions in Science & Technology for GK Challenge.",
+            "teaching_content": "Inventions are designed solutions that introduce or apply ideas to solve practical problems; their development is often cumulative.",
+            "worked_examples": [
+              "The printing press greatly expanded the ability to reproduce written material, building on earlier technologies and knowledge."
+            ],
+            "pitfall": "An invention rarely emerges entirely without earlier influences or related developments.",
+            "mastery_check": "Connect important inventions with their broad purpose and historical context.",
+            "revision": "Revise inventions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "technology milestones",
+          "study_materials": {
+            "objective": "Build mastery of technology milestones in Science & Technology for GK Challenge.",
+            "teaching_content": "Technology milestones are developments that significantly change how information, transportation, communication, health or production work.",
+            "worked_examples": [
+              "The development of the internet transformed global digital communication and information exchange."
+            ],
+            "pitfall": "A milestone's importance should be judged by its impact rather than by being the newest technology.",
+            "mastery_check": "Recognize major technology developments and explain their broad significance.",
+            "revision": "Revise technology milestones through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "scientific personalities",
+          "study_materials": {
+            "objective": "Build mastery of scientific personalities in Science & Technology for GK Challenge.",
+            "teaching_content": "Scientific personalities are associated with documented discoveries, theories, experiments or contributions to scientific practice.",
+            "worked_examples": [
+              "C. V. Raman's work on light scattering led to the discovery known as the Raman effect."
+            ],
+            "pitfall": "A person's fame does not establish that every claim attributed to them is accurate.",
+            "mastery_check": "Match major scientists with their verified contributions and fields.",
+            "revision": "Revise scientific personalities through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sports",
+      "subtopics": [
+        {
+          "title": "sports and rules",
+          "study_materials": {
+            "objective": "Build mastery of sports and rules in Sports for GK Challenge.",
+            "teaching_content": "Sports have defined rules governing scoring, equipment, player actions, boundaries and winning conditions.",
+            "worked_examples": [
+              "In cricket, a batter's score, dismissals and innings structure follow specific laws rather than general ideas about team sports."
+            ],
+            "pitfall": "A rule from one sport cannot be assumed to apply to another.",
+            "mastery_check": "Identify the basic objective and distinctive rules of major sports.",
+            "revision": "Revise sports and rules through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "major tournaments",
+          "study_materials": {
+            "objective": "Build mastery of major tournaments in Sports for GK Challenge.",
+            "teaching_content": "Major tournaments bring teams or individuals together under defined competition formats, often representing national, club or professional levels.",
+            "worked_examples": [
+              "The FIFA World Cup is an international football tournament involving national teams."
+            ],
+            "pitfall": "A tournament and a league use different competition structures and should not be treated as synonyms.",
+            "mastery_check": "Match major tournaments with their sports and broad format.",
+            "revision": "Revise major tournaments through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sporting personalities",
+          "study_materials": {
+            "objective": "Build mastery of sporting personalities in Sports for GK Challenge.",
+            "teaching_content": "Sporting personalities can be recognized for achievements, leadership or influence within their sport.",
+            "worked_examples": [
+              "Sachin Tendulkar is associated with international cricket and represented India at the highest level."
+            ],
+            "pitfall": "A famous athlete's sport should not be inferred from popularity alone.",
+            "mastery_check": "Associate prominent athletes with their sports and documented achievements.",
+            "revision": "Revise sporting personalities through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "records",
+          "study_materials": {
+            "objective": "Build mastery of records in Sports for GK Challenge.",
+            "teaching_content": "Sports records are measured achievements defined by a sport's rules, event category and record-keeping authority.",
+            "worked_examples": [
+              "A world record in a 100-metre event is meaningful only when the event, rules and measurement conditions are specified."
+            ],
+            "pitfall": "A tournament victory and an individual record are different kinds of achievement.",
+            "mastery_check": "Distinguish records, titles, medals and match results and interpret record claims carefully.",
+            "revision": "Revise records through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "awards",
+          "study_materials": {
+            "objective": "Build mastery of awards in Sports for GK Challenge.",
+            "teaching_content": "Sports awards recognize achievements such as outstanding performance, fair play, leadership or season-long excellence.",
+            "worked_examples": [
+              "An award may be determined by a governing body, panel, voting process or competition-specific criteria."
+            ],
+            "pitfall": "Winning an award does not necessarily mean winning a tournament.",
+            "mastery_check": "Match notable sports awards with their broad purpose and recognize different award categories.",
+            "revision": "Revise awards through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Current Awareness",
+      "subtopics": [
+        {
+          "title": "major events",
+          "study_materials": {
+            "objective": "Build mastery of major events in Current Awareness for GK Challenge.",
+            "teaching_content": "Current awareness requires identifying significant recent events and understanding what happened, where, when and why it matters.",
+            "worked_examples": [
+              "A strong event summary separates the confirmed event from speculation about possible future consequences."
+            ],
+            "pitfall": "Old information can appear current when reposted without its original date.",
+            "mastery_check": "Check publication date, event date and primary evidence before treating an event as current.",
+            "revision": "Revise major events through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "public institutions",
+          "study_materials": {
+            "objective": "Build mastery of public institutions in Current Awareness for GK Challenge.",
+            "teaching_content": "Public institutions publish information, policies, reports and announcements that can be important sources for current affairs.",
+            "worked_examples": [
+              "An official ministry or regulator may publish a notification that is more authoritative for a policy detail than an unverified social-media post."
+            ],
+            "pitfall": "An institution's official status does not mean every third-party interpretation of its notice is correct.",
+            "mastery_check": "Identify the responsible institution and distinguish its primary statement from commentary.",
+            "revision": "Revise public institutions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "science news",
+          "study_materials": {
+            "objective": "Build mastery of science news in Current Awareness for GK Challenge.",
+            "teaching_content": "Science news should connect a reported finding to the underlying study, evidence, limitations and date rather than relying only on a headline.",
+            "worked_examples": [
+              "A study reporting an association between two factors does not automatically establish causation."
+            ],
+            "pitfall": "A headline may simplify or exaggerate the actual research conclusion.",
+            "mastery_check": "Read beyond headlines and identify what the evidence actually supports.",
+            "revision": "Revise science news through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sports news",
+          "study_materials": {
+            "objective": "Build mastery of sports news in Current Awareness for GK Challenge.",
+            "teaching_content": "Sports news changes quickly, so current claims should be checked against recent schedules, results, official team or tournament sources and reliable reporting.",
+            "worked_examples": [
+              "A transfer rumour is different from a confirmed signing, and a scheduled match is different from a completed result."
+            ],
+            "pitfall": "Old results can circulate again during later tournaments.",
+            "mastery_check": "Separate confirmed results, schedules, announcements and rumours.",
+            "revision": "Revise sports news through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "fact verification",
+          "study_materials": {
+            "objective": "Build mastery of fact verification in Current Awareness for GK Challenge.",
+            "teaching_content": "Fact verification checks a claim against reliable evidence, dates, original sources and independent confirmation when appropriate.",
+            "worked_examples": [
+              "For a viral claim, trace it to the earliest credible source, check the date and compare it with authoritative evidence."
+            ],
+            "pitfall": "High engagement, screenshots and confident wording are not proof of truth.",
+            "mastery_check": "Apply a repeatable verification process before accepting or sharing a claim.",
+            "revision": "Revise fact verification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GK Reasoning",
+      "subtopics": [
+        {
+          "title": "classification",
+          "study_materials": {
+            "objective": "Build mastery of classification in GK Reasoning for GK Challenge.",
+            "teaching_content": "Classification groups knowledge items by a shared defining property, category, origin, function or other rule.",
+            "worked_examples": [
+              "India, Japan and Brazil can be grouped as countries, while Asia differs because it is a continent."
+            ],
+            "pitfall": "An item may belong to multiple categories, so the intended rule must be inferred from context.",
+            "mastery_check": "Identify the precise classification rule and apply it consistently.",
+            "revision": "Revise classification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "analogy",
+          "study_materials": {
+            "objective": "Build mastery of analogy in GK Reasoning for GK Challenge.",
+            "teaching_content": "An analogy compares a relationship between two items with a corresponding relationship in another pair.",
+            "worked_examples": [
+              "'India : New Delhi :: Japan : Tokyo' uses country-to-capital relationships."
+            ],
+            "pitfall": "Sharing a broad topic is not enough if the relationship itself differs.",
+            "mastery_check": "Identify the exact relationship and preserve its direction.",
+            "revision": "Revise analogy through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sequences",
+          "study_materials": {
+            "objective": "Build mastery of sequences in GK Reasoning for GK Challenge.",
+            "teaching_content": "Sequences contain ordered items following a detectable rule involving numbers, letters, dates, categories or other information.",
+            "worked_examples": [
+              "If a sequence progresses Monday, Wednesday, Friday, the rule advances by two days rather than simply listing weekdays."
+            ],
+            "pitfall": "A sequence may contain alternating or multiple rules, so test more than one step.",
+            "mastery_check": "Determine the simplest rule that explains all given transitions.",
+            "revision": "Revise sequences through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "odd one out",
+          "study_materials": {
+            "objective": "Build mastery of odd one out in GK Reasoning for GK Challenge.",
+            "teaching_content": "Odd-one-out questions require identifying the item that does not follow the defining relationship shared by the others.",
+            "worked_examples": [
+              "Mercury, Venus, Earth and Jupiter are planets, so an option naming the Moon would differ because it is a natural satellite."
+            ],
+            "pitfall": "An item can be 'different' in many ways, so the intended category matters.",
+            "mastery_check": "State the common rule for the majority before selecting the exception.",
+            "revision": "Revise odd one out through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mixed knowledge reasoning",
+          "study_materials": {
+            "objective": "Build mastery of mixed knowledge reasoning in GK Reasoning for GK Challenge.",
+            "teaching_content": "Mixed GK reasoning combines factual recall with comparison, classification, chronology and logical elimination.",
+            "worked_examples": [
+              "If four options are historical figures and one is a scientific unit, both subject knowledge and category reasoning can identify the mismatch."
+            ],
+            "pitfall": "Pure guessing from familiarity is weaker than combining independent clues.",
+            "mastery_check": "Use factual knowledge first, then apply structured elimination and verify the final relationship.",
+            "revision": "Revise mixed knowledge reasoning through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GK Competition Mastery",
+      "subtopics": [
+        {
+          "title": "fact verification strategy",
+          "study_materials": {
+            "objective": "Build mastery of fact verification strategy in GK Competition Mastery for GK Challenge.",
+            "teaching_content": "Master fact verification strategy within GK Competition Mastery for GK Challenge. Apply GK knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative fact verification strategy task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the fact verification strategy task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar fact verification strategy challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise fact verification strategy through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "cross-domain clue reasoning",
+          "study_materials": {
+            "objective": "Build mastery of cross-domain clue reasoning in GK Competition Mastery for GK Challenge.",
+            "teaching_content": "Master cross-domain clue reasoning within GK Competition Mastery for GK Challenge. Apply GK knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative cross-domain clue reasoning task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the cross-domain clue reasoning task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar cross-domain clue reasoning challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise cross-domain clue reasoning through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "source reliability and date checks",
+          "study_materials": {
+            "objective": "Build mastery of source reliability and date checks in GK Competition Mastery for GK Challenge.",
+            "teaching_content": "Master source reliability and date checks within GK Competition Mastery for GK Challenge. Apply GK knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative source reliability and date checks task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the source reliability and date checks task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar source reliability and date checks challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise source reliability and date checks through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated general knowledge scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated general knowledge scenarios in GK Competition Mastery for GK Challenge.",
+            "teaching_content": "Master integrated general knowledge scenarios within GK Competition Mastery for GK Challenge. Apply GK knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative integrated general knowledge scenarios task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the integrated general knowledge scenarios task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar integrated general knowledge scenarios challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise integrated general knowledge scenarios through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "GK championship round",
+          "study_materials": {
+            "objective": "Build mastery of GK championship round in GK Competition Mastery for GK Challenge.",
+            "teaching_content": "Master GK championship round within GK Competition Mastery for GK Challenge. Apply GK knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative GK championship round task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the GK championship round task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar GK championship round challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise GK championship round through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "GK-CHALLENGE-MOCK-01",
+      "focus": "core curriculum mastery and topic-wise practice"
+    },
+    {
+      "id": "GK-CHALLENGE-MOCK-02",
+      "focus": "advanced mixed-domain preparation"
+    },
+    {
+      "id": "GK-CHALLENGE-MOCK-03",
+      "focus": "full championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "GK Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
