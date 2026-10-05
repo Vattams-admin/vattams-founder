@@ -17,6 +17,7 @@ import Home from '@/pages/Home'
 const Courses = lazy(() => import('@/pages/Courses'))
 const CourseDetail = lazy(() => import('@/pages/CourseDetail'))
 const Competitions = lazy(() => import('@/pages/Competitions'))
+const CompetitiveExams = lazy(() => import('@/pages/CompetitiveExams'))
 const Payment = lazy(() => import('@/pages/Payment'))
 const StudentDashboard = lazy(() => import('@/pages/StudentDashboard'))
 const StudentIdCard = lazy(() => import('@/pages/StudentIdCard'))
@@ -84,7 +85,7 @@ export default function App() {
                 collection, no admin UI) — this route is an honest
                 "coming soon" placeholder, not the full feature. */}
             <Route path="/competitions" element={<Competitions />} />
-            <Route path="/competitive-exams" element={<Competitions />} />
+            <Route path="/competitive-exams" element={<CompetitiveExams />} />
 
             <Route path="/verify-certificate" element={<VerifyCertificate />} />
             <Route path="/verify" element={<VerifyCertificate />} />
