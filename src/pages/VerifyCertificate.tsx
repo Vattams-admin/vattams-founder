@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
@@ -5,6 +6,7 @@ import { firestore } from '@/lib/firebase'
 import type { CertificateVerification } from '@/types/database'
 
 export default function VerifyCertificate() {
+  useSeo({ title: 'Verify a VATTAMS ACADEMIA Certificate', description: 'Verify a VATTAMS ACADEMIA certificate using its certificate code. Public verification is available without an account.', path: '/verify-certificate' })
   const [searchParams] = useSearchParams()
   const [code, setCode] = useState(() => searchParams.get('code') ?? '')
   const [result, setResult] = useState<CertificateVerification | null | 'not_found'>(null)
