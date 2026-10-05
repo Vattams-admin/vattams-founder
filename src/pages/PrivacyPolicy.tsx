@@ -2,7 +2,7 @@ import LegalPage from '@/components/LegalPage'
 
 export default function PrivacyPolicy() {
   return (
-    <LegalPage title="Privacy Policy">
+    <LegalPage noindex title="Privacy Policy">
       <p>
         VATTAMS ACADEMIA collects the information needed to run your account, courses, exam
         programmes, competitions, payments, and certificates — such as your name, contact details,
