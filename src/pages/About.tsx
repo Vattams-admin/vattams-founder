@@ -1,5 +1,7 @@
+import { useSeo } from '@/hooks/useSeo'
 import { Link } from 'react-router-dom'
 export default function About() {
+  useSeo({ title: 'About VATTAMS ACADEMIA', description: 'Learn about VATTAMS ACADEMIA, our education platform, learning philosophy, competitive exam preparation, academic competitions and verifiable certification.', path: '/about' })
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">About</p>
