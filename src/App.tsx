@@ -83,7 +83,8 @@ function PrivateRouteSeoGuard() {
     title: 'VATTAMS ACADEMIA',
     description: 'Private VATTAMS ACADEMIA application area.',
     path: pathname,
-    noindex: privateRoute,
+    noindex: true,
+    enabled: privateRoute,
   })
 
   return null
