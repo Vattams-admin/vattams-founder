@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "AI & Technology Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/ai-technology-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "AI Foundations",
+      "subtopics": [
+        {
+          "title": "what AI is",
+          "study_materials": {
+            "objective": "Build mastery of what AI is in AI Foundations for AI & Technology Challenge.",
+            "teaching_content": "Artificial intelligence is the design of computer systems that perform tasks requiring capabilities such as perception, prediction, language processing, planning or decision support.",
+            "worked_examples": [
+              "A spam filter classifies messages using learned patterns; it does not need human-like consciousness to perform the task."
+            ],
+            "pitfall": "Do not equate fluent output with human understanding or consciousness.",
+            "mastery_check": "Define AI in terms of capabilities and distinguish an AI task from ordinary fixed automation.",
+            "revision": "Revise what AI is through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "AI history",
+          "study_materials": {
+            "objective": "Build mastery of AI history in AI Foundations for AI & Technology Challenge.",
+            "teaching_content": "AI research has passed through symbolic reasoning, expert systems, statistical machine learning, deep learning and today's foundation and generative models.",
+            "worked_examples": [
+              "An expert system can be viewed as an earlier approach based on encoded rules, while a neural model learns patterns from examples."
+            ],
+            "pitfall": "Do not describe generative AI as if the field began only when chatbots became popular.",
+            "mastery_check": "Sequence major AI eras and explain how the dominant approach changed.",
+            "revision": "Revise AI history through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "machine learning concepts",
+          "study_materials": {
+            "objective": "Build mastery of machine learning concepts in AI Foundations for AI & Technology Challenge.",
+            "teaching_content": "Machine learning enables a system to learn patterns from data so that its behaviour can generalize to new examples. Common learning settings include supervised, unsupervised and reinforcement learning.",
+            "worked_examples": [
+              "A model trained on labelled images of cats and dogs can learn to classify a new image it has not seen during training."
+            ],
+            "pitfall": "Memorizing training examples is not the same as learning a pattern that generalizes.",
+            "mastery_check": "Match a problem to an appropriate learning setting and explain training versus inference.",
+            "revision": "Revise machine learning concepts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "models and data",
+          "study_materials": {
+            "objective": "Build mastery of models and data in AI Foundations for AI & Technology Challenge.",
+            "teaching_content": "A model is a learned mathematical representation used to transform inputs into predictions, classifications, rankings or generated outputs. Data quality, representation and coverage strongly affect what the model can learn.",
+            "worked_examples": [
+              "A handwriting classifier may fail on an unfamiliar script style if its training data contains only one narrow writing pattern."
+            ],
+            "pitfall": "A larger dataset does not automatically produce a better model if the data is noisy, biased or poorly labelled.",
+            "mastery_check": "Explain the relationship among data, model parameters, training and inference.",
+            "revision": "Revise models and data through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "AI applications",
+          "study_materials": {
+            "objective": "Build mastery of AI applications in AI Foundations for AI & Technology Challenge.",
+            "teaching_content": "AI is used in recommendation, search, translation, speech recognition, medical decision support, fraud detection, education and many other domains.",
+            "worked_examples": [
+              "A learning platform can recommend practice topics from a student's previous performance while leaving the final learning decision to the student or teacher."
+            ],
+            "pitfall": "Calling every digital feature AI can hide whether a rule-based system or learned model is actually being used.",
+            "mastery_check": "Identify the AI component in a real application and state what input, output and decision it supports.",
+            "revision": "Revise AI applications through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Data & Algorithms",
+      "subtopics": [
+        {
+          "title": "data types",
+          "study_materials": {
+            "objective": "Build mastery of data types in Data & Algorithms for AI & Technology Challenge.",
+            "teaching_content": "Computing systems work with structured data such as tables and numerical values, semi-structured data such as JSON, and unstructured data such as images, audio and free text.",
+            "worked_examples": [
+              "A student record may contain structured marks, while an uploaded essay is unstructured text that can be processed by language tools."
+            ],
+            "pitfall": "Treating all data as interchangeable can lead to unsuitable storage, preprocessing or modelling choices.",
+            "mastery_check": "Classify common data formats and explain why representation matters to an AI system.",
+            "revision": "Revise data types through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "patterns",
+          "study_materials": {
+            "objective": "Build mastery of patterns in Data & Algorithms for AI & Technology Challenge.",
+            "teaching_content": "Algorithms and models detect useful regularities such as frequency, correlation, sequence and similarity. A pattern is valuable only when it generalizes beyond the examples used to discover it.",
+            "worked_examples": [
+              "A model may notice that certain words frequently occur in positive product reviews and use that pattern for sentiment classification."
+            ],
+            "pitfall": "A correlation in a dataset does not by itself prove that one factor causes another.",
+            "mastery_check": "Recognize meaningful patterns while distinguishing correlation, coincidence and causation.",
+            "revision": "Revise patterns through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "algorithms",
+          "study_materials": {
+            "objective": "Build mastery of algorithms in Data & Algorithms for AI & Technology Challenge.",
+            "teaching_content": "An algorithm is a finite, ordered procedure for solving a problem or transforming input into output. Good algorithmic thinking emphasizes clear steps, inputs, conditions, repetition and termination.",
+            "worked_examples": [
+              "A binary search repeatedly halves a sorted search space rather than checking every item one by one."
+            ],
+            "pitfall": "A procedure that has no clear stopping condition or assumes an unsorted input without stating it is incomplete.",
+            "mastery_check": "Write or describe a stepwise algorithm and trace its behaviour on a small input.",
+            "revision": "Revise algorithms through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "training data",
+          "study_materials": {
+            "objective": "Build mastery of training data in Data & Algorithms for AI & Technology Challenge.",
+            "teaching_content": "Training data provides examples from which a machine-learning model learns. Labels may be supplied by people or generated by a defined process, and representative coverage is critical.",
+            "worked_examples": [
+              "If an image classifier is trained mostly on bright, front-facing photos, it may perform poorly on dark or side-view images."
+            ],
+            "pitfall": "More examples cannot fully correct a training set that systematically omits important cases.",
+            "mastery_check": "Explain how training examples influence model behaviour and identify gaps in a dataset.",
+            "revision": "Revise training data through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "evaluation",
+          "study_materials": {
+            "objective": "Build mastery of evaluation in Data & Algorithms for AI & Technology Challenge.",
+            "teaching_content": "Model evaluation measures how well a system performs on data reserved for testing rather than merely showing performance on training examples. Metrics should match the task and its risks.",
+            "worked_examples": [
+              "For a classifier, accuracy may be useful, while precision and recall can reveal different error patterns when false positives and false negatives have unequal costs."
+            ],
+            "pitfall": "A high training score alone is not evidence that a model generalizes well.",
+            "mastery_check": "Explain train/test separation and choose an evaluation measure appropriate to a stated task.",
+            "revision": "Revise evaluation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Generative AI",
+      "subtopics": [
+        {
+          "title": "text generation",
+          "study_materials": {
+            "objective": "Build mastery of text generation in Generative AI for AI & Technology Challenge.",
+            "teaching_content": "Text-generation systems produce sequences of tokens based on patterns learned from large language datasets. They can draft, summarize, transform and answer questions, but their output still requires verification.",
+            "worked_examples": [
+              "A language model can turn bullet points into a structured explanation by predicting a plausible sequence of words."
+            ],
+            "pitfall": "Confident wording does not guarantee that a generated statement is factually correct.",
+            "mastery_check": "Describe how text generation works at a high level and identify when human verification is necessary.",
+            "revision": "Revise text generation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "image generation",
+          "study_materials": {
+            "objective": "Build mastery of image generation in Generative AI for AI & Technology Challenge.",
+            "teaching_content": "Image-generation systems create images from learned representations of visual patterns, often conditioned on text or other inputs.",
+            "worked_examples": [
+              "A text prompt describing a science laboratory can be transformed into a generated illustration whose visual details are synthesized by the model."
+            ],
+            "pitfall": "A generated image should not automatically be treated as a photograph or documentary evidence.",
+            "mastery_check": "Distinguish generated imagery from captured imagery and identify appropriate verification needs.",
+            "revision": "Revise image generation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "multimodal systems",
+          "study_materials": {
+            "objective": "Build mastery of multimodal systems in Generative AI for AI & Technology Challenge.",
+            "teaching_content": "Multimodal AI combines or coordinates information from different modalities such as text, images, audio and video so a system can reason or generate across them.",
+            "worked_examples": [
+              "A model may inspect a chart image and answer a question about the labels while also using a written instruction."
+            ],
+            "pitfall": "Combining modalities does not guarantee that the system correctly understands every visual or audio detail.",
+            "mastery_check": "Identify the modalities involved in an AI task and explain why combining them can be useful.",
+            "revision": "Revise multimodal systems through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "prompt concepts",
+          "study_materials": {
+            "objective": "Build mastery of prompt concepts in Generative AI for AI & Technology Challenge.",
+            "teaching_content": "A prompt is an instruction or input that guides a generative model. Clear goals, relevant context, constraints, examples and an explicit output format can improve usefulness and consistency.",
+            "worked_examples": [
+              "Instead of asking for 'a quiz', a prompt can specify the age group, topic, number of questions, difficulty and required answer format."
+            ],
+            "pitfall": "Adding unnecessary instructions or contradictory constraints can make an output less reliable.",
+            "mastery_check": "Construct a clear prompt with goal, context, constraints and expected output.",
+            "revision": "Revise prompt concepts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "limitations",
+          "study_materials": {
+            "objective": "Build mastery of limitations in Generative AI for AI & Technology Challenge.",
+            "teaching_content": "Generative AI can produce inaccurate claims, fabricated citations, incomplete reasoning, biased outputs or unsafe recommendations. Reliability depends on the task, input, model and verification process.",
+            "worked_examples": [
+              "A student can use AI to draft practice questions but should check facts against authoritative study material before publishing them."
+            ],
+            "pitfall": "Treating a fluent response as automatically true is a major reliability error.",
+            "mastery_check": "List common generative-AI failure modes and select a verification strategy.",
+            "revision": "Revise limitations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Robotics & Automation",
+      "subtopics": [
+        {
+          "title": "sensors",
+          "study_materials": {
+            "objective": "Build mastery of sensors in Robotics & Automation for AI & Technology Challenge.",
+            "teaching_content": "Sensors convert physical conditions such as light, temperature, distance, pressure or motion into measurable signals that a computing system can process.",
+            "worked_examples": [
+              "A robot can use a distance sensor to estimate how close an obstacle is before deciding whether to move."
+            ],
+            "pitfall": "A sensor reading is a measurement with limitations and noise, not a perfect description of the environment.",
+            "mastery_check": "Explain the input role of sensors and identify how measurement errors can affect an automated system.",
+            "revision": "Revise sensors through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "actuators",
+          "study_materials": {
+            "objective": "Build mastery of actuators in Robotics & Automation for AI & Technology Challenge.",
+            "teaching_content": "Actuators convert control signals into physical action, such as moving a motor, opening a valve or changing a robotic joint position.",
+            "worked_examples": [
+              "A robot controller can command a motor to rotate a wheel after its sensors indicate that the path is clear."
+            ],
+            "pitfall": "Confusing sensing with actuation makes it difficult to reason about the control loop.",
+            "mastery_check": "Distinguish sensors, controllers and actuators and trace information from measurement to action.",
+            "revision": "Revise actuators through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "control",
+          "study_materials": {
+            "objective": "Build mastery of control in Robotics & Automation for AI & Technology Challenge.",
+            "teaching_content": "A control system repeatedly observes a state, compares it with a desired condition and changes an actuator command to influence the outcome. Feedback allows the system to correct deviations.",
+            "worked_examples": [
+              "A smart fan can measure room temperature and adjust its speed to move toward a target temperature."
+            ],
+            "pitfall": "An open-loop action that never checks the result cannot automatically compensate for changing conditions.",
+            "mastery_check": "Describe a feedback loop using sensor input, controller decision and actuator output.",
+            "revision": "Revise control through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "autonomous systems",
+          "study_materials": {
+            "objective": "Build mastery of autonomous systems in Robotics & Automation for AI & Technology Challenge.",
+            "teaching_content": "An autonomous system can perceive its environment, make decisions according to programmed or learned policies and act with limited direct human control.",
+            "worked_examples": [
+              "A warehouse robot can detect obstacles, plan a route and adjust movement while transporting an item."
+            ],
+            "pitfall": "Autonomous does not mean infallible or independent of human responsibility.",
+            "mastery_check": "Break an autonomous task into perception, decision and action stages and identify where human oversight may be needed.",
+            "revision": "Revise autonomous systems through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "real-world automation",
+          "study_materials": {
+            "objective": "Build mastery of real-world automation in Robotics & Automation for AI & Technology Challenge.",
+            "teaching_content": "Automation applies computing or control logic to repeatable physical or digital tasks, while intelligent automation may add perception, prediction or adaptive decision-making.",
+            "worked_examples": [
+              "A warehouse can automatically route packages using barcode scans and conveyor controls, while an AI layer could predict congestion and adjust routing."
+            ],
+            "pitfall": "Automation and AI are not synonyms; a fixed rule can automate a task without machine learning.",
+            "mastery_check": "Distinguish rule-based automation from AI-enabled automation and identify the control flow in a real system.",
+            "revision": "Revise real-world automation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Computing Systems",
+      "subtopics": [
+        {
+          "title": "hardware",
+          "study_materials": {
+            "objective": "Build mastery of hardware in Computing Systems for AI & Technology Challenge.",
+            "teaching_content": "Computer hardware is the physical equipment used to sense, process, store or communicate information. Important components include processors, memory, storage devices, input/output devices and specialized accelerators.",
+            "worked_examples": [
+              "A phone combines a processor, memory, storage, cameras and network hardware to run applications and communicate with other systems."
+            ],
+            "pitfall": "A faster processor alone does not guarantee a faster application; memory, storage, software and workload also matter.",
+            "mastery_check": "Identify major hardware components and explain their roles in an AI-enabled computing system.",
+            "revision": "Revise hardware through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "software",
+          "study_materials": {
+            "objective": "Build mastery of software in Computing Systems for AI & Technology Challenge.",
+            "teaching_content": "Software is the set of programs and instructions that tell hardware what operations to perform. Operating systems, applications, libraries and drivers form different layers of software.",
+            "worked_examples": [
+              "An operating system manages hardware resources while an AI application uses software libraries to load a model and process input."
+            ],
+            "pitfall": "Software is not the physical device itself, and installing more software does not increase hardware capacity.",
+            "mastery_check": "Distinguish hardware from software and explain how software layers cooperate to deliver a computing task.",
+            "revision": "Revise software through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "networks",
+          "study_materials": {
+            "objective": "Build mastery of networks in Computing Systems for AI & Technology Challenge.",
+            "teaching_content": "A computer network connects devices so they can exchange data using defined communication protocols. Networks may be local or wide-area and can use wired or wireless links.",
+            "worked_examples": [
+              "A student's browser can request a learning resource from a server over the internet using network protocols."
+            ],
+            "pitfall": "A network connection does not mean that every device or service is automatically trusted or secure.",
+            "mastery_check": "Explain the basic path of data between a client and service and identify the role of protocols.",
+            "revision": "Revise networks through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "cloud concepts",
+          "study_materials": {
+            "objective": "Build mastery of cloud concepts in Computing Systems for AI & Technology Challenge.",
+            "teaching_content": "Cloud computing provides computing resources such as storage, servers, databases and processing through network-accessible infrastructure rather than requiring every resource to run locally.",
+            "worked_examples": [
+              "An application can store large course files in cloud storage while a remote service performs processing when requested."
+            ],
+            "pitfall": "Cloud computing does not mean data has no physical location or that availability is guaranteed without limits.",
+            "mastery_check": "Distinguish local computing from cloud services and identify common cloud resources.",
+            "revision": "Revise cloud concepts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "edge computing",
+          "study_materials": {
+            "objective": "Build mastery of edge computing in Computing Systems for AI & Technology Challenge.",
+            "teaching_content": "Edge computing places processing closer to where data is produced, reducing the need to send every input to a distant central service and potentially improving response time.",
+            "worked_examples": [
+              "A factory camera can perform an initial safety check on an edge device and send only relevant events to a central system."
+            ],
+            "pitfall": "Edge processing does not automatically eliminate the need for networks, cloud services or security controls.",
+            "mastery_check": "Explain when edge processing can reduce latency and compare it with centralized processing.",
+            "revision": "Revise edge computing through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI Safety & Ethics",
+      "subtopics": [
+        {
+          "title": "bias",
+          "study_materials": {
+            "objective": "Build mastery of bias in AI Safety & Ethics for AI & Technology Challenge.",
+            "teaching_content": "Algorithmic bias can arise when data, labels, model design, measurement or deployment conditions systematically produce poorer outcomes for some groups or situations.",
+            "worked_examples": [
+              "A recognition system trained on a narrow population may perform differently when used with people whose characteristics were underrepresented in training data."
+            ],
+            "pitfall": "Bias is not limited to intentional discrimination; technical choices and incomplete data can also create unequal outcomes.",
+            "mastery_check": "Identify potential sources of bias in an AI pipeline and propose a way to investigate them.",
+            "revision": "Revise bias through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "privacy",
+          "study_materials": {
+            "objective": "Build mastery of privacy in AI Safety & Ethics for AI & Technology Challenge.",
+            "teaching_content": "Privacy concerns how personal information is collected, used, stored, shared and protected. AI systems can create additional risks when sensitive data is processed at scale or used for inference.",
+            "worked_examples": [
+              "A learning application should collect only the student information needed for its stated function and restrict access to authorized users."
+            ],
+            "pitfall": "Data being technically available does not mean it is appropriate to collect or reuse for another purpose.",
+            "mastery_check": "Explain data minimization, purpose limitation and access control in an AI system.",
+            "revision": "Revise privacy through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "fairness",
+          "study_materials": {
+            "objective": "Build mastery of fairness in AI Safety & Ethics for AI & Technology Challenge.",
+            "teaching_content": "Fairness in AI concerns whether system design and outcomes treat relevant people or groups appropriately according to the task and context. There is no single fairness rule for every application.",
+            "worked_examples": [
+              "A scholarship screening system may need evaluation across relevant groups to check whether error rates differ materially."
+            ],
+            "pitfall": "Equal treatment at the input stage does not automatically guarantee equal outcomes after a model is deployed.",
+            "mastery_check": "Describe why fairness must be evaluated in context and identify evidence needed to assess an AI system.",
+            "revision": "Revise fairness through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "misinformation",
+          "study_materials": {
+            "objective": "Build mastery of misinformation in AI Safety & Ethics for AI & Technology Challenge.",
+            "teaching_content": "Misinformation is false or misleading information that can spread through human or automated systems. Generative tools can increase the speed and scale of producing convincing but inaccurate content.",
+            "worked_examples": [
+              "An AI-generated post may combine a real photograph with a false claim about when or where it was taken."
+            ],
+            "pitfall": "Visual polish, confident language or many shares are not evidence that a claim is true.",
+            "mastery_check": "Apply source checking, cross-verification and provenance reasoning before accepting or sharing questionable AI-assisted content.",
+            "revision": "Revise misinformation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "human oversight",
+          "study_materials": {
+            "objective": "Build mastery of human oversight in AI Safety & Ethics for AI & Technology Challenge.",
+            "teaching_content": "Human oversight means people remain responsible for monitoring, reviewing or intervening in AI-assisted decisions when the consequences warrant it.",
+            "worked_examples": [
+              "A teacher can review an AI-generated assessment report before using it to guide a student's learning plan."
+            ],
+            "pitfall": "Calling a system 'automated' does not transfer responsibility for consequential decisions to the machine.",
+            "mastery_check": "Identify where human review should occur in an AI workflow and explain what the reviewer must verify.",
+            "revision": "Revise human oversight through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Emerging Technologies",
+      "subtopics": [
+        {
+          "title": "IoT",
+          "study_materials": {
+            "objective": "Build mastery of IoT in Emerging Technologies for AI & Technology Challenge.",
+            "teaching_content": "The Internet of Things connects physical objects equipped with sensors, processing and communication capabilities so they can collect, exchange or act on data.",
+            "worked_examples": [
+              "A smart irrigation controller can use soil-moisture measurements and network connectivity to adjust watering."
+            ],
+            "pitfall": "An internet-connected device is not automatically secure or useful simply because it can transmit data.",
+            "mastery_check": "Describe the sensing, connectivity and action cycle of an IoT device.",
+            "revision": "Revise IoT through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "AR and VR",
+          "study_materials": {
+            "objective": "Build mastery of AR and VR in Emerging Technologies for AI & Technology Challenge.",
+            "teaching_content": "Augmented reality overlays digital information on a user's view of the physical world, while virtual reality creates an immersive computer-generated environment.",
+            "worked_examples": [
+              "An AR learning app can place labels over a real laboratory object, whereas a VR lesson can place the learner inside a simulated environment."
+            ],
+            "pitfall": "AR and VR are not interchangeable; their interaction models and hardware requirements differ.",
+            "mastery_check": "Compare AR and VR and select the appropriate technology for a stated learning or training scenario.",
+            "revision": "Revise AR and VR through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "quantum concepts",
+          "study_materials": {
+            "objective": "Build mastery of quantum concepts in Emerging Technologies for AI & Technology Challenge.",
+            "teaching_content": "Quantum computing uses quantum-mechanical phenomena to represent and manipulate information in ways that differ from classical bits. Qubits can exist in superposition and can be entangled.",
+            "worked_examples": [
+              "A classical bit is represented as 0 or 1, while a qubit can be prepared in a quantum state involving amplitudes for both basis states."
+            ],
+            "pitfall": "A qubit being in superposition does not mean it simply stores every possible answer for free or that quantum computers are faster for every task.",
+            "mastery_check": "Explain bits versus qubits, superposition and entanglement at a conceptual level without treating them as magic speed multipliers.",
+            "revision": "Revise quantum concepts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "blockchain basics",
+          "study_materials": {
+            "objective": "Build mastery of blockchain basics in Emerging Technologies for AI & Technology Challenge.",
+            "teaching_content": "A blockchain is a distributed ledger in which records are grouped into blocks and linked using cryptographic mechanisms, with network rules governing how new records are accepted.",
+            "worked_examples": [
+              "A blockchain network can maintain a shared transaction history across participating nodes without relying on one ordinary database server."
+            ],
+            "pitfall": "Blockchain does not make information automatically true, private or legally valid; the ledger records what the network accepts.",
+            "mastery_check": "Explain the shared-ledger concept and distinguish immutability claims from the accuracy of the original input.",
+            "revision": "Revise blockchain basics through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "future technologies",
+          "study_materials": {
+            "objective": "Build mastery of future technologies in Emerging Technologies for AI & Technology Challenge.",
+            "teaching_content": "Emerging technologies should be evaluated by their capabilities, maturity, costs, risks, infrastructure requirements and likely applications rather than by novelty alone.",
+            "worked_examples": [
+              "A new computing technology may be promising in research but still require years of engineering before it becomes practical at large scale."
+            ],
+            "pitfall": "A technology being described as 'next generation' is not evidence that it is ready for widespread deployment.",
+            "mastery_check": "Assess a proposed technology using evidence about readiness, benefit, limitations and risk.",
+            "revision": "Revise future technologies through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Applied Technology Reasoning",
+      "subtopics": [
+        {
+          "title": "technology scenarios",
+          "study_materials": {
+            "objective": "Build mastery of technology scenarios in Applied Technology Reasoning for AI & Technology Challenge.",
+            "teaching_content": "Technology reasoning starts by identifying the goal, users, inputs, constraints, outputs and risks before choosing a tool or architecture.",
+            "worked_examples": [
+              "For an online learning service, a requirement for low-latency live interaction points toward real-time communication infrastructure rather than ordinary file storage alone."
+            ],
+            "pitfall": "Choosing a fashionable technology before defining the problem can create unnecessary complexity.",
+            "mastery_check": "Break a real-world technology scenario into requirements, constraints and candidate solution components.",
+            "revision": "Revise technology scenarios through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "system design thinking",
+          "study_materials": {
+            "objective": "Build mastery of system design thinking in Applied Technology Reasoning for AI & Technology Challenge.",
+            "teaching_content": "System design organizes components and interfaces so a complete service can meet functional, performance, reliability, security and usability requirements.",
+            "worked_examples": [
+              "A learning platform may separate authentication, application data, media storage and real-time communication because each has different responsibilities."
+            ],
+            "pitfall": "A system with many components is not automatically well designed; unnecessary coupling can make failures harder to isolate.",
+            "mastery_check": "Draw a simple component-level design and explain data flow, responsibilities and failure boundaries.",
+            "revision": "Revise system design thinking through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "AI problem solving",
+          "study_materials": {
+            "objective": "Build mastery of AI problem solving in Applied Technology Reasoning for AI & Technology Challenge.",
+            "teaching_content": "AI problem solving involves defining the task, determining whether AI is appropriate, identifying data and evaluation criteria, selecting a method and planning validation and monitoring.",
+            "worked_examples": [
+              "For classifying student questions, a team can first define the categories and success criteria before collecting representative examples and testing a model."
+            ],
+            "pitfall": "Starting with a model before defining the problem can produce impressive output that does not solve the intended task.",
+            "mastery_check": "Turn a real problem into an AI task specification with inputs, outputs, data, metric and validation plan.",
+            "revision": "Revise AI problem solving through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "trade-offs",
+          "study_materials": {
+            "objective": "Build mastery of trade-offs in Applied Technology Reasoning for AI & Technology Challenge.",
+            "teaching_content": "Technology decisions involve trade-offs among accuracy, speed, cost, privacy, reliability, maintainability, energy use and user experience. Improving one dimension can sometimes worsen another.",
+            "worked_examples": [
+              "Processing sensitive data locally may improve privacy but require more capable devices, while sending it to a server may simplify centralized processing but increase data-transfer concerns."
+            ],
+            "pitfall": "There is rarely one universally best technology independent of requirements.",
+            "mastery_check": "Compare at least two solution options using explicit criteria and justify the choice for a stated scenario.",
+            "revision": "Revise trade-offs through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "case analysis",
+          "study_materials": {
+            "objective": "Build mastery of case analysis in Applied Technology Reasoning for AI & Technology Challenge.",
+            "teaching_content": "Case analysis evaluates a technology in its real context by combining requirements, evidence, system behaviour, benefits, limitations, risks and stakeholder impact.",
+            "worked_examples": [
+              "A school considering an AI study assistant should evaluate accuracy, student privacy, teacher oversight, accessibility, cost and failure handling before adoption."
+            ],
+            "pitfall": "A case study based only on successful demonstrations can hide failure modes and operational costs.",
+            "mastery_check": "Analyze a technology case systematically and reach a justified recommendation supported by stated evidence.",
+            "revision": "Revise case analysis through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI & Technology Competition Mastery",
+      "subtopics": [
+        {
+          "title": "AI technology challenge strategy",
+          "study_materials": {
+            "objective": "Build mastery of AI technology challenge strategy in AI & Technology Competition Mastery for AI & Technology Challenge.",
+            "teaching_content": "Master AI technology challenge strategy within AI & Technology Competition Mastery for AI & Technology Challenge. Apply AI & Technology knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative AI technology challenge strategy task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the AI technology challenge strategy task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar AI technology challenge strategy challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise AI technology challenge strategy through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "model and tool comparison",
+          "study_materials": {
+            "objective": "Build mastery of model and tool comparison in AI & Technology Competition Mastery for AI & Technology Challenge.",
+            "teaching_content": "Master model and tool comparison within AI & Technology Competition Mastery for AI & Technology Challenge. Apply AI & Technology knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative model and tool comparison task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the model and tool comparison task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar model and tool comparison challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise model and tool comparison through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "AI output verification",
+          "study_materials": {
+            "objective": "Build mastery of AI output verification in AI & Technology Competition Mastery for AI & Technology Challenge.",
+            "teaching_content": "Master AI output verification within AI & Technology Competition Mastery for AI & Technology Challenge. Apply AI & Technology knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative AI output verification task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the AI output verification task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar AI output verification challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise AI output verification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated technology scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated technology scenarios in AI & Technology Competition Mastery for AI & Technology Challenge.",
+            "teaching_content": "Master integrated technology scenarios within AI & Technology Competition Mastery for AI & Technology Challenge. Apply AI & Technology knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative integrated technology scenarios task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the integrated technology scenarios task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar integrated technology scenarios challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise integrated technology scenarios through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "AI technology championship round",
+          "study_materials": {
+            "objective": "Build mastery of AI technology championship round in AI & Technology Competition Mastery for AI & Technology Challenge.",
+            "teaching_content": "Master AI technology championship round within AI & Technology Competition Mastery for AI & Technology Challenge. Apply AI & Technology knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative AI technology championship round task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the AI technology championship round task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar AI technology championship round challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise AI technology championship round through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "AI-TECHNOLOG-MOCK-01",
+      "focus": "core curriculum mastery and topic-wise practice"
+    },
+    {
+      "id": "AI-TECHNOLOG-MOCK-02",
+      "focus": "advanced mixed-domain preparation"
+    },
+    {
+      "id": "AI-TECHNOLOG-MOCK-03",
+      "focus": "full championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "AI & Technology Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
