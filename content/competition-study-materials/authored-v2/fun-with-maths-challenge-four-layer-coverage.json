@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "Fun with Maths Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/fun-with-maths-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Math Play Foundations",
+      "subtopics": [
+        {
+          "title": "counting games",
+          "study_materials": {
+            "objective": "Build mastery of counting games in Math Play Foundations.",
+            "teaching_content": "Master counting games within Math Play Foundations for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative counting games task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar counting games task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review counting games through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "number patterns",
+          "study_materials": {
+            "objective": "Build mastery of number patterns in Math Play Foundations.",
+            "teaching_content": "Master number patterns within Math Play Foundations for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative number patterns task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar number patterns task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review number patterns through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mental math games",
+          "study_materials": {
+            "objective": "Build mastery of mental math games in Math Play Foundations.",
+            "teaching_content": "Master mental math games within Math Play Foundations for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative mental math games task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar mental math games task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review mental math games through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "estimation games",
+          "study_materials": {
+            "objective": "Build mastery of estimation games in Math Play Foundations.",
+            "teaching_content": "Master estimation games within Math Play Foundations for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative estimation games task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar estimation games task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review estimation games through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "math vocabulary",
+          "study_materials": {
+            "objective": "Build mastery of math vocabulary in Math Play Foundations.",
+            "teaching_content": "Master math vocabulary within Math Play Foundations for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative math vocabulary task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar math vocabulary task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review math vocabulary through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Puzzles & Riddles",
+      "subtopics": [
+        {
+          "title": "number riddles",
+          "study_materials": {
+            "objective": "Build mastery of number riddles in Puzzles & Riddles.",
+            "teaching_content": "Master number riddles within Puzzles & Riddles for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative number riddles task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar number riddles task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review number riddles through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "logic grids",
+          "study_materials": {
+            "objective": "Build mastery of logic grids in Puzzles & Riddles.",
+            "teaching_content": "Master logic grids within Puzzles & Riddles for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative logic grids task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar logic grids task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review logic grids through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "magic squares",
+          "study_materials": {
+            "objective": "Build mastery of magic squares in Puzzles & Riddles.",
+            "teaching_content": "Master magic squares within Puzzles & Riddles for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative magic squares task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar magic squares task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review magic squares through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "missing numbers",
+          "study_materials": {
+            "objective": "Build mastery of missing numbers in Puzzles & Riddles.",
+            "teaching_content": "Master missing numbers within Puzzles & Riddles for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative missing numbers task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar missing numbers task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review missing numbers through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "visual puzzles",
+          "study_materials": {
+            "objective": "Build mastery of visual puzzles in Puzzles & Riddles.",
+            "teaching_content": "Master visual puzzles within Puzzles & Riddles for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative visual puzzles task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar visual puzzles task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review visual puzzles through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Shapes & Space",
+      "subtopics": [
+        {
+          "title": "shape recognition",
+          "study_materials": {
+            "objective": "Build mastery of shape recognition in Shapes & Space.",
+            "teaching_content": "Master shape recognition within Shapes & Space for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative shape recognition task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar shape recognition task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review shape recognition through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "symmetry",
+          "study_materials": {
+            "objective": "Build mastery of symmetry in Shapes & Space.",
+            "teaching_content": "Master symmetry within Shapes & Space for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative symmetry task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar symmetry task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review symmetry through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "angles in play",
+          "study_materials": {
+            "objective": "Build mastery of angles in play in Shapes & Space.",
+            "teaching_content": "Master angles in play within Shapes & Space for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative angles in play task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar angles in play task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review angles in play through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "area puzzles",
+          "study_materials": {
+            "objective": "Build mastery of area puzzles in Shapes & Space.",
+            "teaching_content": "Master area puzzles within Shapes & Space for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative area puzzles task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar area puzzles task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review area puzzles through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "spatial challenges",
+          "study_materials": {
+            "objective": "Build mastery of spatial challenges in Shapes & Space.",
+            "teaching_content": "Master spatial challenges within Shapes & Space for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative spatial challenges task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar spatial challenges task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review spatial challenges through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Patterns",
+      "subtopics": [
+        {
+          "title": "repeating patterns",
+          "study_materials": {
+            "objective": "Build mastery of repeating patterns in Patterns.",
+            "teaching_content": "Master repeating patterns within Patterns for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative repeating patterns task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar repeating patterns task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review repeating patterns through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "growing patterns",
+          "study_materials": {
+            "objective": "Build mastery of growing patterns in Patterns.",
+            "teaching_content": "Master growing patterns within Patterns for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative growing patterns task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar growing patterns task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review growing patterns through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sequence games",
+          "study_materials": {
+            "objective": "Build mastery of sequence games in Patterns.",
+            "teaching_content": "Master sequence games within Patterns for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative sequence games task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar sequence games task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review sequence games through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "rule finding",
+          "study_materials": {
+            "objective": "Build mastery of rule finding in Patterns.",
+            "teaching_content": "Master rule finding within Patterns for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative rule finding task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar rule finding task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review rule finding through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "pattern creation",
+          "study_materials": {
+            "objective": "Build mastery of pattern creation in Patterns.",
+            "teaching_content": "Master pattern creation within Patterns for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative pattern creation task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar pattern creation task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review pattern creation through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Fractions & Sharing",
+      "subtopics": [
+        {
+          "title": "equal shares",
+          "study_materials": {
+            "objective": "Build mastery of equal shares in Fractions & Sharing.",
+            "teaching_content": "Master equal shares within Fractions & Sharing for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative equal shares task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar equal shares task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review equal shares through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "fraction games",
+          "study_materials": {
+            "objective": "Build mastery of fraction games in Fractions & Sharing.",
+            "teaching_content": "Master fraction games within Fractions & Sharing for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative fraction games task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar fraction games task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review fraction games through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "ratio puzzles",
+          "study_materials": {
+            "objective": "Build mastery of ratio puzzles in Fractions & Sharing.",
+            "teaching_content": "Master ratio puzzles within Fractions & Sharing for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative ratio puzzles task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar ratio puzzles task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review ratio puzzles through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "money fractions",
+          "study_materials": {
+            "objective": "Build mastery of money fractions in Fractions & Sharing.",
+            "teaching_content": "Master money fractions within Fractions & Sharing for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative money fractions task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar money fractions task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review money fractions through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "proportion play",
+          "study_materials": {
+            "objective": "Build mastery of proportion play in Fractions & Sharing.",
+            "teaching_content": "Master proportion play within Fractions & Sharing for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative proportion play task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar proportion play task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review proportion play through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Measurement",
+      "subtopics": [
+        {
+          "title": "length",
+          "study_materials": {
+            "objective": "Build mastery of length in Measurement.",
+            "teaching_content": "Master length within Measurement for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative length task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar length task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review length through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mass",
+          "study_materials": {
+            "objective": "Build mastery of mass in Measurement.",
+            "teaching_content": "Master mass within Measurement for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative mass task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar mass task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review mass through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "time",
+          "study_materials": {
+            "objective": "Build mastery of time in Measurement.",
+            "teaching_content": "Master time within Measurement for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative time task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar time task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review time through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "capacity",
+          "study_materials": {
+            "objective": "Build mastery of capacity in Measurement.",
+            "teaching_content": "Master capacity within Measurement for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative capacity task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar capacity task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review capacity through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "measurement estimation",
+          "study_materials": {
+            "objective": "Build mastery of measurement estimation in Measurement.",
+            "teaching_content": "Master measurement estimation within Measurement for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative measurement estimation task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar measurement estimation task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review measurement estimation through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Data Games",
+      "subtopics": [
+        {
+          "title": "picture graphs",
+          "study_materials": {
+            "objective": "Build mastery of picture graphs in Data Games.",
+            "teaching_content": "Master picture graphs within Data Games for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative picture graphs task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar picture graphs task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review picture graphs through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "simple charts",
+          "study_materials": {
+            "objective": "Build mastery of simple charts in Data Games.",
+            "teaching_content": "Master simple charts within Data Games for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative simple charts task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar simple charts task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review simple charts through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "probability games",
+          "study_materials": {
+            "objective": "Build mastery of probability games in Data Games.",
+            "teaching_content": "Master probability games within Data Games for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative probability games task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar probability games task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review probability games through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "survey puzzles",
+          "study_materials": {
+            "objective": "Build mastery of survey puzzles in Data Games.",
+            "teaching_content": "Master survey puzzles within Data Games for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative survey puzzles task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar survey puzzles task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review survey puzzles through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "data stories",
+          "study_materials": {
+            "objective": "Build mastery of data stories in Data Games.",
+            "teaching_content": "Master data stories within Data Games for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative data stories task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar data stories task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review data stories through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Challenge Rounds",
+      "subtopics": [
+        {
+          "title": "mixed puzzles",
+          "study_materials": {
+            "objective": "Build mastery of mixed puzzles in Challenge Rounds.",
+            "teaching_content": "Master mixed puzzles within Challenge Rounds for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative mixed puzzles task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar mixed puzzles task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review mixed puzzles through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "speed rounds",
+          "study_materials": {
+            "objective": "Build mastery of speed rounds in Challenge Rounds.",
+            "teaching_content": "Master speed rounds within Challenge Rounds for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative speed rounds task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar speed rounds task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review speed rounds through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "strategy",
+          "study_materials": {
+            "objective": "Build mastery of strategy in Challenge Rounds.",
+            "teaching_content": "Master strategy within Challenge Rounds for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative strategy task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar strategy task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review strategy through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "explanation",
+          "study_materials": {
+            "objective": "Build mastery of explanation in Challenge Rounds.",
+            "teaching_content": "Master explanation within Challenge Rounds for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative explanation task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar explanation task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review explanation through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mastery games",
+          "study_materials": {
+            "objective": "Build mastery of mastery games in Challenge Rounds.",
+            "teaching_content": "Master mastery games within Challenge Rounds for Fun with Maths Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative mastery games task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar mastery games task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Review mastery games through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Maths Competition Mastery",
+      "subtopics": [
+        {
+          "title": "strategy selection",
+          "study_materials": {
+            "objective": "Build mastery of strategy selection in Maths Competition Mastery.",
+            "teaching_content": "Choose a representation or method by inspecting what the puzzle asks, what information is given, and which relationships are easiest to expose.",
+            "worked_examples": [
+              "For a number puzzle with repeated clues, organize the known values in a table before calculating so hidden relationships become visible."
+            ],
+            "pitfall": "Pitfall: calculating immediately without first identifying the structure of the puzzle.",
+            "mastery_check": "Explain why a chosen method makes the challenge simpler and apply it correctly.",
+            "revision": "Review strategy selection through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "multi-step reasoning",
+          "study_materials": {
+            "objective": "Build mastery of multi-step reasoning in Maths Competition Mastery.",
+            "teaching_content": "Break playful mathematics challenges into short linked steps and keep intermediate results visible so each deduction can be checked.",
+            "worked_examples": [
+              "A three-stage sharing puzzle can be solved by finding the total first, applying the first share, then checking the remaining amount before the final share."
+            ],
+            "pitfall": "Pitfall: carrying an unchecked intermediate result into later steps.",
+            "mastery_check": "Solve a multi-step challenge while showing and verifying each important deduction.",
+            "revision": "Review multi-step reasoning through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "error spotting",
+          "study_materials": {
+            "objective": "Build mastery of error spotting in Maths Competition Mastery.",
+            "teaching_content": "Compare a proposed solution with the original conditions, test simple cases, and locate the first step where the reasoning stops matching the puzzle.",
+            "worked_examples": [
+              "If a pattern solution predicts the next term but fails when the same rule is tested on an earlier term, revisit the assumed rule."
+            ],
+            "pitfall": "Pitfall: changing the final answer without identifying which assumption caused the error.",
+            "mastery_check": "Find and explain the first incorrect step in a worked mathematics puzzle.",
+            "revision": "Review error spotting through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mixed maths challenges",
+          "study_materials": {
+            "objective": "Build mastery of mixed maths challenges in Maths Competition Mastery.",
+            "teaching_content": "Combine arithmetic, patterns, geometry, measurement, data, and logical reasoning in unfamiliar contexts rather than treating each skill as isolated.",
+            "worked_examples": [
+              "A treasure-map challenge may combine coordinates, distance comparisons, shape clues, and a final arithmetic code."
+            ],
+            "pitfall": "Pitfall: using a familiar operation just because it appears in the story instead of matching the operation to the evidence.",
+            "mastery_check": "Select and combine multiple mathematical ideas to solve an unfamiliar challenge.",
+            "revision": "Review mixed maths challenges through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "championship puzzle round",
+          "study_materials": {
+            "objective": "Build mastery of championship puzzle round in Maths Competition Mastery.",
+            "teaching_content": "Practice timed mixed challenges with deliberate question selection, clean working, estimation checks, and final-answer verification.",
+            "worked_examples": [
+              "In a timed round, secure direct points first, mark a harder puzzle, then return with the remaining time and verify every selected answer."
+            ],
+            "pitfall": "Pitfall: spending too long on one puzzle and losing easy marks elsewhere.",
+            "mastery_check": "Complete a mixed challenge accurately under time pressure and justify the final answers.",
+            "revision": "Review championship puzzle round through examples, practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "FWM-MOCK-01",
+      "focus": "core maths games, patterns and reasoning"
+    },
+    {
+      "id": "FWM-MOCK-02",
+      "focus": "mixed problem solving and applied maths"
+    },
+    {
+      "id": "FWM-MOCK-03",
+      "focus": "championship mixed-puzzle simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "Fun with Maths Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
