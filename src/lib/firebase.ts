@@ -47,7 +47,7 @@ const app = initializeApp(firebaseConfig)
 export const firebaseAuth = getAuth(app)
 // Keep recently-read Firestore data available during slow/intermittent connectivity.
 // If IndexedDB persistence is unavailable, fall back to the normal Firestore client.
-let firestore
+let firestore: Firestore
 try {
   firestore = initializeFirestore(app, {
     localCache: persistentLocalCache({
