@@ -33,7 +33,9 @@ const missingFirebaseEnvVars = REQUIRED_FIREBASE_ENV_VARS.filter(([, value]) => 
 
 if (missingFirebaseEnvVars.length > 0) {
   throw new Error(
-    `Firebase configuration is missing required environment variable(s): ${missingFirebaseEnvVars.join(', ')}.\n\n` +
+    `Firebase configuration is missing required environment variable(s): ${missingFirebaseEnvVars.join(', ')}.
+
+` +
       'Add them to .env.local (see .env.example) with the values from ' +
       'Firebase Console \u2192 Project settings \u2192 General \u2192 Your apps \u2192 SDK setup and configuration, ' +
       'then restart the Vite dev server \u2014 Vite only reads environment variables at startup.'
@@ -43,6 +45,19 @@ if (missingFirebaseEnvVars.length > 0) {
 const app = initializeApp(firebaseConfig)
 
 export const firebaseAuth = getAuth(app)
-// Keep recently-read Firestore data available during slow/intermittent connectivity.\n// If IndexedDB persistence is unavailable, fall back to the normal Firestore client.\nlet firestore\ntry {\n  firestore = initializeFirestore(app, {\n    localCache: persistentLocalCache({\n      tabManager: persistentMultipleTabManager(),\n    }),\n  })\n} catch {\n  firestore = getFirestore(app)\n}\n\nexport { firestore }
+// Keep recently-read Firestore data available during slow/intermittent connectivity.
+// If IndexedDB persistence is unavailable, fall back to the normal Firestore client.
+let firestore
+try {
+  firestore = initializeFirestore(app, {
+    localCache: persistentLocalCache({
+      tabManager: persistentMultipleTabManager(),
+    }),
+  })
+} catch {
+  firestore = getFirestore(app)
+}
+
+export { firestore }
 
 export default app
