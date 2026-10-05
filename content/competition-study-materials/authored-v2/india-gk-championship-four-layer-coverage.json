@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "India GK Championship",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/india-gk-championship-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Indian Polity",
+      "subtopics": [
+        {
+          "title": "constitution",
+          "study_materials": {
+            "objective": "Build mastery of constitution in Indian Polity for India GK Championship.",
+            "teaching_content": "The Constitution of India establishes the structure and powers of government, fundamental rights, directive principles and duties, and relationships among institutions.",
+            "worked_examples": [
+              "It was adopted on 26 November 1949 and came into force on 26 January 1950."
+            ],
+            "pitfall": "Adoption and commencement are different constitutional milestones.",
+            "mastery_check": "Distinguish major constitutional dates and explain the Constitution's foundational role.",
+            "revision": "Revise constitution through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "parliament",
+          "study_materials": {
+            "objective": "Build mastery of parliament in Indian Polity for India GK Championship.",
+            "teaching_content": "The Parliament of India consists of the President and two Houses: the Rajya Sabha and Lok Sabha.",
+            "worked_examples": [
+              "Lok Sabha is the House of the People and members are directly elected; Rajya Sabha represents the states and union territories through its constitutional composition."
+            ],
+            "pitfall": "Parliament is not identical to the Union Cabinet or Supreme Court.",
+            "mastery_check": "Identify the Houses of Parliament and their basic constitutional roles.",
+            "revision": "Revise parliament through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "executive",
+          "study_materials": {
+            "objective": "Build mastery of executive in Indian Polity for India GK Championship.",
+            "teaching_content": "The Union executive includes the President, Vice-President, Prime Minister and Council of Ministers, with the constitutional roles distributed among them.",
+            "worked_examples": [
+              "The President is the constitutional head of the Union, while the Council of Ministers headed by the Prime Minister exercises executive functions subject to constitutional arrangements."
+            ],
+            "pitfall": "The President and Prime Minister do not have identical constitutional roles.",
+            "mastery_check": "Distinguish major Union executive offices and their functions.",
+            "revision": "Revise executive through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "judiciary",
+          "study_materials": {
+            "objective": "Build mastery of judiciary in Indian Polity for India GK Championship.",
+            "teaching_content": "India has an integrated judicial system headed by the Supreme Court, with High Courts and subordinate courts below it.",
+            "worked_examples": [
+              "The Supreme Court has jurisdiction including constitutional matters and appeals as provided by law and the Constitution."
+            ],
+            "pitfall": "A High Court is not subordinate to the state executive; courts exercise judicial functions independently within the constitutional framework.",
+            "mastery_check": "Identify the court hierarchy and broad jurisdictional roles.",
+            "revision": "Revise judiciary through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "constitutional bodies",
+          "study_materials": {
+            "objective": "Build mastery of constitutional bodies in Indian Polity for India GK Championship.",
+            "teaching_content": "Constitutional bodies derive their authority directly from the Constitution and perform defined public functions.",
+            "worked_examples": [
+              "The Election Commission of India is a constitutional body responsible for supervising and controlling elections to specified legislatures and offices."
+            ],
+            "pitfall": "A statutory body is created by legislation rather than directly by the Constitution.",
+            "mastery_check": "Distinguish constitutional bodies from statutory institutions and match them with functions.",
+            "revision": "Revise constitutional bodies through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Indian Geography",
+      "subtopics": [
+        {
+          "title": "states and borders",
+          "study_materials": {
+            "objective": "Build mastery of states and borders in Indian Geography for India GK Championship.",
+            "teaching_content": "India's states and union territories have defined boundaries and neighbouring countries occur along particular parts of India's land borders.",
+            "worked_examples": [
+              "India shares land boundaries with countries including Pakistan, China, Nepal, Bhutan, Bangladesh and Myanmar."
+            ],
+            "pitfall": "A neighbouring country may be geographically close without sharing a land border with every state.",
+            "mastery_check": "Identify major Indian neighbours and understand state-level geographic relationships.",
+            "revision": "Revise states and borders through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "rivers and mountains",
+          "study_materials": {
+            "objective": "Build mastery of rivers and mountains in Indian Geography for India GK Championship.",
+            "teaching_content": "India's major river systems and mountain ranges shape agriculture, settlement, ecosystems and transport.",
+            "worked_examples": [
+              "The Himalayas influence northern drainage, while peninsular rivers include systems such as the Godavari, Krishna, Narmada and Kaveri."
+            ],
+            "pitfall": "Not all Indian rivers flow in the same direction or have the same source environment.",
+            "mastery_check": "Locate major rivers and mountain systems and compare their broad characteristics.",
+            "revision": "Revise rivers and mountains through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "climate",
+          "study_materials": {
+            "objective": "Build mastery of climate in Indian Geography for India GK Championship.",
+            "teaching_content": "India's climate varies by region and season and is strongly influenced by monsoon circulation, latitude, relief and proximity to the sea.",
+            "worked_examples": [
+              "The southwest monsoon contributes a large share of annual rainfall in many parts of India, but rainfall distribution is uneven."
+            ],
+            "pitfall": "India does not experience one uniform climate throughout the country.",
+            "mastery_check": "Explain major factors influencing Indian climate and seasonal rainfall.",
+            "revision": "Revise climate through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "resources",
+          "study_materials": {
+            "objective": "Build mastery of resources in Indian Geography for India GK Championship.",
+            "teaching_content": "India has diverse mineral, water, forest, agricultural and energy resources distributed unevenly across regions.",
+            "worked_examples": [
+              "Coal, iron ore, petroleum, natural gas and renewable energy resources have different locations, uses and extraction considerations."
+            ],
+            "pitfall": "A resource's presence in a region does not mean it is unlimited or equally accessible everywhere.",
+            "mastery_check": "Relate major resources to broad regions and explain why conservation matters.",
+            "revision": "Revise resources through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "maps",
+          "study_materials": {
+            "objective": "Build mastery of maps in Indian Geography for India GK Championship.",
+            "teaching_content": "Indian maps use political boundaries, physical features, scale, directions and symbols to represent geographic information.",
+            "worked_examples": [
+              "A map can be used to locate a state, trace a river or compare the position of mountain ranges using a legend and scale."
+            ],
+            "pitfall": "Political and physical maps answer different kinds of geographic questions.",
+            "mastery_check": "Interpret Indian maps using scale, symbols, directions and geographic context.",
+            "revision": "Revise maps through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Indian History",
+      "subtopics": [
+        {
+          "title": "ancient India",
+          "study_materials": {
+            "objective": "Build mastery of ancient India in Indian History for India GK Championship.",
+            "teaching_content": "Ancient Indian history includes diverse archaeological and textual traditions, urban cultures, kingdoms and intellectual developments.",
+            "worked_examples": [
+              "The Indus Valley Civilization is associated with planned settlements and drainage, while the Mauryan period is associated with imperial expansion under rulers including Ashoka."
+            ],
+            "pitfall": "Chronology matters when comparing civilizations and empires.",
+            "mastery_check": "Place major ancient developments in sequence and associate them with evidence and achievements.",
+            "revision": "Revise ancient India through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "medieval India",
+          "study_materials": {
+            "objective": "Build mastery of medieval India in Indian History for India GK Championship.",
+            "teaching_content": "Medieval Indian history includes regional kingdoms, the Delhi Sultanates, the Mughal Empire, the Vijayanagara Empire and many other political and cultural traditions.",
+            "worked_examples": [
+              "The Mughal Empire and Vijayanagara Empire existed within different regional and chronological contexts and should not be treated as a single political system."
+            ],
+            "pitfall": "Historical labels cover long periods with internal change.",
+            "mastery_check": "Identify major medieval powers and place them in broad chronology.",
+            "revision": "Revise medieval India through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "modern India",
+          "study_materials": {
+            "objective": "Build mastery of modern India in Indian History for India GK Championship.",
+            "teaching_content": "Modern Indian history includes colonial expansion, social and political reform, economic change, resistance and the emergence of nationalist movements.",
+            "worked_examples": [
+              "The British East India Company expanded political control before the British Crown assumed direct rule after the Revolt of 1857."
+            ],
+            "pitfall": "Company rule and Crown rule are distinct phases of colonial administration.",
+            "mastery_check": "Trace major transitions in modern Indian history and their consequences.",
+            "revision": "Revise modern India through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "freedom movement",
+          "study_materials": {
+            "objective": "Build mastery of freedom movement in Indian History for India GK Championship.",
+            "teaching_content": "India's freedom movement included diverse organizations, leaders, methods and mass movements rather than one single campaign.",
+            "worked_examples": [
+              "The Non-Cooperation Movement, Civil Disobedience Movement and Quit India Movement occurred at different stages and had distinct immediate contexts."
+            ],
+            "pitfall": "Different movements should not be collapsed into one event.",
+            "mastery_check": "Place major movements chronologically and identify their broad objectives and methods.",
+            "revision": "Revise freedom movement through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "post-independence India",
+          "study_materials": {
+            "objective": "Build mastery of post-independence India in Indian History for India GK Championship.",
+            "teaching_content": "Post-independence India involved constitutional consolidation, integration of territories, linguistic reorganization, economic planning, wars and democratic institution-building.",
+            "worked_examples": [
+              "The States Reorganisation Act of 1956 significantly reorganized state boundaries along linguistic lines, while the Constitution continued to provide the national framework."
+            ],
+            "pitfall": "Post-independence political boundaries have changed over time.",
+            "mastery_check": "Identify major post-1947 developments and distinguish them chronologically.",
+            "revision": "Revise post-independence India through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Indian Culture",
+      "subtopics": [
+        {
+          "title": "languages",
+          "study_materials": {
+            "objective": "Build mastery of languages in Indian Culture for India GK Championship.",
+            "teaching_content": "India has extensive linguistic diversity, with multiple language families and constitutionally recognized languages in the Eighth Schedule.",
+            "worked_examples": [
+              "Hindi and English have roles in Union official-language arrangements, while states may adopt their own official languages under law."
+            ],
+            "pitfall": "An official language is not the same concept as a national language.",
+            "mastery_check": "Distinguish linguistic diversity, scheduled languages and official-language arrangements.",
+            "revision": "Revise languages through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "literature",
+          "study_materials": {
+            "objective": "Build mastery of literature in Indian Culture for India GK Championship.",
+            "teaching_content": "Indian literature includes classical, medieval and modern traditions in many Indian languages and literary forms.",
+            "worked_examples": [
+              "Works such as the Ramayana and Mahabharata have shaped literary and cultural traditions across languages and regions."
+            ],
+            "pitfall": "A literary tradition can exist in multiple versions and languages.",
+            "mastery_check": "Connect major literary works and traditions with their broad cultural contexts.",
+            "revision": "Revise literature through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "classical arts",
+          "study_materials": {
+            "objective": "Build mastery of classical arts in Indian Culture for India GK Championship.",
+            "teaching_content": "Indian classical arts include established traditions of music and dance with distinct forms, repertoires and performance conventions.",
+            "worked_examples": [
+              "Bharatanatyam is a major Indian classical dance tradition associated historically with Tamil Nadu, while Kathak developed through North Indian traditions."
+            ],
+            "pitfall": "Classical dance forms should not be treated as interchangeable regional folk forms.",
+            "mastery_check": "Identify major classical arts and associate them with broad traditions and regions.",
+            "revision": "Revise classical arts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "festivals",
+          "study_materials": {
+            "objective": "Build mastery of festivals in Indian Culture for India GK Championship.",
+            "teaching_content": "Indian festivals reflect religious, seasonal, historical and regional traditions and may be celebrated in different forms across communities.",
+            "worked_examples": [
+              "Pongal is a major Tamil harvest festival, while Onam is strongly associated with Kerala's cultural traditions."
+            ],
+            "pitfall": "A festival's cultural significance may extend beyond one simple origin story.",
+            "mastery_check": "Connect major festivals with regions, seasons and broad cultural significance.",
+            "revision": "Revise festivals through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "heritage sites",
+          "study_materials": {
+            "objective": "Build mastery of heritage sites in Indian Culture for India GK Championship.",
+            "teaching_content": "India's heritage includes archaeological, architectural and natural sites recognized for cultural or historical importance.",
+            "worked_examples": [
+              "Ajanta and Ellora in Maharashtra are renowned for rock-cut Buddhist, Hindu and Jain cave traditions and art."
+            ],
+            "pitfall": "A heritage site can contain evidence from multiple periods and traditions.",
+            "mastery_check": "Identify major heritage sites, locations and their broad significance.",
+            "revision": "Revise heritage sites through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Indian Economy",
+      "subtopics": [
+        {
+          "title": "basic economic concepts",
+          "study_materials": {
+            "objective": "Build mastery of basic economic concepts in Indian Economy for India GK Championship.",
+            "teaching_content": "Economic concepts such as demand, supply, inflation, GDP, unemployment and productivity describe different aspects of economic activity.",
+            "worked_examples": [
+              "If demand rises while supply remains unchanged, prices may face upward pressure, while GDP measures the value of final goods and services produced within an economy."
+            ],
+            "pitfall": "GDP and personal income are not interchangeable measures.",
+            "mastery_check": "Distinguish major economic terms and interpret simple cause-and-effect relationships.",
+            "revision": "Revise basic economic concepts through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "agriculture",
+          "study_materials": {
+            "objective": "Build mastery of agriculture in Indian Economy for India GK Championship.",
+            "teaching_content": "Agriculture remains important to India's economy, employment and food system, with crops and farming conditions varying by region.",
+            "worked_examples": [
+              "Rice, wheat, cotton, sugarcane and pulses have different water, soil and climatic requirements across India."
+            ],
+            "pitfall": "A crop's importance nationally does not mean it is grown equally in every state.",
+            "mastery_check": "Relate major crops to broad climatic and regional conditions.",
+            "revision": "Revise agriculture through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "industry",
+          "study_materials": {
+            "objective": "Build mastery of industry in Indian Economy for India GK Championship.",
+            "teaching_content": "Industry includes manufacturing, construction, mining and related production activities, with major industrial clusters shaped by resources, infrastructure and markets.",
+            "worked_examples": [
+              "Steel, automobiles, textiles, pharmaceuticals and electronics represent different industrial sectors with different input and infrastructure needs."
+            ],
+            "pitfall": "Industrialization is not limited to one type of factory or one region.",
+            "mastery_check": "Classify major industries and explain the role of resources, infrastructure and markets.",
+            "revision": "Revise industry through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "banking",
+          "study_materials": {
+            "objective": "Build mastery of banking in Indian Economy for India GK Championship.",
+            "teaching_content": "Banking systems accept deposits, provide credit, facilitate payments and support financial activity under regulatory frameworks.",
+            "worked_examples": [
+              "A bank loan creates a borrower obligation to repay principal and applicable interest; a deposit is money placed with a bank under agreed terms."
+            ],
+            "pitfall": "A bank balance and a loan are different financial positions.",
+            "mastery_check": "Distinguish common banking products and explain their basic purposes.",
+            "revision": "Revise banking through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "public finance",
+          "study_materials": {
+            "objective": "Build mastery of public finance in Indian Economy for India GK Championship.",
+            "teaching_content": "Public finance concerns government revenue, expenditure, borrowing and fiscal management.",
+            "worked_examples": [
+              "Taxes provide government revenue, while public expenditure can fund infrastructure, welfare, education and other services."
+            ],
+            "pitfall": "Government revenue and government spending are different sides of public finance.",
+            "mastery_check": "Explain basic public-finance terms and distinguish revenue, expenditure and borrowing.",
+            "revision": "Revise public finance through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Science & Space India",
+      "subtopics": [
+        {
+          "title": "Indian scientists",
+          "study_materials": {
+            "objective": "Build mastery of Indian scientists in Science & Space India for India GK Championship.",
+            "teaching_content": "Indian scientists have contributed to physics, chemistry, mathematics, medicine, biology and other fields through research and institutions.",
+            "worked_examples": [
+              "C. V. Raman discovered the Raman effect, while Homi J. Bhabha played a major role in developing India's nuclear science programme."
+            ],
+            "pitfall": "Fame alone is not evidence for attributing a discovery.",
+            "mastery_check": "Match major Indian scientists with their documented fields and contributions.",
+            "revision": "Revise Indian scientists through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "ISRO",
+          "study_materials": {
+            "objective": "Build mastery of ISRO in Science & Space India for India GK Championship.",
+            "teaching_content": "The Indian Space Research Organisation is India's principal civilian space agency responsible for developing and operating space technologies and missions.",
+            "worked_examples": [
+              "ISRO develops launch vehicles, satellites and space applications supporting areas such as communication, navigation, weather and Earth observation."
+            ],
+            "pitfall": "ISRO's role should not be confused with every Indian institution involved in science or defence.",
+            "mastery_check": "Identify ISRO's broad mandate and major areas of work.",
+            "revision": "Revise ISRO through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "space missions",
+          "study_materials": {
+            "objective": "Build mastery of space missions in Science & Space India for India GK Championship.",
+            "teaching_content": "Indian space missions have advanced lunar, planetary, Earth-observation and space-science capabilities.",
+            "worked_examples": [
+              "Chandrayaan missions have focused on lunar exploration, while Mangalyaan was India's Mars Orbiter Mission."
+            ],
+            "pitfall": "Different missions have different objectives and destinations.",
+            "mastery_check": "Associate major Indian space missions with their targets and broad objectives.",
+            "revision": "Revise space missions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "research institutions",
+          "study_materials": {
+            "objective": "Build mastery of research institutions in Science & Space India for India GK Championship.",
+            "teaching_content": "India has specialized research institutions working in fields such as fundamental science, medicine, agriculture, space and technology.",
+            "worked_examples": [
+              "Institutions such as the Indian Institute of Science and Tata Institute of Fundamental Research have distinct research traditions and areas of expertise."
+            ],
+            "pitfall": "An institute's name or location alone does not determine its research mandate.",
+            "mastery_check": "Match major research institutions with their broad fields and roles.",
+            "revision": "Revise research institutions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "technology achievements",
+          "study_materials": {
+            "objective": "Build mastery of technology achievements in Science & Space India for India GK Championship.",
+            "teaching_content": "Indian technology achievements include advances in space systems, digital public infrastructure, pharmaceuticals, engineering and information technology.",
+            "worked_examples": [
+              "India's digital payments ecosystem has enabled large-scale electronic transactions through systems such as UPI."
+            ],
+            "pitfall": "A technology achievement should be identified by its actual capability and impact, not only by publicity.",
+            "mastery_check": "Recognize major Indian technology achievements and explain their practical significance.",
+            "revision": "Revise technology achievements through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Institutions & Awards",
+      "subtopics": [
+        {
+          "title": "national institutions",
+          "study_materials": {
+            "objective": "Build mastery of national institutions in Institutions & Awards for India GK Championship.",
+            "teaching_content": "National institutions perform specialized functions in governance, science, finance, law, education and public administration.",
+            "worked_examples": [
+              "The Reserve Bank of India regulates key aspects of the banking and monetary system, while the Election Commission oversees specified electoral processes."
+            ],
+            "pitfall": "Different institutions may cooperate but retain distinct mandates.",
+            "mastery_check": "Match major national institutions with their primary responsibilities.",
+            "revision": "Revise national institutions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "constitutional offices",
+          "study_materials": {
+            "objective": "Build mastery of constitutional offices in Institutions & Awards for India GK Championship.",
+            "teaching_content": "Constitutional offices are established by the Constitution and have defined responsibilities within India's governmental framework.",
+            "worked_examples": [
+              "The offices of President, Vice-President, Comptroller and Auditor General and members of constitutional commissions have distinct functions."
+            ],
+            "pitfall": "A senior government position is not automatically a constitutional office.",
+            "mastery_check": "Identify major constitutional offices and distinguish them from ordinary administrative posts.",
+            "revision": "Revise constitutional offices through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "civil services",
+          "study_materials": {
+            "objective": "Build mastery of civil services in Institutions & Awards for India GK Championship.",
+            "teaching_content": "Civil services support administration and implementation of government policies across the Union and states, with different services having different roles.",
+            "worked_examples": [
+              "The Indian Administrative Service and Indian Police Service are among the All India Services with distinct administrative and policing responsibilities."
+            ],
+            "pitfall": "Civil services and elected political offices have different constitutional and administrative roles.",
+            "mastery_check": "Match major civil services with their broad functions.",
+            "revision": "Revise civil services through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "national awards",
+          "study_materials": {
+            "objective": "Build mastery of national awards in Institutions & Awards for India GK Championship.",
+            "teaching_content": "India's national awards recognize contributions in areas such as civilian service, bravery, arts, science and sports, with different awards having different criteria.",
+            "worked_examples": [
+              "The Bharat Ratna is India's highest civilian award, while Padma awards recognize distinguished service across specified fields."
+            ],
+            "pitfall": "A national award category should not be confused with a sports-specific honour.",
+            "mastery_check": "Distinguish major national awards by purpose and level.",
+            "revision": "Revise national awards through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sports honours",
+          "study_materials": {
+            "objective": "Build mastery of sports honours in Institutions & Awards for India GK Championship.",
+            "teaching_content": "Indian sports honours recognize athletes and coaches for sporting achievement and contribution.",
+            "worked_examples": [
+              "The Major Dhyan Chand Khel Ratna is India's highest sporting honour, while the Arjuna Award recognizes outstanding sporting achievement."
+            ],
+            "pitfall": "Different awards have different eligibility and recognition purposes.",
+            "mastery_check": "Match major sports honours with their broad purpose.",
+            "revision": "Revise sports honours through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "India Current Awareness",
+      "subtopics": [
+        {
+          "title": "government initiatives",
+          "study_materials": {
+            "objective": "Build mastery of government initiatives in India Current Awareness for India GK Championship.",
+            "teaching_content": "Government initiatives should be understood from official announcements, objectives, implementing bodies, eligibility rules and dates rather than headlines alone.",
+            "worked_examples": [
+              "A scheme's official guidelines can differ from simplified social-media descriptions of who is eligible."
+            ],
+            "pitfall": "A widely shared summary is not a substitute for the current official notification.",
+            "mastery_check": "Identify the responsible authority and verify scheme details from authoritative sources.",
+            "revision": "Revise government initiatives through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "major events",
+          "study_materials": {
+            "objective": "Build mastery of major events in India Current Awareness for India GK Championship.",
+            "teaching_content": "National current affairs include elections, major policy decisions, disasters, scientific milestones, international engagements and other events with significant public impact.",
+            "worked_examples": [
+              "A reliable event summary should distinguish what happened, when it happened and what official sources confirm."
+            ],
+            "pitfall": "An old event can become viral again without being recent.",
+            "mastery_check": "Verify event dates and primary evidence before treating a claim as current.",
+            "revision": "Revise major events through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "national appointments",
+          "study_materials": {
+            "objective": "Build mastery of national appointments in India Current Awareness for India GK Championship.",
+            "teaching_content": "Appointments to important national offices should be checked against the official notification or authoritative institutional announcement.",
+            "worked_examples": [
+              "A reported nominee, appointed office-holder and acting office-holder can represent different stages of a process."
+            ],
+            "pitfall": "News speculation is not equivalent to a confirmed appointment.",
+            "mastery_check": "Distinguish nomination, appointment and assumption of office using authoritative evidence.",
+            "revision": "Revise national appointments through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "summits",
+          "study_materials": {
+            "objective": "Build mastery of summits in India Current Awareness for India GK Championship.",
+            "teaching_content": "Summits bring leaders or representatives together to discuss defined national, regional or international priorities and often produce statements or agreements.",
+            "worked_examples": [
+              "The G20 Summit involves member economies and invited participants and addresses broad global economic and policy issues."
+            ],
+            "pitfall": "Attendance at a summit does not by itself mean that every discussed proposal became binding policy.",
+            "mastery_check": "Identify the summit, participants, agenda and confirmed outcomes separately.",
+            "revision": "Revise summits through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "fact verification",
+          "study_materials": {
+            "objective": "Build mastery of fact verification in India Current Awareness for India GK Championship.",
+            "teaching_content": "Current-affairs verification requires checking dates, original documents, official statements and reliable independent reporting when necessary.",
+            "worked_examples": [
+              "For a viral claim about a government decision, locate the relevant ministry or official notification before accepting the claim."
+            ],
+            "pitfall": "Screenshots and forwarded messages can omit dates or context.",
+            "mastery_check": "Use a repeatable verification process and label unconfirmed claims as unverified.",
+            "revision": "Revise fact verification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "India GK Championship Mastery",
+      "subtopics": [
+        {
+          "title": "Indian fact verification",
+          "study_materials": {
+            "objective": "Build mastery of Indian fact verification in India GK Championship Mastery for India GK Championship.",
+            "teaching_content": "Master Indian fact verification within India GK Championship Mastery for India GK Championship. Apply India GK knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative Indian fact verification task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the Indian fact verification task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar Indian fact verification challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise Indian fact verification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "cross-domain India clues",
+          "study_materials": {
+            "objective": "Build mastery of cross-domain India clues in India GK Championship Mastery for India GK Championship.",
+            "teaching_content": "Master cross-domain India clues within India GK Championship Mastery for India GK Championship. Apply India GK knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative cross-domain India clues task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the cross-domain India clues task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar cross-domain India clues challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise cross-domain India clues through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "chronology and institutional reasoning",
+          "study_materials": {
+            "objective": "Build mastery of chronology and institutional reasoning in India GK Championship Mastery for India GK Championship.",
+            "teaching_content": "Master chronology and institutional reasoning within India GK Championship Mastery for India GK Championship. Apply India GK knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative chronology and institutional reasoning task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the chronology and institutional reasoning task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar chronology and institutional reasoning challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise chronology and institutional reasoning through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated India GK scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated India GK scenarios in India GK Championship Mastery for India GK Championship.",
+            "teaching_content": "Master integrated India GK scenarios within India GK Championship Mastery for India GK Championship. Apply India GK knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative integrated India GK scenarios task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the integrated India GK scenarios task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar integrated India GK scenarios challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise integrated India GK scenarios through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "India GK championship round",
+          "study_materials": {
+            "objective": "Build mastery of India GK championship round in India GK Championship Mastery for India GK Championship.",
+            "teaching_content": "Master India GK championship round within India GK Championship Mastery for India GK Championship. Apply India GK knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative India GK championship round task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the India GK championship round task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar India GK championship round challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise India GK championship round through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "INDIA-GK-CHA-MOCK-01",
+      "focus": "core curriculum mastery and topic-wise practice"
+    },
+    {
+      "id": "INDIA-GK-CHA-MOCK-02",
+      "focus": "advanced mixed-domain preparation"
+    },
+    {
+      "id": "INDIA-GK-CHA-MOCK-03",
+      "focus": "full championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "India GK Championship official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
