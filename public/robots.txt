@@ -10,6 +10,9 @@ Allow: /
 Disallow: /login
 Disallow: /register
 Disallow: /pay/
+Disallow: /tutor/pay
+Disallow: /tutor/onboarding-documents
+Disallow: /admin
 Disallow: /dashboard
 Disallow: /learn/
 Disallow: /notifications
@@ -20,7 +23,6 @@ Disallow: /tutor/onboarding-letter
 Disallow: /tutor/live-sessions
 Disallow: /student/id-card
 Disallow: /student/welcome-letter
-Disallow: /admin
 Disallow: /admin/
 
 # /verify and /competitive-exams are duplicates of /verify-certificate
