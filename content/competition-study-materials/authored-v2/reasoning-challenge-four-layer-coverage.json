@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "Reasoning Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/reasoning-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Analogy & Classification",
+      "subtopics": [
+        {
+          "title": "word analogy",
+          "study_materials": {
+            "objective": "Build mastery of word analogy in Analogy & Classification for Reasoning Challenge.",
+            "teaching_content": "Word analogies compare the relationship between two words and apply the same relationship to another pair.",
+            "worked_examples": [
+              "'Book : read :: food : eat' follows object-to-associated action."
+            ],
+            "pitfall": "Sharing a topic is not enough if the relationship differs.",
+            "mastery_check": "Identify the exact relation before selecting the answer.",
+            "revision": "Revise word analogy through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "number analogy",
+          "study_materials": {
+            "objective": "Build mastery of number analogy in Analogy & Classification for Reasoning Challenge.",
+            "teaching_content": "Number analogies use a mathematical relationship between one pair and apply it to another pair.",
+            "worked_examples": [
+              "If 3 : 9 follows ×3, then 5 : 15 follows the same rule."
+            ],
+            "pitfall": "A rule that fits one pair but not the complete question is insufficient.",
+            "mastery_check": "Test the same operation consistently on all given pairs.",
+            "revision": "Revise number analogy through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "figure analogy",
+          "study_materials": {
+            "objective": "Build mastery of figure analogy in Analogy & Classification for Reasoning Challenge.",
+            "teaching_content": "Figure analogies compare transformations such as rotation, reflection, movement, addition or removal of elements.",
+            "worked_examples": [
+              "If a dot moves clockwise by one position in the first transformation, apply the same movement to the second figure."
+            ],
+            "pitfall": "A visual answer may look similar without preserving the transformation.",
+            "mastery_check": "Track each changed feature systematically.",
+            "revision": "Revise figure analogy through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "classification",
+          "study_materials": {
+            "objective": "Build mastery of classification in Analogy & Classification for Reasoning Challenge.",
+            "teaching_content": "Classification groups items according to a common property such as category, function, structure or numerical rule.",
+            "worked_examples": [
+              "Triangle, square and circle can be grouped as geometric figures, while a number differs under that rule."
+            ],
+            "pitfall": "An item can fit multiple categories, so the intended rule must explain the full group.",
+            "mastery_check": "State and apply one consistent classification rule.",
+            "revision": "Revise classification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "odd one out",
+          "study_materials": {
+            "objective": "Build mastery of odd one out in Analogy & Classification for Reasoning Challenge.",
+            "teaching_content": "Odd-one-out problems identify the item that breaks the relationship shared by the others.",
+            "worked_examples": [
+              "2, 4, 6 and 9 differ because the first three are even while 9 is odd."
+            ],
+            "pitfall": "An alternative property may exist, so use the simplest rule supported by the set.",
+            "mastery_check": "Identify the majority rule before selecting the exception.",
+            "revision": "Revise odd one out through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Series",
+      "subtopics": [
+        {
+          "title": "number series",
+          "study_materials": {
+            "objective": "Build mastery of number series in Series for Reasoning Challenge.",
+            "teaching_content": "Number series require finding the rule connecting consecutive terms, often using differences, ratios or alternating operations.",
+            "worked_examples": [
+              "2, 5, 8, 11 increases by 3 each time, so the next term is 14."
+            ],
+            "pitfall": "Checking only the first two differences can miss an alternating pattern.",
+            "mastery_check": "Test the proposed rule across every transition.",
+            "revision": "Revise number series through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "alphabet series",
+          "study_materials": {
+            "objective": "Build mastery of alphabet series in Series for Reasoning Challenge.",
+            "teaching_content": "Alphabet series apply ordered letter positions, skips, reversals or repeated patterns.",
+            "worked_examples": [
+              "A, C, E, G advances by two alphabet positions, giving I next."
+            ],
+            "pitfall": "Treating letters only as visual symbols can hide their positional pattern.",
+            "mastery_check": "Convert letters to positions when useful and verify the step pattern.",
+            "revision": "Revise alphabet series through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mixed series",
+          "study_materials": {
+            "objective": "Build mastery of mixed series in Series for Reasoning Challenge.",
+            "teaching_content": "Mixed series combine numbers, letters or symbols and may use separate interleaved rules.",
+            "worked_examples": [
+              "A1, C3, E5 follows two linked progressions: letters advance by two and numbers increase by two."
+            ],
+            "pitfall": "A single-rule assumption may fail when two patterns alternate.",
+            "mastery_check": "Separate components and test each pattern independently.",
+            "revision": "Revise mixed series through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "figure series",
+          "study_materials": {
+            "objective": "Build mastery of figure series in Series for Reasoning Challenge.",
+            "teaching_content": "Figure series use repeated visual changes such as rotation, movement, count, shading or shape transformation.",
+            "worked_examples": [
+              "If a triangle rotates 90 degrees clockwise at each step, the next figure continues the same rotation."
+            ],
+            "pitfall": "Focusing on shape alone can miss movement or shading changes.",
+            "mastery_check": "Track every changing attribute across the sequence.",
+            "revision": "Revise figure series through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "missing terms",
+          "study_materials": {
+            "objective": "Build mastery of missing terms in Series for Reasoning Challenge.",
+            "teaching_content": "A missing-term problem asks for the value or figure that preserves the established sequence rule.",
+            "worked_examples": [
+              "In 4, 8, 16, ?, 64, each term doubles, so the missing value is 32."
+            ],
+            "pitfall": "Choosing a number that fits only one neighbour is not enough.",
+            "mastery_check": "Check the missing term against both preceding and following relationships.",
+            "revision": "Revise missing terms through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Coding & Decoding",
+      "subtopics": [
+        {
+          "title": "letter coding",
+          "study_materials": {
+            "objective": "Build mastery of letter coding in Coding & Decoding for Reasoning Challenge.",
+            "teaching_content": "Letter coding maps letters to other letters using a defined transformation such as shifting alphabet positions.",
+            "worked_examples": [
+              "If CAT becomes DBU by shifting every letter forward one place, DOG becomes EPH under the same rule."
+            ],
+            "pitfall": "A transformation should be applied consistently to every relevant character.",
+            "mastery_check": "Identify the letter-position rule and apply it uniformly.",
+            "revision": "Revise letter coding through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "number coding",
+          "study_materials": {
+            "objective": "Build mastery of number coding in Coding & Decoding for Reasoning Challenge.",
+            "teaching_content": "Number coding represents words or letters using numerical values based on a stated or discoverable rule.",
+            "worked_examples": [
+              "If A=1, B=2 and C=3, then CAB can be represented as 3-1-2."
+            ],
+            "pitfall": "Different questions may use different coding schemes, so do not assume one universal code.",
+            "mastery_check": "Infer the coding rule from the examples before decoding.",
+            "revision": "Revise number coding through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "symbol coding",
+          "study_materials": {
+            "objective": "Build mastery of symbol coding in Coding & Decoding for Reasoning Challenge.",
+            "teaching_content": "Symbol coding replaces letters, numbers or categories with symbols according to an established mapping.",
+            "worked_examples": [
+              "If ▲ represents A and ● represents B, the coded form of AB is ▲●."
+            ],
+            "pitfall": "A symbol has no assumed meaning outside the rule given by the question.",
+            "mastery_check": "Build the mapping table and decode only after all relevant assignments are clear.",
+            "revision": "Revise symbol coding through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "transformations",
+          "study_materials": {
+            "objective": "Build mastery of transformations in Coding & Decoding for Reasoning Challenge.",
+            "teaching_content": "Coding transformations may reverse order, shift positions, substitute values or combine multiple operations.",
+            "worked_examples": [
+              "If a word is reversed and then each letter is shifted one position, both operations must be applied in that order."
+            ],
+            "pitfall": "Applying the right operations in the wrong order can produce a different code.",
+            "mastery_check": "Write each transformation as a separate step and preserve the sequence.",
+            "revision": "Revise transformations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "coded relationships",
+          "study_materials": {
+            "objective": "Build mastery of coded relationships in Coding & Decoding for Reasoning Challenge.",
+            "teaching_content": "Some coding questions encode relationships between words or objects rather than individual letters.",
+            "worked_examples": [
+              "If one code indicates 'A is the parent of B,' decoding requires identifying the relationship represented rather than translating letters."
+            ],
+            "pitfall": "A familiar-looking code should not be interpreted without its examples.",
+            "mastery_check": "Use the given coded examples to reconstruct the relationship rule.",
+            "revision": "Revise coded relationships through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Relations & Directions",
+      "subtopics": [
+        {
+          "title": "family relations",
+          "study_materials": {
+            "objective": "Build mastery of family relations in Relations & Directions for Reasoning Challenge.",
+            "teaching_content": "Family-relation problems represent kinship links such as parent, sibling, child, uncle, aunt and cousin.",
+            "worked_examples": [
+              "If Ravi is Maya's brother and Maya is Arun's mother, Ravi is Arun's maternal uncle."
+            ],
+            "pitfall": "Gender and generation must both be tracked.",
+            "mastery_check": "Translate each relationship into a simple family tree before answering.",
+            "revision": "Revise family relations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "blood relations",
+          "study_materials": {
+            "objective": "Build mastery of blood relations in Relations & Directions for Reasoning Challenge.",
+            "teaching_content": "Blood-relation questions require combining multiple kinship statements while distinguishing direct and indirect relationships.",
+            "worked_examples": [
+              "If A is B's mother and B is C's brother, A is C's mother if B and C share that parent as stated or implied by the problem."
+            ],
+            "pitfall": "Do not add unstated relationships merely because they are common in real life.",
+            "mastery_check": "Use only relationships supported by the question.",
+            "revision": "Revise blood relations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "directions",
+          "study_materials": {
+            "objective": "Build mastery of directions in Relations & Directions for Reasoning Challenge.",
+            "teaching_content": "Direction problems use compass relationships such as north, south, east and west and may include turns.",
+            "worked_examples": [
+              "If a person walks north and then turns right, the new direction is east."
+            ],
+            "pitfall": "Left and right depend on the person's current facing direction.",
+            "mastery_check": "Track orientation after every movement or turn.",
+            "revision": "Revise directions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "distance",
+          "study_materials": {
+            "objective": "Build mastery of distance in Relations & Directions for Reasoning Challenge.",
+            "teaching_content": "Distance problems combine movements to determine displacement or total path length depending on the question.",
+            "worked_examples": [
+              "Walking 3 km east and 4 km north gives a 5 km straight-line displacement using the 3-4-5 triangle, while the path travelled is 7 km."
+            ],
+            "pitfall": "Distance travelled and displacement are not always the same quantity.",
+            "mastery_check": "Determine which distance concept the question asks for before calculating.",
+            "revision": "Revise distance through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "position problems",
+          "study_materials": {
+            "objective": "Build mastery of position problems in Relations & Directions for Reasoning Challenge.",
+            "teaching_content": "Position problems determine relative location using rows, columns, directions or movement constraints.",
+            "worked_examples": [
+              "If A is third from the left and B is immediately to A's right, B is fourth from the left."
+            ],
+            "pitfall": "A position stated from the right must be converted carefully when total positions are known.",
+            "mastery_check": "Represent positions on a line or grid and apply each constraint in order.",
+            "revision": "Revise position problems through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Ordering & Ranking",
+      "subtopics": [
+        {
+          "title": "rank problems",
+          "study_materials": {
+            "objective": "Build mastery of rank problems in Ordering & Ranking for Reasoning Challenge.",
+            "teaching_content": "Rank problems determine an item's position from the top, bottom, left or right using stated relationships.",
+            "worked_examples": [
+              "If a student is 7th from the top and there are 20 students, the same student is 14th from the bottom."
+            ],
+            "pitfall": "Use total count plus one when converting opposite ranks.",
+            "mastery_check": "Convert ranks carefully and check the total-position relationship.",
+            "revision": "Revise rank problems through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "comparison chains",
+          "study_materials": {
+            "objective": "Build mastery of comparison chains in Ordering & Ranking for Reasoning Challenge.",
+            "teaching_content": "Comparison chains combine statements such as taller than, older than or faster than to establish an order.",
+            "worked_examples": [
+              "If A>B and B>C, then A>C by transitivity for the stated comparison."
+            ],
+            "pitfall": "A chain cannot reverse direction without evidence.",
+            "mastery_check": "Build the chain explicitly before selecting a relative position.",
+            "revision": "Revise comparison chains through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "arrangements",
+          "study_materials": {
+            "objective": "Build mastery of arrangements in Ordering & Ranking for Reasoning Challenge.",
+            "teaching_content": "Arrangement problems place people or objects in positions subject to constraints such as adjacency, fixed positions or exclusions.",
+            "worked_examples": [
+              "If A must sit beside B and C must be at an end, place the fixed constraint first and test remaining positions."
+            ],
+            "pitfall": "Starting with unconstrained items can create unnecessary cases.",
+            "mastery_check": "Place the strongest constraints first and verify every condition.",
+            "revision": "Revise arrangements through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "scheduling",
+          "study_materials": {
+            "objective": "Build mastery of scheduling in Ordering & Ranking for Reasoning Challenge.",
+            "teaching_content": "Scheduling problems assign activities to time slots while respecting order, availability or separation rules.",
+            "worked_examples": [
+              "If a meeting must occur before lunch and another event must follow it, place the dependency before filling free slots."
+            ],
+            "pitfall": "A schedule that fits one condition but violates another is invalid.",
+            "mastery_check": "Represent time slots explicitly and test every scheduling constraint.",
+            "revision": "Revise scheduling through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "ordering constraints",
+          "study_materials": {
+            "objective": "Build mastery of ordering constraints in Ordering & Ranking for Reasoning Challenge.",
+            "teaching_content": "Ordering constraints specify relative positions such as before, after, immediately before or between.",
+            "worked_examples": [
+              "If A is before B and C is immediately after B, the sequence A-B-C must preserve both relationships."
+            ],
+            "pitfall": "'Before' does not mean immediately before unless stated.",
+            "mastery_check": "Distinguish strict order from adjacency and apply each constraint exactly.",
+            "revision": "Revise ordering constraints through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Logical Deduction",
+      "subtopics": [
+        {
+          "title": "statements and conclusions",
+          "study_materials": {
+            "objective": "Build mastery of statements and conclusions in Logical Deduction for Reasoning Challenge.",
+            "teaching_content": "Statement-and-conclusion questions ask whether a conclusion necessarily follows from the information given.",
+            "worked_examples": [
+              "If all registered students have IDs and Ravi is a registered student, Ravi has an ID follows directly."
+            ],
+            "pitfall": "A conclusion that is merely possible is weaker than one logically guaranteed.",
+            "mastery_check": "Use only the stated premises and test whether the conclusion must be true.",
+            "revision": "Revise statements and conclusions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "syllogisms",
+          "study_materials": {
+            "objective": "Build mastery of syllogisms in Logical Deduction for Reasoning Challenge.",
+            "teaching_content": "Syllogisms use categorical statements to determine what logically follows from relationships between groups.",
+            "worked_examples": [
+              "If all A are B and all B are C, then all A are C."
+            ],
+            "pitfall": "The reverse conclusion that all C are A does not follow.",
+            "mastery_check": "Represent group relationships and avoid reversing one-way statements.",
+            "revision": "Revise syllogisms through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "cause and effect",
+          "study_materials": {
+            "objective": "Build mastery of cause and effect in Logical Deduction for Reasoning Challenge.",
+            "teaching_content": "Cause-and-effect reasoning identifies whether one event plausibly produces another and distinguishes it from simple sequence or association.",
+            "worked_examples": [
+              "If a machine stops because its power supply fails, the power failure is a stated cause of the shutdown."
+            ],
+            "pitfall": "Two events occurring together do not automatically prove causation.",
+            "mastery_check": "Look for explicit mechanisms or evidence before claiming cause and effect.",
+            "revision": "Revise cause and effect through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "assumptions",
+          "study_materials": {
+            "objective": "Build mastery of assumptions in Logical Deduction for Reasoning Challenge.",
+            "teaching_content": "An assumption is an unstated idea that must be accepted for a statement or argument to work.",
+            "worked_examples": [
+              "A school proposes online registration because it assumes students can access the registration system."
+            ],
+            "pitfall": "An assumption is not simply another fact mentioned in the argument.",
+            "mastery_check": "Identify the missing condition on which the argument depends.",
+            "revision": "Revise assumptions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "decision logic",
+          "study_materials": {
+            "objective": "Build mastery of decision logic in Logical Deduction for Reasoning Challenge.",
+            "teaching_content": "Decision logic applies explicit rules and constraints to choose among alternatives.",
+            "worked_examples": [
+              "If a trip requires a valid ID AND parental permission, missing either requirement prevents eligibility."
+            ],
+            "pitfall": "Replacing AND with OR changes the decision rule.",
+            "mastery_check": "Translate every condition into a logical test before deciding.",
+            "revision": "Revise decision logic through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Puzzles",
+      "subtopics": [
+        {
+          "title": "seating arrangements",
+          "study_materials": {
+            "objective": "Build mastery of seating arrangements in Puzzles for Reasoning Challenge.",
+            "teaching_content": "Seating puzzles require placing people around rows or circles while respecting adjacency, opposition and positional constraints.",
+            "worked_examples": [
+              "In a row, if A sits immediately left of B, the pair can be treated as a block before considering other placements."
+            ],
+            "pitfall": "Circular arrangements require attention to relative positions rather than an arbitrary first seat.",
+            "mastery_check": "Draw the arrangement and apply fixed or strongest constraints first.",
+            "revision": "Revise seating arrangements through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "distribution",
+          "study_materials": {
+            "objective": "Build mastery of distribution in Puzzles for Reasoning Challenge.",
+            "teaching_content": "Distribution puzzles allocate objects, people or quantities across groups subject to totals, limits or uniqueness rules.",
+            "worked_examples": [
+              "If 12 books are distributed equally among 3 shelves, each shelf receives 4 books."
+            ],
+            "pitfall": "A distribution can satisfy the total while violating a per-group limit.",
+            "mastery_check": "Track totals and every stated minimum, maximum or equality constraint.",
+            "revision": "Revise distribution through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "matching",
+          "study_materials": {
+            "objective": "Build mastery of matching in Puzzles for Reasoning Challenge.",
+            "teaching_content": "Matching puzzles pair items from different categories using positive and negative clues.",
+            "worked_examples": [
+              "If Ravi studies Maths and Priya does not study Science, the remaining subject assignments can be narrowed by elimination."
+            ],
+            "pitfall": "One matching clue should not be applied to unrelated categories.",
+            "mastery_check": "Create a grid or table and mark confirmed and impossible pairings.",
+            "revision": "Revise matching through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "calendar and clock logic",
+          "study_materials": {
+            "objective": "Build mastery of calendar and clock logic in Puzzles for Reasoning Challenge.",
+            "teaching_content": "Calendar and clock puzzles use dates, weekdays, elapsed time, angles or cyclic patterns to derive answers.",
+            "worked_examples": [
+              "If a meeting starts at 2:35 and lasts 50 minutes, it ends at 3:25; clock-angle questions require converting time into hand positions."
+            ],
+            "pitfall": "A 24-hour day and a 12-hour clock cycle use different representations of the same time.",
+            "mastery_check": "Track units and cycles carefully and distinguish elapsed time from displayed clock time.",
+            "revision": "Revise calendar and clock logic through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "multi-condition puzzles",
+          "study_materials": {
+            "objective": "Build mastery of multi-condition puzzles in Puzzles for Reasoning Challenge.",
+            "teaching_content": "Multi-condition puzzles combine several constraints, so a valid solution must satisfy all of them simultaneously.",
+            "worked_examples": [
+              "If A must be before B, C cannot sit beside D, and E must occupy the third position, start with the fixed position and eliminate arrangements violating either relation."
+            ],
+            "pitfall": "Solving conditions one at a time without checking their interaction can produce false candidates.",
+            "mastery_check": "List every condition and verify the final arrangement against each one.",
+            "revision": "Revise multi-condition puzzles through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Non-Verbal Reasoning",
+      "subtopics": [
+        {
+          "title": "figure patterns",
+          "study_materials": {
+            "objective": "Build mastery of figure patterns in Non-Verbal Reasoning for Reasoning Challenge.",
+            "teaching_content": "Figure-pattern questions identify visual changes in shape, position, count, orientation, shading or size.",
+            "worked_examples": [
+              "If a shaded triangle rotates 90 degrees clockwise at each step while the number of dots stays constant, both features form the pattern."
+            ],
+            "pitfall": "A pattern may contain more than one simultaneous change.",
+            "mastery_check": "Track each visual attribute separately before predicting the next figure.",
+            "revision": "Revise figure patterns through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mirror images",
+          "study_materials": {
+            "objective": "Build mastery of mirror images in Non-Verbal Reasoning for Reasoning Challenge.",
+            "teaching_content": "A mirror image reverses left and right across the mirror line while preserving top and bottom orientation.",
+            "worked_examples": [
+              "A word's mirror image has its left-right order reversed relative to the vertical mirror."
+            ],
+            "pitfall": "A vertical mirror does not swap top and bottom.",
+            "mastery_check": "Apply the correct axis of reflection before selecting an image.",
+            "revision": "Revise mirror images through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "water images",
+          "study_materials": {
+            "objective": "Build mastery of water images in Non-Verbal Reasoning for Reasoning Challenge.",
+            "teaching_content": "A water image reflects a figure across a horizontal line, reversing top and bottom while preserving left and right.",
+            "worked_examples": [
+              "A capital letter's water image changes its vertical orientation but does not exchange its left and right sides."
+            ],
+            "pitfall": "Confusing water reflection with a mirror reflection gives the wrong orientation.",
+            "mastery_check": "Identify the reflection axis and track which dimensions reverse.",
+            "revision": "Revise water images through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "embedded figures",
+          "study_materials": {
+            "objective": "Build mastery of embedded figures in Non-Verbal Reasoning for Reasoning Challenge.",
+            "teaching_content": "Embedded-figure questions ask whether a target shape appears within a more complex figure, possibly rotated or hidden among overlapping lines.",
+            "worked_examples": [
+              "A small triangle may be present as part of several intersecting segments even when no separate triangle is drawn."
+            ],
+            "pitfall": "Extra lines do not invalidate a target shape if the required structure remains present.",
+            "mastery_check": "Trace the target's defining edges systematically rather than judging by overall appearance.",
+            "revision": "Revise embedded figures through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "paper folding",
+          "study_materials": {
+            "objective": "Build mastery of paper folding in Non-Verbal Reasoning for Reasoning Challenge.",
+            "teaching_content": "Paper-folding problems predict the positions of holes or cuts after a folded sheet is unfolded by reversing each fold.",
+            "worked_examples": [
+              "A hole punched through two folded layers may appear as corresponding holes symmetrically placed when the paper is fully opened."
+            ],
+            "pitfall": "Unfolding reverses the folds in reverse order.",
+            "mastery_check": "Track fold axes and reflect each mark across every fold line.",
+            "revision": "Revise paper folding through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reasoning Competition Mastery",
+      "subtopics": [
+        {
+          "title": "strategy selection and decomposition",
+          "study_materials": {
+            "objective": "Build mastery of strategy selection and decomposition in Reasoning Competition Mastery for Reasoning Challenge.",
+            "teaching_content": "Master strategy selection and decomposition within Reasoning Competition Mastery for Reasoning Challenge. Apply Reasoning knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative strategy selection and decomposition task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the strategy selection and decomposition task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar strategy selection and decomposition challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise strategy selection and decomposition through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "multi-step logical deduction",
+          "study_materials": {
+            "objective": "Build mastery of multi-step logical deduction in Reasoning Competition Mastery for Reasoning Challenge.",
+            "teaching_content": "Master multi-step logical deduction within Reasoning Competition Mastery for Reasoning Challenge. Apply Reasoning knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative multi-step logical deduction task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the multi-step logical deduction task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar multi-step logical deduction challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise multi-step logical deduction through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "pattern and constraint verification",
+          "study_materials": {
+            "objective": "Build mastery of pattern and constraint verification in Reasoning Competition Mastery for Reasoning Challenge.",
+            "teaching_content": "Master pattern and constraint verification within Reasoning Competition Mastery for Reasoning Challenge. Apply Reasoning knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative pattern and constraint verification task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the pattern and constraint verification task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar pattern and constraint verification challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise pattern and constraint verification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated reasoning scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated reasoning scenarios in Reasoning Competition Mastery for Reasoning Challenge.",
+            "teaching_content": "Master integrated reasoning scenarios within Reasoning Competition Mastery for Reasoning Challenge. Apply Reasoning knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative integrated reasoning scenarios task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the integrated reasoning scenarios task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar integrated reasoning scenarios challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise integrated reasoning scenarios through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "reasoning championship round",
+          "study_materials": {
+            "objective": "Build mastery of reasoning championship round in Reasoning Competition Mastery for Reasoning Challenge.",
+            "teaching_content": "Master reasoning championship round within Reasoning Competition Mastery for Reasoning Challenge. Apply Reasoning knowledge through recognition, structured reasoning, independent application and unfamiliar competition scenarios. Focus on evidence, precision, explanation and verification rather than memorisation alone.",
+            "worked_examples": [
+              "Complete a representative reasoning championship round task: identify the key clue, rule, concept or evidence, solve it step by step, explain the decision, and verify the result against the stated competition requirement."
+            ],
+            "pitfall": "Do not substitute a related concept, familiar keyword or unsupported assumption for the exact requirement of the reasoning championship round task; verify the final answer before submission.",
+            "mastery_check": "Independently solve an unfamiliar reasoning championship round challenge, explain the reasoning, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise reasoning championship round through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "REASONING-CH-MOCK-01",
+      "focus": "core curriculum mastery and topic-wise practice"
+    },
+    {
+      "id": "REASONING-CH-MOCK-02",
+      "focus": "advanced mixed-domain preparation"
+    },
+    {
+      "id": "REASONING-CH-MOCK-03",
+      "focus": "full championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "Reasoning Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
