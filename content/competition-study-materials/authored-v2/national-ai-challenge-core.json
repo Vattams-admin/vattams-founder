@@ -20,38 +20,38 @@
       "subtopics": [
         {
           "title": "AI domains",
-          "teaching": "Master AI domains within AI Concepts for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative AI domains question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar AI domains task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach major AI domains by separating tasks such as perception, language, prediction, generation, planning, and decision support. Emphasize that AI is an umbrella field containing multiple methods rather than one single technology.",
+          "worked_example": "A spam filter classifies messages, a speech recognizer converts audio to text, and a generative model creates new content. Their goals differ even though all can be described as AI applications.",
+          "pitfall": "Pitfall: treating every automated rule-based program as machine learning, or assuming AI, machine learning, and generative AI are interchangeable terms.",
+          "mastery": "Mastery: classify an unfamiliar AI system by its task, identify the relevant AI subfield, and explain why the classification fits."
         },
         {
           "title": "machine learning",
-          "teaching": "Master machine learning within AI Concepts for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative machine learning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar machine learning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach machine learning as systems that learn patterns from data to make predictions or decisions rather than relying only on explicitly written rules. Distinguish learning from simple deterministic automation.",
+          "worked_example": "A model trained on labelled images can learn patterns associated with cats and dogs and then predict a class for a new image; the prediction is learned from examples rather than a hand-written rule for every image.",
+          "pitfall": "Pitfall: assuming a model understands a task like a human or that more training data automatically guarantees better predictions.",
+          "mastery": "Mastery: explain what is learned, identify the role of training data, and distinguish machine-learning behavior from fixed-rule automation."
         },
         {
           "title": "deep learning concepts",
-          "teaching": "Master deep learning concepts within AI Concepts for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative deep learning concepts question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar deep learning concepts task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach deep learning as machine learning based on multi-layer neural networks that learn representations from data. Connect layers, learned features, parameters, and training without requiring implementation-level mathematics first.",
+          "worked_example": "In image recognition, early network layers may respond to simple visual patterns while deeper layers combine them into more complex representations useful for classification.",
+          "pitfall": "Pitfall: assuming every neural network is automatically accurate or that deep learning removes the need for suitable data and evaluation.",
+          "mastery": "Mastery: explain why depth can support hierarchical representations and identify the data, training, and evaluation conditions still required."
         },
         {
           "title": "models",
-          "teaching": "Master models within AI Concepts for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative models question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar models task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach an AI model as a learned computational representation used to transform inputs into outputs according to a task. Distinguish the model itself from its training data, parameters, prompt, and deployed application.",
+          "worked_example": "A model trained to classify plant images takes image features as input and produces class scores or a predicted label. The application may then turn that prediction into a user-facing result.",
+          "pitfall": "Pitfall: treating a model as a database that simply retrieves memorized answers or assuming the same model is equally suitable for every task.",
+          "mastery": "Mastery: identify model inputs, outputs, learned behavior, and intended task, then justify whether a model is appropriate for a stated use case."
         },
         {
           "title": "AI applications",
-          "teaching": "Master AI applications within AI Concepts for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative AI applications question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar AI applications task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach AI applications by mapping a real-world goal to the data, prediction/generation task, human role, and risks involved. Evaluate usefulness rather than labeling an application as good merely because it uses AI.",
+          "worked_example": "A hospital triage-support system might prioritize cases from clinical inputs, but a qualified professional should remain responsible for decisions where errors have serious consequences.",
+          "pitfall": "Pitfall: confusing an impressive demonstration with a reliable deployment or ignoring accuracy, privacy, bias, safety, and human oversight.",
+          "mastery": "Mastery: analyze an AI application end to end, identify benefits and limitations, and propose an appropriate human decision boundary."
         }
       ]
     },
@@ -60,38 +60,38 @@
       "subtopics": [
         {
           "title": "datasets",
-          "teaching": "Master datasets within Data Literacy for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative datasets question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar datasets task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach datasets as collections of examples or records used for analysis or model development. Identify rows, variables, labels when present, and the difference between representative coverage and raw quantity.",
+          "worked_example": "A dataset for house-price prediction might contain records with area, location, bedrooms, and sale price. The first three can be input variables while price is the target.",
+          "pitfall": "Pitfall: assuming a large dataset is automatically representative, clean, or suitable for the intended prediction task.",
+          "mastery": "Mastery: describe dataset structure, identify its role in a task, and question whether its coverage and quality support the intended conclusion."
         },
         {
           "title": "features and labels",
-          "teaching": "Master features and labels within Data Literacy for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative features and labels question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar features and labels task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach features as input attributes and labels as target answers in supervised learning. Use examples to show that the same field can play different roles depending on the task.",
+          "worked_example": "For email classification, message length and selected text features can be inputs while spam/not-spam is the label. In a different task, the same email may be used without a label.",
+          "pitfall": "Pitfall: calling every column a label or leaking the target into the input features during training.",
+          "mastery": "Mastery: identify features and labels for unfamiliar tasks and detect when a proposed feature would improperly reveal the target."
         },
         {
           "title": "data quality",
-          "teaching": "Master data quality within Data Literacy for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative data quality question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar data quality task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach data quality through accuracy, completeness, consistency, relevance, timeliness, and duplicate/error detection. Explain that model quality is constrained by the information supplied to it.",
+          "worked_example": "If a temperature dataset contains one entry of 250°C where the sensor range is -20°C to 60°C, that outlier should be investigated before training or analysis.",
+          "pitfall": "Pitfall: deleting unusual records automatically instead of checking whether they are errors or legitimate rare cases.",
+          "mastery": "Mastery: diagnose common data-quality problems, select appropriate cleaning actions, and explain how each problem could affect results."
         },
         {
           "title": "bias in data",
-          "teaching": "Master bias in data within Data Literacy for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative bias in data question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar bias in data task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach data bias as systematic imbalance or distortion in collected or labelled information. Distinguish sampling bias, measurement bias, and historical patterns from random noise.",
+          "worked_example": "If a face-recognition dataset contains far more images from one demographic group than others, performance measured only on the majority group may hide poorer performance elsewhere.",
+          "pitfall": "Pitfall: assuming a model is neutral because the algorithm is mathematical, or treating fairness as something that can be solved solely by adding more rows.",
+          "mastery": "Mastery: identify likely sources of dataset bias, predict who may be affected, and propose collection or evaluation steps that expose the problem."
         },
         {
           "title": "data preparation",
-          "teaching": "Master data preparation within Data Literacy for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative data preparation question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar data preparation task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach preparation as making raw data usable while preserving the information needed for the task. Cover cleaning, encoding, normalization where appropriate, splitting data, and preventing leakage.",
+          "worked_example": "For a mixed dataset, categorical values may need consistent encoding, missing values need an explicit policy, and train/test separation must happen so test information does not influence training.",
+          "pitfall": "Pitfall: applying transformations using the full dataset before the split, thereby leaking information from evaluation data into training.",
+          "mastery": "Mastery: design a preparation pipeline that is reproducible, task-appropriate, and resistant to leakage and inconsistent preprocessing."
         }
       ]
     },
@@ -100,38 +100,38 @@
       "subtopics": [
         {
           "title": "classification",
-          "teaching": "Master classification within Machine Learning Reasoning for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative classification question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar classification task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach classification as predicting one or more discrete categories from input data. Explain class boundaries, examples, and why a predicted class is not the same as certainty.",
+          "worked_example": "A model classifying fruit from measurements might predict apple, orange, or banana. If two fruits have similar measurements, the output should be interpreted as a model prediction with uncertainty rather than a guaranteed fact.",
+          "pitfall": "Pitfall: confusing classification with continuous-value prediction or assuming the most frequent class is automatically the correct choice.",
+          "mastery": "Mastery: recognize classification tasks, identify inputs and classes, interpret predictions cautiously, and choose appropriate evaluation questions."
         },
         {
           "title": "regression",
-          "teaching": "Master regression within Machine Learning Reasoning for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative regression question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar regression task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach regression as predicting a numeric quantity, often continuous, from input variables. Emphasize that predictions are estimates and can be evaluated by the size and pattern of errors.",
+          "worked_example": "A model can estimate delivery time as 32 minutes from distance, traffic, and time of day. The output is a number rather than a category such as fast or slow.",
+          "pitfall": "Pitfall: converting every numeric output into a classification problem or interpreting a predicted value as exact ground truth.",
+          "mastery": "Mastery: distinguish regression from classification, interpret numeric predictions, and reason about residual error and useful evaluation."
         },
         {
           "title": "training and testing",
-          "teaching": "Master training and testing within Machine Learning Reasoning for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative training and testing question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar training and testing task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach training as fitting model behavior from training data and testing as evaluating on data not used for fitting. Explain why independent evaluation estimates generalization better than reusing training examples.",
+          "worked_example": "A model that memorizes 1,000 training examples can achieve near-perfect training accuracy but still perform poorly on new examples; a held-out test set exposes that gap.",
+          "pitfall": "Pitfall: tuning repeatedly against the test set until it effectively becomes another training set, or reporting training accuracy as proof of generalization.",
+          "mastery": "Mastery: explain the purpose of train/test separation, identify leakage, and interpret differences between training and unseen performance."
         },
         {
           "title": "overfitting intuition",
-          "teaching": "Master overfitting intuition within Machine Learning Reasoning for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative overfitting intuition question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar overfitting intuition task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach overfitting as learning accidental details of training data so strongly that performance on new data suffers. Contrast it with underfitting, where the model is too simple to capture useful structure.",
+          "worked_example": "A model that predicts every training example correctly but makes poor predictions on new examples may have memorized noise rather than learned general patterns.",
+          "pitfall": "Pitfall: assuming a more complex model is always better because it fits training data more closely.",
+          "mastery": "Mastery: recognize overfitting from train-versus-test behavior, identify likely causes, and explain why simpler models or stronger validation may generalize better."
         },
         {
           "title": "evaluation metrics",
-          "teaching": "Master evaluation metrics within Machine Learning Reasoning for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative evaluation metrics question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar evaluation metrics task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach evaluation metrics as task-specific measurements of model behavior. Explain why accuracy alone can be misleading for imbalanced classes and introduce precision, recall, and error-based thinking at an intuitive level.",
+          "worked_example": "If only 1% of transactions are fraudulent, a model that always predicts legitimate can reach 99% accuracy while detecting zero fraud. A fraud system therefore needs metrics that reflect the costly positive class.",
+          "pitfall": "Pitfall: selecting a metric because its number is highest without asking which errors matter to the application.",
+          "mastery": "Mastery: choose and interpret metrics according to the task, class balance, and consequences of false positives and false negatives."
         }
       ]
     },
@@ -140,38 +140,38 @@
       "subtopics": [
         {
           "title": "language models",
-          "teaching": "Master language models within Generative AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative language models question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar language models task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach language models as systems that estimate and generate sequences of language tokens from learned patterns. Explain that fluent text does not by itself guarantee factual accuracy.",
+          "worked_example": "A language model can complete `The capital of France is...` with a likely continuation based on learned patterns, but the generated statement still needs verification when factual accuracy matters.",
+          "pitfall": "Pitfall: treating fluent generation as evidence that the model has checked a fact or possesses a human-like source of truth.",
+          "mastery": "Mastery: explain token-based language generation at an appropriate level, distinguish fluency from factual reliability, and identify when verification is required."
         },
         {
           "title": "image models",
-          "teaching": "Master image models within Generative AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative image models question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar image models task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach generative image models as systems that learn visual patterns and can produce or transform images from conditioning information such as text or reference inputs.",
+          "worked_example": "A text prompt describing a red bicycle beside a lake can condition an image-generation system to create a new visual matching those concepts; the result is generated rather than retrieved as a single stored photograph.",
+          "pitfall": "Pitfall: assuming generated details are guaranteed to be physically accurate or that every visual element corresponds to a real source image.",
+          "mastery": "Mastery: distinguish generation from retrieval, reason about conditioning, and identify visual details that require human verification."
         },
         {
           "title": "multimodal AI",
-          "teaching": "Master multimodal AI within Generative AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative multimodal AI question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar multimodal AI task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach multimodal AI as systems that work across more than one modality, such as text, images, audio, or video. Focus on how combining modalities can change the information available to a task.",
+          "worked_example": "A system given a photograph and a written question can use visual content plus language to answer a query about objects in the image.",
+          "pitfall": "Pitfall: assuming multimodal means equally reliable across every modality or that combining inputs automatically resolves ambiguity.",
+          "mastery": "Mastery: identify the modalities involved, explain their complementary roles, and evaluate where missing or ambiguous information could affect the result."
         },
         {
           "title": "prompting",
-          "teaching": "Master prompting within Generative AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative prompting question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar prompting task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach prompting as specifying task, context, constraints, desired format, and relevant examples so a generative model has clearer instructions. Emphasize iteration and verification rather than magical wording.",
+          "worked_example": "Instead of `Explain photosynthesis`, a prompt can request a 100-word explanation for a Grade 6 learner with three key terms and one analogy, making the expected output more constrained.",
+          "pitfall": "Pitfall: assuming a better prompt guarantees a correct answer or hiding uncertainty by asking the model to sound confident.",
+          "mastery": "Mastery: construct precise prompts, compare outputs against the stated requirements, and add verification steps for factual or high-stakes content."
         },
         {
           "title": "hallucination and verification",
-          "teaching": "Master hallucination and verification within Generative AI for National AI Challenge. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative hallucination and verification question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar hallucination and verification task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach hallucination as confident-looking generated content that is unsupported, incorrect, or invented. Verification means checking claims against reliable evidence appropriate to the task.",
+          "worked_example": "If a model supplies a plausible-looking historical citation, verify the title, author, date, and source independently before using it in educational material.",
+          "pitfall": "Pitfall: accepting a citation, statistic, quotation, or named source merely because it is specific and confidently presented.",
+          "mastery": "Mastery: identify claims requiring verification, check them against appropriate sources, and clearly separate verified information from model-generated uncertainty."
         }
       ]
     },
