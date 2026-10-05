@@ -100,6 +100,7 @@ for (const slug of targetSlugs) {
   }
 
   const publicBank = read(publicPath);
+  const pools = read(poolsPath);
   const privatePath = path.join(dir, "answer-key.objective.private.json");
   const officialPath = path.join(dir, "official.objective.json");
   const privateBank = read(privatePath);
