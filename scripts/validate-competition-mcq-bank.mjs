@@ -84,3 +84,4 @@ console.log(`RESULT: PASS — ${slug}: ${publicBank.length} reviewed mock MCQs, 
 // Validation run after GK authored-bank replacement.
 
 // Full 24-competition production validation is orchestrated by the CI workflow.\n
+// Trigger report workflow after enabling contents write permission.\n
