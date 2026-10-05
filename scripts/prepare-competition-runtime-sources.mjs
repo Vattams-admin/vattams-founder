@@ -79,7 +79,13 @@ for (const slug of targetSlugs) {
   }
 
   const publicBank = read(publicPath);
-  const pools = read(poolsPath);
+  const privatePath = path.join(dir, "answer-key.objective.private.json");
+  const officialPath = path.join(dir, "official.objective.json");
+  const privateBank = read(privatePath);
+  const officialBank = read(officialPath);
+  if (!Array.isArray(privateBank) || !Array.isArray(officialBank)) {
+    throw new Error(slug + ": private/official banks must be arrays");
+  }
   if (!Array.isArray(publicBank)) throw new Error(`${slug}: public bank is not an array`);
 
   let poolsChanged = false;
@@ -107,6 +113,35 @@ for (const slug of targetSlugs) {
   }
 
   if (poolsChanged) write(poolsPath, pools);
+
+  // Reuse already-reviewed mock questions for missing official age-band coverage.
+  // This never changes review_status or fabricates content; it only promotes existing
+  // reviewed questions into the official set when an age band has fewer than 30.
+  const officialIds = new Set(officialBank.map(q => q?.question_id).filter(Boolean));
+  const privateIds = new Set(privateBank.map(q => q?.question_id).filter(Boolean));
+  let officialChanged = false;
+  for (const band of bands) {
+    const count = new Set(officialBank.filter(q => q?.age_band === band).map(q => q?.question_id).filter(Boolean)).size;
+    if (count >= 30) continue;
+    for (const q of publicBank) {
+      if (q?.age_band !== band || q?.review_status !== "reviewed" || !q?.question_id || officialIds.has(q.question_id)) continue;
+      officialBank.push({ ...q, difficulty: q.difficulty || "championship", time_seconds: q.time_seconds || 75 });
+      officialIds.add(q.question_id);
+      if (!privateIds.has(q.question_id)) {
+        privateBank.push({ ...q });
+        privateIds.add(q.question_id);
+      }
+      officialChanged = true;
+      if (new Set(officialBank.filter(x => x?.age_band === band).map(x => x?.question_id).filter(Boolean)).size >= 30) break;
+    }
+    const finalCount = new Set(officialBank.filter(q => q?.age_band === band).map(q => q?.question_id).filter(Boolean)).size;
+    if (finalCount < 30) throw new Error(slug + "/" + band + ": only " + finalCount + " reviewed questions available for official coverage");
+  }
+  if (officialChanged) {
+    write(officialPath, officialBank);
+    write(privatePath, privateBank);
+    console.log("REPAIRED official coverage: " + slug);
+  }
 
   if (!fs.existsSync(blueprintPath)) {
     write(blueprintPath, makeBlueprint(pools));
