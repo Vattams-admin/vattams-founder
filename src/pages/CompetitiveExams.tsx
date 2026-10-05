@@ -10,7 +10,7 @@ import { getPricingConfig } from '@/lib/pricingConfig'
 
 export default function CompetitiveExams() {
   useSeo({
-    title: 'Competitive Exam Preparation | TNPSC, SSC, Banking & More',
+    title: 'Competitive Exam Preparation | VATTAMS ACADEMIA',
     description: 'Explore VATTAMS ACADEMIA competitive exam preparation for TNPSC, SSC, Banking, Railway, Police, Defence, UGC NET/SET, TET and other major exams.',
     path: '/competitive-exams',
     jsonLd: {
