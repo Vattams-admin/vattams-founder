@@ -1,4 +1,6 @@
+import { useSeo } from '@/hooks/useSeo'
 export default function Contact() {
+  useSeo({ title: 'Contact VATTAMS ACADEMIA', description: 'Contact VATTAMS ACADEMIA for questions about courses, competitive exam preparation, competitions, payments and certificates.', path: '/contact' })
   return (
     <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6">
       <p className="text-xs font-semibold uppercase tracking-[0.3em] text-gold">Contact</p>
