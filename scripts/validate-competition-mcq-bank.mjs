@@ -65,10 +65,17 @@ for (const [i,q] of publicBank.entries()) {
   ids.add(q.question_id);
 }
 const officialIds = new Set();
+const officialByBand = new Map();
 for (const [i,q] of official.entries()) {
   validateMcq(q, `official[${i}]`);
   if (officialIds.has(q.question_id)) throw new Error(`Duplicate official question_id: ${q.question_id}`);
   officialIds.add(q.question_id);
+  if (!officialByBand.has(q.age_band)) officialByBand.set(q.age_band, new Set());
+  officialByBand.get(q.age_band).add(q.question_id);
+}
+for (const band of ["up_to_8","age_9_12","age_13_15","age_16_plus"]) {
+  const count = officialByBand.get(band)?.size ?? 0;
+  if (count < 30) throw new Error(`official/${band}: fewer than 30 unique official questions`);
 }
 for (const band of ["up_to_8","age_9_12","age_13_15","age_16_plus"]) {
   const topics = pools[band];
@@ -79,7 +86,7 @@ for (const band of ["up_to_8","age_9_12","age_13_15","age_16_plus"]) {
   const total = blueprint[band].reduce((n, pair) => n + Number(pair?.[1] || 0), 0);
   if (total !== 30) throw new Error(`${band}: blueprint must select exactly 30 questions`);
 }
-console.log(`RESULT: PASS — ${slug}: ${publicBank.length} reviewed mock MCQs, ${official.length} official MCQs, 4 age pools, explicit 30-question blueprint`);
+console.log(`RESULT: PASS — ${slug}: ${publicBank.length} reviewed mock MCQs, ${official.length} official MCQs (30+ per age band), 4 age pools, explicit 30-question blueprint`);
 
 // Validation run after GK authored-bank replacement.
 
