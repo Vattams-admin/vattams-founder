@@ -2,7 +2,7 @@ import LegalPage from '@/components/LegalPage'
 
 export default function RefundPolicy() {
   return (
-    <LegalPage title="Refund Policy">
+    <LegalPage noindex title="Refund Policy">
       <p>
         Payments are verified manually after UTR submission. If a payment is rejected during
         verification, no enrolment is created and the amount is not collected further; for UPI
