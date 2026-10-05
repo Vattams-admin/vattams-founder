@@ -334,6 +334,46 @@
           "mastery": "Define the problem, constraints, inputs and success criteria before selecting a technical solution."
         }
       ]
+    },
+    {
+      "name": "Computer Competition Mastery",
+      "subtopics": [
+        {
+          "title": "technology problem classification",
+          "teaching": "Identify whether a challenge concerns hardware, software, networking, data, safety, programming, AI, or digital productivity before selecting a solution.",
+          "worked_example": "A device that cannot access a website may require checking network connectivity before reinstalling application software.",
+          "pitfall": "Pitfall: changing software settings without first identifying whether the failure is actually caused by the network or hardware.",
+          "mastery": "Classify a computing problem and choose an appropriate first diagnostic step."
+        },
+        {
+          "title": "computational troubleshooting",
+          "teaching": "Use a repeatable diagnose-test-isolate-verify process instead of random changes when solving computing problems.",
+          "worked_example": "If an application fails, reproduce the error, identify whether other applications work, isolate the affected component, apply one change, and retest.",
+          "pitfall": "Pitfall: making several changes at once so the cause of improvement or failure becomes unknown.",
+          "mastery": "Troubleshoot a computing scenario systematically and verify the fix."
+        },
+        {
+          "title": "digital evidence and verification",
+          "teaching": "Evaluate files, outputs, search results, data, and online claims by checking source, context, consistency, and reliability.",
+          "worked_example": "Before accepting an online technical claim, compare its stated behavior with official documentation or a controlled test.",
+          "pitfall": "Pitfall: treating the first search result or confident-looking statement as automatically correct.",
+          "mastery": "Use appropriate evidence to verify a computing claim or result."
+        },
+        {
+          "title": "integrated computing scenarios",
+          "teaching": "Combine digital safety, networking, data, programming, productivity, AI, and computational thinking in unfamiliar scenarios.",
+          "worked_example": "A school project may require organizing data, writing a simple program, protecting credentials, and checking an AI-generated summary.",
+          "pitfall": "Pitfall: solving the technical task while ignoring security, privacy, data quality, or verification requirements.",
+          "mastery": "Build a complete computing solution that accounts for technical and responsible-use constraints."
+        },
+        {
+          "title": "computer championship round",
+          "teaching": "Practice timed mixed computing challenges with diagnosis, reasoning, security awareness, and final verification.",
+          "worked_example": "Classify each challenge first, secure high-confidence answers, then solve the multi-step scenarios while checking each claim against the given evidence.",
+          "pitfall": "Pitfall: choosing answers from familiar technology keywords without analyzing the actual scenario.",
+          "mastery": "Solve mixed computing challenges accurately under time pressure with justified decisions."
+        }
+      ]
     }
   ]
 }
