@@ -13,6 +13,9 @@ const slugs = [
   "thirukkural","fun-with-maths-challenge","azhagu-tamil-challenge",
   "handwriting-excellence-challenge","spoken-hindi-challenge",
 ];
+const requestedSlug = process.argv.includes("--slug") ? process.argv[process.argv.indexOf("--slug") + 1] : "";
+const targetSlugs = requestedSlug ? slugs.filter((slug) => slug === requestedSlug) : slugs;
+if (requestedSlug && targetSlugs.length !== 1) throw new Error(`Unknown competition slug: ${requestedSlug}`);
 
 const read = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const write = (p, value) => fs.writeFileSync(p, JSON.stringify(value, null, 2) + "\n");
@@ -65,7 +68,7 @@ function makeBlueprint(pools) {
   return result;
 }
 
-for (const slug of slugs) {
+for (const slug of targetSlugs) {
   const dir = path.join(root, "data", "competitions", slug, "full-bank", "objective");
   const publicPath = path.join(dir, "questions.objective.public.json");
   const poolsPath = path.join(dir, "age-pools.json");
