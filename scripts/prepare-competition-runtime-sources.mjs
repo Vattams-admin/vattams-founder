@@ -74,6 +74,27 @@ for (const slug of targetSlugs) {
   const poolsPath = path.join(dir, "age-pools.json");
   const blueprintPath = path.join(dir, "selection-blueprint.json");
 
+  // Thirukkural keeps its reviewed production bank in the dedicated
+  // data/thirukkural tree. Materialize that same reviewed source into the
+  // common competition runtime layout; do not synthesize or alter questions.
+  if (slug === "thirukkural" && !fs.existsSync(publicPath)) {
+    const sourceDir = path.join(root, "data", "thirukkural", "full-bank", "objective");
+    const sourceFiles = [
+      ["questions.objective.public.json", "questions.objective.public.json"],
+      ["answer-key.objective.private.json", "answer-key.objective.private.json"],
+      ["official-120.objective.json", "official.objective.json"],
+      ["age-pools.json", "age-pools.json"],
+    ];
+    if (!sourceFiles.every(([from]) => fs.existsSync(path.join(sourceDir, from)))) {
+      throw new Error("thirukkural: reviewed production source package is incomplete");
+    }
+    fs.mkdirSync(dir, { recursive: true });
+    for (const [from, to] of sourceFiles) {
+      fs.copyFileSync(path.join(sourceDir, from), path.join(dir, to));
+    }
+    console.log("MATERIALIZED reviewed Thirukkural runtime source package");
+  }
+
   if (!fs.existsSync(publicPath) || !fs.existsSync(poolsPath)) {
     throw new Error(`${slug}: required reviewed bank/age-pool source is missing`);
   }
