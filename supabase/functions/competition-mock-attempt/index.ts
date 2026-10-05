@@ -48,6 +48,7 @@ type CompetitionRegistryEntry = {
   answer_key_bundle?: string;
   age_pools: string;
   per_attempt?: number;
+  selection_blueprint?: SelectionBlueprint;
   enabled: boolean;
 };
 
@@ -219,48 +220,63 @@ function shuffle<T>(items: T[]): T[] {
 }
 
 /*
- * Current configured competition blueprint.
+ * Runtime selection blueprint is stored with each competition registry entry.
+ * This keeps the mock engine competition-agnostic: no subject-specific
+ * Thirukkural topics are embedded in the function.
  *
- * This is intentionally kept identical to the validated
- * Thirukkural Mock/Question-Pool blueprint already used
- * by the project.
+ * Registry format:
+ *   selection_blueprint: {
+ *     up_to_8: [["Topic A", 15], ["Topic B", 15]],
+ *     age_9_12: [...]
+ *   }
+ *
+ * If a bundle does not declare a blueprint, the runtime derives one from
+ * the available age-pool topics, allocating the 30-question attempt as
+ * evenly as possible. This is only a fallback for already-reviewed pools;
+ * the production validator should require an explicit blueprint.
  */
-const BLUEPRINT: Record<
-  string,
-  Array<[string, number]>
-> = {
-  up_to_8: [
-    ["Complete second line", 15],
-    ["Identify Paal", 15],
-  ],
+type SelectionBlueprint = Record<string, Array<[string, number]>>;
 
-  age_9_12: [
-    ["Complete second line", 5],
-    ["Identify Paal", 5],
-    ["Complete Kural", 8],
-    ["Identify Adhigaram", 3],
-    ["Identify Iyal", 3],
-    ["Chapter range", 6],
-  ],
+function deriveBlueprint(
+  agePools: AgePools,
+  perAttempt: number,
+): SelectionBlueprint {
+  const result: SelectionBlueprint = {};
 
-  age_13_15: [
-    ["Complete Kural", 5],
-    ["Identify Adhigaram", 5],
-    ["Identify Iyal", 4],
-    ["Chapter range", 2],
-    ["Source meaning identification", 7],
-    ["Identify source meaning", 7],
-  ],
+  for (const [ageBand, topics] of Object.entries(agePools)) {
+    const names = Object.keys(topics || {}).filter(
+      (topic) => Array.isArray(topics[topic]) && topics[topic].length > 0,
+    );
 
-  age_16_plus: [
-    ["Complete Kural", 3],
-    ["Identify Adhigaram", 4],
-    ["Identify Iyal", 3],
-    ["Chapter range", 2],
-    ["Source meaning identification", 9],
-    ["Identify source meaning", 9],
-  ],
-};
+    if (names.length === 0) {
+      throw new Error(`No usable topics in age pool: ${ageBand}`);
+    }
+
+    const base = Math.floor(perAttempt / names.length);
+    let remainder = perAttempt % names.length;
+
+    result[ageBand] = names.map((topic) => {
+      const count = base + (remainder-- > 0 ? 1 : 0);
+      return [topic, count];
+    });
+  }
+
+  return result;
+}
+
+function getBlueprint(
+  competition: CompetitionRegistryEntry,
+  agePools: AgePools,
+): SelectionBlueprint {
+  if (competition.selection_blueprint) {
+    return competition.selection_blueprint;
+  }
+
+  return deriveBlueprint(
+    agePools,
+    competition.per_attempt || 30,
+  );
+}
 
 function getQuestionId(
   question: AgePoolQuestion,
@@ -295,8 +311,9 @@ function getQuestionId(
 function selectQuestions(
   agePools: AgePools,
   ageBand: string,
+  blueprintByAgeBand: SelectionBlueprint,
 ): string[] {
-  const blueprint = BLUEPRINT[ageBand];
+  const blueprint = blueprintByAgeBand[ageBand];
 
   if (!blueprint) {
     throw new Error(`Unsupported age band: ${ageBand}`);
@@ -585,6 +602,7 @@ async function startOrResume(
     selectQuestions(
       agePools,
       ageBand,
+      blueprintByAgeBand,
     );
 
   const { data, error } =
