@@ -1,3 +1,4 @@
+import { useSeo } from '@/hooks/useSeo'
 // src/pages/Payment.tsx
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
@@ -30,6 +31,7 @@ const PAYEE_VPA = import.meta.env.VITE_UPI_VPA as string | undefined
 const CONNECTION_ERROR = 'Unable to connect right now. Please check your internet connection and try again.'
 
 export default function Payment() {
+  useSeo({ title: 'Payment', description: 'Complete course or competition payment', noindex: true })
   const { courseId } = useParams<{ courseId: string }>()
   const { user, loading: authLoading } = useAuth()
   const navigate = useNavigate()
