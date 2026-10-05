@@ -7,6 +7,7 @@ on:
     paths:
       - "scripts/catalog-data.mjs"
       - "scripts/generate-competition-runtime-registry.mjs"
+      - "scripts/prepare-competition-runtime-sources.mjs"
       - "scripts/validate-competition-runtime-coverage.mjs"
       - "data/competitions/**/full-bank/objective/**"
       - ".github/workflows/generate-competition-runtime-registry.yml"
@@ -24,6 +25,8 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
+      - name: Prepare reviewed competition runtime sources
+        run: node scripts/prepare-competition-runtime-sources.mjs
       - name: Generate registry from Firestore course IDs
         env:
           FIREBASE_PROJECT_ID: vattams-academia
@@ -35,14 +38,14 @@ jobs:
       - name: Validate all competition MCQ packages
         run: |
           set -e
-          for slug in mathematics-challenge science-challenge english-challenge computer-challenge gk-challenge reasoning-challenge india-gk-championship national-quiz-championship ai-technology-challenge international-knowledge-challenge national-mathematics-championship national-science-championship national-english-championship national-aptitude-championship national-coding-challenge national-ai-challenge mega-inter-school-championship indian-classical-literature-wisdom-championship indian-language-literature-masters-series thirukkural fun-with-maths-challenge azhagu-tamil-challenge handwriting-excellence-challenge spoken-hindi-challenge; do
+          for slug in mathematics-challenge science-challenge english-challenge computer-challenge gk-challenge reasoning-challenge india-gk-championship national-quiz-championship ai-technology-challenge international-knowledge-challenge national-mathematics-championship national-science-championship national-english-championship national-aptitude-championship national-coding-challenge national-ai-challenge mega-inter-school-championship indian-classical-literature-wisdom-championship thirukkural fun-with-maths-challenge azhagu-tamil-challenge handwriting-excellence-challenge spoken-hindi-challenge; do
             node scripts/validate-competition-mcq-bank.mjs --slug "$slug"
           done
-      - name: Commit generated registry
+      - name: Commit prepared sources and generated registry
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add config/competition-registry.json
-          git diff --cached --quiet && echo "Registry already current" && exit 0
-          git commit -m "Generate 24-competition runtime registry"
+          git add config/competition-registry.json data/competitions/**/full-bank/objective/age-pools.json data/competitions/**/full-bank/objective/selection-blueprint.json
+          git diff --cached --quiet && echo "Runtime sources and registry already current" && exit 0
+          git commit -m "Prepare 24 competition runtime packages [skip ci]"
           git push
