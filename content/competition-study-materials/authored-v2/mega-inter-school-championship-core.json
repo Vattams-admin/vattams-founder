@@ -2,7 +2,7 @@
   "schema_version": "3.1.0",
   "course": "Mega Inter-School Championship",
   "model": "thirukkural_mastery_reference",
-  "status": "subject_specific_authoring_v1_in_progress",
+  "status": "subject_specific_authoring_v1_complete",
   "age_bands": [
     "foundation",
     "developing",
@@ -220,38 +220,38 @@
       "subtopics": [
         {
           "title": "computing",
-          "teaching": "Master computing within Technology for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative computing question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar computing task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach computing through hardware, software, data, algorithms, operating systems, and networks, focusing on how components work together to solve tasks.",
+          "worked_example": "A word processor uses input devices, memory, processor instructions, storage, and an operating system to turn keystrokes into a saved document.",
+          "pitfall": "Pitfall: treating hardware and software as interchangeable or assuming storage and memory serve the same purpose.",
+          "mastery": "Mastery: identify the role of computing components in an unfamiliar scenario and explain how they cooperate."
         },
         {
           "title": "internet",
-          "teaching": "Master internet within Technology for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative internet question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar internet task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach the internet as interconnected networks using addressing, routing, protocols, and services. Distinguish the internet itself from individual web services and apps.",
+          "worked_example": "When a student opens a website, a device sends requests through networks to a server and receives data back; the web is one service built on internet infrastructure.",
+          "pitfall": "Pitfall: treating the internet, web, browser, and search engine as synonyms.",
+          "mastery": "Mastery: trace a simple online interaction and distinguish the roles of device, network, protocol, browser, and service."
         },
         {
           "title": "AI",
-          "teaching": "Master AI within Technology for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative AI question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar AI task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach AI at an inter-school level through prediction, classification, generation, perception, and decision support, while distinguishing AI from ordinary fixed rules.",
+          "worked_example": "A recommendation system can infer likely interests from interaction patterns, while a fixed menu simply displays predefined choices.",
+          "pitfall": "Pitfall: calling every automated feature AI or assuming an AI output is necessarily correct.",
+          "mastery": "Mastery: identify whether a scenario uses AI, state the task it performs, and explain an appropriate limitation or verification step."
         },
         {
           "title": "cyber safety",
-          "teaching": "Master cyber safety within Technology for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative cyber safety question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar cyber safety task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach cyber safety through strong authentication, phishing awareness, software updates, privacy, secure sharing, malware awareness, and safe recovery practices.",
+          "worked_example": "A message claiming an urgent account problem and asking for a password link is a phishing warning sign; verify through the official service instead of following the message.",
+          "pitfall": "Pitfall: trusting a message because it uses familiar logos, urgency, or personal details.",
+          "mastery": "Mastery: recognize common attack signals and choose safe actions that protect accounts, devices, and information."
         },
         {
           "title": "digital society",
-          "teaching": "Master digital society within Technology for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative digital society question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar digital society task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach digital society through digital identity, accessibility, online behavior, misinformation, platform effects, intellectual property, and responsible technology use.",
+          "worked_example": "A viral post can spread widely before its claim is checked, so responsible participation includes evaluating evidence before forwarding it.",
+          "pitfall": "Pitfall: assuming popularity proves truth or ignoring how digital systems affect people who have different access or needs.",
+          "mastery": "Mastery: analyze a digital-life scenario from technical, social, and ethical perspectives and justify responsible behavior."
         }
       ]
     },
@@ -260,38 +260,38 @@
       "subtopics": [
         {
           "title": "science news",
-          "teaching": "Master science news within Current Awareness for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative science news question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar science news task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach science-news awareness by identifying the discovery or mission, organization, evidence, significance, and date, while separating reported findings from headlines or speculation.",
+          "worked_example": "A report about a new space mission should be checked for the mission's objective, agency, launch or milestone date, and what scientists actually measured.",
+          "pitfall": "Pitfall: treating a headline's strongest wording as equivalent to the underlying scientific result.",
+          "mastery": "Mastery: extract the key verified facts from a science report and distinguish evidence from promotional or speculative language."
         },
         {
           "title": "sports",
-          "teaching": "Master sports within Current Awareness for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative sports question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar sports task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Build sports awareness through competitions, rules, records, teams, athletes, venues, and major results, with attention to the exact event and year.",
+          "worked_example": "A record belongs to a particular sport, event, category, and date; identifying only the athlete is insufficient when several records are associated with the same person.",
+          "pitfall": "Pitfall: mixing different editions, formats, or event categories when recalling a sports fact.",
+          "mastery": "Mastery: answer sports-current-awareness questions using precise event, athlete/team, year, and record qualifiers."
         },
         {
           "title": "major events",
-          "teaching": "Master major events within Current Awareness for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative major events question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar major events task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach major-event awareness through who, what, where, when, why, and consequence. Build timelines so similarly named events are not conflated.",
+          "worked_example": "For a major international summit, distinguish the host location, participating leaders or institutions, stated agenda, and resulting announcement rather than treating the event name as the whole fact.",
+          "pitfall": "Pitfall: confusing an announcement date with the event date or repeating an unverified claim about an outcome.",
+          "mastery": "Mastery: reconstruct the essential facts of a major event and verify the exact qualifier requested."
         },
         {
           "title": "institutions",
-          "teaching": "Master institutions within Current Awareness for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative institutions question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar institutions task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach institutional awareness through purpose, headquarters or location, leadership where relevant, membership, and major functions. Similar names should be separated by mandate.",
+          "worked_example": "Two international organizations may both work on development but have different mandates, membership structures, and responsibilities; the function in the question determines the answer.",
+          "pitfall": "Pitfall: choosing an institution from a familiar name without checking its actual mandate.",
+          "mastery": "Mastery: distinguish institutions by function, structure, and role and apply those distinctions to unfamiliar questions."
         },
         {
           "title": "fact verification",
-          "teaching": "Master fact verification within Current Awareness for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative fact verification question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar fact verification task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach fact verification as checking a claim against reliable evidence, date, source, wording, and context. Compare independent evidence before accepting a striking claim.",
+          "worked_example": "If a post claims a record was broken, verify the official competition record or authoritative report, confirm the date and category, and check that the number refers to the same event.",
+          "pitfall": "Pitfall: trusting a screenshot, viral post, or repeated claim as proof.",
+          "mastery": "Mastery: identify what evidence a claim requires, verify it using appropriate sources, and reject claims whose qualifiers do not match."
         }
       ]
     },
@@ -300,38 +300,38 @@
       "subtopics": [
         {
           "title": "data reasoning",
-          "teaching": "Master data reasoning within Interdisciplinary Challenges for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative data reasoning question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar data reasoning task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach data reasoning by extracting quantities, units, trends, comparisons, and relationships before drawing conclusions. Tables and charts should be read literally before interpretation.",
+          "worked_example": "If a chart shows enrollment rising from 200 to 260, the increase is 60 students or 30%; the percentage requires dividing by the original 200.",
+          "pitfall": "Pitfall: comparing percentages with different bases or inferring causation from a visible trend alone.",
+          "mastery": "Mastery: calculate and interpret data accurately, identify the correct comparison base, and separate observation from inference."
         },
         {
           "title": "cross-domain clues",
-          "teaching": "Master cross-domain clues within Interdisciplinary Challenges for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative cross-domain clues question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar cross-domain clues task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach cross-domain clues by combining evidence from different subjects without allowing one clue to override a stronger contradiction. Build a candidate set and eliminate systematically.",
+          "worked_example": "A scenario mentioning a monsoon region, a historical port, and a crop can combine geography, history, and agriculture clues to identify a location more reliably than any one clue alone.",
+          "pitfall": "Pitfall: anchoring on the first recognizable clue and ignoring evidence from another domain.",
+          "mastery": "Mastery: integrate clues from multiple disciplines, rank their evidential strength, and justify the final identification."
         },
         {
           "title": "integrated scenarios",
-          "teaching": "Master integrated scenarios within Interdisciplinary Challenges for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative integrated scenarios question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar integrated scenarios task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach integrated scenarios by decomposing a real-world situation into scientific, mathematical, language, social, and technological questions before solving each part.",
+          "worked_example": "A school plans a solar installation: students may calculate energy use, interpret weather data, evaluate environmental effects, compare costs, and communicate a recommendation.",
+          "pitfall": "Pitfall: solving one component correctly while ignoring constraints imposed by the rest of the scenario.",
+          "mastery": "Mastery: connect multiple subject methods into one coherent solution and explain how each result affects the final decision."
         },
         {
           "title": "case analysis",
-          "teaching": "Master case analysis within Interdisciplinary Challenges for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative case analysis question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar case analysis task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach case analysis through context, stakeholders, evidence, alternatives, constraints, and consequences. Require conclusions to be supported by the case rather than by outside assumptions.",
+          "worked_example": "A school considering a digital learning tool should examine cost, accessibility, learning evidence, privacy, teacher workload, and student outcomes before choosing it.",
+          "pitfall": "Pitfall: selecting the most impressive option without weighing evidence, trade-offs, and affected stakeholders.",
+          "mastery": "Mastery: identify the central decision, compare alternatives against explicit criteria, and defend a balanced conclusion."
         },
         {
           "title": "championship rounds",
-          "teaching": "Master championship rounds within Interdisciplinary Challenges for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative championship rounds question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar championship rounds task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach championship rounds as mixed-domain challenges requiring rapid identification of the subject principle, disciplined elimination, and a final verification pass.",
+          "worked_example": "A round may move from a number pattern to a science fact and then a data chart; the winning strategy is to reset the reasoning method for each question rather than carry assumptions across subjects.",
+          "pitfall": "Pitfall: spending disproportionate time on one difficult question or using the previous question's reasoning style for a different domain.",
+          "mastery": "Mastery: switch methods quickly, preserve accuracy under mixed difficulty, and verify high-risk answers before submission."
         }
       ]
     },
@@ -340,38 +340,38 @@
       "subtopics": [
         {
           "title": "mixed sets",
-          "teaching": "Master mixed sets within Competition Mastery for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative mixed sets question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar mixed sets task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach mixed-set practice as deliberate switching among domains, with students first identifying the question type before selecting a method. Track errors by domain rather than only by total score.",
+          "worked_example": "A 10-question set might require algebra, reading inference, science reasoning, and geography; classify each question first, then apply the matching strategy.",
+          "pitfall": "Pitfall: beginning calculations or recall before determining what the question actually tests.",
+          "mastery": "Mastery: classify mixed questions quickly, select the correct reasoning tool, and maintain accuracy across subject changes."
         },
         {
           "title": "time management",
-          "teaching": "Master time management within Competition Mastery for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative time management question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar time management task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach time management through triage: answer high-confidence questions first, mark uncertain items, allocate time according to value and difficulty, and reserve a final checking window.",
+          "worked_example": "In a 30-minute round, spending 8 minutes on one hard puzzle can crowd out several easier questions; a deliberate pass structure protects the total score.",
+          "pitfall": "Pitfall: equating persistence with productivity or repeatedly rereading a question without changing the solving approach.",
+          "mastery": "Mastery: plan a time budget, recognize when to move on, and finish with enough time for targeted review."
         },
         {
           "title": "elimination",
-          "teaching": "Master elimination within Competition Mastery for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative elimination question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar elimination task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach elimination as evidence-based removal of options that violate facts, logic, units, grammar, or the question's exact qualifier. Never eliminate merely because an option feels unfamiliar.",
+          "worked_example": "If a geometry option gives an angle sum other than 180° for a triangle, it can be rejected immediately before comparing the remaining choices.",
+          "pitfall": "Pitfall: eliminating an option because it is uncommon rather than because it contradicts evidence.",
+          "mastery": "Mastery: state the specific reason each rejected option fails and use elimination only where the evidence supports it."
         },
         {
           "title": "accuracy",
-          "teaching": "Master accuracy within Competition Mastery for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative accuracy question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar accuracy task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach accuracy as a process: read qualifiers, calculate carefully, check units, compare with estimates, and distinguish answer selection from explanation. Accuracy is protected by repeatable habits.",
+          "worked_example": "If a percentage calculation gives a result larger than the original quantity when the task describes a discount, an estimate exposes the likely error before submission.",
+          "pitfall": "Pitfall: changing a correct answer during review without new evidence or skipping a final check because the reasoning felt easy.",
+          "mastery": "Mastery: apply a consistent verification checklist and correct errors based on evidence rather than anxiety or guesswork."
         },
         {
           "title": "final review",
-          "teaching": "Master final review within Competition Mastery for Mega Inter-School Championship. Build precise concepts and terminology first, then connect them to examples, interpretation and competition-style reasoning. Students should distinguish evidence from assumption, compare alternatives, and justify conclusions rather than relying on memorised associations.",
-          "worked_example": "Worked example: analyse a representative final review question, identify the decisive concept or textual/evidential clue, reason through the alternatives, and verify the conclusion.",
-          "pitfall": "Common pitfall: confusing a related concept, author, text, period, technology or interpretation with the exact item requested by the question.",
-          "mastery": "Mastery: solve an unfamiliar final review task independently, explain the decisive evidence or principle, reject a plausible distractor, and verify the conclusion."
+          "teaching": "Teach final review as targeted verification of boundaries, unanswered items, calculations, copied values, units, and question qualifiers. Review should prioritize high-risk errors rather than rereading everything equally.",
+          "worked_example": "If an answer depends on whether a range is inclusive, revisit that boundary explicitly; a single symbol can change the result.",
+          "pitfall": "Pitfall: spending the entire review time rereading already-certain answers while leaving flagged questions unchecked.",
+          "mastery": "Mastery: perform a focused final audit, resolve flagged uncertainties, and submit only after checking the highest-impact error risks."
         }
       ]
     }
