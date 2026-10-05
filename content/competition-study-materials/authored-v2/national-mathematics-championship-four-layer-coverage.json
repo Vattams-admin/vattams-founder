@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "National Mathematics Championship",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/national-mathematics-championship-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Advanced Number Theory",
+      "subtopics": [
+        {
+          "title": "divisibility",
+          "study_materials": {
+            "objective": "Build mastery of divisibility in Advanced Number Theory for National Mathematics Championship.",
+            "teaching_content": "Divisibility problems use exact integer structure: if a divides b, then b is an integer multiple of a. Factorization, divisibility tests and modular reasoning help expose hidden structure.",
+            "worked_examples": [
+              "To test whether 3 divides 4,872, add its digits: 4+8+7+2=21, which is divisible by 3, so 4,872 is divisible by 3."
+            ],
+            "pitfall": "A divisibility test is not interchangeable with another test; the digit-sum rule for 3 does not prove divisibility by 8.",
+            "mastery_check": "Use divisibility rules and factor structure to solve unfamiliar integer problems and justify each step.",
+            "revision": "Revise divisibility through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "remainders",
+          "study_materials": {
+            "objective": "Build mastery of remainders in Advanced Number Theory for National Mathematics Championship.",
+            "teaching_content": "Remainder arithmetic studies what remains after division and can simplify large-number problems by working modulo a convenient integer.",
+            "worked_examples": [
+              "For the last digit of 7^n, work modulo 10 and observe the repeating cycle 7, 9, 3, 1."
+            ],
+            "pitfall": "Reducing a number modulo m does not mean replacing it with an unrelated value; operations must respect modular equivalence.",
+            "mastery_check": "Choose an appropriate modulus, identify cycles, and calculate remainders without expanding unnecessarily large powers.",
+            "revision": "Revise remainders through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "prime structures",
+          "study_materials": {
+            "objective": "Build mastery of prime structures in Advanced Number Theory for National Mathematics Championship.",
+            "teaching_content": "Prime numbers are integers greater than 1 with exactly two positive divisors. Prime factorization provides a canonical way to analyze divisibility, gcd, lcm and divisor counts.",
+            "worked_examples": [
+              "The factorization 360=2^3×3^2×5 reveals its divisor structure and makes related questions easier."
+            ],
+            "pitfall": "Treating 1 as prime or assuming every composite number has only two factors leads to structural errors.",
+            "mastery_check": "Factor integers into primes and use exponents to derive divisor and divisibility properties.",
+            "revision": "Revise prime structures through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "gcd and lcm",
+          "study_materials": {
+            "objective": "Build mastery of gcd and lcm in Advanced Number Theory for National Mathematics Championship.",
+            "teaching_content": "The greatest common divisor captures the largest shared factor, while the least common multiple captures the smallest positive shared multiple. Prime exponents give a systematic method for both.",
+            "worked_examples": [
+              "For 84=2^2×3×7 and 126=2×3^2×7, the gcd uses minimum exponents and the lcm uses maximum exponents."
+            ],
+            "pitfall": "Using maximum exponents for gcd or minimum exponents for lcm reverses the underlying rule.",
+            "mastery_check": "Compute gcd and lcm efficiently and apply them to scheduling, grouping and integer-structure problems.",
+            "revision": "Revise gcd and lcm through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "number patterns",
+          "study_materials": {
+            "objective": "Build mastery of number patterns in Advanced Number Theory for National Mathematics Championship.",
+            "teaching_content": "Number patterns can arise from arithmetic relationships, modular cycles, factor structure, recursive rules or digit operations. The goal is to identify a rule that explains all supplied terms.",
+            "worked_examples": [
+              "For 2, 5, 10, 17, 26, the differences are 3, 5, 7, 9, suggesting n²+1 for the nth term."
+            ],
+            "pitfall": "Matching only the first two or three terms can support many false rules.",
+            "mastery_check": "Test a proposed pattern against multiple terms and derive a rule that can be justified rather than guessed.",
+            "revision": "Revise number patterns through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Advanced Arithmetic",
+      "subtopics": [
+        {
+          "title": "fractions and ratios",
+          "study_materials": {
+            "objective": "Build mastery of fractions and ratios in Advanced Arithmetic for National Mathematics Championship.",
+            "teaching_content": "Fractions represent quantities as a ratio of integers, while ratios compare quantities using consistent units. Competition problems often require scaling, simplification and equivalent representations.",
+            "worked_examples": [
+              "If 3/5 of a quantity is 24, multiply by 5/3 to recover the whole quantity: 40."
+            ],
+            "pitfall": "Adding numerators and denominators separately does not generally preserve fraction equivalence.",
+            "mastery_check": "Move confidently among fractions, ratios and whole quantities while tracking units and scale factors.",
+            "revision": "Revise fractions and ratios through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "percentages",
+          "study_materials": {
+            "objective": "Build mastery of percentages in Advanced Arithmetic for National Mathematics Championship.",
+            "teaching_content": "Percentage problems describe relative change using a base quantity. Successive percentage changes must be applied to the updated value rather than simply added.",
+            "worked_examples": [
+              "A 20% increase followed by a 20% decrease multiplies a quantity by 1.2×0.8=0.96, producing a net 4% decrease."
+            ],
+            "pitfall": "A percentage change is meaningless without identifying the quantity used as the base.",
+            "mastery_check": "Solve successive-change and reverse-percentage problems by explicitly identifying the base amount.",
+            "revision": "Revise percentages through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "rates",
+          "study_materials": {
+            "objective": "Build mastery of rates in Advanced Arithmetic for National Mathematics Championship.",
+            "teaching_content": "A rate compares quantities measured in different units, such as distance per time, work per hour or cost per item. Unit consistency is essential.",
+            "worked_examples": [
+              "If a cyclist travels 36 km in 2 hours, the average speed is 18 km/h; converting minutes or seconds incorrectly would change the result."
+            ],
+            "pitfall": "Adding rates from different tasks without considering how the tasks combine can produce incorrect answers.",
+            "mastery_check": "Set up rate equations with consistent units and distinguish average rate from component rates.",
+            "revision": "Revise rates through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "proportional reasoning",
+          "study_materials": {
+            "objective": "Build mastery of proportional reasoning in Advanced Arithmetic for National Mathematics Championship.",
+            "teaching_content": "Direct proportion means one quantity changes by a constant factor with another, while inverse proportion means their product remains constant under stated conditions.",
+            "worked_examples": [
+              "If four identical machines complete a fixed job in 6 hours under ideal assumptions, doubling the machines suggests half the time: 3 hours."
+            ],
+            "pitfall": "Not every relationship that increases together is directly proportional.",
+            "mastery_check": "Identify the relationship type, state its assumptions and use scaling factors correctly.",
+            "revision": "Revise proportional reasoning through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integer problems",
+          "study_materials": {
+            "objective": "Build mastery of integer problems in Advanced Arithmetic for National Mathematics Championship.",
+            "teaching_content": "Integer problems use whole-number constraints, signs, parity, divisibility and bounds. The discrete nature of integers often provides stronger restrictions than continuous algebra alone.",
+            "worked_examples": [
+              "If two integers have an odd sum, one must be even and the other odd, because equal parity would produce an even sum."
+            ],
+            "pitfall": "Solving an integer problem over all real numbers can produce answers that violate the original domain.",
+            "mastery_check": "Use parity, bounds, divisibility and integer constraints to eliminate impossible cases.",
+            "revision": "Revise integer problems through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Algebra",
+      "subtopics": [
+        {
+          "title": "expressions",
+          "study_materials": {
+            "objective": "Build mastery of expressions in Algebra for National Mathematics Championship.",
+            "teaching_content": "Algebraic expressions combine constants, variables and operations according to a precise order and structure. Simplification preserves value while revealing useful forms.",
+            "worked_examples": [
+              "Expanding (x+3)(x+5) gives x²+8x+15, which can then be compared with other expressions."
+            ],
+            "pitfall": "Combining unlike terms such as x and x² as though they were the same changes the expression.",
+            "mastery_check": "Simplify, expand and factor expressions accurately and explain why each transformation preserves value.",
+            "revision": "Revise expressions through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "equations",
+          "study_materials": {
+            "objective": "Build mastery of equations in Algebra for National Mathematics Championship.",
+            "teaching_content": "An equation asserts equality between two expressions. Solving means finding values that satisfy the equality while respecting restrictions introduced by operations.",
+            "worked_examples": [
+              "For 3x+5=20, subtract 5 and divide by 3 to obtain x=5, then substitute back to verify."
+            ],
+            "pitfall": "Multiplying or dividing by an expression that could be zero can introduce or lose solutions if restrictions are ignored.",
+            "mastery_check": "Solve equations systematically, state domain restrictions and verify candidate solutions.",
+            "revision": "Revise equations through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "inequalities",
+          "study_materials": {
+            "objective": "Build mastery of inequalities in Algebra for National Mathematics Championship.",
+            "teaching_content": "Inequalities compare quantities and describe sets of possible values rather than usually one exact answer. Multiplying or dividing by a negative reverses the inequality sign.",
+            "worked_examples": [
+              "From -2x>6, division by -2 gives x<-3, with the inequality direction reversed."
+            ],
+            "pitfall": "Solving an inequality like an equation without reversing the sign under a negative multiplier gives the wrong solution set.",
+            "mastery_check": "Solve linear and basic nonlinear inequalities and represent the resulting solution region correctly.",
+            "revision": "Revise inequalities through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "identities",
+          "study_materials": {
+            "objective": "Build mastery of identities in Algebra for National Mathematics Championship.",
+            "teaching_content": "An algebraic identity is true for every value in its stated domain, unlike an equation that may hold only for particular values. Standard identities can transform difficult expressions.",
+            "worked_examples": [
+              "The identity (a+b)^2=a²+2ab+b² follows by expansion and holds for all real a and b."
+            ],
+            "pitfall": "Confusing an identity with a conditional equation can lead to incorrect assumptions about when it is valid.",
+            "mastery_check": "Recognize, prove and apply common algebraic identities in unfamiliar competition problems.",
+            "revision": "Revise identities through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "algebraic problem solving",
+          "study_materials": {
+            "objective": "Build mastery of algebraic problem solving in Algebra for National Mathematics Championship.",
+            "teaching_content": "Competition algebra often requires translating a verbal condition into variables, selecting a useful representation and combining several constraints before solving.",
+            "worked_examples": [
+              "If a rectangle has perimeter 30 and length is twice its width, writing 2(2w+w)=30 reduces the problem to one variable."
+            ],
+            "pitfall": "Choosing variables without defining what they represent can produce equations that encode the wrong situation.",
+            "mastery_check": "Translate a multi-condition problem into algebra, solve it, and interpret the result in the original context.",
+            "revision": "Revise algebraic problem solving through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Geometry",
+      "subtopics": [
+        {
+          "title": "angles",
+          "study_materials": {
+            "objective": "Build mastery of angles in Geometry for National Mathematics Championship.",
+            "teaching_content": "Angle relationships arise from lines, intersections, polygons and parallel-line configurations. Recognizing invariant relationships can reduce a diagram to a few equations.",
+            "worked_examples": [
+              "If two adjacent angles form a straight line and one is 68°, the other is 112° because their sum is 180°."
+            ],
+            "pitfall": "A diagram drawn approximately is not proof that two angles are equal or lines are parallel.",
+            "mastery_check": "Use angle sums and parallel-line relationships to derive unknown angles from stated facts.",
+            "revision": "Revise angles through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "triangles",
+          "study_materials": {
+            "objective": "Build mastery of triangles in Geometry for National Mathematics Championship.",
+            "teaching_content": "Triangles obey angle-sum and side relationships, including isosceles properties, congruence, similarity and the Pythagorean theorem in right triangles.",
+            "worked_examples": [
+              "A right triangle with legs 6 and 8 has hypotenuse 10 by the Pythagorean theorem."
+            ],
+            "pitfall": "The Pythagorean theorem applies only to right triangles, and visual appearance is not enough to establish congruence.",
+            "mastery_check": "Select appropriate triangle theorems and justify the relationship before calculating.",
+            "revision": "Revise triangles through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "polygons",
+          "study_materials": {
+            "objective": "Build mastery of polygons in Geometry for National Mathematics Championship.",
+            "teaching_content": "For an n-sided polygon, the sum of interior angles is (n−2)×180°. Regular polygons add equal-angle and symmetry constraints.",
+            "worked_examples": [
+              "A regular hexagon has interior-angle sum 720°, so each interior angle is 120°."
+            ],
+            "pitfall": "The interior-angle sum is not the measure of one angle in a regular polygon.",
+            "mastery_check": "Use polygon angle formulas and symmetry to solve multi-step geometry problems.",
+            "revision": "Revise polygons through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "circles",
+          "study_materials": {
+            "objective": "Build mastery of circles in Geometry for National Mathematics Championship.",
+            "teaching_content": "Circle geometry uses radius, diameter, circumference, area, arcs, chords, tangents and angle relationships. The same radius and central-angle structure often unlocks competition problems.",
+            "worked_examples": [
+              "A circle with radius 7 has circumference 14π and area 49π; the formulas use the same radius but describe different quantities."
+            ],
+            "pitfall": "Confusing circumference with area or radius with diameter creates systematic factor errors.",
+            "mastery_check": "Apply circle formulas and basic angle, chord and tangent relationships while tracking what each quantity represents.",
+            "revision": "Revise circles through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "area and geometry proofs",
+          "study_materials": {
+            "objective": "Build mastery of area and geometry proofs in Geometry for National Mathematics Championship.",
+            "teaching_content": "Area methods combine formulas, decomposition, rearrangement and sometimes similarity or algebra. Geometry proofs require a logically ordered chain from given facts to the desired conclusion.",
+            "worked_examples": [
+              "A complex polygon can be split into rectangles and triangles, while a proof may establish equal areas by showing two triangles share a base and have equal heights."
+            ],
+            "pitfall": "A numerical diagram is not proof; measurements or visual symmetry cannot replace stated geometric reasons.",
+            "mastery_check": "Calculate composite areas and write short proofs in which every conclusion follows from a stated theorem, definition or given fact.",
+            "revision": "Revise area and geometry proofs through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Combinatorics",
+      "subtopics": [
+        {
+          "title": "counting principles",
+          "study_materials": {
+            "objective": "Build mastery of counting principles in Combinatorics for National Mathematics Championship.",
+            "teaching_content": "Combinatorics begins by deciding whether choices are independent, sequential, grouped or overlapping. The multiplication principle counts successive choices, while the addition principle combines mutually exclusive cases.",
+            "worked_examples": [
+              "If a meal has 3 starters and 4 main courses and one of each is chosen, there are 3×4=12 possible meals."
+            ],
+            "pitfall": "Multiplying counts that are not independent or adding cases that overlap can double-count outcomes.",
+            "mastery_check": "Choose and justify an addition or multiplication structure before calculating a total.",
+            "revision": "Revise counting principles through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "arrangements",
+          "study_materials": {
+            "objective": "Build mastery of arrangements in Combinatorics for National Mathematics Championship.",
+            "teaching_content": "Arrangements count ordered outcomes. Permutations are appropriate when position matters, while repeated or restricted elements require additional care.",
+            "worked_examples": [
+              "Three distinct books can be arranged on a shelf in 3!=6 orders."
+            ],
+            "pitfall": "Treating an ordered arrangement as an unordered selection loses positional information.",
+            "mastery_check": "Determine whether order matters and count arrangements with repeated or restricted positions correctly.",
+            "revision": "Revise arrangements through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "selections",
+          "study_materials": {
+            "objective": "Build mastery of selections in Combinatorics for National Mathematics Championship.",
+            "teaching_content": "Selections count groups where order does not matter. Binomial coefficients provide a systematic method for choosing a fixed number from a larger set.",
+            "worked_examples": [
+              "Choosing 2 students from 5 gives C(5,2)=10 groups because the pair {A,B} is the same selection as {B,A}."
+            ],
+            "pitfall": "Counting the same group in different orders creates duplicates.",
+            "mastery_check": "Distinguish combinations from permutations and solve selection problems with stated restrictions.",
+            "revision": "Revise selections through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "casework",
+          "study_materials": {
+            "objective": "Build mastery of casework in Combinatorics for National Mathematics Championship.",
+            "teaching_content": "Casework partitions a problem into distinct, exhaustive cases and solves each case without overlap. Good casework reduces complexity rather than multiplying possibilities blindly.",
+            "worked_examples": [
+              "A digit problem can be split into cases based on whether the first digit is zero, even or odd, provided the cases are mutually exclusive and cover every allowed outcome."
+            ],
+            "pitfall": "Missing a case or allowing two cases to overlap causes an incorrect total.",
+            "mastery_check": "Design a complete, non-overlapping case split and combine the results accurately.",
+            "revision": "Revise casework through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "inclusion exclusion basics",
+          "study_materials": {
+            "objective": "Build mastery of inclusion exclusion basics in Combinatorics for National Mathematics Championship.",
+            "teaching_content": "Inclusion-exclusion corrects double counting when sets overlap. For two sets, the size of their union equals the sum of their sizes minus the intersection.",
+            "worked_examples": [
+              "If 18 students like chess, 12 like coding and 5 like both, then 25 like at least one: 18+12−5."
+            ],
+            "pitfall": "Adding set sizes without subtracting the overlap counts shared members twice.",
+            "mastery_check": "Identify overlaps and apply inclusion-exclusion to small multi-set counting problems.",
+            "revision": "Revise inclusion exclusion basics through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sequences & Patterns",
+      "subtopics": [
+        {
+          "title": "arithmetic sequences",
+          "study_materials": {
+            "objective": "Build mastery of arithmetic sequences in Sequences & Patterns for National Mathematics Championship.",
+            "teaching_content": "An arithmetic sequence has a constant common difference. Its nth term is a+(n−1)d and its partial sum can be found from the first and last terms.",
+            "worked_examples": [
+              "For 7, 11, 15, 19,... the common difference is 4, so the 10th term is 7+9×4=43."
+            ],
+            "pitfall": "Using the first term as though it were the zeroth term shifts the index and produces an off-by-one error.",
+            "mastery_check": "Find terms and sums of arithmetic sequences and translate between recursive and explicit descriptions.",
+            "revision": "Revise arithmetic sequences through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "geometric sequences",
+          "study_materials": {
+            "objective": "Build mastery of geometric sequences in Sequences & Patterns for National Mathematics Championship.",
+            "teaching_content": "A geometric sequence has a constant common ratio. Its nth term scales multiplicatively rather than by a fixed difference.",
+            "worked_examples": [
+              "For 3, 6, 12, 24,... the ratio is 2 and the 6th term is 3×2^5=96."
+            ],
+            "pitfall": "A constant difference does not imply a geometric sequence, and the ratio must be defined where division is valid.",
+            "mastery_check": "Identify common ratios and calculate terms or finite sums of geometric sequences.",
+            "revision": "Revise geometric sequences through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "recurrences",
+          "study_materials": {
+            "objective": "Build mastery of recurrences in Sequences & Patterns for National Mathematics Championship.",
+            "teaching_content": "A recurrence defines terms from earlier terms. Solving or analyzing it requires tracking the initial conditions as well as the update rule.",
+            "worked_examples": [
+              "The Fibonacci sequence uses a_n=a_(n−1)+a_(n−2) with initial terms 0 and 1; both the recurrence and starting values are necessary."
+            ],
+            "pitfall": "A recurrence without initial conditions may not determine a unique sequence.",
+            "mastery_check": "Generate terms accurately and reason from a recurrence while preserving its initial conditions.",
+            "revision": "Revise recurrences through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "visual patterns",
+          "study_materials": {
+            "objective": "Build mastery of visual patterns in Sequences & Patterns for National Mathematics Championship.",
+            "teaching_content": "Visual patterns encode numerical relationships through shapes, grids, tiles or growing arrangements. Translating the visual structure into a count often reveals a sequence or formula.",
+            "worked_examples": [
+              "A row of joined squares may use one new edge-sharing square at each step, allowing the number of tiles or exposed sides to be expressed as a function of the step number."
+            ],
+            "pitfall": "Guessing from the first few drawings without identifying what changes between stages can lead to the wrong rule.",
+            "mastery_check": "Translate a visual growth rule into a numerical sequence or formula and justify the pattern.",
+            "revision": "Revise visual patterns through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "pattern proofs",
+          "study_materials": {
+            "objective": "Build mastery of pattern proofs in Sequences & Patterns for National Mathematics Championship.",
+            "teaching_content": "A pattern becomes mathematically reliable when the rule is justified rather than merely observed. Induction, algebraic derivation or structural reasoning can provide that justification.",
+            "worked_examples": [
+              "To justify 1+3+5+...+(2n−1)=n², one can show the next odd number converts n² into (n+1)²."
+            ],
+            "pitfall": "Checking many examples provides evidence but does not by itself prove a statement for every allowed n.",
+            "mastery_check": "Distinguish observation from proof and justify a general pattern using an appropriate method.",
+            "revision": "Revise pattern proofs through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Probability & Data",
+      "subtopics": [
+        {
+          "title": "sample spaces",
+          "study_materials": {
+            "objective": "Build mastery of sample spaces in Probability & Data for National Mathematics Championship.",
+            "teaching_content": "A sample space lists or characterizes all possible outcomes of a random experiment. Correct probability calculations depend on defining the relevant outcomes and their weights.",
+            "worked_examples": [
+              "For one fair coin and one fair die, the sample space has 2×6=12 equally likely elementary outcomes."
+            ],
+            "pitfall": "Ignoring an outcome or treating unequal outcomes as equally likely can distort the probability.",
+            "mastery_check": "Define a complete sample space and determine whether its outcomes are equally likely before calculating.",
+            "revision": "Revise sample spaces through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "probability rules",
+          "study_materials": {
+            "objective": "Build mastery of probability rules in Probability & Data for National Mathematics Championship.",
+            "teaching_content": "Probability values lie between 0 and 1. Complement, addition and multiplication rules allow compound events to be calculated when their relationships are understood.",
+            "worked_examples": [
+              "For any event A, P(not A)=1−P(A). If two events are mutually exclusive, P(A or B)=P(A)+P(B)."
+            ],
+            "pitfall": "Using the multiplication rule merely because two events occur in the same question ignores whether they are independent or conditional.",
+            "mastery_check": "Select the correct probability rule based on event relationships and justify its use.",
+            "revision": "Revise probability rules through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "expected outcomes",
+          "study_materials": {
+            "objective": "Build mastery of expected outcomes in Probability & Data for National Mathematics Championship.",
+            "teaching_content": "Expected value is the probability-weighted average of possible numerical outcomes. It describes long-run average behaviour, not a guaranteed result of one trial.",
+            "worked_examples": [
+              "For a fair six-sided die, the expected roll is (1+2+3+4+5+6)/6=3.5 even though 3.5 cannot appear on one roll."
+            ],
+            "pitfall": "Expected value should not be interpreted as the outcome that must occur or even the most likely single outcome.",
+            "mastery_check": "Calculate and interpret expected values as long-run averages and distinguish them from actual outcomes.",
+            "revision": "Revise expected outcomes through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "data analysis",
+          "study_materials": {
+            "objective": "Build mastery of data analysis in Probability & Data for National Mathematics Championship.",
+            "teaching_content": "Data analysis involves organizing, summarizing and interpreting numerical information using measures such as mean, median, range and appropriate charts.",
+            "worked_examples": [
+              "For 2, 3, 3, 8, 14, the median is 3 while the mean is 6, illustrating how an extreme value can pull the mean upward."
+            ],
+            "pitfall": "Averages can hide spread or skew, and a chart can mislead if its scale is distorted.",
+            "mastery_check": "Choose appropriate summaries and interpret center, spread and outliers rather than relying on one statistic.",
+            "revision": "Revise data analysis through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "conditional reasoning",
+          "study_materials": {
+            "objective": "Build mastery of conditional reasoning in Probability & Data for National Mathematics Championship.",
+            "teaching_content": "Conditional probability measures the chance of an event given that another event is known to have occurred. The new information can change the relevant sample space.",
+            "worked_examples": [
+              "If a card is known to be a face card, the probability it is a king is 4/12=1/3 because only the 12 face cards remain relevant."
+            ],
+            "pitfall": "Using the original sample space after receiving new information ignores the condition.",
+            "mastery_check": "Update the sample space or use P(A|B)=P(A and B)/P(B) to solve conditional problems.",
+            "revision": "Revise conditional reasoning through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Olympiad Problem Solving",
+      "subtopics": [
+        {
+          "title": "invariants",
+          "study_materials": {
+            "objective": "Build mastery of invariants in Olympiad Problem Solving for National Mathematics Championship.",
+            "teaching_content": "An invariant is a quantity or property that remains unchanged under every allowed move of a process. It can prove that a target state is impossible even when many moves are possible.",
+            "worked_examples": [
+              "If an operation always changes a number by an even amount, its parity remains invariant, so an odd starting value can never become even."
+            ],
+            "pitfall": "A quantity that changes during a move is not an invariant merely because it often looks similar.",
+            "mastery_check": "Identify a property preserved by every legal operation and use it to constrain reachable states.",
+            "revision": "Revise invariants through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "extremal reasoning",
+          "study_materials": {
+            "objective": "Build mastery of extremal reasoning in Olympiad Problem Solving for National Mathematics Championship.",
+            "teaching_content": "Extremal reasoning focuses on a largest, smallest, earliest or otherwise extreme object because its properties can force constraints on the rest of a configuration.",
+            "worked_examples": [
+              "In a finite set of integers, choosing the smallest counterexample can allow a proof to show that a still smaller counterexample must exist, producing a contradiction."
+            ],
+            "pitfall": "Selecting an arbitrary example instead of a genuinely extreme one removes the key logical leverage.",
+            "mastery_check": "Identify a useful extremal object and derive a contradiction or structural conclusion from its extremal property.",
+            "revision": "Revise extremal reasoning through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "working backwards",
+          "study_materials": {
+            "objective": "Build mastery of working backwards in Olympiad Problem Solving for National Mathematics Championship.",
+            "teaching_content": "Working backwards starts from the required final condition and reverses valid operations to recover possible starting states or necessary intermediate states.",
+            "worked_examples": [
+              "If a number is doubled and then 5 is added to obtain 23, reverse the operations: 23−5=18 and 18÷2=9."
+            ],
+            "pitfall": "Reversing operations in the wrong order or ignoring non-reversible steps can create false solutions.",
+            "mastery_check": "Reverse a sequence of operations carefully and verify the recovered starting state by running the original process forward.",
+            "revision": "Revise working backwards through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "construction",
+          "study_materials": {
+            "objective": "Build mastery of construction in Olympiad Problem Solving for National Mathematics Championship.",
+            "teaching_content": "Constructive problems ask for an explicit object satisfying given conditions rather than only proving that one exists. A successful construction must be checked against every constraint.",
+            "worked_examples": [
+              "To show that a required arrangement exists, build a specific arrangement and verify each adjacency or counting condition."
+            ],
+            "pitfall": "Producing an example that satisfies most but not all constraints is not a valid construction.",
+            "mastery_check": "Build explicit examples systematically and verify every required condition.",
+            "revision": "Revise construction through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "multi-step proofs",
+          "study_materials": {
+            "objective": "Build mastery of multi-step proofs in Olympiad Problem Solving for National Mathematics Championship.",
+            "teaching_content": "Competition proofs often combine definitions, lemmas, algebraic transformations and contradiction or induction. Each step must follow from established facts.",
+            "worked_examples": [
+              "A geometry proof might first establish two triangles are similar, then use corresponding ratios to derive the requested length."
+            ],
+            "pitfall": "Skipping the justification for a crucial intermediate claim can make a proof appear plausible while leaving a logical gap.",
+            "mastery_check": "Organize a multi-step proof into justified claims and ensure the conclusion follows from the chain of evidence.",
+            "revision": "Revise multi-step proofs through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Competition Strategy",
+      "subtopics": [
+        {
+          "title": "estimation",
+          "study_materials": {
+            "objective": "Build mastery of estimation in Competition Strategy for National Mathematics Championship.",
+            "teaching_content": "Estimation provides a fast reasonableness check and can sometimes eliminate answer choices before exact calculation. It relies on controlled rounding and scale awareness.",
+            "worked_examples": [
+              "To estimate 49.8×20.2, round to about 50×20=1000 before checking an exact result."
+            ],
+            "pitfall": "Rounding in inconsistent directions or too aggressively can produce an estimate that is not useful.",
+            "mastery_check": "Choose sensible approximations, estimate the scale of an answer and use the estimate to detect implausible results.",
+            "revision": "Revise estimation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "time allocation",
+          "study_materials": {
+            "objective": "Build mastery of time allocation in Competition Strategy for National Mathematics Championship.",
+            "teaching_content": "Competition time management means allocating effort according to question difficulty, scoring value and remaining time rather than spending too long on one obstacle.",
+            "worked_examples": [
+              "If a paper contains easy, medium and difficult questions, securing the easy marks first can leave more time for high-value problems later."
+            ],
+            "pitfall": "Spending most of the available time on the first difficult question can reduce the total score even if that question is eventually solved.",
+            "mastery_check": "Use a deliberate first pass, mark uncertain problems and redistribute time based on progress.",
+            "revision": "Revise time allocation through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "answer verification",
+          "study_materials": {
+            "objective": "Build mastery of answer verification in Competition Strategy for National Mathematics Championship.",
+            "teaching_content": "Verification checks whether a solution satisfies the original conditions and whether arithmetic, units, signs and logical assumptions are consistent.",
+            "worked_examples": [
+              "After solving x=5, substitute it into the original equation rather than checking only the transformed equation."
+            ],
+            "pitfall": "A calculation can be internally consistent yet answer a different question because of an incorrect interpretation.",
+            "mastery_check": "Substitute, estimate, inspect units and reread the original condition before finalizing an answer.",
+            "revision": "Revise answer verification through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "error analysis",
+          "study_materials": {
+            "objective": "Build mastery of error analysis in Competition Strategy for National Mathematics Championship.",
+            "teaching_content": "Error analysis identifies where a solution first diverged from valid reasoning and distinguishes conceptual mistakes from arithmetic or transcription errors.",
+            "worked_examples": [
+              "If a student applies the correct formula but substitutes the wrong value, the repair is different from choosing an invalid theorem in the first place."
+            ],
+            "pitfall": "Fixing only the final number without locating the first invalid step can leave the underlying misconception unchanged.",
+            "mastery_check": "Locate the first incorrect step, classify the error and state the correct reasoning that replaces it.",
+            "revision": "Revise error analysis through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "mixed championship sets",
+          "study_materials": {
+            "objective": "Build mastery of mixed championship sets in Competition Strategy for National Mathematics Championship.",
+            "teaching_content": "Mixed sets require switching among number theory, algebra, geometry, combinatorics, probability and proof without being told the topic in advance. The key skill is rapid problem classification.",
+            "worked_examples": [
+              "A mixed paper may place a modular arithmetic problem beside a geometry proof; first identify the governing structure before selecting a method."
+            ],
+            "pitfall": "Continuing with the method used on the previous question can bias the solver toward the wrong mathematical tool.",
+            "mastery_check": "Classify unfamiliar problems quickly, select an appropriate strategy, solve rigorously and verify the result.",
+            "revision": "Revise mixed championship sets through teaching, worked examples, targeted practice, error correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "NATIONAL-M-MOCK-01",
+      "focus": "core curriculum and topic-wise preparation"
+    },
+    {
+      "id": "NATIONAL-M-MOCK-02",
+      "focus": "advanced mixed-domain preparation"
+    },
+    {
+      "id": "NATIONAL-M-MOCK-03",
+      "focus": "full championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "National Mathematics Championship official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
