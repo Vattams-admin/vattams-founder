@@ -92,3 +92,4 @@ console.log(`RESULT: PASS — ${slug}: ${publicBank.length} reviewed mock MCQs, 
 // Trigger isolated runtime preparation diagnostics.\n
 // Trigger independent 24-competition matrix gate.\n
 // Trigger per-competition diagnostic issue publication.\n
+// Trigger artifact-backed per-competition diagnostics.\n
