@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "Azhagu Tamil Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/azhagu-tamil-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Tamil Language Foundations",
+      "subtopics": [
+        {
+          "title": "letters and sounds",
+          "study_materials": {
+            "objective": "Build mastery of letters and sounds in Tamil Language Foundations.",
+            "teaching_content": "Master letters and sounds within Tamil Language Foundations for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative letters and sounds task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar letters and sounds task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise letters and sounds using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "uyir mei structure",
+          "study_materials": {
+            "objective": "Build mastery of uyir mei structure in Tamil Language Foundations.",
+            "teaching_content": "Master uyir mei structure within Tamil Language Foundations for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative uyir mei structure task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar uyir mei structure task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise uyir mei structure using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "word formation",
+          "study_materials": {
+            "objective": "Build mastery of word formation in Tamil Language Foundations.",
+            "teaching_content": "Master word formation within Tamil Language Foundations for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative word formation task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar word formation task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise word formation using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "spelling",
+          "study_materials": {
+            "objective": "Build mastery of spelling in Tamil Language Foundations.",
+            "teaching_content": "Master spelling within Tamil Language Foundations for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative spelling task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar spelling task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise spelling using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "vocabulary",
+          "study_materials": {
+            "objective": "Build mastery of vocabulary in Tamil Language Foundations.",
+            "teaching_content": "Master vocabulary within Tamil Language Foundations for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative vocabulary task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar vocabulary task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise vocabulary using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Grammar",
+      "subtopics": [
+        {
+          "title": "sol vagai",
+          "study_materials": {
+            "objective": "Build mastery of sol vagai in Grammar.",
+            "teaching_content": "Master sol vagai within Grammar for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative sol vagai task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar sol vagai task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise sol vagai using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "word relationships",
+          "study_materials": {
+            "objective": "Build mastery of word relationships in Grammar.",
+            "teaching_content": "Master word relationships within Grammar for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative word relationships task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar word relationships task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise word relationships using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "tense and usage",
+          "study_materials": {
+            "objective": "Build mastery of tense and usage in Grammar.",
+            "teaching_content": "Master tense and usage within Grammar for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative tense and usage task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar tense and usage task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise tense and usage using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sentence structure",
+          "study_materials": {
+            "objective": "Build mastery of sentence structure in Grammar.",
+            "teaching_content": "Master sentence structure within Grammar for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative sentence structure task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar sentence structure task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise sentence structure using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "grammar correction",
+          "study_materials": {
+            "objective": "Build mastery of grammar correction in Grammar.",
+            "teaching_content": "Master grammar correction within Grammar for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative grammar correction task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar grammar correction task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise grammar correction using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Literature & Poetry",
+      "subtopics": [
+        {
+          "title": "Tamil poems",
+          "study_materials": {
+            "objective": "Build mastery of Tamil poems in Literature & Poetry.",
+            "teaching_content": "Master Tamil poems within Literature & Poetry for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative Tamil poems task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar Tamil poems task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise Tamil poems using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "prose",
+          "study_materials": {
+            "objective": "Build mastery of prose in Literature & Poetry.",
+            "teaching_content": "Master prose within Literature & Poetry for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative prose task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar prose task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise prose using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "literary themes",
+          "study_materials": {
+            "objective": "Build mastery of literary themes in Literature & Poetry.",
+            "teaching_content": "Master literary themes within Literature & Poetry for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative literary themes task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar literary themes task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise literary themes using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "poetic devices",
+          "study_materials": {
+            "objective": "Build mastery of poetic devices in Literature & Poetry.",
+            "teaching_content": "Master poetic devices within Literature & Poetry for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative poetic devices task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar poetic devices task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise poetic devices using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "authors and works",
+          "study_materials": {
+            "objective": "Build mastery of authors and works in Literature & Poetry.",
+            "teaching_content": "Master authors and works within Literature & Poetry for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative authors and works task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar authors and works task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise authors and works using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Thirukkural & Ethics",
+      "subtopics": [
+        {
+          "title": "selected kurals",
+          "study_materials": {
+            "objective": "Build mastery of selected kurals in Thirukkural & Ethics.",
+            "teaching_content": "Master selected kurals within Thirukkural & Ethics for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative selected kurals task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar selected kurals task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise selected kurals using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "meaning",
+          "study_materials": {
+            "objective": "Build mastery of meaning in Thirukkural & Ethics.",
+            "teaching_content": "Master meaning within Thirukkural & Ethics for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative meaning task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar meaning task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise meaning using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "themes",
+          "study_materials": {
+            "objective": "Build mastery of themes in Thirukkural & Ethics.",
+            "teaching_content": "Master themes within Thirukkural & Ethics for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative themes task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar themes task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise themes using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "ethical applications",
+          "study_materials": {
+            "objective": "Build mastery of ethical applications in Thirukkural & Ethics.",
+            "teaching_content": "Master ethical applications within Thirukkural & Ethics for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative ethical applications task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar ethical applications task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise ethical applications using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "recognition",
+          "study_materials": {
+            "objective": "Build mastery of recognition in Thirukkural & Ethics.",
+            "teaching_content": "Master recognition within Thirukkural & Ethics for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative recognition task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar recognition task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise recognition using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vocabulary Mastery",
+      "subtopics": [
+        {
+          "title": "synonyms",
+          "study_materials": {
+            "objective": "Build mastery of synonyms in Vocabulary Mastery.",
+            "teaching_content": "Master synonyms within Vocabulary Mastery for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative synonyms task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar synonyms task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise synonyms using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "antonyms",
+          "study_materials": {
+            "objective": "Build mastery of antonyms in Vocabulary Mastery.",
+            "teaching_content": "Master antonyms within Vocabulary Mastery for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative antonyms task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar antonyms task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise antonyms using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "idioms",
+          "study_materials": {
+            "objective": "Build mastery of idioms in Vocabulary Mastery.",
+            "teaching_content": "Master idioms within Vocabulary Mastery for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative idioms task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar idioms task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise idioms using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "proverbs",
+          "study_materials": {
+            "objective": "Build mastery of proverbs in Vocabulary Mastery.",
+            "teaching_content": "Master proverbs within Vocabulary Mastery for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative proverbs task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar proverbs task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise proverbs using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "context usage",
+          "study_materials": {
+            "objective": "Build mastery of context usage in Vocabulary Mastery.",
+            "teaching_content": "Master context usage within Vocabulary Mastery for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative context usage task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar context usage task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise context usage using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reading Comprehension",
+      "subtopics": [
+        {
+          "title": "main idea",
+          "study_materials": {
+            "objective": "Build mastery of main idea in Reading Comprehension.",
+            "teaching_content": "Master main idea within Reading Comprehension for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative main idea task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar main idea task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise main idea using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "details",
+          "study_materials": {
+            "objective": "Build mastery of details in Reading Comprehension.",
+            "teaching_content": "Master details within Reading Comprehension for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative details task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar details task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise details using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "inference",
+          "study_materials": {
+            "objective": "Build mastery of inference in Reading Comprehension.",
+            "teaching_content": "Master inference within Reading Comprehension for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative inference task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar inference task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise inference using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "sequence",
+          "study_materials": {
+            "objective": "Build mastery of sequence in Reading Comprehension.",
+            "teaching_content": "Master sequence within Reading Comprehension for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative sequence task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar sequence task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise sequence using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "message",
+          "study_materials": {
+            "objective": "Build mastery of message in Reading Comprehension.",
+            "teaching_content": "Master message within Reading Comprehension for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative message task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar message task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise message using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Writing & Expression",
+      "subtopics": [
+        {
+          "title": "sentence construction",
+          "study_materials": {
+            "objective": "Build mastery of sentence construction in Writing & Expression.",
+            "teaching_content": "Master sentence construction within Writing & Expression for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative sentence construction task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar sentence construction task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise sentence construction using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "paragraphs",
+          "study_materials": {
+            "objective": "Build mastery of paragraphs in Writing & Expression.",
+            "teaching_content": "Master paragraphs within Writing & Expression for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative paragraphs task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar paragraphs task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise paragraphs using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "description",
+          "study_materials": {
+            "objective": "Build mastery of description in Writing & Expression.",
+            "teaching_content": "Master description within Writing & Expression for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative description task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar description task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise description using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "creative expression",
+          "study_materials": {
+            "objective": "Build mastery of creative expression in Writing & Expression.",
+            "teaching_content": "Master creative expression within Writing & Expression for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative creative expression task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar creative expression task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise creative expression using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "editing",
+          "study_materials": {
+            "objective": "Build mastery of editing in Writing & Expression.",
+            "teaching_content": "Master editing within Writing & Expression for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative editing task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar editing task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise editing using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tamil Reasoning",
+      "subtopics": [
+        {
+          "title": "analogies",
+          "study_materials": {
+            "objective": "Build mastery of analogies in Tamil Reasoning.",
+            "teaching_content": "Master analogies within Tamil Reasoning for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative analogies task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar analogies task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise analogies using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "classification",
+          "study_materials": {
+            "objective": "Build mastery of classification in Tamil Reasoning.",
+            "teaching_content": "Master classification within Tamil Reasoning for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative classification task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar classification task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise classification using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "word puzzles",
+          "study_materials": {
+            "objective": "Build mastery of word puzzles in Tamil Reasoning.",
+            "teaching_content": "Master word puzzles within Tamil Reasoning for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative word puzzles task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar word puzzles task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise word puzzles using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "letter patterns",
+          "study_materials": {
+            "objective": "Build mastery of letter patterns in Tamil Reasoning.",
+            "teaching_content": "Master letter patterns within Tamil Reasoning for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative letter patterns task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar letter patterns task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise letter patterns using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "language logic",
+          "study_materials": {
+            "objective": "Build mastery of language logic in Tamil Reasoning.",
+            "teaching_content": "Master language logic within Tamil Reasoning for Azhagu Tamil Challenge. Establish the core terminology, observable or textual features, and the skill needed to apply it. Progress from recognition to independent application, then to unfamiliar competition scenarios. Students should explain their choices, identify errors or misconceptions, and verify the result rather than relying on memorisation alone.",
+            "worked_examples": [
+              "Worked example: complete a representative language logic task, identify the key rule, clue, language feature or performance criterion, then explain and verify the result."
+            ],
+            "pitfall": "Common pitfall: confusing a related term, form, interpretation or technique with the exact requirement of the task, or skipping verification after producing an answer or performance sample.",
+            "mastery_check": "Mastery: perform or solve an unfamiliar language logic task independently, explain the reasoning or technique, correct a plausible error, and verify the final result against the stated criteria.",
+            "revision": "Revise language logic using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tamil Championship Mastery",
+      "subtopics": [
+        {
+          "title": "language challenge strategy",
+          "study_materials": {
+            "objective": "Build mastery of language challenge strategy in Tamil Championship Mastery.",
+            "teaching_content": "Choose the appropriate Tamil language skill by identifying whether a challenge depends on grammar, vocabulary, literature, comprehension, or language reasoning.",
+            "worked_examples": [
+              "A question asking for the best word in a sentence should first be read for context before comparing dictionary meanings."
+            ],
+            "pitfall": "Pitfall: selecting a familiar word without checking its grammatical and contextual fit.",
+            "mastery_check": "Identify the tested Tamil skill and apply a suitable solving method.",
+            "revision": "Revise language challenge strategy using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "meaning and context reasoning",
+          "study_materials": {
+            "objective": "Build mastery of meaning and context reasoning in Tamil Championship Mastery.",
+            "teaching_content": "Use surrounding words, sentence structure, literary context, and semantic relationships to determine the intended meaning rather than relying on isolated translations.",
+            "worked_examples": [
+              "When a Tamil word has multiple meanings, use the surrounding sentence to select the meaning that preserves the author's intended idea."
+            ],
+            "pitfall": "Pitfall: choosing the most common dictionary meaning when the passage clearly signals another sense.",
+            "mastery_check": "Justify a Tamil meaning using contextual evidence.",
+            "revision": "Revise meaning and context reasoning using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "language error detection",
+          "study_materials": {
+            "objective": "Build mastery of language error detection in Tamil Championship Mastery.",
+            "teaching_content": "Review spelling, grammatical agreement, word choice, sentence order, and usage systematically to locate the first language error.",
+            "worked_examples": [
+              "If a sentence contains a tense mismatch, identify the time reference first and then check whether the verb form agrees with it."
+            ],
+            "pitfall": "Pitfall: correcting a stylistic preference when the actual issue is grammatical or spelling accuracy.",
+            "mastery_check": "Locate and explain a genuine Tamil language error and correct it.",
+            "revision": "Revise language error detection using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated Tamil challenges",
+          "study_materials": {
+            "objective": "Build mastery of integrated Tamil challenges in Tamil Championship Mastery.",
+            "teaching_content": "Combine vocabulary, grammar, literature, comprehension, Thirukkural, and language reasoning in unfamiliar question formats.",
+            "worked_examples": [
+              "A passage-based challenge may require identifying its theme, interpreting a phrase, correcting a grammatical form, and selecting a related literary idea."
+            ],
+            "pitfall": "Pitfall: treating each clue independently when the passage provides evidence that connects the answers.",
+            "mastery_check": "Combine multiple Tamil language skills to solve an integrated challenge.",
+            "revision": "Revise integrated Tamil challenges using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "Tamil championship round",
+          "study_materials": {
+            "objective": "Build mastery of Tamil championship round in Tamil Championship Mastery.",
+            "teaching_content": "Practice timed mixed Tamil challenges with careful reading, evidence-based answers, revision of uncertain items, and final accuracy checks.",
+            "worked_examples": [
+              "In a timed round, answer direct vocabulary and grammar items first, then return to longer literature and comprehension questions with the remaining time."
+            ],
+            "pitfall": "Pitfall: rushing literary questions and choosing answers from memory without rereading the relevant text.",
+            "mastery_check": "Complete a mixed Tamil challenge accurately under time pressure and support answers with textual or linguistic evidence.",
+            "revision": "Revise Tamil championship round using examples, guided practice, correction and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "reasoning",
+              "error correction",
+              "championship challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "ATC-MOCK-01",
+      "focus": "Tamil foundations, grammar and vocabulary"
+    },
+    {
+      "id": "ATC-MOCK-02",
+      "focus": "literature, comprehension and language reasoning"
+    },
+    {
+      "id": "ATC-MOCK-03",
+      "focus": "Tamil championship mixed simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "Azhagu Tamil Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
