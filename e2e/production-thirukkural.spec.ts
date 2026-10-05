@@ -34,6 +34,20 @@ async function login(page: Page) {
 }
 
 test.describe('production Thirukkural authenticated smoke', () => {
+  test('enrolled student can start the 30-question mock test', async ({ page }) => {
+    await login(page)
+
+    await page.goto(`/competition/${competitionSlug}`, { waitUntil: 'domcontentloaded' })
+    await expect(page.getByText('Thirukkural Mastery Championship', { exact: true }).first()).toBeVisible({ timeout: 30_000 })
+
+    const mockButton = page.getByRole('button', { name: /Start Mock Test/i })
+    await expect(mockButton).toBeVisible({ timeout: 30_000 })
+    await mockButton.click()
+
+    await expect(page.getByText(/Question 1 of 30/i)).toBeVisible({ timeout: 30_000 })
+    await expect(page.getByText(/Answered 0\/30/i)).toBeVisible({ timeout: 30_000 })
+  })
+
   test('enrolled student can open the official competition and preparation UI', async ({ page }) => {
     await login(page)
 
