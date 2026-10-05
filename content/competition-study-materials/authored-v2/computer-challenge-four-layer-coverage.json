@@ -1,0 +1,1835 @@
+{
+  "schema_version": "1.0.0",
+  "course": "Computer Challenge",
+  "model": "thirukkural_mastery_reference",
+  "status": "four_layer_coverage_v1",
+  "source_core": "content/competition-study-materials/authored-v2/computer-challenge-core.json",
+  "rules": {
+    "taxonomy_preserved": true,
+    "study_materials": "subtopic-specific",
+    "question_bank": "curriculum-mapped",
+    "mock_tests": "separate preparation layer",
+    "official_competition": "separate"
+  },
+  "domains": [
+    {
+      "name": "Digital Foundations",
+      "subtopics": [
+        {
+          "title": "computer components",
+          "study_materials": {
+            "objective": "Build mastery of computer components in Digital Foundations.",
+            "teaching_content": "A computer system uses components such as the processor, memory, storage, motherboard and power system, each serving a different role.",
+            "worked_examples": [
+              "RAM temporarily holds data and instructions being actively used, while storage retains files when power is off."
+            ],
+            "pitfall": "More storage capacity does not mean more processing speed.",
+            "mastery_check": "Explain the role of major computer components and distinguish temporary memory from persistent storage.",
+            "revision": "Revise computer components through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "input output and storage",
+          "study_materials": {
+            "objective": "Build mastery of input output and storage in Digital Foundations.",
+            "teaching_content": "Input devices send information to a computer; output devices present results; storage keeps data for later use.",
+            "worked_examples": [
+              "A keyboard is an input device, a monitor is an output device, and an SSD is storage."
+            ],
+            "pitfall": "A touchscreen can provide both input and output because it displays information and detects touch.",
+            "mastery_check": "Classify devices by their primary functions and recognize devices with multiple roles.",
+            "revision": "Revise input output and storage through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "operating systems",
+          "study_materials": {
+            "objective": "Build mastery of operating systems in Digital Foundations.",
+            "teaching_content": "An operating system manages hardware resources and provides services that allow applications to run and users to interact with the device.",
+            "worked_examples": [
+              "A file manager, process scheduler and device drivers are examples of functions associated with operating systems."
+            ],
+            "pitfall": "An application such as a word processor is not itself the operating system.",
+            "mastery_check": "Describe what an operating system does and distinguish system software from application software.",
+            "revision": "Revise operating systems through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "files and folders",
+          "study_materials": {
+            "objective": "Build mastery of files and folders in Digital Foundations.",
+            "teaching_content": "Files store information while folders organize files and other folders into a manageable structure.",
+            "worked_examples": [
+              "Placing photos inside a named folder and using meaningful filenames makes retrieval easier."
+            ],
+            "pitfall": "Renaming a file does not automatically change its contents.",
+            "mastery_check": "Organize files using sensible names, folders and extensions while understanding basic file operations.",
+            "revision": "Revise files and folders through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "digital devices",
+          "study_materials": {
+            "objective": "Build mastery of digital devices in Digital Foundations.",
+            "teaching_content": "Digital devices process information electronically and include computers, smartphones, tablets, cameras and many embedded systems.",
+            "worked_examples": [
+              "A smart thermostat is a computing device because it senses information, processes it and controls an output."
+            ],
+            "pitfall": "A device does not need a keyboard or screen to contain computing capability.",
+            "mastery_check": "Identify computing devices and explain their input-process-output behaviour.",
+            "revision": "Revise digital devices through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Internet & Networking",
+      "subtopics": [
+        {
+          "title": "web browsers and search",
+          "study_materials": {
+            "objective": "Build mastery of web browsers and search in Internet & Networking.",
+            "teaching_content": "A browser retrieves and displays web resources, while a search engine helps locate indexed information by query.",
+            "worked_examples": [
+              "Typing a question into a search engine produces results; opening one result then uses a browser to request the webpage."
+            ],
+            "pitfall": "A search engine and browser are different tools even though they are commonly used together.",
+            "mastery_check": "Distinguish browser functions from search-engine functions and formulate useful searches.",
+            "revision": "Revise web browsers and search through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "network basics",
+          "study_materials": {
+            "objective": "Build mastery of network basics in Internet & Networking.",
+            "teaching_content": "A network connects devices so they can exchange data and share resources; local and wide-area networks differ in scale and scope.",
+            "worked_examples": [
+              "Devices on a home network may communicate through a router, while the internet connects networks across the world."
+            ],
+            "pitfall": "The internet is not a single cable or single computer.",
+            "mastery_check": "Explain basic network roles and distinguish a local network from the internet.",
+            "revision": "Revise network basics through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "URLs and domains",
+          "study_materials": {
+            "objective": "Build mastery of URLs and domains in Internet & Networking.",
+            "teaching_content": "A URL identifies the location and access method of a web resource; a domain is the human-readable name within an internet addressing system.",
+            "worked_examples": [
+              "In a URL such as https://example.com/page, the scheme is https, the domain is example.com and /page identifies a resource path."
+            ],
+            "pitfall": "A domain name is not the same thing as the entire URL.",
+            "mastery_check": "Identify major URL parts and use domains as one signal when evaluating a destination.",
+            "revision": "Revise URLs and domains through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "connectivity",
+          "study_materials": {
+            "objective": "Build mastery of connectivity in Internet & Networking.",
+            "teaching_content": "Connectivity depends on technologies such as Wi-Fi, mobile networks, Ethernet and Bluetooth, each suited to different ranges and uses.",
+            "worked_examples": [
+              "A phone may use Wi-Fi for a home connection and mobile data when away from that network."
+            ],
+            "pitfall": "A device being connected to Wi-Fi does not guarantee that the internet service itself is available.",
+            "mastery_check": "Choose appropriate connectivity methods and distinguish local connection from internet access.",
+            "revision": "Revise connectivity through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "online communication",
+          "study_materials": {
+            "objective": "Build mastery of online communication in Internet & Networking.",
+            "teaching_content": "Online communication includes email, messaging, video meetings, forums and collaborative platforms, each with different audience and persistence characteristics.",
+            "worked_examples": [
+              "A formal school email should use an appropriate subject and respectful wording, while a quick message to a friend can be shorter."
+            ],
+            "pitfall": "Digital communication can be copied or forwarded beyond its original audience.",
+            "mastery_check": "Select suitable channels and communicate clearly with awareness of audience and permanence.",
+            "revision": "Revise online communication through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Digital Safety",
+      "subtopics": [
+        {
+          "title": "passwords and authentication",
+          "study_materials": {
+            "objective": "Build mastery of passwords and authentication in Digital Safety.",
+            "teaching_content": "Authentication verifies identity. Strong unique passwords, password managers and multi-factor authentication reduce account compromise risk.",
+            "worked_examples": [
+              "A unique password for an important account plus a second authentication factor provides stronger protection than reusing one password everywhere."
+            ],
+            "pitfall": "A password that is merely long but reused across sites can expose multiple accounts after one breach.",
+            "mastery_check": "Create and evaluate safer authentication practices without sharing secrets.",
+            "revision": "Revise passwords and authentication through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "privacy and personal data",
+          "study_materials": {
+            "objective": "Build mastery of privacy and personal data in Digital Safety.",
+            "teaching_content": "Personal data can include names, contact details, identifiers, location information, photos and account information. Privacy controls limit unnecessary exposure.",
+            "worked_examples": [
+              "Before posting a location-tagged photo, consider whether the location and metadata reveal information that should remain private."
+            ],
+            "pitfall": "Publicly available does not mean harmless or impossible to misuse.",
+            "mastery_check": "Identify sensitive information and choose appropriate sharing and privacy settings.",
+            "revision": "Revise privacy and personal data through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "phishing and scams",
+          "study_materials": {
+            "objective": "Build mastery of phishing and scams in Digital Safety.",
+            "teaching_content": "Phishing attempts trick people into revealing information or taking unsafe actions through deceptive messages, websites or calls.",
+            "worked_examples": [
+              "An urgent message demanding a password reset through an unfamiliar link is a warning sign; verify through the service's official channel instead."
+            ],
+            "pitfall": "A familiar logo or convincing wording does not prove that a message is genuine.",
+            "mastery_check": "Spot common warning signs and verify requests independently before acting.",
+            "revision": "Revise phishing and scams through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "device security",
+          "study_materials": {
+            "objective": "Build mastery of device security in Digital Safety.",
+            "teaching_content": "Device security includes updates, screen locks, trusted software, backups and careful handling of removable media or downloads.",
+            "worked_examples": [
+              "Installing security updates and using an automatic screen lock reduce common attack opportunities."
+            ],
+            "pitfall": "Security software cannot compensate for every unsafe user action.",
+            "mastery_check": "Apply layered device-security practices and explain why each layer matters.",
+            "revision": "Revise device security through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "digital citizenship",
+          "study_materials": {
+            "objective": "Build mastery of digital citizenship in Digital Safety.",
+            "teaching_content": "Digital citizenship involves responsible, respectful and safe participation in digital environments, including respecting others, intellectual property and community rules.",
+            "worked_examples": [
+              "Before reposting a claim about someone, check its source and consider the potential harm of spreading it."
+            ],
+            "pitfall": "Being online does not remove responsibilities that apply offline.",
+            "mastery_check": "Make responsible choices about communication, attribution, consent and online behaviour.",
+            "revision": "Revise digital citizenship through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Productivity & Information",
+      "subtopics": [
+        {
+          "title": "documents",
+          "study_materials": {
+            "objective": "Build mastery of documents in Productivity & Information.",
+            "teaching_content": "Document software supports structured text creation through formatting, headings, tables, lists and revision features.",
+            "worked_examples": [
+              "Using heading styles makes a long report easier to navigate and can support automatic tables of contents."
+            ],
+            "pitfall": "Changing font size manually for every heading is less consistent than using styles.",
+            "mastery_check": "Create clear structured documents using appropriate formatting and organization.",
+            "revision": "Revise documents through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "spreadsheets",
+          "study_materials": {
+            "objective": "Build mastery of spreadsheets in Productivity & Information.",
+            "teaching_content": "Spreadsheets organize data in cells and can calculate results using formulas and functions.",
+            "worked_examples": [
+              "If B2 contains quantity and C2 contains price, =B2*C2 calculates the row total rather than requiring manual arithmetic."
+            ],
+            "pitfall": "Typing calculated totals manually makes updates error-prone.",
+            "mastery_check": "Use cell references, formulas and basic functions to analyse structured data.",
+            "revision": "Revise spreadsheets through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "presentations",
+          "study_materials": {
+            "objective": "Build mastery of presentations in Productivity & Information.",
+            "teaching_content": "Effective presentations combine concise text, meaningful visuals and logical sequencing for an audience; slides should support rather than replace explanation.",
+            "worked_examples": [
+              "A slide showing three key findings with a simple chart is easier to follow than a paragraph containing every detail."
+            ],
+            "pitfall": "Adding animations or decorative elements does not automatically improve communication.",
+            "mastery_check": "Design readable slides with clear hierarchy and audience-appropriate content.",
+            "revision": "Revise presentations through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "search strategies",
+          "study_materials": {
+            "objective": "Build mastery of search strategies in Productivity & Information.",
+            "teaching_content": "Search quality improves when queries use specific terms, useful phrases, filters and alternative keywords instead of vague wording.",
+            "worked_examples": [
+              "Searching 'water cycle evaporation condensation precipitation' is more targeted than searching only 'water'."
+            ],
+            "pitfall": "More words are not always better if irrelevant terms obscure the goal.",
+            "mastery_check": "Refine searches iteratively and use terms that represent the information need.",
+            "revision": "Revise search strategies through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "source evaluation",
+          "study_materials": {
+            "objective": "Build mastery of source evaluation in Productivity & Information.",
+            "teaching_content": "Reliable information should be assessed for authorship, evidence, date, purpose, relevance and agreement with other credible sources.",
+            "worked_examples": [
+              "A page that provides an identifiable author, supporting references and a recent publication date may be stronger evidence than an anonymous unsourced post."
+            ],
+            "pitfall": "A polished website design is not proof of reliability.",
+            "mastery_check": "Evaluate sources using evidence and provenance rather than appearance alone.",
+            "revision": "Revise source evaluation through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Programming Foundations",
+      "subtopics": [
+        {
+          "title": "algorithms",
+          "study_materials": {
+            "objective": "Build mastery of algorithms in Programming Foundations.",
+            "teaching_content": "An algorithm is a finite, ordered set of instructions for solving a problem or completing a task.",
+            "worked_examples": [
+              "To find the larger of two numbers, compare them and output the one that is greater; this is an algorithm independent of programming language."
+            ],
+            "pitfall": "A list of instructions can still be ambiguous if steps are not precise.",
+            "mastery_check": "Write ordered, unambiguous steps with clear inputs and outputs.",
+            "revision": "Revise algorithms through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "variables",
+          "study_materials": {
+            "objective": "Build mastery of variables in Programming Foundations.",
+            "teaching_content": "A variable is a named storage location or symbolic reference whose value can be used and changed during computation.",
+            "worked_examples": [
+              "If score starts at 0 and later becomes 10, the variable score holds the current value used by the program."
+            ],
+            "pitfall": "A variable name describes a value but is not necessarily the value itself.",
+            "mastery_check": "Trace variable values through a sequence of assignments.",
+            "revision": "Revise variables through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "conditions",
+          "study_materials": {
+            "objective": "Build mastery of conditions in Programming Foundations.",
+            "teaching_content": "Conditional logic chooses actions based on whether a Boolean expression is true or false.",
+            "worked_examples": [
+              "If temperature > 30, a program might display 'hot'; otherwise it displays 'not hot'."
+            ],
+            "pitfall": "A condition must be evaluated before deciding which branch executes.",
+            "mastery_check": "Construct and trace if/else decisions using clear Boolean conditions.",
+            "revision": "Revise conditions through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "loops",
+          "study_materials": {
+            "objective": "Build mastery of loops in Programming Foundations.",
+            "teaching_content": "Loops repeat instructions while a condition or collection requires further processing, reducing unnecessary duplicate code.",
+            "worked_examples": [
+              "A loop can add the numbers 1 through 5 without writing five separate addition statements."
+            ],
+            "pitfall": "An incorrectly designed loop can run forever or repeat the wrong number of times.",
+            "mastery_check": "Identify initialization, condition, update and repeated body when tracing loops.",
+            "revision": "Revise loops through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "debugging",
+          "study_materials": {
+            "objective": "Build mastery of debugging in Programming Foundations.",
+            "teaching_content": "Debugging is the systematic process of finding and correcting faults in a program by reproducing, isolating and testing problems.",
+            "worked_examples": [
+              "If a loop produces six outputs instead of five, inspect its starting value, stopping condition and update step."
+            ],
+            "pitfall": "Changing several unrelated lines at once makes the source of a fix harder to identify.",
+            "mastery_check": "Use evidence, small changes and retesting to locate and fix bugs.",
+            "revision": "Revise debugging through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Computational Thinking",
+      "subtopics": [
+        {
+          "title": "decomposition",
+          "study_materials": {
+            "objective": "Build mastery of decomposition in Computational Thinking.",
+            "teaching_content": "Decomposition breaks a complex problem into smaller, manageable parts that can be solved or tested separately.",
+            "worked_examples": [
+              "A school-event app can be decomposed into registration, scheduling, notifications and results rather than solved as one large task."
+            ],
+            "pitfall": "Breaking a problem into parts is useful only if the parts still cover the original goal.",
+            "mastery_check": "Decompose a problem into logical components with clear responsibilities.",
+            "revision": "Revise decomposition through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "pattern recognition",
+          "study_materials": {
+            "objective": "Build mastery of pattern recognition in Computational Thinking.",
+            "teaching_content": "Pattern recognition identifies repeated structures or relationships that can guide a solution.",
+            "worked_examples": [
+              "If several tasks require the same validation steps, recognizing the pattern can lead to one reusable procedure."
+            ],
+            "pitfall": "A superficial similarity is not necessarily a useful computational pattern.",
+            "mastery_check": "Identify meaningful repetition and use it to simplify problem solving.",
+            "revision": "Revise pattern recognition through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "abstraction",
+          "study_materials": {
+            "objective": "Build mastery of abstraction in Computational Thinking.",
+            "teaching_content": "Abstraction focuses on essential information while hiding unnecessary implementation detail.",
+            "worked_examples": [
+              "A map represents roads and locations without showing every physical object along the route because those details are unnecessary for navigation."
+            ],
+            "pitfall": "Removing a detail that affects the problem can make an abstraction misleading.",
+            "mastery_check": "Choose the details that matter to the task and deliberately ignore the rest.",
+            "revision": "Revise abstraction through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "logic",
+          "study_materials": {
+            "objective": "Build mastery of logic in Computational Thinking.",
+            "teaching_content": "Computational logic uses precise statements and operators such as AND, OR and NOT to make decisions.",
+            "worked_examples": [
+              "A student may access a resource when enrolled AND logged in; either condition alone is insufficient."
+            ],
+            "pitfall": "Replacing AND with OR can change the set of users who satisfy a rule.",
+            "mastery_check": "Translate requirements into precise Boolean conditions and evaluate them correctly.",
+            "revision": "Revise logic through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "algorithm design",
+          "study_materials": {
+            "objective": "Build mastery of algorithm design in Computational Thinking.",
+            "teaching_content": "Algorithm design turns a problem into a finite sequence of precise operations, considering inputs, outputs, conditions and efficiency.",
+            "worked_examples": [
+              "A route-planning algorithm needs a starting point, destination, available connections and a rule for selecting routes."
+            ],
+            "pitfall": "An algorithm that works for one example but fails valid inputs is incomplete.",
+            "mastery_check": "Design, trace and test algorithms against normal and edge cases.",
+            "revision": "Revise algorithm design through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "AI & Emerging Technology",
+      "subtopics": [
+        {
+          "title": "AI concepts",
+          "study_materials": {
+            "objective": "Build mastery of AI concepts in AI & Emerging Technology.",
+            "teaching_content": "Artificial intelligence describes systems designed to perform tasks that normally require aspects of human intelligence, such as recognition, prediction or language processing.",
+            "worked_examples": [
+              "A recommendation system can use patterns in user behaviour to rank likely relevant items without possessing human-like understanding."
+            ],
+            "pitfall": "AI output should not automatically be treated as proof of reasoning or truth.",
+            "mastery_check": "Identify common AI applications and distinguish system behaviour from human understanding.",
+            "revision": "Revise AI concepts through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "machine learning basics",
+          "study_materials": {
+            "objective": "Build mastery of machine learning basics in AI & Emerging Technology.",
+            "teaching_content": "Machine learning systems learn patterns from data to make predictions or decisions rather than receiving every rule explicitly.",
+            "worked_examples": [
+              "A model trained on labelled images can learn patterns associated with categories such as cats and dogs."
+            ],
+            "pitfall": "A model can perform poorly when training data is limited, biased or unlike real-world inputs.",
+            "mastery_check": "Explain training data, learned patterns, predictions and basic limitations.",
+            "revision": "Revise machine learning basics through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "generative AI",
+          "study_materials": {
+            "objective": "Build mastery of generative AI in AI & Emerging Technology.",
+            "teaching_content": "Generative AI produces new text, images, audio, code or other content from learned patterns and a user's input.",
+            "worked_examples": [
+              "A language model can generate a draft explanation from a prompt, but the generated claim still needs verification."
+            ],
+            "pitfall": "Fluent output can contain incorrect or invented information.",
+            "mastery_check": "Use generated content critically and verify important facts before relying on it.",
+            "revision": "Revise generative AI through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "responsible AI",
+          "study_materials": {
+            "objective": "Build mastery of responsible AI in AI & Emerging Technology.",
+            "teaching_content": "Responsible AI considers accuracy, fairness, privacy, transparency, safety, accountability and appropriate human oversight.",
+            "worked_examples": [
+              "A school using an automated recommendation system should consider whether its data disadvantages particular students and provide a way to review decisions."
+            ],
+            "pitfall": "Automation does not remove responsibility from the people deploying or supervising a system.",
+            "mastery_check": "Identify risks and propose safeguards appropriate to the AI use case.",
+            "revision": "Revise responsible AI through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "automation",
+          "study_materials": {
+            "objective": "Build mastery of automation in AI & Emerging Technology.",
+            "teaching_content": "Automation uses technology to perform repeatable tasks with limited manual intervention; it can improve consistency but can also reproduce errors.",
+            "worked_examples": [
+              "An automated report can collect approved data and generate a standard summary each evening."
+            ],
+            "pitfall": "Automating a flawed rule can make the same mistake faster and at larger scale.",
+            "mastery_check": "Decide which tasks are suitable for automation and include checks for failures.",
+            "revision": "Revise automation through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Applied Computing",
+      "subtopics": [
+        {
+          "title": "data representation",
+          "study_materials": {
+            "objective": "Build mastery of data representation in Applied Computing.",
+            "teaching_content": "Computers represent information using digital encodings; binary uses two symbols, 0 and 1, to represent data and instructions at a fundamental level.",
+            "worked_examples": [
+              "The decimal number 5 is represented as 101 in binary because 1×4 + 0×2 + 1×1 = 5."
+            ],
+            "pitfall": "Binary is not a different value system for humans; it is one representation used by digital systems.",
+            "mastery_check": "Convert simple decimal values to binary and explain why digital systems use discrete representations.",
+            "revision": "Revise data representation through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "cyber awareness",
+          "study_materials": {
+            "objective": "Build mastery of cyber awareness in Applied Computing.",
+            "teaching_content": "Cyber awareness means recognizing common threats, understanding safe behaviour and responding appropriately to suspicious activity.",
+            "worked_examples": [
+              "If an unexpected attachment arrives from an unknown sender, avoid opening it and verify the source through a trusted channel."
+            ],
+            "pitfall": "Cybersecurity is not only the responsibility of specialist teams; everyday actions can create or reduce risk.",
+            "mastery_check": "Recognize common attack surfaces and choose safe responses without attempting unsafe experimentation.",
+            "revision": "Revise cyber awareness through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "technology scenarios",
+          "study_materials": {
+            "objective": "Build mastery of technology scenarios in Applied Computing.",
+            "teaching_content": "Applied computing requires matching technology to a real problem while considering users, cost, reliability, accessibility, privacy and security.",
+            "worked_examples": [
+              "A school may choose a cloud collaboration system when simultaneous editing is more important than offline-only use, while still planning access controls."
+            ],
+            "pitfall": "The newest technology is not automatically the best solution.",
+            "mastery_check": "Evaluate technology choices against explicit requirements and constraints.",
+            "revision": "Revise technology scenarios through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "digital workflows",
+          "study_materials": {
+            "objective": "Build mastery of digital workflows in Applied Computing.",
+            "teaching_content": "A digital workflow is a sequence of tools and actions that moves information from input through processing to an output or decision.",
+            "worked_examples": [
+              "A school certificate workflow can collect approved data, validate it, generate a document and record completion."
+            ],
+            "pitfall": "Adding unnecessary tools can create duplicate data and more failure points.",
+            "mastery_check": "Map workflow stages, identify dependencies and reduce avoidable manual repetition.",
+            "revision": "Revise digital workflows through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "computing problem solving",
+          "study_materials": {
+            "objective": "Build mastery of computing problem solving in Applied Computing.",
+            "teaching_content": "Computing problem solving combines requirements analysis, decomposition, algorithms, testing and iteration to produce a reliable solution.",
+            "worked_examples": [
+              "For a timetable conflict, first define constraints, represent the data, generate candidate schedules and test each against the rules."
+            ],
+            "pitfall": "Coding immediately without understanding the problem can solve the wrong problem efficiently.",
+            "mastery_check": "Define the problem, constraints, inputs and success criteria before selecting a technical solution.",
+            "revision": "Revise computing problem solving through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Computer Competition Mastery",
+      "subtopics": [
+        {
+          "title": "technology problem classification",
+          "study_materials": {
+            "objective": "Build mastery of technology problem classification in Computer Competition Mastery.",
+            "teaching_content": "Identify whether a challenge concerns hardware, software, networking, data, safety, programming, AI, or digital productivity before selecting a solution.",
+            "worked_examples": [
+              "A device that cannot access a website may require checking network connectivity before reinstalling application software."
+            ],
+            "pitfall": "Pitfall: changing software settings without first identifying whether the failure is actually caused by the network or hardware.",
+            "mastery_check": "Classify a computing problem and choose an appropriate first diagnostic step.",
+            "revision": "Revise technology problem classification through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "computational troubleshooting",
+          "study_materials": {
+            "objective": "Build mastery of computational troubleshooting in Computer Competition Mastery.",
+            "teaching_content": "Use a repeatable diagnose-test-isolate-verify process instead of random changes when solving computing problems.",
+            "worked_examples": [
+              "If an application fails, reproduce the error, identify whether other applications work, isolate the affected component, apply one change, and retest."
+            ],
+            "pitfall": "Pitfall: making several changes at once so the cause of improvement or failure becomes unknown.",
+            "mastery_check": "Troubleshoot a computing scenario systematically and verify the fix.",
+            "revision": "Revise computational troubleshooting through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "digital evidence and verification",
+          "study_materials": {
+            "objective": "Build mastery of digital evidence and verification in Computer Competition Mastery.",
+            "teaching_content": "Evaluate files, outputs, search results, data, and online claims by checking source, context, consistency, and reliability.",
+            "worked_examples": [
+              "Before accepting an online technical claim, compare its stated behavior with official documentation or a controlled test."
+            ],
+            "pitfall": "Pitfall: treating the first search result or confident-looking statement as automatically correct.",
+            "mastery_check": "Use appropriate evidence to verify a computing claim or result.",
+            "revision": "Revise digital evidence and verification through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "integrated computing scenarios",
+          "study_materials": {
+            "objective": "Build mastery of integrated computing scenarios in Computer Competition Mastery.",
+            "teaching_content": "Combine digital safety, networking, data, programming, productivity, AI, and computational thinking in unfamiliar scenarios.",
+            "worked_examples": [
+              "A school project may require organizing data, writing a simple program, protecting credentials, and checking an AI-generated summary."
+            ],
+            "pitfall": "Pitfall: solving the technical task while ignoring security, privacy, data quality, or verification requirements.",
+            "mastery_check": "Build a complete computing solution that accounts for technical and responsible-use constraints.",
+            "revision": "Revise integrated computing scenarios through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        },
+        {
+          "title": "computer championship round",
+          "study_materials": {
+            "objective": "Build mastery of computer championship round in Computer Competition Mastery.",
+            "teaching_content": "Practice timed mixed computing challenges with diagnosis, reasoning, security awareness, and final verification.",
+            "worked_examples": [
+              "Classify each challenge first, secure high-confidence answers, then solve the multi-step scenarios while checking each claim against the given evidence."
+            ],
+            "pitfall": "Pitfall: choosing answers from familiar technology keywords without analyzing the actual scenario.",
+            "mastery_check": "Solve mixed computing challenges accurately under time pressure with justified decisions.",
+            "revision": "Revise computer championship round through examples, practical reasoning, verification and a final mastery check."
+          },
+          "question_bank": {
+            "minimum_items": 5,
+            "mapped_to": "subtopic",
+            "coverage": [
+              "recognition",
+              "application",
+              "diagnosis",
+              "error correction",
+              "challenge"
+            ]
+          },
+          "mock_test_questions": {
+            "included": true,
+            "mapped_to": "subtopic",
+            "difficulty_bands": [
+              "foundation",
+              "developing",
+              "advanced",
+              "championship"
+            ]
+          },
+          "official_competition_questions": {
+            "mapped_to": "subtopic",
+            "separate_from_preparation": true,
+            "source": "official competition pool"
+          }
+        }
+      ]
+    }
+  ],
+  "mock_tests": [
+    {
+      "id": "CC-MOCK-01",
+      "focus": "digital foundations, internet, safety and productivity"
+    },
+    {
+      "id": "CC-MOCK-02",
+      "focus": "programming, computational thinking, AI and applied computing"
+    },
+    {
+      "id": "CC-MOCK-03",
+      "focus": "mixed computer championship simulation"
+    }
+  ],
+  "official_attempt": {
+    "separate": true,
+    "question_pool": "Computer Challenge official competition pool",
+    "preparation_content_does_not_replace_official_attempt": true
+  }
+}
