@@ -334,6 +334,46 @@
           "mastery": "Mastery: reason across the complete AI system, identify interactions and feedback loops, and propose tests that evaluate real-world behavior rather than one component alone."
         }
       ]
+    },
+    {
+      "name": "AI Competition Mastery",
+      "subtopics": [
+        {
+          "title": "AI challenge strategy",
+          "teaching": "Apply AI concepts under competition conditions by classifying the task, identifying the relevant model or principle, and eliminating unsupported options.",
+          "worked_example": "For an AI scenario, first identify whether it concerns data, prediction, generation, vision, language, or agents before choosing the answer.",
+          "pitfall": "Pitfall: selecting a familiar AI term without matching it to the task.",
+          "mastery": "Classify unfamiliar AI challenge questions quickly and justify the selected principle."
+        },
+        {
+          "title": "model comparison",
+          "teaching": "Compare AI approaches using task fit, data needs, performance, interpretability, cost, latency, and safety rather than assuming the newest model is best.",
+          "worked_example": "A small classification task with limited labeled data may favor a simpler approach over a larger general model.",
+          "pitfall": "Pitfall: choosing by model popularity instead of requirements.",
+          "mastery": "Compare candidate approaches against explicit constraints and defend the best fit."
+        },
+        {
+          "title": "AI evaluation and verification",
+          "teaching": "Evaluate AI outputs with task-appropriate metrics, test cases, human review, and source verification. Treat confidence as different from correctness.",
+          "worked_example": "A generated factual answer should be checked against reliable sources rather than accepted because it sounds fluent.",
+          "pitfall": "Pitfall: equating fluent output or high confidence with truth.",
+          "mastery": "Select suitable evaluation and verification methods and identify unsupported outputs."
+        },
+        {
+          "title": "integrated AI scenarios",
+          "teaching": "Solve end-to-end AI scenarios by connecting data, model choice, deployment, user impact, monitoring, and governance.",
+          "worked_example": "A school AI tool requires data preparation, a suitable model, privacy controls, human oversight, and post-deployment monitoring.",
+          "pitfall": "Pitfall: optimizing the model while ignoring data quality, users, or operational constraints.",
+          "mastery": "Trace an AI system from problem definition through deployment and responsible monitoring."
+        },
+        {
+          "title": "championship simulation",
+          "teaching": "Practice mixed AI questions under time pressure with deliberate switching between conceptual recall, quantitative reasoning, case analysis, and ethical judgment.",
+          "worked_example": "A timed set can move from dataset bias to model evaluation to a generative-AI verification scenario; the method should reset for each question.",
+          "pitfall": "Pitfall: carrying the previous question's assumptions into a different AI task.",
+          "mastery": "Maintain accuracy under mixed difficulty, manage time, and verify high-risk answers before submission."
+        }
+      ]
     }
   ]
 }
