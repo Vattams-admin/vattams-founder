@@ -1218,7 +1218,7 @@ Deno.serve(async (req) => {
         insertAnswerError } =
         await supabase
           .from("competition_mock_answers")
-          .insert({
+          .upsert({
             attempt_id: attemptId,
             question_id:
               item.questionId,
