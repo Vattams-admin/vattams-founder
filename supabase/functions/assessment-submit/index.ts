@@ -10,56 +10,78 @@ const jwks = createRemoteJWKSet(new URL("https://www.googleapis.com/service_acco
 async function uid(auth: string | null) {
   if (!auth?.startsWith("Bearer ") || !FIREBASE_PROJECT_ID) throw new Error("Unauthorized");
   const { payload } = await jwtVerify(auth.slice(7).trim(), jwks, {
-    issuer: `https://securetoken.google.com/${FIREBASE_PROJECT_ID}`, audience: FIREBASE_PROJECT_ID,
+    issuer: "https://securetoken.google.com/" + FIREBASE_PROJECT_ID, audience: FIREBASE_PROJECT_ID,
   });
   if (typeof payload.sub !== "string" || !payload.sub) throw new Error("Invalid Firebase token");
   return payload.sub;
+}
+
+async function downloadJson(path: string, label: string) {
+  if (typeof path !== "string" || !path) throw new Error("Assessment " + label + " is not configured");
+  const { data, error } = await supabase.storage.from("academia-course-materials").download(path);
+  if (error || !data) throw new Error("Unable to load assessment " + label);
+  return JSON.parse(await data.text());
 }
 
 async function submit(attemptId: string, studentId: string) {
   const { data: attempt, error: ae } = await supabase.from("assessment_attempts")
     .select("id,student_id,course_id,assessment_id,domain,kind,status,question_ids,is_mock")
     .eq("id", attemptId).maybeSingle();
-  if (ae) throw new Error(`Attempt lookup failed: ${ae.message}`);
+  if (ae) throw new Error("Attempt lookup failed: " + ae.message);
   if (!attempt) throw new Error("Assessment attempt not found");
   if (attempt.student_id !== studentId) throw new Error("Assessment attempt does not belong to this student");
   if (attempt.status !== "in_progress") throw new Error("Assessment attempt is no longer active");
 
   const ids = Array.isArray(attempt.question_ids) ? attempt.question_ids : [];
-  if (!ids.length || new Set(ids).size !== ids.length) throw new Error("Assessment attempt has invalid question set");
+  if (!ids.length || ids.some((x: unknown) => typeof x !== "string") || new Set(ids).size !== ids.length) {
+    throw new Error("Assessment attempt has invalid question set");
+  }
 
   const { data: answers, error: ansErr } = await supabase.from("assessment_answers")
-    .select("question_id,answer,selected_option_index").eq("attempt_id", attemptId);
-  if (ansErr) throw new Error(`Answer lookup failed: ${ansErr.message}`);
+    .select("question_id,answer,selected_option_index,answered_at").eq("attempt_id", attemptId);
+  if (ansErr) throw new Error("Answer lookup failed: " + ansErr.message);
 
-  const { data: registryFile, error: regErr } = await supabase.storage.from("academia-course-materials").download("assessments/registry.json");
-  if (regErr || !registryFile) throw new Error("Unable to load assessment registry");
-  const registry = JSON.parse(await registryFile.text());
+  const registry = await downloadJson("assessments/registry.json", "registry");
   const definition = registry.assessments?.[attempt.assessment_id];
   if (!definition || definition.status !== "enabled") throw new Error("Assessment is not enabled");
+  if (definition.course_id !== attempt.course_id || definition.domain !== attempt.domain || definition.kind !== attempt.kind) {
+    throw new Error("Assessment definition does not match attempt");
+  }
 
-  const { data: bankFile, error: bankErr } = await supabase.storage.from("academia-course-materials").download(definition.question_bank);
-  if (bankErr || !bankFile) throw new Error("Unable to load assessment question bank");
-  const parsed = JSON.parse(await bankFile.text());
-  const questions = Array.isArray(parsed) ? parsed : parsed?.questions;
-  if (!Array.isArray(questions)) throw new Error("Invalid assessment question bank");
+  const publicParsed = await downloadJson(definition.question_bank_public, "public question bank");
+  const publicQuestions = Array.isArray(publicParsed) ? publicParsed : publicParsed?.questions;
+  if (!Array.isArray(publicQuestions)) throw new Error("Invalid public assessment question bank");
+  const publicById = new Map(publicQuestions.map((q: any) => [q.question_id, q]));
 
-  const byId = new Map(questions.map((q: any) => [q.question_id, q]));
+  const keyParsed = await downloadJson(definition.answer_key, "answer key");
+  const answerEntries = Array.isArray(keyParsed) ? keyParsed : keyParsed?.questions || keyParsed?.answers;
+  if (!Array.isArray(answerEntries)) throw new Error("Invalid private assessment answer key");
+  const keyById = new Map(answerEntries.map((q: any) => [q.question_id, q]));
+
   let score = 0;
   let maxScore = 0;
   let answeredCount = 0;
   const updates: any[] = [];
 
   for (const questionId of ids) {
-    const q = byId.get(questionId);
-    if (!q) throw new Error(`Question missing from bank: ${questionId}`);
-    const marks = Number(q.marks);
-    if (!Number.isFinite(marks) || marks <= 0) throw new Error(`Invalid marks for ${questionId}`);
+    const publicQuestion = publicById.get(questionId);
+    const key = keyById.get(questionId);
+    if (!publicQuestion || !key) throw new Error("Question or answer key entry missing: " + questionId);
+    if (Object.prototype.hasOwnProperty.call(publicQuestion, "correct_option_index") ||
+        Object.prototype.hasOwnProperty.call(publicQuestion, "explanation")) {
+      throw new Error("Public question contains private scoring fields: " + questionId);
+    }
+
+    const marks = Number(key.marks ?? publicQuestion.marks);
+    const correct = Number(key.correct_option_index);
+    const explanation = typeof key.explanation === "string" ? key.explanation : "";
+    if (!Number.isFinite(marks) || marks <= 0) throw new Error("Invalid marks for " + questionId);
+    if (!Number.isInteger(correct) || correct < 0 || correct > 3) throw new Error("Invalid answer key for " + questionId);
+    if (explanation.length < 12) throw new Error("Missing explanation for " + questionId);
     maxScore += marks;
 
     const answer = (answers || []).find((a: any) => a.question_id === questionId);
     const selected = answer?.selected_option_index;
-    const correct = Number(q.correct_option_index);
     const hasAnswer = Number.isInteger(selected) && selected >= 0 && selected <= 3;
     if (hasAnswer) answeredCount++;
     const isCorrect = hasAnswer && selected === correct;
@@ -70,10 +92,8 @@ async function submit(attemptId: string, studentId: string) {
       attempt_id: attemptId, question_id: questionId,
       answer: typeof answer?.answer === "string" ? answer.answer : "",
       selected_option_index: hasAnswer ? selected : null,
-      is_correct: isCorrect,
-      correct_option_index: correct,
-      explanation: typeof q.explanation === "string" ? q.explanation : null,
-      marks_awarded: awarded,
+      is_correct: isCorrect, correct_option_index: correct,
+      explanation, marks_awarded: awarded,
       answered_at: answer?.answered_at || new Date().toISOString(),
       updated_at: new Date().toISOString(),
     });
@@ -81,12 +101,12 @@ async function submit(attemptId: string, studentId: string) {
 
   const now = new Date().toISOString();
   const { error: upErr } = await supabase.from("assessment_answers").upsert(updates, { onConflict: "attempt_id,question_id" });
-  if (upErr) throw new Error(`Unable to persist scored answers: ${upErr.message}`);
+  if (upErr) throw new Error("Unable to persist scored answers: " + upErr.message);
 
   const { data: updated, error: attemptErr } = await supabase.from("assessment_attempts")
     .update({ status: "submitted", score, max_score: maxScore, submitted_at: now, scored_at: now, updated_at: now })
     .eq("id", attemptId).eq("student_id", studentId).eq("status", "in_progress").select("id").maybeSingle();
-  if (attemptErr) throw new Error(`Unable to submit assessment: ${attemptErr.message}`);
+  if (attemptErr) throw new Error("Unable to submit assessment: " + attemptErr.message);
   if (!updated) throw new Error("Assessment was already submitted");
 
   const { error: resultErr } = await supabase.from("assessment_results").insert({
@@ -94,7 +114,7 @@ async function submit(attemptId: string, studentId: string) {
     assessment_id: attempt.assessment_id, domain: attempt.domain, score, max_score: maxScore,
     answered_count: answeredCount, submitted_at: now, scored_at: now, is_mock: attempt.is_mock,
   });
-  if (resultErr) throw new Error(`Unable to create assessment result: ${resultErr.message}`);
+  if (resultErr) throw new Error("Unable to create assessment result: " + resultErr.message);
 
   return { attempt_id: attemptId, status: "submitted", score, max_score: maxScore, answered_count: answeredCount, submitted_at: now, scored_at: now };
 }
