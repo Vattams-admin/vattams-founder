@@ -224,7 +224,8 @@ export default function CourseLearn() {
     }
 
     let cancelled = false
-    const userId = user.uid
+    const currentUser = user
+    const userId = currentUser.uid
 
     async function load() {
       let currentStep = 'initializing CourseLearn'
@@ -396,7 +397,7 @@ export default function CourseLearn() {
         // ---------------------------------------------------------
         currentStep = 'Step 6c: loading assessments'
         try {
-          const token = await user.getIdToken()
+          const token = await currentUser.getIdToken()
           const { data: assessmentData, error: assessmentError } = await supabase.functions.invoke('assessment-catalog', {
             body: { course_id: course.id },
             headers: { Authorization: `Bearer ${token}` },
