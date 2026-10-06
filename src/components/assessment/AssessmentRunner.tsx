@@ -105,6 +105,18 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     setQuestions(ordered as AssessmentQuestion[]);
     setAnswers(restored);
     setAttemptId(data.attempt_id);
+
+    if (data.status === "submitted" && data.result) {
+      setResult({
+        attempt_id: data.attempt_id,
+        score: Number(data.result.score) || 0,
+        max_score: Number(data.result.max_score) || 0,
+        answered_count: Number(data.result.answered_count) || 0,
+      });
+      setView("result");
+      return;
+    }
+
     const started = typeof data.started_at === "string" ? Date.parse(data.started_at) : NaN;
     const startMs = Number.isFinite(started) ? started : Date.now();
     setStartedAt(startMs);
@@ -113,7 +125,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
       (sum, q) => sum + Math.max(1, Number(q.time_seconds) || 60), 0,
     );
     setRemainingSeconds(Math.max(0, configuredSeconds - Math.floor((Date.now() - startMs) / 1000)));
-    setView(data.status === "submitted" ? "result" : "attempt");
+    setView("attempt");
   }, [assessmentId, courseId]);
 
   const saveAnswer = useCallback(async (questionId: string, selected: number | null) => {
