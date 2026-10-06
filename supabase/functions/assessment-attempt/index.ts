@@ -19,7 +19,7 @@ type AssessmentDefinition = {
   course_id: string;
   domain: "competition" | "competitive-exam" | "tuition";
   kind: "topic_practice" | "sectional_test" | "pyq_test" | "mock_test" | "official_attempt" | "chapter_test" | "subject_test";
-  status: "draft" | "enabled" | "retired";
+  status: "draft" | "reviewed" | "published" | "retired";
   question_bank_public: string;
   answer_key: string;
   question_count: number;
@@ -55,7 +55,7 @@ async function loadRegistry(): Promise<AssessmentRegistry> {
 async function getAssessment(assessmentId: string, courseId: string): Promise<AssessmentDefinition> {
   const registry = await loadRegistry();
   const definition = registry.assessments?.[assessmentId];
-  if (!definition || definition.status !== "enabled") throw new Error("Assessment is not enabled");
+  if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
   if (
     definition.assessment_id !== assessmentId || definition.course_id !== courseId ||
     !definition.question_bank_public || !definition.answer_key ||
