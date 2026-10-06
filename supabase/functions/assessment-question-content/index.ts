@@ -32,8 +32,11 @@ async function loadPublicQuestions(studentId: string, attemptId: string) {
   const registry = JSON.parse(await registryFile.text());
   const definition = registry.assessments?.[attempt.assessment_id];
   if (!definition || definition.status !== "enabled") throw new Error("Assessment is not enabled");
+  if (typeof definition.question_bank_public !== "string" || !definition.question_bank_public) {
+    throw new Error("Assessment public question bank is not configured");
+  }
 
-  const { data: bankFile, error: bankError } = await supabase.storage.from("academia-course-materials").download(definition.question_bank);
+  const { data: bankFile, error: bankError } = await supabase.storage.from("academia-course-materials").download(definition.question_bank_public);
   if (bankError || !bankFile) throw new Error("Unable to load assessment question bank");
   const parsed = JSON.parse(await bankFile.text());
   const questions = Array.isArray(parsed) ? parsed : parsed?.questions;
@@ -42,22 +45,20 @@ async function loadPublicQuestions(studentId: string, attemptId: string) {
   const byId = new Map(questions.map((q: any) => [q.question_id, q]));
   const publicQuestions = ids.map((id) => {
     const q = byId.get(id);
-    if (!q) throw new Error(`Question missing from bank: ${id}`);
+    if (!q) throw new Error(`Question missing from public bank: ${id}`);
     const options = Array.isArray(q.options) ? q.options : [];
+    if (Object.prototype.hasOwnProperty.call(q, "correct_option_index") ||
+        Object.prototype.hasOwnProperty.call(q, "explanation")) {
+      throw new Error(`Public question contains private scoring fields: ${id}`);
+    }
     if (options.length !== 4 || options.some((x: unknown) => typeof x !== "string" || !x.trim())) {
       throw new Error(`Question has invalid options: ${id}`);
     }
     return {
-      question_id: q.question_id,
-      question: q.question,
-      options,
-      subject: q.subject,
-      topic: q.topic,
-      subtopic: q.subtopic,
-      difficulty: q.difficulty,
-      language: q.language,
-      marks: q.marks,
-      time_seconds: q.time_seconds,
+      question_id: q.question_id, question: q.question, options,
+      subject: q.subject, topic: q.topic, subtopic: q.subtopic,
+      difficulty: q.difficulty, language: q.language,
+      marks: q.marks, time_seconds: q.time_seconds,
     };
   });
 
@@ -67,19 +68,13 @@ async function loadPublicQuestions(studentId: string, attemptId: string) {
   if (answerError) throw new Error(`Answer lookup failed: ${answerError.message}`);
 
   return {
-    attempt_id: attemptId,
-    assessment_id: attempt.assessment_id,
-    status: attempt.status,
+    attempt_id: attemptId, assessment_id: attempt.assessment_id, status: attempt.status,
     questions: publicQuestions,
     answers: (answers || []).map((a: any) => ({
-      question_id: a.question_id,
-      answer: a.answer,
-      selected_option_index: a.selected_option_index,
+      question_id: a.question_id, answer: a.answer, selected_option_index: a.selected_option_index,
       ...(attempt.status === "submitted" ? {
-        is_correct: a.is_correct,
-        correct_option_index: a.correct_option_index,
-        explanation: a.explanation,
-        marks_awarded: a.marks_awarded,
+        is_correct: a.is_correct, correct_option_index: a.correct_option_index,
+        explanation: a.explanation, marks_awarded: a.marks_awarded,
       } : {}),
     })),
   };
