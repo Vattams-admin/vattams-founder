@@ -13,10 +13,48 @@ async function verify(auth: string | null) {
     issuer: `https://securetoken.google.com/${PROJECT_ID}`, audience: PROJECT_ID,
   });
   if (typeof payload.sub !== "string" || !payload.sub) throw new Error("Invalid Firebase token");
-  return payload.sub;
+  return { uid: payload.sub, token: auth.slice(7).trim() };
 }
 
-async function catalog(studentId: string, courseId: string) {
+async function refreshAccess(studentId: string, courseId: string, token: string) {
+  const base = `https://firestore.googleapis.com/v1/projects/${encodeURIComponent(PROJECT_ID)}/databases/(default)/documents:runQuery`;
+  const response = await fetch(base, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      structuredQuery: {
+        from: [{ collectionId: "enrolments" }],
+        where: { compositeFilter: { op: "AND", filters: [
+          { fieldFilter: { field: { fieldPath: "student_id" }, op: "EQUAL", value: { stringValue: studentId } } },
+          { fieldFilter: { field: { fieldPath: "course_id" }, op: "EQUAL", value: { stringValue: courseId } } },
+          { fieldFilter: { field: { fieldPath: "status" }, op: "EQUAL", value: { stringValue: "active" } } },
+        ]}},
+        limit: 1,
+      },
+    }),
+  });
+  if (!response.ok) throw new Error("Unable to verify course enrolment");
+  const rows = await response.json();
+  const active = Array.isArray(rows) && rows.some((row: any) => row?.document);
+  const now = new Date().toISOString();
+  const { data: registryFile, error: registryError } = await supabase.storage.from("academia-course-materials").download("assessments/registry.json");
+  if (registryError || !registryFile) throw new Error("Unable to load assessment registry");
+  const registry = JSON.parse(await registryFile.text());
+  const publishedIds = Object.values(registry.assessments || {}).filter((a: any) =>
+    a?.status === "published" && a?.course_id === courseId && typeof a.assessment_id === "string"
+  ).map((a: any) => a.assessment_id);
+  if (publishedIds.length) {
+    const writes = publishedIds.map((assessmentId: string) => ({
+      student_id: studentId, course_id: courseId, assessment_id: assessmentId,
+      enrolment_active: active, is_admin: false, checked_at: now,
+    }));
+    const { error } = await supabase.from("assessment_access_cache").upsert(writes, { onConflict: "student_id,course_id,assessment_id" });
+    if (error) throw new Error(`Assessment access refresh failed: ${error.message}`);
+  }
+}
+
+async function catalog(studentId: string, courseId: string, token: string) {
+  await refreshAccess(studentId, courseId, token);
   const { data: access, error: accessError } = await supabase.from("assessment_access_cache")
     .select("assessment_id,enrolment_active,is_admin,checked_at")
     .eq("student_id", studentId).eq("course_id", courseId);
@@ -70,11 +108,11 @@ function json(body: unknown, status = 200) {
 Deno.serve(async (request) => {
   if (request.method === "OPTIONS") return new Response("ok", { headers: headers() });
   try {
-    const studentId = await verify(request.headers.get("Authorization"));
+    const auth = await verify(request.headers.get("Authorization"));
     const body = await request.json();
     const courseId = typeof body?.course_id === "string" ? body.course_id.trim() : "";
     if (!courseId) return json({ error: "course_id is required" }, 400);
-    return json(await catalog(studentId, courseId));
+    return json(await catalog(auth.uid, courseId, auth.token));
   } catch (error) {
     console.error("assessment-catalog error", error);
     return json({ error: error instanceof Error ? error.message : "Unable to load assessments" }, 400);
