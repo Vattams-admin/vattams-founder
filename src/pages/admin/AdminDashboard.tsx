@@ -18,6 +18,11 @@ const adminSections = [
     path: '/admin/courses',
   },
   {
+    title: 'Assessments',
+    description: 'Validate, review, publish and retire self-learning assessments.',
+    path: '/admin/assessments',
+  },
+  {
     title: 'Payments',
     description: 'Review course payment transactions.',
     path: '/admin/payments',
