@@ -1,5 +1,7 @@
 rules_version = '2';
 
+// E2E signalling deployment verification: student offer refresh must be deployable.
+
 // IMPORTANT — READ BEFORE DEPLOYING
 // ----------------------------------------------------------------------
 // This environment has no network access and no Firebase credentials, so
