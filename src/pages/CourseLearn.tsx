@@ -17,6 +17,7 @@ import { getMaterialTypeLabel } from '@/types/materials'
 import { formatFileSize } from '@/lib/materialValidation'
 import { MaterialTypeIcon } from '@/components/materials/MaterialIcons'
 import MaterialViewerModal from '@/components/materials/MaterialViewerModal'
+import { supabase } from '@/lib/supabase'
 import AssessmentCatalog from '@/components/assessment/AssessmentCatalog'
 
 interface Course {
@@ -38,6 +39,17 @@ interface Lesson {
   content: string | null
   sort_order: number
   module_id: string
+}
+
+interface AssessmentSummary {
+  assessment_id: string
+  slug: string
+  title: string
+  domain: string
+  kind: string
+  question_count: number
+  time_seconds: number
+  pass_percent?: number | null
 }
 
 interface Module {
@@ -193,6 +205,7 @@ export default function CourseLearn() {
   const [lessonFilesError, setLessonFilesError] = useState<string | null>(null)
   const [lessonFilesRetryToken, setLessonFilesRetryToken] = useState(0)
   const [viewerMaterial, setViewerMaterial] = useState<Material | null>(null)
+  const [assessments, setAssessments] = useState<AssessmentSummary[]>([])
   const [error, setError] = useState<string | null>(null)
   const [status, setStatus] = useState<
     'loading' | 'no_access' | 'error' | 'ready'
@@ -376,6 +389,24 @@ export default function CourseLearn() {
         currentStep = 'Step 6: loading course materials'
         const { rows: materialRows } = await listPublishedMaterials(course.id)
         if (!cancelled) setMaterials(materialRows)
+
+        // ---------------------------------------------------------
+        // 6c. Load enabled self-learning assessments. Non-fatal so
+        // ordinary lesson access never depends on assessment services.
+        // ---------------------------------------------------------
+        currentStep = 'Step 6c: loading assessments'
+        try {
+          const token = await user.getIdToken()
+          const { data: assessmentData, error: assessmentError } = await supabase.functions.invoke('assessment-catalog', {
+            body: { course_id: course.id },
+            headers: { Authorization: `Bearer ${token}` },
+          })
+          if (assessmentError) throw assessmentError
+          if (!cancelled) setAssessments(Array.isArray(assessmentData?.assessments) ? assessmentData.assessments : [])
+        } catch (assessmentError) {
+          console.warn('Assessment catalog unavailable; continuing lessons:', assessmentError)
+          if (!cancelled) setAssessments([])
+        }
 
         // ---------------------------------------------------------
         // 7. Update state
@@ -625,6 +656,23 @@ export default function CourseLearn() {
           style={{ width: `${percentComplete}%` }}
         />
       </div>
+
+      {assessments.length > 0 && (
+        <section className="card mt-6 p-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Self-learning Assessments</p>
+          <h2 className="mt-2 font-display text-xl">Practice, tests & mock exams</h2>
+          <p className="mt-2 text-sm leading-6 text-slate-muted">Continue independently. No tutor assignment or live session is required.</p>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {assessments.map((assessment) => (
+              <button key={assessment.assessment_id} type="button" onClick={() => navigate(`/assessment/${courseId}/${assessment.assessment_id}`)} className="rounded-card border border-white/10 p-4 text-left transition hover:border-gold/40 hover:bg-white/5">
+                <p className="text-xs font-semibold uppercase tracking-wide text-gold">{assessment.kind.replace(/_/g, ' ')}</p>
+                <h3 className="mt-2 font-semibold">{assessment.title}</h3>
+                <p className="mt-2 text-xs text-slate-muted">{assessment.question_count} questions · {Math.ceil(assessment.time_seconds / 60)} min</p>
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[280px_1fr]">
         <aside className="card max-h-[70vh] overflow-y-auto p-2">
