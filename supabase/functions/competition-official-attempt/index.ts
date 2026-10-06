@@ -112,6 +112,17 @@ async function getAccessForCompetition(studentId: string, courseId: string, comp
   return { dob: String(data.date_of_birth), ...paperForAge(age, competition.official_papers as Record<AgeBand, string[]>) };
 }
 
+async function loadAttemptAnswers(attemptId: string) {
+  const { data, error } = await supabase.from("competition_answers")
+    .select("question_id,answer")
+    .eq("attempt_id", attemptId);
+  if (error) throw new Error("Answer lookup failed: " + error.message);
+  return (data || []).map((row) => ({
+    question_id: row.question_id,
+    answer: row.answer || "",
+  }));
+}
+
 async function activeAttempt(studentId: string, courseId: string) {
   const { data, error } = await supabase.from("competition_attempts")
     .select("id,student_id,course_id,status,started_at,question_ids")
@@ -140,7 +151,7 @@ Deno.serve(async (request) => {
     const existing = await activeAttempt(studentId, courseId);
     if (existing) {
       if (validQuestionSet(existing.question_ids, access.questionIds)) {
-        return json({ ok: true, course_id: courseId, competition: competition.competition, attempt_id: existing.id, status: existing.status, started_at: existing.started_at, question_ids: existing.question_ids, count: PER_ATTEMPT, age_band: access.ageBand });
+        return json({ ok: true, course_id: courseId, competition: competition.competition, attempt_id: existing.id, status: existing.status, started_at: existing.started_at, question_ids: existing.question_ids, answers: await loadAttemptAnswers(existing.id), count: PER_ATTEMPT, age_band: access.ageBand });
       }
       await supabase.from("competition_attempts").update({
         status: "submitted", submitted_at: new Date().toISOString(), updated_at: new Date().toISOString(),
