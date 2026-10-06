@@ -658,23 +658,6 @@ export default function CourseLearn() {
         />
       </div>
 
-      {assessments.length > 0 && (
-        <section className="card mt-6 p-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Self-learning Assessments</p>
-          <h2 className="mt-2 font-display text-xl">Practice, tests & mock exams</h2>
-          <p className="mt-2 text-sm leading-6 text-slate-muted">Continue independently. No tutor assignment or live session is required.</p>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {assessments.map((assessment) => (
-              <button key={assessment.assessment_id} type="button" onClick={() => navigate(`/assessment/${courseId}/${assessment.assessment_id}`)} className="rounded-card border border-white/10 p-4 text-left transition hover:border-gold/40 hover:bg-white/5">
-                <p className="text-xs font-semibold uppercase tracking-wide text-gold">{assessment.kind.replace(/_/g, ' ')}</p>
-                <h3 className="mt-2 font-semibold">{assessment.title}</h3>
-                <p className="mt-2 text-xs text-slate-muted">{assessment.question_count} questions · {Math.ceil(assessment.time_seconds / 60)} min</p>
-              </button>
-            ))}
-          </div>
-        </section>
-      )}
-
       <div className="mt-8 grid gap-6 lg:grid-cols-[280px_1fr]">
         <aside className="card max-h-[70vh] overflow-y-auto p-2">
           {modules.map((module) => (
