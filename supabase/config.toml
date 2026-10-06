@@ -50,3 +50,21 @@ verify_jwt = false
 
 [functions.competition-official-scoring]
 verify_jwt = false
+
+[functions.assessment-admin]
+verify_jwt = false
+
+[functions.assessment-catalog]
+verify_jwt = false
+
+[functions.assessment-attempt]
+verify_jwt = false
+
+[functions.assessment-answer]
+verify_jwt = false
+
+[functions.assessment-question-content]
+verify_jwt = false
+
+[functions.assessment-submit]
+verify_jwt = false
