@@ -35,6 +35,7 @@ const RefundPolicy = lazy(() => import('@/pages/RefundPolicy'))
 const UdyamRegistration = lazy(() => import('@/pages/UdyamRegistration'))
 const AdminLogin = lazy(() => import('@/pages/admin/AdminLogin'))
 const AdminDashboard = lazy(() => import('@/pages/admin/AdminDashboard'))
+const AdminAssessments = lazy(() => import('@/pages/admin/AdminAssessments'))
 const AdminPricingBootstrap = lazy(() => import('@/pages/admin/AdminPricingBootstrap'))
 const AdminPayments = lazy(() => import('@/pages/admin/AdminPayments'))
 const AdminCourses = lazy(() => import('@/pages/admin/AdminCourses'))
@@ -119,6 +120,7 @@ export default function App() {
             <Route path="/tutor/live-sessions" element={<TutorLiveSessions />} />
             <Route path="/admin" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
+            <Route path="/admin/assessments" element={<AdminRoute><AdminAssessments /></AdminRoute>} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin/pricing-bootstrap" element={<AdminRoute><AdminPricingBootstrap /></AdminRoute>} />
             <Route path="/admin/payments" element={<AdminRoute><AdminPayments /></AdminRoute>} />
