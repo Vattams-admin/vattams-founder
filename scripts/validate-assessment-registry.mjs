@@ -13,7 +13,7 @@ if (registry?.version !== 1 || !registry?.assessments || typeof registry.assessm
 
 const allowedDomains = new Set(['competition', 'competitive-exam', 'tuition'])
 const allowedKinds = new Set(['topic_practice', 'sectional_test', 'pyq_test', 'mock_test', 'official_attempt', 'chapter_test', 'subject_test'])
-const allowedStatus = new Set(['draft', 'enabled', 'retired'])
+const allowedStatus = new Set(['draft', 'reviewed', 'published', 'retired'])
 
 function readJson(relativePath, label) {
   if (typeof relativePath !== 'string' || !relativePath.trim()) throw new Error(`${label}: path is required`)
@@ -82,7 +82,7 @@ for (const [key, a] of Object.entries(registry.assessments)) {
 
   // Draft/retired definitions may exist without published content. Enabled
   // definitions are never allowed to bypass the content gate.
-  if (a.status === 'enabled') {
+  if (a.status === 'reviewed' || a.status === 'published') {
     if (a.domain === 'competition' && a.kind === 'official_attempt') {
       throw new Error(`Assessment ${key}: generic engine cannot replace the existing competition official-attempt runtime`)
     }
@@ -113,4 +113,4 @@ for (const [key, a] of Object.entries(registry.assessments)) {
   }
 }
 
-console.log(`ASSESSMENT REGISTRY VALID: ${Object.keys(registry.assessments).length} definitions, ${enabledCount} enabled`)
+console.log(`ASSESSMENT REGISTRY VALID: ${Object.keys(registry.assessments).length} definitions, ${enabledCount} reviewed/published`)
