@@ -1,0 +1,41 @@
+name: Deploy Generic Assessment Engine
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "supabase/functions/assessment-admin/**"
+      - "supabase/functions/assessment-catalog/**"
+      - "supabase/functions/assessment-attempt/**"
+      - "supabase/functions/assessment-answer/**"
+      - "supabase/functions/assessment-question-content/**"
+      - "supabase/functions/assessment-submit/**"
+      - "supabase/config.toml"
+      - ".github/workflows/deploy-assessment-engine.yml"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      PROJECT_ID: ${{ secrets.SUPABASE_PROJECT_ID }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          version: latest
+
+      - name: Deploy assessment functions
+        run: |
+          set -euo pipefail
+          for fn in             assessment-admin             assessment-catalog             assessment-attempt             assessment-answer             assessment-question-content             assessment-submit
+          do
+            supabase functions deploy "$fn"               --project-ref "$PROJECT_ID"               --use-api
+          done
