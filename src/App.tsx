@@ -6,16 +6,6 @@ import Footer from '@/components/Footer'
 import Home from '@/pages/Home'
 import NetworkStatus from '@/components/NetworkStatus'
 
-// Route-level code splitting keeps the initial bundle lean — only Home +
-// shell load eagerly; everything else loads on navigation.
-//
-// NOTE: this file previously imported several pages (Competitions,
-// CompetitionDetail, Exams, ExamDetail, ProtectedRoute, AdminRoute,
-// ForgotPassword, AdminDashboard, AdminExams, AdminExamForm,
-// AdminCompetitions, AdminCompetitionForm) that do not exist anywhere in
-// this repo, which meant the project could not build. Routes below are
-// restricted to pages that actually exist on disk. See the delivery
-// report for what a real Competitions build would need.
 const Courses = lazy(() => import('@/pages/Courses'))
 const CourseDetail = lazy(() => import('@/pages/CourseDetail'))
 const Competitions = lazy(() => import('@/pages/Competitions'))
@@ -26,6 +16,7 @@ const StudentIdCard = lazy(() => import('@/pages/StudentIdCard'))
 const StudentWelcomeLetter = lazy(() => import('@/pages/StudentWelcomeLetter'))
 const CourseLearn = lazy(() => import('@/pages/CourseLearn'))
 const CompetitionParticipant = lazy(() => import('@/pages/CompetitionParticipant'))
+const AssessmentPage = lazy(() => import('@/pages/AssessmentPage'))
 const VerifyCertificate = lazy(() => import('@/pages/VerifyCertificate'))
 const Auth = lazy(() => import('@/pages/Auth'))
 const StudentRegister = lazy(() => import('@/pages/StudentRegister'))
@@ -67,36 +58,19 @@ const NotFound = lazy(() => import('@/pages/NotFound'))
 function PrivateRouteSeoGuard() {
   const { pathname } = useLocation()
   const privateRoute =
-    pathname === '/login' ||
-    pathname === '/register' ||
-    pathname.startsWith('/student/') ||
-    pathname.startsWith('/tutor/') ||
-    pathname.startsWith('/admin') ||
-    pathname.startsWith('/dashboard') ||
-    pathname.startsWith('/learn/') ||
-    pathname.startsWith('/pay/') ||
-    pathname.startsWith('/competition/') ||
-    pathname.startsWith('/notifications') ||
-    pathname.startsWith('/live-session/') ||
+    pathname === '/login' || pathname === '/register' ||
+    pathname.startsWith('/student/') || pathname.startsWith('/tutor/') ||
+    pathname.startsWith('/admin') || pathname.startsWith('/dashboard') ||
+    pathname.startsWith('/learn/') || pathname.startsWith('/assessment/') ||
+    pathname.startsWith('/pay/') || pathname.startsWith('/competition/') ||
+    pathname.startsWith('/notifications') || pathname.startsWith('/live-session/') ||
     pathname.startsWith('/live-classroom/')
-
-  useSeo({
-    title: 'VATTAMS ACADEMIA',
-    description: 'Private VATTAMS ACADEMIA application area.',
-    path: pathname,
-    noindex: true,
-    enabled: privateRoute,
-  })
-
+  useSeo({ title: 'VATTAMS ACADEMIA', description: 'Private VATTAMS ACADEMIA application area.', path: pathname, noindex: true, enabled: privateRoute })
   return null
 }
 
 function PageFallback() {
-  return (
-    <div className="flex min-h-[50vh] items-center justify-center">
-      <div className="h-8 w-8 animate-spin rounded-full border-2 border-gold/30 border-t-gold" />
-    </div>
-  )
+  return <div className="flex min-h-[50vh] items-center justify-center"><div className="h-8 w-8 animate-spin rounded-full border-2 border-gold/30 border-t-gold" /></div>
 }
 
 export default function App() {
@@ -111,14 +85,10 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/courses/:slug" element={<CourseDetail />} />
-
-            {/* Public discovery pages: competitions and competitive-exam programmes. */}
             <Route path="/competitions" element={<Competitions />} />
             <Route path="/competitive-exams" element={<CompetitiveExams />} />
-
             <Route path="/verify-certificate" element={<VerifyCertificate />} />
             <Route path="/verify" element={<VerifyCertificate />} />
-
             <Route path="/about" element={<About />} />
             <Route path="/founder" element={<Founder />} />
             <Route path="/contact" element={<Contact />} />
@@ -126,144 +96,43 @@ export default function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path="/udyam-registration" element={<UdyamRegistration />} />
-
             <Route path="/login" element={<Auth mode="login" />} />
             <Route path="/register" element={<Auth mode="register" />} />
             <Route path="/student/register" element={<StudentRegister />} />
             <Route path="/tutor/register" element={<TutorRegister />} />
-        <Route path="/tutor/payment" element={<TutorPayment />} />
-
-            {/* Payment.tsx reads useParams<{ courseId }>() — the param
-                name here must match that, not "paymentId". */}
+            <Route path="/tutor/payment" element={<TutorPayment />} />
             <Route path="/pay/:courseId" element={<Payment />} />
             <Route path="/dashboard" element={<StudentDashboard />} />
-                        <Route path="/tutor/pay" element={<TutorPayment />} />
+            <Route path="/tutor/pay" element={<TutorPayment />} />
             <Route path="/tutor/dashboard" element={<TutorDashboard />} />
             <Route path="/tutor/onboarding-documents" element={<TutorOnboardingDocuments />} />
-                        <Route path="/tutor/id-card" element={<TutorIdCard />} />
-                        <Route path="/tutor/onboarding-letter" element={<TutorOnboardingLetter />} />
+            <Route path="/tutor/id-card" element={<TutorIdCard />} />
+            <Route path="/tutor/onboarding-letter" element={<TutorOnboardingLetter />} />
             <Route path="/student/id-card" element={<StudentIdCard />} />
             <Route path="/student/welcome-letter" element={<StudentWelcomeLetter />} />
             <Route path="/learn/:slug" element={<CourseLearn />} />
-                    <Route path="/competition/:slug" element={<CompetitionParticipant />} />
+            <Route path="/competition/:slug" element={<CompetitionParticipant />} />
+            <Route path="/assessment/:courseId/:assessmentId" element={<AssessmentPage />} />
             <Route path="/notifications" element={<Notifications />} />
-
-            {/* Phase 19 — Live Sessions. /live-session/:sessionId enforces
-                its own access control (see LiveSession.tsx + the
-                live_sessions rule in firestore.rules), so it isn't
-                wrapped in a route guard here. */}
             <Route path="/live-session/:sessionId" element={<LiveSession />} />
             <Route path="/live-classroom/:sessionId" element={<LiveClassroom />} />
             <Route path="/tutor/live-sessions" element={<TutorLiveSessions />} />
-
             <Route path="/admin" element={<AdminLogin />} />
-            <Route
-              path="/admin/dashboard"
-              element={
-                <AdminRoute>
-                  <AdminDashboard />
-                </AdminRoute>
-              }
-            />
-            {/* Alias for the existing admin login — same component, same
-                Supabase-backed `admins` table check. Not linked from any
-                public nav; only reachable if you know the URL. */}
+            <Route path="/admin/dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
             <Route path="/admin/login" element={<AdminLogin />} />
-            <Route
-              path="/admin/pricing-bootstrap"
-              element={
-                <AdminRoute>
-                  <AdminPricingBootstrap />
-                </AdminRoute>
-              }
-            />
+            <Route path="/admin/pricing-bootstrap" element={<AdminRoute><AdminPricingBootstrap /></AdminRoute>} />
             <Route path="/admin/payments" element={<AdminRoute><AdminPayments /></AdminRoute>} />
             <Route path="/admin/courses" element={<AdminRoute><AdminCourses /></AdminRoute>} />
-            <Route
-              path="/admin/competitions"
-              element={
-                <AdminRoute>
-                  <AdminCompetitions />
-                </AdminRoute>
-              }
-            />
-            <Route
-              path="/admin/competitions/:id"
-              element={
-                <AdminRoute>
-                  <AdminCompetitionDetail />
-                </AdminRoute>
-              }
-            />
+            <Route path="/admin/competitions" element={<AdminRoute><AdminCompetitions /></AdminRoute>} />
+            <Route path="/admin/competitions/:id" element={<AdminRoute><AdminCompetitionDetail /></AdminRoute>} />
             <Route path="/admin/courses/:id" element={<AdminRoute><AdminCourseForm /></AdminRoute>} />
-            {/* Was already fully built (upload/replace/remove, validation,
-                progress) but had no <Route> at all — the actual root cause
-                of "Course Edit doesn't offer a PDF upload option". See
-                AdminCourseForm.tsx's "Course PDF / Study Material" card,
-                which links here for the full multi-material manager
-                (video/image/notes/link, publish toggle). */}
-            <Route
-              path="/admin/courses/:id/materials"
-              element={
-                <AdminRoute>
-                  <AdminCourseMaterials />
-                </AdminRoute>
-              }
-            />
-            <Route
-              path="/admin/courses/:id/content"
-              element={
-                <AdminRoute>
-                  <AdminCourseContent />
-                </AdminRoute>
-              }
-            />
-
-
-            {/* New in Phase 2 — guarded, unlike the existing /admin/*
-                routes above (see components/AdminRoute.tsx). */}
-            <Route
-              path="/admin/students"
-              element={
-                <AdminRoute>
-                  <AdminStudents />
-                </AdminRoute>
-              }
-            />
-            <Route
-              path="/admin/tutors"
-              element={
-                <AdminRoute>
-                  <AdminTutors />
-                </AdminRoute>
-              }
-            />
-            <Route
-              path="/admin/certificates"
-              element={
-                <AdminRoute>
-                  <AdminCertificates />
-                </AdminRoute>
-              }
-            />
-            <Route
-              path="/admin/notifications"
-              element={
-                <AdminRoute>
-                  <AdminNotifications />
-                </AdminRoute>
-              }
-            />
-            <Route
-              path="/admin/live-sessions"
-              element={
-                <AdminRoute>
-                  <AdminLiveSessions />
-                </AdminRoute>
-              }
-            />
-
-            {/* Authenticated learning, assessment, live-session and admin routes are intentionally not indexable. */}
+            <Route path="/admin/courses/:id/materials" element={<AdminRoute><AdminCourseMaterials /></AdminRoute>} />
+            <Route path="/admin/courses/:id/content" element={<AdminRoute><AdminCourseContent /></AdminRoute>} />
+            <Route path="/admin/students" element={<AdminRoute><AdminStudents /></AdminRoute>} />
+            <Route path="/admin/tutors" element={<AdminRoute><AdminTutors /></AdminRoute>} />
+            <Route path="/admin/certificates" element={<AdminRoute><AdminCertificates /></AdminRoute>} />
+            <Route path="/admin/notifications" element={<AdminRoute><AdminNotifications /></AdminRoute>} />
+            <Route path="/admin/live-sessions" element={<AdminRoute><AdminLiveSessions /></AdminRoute>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
