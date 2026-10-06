@@ -34,7 +34,7 @@ type AttemptRow = {
   question_ids: string[] | null; is_mock: boolean;
 };
 
-async function verifyFirebaseToken(authorization: string | null): Promise<string> {
+async function verifyFirebaseToken(authorization: string | null): Promise<{ uid: string; token: string }> {
   if (!authorization?.startsWith("Bearer ")) throw new Error("Missing authorization token");
   if (!FIREBASE_PROJECT_ID) throw new Error("Firebase project configuration missing");
   const token = authorization.slice(7).trim();
@@ -43,7 +43,7 @@ async function verifyFirebaseToken(authorization: string | null): Promise<string
   });
   const uid = typeof payload.sub === "string" ? payload.sub : "";
   if (!uid) throw new Error("Invalid Firebase token");
-  return uid;
+  return { uid, token };
 }
 
 async function loadRegistry(): Promise<AssessmentRegistry> {
@@ -117,7 +117,35 @@ function shuffled<T>(items: T[]): T[] {
   return copy;
 }
 
-async function checkAccess(studentId: string, courseId: string, assessmentId: string): Promise<void> {
+async function refreshAccess(studentId: string, courseId: string, assessmentId: string, token: string): Promise<void> {
+  const base = `https://firestore.googleapis.com/v1/projects/${encodeURIComponent(FIREBASE_PROJECT_ID)}/databases/(default)/documents:runQuery`;
+  const response = await fetch(base, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      structuredQuery: {
+        from: [{ collectionId: "enrolments" }],
+        where: { compositeFilter: { op: "AND", filters: [
+          { fieldFilter: { field: { fieldPath: "student_id" }, op: "EQUAL", value: { stringValue: studentId } } },
+          { fieldFilter: { field: { fieldPath: "course_id" }, op: "EQUAL", value: { stringValue: courseId } } },
+          { fieldFilter: { field: { fieldPath: "status" }, op: "EQUAL", value: { stringValue: "active" } } },
+        ]}},
+        limit: 1,
+      },
+    }),
+  });
+  if (!response.ok) throw new Error("Unable to verify course enrolment");
+  const rows = await response.json();
+  const active = Array.isArray(rows) && rows.some((row: any) => row?.document);
+  const { error } = await supabase.from("assessment_access_cache").upsert({
+    student_id: studentId, course_id: courseId, assessment_id: assessmentId,
+    enrolment_active: active, is_admin: false, checked_at: new Date().toISOString(),
+  }, { onConflict: "student_id,course_id,assessment_id" });
+  if (error) throw new Error(`Assessment access refresh failed: ${error.message}`);
+}
+
+async function checkAccess(studentId: string, courseId: string, assessmentId: string, token: string): Promise<void> {
+  await refreshAccess(studentId, courseId, assessmentId, token);
   const { data, error } = await supabase.from("assessment_access_cache")
     .select("enrolment_active,is_admin,checked_at")
     .eq("student_id", studentId).eq("course_id", courseId).eq("assessment_id", assessmentId).maybeSingle();
@@ -151,9 +179,9 @@ async function buildResponse(attempt: AttemptRow) {
   };
 }
 
-async function startOrResume(studentId: string, courseId: string, assessmentId: string) {
+async function startOrResume(studentId: string, courseId: string, assessmentId: string, token: string) {
   const assessment = await getAssessment(assessmentId, courseId);
-  await checkAccess(studentId, courseId, assessmentId);
+  await checkAccess(studentId, courseId, assessmentId, token);
 
   const existing = await findActiveAttempt(studentId, assessmentId);
   if (existing) return buildResponse(existing);
@@ -197,13 +225,13 @@ Deno.serve(async (request) => {
     "Access-Control-Allow-Methods": "POST, OPTIONS",
   }});
   try {
-    const studentId = await verifyFirebaseToken(request.headers.get("Authorization"));
+    const auth = await verifyFirebaseToken(request.headers.get("Authorization"));
     const body = await request.json();
     if ((body?.action || "start_or_resume") !== "start_or_resume") return jsonResponse({ error: "Unsupported action" }, 400);
     const courseId = typeof body?.course_id === "string" ? body.course_id.trim() : "";
     const assessmentId = typeof body?.assessment_id === "string" ? body.assessment_id.trim() : "";
     if (!courseId || !assessmentId) return jsonResponse({ error: "course_id and assessment_id are required" }, 400);
-    return jsonResponse(await startOrResume(studentId, courseId, assessmentId));
+    return jsonResponse(await startOrResume(auth.uid, courseId, assessmentId, auth.token));
   } catch (error) {
     console.error("assessment-attempt error", error);
     return jsonResponse({ error: error instanceof Error ? error.message : "Unable to start assessment" }, 400);
