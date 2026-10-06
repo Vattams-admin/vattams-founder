@@ -6,6 +6,7 @@ on:
     branches:
       - main
     paths:
+      - "assessments/registry.json"
       - "supabase/functions/assessment-admin/**"
       - "supabase/functions/assessment-catalog/**"
       - "supabase/functions/assessment-attempt/**"
@@ -22,6 +23,8 @@ jobs:
     env:
       SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
       PROJECT_ID: ${{ secrets.SUPABASE_PROJECT_ID }}
+      SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
 
     steps:
       - name: Checkout repository
@@ -35,7 +38,26 @@ jobs:
       - name: Deploy assessment functions
         run: |
           set -euo pipefail
-          for fn in             assessment-admin             assessment-catalog             assessment-attempt             assessment-answer             assessment-question-content             assessment-submit
+          for fn in \
+            assessment-admin \
+            assessment-catalog \
+            assessment-attempt \
+            assessment-answer \
+            assessment-question-content \
+            assessment-submit
           do
-            supabase functions deploy "$fn"               --project-ref "$PROJECT_ID"               --use-api
+            supabase functions deploy "$fn" --project-ref "$PROJECT_ID" --use-api
           done
+
+      - name: Publish assessment registry
+        run: |
+          set -euo pipefail
+          test -f assessments/registry.json
+          curl --fail-with-body --silent --show-error \
+            -X POST \
+            -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "Content-Type: application/json" \
+            -H "x-upsert: true" \
+            --data-binary @assessments/registry.json \
+            "$SUPABASE_URL/storage/v1/object/academia-course-materials/assessments/registry.json"
