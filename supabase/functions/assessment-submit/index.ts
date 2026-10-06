@@ -43,7 +43,7 @@ async function submit(attemptId: string, studentId: string) {
 
   const registry = await downloadJson("assessments/registry.json", "registry");
   const definition = registry.assessments?.[attempt.assessment_id];
-  if (!definition || definition.status !== "enabled") throw new Error("Assessment is not enabled");
+  if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
   if (definition.course_id !== attempt.course_id || definition.domain !== attempt.domain || definition.kind !== attempt.kind) {
     throw new Error("Assessment definition does not match attempt");
   }
