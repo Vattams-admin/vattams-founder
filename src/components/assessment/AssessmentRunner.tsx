@@ -89,8 +89,8 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     const loaded = Array.isArray(content?.questions) ? content.questions as AssessmentQuestion[] : [];
     if (loaded.length !== ids.length) throw new Error("Assessment question set is incomplete.");
 
-    const byId = new Map(loaded.map((q) => [q.question_id, q]));
-    const ordered = ids.map((id) => byId.get(id));
+    const byId = new Map(loaded.map((q: AssessmentQuestion) => [q.question_id, q]));
+    const ordered = ids.map((id: string) => byId.get(id));
     if (ordered.some((q) => !q)) throw new Error("Assessment question ordering is invalid.");
 
     const restored: Record<string, number | null> = {};
