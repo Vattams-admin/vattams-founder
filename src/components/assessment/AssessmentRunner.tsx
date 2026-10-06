@@ -91,7 +91,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
 
     const byId = new Map(loaded.map((q: AssessmentQuestion) => [q.question_id, q]));
     const ordered = ids.map((id: string) => byId.get(id));
-    if (ordered.some((q) => !q)) throw new Error("Assessment question ordering is invalid.");
+    if (ordered.some((q: AssessmentQuestion | undefined) => !q)) throw new Error("Assessment question ordering is invalid.");
 
     const restored: Record<string, number | null> = {};
     for (const answer of (Array.isArray(data?.answers) ? data.answers : []) as AssessmentAnswer[]) {
