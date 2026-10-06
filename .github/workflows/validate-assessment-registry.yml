@@ -9,6 +9,7 @@ on:
       - 'content/**/assessment*.json'
       - 'scripts/validate-assessment-bank.mjs'
       - 'scripts/validate-assessment-registry.mjs'
+      - 'scripts/validate-assessment-production.mjs'
       - '.github/workflows/validate-assessment-registry.yml'
   pull_request:
     paths:
@@ -31,3 +32,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: node scripts/validate-assessment-registry.mjs
+        if: ${{ hashFiles('config/assessment-registry.json') != '' }}
+
+      - name: Validate production assessment registry
+        env:
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: node scripts/validate-assessment-production.mjs
