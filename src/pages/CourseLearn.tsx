@@ -41,17 +41,6 @@ interface Lesson {
   module_id: string
 }
 
-interface AssessmentSummary {
-  assessment_id: string
-  slug: string
-  title: string
-  domain: string
-  kind: string
-  question_count: number
-  time_seconds: number
-  pass_percent?: number | null
-}
-
 interface Module {
   id: string
   title: string
@@ -205,7 +194,6 @@ export default function CourseLearn() {
   const [lessonFilesError, setLessonFilesError] = useState<string | null>(null)
   const [lessonFilesRetryToken, setLessonFilesRetryToken] = useState(0)
   const [viewerMaterial, setViewerMaterial] = useState<Material | null>(null)
-  const [assessments, setAssessments] = useState<AssessmentSummary[]>([])
   const [error, setError] = useState<string | null>(null)
   const [status, setStatus] = useState<
     'loading' | 'no_access' | 'error' | 'ready'
@@ -390,24 +378,6 @@ export default function CourseLearn() {
         currentStep = 'Step 6: loading course materials'
         const { rows: materialRows } = await listPublishedMaterials(course.id)
         if (!cancelled) setMaterials(materialRows)
-
-        // ---------------------------------------------------------
-        // 6c. Load enabled self-learning assessments. Non-fatal so
-        // ordinary lesson access never depends on assessment services.
-        // ---------------------------------------------------------
-        currentStep = 'Step 6c: loading assessments'
-        try {
-          const token = await currentUser.getIdToken()
-          const { data: assessmentData, error: assessmentError } = await supabase.functions.invoke('assessment-catalog', {
-            body: { course_id: course.id },
-            headers: { Authorization: `Bearer ${token}` },
-          })
-          if (assessmentError) throw assessmentError
-          if (!cancelled) setAssessments(Array.isArray(assessmentData?.assessments) ? assessmentData.assessments : [])
-        } catch (assessmentError) {
-          console.warn('Assessment catalog unavailable; continuing lessons:', assessmentError)
-          if (!cancelled) setAssessments([])
-        }
 
         // ---------------------------------------------------------
         // 7. Update state
