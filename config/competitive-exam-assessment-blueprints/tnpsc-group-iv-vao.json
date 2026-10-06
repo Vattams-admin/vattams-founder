@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "course_id": "tnpsc-group-iv-vao",
+  "title": "TNPSC Group IV / VAO Assessment Blueprint",
+  "status": "draft",
+  "source_of_truth": "TNPSC Revised Scheme of Examination; VATTAMS authored question bank must be independently authored/reviewed.",
+  "exam_model": {
+    "questions": 200,
+    "marks": 300,
+    "duration_minutes": 180,
+    "part_a": {
+      "id": "tamil-eligibility-cum-scoring",
+      "questions": 100,
+      "marks": 150,
+      "qualifying_marks": 60
+    },
+    "part_b": {
+      "id": "general-studies-aptitude",
+      "questions": 100,
+      "marks": 150,
+      "general_studies_questions": 75,
+      "aptitude_mental_ability_questions": 25
+    }
+  },
+  "journey": {
+    "topic_practice": true,
+    "sectional_tests": true,
+    "pyq_tests": true,
+    "full_mock_tests": true,
+    "save_resume": true,
+    "server_side_scoring": true,
+    "review_wrong_answers": true,
+    "weak_topic_progress": true
+  },
+  "assessment_sets": [
+    {
+      "assessment_id": "tnpsc-group-iv-vao-mock-01",
+      "kind": "mock_test",
+      "question_count": 200,
+      "time_seconds": 10800,
+      "status": "draft"
+    },
+    {
+      "assessment_id": "tnpsc-group-iv-vao-mock-02",
+      "kind": "mock_test",
+      "question_count": 200,
+      "time_seconds": 10800,
+      "status": "draft"
+    },
+    {
+      "assessment_id": "tnpsc-group-iv-vao-mock-03",
+      "kind": "mock_test",
+      "question_count": 200,
+      "time_seconds": 10800,
+      "status": "draft"
+    }
+  ],
+  "authoring_gate": {
+    "minimum_quality": [
+      "unique question_id",
+      "exactly four unique options",
+      "verified correct option",
+      "explanation",
+      "subject/topic/subtopic",
+      "difficulty",
+      "marks",
+      "time_seconds",
+      "review_status=reviewed"
+    ],
+    "policy": "Do not convert generic lesson checkpoint prompts into production MCQs. Only reviewed authored/licensed questions enter the executable bank."
+  }
+}
