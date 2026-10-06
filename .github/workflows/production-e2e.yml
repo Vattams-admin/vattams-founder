@@ -19,6 +19,7 @@ on:
       - "supabase/functions/competition-official-*/**"
       - "supabase/functions/competition-mock-*/**"
       - ".github/workflows/production-e2e.yml"
+      - "firestore.rules"
 
 jobs:
   production-e2e:
