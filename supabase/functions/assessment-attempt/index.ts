@@ -157,10 +157,11 @@ async function checkAccess(studentId: string, courseId: string, assessmentId: st
   }
 }
 
-async function findActiveAttempt(studentId: string, assessmentId: string): Promise<AttemptRow | null> {
+async function findLatestAttempt(studentId: string, assessmentId: string): Promise<AttemptRow | null> {
   const { data, error } = await supabase.from("assessment_attempts")
     .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock")
-    .eq("student_id", studentId).eq("assessment_id", assessmentId).eq("status", "in_progress").maybeSingle();
+    .eq("student_id", studentId).eq("assessment_id", assessmentId)
+    .order("started_at", { ascending: false }).limit(1).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
   return data as AttemptRow | null;
 }
@@ -169,10 +170,19 @@ async function buildResponse(attempt: AttemptRow) {
   const { data, error } = await supabase.from("assessment_answers")
     .select("question_id,answer,selected_option_index").eq("attempt_id", attempt.id);
   if (error) throw new Error(`Answer lookup failed: ${error.message}`);
+
+  const { data: result } = await supabase.from("assessment_results")
+    .select("score,max_score,answered_count,submitted_at")
+    .eq("attempt_id", attempt.id).maybeSingle();
+
   return {
     attempt_id: attempt.id, course_id: attempt.course_id, assessment_id: attempt.assessment_id,
     domain: attempt.domain, kind: attempt.kind, status: attempt.status, started_at: attempt.started_at,
     question_ids: attempt.question_ids || [],
+    result: result ? {
+      score: result.score, max_score: result.max_score, answered_count: result.answered_count,
+      submitted_at: result.submitted_at,
+    } : null,
     answers: (data || []).map((row) => ({
       question_id: row.question_id, answer: row.answer, selected_option_index: row.selected_option_index,
     })),
@@ -183,8 +193,9 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
   const assessment = await getAssessment(assessmentId, courseId);
   await checkAccess(studentId, courseId, assessmentId, token);
 
-  const existing = await findActiveAttempt(studentId, assessmentId);
-  if (existing) return buildResponse(existing);
+  const existing = await findLatestAttempt(studentId, assessmentId);
+  if (existing?.status === "in_progress") return buildResponse(existing);
+  if (existing?.status === "submitted") return buildResponse(existing);
 
   const allQuestionIds = await loadQuestionIds(assessment);
   if (allQuestionIds.length < assessment.question_count) {
@@ -202,7 +213,7 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
 
   if (error) {
     if (error.code === "23505") {
-      const raced = await findActiveAttempt(studentId, assessmentId);
+      const raced = await findLatestAttempt(studentId, assessmentId);
       if (raced) return buildResponse(raced);
     }
     throw new Error(`Unable to create assessment attempt: ${error.message}`);
