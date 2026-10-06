@@ -1273,15 +1273,26 @@ service cloud.firestore {
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
                 && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
 
-          // Only the assigned tutor may write the answer.
-          // Connection identity and the original offer cannot be changed.
+          // Tutor writes answers; the owning student may safely refresh an
+          // offer while no answer exists. This is required because the
+          // client uses setDoc(..., { merge: true }) during reconnects.
           allow update: if isAdmin()
             || (isApprovedTutor()
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
                 && request.resource.data.student_id == resource.data.student_id
                 && request.resource.data.tutor_id == resource.data.tutor_id
                 && request.resource.data.offer == resource.data.offer
-                && request.resource.data.answer is string);
+                && request.resource.data.answer is string)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && resource.data.answer == null
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id)
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['offer', 'answer', 'updated_at']));
 
           allow delete: if isAdmin()
             || (isApprovedTutor()
@@ -1734,15 +1745,26 @@ service cloud.firestore {
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
                 && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
 
-          // Only the assigned tutor may write the answer.
-          // Connection identity and the original offer cannot be changed.
+          // Tutor writes answers; the owning student may safely refresh an
+          // offer while no answer exists. This is required because the
+          // client uses setDoc(..., { merge: true }) during reconnects.
           allow update: if isAdmin()
             || (isApprovedTutor()
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
                 && request.resource.data.student_id == resource.data.student_id
                 && request.resource.data.tutor_id == resource.data.tutor_id
                 && request.resource.data.offer == resource.data.offer
-                && request.resource.data.answer is string);
+                && request.resource.data.answer is string)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && resource.data.answer == null
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id)
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['offer', 'answer', 'updated_at']));
 
           allow delete: if isAdmin()
             || (isApprovedTutor()
@@ -2194,15 +2216,26 @@ service cloud.firestore {
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
                 && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
 
-          // Only the assigned tutor may write the answer.
-          // Connection identity and the original offer cannot be changed.
+          // Tutor writes answers; the owning student may safely refresh an
+          // offer while no answer exists. This is required because the
+          // client uses setDoc(..., { merge: true }) during reconnects.
           allow update: if isAdmin()
             || (isApprovedTutor()
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
                 && request.resource.data.student_id == resource.data.student_id
                 && request.resource.data.tutor_id == resource.data.tutor_id
                 && request.resource.data.offer == resource.data.offer
-                && request.resource.data.answer is string);
+                && request.resource.data.answer is string)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && resource.data.answer == null
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id)
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['offer', 'answer', 'updated_at']));
 
           allow delete: if isAdmin()
             || (isApprovedTutor()
@@ -2656,15 +2689,26 @@ service cloud.firestore {
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
                 && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
 
-          // Only the assigned tutor may write the answer.
-          // Connection identity and the original offer cannot be changed.
+          // Tutor writes answers; the owning student may safely refresh an
+          // offer while no answer exists. This is required because the
+          // client uses setDoc(..., { merge: true }) during reconnects.
           allow update: if isAdmin()
             || (isApprovedTutor()
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
                 && request.resource.data.student_id == resource.data.student_id
                 && request.resource.data.tutor_id == resource.data.tutor_id
                 && request.resource.data.offer == resource.data.offer
-                && request.resource.data.answer is string);
+                && request.resource.data.answer is string)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && resource.data.answer == null
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id)
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['offer', 'answer', 'updated_at']));
 
           allow delete: if isAdmin()
             || (isApprovedTutor()
@@ -3117,15 +3161,26 @@ service cloud.firestore {
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
                 && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
 
-          // Only the assigned tutor may write the answer.
-          // Connection identity and the original offer cannot be changed.
+          // Tutor writes answers; the owning student may safely refresh an
+          // offer while no answer exists. This is required because the
+          // client uses setDoc(..., { merge: true }) during reconnects.
           allow update: if isAdmin()
             || (isApprovedTutor()
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
                 && request.resource.data.student_id == resource.data.student_id
                 && request.resource.data.tutor_id == resource.data.tutor_id
                 && request.resource.data.offer == resource.data.offer
-                && request.resource.data.answer is string);
+                && request.resource.data.answer is string)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && resource.data.answer == null
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id)
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['offer', 'answer', 'updated_at']));
 
           allow delete: if isAdmin()
             || (isApprovedTutor()
@@ -3406,15 +3461,26 @@ service cloud.firestore {
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
                 && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
 
-          // Only the assigned tutor may write the answer.
-          // Connection identity and the original offer cannot be changed.
+          // Tutor writes answers; the owning student may safely refresh an
+          // offer while no answer exists. This is required because the
+          // client uses setDoc(..., { merge: true }) during reconnects.
           allow update: if isAdmin()
             || (isApprovedTutor()
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
                 && request.resource.data.student_id == resource.data.student_id
                 && request.resource.data.tutor_id == resource.data.tutor_id
                 && request.resource.data.offer == resource.data.offer
-                && request.resource.data.answer is string);
+                && request.resource.data.answer is string)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && resource.data.answer == null
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id)
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['offer', 'answer', 'updated_at']));
 
           allow delete: if isAdmin()
             || (isApprovedTutor()
@@ -3868,15 +3934,26 @@ service cloud.firestore {
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
                 && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
 
-          // Only the assigned tutor may write the answer.
-          // Connection identity and the original offer cannot be changed.
+          // Tutor writes answers; the owning student may safely refresh an
+          // offer while no answer exists. This is required because the
+          // client uses setDoc(..., { merge: true }) during reconnects.
           allow update: if isAdmin()
             || (isApprovedTutor()
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
                 && request.resource.data.student_id == resource.data.student_id
                 && request.resource.data.tutor_id == resource.data.tutor_id
                 && request.resource.data.offer == resource.data.offer
-                && request.resource.data.answer is string);
+                && request.resource.data.answer is string)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && resource.data.answer == null
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id)
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['offer', 'answer', 'updated_at']));
 
           allow delete: if isAdmin()
             || (isApprovedTutor()
@@ -4329,15 +4406,26 @@ service cloud.firestore {
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
                 && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
 
-          // Only the assigned tutor may write the answer.
-          // Connection identity and the original offer cannot be changed.
+          // Tutor writes answers; the owning student may safely refresh an
+          // offer while no answer exists. This is required because the
+          // client uses setDoc(..., { merge: true }) during reconnects.
           allow update: if isAdmin()
             || (isApprovedTutor()
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
                 && request.resource.data.student_id == resource.data.student_id
                 && request.resource.data.tutor_id == resource.data.tutor_id
                 && request.resource.data.offer == resource.data.offer
-                && request.resource.data.answer is string);
+                && request.resource.data.answer is string)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && resource.data.answer == null
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id)
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['offer', 'answer', 'updated_at']));
 
           allow delete: if isAdmin()
             || (isApprovedTutor()
@@ -4789,15 +4877,26 @@ service cloud.firestore {
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
                 && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
 
-          // Only the assigned tutor may write the answer.
-          // Connection identity and the original offer cannot be changed.
+          // Tutor writes answers; the owning student may safely refresh an
+          // offer while no answer exists. This is required because the
+          // client uses setDoc(..., { merge: true }) during reconnects.
           allow update: if isAdmin()
             || (isApprovedTutor()
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
                 && request.resource.data.student_id == resource.data.student_id
                 && request.resource.data.tutor_id == resource.data.tutor_id
                 && request.resource.data.offer == resource.data.offer
-                && request.resource.data.answer is string);
+                && request.resource.data.answer is string)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && resource.data.answer == null
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id)
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['offer', 'answer', 'updated_at']));
 
           allow delete: if isAdmin()
             || (isApprovedTutor()
@@ -5251,15 +5350,26 @@ service cloud.firestore {
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
                 && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
 
-          // Only the assigned tutor may write the answer.
-          // Connection identity and the original offer cannot be changed.
+          // Tutor writes answers; the owning student may safely refresh an
+          // offer while no answer exists. This is required because the
+          // client uses setDoc(..., { merge: true }) during reconnects.
           allow update: if isAdmin()
             || (isApprovedTutor()
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
                 && request.resource.data.student_id == resource.data.student_id
                 && request.resource.data.tutor_id == resource.data.tutor_id
                 && request.resource.data.offer == resource.data.offer
-                && request.resource.data.answer is string);
+                && request.resource.data.answer is string)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && resource.data.answer == null
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id)
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['offer', 'answer', 'updated_at']));
 
           allow delete: if isAdmin()
             || (isApprovedTutor()
@@ -5712,15 +5822,26 @@ service cloud.firestore {
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
                 && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id));
 
-          // Only the assigned tutor may write the answer.
-          // Connection identity and the original offer cannot be changed.
+          // Tutor writes answers; the owning student may safely refresh an
+          // offer while no answer exists. This is required because the
+          // client uses setDoc(..., { merge: true }) during reconnects.
           allow update: if isAdmin()
             || (isApprovedTutor()
                 && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid
                 && request.resource.data.student_id == resource.data.student_id
                 && request.resource.data.tutor_id == resource.data.tutor_id
                 && request.resource.data.offer == resource.data.offer
-                && request.resource.data.answer is string);
+                && request.resource.data.answer is string)
+            || (isSignedIn()
+                && studentId == request.auth.uid
+                && resource.data.answer == null
+                && request.resource.data.student_id == resource.data.student_id
+                && request.resource.data.tutor_id == resource.data.tutor_id
+                && request.resource.data.offer is string
+                && request.resource.data.answer == null
+                && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.status == 'published'
+                && hasActiveEnrolment(get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.course_id)
+                && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['offer', 'answer', 'updated_at']));
 
           allow delete: if isAdmin()
             || (isApprovedTutor()
