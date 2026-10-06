@@ -1,0 +1,104 @@
+import { createRemoteJWKSet, jwtVerify } from "npm:jose@6";
+import { createClient } from "npm:@supabase/supabase-js@2";
+
+const PROJECT_ID = Deno.env.get("FIREBASE_PROJECT_ID") || Deno.env.get("VITE_FIREBASE_PROJECT_ID") || "";
+const URL = Deno.env.get("SUPABASE_URL") || "";
+const KEYS = JSON.parse(Deno.env.get("SUPABASE_SECRET_KEYS") || "{}");
+const supabase = createClient(URL, KEYS["default"] || "", { auth: { persistSession: false, autoRefreshToken: false } });
+const jwks = createRemoteJWKSet(new URL("https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com"));
+
+async function verify(auth: string | null) {
+  if (!auth?.startsWith("Bearer ") || !PROJECT_ID) throw new Error("Unauthorized");
+  const { payload } = await jwtVerify(auth.slice(7).trim(), jwks, {
+    issuer: `https://securetoken.google.com/${PROJECT_ID}`, audience: PROJECT_ID,
+  });
+  if (typeof payload.sub !== "string" || !payload.sub) throw new Error("Invalid Firebase token");
+  return payload.sub;
+}
+
+async function loadPublicQuestions(studentId: string, attemptId: string) {
+  const { data: attempt, error } = await supabase.from("assessment_attempts")
+    .select("id,student_id,status,assessment_id,question_ids").eq("id", attemptId).maybeSingle();
+  if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
+  if (!attempt) throw new Error("Assessment attempt not found");
+  if (attempt.student_id !== studentId) throw new Error("Assessment attempt does not belong to this student");
+  if (!["in_progress", "submitted"].includes(attempt.status)) throw new Error("Invalid assessment attempt");
+
+  const ids = Array.isArray(attempt.question_ids) ? attempt.question_ids.filter((x: unknown): x is string => typeof x === "string") : [];
+  if (!ids.length || new Set(ids).size !== ids.length) throw new Error("Assessment attempt has invalid question IDs");
+
+  const { data: registryFile, error: registryError } = await supabase.storage.from("academia-course-materials").download("assessments/registry.json");
+  if (registryError || !registryFile) throw new Error("Unable to load assessment registry");
+  const registry = JSON.parse(await registryFile.text());
+  const definition = registry.assessments?.[attempt.assessment_id];
+  if (!definition || definition.status !== "enabled") throw new Error("Assessment is not enabled");
+
+  const { data: bankFile, error: bankError } = await supabase.storage.from("academia-course-materials").download(definition.question_bank);
+  if (bankError || !bankFile) throw new Error("Unable to load assessment question bank");
+  const parsed = JSON.parse(await bankFile.text());
+  const questions = Array.isArray(parsed) ? parsed : parsed?.questions;
+  if (!Array.isArray(questions)) throw new Error("Invalid assessment question bank");
+
+  const byId = new Map(questions.map((q: any) => [q.question_id, q]));
+  const publicQuestions = ids.map((id) => {
+    const q = byId.get(id);
+    if (!q) throw new Error(`Question missing from bank: ${id}`);
+    const options = Array.isArray(q.options) ? q.options : [];
+    if (options.length !== 4 || options.some((x: unknown) => typeof x !== "string" || !x.trim())) {
+      throw new Error(`Question has invalid options: ${id}`);
+    }
+    return {
+      question_id: q.question_id,
+      question: q.question,
+      options,
+      subject: q.subject,
+      topic: q.topic,
+      subtopic: q.subtopic,
+      difficulty: q.difficulty,
+      language: q.language,
+      marks: q.marks,
+      time_seconds: q.time_seconds,
+    };
+  });
+
+  const { data: answers, error: answerError } = await supabase.from("assessment_answers")
+    .select("question_id,answer,selected_option_index,is_correct,correct_option_index,explanation,marks_awarded")
+    .eq("attempt_id", attemptId);
+  if (answerError) throw new Error(`Answer lookup failed: ${answerError.message}`);
+
+  return {
+    attempt_id: attemptId,
+    assessment_id: attempt.assessment_id,
+    status: attempt.status,
+    questions: publicQuestions,
+    answers: (answers || []).map((a: any) => ({
+      question_id: a.question_id,
+      answer: a.answer,
+      selected_option_index: a.selected_option_index,
+      ...(attempt.status === "submitted" ? {
+        is_correct: a.is_correct,
+        correct_option_index: a.correct_option_index,
+        explanation: a.explanation,
+        marks_awarded: a.marks_awarded,
+      } : {}),
+    })),
+  };
+}
+
+function cors() { return { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type", "Access-Control-Allow-Methods": "POST, OPTIONS" }; }
+function json(body: unknown, status = 200) { return new Response(JSON.stringify(body), { status, headers: { ...cors(), "Content-Type": "application/json" } }); }
+
+Deno.serve(async (request) => {
+  if (request.method === "OPTIONS") return new Response("ok", { headers: cors() });
+  try {
+    const studentId = await verify(request.headers.get("Authorization"));
+    const body = await request.json();
+    if ((body?.action || "load") !== "load") return json({ error: "Unsupported action" }, 400);
+    const attemptId = typeof body?.attempt_id === "string" ? body.attempt_id.trim() : "";
+    if (!attemptId) return json({ error: "attempt_id is required" }, 400);
+    return json(await loadPublicQuestions(studentId, attemptId));
+  } catch (error) {
+    console.error("assessment-question-content error", error);
+    return json({ error: error instanceof Error ? error.message : "Unable to load assessment questions" }, 400);
+  }
+});
