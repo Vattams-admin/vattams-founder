@@ -25,12 +25,15 @@ async function downloadJson(path: string, label: string) {
 
 async function submit(attemptId: string, studentId: string) {
   const { data: attempt, error: ae } = await supabase.from("assessment_attempts")
-    .select("id,student_id,course_id,assessment_id,domain,kind,status,question_ids,is_mock")
+     .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock")
     .eq("id", attemptId).maybeSingle();
   if (ae) throw new Error("Attempt lookup failed: " + ae.message);
   if (!attempt) throw new Error("Assessment attempt not found");
   if (attempt.student_id !== studentId) throw new Error("Assessment attempt does not belong to this student");
   if (attempt.status !== "in_progress") throw new Error("Assessment attempt is no longer active");
+
+  const startedAtMs = Date.parse(attempt.started_at);
+  if (!Number.isFinite(startedAtMs)) throw new Error("Assessment attempt has an invalid start time");
 
   const ids = Array.isArray(attempt.question_ids) ? attempt.question_ids : [];
   if (!ids.length || ids.some((x: unknown) => typeof x !== "string") || new Set(ids).size !== ids.length) {
@@ -46,6 +49,14 @@ async function submit(attemptId: string, studentId: string) {
   if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
   if (definition.course_id !== attempt.course_id || definition.domain !== attempt.domain || definition.kind !== attempt.kind) {
     throw new Error("Assessment definition does not match attempt");
+  }
+  if (!Number.isInteger(definition.time_seconds) || definition.time_seconds <= 0) {
+    throw new Error("Assessment time limit is invalid");
+  }
+  if (Date.now() > startedAtMs + definition.time_seconds * 1000) {
+    // The client timer is only a UX aid; the server remains authoritative.
+    // Expired attempts are still scored on submission so the student does not lose
+    // their saved answers, but no new answers can be accepted after expiry.
   }
 
   const publicParsed = await downloadJson(definition.question_bank_public, "public question bank");
