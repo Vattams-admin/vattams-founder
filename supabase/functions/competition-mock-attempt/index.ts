@@ -78,6 +78,8 @@ type MockAttemptRow = {
   started_at: string;
   question_ids: string[] | null;
   is_mock: boolean;
+  score: number | null;
+  max_score: number | null;
 };
 
 type MockAnswerRow = {
@@ -483,12 +485,13 @@ async function findActiveAttempt(
     await supabase
       .from("competition_mock_attempts")
       .select(
-        "id,student_id,course_id,status,started_at,question_ids,is_mock",
+        "id,student_id,course_id,status,started_at,question_ids,is_mock,score,max_score",
       )
       .eq("student_id", studentId)
       .eq("course_id", courseId)
       .eq("is_mock", true)
-      .eq("status", "in_progress")
+      .order("started_at", { ascending: false })
+      .limit(1)
       .maybeSingle();
 
   if (error) {
@@ -547,6 +550,9 @@ async function attemptResponse(
     started_at: attempt.started_at,
     question_ids: attempt.question_ids || [],
     answers: studentAnswers,
+    score: attempt.score,
+    max_score: attempt.max_score,
+    answered_count: studentAnswers.filter((answer) => String(answer.answer ?? "").trim() !== "").length,
   };
 }
 
@@ -623,7 +629,7 @@ async function startOrResume(
         age_band: ageBand,
       })
       .select(
-        "id,student_id,course_id,status,started_at,question_ids,is_mock",
+        "id,student_id,course_id,status,started_at,question_ids,is_mock,score,max_score",
       )
       .single();
 
