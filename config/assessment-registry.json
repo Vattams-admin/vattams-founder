@@ -1,4 +1,44 @@
 {
   "version": 1,
-  "assessments": {}
+  "assessments": {
+    "tnpsc-group-iv-vao-mock-01": {
+      "assessment_id": "tnpsc-group-iv-vao-mock-01",
+      "course_id": "tnpsc-group-iv-vao",
+      "slug": "tnpsc-group-iv-vao-mock-01",
+      "title": "TNPSC Group IV / VAO Mock Test 01",
+      "domain": "competitive-exam",
+      "kind": "mock_test",
+      "status": "draft",
+      "question_bank_public": "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-01.public.json",
+      "answer_key": "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-01.private.json",
+      "question_count": 200,
+      "time_seconds": 10800
+    },
+    "tnpsc-group-iv-vao-mock-02": {
+      "assessment_id": "tnpsc-group-iv-vao-mock-02",
+      "course_id": "tnpsc-group-iv-vao",
+      "slug": "tnpsc-group-iv-vao-mock-02",
+      "title": "TNPSC Group IV / VAO Mock Test 02",
+      "domain": "competitive-exam",
+      "kind": "mock_test",
+      "status": "draft",
+      "question_bank_public": "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-02.public.json",
+      "answer_key": "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-02.private.json",
+      "question_count": 200,
+      "time_seconds": 10800
+    },
+    "tnpsc-group-iv-vao-mock-03": {
+      "assessment_id": "tnpsc-group-iv-vao-mock-03",
+      "course_id": "tnpsc-group-iv-vao",
+      "slug": "tnpsc-group-iv-vao-mock-03",
+      "title": "TNPSC Group IV / VAO Mock Test 03",
+      "domain": "competitive-exam",
+      "kind": "mock_test",
+      "status": "draft",
+      "question_bank_public": "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-03.public.json",
+      "answer_key": "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-03.private.json",
+      "question_count": 200,
+      "time_seconds": 10800
+    }
+  }
 }
