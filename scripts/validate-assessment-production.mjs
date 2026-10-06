@@ -9,7 +9,7 @@ if (!SUPABASE_URL || !SERVICE_KEY) {
 }
 
 async function loadJson(path, label) {
-  const url = `${SUPABASE_URL}/storage/v1/object/${BUCKET}/${path.split("/").map(encodeURIComponent).join("/")}`;
+  const url = `${SUPABASE_URL}/storage/v1/object/${BUCKET}/${path.split("/").map((segment) => encodeURIComponent(segment)).join("/")}`;
   const response = await fetch(url, { headers: { Authorization: `Bearer ${SERVICE_KEY}`, apikey: SERVICE_KEY } });
   if (!response.ok) throw new Error(`${label}: HTTP ${response.status}`);
   try { return await response.json(); } catch { throw new Error(`${label}: invalid JSON`); }
