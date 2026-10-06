@@ -160,6 +160,7 @@ service cloud.firestore {
 
     // ------------------------------------------------------------------
     // Phase 19 — Live Sessions
+    // Production WebRTC rule deployment verification pass.
     // ------------------------------------------------------------------
     // NOT independently verified against a live Firebase project (same
     // no-network-access caveat as the top of this file) — run these
