@@ -12,6 +12,15 @@ export function useAuth() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    let settled = false
+    const timeout = window.setTimeout(() => {
+      if (settled) return
+      console.error('Firebase Auth initialization timed out')
+      setUser(null)
+      setLoading(false)
+      settled = true
+    }, 10000)
+
     const unsubscribe = onAuthStateChanged(
       firebaseAuth,
       (firebaseUser) => {
@@ -26,6 +35,8 @@ export function useAuth() {
           setUser(null)
         }
 
+        settled = true
+        window.clearTimeout(timeout)
         setLoading(false)
       },
       (error) => {
@@ -34,11 +45,17 @@ export function useAuth() {
         // (StudentDashboard, CourseLearn, Payment, ...) spins forever.
         console.error('Auth state listener error:', error)
         setUser(null)
+        settled = true
+        window.clearTimeout(timeout)
         setLoading(false)
       }
     )
 
-    return () => unsubscribe()
+    return () => {
+      settled = true
+      window.clearTimeout(timeout)
+      unsubscribe()
+    }
   }, [])
 
   return {
