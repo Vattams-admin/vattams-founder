@@ -208,7 +208,7 @@ export default function StudentDashboard() {
         )}
       </section>
       <section className="mt-8">
-        <h2 className="font-display text-xl text-gold-bright">Enrolled courses</h2
+        <h2 className="font-display text-xl text-gold-bright">Enrolled courses</h2>
         {enrolmentsState === 'loading' && <p className="mt-2 text-sm text-slate-muted">Loading…</p>}
         {enrolmentsState === 'error' && (
           <div className="mt-2 flex flex-wrap items-center gap-3">
