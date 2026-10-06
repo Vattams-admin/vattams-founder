@@ -20,6 +20,8 @@ export default function StudentDashboard() {
   const [paymentsState, setPaymentsState] = useState<SectionState>('loading')
   const [nextLiveSession, setNextLiveSession] = useState<LiveSession | null>(null)
   const [liveSessionState, setLiveSessionState] = useState<SectionState>('loading')
+  const [activeCompetitions, setActiveCompetitions] = useState<Course[]>([])
+  const [competitionsState, setCompetitionsState] = useState<SectionState>('loading')
 
   async function loadEnrolments(userId: string) {
     setEnrolmentsState('loading')
@@ -80,6 +82,19 @@ export default function StudentDashboard() {
     }
   }
 
+  async function loadActiveCompetitions() {
+    setCompetitionsState('loading')
+    try {
+      const q = query(collection(firestore, 'courses'), where('is_published', '==', true), where('is_competition', '==', true))
+      const snapshot = await getDocs(q)
+      const rows = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }) as Course).sort((a, b) => (a.name ?? '').localeCompare(b.name ?? ''))
+      setActiveCompetitions(rows)
+      setCompetitionsState('loaded')
+    } catch (err) {
+      console.error('Failed to load active competitions:', err)
+      setCompetitionsState('error')
+    }
+  }
   async function loadNextLiveSession(userId: string) {
     setLiveSessionState('loading')
     try {
@@ -97,6 +112,7 @@ export default function StudentDashboard() {
     loadEnrolments(user.id)
     loadPayments(user.id)
     loadNextLiveSession(user.id)
+    loadActiveCompetitions()
   }, [user])
 
   if (loading) return <div className="mx-auto max-w-4xl px-4 py-16 text-slate-muted">Loading…</div>
@@ -167,7 +183,32 @@ export default function StudentDashboard() {
       </section>
 
       <section className="mt-8">
-        <h2 className="font-display text-xl text-gold-bright">Enrolled courses</h2>
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <h2 className="font-display text-xl text-gold-bright">Active Competitions</h2>
+            <p className="mt-1 text-sm text-slate-muted">Compete, prepare and build your academic profile.</p>
+          </div>
+          <Link to="/competitions" className="text-sm font-medium text-gold hover:text-gold-bright">View all</Link>
+        </div>
+        {competitionsState === 'loading' && <p className="mt-3 text-sm text-slate-muted">Loading competitions…</p>}
+        {competitionsState === 'error' && <p className="mt-3 text-sm text-danger">Unable to load competitions right now.</p>}
+        {competitionsState === 'loaded' && activeCompetitions.length === 0 && <p className="mt-3 text-sm text-slate-muted">No active competitions right now.</p>}
+        {competitionsState === 'loaded' && activeCompetitions.length > 0 && (
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {activeCompetitions.map((competition) => (
+              <Link key={competition.id} to={competition.slug ? `/courses/${competition.slug}` : '/competitions'} className="card flex items-center justify-between gap-4 p-4 hover:border-gold/30">
+                <div>
+                  <p className="font-medium">{competition.name}</p>
+                  <p className="mt-1 text-xs text-slate-muted">Official competition · Study Materials · Mock Test</p>
+                </div>
+                <span className="shrink-0 text-xs font-semibold uppercase tracking-wide text-gold">View →</span>
+              </Link>
+            ))}
+          </div>
+        )}
+      </section>
+      <section className="mt-8">
+        <h2 className="font-display text-xl text-gold-bright">Enrolled courses</h2
         {enrolmentsState === 'loading' && <p className="mt-2 text-sm text-slate-muted">Loading…</p>}
         {enrolmentsState === 'error' && (
           <div className="mt-2 flex flex-wrap items-center gap-3">
