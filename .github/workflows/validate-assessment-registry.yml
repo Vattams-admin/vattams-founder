@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'config/assessment-registry.json'
+      - 'assessments/registry.json'
       - 'config/**/assessment*.json'
       - 'content/**/assessment*.json'
       - 'scripts/validate-assessment-bank.mjs'
