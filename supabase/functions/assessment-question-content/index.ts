@@ -31,7 +31,7 @@ async function loadPublicQuestions(studentId: string, attemptId: string) {
   if (registryError || !registryFile) throw new Error("Unable to load assessment registry");
   const registry = JSON.parse(await registryFile.text());
   const definition = registry.assessments?.[attempt.assessment_id];
-  if (!definition || definition.status !== "enabled") throw new Error("Assessment is not enabled");
+  if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
   if (typeof definition.question_bank_public !== "string" || !definition.question_bank_public) {
     throw new Error("Assessment public question bank is not configured");
   }
