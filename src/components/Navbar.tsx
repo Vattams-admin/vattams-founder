@@ -35,19 +35,19 @@ export default function Navbar() {
     navigate('/')
   }
   return (
-    <header className="sticky top-0 z-40 border-b border-white/5 bg-ink/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-[#050B17]/90 backdrop-blur-2xl shadow-[0_14px_50px_rgba(0,0,0,.22)]">
+      <div className="mx-auto flex min-h-[76px] max-w-[1440px] items-center justify-between gap-5 px-4 sm:px-8 lg:px-10">
         <Link
           to="/"
           className="flex shrink-0 items-center gap-2.5"
           aria-label="VATTAMS ACADEMIA home"
         >
-          <img src="/branding/logo.png" alt="" className="h-9 w-9 object-contain" />
-          <span className="font-display text-base font-semibold leading-none tracking-wide text-parchment sm:text-lg">
-            VATTAMS <span className="text-gold">ACADEMIA</span>
+          <img src="/branding/logo-header.png" alt="VATTAMS Academia" className="h-11 w-auto object-contain" />
+          <span className="hidden sm:block font-display text-sm font-bold leading-tight tracking-[.08em] text-white sm:text-base">
+            VATTAMS <span className="text-[#60A5FA]">ACADEMIA</span><span className="block text-[9px] font-medium tracking-[.22em] text-slate-400">LEARN BETTER. ACHIEVE MORE.</span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-5 xl:flex">
+        <nav className="hidden items-center gap-6 xl:flex">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
@@ -55,7 +55,7 @@ export default function Navbar() {
               end={item.end}
               className={({ isActive }) =>
                 `whitespace-nowrap text-sm font-medium transition-colors ${
-                  isActive ? 'text-azure-bright' : 'text-slate-muted hover:text-parchment'
+                  isActive ? 'text-[#67E8F9]' : 'text-slate-300 hover:text-white'
                 }`
               }
             >
@@ -72,7 +72,7 @@ export default function Navbar() {
                   Loading…
                 </span>
               ) : (
-                <Link to={dashboardPath} className="text-sm font-medium text-slate-muted hover:text-parchment">
+                <Link to={dashboardPath} className="text-sm font-medium text-slate-300 transition-colors hover:text-white">
                   {user.displayName?.split(' ')[0] ?? 'Dashboard'}
                 </Link>
               )}
@@ -88,7 +88,7 @@ export default function Navbar() {
               <Link to="/tutor/register" className="text-sm font-medium text-slate-muted hover:text-parchment">
                 Become a Tutor
               </Link>
-              <Link to="/student/register" className="btn-primary text-sm">
+              <Link to="/student/register" className="btn-primary text-sm !rounded-full !px-5">
                 Student Registration
               </Link>
               <Link to="/admin" className="text-sm font-medium text-slate-muted hover:text-parchment">
