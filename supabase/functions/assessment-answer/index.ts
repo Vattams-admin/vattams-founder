@@ -53,7 +53,7 @@ async function saveAnswer(
 ) {
   const { data: attempt, error: attemptError } = await supabase
     .from("assessment_attempts")
-    .select("id,student_id,status,question_ids")
+    .select("id,student_id,assessment_id,status,started_at,question_ids")
     .eq("id", attemptId)
     .maybeSingle();
 
@@ -66,6 +66,26 @@ async function saveAnswer(
   }
   if (attempt.status !== "in_progress") {
     throw new Error("Assessment attempt is no longer active");
+  }
+
+  const startedAtMs = Date.parse(attempt.started_at);
+  if (!Number.isFinite(startedAtMs)) {
+    throw new Error("Assessment attempt has an invalid start time");
+  }
+
+  const { data: registryFile, error: registryError } = await supabase.storage
+    .from("academia-course-materials")
+    .download("assessments/registry.json");
+  if (registryError || !registryFile) {
+    throw new Error("Unable to load assessment registry");
+  }
+  const registry = JSON.parse(await registryFile.text());
+  const definition = registry.assessments?.[attempt.assessment_id];
+  if (!definition || definition.status !== "published" || !Number.isInteger(definition.time_seconds) || definition.time_seconds <= 0) {
+    throw new Error("Assessment time limit is unavailable");
+  }
+  if (Date.now() > startedAtMs + definition.time_seconds * 1000) {
+    throw new Error("Assessment time has expired");
   }
 
   const questionIds = Array.isArray(attempt.question_ids)
