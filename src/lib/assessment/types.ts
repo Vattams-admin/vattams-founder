@@ -11,7 +11,7 @@ export type AssessmentKind =
 
 export type AssessmentQuestionType = 'multiple_choice'
 
-export type AssessmentStatus = 'draft' | 'enabled' | 'retired'
+export type AssessmentStatus = 'draft' | 'reviewed' | 'published' | 'retired'
 
 export interface AssessmentQuestionPublic {
   question_id: string
