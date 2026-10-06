@@ -1,0 +1,32 @@
+name: Validate Assessment Registry
+
+on:
+  push:
+    paths:
+      - 'config/assessment-registry.json'
+      - 'config/**/assessment*.json'
+      - 'content/**/assessment*.json'
+      - 'scripts/validate-assessment-bank.mjs'
+      - 'scripts/validate-assessment-registry.mjs'
+      - '.github/workflows/validate-assessment-registry.yml'
+  pull_request:
+    paths:
+      - 'config/assessment-registry.json'
+      - 'config/**/assessment*.json'
+      - 'content/**/assessment*.json'
+      - 'scripts/validate-assessment-bank.mjs'
+      - 'scripts/validate-assessment-registry.mjs'
+      - '.github/workflows/validate-assessment-registry.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: node scripts/validate-assessment-registry.mjs
