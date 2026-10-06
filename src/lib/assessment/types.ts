@@ -13,12 +13,10 @@ export type AssessmentQuestionType = 'multiple_choice'
 
 export type AssessmentStatus = 'draft' | 'enabled' | 'retired'
 
-export interface AssessmentQuestion {
+export interface AssessmentQuestionPublic {
   question_id: string
   question: string
   options: [string, string, string, string]
-  correct_option_index: 0 | 1 | 2 | 3
-  explanation: string
   domain: AssessmentDomain
   course_id: string
   assessment_id: string
@@ -29,6 +27,11 @@ export interface AssessmentQuestion {
   language: string
   marks: number
   time_seconds: number
+}
+
+export interface AssessmentQuestion extends AssessmentQuestionPublic {
+  correct_option_index: 0 | 1 | 2 | 3
+  explanation: string
   review_status: 'reviewed'
 }
 
@@ -40,7 +43,7 @@ export interface AssessmentDefinition {
   domain: AssessmentDomain
   kind: AssessmentKind
   status: AssessmentStatus
-  question_bank: string
+  question_bank_public: string
   answer_key: string
   question_count: number
   time_seconds: number
