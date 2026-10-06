@@ -17,7 +17,6 @@ import { getMaterialTypeLabel } from '@/types/materials'
 import { formatFileSize } from '@/lib/materialValidation'
 import { MaterialTypeIcon } from '@/components/materials/MaterialIcons'
 import MaterialViewerModal from '@/components/materials/MaterialViewerModal'
-import { supabase } from '@/lib/supabase'
 import AssessmentCatalog from '@/components/assessment/AssessmentCatalog'
 
 interface Course {
