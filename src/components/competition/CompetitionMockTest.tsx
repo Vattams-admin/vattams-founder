@@ -224,6 +224,16 @@ export default function CompetitionMockTest({
       );
     }
 
+    if (data?.status === "submitted") {
+      setResult({
+        score: Number(data?.score) || 0,
+        maxScore: Number(data?.max_score) || 0,
+        answeredCount: Number(data?.answered_count) || 0,
+      });
+      setView("result");
+      return true;
+    }
+
     const loadedQuestions =
       await loadQuestions(
         questionIds,
