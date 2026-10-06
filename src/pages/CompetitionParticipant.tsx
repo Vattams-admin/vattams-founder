@@ -183,7 +183,15 @@ export default function CompetitionParticipant() {
       const startMs = typeof data?.started_at === 'string' ? new Date(data.started_at).getTime() : Date.now()
       setStartedAtMs(startMs)
       setRemainingSeconds(totalSeconds)
-      setAnswers({})
+      const restoredAnswers: Record<string, string> = {}
+      if (Array.isArray(data?.answers)) {
+        for (const answer of data.answers) {
+          if (typeof answer?.question_id === 'string' && typeof answer?.answer === 'string') {
+            restoredAnswers[answer.question_id] = answer.answer
+          }
+        }
+      }
+      setAnswers(restoredAnswers)
       setCurrentIndex(0)
       setView('attempt')
     } catch (error) {
@@ -239,8 +247,19 @@ export default function CompetitionParticipant() {
     return () => window.clearInterval(timer)
   }, [view, startedAtMs, totalSeconds])
 
-  const saveAnswer = (questionId: string, value: string) => {
+  const saveAnswer = async (questionId: string, value: string) => {
     setAnswers((previous) => ({ ...previous, [questionId]: value }))
+    try {
+      await invokeOfficial('competition-official-scoring', {
+        action: 'save_answer',
+        attempt_id: attemptId,
+        questionId,
+        answer: value,
+      })
+    } catch (error) {
+      console.error('Failed to save official competition answer:', error)
+      setErrorMessage(error instanceof Error ? error.message : 'Unable to save your answer. Please try again.')
+    }
   }
 
   if (loading) {
