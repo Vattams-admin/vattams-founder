@@ -68,7 +68,17 @@ jobs:
 
       - name: Build debug APK
         working-directory: android
-        run: ./gradlew assembleDebug
+        run: |
+          set -o pipefail
+          ./gradlew assembleDebug --stacktrace --info 2>&1 | tee ../android-gradle-build.log
+
+      - name: Upload Android Gradle diagnostic
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-gradle-diagnostic
+          path: android-gradle-build.log
+          if-no-files-found: ignore
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
