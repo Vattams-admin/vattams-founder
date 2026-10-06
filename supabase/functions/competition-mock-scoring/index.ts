@@ -731,12 +731,13 @@ Deno.serve(async (req) => {
 
     if (
       action !== "check_answer" &&
+      action !== "save_answer" &&
       action !== "submit_mock"
     ) {
       return json(
         {
           error:
-            'action must be "check_answer" or "submit_mock"',
+            'action must be "check_answer", "save_answer" or "submit_mock"',
         },
         400,
       );
@@ -824,7 +825,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    if (action === "check_answer") {
+    if (action === "check_answer" || action === "save_answer") {
       const questionId =
         typeof body?.questionId === "string"
           ? body.questionId.trim()
@@ -907,7 +908,7 @@ Deno.serve(async (req) => {
         );
       }
 
-      if (existingAnswer) {
+      if (existingAnswer && action === "check_answer") {
         return json({
           ok: true,
           action: "check_answer",
@@ -945,7 +946,7 @@ Deno.serve(async (req) => {
         error: insertAnswerError } =
         await supabase
           .from("competition_mock_answers")
-          .insert({
+          .upsert({
             attempt_id: attemptId,
             question_id: questionId,
             answer: submittedAnswer,
@@ -1234,13 +1235,11 @@ Deno.serve(async (req) => {
               evaluated.marksAwarded,
             answered_at: now,
             updated_at: now,
+          }, {
+            onConflict: "attempt_id,question_id",
           });
 
-      if (
-        insertAnswerError &&
-        insertAnswerError.code !==
-          "23505"
-      ) {
+      if (insertAnswerError) {
         console.error(
           "Mock submit answer insert failed:",
           insertAnswerError,
@@ -1249,6 +1248,10 @@ Deno.serve(async (req) => {
         throw new Error(
           "Unable to save mock answer",
         );
+      }
+
+      if (action === "save_answer") {
+        return json({ ok: true, action: "save_answer", questionId });
       }
     }
 
