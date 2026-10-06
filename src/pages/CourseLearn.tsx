@@ -17,6 +17,7 @@ import { getMaterialTypeLabel } from '@/types/materials'
 import { formatFileSize } from '@/lib/materialValidation'
 import { MaterialTypeIcon } from '@/components/materials/MaterialIcons'
 import MaterialViewerModal from '@/components/materials/MaterialViewerModal'
+import AssessmentCatalog from '@/components/assessment/AssessmentCatalog'
 
 interface Course {
   id: string
@@ -765,6 +766,8 @@ export default function CourseLearn() {
           )}
         </section>
       </div>
+
+      {courseId && <AssessmentCatalog courseId={courseId} />}
 
       {materials.length > 0 && (
         <section className="card mt-6 p-6">
