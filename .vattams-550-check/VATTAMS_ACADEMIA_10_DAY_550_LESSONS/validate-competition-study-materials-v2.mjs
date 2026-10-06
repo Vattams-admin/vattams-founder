@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { CATALOG_ITEMS, CATEGORY } from "../../../scripts/catalog-data.mjs";
+import { CATALOG_ITEMS, CATEGORY } from "../../scripts/catalog-data.mjs";
 
 const root = path.resolve("content/competition-study-materials");
 const blueprint = JSON.parse(fs.readFileSync(path.join(root, "competition-study-blueprints.json"), "utf8"));
