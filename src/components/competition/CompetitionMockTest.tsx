@@ -337,6 +337,24 @@ export default function CompetitionMockTest({
       [questionId]: value,
     }));
 
+    try {
+      const user = firebaseAuth.currentUser;
+      if (!user) throw new Error("Your Firebase session has expired. Please sign in again.");
+      const token = await user.getIdToken();
+      const { error } = await supabase.functions.invoke("competition-mock-scoring", {
+        body: {
+          action: "save_answer",
+          attemptId,
+          questionId,
+          answer: value,
+        },
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (error) throw error;
+    } catch (error) {
+      console.error("Failed to save mock answer:", error);
+      setErrorMessage(error instanceof Error ? error.message : "Unable to save your answer. Please try again.");
+    }
   };
 
   const submitAnswer = async () => {
