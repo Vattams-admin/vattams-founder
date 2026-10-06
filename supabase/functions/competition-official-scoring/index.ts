@@ -50,7 +50,9 @@ Deno.serve(async (request) => {
     const studentId = await uid(request);
     const body = await request.json();
     const attemptId = typeof body?.attempt_id === "string" ? body.attempt_id.trim() : "";
+    const action = typeof body?.action === "string" ? body.action.trim() : "submit";
     const submitted = Array.isArray(body?.answers) ? body.answers : [];
+    if (action !== "submit" && action !== "save_answer") return json({ error: "Invalid action." }, 400);
     if (!attemptId || submitted.length > 30) return json({ error: "Valid attempt and answers are required." }, 400);
 
     const { data: attempt, error: attemptError } = await supabase.from("competition_attempts")
@@ -83,6 +85,24 @@ Deno.serve(async (request) => {
     const startedAt = new Date(String(attempt.started_at)).getTime();
     if (!Number.isFinite(startedAt)) return json({ error: "Competition attempt has an invalid start time." }, 409);
     if (Math.floor((Date.now() - startedAt) / 1000) > allowedSeconds + 30) return json({ error: "Competition time has expired." }, 409);
+
+    if (action === "save_answer") {
+      const questionId = typeof body?.questionId === "string" ? body.questionId.trim() : "";
+      const answer = typeof body?.answer === "string" ? body.answer.trim() : "";
+      if (!questionId || !questionIds.includes(questionId)) {
+        return json({ error: "Invalid official competition question." }, 400);
+      }
+      const now = new Date().toISOString();
+      const { error: saveError } = await supabase.from("competition_answers").upsert({
+        attempt_id: attemptId,
+        question_id: questionId,
+        answer,
+        answered_at: answer ? now : null,
+        updated_at: now,
+      }, { onConflict: "attempt_id,question_id" });
+      if (saveError) throw new Error("Unable to save competition answer: " + saveError.message);
+      return json({ ok: true, action: "save_answer", questionId });
+    }
 
     const answerMap = new Map<string, string>();
     for (const item of submitted) {
