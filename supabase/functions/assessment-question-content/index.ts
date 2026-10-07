@@ -79,7 +79,6 @@ async function loadPublicQuestions(studentId: string, attemptId: string, token: 
   const definition = registry.assessments?.[attempt.assessment_id];
   if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
   if (attempt.release_version !== definition.release_version || attempt.release_public_sha256 !== definition.release_public_sha256 || attempt.release_private_sha256 !== definition.release_private_sha256) throw new Error("Assessment release changed after this attempt started; the attempt is locked to its original release");
-  if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
   if (typeof definition.question_bank_public !== "string" || !definition.question_bank_public) {
     throw new Error("Assessment public question bank is not configured");
   }
