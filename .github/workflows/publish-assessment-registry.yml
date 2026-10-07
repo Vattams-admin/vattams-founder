@@ -5,6 +5,12 @@ on:
   push:
     paths:
       - "config/assessment-registry.json"
+      - "config/assessment-blueprint-registry.json"
+      - "assessments/**"
+      - "scripts/validate-assessment-registry.mjs"
+      - "scripts/validate-assessment-bank-registration.mjs"
+      - "scripts/validate-assessment-blueprint-registry.mjs"
+      - ".github/workflows/publish-assessment-registry.yml"
 
 jobs:
   publish:
