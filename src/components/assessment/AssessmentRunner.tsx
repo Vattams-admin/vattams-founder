@@ -54,6 +54,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
   const [attemptId, setAttemptId] = useState("");
   const [startedAt, setStartedAt] = useState<number | null>(null);
   const [remainingSeconds, setRemainingSeconds] = useState(0);
+  const [assessmentTimeSeconds, setAssessmentTimeSeconds] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [result, setResult] = useState<AssessmentResult | null>(null);
   const [busy, setBusy] = useState(false);
@@ -105,6 +106,9 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     setQuestions(ordered as AssessmentQuestion[]);
     setAnswers(restored);
     setAttemptId(data.attempt_id);
+    const configuredSeconds = Number(data?.time_seconds);
+    if (!Number.isFinite(configuredSeconds) || configuredSeconds <= 0) throw new Error("Assessment returned an invalid time limit.");
+    setAssessmentTimeSeconds(configuredSeconds);
 
     if (data.status === "submitted" && data.result) {
       setResult({
@@ -121,10 +125,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     const startMs = Number.isFinite(started) ? started : Date.now();
     setStartedAt(startMs);
 
-    const configuredSeconds = (ordered as AssessmentQuestion[]).reduce(
-      (sum, q) => sum + Math.max(1, Number(q.time_seconds) || 60), 0,
-    );
-    setRemainingSeconds(Math.max(0, configuredSeconds - Math.floor((Date.now() - startMs) / 1000)));
+    setRemainingSeconds(Math.max(0, assessmentTimeSeconds - Math.floor((Date.now() - startMs) / 1000)));
     setView("attempt");
   }, [assessmentId, courseId]);
 
@@ -185,17 +186,14 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
   useEffect(() => {
     if (view !== "attempt" || startedAt === null) return;
     const tick = () => {
-      const configuredSeconds = questions.reduce(
-        (sum, q) => sum + Math.max(1, Number(q.time_seconds) || 60), 0,
-      );
-      const remaining = Math.max(0, configuredSeconds - Math.floor((Date.now() - startedAt) / 1000));
+      const remaining = Math.max(0, assessmentTimeSeconds - Math.floor((Date.now() - startedAt) / 1000));
       setRemainingSeconds(remaining);
       if (remaining === 0 && !autoSubmit.current) void submit();
     };
     tick();
     const timer = window.setInterval(tick, 1000);
     return () => window.clearInterval(timer);
-  }, [questions, startedAt, submit, view]);
+  }, [assessmentTimeSeconds, startedAt, submit, view]);
 
   useEffect(() => () => {
     Object.values(saveTimers.current).forEach((id) => window.clearTimeout(id));
