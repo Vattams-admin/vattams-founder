@@ -4,7 +4,7 @@ import crypto from "node:crypto";
 const root=process.cwd();
 const registry=JSON.parse(fs.readFileSync(path.join(root,"config/assessment-registry.json"),"utf8"));
 const errors=[];
-function sha(rel){const p=path.resolve(root,rel);if(!fs.existsSync(p))return null;return crypto.createHash("sha256").update(fs.readFileSync(p)).digest("hex");}
+function sha(rel){const p=path.resolve(root,rel);if(!fs.existsSync(p))return null;const parsed=JSON.parse(fs.readFileSync(p,"utf8"));return crypto.createHash("sha256").update(JSON.stringify(parsed)).digest("hex");}
 function read(rel){const p=path.resolve(root,rel);if(!fs.existsSync(p))return null;return JSON.parse(fs.readFileSync(p,"utf8"));}
 for(const [id,a] of Object.entries(registry.assessments||{})){
  const manifestPath=a.bank_manifest;
