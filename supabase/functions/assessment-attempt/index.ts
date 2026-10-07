@@ -103,7 +103,8 @@ async function getAssessment(assessmentId: string, courseId: string): Promise<As
     definition.assessment_id !== assessmentId || definition.course_id !== courseId ||
     !definition.question_bank_public || !definition.answer_key ||
     !Number.isInteger(definition.question_count) || definition.question_count <= 0 ||
-    !Number.isInteger(definition.time_seconds) || definition.time_seconds <= 0
+    !Number.isInteger(definition.time_seconds) || definition.time_seconds <= 0 ||
+    !definition.release_version || !definition.release_public_sha256 || !definition.release_private_sha256
   ) throw new Error("Assessment configuration is incomplete");
   return definition;
 }
