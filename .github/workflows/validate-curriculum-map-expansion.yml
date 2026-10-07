@@ -1,0 +1,26 @@
+name: Validate Curriculum Map Expansion
+
+on:
+  push:
+    paths:
+      - "config/curriculum-map-expansion.schema.json"
+      - "content/school/**/curriculum-map.json"
+      - "scripts/validate-curriculum-map-expansion.mjs"
+      - ".github/workflows/validate-curriculum-map-expansion.yml"
+  pull_request:
+    paths:
+      - "config/curriculum-map-expansion.schema.json"
+      - "content/school/**/curriculum-map.json"
+      - "scripts/validate-curriculum-map-expansion.mjs"
+      - ".github/workflows/validate-curriculum-map-expansion.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate curriculum map expansion
+        run: node scripts/validate-curriculum-map-expansion.mjs
