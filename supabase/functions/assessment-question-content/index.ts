@@ -30,7 +30,7 @@ async function verifyActiveEnrollment(studentId: string, courseId: string, token
 
 async function loadPublicQuestions(studentId: string, attemptId: string, token: string) {
   const { data: attempt, error } = await supabase.from("assessment_attempts")
-    .select("id,student_id,status,assessment_id,question_ids").eq("id", attemptId).maybeSingle();
+    .select("id,student_id,status,assessment_id,question_ids,option_orders").eq("id", attemptId).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
   if (!attempt) throw new Error("Assessment attempt not found");
   if (attempt.student_id !== studentId) throw new Error("Assessment attempt does not belong to this student");
@@ -70,8 +70,13 @@ async function loadPublicQuestions(studentId: string, attemptId: string, token: 
     if (options.length !== 4 || options.some((x: unknown) => typeof x !== "string" || !x.trim())) {
       throw new Error(`Question has invalid options: ${id}`);
     }
+    const order = Array.isArray(attempt.option_orders?.[id]) ? attempt.option_orders[id] : [0,1,2,3];
+    if (order.length !== 4 || new Set(order).size !== 4 || order.some((x: unknown) => !Number.isInteger(x) || x < 0 || x > 3)) {
+      throw new Error(`Invalid private option permutation: ${id}`);
+    }
+    const shuffledOptions = order.map((index: number) => options[index]);
     return {
-      question_id: q.question_id, question: q.question, options,
+      question_id: q.question_id, question: q.question, options: shuffledOptions,
       subject: q.subject, topic: q.topic, subtopic: q.subtopic,
       difficulty: q.difficulty, language: q.language,
       marks: q.marks, time_seconds: q.time_seconds,
@@ -83,13 +88,22 @@ async function loadPublicQuestions(studentId: string, attemptId: string, token: 
     .eq("attempt_id", attemptId);
   if (answerError) throw new Error(`Answer lookup failed: ${answerError.message}`);
 
+  const orders = attempt.option_orders || {};
+  const toShuffledIndex = (questionId: string, originalIndex: unknown) => {
+    if (!Number.isInteger(originalIndex)) return originalIndex;
+    const order = Array.isArray(orders[questionId]) ? orders[questionId] : [0,1,2,3];
+    const index = order.indexOf(originalIndex as number);
+    return index >= 0 ? index : originalIndex;
+  };
+
   return {
     attempt_id: attemptId, assessment_id: attempt.assessment_id, status: attempt.status,
     questions: publicQuestions,
     answers: (answers || []).map((a: any) => ({
-      question_id: a.question_id, answer: a.answer, selected_option_index: a.selected_option_index,
+      question_id: a.question_id, answer: a.answer,
+      selected_option_index: toShuffledIndex(a.question_id, a.selected_option_index),
       ...(attempt.status === "submitted" ? {
-        is_correct: a.is_correct, correct_option_index: a.correct_option_index,
+        is_correct: a.is_correct, correct_option_index: toShuffledIndex(a.question_id, a.correct_option_index),
         explanation: a.explanation, marks_awarded: a.marks_awarded,
       } : {}),
     })),

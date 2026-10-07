@@ -40,7 +40,8 @@
     "content:curriculum:evidence:validate": "node scripts/validate-evidence-backed-curriculum-map.mjs",
     "content:curriculum:readiness:validate": "node scripts/validate-curriculum-authoring-readiness.mjs",
     "content:authoring:package:validate": "node scripts/validate-content-authoring-package.mjs",
-    "content:questions:quality:validate": "node scripts/validate-question-quality-security.mjs"
+    "content:questions:quality:validate": "node scripts/validate-question-quality-security.mjs",
+    "content:assessment:selection:validate": "node scripts/validate-assessment-selection-policy.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",

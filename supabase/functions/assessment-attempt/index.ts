@@ -25,6 +25,17 @@ type AssessmentDefinition = {
   question_count: number;
   time_seconds: number;
   section_blueprint?: Record<string, number>;
+  selection_blueprint?: {
+    questionCount: number;
+    difficultyDistribution: { easy: number; medium: number; hard: number };
+    topicDistribution: Array<{ subject: string; topic: string; proportion: number }>;
+  };
+  eligibility?: {
+    curriculum?: string[];
+    classNumbers?: number[];
+    examIds?: string[];
+    ageBands?: string[];
+  };
 };
 
 type AssessmentRegistry = { version: number; assessments: Record<string, AssessmentDefinition> };
@@ -34,7 +45,7 @@ type AttemptRow = {
   question_ids: string[] | null; is_mock: boolean;
 };
 
-async function verifyFirebaseToken(authorization: string | null): Promise<{ uid: string; token: string }> {
+async function verifyFirebaseToken(authorization: string | null): Promise<{ uid: string; token: string; claims: Record<string, unknown> }> {
   if (!authorization?.startsWith("Bearer ")) throw new Error("Missing authorization token");
   if (!FIREBASE_PROJECT_ID) throw new Error("Firebase project configuration missing");
   const token = authorization.slice(7).trim();
@@ -43,7 +54,7 @@ async function verifyFirebaseToken(authorization: string | null): Promise<{ uid:
   });
   const uid = typeof payload.sub === "string" ? payload.sub : "";
   if (!uid) throw new Error("Invalid Firebase token");
-  return { uid, token };
+  return { uid, token, claims: payload as Record<string, unknown> };
 }
 
 async function loadRegistry(): Promise<AssessmentRegistry> {
@@ -71,50 +82,172 @@ async function loadJson(path: string, label: string): Promise<any> {
   return JSON.parse(await data.text());
 }
 
-async function loadQuestionIds(definition: AssessmentDefinition): Promise<string[]> {
+type Question = {
+  question_id: string;
+  subject?: string;
+  topic?: string;
+  curriculum_locator?: string | Record<string, unknown>;
+  curriculum?: string;
+  class_number?: number;
+  exam_id?: string;
+  age_band?: string;
+  difficulty?: "easy" | "medium" | "hard";
+  options?: string[];
+};
+
+function normalize(value: unknown): string {
+  return typeof value === "string" ? value.trim().toLowerCase() : "";
+}
+
+function shuffled<T>(items: T[], random = Math.random): T[] {
+  const copy = [...items];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+function seededRandom(seed: string): () => number {
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < seed.length; i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619) >>> 0;
+  return () => {
+    h += 0x6D2B79F5;
+    let t = h;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function distributionCounts(total: number, distribution: Record<string, number>): Record<string, number> {
+  const entries = Object.entries(distribution);
+  const counts = Object.fromEntries(entries.map(([k, v]) => [k, Math.floor(total * v)]));
+  let remaining = total - Object.values(counts).reduce((a, b) => a + b, 0);
+  const ranked = entries
+    .map(([k, v]) => ({ k, fraction: total * v - Math.floor(total * v) }))
+    .sort((a, b) => b.fraction - a.fraction);
+  for (let i = 0; i < remaining; i++) counts[ranked[i % ranked.length].k]++;
+  return counts;
+}
+
+function validateBlueprint(assessment: AssessmentDefinition) {
+  const bp = assessment.selection_blueprint;
+  if (!bp) throw new Error("Published assessment is missing selection blueprint");
+  if (bp.questionCount !== assessment.question_count) throw new Error("Selection blueprint question count does not match assessment");
+  const dsum = bp.difficultyDistribution.easy + bp.difficultyDistribution.medium + bp.difficultyDistribution.hard;
+  if (Math.abs(dsum - 1) > 0.000001) throw new Error("Difficulty distribution must sum to 1");
+  const tsum = bp.topicDistribution.reduce((s, x) => s + Number(x.proportion), 0);
+  if (Math.abs(tsum - 1) > 0.000001) throw new Error("Topic distribution must sum to 1");
+}
+
+function matchesEligibility(q: Question, assessment: AssessmentDefinition, claims: Record<string, unknown>): boolean {
+  const e = assessment.eligibility;
+  if (!e) return true;
+  if (e.curriculum?.length && !e.curriculum.includes(String(claims.curriculum || ""))) return false;
+  if (e.classNumbers?.length && !e.classNumbers.includes(Number(claims.class_number))) return false;
+  if (e.examIds?.length && !e.examIds.includes(String(claims.exam_id || ""))) return false;
+  if (e.ageBands?.length && !e.ageBands.includes(String(claims.age_band || ""))) return false;
+  if (e.ageBands?.length && !q.age_band) return false;
+  if (e.curriculum?.length && !q.curriculum_locator && !q.curriculum) return false;
+  return true;
+}
+
+function matchesTopic(q: Question, t: { subject: string; topic: string }): boolean {
+  return normalize(q.subject) === normalize(t.subject) && normalize(q.topic) === normalize(t.topic);
+}
+
+async function loadQuestionBank(definition: AssessmentDefinition): Promise<Question[]> {
   const parsed = await loadJson(definition.question_bank_public, "public question bank");
   const questions = Array.isArray(parsed) ? parsed : parsed?.questions;
   if (!Array.isArray(questions) || questions.length === 0) throw new Error("Public question bank has invalid format");
-
-  const ids = questions.map((q: any) => typeof q?.question_id === "string" ? q.question_id.trim() : "");
-  if (ids.some((id: string) => !id) || new Set(ids).size !== ids.length) {
-    throw new Error("Public question bank contains invalid or duplicate IDs");
-  }
-
+  const ids = questions.map((q: Question) => typeof q?.question_id === "string" ? q.question_id.trim() : "");
+  if (ids.some((id: string) => !id) || new Set(ids).size !== ids.length) throw new Error("Public question bank contains invalid or duplicate IDs");
   for (const q of questions) {
     if (Object.prototype.hasOwnProperty.call(q, "correct_option_index") ||
         Object.prototype.hasOwnProperty.call(q, "explanation") ||
         Object.prototype.hasOwnProperty.call(q, "answer")) {
       throw new Error(`Public question bank contains private scoring data: ${q.question_id || "unknown"}`);
     }
-    if (!Array.isArray(q.options) || q.options.length !== 4 ||
-        q.options.some((x: unknown) => typeof x !== "string" || !x.trim())) {
+    if (!Array.isArray(q.options) || q.options.length !== 4 || q.options.some((x: unknown) => typeof x !== "string" || !x.trim())) {
       throw new Error(`Invalid options for question: ${q.question_id || "unknown"}`);
     }
+    if (!["easy", "medium", "hard"].includes(q.difficulty || "")) throw new Error(`Question missing valid difficulty: ${q.question_id || "unknown"}`);
+    if (!q.age_band) throw new Error(`Question missing age band: ${q.question_id || "unknown"}`);
   }
-
   const keyParsed = await loadJson(definition.answer_key, "private answer key");
   const entries = Array.isArray(keyParsed) ? keyParsed : keyParsed?.questions || keyParsed?.answers;
   if (!Array.isArray(entries)) throw new Error("Private answer key has invalid format");
   const keyIds = entries.map((q: any) => typeof q?.question_id === "string" ? q.question_id.trim() : "");
-  if (keyIds.some((id: string) => !id) || new Set(keyIds).size !== keyIds.length) {
-    throw new Error("Private answer key contains invalid or duplicate IDs");
-  }
+  if (keyIds.some((id: string) => !id) || new Set(keyIds).size !== keyIds.length) throw new Error("Private answer key contains invalid or duplicate IDs");
   const keySet = new Set(keyIds);
-  for (const id of ids) {
-    if (!keySet.has(id)) throw new Error(`Answer key missing question: ${id}`);
-  }
+  for (const id of ids) if (!keySet.has(id)) throw new Error(`Answer key missing question: ${id}`);
+  return questions as Question[];
+}
 
+async function recentQuestionIds(studentId: string, assessmentId: string): Promise<Set<string>> {
+  const { data, error } = await supabase.from("assessment_attempts")
+    .select("question_ids").eq("student_id", studentId).eq("assessment_id", assessmentId)
+    .eq("status", "submitted").order("started_at", { ascending: false }).limit(3);
+  if (error) throw new Error(`Recent attempt lookup failed: ${error.message}`);
+  const ids = new Set<string>();
+  for (const row of data || []) for (const id of Array.isArray(row.question_ids) ? row.question_ids : []) if (typeof id === "string") ids.add(id);
   return ids;
 }
 
-function shuffled<T>(items: T[]): T[] {
-  const copy = [...items];
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = crypto.getRandomValues(new Uint32Array(1))[0] % (i + 1);
-    [copy[i], copy[j]] = [copy[j], copy[i]];
+function selectQuestions(questions: Question[], assessment: AssessmentDefinition, claims: Record<string, unknown>, recent: Set<string>, random: () => number): Question[] {
+  validateBlueprint(assessment);
+  const bp = assessment.selection_blueprint!;
+  const eligible = questions.filter(q => matchesEligibility(q, assessment, claims));
+  if (eligible.length < bp.questionCount) throw new Error(`Eligible question inventory is ${eligible.length}; ${bp.questionCount} required`);
+
+  const alternatives = eligible.filter(q => !recent.has(q.question_id));
+  const pool = alternatives.length >= bp.questionCount ? alternatives : eligible;
+  const difficultyTargets = distributionCounts(bp.questionCount, bp.difficultyDistribution);
+  const topicTargets = new Map(bp.topicDistribution.map(t => [normalize(t.subject)+"::"+normalize(t.topic), Math.round(bp.questionCount * t.proportion)]));
+  const topicSelected = new Map<string, number>();
+  const difficultySelected = new Map<string, number>();
+  const selected: Question[] = [];
+  const remaining = [...pool];
+
+  while (selected.length < bp.questionCount) {
+    const candidates = remaining.filter(q => {
+      const d = q.difficulty || "";
+      const dk = normalize(q.subject)+"::"+normalize(q.topic);
+      return (difficultySelected.get(d) || 0) < (difficultyTargets[d] || 0) &&
+        (topicTargets.has(dk) ? (topicSelected.get(dk) || 0) < (topicTargets.get(dk) || 0) : true);
+    });
+    if (!candidates.length) break;
+    candidates.sort((a, b) => {
+      const ad = (difficultyTargets[a.difficulty || ""] || 0) - (difficultySelected.get(a.difficulty || "") || 0);
+      const bd = (difficultyTargets[b.difficulty || ""] || 0) - (difficultySelected.get(b.difficulty || "") || 0);
+      const ak = normalize(a.subject)+"::"+normalize(a.topic);
+      const bk = normalize(b.subject)+"::"+normalize(b.topic);
+      const at = (topicTargets.get(ak) || 0) - (topicSelected.get(ak) || 0);
+      const bt = (topicTargets.get(bk) || 0) - (topicSelected.get(bk) || 0);
+      return (bd + bt) - (ad + at);
+    });
+    const topScore = candidates.slice(0, Math.min(8, candidates.length));
+    const q = topScore[Math.floor(random() * topScore.length)];
+    selected.push(q);
+    remaining.splice(remaining.indexOf(q), 1);
+    difficultySelected.set(q.difficulty || "", (difficultySelected.get(q.difficulty || "") || 0) + 1);
+    const key = normalize(q.subject)+"::"+normalize(q.topic);
+    topicSelected.set(key, (topicSelected.get(key) || 0) + 1);
   }
-  return copy;
+
+  if (selected.length !== bp.questionCount) {
+    throw new Error("Blueprint cannot be satisfied by eligible question inventory; assessment start blocked");
+  }
+  return shuffled(selected, random);
+}
+
+function buildOptionOrders(questionIds: string[], questions: Question[], random: () => number): Record<string, number[]> {
+  const byId = new Map(questions.map(q => [q.question_id, q]));
+  const orders: Record<string, number[]> = {};
+  for (const id of questionIds) orders[id] = shuffled([0,1,2,3], random);
+  if (Object.keys(orders).length !== questionIds.length || Object.keys(byId).length === 0) throw new Error("Unable to build option permutations");
+  return orders;
 }
 
 async function refreshAccess(studentId: string, courseId: string, assessmentId: string, token: string): Promise<void> {
@@ -189,7 +322,7 @@ async function buildResponse(attempt: AttemptRow, timeSeconds: number) {
   };
 }
 
-async function startOrResume(studentId: string, courseId: string, assessmentId: string, token: string) {
+async function startOrResume(studentId: string, courseId: string, assessmentId: string, token: string, claims: Record<string, unknown>) {
   const assessment = await getAssessment(assessmentId, courseId);
   await checkAccess(studentId, courseId, assessmentId, token);
 
@@ -197,17 +330,17 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
   if (existing?.status === "in_progress") return buildResponse(existing, assessment.time_seconds);
   if (existing?.status === "submitted") return buildResponse(existing, assessment.time_seconds);
 
-  const allQuestionIds = await loadQuestionIds(assessment);
-  if (allQuestionIds.length < assessment.question_count) {
-    throw new Error(`Question bank has ${allQuestionIds.length} questions; ${assessment.question_count} required`);
-  }
-
-  const questionIds = shuffled(allQuestionIds).slice(0, assessment.question_count);
+  const questions = await loadQuestionBank(assessment);
+  const recent = await recentQuestionIds(studentId, assessmentId);
+  const random = seededRandom(`${studentId}:${assessmentId}:${crypto.randomUUID()}`);
+  const selected = selectQuestions(questions, assessment, claims, recent, random);
+  const questionIds = selected.map(q => q.question_id);
+  const optionOrders = buildOptionOrders(questionIds, selected, random);
 
   const { data, error } = await supabase.from("assessment_attempts").insert({
     student_id: studentId, course_id: courseId, assessment_id: assessmentId,
     domain: assessment.domain, kind: assessment.kind, status: "in_progress",
-    started_at: new Date().toISOString(), question_ids: questionIds,
+    started_at: new Date().toISOString(), question_ids: questionIds, option_orders: optionOrders,
     is_mock: assessment.kind === "mock_test",
   }).select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock").single();
 
@@ -242,7 +375,7 @@ Deno.serve(async (request) => {
     const courseId = typeof body?.course_id === "string" ? body.course_id.trim() : "";
     const assessmentId = typeof body?.assessment_id === "string" ? body.assessment_id.trim() : "";
     if (!courseId || !assessmentId) return jsonResponse({ error: "course_id and assessment_id are required" }, 400);
-    return jsonResponse(await startOrResume(auth.uid, courseId, assessmentId, auth.token));
+    return jsonResponse(await startOrResume(auth.uid, courseId, assessmentId, auth.token, auth.claims));
   } catch (error) {
     console.error("assessment-attempt error", error);
     return jsonResponse({ error: error instanceof Error ? error.message : "Unable to start assessment" }, 400);

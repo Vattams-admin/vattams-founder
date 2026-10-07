@@ -1,0 +1,21 @@
+name: Validate Assessment Selection Gate
+
+on:
+  pull_request:
+    paths:
+      - "config/assessment-selection-policy.json"
+      - "config/assessment-selection-blueprint.schema.json"
+      - "scripts/validate-assessment-selection-policy.mjs"
+      - "config/competitive-exam-assessment-blueprints/**"
+      - "package.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate assessment selection policy
+        run: npm run content:assessment:selection:validate
