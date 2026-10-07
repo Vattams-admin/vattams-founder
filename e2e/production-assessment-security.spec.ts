@@ -111,7 +111,7 @@ test.describe("production assessment security boundary", () => {
     }
   });
 
-  test("Student B cannot read Student A's attempt", async ({ page }) => {
+  test("Student B cannot read Student A's attempt", async ({ browser }) => {
     const emailA = process.env.E2E_STUDENT_A_EMAIL;
     const passwordA = process.env.E2E_STUDENT_A_PASSWORD;
     const emailB = process.env.E2E_STUDENT_B_EMAIL;
@@ -120,25 +120,34 @@ test.describe("production assessment security boundary", () => {
 
     await setEnrollmentStatus(emailA, "active");
     await setEnrollmentStatus(emailB, "active");
-    await login(page, emailA, passwordA);
-    const started = await startPublishedAssessment(page);
+    const contextA = await browser.newContext();
+    const contextB = await browser.newContext();
+    const pageA = await contextA.newPage();
+    const pageB = await contextB.newPage();
+    try {
+      await login(pageA, emailA, passwordA);
+      const started = await startPublishedAssessment(pageA);
 
-    await login(page, emailB, passwordB);
-    const bRequest = page.waitForRequest(
+      await login(pageB, emailB, passwordB);
+      const bRequest = pageB.waitForRequest(
       request => request.url().includes("/functions/v1/assessment-attempt") && request.method() === "POST",
       { timeout: 15000 },
     );
-    await page.goto(`/assessment/${COURSE_ID}/${started.assessmentId}`);
-    await page.getByRole("button", { name: "Start / Resume" }).click();
-    const bAttemptRequest = await bRequest;
-    const authorization = bAttemptRequest.headers().authorization;
-    if (!authorization) throw new Error("Student B authorization header was not captured.");
+      await pageB.goto(`/assessment/${COURSE_ID}/${started.assessmentId}`);
+      await pageB.getByRole("button", { name: "Start / Resume" }).click();
+      const bAttemptRequest = await bRequest;
+      const authorization = bAttemptRequest.headers().authorization;
+      if (!authorization) throw new Error("Student B authorization header was not captured.");
 
-    const crossStudent = await callFunction(page, "assessment-question-content", authorization, {
+      const crossStudent = await callFunction(pageB, "assessment-question-content", authorization, {
       action: "load", attempt_id: started.attemptId,
     });
-    expect(crossStudent.response.status()).toBe(400);
-    expect(crossStudent.body.error).toContain("does not belong to this student");
+      expect(crossStudent.response.status()).toBe(400);
+      expect(crossStudent.body.error).toContain("does not belong to this student");
+    } finally {
+      await contextA.close();
+      await contextB.close();
+    }
   });
 
   test("private answer keys are not anonymously downloadable", async ({ request }) => {
