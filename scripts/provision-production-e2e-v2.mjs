@@ -16,6 +16,7 @@ const runId = process.env.GITHUB_RUN_ID || randomUUID().replace(/-/g, '').slice(
 const emailDomain = 'vattams-e2e.test'
 const password = `VattamsE2E!${runId}Aa`
 const competitionCourseId = 'DNWt3cPE4ZSJG90CTC1e'
+const assessmentCourseId = 'tnpsc-group-iv-vao'
 const supabaseUrl = process.env.SUPABASE_URL || ''
 const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || ''
 const supabase = supabaseUrl && supabaseServiceRoleKey
@@ -46,10 +47,12 @@ async function provision() {
       id: student.uid, full_name: student.displayName, date_of_birth: '2005-01-01',
       email: student.email, role: 'student', status: 'active', created_at: now.toISOString(),
     }, { merge: true })
-    batch.set(db.collection('enrolments').doc(`${student.uid}_${competitionCourseId}`), {
-      student_id: student.uid, course_id: competitionCourseId, status: 'active',
-      enrolled_at: now.toISOString(), source: 'production-e2e-competition',
-    }, { merge: true })
+    for (const courseId of [competitionCourseId, assessmentCourseId]) {
+      batch.set(db.collection('enrolments').doc(`${student.uid}_${courseId}`), {
+        student_id: student.uid, course_id: courseId, status: 'active',
+        enrolled_at: now.toISOString(), source: 'production-e2e',
+      }, { merge: true })
+    }
   }
   await batch.commit()
   if (!supabase) throw new Error('SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required for competition E2E provisioning.')
