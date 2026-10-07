@@ -1,0 +1,19 @@
+name: Validate Assessment Blueprint Authoring
+
+on:
+  pull_request:
+    paths:
+      - "config/assessment-blueprint-authoring/**"
+      - "config/assessment-blueprint-authoring.schema.json"
+      - "scripts/validate-assessment-blueprint-authoring.mjs"
+      - "package.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run content:assessment:blueprint:authoring:validate -- config/assessment-blueprint-authoring/tnpsc-group-iv-vao-mock.json

@@ -1,0 +1,45 @@
+{
+  "blueprint_id": "tnpsc-group-iv-vao-mock",
+  "version": "0.1.0",
+  "status": "draft",
+  "question_count": 200,
+  "sections": [
+    {
+      "id": "tamil-eligibility-cum-scoring",
+      "subject": "Tamil",
+      "question_count": 100
+    },
+    {
+      "id": "general-studies",
+      "subject": "General Studies",
+      "question_count": 75
+    },
+    {
+      "id": "aptitude-mental-ability",
+      "subject": "Aptitude & Mental Ability",
+      "question_count": 25
+    }
+  ],
+  "difficulty_distribution": {
+    "easy": 0,
+    "medium": 0,
+    "hard": 0
+  },
+  "topic_distribution": [],
+  "eligibility": {
+    "exam_ids": [
+      "tnpsc-group-iv-vao"
+    ],
+    "age_bands_required": true
+  },
+  "provenance": {
+    "source_evidence": [
+      "TNPSC official scheme captured in config/competitive-exam-assessment-blueprints/tnpsc-group-iv-vao.json"
+    ],
+    "authored_by": "VATTAMS Academia assessment authoring team",
+    "notes": "Draft shell only. No difficulty or topic quota is asserted until independently authored and reviewed."
+  },
+  "review": {
+    "status": "pending"
+  }
+}
