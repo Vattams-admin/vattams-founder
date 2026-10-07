@@ -1,0 +1,28 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"VATTAMS Syllabus Artifact Registry",
+  "type":"object",
+  "required":["version","registryId","artifacts"],
+  "properties":{
+    "version":{"type":"integer","const":1},
+    "registryId":{"type":"string","const":"vattams-syllabus-artifact-registry"},
+    "artifacts":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["artifactId","trackId","sourceType","sourceTitle","sourceLocator","retrievedAt","sha256","status"],
+        "properties":{
+          "artifactId":{"type":"string","minLength":1},
+          "trackId":{"type":"string","minLength":1},
+          "sourceType":{"enum":["official_curriculum_document","official_syllabus_page","official_subject_framework","official_exam_notification","official_handbook","authorized_textbook_framework"]},
+          "sourceTitle":{"type":"string","minLength":1},
+          "sourceLocator":{"type":"string","minLength":1},
+          "retrievedAt":{"type":"string","minLength":1},
+          "sha256":{"type":"string","pattern":"^[a-fA-F0-9]{64}$"},
+          "status":{"enum":["captured","verified","approved","superseded"]},
+          "supersedesArtifactId":{"type":["string","null"]}
+        }
+      }
+    }
+  }
+}
