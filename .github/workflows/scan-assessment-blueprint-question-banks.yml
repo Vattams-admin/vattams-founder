@@ -1,0 +1,23 @@
+name: Scan Assessment Blueprint Question Banks
+
+on:
+  pull_request:
+    paths:
+      - "config/assessment-blueprint-registry.json"
+      - "config/assessment-blueprint-coverage/**"
+      - "config/assessment-registry.json"
+      - "assessments/**"
+      - "scripts/scan-assessment-blueprint-question-banks.mjs"
+      - "scripts/validate-assessment-blueprint-coverage.mjs"
+      - "package.json"
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run content:assessment:coverage:scan
+      - run: npm run content:assessment:coverage:validate
