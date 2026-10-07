@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "registry_id": "vattams-production-content-library",
+  "purpose": "Canonical routing registry for production education content. This registry defines supported locator families and storage conventions; it does not claim that a subject, chapter, question bank, or syllabus has been authored.",
+  "source_of_truth": [
+    "config/india-education-registry.json",
+    "config/assessment-registry.json",
+    "config/competition-registry.json",
+    "config/competitive-exam-assessment-blueprints/"
+  ],
+  "library_root": "content",
+  "domains": {
+    "school": {
+      "path": "school/{state-or-national}/{curriculum}/{class}/{subject}",
+      "locator": [
+        "domain",
+        "stateOrUt",
+        "curriculum",
+        "classNumber",
+        "subject",
+        "language"
+      ],
+      "assessmentModes": [
+        "practice",
+        "topic_test",
+        "chapter_test",
+        "subject_test",
+        "sectional_test",
+        "mock_test",
+        "official_attempt"
+      ]
+    },
+    "competitive-exam": {
+      "path": "competitive-exams/{exam-family}/{exam}/{course}",
+      "locator": [
+        "domain",
+        "examFamily",
+        "exam",
+        "course",
+        "subject",
+        "topic",
+        "subtopic",
+        "language"
+      ],
+      "assessmentModes": [
+        "practice",
+        "topic_test",
+        "sectional_test",
+        "pyq_test",
+        "mock_test",
+        "official_attempt"
+      ]
+    },
+    "entrance-exam": {
+      "path": "entrance-exams/{exam-family}/{exam}/{course}",
+      "locator": [
+        "domain",
+        "examFamily",
+        "exam",
+        "course",
+        "subject",
+        "topic",
+        "subtopic",
+        "language"
+      ],
+      "assessmentModes": [
+        "practice",
+        "topic_test",
+        "sectional_test",
+        "mock_test",
+        "official_attempt"
+      ]
+    },
+    "professional": {
+      "path": "professional/{family}/{exam-or-qualification}/{course}",
+      "locator": [
+        "domain",
+        "examFamily",
+        "exam",
+        "course",
+        "subject",
+        "topic",
+        "subtopic",
+        "language"
+      ],
+      "assessmentModes": [
+        "practice",
+        "topic_test",
+        "sectional_test",
+        "mock_test",
+        "official_attempt"
+      ]
+    },
+    "competition": {
+      "path": "competitions/{competition-slug}",
+      "locator": [
+        "domain",
+        "competition",
+        "ageBand",
+        "topic",
+        "language"
+      ],
+      "assessmentModes": [
+        "practice",
+        "topic_test",
+        "mock_test",
+        "official_attempt"
+      ]
+    }
+  },
+  "package_layout": {
+    "lesson": [
+      "study-material",
+      "lessons"
+    ],
+    "practice": [
+      "practice",
+      "questions"
+    ],
+    "revision": [
+      "revision",
+      "flash-recall",
+      "formula-bank",
+      "weak-topic-revision"
+    ],
+    "assessments": [
+      "assessments"
+    ],
+    "governance": [
+      "manifest.json",
+      "review.json"
+    ]
+  },
+  "school_foundation": {
+    "class_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "national_curricula": [
+      "cbse",
+      "cisce",
+      "nios"
+    ],
+    "state_curriculum": "state_board",
+    "private_curriculum": "matriculation",
+    "international_curriculum": [
+      "ib",
+      "cambridge-international",
+      "pearson-edexcel"
+    ],
+    "language_policy": "Use the language registry and review every translated package before publication."
+  },
+  "exam_foundation": {
+    "families": [
+      "tnpsc",
+      "upsc",
+      "ssc",
+      "banking",
+      "railways",
+      "defence",
+      "state_recruitment",
+      "neet",
+      "jee",
+      "cuet",
+      "law",
+      "ca",
+      "cma",
+      "cs",
+      "other_entrance"
+    ],
+    "source_policy": "Exam blueprints and official sources must define the actual syllabus and assessment structure before production content is marked reviewed."
+  },
+  "package_statuses": [
+    "draft",
+    "in_review",
+    "approved",
+    "published",
+    "retired"
+  ],
+  "publication_gate": {
+    "requires_registry_locator": true,
+    "requires_schema_validation": true,
+    "requires_reviewed_content": true,
+    "requires_audit_metadata": true,
+    "forbids_placeholder_questions": true,
+    "forbids_machine_translation_auto_publish": true
+  }
+}
