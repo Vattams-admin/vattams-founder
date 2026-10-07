@@ -1,0 +1,25 @@
+name: Validate Production Package Manifests
+
+on:
+  push:
+    paths:
+      - 'config/production-content-package-manifest.schema.json'
+      - 'content/**/manifest.json'
+      - 'scripts/validate-production-package-manifests.mjs'
+      - '.github/workflows/validate-production-package-manifests.yml'
+  pull_request:
+    paths:
+      - 'config/production-content-package-manifest.schema.json'
+      - 'content/**/manifest.json'
+      - 'scripts/validate-production-package-manifests.mjs'
+      - '.github/workflows/validate-production-package-manifests.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/validate-production-package-manifests.mjs

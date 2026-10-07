@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vattams.net/schemas/production-content-package-manifest.schema.json",
+  "title": "VATTAMS Academia Production Content Package Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "packageId",
+    "version",
+    "domain",
+    "locator",
+    "status",
+    "coverage",
+    "assets",
+    "governance"
+  ],
+  "properties": {
+    "packageId": {
+      "type": "string",
+      "minLength": 3
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "domain": {
+      "enum": [
+        "school",
+        "competitive-exam",
+        "entrance-exam",
+        "professional",
+        "competition"
+      ]
+    },
+    "locator": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "language"
+      ],
+      "properties": {
+        "stateOrUt": {
+          "type": "string"
+        },
+        "curriculum": {
+          "type": "string"
+        },
+        "classNumber": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "subject": {
+          "type": "string"
+        },
+        "chapter": {
+          "type": "string"
+        },
+        "topic": {
+          "type": "string"
+        },
+        "subtopic": {
+          "type": "string"
+        },
+        "examFamily": {
+          "type": "string"
+        },
+        "exam": {
+          "type": "string"
+        },
+        "course": {
+          "type": "string"
+        },
+        "competition": {
+          "type": "string"
+        },
+        "ageBand": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string",
+          "minLength": 2
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "in_review",
+        "approved",
+        "published",
+        "retired"
+      ]
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "studyMaterials",
+        "questions",
+        "assessments"
+      ],
+      "properties": {
+        "studyMaterials": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "questions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "assessments": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifestPath"
+      ],
+      "properties": {
+        "manifestPath": {
+          "type": "string"
+        },
+        "studyMaterials": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "questionBanksPublic": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "answerKeysPrivate": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "assessments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceEvidence",
+        "reviewStatus",
+        "answerKeyPrivate"
+      ],
+      "properties": {
+        "sourceEvidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reviewStatus": {
+          "enum": [
+            "unreviewed",
+            "reviewed",
+            "approved"
+          ]
+        },
+        "answerKeyPrivate": {
+          "const": true
+        },
+        "contentHash": {
+          "type": "string"
+        },
+        "approvedBy": {
+          "type": "string"
+        },
+        "approvedAt": {
+          "type": "string"
+        },
+        "previousVersion": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "published"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "governance": {
+            "properties": {
+              "reviewStatus": {
+                "enum": [
+                  "reviewed",
+                  "approved"
+                ]
+              },
+              "approvedBy": {
+                "minLength": 1
+              },
+              "approvedAt": {
+                "minLength": 1
+              },
+              "contentHash": {
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
