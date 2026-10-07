@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vattams.net/schemas/production-content-coverage.schema.json",
+  "title": "VATTAMS Academia Production Content Coverage Report",
+  "type": "object",
+  "required": ["version", "generatedAt", "summary", "targets", "manifests"],
+  "properties": {
+    "version": { "const": 1 },
+    "generatedAt": { "type": "string" },
+    "summary": {
+      "type": "object",
+      "required": ["actualManifestCount", "targetCount", "missingCount", "publishedCount"],
+      "properties": {
+        "actualManifestCount": { "type": "integer", "minimum": 0 },
+        "targetCount": { "type": "integer", "minimum": 0 },
+        "missingCount": { "type": "integer", "minimum": 0 },
+        "publishedCount": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "targets": { "type": "array" },
+    "manifests": { "type": "array" }
+  }
+}
