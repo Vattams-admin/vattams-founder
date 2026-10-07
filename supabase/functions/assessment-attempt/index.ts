@@ -68,6 +68,17 @@ async function verifyFirebaseToken(authorization: string | null): Promise<{ uid:
   return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
+
+async function attemptIntegrityHash(attempt: { release_version: string; release_public_sha256: string; release_private_sha256: string; question_ids: string[]; option_orders: Record<string, number[]> }): Promise<string> {
+  return canonicalSha256({
+    release_version: attempt.release_version,
+    release_public_sha256: attempt.release_public_sha256,
+    release_private_sha256: attempt.release_private_sha256,
+    question_ids: attempt.question_ids,
+    option_orders: attempt.option_orders,
+  });
+}
+
 async function verifyRegisteredBank(definition: any, publicParsed: unknown, privateParsed?: unknown): Promise<void> {
   if (typeof definition.bank_manifest !== "string" || !definition.bank_manifest) {
     throw new Error("Assessment bank manifest is not registered");
@@ -326,7 +337,7 @@ async function checkAccess(studentId: string, courseId: string, assessmentId: st
 
 async function findLatestAttempt(studentId: string, assessmentId: string): Promise<AttemptRow | null> {
   const { data, error } = await supabase.from("assessment_attempts")
-    .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256")
+    .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders")
     .eq("student_id", studentId).eq("assessment_id", assessmentId)
     .order("started_at", { ascending: false }).limit(1).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
@@ -392,6 +403,7 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
     domain: assessment.domain, kind: assessment.kind, status: "in_progress",
     started_at: new Date().toISOString(), question_ids: questionIds, option_orders: optionOrders,
     release_version: assessment.release_version, release_public_sha256: assessment.release_public_sha256, release_private_sha256: assessment.release_private_sha256,
+    integrity_sha256: await attemptIntegrityHash({ release_version: assessment.release_version!, release_public_sha256: assessment.release_public_sha256!, release_private_sha256: assessment.release_private_sha256!, question_ids: questionIds, option_orders: optionOrders }),
     is_mock: assessment.kind === "mock_test",
   }).select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock").single();
 
