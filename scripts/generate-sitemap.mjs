@@ -50,6 +50,13 @@ const required = [
 const missing = required.filter((name) => !process.env[name])
 
 if (missing.length > 0) {
+  if (process.env.WORKERS_CI) {
+    console.warn(
+      `Firebase build variables are unavailable in Workers Builds; preserving the checked-in sitemap.xml. Missing: ${missing.join(', ')}`,
+    )
+    process.exit(0)
+  }
+
   console.error(`Missing Firebase environment variable(s): ${missing.join(', ')}`)
   process.exit(1)
 }
