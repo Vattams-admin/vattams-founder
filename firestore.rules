@@ -1,6 +1,7 @@
 rules_version = '2';
 
 // E2E signalling deployment verification: student offer refresh must be deployable.
+// Production redeploy trigger: current WebRTC student retry rules.
 
 // IMPORTANT — READ BEFORE DEPLOYING
 // ----------------------------------------------------------------------
