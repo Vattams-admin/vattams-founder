@@ -32,6 +32,8 @@ async function verifyRegisteredBank(definition: any, publicParsed: unknown, priv
   if (manifest.assessmentId !== definition.assessment_id || manifest.questionCount !== definition.question_count || manifest.answerKeyPrivate !== true) {
     throw new Error("Assessment bank manifest does not match registry");
   }
+  if (definition.release_version !== manifest.version) throw new Error("Published assessment release version is not pinned to its bank manifest");
+  if (definition.release_public_sha256 !== manifest.publicSha256 || definition.release_private_sha256 !== manifest.privateSha256) throw new Error("Published assessment release hashes do not match its bank manifest");
   if (manifest.publicBank !== definition.question_bank_public || manifest.privateAnswerKey !== definition.answer_key) {
     throw new Error("Assessment bank paths do not match registered manifest");
   }
