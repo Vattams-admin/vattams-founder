@@ -15,11 +15,16 @@ export interface ContentLocator {
   domain: ContentDomain
   stateOrUt?: string
   curriculum?: string
+  boardOrCurriculum?: string
   classNumber?: number
   subject?: string
   chapter?: string
   topic?: string
   subtopic?: string
+  examFamily?: string
+  exam?: string
+  course?: string
+  competition?: string
   language: string
   ageBand?: string
 }
@@ -36,6 +41,20 @@ export interface StudyMaterialPackage {
   commonMistakes?: string[]
   keyTakeaways?: string[]
   revisionPoints?: string[]
+  practiceLayers?: {
+    basic?: string[]
+    conceptual?: string[]
+    application?: string[]
+    higherOrderThinking?: string[]
+    mixedReview?: string[]
+  }
+  revisionLayers?: {
+    quickRevision?: string[]
+    flashRecall?: string[]
+    formulaOrFactBank?: string[]
+    mistakeBasedRevision?: string[]
+    weakTopicRevision?: string[]
+  }
   status: ContentStatus
   source?: string
   contentHash?: string
@@ -54,6 +73,10 @@ export interface ObjectiveQuestion {
   questionType: 'mcq'
   marks: number
   timeSeconds: number
+  ageBand?: string
+  source?: string
+  provenance?: string
+  version?: number
   reviewStatus: 'reviewed'
 }
 
@@ -61,6 +84,9 @@ export interface PrivateAnswerKey {
   questionId: string
   correctOptionIndex: 0 | 1 | 2 | 3
   explanation: string
+  distractorExplanations?: [string, string, string, string]
+  concept?: string
+  remediation?: string
   reviewStatus: 'reviewed'
 }
 
