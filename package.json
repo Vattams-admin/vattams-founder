@@ -29,7 +29,8 @@
     "content:coverage:plan:validate": "node scripts/validate-production-content-coverage-plan.mjs",
     "academia:catalog:validate": "node scripts/validate-complete-platform-catalog.mjs",
     "content:authoring:matrix:validate": "node scripts/validate-atomic-content-authoring-matrix.mjs",
-    "content:backlog:validate": "node scripts/validate-production-authoring-backlog.mjs"
+    "content:backlog:validate": "node scripts/validate-production-authoring-backlog.mjs",
+    "content:syllabus:evidence:validate": "node scripts/validate-syllabus-evidence-schema.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",

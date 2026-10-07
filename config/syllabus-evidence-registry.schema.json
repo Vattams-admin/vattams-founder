@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "registry_id": "vattams-syllabus-evidence-registry",
+  "purpose": "Evidence gate for curriculum-specific production authoring. No lesson, question, mock or official assessment may be treated as curriculum-aligned until its syllabus evidence is recorded and approved.",
+  "evidence_status": [
+    "missing",
+    "collected",
+    "verified",
+    "approved",
+    "superseded"
+  ],
+  "required_fields": [
+    "evidenceId",
+    "trackId",
+    "sourceType",
+    "sourceTitle",
+    "sourceLocator",
+    "curriculumVersion",
+    "effectiveFrom",
+    "retrievedAt",
+    "evidenceHash",
+    "status",
+    "verifiedBy",
+    "verifiedAt"
+  ],
+  "source_types": [
+    "official_curriculum_document",
+    "official_syllabus_page",
+    "official_subject_framework",
+    "official_exam_notification",
+    "official_handbook",
+    "authorized_textbook_framework"
+  ],
+  "rules": {
+    "official_source_required": true,
+    "third_party_source_may_support_but_not_replace_official": true,
+    "version_required": true,
+    "effective_date_required": true,
+    "hash_required": true,
+    "verification_required": true,
+    "superseded_evidence_cannot_authorize_new_content": true,
+    "content_authoring_blocked_until_approved": true,
+    "translation_requires_source_version_match": true
+  },
+  "alignment": {
+    "school": [
+      "stateOrUt",
+      "curriculum",
+      "classNumber",
+      "subject",
+      "chapter",
+      "topic",
+      "subtopic",
+      "language"
+    ],
+    "exam": [
+      "examFamily",
+      "exam",
+      "course",
+      "subject",
+      "topic",
+      "subtopic",
+      "language"
+    ],
+    "competition": [
+      "competition",
+      "ageBand",
+      "topic",
+      "language"
+    ]
+  },
+  "approval": {
+    "workflow": [
+      "collected",
+      "verified",
+      "approved"
+    ],
+    "audit": [
+      "verifiedBy",
+      "verifiedAt",
+      "evidenceHash",
+      "curriculumVersion"
+    ],
+    "no_auto_approval_from_unverified_sources": true
+  }
+}
