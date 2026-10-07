@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VATTAMS Curriculum Authoring Control",
+  "type": "object",
+  "required": ["version","controlId","rules","tracks"],
+  "properties": {
+    "version": {"type":"integer","const":1},
+    "controlId": {"type":"string","const":"vattams-curriculum-authoring-control"},
+    "rules": {
+      "type":"object",
+      "required":["evidenceRequiredBeforeAuthoring","approvedEvidenceRequiredBeforeReview","approvedEvidenceRequiredBeforePublish"],
+      "properties":{
+        "evidenceRequiredBeforeAuthoring":{"type":"boolean","const":true},
+        "approvedEvidenceRequiredBeforeReview":{"type":"boolean","const":true},
+        "approvedEvidenceRequiredBeforePublish":{"type":"boolean","const":true}
+      }
+    },
+    "tracks": {
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["trackId","evidenceStatus","contentStatus"],
+        "properties":{
+          "trackId":{"type":"string","minLength":1},
+          "evidenceStatus":{"enum":["missing","collected","verified","approved","superseded"]},
+          "evidenceIds":{"type":"array","items":{"type":"string"}},
+          "contentStatus":{"enum":["not_started","authoring","in_review","approved","published","retired"]}
+        }
+      }
+    }
+  }
+}
