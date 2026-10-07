@@ -21,7 +21,8 @@
     "competition:package": "node scripts/package-competition-runtime.mjs",
     "seo:validate": "node scripts/validate-seo.mjs",
     "india:validate": "node scripts/validate-india-education-registry.mjs",
-    "content:schema:validate": "node scripts/validate-content-package-schema.mjs"
+    "content:schema:validate": "node scripts/validate-content-package-schema.mjs",
+    "content:library:validate": "node scripts/validate-content-library-registry.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
