@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"VATTAMS Assessment Blueprint Coverage",
+  "type":"object",
+  "required":["blueprint_id","assessment_id","inventory","coverage","status"],
+  "properties":{
+    "blueprint_id":{"type":"string","minLength":1},
+    "assessment_id":{"type":"string","minLength":1},
+    "inventory":{"type":"object","required":["reviewed_questions","eligible_questions"],"properties":{"reviewed_questions":{"type":"integer","minimum":0},"eligible_questions":{"type":"integer","minimum":0}},"additionalProperties":true},
+    "coverage":{"type":"object"},
+    "status":{"enum":["blocked","ready"]},
+    "blocked_reasons":{"type":"array","items":{"type":"string"}}
+  },
+  "additionalProperties":false
+}
