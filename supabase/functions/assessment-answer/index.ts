@@ -68,6 +68,34 @@ async function verifyActiveEnrollment(studentId: string, courseId: string, token
   }
 }
 
+\nasync function canonicalSha256(value: unknown): Promise<string> {
+  const canonical = JSON.stringify(value);
+  const bytes = new TextEncoder().encode(canonical);
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function verifyRegisteredBank(definition: any, publicParsed: unknown, privateParsed?: unknown): Promise<void> {
+  if (typeof definition.bank_manifest !== "string" || !definition.bank_manifest) {
+    throw new Error("Assessment bank manifest is not registered");
+  }
+  const manifestFile = await supabase.storage.from(SUPABASE_BUCKET).download(definition.bank_manifest);
+  if (manifestFile.error || !manifestFile.data) throw new Error("Unable to load assessment bank manifest");
+  const manifest = JSON.parse(await manifestFile.data.text());
+  if (manifest.assessmentId !== definition.assessment_id || manifest.questionCount !== definition.question_count || manifest.answerKeyPrivate !== true) {
+    throw new Error("Assessment bank manifest does not match registry");
+  }
+  if (manifest.publicBank !== definition.question_bank_public || manifest.privateAnswerKey !== definition.answer_key) {
+    throw new Error("Assessment bank paths do not match registered manifest");
+  }
+  const publicHash = await canonicalSha256(publicParsed);
+  if (publicHash !== manifest.publicSha256) throw new Error("Public assessment bank integrity check failed");
+  if (privateParsed !== undefined) {
+    const privateHash = await canonicalSha256(privateParsed);
+    if (privateHash !== manifest.privateSha256) throw new Error("Private assessment answer-key integrity check failed");
+  }
+}
+
 async function saveAnswer(
   studentId: string,
   attemptId: string,
@@ -112,7 +140,7 @@ async function saveAnswer(
   }
   if (Date.now() > startedAtMs + definition.time_seconds * 1000) {
     throw new Error("Assessment time has expired");
-  }
+  }\n\n  const publicBankForIntegrity = await loadJson(definition.question_bank_public, "public question bank");\n  await verifyRegisteredBank(definition, publicBankForIntegrity);
 
   const questionIds = Array.isArray(attempt.question_ids)
     ? attempt.question_ids.filter((id: unknown): id is string =>
