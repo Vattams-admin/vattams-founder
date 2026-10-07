@@ -67,7 +67,7 @@ async function verifyActiveEnrollment(studentId: string, courseId: string, token
 
 async function submit(attemptId: string, studentId: string, token: string) {
   const { data: attempt, error: ae } = await supabase.from("assessment_attempts")
-     .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256")
+     .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders")
     .eq("id", attemptId).maybeSingle();
   if (ae) throw new Error("Attempt lookup failed: " + ae.message);
   if (!attempt) throw new Error("Assessment attempt not found");
