@@ -60,7 +60,8 @@
     "content:assessment:attempt:snapshot:test": "node scripts/test-assessment-attempt-release-snapshot.mjs",
     "content:assessment:attempt:integrity:test": "node scripts/test-assessment-attempt-integrity.mjs",
     "content:assessment:attempt:deadline:test": "node scripts/test-assessment-attempt-deadline.mjs",
-    "content:assessment:attempt:state:test": "node scripts/test-assessment-attempt-state-machine.mjs"
+    "content:assessment:attempt:state:test": "node scripts/test-assessment-attempt-state-machine.mjs",
+    "content:assessment:answer:integrity:test": "node scripts/test-assessment-answer-write-integrity.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
