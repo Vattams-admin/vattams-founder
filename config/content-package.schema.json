@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "domains": [
     "school",
     "competitive-exam",
@@ -60,7 +60,14 @@
       "correctOptionIndex",
       "explanation"
     ],
-    "official_answer_visibility": "hidden_until_release_policy"
+    "official_answer_visibility": "hidden_until_release_policy",
+    "review_fields": [
+      "correctOptionIndex",
+      "explanation",
+      "distractorExplanations",
+      "concept",
+      "remediation"
+    ]
   },
   "randomization": {
     "blueprint_controlled_selection": true,
@@ -74,5 +81,98 @@
     "translated_content_requires_review": true,
     "version_required": true,
     "audit_trail_required": true
+  },
+  "locator_dimensions": {
+    "school": [
+      "domain",
+      "stateOrUt",
+      "curriculum",
+      "boardOrCurriculum",
+      "classNumber",
+      "subject",
+      "chapter",
+      "topic",
+      "subtopic",
+      "language",
+      "ageBand"
+    ],
+    "competitive-exam": [
+      "domain",
+      "examFamily",
+      "exam",
+      "course",
+      "subject",
+      "topic",
+      "subtopic",
+      "language"
+    ],
+    "entrance-exam": [
+      "domain",
+      "examFamily",
+      "exam",
+      "course",
+      "subject",
+      "topic",
+      "subtopic",
+      "language"
+    ],
+    "professional": [
+      "domain",
+      "examFamily",
+      "exam",
+      "course",
+      "subject",
+      "topic",
+      "subtopic",
+      "language"
+    ],
+    "competition": [
+      "domain",
+      "competition",
+      "ageBand",
+      "topic",
+      "language"
+    ]
+  },
+  "quality": {
+    "lesson_required_layers": [
+      "objectives",
+      "concepts",
+      "definitions",
+      "workedExamples",
+      "commonMistakes",
+      "keyTakeaways",
+      "revisionPoints"
+    ],
+    "practice_layers": [
+      "basic",
+      "conceptual",
+      "application",
+      "higherOrderThinking",
+      "mixedReview"
+    ],
+    "revision_layers": [
+      "quickRevision",
+      "flashRecall",
+      "formulaOrFactBank",
+      "mistakeBasedRevision",
+      "weakTopicRevision"
+    ],
+    "official_attempt_public_payload": [
+      "questionId",
+      "question",
+      "options",
+      "difficulty",
+      "marks",
+      "timeSeconds"
+    ],
+    "review_payload": [
+      "selectedOptionIndex",
+      "correctOptionIndex",
+      "explanation",
+      "distractorExplanations",
+      "concept",
+      "remediation"
+    ]
   }
 }
