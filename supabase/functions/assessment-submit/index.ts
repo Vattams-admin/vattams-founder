@@ -16,6 +16,29 @@ async function uid(auth: string | null): Promise<{ uid: string; token: string }>
   return { uid: payload.sub, token: auth.slice(7).trim() };
 }
 
+
+async function canonicalSha256(value: unknown): Promise<string> {
+  const canonical = JSON.stringify(value);
+  const bytes = new TextEncoder().encode(canonical);
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function verifyRegisteredBank(definition: any, publicParsed: unknown, privateParsed: unknown): Promise<void> {
+  if (typeof definition.bank_manifest !== "string" || !definition.bank_manifest) throw new Error("Assessment bank manifest is not registered");
+  const { data, error } = await supabase.storage.from("academia-course-materials").download(definition.bank_manifest);
+  if (error || !data) throw new Error("Unable to load assessment bank manifest");
+  const manifest = JSON.parse(await data.text());
+  if (manifest.assessmentId !== definition.assessment_id || manifest.questionCount !== definition.question_count || manifest.answerKeyPrivate !== true) {
+    throw new Error("Assessment bank manifest does not match registry");
+  }
+  if (manifest.publicBank !== definition.question_bank_public || manifest.privateAnswerKey !== definition.answer_key) {
+    throw new Error("Assessment bank paths do not match registered manifest");
+  }
+  if (await canonicalSha256(publicParsed) !== manifest.publicSha256) throw new Error("Public assessment bank integrity check failed");
+  if (await canonicalSha256(privateParsed) !== manifest.privateSha256) throw new Error("Private assessment answer-key integrity check failed");
+}
+
 async function downloadJson(path: string, label: string) {
   if (typeof path !== "string" || !path) throw new Error("Assessment " + label + " is not configured");
   const { data, error } = await supabase.storage.from("academia-course-materials").download(path);
@@ -68,7 +91,7 @@ async function submit(attemptId: string, studentId: string, token: string) {
   }
   if (Date.now() > startedAtMs + definition.time_seconds * 1000) {
     throw new Error("Assessment time has expired");
-  }
+  }\n\n  const publicBankForIntegrity = await loadJson(definition.question_bank_public, "public question bank");\n  await verifyRegisteredBank(definition, publicBankForIntegrity);
 
   const publicParsed = await downloadJson(definition.question_bank_public, "public question bank");
   const publicQuestions = Array.isArray(publicParsed) ? publicParsed : publicParsed?.questions;
@@ -76,6 +99,7 @@ async function submit(attemptId: string, studentId: string, token: string) {
   const publicById = new Map(publicQuestions.map((q: any) => [q.question_id, q]));
 
   const keyParsed = await downloadJson(definition.answer_key, "answer key");
+  await verifyRegisteredBank(definition, publicParsed, keyParsed);
   const answerEntries = Array.isArray(keyParsed) ? keyParsed : keyParsed?.questions || keyParsed?.answers;
   if (!Array.isArray(answerEntries)) throw new Error("Invalid private assessment answer key");
   const keyById = new Map(answerEntries.map((q: any) => [q.question_id, q]));
