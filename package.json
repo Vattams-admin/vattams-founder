@@ -38,7 +38,8 @@
     "content:syllabus:link:validate": "node scripts/validate-evidence-to-curriculum-map-link.mjs",
     "content:curriculum:map:expand:validate": "node scripts/validate-curriculum-map-expansion.mjs",
     "content:curriculum:evidence:validate": "node scripts/validate-evidence-backed-curriculum-map.mjs",
-    "content:curriculum:readiness:validate": "node scripts/validate-curriculum-authoring-readiness.mjs"
+    "content:curriculum:readiness:validate": "node scripts/validate-curriculum-authoring-readiness.mjs",
+    "content:authoring:package:validate": "node scripts/validate-content-authoring-package.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
