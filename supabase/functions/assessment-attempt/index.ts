@@ -330,9 +330,18 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
   if (!assessment.blueprint_id || !blueprintRegistry.blueprints?.[assessment.blueprint_id]) {
     throw new Error("Assessment has no executable blueprint");
   }
-  if (blueprintRegistry.blueprints[assessment.blueprint_id].status !== "ready") {
+  const executableBlueprint = blueprintRegistry.blueprints[assessment.blueprint_id];
+  if (executableBlueprint.status !== "ready") {
     throw new Error("Assessment blueprint is not ready for production use");
   }
+  if (!executableBlueprint.difficulty_distribution || !Array.isArray(executableBlueprint.topic_distribution)) {
+    throw new Error("Assessment blueprint is missing reviewed difficulty/topic distributions");
+  }
+  assessment.selection_blueprint = {
+    questionCount: executableBlueprint.question_count,
+    difficultyDistribution: executableBlueprint.difficulty_distribution,
+    topicDistribution: executableBlueprint.topic_distribution,
+  };
 
   const existing = await findLatestAttempt(studentId, assessmentId);
   if (existing?.status === "in_progress") return buildResponse(existing, assessment.time_seconds);
