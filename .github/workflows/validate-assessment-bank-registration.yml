@@ -18,5 +18,6 @@ jobs:
         with:
           node-version: 20
       - run: npm run content:assessment:bank:hash:test
+      - run: npm run content:assessment:bank:path:test
       - run: npm run content:assessment:banks:validate
       - run: node scripts/validate-assessment-registry.mjs
