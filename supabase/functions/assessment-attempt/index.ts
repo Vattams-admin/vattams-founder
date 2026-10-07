@@ -6,6 +6,7 @@ const SUPABASE_URL = Deno.env.get("SUPABASE_URL") || "";
 const SUPABASE_SECRET_KEYS = JSON.parse(Deno.env.get("SUPABASE_SECRET_KEYS") || "{}");
 const SUPABASE_SERVICE_ROLE_KEY = SUPABASE_SECRET_KEYS["default"] || "";
 const SUPABASE_BUCKET = "academia-course-materials";
+const RETRY_POLICY_PATH = "config/assessment-retry-policy.json";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
   auth: { persistSession: false, autoRefreshToken: false },
@@ -98,6 +99,20 @@ async function verifyRegisteredBank(definition: any, publicParsed: unknown, priv
     const privateHash = await canonicalSha256(privateParsed);
     if (privateHash !== manifest.privateSha256) throw new Error("Private assessment answer-key integrity check failed");
   }
+}
+
+
+async function loadRetryPolicy() {
+  return await loadJson(RETRY_POLICY_PATH, "retry policy");
+}
+function retryLimit(policy: any, assessment: AssessmentDefinition): number | null {
+  const defaults = policy?.default || {};
+  const override = policy?.overrides?.[assessment.assessment_id] || {};
+  const mode = assessment.kind === "official_attempt" ? "official_attempt" : assessment.kind === "mock_test" ? "mock_test" : "practice";
+  const value = override.maxAttempts ?? defaults?.[mode]?.maxAttempts;
+  if (value === null || value === undefined) return null;
+  if (!Number.isInteger(value) || value < 1) throw new Error("Assessment retry policy is invalid");
+  return value;
 }
 
 async function loadRegistry(): Promise<AssessmentRegistry> {
@@ -387,13 +402,24 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
     topicDistribution: executableBlueprint.topic_distribution,
   };
 
+  const retryPolicy = await loadRetryPolicy();
+  const maxAttempts = retryLimit(retryPolicy, assessment);
   const existing = await findLatestAttempt(studentId, assessmentId);
   if (existing?.status === "in_progress") {
     if (!existing.expires_at || Date.now() >= Date.parse(existing.expires_at)) throw new Error("Assessment attempt time has expired");
     if (!existing.integrity_sha256 || (await attemptIntegrityHash({ release_version: existing.release_version, release_public_sha256: existing.release_public_sha256, release_private_sha256: existing.release_private_sha256, question_ids: existing.question_ids || [], option_orders: existing.option_orders || {} })) !== existing.integrity_sha256) throw new Error("Assessment attempt integrity check failed");
     return buildResponse(existing, assessment.time_seconds);
   }
-  if (existing?.status === "submitted") return buildResponse(existing, assessment.time_seconds);
+  if (existing?.status === "submitted") {
+    if (maxAttempts !== null) {
+      const { count, error: countError } = await supabase.from("assessment_attempts")
+        .select("id", { count: "exact", head: true })
+        .eq("student_id", studentId).eq("assessment_id", assessmentId).eq("status", "submitted");
+      if (countError) throw new Error("Unable to determine assessment retry eligibility");
+      if ((count || 0) >= maxAttempts) throw new Error("Assessment retry limit reached");
+    }
+    // A submitted attempt is history; continue below to create the next permitted attempt.
+  }
 
   const questions = await loadQuestionBank(assessment);
   const recent = await recentQuestionIds(studentId, assessmentId);
