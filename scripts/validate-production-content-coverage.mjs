@@ -47,7 +47,9 @@ const competitionTargets = Object.values(competitionRegistry.competitions ?? {})
   id: item.course_id,
   slug: item.slug,
   title: item.competition,
-  enabled: item.enabled === true
+  enabled: item.enabled === true,
+  questionBundle: item.question_bundle,
+  answerKeyBundle: item.answer_key_bundle
 }));
 
 const assessmentTargets = Object.values(assessmentRegistry.assessments ?? {}).map((item) => ({
@@ -57,16 +59,41 @@ const assessmentTargets = Object.values(assessmentRegistry.assessments ?? {}).ma
   title: item.title ?? item.assessment_id,
   kind: item.kind,
   status: item.status,
-  enabled: item.status !== 'retired'
+  enabled: item.status !== 'retired',
+  questionBankPublic: item.question_bank_public,
+  answerKey: item.answer_key
 }));
+
+const includesAsset = (manifest, candidates) => {
+  const assets = manifest?.assets ?? {};
+  const values = [
+    ...(assets.questionBanksPublic ?? []),
+    ...(assets.answerKeysPrivate ?? []),
+    ...(assets.assessments ?? [])
+  ];
+  return candidates.some((candidate) => values.includes(candidate));
+};
 
 const findManifest = (target) => manifests.find((item) => {
   if (item.invalid) return false;
+
   if (target.targetType === 'competition') {
-    return item.domain === 'competition' && item.locator?.competition === target.slug;
+    if (item.domain !== 'competition' || item.locator?.competition !== target.slug) return false;
+    return includesAsset(item, [
+      target.questionBundle,
+      target.answerKeyBundle
+    ].filter(Boolean));
   }
-  return item.domain === 'competitive-exam' &&
-    (item.locator?.exam === target.courseId || item.locator?.course === target.courseId);
+
+  if (item.domain !== 'competitive-exam' ||
+      (item.locator?.exam !== target.courseId && item.locator?.course !== target.courseId)) {
+    return false;
+  }
+
+  return includesAsset(item, [
+    target.questionBankPublic,
+    target.answerKey
+  ].filter(Boolean)) || (item.assets?.assessments ?? []).includes(target.id);
 });
 
 const targets = [
