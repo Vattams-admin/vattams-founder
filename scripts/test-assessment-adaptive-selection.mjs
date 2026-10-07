@@ -1,0 +1,10 @@
+import fs from "node:fs";
+const policy=JSON.parse(fs.readFileSync("config/assessment-adaptive-selection-policy.json","utf8"));
+if(policy.minimumEvidence!==3) throw new Error("Adaptive evidence threshold must be 3");
+if(policy.weakAccuracyBelowPercent!==60) throw new Error("Adaptive weak-topic threshold must be 60%");
+if(policy.weakTopicBoost<=0) throw new Error("Weak-topic boost must be positive");
+for(const key of ["blueprintIsAuthoritative","difficultyDistributionRemainsExact","topicDistributionRemainsExact","eligibilityRunsBeforeAdaptation","recentRepetitionRunsBeforeAdaptation","clientCannotSupplyPerformance","serverDerivesStudentIdentityFromFirebaseJwt"]) if(policy.rules[key]!==true) throw new Error("Missing adaptive safety rule: "+key);
+const src=fs.readFileSync("supabase/functions/assessment-attempt/index.ts","utf8");
+for(const x of ["get_assessment_topic_performance","p_student_id: studentId","assessment.kind === \"topic_practice\"","weakTopics","adaptiveScore","selection_blueprint","recentQuestionIds","matchesEligibility","distributionCounts"]) if(!src.includes(x)) throw new Error("Missing adaptive selector control: "+x);
+for(const x of ["body?.student_id","body?.accuracy_percent","body?.weak_topics"]) if(src.includes(x)) throw new Error("Client-controlled adaptive performance detected: "+x);
+console.log("ASSESSMENT ADAPTIVE SELECTION: VALID");
