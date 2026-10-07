@@ -1,5 +1,7 @@
 name: Generate Competition Runtime Registry
 
+# Production master path: validate, publish, and persist all 24 competition runtime packages.
+
 on:
   workflow_dispatch:
   push:
