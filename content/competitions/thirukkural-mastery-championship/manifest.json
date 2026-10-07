@@ -1,0 +1,46 @@
+{
+  "packageId": "competition-thirukkural-mastery-championship",
+  "version": "1.0.0",
+  "domain": "competition",
+  "locator": {
+    "competition": "thirukkural-mastery-championship",
+    "language": "en"
+  },
+  "status": "approved",
+  "coverage": {
+    "studyMaterials": 2,
+    "questions": 9443,
+    "assessments": 2
+  },
+  "assets": {
+    "manifestPath": "content/competitions/thirukkural-mastery-championship/manifest.json",
+    "studyMaterials": [
+      "content/competition-study-materials/authored-v2/thirukkural-mastery-championship-core.json",
+      "content/competition-study-materials/authored-v2/thirukkural-mastery-championship-four-layer-coverage.json"
+    ],
+    "questionBanksPublic": [
+      "data/thirukkural/full-bank/objective/questions.objective.public.json"
+    ],
+    "answerKeysPrivate": [
+      "data/thirukkural/full-bank/objective/answer-key.objective.private.json"
+    ],
+    "assessments": [
+      "data/thirukkural/full-bank/objective/official-120.objective.json",
+      "data/thirukkural/full-bank/objective/age-pools.json"
+    ]
+  },
+  "governance": {
+    "sourceEvidence": [
+      "data/thirukkural/thirukkural.json",
+      "data/thirukkural/detail.json",
+      "scripts/validate-thirukkural-production.mjs",
+      "config/competition-registry.json",
+      "src/pages/CompetitionParticipant.tsx",
+      "supabase/functions/competition-scoring/index.ts"
+    ],
+    "reviewStatus": "approved",
+    "answerKeyPrivate": true,
+    "approvedBy": "VATTAMS Academia production governance",
+    "approvedAt": "2026-10-07T00:00:00Z"
+  }
+}
