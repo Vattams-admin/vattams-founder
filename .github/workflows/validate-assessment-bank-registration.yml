@@ -22,6 +22,8 @@ on:
       - "scripts/test-assessment-attempt-integrity.mjs"
       - "scripts/test-assessment-attempt-deadline.mjs"
       - "scripts/test-assessment-attempt-state-machine.mjs"
+      - "scripts/test-assessment-answer-write-integrity.mjs"
+      - "supabase/migrations/20261007160000_assessment_answer_atomic_write.sql"
       - "supabase/migrations/20261007150000_assessment_attempt_state_machine.sql"
       - "supabase/migrations/20261007140000_assessment_attempt_deadline.sql"
       - "supabase/migrations/20261007130000_assessment_attempt_integrity.sql"
@@ -46,3 +48,4 @@ jobs:
       - run: npm run content:assessment:attempt:integrity:test
       - run: npm run content:assessment:attempt:deadline:test
       - run: npm run content:assessment:attempt:state:test
+      - run: npm run content:assessment:answer:integrity:test
