@@ -27,3 +27,11 @@ jobs:
             -H "x-upsert: true" \
             --data-binary @config/assessment-registry.json \
             "$SUPABASE_URL/storage/v1/object/academia-course-materials/assessments/registry.json"
+          curl --fail-with-body --silent --show-error \
+            -X POST \
+            -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
+            -H "Content-Type: application/json" \
+            -H "x-upsert: true" \
+            --data-binary @assessments/blueprint-registry.json \
+            "$SUPABASE_URL/storage/v1/object/academia-course-materials/assessments/blueprint-registry.json"
