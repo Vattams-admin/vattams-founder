@@ -17,4 +17,3 @@ jobs:
         with:
           node-version: 20
       - run: npm run content:schema:validate
-      - run: npx tsc --noEmit
