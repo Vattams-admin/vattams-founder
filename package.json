@@ -45,7 +45,8 @@
     "content:assessment:blueprint:validate": "node scripts/validate-assessment-blueprint-registry.mjs",
     "content:assessment:coverage:validate": "node scripts/validate-assessment-blueprint-coverage.mjs",
     "content:assessment:coverage:scan": "node scripts/scan-assessment-blueprint-question-banks.mjs",
-    "content:assessment:blueprint:authoring:validate": "node scripts/validate-assessment-blueprint-authoring.mjs"
+    "content:assessment:blueprint:authoring:validate": "node scripts/validate-assessment-blueprint-authoring.mjs",
+    "content:assessment:blueprint:promote": "node scripts/promote-assessment-blueprint.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
