@@ -166,7 +166,7 @@ async function findLatestAttempt(studentId: string, assessmentId: string): Promi
   return data as AttemptRow | null;
 }
 
-async function buildResponse(attempt: AttemptRow) {
+async function buildResponse(attempt: AttemptRow, timeSeconds: number) {
   const { data, error } = await supabase.from("assessment_answers")
     .select("question_id,answer,selected_option_index").eq("attempt_id", attempt.id);
   if (error) throw new Error(`Answer lookup failed: ${error.message}`);
@@ -176,7 +176,7 @@ async function buildResponse(attempt: AttemptRow) {
     .eq("attempt_id", attempt.id).maybeSingle();
 
   return {
-    attempt_id: attempt.id, course_id: attempt.course_id, assessment_id: attempt.assessment_id,
+    attempt_id: attempt.id, course_id: attempt.course_id, assessment_id: attempt.assessment_id, time_seconds: timeSeconds,
     domain: attempt.domain, kind: attempt.kind, status: attempt.status, started_at: attempt.started_at,
     question_ids: attempt.question_ids || [],
     result: result ? {
@@ -194,8 +194,8 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
   await checkAccess(studentId, courseId, assessmentId, token);
 
   const existing = await findLatestAttempt(studentId, assessmentId);
-  if (existing?.status === "in_progress") return buildResponse(existing);
-  if (existing?.status === "submitted") return buildResponse(existing);
+  if (existing?.status === "in_progress") return buildResponse(existing, assessment.time_seconds);
+  if (existing?.status === "submitted") return buildResponse(existing, assessment.time_seconds);
 
   const allQuestionIds = await loadQuestionIds(assessment);
   if (allQuestionIds.length < assessment.question_count) {
@@ -214,11 +214,11 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
   if (error) {
     if (error.code === "23505") {
       const raced = await findLatestAttempt(studentId, assessmentId);
-      if (raced) return buildResponse(raced);
+      if (raced) return buildResponse(raced, assessment.time_seconds);
     }
     throw new Error(`Unable to create assessment attempt: ${error.message}`);
   }
-  return buildResponse(data as AttemptRow);
+  return buildResponse(data as AttemptRow, assessment.time_seconds);
 }
 
 function jsonResponse(body: unknown, status = 200) {
