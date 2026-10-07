@@ -13,6 +13,7 @@ for(const [id,bp] of Object.entries(registry.blueprints||{})){
   if(!Number.isInteger(bp.question_count)||bp.question_count<1) fail(id+": question_count invalid");
   if(!Number.isInteger(bp.time_seconds)||bp.time_seconds<1) fail(id+": time_seconds invalid");
   if(bp.status==="ready" && Math.abs(sum(bp.difficulty_distribution)-1)>0.000001) fail(id+": ready blueprint difficulty distribution must sum to 1");
+  if(bp.status==="ready" && !bp.authoring_source) fail(id+": ready blueprint requires approved authoring source");
 if(!["blocked","ready"].includes(bp.status)) fail(id+": status must be blocked or ready");
   if(!Array.isArray(bp.sections)||!bp.sections.length) fail(id+": sections required");
   else if(bp.sections.reduce((n,s)=>n+Number(s.question_count||0),0)!==bp.question_count) fail(id+": section counts must equal question_count");
