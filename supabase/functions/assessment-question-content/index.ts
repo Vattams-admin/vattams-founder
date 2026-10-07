@@ -30,7 +30,7 @@ async function verifyActiveEnrollment(studentId: string, courseId: string, token
 
 async function loadPublicQuestions(studentId: string, attemptId: string, token: string) {
   const { data: attempt, error } = await supabase.from("assessment_attempts")
-    .select("id,student_id,status,assessment_id,question_ids").eq("id", attemptId).maybeSingle();
+    .select("id,student_id,status,assessment_id,question_ids,option_orders").eq("id", attemptId).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
   if (!attempt) throw new Error("Assessment attempt not found");
   if (attempt.student_id !== studentId) throw new Error("Assessment attempt does not belong to this student");
@@ -70,8 +70,13 @@ async function loadPublicQuestions(studentId: string, attemptId: string, token: 
     if (options.length !== 4 || options.some((x: unknown) => typeof x !== "string" || !x.trim())) {
       throw new Error(`Question has invalid options: ${id}`);
     }
+    const order = Array.isArray(attempt.option_orders?.[id]) ? attempt.option_orders[id] : [0,1,2,3];
+    if (order.length !== 4 || new Set(order).size !== 4 || order.some((x: unknown) => !Number.isInteger(x) || x < 0 || x > 3)) {
+      throw new Error(`Invalid private option permutation: ${id}`);
+    }
+    const shuffledOptions = order.map((index: number) => options[index]);
     return {
-      question_id: q.question_id, question: q.question, options,
+      question_id: q.question_id, question: q.question, options: shuffledOptions,
       subject: q.subject, topic: q.topic, subtopic: q.subtopic,
       difficulty: q.difficulty, language: q.language,
       marks: q.marks, time_seconds: q.time_seconds,
