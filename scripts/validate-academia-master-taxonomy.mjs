@@ -15,7 +15,7 @@ for (const id of ['cbse','cisce','nios','state_board','matriculation','internati
 for (const layer of ['lesson_notes','worked_examples','guided_practice','independent_practice','chapter_revision','subject_revision','mock_test','official_assessment','weak_topic_remediation']) {
   if (!r.school.delivery_layers.includes(layer)) fail('missing school delivery layer ' + layer)
 }
-if (r.school.school_package_standard.question_standard.options !== 4) fail('MCQs must have exactly four options')
+if (r.school_package_standard.question_standard.options !== 4) fail('MCQs must have exactly four options')
 if (r.adaptive_policy.eligibility_order.indexOf('class') < 0 || r.adaptive_policy.eligibility_order.indexOf('age_band') < 0) fail('class and age_band must participate in eligibility')
 if (r.adaptive_policy.eligibility_order.indexOf('class') > r.adaptive_policy.eligibility_order.indexOf('age_band')) fail('curriculum/class eligibility must precede age filtering')
 if (!r.adaptive_policy.never_reveal_official_answer_during_attempt) fail('official answers must remain hidden during attempt')
