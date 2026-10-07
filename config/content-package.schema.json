@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "domains": [
+    "school",
+    "competitive-exam",
+    "entrance-exam",
+    "professional",
+    "competition"
+  ],
+  "required_locator_dimensions": [
+    "domain",
+    "language"
+  ],
+  "optional_school_dimensions": [
+    "stateOrUt",
+    "curriculum",
+    "classNumber",
+    "subject",
+    "chapter",
+    "topic",
+    "subtopic",
+    "ageBand"
+  ],
+  "content_types": [
+    "study_material",
+    "lesson",
+    "worked_example",
+    "practice",
+    "revision",
+    "flash_recall",
+    "formula_bank",
+    "question",
+    "mock_test",
+    "official_test",
+    "answer_explanation",
+    "weak_topic_revision"
+  ],
+  "assessment_modes": [
+    "practice",
+    "topic_test",
+    "chapter_test",
+    "subject_test",
+    "sectional_test",
+    "mock_test",
+    "official_attempt"
+  ],
+  "mcq": {
+    "type": "mcq",
+    "options": 4,
+    "unique_options": true,
+    "public_fields": [
+      "questionId",
+      "question",
+      "options",
+      "difficulty",
+      "marks",
+      "timeSeconds"
+    ],
+    "private_fields": [
+      "correctOptionIndex",
+      "explanation"
+    ],
+    "official_answer_visibility": "hidden_until_release_policy"
+  },
+  "randomization": {
+    "blueprint_controlled_selection": true,
+    "option_shuffle": true,
+    "student_specific_order": true,
+    "avoid_recent_repetition": true
+  },
+  "governance": {
+    "unreviewed_content_publishable": false,
+    "machine_translation_auto_publish": false,
+    "translated_content_requires_review": true,
+    "version_required": true,
+    "audit_trail_required": true
+  }
+}
