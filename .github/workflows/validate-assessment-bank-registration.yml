@@ -28,6 +28,9 @@ on:
       - "scripts/test-assessment-result-isolation.mjs"
       - "scripts/test-assessment-review-payload-minimization.mjs"
       - "scripts/test-assessment-attempt-lifecycle.mjs"
+      - "scripts/test-assessment-retry-enforcement.mjs"
+      - "config/assessment-retry-policy.json"
+      - "scripts/validate-assessment-retry-policy.mjs"
       - "scripts/test-assessment-history-access.mjs"
       - "supabase/migrations/20261007170000_assessment_authoritative_scoring.sql"
       - "supabase/migrations/20261007160000_assessment_answer_atomic_write.sql"
@@ -61,4 +64,6 @@ jobs:
       - run: npm run content:assessment:result:isolation:test
       - run: npm run content:assessment:review:payload:test
       - run: npm run content:assessment:attempt:lifecycle:test
+      - run: npm run content:assessment:retry:test
+      - run: npm run content:assessment:retry:validate
       - run: npm run content:assessment:history:test

@@ -67,7 +67,9 @@
     "content:assessment:result:isolation:test": "node scripts/test-assessment-result-isolation.mjs",
     "content:assessment:review:payload:test": "node scripts/test-assessment-review-payload-minimization.mjs",
     "content:assessment:attempt:lifecycle:test": "node scripts/test-assessment-attempt-lifecycle.mjs",
-    "content:assessment:history:test": "node scripts/test-assessment-history-access.mjs"
+    "content:assessment:history:test": "node scripts/test-assessment-history-access.mjs",
+    "content:assessment:retry:validate": "node scripts/validate-assessment-retry-policy.mjs",
+    "content:assessment:retry:test": "node scripts/test-assessment-retry-enforcement.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",

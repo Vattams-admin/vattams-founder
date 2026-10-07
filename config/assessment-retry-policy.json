@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "default": {
+    "practice": { "maxAttempts": null, "cooldownSeconds": 0 },
+    "mock_test": { "maxAttempts": 3, "cooldownSeconds": 0 },
+    "official_attempt": { "maxAttempts": 1, "cooldownSeconds": 0 }
+  },
+  "overrides": {}
+}
