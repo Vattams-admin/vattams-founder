@@ -46,7 +46,7 @@ type AssessmentRegistry = { version: number; assessments: Record<string, Assessm
 type AttemptRow = {
   id: string; student_id: string; course_id: string; assessment_id: string; domain: string;
   kind: string; status: "in_progress" | "submitted"; started_at: string;
-  question_ids: string[] | null; is_mock: boolean;
+  question_ids: string[] | null; is_mock: boolean; release_version: string; release_public_sha256: string; release_private_sha256: string; integrity_sha256: string; option_orders: Record<string, number[]>;
 };
 
 async function verifyFirebaseToken(authorization: string | null): Promise<{ uid: string; token: string; claims: Record<string, unknown> }> {
@@ -388,7 +388,10 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
   };
 
   const existing = await findLatestAttempt(studentId, assessmentId);
-  if (existing?.status === "in_progress") return buildResponse(existing, assessment.time_seconds);
+  if (existing?.status === "in_progress") {
+    if (!existing.integrity_sha256 || (await attemptIntegrityHash({ release_version: existing.release_version, release_public_sha256: existing.release_public_sha256, release_private_sha256: existing.release_private_sha256, question_ids: existing.question_ids || [], option_orders: existing.option_orders || {} })) !== existing.integrity_sha256) throw new Error("Assessment attempt integrity check failed");
+    return buildResponse(existing, assessment.time_seconds);
+  }
   if (existing?.status === "submitted") return buildResponse(existing, assessment.time_seconds);
 
   const questions = await loadQuestionBank(assessment);
