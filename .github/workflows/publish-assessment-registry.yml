@@ -26,6 +26,9 @@ jobs:
       - name: Validate assessment blueprint registry
         run: node scripts/validate-assessment-blueprint-registry.mjs
 
+      - name: Validate centralized production readiness
+        run: node scripts/validate-assessment-production-readiness.mjs
+
       - name: Upload production assessment registry
         env:
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
