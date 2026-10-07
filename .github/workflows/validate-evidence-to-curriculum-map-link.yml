@@ -1,0 +1,23 @@
+name: Validate Evidence to Curriculum Map Link
+
+on:
+  push:
+    paths:
+      - "config/syllabus-artifact-registry.json"
+      - "content/school/cbse/class-1/curriculum-map.json"
+      - "scripts/validate-evidence-to-curriculum-map-link.mjs"
+  pull_request:
+    paths:
+      - "config/syllabus-artifact-registry.json"
+      - "content/school/cbse/class-1/curriculum-map.json"
+      - "scripts/validate-evidence-to-curriculum-map-link.mjs"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/validate-evidence-to-curriculum-map-link.mjs
