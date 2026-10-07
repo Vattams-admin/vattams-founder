@@ -10,7 +10,7 @@ if(!Array.isArray(x.answerKeys))e.push("answerKeys must be an array");
 for(const q of x.questions||[]){
  if(!q.questionId||ids.has(q.questionId))e.push("missing or duplicate questionId: "+q.questionId); ids.add(q.questionId);
  if(!Array.isArray(q.options)||q.options.length!==4||new Set(q.options).size!==4)e.push("exactly four unique options required: "+q.questionId);
- for(const f of ["subject","topic","subtopic","language","ageBand","examId","provenance"])if(!String(q[f]??"").trim())e.push(f+" required: "+q.questionId);
+ for(const f of ["sectionId","subject","topic","subtopic","language","ageBand","examId","provenance"])if(!String(q[f]??"").trim())e.push(f+" required: "+q.questionId);
  if(!["easy","medium","hard"].includes(q.difficulty))e.push("invalid difficulty: "+q.questionId);
  if(q.reviewStatus!=="reviewed")e.push("question must be reviewed: "+q.questionId);
  if(Object.hasOwn(q,"correctOptionIndex")||Object.hasOwn(q,"explanation")||Object.hasOwn(q,"answer"))e.push("private answer data leaked into question: "+q.questionId);
