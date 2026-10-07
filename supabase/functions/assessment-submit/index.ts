@@ -67,11 +67,14 @@ async function verifyActiveEnrollment(studentId: string, courseId: string, token
 
 async function submit(attemptId: string, studentId: string, token: string) {
   const { data: attempt, error: ae } = await supabase.from("assessment_attempts")
-     .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders")
+     .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders,expires_at")
     .eq("id", attemptId).maybeSingle();
   if (ae) throw new Error("Attempt lookup failed: " + ae.message);
   if (!attempt) throw new Error("Assessment attempt not found");
   if (attempt.student_id !== studentId) throw new Error("Assessment attempt does not belong to this student");
+  if (!attempt.expires_at || !Number.isFinite(Date.parse(attempt.expires_at))) throw new Error("Assessment attempt has an invalid deadline");
+  if (Date.now() >= Date.parse(attempt.expires_at)) throw new Error("Assessment attempt time has expired");
+
   if (!attempt.integrity_sha256 || await attemptIntegrityHash(attempt) !== attempt.integrity_sha256) throw new Error("Assessment attempt integrity check failed");
   await verifyActiveEnrollment(studentId, attempt.course_id, token);
   if (attempt.status !== "in_progress") throw new Error("Assessment attempt is no longer active");
