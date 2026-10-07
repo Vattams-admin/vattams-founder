@@ -8,6 +8,7 @@ on:
     paths:
       - "e2e/**"
       - "scripts/provision-production-e2e-v2.mjs"
+      - "scripts/cleanup-production-e2e.mjs"
       - "playwright.config.ts"
       - "package.json"
       - "package-lock.json"
@@ -45,7 +46,7 @@ jobs:
         run: |
           set -euo pipefail
           test -n "$FIREBASE_SERVICE_ACCOUNT_JSON"
-          node scripts/provision-production-e2e-v2.mjs --cleanup
+          node scripts/cleanup-production-e2e.mjs
       - name: Provision isolated Firebase E2E student accounts
         env:
           FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
@@ -75,7 +76,7 @@ jobs:
           test -n "$FIREBASE_SERVICE_ACCOUNT_JSON"
           test -n "$SUPABASE_URL"
           test -n "$SUPABASE_SERVICE_ROLE_KEY"
-          node scripts/provision-production-e2e-v2.mjs --cleanup
+          node scripts/cleanup-production-e2e.mjs
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
