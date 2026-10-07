@@ -132,6 +132,9 @@ async function saveAnswer(
   if (attempt.status !== "in_progress") {
     throw new Error("Assessment attempt is no longer active");
   }
+  if (!attempt.expires_at || Date.now() >= Date.parse(attempt.expires_at)) {
+    throw new Error("Assessment attempt time has expired");
+  }
 
   const startedAtMs = Date.parse(attempt.started_at);
   if (!Number.isFinite(startedAtMs)) {

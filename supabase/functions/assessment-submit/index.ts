@@ -161,11 +161,13 @@ async function submit(attemptId: string, studentId: string, token: string) {
   const { error: upErr } = await supabase.from("assessment_answers").upsert(updates, { onConflict: "attempt_id,question_id" });
   if (upErr) throw new Error("Unable to persist scored answers: " + upErr.message);
 
-  const { data: updated, error: attemptErr } = await supabase.from("assessment_attempts")
-    .update({ status: "submitted", score, max_score: maxScore, submitted_at: now, scored_at: now, updated_at: now })
-    .eq("id", attemptId).eq("student_id", studentId).eq("status", "in_progress").select("id").maybeSingle();
-  if (attemptErr) throw new Error("Unable to submit assessment: " + attemptErr.message);
-  if (!updated) throw new Error("Assessment was already submitted");
+  const { data: transitioned, error: transitionError } = await supabase.rpc("transition_assessment_attempt_to_submitted", {
+    p_attempt_id: attemptId, p_student_id: studentId, p_submitted_at: now,
+  });
+  if (transitionError || !transitioned) {
+    if (transitionError?.message?.includes("ASSESSMENT_ATTEMPT_NOT_TRANSITIONABLE")) throw new Error("Assessment was already submitted or is no longer active");
+    throw new Error("Unable to submit assessment: " + (transitionError?.message || "state transition failed"));
+  }
 
   const { error: resultErr } = await supabase.from("assessment_results").insert({
     student_id: studentId, attempt_id: attemptId, course_id: attempt.course_id,
