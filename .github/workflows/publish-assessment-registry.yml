@@ -11,6 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Validate assessment registry
+        run: node scripts/validate-assessment-registry.mjs
+
+      - name: Validate packaged assessment banks
+        run: node scripts/validate-assessment-bank-registration.mjs
+
+      - name: Validate assessment blueprint registry
+        run: node scripts/validate-assessment-blueprint-registry.mjs
+
       - name: Upload production assessment registry
         env:
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
@@ -35,3 +44,40 @@ jobs:
             -H "x-upsert: true" \
             --data-binary @assessments/blueprint-registry.json \
             "$SUPABASE_URL/storage/v1/object/academia-course-materials/assessments/blueprint-registry.json"
+
+      - name: Upload verified assessment bank assets
+        env:
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs=require("node:fs");
+          const r=JSON.parse(fs.readFileSync("config/assessment-registry.json","utf8"));
+          for(const a of Object.values(r.assessments||{})){
+            if(a.status==="draft") continue;
+            for(const f of [a.bank_manifest,a.question_bank_public,a.answer_key]){
+              if(!f || !fs.existsSync(f)) throw new Error("Missing production assessment asset: "+f);
+              console.log(f);
+            }
+          }
+          NODE
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            curl --fail-with-body --retry 3 -sS \
+              -X POST \
+              -H "Authorization: Bearer $SUPABASE_SERVICE_ROLE_KEY" \
+              -H "apikey: $SUPABASE_SERVICE_ROLE_KEY" \
+              -H "Content-Type: application/json" \
+              -H "x-upsert: true" \
+              --data-binary "@$file" \
+              "$SUPABASE_URL/storage/v1/object/academia-course-materials/$file"
+          done < <(node <<'NODE'
+          const fs=require("node:fs");
+          const r=JSON.parse(fs.readFileSync("config/assessment-registry.json","utf8"));
+          for(const a of Object.values(r.assessments||{})){
+            if(a.status==="draft") continue;
+            for(const f of [a.bank_manifest,a.question_bank_public,a.answer_key]) console.log(f);
+          }
+          NODE
+          )
