@@ -1,0 +1,37 @@
+{
+  "policyId": "vattams-production-assessment-selection",
+  "version": "1.0.0",
+  "selectionOrder": [
+    "curriculum_eligibility",
+    "class_or_exam_eligibility",
+    "age_band",
+    "blueprint",
+    "difficulty_distribution",
+    "topic_distribution",
+    "recent_repetition_exclusion",
+    "student_specific_question_shuffle",
+    "option_shuffle"
+  ],
+  "rules": {
+    "failClosedWhenInsufficientEligibleQuestions": true,
+    "requireBlueprintForPublishedAssessments": true,
+    "questionIdsMustComeFromPublishedPublicBank": true,
+    "officialAttemptAnswerHidden": true,
+    "studentSpecificSeedRequired": true,
+    "optionShuffleRequired": true,
+    "recentAttemptWindow": 3,
+    "recentRepetitionPolicy": "exclude_when_alternative_eligible_questions_exist",
+    "practiceAnswerRelease": "after_submission",
+    "privateAnswerKeyNeverReturnedBySelector": true
+  },
+  "eligibility": {
+    "curriculumBeforeAgeBand": true,
+    "examOrClassBeforeAgeBand": true,
+    "ageBandRequiredForProductionQuestions": true
+  },
+  "blueprint": {
+    "requiredFields": ["questionCount", "difficultyDistribution", "topicDistribution"],
+    "difficultyDistributionMustSumToOne": true,
+    "topicDistributionMustSumToOne": true
+  }
+}
