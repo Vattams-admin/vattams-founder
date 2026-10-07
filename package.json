@@ -65,7 +65,8 @@
     "content:assessment:scoring:test": "node scripts/test-server-authoritative-scoring.mjs",
     "content:assessment:review:release:test": "node scripts/test-assessment-result-review-release.mjs",
     "content:assessment:result:isolation:test": "node scripts/test-assessment-result-isolation.mjs",
-    "content:assessment:review:payload:test": "node scripts/test-assessment-review-payload-minimization.mjs"
+    "content:assessment:review:payload:test": "node scripts/test-assessment-review-payload-minimization.mjs",
+    "content:assessment:attempt:lifecycle:test": "node scripts/test-assessment-attempt-lifecycle.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
