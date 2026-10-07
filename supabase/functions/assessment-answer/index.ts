@@ -44,16 +44,41 @@ async function verifyFirebaseToken(
   return uid;
 }
 
+async function verifyActiveEnrollment(studentId: string, courseId: string, token: string) {
+  const base = `https://firestore.googleapis.com/v1/projects/${encodeURIComponent(FIREBASE_PROJECT_ID)}/databases/(default)/documents:runQuery`;
+  const response = await fetch(base, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      structuredQuery: {
+        from: [{ collectionId: "enrolments" }],
+        where: { compositeFilter: { op: "AND", filters: [
+          { fieldFilter: { field: { fieldPath: "student_id" }, op: "EQUAL", value: { stringValue: studentId } } },
+          { fieldFilter: { field: { fieldPath: "course_id" }, op: "EQUAL", value: { stringValue: courseId } } },
+          { fieldFilter: { field: { fieldPath: "status" }, op: "EQUAL", value: { stringValue: "active" } } },
+        ]}},
+        limit: 1,
+      },
+    }),
+  });
+  if (!response.ok) throw new Error("Unable to verify course enrolment");
+  const rows = await response.json();
+  if (!(Array.isArray(rows) && rows.some((row: any) => row?.document))) {
+    throw new Error("You no longer have access to this assessment");
+  }
+}
+
 async function saveAnswer(
   studentId: string,
   attemptId: string,
   questionId: string,
   answer: string,
   selectedOptionIndex: number | null,
+  token: string,
 ) {
   const { data: attempt, error: attemptError } = await supabase
     .from("assessment_attempts")
-    .select("id,student_id,assessment_id,status,started_at,question_ids")
+    .select("id,student_id,course_id,assessment_id,status,started_at,question_ids")
     .eq("id", attemptId)
     .maybeSingle();
 
@@ -64,6 +89,7 @@ async function saveAnswer(
   if (attempt.student_id !== studentId) {
     throw new Error("Assessment attempt does not belong to this student");
   }
+  await verifyActiveEnrollment(studentId, attempt.course_id, token);
   if (attempt.status !== "in_progress") {
     throw new Error("Assessment attempt is no longer active");
   }
@@ -159,9 +185,9 @@ Deno.serve(async (request) => {
   }
 
   try {
-    const studentId = await verifyFirebaseToken(
-      request.headers.get("Authorization"),
-    );
+    const authorization = request.headers.get("Authorization");
+    const studentId = await verifyFirebaseToken(authorization);
+    const token = authorization!.slice("Bearer ".length).trim();
     const body = await request.json();
 
     if ((body?.action || "save_answer") !== "save_answer") {
@@ -194,6 +220,7 @@ Deno.serve(async (request) => {
         questionId,
         answer,
         selectedOptionIndex,
+        token,
       ),
     );
   } catch (error) {
