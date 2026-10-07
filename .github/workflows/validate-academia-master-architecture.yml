@@ -1,0 +1,26 @@
+name: Validate Academia Master Architecture
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "config/academia-learning-journey.json"
+      - "config/academia-catalog-taxonomy.json"
+      - "config/india-education-registry.json"
+      - "config/content-library-registry.json"
+      - "scripts/validate-academia-master-architecture.mjs"
+      - "package.json"
+      - ".github/workflows/validate-academia-master-architecture.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate master architecture
+        run: node scripts/validate-academia-master-architecture.mjs
