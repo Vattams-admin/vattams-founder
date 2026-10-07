@@ -25,6 +25,7 @@ on:
       - "scripts/test-assessment-answer-write-integrity.mjs"
       - "scripts/test-server-authoritative-scoring.mjs"
       - "scripts/test-assessment-result-review-release.mjs"
+      - "scripts/test-assessment-result-isolation.mjs"
       - "supabase/migrations/20261007170000_assessment_authoritative_scoring.sql"
       - "supabase/migrations/20261007160000_assessment_answer_atomic_write.sql"
       - "supabase/migrations/20261007150000_assessment_attempt_state_machine.sql"
@@ -54,3 +55,4 @@ jobs:
       - run: npm run content:assessment:answer:integrity:test
       - run: npm run content:assessment:scoring:test
       - run: npm run content:assessment:review:release:test
+      - run: npm run content:assessment:result:isolation:test
