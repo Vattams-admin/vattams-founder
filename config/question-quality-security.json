@@ -1,0 +1,16 @@
+{
+  "policyId":"vattams-production-question-quality-security",
+  "version":"1.0.0",
+  "rules":{
+    "exactOptionCount":4,
+    "uniqueOptions":true,
+    "uniqueQuestionIds":true,
+    "privateAnswerKey":true,
+    "explanationRequired":true,
+    "provenanceRequired":true,
+    "curriculumLocatorRequired":true,
+    "difficultyRequired":true,
+    "ageBandRequired":true,
+    "officialAnswerHidden":true
+  }
+}
