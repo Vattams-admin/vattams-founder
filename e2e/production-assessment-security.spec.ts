@@ -4,11 +4,6 @@ import { getAuth } from "firebase-admin/auth";
 import { getFirestore } from "firebase-admin/firestore";
 
 const COURSE_ID = "tnpsc-group-iv-vao";
-const CANDIDATE_ASSESSMENTS = [
-  "tnpsc-group-iv-vao-mock-01",
-  "tnpsc-group-iv-vao-mock-02",
-  "tnpsc-group-iv-vao-mock-03",
-];
 const SUPABASE_URL = process.env.SUPABASE_URL || "";
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || "";
 const FIREBASE_SERVICE_ACCOUNT_JSON = process.env.FIREBASE_SERVICE_ACCOUNT_JSON || "";
