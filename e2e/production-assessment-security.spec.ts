@@ -150,6 +150,8 @@ test.describe("production assessment security boundary", () => {
     try {
       await login(pageA, emailA, passwordA);
       const started = await startPublishedAssessment(pageA);
+      test.skip(!started, "No published competitive-exam assessment is currently available; cross-student isolation is validated when a production assessment is published.");
+      if (!started) return;
 
       await login(pageB, emailB, passwordB);
       const bRequest = pageB.waitForRequest(
