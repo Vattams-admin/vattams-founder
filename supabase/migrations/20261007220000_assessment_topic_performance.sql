@@ -50,3 +50,60 @@ $$;
 
 revoke all on function public.get_assessment_topic_performance(text,text) from public, anon, authenticated;
 grant execute on function public.get_assessment_topic_performance(text,text) to service_role;
+
+
+create or replace function public.persist_assessment_scored_answers(
+  p_attempt_id uuid,
+  p_student_id text,
+  p_rows jsonb
+)
+returns boolean
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  a public.assessment_attempts;
+  row jsonb;
+begin
+  select * into a from public.assessment_attempts
+    where id = p_attempt_id and student_id = p_student_id
+    for update;
+  if not found then raise exception 'ASSESSMENT_ATTEMPT_NOT_FOUND'; end if;
+  if a.status <> 'in_progress' then raise exception 'ASSESSMENT_ATTEMPT_NOT_ACTIVE'; end if;
+  if jsonb_typeof(p_rows) <> 'array' then raise exception 'INVALID_SCORED_ANSWERS'; end if;
+
+  for row in select * from jsonb_array_elements(p_rows)
+  loop
+    insert into public.assessment_answers(
+      attempt_id, question_id, answer, selected_option_index,
+      is_correct, correct_option_index, explanation, marks_awarded,
+      answered_at, updated_at, subject, topic, subtopic
+    ) values (
+      p_attempt_id,
+      row->>'question_id',
+      coalesce(row->>'answer',''),
+      case when row ? 'selected_option_index' then (row->>'selected_option_index')::integer else null end,
+      (row->>'is_correct')::boolean,
+      (row->>'correct_option_index')::integer,
+      row->>'explanation',
+      (row->>'marks_awarded')::integer,
+      coalesce((row->>'answered_at')::timestamptz, now()),
+      now(),
+      nullif(row->>'subject',''),
+      nullif(row->>'topic',''),
+      nullif(row->>'subtopic','')
+    )
+    on conflict (attempt_id, question_id) do update set
+      answer=excluded.answer, selected_option_index=excluded.selected_option_index,
+      is_correct=excluded.is_correct, correct_option_index=excluded.correct_option_index,
+      explanation=excluded.explanation, marks_awarded=excluded.marks_awarded,
+      answered_at=excluded.answered_at, updated_at=now(),
+      subject=excluded.subject, topic=excluded.topic, subtopic=excluded.subtopic;
+  end loop;
+  return true;
+end;
+$$;
+
+revoke all on function public.persist_assessment_scored_answers(uuid,text,jsonb) from public, anon, authenticated;
+grant execute on function public.persist_assessment_scored_answers(uuid,text,jsonb) to service_role;
