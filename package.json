@@ -58,7 +58,8 @@
     "content:assessment:promote": "node scripts/promote-assessment.mjs",
     "content:assessment:promotion:test": "node scripts/test-assessment-promotion-contract.mjs",
     "content:assessment:attempt:snapshot:test": "node scripts/test-assessment-attempt-release-snapshot.mjs",
-    "content:assessment:attempt:integrity:test": "node scripts/test-assessment-attempt-integrity.mjs"
+    "content:assessment:attempt:integrity:test": "node scripts/test-assessment-attempt-integrity.mjs",
+    "content:assessment:attempt:deadline:test": "node scripts/test-assessment-attempt-deadline.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
