@@ -18,6 +18,7 @@ try{
       questionId:"Q-CONTRACT-01",
       question:"Which option is valid for this contract test?",
       options:["A","B","C","D"],
+      sectionId:"contract-section",
       subject:"Contract",
       topic:"Path",
       subtopic:"Manifest",

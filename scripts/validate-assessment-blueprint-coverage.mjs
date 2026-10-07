@@ -12,7 +12,7 @@ for(const [id,bp] of Object.entries(bpRegistry.blueprints||{})){
   if(c.blueprint_id!==id) fail(id+": coverage blueprint_id mismatch");
   const assessments=Object.entries(assessmentRegistry.assessments||{}).filter(([,a])=>a.blueprint_id===id);
   if(!assessments.length) fail(id+": no assessments reference blueprint");
-  if(c.inventory?.eligible_questions < bp.question_count) fail(id+": insufficient eligible inventory");
+  if(bp.status==="ready" && c.inventory?.eligible_questions < bp.question_count) fail(id+": insufficient eligible inventory");
   if(c.status==="ready" && bp.status!=="ready") fail(id+": coverage cannot be ready while blueprint is blocked");
   if(c.status==="ready" && (c.blocked_reasons||[]).length) fail(id+": ready coverage cannot contain blocked reasons");
   if(c.status==="ready"){

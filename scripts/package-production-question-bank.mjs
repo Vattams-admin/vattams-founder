@@ -11,8 +11,9 @@ const keys=new Map((x.answerKeys||[]).map(k=>[k.questionId,k])); const ids=new S
 const pub=[]; const priv=[];
 for(const q of x.questions||[]){
  if(ids.has(q.questionId))throw new Error("Duplicate questionId: "+q.questionId); ids.add(q.questionId);
+ if(!String(q.sectionId||"").trim())throw new Error("Missing sectionId: "+q.questionId);
  const k=keys.get(q.questionId); if(!k)throw new Error("Missing private answer key: "+q.questionId);
- const publicQuestion={question_id:q.questionId,assessment_id:x.assessmentId,question:q.question,options:q.options,subject:q.subject,topic:q.topic,subtopic:q.subtopic,language:q.language,difficulty:q.difficulty,age_band:q.ageBand,exam_id:q.examId,marks:q.marks,time_seconds:q.timeSeconds,review_status:q.reviewStatus};
+ const publicQuestion={question_id:q.questionId,assessment_id:x.assessmentId,question:q.question,options:q.options,section_id:q.sectionId,subject:q.subject,topic:q.topic,subtopic:q.subtopic,language:q.language,difficulty:q.difficulty,age_band:q.ageBand,exam_id:q.examId,marks:q.marks,time_seconds:q.timeSeconds,review_status:q.reviewStatus};
  if(Object.hasOwn(publicQuestion,"correct_option_index"))throw new Error("Public answer leakage: "+q.questionId);
  pub.push(publicQuestion);
  priv.push({question_id:q.questionId,correct_option_index:k.correctOptionIndex,explanation:k.explanation,review_status:k.reviewStatus});

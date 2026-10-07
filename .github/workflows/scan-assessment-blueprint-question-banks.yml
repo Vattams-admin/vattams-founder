@@ -10,6 +10,9 @@ on:
       - "scripts/scan-assessment-blueprint-question-banks.mjs"
       - "scripts/validate-assessment-blueprint-coverage.mjs"
       - "package.json"
+      - "config/production-question-ingestion.schema.json"
+      - "scripts/validate-production-question-ingestion.mjs"
+      - "scripts/package-production-question-bank.mjs"
 
 jobs:
   scan:
