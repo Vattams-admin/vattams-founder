@@ -1,0 +1,26 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"VATTAMS Question Quality and Answer-Key Security",
+  "type":"object",
+  "required":["policyId","version","rules"],
+  "properties":{
+    "policyId":{"type":"string"},
+    "version":{"type":"string"},
+    "rules":{
+      "type":"object",
+      "required":["exactOptionCount","uniqueOptions","uniqueQuestionIds","privateAnswerKey","explanationRequired","provenanceRequired","curriculumLocatorRequired","difficultyRequired","ageBandRequired","officialAnswerHidden"],
+      "properties":{
+        "exactOptionCount":{"type":"integer","const":4},
+        "uniqueOptions":{"type":"boolean","const":true},
+        "uniqueQuestionIds":{"type":"boolean","const":true},
+        "privateAnswerKey":{"type":"boolean","const":true},
+        "explanationRequired":{"type":"boolean","const":true},
+        "provenanceRequired":{"type":"boolean","const":true},
+        "curriculumLocatorRequired":{"type":"boolean","const":true},
+        "difficultyRequired":{"type":"boolean","const":true},
+        "ageBandRequired":{"type":"boolean","const":true},
+        "officialAnswerHidden":{"type":"boolean","const":true}
+      }
+    }
+  }
+}
