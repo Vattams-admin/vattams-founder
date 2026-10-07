@@ -1,0 +1,25 @@
+{
+  "blueprint_id":"tnpsc-group-iv-vao-mock",
+  "assessment_id":"tnpsc-group-iv-vao-mock-01",
+  "inventory":{"reviewed_questions":0,"eligible_questions":0},
+  "coverage":{
+    "sections":{
+      "tamil-eligibility-cum-scoring":{"required":100,"available":0},
+      "general-studies":{"required":75,"available":0},
+      "aptitude-mental-ability":{"required":25,"available":0}
+    },
+    "difficulty":{
+      "easy":{"required":0,"available":0},
+      "medium":{"required":0,"available":0},
+      "hard":{"required":0,"available":0}
+    },
+    "topics":{},
+    "eligibility":{"all_required":false,"missing":["exam_id","age_band","subject","topic","subtopic","difficulty","review_status","private_answer_key"]}
+  },
+  "status":"blocked",
+  "blocked_reasons":[
+    "No reviewed production question inventory is currently available for this assessment.",
+    "Difficulty and topic quotas are intentionally not fabricated.",
+    "Required question-level eligibility and private-key evidence is incomplete."
+  ]
+}
