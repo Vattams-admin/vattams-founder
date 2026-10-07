@@ -42,7 +42,8 @@
     "content:authoring:package:validate": "node scripts/validate-content-authoring-package.mjs",
     "content:questions:quality:validate": "node scripts/validate-question-quality-security.mjs",
     "content:assessment:selection:validate": "node scripts/validate-assessment-selection-policy.mjs",
-    "content:assessment:blueprint:validate": "node scripts/validate-assessment-blueprint-registry.mjs"
+    "content:assessment:blueprint:validate": "node scripts/validate-assessment-blueprint-registry.mjs",
+    "content:assessment:coverage:validate": "node scripts/validate-assessment-blueprint-coverage.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
