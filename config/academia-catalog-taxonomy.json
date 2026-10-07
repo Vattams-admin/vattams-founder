@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "id": "vattams-academia-pan-india-catalog",
+  "scope": "pan_india",
+  "school": {
+    "curricula": ["cbse","cisce","nios","state_board","matriculation","ib","cambridge-international","pearson-edexcel"],
+    "classes": [1,2,3,4,5,6,7,8,9,10,11,12],
+    "state_model": "every_state_and_union_territory_uses_its_own_board_package_when_applicable",
+    "subjects_are_segregated_by_curriculum_and_class": true
+  },
+  "competitive_exams": {
+    "families": ["tnpsc","upsc","ssc","banking","railways","defence","police_and_uniformed_services","state_recruitment","insurance","regulatory","teaching_recruitment","judiciary","other_government_recruitment"],
+    "examples": {
+      "banking": ["ibps","sbi","rbi","nabard"],
+      "regulatory": ["sebi","irdai","pfrda"],
+      "railways": ["rrb_ntpc","rrb_group_d","rrb_alp","rrb_technician"],
+      "ssc": ["cgl","chsl","mts","gd","cpo","stenographer"],
+      "defence": ["nda","cds","afcat","agniveer"],
+      "teaching_recruitment": ["ctet","state_tet","teacher_recruitment"],
+      "state_recruitment": ["state_psc","state_ssc","state_police","other_state_recruitment"]
+    }
+  },
+  "entrance_exams": {
+    "families": ["medical","engineering","university","law","design","architecture","management","defence","agriculture","pharmacy","other_entrance"],
+    "examples": {
+      "medical": ["neet_ug","neet_pg"],
+      "engineering": ["jee_main","jee_advanced","state_engineering_entrance"],
+      "university": ["cuet_ug","cuet_pg"],
+      "law": ["clat","ailet","state_law_entrance"],
+      "design": ["nift","nid_darshan","uceed","ceed"],
+      "architecture": ["nata"],
+      "management": ["cat","xat","cmat","mat"],
+      "agriculture": ["icar_aieea","state_agriculture_entrance"],
+      "pharmacy": ["state_pharmacy_entrance","other_pharmacy_entrance"]
+    }
+  },
+  "professional": {
+    "families": ["accounting_audit","company_secretarial","cost_accounting","medical_professional","law_professional","finance","taxation","other_professional"],
+    "examples": {
+      "accounting_audit": ["ca_foundation","ca_intermediate","ca_final","audit"],
+      "company_secretarial": ["cs_executive","cs_professional"],
+      "cost_accounting": ["cma_foundation","cma_intermediate","cma_final"],
+      "finance": ["cfa","frm"],
+      "taxation": ["direct_tax","indirect_tax","gst"],
+      "medical_professional": ["medical_subject_revision","professional_exam_preparation"],
+      "law_professional": ["llb_subjects","bar_exam_preparation"]
+    }
+  },
+  "competitions": {
+    "model": "study_material_practice_mock_revision_age_eligibility_official_attempt_result_certificate",
+    "reference": "thirukkural-mastery-championship"
+  },
+  "languages": {
+    "source_registry": "config/india-education-registry.json",
+    "translation_requires_human_review": true,
+    "english_fallback": true
+  }
+}
