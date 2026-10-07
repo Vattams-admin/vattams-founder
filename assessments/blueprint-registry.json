@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "blueprints": {
+    "tnpsc-group-iv-vao-mock": {
+      "blueprint_id": "tnpsc-group-iv-vao-mock",
+      "status": "blocked",
+      "blocked_reason": "Official exam structure is captured, but production difficulty/topic distributions and question-level eligibility metadata have not yet been independently authored and reviewed. No distribution is fabricated.",
+      "question_count": 200,
+      "time_seconds": 10800,
+      "eligibility": {"exam_ids":["tnpsc-group-iv-vao"],"age_bands_required":true},
+      "answer_release_policy": "after_submission"
+    }
+  }
+}
