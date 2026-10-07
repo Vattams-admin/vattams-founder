@@ -1,0 +1,32 @@
+name: Validate Production Content Coverage
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'config/**'
+      - 'content/**'
+      - 'scripts/validate-production-content-coverage.mjs'
+      - '.github/workflows/validate-production-content-coverage.yml'
+  pull_request:
+    paths:
+      - 'config/**'
+      - 'content/**'
+      - 'scripts/validate-production-content-coverage.mjs'
+      - '.github/workflows/validate-production-content-coverage.yml'
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Generate production coverage report
+        run: node scripts/validate-production-content-coverage.mjs
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-content-coverage
+          path: reports/production-content-coverage.json
