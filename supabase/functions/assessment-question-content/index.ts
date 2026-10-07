@@ -65,7 +65,7 @@ async function verifyRegisteredBank(definition: any, publicParsed: unknown, priv
 
 async function loadPublicQuestions(studentId: string, attemptId: string, token: string) {
   const { data: attempt, error } = await supabase.from("assessment_attempts")
-    .select("id,student_id,status,assessment_id,question_ids,option_orders,release_version,release_public_sha256,release_private_sha256").eq("id", attemptId).maybeSingle();
+    .select("id,student_id,status,assessment_id,question_ids,option_orders,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders").eq("id", attemptId).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
   if (!attempt) throw new Error("Assessment attempt not found");
   if (attempt.student_id !== studentId) throw new Error("Assessment attempt does not belong to this student");
