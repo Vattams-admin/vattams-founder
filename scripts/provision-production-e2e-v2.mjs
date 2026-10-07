@@ -28,7 +28,7 @@ async function getOrCreateUser(email, displayName) {
     return await auth.updateUser(existing.uid, { password, displayName, disabled: false, emailVerified: true })
   } catch (error) {
     if (error?.code !== 'auth/user-not-found') throw error
-    return auth.createUser({ email, password, displayName, emailVerified: true, disabled: false, emailVerified: true })
+    return auth.createUser({ email, password, displayName, emailVerified: true, disabled: false })
   }
 }
 
