@@ -86,7 +86,6 @@ async function submit(attemptId: string, studentId: string, token: string) {
   const definition = registry.assessments?.[attempt.assessment_id];
   if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
   if (attempt.release_version !== definition.release_version || attempt.release_public_sha256 !== definition.release_public_sha256 || attempt.release_private_sha256 !== definition.release_private_sha256) throw new Error("Assessment release changed after this attempt started; the attempt is locked to its original release");
-  if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
   if (definition.course_id !== attempt.course_id || definition.domain !== attempt.domain || definition.kind !== attempt.kind) {
     throw new Error("Assessment definition does not match attempt");
   }
