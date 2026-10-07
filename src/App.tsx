@@ -50,10 +50,6 @@ const AdminCertificates = lazy(() => import('@/pages/admin/AdminCertificates'))
 const AdminRoute = lazy(() => import('@/components/AdminRoute'))
 const Notifications = lazy(() => import('@/pages/Notifications'))
 const AdminNotifications = lazy(() => import('@/pages/admin/AdminNotifications'))
-const LiveSession = lazy(() => import('@/pages/LiveSession'))
-const LiveClassroom = lazy(() => import('@/pages/live/LiveClassroom'))
-const TutorLiveSessions = lazy(() => import('@/pages/tutor/TutorLiveSessions'))
-const AdminLiveSessions = lazy(() => import('@/pages/admin/AdminLiveSessions'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 
 function PrivateRouteSeoGuard() {
@@ -64,8 +60,7 @@ function PrivateRouteSeoGuard() {
     pathname.startsWith('/admin') || pathname.startsWith('/dashboard') ||
     pathname.startsWith('/learn/') || pathname.startsWith('/assessment/') ||
     pathname.startsWith('/pay/') || pathname.startsWith('/competition/') ||
-    pathname.startsWith('/notifications') || pathname.startsWith('/live-session/') ||
-    pathname.startsWith('/live-classroom/')
+    pathname.startsWith('/notifications')
   useSeo({ title: 'VATTAMS ACADEMIA', description: 'Private VATTAMS ACADEMIA application area.', path: pathname, noindex: true, enabled: privateRoute })
   return null
 }
@@ -115,9 +110,6 @@ export default function App() {
             <Route path="/competition/:slug" element={<CompetitionParticipant />} />
             <Route path="/assessment/:courseId/:assessmentId" element={<AssessmentPage />} />
             <Route path="/notifications" element={<Notifications />} />
-            <Route path="/live-session/:sessionId" element={<LiveSession />} />
-            <Route path="/live-classroom/:sessionId" element={<LiveClassroom />} />
-            <Route path="/tutor/live-sessions" element={<TutorLiveSessions />} />
             <Route path="/admin" element={<AdminLogin />} />
             <Route path="/admin/dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
             <Route path="/admin/assessments" element={<AdminRoute><AdminAssessments /></AdminRoute>} />
@@ -134,7 +126,6 @@ export default function App() {
             <Route path="/admin/tutors" element={<AdminRoute><AdminTutors /></AdminRoute>} />
             <Route path="/admin/certificates" element={<AdminRoute><AdminCertificates /></AdminRoute>} />
             <Route path="/admin/notifications" element={<AdminRoute><AdminNotifications /></AdminRoute>} />
-            <Route path="/admin/live-sessions" element={<AdminRoute><AdminLiveSessions /></AdminRoute>} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
