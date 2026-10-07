@@ -7,7 +7,7 @@ const errors=[];
 function sha(rel){const p=path.resolve(root,rel);if(!fs.existsSync(p))return null;return crypto.createHash("sha256").update(fs.readFileSync(p)).digest("hex");}
 function read(rel){const p=path.resolve(root,rel);if(!fs.existsSync(p))return null;return JSON.parse(fs.readFileSync(p,"utf8"));}
 for(const [id,a] of Object.entries(registry.assessments||{})){
- const manifestPath="assessments/competitive-exam/"+a.course_id+"/"+a.assessment_id+".manifest.json";
+ const manifestPath=a.bank_manifest;
  const m=read(manifestPath);
  if(!m){if(a.status==="reviewed"||a.status==="published")errors.push(id+": reviewed/published assessment requires packaged manifest");continue;}
  if(m.assessmentId!==id)errors.push(id+": manifest assessmentId mismatch");
