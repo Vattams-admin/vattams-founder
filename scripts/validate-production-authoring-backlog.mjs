@@ -10,7 +10,7 @@ const ids=new Set();
 for(const t of b.tracks){
   if(ids.has(t.trackId)) fail("duplicate trackId "+t.trackId);
   ids.add(t.trackId);
-  if(![...Array(12)].includes(t.classNumber)) fail("invalid class "+t.trackId);
+  if(!Number.isInteger(t.classNumber) || t.classNumber < 1 || t.classNumber > 12) fail("invalid class "+t.trackId);
   if(!["national","state_board","matriculation","international"].includes(t.scope)) fail("invalid scope "+t.trackId);
   for(const k of ["curriculum_map","subject_map","chapter_map","lesson_notes","practice","revision","mock_test","official_attempt"]) if(t.packageStatus?.[k]!=="not_started") fail("unexpected initial package state "+t.trackId+"/"+k);
 }
