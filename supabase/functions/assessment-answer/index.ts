@@ -78,7 +78,7 @@ async function saveAnswer(
 ) {
   const { data: attempt, error: attemptError } = await supabase
     .from("assessment_attempts")
-    .select("id,student_id,course_id,assessment_id,status,started_at,question_ids")
+    .select("id,student_id,course_id,assessment_id,status,started_at,question_ids,option_orders")
     .eq("id", attemptId)
     .maybeSingle();
 
@@ -132,6 +132,15 @@ async function saveAnswer(
   }
 
   const normalizedAnswer = answer.trim();
+  if (selectedOptionIndex !== null) {
+    const order = Array.isArray((attempt as any).option_orders?.[questionId])
+      ? (attempt as any).option_orders[questionId]
+      : [0,1,2,3];
+    if (order.length !== 4 || new Set(order).size !== 4 || order.some((x: unknown) => !Number.isInteger(x) || x < 0 || x > 3)) {
+      throw new Error("Assessment option permutation is invalid");
+    }
+    selectedOptionIndex = order[selectedOptionIndex];
+  }
   if (normalizedAnswer.length > 2000) {
     throw new Error("Answer is too long");
   }
