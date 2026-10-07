@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firebaseAuth, firestore } from '@/lib/firebase'
-import { getNextLiveSessionForStudent } from '@/lib/liveSessions'
-import type { LiveSession } from '@/types/liveSession'
 import { useAuth } from '@/hooks/useAuth'
 import type { Course, Enrolment, Payment } from '@/types/database'
 import EmailVerificationBanner from '@/components/EmailVerificationBanner'
@@ -18,8 +16,6 @@ export default function StudentDashboard() {
   const [enrolmentsError, setEnrolmentsError] = useState<string | null>(null)
   const [payments, setPayments] = useState<Payment[]>([])
   const [paymentsState, setPaymentsState] = useState<SectionState>('loading')
-  const [nextLiveSession, setNextLiveSession] = useState<LiveSession | null>(null)
-  const [liveSessionState, setLiveSessionState] = useState<SectionState>('loading')
   const [activeCompetitions, setActiveCompetitions] = useState<Course[]>([])
   const [competitionsState, setCompetitionsState] = useState<SectionState>('loading')
 
@@ -95,23 +91,10 @@ export default function StudentDashboard() {
       setCompetitionsState('error')
     }
   }
-  async function loadNextLiveSession(userId: string) {
-    setLiveSessionState('loading')
-    try {
-      const session = await getNextLiveSessionForStudent(userId)
-      setNextLiveSession(session)
-      setLiveSessionState('loaded')
-    } catch (err) {
-      console.error('Failed to load next live session:', err)
-      setLiveSessionState('error')
-    }
-  }
-
   useEffect(() => {
     if (!user) return
     loadEnrolments(user.id)
     loadPayments(user.id)
-    loadNextLiveSession(user.id)
     loadActiveCompetitions()
   }, [user])
 
@@ -136,51 +119,6 @@ export default function StudentDashboard() {
           Welcome letter
         </Link>
       </div>
-
-      <section className="mt-8">
-        <h2 className="font-display text-xl text-gold-bright">Next Live Class</h2>
-        {liveSessionState === 'loading' && (
-          <p className="mt-2 text-sm text-slate-muted">Loading…</p>
-        )}
-        {liveSessionState === 'error' && (
-          <div className="mt-2 flex flex-wrap items-center gap-3">
-            <p className="text-sm text-danger">
-              Unable to load live classes right now.
-            </p>
-            <button
-              onClick={() => loadNextLiveSession(user.id)}
-              className="btn-secondary text-xs"
-            >
-              Retry
-            </button>
-          </div>
-        )}
-        {liveSessionState === 'loaded' && !nextLiveSession && (
-          <p className="mt-2 text-sm text-slate-muted">
-            No upcoming live classes.
-          </p>
-        )}
-        {liveSessionState === 'loaded' && nextLiveSession && (
-          <div className="card mt-4 flex flex-wrap items-center justify-between gap-4 p-4">
-            <div>
-              <p className="font-medium">{nextLiveSession.title}</p>
-              <p className="text-sm text-slate-muted">
-                {nextLiveSession.course_name ?? 'Course'}
-                {nextLiveSession.tutor_name ? ` · ${nextLiveSession.tutor_name}` : ''}
-              </p>
-              <p className="mt-1 text-xs text-slate-muted">
-                {new Date(nextLiveSession.start_time).toLocaleString('en-IN')}
-              </p>
-            </div>
-            <Link
-              to={`/live-session/${nextLiveSession.id}`}
-              className="btn-primary text-sm"
-            >
-              View Live Class
-            </Link>
-          </div>
-        )}
-      </section>
 
       <section className="mt-8">
         <div className="flex items-end justify-between gap-4">
