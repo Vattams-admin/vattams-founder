@@ -35,6 +35,11 @@ async function verifyActiveEnrollment(studentId: string, courseId: string, token
   return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
+
+async function attemptIntegrityHash(attempt: any): Promise<string> {
+  return canonicalSha256({ release_version: attempt.release_version, release_public_sha256: attempt.release_public_sha256, release_private_sha256: attempt.release_private_sha256, question_ids: attempt.question_ids, option_orders: attempt.option_orders });
+}
+
 async function verifyRegisteredBank(definition: any, publicParsed: unknown, privateParsed?: unknown): Promise<void> {
   if (typeof definition.bank_manifest !== "string" || !definition.bank_manifest) {
     throw new Error("Assessment bank manifest is not registered");
@@ -60,10 +65,11 @@ async function verifyRegisteredBank(definition: any, publicParsed: unknown, priv
 
 async function loadPublicQuestions(studentId: string, attemptId: string, token: string) {
   const { data: attempt, error } = await supabase.from("assessment_attempts")
-    .select("id,student_id,status,assessment_id,question_ids,option_orders,release_version,release_public_sha256,release_private_sha256").eq("id", attemptId).maybeSingle();
+    .select("id,student_id,status,assessment_id,question_ids,option_orders,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders").eq("id", attemptId).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
   if (!attempt) throw new Error("Assessment attempt not found");
   if (attempt.student_id !== studentId) throw new Error("Assessment attempt does not belong to this student");
+  if (!attempt.integrity_sha256 || await attemptIntegrityHash(attempt) !== attempt.integrity_sha256) throw new Error("Assessment attempt integrity check failed");
   if (!["in_progress", "submitted"].includes(attempt.status)) throw new Error("Invalid assessment attempt");
 
   const ids = Array.isArray(attempt.question_ids) ? attempt.question_ids.filter((x: unknown): x is string => typeof x === "string") : [];

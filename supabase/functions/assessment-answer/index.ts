@@ -75,6 +75,11 @@ async function verifyActiveEnrollment(studentId: string, courseId: string, token
   return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
+
+async function attemptIntegrityHash(attempt: any): Promise<string> {
+  return canonicalSha256({ release_version: attempt.release_version, release_public_sha256: attempt.release_public_sha256, release_private_sha256: attempt.release_private_sha256, question_ids: attempt.question_ids, option_orders: attempt.option_orders });
+}
+
 async function verifyRegisteredBank(definition: any, publicParsed: unknown, privateParsed?: unknown): Promise<void> {
   if (typeof definition.bank_manifest !== "string" || !definition.bank_manifest) {
     throw new Error("Assessment bank manifest is not registered");
@@ -108,7 +113,7 @@ async function saveAnswer(
 ) {
   const { data: attempt, error: attemptError } = await supabase
     .from("assessment_attempts")
-    .select("id,student_id,course_id,assessment_id,status,started_at,question_ids,option_orders,release_version,release_public_sha256,release_private_sha256")
+    .select("id,student_id,course_id,assessment_id,status,started_at,question_ids,option_orders,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders")
     .eq("id", attemptId)
     .maybeSingle();
 
@@ -119,6 +124,7 @@ async function saveAnswer(
   if (attempt.student_id !== studentId) {
     throw new Error("Assessment attempt does not belong to this student");
   }
+  if (!attempt.integrity_sha256 || await attemptIntegrityHash(attempt) !== attempt.integrity_sha256) throw new Error("Assessment attempt integrity check failed");
   await verifyActiveEnrollment(studentId, attempt.course_id, token);
   if (attempt.status !== "in_progress") {
     throw new Error("Assessment attempt is no longer active");
