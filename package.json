@@ -53,7 +53,8 @@
     "content:assessment:bank:hash:test": "node scripts/test-assessment-bank-hash-contract.mjs",
     "content:assessment:bank:path:test": "node scripts/test-assessment-bank-packager-path-contract.mjs",
     "content:assessment:readiness:validate": "node scripts/validate-assessment-production-readiness.mjs",
-    "content:assessment:audit:validate": "node scripts/validate-assessment-publication-audit.mjs"
+    "content:assessment:audit:validate": "node scripts/validate-assessment-publication-audit.mjs",
+    "content:assessment:versions:validate": "node scripts/validate-assessment-version-history.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
