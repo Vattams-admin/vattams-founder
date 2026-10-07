@@ -173,6 +173,7 @@ async function loadQuestionBank(definition: AssessmentDefinition): Promise<Quest
       throw new Error(`Invalid options for question: ${q.question_id || "unknown"}`);
     }
     if (!["easy", "medium", "hard"].includes(q.difficulty || "")) throw new Error(`Question missing valid difficulty: ${q.question_id || "unknown"}`);
+    if (!q.age_band) throw new Error(`Question missing age band: ${q.question_id || "unknown"}`);
   }
   const keyParsed = await loadJson(definition.answer_key, "private answer key");
   const entries = Array.isArray(keyParsed) ? keyParsed : keyParsed?.questions || keyParsed?.answers;
