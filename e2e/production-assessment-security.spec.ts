@@ -4,6 +4,11 @@ import { getAuth } from "firebase-admin/auth";
 import { getFirestore } from "firebase-admin/firestore";
 
 const COURSE_ID = "tnpsc-group-iv-vao";
+const PRIVATE_KEY_ASSESSMENT_IDS = [
+  "tnpsc-group-iv-vao-mock-01",
+  "tnpsc-group-iv-vao-mock-02",
+  "tnpsc-group-iv-vao-mock-03",
+];
 const SUPABASE_URL = process.env.SUPABASE_URL || "";
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || "";
 const FIREBASE_SERVICE_ACCOUNT_JSON = process.env.FIREBASE_SERVICE_ACCOUNT_JSON || "";
@@ -173,7 +178,7 @@ test.describe("production assessment security boundary", () => {
   test("private answer keys are not anonymously downloadable", async ({ request }) => {
     expect(SUPABASE_URL).toBeTruthy();
     expect(SUPABASE_ANON_KEY).toBeTruthy();
-    for (const assessmentId of CANDIDATE_ASSESSMENTS) {
+    for (const assessmentId of PRIVATE_KEY_ASSESSMENT_IDS) {
       const path = `assessments/competitive-exam/${COURSE_ID}/${assessmentId}.private.json`;
       const response = await request.get(`${SUPABASE_URL}/storage/v1/object/academia-course-materials/${path}`, {
         headers: { apikey: SUPABASE_ANON_KEY },
