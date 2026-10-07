@@ -1,0 +1,19 @@
+{
+  "version":1,
+  "registryId":"vattams-syllabus-source-intake",
+  "purpose":"Tracks authoritative source discovery separately from captured evidence so a URL can never be mistaken for a verified artifact.",
+  "records":[
+    {
+      "intakeId":"cbse-class-1-2026-27-primary-curriculum-discovery",
+      "trackId":"school-cbse-class-1",
+      "sourceType":"official_curriculum_document",
+      "sourceTitle":"CBSE Curriculum Framework / Primary Curriculum 2026-27",
+      "sourceLocator":"https://cbseacademic.nic.in/web_material/CurriculumMain27/CTAI_Pri_2026-27.pdf",
+      "discoveryStatus":"discovered",
+      "artifactStatus":"not_captured",
+      "sha256":null,
+      "contentAuthoringAllowed":false,
+      "notes":"Official CBSE source located. Binary artifact must be captured through an approved evidence-ingestion process before SHA-256 verification or curriculum authoring."
+    }
+  ]
+}

@@ -32,7 +32,8 @@
     "content:backlog:validate": "node scripts/validate-production-authoring-backlog.mjs",
     "content:syllabus:evidence:validate": "node scripts/validate-syllabus-evidence-schema.mjs",
     "content:authoring:control:validate": "node scripts/validate-curriculum-authoring-control.mjs",
-    "content:syllabus:artifact:validate": "node scripts/validate-syllabus-artifact-registry.mjs"
+    "content:syllabus:artifact:validate": "node scripts/validate-syllabus-artifact-registry.mjs",
+    "content:syllabus:source-intake:validate": "node scripts/validate-syllabus-source-intake.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",

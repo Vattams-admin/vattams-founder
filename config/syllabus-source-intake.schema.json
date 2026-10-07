@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"VATTAMS Syllabus Source Intake",
+  "type":"object",
+  "required":["version","registryId","records"],
+  "properties":{
+    "version":{"type":"integer","const":1},
+    "registryId":{"type":"string","const":"vattams-syllabus-source-intake"},
+    "records":{"type":"array","items":{"type":"object","required":["intakeId","trackId","sourceType","sourceTitle","sourceLocator","discoveryStatus","artifactStatus","sha256","contentAuthoringAllowed"],"properties":{
+      "intakeId":{"type":"string"},
+      "trackId":{"type":"string"},
+      "sourceType":{"type":"string"},
+      "sourceTitle":{"type":"string"},
+      "sourceLocator":{"type":"string","format":"uri"},
+      "discoveryStatus":{"enum":["discovered","rejected"]},
+      "artifactStatus":{"enum":["not_captured","captured","verified","approved","superseded"]},
+      "sha256":{"type":["string","null"],"pattern":"^[a-fA-F0-9]{64}$"},
+      "contentAuthoringAllowed":{"type":"boolean"},
+      "notes":{"type":"string"}
+    }}}
+  }
+}

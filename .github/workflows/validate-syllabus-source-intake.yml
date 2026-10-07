@@ -1,0 +1,22 @@
+name: Validate Syllabus Source Intake
+
+on:
+  push:
+    paths:
+      - "config/syllabus-source-intake.json"
+      - "config/syllabus-source-intake.schema.json"
+      - "scripts/validate-syllabus-source-intake.mjs"
+  pull_request:
+    paths:
+      - "config/syllabus-source-intake.json"
+      - "config/syllabus-source-intake.schema.json"
+      - "scripts/validate-syllabus-source-intake.mjs"
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/validate-syllabus-source-intake.mjs
