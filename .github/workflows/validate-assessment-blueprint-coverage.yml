@@ -1,0 +1,20 @@
+name: Validate Assessment Blueprint Coverage
+
+on:
+  pull_request:
+    paths:
+      - "config/assessment-blueprint-registry.json"
+      - "config/assessment-blueprint-coverage/**"
+      - "config/assessment-registry.json"
+      - "scripts/validate-assessment-blueprint-coverage.mjs"
+      - "package.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run content:assessment:coverage:validate
