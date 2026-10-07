@@ -5,12 +5,13 @@ for (const token of [
   "const reviewReleased",
   "attempt.status === \"submitted\"",
   "answerReleasePolicy !== \"never\"",
-  "is_correct: a.is_correct === true",
-  "typeof a.explanation === \"string\"",
-  "marks_awarded: Number.isFinite",
+  "item.is_correct",
+  "item.correct_option_index",
+  "item.explanation",
+  "item.marks_awarded",
 ]) if (!p.includes(token)) throw new Error("missing payload minimization control: "+token);
-for (const forbidden of ["release_public_sha256:", "release_private_sha256:", "integrity_sha256:", "option_orders:"]) {
-  const response = p.slice(p.indexOf("  return {"));
+const response = p.slice(p.indexOf("  return {"));
+for (const forbidden of ["release_version:", "release_public_sha256:", "release_private_sha256:", "integrity_sha256:", "option_orders:", "answer: a.answer"]) {
   if (response.includes(forbidden)) throw new Error("internal field leaked in response mapping: "+forbidden);
 }
 console.log("ASSESSMENT REVIEW PAYLOAD MINIMIZATION: VALID");
