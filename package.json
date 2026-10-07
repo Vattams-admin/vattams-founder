@@ -62,7 +62,8 @@
     "content:assessment:attempt:deadline:test": "node scripts/test-assessment-attempt-deadline.mjs",
     "content:assessment:attempt:state:test": "node scripts/test-assessment-attempt-state-machine.mjs",
     "content:assessment:answer:integrity:test": "node scripts/test-assessment-answer-write-integrity.mjs",
-    "content:assessment:scoring:test": "node scripts/test-server-authoritative-scoring.mjs"
+    "content:assessment:scoring:test": "node scripts/test-server-authoritative-scoring.mjs",
+    "content:assessment:review:release:test": "node scripts/test-assessment-result-review-release.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",

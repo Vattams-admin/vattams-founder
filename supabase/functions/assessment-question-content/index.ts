@@ -70,7 +70,7 @@ async function loadPublicQuestions(studentId: string, attemptId: string, token: 
   if (!attempt) throw new Error("Assessment attempt not found");
   if (attempt.student_id !== studentId) throw new Error("Assessment attempt does not belong to this student");
   if (!attempt.expires_at || !Number.isFinite(Date.parse(attempt.expires_at))) throw new Error("Assessment attempt has an invalid deadline");
-  if (Date.now() >= Date.parse(attempt.expires_at)) throw new Error("Assessment attempt time has expired");
+  if (attempt.status === "in_progress" && Date.now() >= Date.parse(attempt.expires_at)) throw new Error("Assessment attempt time has expired");
 
   if (!attempt.integrity_sha256 || await attemptIntegrityHash(attempt) !== attempt.integrity_sha256) throw new Error("Assessment attempt integrity check failed");
   if (!["in_progress", "submitted"].includes(attempt.status)) throw new Error("Invalid assessment attempt");
@@ -88,6 +88,16 @@ async function loadPublicQuestions(studentId: string, attemptId: string, token: 
   const definition = registry.assessments?.[attempt.assessment_id];
   if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
   if (attempt.release_version !== definition.release_version || attempt.release_public_sha256 !== definition.release_public_sha256 || attempt.release_private_sha256 !== definition.release_private_sha256) throw new Error("Assessment release changed after this attempt started; the attempt is locked to its original release");
+  const answerReleasePolicy = definition.answerReleasePolicy || definition.answer_release_policy || "after_submission";
+  if (!["immediate_practice", "after_submission", "scheduled", "never"].includes(answerReleasePolicy)) {
+    throw new Error("Assessment answer release policy is invalid");
+  }
+  if (attempt.status === "submitted" && answerReleasePolicy === "scheduled") {
+    const releaseAt = definition.answerReleaseAt || definition.answer_release_at;
+    if (!releaseAt || !Number.isFinite(Date.parse(releaseAt)) || Date.now() < Date.parse(releaseAt)) {
+      throw new Error("Assessment review is not yet released");
+    }
+  }
   if (typeof definition.question_bank_public !== "string" || !definition.question_bank_public) {
     throw new Error("Assessment public question bank is not configured");
   }
@@ -143,7 +153,7 @@ async function loadPublicQuestions(studentId: string, attemptId: string, token: 
     answers: (answers || []).map((a: any) => ({
       question_id: a.question_id, answer: a.answer,
       selected_option_index: toShuffledIndex(a.question_id, a.selected_option_index),
-      ...(attempt.status === "submitted" ? {
+      ...((attempt.status === "submitted" && answerReleasePolicy !== "never") ? {
         is_correct: a.is_correct, correct_option_index: toShuffledIndex(a.question_id, a.correct_option_index),
         explanation: a.explanation, marks_awarded: a.marks_awarded,
       } : {}),
