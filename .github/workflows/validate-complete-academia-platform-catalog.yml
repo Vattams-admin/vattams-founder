@@ -1,0 +1,28 @@
+name: Validate Complete Academia Platform Catalog
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "config/vattams-academia-complete-platform-catalog.json"
+      - "scripts/validate-complete-platform-catalog.mjs"
+      - "package.json"
+  pull_request:
+    paths:
+      - "config/vattams-academia-complete-platform-catalog.json"
+      - "scripts/validate-complete-platform-catalog.mjs"
+      - "package.json"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run academia:catalog:validate
