@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "id": "vattams-academia-master-learning-journey",
+  "purpose": "Canonical learner journey and assessment contract for school, competitive-exam, entrance, professional and competition content.",
+  "reference_implementation": "thirukkural-mastery-championship",
+  "domains": {
+    "school": {
+      "levels": [1,2,3,4,5,6,7,8,9,10,11,12],
+      "journey": ["study_material","lesson","worked_examples","practice","chapter_test","revision","subject_test","mock_test"],
+      "official_mode": "official_attempt"
+    },
+    "competitive-exam": {
+      "journey": ["study_material","topic_learning","practice","sectional_test","pyq_test","mock_test","revision","official_attempt"]
+    },
+    "entrance-exam": {
+      "journey": ["study_material","topic_learning","practice","sectional_test","mock_test","revision","official_attempt"]
+    },
+    "professional": {
+      "journey": ["study_material","topic_learning","practice","sectional_test","mock_test","revision","official_attempt"]
+    },
+    "competition": {
+      "journey": ["study_material","topic_learning","practice","mock_test","revision","eligibility_check","official_attempt","results","certificate"]
+    }
+  },
+  "lesson_contract": {
+    "required": ["objectives","concepts","definitions","worked_examples","practice","revision","review_status"],
+    "recommended": ["visuals","common_mistakes","key_takeaways","flash_recall","formula_bank","weak_topic_revision"],
+    "no_placeholder_content": true
+  },
+  "question_contract": {
+    "question_type": "mcq",
+    "options_exactly": 4,
+    "options_unique": true,
+    "required_metadata": ["question_id","content_id","domain","language","difficulty","marks","time_seconds","review_status","source","version"],
+    "private_answer_fields": ["correct_option_index","explanation"],
+    "public_attempt_fields": ["question_id","question","options"],
+    "answer_hidden_during_official_attempt": true,
+    "review_after_submission": {
+      "show_correct_answer": true,
+      "show_reasoning": true,
+      "show_option_analysis": true,
+      "show_concept": true,
+      "show_revision_recommendation": true
+    }
+  },
+  "selection_engine": {
+    "eligibility_order": ["domain","state_or_ut","curriculum","class_or_exam","age_band","language","blueprint","difficulty","recent_repetition"],
+    "question_selection": "blueprint_controlled_random",
+    "question_order": "student_specific_random",
+    "option_order": "student_specific_random",
+    "repetition_control": {
+      "avoid_recent_questions": true,
+      "avoid_same_paper_sequence": true
+    },
+    "age_policy": {
+      "school": "class_and_age_eligible",
+      "competition": "age_band_eligible",
+      "exam": "exam_eligibility_first"
+    },
+    "never_randomize": ["correct_answer_identity","marks","blueprint_requirements","eligibility"]
+  },
+  "assessment_security": {
+    "public_question_bank_must_not_contain": ["correct_option_index","explanation"],
+    "answer_key_storage": "private",
+    "official_attempt_answer_visibility": "hidden_until_result_policy",
+    "server_side_scoring": true
+  },
+  "governance": {
+    "workflow": ["draft","automated_validation","quality_review","ceo_approval","published","retired"],
+    "ceo_auto_approval": {
+      "enabled": true,
+      "meaning": "A configured CEO approval policy executes the approval transition only after every mandatory validation and review gate passes.",
+      "never_bypass": ["schema_validation","source_review","answer_key_review","security_checks","content_hash","audit_log"]
+    },
+    "audit_required": ["content_id","version","reviewer","approver","approved_at","content_hash","previous_version"],
+    "machine_translation_auto_publish": false,
+    "unreviewed_official_content": false
+  }
+}
