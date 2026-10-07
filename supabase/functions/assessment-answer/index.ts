@@ -113,7 +113,7 @@ async function saveAnswer(
 ) {
   const { data: attempt, error: attemptError } = await supabase
     .from("assessment_attempts")
-    .select("id,student_id,course_id,assessment_id,status,started_at,question_ids,option_orders,release_version,release_public_sha256,release_private_sha256")
+    .select("id,student_id,course_id,assessment_id,status,started_at,question_ids,option_orders,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders")
     .eq("id", attemptId)
     .maybeSingle();
 
