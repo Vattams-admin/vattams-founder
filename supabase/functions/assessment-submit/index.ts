@@ -7,13 +7,13 @@ const KEYS = JSON.parse(Deno.env.get("SUPABASE_SECRET_KEYS") || "{}");
 const supabase = createClient(SUPABASE_URL, KEYS["default"] || "", { auth: { persistSession: false, autoRefreshToken: false } });
 const jwks = createRemoteJWKSet(new URL("https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com"));
 
-async function uid(auth: string | null) {
+async function uid(auth: string | null): Promise<{ uid: string; token: string }> {
   if (!auth?.startsWith("Bearer ") || !FIREBASE_PROJECT_ID) throw new Error("Unauthorized");
   const { payload } = await jwtVerify(auth.slice(7).trim(), jwks, {
     issuer: "https://securetoken.google.com/" + FIREBASE_PROJECT_ID, audience: FIREBASE_PROJECT_ID,
   });
   if (typeof payload.sub !== "string" || !payload.sub) throw new Error("Invalid Firebase token");
-  return payload.sub;
+  return { uid: payload.sub, token: auth.slice(7).trim() };
 }
 
 async function downloadJson(path: string, label: string) {
@@ -23,13 +23,26 @@ async function downloadJson(path: string, label: string) {
   return JSON.parse(await data.text());
 }
 
-async function submit(attemptId: string, studentId: string) {
+async function verifyActiveEnrollment(studentId: string, courseId: string, token: string) {
+  const base = `https://firestore.googleapis.com/v1/projects/${encodeURIComponent(FIREBASE_PROJECT_ID)}/databases/(default)/documents:runQuery`;
+  const response = await fetch(base, { method: "POST", headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" }, body: JSON.stringify({ structuredQuery: { from: [{ collectionId: "enrolments" }], where: { compositeFilter: { op: "AND", filters: [
+    { fieldFilter: { field: { fieldPath: "student_id" }, op: "EQUAL", value: { stringValue: studentId } } },
+    { fieldFilter: { field: { fieldPath: "course_id" }, op: "EQUAL", value: { stringValue: courseId } } },
+    { fieldFilter: { field: { fieldPath: "status" }, op: "EQUAL", value: { stringValue: "active" } } },
+  ]}}, limit: 1 } }) });
+  if (!response.ok) throw new Error("Unable to verify course enrolment");
+  const rows = await response.json();
+  if (!(Array.isArray(rows) && rows.some((row: any) => row?.document))) throw new Error("You no longer have access to this assessment");
+}
+
+async function submit(attemptId: string, studentId: string, token: string) {
   const { data: attempt, error: ae } = await supabase.from("assessment_attempts")
      .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock")
     .eq("id", attemptId).maybeSingle();
   if (ae) throw new Error("Attempt lookup failed: " + ae.message);
   if (!attempt) throw new Error("Assessment attempt not found");
   if (attempt.student_id !== studentId) throw new Error("Assessment attempt does not belong to this student");
+  await verifyActiveEnrollment(studentId, attempt.course_id, token);
   if (attempt.status !== "in_progress") throw new Error("Assessment attempt is no longer active");
 
   const startedAtMs = Date.parse(attempt.started_at);
@@ -136,12 +149,12 @@ function response(body: unknown, status = 200) { return new Response(JSON.string
 Deno.serve(async (request) => {
   if (request.method === "OPTIONS") return new Response("ok", { headers: headers() });
   try {
-    const studentId = await uid(request.headers.get("Authorization"));
+    const auth = await uid(request.headers.get("Authorization"));
     const body = await request.json();
     if ((body?.action || "submit") !== "submit") return response({ error: "Unsupported action" }, 400);
     const attemptId = typeof body?.attempt_id === "string" ? body.attempt_id.trim() : "";
     if (!attemptId) return response({ error: "attempt_id is required" }, 400);
-    return response(await submit(attemptId, studentId));
+    return response(await submit(attemptId, auth.uid, auth.token));
   } catch (error) {
     console.error("assessment-submit error", error);
     return response({ error: error instanceof Error ? error.message : "Unable to submit assessment" }, 400);
