@@ -1,0 +1,30 @@
+name: Validate Production Package Registry Links
+
+on:
+  pull_request:
+    paths:
+      - 'content/**/manifest.json'
+      - 'config/content-library-registry.json'
+      - 'config/competition-registry.json'
+      - 'config/assessment-registry.json'
+      - 'scripts/validate-production-package-registry-links.mjs'
+      - '.github/workflows/validate-production-package-registry-links.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'content/**/manifest.json'
+      - 'config/content-library-registry.json'
+      - 'config/competition-registry.json'
+      - 'config/assessment-registry.json'
+      - 'scripts/validate-production-package-registry-links.mjs'
+      - '.github/workflows/validate-production-package-registry-links.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/validate-production-package-registry-links.mjs
