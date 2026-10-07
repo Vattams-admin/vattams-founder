@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "weakTopic": {
+    "minimumAnsweredQuestions": 3,
+    "accuracyBelowPercent": 60,
+    "maximumRecommendations": 10
+  },
+  "remediationSequence": [
+    "weak_topic_revision",
+    "topic_practice",
+    "topic_reassessment"
+  ]
+}
