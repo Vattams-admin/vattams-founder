@@ -13,6 +13,12 @@ on:
       - "scripts/validate-assessment-publication-audit.mjs"
       - "config/assessment-version-history.json"
       - "scripts/validate-assessment-version-history.mjs"
+      - "supabase/functions/assessment-attempt/index.ts"
+      - "supabase/functions/assessment-question-content/index.ts"
+      - "supabase/functions/assessment-answer/index.ts"
+      - "supabase/functions/assessment-submit/index.ts"
+      - "supabase/migrations/20261007120000_assessment_attempt_release_snapshot.sql"
+      - "scripts/test-assessment-attempt-release-snapshot.mjs"
       - "scripts/promote-assessment.mjs"
 
 jobs:
@@ -30,3 +36,4 @@ jobs:
       - run: npm run content:assessment:readiness:validate
       - run: npm run content:assessment:audit:validate
       - run: npm run content:assessment:versions:validate
+      - run: npm run content:assessment:attempt:snapshot:test
