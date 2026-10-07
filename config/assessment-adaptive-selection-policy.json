@@ -1,0 +1,19 @@
+{
+  "policyId": "vattams-production-adaptive-selection",
+  "version": 1,
+  "appliesToKinds": ["topic_practice"],
+  "minimumEvidence": 3,
+  "weakAccuracyBelowPercent": 60,
+  "lowAccuracyBelowPercent": 40,
+  "mediumAccuracyBelowPercent": 60,
+  "weakTopicBoost": 1000,
+  "rules": {
+    "blueprintIsAuthoritative": true,
+    "difficultyDistributionRemainsExact": true,
+    "topicDistributionRemainsExact": true,
+    "eligibilityRunsBeforeAdaptation": true,
+    "recentRepetitionRunsBeforeAdaptation": true,
+    "clientCannotSupplyPerformance": true,
+    "serverDerivesStudentIdentityFromFirebaseJwt": true
+  }
+}
