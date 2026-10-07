@@ -30,7 +30,8 @@
     "academia:catalog:validate": "node scripts/validate-complete-platform-catalog.mjs",
     "content:authoring:matrix:validate": "node scripts/validate-atomic-content-authoring-matrix.mjs",
     "content:backlog:validate": "node scripts/validate-production-authoring-backlog.mjs",
-    "content:syllabus:evidence:validate": "node scripts/validate-syllabus-evidence-schema.mjs"
+    "content:syllabus:evidence:validate": "node scripts/validate-syllabus-evidence-schema.mjs",
+    "content:authoring:control:validate": "node scripts/validate-curriculum-authoring-control.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
