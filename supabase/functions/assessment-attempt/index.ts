@@ -30,6 +30,7 @@ type AssessmentDefinition = {
     difficultyDistribution: { easy: number; medium: number; hard: number };
     topicDistribution: Array<{ subject: string; topic: string; proportion: number }>;
   };
+  blueprint_id?: string;
   eligibility?: {
     curriculum?: string[];
     classNumbers?: number[];
@@ -325,6 +326,22 @@ async function buildResponse(attempt: AttemptRow, timeSeconds: number) {
 async function startOrResume(studentId: string, courseId: string, assessmentId: string, token: string, claims: Record<string, unknown>) {
   const assessment = await getAssessment(assessmentId, courseId);
   await checkAccess(studentId, courseId, assessmentId, token);
+  const blueprintRegistry = await loadBlueprintRegistry();
+  if (!assessment.blueprint_id || !blueprintRegistry.blueprints?.[assessment.blueprint_id]) {
+    throw new Error("Assessment has no executable blueprint");
+  }
+  const executableBlueprint = blueprintRegistry.blueprints[assessment.blueprint_id];
+  if (executableBlueprint.status !== "ready") {
+    throw new Error("Assessment blueprint is not ready for production use");
+  }
+  if (!executableBlueprint.difficulty_distribution || !Array.isArray(executableBlueprint.topic_distribution)) {
+    throw new Error("Assessment blueprint is missing reviewed difficulty/topic distributions");
+  }
+  assessment.selection_blueprint = {
+    questionCount: executableBlueprint.question_count,
+    difficultyDistribution: executableBlueprint.difficulty_distribution,
+    topicDistribution: executableBlueprint.topic_distribution,
+  };
 
   const existing = await findLatestAttempt(studentId, assessmentId);
   if (existing?.status === "in_progress") return buildResponse(existing, assessment.time_seconds);

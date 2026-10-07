@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "blueprints": {
+    "tnpsc-group-iv-vao-mock": {
+      "blueprint_id": "tnpsc-group-iv-vao-mock",
+      "source": "config/competitive-exam-assessment-blueprints/tnpsc-group-iv-vao.json",
+      "status": "blocked",
+      "blocked_reason": "Official exam structure is captured, but production difficulty/topic distributions and question-level eligibility metadata have not yet been independently authored and reviewed. No distribution is fabricated.",
+      "question_count": 200,
+      "time_seconds": 10800,
+      "exam_structure": {
+        "sections": [
+          {"id":"tamil-eligibility-cum-scoring","question_count":100,"subject":"Tamil"},
+          {"id":"general-studies","question_count":75,"subject":"General Studies"},
+          {"id":"aptitude-mental-ability","question_count":25,"subject":"Aptitude & Mental Ability"}
+        ]
+      },
+      "eligibility": {
+        "exam_ids":["tnpsc-group-iv-vao"],
+        "age_bands_required": true
+      },
+      "answer_release_policy": "after_submission"
+    }
+  }
+}
