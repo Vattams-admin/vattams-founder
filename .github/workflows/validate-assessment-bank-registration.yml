@@ -8,6 +8,7 @@ on:
       - "scripts/validate-assessment-registry.mjs"
       - "scripts/validate-assessment-bank-registration.mjs"
       - "package.json"
+      - "scripts/validate-assessment-production-readiness.mjs"
 
 jobs:
   validate:
@@ -21,3 +22,4 @@ jobs:
       - run: npm run content:assessment:bank:path:test
       - run: npm run content:assessment:banks:validate
       - run: node scripts/validate-assessment-registry.mjs
+      - run: npm run content:assessment:readiness:validate
