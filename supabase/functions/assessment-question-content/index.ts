@@ -147,17 +147,25 @@ async function loadPublicQuestions(studentId: string, attemptId: string, token: 
     return index >= 0 ? index : originalIndex;
   };
 
+  const reviewReleased = attempt.status === "submitted" && answerReleasePolicy !== "never";
   return {
-    attempt_id: attemptId, assessment_id: attempt.assessment_id, status: attempt.status,
+    attempt_id: attemptId,
+    assessment_id: attempt.assessment_id,
+    status: attempt.status,
     questions: publicQuestions,
-    answers: (answers || []).map((a: any) => ({
-      question_id: a.question_id, answer: a.answer,
-      selected_option_index: toShuffledIndex(a.question_id, a.selected_option_index),
-      ...((attempt.status === "submitted" && answerReleasePolicy !== "never") ? {
-        is_correct: a.is_correct, correct_option_index: toShuffledIndex(a.question_id, a.correct_option_index),
-        explanation: a.explanation, marks_awarded: a.marks_awarded,
-      } : {}),
-    })),
+    answers: (answers || []).map((a: any) => {
+      const item: Record<string, unknown> = {
+        question_id: a.question_id,
+        selected_option_index: toShuffledIndex(a.question_id, a.selected_option_index),
+      };
+      if (reviewReleased) {
+        item.is_correct = a.is_correct === true;
+        item.correct_option_index = toShuffledIndex(a.question_id, a.correct_option_index);
+        item.explanation = typeof a.explanation === "string" ? a.explanation : "";
+        item.marks_awarded = Number.isFinite(a.marks_awarded) ? a.marks_awarded : 0;
+      }
+      return item;
+    }),
   };
 }
 
