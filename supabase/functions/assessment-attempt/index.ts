@@ -401,6 +401,8 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
   const selected = selectQuestions(questions, assessment, claims, recent, random);
   const questionIds = selected.map(q => q.question_id);
   const optionOrders = buildOptionOrders(questionIds, selected, random);
+  const startedAt = new Date().toISOString();
+  const expiresAt = new Date(Date.parse(startedAt) + assessment.time_seconds * 1000).toISOString();
 
   const { data, error } = await supabase.from("assessment_attempts").insert({
     student_id: studentId, course_id: courseId, assessment_id: assessmentId,
