@@ -1,0 +1,27 @@
+name: Validate Curriculum Authoring Control
+
+on:
+  push:
+    paths:
+      - "config/curriculum-authoring-control.json"
+      - "config/curriculum-authoring-control.schema.json"
+      - "scripts/validate-curriculum-authoring-control.mjs"
+      - ".github/workflows/validate-curriculum-authoring-control.yml"
+      - "package.json"
+  pull_request:
+    paths:
+      - "config/curriculum-authoring-control.json"
+      - "config/curriculum-authoring-control.schema.json"
+      - "scripts/validate-curriculum-authoring-control.mjs"
+      - ".github/workflows/validate-curriculum-authoring-control.yml"
+      - "package.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run content:authoring:control:validate
