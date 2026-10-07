@@ -25,7 +25,8 @@
     "content:library:validate": "node scripts/validate-content-library-registry.mjs",
     "content:coverage:validate": "node scripts/validate-production-content-coverage.mjs",
     "content:package:registry:validate": "node scripts/validate-production-package-registry-links.mjs",
-    "academia:taxonomy:validate": "node scripts/validate-academia-master-taxonomy.mjs"
+    "academia:taxonomy:validate": "node scripts/validate-academia-master-taxonomy.mjs",
+    "academia:catalog:validate": "node scripts/validate-complete-platform-catalog.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
