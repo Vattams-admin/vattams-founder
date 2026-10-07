@@ -47,7 +47,8 @@
     "content:assessment:coverage:scan": "node scripts/scan-assessment-blueprint-question-banks.mjs",
     "content:assessment:blueprint:authoring:validate": "node scripts/validate-assessment-blueprint-authoring.mjs",
     "content:assessment:blueprint:promote": "node scripts/promote-assessment-blueprint.mjs",
-    "content:questions:ingestion:validate": "node scripts/validate-production-question-ingestion.mjs"
+    "content:questions:ingestion:validate": "node scripts/validate-production-question-ingestion.mjs",
+    "content:questions:package": "node scripts/package-production-question-bank.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
