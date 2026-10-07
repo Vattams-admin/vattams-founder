@@ -31,6 +31,9 @@ type AssessmentDefinition = {
     topicDistribution: Array<{ subject: string; topic: string; proportion: number }>;
   };
   blueprint_id?: string;
+  release_version?: string;
+  release_public_sha256?: string;
+  release_private_sha256?: string;
   eligibility?: {
     curriculum?: string[];
     classNumbers?: number[];
