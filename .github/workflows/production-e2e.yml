@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - "e2e/**"
+      - "scripts/provision-production-e2e-v2.mjs"
       - "playwright.config.ts"
       - "package.json"
       - "package-lock.json"
@@ -57,9 +58,12 @@ jobs:
           test -n "$SUPABASE_SERVICE_ROLE_KEY"
           node scripts/provision-production-e2e-v2.mjs
       - name: Run production smoke tests
-        run: npx playwright test e2e/production-smoke.spec.ts e2e/production-thirukkural.spec.ts
+        run: npx playwright test e2e/production-smoke.spec.ts e2e/production-thirukkural.spec.ts e2e/production-assessment-security.spec.ts
         env:
           PLAYWRIGHT_BASE_URL: https://academia.vattams.net
+          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          FIREBASE_SERVICE_ACCOUNT_JSON: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
       - name: Cleanup isolated Firebase E2E data
         if: always()
         env:
