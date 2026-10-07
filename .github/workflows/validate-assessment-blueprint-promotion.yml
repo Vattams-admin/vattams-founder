@@ -17,6 +17,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm run content:assessment:blueprint:promote
-        continue-on-error: true
+      - run: npm run content:assessment:blueprint:authoring:validate -- config/assessment-blueprint-authoring/tnpsc-group-iv-vao-mock.json
       - run: npm run content:assessment:blueprint:validate
