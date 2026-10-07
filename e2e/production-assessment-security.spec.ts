@@ -31,6 +31,12 @@ async function setEnrollmentStatus(email: string, status: "active" | "revoked") 
   }, { merge: true });
 }
 
+async function removeAssessmentEnrollment(email: string) {
+  const { auth, db } = getAdmin();
+  const user = await auth.getUserByEmail(email);
+  await db.collection("enrolments").doc(`${user.uid}_${COURSE_ID}`).delete();
+}
+
 async function login(page: Page, email: string, password: string) {
   await page.goto("/login");
   await page.locator("#email").fill(email);
@@ -107,7 +113,7 @@ test.describe("production assessment security boundary", () => {
       expect(submit.response.status()).toBe(400);
       expect(submit.body.error).toContain("no longer have access");
     } finally {
-      await setEnrollmentStatus(email, "active");
+      await removeAssessmentEnrollment(email);
     }
   });
 
@@ -147,6 +153,8 @@ test.describe("production assessment security boundary", () => {
     } finally {
       await contextA.close();
       await contextB.close();
+      await removeAssessmentEnrollment(emailA);
+      await removeAssessmentEnrollment(emailB);
     }
   });
 
