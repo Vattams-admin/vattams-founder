@@ -32,6 +32,9 @@ jobs:
       - name: Validate publication audit
         run: npm run content:assessment:audit:validate
 
+      - name: Validate assessment version history
+        run: npm run content:assessment:versions:validate
+
       - name: Upload production assessment registry
         env:
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}

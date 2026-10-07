@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vattams.net/schemas/assessment-version-history.schema.json",
+  "title": "VATTAMS Academia Assessment Version History",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "assessments"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "assessments": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "assessmentId",
+          "versions",
+          "currentVersion"
+        ],
+        "properties": {
+          "assessmentId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "currentVersion": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+\\.\\d+$"
+          },
+          "versions": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "version",
+                "publicSha256",
+                "privateSha256",
+                "manifestPath",
+                "releasedAt"
+              ],
+              "properties": {
+                "version": {
+                  "type": "string",
+                  "pattern": "^\\d+\\.\\d+\\.\\d+$"
+                },
+                "publicSha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "privateSha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                },
+                "manifestPath": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "releasedAt": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "supersedesVersion": {
+                  "type": "string",
+                  "pattern": "^\\d+\\.\\d+\\.\\d+$"
+                },
+                "rollbackOf": {
+                  "type": "string",
+                  "pattern": "^\\d+\\.\\d+\\.\\d+$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
