@@ -75,6 +75,11 @@ async function verifyActiveEnrollment(studentId: string, courseId: string, token
   return Array.from(new Uint8Array(digest)).map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
+
+async function attemptIntegrityHash(attempt: any): Promise<string> {
+  return canonicalSha256({ release_version: attempt.release_version, release_public_sha256: attempt.release_public_sha256, release_private_sha256: attempt.release_private_sha256, question_ids: attempt.question_ids, option_orders: attempt.option_orders });
+}
+
 async function verifyRegisteredBank(definition: any, publicParsed: unknown, privateParsed?: unknown): Promise<void> {
   if (typeof definition.bank_manifest !== "string" || !definition.bank_manifest) {
     throw new Error("Assessment bank manifest is not registered");
