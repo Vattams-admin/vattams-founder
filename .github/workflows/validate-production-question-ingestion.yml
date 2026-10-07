@@ -1,0 +1,19 @@
+name: Validate Production Question Ingestion
+
+on:
+  pull_request:
+    paths:
+      - "config/production-question-ingestion.schema.json"
+      - "config/production-question-ingestion.example.json"
+      - "scripts/validate-production-question-ingestion.mjs"
+      - "package.json"
+
+jobs:
+  validate-example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run content:questions:ingestion:validate -- config/production-question-ingestion.example.json
