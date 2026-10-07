@@ -158,23 +158,20 @@ async function submit(attemptId: string, studentId: string, token: string) {
   }
 
   const now = new Date().toISOString();
-  const { error: upErr } = await supabase.from("assessment_answers").upsert(updates, { onConflict: "attempt_id,question_id" });
-  if (upErr) throw new Error("Unable to persist scored answers: " + upErr.message);
-
-  const { data: transitioned, error: transitionError } = await supabase.rpc("transition_assessment_attempt_to_submitted", {
-    p_attempt_id: attemptId, p_student_id: studentId, p_submitted_at: now,
+  const { data: finalized, error: finalizeError } = await supabase.rpc("finalize_assessment_attempt_result", {
+    p_attempt_id: attemptId,
+    p_student_id: studentId,
+    p_score: score,
+    p_max_score: maxScore,
+    p_answered_count: answeredCount,
+    p_submitted_at: now,
+    p_scored_at: now,
   });
-  if (transitionError || !transitioned) {
-    if (transitionError?.message?.includes("ASSESSMENT_ATTEMPT_NOT_TRANSITIONABLE")) throw new Error("Assessment was already submitted or is no longer active");
-    throw new Error("Unable to submit assessment: " + (transitionError?.message || "state transition failed"));
+  if (finalizeError || !finalized) {
+    if (finalizeError?.message?.includes("ASSESSMENT_ATTEMPT_NOT_ACTIVE")) throw new Error("Assessment was already submitted or is no longer active");
+    if (finalizeError?.message?.includes("ASSESSMENT_ATTEMPT_EXPIRED")) throw new Error("Assessment attempt time has expired");
+    throw new Error("Unable to finalize assessment: " + (finalizeError?.message || "finalization failed"));
   }
-
-  const { error: resultErr } = await supabase.from("assessment_results").insert({
-    student_id: studentId, attempt_id: attemptId, course_id: attempt.course_id,
-    assessment_id: attempt.assessment_id, domain: attempt.domain, score, max_score: maxScore,
-    answered_count: answeredCount, submitted_at: now, scored_at: now, is_mock: attempt.is_mock,
-  });
-  if (resultErr) throw new Error("Unable to create assessment result: " + resultErr.message);
 
   return { attempt_id: attemptId, status: "submitted", score, max_score: maxScore, answered_count: answeredCount, submitted_at: now, scored_at: now };
 }
