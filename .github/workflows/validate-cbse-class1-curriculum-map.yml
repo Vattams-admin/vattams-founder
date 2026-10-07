@@ -1,0 +1,23 @@
+name: Validate CBSE Class 1 Curriculum Map Gate
+
+on:
+  push:
+    paths:
+      - "content/school/cbse/class-1/curriculum-map.json"
+      - "config/curriculum-map.schema.json"
+      - "scripts/validate-cbse-class1-curriculum-map.mjs"
+  pull_request:
+    paths:
+      - "content/school/cbse/class-1/curriculum-map.json"
+      - "config/curriculum-map.schema.json"
+      - "scripts/validate-cbse-class1-curriculum-map.mjs"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/validate-cbse-class1-curriculum-map.mjs
