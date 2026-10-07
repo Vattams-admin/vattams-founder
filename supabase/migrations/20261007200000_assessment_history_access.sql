@@ -36,7 +36,10 @@ begin
       'score', a.score,
       'max_score', a.max_score,
       'answered_count', case
-        when a.status = 'submitted' then a.score is not null
+        when a.status = 'submitted' then (
+          select count(*) from public.assessment_answers aa
+          where aa.attempt_id = a.id and aa.selected_option_index is not null
+        )
         else null
       end
     ) order by a.started_at desc
