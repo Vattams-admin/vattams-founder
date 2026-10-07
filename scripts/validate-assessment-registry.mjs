@@ -75,6 +75,11 @@ for (const [key, a] of Object.entries(registry.assessments)) {
   if (!Number.isInteger(a.question_count) || a.question_count <= 0) throw new Error(`Assessment ${key}: question_count must be positive`)
   if (!Number.isInteger(a.time_seconds) || a.time_seconds <= 0) throw new Error(`Assessment ${key}: time_seconds must be positive`)
   if (a.pass_percent != null && (!Number.isFinite(a.pass_percent) || a.pass_percent < 0 || a.pass_percent > 100)) throw new Error(`Assessment ${key}: pass_percent must be 0..100`)
+  if (a.status === 'published') {
+    if (!/^\\d+\\.\\d+\\.\\d+$/.test(a.release_version || '')) throw new Error(`Assessment ${key}: published release_version must be semantic version`)
+    if (!/^[a-f0-9]{64}$/.test(a.release_public_sha256 || '')) throw new Error(`Assessment ${key}: published release_public_sha256 is required`)
+    if (!/^[a-f0-9]{64}$/.test(a.release_private_sha256 || '')) throw new Error(`Assessment ${key}: published release_private_sha256 is required`)
+  }
   if (a.status === 'reviewed' || a.status === 'published') {
     if (a.domain === 'competition' && a.kind === 'official_attempt') throw new Error(`Assessment ${key}: generic engine cannot replace the existing competition official-attempt runtime`)
     if (a.question_bank_public === a.answer_key) throw new Error(`Assessment ${key}: public bank and private answer key must be separate files`)
@@ -89,6 +94,12 @@ for (const [key, a] of Object.entries(registry.assessments)) {
     const keyIds = new Set()
     for (const [i, q] of answerKey.entries()) { validateKey(q, i, a); if (keyIds.has(q.question_id)) throw new Error(`Assessment ${key}: duplicate answer-key question_id ${q.question_id}`); keyIds.add(q.question_id); if (!publicIds.has(q.question_id)) throw new Error(`Assessment ${key}: answer key contains unknown question_id ${q.question_id}`) }
     for (const id of publicIds) if (!keyIds.has(id)) throw new Error(`Assessment ${key}: missing answer key for question_id ${id}`)
+    if (a.status === 'published') {
+      const crypto = await import('node:crypto')
+      const canonicalHash = value => crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex')
+      if (canonicalHash(publicBank) !== a.release_public_sha256) throw new Error(`Assessment ${key}: published release_public_sha256 does not match bank`)
+      if (canonicalHash(answerKey) !== a.release_private_sha256) throw new Error(`Assessment ${key}: published release_private_sha256 does not match answer key`)
+    }
     reviewedOrPublishedCount++
   }
 }

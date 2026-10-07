@@ -38,6 +38,15 @@ if(target==="reviewed"){
  if(!audit.approvedBy||!audit.approvedAt) throw new Error("Explicit approval identity/timestamp required");
  if(!history||!history.currentVersion) throw new Error("Version history is required");
  a.status="published";
+ const hash=v=>crypto.createHash("sha256").update(JSON.stringify(v)).digest("hex");
+ const pub=JSON.parse(fs.readFileSync(path.resolve(root,a.question_bank_public),"utf8"));
+ const priv=JSON.parse(fs.readFileSync(path.resolve(root,a.answer_key),"utf8"));
+ const publicHash=hash(pub), privateHash=hash(priv);
+ if(audit.publicBankSha256!==publicHash||audit.privateAnswerKeySha256!==privateHash) throw new Error("Publication audit hashes do not match current assessment banks");
+ if(history.currentVersion!==history.versions.at(-1)?.version) throw new Error("Version history currentVersion is invalid");
+ a.release_version=history.currentVersion;
+ a.release_public_sha256=publicHash;
+ a.release_private_sha256=privateHash;
 }
 fs.writeFileSync(registryPath,JSON.stringify(registry,null,2)+"\n");
 console.log("PROMOTED "+id+" -> "+target);

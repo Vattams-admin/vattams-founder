@@ -24,6 +24,6 @@ const publicHash=hash(pub), privateHash=hash(priv); const dir=path.resolve(root,
 fs.writeFileSync(path.join(dir,x.assessmentId+".public.json"),JSON.stringify(pub,null,2)+"\n");
 fs.writeFileSync(path.join(dir,x.assessmentId+".private.json"),JSON.stringify(priv,null,2)+"\n");
 const repoRelative=p=>path.relative(root,p).split(path.sep).join("/");
-const manifest={version:"1.0.0",assessmentId:x.assessmentId,questionCount:pub.length,publicBank:repoRelative(path.join(dir,x.assessmentId+".public.json")),privateAnswerKey:repoRelative(path.join(dir,x.assessmentId+".private.json")),publicSha256:publicHash,privateSha256:privateHash,sourceEvidence:x.governance.sourceEvidence,packagedAt:new Date().toISOString(),answerKeyPrivate:true};
+const manifest={version:(/^\\d+\\.\\d+\\.\\d+$/.test(x.version||"")?x.version:"1.0.0"),assessmentId:x.assessmentId,questionCount:pub.length,publicBank:repoRelative(path.join(dir,x.assessmentId+".public.json")),privateAnswerKey:repoRelative(path.join(dir,x.assessmentId+".private.json")),publicSha256:publicHash,privateSha256:privateHash,sourceEvidence:x.governance.sourceEvidence,packagedAt:new Date().toISOString(),answerKeyPrivate:true};
 fs.writeFileSync(path.join(dir,x.assessmentId+".manifest.json"),JSON.stringify(manifest,null,2)+"\n");
 console.log("PRODUCTION QUESTION BANK: PACKAGED"); console.log("Questions: "+pub.length); console.log("Public SHA-256: "+publicHash); console.log("Private SHA-256: "+privateHash);
