@@ -45,8 +45,23 @@ async function login(page: Page, email: string, password: string) {
   await page.waitForURL(/\/dashboard(?:$|[?#])/, { timeout: 30000 });
 }
 
+async function getPublishedAssessmentIds() {
+  const response = await fetch(`${SUPABASE_URL}/functions/v1/assessment-catalog?course_id=${encodeURIComponent(COURSE_ID)}`, {
+    headers: { apikey: SUPABASE_ANON_KEY },
+  });
+  if (!response.ok) return [];
+  const body = await response.json();
+  const assessments = Array.isArray(body?.assessments) ? body.assessments : [];
+  return assessments
+    .map((item: { assessment_id?: unknown; status?: unknown }) => item)
+    .filter((item) => item.status === "published" && typeof item.assessment_id === "string")
+    .map((item) => item.assessment_id as string);
+}
+
 async function startPublishedAssessment(page: Page) {
-  for (const assessmentId of CANDIDATE_ASSESSMENTS) {
+  const publishedIds = await getPublishedAssessmentIds();
+  const candidateIds = publishedIds.length ? publishedIds : CANDIDATE_ASSESSMENTS;
+  for (const assessmentId of candidateIds) {
     await page.goto(`/assessment/${COURSE_ID}/${assessmentId}`);
     const requestPromise = page.waitForRequest(
       request => request.url().includes("/functions/v1/assessment-attempt") && request.method() === "POST",
