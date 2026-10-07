@@ -29,6 +29,9 @@ jobs:
       - name: Validate centralized production readiness
         run: node scripts/validate-assessment-production-readiness.mjs
 
+      - name: Validate publication audit
+        run: npm run content:assessment:audit:validate
+
       - name: Upload production assessment registry
         env:
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}

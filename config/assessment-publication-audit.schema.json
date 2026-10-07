@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vattams.net/schemas/assessment-publication-audit.schema.json",
+  "title": "VATTAMS Academia Assessment Publication Audit",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "assessmentId",
+    "decision",
+    "reviewStatus",
+    "sourceEvidence",
+    "publicBankSha256",
+    "privateAnswerKeySha256",
+    "blueprintId",
+    "coverageStatus",
+    "answerKeyPrivate",
+    "auditTrail"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "assessmentId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decision": {
+      "enum": [
+        "blocked",
+        "approved_for_publication",
+        "published",
+        "retired"
+      ]
+    },
+    "reviewStatus": {
+      "enum": [
+        "reviewed",
+        "approved"
+      ]
+    },
+    "sourceEvidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "publicBankSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "privateAnswerKeySha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "blueprintId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "coverageStatus": {
+      "enum": [
+        "ready"
+      ]
+    },
+    "answerKeyPrivate": {
+      "const": true
+    },
+    "approvedBy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approvedAt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "publishedAt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "auditTrail": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "event",
+          "actor",
+          "timestamp"
+        ],
+        "properties": {
+          "event": {
+            "enum": [
+              "reviewed",
+              "approved_for_publication",
+              "published",
+              "retired"
+            ]
+          },
+          "actor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "timestamp": {
+            "type": "string",
+            "minLength": 1
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "enum": [
+              "approved_for_publication",
+              "published"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "approvedBy",
+          "approvedAt"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "published"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "publishedAt"
+        ]
+      }
+    }
+  ]
+}
