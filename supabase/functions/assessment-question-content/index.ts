@@ -7,16 +7,28 @@ const KEYS = JSON.parse(Deno.env.get("SUPABASE_SECRET_KEYS") || "{}");
 const supabase = createClient(URL, KEYS["default"] || "", { auth: { persistSession: false, autoRefreshToken: false } });
 const jwks = createRemoteJWKSet(new URL("https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com"));
 
-async function verify(auth: string | null) {
+async function verify(auth: string | null): Promise<{ uid: string; token: string }> {
   if (!auth?.startsWith("Bearer ") || !PROJECT_ID) throw new Error("Unauthorized");
   const { payload } = await jwtVerify(auth.slice(7).trim(), jwks, {
     issuer: `https://securetoken.google.com/${PROJECT_ID}`, audience: PROJECT_ID,
   });
   if (typeof payload.sub !== "string" || !payload.sub) throw new Error("Invalid Firebase token");
-  return payload.sub;
+  return { uid: payload.sub, token: auth.slice(7).trim() };
 }
 
-async function loadPublicQuestions(studentId: string, attemptId: string) {
+async function verifyActiveEnrollment(studentId: string, courseId: string, token: string) {
+  const base = `https://firestore.googleapis.com/v1/projects/${encodeURIComponent(PROJECT_ID)}/databases/(default)/documents:runQuery`;
+  const response = await fetch(base, { method: "POST", headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" }, body: JSON.stringify({ structuredQuery: { from: [{ collectionId: "enrolments" }], where: { compositeFilter: { op: "AND", filters: [
+    { fieldFilter: { field: { fieldPath: "student_id" }, op: "EQUAL", value: { stringValue: studentId } } },
+    { fieldFilter: { field: { fieldPath: "course_id" }, op: "EQUAL", value: { stringValue: courseId } } },
+    { fieldFilter: { field: { fieldPath: "status" }, op: "EQUAL", value: { stringValue: "active" } } },
+  ]}}, limit: 1 } }) });
+  if (!response.ok) throw new Error("Unable to verify course enrolment");
+  const rows = await response.json();
+  if (!(Array.isArray(rows) && rows.some((row: any) => row?.document))) throw new Error("You no longer have access to this assessment");
+}
+
+async function loadPublicQuestions(studentId: string, attemptId: string, token: string) {
   const { data: attempt, error } = await supabase.from("assessment_attempts")
     .select("id,student_id,status,assessment_id,question_ids").eq("id", attemptId).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
@@ -26,6 +38,10 @@ async function loadPublicQuestions(studentId: string, attemptId: string) {
 
   const ids = Array.isArray(attempt.question_ids) ? attempt.question_ids.filter((x: unknown): x is string => typeof x === "string") : [];
   if (!ids.length || new Set(ids).size !== ids.length) throw new Error("Assessment attempt has invalid question IDs");
+
+  const { data: attemptCourse, error: courseError } = await supabase.from("assessment_attempts").select("course_id").eq("id", attemptId).maybeSingle();
+  if (courseError || !attemptCourse?.course_id) throw new Error("Assessment course is unavailable");
+  await verifyActiveEnrollment(studentId, attemptCourse.course_id, token);
 
   const { data: registryFile, error: registryError } = await supabase.storage.from("academia-course-materials").download("assessments/registry.json");
   if (registryError || !registryFile) throw new Error("Unable to load assessment registry");
@@ -86,12 +102,12 @@ function json(body: unknown, status = 200) { return new Response(JSON.stringify(
 Deno.serve(async (request) => {
   if (request.method === "OPTIONS") return new Response("ok", { headers: cors() });
   try {
-    const studentId = await verify(request.headers.get("Authorization"));
+    const auth = await verify(request.headers.get("Authorization"));
     const body = await request.json();
     if ((body?.action || "load") !== "load") return json({ error: "Unsupported action" }, 400);
     const attemptId = typeof body?.attempt_id === "string" ? body.attempt_id.trim() : "";
     if (!attemptId) return json({ error: "attempt_id is required" }, 400);
-    return json(await loadPublicQuestions(studentId, attemptId));
+    return json(await loadPublicQuestions(auth.uid, attemptId, auth.token));
   } catch (error) {
     console.error("assessment-question-content error", error);
     return json({ error: error instanceof Error ? error.message : "Unable to load assessment questions" }, 400);
