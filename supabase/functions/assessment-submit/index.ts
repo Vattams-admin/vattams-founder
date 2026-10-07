@@ -158,6 +158,7 @@ async function submit(attemptId: string, studentId: string, token: string) {
   }
 
   const now = new Date().toISOString();
+  // Score and correctness are derived exclusively from the private key above; client fields are never accepted.
   const { data: finalized, error: finalizeError } = await supabase.rpc("finalize_assessment_attempt_result", {
     p_attempt_id: attemptId,
     p_student_id: studentId,
