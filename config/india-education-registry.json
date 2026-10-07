@@ -1,0 +1,637 @@
+{
+  "version": 1,
+  "registry_id": "vattams-india-education",
+  "scope": "pan_india",
+  "country": {
+    "code": "IN",
+    "name": "India"
+  },
+  "education_levels": [
+    {
+      "id": "pre_primary",
+      "label": "Pre-Primary / KG",
+      "class_numbers": []
+    },
+    {
+      "id": "school",
+      "label": "School Education",
+      "class_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "competitive_exam",
+      "label": "Competitive Exams",
+      "class_numbers": []
+    },
+    {
+      "id": "entrance_exam",
+      "label": "Entrance Exams",
+      "class_numbers": []
+    },
+    {
+      "id": "professional",
+      "label": "Professional Education",
+      "class_numbers": []
+    },
+    {
+      "id": "competition",
+      "label": "VATTAMS Competitions",
+      "class_numbers": []
+    }
+  ],
+  "classes": [
+    {
+      "id": "class_1",
+      "number": 1,
+      "label": "Class 1",
+      "age_band": "5-7"
+    },
+    {
+      "id": "class_2",
+      "number": 2,
+      "label": "Class 2",
+      "age_band": "5-7"
+    },
+    {
+      "id": "class_3",
+      "number": 3,
+      "label": "Class 3",
+      "age_band": "8-10"
+    },
+    {
+      "id": "class_4",
+      "number": 4,
+      "label": "Class 4",
+      "age_band": "8-10"
+    },
+    {
+      "id": "class_5",
+      "number": 5,
+      "label": "Class 5",
+      "age_band": "8-10"
+    },
+    {
+      "id": "class_6",
+      "number": 6,
+      "label": "Class 6",
+      "age_band": "11-13"
+    },
+    {
+      "id": "class_7",
+      "number": 7,
+      "label": "Class 7",
+      "age_band": "11-13"
+    },
+    {
+      "id": "class_8",
+      "number": 8,
+      "label": "Class 8",
+      "age_band": "11-13"
+    },
+    {
+      "id": "class_9",
+      "number": 9,
+      "label": "Class 9",
+      "age_band": "13-15"
+    },
+    {
+      "id": "class_10",
+      "number": 10,
+      "label": "Class 10",
+      "age_band": "13-15"
+    },
+    {
+      "id": "class_11",
+      "number": 11,
+      "label": "Class 11",
+      "age_band": "15-18"
+    },
+    {
+      "id": "class_12",
+      "number": 12,
+      "label": "Class 12",
+      "age_band": "15-18"
+    }
+  ],
+  "curriculum_families": [
+    {
+      "id": "cbse",
+      "label": "CBSE",
+      "scope": "national"
+    },
+    {
+      "id": "cisce",
+      "label": "CISCE (ICSE/ISC)",
+      "scope": "national"
+    },
+    {
+      "id": "nios",
+      "label": "NIOS",
+      "scope": "national"
+    },
+    {
+      "id": "state_board",
+      "label": "State / UT Board",
+      "scope": "state"
+    },
+    {
+      "id": "matriculation",
+      "label": "Matriculation / State-specific private curriculum",
+      "scope": "state"
+    },
+    {
+      "id": "international",
+      "label": "International Curriculum",
+      "scope": "international",
+      "examples": [
+        "IB",
+        "Cambridge International",
+        "Pearson Edexcel"
+      ]
+    }
+  ],
+  "states_and_uts": [
+    {
+      "code": "AP",
+      "name": "Andhra Pradesh",
+      "type": "state"
+    },
+    {
+      "code": "AR",
+      "name": "Arunachal Pradesh",
+      "type": "state"
+    },
+    {
+      "code": "AS",
+      "name": "Assam",
+      "type": "state"
+    },
+    {
+      "code": "BR",
+      "name": "Bihar",
+      "type": "state"
+    },
+    {
+      "code": "CG",
+      "name": "Chhattisgarh",
+      "type": "state"
+    },
+    {
+      "code": "GA",
+      "name": "Goa",
+      "type": "state"
+    },
+    {
+      "code": "GJ",
+      "name": "Gujarat",
+      "type": "state"
+    },
+    {
+      "code": "HR",
+      "name": "Haryana",
+      "type": "state"
+    },
+    {
+      "code": "HP",
+      "name": "Himachal Pradesh",
+      "type": "state"
+    },
+    {
+      "code": "JH",
+      "name": "Jharkhand",
+      "type": "state"
+    },
+    {
+      "code": "KA",
+      "name": "Karnataka",
+      "type": "state"
+    },
+    {
+      "code": "KL",
+      "name": "Kerala",
+      "type": "state"
+    },
+    {
+      "code": "MP",
+      "name": "Madhya Pradesh",
+      "type": "state"
+    },
+    {
+      "code": "MH",
+      "name": "Maharashtra",
+      "type": "state"
+    },
+    {
+      "code": "MN",
+      "name": "Manipur",
+      "type": "state"
+    },
+    {
+      "code": "ML",
+      "name": "Meghalaya",
+      "type": "state"
+    },
+    {
+      "code": "MZ",
+      "name": "Mizoram",
+      "type": "state"
+    },
+    {
+      "code": "NL",
+      "name": "Nagaland",
+      "type": "state"
+    },
+    {
+      "code": "OD",
+      "name": "Odisha",
+      "type": "state"
+    },
+    {
+      "code": "PB",
+      "name": "Punjab",
+      "type": "state"
+    },
+    {
+      "code": "RJ",
+      "name": "Rajasthan",
+      "type": "state"
+    },
+    {
+      "code": "SK",
+      "name": "Sikkim",
+      "type": "state"
+    },
+    {
+      "code": "TN",
+      "name": "Tamil Nadu",
+      "type": "state"
+    },
+    {
+      "code": "TS",
+      "name": "Telangana",
+      "type": "state"
+    },
+    {
+      "code": "TR",
+      "name": "Tripura",
+      "type": "state"
+    },
+    {
+      "code": "UP",
+      "name": "Uttar Pradesh",
+      "type": "state"
+    },
+    {
+      "code": "UK",
+      "name": "Uttarakhand",
+      "type": "state"
+    },
+    {
+      "code": "WB",
+      "name": "West Bengal",
+      "type": "state"
+    },
+    {
+      "code": "AN",
+      "name": "Andaman and Nicobar Islands",
+      "type": "union_territory"
+    },
+    {
+      "code": "CH",
+      "name": "Chandigarh",
+      "type": "union_territory"
+    },
+    {
+      "code": "DN",
+      "name": "Dadra and Nagar Haveli and Daman and Diu",
+      "type": "union_territory"
+    },
+    {
+      "code": "DL",
+      "name": "Delhi",
+      "type": "union_territory"
+    },
+    {
+      "code": "JK",
+      "name": "Jammu and Kashmir",
+      "type": "union_territory"
+    },
+    {
+      "code": "LA",
+      "name": "Ladakh",
+      "type": "union_territory"
+    },
+    {
+      "code": "LD",
+      "name": "Lakshadweep",
+      "type": "union_territory"
+    },
+    {
+      "code": "PY",
+      "name": "Puducherry",
+      "type": "union_territory"
+    }
+  ],
+  "languages": [
+    {
+      "code": "as",
+      "name": "Assamese",
+      "script": "bengali",
+      "enabled": true
+    },
+    {
+      "code": "bn",
+      "name": "Bengali",
+      "script": "bengali",
+      "enabled": true
+    },
+    {
+      "code": "brx",
+      "name": "Bodo",
+      "script": "devanagari",
+      "enabled": true
+    },
+    {
+      "code": "doi",
+      "name": "Dogri",
+      "script": "devanagari",
+      "enabled": true
+    },
+    {
+      "code": "gu",
+      "name": "Gujarati",
+      "script": "gujarati",
+      "enabled": true
+    },
+    {
+      "code": "hi",
+      "name": "Hindi",
+      "script": "devanagari",
+      "enabled": true
+    },
+    {
+      "code": "kn",
+      "name": "Kannada",
+      "script": "kannada",
+      "enabled": true
+    },
+    {
+      "code": "ks",
+      "name": "Kashmiri",
+      "script": "perso_arabic",
+      "enabled": true
+    },
+    {
+      "code": "kok",
+      "name": "Konkani",
+      "script": "devanagari",
+      "enabled": true
+    },
+    {
+      "code": "mai",
+      "name": "Maithili",
+      "script": "devanagari",
+      "enabled": true
+    },
+    {
+      "code": "ml",
+      "name": "Malayalam",
+      "script": "malayalam",
+      "enabled": true
+    },
+    {
+      "code": "mni",
+      "name": "Manipuri",
+      "script": "bengali",
+      "enabled": true
+    },
+    {
+      "code": "mr",
+      "name": "Marathi",
+      "script": "devanagari",
+      "enabled": true
+    },
+    {
+      "code": "ne",
+      "name": "Nepali",
+      "script": "devanagari",
+      "enabled": true
+    },
+    {
+      "code": "or",
+      "name": "Odia",
+      "script": "odia",
+      "enabled": true
+    },
+    {
+      "code": "pa",
+      "name": "Punjabi",
+      "script": "gurmukhi",
+      "enabled": true
+    },
+    {
+      "code": "sa",
+      "name": "Sanskrit",
+      "script": "devanagari",
+      "enabled": true
+    },
+    {
+      "code": "sd",
+      "name": "Sindhi",
+      "script": "perso_arabic",
+      "enabled": true
+    },
+    {
+      "code": "ta",
+      "name": "Tamil",
+      "script": "tamil",
+      "enabled": true
+    },
+    {
+      "code": "te",
+      "name": "Telugu",
+      "script": "telugu",
+      "enabled": true
+    },
+    {
+      "code": "ur",
+      "name": "Urdu",
+      "script": "perso_arabic",
+      "enabled": true
+    },
+    {
+      "code": "en",
+      "name": "English",
+      "script": "latin",
+      "enabled": true
+    }
+  ],
+  "language_policy": {
+    "content_language_is_independent_of_board": true,
+    "content_language_is_independent_of_state": true,
+    "fallback_language": "en",
+    "official_assessment_answers_hidden_during_attempt": true,
+    "translated_content_requires_review": true,
+    "machine_translation_never_auto_publishes": true
+  },
+  "content_dimensions": [
+    "education_level",
+    "state_or_ut",
+    "curriculum",
+    "class",
+    "subject",
+    "chapter",
+    "topic",
+    "subtopic",
+    "language",
+    "age_band",
+    "difficulty",
+    "content_type",
+    "assessment_type",
+    "version"
+  ],
+  "content_types": [
+    "study_material",
+    "lesson",
+    "worked_example",
+    "practice",
+    "revision",
+    "flash_recall",
+    "formula_bank",
+    "question",
+    "mock_test",
+    "official_test",
+    "answer_explanation",
+    "weak_topic_revision"
+  ],
+  "assessment_modes": [
+    "practice",
+    "topic_test",
+    "sectional_test",
+    "chapter_test",
+    "subject_test",
+    "mock_test",
+    "official_attempt"
+  ],
+  "question_standard": {
+    "objective_mcq": {
+      "options": 4,
+      "unique_options": true
+    },
+    "public_attempt_fields": [
+      "question_id",
+      "question",
+      "options"
+    ],
+    "private_fields": [
+      "correct_option_index",
+      "explanation"
+    ],
+    "official_attempt_answer_visibility": "hidden_until_result_policy_allows",
+    "option_randomization": true,
+    "blueprint_controlled_selection": true,
+    "student_specific_question_order": true,
+    "age_and_class_filtering": true,
+    "curriculum_eligibility_before_age_filter": true
+  },
+  "governance": {
+    "workflow": [
+      "draft",
+      "automated_validation",
+      "quality_review",
+      "ceo_approval",
+      "published",
+      "retired"
+    ],
+    "automatic_approval_mode": "configured_ceo_approval",
+    "publish_requires_validation": true,
+    "audit_fields": [
+      "content_id",
+      "version",
+      "approver",
+      "approved_at",
+      "content_hash",
+      "previous_version"
+    ],
+    "no_unreviewed_content_in_official_assessment": true
+  },
+  "exam_families": [
+    {
+      "id": "tnpsc",
+      "label": "TNPSC / State Public Service"
+    },
+    {
+      "id": "upsc",
+      "label": "UPSC"
+    },
+    {
+      "id": "ssc",
+      "label": "SSC"
+    },
+    {
+      "id": "banking",
+      "label": "Banking & Financial Recruitment"
+    },
+    {
+      "id": "railways",
+      "label": "Railway Recruitment"
+    },
+    {
+      "id": "defence",
+      "label": "Defence & Uniformed Services"
+    },
+    {
+      "id": "state_recruitment",
+      "label": "State Government Recruitment"
+    },
+    {
+      "id": "neet",
+      "label": "NEET"
+    },
+    {
+      "id": "jee",
+      "label": "JEE"
+    },
+    {
+      "id": "cuet",
+      "label": "CUET"
+    },
+    {
+      "id": "law",
+      "label": "Law Entrance"
+    },
+    {
+      "id": "ca",
+      "label": "CA"
+    },
+    {
+      "id": "cma",
+      "label": "CMA"
+    },
+    {
+      "id": "cs",
+      "label": "CS"
+    },
+    {
+      "id": "other_entrance",
+      "label": "Other Entrance / Professional Exams"
+    }
+  ],
+  "hierarchy": {
+    "school": "state_or_ut/curriculum/class/subject/chapter/topic/subtopic/language",
+    "exam": "exam_family/exam/course/subject/topic/subtopic/language",
+    "competition": "competition/age_band/topic/language"
+  }
+}
