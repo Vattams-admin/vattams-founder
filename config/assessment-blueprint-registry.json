@@ -10,16 +10,47 @@
       "time_seconds": 10800,
       "exam_structure": {
         "sections": [
-          {"id":"tamil-eligibility-cum-scoring","question_count":100,"subject":"Tamil"},
-          {"id":"general-studies","question_count":75,"subject":"General Studies"},
-          {"id":"aptitude-mental-ability","question_count":25,"subject":"Aptitude & Mental Ability"}
+          {
+            "id": "tamil-eligibility-cum-scoring",
+            "question_count": 100,
+            "subject": "Tamil"
+          },
+          {
+            "id": "general-studies",
+            "question_count": 75,
+            "subject": "General Studies"
+          },
+          {
+            "id": "aptitude-mental-ability",
+            "question_count": 25,
+            "subject": "Aptitude & Mental Ability"
+          }
         ]
       },
       "eligibility": {
-        "exam_ids":["tnpsc-group-iv-vao"],
+        "exam_ids": [
+          "tnpsc-group-iv-vao"
+        ],
         "age_bands_required": true
       },
-      "answer_release_policy": "after_submission"
+      "answer_release_policy": "after_submission",
+      "sections": [
+        {
+          "id": "tamil-eligibility-cum-scoring",
+          "question_count": 100,
+          "subject": "Tamil"
+        },
+        {
+          "id": "general-studies",
+          "question_count": 75,
+          "subject": "General Studies"
+        },
+        {
+          "id": "aptitude-mental-ability",
+          "question_count": 25,
+          "subject": "Aptitude & Mental Ability"
+        }
+      ]
     }
   }
 }
