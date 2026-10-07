@@ -1,0 +1,24 @@
+name: Validate India Education Registry
+
+on:
+  pull_request:
+    paths:
+      - 'config/india-education-registry.json'
+      - 'scripts/validate-india-education-registry.mjs'
+      - 'package.json'
+  push:
+    branches: [main]
+    paths:
+      - 'config/india-education-registry.json'
+      - 'scripts/validate-india-education-registry.mjs'
+      - 'package.json'
+
+jobs:
+  validate-india-education-registry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run india:validate
