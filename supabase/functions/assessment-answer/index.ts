@@ -124,6 +124,7 @@ async function saveAnswer(
   if (attempt.student_id !== studentId) {
     throw new Error("Assessment attempt does not belong to this student");
   }
+  if (!attempt.integrity_sha256 || await attemptIntegrityHash(attempt) !== attempt.integrity_sha256) throw new Error("Assessment attempt integrity check failed");
   await verifyActiveEnrollment(studentId, attempt.course_id, token);
   if (attempt.status !== "in_progress") {
     throw new Error("Assessment attempt is no longer active");
