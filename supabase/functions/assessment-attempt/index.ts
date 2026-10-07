@@ -7,6 +7,8 @@ const SUPABASE_SECRET_KEYS = JSON.parse(Deno.env.get("SUPABASE_SECRET_KEYS") || 
 const SUPABASE_SERVICE_ROLE_KEY = SUPABASE_SECRET_KEYS["default"] || "";
 const SUPABASE_BUCKET = "academia-course-materials";
 const RETRY_POLICY_PATH = "config/assessment-retry-policy.json";
+const REMEDIATION_POLICY_PATH = "config/assessment-remediation-policy.json";
+const ADAPTIVE_POLICY_PATH = "config/assessment-adaptive-selection-policy.json";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
   auth: { persistSession: false, autoRefreshToken: false },
@@ -104,6 +106,32 @@ async function verifyRegisteredBank(definition: any, publicParsed: unknown, priv
 
 async function loadRetryPolicy() {
   return await loadJson(RETRY_POLICY_PATH, "retry policy");
+}
+
+async function loadAdaptivePolicies() {
+  const remediation = await loadJson(REMEDIATION_POLICY_PATH, "remediation policy");
+  const adaptive = await loadJson(ADAPTIVE_POLICY_PATH, "adaptive selection policy");
+  const weak = remediation?.weakTopic;
+  if (!Number.isInteger(weak?.minimumAnsweredQuestions) || !Number.isFinite(weak?.accuracyBelowPercent)) throw new Error("Remediation weak-topic policy is invalid");
+  if (!Number.isInteger(adaptive?.minimumEvidence) || !Number.isFinite(adaptive?.weakAccuracyBelowPercent) || !Number.isFinite(adaptive?.lowAccuracyBelowPercent) || !Number.isFinite(adaptive?.mediumAccuracyBelowPercent) || adaptive.weakTopicBoost <= 0) throw new Error("Adaptive selection policy is invalid");
+  return { minEvidence: weak.minimumAnsweredQuestions, weakThreshold: weak.accuracyBelowPercent, ...adaptive };
+}
+
+async function loadWeakTopics(studentId: string, assessmentId: string, policy: any): Promise<Map<string, { accuracy: number; attempted: number }>> {
+  const { data, error } = await supabase.rpc("get_assessment_topic_performance", { p_student_id: studentId, p_assessment_id: assessmentId });
+  if (error) throw new Error(`Unable to load adaptive performance: ${error.message}`);
+  const rows = Array.isArray(data) ? data : [];
+  const weak = new Map<string, { accuracy: number; attempted: number }>();
+  for (const row of rows) {
+    const subject = typeof row?.subject === "string" ? row.subject.trim() : "";
+    const topic = typeof row?.topic === "string" ? row.topic.trim() : "";
+    const attempted = Number(row?.attempted_questions);
+    const accuracy = Number(row?.accuracy_percent);
+    if (!subject || !topic || !Number.isFinite(attempted) || !Number.isFinite(accuracy)) continue;
+    if (attempted < policy.minEvidence || attempted < policy.minimumEvidence || accuracy >= policy.weakThreshold || accuracy >= policy.weakAccuracyBelowPercent) continue;
+    weak.set(normalize(subject) + "::" + normalize(topic), { accuracy, attempted });
+  }
+  return weak;
 }
 function retryLimit(policy: any, assessment: AssessmentDefinition): number | null {
   const defaults = policy?.default || {};
@@ -255,7 +283,7 @@ async function recentQuestionIds(studentId: string, assessmentId: string): Promi
   return ids;
 }
 
-function selectQuestions(questions: Question[], assessment: AssessmentDefinition, claims: Record<string, unknown>, recent: Set<string>, random: () => number): Question[] {
+function selectQuestions(questions: Question[], assessment: AssessmentDefinition, claims: Record<string, unknown>, recent: Set<string>, random: () => number, weakTopics = new Map<string, { accuracy: number; attempted: number }>(), adaptivePolicy: any = null): Question[] {
   validateBlueprint(assessment);
   const bp = assessment.selection_blueprint!;
   const eligible = questions.filter(q => matchesEligibility(q, assessment, claims));
@@ -279,13 +307,20 @@ function selectQuestions(questions: Question[], assessment: AssessmentDefinition
     });
     if (!candidates.length) break;
     candidates.sort((a, b) => {
+      const adaptiveScore = (q: Question) => {
+        if (!adaptivePolicy || assessment.kind !== "topic_practice") return 0;
+        const signal = weakTopics.get(normalize(q.subject) + "::" + normalize(q.topic));
+        if (!signal) return 0;
+        const accuracyBonus = signal.accuracy < adaptivePolicy.lowAccuracyBelowPercent ? 2 : signal.accuracy < adaptivePolicy.mediumAccuracyBelowPercent ? 1 : 0;
+        return adaptivePolicy.weakTopicBoost + accuracyBonus;
+      };
       const ad = (difficultyTargets[a.difficulty || ""] || 0) - (difficultySelected.get(a.difficulty || "") || 0);
       const bd = (difficultyTargets[b.difficulty || ""] || 0) - (difficultySelected.get(b.difficulty || "") || 0);
       const ak = normalize(a.subject)+"::"+normalize(a.topic);
       const bk = normalize(b.subject)+"::"+normalize(b.topic);
       const at = (topicTargets.get(ak) || 0) - (topicSelected.get(ak) || 0);
       const bt = (topicTargets.get(bk) || 0) - (topicSelected.get(bk) || 0);
-      return (bd + bt) - (ad + at);
+      return (adaptiveScore(b) + bd + bt) - (adaptiveScore(a) + ad + at);
     });
     const topScore = candidates.slice(0, Math.min(8, candidates.length));
     const q = topScore[Math.floor(random() * topScore.length)];
@@ -424,7 +459,13 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
   const questions = await loadQuestionBank(assessment);
   const recent = await recentQuestionIds(studentId, assessmentId);
   const random = seededRandom(`${studentId}:${assessmentId}:${crypto.randomUUID()}`);
-  const selected = selectQuestions(questions, assessment, claims, recent, random);
+  let weakTopics = new Map<string, { accuracy: number; attempted: number }>();
+  let adaptivePolicy: any = null;
+  if (assessment.kind === "topic_practice") {
+    adaptivePolicy = await loadAdaptivePolicies();
+    weakTopics = await loadWeakTopics(studentId, assessmentId, adaptivePolicy);
+  }
+  const selected = selectQuestions(questions, assessment, claims, recent, random, weakTopics, adaptivePolicy);
   const questionIds = selected.map(q => q.question_id);
   const optionOrders = buildOptionOrders(questionIds, selected, random);
   const startedAt = new Date().toISOString();
