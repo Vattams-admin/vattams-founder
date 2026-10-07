@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"VATTAMS Production Content Authoring Package",
+  "type":"object",
+  "required":["packageId","version","trackId","locator","status","studyMaterial","practice","revision","questions","answerKeys","governance"],
+  "properties":{
+    "packageId":{"type":"string","minLength":1},
+    "version":{"type":"string","pattern":"^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "trackId":{"type":"string","minLength":1},
+    "locator":{"type":"object","required":["domain","language"],"properties":{"domain":{"type":"string"},"language":{"type":"string"}}},
+    "status":{"enum":["draft","in_review","approved","published","retired"]},
+    "studyMaterial":{"type":"object","required":["objectives","concepts","definitions","workedExamples","commonMistakes","keyTakeaways","revisionPoints"],"properties":{"objectives":{"type":"array"},"concepts":{"type":"array"},"definitions":{"type":"array"},"workedExamples":{"type":"array"},"commonMistakes":{"type":"array"},"keyTakeaways":{"type":"array"},"revisionPoints":{"type":"array"}}},
+    "practice":{"type":"object","required":["basic","conceptual","application","higherOrderThinking","mixedReview"],"properties":{"basic":{"type":"array"},"conceptual":{"type":"array"},"application":{"type":"array"},"higherOrderThinking":{"type":"array"},"mixedReview":{"type":"array"}}},
+    "revision":{"type":"object","required":["quickRevision","flashRecall","formulaOrFactBank","mistakeBasedRevision","weakTopicRevision"],"properties":{"quickRevision":{"type":"array"},"flashRecall":{"type":"array"},"formulaOrFactBank":{"type":"array"},"mistakeBasedRevision":{"type":"array"},"weakTopicRevision":{"type":"array"}}},
+    "questions":{"type":"array","items":{"type":"object","required":["questionId","question","options","difficulty","marks","timeSeconds"],"properties":{"questionId":{"type":"string"},"question":{"type":"string","minLength":1},"options":{"type":"array","minItems":4,"maxItems":4,"items":{"type":"string","minLength":1}},"difficulty":{"enum":["easy","medium","hard"]},"marks":{"type":"number"},"timeSeconds":{"type":"number","exclusiveMinimum":0}}}},
+    "answerKeys":{"type":"array","items":{"type":"object","required":["questionId","correctOptionIndex","explanation"],"properties":{"questionId":{"type":"string"},"correctOptionIndex":{"type":"integer","minimum":0,"maximum":3},"explanation":{"type":"string","minLength":1}}}},
+    "governance":{"type":"object","required":["reviewStatus","answerKeyPrivate","provenance","contentHash"],"properties":{"reviewStatus":{"enum":["draft","in_review","approved"]},"answerKeyPrivate":{"const":true},"provenance":{"type":"array"},"contentHash":{"type":"string","minLength":1}}}
+  }
+}
