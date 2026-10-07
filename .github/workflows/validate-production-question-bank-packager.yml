@@ -1,0 +1,20 @@
+name: Validate Production Question Bank Packager
+
+on:
+  pull_request:
+    paths:
+      - "scripts/package-production-question-bank.mjs"
+      - "scripts/validate-production-question-ingestion.mjs"
+      - "config/production-question-ingestion.schema.json"
+      - "package.json"
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node --check scripts/package-production-question-bank.mjs
+      - run: node --check scripts/validate-production-question-ingestion.mjs
