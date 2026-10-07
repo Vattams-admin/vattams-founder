@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "controlId": "vattams-curriculum-authoring-control",
+  "purpose": "Production control plane preventing curriculum content from advancing until authoritative syllabus evidence is approved.",
+  "rules": {
+    "evidenceRequiredBeforeAuthoring": true,
+    "approvedEvidenceRequiredBeforeReview": true,
+    "approvedEvidenceRequiredBeforePublish": true
+  },
+  "tracks": [
+    {
+      "trackId": "school-cbse-class-1",
+      "evidenceStatus": "collected",
+      "evidenceIds": [],
+      "contentStatus": "not_started"
+    }
+  ]
+}
