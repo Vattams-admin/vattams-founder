@@ -1,0 +1,21 @@
+name: Validate Assessment Bank Registration
+
+on:
+  pull_request:
+    paths:
+      - "config/assessment-registry.json"
+      - "assessments/**"
+      - "scripts/validate-assessment-registry.mjs"
+      - "scripts/validate-assessment-bank-registration.mjs"
+      - "package.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run content:assessment:banks:validate
+      - run: node scripts/validate-assessment-registry.mjs

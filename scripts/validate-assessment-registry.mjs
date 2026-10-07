@@ -68,7 +68,7 @@ let reviewedOrPublishedCount = 0
 for (const [key, a] of Object.entries(registry.assessments)) {
   if (!a || typeof a !== 'object') throw new Error(`Assessment ${key}: invalid definition`)
   if (a.assessment_id !== key) throw new Error(`Assessment ${key}: assessment_id must match registry key`)
-  for (const field of ['course_id', 'slug', 'title', 'question_bank_public', 'answer_key']) if (typeof a[field] !== 'string' || !a[field].trim()) throw new Error(`Assessment ${key}: ${field} is required`)
+  for (const field of ['course_id', 'slug', 'title', 'question_bank_public', 'answer_key', 'bank_manifest']) if (typeof a[field] !== 'string' || !a[field].trim()) throw new Error(`Assessment ${key}: ${field} is required`)
   if (!allowedDomains.has(a.domain)) throw new Error(`Assessment ${key}: invalid domain`)
   if (!allowedKinds.has(a.kind)) throw new Error(`Assessment ${key}: invalid kind`)
   if (!allowedStatus.has(a.status)) throw new Error(`Assessment ${key}: invalid status`)
