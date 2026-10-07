@@ -41,7 +41,8 @@
     "content:curriculum:readiness:validate": "node scripts/validate-curriculum-authoring-readiness.mjs",
     "content:authoring:package:validate": "node scripts/validate-content-authoring-package.mjs",
     "content:questions:quality:validate": "node scripts/validate-question-quality-security.mjs",
-    "content:assessment:selection:validate": "node scripts/validate-assessment-selection-policy.mjs"
+    "content:assessment:selection:validate": "node scripts/validate-assessment-selection-policy.mjs",
+    "content:assessment:blueprint:validate": "node scripts/validate-assessment-blueprint-registry.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
