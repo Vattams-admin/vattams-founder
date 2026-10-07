@@ -57,7 +57,7 @@ jobs:
           test -n "$SUPABASE_SERVICE_ROLE_KEY"
           node scripts/provision-production-e2e-v2.mjs
       - name: Run production smoke tests
-        run: npx playwright test
+        run: npx playwright test e2e/production-smoke.spec.ts e2e/production-thirukkural.spec.ts
         env:
           PLAYWRIGHT_BASE_URL: https://academia.vattams.net
       - name: Cleanup isolated Firebase E2E data
