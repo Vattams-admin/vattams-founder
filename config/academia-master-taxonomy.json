@@ -1,0 +1,495 @@
+{
+  "version": 1,
+  "registry_id": "vattams-academia-master-taxonomy",
+  "purpose": "Canonical product taxonomy for VATTAMS Academia. Defines routing and coverage dimensions; it does not claim that production content has been authored or approved.",
+  "school": {
+    "education_levels": [
+      "pre_primary",
+      "primary",
+      "upper_primary",
+      "secondary",
+      "senior_secondary"
+    ],
+    "classes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "curriculum_families": [
+      {
+        "id": "cbse",
+        "label": "CBSE",
+        "scope": "national"
+      },
+      {
+        "id": "cisce",
+        "label": "CISCE",
+        "variants": [
+          "icse",
+          "isc"
+        ],
+        "scope": "national"
+      },
+      {
+        "id": "nios",
+        "label": "NIOS",
+        "scope": "national"
+      },
+      {
+        "id": "state_board",
+        "label": "State / UT Board",
+        "scope": "state_or_ut"
+      },
+      {
+        "id": "matriculation",
+        "label": "Matriculation / State-specific private curriculum",
+        "scope": "state_or_ut"
+      },
+      {
+        "id": "international",
+        "label": "International Schools",
+        "variants": [
+          "ib",
+          "cambridge-international",
+          "pearson-edexcel"
+        ],
+        "scope": "international"
+      }
+    ],
+    "delivery_layers": [
+      "foundation",
+      "lesson_notes",
+      "worked_examples",
+      "guided_practice",
+      "independent_practice",
+      "chapter_revision",
+      "subject_revision",
+      "mock_test",
+      "official_assessment",
+      "weak_topic_remediation"
+    ],
+    "hierarchy": "state_or_ut → board_or_curriculum → class → subject → chapter → topic → subtopic → language → age_band"
+  },
+  "board_catalog": {
+    "national": [
+      {
+        "id": "cbse",
+        "curriculum": "cbse",
+        "label": "CBSE"
+      },
+      {
+        "id": "cisce-icse",
+        "curriculum": "cisce",
+        "label": "CISCE / ICSE"
+      },
+      {
+        "id": "cisce-isc",
+        "curriculum": "cisce",
+        "label": "CISCE / ISC"
+      },
+      {
+        "id": "nios",
+        "curriculum": "nios",
+        "label": "NIOS"
+      }
+    ],
+    "international": [
+      {
+        "id": "ib",
+        "curriculum": "international",
+        "label": "International Baccalaureate"
+      },
+      {
+        "id": "cambridge-international",
+        "curriculum": "international",
+        "label": "Cambridge International"
+      },
+      {
+        "id": "pearson-edexcel",
+        "curriculum": "international",
+        "label": "Pearson Edexcel"
+      }
+    ],
+    "state_or_ut": "Resolve the state/UT code from config/india-education-registry.json. Each state/UT receives its own board/curriculum content namespace; no state syllabus is silently substituted for another."
+  },
+  "school_package_standard": {
+    "lesson_notes": [
+      "learning_objectives",
+      "concepts",
+      "definitions",
+      "explanations",
+      "worked_examples",
+      "visuals_when_useful",
+      "common_mistakes",
+      "key_takeaways"
+    ],
+    "practice_layers": [
+      "basic",
+      "conceptual",
+      "application",
+      "higher_order_thinking",
+      "mixed_review"
+    ],
+    "revision_layers": [
+      "quick_revision",
+      "flash_recall",
+      "formula_or_fact_bank",
+      "mistake_based_revision",
+      "weak_topic_revision"
+    ],
+    "assessments": [
+      "practice",
+      "topic_test",
+      "chapter_test",
+      "subject_test",
+      "sectional_test",
+      "mock_test",
+      "official_attempt"
+    ],
+    "question_standard": {
+      "format": "mcq",
+      "options": 4,
+      "unique_options": true,
+      "public_attempt": "question + four options only",
+      "review_mode": "selected answer + correct answer + reasoning + distractor explanations + concept/remediation",
+      "answer_key": "private"
+    }
+  },
+  "adaptive_policy": {
+    "eligibility_order": [
+      "country",
+      "state_or_ut",
+      "board_or_curriculum",
+      "class",
+      "subject",
+      "chapter",
+      "language",
+      "age_band",
+      "difficulty"
+    ],
+    "age_band_is_additional_guardrail": true,
+    "student_specific_question_order": true,
+    "option_shuffle": true,
+    "blueprint_controlled_selection": true,
+    "avoid_recent_repetition": true,
+    "difficulty_distribution_required": true,
+    "topic_distribution_required": true,
+    "never_reveal_official_answer_during_attempt": true
+  },
+  "exam_domains": {
+    "competitive": [
+      {
+        "family": "tnpsc",
+        "tracks": [
+          "group-1",
+          "group-2",
+          "group-2a",
+          "group-4",
+          "vao",
+          "technical_recruitment"
+        ]
+      },
+      {
+        "family": "upsc",
+        "tracks": [
+          "civil-services",
+          "forest-service",
+          "engineering-services",
+          "combined-defence-services",
+          "nda",
+          "other_upsc"
+        ]
+      },
+      {
+        "family": "ssc",
+        "tracks": [
+          "cgl",
+          "chsl",
+          "mts",
+          "gd",
+          "cpo",
+          "je",
+          "stenographer",
+          "selection-post"
+        ]
+      },
+      {
+        "family": "banking",
+        "tracks": [
+          "ibps-po",
+          "ibps-clerk",
+          "ibps-rrb",
+          "sbi-po",
+          "sbi-clerk",
+          "rbi",
+          "nabard",
+          "sebi",
+          "other-banking"
+        ]
+      },
+      {
+        "family": "railways",
+        "tracks": [
+          "ntpc",
+          "group-d",
+          "alp",
+          "technician",
+          "je",
+          "other-rrb"
+        ]
+      },
+      {
+        "family": "defence",
+        "tracks": [
+          "nda",
+          "cds",
+          "afcat",
+          "agniveer",
+          "navy",
+          "coast-guard",
+          "paramilitary"
+        ]
+      },
+      {
+        "family": "state_recruitment",
+        "tracks": [
+          "state-psc",
+          "police",
+          "teacher-recruitment",
+          "group-c",
+          "group-d",
+          "other_state_recruitment"
+        ]
+      }
+    ],
+    "entrance": [
+      {
+        "family": "medical",
+        "tracks": [
+          "neet-ug",
+          "aiims-legacy-aligned-medical-prep",
+          "other-medical-entrance"
+        ]
+      },
+      {
+        "family": "engineering",
+        "tracks": [
+          "jee-main",
+          "jee-advanced",
+          "state-engineering-entrance",
+          "other-engineering-entrance"
+        ]
+      },
+      {
+        "family": "university",
+        "tracks": [
+          "cuet-ug",
+          "cuet-pg",
+          "other-university-entrance"
+        ]
+      },
+      {
+        "family": "law",
+        "tracks": [
+          "clat",
+          "ailet",
+          "other-law-entrance"
+        ]
+      },
+      {
+        "family": "design",
+        "tracks": [
+          "nift",
+          "uceed",
+          "nid-dat",
+          "other-design-entrance"
+        ]
+      },
+      {
+        "family": "architecture",
+        "tracks": [
+          "nata",
+          "jee-architecture"
+        ]
+      },
+      {
+        "family": "agriculture",
+        "tracks": [
+          "icar",
+          "state-agriculture-entrance",
+          "other-agriculture-entrance"
+        ]
+      },
+      {
+        "family": "pharmacy",
+        "tracks": [
+          "state-pharmacy-entrance",
+          "other-pharmacy-entrance"
+        ]
+      },
+      {
+        "family": "nursing_allied_health",
+        "tracks": [
+          "nursing-entrance",
+          "paramedical-entrance",
+          "allied-health-entrance"
+        ]
+      },
+      {
+        "family": "management",
+        "tracks": [
+          "cat",
+          "xat",
+          "cmat",
+          "mat",
+          "other-management-entrance"
+        ]
+      },
+      {
+        "family": "hotel_management",
+        "tracks": [
+          "nchmct-jee",
+          "other-hotel-management"
+        ]
+      },
+      {
+        "family": "teacher_education",
+        "tracks": [
+          "ctet",
+          "state-tet",
+          "other-teacher-education"
+        ]
+      },
+      {
+        "family": "fine_arts_media",
+        "tracks": [
+          "fine-arts-entrance",
+          "media-entrance",
+          "other-creative-entrance"
+        ]
+      }
+    ],
+    "professional": [
+      {
+        "family": "accounting_finance",
+        "tracks": [
+          "ca-foundation",
+          "ca-intermediate",
+          "ca-final",
+          "ca-auditing",
+          "cma",
+          "cs",
+          "acca",
+          "other-accounting-finance"
+        ]
+      },
+      {
+        "family": "medicine",
+        "tracks": [
+          "medical-professional",
+          "postgraduate-medical-entrance"
+        ]
+      },
+      {
+        "family": "law",
+        "tracks": [
+          "llb",
+          "llm",
+          "bar-exam-preparation"
+        ]
+      },
+      {
+        "family": "engineering_professional",
+        "tracks": [
+          "gates",
+          "engineering-certifications",
+          "other-professional-engineering"
+        ]
+      },
+      {
+        "family": "it_technology",
+        "tracks": [
+          "professional-it-certifications",
+          "cloud",
+          "cybersecurity",
+          "data-ai",
+          "other-it"
+        ]
+      },
+      {
+        "family": "education",
+        "tracks": [
+          "teacher-certification",
+          "education-professional-development"
+        ]
+      },
+      {
+        "family": "other_professional",
+        "tracks": [
+          "qualification",
+          "certification",
+          "continuing-professional-education"
+        ]
+      }
+    ]
+  },
+  "competitions": {
+    "pathway": [
+      "eligibility",
+      "study_materials",
+      "topic_learning",
+      "practice",
+      "mock_tests",
+      "revision",
+      "official_attempt",
+      "results",
+      "certificate"
+    ],
+    "age_groups": [
+      "5-7",
+      "8-10",
+      "11-13",
+      "13-15",
+      "15-18",
+      "18+"
+    ],
+    "question_policy": "Age-appropriate language, cognitive load, distractors and difficulty are selected from the eligible pool; curriculum eligibility precedes age filtering."
+  },
+  "languages": {
+    "source_of_truth": "config/india-education-registry.json",
+    "supported_model": "language is an independent content dimension",
+    "translation_policy": "Every translated lesson/question is a separately reviewable version. Machine translation may assist drafting but cannot publish automatically.",
+    "ui_fallback": "en"
+  },
+  "governance": {
+    "lifecycle": [
+      "draft",
+      "automated_validation",
+      "quality_review",
+      "ceo_approval",
+      "published",
+      "retired"
+    ],
+    "ceo_approval_mode": "configured_ceo_approval",
+    "auto_publish_conditions": [
+      "schema_valid",
+      "source_evidence_present",
+      "question_quality_validated",
+      "answer_key_private",
+      "review_status_approved",
+      "content_hash_present",
+      "audit_record_present"
+    ],
+    "official_assessment_requires_approved_content": true,
+    "every_version_requires_audit": true
+  }
+}
