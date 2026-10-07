@@ -1,0 +1,25 @@
+name: Validate Syllabus Artifact Registry
+
+on:
+  push:
+    paths:
+      - "config/syllabus-artifact-registry.json"
+      - "config/syllabus-artifact-registry.schema.json"
+      - "scripts/validate-syllabus-artifact-registry.mjs"
+      - ".github/workflows/validate-syllabus-artifact-registry.yml"
+  pull_request:
+    paths:
+      - "config/syllabus-artifact-registry.json"
+      - "config/syllabus-artifact-registry.schema.json"
+      - "scripts/validate-syllabus-artifact-registry.mjs"
+      - ".github/workflows/validate-syllabus-artifact-registry.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/validate-syllabus-artifact-registry.mjs
