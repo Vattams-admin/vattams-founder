@@ -189,23 +189,19 @@ async function saveAnswer(
     throw new Error("Answer is too long");
   }
 
-  const { data, error } = await supabase
-    .from("assessment_answers")
-    .upsert(
-      {
-        attempt_id: attemptId,
-        question_id: questionId,
-        answer: normalizedAnswer,
-        selected_option_index: selectedOptionIndex,
-        answered_at: new Date().toISOString(),
-        updated_at: new Date().toISOString(),
-      },
-      { onConflict: "attempt_id,question_id" },
-    )
-    .select("question_id,answer,selected_option_index,answered_at,updated_at")
-    .single();
-
+  const answeredAt = new Date().toISOString();
+  const { data, error } = await supabase.rpc("save_assessment_attempt_answer", {
+    p_attempt_id: attemptId,
+    p_student_id: studentId,
+    p_question_id: questionId,
+    p_answer: normalizedAnswer,
+    p_selected_option_index: selectedOptionIndex,
+    p_answered_at: answeredAt,
+  });
   if (error) {
+    if (error.message.includes("ASSESSMENT_ATTEMPT_NOT_ACTIVE")) throw new Error("Assessment attempt is no longer active");
+    if (error.message.includes("ASSESSMENT_ATTEMPT_EXPIRED")) throw new Error("Assessment attempt time has expired");
+    if (error.message.includes("ASSESSMENT_QUESTION_NOT_IN_ATTEMPT")) throw new Error("Question does not belong to this assessment attempt");
     throw new Error(`Unable to save answer: ${error.message}`);
   }
 
