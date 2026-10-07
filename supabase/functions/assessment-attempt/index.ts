@@ -46,7 +46,7 @@ type AssessmentRegistry = { version: number; assessments: Record<string, Assessm
 type AttemptRow = {
   id: string; student_id: string; course_id: string; assessment_id: string; domain: string;
   kind: string; status: "in_progress" | "submitted"; started_at: string;
-  question_ids: string[] | null; is_mock: boolean; release_version: string; release_public_sha256: string; release_private_sha256: string; integrity_sha256: string; option_orders: Record<string, number[]>;
+  question_ids: string[] | null; is_mock: boolean; release_version: string; release_public_sha256: string; release_private_sha256: string; integrity_sha256: string; option_orders: Record<string, number[]>; expires_at: string;
 };
 
 async function verifyFirebaseToken(authorization: string | null): Promise<{ uid: string; token: string; claims: Record<string, unknown> }> {
@@ -337,7 +337,7 @@ async function checkAccess(studentId: string, courseId: string, assessmentId: st
 
 async function findLatestAttempt(studentId: string, assessmentId: string): Promise<AttemptRow | null> {
   const { data, error } = await supabase.from("assessment_attempts")
-    .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders")
+    .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,expires_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders,expires_at")
     .eq("student_id", studentId).eq("assessment_id", assessmentId)
     .order("started_at", { ascending: false }).limit(1).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
@@ -389,6 +389,7 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
 
   const existing = await findLatestAttempt(studentId, assessmentId);
   if (existing?.status === "in_progress") {
+    if (!existing.expires_at || Date.now() >= Date.parse(existing.expires_at)) throw new Error("Assessment attempt time has expired");
     if (!existing.integrity_sha256 || (await attemptIntegrityHash({ release_version: existing.release_version, release_public_sha256: existing.release_public_sha256, release_private_sha256: existing.release_private_sha256, question_ids: existing.question_ids || [], option_orders: existing.option_orders || {} })) !== existing.integrity_sha256) throw new Error("Assessment attempt integrity check failed");
     return buildResponse(existing, assessment.time_seconds);
   }
@@ -404,7 +405,7 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
   const { data, error } = await supabase.from("assessment_attempts").insert({
     student_id: studentId, course_id: courseId, assessment_id: assessmentId,
     domain: assessment.domain, kind: assessment.kind, status: "in_progress",
-    started_at: new Date().toISOString(), question_ids: questionIds, option_orders: optionOrders,
+    started_at: startedAt, expires_at: expiresAt, question_ids: questionIds, option_orders: optionOrders,
     release_version: assessment.release_version, release_public_sha256: assessment.release_public_sha256, release_private_sha256: assessment.release_private_sha256,
     integrity_sha256: await attemptIntegrityHash({ release_version: assessment.release_version!, release_public_sha256: assessment.release_public_sha256!, release_private_sha256: assessment.release_private_sha256!, question_ids: questionIds, option_orders: optionOrders }),
     is_mock: assessment.kind === "mock_test",
