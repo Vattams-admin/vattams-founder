@@ -1,0 +1,30 @@
+name: Validate Atomic Content Authoring Matrix
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "config/atomic-content-authoring-matrix.json"
+      - "scripts/validate-atomic-content-authoring-matrix.mjs"
+      - "config/india-education-registry.json"
+      - "package.json"
+  pull_request:
+    paths:
+      - "config/atomic-content-authoring-matrix.json"
+      - "scripts/validate-atomic-content-authoring-matrix.mjs"
+      - "config/india-education-registry.json"
+      - "package.json"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run content:authoring:matrix:validate
