@@ -27,11 +27,6 @@ const adminSections = [
     description: 'Review course payment transactions.',
     path: '/admin/payments',
   },
-  {
-    title: 'Live Sessions',
-    description: 'View and enter published live classrooms.',
-    path: '/admin/live-sessions',
-  },
 ]
 
 export default function AdminDashboard() {
@@ -47,7 +42,7 @@ export default function AdminDashboard() {
         </h1>
 
         <p className="mt-3 max-w-2xl text-base text-slate-300">
-          Manage students, tutors, courses, payments and live sessions from one place.
+          Manage students, tutors, courses, payments and assessments from one place.
         </p>
       </div>
 
