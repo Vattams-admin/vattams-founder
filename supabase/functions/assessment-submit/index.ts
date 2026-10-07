@@ -67,9 +67,7 @@ async function submit(attemptId: string, studentId: string, token: string) {
     throw new Error("Assessment time limit is invalid");
   }
   if (Date.now() > startedAtMs + definition.time_seconds * 1000) {
-    // The client timer is only a UX aid; the server remains authoritative.
-    // Expired attempts are still scored on submission so the student does not lose
-    // their saved answers, but no new answers can be accepted after expiry.
+    throw new Error("Assessment time has expired");
   }
 
   const publicParsed = await downloadJson(definition.question_bank_public, "public question bank");
