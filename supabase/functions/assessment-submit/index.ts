@@ -62,7 +62,7 @@ async function verifyActiveEnrollment(studentId: string, courseId: string, token
 
 async function submit(attemptId: string, studentId: string, token: string) {
   const { data: attempt, error: ae } = await supabase.from("assessment_attempts")
-     .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock")
+     .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256")
     .eq("id", attemptId).maybeSingle();
   if (ae) throw new Error("Attempt lookup failed: " + ae.message);
   if (!attempt) throw new Error("Assessment attempt not found");
@@ -85,6 +85,7 @@ async function submit(attemptId: string, studentId: string, token: string) {
   const registry = await downloadJson("assessments/registry.json", "registry");
   const definition = registry.assessments?.[attempt.assessment_id];
   if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
+  if (attempt.release_version !== definition.release_version || attempt.release_public_sha256 !== definition.release_public_sha256 || attempt.release_private_sha256 !== definition.release_private_sha256) throw new Error("Assessment release changed after this attempt started; the attempt is locked to its original release");
   if (definition.course_id !== attempt.course_id || definition.domain !== attempt.domain || definition.kind !== attempt.kind) {
     throw new Error("Assessment definition does not match attempt");
   }

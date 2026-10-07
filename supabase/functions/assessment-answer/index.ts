@@ -108,7 +108,7 @@ async function saveAnswer(
 ) {
   const { data: attempt, error: attemptError } = await supabase
     .from("assessment_attempts")
-    .select("id,student_id,course_id,assessment_id,status,started_at,question_ids,option_orders")
+    .select("id,student_id,course_id,assessment_id,status,started_at,question_ids,option_orders,release_version,release_public_sha256,release_private_sha256")
     .eq("id", attemptId)
     .maybeSingle();
 
@@ -137,6 +137,8 @@ async function saveAnswer(
   }
   const registry = JSON.parse(await registryFile.text());
   const definition = registry.assessments?.[attempt.assessment_id];
+  if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
+  if (attempt.release_version !== definition.release_version || attempt.release_public_sha256 !== definition.release_public_sha256 || attempt.release_private_sha256 !== definition.release_private_sha256) throw new Error("Assessment release changed after this attempt started; the attempt is locked to its original release");
   if (!definition || definition.status !== "published" || !Number.isInteger(definition.time_seconds) || definition.time_seconds <= 0) {
     throw new Error("Assessment time limit is unavailable");
   }

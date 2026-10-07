@@ -103,7 +103,8 @@ async function getAssessment(assessmentId: string, courseId: string): Promise<As
     definition.assessment_id !== assessmentId || definition.course_id !== courseId ||
     !definition.question_bank_public || !definition.answer_key ||
     !Number.isInteger(definition.question_count) || definition.question_count <= 0 ||
-    !Number.isInteger(definition.time_seconds) || definition.time_seconds <= 0
+    !Number.isInteger(definition.time_seconds) || definition.time_seconds <= 0 ||
+    !definition.release_version || !definition.release_public_sha256 || !definition.release_private_sha256
   ) throw new Error("Assessment configuration is incomplete");
   return definition;
 }
@@ -325,7 +326,7 @@ async function checkAccess(studentId: string, courseId: string, assessmentId: st
 
 async function findLatestAttempt(studentId: string, assessmentId: string): Promise<AttemptRow | null> {
   const { data, error } = await supabase.from("assessment_attempts")
-    .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock")
+    .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256")
     .eq("student_id", studentId).eq("assessment_id", assessmentId)
     .order("started_at", { ascending: false }).limit(1).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
@@ -390,6 +391,7 @@ async function startOrResume(studentId: string, courseId: string, assessmentId: 
     student_id: studentId, course_id: courseId, assessment_id: assessmentId,
     domain: assessment.domain, kind: assessment.kind, status: "in_progress",
     started_at: new Date().toISOString(), question_ids: questionIds, option_orders: optionOrders,
+    release_version: assessment.release_version, release_public_sha256: assessment.release_public_sha256, release_private_sha256: assessment.release_private_sha256,
     is_mock: assessment.kind === "mock_test",
   }).select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,question_ids,is_mock").single();
 

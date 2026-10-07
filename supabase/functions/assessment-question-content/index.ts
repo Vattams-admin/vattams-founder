@@ -60,7 +60,7 @@ async function verifyRegisteredBank(definition: any, publicParsed: unknown, priv
 
 async function loadPublicQuestions(studentId: string, attemptId: string, token: string) {
   const { data: attempt, error } = await supabase.from("assessment_attempts")
-    .select("id,student_id,status,assessment_id,question_ids,option_orders").eq("id", attemptId).maybeSingle();
+    .select("id,student_id,status,assessment_id,question_ids,option_orders,release_version,release_public_sha256,release_private_sha256").eq("id", attemptId).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
   if (!attempt) throw new Error("Assessment attempt not found");
   if (attempt.student_id !== studentId) throw new Error("Assessment attempt does not belong to this student");
@@ -78,6 +78,7 @@ async function loadPublicQuestions(studentId: string, attemptId: string, token: 
   const registry = JSON.parse(await registryFile.text());
   const definition = registry.assessments?.[attempt.assessment_id];
   if (!definition || definition.status !== "published") throw new Error("Assessment is not published");
+  if (attempt.release_version !== definition.release_version || attempt.release_public_sha256 !== definition.release_public_sha256 || attempt.release_private_sha256 !== definition.release_private_sha256) throw new Error("Assessment release changed after this attempt started; the attempt is locked to its original release");
   if (typeof definition.question_bank_public !== "string" || !definition.question_bank_public) {
     throw new Error("Assessment public question bank is not configured");
   }
