@@ -862,9 +862,11 @@ service cloud.firestore {
 
             allow update: if false;
 
+            // Students may clear stale tutor ICE only from their own signalling slot.
             allow delete: if isAdmin()
               || (isApprovedTutor()
-                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid);
+                  && get(/databases/$(database)/documents/live_sessions/$(sessionId)).data.tutor_id == request.auth.uid)
+              || (isSignedIn() && studentId == request.auth.uid);
           }
         }
 
