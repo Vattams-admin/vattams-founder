@@ -1,0 +1,27 @@
+name: Validate Production Content Library Registry
+
+on:
+  push:
+    paths:
+      - 'config/content-library-registry.json'
+      - 'config/india-education-registry.json'
+      - 'config/assessment-registry.json'
+      - 'scripts/validate-content-library-registry.mjs'
+      - '.github/workflows/validate-content-library-registry.yml'
+  pull_request:
+    paths:
+      - 'config/content-library-registry.json'
+      - 'config/india-education-registry.json'
+      - 'config/assessment-registry.json'
+      - 'scripts/validate-content-library-registry.mjs'
+      - '.github/workflows/validate-content-library-registry.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/validate-content-library-registry.mjs
