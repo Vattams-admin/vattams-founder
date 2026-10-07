@@ -23,7 +23,8 @@
     "india:validate": "node scripts/validate-india-education-registry.mjs",
     "content:schema:validate": "node scripts/validate-content-package-schema.mjs",
     "content:library:validate": "node scripts/validate-content-library-registry.mjs",
-    "content:coverage:validate": "node scripts/validate-production-content-coverage.mjs"
+    "content:coverage:validate": "node scripts/validate-production-content-coverage.mjs",
+    "content:package:registry:validate": "node scripts/validate-production-package-registry-links.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
