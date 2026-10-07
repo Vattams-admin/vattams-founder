@@ -152,12 +152,21 @@ async function submit(attemptId: string, studentId: string, token: string) {
       selected_option_index: hasAnswer ? selected : null,
       is_correct: isCorrect, correct_option_index: correct,
       explanation, marks_awarded: awarded,
+      subject: typeof publicQuestion.subject === "string" ? publicQuestion.subject : "",
+      topic: typeof publicQuestion.topic === "string" ? publicQuestion.topic : "",
+      subtopic: typeof publicQuestion.subtopic === "string" ? publicQuestion.subtopic : "",
       answered_at: answer?.answered_at || new Date().toISOString(),
       updated_at: new Date().toISOString(),
     });
   }
 
   const now = new Date().toISOString();
+  const { error: scoredAnswersError } = await supabase.rpc("persist_assessment_scored_answers", {
+    p_attempt_id: attemptId,
+    p_student_id: studentId,
+    p_rows: updates,
+  });
+  if (scoredAnswersError) throw new Error("Unable to persist authoritative scored answers");
   // Score and correctness are derived exclusively from the private key above; client fields are never accepted.
   const { data: finalized, error: finalizeError } = await supabase.rpc("finalize_assessment_attempt_result", {
     p_attempt_id: attemptId,
