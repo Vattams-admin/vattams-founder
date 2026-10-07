@@ -88,13 +88,22 @@ async function loadPublicQuestions(studentId: string, attemptId: string, token: 
     .eq("attempt_id", attemptId);
   if (answerError) throw new Error(`Answer lookup failed: ${answerError.message}`);
 
+  const orders = attempt.option_orders || {};
+  const toShuffledIndex = (questionId: string, originalIndex: unknown) => {
+    if (!Number.isInteger(originalIndex)) return originalIndex;
+    const order = Array.isArray(orders[questionId]) ? orders[questionId] : [0,1,2,3];
+    const index = order.indexOf(originalIndex as number);
+    return index >= 0 ? index : originalIndex;
+  };
+
   return {
     attempt_id: attemptId, assessment_id: attempt.assessment_id, status: attempt.status,
     questions: publicQuestions,
     answers: (answers || []).map((a: any) => ({
-      question_id: a.question_id, answer: a.answer, selected_option_index: a.selected_option_index,
+      question_id: a.question_id, answer: a.answer,
+      selected_option_index: toShuffledIndex(a.question_id, a.selected_option_index),
       ...(attempt.status === "submitted" ? {
-        is_correct: a.is_correct, correct_option_index: a.correct_option_index,
+        is_correct: a.is_correct, correct_option_index: toShuffledIndex(a.question_id, a.correct_option_index),
         explanation: a.explanation, marks_awarded: a.marks_awarded,
       } : {}),
     })),
