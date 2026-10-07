@@ -35,7 +35,8 @@
     "content:syllabus:artifact:validate": "node scripts/validate-syllabus-artifact-registry.mjs",
     "content:syllabus:source-intake:validate": "node scripts/validate-syllabus-source-intake.mjs",
     "content:syllabus:artifact:capture": "node scripts/capture-syllabus-artifact.mjs",
-    "content:syllabus:link:validate": "node scripts/validate-evidence-to-curriculum-map-link.mjs"
+    "content:syllabus:link:validate": "node scripts/validate-evidence-to-curriculum-map-link.mjs",
+    "content:curriculum:map:expand:validate": "node scripts/validate-curriculum-map-expansion.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
