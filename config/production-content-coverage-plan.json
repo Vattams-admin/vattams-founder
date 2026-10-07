@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "registry_id": "vattams-production-content-coverage-plan",
+  "purpose": "Executable planning matrix for authoring production content. Planning entries are targets only and never imply that content exists or is approved.",
+  "status_model": [
+    "not_started",
+    "authoring",
+    "in_review",
+    "approved",
+    "published",
+    "retired"
+  ],
+  "school": {
+    "target_classes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "target_curricula": [
+      {
+        "id": "cbse",
+        "coverage": "class_1_to_12"
+      },
+      {
+        "id": "cisce",
+        "coverage": "class_1_to_12",
+        "variants": [
+          "icse",
+          "isc"
+        ]
+      },
+      {
+        "id": "nios",
+        "coverage": "class_1_to_12"
+      },
+      {
+        "id": "state_board",
+        "coverage": "all_states_and_uts_class_1_to_12"
+      },
+      {
+        "id": "matriculation",
+        "coverage": "applicable_state_curricula_class_1_to_12"
+      },
+      {
+        "id": "international",
+        "coverage": "ib_cambridge_pearson_class_1_to_12"
+      }
+    ],
+    "package_sequence": [
+      "curriculum_map",
+      "subject_map",
+      "chapter_map",
+      "lesson_notes",
+      "worked_examples",
+      "practice_basic",
+      "practice_conceptual",
+      "practice_application",
+      "practice_hots",
+      "revision",
+      "weak_topic_revision",
+      "chapter_test",
+      "subject_test",
+      "mock_test",
+      "official_attempt"
+    ],
+    "separation_policy": "Never reuse one board's syllabus as another board's production syllabus. Shared concepts may be linked only after curriculum eligibility is independently established."
+  },
+  "competitive": {
+    "families": [
+      "tnpsc",
+      "upsc",
+      "ssc",
+      "banking",
+      "railways",
+      "defence",
+      "state_recruitment"
+    ],
+    "package_sequence": [
+      "syllabus_map",
+      "study_material",
+      "topic_practice",
+      "sectional_test",
+      "pyq_test",
+      "mock_test",
+      "revision",
+      "official_attempt",
+      "results"
+    ]
+  },
+  "entrance": {
+    "families": [
+      "medical",
+      "engineering",
+      "university",
+      "law",
+      "design",
+      "architecture",
+      "agriculture",
+      "pharmacy",
+      "nursing_allied_health",
+      "management",
+      "hotel_management",
+      "teacher_education",
+      "fine_arts_media"
+    ],
+    "package_sequence": [
+      "syllabus_map",
+      "study_material",
+      "topic_practice",
+      "sectional_test",
+      "mock_test",
+      "revision",
+      "official_attempt",
+      "results"
+    ]
+  },
+  "professional": {
+    "families": [
+      "accounting_finance",
+      "medicine",
+      "law",
+      "engineering_professional",
+      "it_technology",
+      "education",
+      "other_professional"
+    ],
+    "package_sequence": [
+      "qualification_map",
+      "study_material",
+      "topic_practice",
+      "sectional_test",
+      "mock_test",
+      "revision",
+      "assessment",
+      "results"
+    ]
+  },
+  "competitions": {
+    "reference": "thirukkural-mastery-championship",
+    "package_sequence": [
+      "eligibility",
+      "study_material",
+      "topic_learning",
+      "practice",
+      "mock_test",
+      "revision",
+      "official_attempt",
+      "results",
+      "certificate"
+    ],
+    "age_groups": [
+      "5-7",
+      "8-10",
+      "11-13",
+      "13-15",
+      "15-18",
+      "18+"
+    ]
+  },
+  "question_bank_standard": {
+    "mcq_options": 4,
+    "unique_options": true,
+    "answer_key_private": true,
+    "explanation_required": true,
+    "distractor_reasoning_recommended": true,
+    "public_official_attempt_must_not_reveal_answer": true,
+    "randomization": [
+      "blueprint_selection",
+      "option_shuffle",
+      "student_specific_order",
+      "recent_repetition_avoidance"
+    ],
+    "adaptive_order": [
+      "curriculum",
+      "class",
+      "age_band",
+      "difficulty",
+      "topic_distribution"
+    ]
+  },
+  "multilingual": {
+    "source_of_truth": "config/india-education-registry.json",
+    "translation_is_versioned": true,
+    "machine_translation_auto_publish": false,
+    "human_review_required": true
+  },
+  "governance": {
+    "workflow": [
+      "draft",
+      "automated_validation",
+      "quality_review",
+      "ceo_approval",
+      "published",
+      "retired"
+    ],
+    "publish_requires_approved_content": true,
+    "content_hash_required": true,
+    "audit_record_required": true
+  }
+}

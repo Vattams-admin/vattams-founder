@@ -1,0 +1,18 @@
+name: Validate Production Content Coverage Plan
+
+on:
+  pull_request:
+    paths:
+      - 'config/production-content-coverage-plan.json'
+      - 'scripts/validate-production-content-coverage-plan.mjs'
+      - 'package.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run content:coverage:plan:validate
