@@ -11,6 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Validate assessment registry
+        run: node scripts/validate-assessment-registry.mjs
+
+      - name: Validate packaged assessment banks
+        run: node scripts/validate-assessment-bank-registration.mjs
+
+      - name: Validate assessment blueprint registry
+        run: node scripts/validate-assessment-blueprint-registry.mjs
+
       - name: Upload production assessment registry
         env:
           SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
