@@ -18,6 +18,8 @@ if(!["blocked","ready"].includes(bp.status)) fail(id+": status must be blocked o
   else if(bp.sections.reduce((n,s)=>n+Number(s.question_count||0),0)!==bp.question_count) fail(id+": section counts must equal question_count");
   if(!bp.source || !fs.existsSync(path.resolve(root,bp.source))) fail(id+": source blueprint missing");
 if(bp.status==="blocked" && !bp.blocked_reason) fail(id+": blocked blueprint requires blocked_reason");
+const coveragePath=path.resolve(root,"config/assessment-blueprint-coverage/"+id+".json");
+if(bp.status==="ready" && !fs.existsSync(coveragePath)) fail(id+": ready blueprint requires coverage evidence");
   if(!["after_submission","immediate_practice","scheduled","never"].includes(bp.answer_release_policy)) fail(id+": invalid answer release policy");
   for(const band of bp.eligibility?.age_bands||[]) if(typeof band!=="string"||!band.trim()) fail(id+": invalid age band");
 }
