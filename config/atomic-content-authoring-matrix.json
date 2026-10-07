@@ -1,0 +1,267 @@
+{
+  "version": 1,
+  "matrix_id": "vattams-atomic-production-authoring",
+  "purpose": "Atomic production queue for India-wide VATTAMS Academia content. Entries are authoring targets only; they never imply content exists, is reviewed, or is published.",
+  "source_registries": [
+    "config/india-education-registry.json",
+    "config/content-library-registry.json",
+    "config/production-content-coverage-plan.json"
+  ],
+  "status_model": [
+    "not_started",
+    "authoring",
+    "in_review",
+    "approved",
+    "published",
+    "retired"
+  ],
+  "school": {
+    "class_range": [
+      1,
+      12
+    ],
+    "national_tracks": [
+      {
+        "id": "cbse",
+        "scope": "national",
+        "classes": "1-12"
+      },
+      {
+        "id": "cisce-icse",
+        "scope": "national",
+        "classes": "1-10"
+      },
+      {
+        "id": "cisce-isc",
+        "scope": "national",
+        "classes": "11-12"
+      },
+      {
+        "id": "nios",
+        "scope": "national",
+        "classes": "1-12"
+      }
+    ],
+    "state_tracks": [
+      {
+        "id": "state_board",
+        "scope": "each_state_and_ut",
+        "classes": "1-12",
+        "jurisdiction_source": "india-education-registry.states_and_uts"
+      },
+      {
+        "id": "matriculation",
+        "scope": "each_applicable_state_or_ut",
+        "classes": "1-12",
+        "jurisdiction_source": "official_curriculum_evidence"
+      }
+    ],
+    "international_tracks": [
+      {
+        "id": "ib",
+        "scope": "international",
+        "classes": "1-12"
+      },
+      {
+        "id": "cambridge-international",
+        "scope": "international",
+        "classes": "1-12"
+      },
+      {
+        "id": "pearson-edexcel",
+        "scope": "international",
+        "classes": "1-12"
+      }
+    ],
+    "atomic_package": [
+      "curriculum_map",
+      "subject_map",
+      "chapter_map",
+      "lesson_notes",
+      "concepts_definitions",
+      "worked_examples",
+      "visuals_when_curriculum_appropriate",
+      "practice_basic",
+      "practice_conceptual",
+      "practice_application",
+      "practice_hots",
+      "common_mistakes",
+      "key_takeaways",
+      "flash_recall",
+      "formula_or_fact_bank",
+      "chapter_revision",
+      "weak_topic_revision",
+      "chapter_test",
+      "subject_test",
+      "mock_test",
+      "official_attempt"
+    ],
+    "question_package": [
+      "unique_question_id",
+      "curriculum_locator",
+      "class_or_exam_locator",
+      "subject_chapter_topic_subtopic",
+      "question_type",
+      "difficulty",
+      "language",
+      "age_band",
+      "four_unique_options",
+      "private_correct_option",
+      "detailed_reasoning",
+      "marks",
+      "expected_time",
+      "source_provenance",
+      "version",
+      "review_status"
+    ]
+  },
+  "language_matrix": {
+    "source_of_truth": "config/india-education-registry.json",
+    "rule": "Only languages permitted by the applicable curriculum/official evidence may be published for a specific package.",
+    "translation_pipeline": [
+      "source_content",
+      "translation_draft",
+      "language_review",
+      "automated_validation",
+      "ceo_approval",
+      "published"
+    ],
+    "prohibited": [
+      "machine_translation_auto_publish",
+      "unreviewed_translation",
+      "cross_board_language_assumption"
+    ]
+  },
+  "assessment_matrix": {
+    "practice": {
+      "display": [
+        "question",
+        "four_options"
+      ],
+      "after_submission": [
+        "correct_answer",
+        "detailed_reasoning",
+        "distractor_reasoning",
+        "concept",
+        "revision_recommendation"
+      ]
+    },
+    "official": {
+      "display": [
+        "question",
+        "four_options"
+      ],
+      "during_attempt_hidden": [
+        "correct_answer",
+        "explanation",
+        "private_answer_key"
+      ],
+      "selection": [
+        "curriculum_eligibility",
+        "class_or_exam_eligibility",
+        "age_band",
+        "blueprint",
+        "difficulty",
+        "topic_distribution",
+        "recent_repetition_exclusion",
+        "student_specific_shuffle"
+      ],
+      "option_order": "randomized",
+      "answer_release": "never_during_attempt"
+    }
+  },
+  "exam_package": {
+    "competitive": [
+      "tnpsc",
+      "upsc",
+      "ssc",
+      "banking",
+      "railways",
+      "defence",
+      "state_recruitment",
+      "teaching",
+      "other_government"
+    ],
+    "entrance": [
+      "medical",
+      "engineering",
+      "university",
+      "law",
+      "management",
+      "design",
+      "architecture_planning",
+      "agriculture",
+      "pharmacy",
+      "nursing_allied_health",
+      "hotel_management",
+      "research_science",
+      "other_entrance"
+    ],
+    "professional": [
+      "ca",
+      "cma",
+      "cs",
+      "audit_assurance",
+      "finance_accounting",
+      "other_professional"
+    ],
+    "sequence": [
+      "syllabus_map",
+      "study_material",
+      "lesson_or_topic_notes",
+      "worked_examples_or_case_studies",
+      "topic_practice",
+      "sectional_test",
+      "pyq_when_authorized",
+      "mock_test",
+      "revision",
+      "weak_topic_revision",
+      "official_attempt",
+      "results"
+    ]
+  },
+  "competition_package": {
+    "reference": "thirukkural-mastery-championship",
+    "sequence": [
+      "eligibility",
+      "study_material",
+      "topic_learning",
+      "practice",
+      "mock_test",
+      "revision",
+      "age_group_pool",
+      "official_attempt",
+      "results",
+      "certificate"
+    ],
+    "rule": "Every competition package must meet the same security, randomization, answer-key privacy, age-adaptation and review gates as the Thirukkural reference."
+  },
+  "governance": {
+    "workflow": [
+      "draft",
+      "automated_validation",
+      "quality_review",
+      "ceo_approval",
+      "published",
+      "retired"
+    ],
+    "published_requires": [
+      "review_status=approved",
+      "content_hash",
+      "approval_identity",
+      "approval_timestamp",
+      "version",
+      "provenance"
+    ],
+    "official_assessment_requires": [
+      "published_package",
+      "private_answer_key",
+      "four_unique_options",
+      "verified_answer",
+      "reasoning",
+      "blueprint_alignment",
+      "language_review"
+    ],
+    "automatic_ceo_approval": "configured auditable CEO approval may authorize publication only after all mandatory automated and human-quality gates pass; it does not bypass them."
+  }
+}
