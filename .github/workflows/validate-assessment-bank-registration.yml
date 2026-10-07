@@ -19,6 +19,8 @@ on:
       - "supabase/functions/assessment-submit/index.ts"
       - "supabase/migrations/20261007120000_assessment_attempt_release_snapshot.sql"
       - "scripts/test-assessment-attempt-release-snapshot.mjs"
+      - "scripts/test-assessment-attempt-integrity.mjs"
+      - "supabase/migrations/20261007130000_assessment_attempt_integrity.sql"
       - "scripts/promote-assessment.mjs"
 
 jobs:
@@ -37,3 +39,4 @@ jobs:
       - run: npm run content:assessment:audit:validate
       - run: npm run content:assessment:versions:validate
       - run: npm run content:assessment:attempt:snapshot:test
+      - run: npm run content:assessment:attempt:integrity:test
