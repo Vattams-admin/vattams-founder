@@ -38,11 +38,11 @@ async function removeAssessmentEnrollment(email: string) {
 }
 
 async function login(page: Page, email: string, password: string) {
-  await page.goto("/login");
+  await page.goto("/login", { waitUntil: "domcontentloaded" });
   await page.locator("#email").fill(email);
   await page.locator("#password").fill(password);
-  await page.getByRole("button", { name: /login/i }).click();
-  await expect(page).toHaveURL(/\/dashboard/);
+  await page.getByRole("button", { name: /log in|sign in|login/i }).click();
+  await page.waitForURL(/\/dashboard(?:$|[?#])/, { timeout: 30000 });
 }
 
 async function startPublishedAssessment(page: Page) {
