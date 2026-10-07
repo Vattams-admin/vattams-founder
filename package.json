@@ -50,7 +50,8 @@
     "content:questions:ingestion:validate": "node scripts/validate-production-question-ingestion.mjs",
     "content:questions:package": "node scripts/package-production-question-bank.mjs",
     "content:assessment:banks:validate": "node scripts/validate-assessment-bank-registration.mjs",
-    "content:assessment:bank:hash:test": "node scripts/test-assessment-bank-hash-contract.mjs"
+    "content:assessment:bank:hash:test": "node scripts/test-assessment-bank-hash-contract.mjs",
+    "content:assessment:bank:path:test": "node scripts/test-assessment-bank-packager-path-contract.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
