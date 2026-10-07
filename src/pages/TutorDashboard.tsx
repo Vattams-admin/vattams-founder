@@ -120,7 +120,6 @@ export default function TutorDashboard() {
               <div className="mt-6 flex flex-wrap gap-2">
                 <Link to="/tutor/id-card" className="btn-secondary text-sm">View ID Card</Link>
                 <Link to="/tutor/onboarding-letter" className="btn-secondary text-sm">View Onboarding Letter</Link>
-                <Link to="/tutor/live-sessions" className="btn-primary text-sm">Live Sessions</Link>
               </div>
             </>
           ) : (
