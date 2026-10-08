@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 69,
-    "studyMaterials": 69,
-    "questionBank": 1025,
-    "assessments": 15
+    "lessons": 70,
+    "studyMaterials": 70,
+    "questionBank": 1040,
+    "assessments": 16
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -90,7 +90,8 @@
       "content/courses/phonics-foundation/66-k-word-families-controlled-reading/authoring-package.json",
       "content/courses/phonics-foundation/67-controlled-k-sentences-comprehension/authoring-package.json",
       "content/courses/phonics-foundation/68-controlled-k-passage-sequencing/authoring-package.json",
-      "content/courses/phonics-foundation/69-k-fluency-consolidation-diagnostic/authoring-package.json"
+      "content/courses/phonics-foundation/69-k-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/70-targeted-k-remediation-reassessment/authoring-package.json"
     ]
   },
   "governance": {
@@ -108,6 +109,7 @@
   "assessments": [
     "PF61-DIAG-01",
     "PF62-REASSESS-01",
-    "PF69-DIAG-01"
+    "PF69-DIAG-01",
+    "PF70-REASSESS-01"
   ]
 }
