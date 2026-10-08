@@ -1,0 +1,33 @@
+{
+  "packageId": "course-phonics-foundation-module-01",
+  "version": "1.0.0",
+  "domain": "course",
+  "status": "draft",
+  "locator": {
+    "course": "phonics-foundation",
+    "module": "sound-awareness-and-letter-sounds",
+    "language": "en"
+  },
+  "title": "Sound Awareness and Letter Sounds",
+  "sequence": 1,
+  "lessons": [
+    {
+      "lessonId": "01-hear-and-identify-m",
+      "sequence": 1,
+      "title": "Hear and Identify /m/",
+      "authoringPackage": "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
+    }
+  ],
+  "progression": {
+    "entrySkills": [
+      "Can attend to and imitate simple spoken sounds"
+    ],
+    "exitSkills": [
+      "Can identify initial /m/ and match M/m to /m/"
+    ]
+  },
+  "governance": {
+    "status": "draft",
+    "contentHash": "sha256:course-phonics-foundation-module-01-v1"
+  }
+}
