@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-33",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "33-cvc-spelling-short-i",
+    "topic": "short-i-vowel",
+    "subtopic": "cvc-spelling-short-i",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment short /i/ CVC words into phonemes.",
+      "Map each phoneme to the correct grapheme and spell the word.",
+      "Use read-back to verify short /i/ spelling."
+    ],
+    "concepts": [
+      "Encoding moves from spoken sounds to written graphemes.",
+      "Short /i/ must be preserved in the middle position during spelling.",
+      "Minimal contrasts expose vowel spelling errors."
+    ],
+    "definitions": [
+      {
+        "term": "encoding",
+        "definition": "Representing spoken phonemes with written graphemes."
+      },
+      {
+        "term": "segmentation",
+        "definition": "Separating a spoken word into its individual phonemes."
+      },
+      {
+        "term": "read-back",
+        "definition": "Reading a newly written word to check whether it matches the intended word."
+      }
+    ],
+    "workedExamples": [
+      "sit → /s/ /i/ /t/ → s-i-t.",
+      "pin → /p/ /i/ /n/ → p-i-n.",
+      "sat for sit → compare the middle phoneme and replace a with i."
+    ],
+    "commonMistakes": [
+      "Writing a instead of i.",
+      "Omitting the middle vowel.",
+      "Confusing i with another vowel.",
+      "Writing without first segmenting the word."
+    ],
+    "keyTakeaways": [
+      "Say it.",
+      "Segment it.",
+      "Map every sound.",
+      "Write it.",
+      "Read it back."
+    ],
+    "revisionPoints": [
+      "Word → phonemes → graphemes → spelling → read-back."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Spell sit, pin and tin from dictation."
+    ],
+    "conceptual": [
+      "Identify the vowel causing an encoding error."
+    ],
+    "application": [
+      "Encode short /i/ CVC words independently."
+    ],
+    "higherOrderThinking": [
+      "Choose the correction step that matches an i/a spelling error."
+    ],
+    "mixedReview": [
+      "Spell short /a/ and /i/ CVC words and compare."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Hear.",
+      "Segment.",
+      "Map.",
+      "Write.",
+      "Read back."
+    ],
+    "flashRecall": [
+      "sit = s-i-t",
+      "pin = p-i-n",
+      "tin = t-i-n"
+    ],
+    "formulaOrFactBank": [
+      "Encoding = segmentation + grapheme mapping"
+    ],
+    "mistakeBasedRevision": [
+      "sit → sat error: check the middle vowel.",
+      "pin → pan error: check the middle vowel."
+    ],
+    "weakTopicRevision": [
+      "Practise i/a minimal pairs before spelling the full word again."
+    ]
+  },
+  "activities": [
+    {
+      "name": "i-word dictation",
+      "steps": [
+        "Say a target word.",
+        "Repeat it.",
+        "Segment each sound.",
+        "Map each grapheme.",
+        "Write the word."
+      ]
+    },
+    {
+      "name": "Read-back check",
+      "steps": [
+        "Read the written word.",
+        "Say each grapheme sound.",
+        "Blend it.",
+        "Compare with the original word."
+      ]
+    },
+    {
+      "name": "Vowel repair",
+      "steps": [
+        "Compare sit/sat or pin/pan.",
+        "Identify the changed middle sound.",
+        "Write the correct grapheme.",
+        "Read both words."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments short /i/ CVC words with at least 80% accuracy.",
+    "Learner spells short /i/ CVC words with at least 80% accuracy.",
+    "Learner represents short /i/ with i in the middle position.",
+    "Learner uses read-back to detect and correct an encoding error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF33-Q01",
+      "question": "Which spelling matches /s/ /i/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "sit",
+        "sat",
+        "set",
+        "sip"
+      ]
+    },
+    {
+      "questionId": "PF33-Q02",
+      "question": "Which spelling matches /p/ /i/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pin",
+        "pan",
+        "pen",
+        "pit"
+      ]
+    },
+    {
+      "questionId": "PF33-Q03",
+      "question": "Which spelling matches /t/ /i/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "tin",
+        "tan",
+        "tap",
+        "pin"
+      ]
+    },
+    {
+      "questionId": "PF33-Q04",
+      "question": "Which word has i in the middle?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "sit",
+        "sat",
+        "mat",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF33-Q05",
+      "question": "Which letters spell “pin”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "p-i-n",
+        "p-a-n",
+        "p-i-t",
+        "m-i-n"
+      ]
+    },
+    {
+      "questionId": "PF33-Q06",
+      "question": "Which letters spell “tin”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "t-i-n",
+        "t-a-n",
+        "t-i-p",
+        "p-i-n"
+      ]
+    },
+    {
+      "questionId": "PF33-Q07",
+      "question": "What should you do first when spelling a spoken CVC word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Say it and segment its sounds",
+        "Guess the letters",
+        "Write the longest word",
+        "Skip the vowel"
+      ]
+    },
+    {
+      "questionId": "PF33-Q08",
+      "question": "After segmenting /s/ /i/ /t/, what should you do?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Map each sound to a grapheme and write it",
+        "Replace i with a",
+        "Skip the middle sound",
+        "Guess from the first letter"
+      ]
+    },
+    {
+      "questionId": "PF33-Q09",
+      "question": "A learner writes “sat” for “sit.” Which sound needs checking?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Middle /i/ versus /a/",
+        "Initial /s/ versus /p/",
+        "Final /t/ versus /n/",
+        "No sound"
+      ]
+    },
+    {
+      "questionId": "PF33-Q10",
+      "question": "A learner writes “pan” for “pin.” What should be checked?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Middle /i/ versus /a/",
+        "Initial /p/ versus /t/",
+        "Final /n/ versus /p/",
+        "Word length"
+      ]
+    },
+    {
+      "questionId": "PF33-Q11",
+      "question": "Why should the learner read the written word back?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "To check that the graphemes represent the intended sounds",
+        "To avoid segmentation",
+        "To add another letter",
+        "To erase the word"
+      ]
+    },
+    {
+      "questionId": "PF33-Q12",
+      "question": "Which spelling has short /i/ in the middle?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "tin",
+        "tan",
+        "tap",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF33-Q13",
+      "question": "Which contrast helps check short /i/ spelling?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "sit and sat",
+        "pin and pan",
+        "Both A and B",
+        "map and mat"
+      ]
+    },
+    {
+      "questionId": "PF33-Q14",
+      "question": "Which spelling begins p, has short /i/, and ends n?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pin",
+        "pan",
+        "pat",
+        "pit"
+      ]
+    },
+    {
+      "questionId": "PF33-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Encode taught CVC words with short /i/ accurately",
+        "Memorize unrelated spellings",
+        "Teach every vowel at once",
+        "Skip sound segmentation"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF33-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF33-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ segmentation, grapheme mapping and read-back process."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-33-v1"
+  }
+}
