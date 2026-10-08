@@ -10,6 +10,39 @@
     "published",
     "retired"
   ],
+  "course": {
+    "families": [
+      "school_foundation",
+      "phonics_early_learning",
+      "language_learning",
+      "academic_foundation",
+      "diploma",
+      "engineering",
+      "medical",
+      "professional_skills",
+      "certification"
+    ],
+    "package_sequence": [
+      "course_map",
+      "module_map",
+      "lesson_notes",
+      "concepts_definitions",
+      "worked_examples",
+      "activities",
+      "study_material",
+      "practice_basic",
+      "practice_conceptual",
+      "practice_application",
+      "practice_hots",
+      "revision",
+      "weak_topic_revision",
+      "chapter_test",
+      "subject_test",
+      "mock_test",
+      "official_assessment",
+      "outcomes"
+    ]
+  },
   "school": {
     "target_classes": [
       1,
