@@ -1,0 +1,413 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-12",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "12-controlled-cvc-passage-sequencing",
+    "topic": "early-reading",
+    "subtopic": "controlled-passage-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a short controlled CVC passage accurately.",
+      "Recall key details across connected sentences.",
+      "Identify simple sequence and stated meaning in a controlled passage."
+    ],
+    "concepts": [
+      "Passage reading requires holding information across sentences.",
+      "Sequence can be reconstructed from explicit events.",
+      "Rereading the relevant sentence is a reliable comprehension strategy."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "The order in which events or ideas happen in a text."
+      },
+      {
+        "term": "passage",
+        "definition": "A connected group of sentences that communicates a small amount of meaning."
+      }
+    ],
+    "workedExamples": [
+      "Sam sat. Sam sat at a mat. → first: Sam sat; next: Sam sat at a mat.",
+      "Question: Where did Sam sit? → find the stated detail: at a mat."
+    ],
+    "commonMistakes": [
+      "Remembering one word but losing the event.",
+      "Changing the order of events.",
+      "Answering from imagination instead of the text.",
+      "Not rereading when a detail is forgotten."
+    ],
+    "keyTakeaways": [
+      "Read all sentences.",
+      "Hold the key details.",
+      "Track order.",
+      "Return to the text when unsure."
+    ],
+    "revisionPoints": [
+      "First → next → detail → main idea.",
+      "Text evidence comes from the words that were read."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read a two-sentence controlled passage aloud."
+    ],
+    "conceptual": [
+      "Identify first and next events."
+    ],
+    "application": [
+      "Locate a stated detail in the passage."
+    ],
+    "higherOrderThinking": [
+      "Explain why rereading the relevant sentence improves accuracy."
+    ],
+    "mixedReview": [
+      "Decode, sequence, recall and answer literal questions."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Read.",
+      "Remember.",
+      "Sequence.",
+      "Reread to check."
+    ],
+    "flashRecall": [
+      "Sam sat.",
+      "Sam sat at a mat."
+    ],
+    "formulaOrFactBank": [
+      "Passage comprehension = accurate decoding + connected recall + text-based answers"
+    ],
+    "mistakeBasedRevision": [
+      "If the sequence is wrong, reread and identify first and next events.",
+      "If a detail is forgotten, locate it in the passage."
+    ],
+    "weakTopicRevision": [
+      "Read the same short passage twice and retell two key events in order."
+    ]
+  },
+  "activities": [
+    {
+      "name": "First and next",
+      "steps": [
+        "Read the passage.",
+        "Tell what happened first.",
+        "Tell what happened next.",
+        "Check against the text."
+      ]
+    },
+    {
+      "name": "Detail hunt",
+      "steps": [
+        "Read the passage.",
+        "Ask one who/what/where question.",
+        "Find the exact sentence that answers it.",
+        "Answer aloud."
+      ]
+    },
+    {
+      "name": "Retell",
+      "steps": [
+        "Read the passage twice.",
+        "Retell two events in order.",
+        "Reread to self-check."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner reads a short controlled passage with accurate decoding.",
+    "Learner recalls at least 4 of 5 key details or sequence items.",
+    "Learner answers at least 4 of 5 text-based comprehension questions."
+  ],
+  "questions": [
+    {
+      "questionId": "PF12-Q01",
+      "question": "Read: “Sam sat. Sam sat at a mat.” Who is the passage about?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Sam",
+        "Mat",
+        "Map",
+        "Tap"
+      ]
+    },
+    {
+      "questionId": "PF12-Q02",
+      "question": "What did Sam do first?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Sat",
+        "Tapped a map",
+        "Ran",
+        "Slept"
+      ]
+    },
+    {
+      "questionId": "PF12-Q03",
+      "question": "Where did Sam sit?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "At a mat",
+        "At a map",
+        "At a tap",
+        "At a cat"
+      ]
+    },
+    {
+      "questionId": "PF12-Q04",
+      "question": "Which word appears more than once in the passage?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Sam",
+        "cat",
+        "map",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF12-Q05",
+      "question": "What happened after Sam sat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Sam sat at a mat",
+        "Sam ran",
+        "Sam slept",
+        "Sam made a map"
+      ]
+    },
+    {
+      "questionId": "PF12-Q06",
+      "question": "Why can rereading help after reading a short passage?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "It helps the learner confirm words and meaning",
+        "It removes the need to decode",
+        "It changes the story",
+        "It makes every word unfamiliar"
+      ]
+    },
+    {
+      "questionId": "PF12-Q07",
+      "question": "Which question asks about sequence?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "What happened first?",
+        "Who is Sam?",
+        "How many letters are in Sam?",
+        "Which letter is m?"
+      ]
+    },
+    {
+      "questionId": "PF12-Q08",
+      "question": "Which question asks about a stated detail?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Where did Sam sit?",
+        "What sound is /m/?",
+        "How many letters are in mat?",
+        "Which word rhymes with sat?"
+      ]
+    },
+    {
+      "questionId": "PF12-Q09",
+      "question": "A learner remembers “Sam” but not what happened. What is the best next step?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Reread the passage and look for the action",
+        "Guess the ending",
+        "Skip the passage",
+        "Read only the first letter"
+      ]
+    },
+    {
+      "questionId": "PF12-Q10",
+      "question": "What is the main idea of the short passage?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Sam sat at a mat",
+        "Sam made a map",
+        "Sam ran fast",
+        "Sam tapped a drum"
+      ]
+    },
+    {
+      "questionId": "PF12-Q11",
+      "question": "Which order matches the passage?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Sam sat → Sam sat at a mat",
+        "Sam ran → Sam sat → Sam slept",
+        "Sam made a map → Sam ran",
+        "Sam tapped → Sam slept"
+      ]
+    },
+    {
+      "questionId": "PF12-Q12",
+      "question": "What should a learner do before answering a passage question?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Make sure the passage has been decoded and understood",
+        "Guess from one word",
+        "Ignore the passage",
+        "Choose the longest answer"
+      ]
+    },
+    {
+      "questionId": "PF12-Q13",
+      "question": "Which skill is added when reading a passage instead of one sentence?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Holding connected information across sentences",
+        "Learning a new alphabet",
+        "Skipping word decoding",
+        "Ignoring meaning"
+      ]
+    },
+    {
+      "questionId": "PF12-Q14",
+      "question": "If a learner answers incorrectly, what is a useful strategy?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Find the relevant sentence and reread it",
+        "Memorise the wrong answer",
+        "Skip all questions",
+        "Change every word"
+      ]
+    },
+    {
+      "questionId": "PF12-Q15",
+      "question": "What shows successful early passage reading?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Accurate decoding, recall of key details and simple meaning",
+        "Fast guessing only",
+        "Letter naming without reading",
+        "Memorising answers without reading"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF12-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    },
+    {
+      "questionId": "PF12-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer is supported directly by the controlled passage-reading and comprehension skill being assessed."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-12-v1"
+  }
+}
