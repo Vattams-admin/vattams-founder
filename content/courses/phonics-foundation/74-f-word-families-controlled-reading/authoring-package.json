@@ -1,0 +1,424 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-74",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "74-f-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "f-word-families-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognize common CVC word families containing /f/.",
+      "Identify shared rime patterns across words.",
+      "Decode controlled /f/ word-family words.",
+      "Read short controlled text with increasing accuracy."
+    ],
+    "concepts": [
+      "Words can share a common rime while changing the onset.",
+      "Word families support pattern recognition but do not replace phoneme-level decoding.",
+      "Controlled rereading supports accuracy and fluency."
+    ],
+    "definitions": [
+      {
+        "term": "word family",
+        "definition": "A group of words sharing the same rime pattern."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and following sounds in a syllable."
+      },
+      {
+        "term": "onset",
+        "definition": "The initial consonant or consonant cluster before the rime."
+      }
+    ],
+    "workedExamples": [
+      "fan, man → -an",
+      "fit, sit → -it",
+      "fun, sun → -un",
+      "fog, log → -og",
+      "fed, bed → -ed"
+    ],
+    "commonMistakes": [
+      "Treating all words in a family as identical.",
+      "Ignoring the onset.",
+      "Guessing from the rime without blending the onset.",
+      "Reading controlled text only once."
+    ],
+    "keyTakeaways": [
+      "Notice the rime.",
+      "Keep the onset.",
+      "Blend the whole word.",
+      "Reread connected text."
+    ],
+    "revisionPoints": [
+      "onset",
+      "rime",
+      "word families",
+      "controlled reading",
+      "rereading"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Sort /f/ CVC words into common rime families."
+    ],
+    "conceptual": [
+      "Explain how onset changes while rime stays constant."
+    ],
+    "application": [
+      "Read controlled word-family sentences and identify evidence."
+    ],
+    "higherOrderThinking": [
+      "Explain why family recognition still requires full-word decoding."
+    ],
+    "mixedReview": [
+      "Mix /f/ families with previously learned CVC patterns."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "find onset → find rime → blend → reread"
+    ],
+    "flashRecall": [
+      "-an",
+      "-it",
+      "-un",
+      "-og",
+      "-ed"
+    ],
+    "formulaOrFactBank": [
+      "Word = onset + rime."
+    ],
+    "mistakeBasedRevision": [
+      "If the learner guesses from the family, return to sound-by-sound blending."
+    ],
+    "weakTopicRevision": [
+      "Practice the weakest rime family with fresh controlled words."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Family sort",
+      "steps": [
+        "Read each word.",
+        "Identify the rime.",
+        "Place it in the matching family.",
+        "Read the completed family."
+      ]
+    },
+    {
+      "name": "Onset swap",
+      "steps": [
+        "Keep a rime constant.",
+        "Change the onset.",
+        "Blend each resulting word.",
+        "Check that each word is real and readable."
+      ]
+    },
+    {
+      "name": "Controlled reread",
+      "steps": [
+        "Read a short controlled passage.",
+        "Mark any decoding errors.",
+        "Repair the word.",
+        "Reread the passage smoothly."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner recognizes common /f/ word families.",
+    "Learner preserves onset and rime during decoding.",
+    "Learner reads controlled /f/ text with improving accuracy."
+  ],
+  "questions": [
+    {
+      "questionId": "PF74-Q01",
+      "question": "Which word belongs to the -an family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fan",
+        "fit",
+        "fog",
+        "fed"
+      ]
+    },
+    {
+      "questionId": "PF74-Q02",
+      "question": "Which word belongs to the -it family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fit",
+        "fan",
+        "fun",
+        "fox"
+      ]
+    },
+    {
+      "questionId": "PF74-Q03",
+      "question": "Which word belongs to the -un family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fun",
+        "fed",
+        "fog",
+        "fan"
+      ]
+    },
+    {
+      "questionId": "PF74-Q04",
+      "question": "Which word belongs to the -og family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fog",
+        "fit",
+        "fan",
+        "fun"
+      ]
+    },
+    {
+      "questionId": "PF74-Q05",
+      "question": "Which word belongs to the -ed family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fed",
+        "fan",
+        "fig",
+        "fog"
+      ]
+    },
+    {
+      "questionId": "PF74-Q06",
+      "question": "Which pair shares the same rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fan and man",
+        "fan and fit",
+        "fog and fed",
+        "fun and fan"
+      ]
+    },
+    {
+      "questionId": "PF74-Q07",
+      "question": "What is the rime in “fan”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "-an",
+        "f-",
+        "-in",
+        "-un"
+      ]
+    },
+    {
+      "questionId": "PF74-Q08",
+      "question": "Which word can join the -an family with a new onset?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "man",
+        "mud",
+        "sit",
+        "dog"
+      ]
+    },
+    {
+      "questionId": "PF74-Q09",
+      "question": "Which word is in the same family as “fog”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "log",
+        "leg",
+        "lid",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF74-Q10",
+      "question": "Which word is in the same family as “fun”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "sun",
+        "sit",
+        "sad",
+        "fog"
+      ]
+    },
+    {
+      "questionId": "PF74-Q11",
+      "question": "A learner reads “fan” and “fit” as if they are the same pattern. What should be compared?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Their rimes and middle vowel sounds",
+        "Their capital letters",
+        "Their punctuation",
+        "Their word length only"
+      ]
+    },
+    {
+      "questionId": "PF74-Q12",
+      "question": "Why does word-family practice help reading?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "It highlights recurring rime patterns that can be recognized across words",
+        "It replaces phoneme blending",
+        "It teaches every irregular word",
+        "It removes the need for decoding"
+      ]
+    },
+    {
+      "questionId": "PF74-Q13",
+      "question": "In the sentence “The fox is on the mat,” which word belongs to the -ox family?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fox",
+        "the",
+        "is",
+        "on"
+      ]
+    },
+    {
+      "questionId": "PF74-Q14",
+      "question": "What is the best way to read a new controlled /f/ word-family text?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Decode unfamiliar words, then reread for smoother accuracy",
+        "Guess every word from pictures",
+        "Skip words that are difficult",
+        "Memorize the whole passage before reading"
+      ]
+    },
+    {
+      "questionId": "PF74-Q15",
+      "question": "A learner accurately reads several -an words but struggles with -og words. What is the best response?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Target -og decoding and rereading with fresh controlled words",
+        "Stop word-family practice",
+        "Move to advanced text immediately",
+        "Only practice handwriting"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF74-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF74-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly identifies the requested /f/ word-family or controlled-reading response."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-74-v1"
+  }
+}
