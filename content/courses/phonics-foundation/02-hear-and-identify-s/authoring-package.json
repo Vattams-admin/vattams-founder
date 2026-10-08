@@ -1,0 +1,337 @@
+{
+  "packageId": "course-phonics-foundation-02-hear-and-identify-s",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "02-hear-and-identify-s",
+    "topic": "/s/-sound",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Hear /s/ at the beginning of familiar spoken words.",
+      "Connect /s/ to s/S.",
+      "Distinguish the target sound from contrasting sounds."
+    ],
+    "concepts": [
+      "/s/ is a phoneme.",
+      "s/S is a common grapheme for /s/."
+    ],
+    "definitions": [
+      {
+        "term": "phoneme",
+        "definition": "The smallest unit of sound that can change a word's meaning."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A written representation of a speech sound."
+      }
+    ],
+    "workedExamples": [
+      {
+        "word": "sun",
+        "letter": "s",
+        "example": "sun begins with /s/."
+      },
+      {
+        "word": "sock",
+        "letter": "s",
+        "example": "sock begins with /s/."
+      }
+    ],
+    "commonMistakes": [
+      "Naming the letter instead of producing the sound.",
+      "Adding an unnecessary vowel to an isolated consonant."
+    ],
+    "keyTakeaways": [
+      "/s/ is the target initial sound.",
+      "Listen first, then connect the sound to s/S."
+    ],
+    "revisionPoints": [
+      "Identify /s/ in spoken words.",
+      "Match s/S to /s/."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Choose a word beginning with /s/.",
+        "answer": "sun"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Why does sun belong in the /s/ group?",
+        "answer": "Its initial speech sound is /s/."
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Sort words by whether they begin with /s/.",
+        "answer": "Place target words in the matching sound group."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "A learner knows the letter but cannot hear the sound. What should be practised?",
+        "answer": "Oral phonemic listening and isolated sound production."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which written letter represents /s/?",
+        "answer": "s"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "/s/ is the target sound.",
+      "s/S represents /s/."
+    ],
+    "flashRecall": [
+      {
+        "front": "Target sound?",
+        "back": "/s/"
+      }
+    ],
+    "formulaOrFactBank": [
+      "sun → /s/"
+    ],
+    "mistakeBasedRevision": [
+      "Do not substitute the letter name for the speech sound."
+    ],
+    "weakTopicRevision": [
+      "Repeat spoken-word sorting if /s/ identification is weak."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "listen-and-sort",
+      "instruction": "Sort spoken words beginning with /s/."
+    },
+    {
+      "id": "ACT2",
+      "type": "sound-match",
+      "instruction": "Match s/S to /s/."
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "O1",
+      "statement": "Identify /s/ in at least 8 of 10 spoken words.",
+      "measure": "initial-sound accuracy",
+      "target": "80%+"
+    },
+    {
+      "id": "O2",
+      "statement": "Match s/S to /s/ with at least 90% accuracy.",
+      "measure": "grapheme-sound matching",
+      "target": "90%+"
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "PHON-S-001",
+      "question": "Which word begins with /s/?",
+      "options": [
+        "sun",
+        "m",
+        "t",
+        "p"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-S-002",
+      "question": "Which lowercase letter commonly represents /s/?",
+      "options": [
+        "s",
+        "m",
+        "t",
+        "p"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-S-003",
+      "question": "Which pair begins with /s/?",
+      "options": [
+        "sun and sock",
+        "sun and m",
+        "sock and t",
+        "sand and p"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-S-004",
+      "question": "What is the initial sound in 'sun'?",
+      "options": [
+        "/s/",
+        "/m/",
+        "/t/",
+        "/p/"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-S-005",
+      "question": "Which word does NOT begin with /s/?",
+      "options": [
+        "sun",
+        "sock",
+        "m",
+        "sand"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-S-006",
+      "question": "Which uppercase letter commonly represents /s/?",
+      "options": [
+        "S",
+        "M",
+        "T",
+        "P"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-S-007",
+      "question": "What is the written symbol s?",
+      "options": [
+        "a letter",
+        "a phoneme",
+        "a syllable",
+        "a sentence"
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-S-008",
+      "question": "Why does 'sock' belong in a /s/ group?",
+      "options": [
+        "It starts with /s/.",
+        "It has four letters.",
+        "It ends with k.",
+        "It is a noun."
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-S-009",
+      "question": "Which sequence contains only words beginning with /s/?",
+      "options": [
+        "sun, sock, sand",
+        "sun, m, sock",
+        "sock, t, sun",
+        "sand, p, sun"
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-S-010",
+      "question": "A learner knows the letter but cannot hear the sound. What should be practised?",
+      "options": [
+        "Oral phonemic listening and isolated sound production",
+        "Copying the alphabet",
+        "Counting letters",
+        "Punctuation"
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PHON-S-001",
+      "correctOptionIndex": 0,
+      "explanation": "\"sun\" begins with /s/."
+    },
+    {
+      "questionId": "PHON-S-002",
+      "correctOptionIndex": 0,
+      "explanation": "Lowercase s commonly represents /s/."
+    },
+    {
+      "questionId": "PHON-S-003",
+      "correctOptionIndex": 0,
+      "explanation": "Both target words begin with /s/."
+    },
+    {
+      "questionId": "PHON-S-004",
+      "correctOptionIndex": 0,
+      "explanation": "sun begins with /s/."
+    },
+    {
+      "questionId": "PHON-S-005",
+      "correctOptionIndex": 2,
+      "explanation": "m does not begin with /s/."
+    },
+    {
+      "questionId": "PHON-S-006",
+      "correctOptionIndex": 0,
+      "explanation": "Uppercase S commonly represents /s/."
+    },
+    {
+      "questionId": "PHON-S-007",
+      "correctOptionIndex": 0,
+      "explanation": "s is a written letter."
+    },
+    {
+      "questionId": "PHON-S-008",
+      "correctOptionIndex": 0,
+      "explanation": "Its initial speech sound is /s/."
+    },
+    {
+      "questionId": "PHON-S-009",
+      "correctOptionIndex": 0,
+      "explanation": "All three target words begin with the target sound."
+    },
+    {
+      "questionId": "PHON-S-010",
+      "correctOptionIndex": 0,
+      "explanation": "The learner needs oral phonemic listening and sound production practice."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia authored phonics curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:02-hear-and-identify-s-v1"
+  }
+}
