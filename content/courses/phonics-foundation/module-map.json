@@ -184,7 +184,8 @@
           "Can segment and spell /k/ CVC words by mapping each phoneme to a letter.",
           "Can recognize /k/ CVC word-family patterns and read them accurately in controlled text.",
           "Can read controlled /k/ sentences and answer meaning questions using text evidence.",
-          "Can read a controlled /k/ passage, sequence events, and retell using text evidence."
+          "Can read a controlled /k/ passage, sequence events, and retell using text evidence.",
+          "Can demonstrate /k/ sound recognition, decoding, encoding, comprehension, and fluency for diagnostic routing."
         ]
       },
       "lessons": [
@@ -517,6 +518,12 @@
           "sequence": 68,
           "title": "Controlled /k/ Passage and Sequencing",
           "authoringPackage": "content/courses/phonics-foundation/68-controlled-k-passage-sequencing/authoring-package.json"
+        },
+        {
+          "lessonId": "69-k-fluency-consolidation-diagnostic",
+          "sequence": 69,
+          "title": "/k/ Fluency Consolidation Diagnostic",
+          "authoringPackage": "content/courses/phonics-foundation/69-k-fluency-consolidation-diagnostic/authoring-package.json"
         }
       ]
     }
