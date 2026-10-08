@@ -6,6 +6,9 @@ const matrix=JSON.parse(fs.readFileSync(path.join(root,"config/atomic-content-au
 const registry=JSON.parse(fs.readFileSync(path.join(root,"config/india-education-registry.json"),"utf8"));
 const errors=[];
 const fail=(m)=>errors.push(m);
+if (!matrix.course) fail("course authoring matrix is required");
+if (matrix.course && !matrix.course.atomic_package.includes("lesson_notes")) fail("course matrix must include lesson_notes");
+if (matrix.course && !matrix.course.atomic_package.includes("outcomes")) fail("course matrix must include outcomes");
 const requiredClasses=Array.from({length:12},(_,i)=>i+1);
 if(JSON.stringify(matrix.school.class_range)!==JSON.stringify(requiredClasses)) fail("school class range must be 1-12");
 for(const id of ["cbse","cisce-icse","cisce-isc","nios"]) if(!matrix.school.national_tracks.some(x=>x.id===id)) fail("missing national track "+id);
