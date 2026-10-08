@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-89",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "89-cvc-spelling-with-l",
+    "topic": "cvc-spelling",
+    "subtopic": "spell-cvc-l",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment taught l CVC words into phonemes.",
+      "Map each phoneme to the correct grapheme.",
+      "Spell l CVC words from spoken dictation.",
+      "Self-correct vowel and consonant spelling errors."
+    ],
+    "concepts": [
+      "CVC spelling requires ordered phoneme segmentation.",
+      "The grapheme l represents /l/.",
+      "Short-vowel selection changes the written word.",
+      "Self-correction starts by isolating the incorrect sound."
+    ],
+    "definitions": [
+      {
+        "term": "phoneme",
+        "definition": "The smallest unit of sound in a spoken word."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A letter or letter group representing a speech sound."
+      },
+      {
+        "term": "segment",
+        "definition": "Separate a spoken word into its individual phonemes."
+      }
+    ],
+    "workedExamples": [
+      "/l/ /ɪ/ /p/ → l-i-p → lip.",
+      "/l/ /ɒ/ /g/ → l-o-g → log.",
+      "/l/ /ʌ/ /g/ → l-u-g → lug."
+    ],
+    "commonMistakes": [
+      "Confusing short vowels.",
+      "Replacing l with a different consonant.",
+      "Leaving out the final consonant.",
+      "Writing letter names instead of graphemes."
+    ],
+    "keyTakeaways": [
+      "Say the word.",
+      "Segment every sound.",
+      "Write each sound in order.",
+      "Read back and check."
+    ],
+    "revisionPoints": [
+      "segment CVC",
+      "l = /l/",
+      "short vowels",
+      "final consonants",
+      "read-back check"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Spell taught l CVC words from dictation."
+    ],
+    "conceptual": [
+      "Identify the phoneme represented by each written grapheme."
+    ],
+    "application": [
+      "Repair CVC spelling errors by isolating the incorrect phoneme."
+    ],
+    "higherOrderThinking": [
+      "Explain how changing one middle vowel changes the written CVC word."
+    ],
+    "mixedReview": [
+      "Mix l CVC spelling with previously taught consonants and short vowels."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "hear → segment → map → write → check"
+    ],
+    "flashRecall": [
+      "lip",
+      "lap",
+      "log",
+      "lug",
+      "let"
+    ],
+    "formulaOrFactBank": [
+      "CVC spelling = phoneme sequence mapped to graphemes in order."
+    ],
+    "mistakeBasedRevision": [
+      "If spelling is wrong, say the word slowly and identify the mismatched sound."
+    ],
+    "weakTopicRevision": [
+      "Practise the weakest short-vowel pattern with fresh l CVC words."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound boxes",
+      "steps": [
+        "Say a taught l CVC word.",
+        "Push one counter for each phoneme.",
+        "Write one grapheme for each sound.",
+        "Read the completed word."
+      ]
+    },
+    {
+      "name": "Vowel contrast dictation",
+      "steps": [
+        "Say two similar CVC words.",
+        "Identify the middle phoneme.",
+        "Write the matching vowel.",
+        "Read both words back."
+      ]
+    },
+    {
+      "name": "Spell and repair",
+      "steps": [
+        "Write a dictated word.",
+        "Compare each sound with the spelling.",
+        "Circle the mismatched grapheme.",
+        "Rewrite and reread."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments taught l CVC words accurately.",
+    "Learner maps phonemes to graphemes in order.",
+    "Learner spells taught l CVC words and self-corrects common errors."
+  ],
+  "questions": [
+    {
+      "questionId": "PF89-Q01",
+      "question": "Which word has the sounds /l/ /ɪ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lip",
+        "lap",
+        "log",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF89-Q02",
+      "question": "Which letters spell /l/ at the beginning of “lip”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "l",
+        "r",
+        "f",
+        "m"
+      ]
+    },
+    {
+      "questionId": "PF89-Q03",
+      "question": "Which word is spelled l-a-p?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lap",
+        "lip",
+        "lop",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF89-Q04",
+      "question": "Which word is spelled l-o-g?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "log",
+        "lag",
+        "leg",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF89-Q05",
+      "question": "Which word is spelled l-u-g?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lug",
+        "lag",
+        "log",
+        "leg"
+      ]
+    },
+    {
+      "questionId": "PF89-Q06",
+      "question": "Which word is spelled l-e-t?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "let",
+        "lit",
+        "lot",
+        "lat"
+      ]
+    },
+    {
+      "questionId": "PF89-Q07",
+      "question": "How many sounds are in “lap”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "3",
+        "2",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "questionId": "PF89-Q08",
+      "question": "What letter should come after l in “lip”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "i",
+        "a",
+        "o",
+        "u"
+      ]
+    },
+    {
+      "questionId": "PF89-Q09",
+      "question": "What is the final letter in “log”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "g",
+        "l",
+        "o",
+        "r"
+      ]
+    },
+    {
+      "questionId": "PF89-Q10",
+      "question": "A learner hears /l/ /ɪ/ /p/. What should they do first to spell the word?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Map each sound to a letter in order.",
+        "Choose a word from a picture.",
+        "Write the final letter first.",
+        "Skip the middle sound."
+      ]
+    },
+    {
+      "questionId": "PF89-Q11",
+      "question": "A learner writes “lap” for the spoken word “lip.” Which sound needs checking?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle vowel /ɪ/.",
+        "The first sound /l/.",
+        "The final sound /p/.",
+        "All punctuation."
+      ]
+    },
+    {
+      "questionId": "PF89-Q12",
+      "question": "A learner writes “rog” when asked to spell “log.” Which sound should be corrected?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The first sound /l/.",
+        "The middle vowel /ɒ/.",
+        "The final sound /g/.",
+        "The number of sounds."
+      ]
+    },
+    {
+      "questionId": "PF89-Q13",
+      "question": "Why is it useful to say each phoneme before writing?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "It helps map each sound to the correct grapheme.",
+        "It removes the need to hear vowels.",
+        "It makes every word longer.",
+        "It replaces spelling practice."
+      ]
+    },
+    {
+      "questionId": "PF89-Q14",
+      "question": "A learner spells “lug” correctly but cannot spell “leg.” What is the best next practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Contrast the middle vowel sounds and spell both words from dictation.",
+        "Practice only the first letter.",
+        "Skip vowel practice.",
+        "Move directly to advanced spelling."
+      ]
+    },
+    {
+      "questionId": "PF89-Q15",
+      "question": "After spelling several taught l CVC words accurately, what should follow?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Controlled l word-family reading and sentence spelling",
+        "Stop using phoneme segmentation",
+        "Move to unrelated advanced words",
+        "Skip checking the final sound"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF89-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    },
+    {
+      "questionId": "PF89-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC spelling item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-89-v1"
+  }
+}
