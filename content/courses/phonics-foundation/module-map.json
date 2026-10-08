@@ -16,6 +16,18 @@
       "sequence": 1,
       "title": "Hear and Identify /m/",
       "authoringPackage": "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
+    },
+    {
+      "lessonId": "02-hear-and-identify-s",
+      "sequence": 2,
+      "title": "Hear and Identify /s/",
+      "authoringPackage": "content/courses/phonics-foundation/02-hear-and-identify-s/authoring-package.json"
+    },
+    {
+      "lessonId": "03-hear-and-identify-t",
+      "sequence": 3,
+      "title": "Hear and Identify /t/",
+      "authoringPackage": "content/courses/phonics-foundation/03-hear-and-identify-t/authoring-package.json"
     }
   ],
   "progression": {
@@ -23,7 +35,7 @@
       "Can attend to and imitate simple spoken sounds"
     ],
     "exitSkills": [
-      "Can identify initial /m/ and match M/m to /m/"
+      "Can identify initial /m/, /s/ and /t/ and match M/m, S/s and T/t to their sounds."
     ]
   },
   "governance": {
