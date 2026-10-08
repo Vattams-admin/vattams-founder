@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-57",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "57-cvc-spelling-short-u",
+    "topic": "short-u-vowel",
+    "subtopic": "cvc-encoding-and-spelling",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment short-/u/ CVC words into phonemes.",
+      "Map each phoneme to the correct grapheme.",
+      "Spell taught short-/u/ CVC words accurately.",
+      "Use read-back to verify sound-to-letter encoding."
+    ],
+    "concepts": [
+      "Encoding moves from spoken sounds to written graphemes.",
+      "Short /u/ is represented by u in the taught CVC pattern.",
+      "Each phoneme should be represented before the completed word is reread."
+    ],
+    "definitions": [
+      {
+        "term": "encoding",
+        "definition": "Representing spoken sounds with written letters or graphemes."
+      },
+      {
+        "term": "segmentation",
+        "definition": "Separating a word into its individual phonemes."
+      },
+      {
+        "term": "sound-to-letter mapping",
+        "definition": "Matching each heard phoneme to the grapheme used to represent it."
+      }
+    ],
+    "workedExamples": [
+      "sun → /s/ /u/ /n/ → s-u-n → read back sun.",
+      "mud → /m/ /u/ /d/ → m-u-d → read back mud.",
+      "cup versus cop → compare the middle /u/ and /o/ before writing."
+    ],
+    "commonMistakes": [
+      "Using o or a instead of u.",
+      "Skipping the middle vowel.",
+      "Writing from memory without segmenting.",
+      "Not reading the completed word back."
+    ],
+    "keyTakeaways": [
+      "Say the word.",
+      "Segment each sound.",
+      "Map each sound.",
+      "Write the graphemes.",
+      "Read it back."
+    ],
+    "revisionPoints": [
+      "spoken word → phonemes → graphemes → written word",
+      "short /u/ → u",
+      "sun, mud, cup, tub, fun"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Segment and spell short-/u/ CVC words."
+    ],
+    "conceptual": [
+      "Identify which grapheme represents the vowel phoneme."
+    ],
+    "application": [
+      "Spell dictated short-/u/ CVC words using sound boxes or oral segmentation."
+    ],
+    "higherOrderThinking": [
+      "Diagnose a vowel spelling error and select the correct repair."
+    ],
+    "mixedReview": [
+      "Mix short-/u/ encoding with familiar short-vowel contrasts."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Say → segment → map → write → read back."
+    ],
+    "flashRecall": [
+      "sun",
+      "mud",
+      "cup",
+      "tub",
+      "fun"
+    ],
+    "formulaOrFactBank": [
+      "short /u/ → u"
+    ],
+    "mistakeBasedRevision": [
+      "u/o or u/a confusion → compare middle phonemes before writing."
+    ],
+    "weakTopicRevision": [
+      "Repeat sound-to-letter mapping for the middle vowel in fresh CVC words."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-box encoding",
+      "steps": [
+        "Say a CVC word.",
+        "Push one counter for each sound.",
+        "Replace each counter with its letter.",
+        "Read the completed word."
+      ]
+    },
+    {
+      "name": "Dictation and repair",
+      "steps": [
+        "Hear the word.",
+        "Segment it.",
+        "Write each grapheme.",
+        "Check the middle vowel.",
+        "Reread."
+      ]
+    },
+    {
+      "name": "Minimal-pair spelling",
+      "steps": [
+        "Compare cup and cop.",
+        "Say the middle sounds.",
+        "Choose u or o.",
+        "Write and reread both."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments taught short-/u/ CVC words accurately.",
+    "Learner maps short /u/ to u in the middle position.",
+    "Learner spells taught short-/u/ CVC words with accurate phoneme-grapheme correspondence.",
+    "Learner detects and repairs a vowel encoding error by rereading the word."
+  ],
+  "questions": [
+    {
+      "questionId": "PF57-Q01",
+      "question": "Which letter represents the middle sound in sun?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "u",
+        "a",
+        "i",
+        "o"
+      ]
+    },
+    {
+      "questionId": "PF57-Q02",
+      "question": "Which spelling matches /s/ /u/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "sun",
+        "san",
+        "sin",
+        "son"
+      ]
+    },
+    {
+      "questionId": "PF57-Q03",
+      "question": "Which word is correctly spelled for /m/ /u/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "mud",
+        "mad",
+        "mid",
+        "mod"
+      ]
+    },
+    {
+      "questionId": "PF57-Q04",
+      "question": "What should you do first when spelling cup?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say and segment /c/ /u/ /p/",
+        "Guess the word shape",
+        "Write the final letter only",
+        "Skip the vowel"
+      ]
+    },
+    {
+      "questionId": "PF57-Q05",
+      "question": "Which spelling represents /t/ /u/ /b/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "tub",
+        "tab",
+        "tib",
+        "tob"
+      ]
+    },
+    {
+      "questionId": "PF57-Q06",
+      "question": "Which letter should be written for the short /u/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "u",
+        "a",
+        "i",
+        "o"
+      ]
+    },
+    {
+      "questionId": "PF57-Q07",
+      "question": "A learner writes cop for cup. Which part should be repaired?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The middle vowel grapheme",
+        "The initial consonant",
+        "The final consonant",
+        "The word spacing"
+      ]
+    },
+    {
+      "questionId": "PF57-Q08",
+      "question": "Which word has the same middle vowel as fun?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "run",
+        "fan",
+        "fin",
+        "fon"
+      ]
+    },
+    {
+      "questionId": "PF57-Q09",
+      "question": "Which sequence supports accurate CVC spelling?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say → segment → map sounds → write → read back",
+        "Guess → write → skip checking",
+        "Write the first letter → guess the rest",
+        "Copy without saying sounds"
+      ]
+    },
+    {
+      "questionId": "PF57-Q10",
+      "question": "Which spelling is correct for /h/ /u/ /t/?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hut",
+        "hat",
+        "hit",
+        "hot"
+      ]
+    },
+    {
+      "questionId": "PF57-Q11",
+      "question": "Why read the word back after spelling it?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "To check that the written graphemes represent the intended sounds",
+        "To make the word longer",
+        "To avoid segmentation",
+        "To replace phoneme practice"
+      ]
+    },
+    {
+      "questionId": "PF57-Q12",
+      "question": "Which spelling contains short /u/?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "bug",
+        "bag",
+        "big",
+        "bog"
+      ]
+    },
+    {
+      "questionId": "PF57-Q13",
+      "question": "If a learner writes cap for cup, what comparison is useful?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Compare /u/ and /a/ in the middle position",
+        "Compare only final consonants",
+        "Ignore the vowel",
+        "Compare word length"
+      ]
+    },
+    {
+      "questionId": "PF57-Q14",
+      "question": "Which word correctly maps three sounds to three letters?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "sun",
+        "soon",
+        "sane",
+        "sign"
+      ]
+    },
+    {
+      "questionId": "PF57-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Encode short-/u/ CVC words by segmenting sounds and mapping them to letters",
+        "Memorize long-vowel spellings",
+        "Write sentences without phonics",
+        "Teach punctuation"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF57-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF57-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ sound-to-letter mapping and CVC encoding."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-57-v1"
+  }
+}
