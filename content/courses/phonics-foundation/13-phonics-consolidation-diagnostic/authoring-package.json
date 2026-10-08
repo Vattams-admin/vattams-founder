@@ -1,0 +1,429 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-13",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "13-phonics-consolidation-diagnostic",
+    "topic": "phonics-consolidation",
+    "subtopic": "diagnostic-checkpoint",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Consolidate the taught m, s, t and short-a sound-spelling correspondences.",
+      "Measure decoding, spelling, early fluency and comprehension separately.",
+      "Use diagnostic evidence to identify the next instructional need."
+    ],
+    "concepts": [
+      "A learner can be strong in one reading component and need support in another.",
+      "Diagnostic assessment should identify a skill gap rather than label the learner.",
+      "Accuracy and understanding are both required for successful early reading."
+    ],
+    "definitions": [
+      {
+        "term": "diagnostic assessment",
+        "definition": "An assessment used to identify specific strengths and learning needs so instruction can be targeted."
+      },
+      {
+        "term": "skill profile",
+        "definition": "A record showing performance across separate learning components."
+      }
+    ],
+    "workedExamples": [
+      "A learner may score strongly on sound recognition but need spelling practice.",
+      "A learner who decodes accurately but cannot answer sentence questions needs meaning-focused support rather than more letter drills."
+    ],
+    "commonMistakes": [
+      "Treating one total score as the only evidence.",
+      "Giving harder content before a prerequisite gap is addressed.",
+      "Using speed alone to judge reading."
+    ],
+    "keyTakeaways": [
+      "Check each skill separately.",
+      "Use errors to identify the next lesson or practice.",
+      "Accuracy comes before speed.",
+      "Comprehension must be checked after decoding."
+    ],
+    "revisionPoints": [
+      "Sound → decode → spell → read fluently → understand."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review each previously taught skill with short familiar items."
+    ],
+    "conceptual": [
+      "Explain why separate skill scores are useful."
+    ],
+    "application": [
+      "Use an error to select the relevant practice type."
+    ],
+    "higherOrderThinking": [
+      "Choose remediation when decoding is strong but spelling is weak."
+    ],
+    "mixedReview": [
+      "Mix sound, decoding, spelling, fluency and comprehension items."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Hear.",
+      "Decode.",
+      "Spell.",
+      "Reread.",
+      "Understand."
+    ],
+    "flashRecall": [
+      "m /m/",
+      "s /s/",
+      "t /t/",
+      "a /ă/"
+    ],
+    "formulaOrFactBank": [
+      "Diagnostic profile = evidence by skill, not one total score"
+    ],
+    "mistakeBasedRevision": [
+      "Repeat only the skill area where errors occur, then reassess with new items."
+    ],
+    "weakTopicRevision": [
+      "Create a short targeted practice set for the weakest skill and reassess after practice."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Skill stations",
+      "steps": [
+        "Complete sound items.",
+        "Complete decoding items.",
+        "Complete spelling items.",
+        "Complete fluency and comprehension items.",
+        "Record each skill separately."
+      ]
+    },
+    {
+      "name": "Error sort",
+      "steps": [
+        "Review incorrect responses.",
+        "Classify each as sound, decoding, spelling, fluency or comprehension.",
+        "Choose one targeted practice activity."
+      ]
+    },
+    {
+      "name": "Targeted reread",
+      "steps": [
+        "Select the weakest reading skill.",
+        "Practise with familiar material.",
+        "Repeat a small set of items.",
+        "Record improvement."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner demonstrates the taught sound correspondences with at least 80% accuracy.",
+    "Learner demonstrates at least 80% accuracy in each core area or receives targeted remediation for the weaker area.",
+    "Learner can complete a short controlled reading task and answer meaning questions."
+  ],
+  "questions": [
+    {
+      "questionId": "PF13-Q01",
+      "question": "Which letter represents /m/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "m",
+        "s",
+        "t",
+        "a"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF13-Q02",
+      "question": "Which letter represents /s/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "t",
+        "s",
+        "a",
+        "m"
+      ],
+      "skill": 1
+    },
+    {
+      "questionId": "PF13-Q03",
+      "question": "Which letter represents /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "a",
+        "m",
+        "t",
+        "s"
+      ],
+      "skill": 2
+    },
+    {
+      "questionId": "PF13-Q04",
+      "question": "Which letter represents short /a/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "s",
+        "a",
+        "m",
+        "t"
+      ],
+      "skill": 1
+    },
+    {
+      "questionId": "PF13-Q05",
+      "question": "Which word begins with /m/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "mat",
+        "sat",
+        "tap",
+        "sap"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF13-Q06",
+      "question": "Which word ends with /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "sat",
+        "mat",
+        "map",
+        "sam"
+      ],
+      "skill": 2
+    },
+    {
+      "questionId": "PF13-Q07",
+      "question": "Which word has /a/ in the middle?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "mat",
+        "me",
+        "mi",
+        "mu"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF13-Q08",
+      "question": "Which spelling matches /s/ /a/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "sat",
+        "sit",
+        "set",
+        "sap"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF13-Q09",
+      "question": "Which spelling matches /m/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "map",
+        "mat",
+        "mop",
+        "sap"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF13-Q10",
+      "question": "A learner writes 'mt' for 'mat'. Which sound is missing?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "/m/",
+        "/a/",
+        "/t/",
+        "none"
+      ],
+      "skill": 1
+    },
+    {
+      "questionId": "PF13-Q11",
+      "question": "What is the best strategy for reading 'tap'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Say /t/ /a/ /p/, blend, then reread",
+        "Guess from a picture",
+        "Skip /a/",
+        "Say the word without looking"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF13-Q12",
+      "question": "Why reread familiar CVC words?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "To build accurate automaticity",
+        "To avoid decoding",
+        "To change the spelling",
+        "To skip difficult words"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF13-Q13",
+      "question": "Read: “Sam sat.” What did Sam do?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "sat",
+        "tap",
+        "map",
+        "mat"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF13-Q14",
+      "question": "Read: “Sam sat at a mat.” Where did Sam sit?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "at a mat",
+        "at a map",
+        "at a tap",
+        "at a cat"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF13-Q15",
+      "question": "If you forget a detail from a short passage, what should you do?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Reread the relevant sentence",
+        "Guess",
+        "Skip it",
+        "Change the story"
+      ],
+      "skill": 0
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF13-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q04",
+      "correctOptionIndex": 1,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q06",
+      "correctOptionIndex": 2,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    },
+    {
+      "questionId": "PF13-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The item measures the named phonics skill and should be interpreted within the learner's skill profile."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-13-v1"
+  }
+}
