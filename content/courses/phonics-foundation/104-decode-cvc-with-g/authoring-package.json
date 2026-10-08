@@ -1,1 +1,414 @@
-{}
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-104",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "104-decode-cvc-with-g",
+    "topic": "cvc-decoding",
+    "subtopic": "g-cvc-decoding",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Map g to /g/ in CVC words.",
+      "Blend /g/ with short vowels and final consonants.",
+      "Decode taught /g/ CVC words.",
+      "Repair common decoding errors."
+    ],
+    "concepts": [
+      "Decoding maps graphemes to phonemes.",
+      "CVC words use consonant-vowel-consonant structure.",
+      "Short vowels affect word identity.",
+      "Rereading supports accuracy."
+    ],
+    "definitions": [
+      {
+        "term": "decode",
+        "definition": "Use known letter-sound correspondences to read a word."
+      },
+      {
+        "term": "blend",
+        "definition": "Combine phonemes to pronounce a word."
+      }
+    ],
+    "workedExamples": [
+      "g-a-p → gap.",
+      "g-i-g → gig.",
+      "g-u-m → gum."
+    ],
+    "commonMistakes": [
+      "Confusing /g/ and /k/.",
+      "Changing the vowel.",
+      "Guessing from one letter."
+    ],
+    "keyTakeaways": [
+      "Map g to /g/.",
+      "Blend all phonemes.",
+      "Attend to the vowel.",
+      "Reread."
+    ],
+    "revisionPoints": [
+      "g /g/",
+      "CVC blending",
+      "short vowels",
+      "self-correction"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Blend /g/ CVC words."
+    ],
+    "conceptual": [
+      "Compare short-vowel CVC words."
+    ],
+    "application": [
+      "Correct decoding substitutions."
+    ],
+    "higherOrderThinking": [
+      "Explain why blending is reliable."
+    ],
+    "mixedReview": [
+      "Decode mixed /g/ CVC words."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "look → sound → blend → word → reread"
+    ],
+    "flashRecall": [
+      "g",
+      "/g/",
+      "gap",
+      "gig",
+      "gum"
+    ],
+    "formulaOrFactBank": [
+      "CVC = consonant + vowel + consonant."
+    ],
+    "mistakeBasedRevision": [
+      "Return to the changed phoneme."
+    ],
+    "weakTopicRevision": [
+      "Practise the vowel or consonant contrast causing errors."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Blending",
+      "steps": [
+        "Say phonemes.",
+        "Blend.",
+        "Reread."
+      ]
+    },
+    {
+      "name": "Vowel contrast",
+      "steps": [
+        "Compare words.",
+        "Identify vowel.",
+        "Reblend."
+      ]
+    },
+    {
+      "name": "Error repair",
+      "steps": [
+        "Locate error.",
+        "Correct sound.",
+        "Reread."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner decodes taught /g/ CVC words accurately.",
+    "Learner attends to short-vowel differences.",
+    "Learner repairs common decoding errors."
+  ],
+  "questions": [
+    {
+      "questionId": "PF104-Q01",
+      "question": "gap",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gap",
+        "/g/ /a/ /p/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q02",
+      "question": "gig",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gig",
+        "/g/ /i/ /g/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q03",
+      "question": "gum",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gum",
+        "/g/ /u/ /m/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q04",
+      "question": "get",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "get",
+        "/g/ /e/ /t/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q05",
+      "question": "got",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "got",
+        "/g/ /o/ /t/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q06",
+      "question": "gab",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gab",
+        "/g/ /a/ /b/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q07",
+      "question": "gag",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gag",
+        "/g/ /a/ /g/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q08",
+      "question": "gig",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gig",
+        "/g/ /i/ /g/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q09",
+      "question": "gum",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gum",
+        "/g/ /u/ /m/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q10",
+      "question": "gap",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gap",
+        "/g/ /a/ /p/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q11",
+      "question": "gap",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gap",
+        "starts with /g/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q12",
+      "question": "gig",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gig",
+        "has short /i/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q13",
+      "question": "gum",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gum",
+        "has short /u/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q14",
+      "question": "gap",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gap",
+        "begins with /g/",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF104-Q15",
+      "question": "gig",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "gig",
+        "is formed by blending /g/ /i/ /g/",
+        "different",
+        "not this"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF104-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    },
+    {
+      "questionId": "PF104-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the target decoding response."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-104-v1"
+  }
+}
