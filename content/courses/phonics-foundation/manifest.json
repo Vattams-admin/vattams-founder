@@ -1,0 +1,35 @@
+{
+  "packageId": "course-phonics-foundation",
+  "version": "1.0.0",
+  "domain": "course",
+  "locator": {
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "language": "en"
+  },
+  "status": "draft",
+  "coverage": {
+    "modules": 1,
+    "lessons": 1,
+    "studyMaterials": 1,
+    "questionBank": 20,
+    "assessments": 0
+  },
+  "assets": {
+    "authoringPackages": [
+      "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
+    ]
+  },
+  "governance": {
+    "sourceEvidence": [
+      "config/content-authoring-package.schema.json",
+      "config/content-package.schema.json",
+      "config/atomic-content-authoring-matrix.json",
+      "config/production-content-coverage-plan.json"
+    ],
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}
