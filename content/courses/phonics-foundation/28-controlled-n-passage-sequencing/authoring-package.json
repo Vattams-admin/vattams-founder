@@ -1,0 +1,420 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-28",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "28-controlled-n-passage-sequencing",
+    "topic": "n-sound",
+    "subtopic": "controlled-n-passage-sequencing",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a short controlled /n/ passage across multiple connected sentences.",
+      "Sequence explicit events using first, next and last relationships.",
+      "Recall details and support answers with information from the passage."
+    ],
+    "concepts": [
+      "Connected-text comprehension requires holding information across sentences.",
+      "Sequence depends on tracking event order rather than isolated sentence meaning.",
+      "Text evidence should be located in the passage before answering."
+    ],
+    "definitions": [
+      {
+        "term": "sequencing",
+        "definition": "Putting events in the order in which they occur."
+      },
+      {
+        "term": "main idea",
+        "definition": "The central meaning or overall point of a short text."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Information explicitly stated in the text that supports an answer."
+      }
+    ],
+    "workedExamples": [
+      "First: Nan sat at a mat. Next: Nan sat. Last: Nan had a map.",
+      "What did Nan have? → a map, stated in the final sentence.",
+      "If the order is uncertain, reread each sentence and mark first/next/last."
+    ],
+    "commonMistakes": [
+      "Reversing first and last events.",
+      "Answering from memory without rereading.",
+      "Adding events not stated in the passage.",
+      "Confusing a detail with the main idea."
+    ],
+    "keyTakeaways": [
+      "Read every sentence.",
+      "Track event order.",
+      "Return to the passage.",
+      "Answer only from evidence."
+    ],
+    "revisionPoints": [
+      "Read → track events → sequence → locate evidence → answer."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read a three-sentence controlled passage."
+    ],
+    "conceptual": [
+      "Identify first, next and last events."
+    ],
+    "application": [
+      "Locate explicit details in connected text."
+    ],
+    "higherOrderThinking": [
+      "Explain why rereading improves sequencing accuracy."
+    ],
+    "mixedReview": [
+      "Decode, sequence, recall and answer text-based questions."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "First.",
+      "Next.",
+      "Last.",
+      "Evidence.",
+      "Answer."
+    ],
+    "flashRecall": [
+      "Nan sat at a mat.",
+      "Nan sat.",
+      "Nan had a map."
+    ],
+    "formulaOrFactBank": [
+      "Sequencing = identify event + position in text"
+    ],
+    "mistakeBasedRevision": [
+      "If order is confused, reread one sentence at a time and label first/next/last.",
+      "If a detail is forgotten, locate its sentence."
+    ],
+    "weakTopicRevision": [
+      "Read the passage twice and retell all three events in order."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Event ordering",
+      "steps": [
+        "Read all sentences.",
+        "State each event.",
+        "Place first, next and last in order.",
+        "Check against the passage."
+      ]
+    },
+    {
+      "name": "Detail hunt",
+      "steps": [
+        "Read a question.",
+        "Return to the relevant sentence.",
+        "Locate the exact detail.",
+        "Answer."
+      ]
+    },
+    {
+      "name": "Three-event retell",
+      "steps": [
+        "Read twice.",
+        "Retell first, next and last.",
+        "Compare with the text."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner reads the controlled passage with at least 80% accuracy.",
+    "Learner sequences three explicit events with at least 80% accuracy.",
+    "Learner recalls explicit details with at least 80% accuracy.",
+    "Learner answers using information stated in the passage rather than guessing."
+  ],
+  "questions": [
+    {
+      "questionId": "PF28-Q01",
+      "question": "Read: “Nan sat at a mat. Nan sat. Nan had a map.” Who is the passage about?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Nan",
+        "Mat",
+        "Map",
+        "Pan"
+      ]
+    },
+    {
+      "questionId": "PF28-Q02",
+      "question": "What did Nan do first?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Sat at a mat",
+        "Had a map",
+        "Ran",
+        "Tapped"
+      ]
+    },
+    {
+      "questionId": "PF28-Q03",
+      "question": "Where did Nan sit?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "At a mat",
+        "At a map",
+        "At a pan",
+        "At a tap"
+      ]
+    },
+    {
+      "questionId": "PF28-Q04",
+      "question": "What did Nan have?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "A map",
+        "A mat",
+        "A pan",
+        "A pat"
+      ]
+    },
+    {
+      "questionId": "PF28-Q05",
+      "question": "Which event happened first?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Nan sat at a mat",
+        "Nan had a map",
+        "Nan ran",
+        "Nan tapped"
+      ]
+    },
+    {
+      "questionId": "PF28-Q06",
+      "question": "Which event happened after Nan sat at a mat?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Nan sat",
+        "Nan had a map",
+        "Nan ran",
+        "Nan slept"
+      ]
+    },
+    {
+      "questionId": "PF28-Q07",
+      "question": "Which event happened last?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Nan had a map",
+        "Nan sat at a mat",
+        "Nan ran",
+        "Nan tapped"
+      ]
+    },
+    {
+      "questionId": "PF28-Q08",
+      "question": "Which order is correct?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "sat at a mat → sat → had a map",
+        "had a map → sat → sat at a mat",
+        "ran → sat → had a map",
+        "tapped → ran → sat"
+      ]
+    },
+    {
+      "questionId": "PF28-Q09",
+      "question": "Why should the reader reread the passage?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "To confirm the order and details",
+        "To avoid decoding",
+        "To change the events",
+        "To skip the final sentence"
+      ]
+    },
+    {
+      "questionId": "PF28-Q10",
+      "question": "Which detail is directly stated?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Nan had a map",
+        "Nan made a map",
+        "Nan lost a map",
+        "Nan ran with a map"
+      ]
+    },
+    {
+      "questionId": "PF28-Q11",
+      "question": "If the reader forgets what Nan had, what should they do?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Reread the sentence about what Nan had",
+        "Guess",
+        "Skip the question",
+        "Change the detail"
+      ]
+    },
+    {
+      "questionId": "PF28-Q12",
+      "question": "What is the main idea of the passage?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Nan sits at a mat and has a map",
+        "Nan runs",
+        "Nan makes a mat",
+        "Nan taps a pan"
+      ]
+    },
+    {
+      "questionId": "PF28-Q13",
+      "question": "Which question checks sequence?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "What happened last?",
+        "What sound is /n/?",
+        "Which letter is m?",
+        "How many letters are in Nan?"
+      ]
+    },
+    {
+      "questionId": "PF28-Q14",
+      "question": "What should a text-based answer come from?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Information stated in the passage",
+        "A random guess",
+        "The longest answer",
+        "An unrelated story"
+      ]
+    },
+    {
+      "questionId": "PF28-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Read a controlled /n/ passage, sequence events and answer from text evidence",
+        "Memorize the passage without decoding",
+        "Introduce an untaught phoneme",
+        "Skip connected reading"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF28-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    },
+    {
+      "questionId": "PF28-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled passage and the taught sequencing strategy."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-28-v1"
+  }
+}
