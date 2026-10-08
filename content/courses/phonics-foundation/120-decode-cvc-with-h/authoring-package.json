@@ -1,1 +1,412 @@
-{}
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-120",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "120-decode-cvc-with-h",
+    "topic": "cvc-decoding",
+    "subtopic": "consonant-h",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Blend /h/ with short vowels and known consonants.",
+      "Decode controlled CVC words containing initial h.",
+      "Distinguish /h/ from contrasting initial consonants.",
+      "Use left-to-right blending and rereading for accuracy."
+    ],
+    "concepts": [
+      "CVC words contain consonant-vowel-consonant patterns.",
+      "The initial h represents /h/ in the taught words.",
+      "Blending combines phonemes into a spoken word.",
+      "Rereading supports accurate, fluent decoding."
+    ],
+    "definitions": [
+      {
+        "term": "blend",
+        "definition": "Combine individual phonemes smoothly to say a word."
+      },
+      {
+        "term": "CVC",
+        "definition": "A consonant-vowel-consonant word pattern."
+      }
+    ],
+    "workedExamples": [
+      "h-a-t → hat",
+      "h-e-n → hen",
+      "h-i-p → hip",
+      "h-o-p → hop",
+      "h-u-g → hug"
+    ],
+    "commonMistakes": [
+      "Replacing /h/ with another consonant.",
+      "Guessing from the first letter without blending.",
+      "Skipping the middle vowel.",
+      "Saying separated sounds without completing the blend."
+    ],
+    "keyTakeaways": [
+      "Start with /h/.",
+      "Blend left to right.",
+      "Listen for the short vowel.",
+      "Reread the complete word."
+    ],
+    "revisionPoints": [
+      "/h/",
+      "CVC",
+      "left-to-right blending",
+      "short vowels",
+      "rereading"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Blend controlled h-initial CVC words."
+    ],
+    "conceptual": [
+      "Identify the phoneme that changes when h is replaced."
+    ],
+    "application": [
+      "Decode mixed h-initial CVC words."
+    ],
+    "higherOrderThinking": [
+      "Explain why checking the initial phoneme can correct a decoding error."
+    ],
+    "mixedReview": [
+      "Blend CVC words using /h/ and known vowels."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "h → /h/ → blend with vowel → add final consonant → reread"
+    ],
+    "flashRecall": [
+      "hat",
+      "hen",
+      "hip",
+      "hop",
+      "hug"
+    ],
+    "formulaOrFactBank": [
+      "CVC = consonant + vowel + consonant"
+    ],
+    "mistakeBasedRevision": [
+      "Tap each phoneme, blend left to right, then reread."
+    ],
+    "weakTopicRevision": [
+      "Practise one short-vowel family at a time."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-to-word blending",
+      "steps": [
+        "Say /h/.",
+        "Say the middle vowel.",
+        "Say the final consonant.",
+        "Blend all three sounds."
+      ]
+    },
+    {
+      "name": "Decode and reread",
+      "steps": [
+        "Point to each grapheme.",
+        "Blend left to right.",
+        "Say the whole word.",
+        "Reread smoothly."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner decodes controlled h-initial CVC words.",
+    "Learner blends phonemes left to right.",
+    "Learner self-corrects initial-sound errors."
+  ],
+  "questions": [
+    {
+      "questionId": "PF120-Q01",
+      "question": "Which word begins with /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hat",
+        "cat",
+        "hop",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q02",
+      "question": "Which word begins with /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hen",
+        "has",
+        "/h/",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q03",
+      "question": "Which word begins with /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hop",
+        "cat",
+        "/h/",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q04",
+      "question": "Which word begins with /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hut",
+        "hem",
+        "hop",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q05",
+      "question": "What word is h-a-t when blended?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hat",
+        "cat",
+        "/h/",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q06",
+      "question": "What word is h-e-n when blended?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hen",
+        "hip",
+        "/h/",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q07",
+      "question": "What word is h-i-p when blended?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hip",
+        "cat",
+        "hop",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q08",
+      "question": "What word is h-o-p when blended?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hop",
+        "hop",
+        "/h/",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q09",
+      "question": "What word is h-u-g when blended?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hug",
+        "cat",
+        "/h/",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q10",
+      "question": "Which word has /h/ as its first sound?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "ham",
+        "hug",
+        "hop",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q11",
+      "question": "Which word has /h/ as its first sound?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hot",
+        "cat",
+        "/h/",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q12",
+      "question": "Which word has /h/ as its first sound?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hum",
+        "hut",
+        "/h/",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q13",
+      "question": "What is a useful decoding strategy?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Blend the sounds from left to right.",
+        "cat",
+        "hop",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q14",
+      "question": "If a learner reads “hat” as “cat”, which sound should be checked first?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "the initial /h/",
+        "hat",
+        "/h/",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF120-Q15",
+      "question": "What should a learner do after blending a CVC word?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Reread the whole word smoothly.",
+        "cat",
+        "/h/",
+        "sun"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF120-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    },
+    {
+      "questionId": "PF120-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target CVC decoding skill."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-120-v1"
+  }
+}
