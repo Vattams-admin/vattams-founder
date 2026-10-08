@@ -132,7 +132,8 @@
         "exitSkills": [
           "Can identify /p/ and connect it to p before independent use.",
           "Can decode familiar CVC words containing p in initial or final position.",
-          "Can spell familiar CVC words containing p in initial or final position."
+          "Can spell familiar CVC words containing p in initial or final position.",
+          "Can recognise and read p-containing -ap and -at word families while decoding each grapheme."
         ]
       },
       "lessons": [
@@ -153,6 +154,12 @@
           "sequence": 17,
           "title": "Spell CVC Words with /p/",
           "authoringPackage": "content/courses/phonics-foundation/17-cvc-spelling-with-p/authoring-package.json"
+        },
+        {
+          "lessonId": "18-p-word-families-controlled-reading",
+          "sequence": 18,
+          "title": "/p/ Word Families and Controlled Reading",
+          "authoringPackage": "content/courses/phonics-foundation/18-p-word-families-controlled-reading/authoring-package.json"
         }
       ]
     }
