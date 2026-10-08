@@ -1,0 +1,421 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-48",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "48-decode-cvc-short-e",
+    "topic": "short-e-vowel",
+    "subtopic": "cvc-decoding",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode taught short-/e/ CVC words using sound-by-sound blending.",
+      "Maintain accurate grapheme-to-phoneme mapping while decoding.",
+      "Distinguish short /e/ from previously taught short vowels.",
+      "Repair vowel confusions through explicit rereading and blending."
+    ],
+    "concepts": [
+      "CVC decoding requires attention to every grapheme.",
+      "Short /e/ is represented by e in the taught words.",
+      "Blending combines segmented phonemes into a recognizable word."
+    ],
+    "definitions": [
+      {
+        "term": "decoding",
+        "definition": "Using printed graphemes and their sounds to read a word."
+      },
+      {
+        "term": "blending",
+        "definition": "Combining individual phonemes smoothly to produce a word."
+      },
+      {
+        "term": "CVC",
+        "definition": "A consonant-vowel-consonant word pattern such as bed."
+      }
+    ],
+    "workedExamples": [
+      "bed → /b/ /e/ /d/ → bed.",
+      "pen → /p/ /e/ /n/ → pen.",
+      "red versus rid → isolate the middle vowel, then blend again."
+    ],
+    "commonMistakes": [
+      "Guessing from the first letter.",
+      "Replacing /e/ with /i/ or /a/.",
+      "Skipping the middle grapheme.",
+      "Saying isolated sounds without blending them."
+    ],
+    "keyTakeaways": [
+      "Read every grapheme.",
+      "Say the matching phoneme.",
+      "Blend the phonemes.",
+      "Check the middle vowel."
+    ],
+    "revisionPoints": [
+      "CVC: first sound + vowel sound + final sound.",
+      "short /e/ → e",
+      "bed, pen, men, red, ten"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Blend short-/e/ CVC phonemes into words."
+    ],
+    "conceptual": [
+      "Explain why changing the middle vowel changes the word."
+    ],
+    "application": [
+      "Decode unfamiliar taught-pattern CVC items without guessing."
+    ],
+    "higherOrderThinking": [
+      "Identify and repair a vowel-mapping error during decoding."
+    ],
+    "mixedReview": [
+      "Mix short-/e/ words with familiar short-/a/, /i/, and /o/ contrasts."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Look → sound → blend → check."
+    ],
+    "flashRecall": [
+      "bed",
+      "pen",
+      "men",
+      "red",
+      "ten"
+    ],
+    "formulaOrFactBank": [
+      "CVC decoding = grapheme recognition + phoneme production + blending"
+    ],
+    "mistakeBasedRevision": [
+      "If e is read as i, isolate the middle sound and remap the printed e before blending."
+    ],
+    "weakTopicRevision": [
+      "Repeat short-/e/ sound-by-sound decoding with fresh CVC words."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-by-sound decoding",
+      "steps": [
+        "Show one CVC word.",
+        "Point to each grapheme.",
+        "Say each sound.",
+        "Blend without guessing."
+      ]
+    },
+    {
+      "name": "Vowel repair",
+      "steps": [
+        "Present a short-/e/ word and a common misread.",
+        "Isolate the middle grapheme.",
+        "Say /e/.",
+        "Blend again."
+      ]
+    },
+    {
+      "name": "Blend and reread",
+      "steps": [
+        "Segment the word.",
+        "Blend slowly.",
+        "Blend smoothly.",
+        "Reread for automaticity."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner accurately decodes taught short-/e/ CVC words.",
+    "Learner maintains grapheme-to-phoneme accuracy across all three positions.",
+    "Learner distinguishes short /e/ from short /a/, /i/, and /o/ in controlled decoding.",
+    "Learner repairs a vowel error by returning to the middle grapheme and blending again."
+  ],
+  "questions": [
+    {
+      "questionId": "PF48-Q01",
+      "question": "Which word is made by blending /b/ /e/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "bed",
+        "bid",
+        "bad",
+        "bud"
+      ]
+    },
+    {
+      "questionId": "PF48-Q02",
+      "question": "Which middle sound is in pen?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "/e/",
+        "/a/",
+        "/i/",
+        "/o/"
+      ]
+    },
+    {
+      "questionId": "PF48-Q03",
+      "question": "Which word matches p-e-n?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "pen",
+        "pan",
+        "pin",
+        "pon"
+      ]
+    },
+    {
+      "questionId": "PF48-Q04",
+      "question": "What is the best way to decode hen?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say /h/ /e/ /n/, then blend",
+        "Guess from the first letter",
+        "Read only h and n",
+        "Skip the vowel"
+      ]
+    },
+    {
+      "questionId": "PF48-Q05",
+      "question": "Which word has short /e/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "red",
+        "rid",
+        "rad",
+        "rod"
+      ]
+    },
+    {
+      "questionId": "PF48-Q06",
+      "question": "Which word is formed by /m/ /e/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "men",
+        "man",
+        "min",
+        "mon"
+      ]
+    },
+    {
+      "questionId": "PF48-Q07",
+      "question": "Which letter represents the middle sound in bed?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "e",
+        "a",
+        "i",
+        "o"
+      ]
+    },
+    {
+      "questionId": "PF48-Q08",
+      "question": "A learner reads bet as bit. What should they check?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The middle vowel /e/ versus /i/",
+        "The final consonant",
+        "The first consonant",
+        "The number of letters"
+      ]
+    },
+    {
+      "questionId": "PF48-Q09",
+      "question": "Which word has the same vowel sound as ten?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "men",
+        "tin",
+        "tan",
+        "ton"
+      ]
+    },
+    {
+      "questionId": "PF48-Q10",
+      "question": "Which sequence supports accurate CVC decoding?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Look at each grapheme → say each sound → blend",
+        "Guess → look at picture → say word",
+        "Read final consonant → guess vowel",
+        "Skip the middle sound → blend"
+      ]
+    },
+    {
+      "questionId": "PF48-Q11",
+      "question": "Which word is different because it has short /a/?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "map",
+        "met",
+        "men",
+        "red"
+      ]
+    },
+    {
+      "questionId": "PF48-Q12",
+      "question": "If a learner says “bed” but points to “bid,” what needs checking?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Accurate grapheme-to-phoneme matching",
+        "Final consonant formation",
+        "Word spacing",
+        "Sentence punctuation"
+      ]
+    },
+    {
+      "questionId": "PF48-Q13",
+      "question": "Which word can be decoded with b-e-d?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "bed",
+        "bad",
+        "bid",
+        "bod"
+      ]
+    },
+    {
+      "questionId": "PF48-Q14",
+      "question": "Why should the learner blend after saying individual sounds?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "To combine the phonemes into the spoken word",
+        "To avoid hearing the vowel",
+        "To memorize the spelling",
+        "To skip decoding"
+      ]
+    },
+    {
+      "questionId": "PF48-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Accurately decode short-/e/ CVC words sound by sound and blend them",
+        "Master long /e/",
+        "Read multisyllable words",
+        "Memorize punctuation"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF48-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF48-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ CVC decoding, vowel mapping, or blending."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-48-v1"
+  }
+}
