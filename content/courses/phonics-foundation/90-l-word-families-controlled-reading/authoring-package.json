@@ -1,0 +1,425 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-90",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "90-l-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "controlled-reading-l",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognise taught CVC word families containing l.",
+      "Decode words by noticing shared rimes.",
+      "Read controlled l word-family chains accurately.",
+      "Build automatic recognition without guessing from pictures."
+    ],
+    "concepts": [
+      "A word family shares a common rime.",
+      "Changing the onset can create a new CVC word.",
+      "Controlled reading keeps decoding within taught sound patterns.",
+      "Accurate repeated reading supports fluency."
+    ],
+    "definitions": [
+      {
+        "term": "onset",
+        "definition": "The initial consonant sound or consonant cluster before the vowel in a syllable."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and following sounds in a syllable."
+      },
+      {
+        "term": "word family",
+        "definition": "A group of words sharing the same rime."
+      }
+    ],
+    "workedExamples": [
+      "lip, sip, tip share the -ip rime.",
+      "lap, map, tap share the -ap rime.",
+      "log, dog, fog share the -og rime."
+    ],
+    "commonMistakes": [
+      "Guessing from the first letter or a picture.",
+      "Confusing short vowel sounds.",
+      "Changing more than the onset when reading a word family.",
+      "Skipping the final consonant."
+    ],
+    "keyTakeaways": [
+      "Notice the shared rime.",
+      "Say the onset.",
+      "Blend the whole word.",
+      "Reread for accuracy."
+    ],
+    "revisionPoints": [
+      "onset",
+      "rime",
+      "-ip",
+      "-ap",
+      "-og",
+      "-ug",
+      "-et"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read taught l CVC word-family chains."
+    ],
+    "conceptual": [
+      "Identify shared rimes and changing onsets."
+    ],
+    "application": [
+      "Decode a new taught-pattern word using its family."
+    ],
+    "higherOrderThinking": [
+      "Explain why changing one onset preserves the rime."
+    ],
+    "mixedReview": [
+      "Mix l word families with previously taught CVC families."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "find rime → say onset → blend → reread"
+    ],
+    "flashRecall": [
+      "-ip",
+      "-ap",
+      "-og",
+      "-ug",
+      "-et"
+    ],
+    "formulaOrFactBank": [
+      "word = onset + rime"
+    ],
+    "mistakeBasedRevision": [
+      "If a word is misread, isolate the rime and rebuild the onset + rime blend."
+    ],
+    "weakTopicRevision": [
+      "Practise the weakest word family with fresh controlled words."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Word-family sort",
+      "steps": [
+        "Read each word.",
+        "Identify its rime.",
+        "Place it with matching family members.",
+        "Reread the family."
+      ]
+    },
+    {
+      "name": "Onset swap",
+      "steps": [
+        "Read a base word.",
+        "Change only its onset.",
+        "Blend the new word.",
+        "Check that the rime stayed the same."
+      ]
+    },
+    {
+      "name": "Controlled reread",
+      "steps": [
+        "Read a short list.",
+        "Mark any misread word.",
+        "Decode it again.",
+        "Reread the whole list smoothly."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner identifies taught word families.",
+    "Learner decodes controlled CVC words using shared rimes.",
+    "Learner reads taught-pattern word lists accurately and begins building automaticity."
+  ],
+  "questions": [
+    {
+      "questionId": "PF90-Q01",
+      "question": "Which word belongs to the -ip family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lip",
+        "log",
+        "let",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF90-Q02",
+      "question": "Which word belongs to the -ap family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lap",
+        "lip",
+        "log",
+        "let"
+      ]
+    },
+    {
+      "questionId": "PF90-Q03",
+      "question": "Which word belongs to the -og family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "log",
+        "leg",
+        "lip",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF90-Q04",
+      "question": "Which word belongs to the -ug family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lug",
+        "lap",
+        "let",
+        "lip"
+      ]
+    },
+    {
+      "questionId": "PF90-Q05",
+      "question": "Which word belongs to the -et family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "let",
+        "log",
+        "lug",
+        "lap"
+      ]
+    },
+    {
+      "questionId": "PF90-Q06",
+      "question": "Which pair shares the same rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lip and sip",
+        "log and leg",
+        "lug and lap",
+        "let and log"
+      ]
+    },
+    {
+      "questionId": "PF90-Q07",
+      "question": "Which word has the same ending sound pattern as “log”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "dog",
+        "leg",
+        "lip",
+        "let"
+      ]
+    },
+    {
+      "questionId": "PF90-Q08",
+      "question": "Which word changes only the first sound from “lip”?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "sip",
+        "lap",
+        "log",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF90-Q09",
+      "question": "Read the word: l-a-p. What is it?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lap",
+        "lip",
+        "lop",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF90-Q10",
+      "question": "Why do word families help beginning readers?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The repeated rime makes part of each new word predictable.",
+        "They remove the need to decode.",
+        "They make every word identical.",
+        "They replace phoneme practice."
+      ]
+    },
+    {
+      "questionId": "PF90-Q11",
+      "question": "A learner reads “lip” correctly but struggles with “sip.” What should be practised?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Keep the -ip pattern and change only the first sound.",
+        "Change every sound at once.",
+        "Skip the word family.",
+        "Practise punctuation instead."
+      ]
+    },
+    {
+      "questionId": "PF90-Q12",
+      "question": "Which word completes the controlled set: lip, sip, ___?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "tip",
+        "log",
+        "leg",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF90-Q13",
+      "question": "A learner reads “lap” as “lip.” Which part should be checked?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle vowel sound.",
+        "The first sound.",
+        "The final sound.",
+        "The number of letters."
+      ]
+    },
+    {
+      "questionId": "PF90-Q14",
+      "question": "Which sequence is easiest to decode as a word-family chain?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lap → lip → lop → lug",
+        "lap → log → let → lip",
+        "lug → leg → lap → log",
+        "lip → let → log → lap"
+      ]
+    },
+    {
+      "questionId": "PF90-Q15",
+      "question": "After accurate word-family reading, what is the best next step?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Read short controlled sentences using the taught words.",
+        "Move immediately to untaught multisyllabic words.",
+        "Stop decoding and guess from pictures.",
+        "Skip rereading for fluency."
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF90-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    },
+    {
+      "questionId": "PF90-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ word-family controlled-reading item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-90-v1"
+  }
+}
