@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-24",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "24-decode-cvc-with-n",
+    "topic": "n-sound",
+    "subtopic": "decode-cvc-with-n",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Blend /n/ with previously taught sounds to decode simple CVC words.",
+      "Read CVC words containing n in initial and final positions.",
+      "Use sound-by-sound correction when n is confused with a previously taught consonant."
+    ],
+    "concepts": [
+      "CVC decoding combines known grapheme-sound relationships in sequence.",
+      "The new /n/ sound can be blended with known /m/, /s/, /t/, /a/ and /p/ patterns.",
+      "Accurate decoding requires attention to every phoneme."
+    ],
+    "definitions": [
+      {
+        "term": "blending",
+        "definition": "Combining individual phonemes smoothly to say a whole word."
+      },
+      {
+        "term": "CVC word",
+        "definition": "A simple word with consonant-vowel-consonant structure."
+      },
+      {
+        "term": "decoding",
+        "definition": "Using grapheme-sound relationships to read a written word."
+      }
+    ],
+    "workedExamples": [
+      "n-a-p → /n/ /a/ /p/ → nap.",
+      "m-a-n → /m/ /a/ /n/ → man.",
+      "If nap is read as map, return to the first grapheme and compare /n/ with /m/."
+    ],
+    "commonMistakes": [
+      "Guessing from the first letter.",
+      "Dropping final /n/.",
+      "Changing /n/ to /m/.",
+      "Adding an extra vowel between sounds."
+    ],
+    "keyTakeaways": [
+      "Look at every grapheme.",
+      "Say each taught sound.",
+      "Blend smoothly.",
+      "Check the final sound.",
+      "Reread the whole word."
+    ],
+    "revisionPoints": [
+      "See → say sounds → blend → check → reread."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Blend taught phonemes into CVC words."
+    ],
+    "conceptual": [
+      "Explain how changing one phoneme changes the word."
+    ],
+    "application": [
+      "Decode nap and man accurately."
+    ],
+    "higherOrderThinking": [
+      "Select the sound to revisit when a word is misread."
+    ],
+    "mixedReview": [
+      "Read m/s/t/a/p/n CVC words and contrast similar words."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "n-a-p → nap",
+      "m-a-n → man",
+      "listen to initial/final sounds"
+    ],
+    "flashRecall": [
+      "n + a + p = nap",
+      "m + a + n = man"
+    ],
+    "formulaOrFactBank": [
+      "CVC decoding = ordered phoneme blending"
+    ],
+    "mistakeBasedRevision": [
+      "nap/map error → check initial sound.",
+      "man/mat error → check final sound."
+    ],
+    "weakTopicRevision": [
+      "Practise one-sound contrasts before returning to full CVC blending."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-to-word blend",
+      "steps": [
+        "Point to each grapheme.",
+        "Say its sound.",
+        "Slide through the sounds.",
+        "Blend the whole word."
+      ]
+    },
+    {
+      "name": "n contrast reading",
+      "steps": [
+        "Read nap and map.",
+        "Compare the first sounds.",
+        "Read again.",
+        "Repeat with man and mat."
+      ]
+    },
+    {
+      "name": "Final-n check",
+      "steps": [
+        "Read man.",
+        "Hold the final /n/.",
+        "Compare with mat.",
+        "Reread both words."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner decodes n-containing CVC words with at least 80% accuracy.",
+    "Learner reads n initially and finally with at least 80% accuracy.",
+    "Learner corrects common n/m and n/t confusions using sound-by-sound analysis.",
+    "Learner blends without adding extra vowel sounds."
+  ],
+  "questions": [
+    {
+      "questionId": "PF24-Q01",
+      "question": "Which word can be built from /n/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap",
+        "map",
+        "net",
+        "man"
+      ]
+    },
+    {
+      "questionId": "PF24-Q02",
+      "question": "Which word can be built from /m/ /a/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "man",
+        "mat",
+        "map",
+        "nap"
+      ]
+    },
+    {
+      "questionId": "PF24-Q03",
+      "question": "Which word begins with /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap",
+        "map",
+        "mat",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF24-Q04",
+      "question": "Which word ends with /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "man",
+        "map",
+        "mat",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF24-Q05",
+      "question": "What word do you get when you blend /n/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap",
+        "nat",
+        "map",
+        "pat"
+      ]
+    },
+    {
+      "questionId": "PF24-Q06",
+      "question": "What word do you get when you blend /m/ /a/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "man",
+        "map",
+        "mat",
+        "nap"
+      ]
+    },
+    {
+      "questionId": "PF24-Q07",
+      "question": "Which word has /n/ as the first sound and /p/ as the last sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap",
+        "map",
+        "man",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF24-Q08",
+      "question": "Which word has /n/ as the first sound and /t/ as the last sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "net",
+        "nap",
+        "man",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF24-Q09",
+      "question": "Which step comes first when decoding a new CVC word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Look at each grapheme and say its taught sound",
+        "Guess the word",
+        "Skip the middle sound",
+        "Read only the final letter"
+      ]
+    },
+    {
+      "questionId": "PF24-Q10",
+      "question": "After saying /n/ /a/ /p/, what should you do?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Blend the sounds together",
+        "Add another sound",
+        "Change /n/ to /m/",
+        "Stop before the word"
+      ]
+    },
+    {
+      "questionId": "PF24-Q11",
+      "question": "A learner reads “nap” as “map.” What should they check first?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "The initial sound /n/ versus /m/",
+        "The final sound /p/ versus /t/",
+        "The middle sound /a/ versus /e/",
+        "The word length"
+      ]
+    },
+    {
+      "questionId": "PF24-Q12",
+      "question": "A learner reads “man” as “mat.” What should they check?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "The final sound /n/ versus /t/",
+        "The initial sound /m/ versus /s/",
+        "The middle sound /a/ versus /i/",
+        "The first two letters only"
+      ]
+    },
+    {
+      "questionId": "PF24-Q13",
+      "question": "Which word is decoded correctly from m-a-p?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "map",
+        "man",
+        "mat",
+        "nap"
+      ]
+    },
+    {
+      "questionId": "PF24-Q14",
+      "question": "Which word is decoded correctly from n-a-p?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap",
+        "map",
+        "nat",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF24-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Blend taught sounds to read CVC words containing n",
+        "Memorize unrelated whole words",
+        "Introduce a new vowel",
+        "Skip sound-by-sound decoding"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF24-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    },
+    {
+      "questionId": "PF24-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught sound-by-sound decoding sequence and n pattern."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-24-v1"
+  }
+}
