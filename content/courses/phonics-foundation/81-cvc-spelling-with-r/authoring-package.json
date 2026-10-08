@@ -1,0 +1,424 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-81",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "81-cvc-spelling-with-r",
+    "topic": "cvc-encoding",
+    "subtopic": "cvc-spelling-with-r",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment /r/ CVC words into phonemes.",
+      "Map each phoneme to a grapheme during spelling.",
+      "Spell new /r/ CVC words from dictation.",
+      "Identify and repair short-vowel and final-sound spelling errors."
+    ],
+    "concepts": [
+      "Encoding moves from spoken phonemes to written graphemes.",
+      "Regular CVC words require representation of each phoneme.",
+      "Short-vowel accuracy is essential for distinguishing CVC spellings."
+    ],
+    "definitions": [
+      {
+        "term": "encoding",
+        "definition": "Representing spoken language using written symbols."
+      },
+      {
+        "term": "phoneme segmentation",
+        "definition": "Breaking a spoken word into its individual speech sounds."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A letter or group of letters representing a sound."
+      }
+    ],
+    "workedExamples": [
+      "/r/ /æ/ /t/ → rat",
+      "/r/ /ɪ/ /p/ → rip",
+      "/r/ /ʌ/ /g/ → rug",
+      "/r/ /ɒ/ /b/ → rob",
+      "/r/ /ɛ/ /d/ → red"
+    ],
+    "commonMistakes": [
+      "Substituting one short vowel for another.",
+      "Omitting the final consonant.",
+      "Writing from memory without segmenting.",
+      "Confusing a phoneme with a letter name."
+    ],
+    "keyTakeaways": [
+      "Hear the word.",
+      "Segment the sounds.",
+      "Map each sound.",
+      "Reread the spelling."
+    ],
+    "revisionPoints": [
+      "segment",
+      "map",
+      "write",
+      "reread",
+      "repair"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Dictate regular /r/ CVC words and segment before writing."
+    ],
+    "conceptual": [
+      "Compare spellings that differ in the middle vowel."
+    ],
+    "application": [
+      "Repair misspelled /r/ CVC words by locating the incorrect mapping."
+    ],
+    "higherOrderThinking": [
+      "Explain why segmentation supports accurate spelling."
+    ],
+    "mixedReview": [
+      "Mix /r/ CVC spelling with previously learned consonants."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "hear → segment → map → write → reread"
+    ],
+    "flashRecall": [
+      "rat",
+      "rip",
+      "rug",
+      "rob",
+      "red"
+    ],
+    "formulaOrFactBank": [
+      "CVC spelling = one grapheme mapped for each phoneme in a regular word."
+    ],
+    "mistakeBasedRevision": [
+      "If the vowel is wrong, rehear and isolate the middle phoneme before rewriting."
+    ],
+    "weakTopicRevision": [
+      "Practice the weakest short-vowel family with fresh /r/ dictation."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound boxes",
+      "steps": [
+        "Say the target word.",
+        "Push one counter per phoneme.",
+        "Replace counters with graphemes.",
+        "Read the completed spelling."
+      ]
+    },
+    {
+      "name": "Dictation repair",
+      "steps": [
+        "Dictate an /r/ CVC word.",
+        "Segment and write it.",
+        "Locate any incorrect mapping.",
+        "Reread and correct."
+      ]
+    },
+    {
+      "name": "Vowel contrast writing",
+      "steps": [
+        "Dictate two /r/ words with different short vowels.",
+        "Segment both.",
+        "Compare their middle graphemes.",
+        "Explain the difference."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments /r/ CVC words accurately.",
+    "Learner maps phonemes to graphemes in spelling.",
+    "Learner repairs common short-vowel and final-sound errors."
+  ],
+  "questions": [
+    {
+      "questionId": "PF81-Q01",
+      "question": "Which spelling matches /r/ /æ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "rat",
+        "rit",
+        "rut",
+        "ret"
+      ]
+    },
+    {
+      "questionId": "PF81-Q02",
+      "question": "Which spelling matches /r/ /ɪ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "rip",
+        "rap",
+        "rop",
+        "rup"
+      ]
+    },
+    {
+      "questionId": "PF81-Q03",
+      "question": "Which spelling matches /r/ /ʌ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "rug",
+        "rag",
+        "rig",
+        "rog"
+      ]
+    },
+    {
+      "questionId": "PF81-Q04",
+      "question": "Which spelling matches /r/ /ɒ/ /b/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "rob",
+        "rib",
+        "rub",
+        "reb"
+      ]
+    },
+    {
+      "questionId": "PF81-Q05",
+      "question": "Which spelling matches /r/ /ɛ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "red",
+        "rid",
+        "rad",
+        "rod"
+      ]
+    },
+    {
+      "questionId": "PF81-Q06",
+      "question": "Which word correctly represents /r/ /æ/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "ran",
+        "rin",
+        "ron",
+        "run"
+      ]
+    },
+    {
+      "questionId": "PF81-Q07",
+      "question": "Which word correctly represents /r/ /ɪ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "rid",
+        "rad",
+        "rod",
+        "rud"
+      ]
+    },
+    {
+      "questionId": "PF81-Q08",
+      "question": "Which word correctly represents /r/ /ʌ/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "run",
+        "ran",
+        "rin",
+        "ron"
+      ]
+    },
+    {
+      "questionId": "PF81-Q09",
+      "question": "Which word correctly represents /r/ /ɒ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "rog",
+        "rig",
+        "rug",
+        "reg"
+      ]
+    },
+    {
+      "questionId": "PF81-Q10",
+      "question": "Which word correctly represents /r/ /ɛ/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "ren",
+        "rin",
+        "ran",
+        "ron"
+      ]
+    },
+    {
+      "questionId": "PF81-Q11",
+      "question": "A learner spells “rat” as “rit.” Which sound should be checked?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle vowel",
+        "The first sound",
+        "The final sound",
+        "The word boundary"
+      ]
+    },
+    {
+      "questionId": "PF81-Q12",
+      "question": "What should a learner do before writing a dictated CVC word?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Segment the word into its phonemes",
+        "Guess from a picture",
+        "Write only the first letter",
+        "Skip the vowel"
+      ]
+    },
+    {
+      "questionId": "PF81-Q13",
+      "question": "Why is sound-to-letter mapping important in spelling?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "It connects each heard phoneme to the grapheme used to represent it",
+        "It removes the need to listen",
+        "It makes words longer",
+        "It teaches punctuation"
+      ]
+    },
+    {
+      "questionId": "PF81-Q14",
+      "question": "A learner writes “rub” for /r/ /ɒ/ /b/. What should be checked first?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle vowel sound",
+        "The first consonant",
+        "The final consonant",
+        "The word length"
+      ]
+    },
+    {
+      "questionId": "PF81-Q15",
+      "question": "After accurate spelling of new /r/ CVC words, what should follow?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Controlled reading and sentence use",
+        "Only alphabet recitation",
+        "Unrelated advanced spelling",
+        "No further practice"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF81-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    },
+    {
+      "questionId": "PF81-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested /r/ phoneme sequence."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-81-v1"
+  }
+}
