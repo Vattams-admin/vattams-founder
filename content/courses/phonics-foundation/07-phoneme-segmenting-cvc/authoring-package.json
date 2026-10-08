@@ -1,0 +1,417 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-07",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "07-phoneme-segmenting-cvc",
+    "topic": "phoneme-segmenting",
+    "subtopic": "segment-familiar-cvc-words",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Hear a familiar CVC word and identify its individual phonemes.",
+      "Keep the phonemes in correct order while segmenting.",
+      "Prepare to map segmented sounds to letters for spelling."
+    ],
+    "concepts": [
+      "Segmenting breaks a spoken word into its component phonemes.",
+      "CVC words such as mat, sat, map and tap contain three phonemes.",
+      "Segmenting is the reverse direction of oral blending."
+    ],
+    "definitions": [
+      {
+        "term": "phoneme segmenting",
+        "definition": "Breaking a spoken word into its individual speech sounds in sequence."
+      },
+      {
+        "term": "phoneme",
+        "definition": "A single speech sound that can be identified within a spoken word."
+      }
+    ],
+    "workedExamples": [
+      "mat → /m/ /a/ /t/",
+      "sat → /s/ /a/ /t/",
+      "map → /m/ /a/ /p/",
+      "tap → /t/ /a/ /p/"
+    ],
+    "commonMistakes": [
+      "Leaving out the middle vowel.",
+      "Changing the sound order.",
+      "Naming letters instead of producing sounds."
+    ],
+    "keyTakeaways": [
+      "Say the word slowly.",
+      "Hear each sound.",
+      "Keep the order.",
+      "Use every sound."
+    ],
+    "revisionPoints": [
+      "Word → first sound → middle sound → final sound.",
+      "Segmenting supports spelling.",
+      "Do not skip the vowel."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Segment mat, sat, map and tap."
+    ],
+    "conceptual": [
+      "Explain how segmenting differs from blending.",
+      "Identify the middle phoneme in CVC words."
+    ],
+    "application": [
+      "Use counters to represent each phoneme.",
+      "Segment spoken words before writing them."
+    ],
+    "higherOrderThinking": [
+      "Diagnose a missing-phoneme error.",
+      "Choose the best support for a learner who omits vowels."
+    ],
+    "mixedReview": [
+      "Mix phoneme counting, position and sequence tasks."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Say the word.",
+      "Stretch it.",
+      "Count and name each sound."
+    ],
+    "flashRecall": [
+      "mat → /m/ /a/ /t/",
+      "sat → /s/ /a/ /t/",
+      "map → /m/ /a/ /p/",
+      "tap → /t/ /a/ /p/"
+    ],
+    "formulaOrFactBank": [
+      "CVC segmenting: whole word → 3 phonemes"
+    ],
+    "mistakeBasedRevision": [
+      "If the vowel is missing, stretch the middle sound.",
+      "If order changes, point from left to right while saying each sound."
+    ],
+    "weakTopicRevision": [
+      "Segment ten familiar CVC words and repeat any missed phoneme sequence."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound counters",
+      "steps": [
+        "Say a CVC word.",
+        "Push one counter for each phoneme.",
+        "Say each phoneme while touching its counter."
+      ]
+    },
+    {
+      "name": "Sound boxes",
+      "steps": [
+        "Draw three boxes.",
+        "Say the word slowly.",
+        "Place one sound in each box."
+      ]
+    },
+    {
+      "name": "Blend versus segment",
+      "steps": [
+        "Blend a sequence into a word.",
+        "Reverse the task and segment the word.",
+        "Compare the two directions."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner correctly segments at least 8 of 10 familiar CVC words.",
+    "Learner identifies first, middle and final phonemes in sequence.",
+    "Learner is ready to map segmented phonemes to graphemes for spelling."
+  ],
+  "questions": [
+    {
+      "questionId": "PF07-Q01",
+      "question": "How many sounds are in 'mat'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "questionId": "PF07-Q02",
+      "question": "What is the first sound in 'sat'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/s/",
+        "/a/",
+        "/t/",
+        "/m/"
+      ]
+    },
+    {
+      "questionId": "PF07-Q03",
+      "question": "What is the middle sound in 'map'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/m/",
+        "/a/",
+        "/p/",
+        "/s/"
+      ]
+    },
+    {
+      "questionId": "PF07-Q04",
+      "question": "What is the final sound in 'tap'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/t/",
+        "/a/",
+        "/p/",
+        "/m/"
+      ]
+    },
+    {
+      "questionId": "PF07-Q05",
+      "question": "Which sequence segments 'mat'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/m/ /a/ /t/",
+        "/t/ /a/ /m/",
+        "/m/ /t/ /a/",
+        "/a/ /m/ /t/"
+      ]
+    },
+    {
+      "questionId": "PF07-Q06",
+      "question": "Which sequence segments 'sat'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/a/ /s/ /t/",
+        "/s/ /a/ /t/",
+        "/t/ /a/ /s/",
+        "/s/ /t/ /a/"
+      ]
+    },
+    {
+      "questionId": "PF07-Q07",
+      "question": "Which sequence segments 'map'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/m/ /p/ /a/",
+        "/p/ /a/ /m/",
+        "/m/ /a/ /p/",
+        "/a/ /m/ /p/"
+      ]
+    },
+    {
+      "questionId": "PF07-Q08",
+      "question": "Which sequence segments 'tap'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/t/ /a/ /p/",
+        "/p/ /a/ /t/",
+        "/t/ /p/ /a/",
+        "/a/ /t/ /p/"
+      ]
+    },
+    {
+      "questionId": "PF07-Q09",
+      "question": "What does segmenting mean?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Breaking a word into its individual sounds",
+        "Joining sounds into a word",
+        "Naming a picture",
+        "Copying a sentence"
+      ]
+    },
+    {
+      "questionId": "PF07-Q10",
+      "question": "Why is segmenting useful for early spelling?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "It helps learners identify the sounds they need to represent",
+        "It removes the need to hear sounds",
+        "It makes every word longer",
+        "It changes consonants"
+      ]
+    },
+    {
+      "questionId": "PF07-Q11",
+      "question": "A learner says /m/ /t/ for 'mat'. Which sound is missing?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/a/",
+        "/s/",
+        "/p/",
+        "none"
+      ]
+    },
+    {
+      "questionId": "PF07-Q12",
+      "question": "A learner says /s/ /t/ for 'sat'. Which sound is missing?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/m/",
+        "/a/",
+        "/p/",
+        "none"
+      ]
+    },
+    {
+      "questionId": "PF07-Q13",
+      "question": "Which word has three phonemes?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat",
+        "m",
+        "a",
+        "s"
+      ]
+    },
+    {
+      "questionId": "PF07-Q14",
+      "question": "What should a learner do when segmenting a word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Say the word slowly and identify each sound in order",
+        "Guess the letters first",
+        "Skip the middle sound",
+        "Reverse the sounds"
+      ]
+    },
+    {
+      "questionId": "PF07-Q15",
+      "question": "Which learner is segmenting correctly?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Learner A says /m/ /a/ /t/ for mat",
+        "Learner B says /m/ /t/ for mat",
+        "Learner C says /t/ /m/ /a/",
+        "Learner D says only /a/"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF07-Q01",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q12",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    },
+    {
+      "questionId": "PF07-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the phoneme-segmenting strategy taught in this lesson."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-07-v1"
+  }
+}
