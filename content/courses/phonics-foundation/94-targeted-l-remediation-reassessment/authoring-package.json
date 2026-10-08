@@ -1,0 +1,443 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-94",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "94-targeted-l-remediation-reassessment",
+    "topic": "targeted-remediation",
+    "subtopic": "l-reassessment",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Use diagnostic evidence to identify the weakest /l/ component.",
+      "Deliver targeted remediation for recognition, decoding, encoding, comprehension, or fluency.",
+      "Use fresh items to reassess the repaired skill.",
+      "Route learners forward only when mastery criteria are met."
+    ],
+    "concepts": [
+      "Remediation should target the specific error pattern.",
+      "Fresh assessment items provide evidence of transferable learning.",
+      "Mastery requires adequate performance across critical components.",
+      "A learner can need remediation in one component while retaining strength in others."
+    ],
+    "definitions": [
+      {
+        "term": "targeted remediation",
+        "definition": "Instruction and practice focused on a specific identified learning gap."
+      },
+      {
+        "term": "reassessment",
+        "definition": "A fresh measurement used to determine whether the targeted skill has improved."
+      },
+      {
+        "term": "fresh item",
+        "definition": "A new assessment item that measures the same skill without repeating the exact prior question."
+      }
+    ],
+    "workedExamples": [
+      "Weak sound recognition → auditory /l/ versus /r/ discrimination → fresh recognition check.",
+      "Weak encoding → segment CVC words → map phonemes to graphemes → fresh spelling check.",
+      "Weak comprehension → controlled sentence questions → fresh text-evidence check."
+    ],
+    "commonMistakes": [
+      "Remediating every skill when only one component is weak.",
+      "Repeating identical assessment questions.",
+      "Advancing because of speed despite inaccurate decoding.",
+      "Ignoring comprehension after decoding improves."
+    ],
+    "keyTakeaways": [
+      "Target the weak component.",
+      "Teach, practise, then reassess.",
+      "Use fresh items.",
+      "Advance only after mastery."
+    ],
+    "revisionPoints": [
+      "weak component",
+      "targeted practice",
+      "fresh items",
+      "80% mastery",
+      "reassessment routing"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Practise the identified weak /l/ component."
+    ],
+    "conceptual": [
+      "Match an error pattern to the correct remediation activity."
+    ],
+    "application": [
+      "Select a targeted response based on diagnostic evidence."
+    ],
+    "higherOrderThinking": [
+      "Interpret mixed component results and choose the narrowest effective remediation route."
+    ],
+    "mixedReview": [
+      "Reassess /l/ skills across recognition, decoding, encoding, comprehension, and fluency."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "diagnose → target → practise → fresh reassess → route"
+    ],
+    "flashRecall": [
+      "weak skill",
+      "fresh item",
+      "80%",
+      "reassess",
+      "advance/remediate"
+    ],
+    "formulaOrFactBank": [
+      "Advance = reassessment ≥ 0.80 + no critical weak component."
+    ],
+    "mistakeBasedRevision": [
+      "Match each error to its component before choosing remediation."
+    ],
+    "weakTopicRevision": [
+      "Repeat only the weak component with varied fresh examples until mastery evidence is sufficient."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Component repair",
+      "steps": [
+        "Review the diagnostic result.",
+        "Name the weak component.",
+        "Select one focused activity.",
+        "Record the new result."
+      ]
+    },
+    {
+      "name": "Fresh-item reassessment",
+      "steps": [
+        "Complete targeted practice.",
+        "Present unseen but equivalent items.",
+        "Score the component.",
+        "Compare with the mastery target."
+      ]
+    },
+    {
+      "name": "Route decision",
+      "steps": [
+        "Check overall reassessment.",
+        "Check each critical component.",
+        "Advance if all criteria are met.",
+        "Otherwise assign the next targeted remediation."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner receives remediation matched to the identified /l/ weakness.",
+    "Learner demonstrates improvement on fresh reassessment items.",
+    "System can route the learner to advancement or further targeted remediation."
+  ],
+  "assessments": [
+    {
+      "assessmentId": "PF94-REASSESS-01",
+      "type": "reassessment",
+      "title": "Targeted /l/ Remediation Reassessment",
+      "masteryTarget": 0.8,
+      "components": [
+        "soundRecognition",
+        "decoding",
+        "encoding",
+        "comprehension",
+        "fluency"
+      ],
+      "freshItemPolicy": true,
+      "routing": {
+        "advance": "Advance when reassessment is at least 0.80 and no critical component remains below target.",
+        "remediate": "Reteach only the component that remains below target, then issue another fresh reassessment."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "PF94-Q01",
+      "question": "If a learner confuses /l/ and /r/, which practice is most direct?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Listen, identify /l/ versus /r/, then repeat the target sound.",
+        "Practise punctuation.",
+        "Read an unrelated passage.",
+        "Skip sound practice."
+      ]
+    },
+    {
+      "questionId": "PF94-Q02",
+      "question": "Which word begins with /l/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "lap",
+        "rap",
+        "fan",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF94-Q03",
+      "question": "Which word begins with /l/ and ends with /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "lip",
+        "rip",
+        "log",
+        "let"
+      ]
+    },
+    {
+      "questionId": "PF94-Q04",
+      "question": "Which word matches /l/ /ɒ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "log",
+        "lag",
+        "lug",
+        "leg"
+      ]
+    },
+    {
+      "questionId": "PF94-Q05",
+      "question": "Which word matches /l/ /ɛ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "let",
+        "lit",
+        "lot",
+        "lat"
+      ]
+    },
+    {
+      "questionId": "PF94-Q06",
+      "question": "Which spelling matches /l/ /ʌ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "lug",
+        "lag",
+        "log",
+        "leg"
+      ]
+    },
+    {
+      "questionId": "PF94-Q07",
+      "question": "A learner writes “lap” for “lip.” Which component needs reteaching?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Short-vowel encoding",
+        "Initial /l/ recognition",
+        "Final consonant recognition",
+        "Passage sequencing"
+      ]
+    },
+    {
+      "questionId": "PF94-Q08",
+      "question": "A learner reads “log” as “lag.” What should they check?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "The middle vowel sound.",
+        "The first consonant.",
+        "The final consonant.",
+        "The number of words."
+      ]
+    },
+    {
+      "questionId": "PF94-Q09",
+      "question": "A learner can decode “lip” but reads it slowly. What is the best practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Repeated accurate reading of controlled /l/ words and sentences.",
+        "Guess the word from a picture.",
+        "Skip decoding.",
+        "Move to advanced text."
+      ]
+    },
+    {
+      "questionId": "PF94-Q10",
+      "question": "Which activity targets comprehension rather than decoding?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Answering who/what/where questions from a controlled sentence.",
+        "Sounding out l-i-p.",
+        "Writing l-a-p from dictation.",
+        "Sorting /l/ and /r/."
+      ]
+    },
+    {
+      "questionId": "PF94-Q11",
+      "question": "A learner scores below target only in spelling. What is the most targeted route?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Phoneme segmentation, sound-to-letter mapping, and fresh spelling items.",
+        "Repeat only passage sequencing.",
+        "Practise punctuation.",
+        "Skip reassessment."
+      ]
+    },
+    {
+      "questionId": "PF94-Q12",
+      "question": "Why should reassessment use fresh items?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "To check whether the learner can apply the skill beyond memorised answers.",
+        "To make the assessment longer.",
+        "To avoid teaching.",
+        "To remove all familiar patterns."
+      ]
+    },
+    {
+      "questionId": "PF94-Q13",
+      "question": "Which result supports advancement after reassessment?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "At least 80% with no critical weak component.",
+        "Fast reading with many errors.",
+        "Correct answers only on memorised items.",
+        "Strong decoding but no comprehension."
+      ]
+    },
+    {
+      "questionId": "PF94-Q14",
+      "question": "If comprehension remains below target after decoding improves, what should happen?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Provide targeted comprehension practice and reassess comprehension.",
+        "Move ahead without checking meaning.",
+        "Restart all phonics from the beginning.",
+        "Remove text reading."
+      ]
+    },
+    {
+      "questionId": "PF94-Q15",
+      "question": "What is the purpose of targeted remediation?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Repair the specific weak skill and verify improvement with reassessment.",
+        "Give identical practice to every learner.",
+        "Increase difficulty regardless of need.",
+        "Replace assessment with guessing."
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF94-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    },
+    {
+      "questionId": "PF94-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this targeted /l/ remediation and reassessment item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-94-v1"
+  }
+}
