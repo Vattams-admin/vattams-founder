@@ -1,0 +1,417 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-08",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "08-cvc-spelling-m-s-t-a",
+    "topic": "cvc-spelling",
+    "subtopic": "phoneme-to-grapheme-mapping",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment spoken CVC words and map each phoneme to a known grapheme.",
+      "Spell familiar CVC words using m, s, t and short a.",
+      "Read back written words to check sound-to-letter accuracy."
+    ],
+    "concepts": [
+      "Spelling maps spoken phonemes to written graphemes.",
+      "One sound in a simple CVC word is represented by one known letter at this stage.",
+      "Segmenting provides the sound sequence needed for spelling."
+    ],
+    "definitions": [
+      {
+        "term": "encoding",
+        "definition": "Using sounds and known letter-sound relationships to write a word."
+      },
+      {
+        "term": "phoneme-to-grapheme mapping",
+        "definition": "Connecting each spoken sound to the written letter that represents it."
+      }
+    ],
+    "workedExamples": [
+      "mat → /m/ /a/ /t/ → m-a-t",
+      "sat → /s/ /a/ /t/ → s-a-t",
+      "map → /m/ /a/ /p/ → m-a-p",
+      "tap → /t/ /a/ /p/ → t-a-p"
+    ],
+    "commonMistakes": [
+      "Leaving out the middle vowel.",
+      "Using the wrong grapheme for a known sound.",
+      "Writing letters without first segmenting the word."
+    ],
+    "keyTakeaways": [
+      "Say the word.",
+      "Segment every sound.",
+      "Write one known grapheme for each sound.",
+      "Read the word back."
+    ],
+    "revisionPoints": [
+      "Hear → segment → map → write → read back.",
+      "Check first, middle and final sounds."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Spell mat, sat, map and tap from dictation."
+    ],
+    "conceptual": [
+      "Explain why segmenting comes before writing.",
+      "Identify the missing grapheme in a CVC spelling."
+    ],
+    "application": [
+      "Write a CVC word after hearing it.",
+      "Correct a spelling with a missing vowel."
+    ],
+    "higherOrderThinking": [
+      "Diagnose a spelling error from its phoneme sequence.",
+      "Choose the best strategy for a learner who omits middle vowels."
+    ],
+    "mixedReview": [
+      "Mix sound segmentation, grapheme selection and word checking."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Say it.",
+      "Segment it.",
+      "Write it.",
+      "Read it back."
+    ],
+    "flashRecall": [
+      "/m/ /a/ /t/ → mat",
+      "/s/ /a/ /t/ → sat",
+      "/m/ /a/ /p/ → map",
+      "/t/ /a/ /p/ → tap"
+    ],
+    "formulaOrFactBank": [
+      "Spelling: phoneme sequence → grapheme sequence → word"
+    ],
+    "mistakeBasedRevision": [
+      "If the vowel is missing, segment again and identify the middle sound.",
+      "If a consonant is wrong, say that phoneme and select its known grapheme."
+    ],
+    "weakTopicRevision": [
+      "Dictate ten familiar CVC words and repeat any spelling that contains a sound-to-letter mismatch."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Say and write",
+      "steps": [
+        "Adult says a familiar CVC word.",
+        "Learner segments it.",
+        "Learner writes one grapheme for each sound."
+      ]
+    },
+    {
+      "name": "Sound boxes to letters",
+      "steps": [
+        "Draw three sound boxes.",
+        "Say the word.",
+        "Write one grapheme in each box."
+      ]
+    },
+    {
+      "name": "Read it back",
+      "steps": [
+        "Learner reads the written word.",
+        "Learner checks each sound.",
+        "Learner corrects any mismatch."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner spells at least 8 of 10 familiar CVC words correctly from dictation.",
+    "Learner maps first, middle and final phonemes to known graphemes.",
+    "Learner reads written CVC words back to self-check spelling."
+  ],
+  "questions": [
+    {
+      "questionId": "PF08-Q01",
+      "question": "Which letters spell the sounds /m/ /a/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat",
+        "sat",
+        "map",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF08-Q02",
+      "question": "Which letters spell /s/ /a/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "sat",
+        "mat",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF08-Q03",
+      "question": "Which letters spell /m/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sat",
+        "tap",
+        "map",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF08-Q04",
+      "question": "Which letters spell /t/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "mat",
+        "tap",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF08-Q05",
+      "question": "What should you do first when spelling a CVC word you hear?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Say and segment the word",
+        "Guess the letters",
+        "Write a long word",
+        "Skip the middle sound"
+      ]
+    },
+    {
+      "questionId": "PF08-Q06",
+      "question": "Which letter represents /m/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "m",
+        "s",
+        "t",
+        "a"
+      ]
+    },
+    {
+      "questionId": "PF08-Q07",
+      "question": "Which letter represents /s/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "m",
+        "a",
+        "s",
+        "p"
+      ]
+    },
+    {
+      "questionId": "PF08-Q08",
+      "question": "Which letter represents /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "a",
+        "p",
+        "t",
+        "m"
+      ]
+    },
+    {
+      "questionId": "PF08-Q09",
+      "question": "Which letter represents short /a/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "m",
+        "s",
+        "a",
+        "t"
+      ]
+    },
+    {
+      "questionId": "PF08-Q10",
+      "question": "A learner spells 'mat' as 'mt'. Which sound was missed?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/m/",
+        "/a/",
+        "/t/",
+        "none"
+      ]
+    },
+    {
+      "questionId": "PF08-Q11",
+      "question": "Which spelling matches /m/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mop",
+        "map",
+        "mat",
+        "sap"
+      ]
+    },
+    {
+      "questionId": "PF08-Q12",
+      "question": "Which spelling matches /s/ /a/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sit",
+        "sat",
+        "set",
+        "sap"
+      ]
+    },
+    {
+      "questionId": "PF08-Q13",
+      "question": "Why is segmenting useful before spelling?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "It tells you which sounds need letters",
+        "It removes the need to listen",
+        "It makes words longer",
+        "It changes the word"
+      ]
+    },
+    {
+      "questionId": "PF08-Q14",
+      "question": "Which learner is using the correct spelling strategy?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Learner A segments the word and writes one letter for each known sound",
+        "Learner B guesses from a picture",
+        "Learner C skips the vowel",
+        "Learner D writes letters in reverse order"
+      ]
+    },
+    {
+      "questionId": "PF08-Q15",
+      "question": "What should you check after writing a CVC word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Read it back and check every sound",
+        "Add another letter",
+        "Cover the word",
+        "Remove the vowel"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF08-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q08",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q09",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q12",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    },
+    {
+      "questionId": "PF08-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught phoneme-to-grapheme spelling process."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-08-v1"
+  }
+}
