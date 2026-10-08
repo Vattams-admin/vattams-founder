@@ -1,1 +1,405 @@
-{}
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-123",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "123-controlled-h-sentences-comprehension",
+    "topic": "controlled-h-sentences-comprehension",
+    "subtopic": "consonant-h",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Controlled /h/ Sentences & Comprehension",
+      "Apply /h/ decoding and reading skills in controlled text.",
+      "Use self-correction and rereading for accuracy."
+    ],
+    "concepts": [
+      "Accurate reading depends on sound-by-sound decoding.",
+      "Controlled repetition builds automaticity.",
+      "Self-correction strengthens sound-letter mapping."
+    ],
+    "definitions": [
+      {
+        "term": "fluency",
+        "definition": "Accurate, appropriately paced, expressive reading."
+      },
+      {
+        "term": "self-correction",
+        "definition": "Noticing an error and changing the response to match the text."
+      }
+    ],
+    "workedExamples": [
+      "hat → read smoothly",
+      "hen → read smoothly",
+      "hop → reread after blending"
+    ],
+    "commonMistakes": [
+      "Guessing from pictures or context.",
+      "Skipping a sound.",
+      "Failing to reread after an error."
+    ],
+    "keyTakeaways": [
+      "Decode accurately.",
+      "Reread.",
+      "Self-correct."
+    ],
+    "revisionPoints": [
+      "/h/",
+      "CVC",
+      "controlled text",
+      "fluency",
+      "self-correction"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read controlled h words."
+    ],
+    "conceptual": [
+      "Identify sound patterns in h-initial words."
+    ],
+    "application": [
+      "Read controlled sentences and passages."
+    ],
+    "higherOrderThinking": [
+      "Explain why rereading improves accuracy."
+    ],
+    "mixedReview": [
+      "Combine decoding, comprehension, and fluency."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "see → sound → blend → read → check"
+    ],
+    "flashRecall": [
+      "hat",
+      "hen",
+      "hop",
+      "hut",
+      "ham"
+    ],
+    "formulaOrFactBank": [
+      "h → /h/"
+    ],
+    "mistakeBasedRevision": [
+      "Return to the grapheme sequence and blend again."
+    ],
+    "weakTopicRevision": [
+      "Practise the weakest reading component with fresh examples."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Controlled reading",
+      "steps": [
+        "Decode each word.",
+        "Read the sentence or passage.",
+        "Reread smoothly.",
+        "Correct errors."
+      ]
+    },
+    {
+      "name": "Fluency check",
+      "steps": [
+        "Read once for accuracy.",
+        "Read again for smoothness.",
+        "Record one improvement."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner applies /h/ knowledge in connected reading.",
+    "Learner improves accuracy through rereading.",
+    "Learner self-corrects decoding errors."
+  ],
+  "questions": [
+    {
+      "questionId": "PF123-Q01",
+      "question": "Which word belongs to the target /h/ reading set?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hat",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q02",
+      "question": "Which word begins with /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hen",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q03",
+      "question": "Which word can be read with h and a?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "ha",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q04",
+      "question": "Which word begins with /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hop",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q05",
+      "question": "Which word begins with /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hut",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q06",
+      "question": "What should a reader do first?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "look at the first grapheme",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q07",
+      "question": "What helps a reader blend a CVC word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "say the phonemes in order",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q08",
+      "question": "What should happen after decoding?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "reread the whole word",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q09",
+      "question": "Which word has initial /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "ham",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q10",
+      "question": "Which word has initial /h/?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hot",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q11",
+      "question": "Which action supports accuracy?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "check each sound",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q12",
+      "question": "What is the key h correspondence?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "h → /h/",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q13",
+      "question": "What should you do when a word is difficult?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "slow down and blend again",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q14",
+      "question": "Why reread controlled text?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "to build accurate fluent reading",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF123-Q15",
+      "question": "What should a learner do after an error?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "self-correct using the sounds",
+        "/d/",
+        "sun",
+        "cat"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF123-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    },
+    {
+      "questionId": "PF123-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target skill."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-123-v1"
+  }
+}
