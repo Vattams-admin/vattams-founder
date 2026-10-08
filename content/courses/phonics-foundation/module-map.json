@@ -175,7 +175,8 @@
           "Can decode taught short-/u/ CVC words by accurate grapheme-to-phoneme mapping and blending.",
           "Can segment and encode taught short-/u/ CVC words using accurate sound-to-letter mapping.",
           "Can read taught short-/u/ word families and apply them in controlled text while checking every grapheme.",
-          "Can read controlled short-/u/ sentences and answer literal questions using text evidence."
+          "Can read controlled short-/u/ sentences and answer literal questions using text evidence.",
+          "Can read a controlled short-/u/ passage, sequence key events, and retell using evidence."
         ]
       },
       "lessons": [
@@ -454,6 +455,12 @@
           "sequence": 59,
           "title": "Controlled Short /u/ Sentences and Comprehension",
           "authoringPackage": "content/courses/phonics-foundation/59-controlled-short-u-sentences-comprehension/authoring-package.json"
+        },
+        {
+          "lessonId": "60-controlled-short-u-passage-sequencing",
+          "sequence": 60,
+          "title": "Controlled Short /u/ Passage and Sequencing",
+          "authoringPackage": "content/courses/phonics-foundation/60-controlled-short-u-passage-sequencing/authoring-package.json"
         }
       ]
     }
