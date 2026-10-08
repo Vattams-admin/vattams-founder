@@ -10,6 +10,28 @@
   ],
   "library_root": "content",
   "domains": {
+    "course": {
+      "path": "courses/{course}/{subject-or-track}",
+      "locator": [
+        "domain",
+        "course",
+        "subject",
+        "module",
+        "lesson",
+        "topic",
+        "subtopic",
+        "language",
+        "ageBand"
+      ],
+      "assessmentModes": [
+        "practice",
+        "topic_test",
+        "chapter_test",
+        "subject_test",
+        "mock_test",
+        "official_attempt"
+      ]
+    },
     "school": {
       "path": "school/{state-or-national}/{curriculum}/{class}/{subject}",
       "locator": [
