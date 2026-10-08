@@ -172,7 +172,8 @@
           "Can distinguish short-/e/ recognition, decoding, encoding, comprehension and developing fluency needs through diagnostic evidence.",
           "Can remediate a diagnosed short-/e/ weakness and demonstrate readiness on fresh reassessment items.",
           "Can hear and identify short /u/ and connect the phoneme to grapheme u in controlled CVC words.",
-          "Can decode taught short-/u/ CVC words by accurate grapheme-to-phoneme mapping and blending."
+          "Can decode taught short-/u/ CVC words by accurate grapheme-to-phoneme mapping and blending.",
+          "Can segment and encode taught short-/u/ CVC words using accurate sound-to-letter mapping."
         ]
       },
       "lessons": [
@@ -433,6 +434,12 @@
           "sequence": 56,
           "title": "Decode CVC Words with Short /u/",
           "authoringPackage": "content/courses/phonics-foundation/56-decode-cvc-short-u/authoring-package.json"
+        },
+        {
+          "lessonId": "57-cvc-spelling-short-u",
+          "sequence": 57,
+          "title": "CVC Spelling with Short /u/",
+          "authoringPackage": "content/courses/phonics-foundation/57-cvc-spelling-short-u/authoring-package.json"
         }
       ]
     }
