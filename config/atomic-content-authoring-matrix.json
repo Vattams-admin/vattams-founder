@@ -273,5 +273,60 @@
       "language_review"
     ],
     "automatic_ceo_approval": "configured auditable CEO approval may authorize publication only after all mandatory automated and human-quality gates pass; it does not bypass them."
+  },
+  "course": {
+    "families": [
+      "school_foundation",
+      "phonics_early_learning",
+      "language_learning",
+      "academic_foundation",
+      "diploma",
+      "engineering",
+      "medical",
+      "professional_skills",
+      "certification"
+    ],
+    "atomic_package": [
+      "course_map",
+      "module_map",
+      "lesson_notes",
+      "concepts_definitions",
+      "worked_examples",
+      "activities",
+      "study_material",
+      "practice_basic",
+      "practice_conceptual",
+      "practice_application",
+      "practice_hots",
+      "common_mistakes",
+      "key_takeaways",
+      "flash_recall",
+      "formula_or_fact_bank",
+      "chapter_revision",
+      "weak_topic_revision",
+      "chapter_test",
+      "subject_test",
+      "mock_test",
+      "official_assessment",
+      "outcomes"
+    ],
+    "question_package": [
+      "unique_question_id",
+      "curriculum_locator",
+      "class_or_exam_locator",
+      "subject_chapter_topic_subtopic",
+      "question_type",
+      "difficulty",
+      "language",
+      "age_band",
+      "four_unique_options",
+      "private_correct_option",
+      "detailed_reasoning",
+      "marks",
+      "expected_time",
+      "source_provenance",
+      "version",
+      "review_status"
+    ]
   }
 }
