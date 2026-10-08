@@ -167,7 +167,8 @@
           "Can decode taught short-/e/ CVC words by accurate grapheme-to-phoneme mapping and blending.",
           "Can segment and encode taught short-/e/ CVC words using accurate sound-to-letter mapping.",
           "Can read taught short-/e/ word families and apply them in controlled text while checking every grapheme.",
-          "Can read controlled short-/e/ sentences and answer literal questions using text evidence."
+          "Can read controlled short-/e/ sentences and answer literal questions using text evidence.",
+          "Can read controlled short-/e/ connected text and sequence explicit events using evidence."
         ]
       },
       "lessons": [
@@ -392,6 +393,12 @@
           "sequence": 51,
           "title": "Controlled Short /e/ Sentences and Comprehension",
           "authoringPackage": "content/courses/phonics-foundation/51-controlled-short-e-sentences-comprehension/authoring-package.json"
+        },
+        {
+          "lessonId": "52-controlled-short-e-passage-sequencing",
+          "sequence": 52,
+          "title": "Controlled Short /e/ Passage and Sequencing",
+          "authoringPackage": "content/courses/phonics-foundation/52-controlled-short-e-passage-sequencing/authoring-package.json"
         }
       ]
     }
