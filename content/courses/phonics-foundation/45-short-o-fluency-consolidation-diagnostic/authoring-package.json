@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-45",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "45-short-o-fluency-consolidation-diagnostic",
+    "topic": "short-o-vowel",
+    "subtopic": "fluency-consolidation-diagnostic",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Measure short /o/ recognition, decoding, spelling and comprehension separately.",
+      "Check accuracy of short /o/ CVC reading and encoding.",
+      "Identify component-specific errors for targeted remediation.",
+      "Use accurate rereading as an early fluency measure."
+    ],
+    "concepts": [
+      "Diagnostic assessment should isolate component skills.",
+      "Accuracy precedes speed in early phonics fluency.",
+      "Error patterns determine the next instructional response."
+    ],
+    "definitions": [
+      {
+        "term": "diagnostic",
+        "definition": "An assessment used to identify strengths and specific learning needs."
+      },
+      {
+        "term": "fluency",
+        "definition": "Accurate and increasingly automatic reading of taught material."
+      },
+      {
+        "term": "component skill",
+        "definition": "A specific part of phonics performance such as sound recognition, decoding or encoding."
+      }
+    ],
+    "workedExamples": [
+      "hot read as hat → inspect the middle vowel.",
+      "dog read as dag → check o versus a.",
+      "Accurate but slow reading → use repeated accurate rereading rather than sacrificing accuracy."
+    ],
+    "commonMistakes": [
+      "Treating every error as a decoding problem.",
+      "Focusing on speed before accuracy.",
+      "Using only a total score without component analysis.",
+      "Advancing without checking the diagnosed gap."
+    ],
+    "keyTakeaways": [
+      "Measure components separately.",
+      "Accuracy first.",
+      "Use error patterns.",
+      "Plan targeted remediation."
+    ],
+    "revisionPoints": [
+      "Sound → decoding → spelling → comprehension → fluency."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Complete short /o/ recognition and decoding checks."
+    ],
+    "conceptual": [
+      "Classify common short /o/ errors."
+    ],
+    "application": [
+      "Read and spell taught short /o/ words."
+    ],
+    "higherOrderThinking": [
+      "Choose the next instructional step from an error pattern."
+    ],
+    "mixedReview": [
+      "Combine recognition, decoding, encoding and comprehension."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Hear it.",
+      "Read it.",
+      "Spell it.",
+      "Understand it.",
+      "Reread it."
+    ],
+    "flashRecall": [
+      "hot = short o",
+      "mop = short o",
+      "dog = short o"
+    ],
+    "formulaOrFactBank": [
+      "Accuracy before speed"
+    ],
+    "mistakeBasedRevision": [
+      "o/a confusion → vowel discrimination and mapping.",
+      "slow accurate reading → repeated accurate rereading."
+    ],
+    "weakTopicRevision": [
+      "Practise the exact weak component before reassessment."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Skill stations",
+      "steps": [
+        "Sound recognition.",
+        "Decoding.",
+        "Spelling.",
+        "Comprehension.",
+        "Record each result separately."
+      ]
+    },
+    {
+      "name": "Error sort",
+      "steps": [
+        "Review an error.",
+        "Identify its component.",
+        "Select targeted practice.",
+        "Record the outcome."
+      ]
+    },
+    {
+      "name": "Fluency reread",
+      "steps": [
+        "Read accurately.",
+        "Reread the same taught text.",
+        "Observe increasing smoothness without reducing accuracy."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner demonstrates at least 80% accuracy on short /o/ recognition and decoding checks.",
+    "Learner demonstrates at least 80% accuracy on short /o/ spelling checks.",
+    "Learner answers controlled-text comprehension questions with at least 80% accuracy.",
+    "Learner uses accurate rereading to support developing fluency.",
+    "Teacher can identify the component skill requiring remediation."
+  ],
+  "questions": [
+    {
+      "questionId": "PF45-Q01",
+      "question": "Which word has short /o/ in the middle?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hot",
+        "hat",
+        "hit",
+        "hut"
+      ]
+    },
+    {
+      "questionId": "PF45-Q02",
+      "question": "Which word begins with /m/ and has short /o/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "mop",
+        "map",
+        "met",
+        "mud"
+      ]
+    },
+    {
+      "questionId": "PF45-Q03",
+      "question": "Which word ends with /g/ and has short /o/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "dog",
+        "dig",
+        "dug",
+        "dag"
+      ]
+    },
+    {
+      "questionId": "PF45-Q04",
+      "question": "Which word matches /p/ /o/ /t/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "pot",
+        "pat",
+        "pit",
+        "put"
+      ]
+    },
+    {
+      "questionId": "PF45-Q05",
+      "question": "Which spelling is correct for /h/ /o/ /t/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hot",
+        "hat",
+        "hit",
+        "hut"
+      ]
+    },
+    {
+      "questionId": "PF45-Q06",
+      "question": "Which spelling is correct for /m/ /o/ /p/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "mop",
+        "map",
+        "mip",
+        "mup"
+      ]
+    },
+    {
+      "questionId": "PF45-Q07",
+      "question": "A learner writes “hat” for “hot.” Which skill needs support?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Short /o/ vowel encoding",
+        "Initial /h/ recognition",
+        "Final /t/ recognition",
+        "Word spacing"
+      ]
+    },
+    {
+      "questionId": "PF45-Q08",
+      "question": "A learner reads “dog” as “dag.” Which skill needs support?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Short /o/ decoding",
+        "Final /g/ decoding",
+        "Initial /d/ decoding",
+        "Punctuation"
+      ]
+    },
+    {
+      "questionId": "PF45-Q09",
+      "question": "Which word belongs to the -ot family?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "pot",
+        "pin",
+        "map",
+        "sit"
+      ]
+    },
+    {
+      "questionId": "PF45-Q10",
+      "question": "Which word belongs to the -op family?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "mop",
+        "hot",
+        "dog",
+        "hat"
+      ]
+    },
+    {
+      "questionId": "PF45-Q11",
+      "question": "Read: “Tom has a mop.” What does Tom have?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "A mop",
+        "A pot",
+        "A dog",
+        "A log"
+      ]
+    },
+    {
+      "questionId": "PF45-Q12",
+      "question": "Read: “The dog is hot.” What is hot?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The dog",
+        "The mop",
+        "The pot",
+        "Tom"
+      ]
+    },
+    {
+      "questionId": "PF45-Q13",
+      "question": "Which sequence shows the taught decoding process?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "See grapheme → say sound → blend → reread",
+        "Guess → read → skip → stop",
+        "Read ending → guess → write",
+        "Skip vowel → blend two sounds"
+      ]
+    },
+    {
+      "questionId": "PF45-Q14",
+      "question": "What should happen after an inaccurate short /o/ decode?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Recheck graphemes, blend again and reread",
+        "Guess from context",
+        "Skip the word",
+        "Change every letter"
+      ]
+    },
+    {
+      "questionId": "PF45-Q15",
+      "question": "What does this diagnostic measure?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Short /o/ recognition, decoding, spelling, comprehension and developing fluency",
+        "Only handwriting speed",
+        "Only vocabulary",
+        "All grammar"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF45-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    },
+    {
+      "questionId": "PF45-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer reflects the measured short /o/ sound, decoding, spelling, comprehension, or diagnostic decision skill."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-45-v1"
+  }
+}
