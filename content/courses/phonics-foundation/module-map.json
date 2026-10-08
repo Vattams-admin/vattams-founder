@@ -202,7 +202,8 @@
           "Can decode taught CVC words containing /b/ by accurate grapheme-to-phoneme mapping, blending and self-correction.",
           "Can segment and spell taught CVC words containing /b/ by ordered phoneme-to-grapheme mapping and self-correction.",
           "Can identify shared CVC rimes and accurately decode controlled /b/ word-family chains.",
-          "Can decode controlled /b/ sentences, answer literal questions, and support answers with sentence evidence."
+          "Can decode controlled /b/ sentences, answer literal questions, and support answers with sentence evidence.",
+          "Can sequence first/next/last events and retell a short controlled /b/ passage using text evidence."
         ]
       },
       "lessons": [
@@ -723,6 +724,12 @@
           "sequence": 99,
           "title": "Controlled /b/ Sentences & Comprehension",
           "authoringPackage": "content/courses/phonics-foundation/99-controlled-b-sentences-comprehension/authoring-package.json"
+        },
+        {
+          "lessonId": "100-controlled-b-passage-sequencing",
+          "sequence": 100,
+          "title": "Controlled /b/ Passage Sequencing",
+          "authoringPackage": "content/courses/phonics-foundation/100-controlled-b-passage-sequencing/authoring-package.json"
         }
       ]
     }
