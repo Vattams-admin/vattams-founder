@@ -169,7 +169,8 @@
           "Can read taught short-/e/ word families and apply them in controlled text while checking every grapheme.",
           "Can read controlled short-/e/ sentences and answer literal questions using text evidence.",
           "Can read controlled short-/e/ connected text and sequence explicit events using evidence.",
-          "Can distinguish short-/e/ recognition, decoding, encoding, comprehension and developing fluency needs through diagnostic evidence."
+          "Can distinguish short-/e/ recognition, decoding, encoding, comprehension and developing fluency needs through diagnostic evidence.",
+          "Can remediate a diagnosed short-/e/ weakness and demonstrate readiness on fresh reassessment items."
         ]
       },
       "lessons": [
@@ -408,6 +409,15 @@
           "authoringPackage": "content/courses/phonics-foundation/53-short-e-fluency-consolidation-diagnostic/authoring-package.json",
           "assessmentIds": [
             "PF53-DIAG-01"
+          ]
+        },
+        {
+          "lessonId": "54-targeted-short-e-remediation-reassessment",
+          "sequence": 54,
+          "title": "Targeted Short /e/ Remediation and Reassessment",
+          "authoringPackage": "content/courses/phonics-foundation/54-targeted-short-e-remediation-reassessment/authoring-package.json",
+          "assessmentIds": [
+            "PF54-REASSESS-01"
           ]
         }
       ]
