@@ -1,1 +1,416 @@
-{}
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-121",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "121-cvc-spelling-with-h",
+    "topic": "cvc-encoding",
+    "subtopic": "consonant-h",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment h-initial CVC words into phonemes.",
+      "Map /h/ to h during spelling.",
+      "Spell controlled CVC words from dictation.",
+      "Read back and self-correct CVC spellings."
+    ],
+    "concepts": [
+      "CVC words can be segmented into three phonemes.",
+      "The initial /h/ maps to the grapheme h in the taught words.",
+      "Encoding requires hearing each phoneme in sequence.",
+      "Read-back checks whether each written grapheme matches the spoken word."
+    ],
+    "definitions": [
+      {
+        "term": "segment",
+        "definition": "Separate a spoken word into its individual phonemes."
+      },
+      {
+        "term": "encode",
+        "definition": "Represent spoken phonemes with written graphemes."
+      },
+      {
+        "term": "dictation",
+        "definition": "Writing a word after hearing it spoken."
+      }
+    ],
+    "workedExamples": [
+      "hat → /h/ /a/ /t/ → h-a-t",
+      "hen → /h/ /e/ /n/ → h-e-n",
+      "hop → /h/ /o/ /p/ → h-o-p",
+      "hug → /h/ /u/ /g/ → h-u-g"
+    ],
+    "commonMistakes": [
+      "Writing c instead of h for the first sound.",
+      "Skipping the middle vowel.",
+      "Changing the final consonant.",
+      "Not reading the completed spelling back."
+    ],
+    "keyTakeaways": [
+      "Say it.",
+      "Segment it.",
+      "Map each sound.",
+      "Read it back."
+    ],
+    "revisionPoints": [
+      "/h/ → h",
+      "CVC segmentation",
+      "sound-to-letter mapping",
+      "dictation",
+      "self-correction"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Segment and spell controlled h-initial CVC words."
+    ],
+    "conceptual": [
+      "Match each phoneme to its grapheme."
+    ],
+    "application": [
+      "Spell h-initial CVC words from dictation."
+    ],
+    "higherOrderThinking": [
+      "Explain how read-back can reveal a spelling error."
+    ],
+    "mixedReview": [
+      "Alternate segmentation, mapping, and spelling."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "say → segment → map → write → read back"
+    ],
+    "flashRecall": [
+      "h-a-t",
+      "h-e-n",
+      "h-i-p",
+      "h-o-p",
+      "h-u-g"
+    ],
+    "formulaOrFactBank": [
+      "CVC spelling uses one grapheme for each taught phoneme in these words."
+    ],
+    "mistakeBasedRevision": [
+      "Stretch the word and check the first phoneme before writing h."
+    ],
+    "weakTopicRevision": [
+      "Practise h-initial words with one short vowel at a time."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Phoneme boxes",
+      "steps": [
+        "Say the word.",
+        "Push one token for each phoneme.",
+        "Write the matching grapheme in each box."
+      ]
+    },
+    {
+      "name": "Dictation and check",
+      "steps": [
+        "Hear the word.",
+        "Segment it.",
+        "Write it.",
+        "Read it back.",
+        "Correct any mismatch."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments h-initial CVC words.",
+    "Learner writes h for initial /h/.",
+    "Learner spells controlled CVC words from dictation.",
+    "Learner checks spelling by reading it back."
+  ],
+  "questions": [
+    {
+      "questionId": "PF121-Q01",
+      "question": "Which letter represents /h/ at the start of “hat”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "h",
+        "g",
+        "4",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q02",
+      "question": "Which letter represents /h/ at the start of “hen”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "h",
+        "c",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q03",
+      "question": "Which letter represents /h/ at the start of “hop”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "h",
+        "g",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q04",
+      "question": "Which letter represents /h/ at the start of “hut”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "h",
+        "c",
+        "4",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q05",
+      "question": "How many phonemes are in “hat”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "3",
+        "g",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q06",
+      "question": "How many phonemes are in “hen”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "3",
+        "c",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q07",
+      "question": "How many phonemes are in “hop”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "3",
+        "g",
+        "4",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q08",
+      "question": "How many phonemes are in “hug”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "3",
+        "c",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q09",
+      "question": "Which word can be spelled h-a-t?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hat",
+        "g",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q10",
+      "question": "Which word can be spelled h-e-n?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hen",
+        "c",
+        "4",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q11",
+      "question": "Which word can be spelled h-i-p?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hip",
+        "g",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q12",
+      "question": "Which word can be spelled h-o-p?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hop",
+        "c",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q13",
+      "question": "What should you do before writing a CVC word?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say and segment each sound.",
+        "g",
+        "4",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q14",
+      "question": "If “hat” is written “cat”, which sound needs correction?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "the first sound /h/",
+        "c",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF121-Q15",
+      "question": "What should you do after spelling a CVC word?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Read it back and check each sound.",
+        "g",
+        "2",
+        "sun"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF121-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF121-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-121-v1"
+  }
+}
