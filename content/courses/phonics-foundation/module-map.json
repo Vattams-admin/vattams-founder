@@ -179,7 +179,8 @@
           "Can read a controlled short-/u/ passage, sequence key events, and retell using evidence.",
           "Can demonstrate short-/u/ sound recognition, decoding, encoding, comprehension, and fluency for diagnostic routing.",
           "Can complete targeted short-/u/ remediation and demonstrate transfer on fresh reassessment items.",
-          "Can hear and identify /k/ in initial and final positions and connect it to c/k."
+          "Can hear and identify /k/ in initial and final positions and connect it to c/k.",
+          "Can decode /k/ CVC words by blending phonemes and checking the middle vowel."
         ]
       },
       "lessons": [
@@ -482,6 +483,12 @@
           "sequence": 63,
           "title": "Hear and Identify /k/",
           "authoringPackage": "content/courses/phonics-foundation/63-hear-and-identify-c/authoring-package.json"
+        },
+        {
+          "lessonId": "64-decode-cvc-with-k",
+          "sequence": 64,
+          "title": "Decode CVC Words with /k/",
+          "authoringPackage": "content/courses/phonics-foundation/64-decode-cvc-with-k/authoring-package.json"
         }
       ]
     }
