@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-88",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "88-decode-cvc-with-l",
+    "topic": "cvc-decoding",
+    "subtopic": "decode-cvc-l",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Connect grapheme l to /l/ in taught CVC words.",
+      "Decode CVC words containing l by mapping each grapheme to its sound.",
+      "Blend /l/ with short vowels and taught final consonants.",
+      "Self-correct common /l/ decoding errors."
+    ],
+    "concepts": [
+      "Decoding follows the full grapheme-to-phoneme sequence.",
+      "Blending combines individual sounds into a spoken word.",
+      "Checking the middle vowel prevents common CVC substitutions.",
+      "Self-correction improves reliable word reading."
+    ],
+    "definitions": [
+      {
+        "term": "grapheme",
+        "definition": "A letter or letter group used to represent a speech sound."
+      },
+      {
+        "term": "blend",
+        "definition": "Combine individual phonemes smoothly to say a whole word."
+      },
+      {
+        "term": "decode",
+        "definition": "Use grapheme-sound knowledge to read a printed word."
+      }
+    ],
+    "workedExamples": [
+      "l-i-p → /l/ /ɪ/ /p/ → lip.",
+      "l-o-g → /l/ /ɒ/ /g/ → log.",
+      "l-u-g → /l/ /ʌ/ /g/ → lug."
+    ],
+    "commonMistakes": [
+      "Replacing /l/ with /r/.",
+      "Skipping the middle vowel.",
+      "Guessing from the first letter only.",
+      "Reading letter names instead of sounds."
+    ],
+    "keyTakeaways": [
+      "Look at every grapheme.",
+      "Say each sound.",
+      "Blend left to right.",
+      "Reread and self-correct."
+    ],
+    "revisionPoints": [
+      "l = /l/",
+      "CVC mapping",
+      "short vowels",
+      "left-to-right blending",
+      "self-correction"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Decode taught l-initial CVC words aloud."
+    ],
+    "conceptual": [
+      "Map each grapheme in a CVC word to its phoneme."
+    ],
+    "application": [
+      "Repair /l/, vowel, or final-sound decoding errors."
+    ],
+    "higherOrderThinking": [
+      "Explain why checking the middle vowel can repair a CVC reading error."
+    ],
+    "mixedReview": [
+      "Mix /l/ CVC decoding with previously taught consonants."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "look → sound → blend → check"
+    ],
+    "flashRecall": [
+      "l",
+      "lip",
+      "log",
+      "lug",
+      "let"
+    ],
+    "formulaOrFactBank": [
+      "CVC decoding = grapheme sounds in order + blend."
+    ],
+    "mistakeBasedRevision": [
+      "If the word is wrong, isolate each sound again and reread the whole word."
+    ],
+    "weakTopicRevision": [
+      "Practice fresh l-initial CVC words with the weakest vowel pattern."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-to-word mapping",
+      "steps": [
+        "Show a taught l CVC word.",
+        "Point to each grapheme.",
+        "Say each phoneme.",
+        "Blend the word."
+      ]
+    },
+    {
+      "name": "Vowel check",
+      "steps": [
+        "Read an l CVC word.",
+        "Identify the middle vowel.",
+        "Say its sound.",
+        "Reread the whole word."
+      ]
+    },
+    {
+      "name": "Decode and repair",
+      "steps": [
+        "Read the word.",
+        "Mark the error.",
+        "Rebuild the sound sequence.",
+        "Blend and reread."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner maps l to /l/ in print.",
+    "Learner decodes taught l CVC words accurately.",
+    "Learner blends left to right and self-corrects common errors."
+  ],
+  "questions": [
+    {
+      "questionId": "PF88-Q01",
+      "question": "Which word starts with l and ends with p?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lip",
+        "lap",
+        "log",
+        "let"
+      ]
+    },
+    {
+      "questionId": "PF88-Q02",
+      "question": "Which word starts with l and has short /a/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lap",
+        "lip",
+        "log",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF88-Q03",
+      "question": "Which word matches /l/ /ɪ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lip",
+        "lap",
+        "lop",
+        "lup"
+      ]
+    },
+    {
+      "questionId": "PF88-Q04",
+      "question": "Which word matches /l/ /ɒ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "log",
+        "lag",
+        "lig",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF88-Q05",
+      "question": "Which word matches /l/ /ʌ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "lug",
+        "lag",
+        "lig",
+        "log"
+      ]
+    },
+    {
+      "questionId": "PF88-Q06",
+      "question": "Which word matches /l/ /ɛ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "let",
+        "lit",
+        "lat",
+        "lot"
+      ]
+    },
+    {
+      "questionId": "PF88-Q07",
+      "question": "Which grapheme represents the /l/ sound at the start of “lip”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "l",
+        "r",
+        "f",
+        "m"
+      ]
+    },
+    {
+      "questionId": "PF88-Q08",
+      "question": "Which word begins with the same sound as “log”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "leg",
+        "rat",
+        "fan",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF88-Q09",
+      "question": "Which word has l at the end?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "pal",
+        "lap",
+        "lip",
+        "log"
+      ]
+    },
+    {
+      "questionId": "PF88-Q10",
+      "question": "What is the best way to decode “lug”?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Say /l/ /ʌ/ /g/, blend, then read “lug”",
+        "Guess from the picture",
+        "Skip the middle sound",
+        "Say the letter names only"
+      ]
+    },
+    {
+      "questionId": "PF88-Q11",
+      "question": "A learner reads “lip” as “rip.” Which part should be checked first?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The first sound /l/",
+        "The middle vowel",
+        "The final sound",
+        "The punctuation"
+      ]
+    },
+    {
+      "questionId": "PF88-Q12",
+      "question": "A learner reads “log” as “lag.” Which part needs checking?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle vowel sound",
+        "The first sound",
+        "The final sound",
+        "The first letter name"
+      ]
+    },
+    {
+      "questionId": "PF88-Q13",
+      "question": "Why should the learner look at every grapheme in a CVC word?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Each grapheme contributes to the word's sound sequence.",
+        "Only the first letter matters.",
+        "Pictures replace decoding.",
+        "The final sound can be skipped."
+      ]
+    },
+    {
+      "questionId": "PF88-Q14",
+      "question": "A learner can say /l/ but cannot blend /l/ /ɪ/ /p/. What is the best next practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Orally blend the sounds, then decode “lip” from print.",
+        "Move to long passages.",
+        "Practice punctuation only.",
+        "Stop using sound-by-sound reading."
+      ]
+    },
+    {
+      "questionId": "PF88-Q15",
+      "question": "After accurately decoding several taught /l/ CVC words, what should follow?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "CVC spelling and controlled word-family reading",
+        "Unrelated advanced text",
+        "Stop checking accuracy",
+        "Skip spelling"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF88-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    },
+    {
+      "questionId": "PF88-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ CVC decoding item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-88-v1"
+  }
+}
