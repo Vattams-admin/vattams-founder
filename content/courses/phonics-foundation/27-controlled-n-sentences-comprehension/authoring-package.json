@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-27",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "27-controlled-n-sentences-comprehension",
+    "topic": "n-sound",
+    "subtopic": "controlled-n-sentences-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read short controlled sentences containing taught /n/ patterns.",
+      "Identify who, action and location details directly stated in a sentence.",
+      "Reread after decoding to connect accurate word reading with meaning."
+    ],
+    "concepts": [
+      "Sentence comprehension depends on accurate decoding plus meaning-making.",
+      "Literal questions can be answered from explicitly stated information.",
+      "A single final-sound error can change a word and therefore change sentence meaning."
+    ],
+    "definitions": [
+      {
+        "term": "sentence comprehension",
+        "definition": "Understanding the meaning and explicit information contained in a sentence."
+      },
+      {
+        "term": "literal detail",
+        "definition": "Information directly stated in the text."
+      },
+      {
+        "term": "rereading",
+        "definition": "Reading the text again to confirm accuracy and meaning."
+      }
+    ],
+    "workedExamples": [
+      "Nan sat. → Who? Nan. What did Nan do? Sat.",
+      "Nan sat at a mat. → Where? At a mat.",
+      "If mat is read as map, reread and check the final sound /t/."
+    ],
+    "commonMistakes": [
+      "Answering from memory instead of the sentence.",
+      "Confusing mat and map.",
+      "Reading accurately but not checking meaning.",
+      "Guessing a word from its first sound."
+    ],
+    "keyTakeaways": [
+      "Decode every word.",
+      "Reread the sentence.",
+      "Find the stated detail.",
+      "Check the exact word."
+    ],
+    "revisionPoints": [
+      "Decode → reread → identify detail → answer from text."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read controlled /n/ sentences."
+    ],
+    "conceptual": [
+      "Identify who, action and location."
+    ],
+    "application": [
+      "Answer literal sentence questions."
+    ],
+    "higherOrderThinking": [
+      "Explain why a final-sound error can change meaning."
+    ],
+    "mixedReview": [
+      "Decode, reread and answer text-based questions."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Who?",
+      "What happened?",
+      "Where?",
+      "Check the exact word."
+    ],
+    "flashRecall": [
+      "Nan sat.",
+      "Nan sat at a mat."
+    ],
+    "formulaOrFactBank": [
+      "Comprehension = accurate reading + meaning check"
+    ],
+    "mistakeBasedRevision": [
+      "If a detail is wrong, reread the exact sentence.",
+      "If mat/map is confused, isolate the final sound."
+    ],
+    "weakTopicRevision": [
+      "Read each sentence twice and point to the word supporting the answer."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Who-action-place",
+      "steps": [
+        "Read a sentence.",
+        "Identify who.",
+        "Identify the action.",
+        "Identify the place if stated."
+      ]
+    },
+    {
+      "name": "Meaning repair",
+      "steps": [
+        "Read the sentence.",
+        "Intentionally compare mat/map.",
+        "Check the final sound.",
+        "Explain which meaning is correct."
+      ]
+    },
+    {
+      "name": "Evidence pointing",
+      "steps": [
+        "Read the question.",
+        "Reread the sentence.",
+        "Locate the supporting word or phrase.",
+        "Answer aloud."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner reads controlled /n/ sentences with at least 80% accuracy.",
+    "Learner identifies explicit who/action/location details with at least 80% accuracy.",
+    "Learner notices when a decoding error changes sentence meaning.",
+    "Learner uses rereading and text evidence to answer comprehension questions."
+  ],
+  "questions": [
+    {
+      "questionId": "PF27-Q01",
+      "question": "Read: “Nan sat.” Who sat?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Nan",
+        "Mat",
+        "Map",
+        "Pan"
+      ]
+    },
+    {
+      "questionId": "PF27-Q02",
+      "question": "Read: “Nan sat at a mat.” Where did Nan sit?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "At a mat",
+        "At a map",
+        "At a pan",
+        "At a tap"
+      ]
+    },
+    {
+      "questionId": "PF27-Q03",
+      "question": "Read: “Nan sat.” What did Nan do?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Sat",
+        "Ran",
+        "Mapped",
+        "Tapped"
+      ]
+    },
+    {
+      "questionId": "PF27-Q04",
+      "question": "Read: “Nan sat at a mat.” What did Nan sit at?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "A mat",
+        "A map",
+        "A pan",
+        "A pat"
+      ]
+    },
+    {
+      "questionId": "PF27-Q05",
+      "question": "Which sentence tells where Nan sat?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Nan sat at a mat.",
+        "Nan sat.",
+        "Nan had a map.",
+        "Nan can tap."
+      ]
+    },
+    {
+      "questionId": "PF27-Q06",
+      "question": "Which word tells who is in the sentence “Nan sat”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Nan",
+        "sat",
+        "at",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF27-Q07",
+      "question": "Which word tells the action in “Nan sat”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "sat",
+        "Nan",
+        "at",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF27-Q08",
+      "question": "Why should the learner reread a sentence after decoding it?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "To connect the words to meaning",
+        "To avoid understanding it",
+        "To skip difficult words",
+        "To memorize punctuation only"
+      ]
+    },
+    {
+      "questionId": "PF27-Q09",
+      "question": "A learner reads “Nan sat at a mat” correctly but says Nan sat at a map. What should the learner do?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Reread the sentence and check the final sound in mat",
+        "Guess again",
+        "Ignore the sentence",
+        "Change Nan"
+      ]
+    },
+    {
+      "questionId": "PF27-Q10",
+      "question": "Which sentence has the same meaning as “Nan sat.”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Nan sat down.",
+        "Nan mapped.",
+        "Nan ran.",
+        "Nan tapped."
+      ]
+    },
+    {
+      "questionId": "PF27-Q11",
+      "question": "What information is directly stated in “Nan sat at a mat”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Nan sat at a mat",
+        "Nan ran to a mat",
+        "Nan made a mat",
+        "Nan had a pan"
+      ]
+    },
+    {
+      "questionId": "PF27-Q12",
+      "question": "Which question checks a sentence detail?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Where did Nan sit?",
+        "What is /n/?",
+        "Which letter is m?",
+        "How many letters are in Nan?"
+      ]
+    },
+    {
+      "questionId": "PF27-Q13",
+      "question": "What should an answer to a sentence question be based on?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Words in the sentence",
+        "A random guess",
+        "An unrelated picture",
+        "The longest option"
+      ]
+    },
+    {
+      "questionId": "PF27-Q14",
+      "question": "Which reading behavior supports comprehension?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Decode accurately, then reread for meaning",
+        "Guess from the first letter",
+        "Skip the middle sound",
+        "Read only the last word"
+      ]
+    },
+    {
+      "questionId": "PF27-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Read controlled /n/ sentences accurately and understand their stated meaning",
+        "Memorize whole sentences without decoding",
+        "Introduce an untaught phoneme",
+        "Skip comprehension"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF27-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    },
+    {
+      "questionId": "PF27-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported directly by the controlled sentence and the taught decoding/comprehension strategy."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-27-v1"
+  }
+}
