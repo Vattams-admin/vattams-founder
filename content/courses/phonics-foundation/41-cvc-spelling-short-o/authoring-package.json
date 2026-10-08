@@ -1,0 +1,426 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-41",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "41-cvc-spelling-short-o",
+    "topic": "short-o-vowel",
+    "subtopic": "cvc-spelling-short-o",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment spoken short /o/ CVC words into phonemes.",
+      "Map each phoneme to its grapheme and spell the word.",
+      "Distinguish short /o/ from short /a/ during encoding.",
+      "Use read-back to detect and repair spelling errors."
+    ],
+    "concepts": [
+      "Encoding moves from spoken phonemes to written graphemes.",
+      "The middle vowel must be represented accurately.",
+      "Minimal contrasts reveal vowel encoding errors."
+    ],
+    "definitions": [
+      {
+        "term": "encoding",
+        "definition": "Representing spoken phonemes with written graphemes."
+      },
+      {
+        "term": "phoneme segmentation",
+        "definition": "Separating a spoken word into its individual sounds."
+      },
+      {
+        "term": "read-back",
+        "definition": "Reading a written word to verify that it represents the intended sounds."
+      }
+    ],
+    "workedExamples": [
+      "hot → /h/ /o/ /t/ → h-o-t.",
+      "mop → /m/ /o/ /p/ → m-o-p.",
+      "hat for hot → compare the middle sound and replace a with o."
+    ],
+    "commonMistakes": [
+      "Writing a instead of o.",
+      "Omitting the middle vowel.",
+      "Confusing o with another short vowel.",
+      "Writing before segmenting the spoken word."
+    ],
+    "keyTakeaways": [
+      "Say it.",
+      "Segment it.",
+      "Map every sound.",
+      "Write it.",
+      "Read it back."
+    ],
+    "revisionPoints": [
+      "Spoken word → phonemes → graphemes → spelling → read-back."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Spell hot, mop, pot and dog from dictation."
+    ],
+    "conceptual": [
+      "Identify the vowel causing an encoding error."
+    ],
+    "application": [
+      "Encode taught short /o/ CVC words independently."
+    ],
+    "higherOrderThinking": [
+      "Choose the correction step for an o/a spelling error."
+    ],
+    "mixedReview": [
+      "Spell short /o/ and contrast with short /a/ words."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Hear.",
+      "Segment.",
+      "Map.",
+      "Write.",
+      "Read back."
+    ],
+    "flashRecall": [
+      "hot = h-o-t",
+      "mop = m-o-p",
+      "pot = p-o-t"
+    ],
+    "formulaOrFactBank": [
+      "short /o/ → o"
+    ],
+    "mistakeBasedRevision": [
+      "hot → hat error: check the middle vowel.",
+      "mop → map error: check the middle vowel."
+    ],
+    "weakTopicRevision": [
+      "Repeat auditory contrast before spelling the target word again."
+    ]
+  },
+  "activities": [
+    {
+      "name": "o-word dictation",
+      "steps": [
+        "Say a target word.",
+        "Repeat it.",
+        "Segment the sounds.",
+        "Map graphemes.",
+        "Write the word.",
+        "Read it back."
+      ]
+    },
+    {
+      "name": "Vowel repair",
+      "steps": [
+        "Compare hot and hat.",
+        "Say the middle sounds.",
+        "Choose o or a.",
+        "Rewrite and read both words."
+      ]
+    },
+    {
+      "name": "Sound-box encoding",
+      "steps": [
+        "Say the word.",
+        "Push one counter for each phoneme.",
+        "Replace counters with graphemes.",
+        "Write the word.",
+        "Check by reading."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments short /o/ CVC words with at least 80% accuracy.",
+    "Learner spells taught short /o/ CVC words with at least 80% accuracy.",
+    "Learner represents short /o/ with o in the middle position.",
+    "Learner uses read-back to identify and correct an encoding error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF41-Q01",
+      "question": "Which spelling matches /h/ /o/ /t/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hot",
+        "hat",
+        "hit",
+        "hut"
+      ]
+    },
+    {
+      "questionId": "PF41-Q02",
+      "question": "Which spelling matches /m/ /o/ /p/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "mop",
+        "map",
+        "mip",
+        "mup"
+      ]
+    },
+    {
+      "questionId": "PF41-Q03",
+      "question": "Which spelling matches /p/ /o/ /t/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "pot",
+        "pat",
+        "pit",
+        "put"
+      ]
+    },
+    {
+      "questionId": "PF41-Q04",
+      "question": "Which word uses o for its middle sound?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "log",
+        "lag",
+        "leg",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF41-Q05",
+      "question": "What should you do first when spelling a spoken CVC word?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say it and segment its sounds",
+        "Guess the letters",
+        "Skip the vowel",
+        "Write the longest word"
+      ]
+    },
+    {
+      "questionId": "PF41-Q06",
+      "question": "After segmenting /m/ /o/ /p/, what should you do?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Map each sound to a grapheme and write it",
+        "Replace o with a",
+        "Skip the middle sound",
+        "Guess from m"
+      ]
+    },
+    {
+      "questionId": "PF41-Q07",
+      "question": "A learner writes “hat” for “hot.” Which sound needs checking?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Middle /o/ versus /a/",
+        "Initial /h/ versus /m/",
+        "Final /t/ versus /p/",
+        "No sound"
+      ]
+    },
+    {
+      "questionId": "PF41-Q08",
+      "question": "A learner writes “map” for “mop.” What should be checked?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Middle /o/ versus /a/",
+        "Initial /m/ versus /p/",
+        "Final /p/ versus /t/",
+        "Word length"
+      ]
+    },
+    {
+      "questionId": "PF41-Q09",
+      "question": "Which spelling has short /o/ in the middle?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "dog",
+        "dig",
+        "dug",
+        "dag"
+      ]
+    },
+    {
+      "questionId": "PF41-Q10",
+      "question": "Which letters spell “pot”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "p-o-t",
+        "p-a-t",
+        "p-i-t",
+        "p-u-t"
+      ]
+    },
+    {
+      "questionId": "PF41-Q11",
+      "question": "Why should the learner read the written word back?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "To check that the spelling represents the intended sounds",
+        "To avoid segmentation",
+        "To add another letter",
+        "To skip the vowel"
+      ]
+    },
+    {
+      "questionId": "PF41-Q12",
+      "question": "Which pair is useful for checking short /o/ spelling against short /a/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hot and hat",
+        "sit and pin",
+        "pin and tin",
+        "map and man"
+      ]
+    },
+    {
+      "questionId": "PF41-Q13",
+      "question": "Which spelling begins d, has short /o/, and ends g?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "dog",
+        "dig",
+        "dug",
+        "dag"
+      ]
+    },
+    {
+      "questionId": "PF41-Q14",
+      "question": "What should happen if the written word does not sound like the target word?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Re-segment, check the graphemes and rewrite it",
+        "Guess again without sounds",
+        "Skip the middle letter",
+        "Change every letter"
+      ]
+    },
+    {
+      "questionId": "PF41-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Encode taught short /o/ CVC words accurately using sound-to-letter mapping",
+        "Memorize unrelated spellings",
+        "Teach every vowel at once",
+        "Skip read-back"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF41-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF41-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /o/ segmentation, grapheme mapping and read-back process."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-41-v1"
+  }
+}
