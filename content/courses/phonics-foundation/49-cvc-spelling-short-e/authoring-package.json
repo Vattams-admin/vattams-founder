@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-49",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "49-cvc-spelling-short-e",
+    "topic": "short-e-vowel",
+    "subtopic": "cvc-encoding-and-spelling",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment short-/e/ CVC words into phonemes.",
+      "Map each phoneme to the appropriate grapheme.",
+      "Spell taught short-/e/ CVC words accurately.",
+      "Use read-back to verify sound-to-letter encoding."
+    ],
+    "concepts": [
+      "Encoding moves from spoken sounds to written graphemes.",
+      "Short /e/ is represented by e in the taught CVC pattern.",
+      "Each sound should be represented in sequence before the word is reread."
+    ],
+    "definitions": [
+      {
+        "term": "encoding",
+        "definition": "Representing spoken sounds with written letters or graphemes."
+      },
+      {
+        "term": "segmentation",
+        "definition": "Separating a word into its individual phonemes."
+      },
+      {
+        "term": "sound-to-letter mapping",
+        "definition": "Matching each heard phoneme to the grapheme used to represent it."
+      }
+    ],
+    "workedExamples": [
+      "bed → /b/ /e/ /d/ → b-e-d → read back bed.",
+      "pen → /p/ /e/ /n/ → p-e-n → read back pen.",
+      "pan versus pen → compare the middle /a/ and /e/ before writing."
+    ],
+    "commonMistakes": [
+      "Using i or a instead of e.",
+      "Skipping the middle vowel.",
+      "Writing from memory without segmenting.",
+      "Not reading the completed word back."
+    ],
+    "keyTakeaways": [
+      "Say the word.",
+      "Stretch and segment the sounds.",
+      "Map each sound.",
+      "Write the graphemes.",
+      "Read it back."
+    ],
+    "revisionPoints": [
+      "spoken word → phonemes → graphemes → written word",
+      "short /e/ → e",
+      "bed, pen, red, ten, men"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Segment and spell short-/e/ CVC words."
+    ],
+    "conceptual": [
+      "Identify which grapheme represents the vowel phoneme."
+    ],
+    "application": [
+      "Spell dictated short-/e/ CVC words using sound boxes or oral segmentation."
+    ],
+    "higherOrderThinking": [
+      "Diagnose a vowel spelling error and select the correct repair."
+    ],
+    "mixedReview": [
+      "Mix short-/e/ encoding with familiar short-vowel contrasts."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Say → segment → map → write → read back."
+    ],
+    "flashRecall": [
+      "bed",
+      "pen",
+      "red",
+      "ten",
+      "men"
+    ],
+    "formulaOrFactBank": [
+      "short /e/ → e"
+    ],
+    "mistakeBasedRevision": [
+      "e/a confusion → compare middle phonemes before writing."
+    ],
+    "weakTopicRevision": [
+      "Repeat sound-to-letter mapping for the middle vowel in fresh CVC words."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-box encoding",
+      "steps": [
+        "Say a CVC word.",
+        "Push one counter for each sound.",
+        "Replace each counter with its letter.",
+        "Read the completed word."
+      ]
+    },
+    {
+      "name": "Dictation and repair",
+      "steps": [
+        "Hear the word.",
+        "Segment it.",
+        "Write each grapheme.",
+        "Check the middle vowel.",
+        "Reread."
+      ]
+    },
+    {
+      "name": "Minimal-pair spelling",
+      "steps": [
+        "Compare pen and pan.",
+        "Say the middle sounds.",
+        "Choose e or a.",
+        "Write and reread both."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments taught short-/e/ CVC words accurately.",
+    "Learner maps short /e/ to e in the middle position.",
+    "Learner spells taught short-/e/ CVC words with accurate phoneme-grapheme correspondence.",
+    "Learner detects and repairs a vowel encoding error by rereading the word."
+  ],
+  "questions": [
+    {
+      "questionId": "PF49-Q01",
+      "question": "Which letter represents the middle sound in bed?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "e",
+        "a",
+        "i",
+        "o"
+      ]
+    },
+    {
+      "questionId": "PF49-Q02",
+      "question": "Which spelling matches /b/ /e/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "bed",
+        "bad",
+        "bid",
+        "bod"
+      ]
+    },
+    {
+      "questionId": "PF49-Q03",
+      "question": "Which word is correctly spelled for /p/ /e/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "pen",
+        "pan",
+        "pin",
+        "pon"
+      ]
+    },
+    {
+      "questionId": "PF49-Q04",
+      "question": "What should you do first when spelling hen?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say and segment /h/ /e/ /n/",
+        "Guess the word shape",
+        "Write the final letter only",
+        "Skip the vowel"
+      ]
+    },
+    {
+      "questionId": "PF49-Q05",
+      "question": "Which spelling represents /r/ /e/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "red",
+        "rad",
+        "rid",
+        "rod"
+      ]
+    },
+    {
+      "questionId": "PF49-Q06",
+      "question": "Which letter should be written for the short /e/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "e",
+        "a",
+        "i",
+        "o"
+      ]
+    },
+    {
+      "questionId": "PF49-Q07",
+      "question": "A learner writes bid for bed. Which part should be repaired?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The middle vowel grapheme",
+        "The initial consonant",
+        "The final consonant",
+        "The word spacing"
+      ]
+    },
+    {
+      "questionId": "PF49-Q08",
+      "question": "Which word has the same middle vowel as men?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hen",
+        "man",
+        "min",
+        "mon"
+      ]
+    },
+    {
+      "questionId": "PF49-Q09",
+      "question": "Which sequence supports accurate CVC spelling?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say → segment → map sounds → write → read back",
+        "Guess → write → skip checking",
+        "Write the first letter → guess the rest",
+        "Copy without saying sounds"
+      ]
+    },
+    {
+      "questionId": "PF49-Q10",
+      "question": "Which spelling is correct for /t/ /e/ /n/?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "ten",
+        "tan",
+        "tin",
+        "ton"
+      ]
+    },
+    {
+      "questionId": "PF49-Q11",
+      "question": "Why read the word back after spelling it?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "To check that the written graphemes represent the intended sounds",
+        "To make the word longer",
+        "To avoid segmentation",
+        "To replace phoneme practice"
+      ]
+    },
+    {
+      "questionId": "PF49-Q12",
+      "question": "Which spelling contains short /e/?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "pet",
+        "pat",
+        "pit",
+        "pot"
+      ]
+    },
+    {
+      "questionId": "PF49-Q13",
+      "question": "If a learner writes pan for pen, what comparison is useful?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Compare /e/ and /a/ in the middle position",
+        "Compare only the final consonants",
+        "Ignore the vowel",
+        "Compare word length"
+      ]
+    },
+    {
+      "questionId": "PF49-Q14",
+      "question": "Which word correctly maps three sounds to three letters?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "men",
+        "mean",
+        "mine",
+        "moon"
+      ]
+    },
+    {
+      "questionId": "PF49-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Encode short-/e/ CVC words by segmenting sounds and mapping them to letters",
+        "Memorize long-vowel spellings",
+        "Write sentences without phonics",
+        "Teach punctuation"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF49-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    },
+    {
+      "questionId": "PF49-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ sound-to-letter mapping and CVC encoding."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-49-v1"
+  }
+}
