@@ -200,7 +200,8 @@
           "Can use diagnostic evidence to complete targeted /l/ remediation and demonstrate improvement on fresh reassessment items.",
           "Can hear and identify /b/ in initial and final positions and distinguish it from similar taught consonants.",
           "Can decode taught CVC words containing /b/ by accurate grapheme-to-phoneme mapping, blending and self-correction.",
-          "Can segment and spell taught CVC words containing /b/ by ordered phoneme-to-grapheme mapping and self-correction."
+          "Can segment and spell taught CVC words containing /b/ by ordered phoneme-to-grapheme mapping and self-correction.",
+          "Can identify shared CVC rimes and accurately decode controlled /b/ word-family chains."
         ]
       },
       "lessons": [
@@ -709,6 +710,12 @@
           "sequence": 97,
           "title": "CVC Spelling with /b/",
           "authoringPackage": "content/courses/phonics-foundation/97-cvc-spelling-with-b/authoring-package.json"
+        },
+        {
+          "lessonId": "98-b-word-families-controlled-reading",
+          "sequence": 98,
+          "title": "/b/ Word Families & Controlled Reading",
+          "authoringPackage": "content/courses/phonics-foundation/98-b-word-families-controlled-reading/authoring-package.json"
         }
       ]
     }
