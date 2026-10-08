@@ -196,7 +196,8 @@
           "Can identify shared CVC rimes and accurately decode controlled /l/ word-family chains.",
           "Can decode controlled /l/ sentences, answer literal comprehension questions, and cite sentence evidence.",
           "Can sequence first/next/last events and retell a short controlled /l/ passage using text evidence.",
-          "Can demonstrate /l/ consolidation across recognition, decoding, encoding, comprehension and fluency at the defined mastery threshold."
+          "Can demonstrate /l/ consolidation across recognition, decoding, encoding, comprehension and fluency at the defined mastery threshold.",
+          "Can use diagnostic evidence to complete targeted /l/ remediation and demonstrate improvement on fresh reassessment items."
         ]
       },
       "lessons": [
@@ -680,6 +681,13 @@
           "title": "/l/ Fluency Consolidation Diagnostic",
           "authoringPackage": "content/courses/phonics-foundation/93-l-fluency-consolidation-diagnostic/authoring-package.json",
           "assessmentId": "PF93-DIAG-01"
+        },
+        {
+          "lessonId": "94-targeted-l-remediation-reassessment",
+          "sequence": 94,
+          "title": "Targeted /l/ Remediation & Reassessment",
+          "authoringPackage": "content/courses/phonics-foundation/94-targeted-l-remediation-reassessment/authoring-package.json",
+          "assessmentId": "PF94-REASSESS-01"
         }
       ]
     }
