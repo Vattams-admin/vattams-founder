@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-26",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "26-n-word-families-controlled-reading",
+    "topic": "n-sound",
+    "subtopic": "word-families-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognize recurring -an and -ap sound-spelling patterns in taught CVC words.",
+      "Compare words that share an ending while attending to the changing initial consonant.",
+      "Apply word-family knowledge without replacing full grapheme-by-grapheme decoding."
+    ],
+    "concepts": [
+      "Word families contain recurring rime patterns such as -an and -ap.",
+      "The initial consonant can change while the shared ending remains stable.",
+      "Pattern recognition supports automaticity but does not replace decoding."
+    ],
+    "definitions": [
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a common ending sound-spelling pattern."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and following sounds in a syllable, such as -an or -ap."
+      },
+      {
+        "term": "controlled reading",
+        "definition": "Reading text restricted mainly to taught sound-spelling patterns."
+      }
+    ],
+    "workedExamples": [
+      "man and pan share -an but differ in the initial consonant.",
+      "map and nap share -ap but differ in the initial consonant.",
+      "Read the full word even when the ending is familiar."
+    ],
+    "commonMistakes": [
+      "Guessing from the word-family ending.",
+      "Confusing -an and -ap.",
+      "Changing the initial consonant incorrectly.",
+      "Reading a familiar pattern without checking every grapheme."
+    ],
+    "keyTakeaways": [
+      "Notice patterns.",
+      "Check the first sound.",
+      "Blend the whole word.",
+      "Use patterns to support, not replace, decoding."
+    ],
+    "revisionPoints": [
+      "Shared ending + changing onset = word family pattern."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Sort taught words into -an and -ap families."
+    ],
+    "conceptual": [
+      "Identify which part stays the same and which changes."
+    ],
+    "application": [
+      "Read controlled word-family lists accurately."
+    ],
+    "higherOrderThinking": [
+      "Explain why word families should not encourage guessing."
+    ],
+    "mixedReview": [
+      "Sort, decode, read and answer controlled-text questions."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "-an: man, pan",
+      "-ap: map, nap",
+      "check every grapheme"
+    ],
+    "flashRecall": [
+      "man → -an",
+      "pan → -an",
+      "map → -ap",
+      "nap → -ap"
+    ],
+    "formulaOrFactBank": [
+      "Word family = shared rime pattern"
+    ],
+    "mistakeBasedRevision": [
+      "If the family is recognized but the word is wrong, return to full decoding."
+    ],
+    "weakTopicRevision": [
+      "Read each word sound by sound, then reread the family for automaticity."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Family sort",
+      "steps": [
+        "Read each word.",
+        "Identify the ending pattern.",
+        "Place it under -an or -ap.",
+        "Decode it again."
+      ]
+    },
+    {
+      "name": "Onset swap",
+      "steps": [
+        "Read man.",
+        "Change m to p.",
+        "Read pan.",
+        "Repeat with map and nap."
+      ]
+    },
+    {
+      "name": "Controlled reading",
+      "steps": [
+        "Read a short list.",
+        "Reread for accuracy.",
+        "Notice repeated endings.",
+        "Explain one pattern."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner sorts taught words into -an and -ap families with at least 80% accuracy.",
+    "Learner identifies the shared ending and changing initial consonant.",
+    "Learner reads word-family words accurately without guessing.",
+    "Learner answers simple controlled-text questions with at least 80% accuracy."
+  ],
+  "questions": [
+    {
+      "questionId": "PF26-Q01",
+      "question": "Which word belongs to the -an family?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "man",
+        "map",
+        "mat",
+        "nap"
+      ]
+    },
+    {
+      "questionId": "PF26-Q02",
+      "question": "Which word belongs to the -an family?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "sat",
+        "pan",
+        "tap",
+        "pat"
+      ]
+    },
+    {
+      "questionId": "PF26-Q03",
+      "question": "Which word ends with -ap?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap",
+        "man",
+        "mat",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF26-Q04",
+      "question": "Which pair shares the -an ending?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "man and pan",
+        "map and man",
+        "mat and nap",
+        "sat and tap"
+      ]
+    },
+    {
+      "questionId": "PF26-Q05",
+      "question": "Which pair shares the -ap ending?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap and map",
+        "man and pan",
+        "mat and sat",
+        "pat and man"
+      ]
+    },
+    {
+      "questionId": "PF26-Q06",
+      "question": "What stays the same in man and pan?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "The final -an pattern",
+        "The first consonant only",
+        "The final /p/",
+        "The middle sound only"
+      ]
+    },
+    {
+      "questionId": "PF26-Q07",
+      "question": "What changes between man and pan?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "The initial consonant",
+        "The vowel /a/",
+        "The final /n/",
+        "The whole ending"
+      ]
+    },
+    {
+      "questionId": "PF26-Q08",
+      "question": "Which word completes the pattern: m-an, p-an?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pan",
+        "map",
+        "pat",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF26-Q09",
+      "question": "Which word completes the pattern: m-ap, n-ap?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap",
+        "man",
+        "pan",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF26-Q10",
+      "question": "Why are word families useful?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "They help notice recurring sound-spelling patterns",
+        "They replace decoding",
+        "They encourage guessing",
+        "They remove the need to read"
+      ]
+    },
+    {
+      "questionId": "PF26-Q11",
+      "question": "When reading a word-family list, what should the learner still do?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Check all graphemes and blend the word",
+        "Guess from the ending only",
+        "Ignore the first sound",
+        "Skip unfamiliar words"
+      ]
+    },
+    {
+      "questionId": "PF26-Q12",
+      "question": "Which word does NOT belong with man and pan?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "map",
+        "man",
+        "pan",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF26-Q13",
+      "question": "Read: “Nan sat. Nan sat at a mat.” Who sat?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Nan",
+        "Mat",
+        "Map",
+        "Pan"
+      ]
+    },
+    {
+      "questionId": "PF26-Q14",
+      "question": "Read: “Nan sat at a mat.” Where did Nan sit?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "At a mat",
+        "At a map",
+        "At a pan",
+        "At a tap"
+      ]
+    },
+    {
+      "questionId": "PF26-Q15",
+      "question": "What is the goal of this lesson?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Recognize n-related word families while continuing accurate decoding and controlled reading",
+        "Memorize whole words without sounds",
+        "Introduce an unrelated spelling pattern",
+        "Skip connected reading"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF26-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF26-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught word-family pattern or controlled-reading evidence."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-26-v1"
+  }
+}
