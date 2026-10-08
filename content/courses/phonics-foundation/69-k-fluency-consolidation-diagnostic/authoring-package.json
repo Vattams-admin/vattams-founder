@@ -1,0 +1,469 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-69",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "69-k-fluency-consolidation-diagnostic",
+    "topic": "new-consonant-pattern",
+    "subtopic": "k-fluency-consolidation-diagnostic",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Check /k/ sound recognition.",
+      "Check /k/ CVC decoding and encoding.",
+      "Check controlled-text comprehension.",
+      "Check connected reading fluency.",
+      "Route learners to targeted remediation using component evidence."
+    ],
+    "concepts": [
+      "Diagnostics separate related skills so support can be precise.",
+      "Accurate word reading and fluent connected reading are different measures.",
+      "Comprehension depends on accurate decoding plus meaning-making."
+    ],
+    "definitions": [
+      {
+        "term": "diagnostic",
+        "definition": "An assessment used to identify strengths, needs, and the next instructional step."
+      },
+      {
+        "term": "fluency",
+        "definition": "Accurate, appropriately paced, connected reading with meaning."
+      },
+      {
+        "term": "component score",
+        "definition": "A score representing performance in one specific skill area."
+      }
+    ],
+    "workedExamples": [
+      "Weak sound recognition → review /k/ discrimination.",
+      "Weak decoding → practice /k/ CVC blending.",
+      "Weak encoding → practice sound-to-letter mapping.",
+      "Weak comprehension → reread controlled sentences and locate evidence.",
+      "Weak fluency → repeated controlled rereading."
+    ],
+    "commonMistakes": [
+      "Treating every error as a decoding problem.",
+      "Guessing words from context.",
+      "Confusing correct word reading with fluent reading.",
+      "Choosing remediation without checking the component score."
+    ],
+    "keyTakeaways": [
+      "Measure each component.",
+      "Match remediation to evidence.",
+      "Use accurate decoding before fluency practice.",
+      "Reassess after targeted support."
+    ],
+    "revisionPoints": [
+      "sound recognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review /k/ sound recognition and CVC words."
+    ],
+    "conceptual": [
+      "Distinguish the five diagnostic components."
+    ],
+    "application": [
+      "Interpret errors and select appropriate support."
+    ],
+    "higherOrderThinking": [
+      "Differentiate decoding, comprehension, and fluency needs from evidence."
+    ],
+    "mixedReview": [
+      "Combine /k/ recognition, decoding, spelling, comprehension, and fluency decisions."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "recognize → decode → encode → comprehend → read fluently"
+    ],
+    "flashRecall": [
+      "sound",
+      "decode",
+      "encode",
+      "meaning",
+      "fluency"
+    ],
+    "formulaOrFactBank": [
+      "Diagnostic evidence → targeted remediation"
+    ],
+    "mistakeBasedRevision": [
+      "Name the skill behind an error before choosing support."
+    ],
+    "weakTopicRevision": [
+      "Repeat the weakest component with controlled fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Skill sort",
+      "steps": [
+        "Review each error.",
+        "Name the component.",
+        "Group errors.",
+        "Choose targeted practice."
+      ]
+    },
+    {
+      "name": "Fluency check",
+      "steps": [
+        "Read controlled text aloud.",
+        "Check accuracy.",
+        "Check smoothness.",
+        "Check meaning."
+      ]
+    },
+    {
+      "name": "Routing decision",
+      "steps": [
+        "Review component scores.",
+        "Identify the weakest skill.",
+        "Select remediation.",
+        "Record the route."
+      ]
+    }
+  ],
+  "assessment": {
+    "assessmentId": "PF69-DIAG-01",
+    "type": "diagnostic",
+    "components": [
+      "soundRecognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "itemCount": 15,
+    "scoring": {
+      "method": "component-level accuracy",
+      "masteryTarget": 0.8
+    },
+    "routing": {
+      "rules": [
+        "If soundRecognition < 0.8, route to /k/ sound recognition review.",
+        "If decoding < 0.8, route to targeted /k/ decoding.",
+        "If encoding < 0.8, route to targeted /k/ spelling.",
+        "If comprehension < 0.8, route to controlled /k/ comprehension.",
+        "If fluency < 0.8, route to controlled /k/ rereading.",
+        "If all components >= 0.8, route to reassessment/next-pattern readiness."
+      ]
+    },
+    "freshItemPolicy": false
+  },
+  "outcomes": [
+    "Learner demonstrates /k/ sound recognition.",
+    "Learner demonstrates /k/ decoding and encoding.",
+    "Learner demonstrates controlled /k/ comprehension.",
+    "Learner demonstrates developing /k/ fluency.",
+    "System can route the learner to component-specific remediation."
+  ],
+  "questions": [
+    {
+      "questionId": "PF69-Q01",
+      "question": "Which word begins with /k/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cat",
+        "sun",
+        "mud",
+        "pen"
+      ],
+      "component": "soundRecognition"
+    },
+    {
+      "questionId": "PF69-Q02",
+      "question": "Which word ends with /k/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "sock",
+        "sun",
+        "map",
+        "bed"
+      ],
+      "component": "soundRecognition"
+    },
+    {
+      "questionId": "PF69-Q03",
+      "question": "Which word is /k/ /æ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cat",
+        "cut",
+        "kit",
+        "cop"
+      ],
+      "component": "decoding"
+    },
+    {
+      "questionId": "PF69-Q04",
+      "question": "Which word is /k/ /ʌ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cup",
+        "cap",
+        "cop",
+        "keg"
+      ],
+      "component": "decoding"
+    },
+    {
+      "questionId": "PF69-Q05",
+      "question": "Which spelling matches /k/ /ɪ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "kid",
+        "kad",
+        "kod",
+        "kud"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF69-Q06",
+      "question": "Which spelling matches /k/ /ɒ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cop",
+        "cap",
+        "cup",
+        "kip"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF69-Q07",
+      "question": "In “Kim has a cup,” who has the cup?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Kim",
+        "The cup",
+        "The cat",
+        "The kid"
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF69-Q08",
+      "question": "In “The cat is on the mat,” where is the cat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "On the mat",
+        "In the cup",
+        "In the hut",
+        "On the bed"
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF69-Q09",
+      "question": "What happened first in “Kim got a cup and put it on the mat”?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Kim got a cup.",
+        "Kim put it on the mat.",
+        "The cat sat.",
+        "The kid hopped."
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF69-Q10",
+      "question": "Which sentence should be read smoothly as one connected thought?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The kid can hop.",
+        "The... kid... can... hop.",
+        "Kid can the hop.",
+        "The can kid hop."
+      ],
+      "component": "fluency"
+    },
+    {
+      "questionId": "PF69-Q11",
+      "question": "Which pair begins with the same /k/ sound?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cat and cup",
+        "cat and sun",
+        "kid and mud",
+        "cop and bed"
+      ],
+      "component": "fluency"
+    },
+    {
+      "questionId": "PF69-Q12",
+      "question": "A learner reads cup as cap. Which component needs support?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Decoding",
+        "Capital letters",
+        "Punctuation",
+        "Story prediction"
+      ],
+      "component": "decoding"
+    },
+    {
+      "questionId": "PF69-Q13",
+      "question": "A learner reads all words correctly but cannot answer where the cat is. Which component needs support?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Comprehension",
+        "Encoding",
+        "Sound recognition",
+        "Letter formation"
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF69-Q14",
+      "question": "A learner answers correctly but reads controlled sentences with long pauses. Which component needs support?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Fluency",
+        "Encoding",
+        "Sound recognition",
+        "Vocabulary copying"
+      ],
+      "component": "fluency"
+    },
+    {
+      "questionId": "PF69-Q15",
+      "question": "What is the purpose of this diagnostic?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Identify strengths and needs across /k/ sound, decoding, encoding, comprehension, and fluency",
+        "Teach a new vowel pattern",
+        "Replace previous lessons",
+        "Assess handwriting only"
+      ],
+      "component": "diagnostic"
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF69-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    },
+    {
+      "questionId": "PF69-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the assessed /k/ skill component and diagnostic routing purpose."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-69-v1"
+  }
+}
