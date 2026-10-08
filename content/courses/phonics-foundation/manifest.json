@@ -10,14 +10,20 @@
   "status": "draft",
   "coverage": {
     "modules": 1,
-    "lessons": 1,
-    "studyMaterials": 1,
-    "questionBank": 20,
+    "lessons": 3,
+    "studyMaterials": 3,
+    "questionBank": 40,
     "assessments": 0
   },
   "assets": {
+    "courseMap": "content/courses/phonics-foundation/course-map.json",
+    "moduleMaps": [
+      "content/courses/phonics-foundation/module-map.json"
+    ],
     "authoringPackages": [
-      "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
+      "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
+      "content/courses/phonics-foundation/02-hear-and-identify-s/authoring-package.json",
+      "content/courses/phonics-foundation/03-hear-and-identify-t/authoring-package.json"
     ]
   },
   "governance": {
