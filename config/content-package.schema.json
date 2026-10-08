@@ -1,6 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "domains": [
+    "course",
     "school",
     "competitive-exam",
     "entrance-exam",
@@ -132,6 +133,17 @@
       "ageBand",
       "topic",
       "language"
+    ],
+    "course": [
+      "domain",
+      "course",
+      "subject",
+      "module",
+      "lesson",
+      "topic",
+      "subtopic",
+      "language",
+      "ageBand"
     ]
   },
   "quality": {
