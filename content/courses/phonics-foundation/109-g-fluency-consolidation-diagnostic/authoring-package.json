@@ -1,0 +1,447 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-109",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "109-g-fluency-consolidation-diagnostic",
+    "topic": "phonics-diagnostic",
+    "subtopic": "g-fluency-mastery",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Measure /g/ recognition and discrimination.",
+      "Measure decoding and encoding of /g/ CVC words.",
+      "Measure controlled-text comprehension and sequencing.",
+      "Measure fluency and determine the next route."
+    ],
+    "concepts": [
+      "Diagnostic evidence samples multiple skill components.",
+      "Mastery requires threshold performance and adequate critical components.",
+      "Fluency includes accuracy, smoothness, phrasing, and meaning.",
+      "Weak components should route to targeted remediation."
+    ],
+    "definitions": [
+      {
+        "term": "diagnostic",
+        "definition": "An assessment used to identify strengths, gaps, and next instructional needs."
+      },
+      {
+        "term": "mastery",
+        "definition": "Performance meeting the defined threshold across required skills."
+      },
+      {
+        "term": "fluency",
+        "definition": "Accurate, smooth reading that maintains meaning."
+      }
+    ],
+    "workedExamples": [
+      "Recognition: identify /g/ in a taught word.",
+      "Decoding: blend g with a short vowel and final consonant.",
+      "Encoding: segment a /g/ CVC word and spell it.",
+      "Comprehension: sequence events using passage evidence."
+    ],
+    "commonMistakes": [
+      "Advancing with weak /g/ recognition.",
+      "Confusing short vowels in spelling.",
+      "Reading quickly without meaning.",
+      "Ignoring passage order."
+    ],
+    "keyTakeaways": [
+      "Check every component.",
+      "Accuracy before speed.",
+      "Use text evidence.",
+      "Route weak skills to remediation."
+    ],
+    "revisionPoints": [
+      "sound recognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency",
+      "80% mastery"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review /g/ sound, decoding, and spelling."
+    ],
+    "conceptual": [
+      "Classify errors by component."
+    ],
+    "application": [
+      "Interpret controlled reading and sequencing evidence."
+    ],
+    "higherOrderThinking": [
+      "Decide whether mixed results justify advancement or remediation."
+    ],
+    "mixedReview": [
+      "Review /g/ across recognition, decoding, encoding, comprehension, and fluency."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "recognise → decode → spell → comprehend → read fluently"
+    ],
+    "flashRecall": [
+      "/g/",
+      "CVC",
+      "-ag",
+      "-ig",
+      "-ug",
+      "evidence",
+      "80%"
+    ],
+    "formulaOrFactBank": [
+      "Advance at >=0.80 overall with no critical component below target."
+    ],
+    "mistakeBasedRevision": [
+      "Identify the weakest component before selecting remediation."
+    ],
+    "weakTopicRevision": [
+      "Use component results to select targeted /g/ practice."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Diagnostic review",
+      "steps": [
+        "Review each component.",
+        "Identify the weakest skill.",
+        "Select targeted remediation.",
+        "Reassess with fresh evidence."
+      ]
+    },
+    {
+      "name": "Fluency check",
+      "steps": [
+        "Read controlled text.",
+        "Check accuracy and phrasing.",
+        "Check meaning.",
+        "Reread after correction."
+      ]
+    },
+    {
+      "name": "Error classification",
+      "steps": [
+        "Review an error.",
+        "Name the component.",
+        "Choose matching practice.",
+        "Record the new result."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner demonstrates measurable /g/ consolidation.",
+    "System identifies weak /g/ components.",
+    "Learner advances only when mastery criteria are met."
+  ],
+  "assessments": [
+    {
+      "assessmentId": "PF109-DIAG-01",
+      "type": "diagnostic",
+      "title": "/g/ Fluency Consolidation Diagnostic",
+      "masteryTarget": 0.8,
+      "components": [
+        "soundRecognition",
+        "decoding",
+        "encoding",
+        "comprehension",
+        "fluency"
+      ],
+      "routing": {
+        "advance": "Advance when overall score is at least 0.80 and no critical component is below target.",
+        "remediate": "Route to targeted remediation for any critical component below target."
+      },
+      "freshItemPolicy": false
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "PF109-Q01",
+      "question": "Which sound does g represent in “gap”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "/g/",
+        "/k/",
+        "/b/",
+        "/f/"
+      ]
+    },
+    {
+      "questionId": "PF109-Q02",
+      "question": "Which word begins with /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "gum",
+        "sun",
+        "fun",
+        "run"
+      ]
+    },
+    {
+      "questionId": "PF109-Q03",
+      "question": "Which word ends with /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "bag",
+        "bat",
+        "ban",
+        "bad"
+      ]
+    },
+    {
+      "questionId": "PF109-Q04",
+      "question": "Which word matches /g/ /ɪ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "gig",
+        "gap",
+        "gum",
+        "get"
+      ]
+    },
+    {
+      "questionId": "PF109-Q05",
+      "question": "Which word matches /g/ /ʌ/ /m/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "gum",
+        "gam",
+        "gem",
+        "gim"
+      ]
+    },
+    {
+      "questionId": "PF109-Q06",
+      "question": "Which spelling represents “gap”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "g-a-p",
+        "g-e-p",
+        "g-i-p",
+        "g-u-p"
+      ]
+    },
+    {
+      "questionId": "PF109-Q07",
+      "question": "Which spelling represents “big”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "b-i-g",
+        "b-a-g",
+        "b-e-g",
+        "b-u-g"
+      ]
+    },
+    {
+      "questionId": "PF109-Q08",
+      "question": "How many phonemes are in “gum”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "3",
+        "2",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "questionId": "PF109-Q09",
+      "question": "Read: “Gus has a big bag.” What does Gus have?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "a big bag",
+        "a big bug",
+        "a red rug",
+        "a bed"
+      ]
+    },
+    {
+      "questionId": "PF109-Q10",
+      "question": "Read: “Gus got a bug. The bug is on the rug.” What happened first?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Gus got a bug.",
+        "The bug is on the rug.",
+        "Gus ran.",
+        "The rug moved."
+      ]
+    },
+    {
+      "questionId": "PF109-Q11",
+      "question": "A learner reads “gap” as “cap.” Which component needs targeted review?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Initial /g/ decoding",
+        "Final /p/",
+        "Comprehension",
+        "Sequencing"
+      ]
+    },
+    {
+      "questionId": "PF109-Q12",
+      "question": "A learner writes “gum” as “gem.” Which component needs targeted review?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Short-vowel encoding",
+        "Initial /g/ recognition",
+        "Final /m/",
+        "Fluency only"
+      ]
+    },
+    {
+      "questionId": "PF109-Q13",
+      "question": "A learner reads a passage accurately but cannot retell its events. Which component needs review?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Comprehension and sequencing",
+        "Initial sound recognition",
+        "Letter formation",
+        "Phoneme counting"
+      ]
+    },
+    {
+      "questionId": "PF109-Q14",
+      "question": "Which behavior demonstrates fluent controlled reading?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Accurate, smooth reading with phrasing and meaning.",
+        "Fast guessing with skipped words.",
+        "Reading letter names.",
+        "Stopping after every phoneme."
+      ]
+    },
+    {
+      "questionId": "PF109-Q15",
+      "question": "Which result supports advancing after the diagnostic?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "At least 80% overall with no critical component below target.",
+        "One correct answer.",
+        "Fast reading with many errors.",
+        "Strong decoding with no comprehension."
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF109-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    },
+    {
+      "questionId": "PF109-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /g/ diagnostic item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-109-v1"
+  }
+}
