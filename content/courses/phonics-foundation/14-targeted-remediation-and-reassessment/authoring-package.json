@@ -1,0 +1,432 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-14",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "14-targeted-remediation-and-reassessment",
+    "topic": "phonics-remediation",
+    "subtopic": "targeted-practice-and-reassessment",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Match common diagnostic errors to targeted phonics remediation.",
+      "Practise one weak skill at a time using familiar content.",
+      "Reassess the target skill with fresh evidence before progression."
+    ],
+    "concepts": [
+      "Remediation should be skill-specific.",
+      "Familiar content reduces unnecessary cognitive load while a weak prerequisite is repaired.",
+      "Reassessment is required to verify improvement."
+    ],
+    "definitions": [
+      {
+        "term": "remediation",
+        "definition": "Targeted instruction and practice designed to address a specific learning difficulty."
+      },
+      {
+        "term": "reassessment",
+        "definition": "A fresh measurement used after intervention to determine whether the target skill has improved."
+      }
+    ],
+    "workedExamples": [
+      "Confuses initial sounds → initial-sound sorting.",
+      "Cannot blend → oral blending with known phonemes.",
+      "Omits vowel in spelling → segment, map and write each sound.",
+      "Accurate but slow → repeated familiar CVC reading.",
+      "Accurate decoding but weak meaning → controlled sentence/passage questions."
+    ],
+    "commonMistakes": [
+      "Remediating everything at once.",
+      "Introducing new difficulty during prerequisite repair.",
+      "Declaring mastery from a single correct response.",
+      "Repeating identical assessment items."
+    ],
+    "keyTakeaways": [
+      "Find the weak skill.",
+      "Target it directly.",
+      "Use familiar material first.",
+      "Reassess with fresh items."
+    ],
+    "revisionPoints": [
+      "Diagnostic → targeted practice → reassessment → progress or further support."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Match learner errors to the appropriate remediation activity."
+    ],
+    "conceptual": [
+      "Explain why one weak skill should be targeted at a time."
+    ],
+    "application": [
+      "Choose a remediation sequence from a learner profile."
+    ],
+    "higherOrderThinking": [
+      "Design a short intervention for a learner who decodes but cannot comprehend."
+    ],
+    "mixedReview": [
+      "Diagnose, target, practise and reassess."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Identify the gap.",
+      "Target the gap.",
+      "Practise.",
+      "Reassess."
+    ],
+    "flashRecall": [
+      "Sound → discriminate",
+      "Blending → combine",
+      "Spelling → segment and map",
+      "Fluency → reread",
+      "Comprehension → reread and explain"
+    ],
+    "formulaOrFactBank": [
+      "Remediation cycle = diagnose → teach/practise → reassess"
+    ],
+    "mistakeBasedRevision": [
+      "Do not add new phonics patterns while repairing an unstable prerequisite unless instruction requires it."
+    ],
+    "weakTopicRevision": [
+      "Repeat the specific skill practice that corresponds to the learner's error profile."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Error-to-practice match",
+      "steps": [
+        "Review a learner error.",
+        "Name the skill.",
+        "Select one targeted activity.",
+        "Practise with familiar content."
+      ]
+    },
+    {
+      "name": "Mini intervention",
+      "steps": [
+        "Choose one weak skill.",
+        "Practise for a short session.",
+        "Record accuracy.",
+        "Repeat only if needed."
+      ]
+    },
+    {
+      "name": "Fresh-item reassessment",
+      "steps": [
+        "Use new items measuring the same skill.",
+        "Compare performance with the diagnostic evidence.",
+        "Decide whether to progress or continue support."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner can identify the appropriate remediation activity for a given phonics error.",
+    "Learner demonstrates improved performance on a targeted skill after practice.",
+    "Learner uses reassessment evidence to decide whether progression is appropriate."
+  ],
+  "questions": [
+    {
+      "questionId": "PF14-Q01",
+      "question": "If a learner confuses /m/ and /s/, which practice is most appropriate?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Hear and sort /m/ and /s/ words",
+        "Practise only long words",
+        "Skip sound work",
+        "Read a passage without decoding"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q02",
+      "question": "If a learner cannot blend /m/ /a/ /t/, what should they practise?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Oral blending of familiar phonemes",
+        "Silent passage reading",
+        "Long vowel spelling",
+        "Paragraph writing"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q03",
+      "question": "If a learner reads 'mat' as 'sat', which area needs attention?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Initial phoneme-grapheme mapping",
+        "Sentence punctuation",
+        "Story sequencing",
+        "Handwriting speed"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q04",
+      "question": "If a learner writes 'mt' for 'mat', what should be practised?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Segmenting and writing the middle sound",
+        "Reading only pictures",
+        "Final punctuation",
+        "Story retelling"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q05",
+      "question": "If a learner decodes accurately but reads very slowly, what is a useful next step?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Short repeated reading of familiar CVC words",
+        "Introduce many new phonemes at once",
+        "Stop rereading",
+        "Ask only comprehension questions"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q06",
+      "question": "If a learner reads a sentence accurately but cannot say what it means, what should be practised?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Rereading and simple meaning questions",
+        "More alphabet naming only",
+        "Faster word reading",
+        "Copying the sentence repeatedly"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q07",
+      "question": "What is the best remediation principle?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Target the specific weak skill",
+        "Repeat the entire course unchanged",
+        "Always make the text harder",
+        "Focus only on speed"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q08",
+      "question": "When should a learner move on from targeted practice?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "When the target skill is demonstrated consistently",
+        "After one lucky answer",
+        "Only when every skill is perfect",
+        "Immediately after starting practice"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q09",
+      "question": "Which evidence is strongest for deciding a learner needs spelling remediation?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Repeated omission of a taught phoneme when writing",
+        "One slow reading",
+        "One incorrect comprehension answer",
+        "Disliking a word"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q10",
+      "question": "Which activity best supports initial-sound discrimination?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Sort spoken words by their first sound",
+        "Memorise a paragraph",
+        "Write a long story",
+        "Read silently"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q11",
+      "question": "Which activity best supports blending?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Say separate phonemes and combine them into a word",
+        "Copy the word ten times without saying sounds",
+        "Guess from a picture",
+        "Skip the middle sound"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q12",
+      "question": "Which activity best supports fluency?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Reread a small set of familiar words accurately",
+        "Introduce ten unfamiliar patterns",
+        "Avoid reading aloud",
+        "Only trace letters"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q13",
+      "question": "Which activity best supports comprehension?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Read a short controlled passage and answer text-based questions",
+        "Practise isolated letter names only",
+        "Copy random words",
+        "Skip the passage"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q14",
+      "question": "Why should remediation use familiar content first?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "It lets the learner practise the weak skill without adding unnecessary new difficulty",
+        "It prevents all future learning",
+        "It removes the need for assessment",
+        "It guarantees instant mastery"
+      ],
+      "skill": 0
+    },
+    {
+      "questionId": "PF14-Q15",
+      "question": "What should happen after remediation?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Reassess the target skill with fresh items",
+        "Assume mastery without checking",
+        "Return to the beginning automatically",
+        "Ignore the result"
+      ],
+      "skill": 0
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF14-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    },
+    {
+      "questionId": "PF14-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response reflects the targeted-remediation cycle for the identified phonics skill."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-14-v1"
+  }
+}
