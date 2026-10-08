@@ -148,7 +148,8 @@
           "Can read taught n patterns accurately and increasingly smoothly while retaining comprehension, with remaining needs identified.",
           "Can correct diagnosed /n/ decoding, spelling, fluency or comprehension needs and demonstrate improvement before advancing.",
           "Can hear short /i/, distinguish it from /a/, and connect it to i.",
-          "Can decode controlled CVC words with short /i/ and distinguish /i/ from /a/ during reading."
+          "Can decode controlled CVC words with short /i/ and distinguish /i/ from /a/ during reading.",
+          "Can segment and spell taught CVC words containing short /i/ and self-check through read-back."
         ]
       },
       "lessons": [
@@ -259,6 +260,12 @@
           "sequence": 32,
           "title": "Decode CVC Words with Short /i/",
           "authoringPackage": "content/courses/phonics-foundation/32-decode-cvc-short-i/authoring-package.json"
+        },
+        {
+          "lessonId": "33-cvc-spelling-short-i",
+          "sequence": 33,
+          "title": "Spell CVC Words with Short /i/",
+          "authoringPackage": "content/courses/phonics-foundation/33-cvc-spelling-short-i/authoring-package.json"
         }
       ]
     }
