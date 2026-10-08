@@ -1,0 +1,407 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-32",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "32-decode-cvc-short-i",
+    "topic": "short-i-vowel",
+    "subtopic": "decode-cvc-short-i",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Blend short /i/ with taught consonants to decode CVC words.",
+      "Read short /i/ words accurately without guessing.",
+      "Use the middle-vowel contrast to correct /i/ and /a/ confusions."
+    ],
+    "concepts": [
+      "CVC decoding requires ordered phoneme blending.",
+      "Short /i/ can be combined with taught consonants to form controlled CVC words.",
+      "Minimal contrasts reveal the exact phoneme causing a decoding error."
+    ],
+    "definitions": [
+      {
+        "term": "decoding",
+        "definition": "Using grapheme-sound relationships to read a written word."
+      },
+      {
+        "term": "blending",
+        "definition": "Combining individual phonemes into a whole spoken word."
+      },
+      {
+        "term": "minimal contrast",
+        "definition": "A pair of words differing in one relevant sound."
+      }
+    ],
+    "workedExamples": [
+      "s-i-t → /s/ /i/ /t/ → sit.",
+      "p-i-n → /p/ /i/ /n/ → pin.",
+      "sit/sat → check the middle vowel when the word is misread."
+    ],
+    "commonMistakes": [
+      "Replacing /i/ with /a/.",
+      "Guessing from the first consonant.",
+      "Skipping the middle vowel.",
+      "Adding an extra vowel while blending."
+    ],
+    "keyTakeaways": [
+      "Say every sound.",
+      "Keep the middle vowel.",
+      "Blend smoothly.",
+      "Reread the whole word."
+    ],
+    "revisionPoints": [
+      "See → sound → blend → check."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Blend short /i/ CVC words."
+    ],
+    "conceptual": [
+      "Compare /i/ and /a/ contrasts."
+    ],
+    "application": [
+      "Decode sit, pin and tin."
+    ],
+    "higherOrderThinking": [
+      "Identify the phoneme to revisit after an error."
+    ],
+    "mixedReview": [
+      "Decode short /a/ and /i/ CVC words."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "s-i-t → sit",
+      "p-i-n → pin",
+      "t-i-n → tin"
+    ],
+    "flashRecall": [
+      "i = short /i/"
+    ],
+    "formulaOrFactBank": [
+      "CVC decoding = ordered sound blending"
+    ],
+    "mistakeBasedRevision": [
+      "sit/sat error → isolate middle vowel.",
+      "pin/pan error → isolate middle vowel."
+    ],
+    "weakTopicRevision": [
+      "Practise minimal pairs before returning to full CVC reading."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-to-word blend",
+      "steps": [
+        "Point to each grapheme.",
+        "Say its sound.",
+        "Blend all sounds.",
+        "Reread the word."
+      ]
+    },
+    {
+      "name": "i/a contrast",
+      "steps": [
+        "Read sit and sat.",
+        "Compare the middle sound.",
+        "Read again.",
+        "Repeat with pin and pan."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner decodes short /i/ CVC words with at least 80% accuracy.",
+    "Learner maintains the short /i/ middle sound during blending.",
+    "Learner corrects common /i/-/a/ decoding confusions."
+  ],
+  "questions": [
+    {
+      "questionId": "PF32-Q01",
+      "question": "What word is /s/ /i/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "sit",
+        "sat",
+        "set",
+        "sip"
+      ]
+    },
+    {
+      "questionId": "PF32-Q02",
+      "question": "What word is /p/ /i/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pin",
+        "pan",
+        "pen",
+        "pit"
+      ]
+    },
+    {
+      "questionId": "PF32-Q03",
+      "question": "What word is /t/ /i/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "tin",
+        "tan",
+        "tap",
+        "pin"
+      ]
+    },
+    {
+      "questionId": "PF32-Q04",
+      "question": "Which word has short /i/ in the middle?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "sit",
+        "sat",
+        "mat",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF32-Q05",
+      "question": "Which word begins /p/ and ends /n/ with short /i/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pin",
+        "pan",
+        "pat",
+        "sit"
+      ]
+    },
+    {
+      "questionId": "PF32-Q06",
+      "question": "Which word begins /t/ and has short /i/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "tin",
+        "tan",
+        "tap",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF32-Q07",
+      "question": "What is the first step when decoding “sit”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Say each taught grapheme sound",
+        "Guess the word",
+        "Ignore the vowel",
+        "Read only the final letter"
+      ]
+    },
+    {
+      "questionId": "PF32-Q08",
+      "question": "After saying /s/ /i/ /t/, what should you do?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Blend the sounds",
+        "Add another sound",
+        "Change /i/ to /a/",
+        "Stop after /s/"
+      ]
+    },
+    {
+      "questionId": "PF32-Q09",
+      "question": "A learner reads “sit” as “sat.” Which sound should be checked?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Middle /i/ versus /a/",
+        "Initial /s/ versus /p/",
+        "Final /t/ versus /n/",
+        "Word length"
+      ]
+    },
+    {
+      "questionId": "PF32-Q10",
+      "question": "A learner reads “pin” as “pan.” What should be checked?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Middle /i/ versus /a/",
+        "Initial /p/ versus /t/",
+        "Final /n/ versus /p/",
+        "The first two letters only"
+      ]
+    },
+    {
+      "questionId": "PF32-Q11",
+      "question": "Which word is correctly decoded from p-i-n?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pin",
+        "pan",
+        "pit",
+        "pat"
+      ]
+    },
+    {
+      "questionId": "PF32-Q12",
+      "question": "Which word is correctly decoded from t-i-n?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "tin",
+        "tan",
+        "tap",
+        "sit"
+      ]
+    },
+    {
+      "questionId": "PF32-Q13",
+      "question": "Which contrast helps confirm the short /i/ vowel?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "sit and sat",
+        "pin and pan",
+        "Both A and B",
+        "map and mat"
+      ]
+    },
+    {
+      "questionId": "PF32-Q14",
+      "question": "Why should the learner blend all three sounds?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "To read the complete word accurately",
+        "To avoid the middle vowel",
+        "To guess faster",
+        "To skip the final sound"
+      ]
+    },
+    {
+      "questionId": "PF32-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Blend taught sounds to decode CVC words with short /i/",
+        "Memorize whole words",
+        "Teach every vowel",
+        "Skip sound-by-sound reading"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF32-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    },
+    {
+      "questionId": "PF32-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught short /i/ decoding and contrast strategy."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-32-v1"
+  }
+}
