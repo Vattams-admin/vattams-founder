@@ -1,0 +1,458 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-62",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "62-targeted-short-u-remediation-reassessment",
+    "topic": "short-u-vowel",
+    "subtopic": "targeted-remediation-and-reassessment",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Target the weakest short-/u/ component identified by Lesson 61.",
+      "Repair sound, decoding, encoding, comprehension, or fluency errors.",
+      "Use fresh items to reassess transfer.",
+      "Apply an explicit advance/reteach decision."
+    ],
+    "concepts": [
+      "Remediation should match the diagnosed error.",
+      "Fresh items provide a stronger transfer check.",
+      "Instructional decisions should use evidence."
+    ],
+    "definitions": [
+      {
+        "term": "targeted remediation",
+        "definition": "Practice focused on a diagnosed skill gap."
+      },
+      {
+        "term": "fresh-item reassessment",
+        "definition": "A follow-up check using new items measuring the same skill."
+      },
+      {
+        "term": "mastery target",
+        "definition": "The minimum performance level required to advance."
+      }
+    ],
+    "workedExamples": [
+      "Weak sound recognition → rehearse short-/u/ identification.",
+      "Weak decoding → blend short-/u/ CVC words.",
+      "Weak comprehension → reread controlled text and locate evidence.",
+      "Weak fluency → repeated accurate rereading."
+    ],
+    "commonMistakes": [
+      "Using the same support for every error.",
+      "Treating memorized answers as transfer.",
+      "Advancing despite persistent errors.",
+      "Repeating support without checking results."
+    ],
+    "keyTakeaways": [
+      "Match support to the error.",
+      "Use fresh items.",
+      "Check the target.",
+      "Advance or reteach from evidence."
+    ],
+    "revisionPoints": [
+      "diagnose",
+      "target",
+      "practice",
+      "reassess",
+      "decide"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review short-/u/ sounds and CVC words."
+    ],
+    "conceptual": [
+      "Match errors to the appropriate support."
+    ],
+    "application": [
+      "Apply decoding, encoding, comprehension, and fluency repair."
+    ],
+    "higherOrderThinking": [
+      "Explain why fresh items improve the transfer check."
+    ],
+    "mixedReview": [
+      "Combine short-/u/ word reading with comprehension and routing decisions."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Find weakness → target → practice → fresh check."
+    ],
+    "flashRecall": [
+      "target",
+      "repair",
+      "fresh",
+      "target",
+      "advance/reteach"
+    ],
+    "formulaOrFactBank": [
+      "Mastery target = 0.8"
+    ],
+    "mistakeBasedRevision": [
+      "If a component remains below target, reteach that component."
+    ],
+    "weakTopicRevision": [
+      "Repeat only the weak component with new controlled examples."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Targeted repair",
+      "steps": [
+        "Review the diagnostic result.",
+        "Select the weakest component.",
+        "Practice controlled short-/u/ items.",
+        "Record improvement."
+      ]
+    },
+    {
+      "name": "Fresh-item check",
+      "steps": [
+        "Present unseen items.",
+        "Read or answer independently.",
+        "Score by component.",
+        "Compare with target."
+      ]
+    },
+    {
+      "name": "Advance or reteach",
+      "steps": [
+        "Review reassessment performance.",
+        "Advance when target is met.",
+        "Reteach the weak component when it is not met."
+      ]
+    }
+  ],
+  "assessment": {
+    "assessmentId": "PF62-REASSESS-01",
+    "type": "reassessment",
+    "components": [
+      "soundRecognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "itemCount": 15,
+    "masteryTarget": 0.8,
+    "scoring": {
+      "method": "component-level accuracy with overall mastery gate"
+    },
+    "freshItemPolicy": true,
+    "decisionRules": {
+      "advance": "Advance when reassessment meets 0.8 and no critical component remains below target.",
+      "reteach": "Reteach the specific component when performance remains below 0.8."
+    }
+  },
+  "outcomes": [
+    "Learner receives targeted short-/u/ remediation.",
+    "Learner demonstrates transfer on fresh short-/u/ items.",
+    "Learner is routed to advance or reteach using evidence."
+  ],
+  "questions": [
+    {
+      "questionId": "PF62-Q01",
+      "question": "Which word has the short /u/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "sun",
+        "sit",
+        "set",
+        "sock"
+      ],
+      "component": "soundRecognition"
+    },
+    {
+      "questionId": "PF62-Q02",
+      "question": "Which word has the short /u/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cup",
+        "cap",
+        "cop",
+        "cep"
+      ],
+      "component": "soundRecognition"
+    },
+    {
+      "questionId": "PF62-Q03",
+      "question": "Blend /r/ /u/ /n/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "run",
+        "ran",
+        "rin",
+        "ron"
+      ],
+      "component": "decoding"
+    },
+    {
+      "questionId": "PF62-Q04",
+      "question": "Blend /h/ /u/ /t/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "hut",
+        "hat",
+        "hot",
+        "hit"
+      ],
+      "component": "decoding"
+    },
+    {
+      "questionId": "PF62-Q05",
+      "question": "Which spelling matches /s/ /u/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "sun",
+        "san",
+        "sin",
+        "son"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF62-Q06",
+      "question": "Which spelling matches /c/ /u/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cup",
+        "cap",
+        "cop",
+        "cep"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF62-Q07",
+      "question": "In “The pup is in the hut,” where is the pup?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "In the hut",
+        "In the tub",
+        "On the rug",
+        "In the sun"
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF62-Q08",
+      "question": "In “Sam runs to the tub,” who runs?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Sam",
+        "The tub",
+        "The pup",
+        "The sun"
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF62-Q09",
+      "question": "What happened first: Sam runs to the tub, or Sam sits?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Sam runs to the tub",
+        "Sam sits",
+        "They happen together",
+        "The text does not say"
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF62-Q10",
+      "question": "Which word family contains run, sun, and fun?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "-un",
+        "-ut",
+        "-ug",
+        "-op"
+      ],
+      "component": "fluency"
+    },
+    {
+      "questionId": "PF62-Q11",
+      "question": "A learner reads hut as hat. What should the learner check?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The vowel sound /u/",
+        "The capital letter",
+        "The question mark",
+        "The word spacing"
+      ],
+      "component": "decoding"
+    },
+    {
+      "questionId": "PF62-Q12",
+      "question": "A learner decodes all words but cannot answer where the pup is. What should be practiced?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Sentence comprehension",
+        "Letter naming",
+        "Sound isolation only",
+        "Handwriting"
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF62-Q13",
+      "question": "A learner answers correctly but reads every sentence with long pauses. What should be practiced?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Fluent rereading",
+        "New vowel patterns",
+        "Capital-letter naming",
+        "Copying words"
+      ],
+      "component": "fluency"
+    },
+    {
+      "questionId": "PF62-Q14",
+      "question": "Why are fresh reassessment items used after remediation?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "To check whether the skill transfers beyond the practiced items",
+        "To let the learner memorize the old answers",
+        "To avoid measuring learning",
+        "To teach a different vowel"
+      ],
+      "component": "diagnostic"
+    },
+    {
+      "questionId": "PF62-Q15",
+      "question": "What should happen when the reassessment reaches the target?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Advance to the next phonics pattern",
+        "Repeat the same lesson forever",
+        "Remove progress data",
+        "Skip future assessments"
+      ],
+      "component": "diagnostic"
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF62-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    },
+    {
+      "questionId": "PF62-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted short-/u/ skill or the reassessment decision."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-62-v1"
+  }
+}
