@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-40",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "40-decode-cvc-short-o",
+    "topic": "short-o-vowel",
+    "subtopic": "cvc-decoding-short-o",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode taught CVC words containing short /o/.",
+      "Blend three phonemes into a complete word.",
+      "Distinguish short /o/ from short /a/ and /i/ during decoding.",
+      "Correct inaccurate decoding by returning to grapheme-level analysis."
+    ],
+    "concepts": [
+      "Systematic decoding proceeds from grapheme to phoneme to blended word.",
+      "The middle vowel is essential to CVC decoding.",
+      "Minimal contrasts help identify vowel decoding errors."
+    ],
+    "definitions": [
+      {
+        "term": "decoding",
+        "definition": "Using written graphemes to identify the sounds in a word and blend them."
+      },
+      {
+        "term": "blending",
+        "definition": "Combining individual phonemes to pronounce a word."
+      },
+      {
+        "term": "CVC word",
+        "definition": "A simple consonant-vowel-consonant word such as hot or mop."
+      }
+    ],
+    "workedExamples": [
+      "h-o-t → /h/ /o/ /t/ → hot.",
+      "m-o-p → /m/ /o/ /p/ → mop.",
+      "hot read as hat → return to o, say /o/, then blend again."
+    ],
+    "commonMistakes": [
+      "Replacing /o/ with /a/.",
+      "Guessing from the first letter.",
+      "Skipping the middle vowel.",
+      "Changing a consonant instead of checking the vowel."
+    ],
+    "keyTakeaways": [
+      "Look at every grapheme.",
+      "Say every sound.",
+      "Blend all sounds.",
+      "Check the middle vowel.",
+      "Reread after correction."
+    ],
+    "revisionPoints": [
+      "Graphemes → phonemes → blend → word."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Decode hot, mop, pot and log."
+    ],
+    "conceptual": [
+      "Identify the vowel causing a decoding error."
+    ],
+    "application": [
+      "Decode short /o/ CVC words independently."
+    ],
+    "higherOrderThinking": [
+      "Explain why hot and hat require attention to the middle vowel."
+    ],
+    "mixedReview": [
+      "Decode short /o/ words and contrast with short /a/ and /i/."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "See it.",
+      "Say it.",
+      "Blend it.",
+      "Check it."
+    ],
+    "flashRecall": [
+      "hot → /h/ /o/ /t/",
+      "mop → /m/ /o/ /p/",
+      "pot → /p/ /o/ /t/"
+    ],
+    "formulaOrFactBank": [
+      "short /o/ → o in taught CVC words"
+    ],
+    "mistakeBasedRevision": [
+      "hot/hat → check o versus a.",
+      "mop/map → check o versus a."
+    ],
+    "weakTopicRevision": [
+      "Return to individual grapheme sounds before blending again."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-by-sound decoding",
+      "steps": [
+        "Point to each grapheme.",
+        "Say its sound.",
+        "Hold the sounds briefly.",
+        "Blend the word.",
+        "Reread."
+      ]
+    },
+    {
+      "name": "Vowel repair",
+      "steps": [
+        "Read the target word.",
+        "Compare the learner response.",
+        "Check the middle grapheme.",
+        "Blend again."
+      ]
+    },
+    {
+      "name": "Minimal-pair decode",
+      "steps": [
+        "Decode hot and hat.",
+        "Identify the changed vowel.",
+        "Repeat with mop and map.",
+        "Explain the difference."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner decodes short /o/ CVC words with at least 80% accuracy.",
+    "Learner blends three phonemes into complete words.",
+    "Learner identifies short /o/ versus /a/ decoding errors.",
+    "Learner self-corrects inaccurate decoding using grapheme-level checking."
+  ],
+  "questions": [
+    {
+      "questionId": "PF40-Q01",
+      "question": "Which word matches /h/ /o/ /t/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "hot",
+        "hat",
+        "hit",
+        "hut"
+      ]
+    },
+    {
+      "questionId": "PF40-Q02",
+      "question": "Which word matches /m/ /o/ /p/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "mop",
+        "map",
+        "mip",
+        "mup"
+      ]
+    },
+    {
+      "questionId": "PF40-Q03",
+      "question": "Which word matches /p/ /o/ /t/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pot",
+        "pat",
+        "pit",
+        "put"
+      ]
+    },
+    {
+      "questionId": "PF40-Q04",
+      "question": "Which word has short /o/ in the middle?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "log",
+        "leg",
+        "lag",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF40-Q05",
+      "question": "What is the first step when decoding a new CVC word?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Say each grapheme sound",
+        "Guess the whole word",
+        "Skip the vowel",
+        "Read the last letter only"
+      ]
+    },
+    {
+      "questionId": "PF40-Q06",
+      "question": "After saying /m/ /o/ /p/, what should you do?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Blend the sounds to say mop",
+        "Change o to a",
+        "Skip the middle sound",
+        "Guess from m"
+      ]
+    },
+    {
+      "questionId": "PF40-Q07",
+      "question": "Which word begins with /d/ and has short /o/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "dog",
+        "dig",
+        "dug",
+        "dag"
+      ]
+    },
+    {
+      "questionId": "PF40-Q08",
+      "question": "Which word begins with /l/ and has short /o/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "log",
+        "leg",
+        "lag",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF40-Q09",
+      "question": "Which contrast helps check short /o/ decoding?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "hot and hat",
+        "mop and map",
+        "Both A and B",
+        "sit and pin"
+      ]
+    },
+    {
+      "questionId": "PF40-Q10",
+      "question": "A learner reads “hot” as “hat.” Which part should be checked first?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "The middle vowel grapheme o",
+        "The initial h",
+        "The final t",
+        "The word length"
+      ]
+    },
+    {
+      "questionId": "PF40-Q11",
+      "question": "A learner reads “mop” as “map.” What should be checked?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "The middle vowel sound /o/ versus /a/",
+        "The final /p/",
+        "The initial /m/",
+        "The first letter only"
+      ]
+    },
+    {
+      "questionId": "PF40-Q12",
+      "question": "Which word is correctly decoded from p-o-t?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pot",
+        "pat",
+        "pit",
+        "put"
+      ]
+    },
+    {
+      "questionId": "PF40-Q13",
+      "question": "Why should the learner blend all three sounds?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "To form the complete spoken word",
+        "To avoid the vowel",
+        "To guess faster",
+        "To skip decoding"
+      ]
+    },
+    {
+      "questionId": "PF40-Q14",
+      "question": "What should a learner do after an inaccurate decode?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Recheck each grapheme, blend again and reread",
+        "Guess from context only",
+        "Skip the word",
+        "Change the final sound"
+      ]
+    },
+    {
+      "questionId": "PF40-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Decode taught short /o/ CVC words accurately using sound-by-sound blending",
+        "Memorize whole words without decoding",
+        "Teach all vowel patterns",
+        "Begin passage comprehension"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF40-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q09",
+      "correctOptionIndex": 2,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    },
+    {
+      "questionId": "PF40-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the taught grapheme-to-phoneme-to-blend decoding process for short /o/."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-40-v1"
+  }
+}
