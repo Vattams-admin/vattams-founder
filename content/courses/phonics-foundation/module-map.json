@@ -165,7 +165,8 @@
           "Can remediate a diagnosed short /o/ weakness and demonstrate readiness through fresh reassessment evidence.",
           "Can hear and identify short /e/ and connect the phoneme to grapheme e in controlled CVC words.",
           "Can decode taught short-/e/ CVC words by accurate grapheme-to-phoneme mapping and blending.",
-          "Can segment and encode taught short-/e/ CVC words using accurate sound-to-letter mapping."
+          "Can segment and encode taught short-/e/ CVC words using accurate sound-to-letter mapping.",
+          "Can read taught short-/e/ word families and apply them in controlled text while checking every grapheme."
         ]
       },
       "lessons": [
@@ -378,6 +379,12 @@
           "sequence": 49,
           "title": "CVC Spelling with Short /e/",
           "authoringPackage": "content/courses/phonics-foundation/49-cvc-spelling-short-e/authoring-package.json"
+        },
+        {
+          "lessonId": "50-short-e-word-families-controlled-reading",
+          "sequence": 50,
+          "title": "Short /e/ Word Families and Controlled Reading",
+          "authoringPackage": "content/courses/phonics-foundation/50-short-e-word-families-controlled-reading/authoring-package.json"
         }
       ]
     }
