@@ -1,0 +1,425 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-64",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "64-decode-cvc-with-k",
+    "topic": "new-consonant-pattern",
+    "subtopic": "cvc-decoding-with-k",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode CVC words beginning with /k/.",
+      "Blend /k/ with short vowels and final consonants.",
+      "Discriminate short-vowel changes in /k/ CVC words.",
+      "Repair decoding errors by checking the middle vowel."
+    ],
+    "concepts": [
+      "Blending joins phonemes into a spoken word.",
+      "The middle vowel can change the word even when the first and last sounds stay constant.",
+      "Accurate decoding should be confirmed by rereading the whole word."
+    ],
+    "definitions": [
+      {
+        "term": "blending",
+        "definition": "Combining individual phonemes smoothly to read a word."
+      },
+      {
+        "term": "CVC word",
+        "definition": "A simple consonant-vowel-consonant word."
+      },
+      {
+        "term": "vowel check",
+        "definition": "Checking the middle vowel sound when two CVC words are confused."
+      }
+    ],
+    "workedExamples": [
+      "/k/ /æ/ /t/ → cat.",
+      "/k/ /ʌ/ /p/ → cup.",
+      "/k/ /ɪ/ /d/ → kid.",
+      "If cup is read as cap, return to the middle vowel and blend again."
+    ],
+    "commonMistakes": [
+      "Guessing from the first letter.",
+      "Confusing short /i/, /o/, /u/, /e/, and /a/.",
+      "Saying letter names instead of phonemes.",
+      "Skipping the reread after blending."
+    ],
+    "keyTakeaways": [
+      "Say sounds.",
+      "Blend.",
+      "Check the vowel.",
+      "Reread the word."
+    ],
+    "revisionPoints": [
+      "/k/",
+      "CVC",
+      "blend",
+      "middle vowel",
+      "reread"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Blend /k/ CVC words with short vowels."
+    ],
+    "conceptual": [
+      "Identify how the middle vowel changes a decoded word."
+    ],
+    "application": [
+      "Repair CVC decoding errors using phoneme-by-phoneme analysis."
+    ],
+    "higherOrderThinking": [
+      "Explain why guessing from the first letter is unreliable."
+    ],
+    "mixedReview": [
+      "Decode /k/ CVC words across multiple short vowels."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "/k/ → vowel → final sound → blend → reread."
+    ],
+    "flashRecall": [
+      "cat",
+      "cup",
+      "kid",
+      "cop",
+      "keg"
+    ],
+    "formulaOrFactBank": [
+      "CVC decoding = first sound + middle vowel + final sound"
+    ],
+    "mistakeBasedRevision": [
+      "If two words are confused, isolate and compare the middle vowel."
+    ],
+    "weakTopicRevision": [
+      "Repeat short-vowel /k/ CVC contrasts using fresh words."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound slide",
+      "steps": [
+        "Say /k/.",
+        "Add the vowel.",
+        "Add the final sound.",
+        "Blend smoothly.",
+        "Reread the word."
+      ]
+    },
+    {
+      "name": "Vowel contrast",
+      "steps": [
+        "Read two /k/ CVC words.",
+        "Identify the middle vowel.",
+        "Say each word.",
+        "Explain the difference."
+      ]
+    },
+    {
+      "name": "Repair and reread",
+      "steps": [
+        "Read the target word.",
+        "Identify the incorrect vowel if present.",
+        "Blend again.",
+        "Read the whole word smoothly."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner decodes /k/ CVC words accurately.",
+    "Learner blends /k/ with short vowels.",
+    "Learner identifies middle-vowel errors.",
+    "Learner uses rereading to confirm accurate decoding."
+  ],
+  "questions": [
+    {
+      "questionId": "PF64-Q01",
+      "question": "Which word can be blended from /k/ /æ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cat",
+        "cut",
+        "kit",
+        "cot"
+      ]
+    },
+    {
+      "questionId": "PF64-Q02",
+      "question": "Which word can be blended from /k/ /ʌ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cup",
+        "cap",
+        "cop",
+        "kip"
+      ]
+    },
+    {
+      "questionId": "PF64-Q03",
+      "question": "Which word can be blended from /k/ /ɪ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "kid",
+        "kad",
+        "kod",
+        "kud"
+      ]
+    },
+    {
+      "questionId": "PF64-Q04",
+      "question": "Which word starts with /k/ and has short /o/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cop",
+        "cap",
+        "cup",
+        "kid"
+      ]
+    },
+    {
+      "questionId": "PF64-Q05",
+      "question": "Which word starts with /k/ and has short /e/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "keg",
+        "cag",
+        "cog",
+        "kug"
+      ]
+    },
+    {
+      "questionId": "PF64-Q06",
+      "question": "Which word starts with /k/ and has short /u/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cub",
+        "cab",
+        "cob",
+        "kib"
+      ]
+    },
+    {
+      "questionId": "PF64-Q07",
+      "question": "What word is /k/ /æ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cat",
+        "cut",
+        "kit",
+        "cot"
+      ]
+    },
+    {
+      "questionId": "PF64-Q08",
+      "question": "What word is /k/ /ʌ/ /b/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cub",
+        "cab",
+        "cob",
+        "keb"
+      ]
+    },
+    {
+      "questionId": "PF64-Q09",
+      "question": "Which word has the same first sound as “cup”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "kid",
+        "sun",
+        "map",
+        "bed"
+      ]
+    },
+    {
+      "questionId": "PF64-Q10",
+      "question": "A learner reads “kit” as “ket.” Which sound should be checked?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle short /i/ sound",
+        "The first /k/ sound",
+        "The final /t/ sound",
+        "The letter name k"
+      ]
+    },
+    {
+      "questionId": "PF64-Q11",
+      "question": "What is the best way to decode an unfamiliar CVC word with /k/?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Say each sound, blend them, then reread the whole word",
+        "Guess from the first letter",
+        "Skip the middle vowel",
+        "Say the word from memory"
+      ]
+    },
+    {
+      "questionId": "PF64-Q12",
+      "question": "Which word changes when the vowel changes from /ɪ/ to /ʌ/?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "kid → kud",
+        "kid → cup",
+        "cat → kid",
+        "cop → cap"
+      ]
+    },
+    {
+      "questionId": "PF64-Q13",
+      "question": "A learner reads “cup” as “cap.” What should the learner do?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Check the middle vowel and blend again",
+        "Change the first sound",
+        "Ignore the vowel",
+        "Guess from a picture"
+      ]
+    },
+    {
+      "questionId": "PF64-Q14",
+      "question": "Which sequence shows accurate decoding?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "look → say sounds → blend → reread",
+        "guess → say word → skip vowel → move on",
+        "look → guess → skip blending → reread",
+        "say letter names → guess → move on"
+      ]
+    },
+    {
+      "questionId": "PF64-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Decode CVC words with /k/ accurately by blending phonemes and checking the vowel",
+        "Memorize whole words without decoding",
+        "Teach long vowels",
+        "Skip sound-by-sound reading"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF64-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    },
+    {
+      "questionId": "PF64-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the target /k/ plus short-vowel CVC decoding pattern."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-64-v1"
+  }
+}
