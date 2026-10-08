@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-72",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "72-decode-cvc-with-f",
+    "topic": "cvc-decoding",
+    "subtopic": "decode-cvc-words-with-f",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Blend /f/ with short vowels and final consonants in CVC words.",
+      "Decode new /f/ CVC words accurately.",
+      "Identify and repair vowel and blending errors.",
+      "Prepare for /f/ CVC spelling and controlled reading."
+    ],
+    "concepts": [
+      "CVC decoding requires accurate phoneme identification and blending.",
+      "The middle vowel changes the word.",
+      "Continuous blending supports fluent word recognition."
+    ],
+    "definitions": [
+      {
+        "term": "CVC",
+        "definition": "A consonant-vowel-consonant word pattern."
+      },
+      {
+        "term": "blending",
+        "definition": "Combining individual phonemes to pronounce a word."
+      },
+      {
+        "term": "decoding",
+        "definition": "Using sound-symbol knowledge to read an unfamiliar written word."
+      }
+    ],
+    "workedExamples": [
+      "f-a-n → fan",
+      "f-i-t → fit",
+      "f-u-n → fun",
+      "f-o-g → fog",
+      "f-e-d → fed"
+    ],
+    "commonMistakes": [
+      "Confusing short vowel sounds.",
+      "Guessing the word from the first consonant.",
+      "Dropping the final consonant.",
+      "Stopping between phonemes instead of blending."
+    ],
+    "keyTakeaways": [
+      "Say each sound.",
+      "Track the middle vowel.",
+      "Blend smoothly.",
+      "Check every phoneme."
+    ],
+    "revisionPoints": [
+      "/f/ CVC",
+      "short vowels",
+      "continuous blending",
+      "decoding repair"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Blend /f/ CVC words with each short vowel."
+    ],
+    "conceptual": [
+      "Compare how changing the middle vowel changes the word."
+    ],
+    "application": [
+      "Decode unfamiliar /f/ CVC words and repair errors."
+    ],
+    "higherOrderThinking": [
+      "Explain which phoneme caused a decoding error."
+    ],
+    "mixedReview": [
+      "Mix /f/ CVC decoding with known consonant patterns."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "look → say sounds → blend → check"
+    ],
+    "flashRecall": [
+      "fan",
+      "fit",
+      "fun",
+      "fog",
+      "fed"
+    ],
+    "formulaOrFactBank": [
+      "CVC = consonant + vowel + consonant."
+    ],
+    "mistakeBasedRevision": [
+      "If fan is read as fin, isolate and rehearse the short /a/ versus /i/ contrast."
+    ],
+    "weakTopicRevision": [
+      "Repeat the weakest vowel set using fresh /f/ CVC words."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-slide decoding",
+      "steps": [
+        "Point to each grapheme.",
+        "Say each phoneme.",
+        "Slide through the word.",
+        "Blend without stopping."
+      ]
+    },
+    {
+      "name": "Vowel contrast",
+      "steps": [
+        "Present two /f/ CVC words.",
+        "Identify the middle vowel.",
+        "Read both words.",
+        "Explain the sound difference."
+      ]
+    },
+    {
+      "name": "Decode and repair",
+      "steps": [
+        "Record the learner's reading.",
+        "Identify the incorrect phoneme.",
+        "Model the correct blend.",
+        "Have the learner reread."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner decodes new /f/ CVC words.",
+    "Learner distinguishes short-vowel contrasts in /f/ words.",
+    "Learner repairs decoding errors using phoneme-level feedback."
+  ],
+  "questions": [
+    {
+      "questionId": "PF72-Q01",
+      "question": "Blend /f/ /æ/ /n/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fan",
+        "fin",
+        "fun",
+        "fen"
+      ]
+    },
+    {
+      "questionId": "PF72-Q02",
+      "question": "Blend /f/ /ɪ/ /t/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fit",
+        "fat",
+        "fot",
+        "fut"
+      ]
+    },
+    {
+      "questionId": "PF72-Q03",
+      "question": "Blend /f/ /ʌ/ /n/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fun",
+        "fan",
+        "fin",
+        "fon"
+      ]
+    },
+    {
+      "questionId": "PF72-Q04",
+      "question": "Which word matches /f/ /ɒ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fog",
+        "fig",
+        "fug",
+        "feg"
+      ]
+    },
+    {
+      "questionId": "PF72-Q05",
+      "question": "Which word matches /f/ /ɛ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fed",
+        "fid",
+        "fad",
+        "fod"
+      ]
+    },
+    {
+      "questionId": "PF72-Q06",
+      "question": "Which word begins with /f/ and has short /a/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fan",
+        "fin",
+        "fun",
+        "fit"
+      ]
+    },
+    {
+      "questionId": "PF72-Q07",
+      "question": "Which word has the short /i/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fit",
+        "fat",
+        "fog",
+        "fun"
+      ]
+    },
+    {
+      "questionId": "PF72-Q08",
+      "question": "Which word has the short /u/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fun",
+        "fan",
+        "fin",
+        "fed"
+      ]
+    },
+    {
+      "questionId": "PF72-Q09",
+      "question": "Which word has the short /o/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fog",
+        "fig",
+        "fit",
+        "fan"
+      ]
+    },
+    {
+      "questionId": "PF72-Q10",
+      "question": "Which word has the short /e/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fed",
+        "fad",
+        "fog",
+        "fun"
+      ]
+    },
+    {
+      "questionId": "PF72-Q11",
+      "question": "A learner reads “fan” as “fin.” Which part should be checked first?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The middle vowel sound",
+        "The first consonant",
+        "The final consonant",
+        "The word length"
+      ]
+    },
+    {
+      "questionId": "PF72-Q12",
+      "question": "What is the best strategy for decoding “fit”?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say each sound, then blend them smoothly",
+        "Guess from the first letter",
+        "Skip the middle sound",
+        "Memorize the picture"
+      ]
+    },
+    {
+      "questionId": "PF72-Q13",
+      "question": "Why does continuous blending help with CVC words?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "It connects individual phonemes into a spoken word",
+        "It removes the need to hear sounds",
+        "It changes the vowel",
+        "It teaches spelling automatically"
+      ]
+    },
+    {
+      "questionId": "PF72-Q14",
+      "question": "A learner can identify /f/ but cannot blend /f/ /ʌ/ /n/. What needs targeted practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Blending the three phonemes",
+        "Recognizing the /f/ sound",
+        "Writing uppercase letters",
+        "Reading paragraphs"
+      ]
+    },
+    {
+      "questionId": "PF72-Q15",
+      "question": "After accurately decoding several new /f/ CVC words, what should come next?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Controlled reading and spelling practice",
+        "Skip all further practice",
+        "Move directly to unrelated advanced text",
+        "Stop checking decoding"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF72-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    },
+    {
+      "questionId": "PF72-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /f/ CVC decoding target."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-72-v1"
+  }
+}
