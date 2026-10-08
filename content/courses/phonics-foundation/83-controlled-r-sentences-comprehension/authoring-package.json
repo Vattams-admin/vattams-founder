@@ -1,0 +1,422 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-83",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "83-controlled-r-sentences-comprehension",
+    "topic": "controlled-sentence-reading",
+    "subtopic": "r-sentences-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read controlled /r/ sentences accurately.",
+      "Answer who, what, where, and sequence questions.",
+      "Locate text evidence for answers.",
+      "Repair decoding and comprehension errors."
+    ],
+    "concepts": [
+      "Accurate word reading supports sentence comprehension.",
+      "Answers should be grounded in text evidence.",
+      "Rereading can repair both decoding and comprehension."
+    ],
+    "definitions": [
+      {
+        "term": "controlled sentence",
+        "definition": "A sentence built mainly from phonics patterns the learner has been explicitly taught."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A word or phrase in the sentence that supports an answer."
+      },
+      {
+        "term": "sequence",
+        "definition": "The order in which events happen."
+      }
+    ],
+    "workedExamples": [
+      "“The rat is on the rug.” → Where? On the rug.",
+      "“Rin has a red cap.” → Who? Rin.",
+      "“Rin got the cap. Rin put it on the rug.” → First? Rin got the cap."
+    ],
+    "commonMistakes": [
+      "Answering from memory instead of the sentence.",
+      "Confusing who and where questions.",
+      "Skipping difficult decodable words.",
+      "Ignoring sequence clues."
+    ],
+    "keyTakeaways": [
+      "Decode accurately.",
+      "Reread.",
+      "Find evidence.",
+      "Answer precisely."
+    ],
+    "revisionPoints": [
+      "who",
+      "what",
+      "where",
+      "evidence",
+      "first/next"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read controlled /r/ sentences aloud."
+    ],
+    "conceptual": [
+      "Match question types to sentence evidence."
+    ],
+    "application": [
+      "Answer comprehension questions and sequence simple events."
+    ],
+    "higherOrderThinking": [
+      "Explain why rereading supports comprehension."
+    ],
+    "mixedReview": [
+      "Combine decoding repair with sentence comprehension."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "read → reread → locate → answer"
+    ],
+    "flashRecall": [
+      "who",
+      "what",
+      "where",
+      "first",
+      "next"
+    ],
+    "formulaOrFactBank": [
+      "Answer = question type + text evidence."
+    ],
+    "mistakeBasedRevision": [
+      "If an answer is unsupported, reread and point to the exact sentence detail."
+    ],
+    "weakTopicRevision": [
+      "Practice the weakest question type with fresh controlled sentences."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Question hunt",
+      "steps": [
+        "Read a controlled sentence.",
+        "Ask who, what, or where.",
+        "Underline supporting words.",
+        "Answer orally."
+      ]
+    },
+    {
+      "name": "Sequence cards",
+      "steps": [
+        "Read two or three controlled sentences.",
+        "Identify first and next events.",
+        "Place event cards in order.",
+        "Retell the sequence."
+      ]
+    },
+    {
+      "name": "Decode and repair",
+      "steps": [
+        "Read the sentence.",
+        "Record any word error.",
+        "Decode the word again.",
+        "Reread the sentence and answer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner reads controlled /r/ sentences accurately.",
+    "Learner answers basic comprehension questions.",
+    "Learner uses text evidence and sequence information."
+  ],
+  "questions": [
+    {
+      "questionId": "PF83-Q01",
+      "question": "In “The rat is on the rug,” where is the rat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "On the rug",
+        "In the box",
+        "On the log",
+        "In the cup"
+      ]
+    },
+    {
+      "questionId": "PF83-Q02",
+      "question": "In “Rin has a red cap,” who has the cap?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Rin",
+        "The cap",
+        "The rat",
+        "The rug"
+      ]
+    },
+    {
+      "questionId": "PF83-Q03",
+      "question": "In “The rug is red,” what is red?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The rug",
+        "The rat",
+        "The cap",
+        "The box"
+      ]
+    },
+    {
+      "questionId": "PF83-Q04",
+      "question": "In “Rob has a rag,” who has the rag?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Rob",
+        "The rag",
+        "The rat",
+        "The rug"
+      ]
+    },
+    {
+      "questionId": "PF83-Q05",
+      "question": "What does the rat sit on in “The rat sits on a rug”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "A rug",
+        "A cap",
+        "A cup",
+        "A bed"
+      ]
+    },
+    {
+      "questionId": "PF83-Q06",
+      "question": "Which sentence says the rug is red?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The rug is red.",
+        "The rat is on the rug.",
+        "Rob has a rag.",
+        "Rin has a cap."
+      ]
+    },
+    {
+      "questionId": "PF83-Q07",
+      "question": "What happened first: Rin got the red cap, or Rin put the cap on the rug?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Rin got the red cap.",
+        "Rin put the cap on the rug.",
+        "They happened together.",
+        "The text does not say."
+      ]
+    },
+    {
+      "questionId": "PF83-Q08",
+      "question": "What happened next in the same sequence?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Rin put the cap on the rug.",
+        "Rin got the cap.",
+        "Rin lost the rug.",
+        "Rin ran away."
+      ]
+    },
+    {
+      "questionId": "PF83-Q09",
+      "question": "Which detail is evidence that the rat is on the rug?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The sentence says “on the rug.”",
+        "The rat is red.",
+        "The rug is big.",
+        "The rat can run."
+      ]
+    },
+    {
+      "questionId": "PF83-Q10",
+      "question": "Which sentence is about Rob?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Rob has a rag.",
+        "The rug is red.",
+        "The rat is on the rug.",
+        "Rin has a cap."
+      ]
+    },
+    {
+      "questionId": "PF83-Q11",
+      "question": "A learner reads “rug” as “rig.” Which part should be checked?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle vowel sound",
+        "The first sound",
+        "The final sound",
+        "The punctuation"
+      ]
+    },
+    {
+      "questionId": "PF83-Q12",
+      "question": "A learner can decode the sentences but cannot answer where questions. What should be practiced?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Sentence comprehension and location words",
+        "Alphabet recitation",
+        "Letter formation",
+        "Only isolated sounds"
+      ]
+    },
+    {
+      "questionId": "PF83-Q13",
+      "question": "Why should a learner point to text evidence?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "It connects the answer directly to information in the sentence.",
+        "It removes the need to decode.",
+        "It changes the sentence.",
+        "It avoids rereading."
+      ]
+    },
+    {
+      "questionId": "PF83-Q14",
+      "question": "What is the best way to repair a missed sentence detail?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Reread, locate the evidence, and answer again.",
+        "Guess a new answer.",
+        "Skip the sentence.",
+        "Copy the question only."
+      ]
+    },
+    {
+      "questionId": "PF83-Q15",
+      "question": "After accurate controlled sentence reading and comprehension, what should follow?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Controlled passage reading and sequencing",
+        "Unrelated advanced text",
+        "Stop phonics practice",
+        "Only handwriting"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF83-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    },
+    {
+      "questionId": "PF83-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the text-supported answer for this controlled /r/ comprehension item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-83-v1"
+  }
+}
