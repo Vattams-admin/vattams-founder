@@ -177,7 +177,8 @@
           "Can read taught short-/u/ word families and apply them in controlled text while checking every grapheme.",
           "Can read controlled short-/u/ sentences and answer literal questions using text evidence.",
           "Can read a controlled short-/u/ passage, sequence key events, and retell using evidence.",
-          "Can demonstrate short-/u/ sound recognition, decoding, encoding, comprehension, and fluency for diagnostic routing."
+          "Can demonstrate short-/u/ sound recognition, decoding, encoding, comprehension, and fluency for diagnostic routing.",
+          "Can complete targeted short-/u/ remediation and demonstrate transfer on fresh reassessment items."
         ]
       },
       "lessons": [
@@ -468,6 +469,12 @@
           "sequence": 61,
           "title": "Short /u/ Fluency Consolidation Diagnostic",
           "authoringPackage": "content/courses/phonics-foundation/61-short-u-fluency-consolidation-diagnostic/authoring-package.json"
+        },
+        {
+          "lessonId": "62-targeted-short-u-remediation-reassessment",
+          "sequence": 62,
+          "title": "Targeted Short /u/ Remediation and Reassessment",
+          "authoringPackage": "content/courses/phonics-foundation/62-targeted-short-u-remediation-reassessment/authoring-package.json"
         }
       ]
     }
