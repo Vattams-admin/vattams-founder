@@ -140,7 +140,8 @@
           "Can demonstrate m/s/t/a/p decoding, spelling and controlled-text comprehension and identify a skill needing remediation.",
           "Can complete a targeted remediation cycle and use reassessment evidence to advance or reteach.",
           "Can hear /n/ initially and finally, distinguish it from /m/, and connect it to n.",
-          "Can decode taught CVC words containing n in initial or final position."
+          "Can decode taught CVC words containing n in initial or final position.",
+          "Can segment and spell taught CVC words containing n, including initial and final n."
         ]
       },
       "lessons": [
@@ -203,6 +204,12 @@
           "sequence": 24,
           "title": "Decode CVC Words with /n/",
           "authoringPackage": "content/courses/phonics-foundation/24-decode-cvc-with-n/authoring-package.json"
+        },
+        {
+          "lessonId": "25-cvc-spelling-with-n",
+          "sequence": 25,
+          "title": "Spell CVC Words with /n/",
+          "authoringPackage": "content/courses/phonics-foundation/25-cvc-spelling-with-n/authoring-package.json"
         }
       ]
     }
