@@ -127,7 +127,8 @@
       "progression": {
         "entrySkills": [
           "Secure m, s, t and short-a correspondences.",
-          "Can decode and segment familiar CVC words."
+          "Can decode and segment familiar CVC words.",
+          "Secure m/s/t/a/p sound relationships and targeted remediation outcomes before learning /n/."
         ],
         "exitSkills": [
           "Can identify /p/ and connect it to p before independent use.",
@@ -137,7 +138,8 @@
           "Can read controlled sentences containing p and answer simple text-based questions.",
           "Can read a short controlled p passage, sequence events and answer text-based questions.",
           "Can demonstrate m/s/t/a/p decoding, spelling and controlled-text comprehension and identify a skill needing remediation.",
-          "Can complete a targeted remediation cycle and use reassessment evidence to advance or reteach."
+          "Can complete a targeted remediation cycle and use reassessment evidence to advance or reteach.",
+          "Can hear /n/ initially and finally, distinguish it from /m/, and connect it to n."
         ]
       },
       "lessons": [
@@ -188,6 +190,12 @@
           "sequence": 22,
           "title": "Targeted Phonics Remediation and Reassessment 2",
           "authoringPackage": "content/courses/phonics-foundation/22-targeted-remediation-and-reassessment-2/authoring-package.json"
+        },
+        {
+          "lessonId": "23-hear-and-identify-n",
+          "sequence": 23,
+          "title": "Hear and Identify /n/",
+          "authoringPackage": "content/courses/phonics-foundation/23-hear-and-identify-n/authoring-package.json"
         }
       ]
     }
