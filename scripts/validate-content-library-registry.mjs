@@ -8,7 +8,7 @@ const assessments = JSON.parse(fs.readFileSync(path.join(root, 'config/assessmen
 
 const errors = [];
 const allowedDomains = new Set(Object.keys(registry.domains));
-const indiaDomains = new Set(['school','competitive-exam','entrance-exam','professional','competition']);
+const indiaDomains = new Set(['course','school','competitive-exam','entrance-exam','professional','competition']);
 
 if (!registry.library_root || registry.library_root !== 'content') errors.push('library_root must be content');
 for (const domain of Object.keys(registry.domains)) {
