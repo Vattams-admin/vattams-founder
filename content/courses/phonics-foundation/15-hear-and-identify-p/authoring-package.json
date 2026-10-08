@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-15",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "15-hear-and-identify-p",
+    "topic": "phonics-new-consonant",
+    "subtopic": "p-sound-and-grapheme",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Hear and identify /p/ in familiar word positions.",
+      "Connect /p/ with the grapheme p.",
+      "Discriminate /p/ from previously taught consonants m, s and t.",
+      "Prepare for decoding and spelling new CVC words containing p."
+    ],
+    "concepts": [
+      "A new grapheme should be explicitly connected to its phoneme before independent use.",
+      "Phoneme position matters: /p/ can occur at the beginning or end of a familiar CVC word.",
+      "New phonics content should build on secure prior correspondences."
+    ],
+    "definitions": [
+      {
+        "term": "phoneme",
+        "definition": "A smallest unit of sound that can change word meaning."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A letter or group of letters used to represent a sound in writing."
+      }
+    ],
+    "workedExamples": [
+      "p → /p/",
+      "pat begins /p/",
+      "map ends /p/",
+      "tap ends /p/"
+    ],
+    "commonMistakes": [
+      "Confusing /p/ with another consonant.",
+      "Selecting p without saying the sound.",
+      "Using p in a word position without listening to the whole word."
+    ],
+    "keyTakeaways": [
+      "Hear /p/.",
+      "Say /p/.",
+      "See p.",
+      "Connect p to /p/.",
+      "Check the sound position in a word."
+    ],
+    "revisionPoints": [
+      "p represents /p/ in this taught set.",
+      "pat → initial /p/",
+      "map → final /p/"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Identify /p/ in spoken words."
+    ],
+    "conceptual": [
+      "Compare /p/ with m, s and t."
+    ],
+    "application": [
+      "Select or write p after hearing /p/."
+    ],
+    "higherOrderThinking": [
+      "Explain why explicit sound-letter mapping supports later decoding."
+    ],
+    "mixedReview": [
+      "Hear, identify, map and classify /p/."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Hear /p/.",
+      "Say /p/.",
+      "Choose p.",
+      "Check its position."
+    ],
+    "flashRecall": [
+      "p → /p/",
+      "pat → initial /p/",
+      "map → final /p/",
+      "tap → final /p/"
+    ],
+    "formulaOrFactBank": [
+      "phoneme /p/ ↔ grapheme p"
+    ],
+    "mistakeBasedRevision": [
+      "If p is confused with another consonant, return to isolated sound discrimination before word reading."
+    ],
+    "weakTopicRevision": [
+      "Use short spoken-word sorting for initial and final /p/, then repeat grapheme selection."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound hunt",
+      "steps": [
+        "Say a familiar word.",
+        "Listen for /p/.",
+        "Show whether /p/ is at the beginning or end.",
+        "Repeat with another word."
+      ]
+    },
+    {
+      "name": "Grapheme match",
+      "steps": [
+        "Say /p/.",
+        "Learner selects p.",
+        "Learner says /p/ again.",
+        "Mix p with m, s and t and repeat."
+      ]
+    },
+    {
+      "name": "Position sort",
+      "steps": [
+        "Use pat, map and tap.",
+        "Listen for /p/.",
+        "Sort initial versus final /p/.",
+        "Read the word after sorting."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner identifies /p/ in at least 8 of 10 familiar spoken words.",
+    "Learner selects the grapheme p for /p/ with at least 90% accuracy.",
+    "Learner distinguishes /p/ from taught m, s and t sounds."
+  ],
+  "questions": [
+    {
+      "questionId": "PF15-Q01",
+      "question": "Which sound does the letter p usually represent in these lessons?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/p/",
+        "/m/",
+        "/s/",
+        "/t/"
+      ]
+    },
+    {
+      "questionId": "PF15-Q02",
+      "question": "Which word begins with /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "pat",
+        "mat",
+        "sat",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF15-Q03",
+      "question": "Which word ends with /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sat",
+        "map",
+        "mat",
+        "sam"
+      ]
+    },
+    {
+      "questionId": "PF15-Q04",
+      "question": "Which letter represents /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "p",
+        "m",
+        "s",
+        "t"
+      ]
+    },
+    {
+      "questionId": "PF15-Q05",
+      "question": "Which word has /p/ as its final sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "tap",
+        "sat",
+        "mat",
+        "sam"
+      ]
+    },
+    {
+      "questionId": "PF15-Q06",
+      "question": "Which pair begins with the same /p/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "pat and pan",
+        "mat and pat",
+        "sat and tap",
+        "map and mat"
+      ]
+    },
+    {
+      "questionId": "PF15-Q07",
+      "question": "Which word begins with a different sound from the others?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "pat",
+        "pan",
+        "map",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF15-Q08",
+      "question": "What should you do when learning a new letter-sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Hear the sound, say it, identify it and connect it to the letter",
+        "Guess the word from a picture",
+        "Skip the sound",
+        "Memorise a whole paragraph"
+      ]
+    },
+    {
+      "questionId": "PF15-Q09",
+      "question": "Which letter should you write after hearing /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "p",
+        "m",
+        "t",
+        "a"
+      ]
+    },
+    {
+      "questionId": "PF15-Q10",
+      "question": "Why is it important to teach /p/ before using it in new spelling work?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "The learner needs the sound-letter relationship as a prerequisite",
+        "It makes words longer",
+        "It removes the need for blending",
+        "It prevents reading"
+      ]
+    },
+    {
+      "questionId": "PF15-Q11",
+      "question": "Which word contains /p/ and short /a/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "pat",
+        "sit",
+        "met",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF15-Q12",
+      "question": "Which word ends with /p/ and has short /a/ in the middle?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "sat",
+        "mat",
+        "sam"
+      ]
+    },
+    {
+      "questionId": "PF15-Q13",
+      "question": "Which activity best teaches /p/ discrimination?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Sort spoken words by whether they begin or end with /p/",
+        "Copy a long story",
+        "Skip listening",
+        "Read only familiar sentences"
+      ]
+    },
+    {
+      "questionId": "PF15-Q14",
+      "question": "If a learner writes 'b' after hearing /p/, what needs practice?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "The /p/ sound and its grapheme connection",
+        "Sentence sequencing",
+        "Reading speed",
+        "Story meaning"
+      ]
+    },
+    {
+      "questionId": "PF15-Q15",
+      "question": "What shows that the /p/ sound is becoming secure?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "The learner identifies /p/, selects p and uses it accurately in familiar words",
+        "The learner guesses words from pictures",
+        "The learner avoids words with p",
+        "The learner only names the alphabet"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF15-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    },
+    {
+      "questionId": "PF15-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response measures the explicitly taught /p/ phoneme-grapheme correspondence."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-15-v1"
+  }
+}
