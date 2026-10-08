@@ -198,7 +198,8 @@
           "Can sequence first/next/last events and retell a short controlled /l/ passage using text evidence.",
           "Can demonstrate /l/ consolidation across recognition, decoding, encoding, comprehension and fluency at the defined mastery threshold.",
           "Can use diagnostic evidence to complete targeted /l/ remediation and demonstrate improvement on fresh reassessment items.",
-          "Can hear and identify /b/ in initial and final positions and distinguish it from similar taught consonants."
+          "Can hear and identify /b/ in initial and final positions and distinguish it from similar taught consonants.",
+          "Can decode taught CVC words containing /b/ by accurate grapheme-to-phoneme mapping, blending and self-correction."
         ]
       },
       "lessons": [
@@ -695,6 +696,12 @@
           "sequence": 95,
           "title": "Hear and Identify New Consonant /b/",
           "authoringPackage": "content/courses/phonics-foundation/95-hear-and-identify-new-consonant-b/authoring-package.json"
+        },
+        {
+          "lessonId": "96-decode-cvc-with-b",
+          "sequence": 96,
+          "title": "Decode CVC Words with /b/",
+          "authoringPackage": "content/courses/phonics-foundation/96-decode-cvc-with-b/authoring-package.json"
         }
       ]
     }
