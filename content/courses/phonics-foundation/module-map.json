@@ -146,7 +146,8 @@
           "Can decode controlled /n/ sentences and answer explicit who, action and location questions from text.",
           "Can read a controlled /n/ passage, sequence three events and answer using explicit text evidence.",
           "Can read taught n patterns accurately and increasingly smoothly while retaining comprehension, with remaining needs identified.",
-          "Can correct diagnosed /n/ decoding, spelling, fluency or comprehension needs and demonstrate improvement before advancing."
+          "Can correct diagnosed /n/ decoding, spelling, fluency or comprehension needs and demonstrate improvement before advancing.",
+          "Can hear short /i/, distinguish it from /a/, and connect it to i."
         ]
       },
       "lessons": [
@@ -245,6 +246,12 @@
           "sequence": 30,
           "title": "Targeted /n/ Remediation and Reassessment",
           "authoringPackage": "content/courses/phonics-foundation/30-targeted-n-remediation-reassessment/authoring-package.json"
+        },
+        {
+          "lessonId": "31-short-i-sound",
+          "sequence": 31,
+          "title": "Hear and Identify Short /i/",
+          "authoringPackage": "content/courses/phonics-foundation/31-short-i-sound/authoring-package.json"
         }
       ]
     }
