@@ -143,7 +143,8 @@
           "Can decode taught CVC words containing n in initial or final position.",
           "Can segment and spell taught CVC words containing n, including initial and final n.",
           "Can recognize -an and -ap families while decoding each full word accurately.",
-          "Can decode controlled /n/ sentences and answer explicit who, action and location questions from text."
+          "Can decode controlled /n/ sentences and answer explicit who, action and location questions from text.",
+          "Can read a controlled /n/ passage, sequence three events and answer using explicit text evidence."
         ]
       },
       "lessons": [
@@ -224,6 +225,12 @@
           "sequence": 27,
           "title": "Controlled /n/ Sentences and Comprehension",
           "authoringPackage": "content/courses/phonics-foundation/27-controlled-n-sentences-comprehension/authoring-package.json"
+        },
+        {
+          "lessonId": "28-controlled-n-passage-sequencing",
+          "sequence": 28,
+          "title": "Controlled /n/ Passage, Sequencing and Comprehension",
+          "authoringPackage": "content/courses/phonics-foundation/28-controlled-n-passage-sequencing/authoring-package.json"
         }
       ]
     }
