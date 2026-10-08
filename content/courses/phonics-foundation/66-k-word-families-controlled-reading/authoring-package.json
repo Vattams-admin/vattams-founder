@@ -144,7 +144,12 @@
       "difficulty": "basic",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "cat"
+      "options": [
+        "cat",
+        "cup",
+        "kid",
+        "cop"
+      ]
     },
     {
       "questionId": "PF66-Q02",
@@ -152,7 +157,12 @@
       "difficulty": "basic",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "cap"
+      "options": [
+        "cap",
+        "cub",
+        "keg",
+        "kit"
+      ]
     },
     {
       "questionId": "PF66-Q03",
@@ -160,7 +170,12 @@
       "difficulty": "basic",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "kit"
+      "options": [
+        "kit",
+        "cat",
+        "cup",
+        "cop"
+      ]
     },
     {
       "questionId": "PF66-Q04",
@@ -168,7 +183,12 @@
       "difficulty": "basic",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "cop"
+      "options": [
+        "cop",
+        "cap",
+        "kid",
+        "cub"
+      ]
     },
     {
       "questionId": "PF66-Q05",
@@ -176,7 +196,12 @@
       "difficulty": "basic",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "cub"
+      "options": [
+        "cub",
+        "cat",
+        "kit",
+        "cop"
+      ]
     },
     {
       "questionId": "PF66-Q06",
@@ -184,7 +209,12 @@
       "difficulty": "basic",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "The beginning /k/ sound"
+      "options": [
+        "The beginning /k/ sound",
+        "The final sound",
+        "The vowel sound",
+        "The whole word"
+      ]
     },
     {
       "questionId": "PF66-Q07",
@@ -192,7 +222,12 @@
       "difficulty": "basic",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "cap"
+      "options": [
+        "cap",
+        "cup",
+        "kid",
+        "cop"
+      ]
     },
     {
       "questionId": "PF66-Q08",
@@ -200,7 +235,12 @@
       "difficulty": "basic",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "cat and cap"
+      "options": [
+        "cat and cap",
+        "cat and kid",
+        "cup and cop",
+        "kid and keg"
+      ]
     },
     {
       "questionId": "PF66-Q09",
@@ -208,7 +248,12 @@
       "difficulty": "basic",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "The cat"
+      "options": [
+        "The cat",
+        "The cup",
+        "The kid",
+        "The cop"
+      ]
     },
     {
       "questionId": "PF66-Q10",
@@ -216,7 +261,12 @@
       "difficulty": "basic",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "Hop"
+      "options": [
+        "Hop",
+        "Run",
+        "Sit",
+        "Dig"
+      ]
     },
     {
       "questionId": "PF66-Q11",
@@ -224,15 +274,25 @@
       "difficulty": "application",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "Look through all sounds and blend the word"
+      "options": [
+        "Look through all sounds and blend the word",
+        "Guess from the picture",
+        "Skip the vowel",
+        "Read only the first letter"
+      ]
     },
     {
       "questionId": "PF66-Q12",
-      "question": "Which word family can help read cat, cap, and can quickly?",
+      "question": "Which word family pattern helps read cat, cap, and can efficiently?",
       "difficulty": "application",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "-at / -ap / -an patterned CVC words"
+      "options": [
+        "CVC family patterns",
+        "Long-vowel words",
+        "Words with silent e",
+        "Irregular words only"
+      ]
     },
     {
       "questionId": "PF66-Q13",
@@ -240,7 +300,12 @@
       "difficulty": "application",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "It helps the learner notice recurring word parts while still decoding accurately"
+      "options": [
+        "It helps notice recurring word parts while still decoding accurately",
+        "It replaces phoneme decoding",
+        "It encourages guessing",
+        "It removes the need to read vowels"
+      ]
     },
     {
       "questionId": "PF66-Q14",
@@ -248,7 +313,12 @@
       "difficulty": "application",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "Blend the sounds, recognize the pattern, then reread the whole word"
+      "options": [
+        "Blend the sounds, recognize the pattern, then reread the whole word",
+        "Guess from the first letter",
+        "Skip unfamiliar words",
+        "Read only the rime"
+      ]
     },
     {
       "questionId": "PF66-Q15",
@@ -256,7 +326,12 @@
       "difficulty": "higherOrderThinking",
       "marks": 1,
       "timeSeconds": 50,
-      "options": "Read /k/ CVC word families accurately and use them in controlled connected text"
+      "options": [
+        "Read /k/ CVC word families accurately and use them in controlled connected text",
+        "Memorize word families without decoding",
+        "Teach long vowels",
+        "Skip connected reading"
+      ]
     }
   ],
   "answerKeys": [
