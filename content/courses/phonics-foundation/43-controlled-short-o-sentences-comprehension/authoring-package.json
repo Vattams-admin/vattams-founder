@@ -1,0 +1,418 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-43",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "43-controlled-short-o-sentences-comprehension",
+    "topic": "short-o-vowel",
+    "subtopic": "controlled-sentences-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read controlled sentences containing taught short /o/ words accurately.",
+      "Identify people, actions and details stated in sentences.",
+      "Use text evidence to answer literal comprehension questions.",
+      "Monitor short /o/ decoding while maintaining sentence meaning."
+    ],
+    "concepts": [
+      "Accurate word reading supports comprehension.",
+      "Literal questions can be answered from explicitly stated sentence information.",
+      "Rereading supports both decoding accuracy and meaning."
+    ],
+    "definitions": [
+      {
+        "term": "literal comprehension",
+        "definition": "Understanding information directly stated in a text."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A specific word or phrase that supports an answer."
+      },
+      {
+        "term": "controlled sentence",
+        "definition": "A sentence built mainly from previously taught sound-spelling patterns."
+      }
+    ],
+    "workedExamples": [
+      "“Tom has a mop.” → Who? Tom. What? A mop.",
+      "“The dog is hot.” → What is hot? The dog.",
+      "If hot is read as hat, return to the middle vowel and decode again."
+    ],
+    "commonMistakes": [
+      "Answering from memory rather than the sentence.",
+      "Confusing hot and hat.",
+      "Ignoring the word that states the object.",
+      "Guessing from the first letter."
+    ],
+    "keyTakeaways": [
+      "Decode.",
+      "Reread.",
+      "Find the evidence.",
+      "Answer from the text."
+    ],
+    "revisionPoints": [
+      "Who? What? Which detail? Point to the supporting word."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read controlled short /o/ sentences."
+    ],
+    "conceptual": [
+      "Identify the word that answers a question."
+    ],
+    "application": [
+      "Answer who/what/detail questions from sentences."
+    ],
+    "higherOrderThinking": [
+      "Explain which words provide evidence for an answer."
+    ],
+    "mixedReview": [
+      "Decode and answer literal comprehension questions."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Decode → reread → find evidence → answer."
+    ],
+    "flashRecall": [
+      "Tom = person",
+      "mop/pot = object",
+      "hot = describing word"
+    ],
+    "formulaOrFactBank": [
+      "Literal answer = information stated in the sentence"
+    ],
+    "mistakeBasedRevision": [
+      "hot/hat → check the middle vowel."
+    ],
+    "weakTopicRevision": [
+      "Point to the exact evidence before saying the answer."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sentence detective",
+      "steps": [
+        "Read the sentence.",
+        "Identify the person.",
+        "Identify the object or detail.",
+        "Point to evidence.",
+        "Answer."
+      ]
+    },
+    {
+      "name": "Meaning reread",
+      "steps": [
+        "Decode once.",
+        "Reread smoothly.",
+        "Check meaning.",
+        "Answer the question."
+      ]
+    },
+    {
+      "name": "Vowel repair",
+      "steps": [
+        "Read hot and hat.",
+        "Say the middle sounds.",
+        "Choose o or a.",
+        "Reread the sentence."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner reads controlled short /o/ sentences with at least 80% accuracy.",
+    "Learner identifies stated people and objects with at least 80% accuracy.",
+    "Learner answers literal detail questions using text evidence.",
+    "Learner self-corrects a short /o/ decoding error and rereads for meaning."
+  ],
+  "questions": [
+    {
+      "questionId": "PF43-Q01",
+      "question": "Read: “Tom has a mop.” Who has a mop?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Tom",
+        "Mop",
+        "Pot",
+        "Dog"
+      ]
+    },
+    {
+      "questionId": "PF43-Q02",
+      "question": "Read: “Tom has a mop.” What does Tom have?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "A mop",
+        "A pot",
+        "A dog",
+        "A hat"
+      ]
+    },
+    {
+      "questionId": "PF43-Q03",
+      "question": "Read: “The dog is hot.” What is hot?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The dog",
+        "The pot",
+        "The mop",
+        "Tom"
+      ]
+    },
+    {
+      "questionId": "PF43-Q04",
+      "question": "Read: “The dog is hot.” Which word describes the dog?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hot",
+        "dog",
+        "the",
+        "is"
+      ]
+    },
+    {
+      "questionId": "PF43-Q05",
+      "question": "Read: “Tom got a pot.” What did Tom get?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "A pot",
+        "A mop",
+        "A dog",
+        "A log"
+      ]
+    },
+    {
+      "questionId": "PF43-Q06",
+      "question": "Read: “Tom got a pot.” Who got the pot?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Tom",
+        "Dog",
+        "Pot",
+        "Mop"
+      ]
+    },
+    {
+      "questionId": "PF43-Q07",
+      "question": "Read: “The dog got hot.” What happened to the dog?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "It got hot.",
+        "It got a mop.",
+        "It got a pot.",
+        "It got a log."
+      ]
+    },
+    {
+      "questionId": "PF43-Q08",
+      "question": "Which word tells what Tom has in “Tom has a mop”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "mop",
+        "Tom",
+        "has",
+        "a"
+      ]
+    },
+    {
+      "questionId": "PF43-Q09",
+      "question": "Which sentence means Tom has a pot?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Tom has a pot.",
+        "Tom has a mop.",
+        "The dog is hot.",
+        "Tom got a log."
+      ]
+    },
+    {
+      "questionId": "PF43-Q10",
+      "question": "A learner reads “hot” as “hat.” What should they check?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The middle vowel o versus a",
+        "The first letter h",
+        "The final t",
+        "The sentence length"
+      ]
+    },
+    {
+      "questionId": "PF43-Q11",
+      "question": "Read: “Tom has a mop. The dog is hot.” Which statement is supported?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Tom has a mop and the dog is hot.",
+        "Tom has a dog.",
+        "The dog has a pot.",
+        "Tom is hot."
+      ]
+    },
+    {
+      "questionId": "PF43-Q12",
+      "question": "What should a learner do after reading a controlled sentence?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Reread and check that the meaning makes sense",
+        "Guess unknown words",
+        "Skip the middle vowel",
+        "Change the sentence"
+      ]
+    },
+    {
+      "questionId": "PF43-Q13",
+      "question": "Which word has short /o/ in “The dog is hot”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "dog",
+        "the",
+        "is",
+        "a"
+      ]
+    },
+    {
+      "questionId": "PF43-Q14",
+      "question": "Why is text evidence useful?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "It shows which words support the answer",
+        "It lets the learner guess",
+        "It removes the need to read",
+        "It changes the passage"
+      ]
+    },
+    {
+      "questionId": "PF43-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Read controlled short /o/ sentences accurately and answer literal questions",
+        "Memorize sentences without decoding",
+        "Teach every vowel",
+        "Skip comprehension"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF43-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF43-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response is supported by the directly stated controlled sentence or the taught short /o/ decoding strategy."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-43-v1"
+  }
+}
