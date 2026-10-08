@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-58",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "58-short-u-word-families-controlled-reading",
+    "topic": "short-u-vowel",
+    "subtopic": "word-families-and-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognize and read common short-/u/ CVC word families.",
+      "Identify onset and rime in controlled word-family patterns.",
+      "Use word-family knowledge as support without abandoning grapheme-by-grapheme decoding.",
+      "Read short-/u/ words in controlled connected text."
+    ],
+    "concepts": [
+      "Words in a family share a rime.",
+      "Changing the onset creates a new word while preserving the rime.",
+      "Word-family recognition supports efficiency but must not replace decoding."
+    ],
+    "definitions": [
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a common rime, such as -un or -ut."
+      },
+      {
+        "term": "onset",
+        "definition": "The initial consonant or consonant cluster before the vowel in a syllable."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and following sounds in a syllable."
+      }
+    ],
+    "workedExamples": [
+      "sun → s + un; change s to r → run.",
+      "hut → h + ut; change h to c → cut.",
+      "mud and bud share -ud while their onsets differ."
+    ],
+    "commonMistakes": [
+      "Guessing a family word from context.",
+      "Reading only the rime.",
+      "Confusing short /u/ with short /o/ or /a/.",
+      "Using untaught patterns in controlled text."
+    ],
+    "keyTakeaways": [
+      "Notice the family.",
+      "Decode the onset.",
+      "Read the rime.",
+      "Blend the whole word.",
+      "Check every grapheme."
+    ],
+    "revisionPoints": [
+      "-un: sun, run, fun",
+      "-ut: cut, hut",
+      "-ud: mud, bud"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Sort short-/u/ CVC words by family."
+    ],
+    "conceptual": [
+      "Identify onset and rime in taught words."
+    ],
+    "application": [
+      "Generate a new family word by changing the onset."
+    ],
+    "higherOrderThinking": [
+      "Explain why word-family recognition still requires grapheme checking."
+    ],
+    "mixedReview": [
+      "Read short-/u/ families and familiar vowel families while preserving decoding accuracy."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Family → onset → rime → blend → check."
+    ],
+    "flashRecall": [
+      "-un",
+      "-ut",
+      "-ud"
+    ],
+    "formulaOrFactBank": [
+      "Word family = shared rime + changing onset"
+    ],
+    "mistakeBasedRevision": [
+      "If guessing occurs, return to grapheme-by-grapheme decoding."
+    ],
+    "weakTopicRevision": [
+      "Practise the specific family causing confusion, then reread controlled text."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Family sort",
+      "steps": [
+        "Read each word.",
+        "Identify the rime.",
+        "Place words into -un, -ut, or -ud groups.",
+        "Decode each word again."
+      ]
+    },
+    {
+      "name": "Onset swap",
+      "steps": [
+        "Read a base word.",
+        "Change only the onset.",
+        "Blend the new word.",
+        "Confirm the word."
+      ]
+    },
+    {
+      "name": "Controlled reading",
+      "steps": [
+        "Read each word accurately.",
+        "Read a short controlled sentence.",
+        "Reread smoothly without guessing."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner accurately reads taught short-/u/ word families.",
+    "Learner identifies shared rimes and changing onsets.",
+    "Learner uses family patterns as support while checking every grapheme.",
+    "Learner applies short-/u/ decoding in controlled connected reading."
+  ],
+  "questions": [
+    {
+      "questionId": "PF58-Q01",
+      "question": "Which words belong to the -un family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "sun and run",
+        "sun and sit",
+        "sun and hot",
+        "sun and map"
+      ]
+    },
+    {
+      "questionId": "PF58-Q02",
+      "question": "Which words belong to the -ut family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "cut and hut",
+        "cat and cot",
+        "sit and fit",
+        "bed and red"
+      ]
+    },
+    {
+      "questionId": "PF58-Q03",
+      "question": "What stays the same in sun and run?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The -un rime",
+        "The first consonant",
+        "The first letter",
+        "The meaning"
+      ]
+    },
+    {
+      "questionId": "PF58-Q04",
+      "question": "What changes when sun becomes run?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The onset",
+        "The rime",
+        "The vowel",
+        "The final two letters"
+      ]
+    },
+    {
+      "questionId": "PF58-Q05",
+      "question": "Which word can be made by changing the first sound in hut to /c/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "cut",
+        "cat",
+        "cit",
+        "cot"
+      ]
+    },
+    {
+      "questionId": "PF58-Q06",
+      "question": "Which word belongs with cup and pup?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "tup",
+        "tap",
+        "tip",
+        "top"
+      ]
+    },
+    {
+      "questionId": "PF58-Q07",
+      "question": "Why should a learner still sound out a word in a word family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "To verify every grapheme and avoid guessing",
+        "To ignore the vowel",
+        "To memorize the family",
+        "To skip blending"
+      ]
+    },
+    {
+      "questionId": "PF58-Q08",
+      "question": "Which pair has the same rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "mud and bud",
+        "mud and mad",
+        "mud and mid",
+        "mud and mod"
+      ]
+    },
+    {
+      "questionId": "PF58-Q09",
+      "question": "Which word does NOT belong with sun, run, and fun?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fin",
+        "fun",
+        "run",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF58-Q10",
+      "question": "If a learner reads cut as cot, what should they check?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The middle vowel /u/ versus /o/",
+        "The final consonant",
+        "The first consonant",
+        "The word length"
+      ]
+    },
+    {
+      "questionId": "PF58-Q11",
+      "question": "Which word completes the controlled sentence: “The pup is ___.”",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "up",
+        "ip",
+        "ap",
+        "op"
+      ]
+    },
+    {
+      "questionId": "PF58-Q12",
+      "question": "What is the safest strategy when reading a new -ut word?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Decode the onset and rime, then check each grapheme",
+        "Guess from the family alone",
+        "Skip the vowel",
+        "Choose the longest word"
+      ]
+    },
+    {
+      "questionId": "PF58-Q13",
+      "question": "Which set contains only short-/u/ CVC words?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "sun, mud, cup",
+        "sat, map, cat",
+        "sit, pin, fit",
+        "hot, log, pot"
+      ]
+    },
+    {
+      "questionId": "PF58-Q14",
+      "question": "Why use controlled text after word-family practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "To apply accurate decoding in connected reading",
+        "To replace phonics instruction",
+        "To encourage guessing",
+        "To introduce unrelated spelling patterns"
+      ]
+    },
+    {
+      "questionId": "PF58-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Read short-/u/ word families accurately while maintaining full decoding and controlled reading",
+        "Memorize every word family",
+        "Read long-vowel words",
+        "Skip sound-by-sound decoding"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF58-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF58-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ word-family recognition, decoding, or controlled-reading application."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-58-v1"
+  }
+}
