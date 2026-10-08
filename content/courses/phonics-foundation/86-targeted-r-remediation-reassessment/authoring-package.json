@@ -1,0 +1,444 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-86",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "86-targeted-r-remediation-reassessment",
+    "topic": "targeted-remediation",
+    "subtopic": "r-remediation-reassessment",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Use Lesson 85 diagnostic evidence to select a weak /r/ component.",
+      "Provide targeted remediation for recognition, decoding, encoding, comprehension or fluency.",
+      "Measure transfer using fresh reassessment items.",
+      "Apply an explicit advance or reteach decision."
+    ],
+    "concepts": [
+      "Remediation should match the diagnosed weakness.",
+      "Fresh items provide stronger evidence of transfer.",
+      "Mastery requires adequate overall performance without a critical component gap."
+    ],
+    "definitions": [
+      {
+        "term": "targeted remediation",
+        "definition": "Instruction focused on the specific skill component identified as weak."
+      },
+      {
+        "term": "fresh-item reassessment",
+        "definition": "A follow-up check using unseen items measuring the same target."
+      },
+      {
+        "term": "mastery gate",
+        "definition": "A defined performance threshold used to decide whether a learner progresses."
+      }
+    ],
+    "workedExamples": [
+      "Recognition gap → oral /r/ discrimination.",
+      "Decoding gap → /r/ CVC blending.",
+      "Encoding gap → phoneme segmentation and spelling.",
+      "Comprehension gap → controlled passage evidence.",
+      "Fluency gap → accurate repeated rereading."
+    ],
+    "commonMistakes": [
+      "Remediating every component when only one is weak.",
+      "Using identical assessment items.",
+      "Advancing despite a critical weak component.",
+      "Increasing speed before accuracy is secure."
+    ],
+    "keyTakeaways": [
+      "Use diagnostic evidence.",
+      "Target the gap.",
+      "Use fresh items.",
+      "Advance only after mastery."
+    ],
+    "revisionPoints": [
+      "diagnose",
+      "target",
+      "practice",
+      "fresh check",
+      "advance/reteach"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review the weakest /r/ component with controlled examples."
+    ],
+    "conceptual": [
+      "Match common errors to the appropriate remediation path."
+    ],
+    "application": [
+      "Apply targeted /r/ repair and interpret fresh reassessment evidence."
+    ],
+    "higherOrderThinking": [
+      "Explain why mastery must include both accuracy and component stability."
+    ],
+    "mixedReview": [
+      "Combine /r/ components in fresh transfer tasks."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "diagnose → target → practice → reassess → route"
+    ],
+    "flashRecall": [
+      "recognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "formulaOrFactBank": [
+      "Mastery target = 0.8"
+    ],
+    "mistakeBasedRevision": [
+      "If one critical component remains below target, reteach that component."
+    ],
+    "weakTopicRevision": [
+      "Repeat the lowest-performing /r/ component with new controlled items."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Targeted repair",
+      "steps": [
+        "Review diagnostic results.",
+        "Identify the weakest component.",
+        "Practice only that component first.",
+        "Record improvement."
+      ]
+    },
+    {
+      "name": "Fresh transfer check",
+      "steps": [
+        "Present unseen /r/ items.",
+        "Score by component.",
+        "Compare with the mastery gate.",
+        "Identify remaining gaps."
+      ]
+    },
+    {
+      "name": "Advance or reteach",
+      "steps": [
+        "Review component results.",
+        "Advance when mastery is met.",
+        "Reteach the specific gap when it is not met."
+      ]
+    }
+  ],
+  "assessment": {
+    "assessmentId": "PF86-REASSESS-01",
+    "type": "reassessment",
+    "components": [
+      "soundRecognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "itemCount": 15,
+    "masteryTarget": 0.8,
+    "scoring": {
+      "method": "component-level accuracy with overall mastery gate"
+    },
+    "freshItemPolicy": true,
+    "decisionRules": {
+      "advance": "Advance when reassessment reaches 0.8 and no critical component remains below target.",
+      "reteach": "Reteach the specific component when performance remains below 0.8."
+    }
+  },
+  "outcomes": [
+    "Learner receives targeted /r/ remediation.",
+    "Learner demonstrates transfer on fresh /r/ items.",
+    "System routes the learner to progression or additional remediation."
+  ],
+  "questions": [
+    {
+      "questionId": "PF86-Q01",
+      "question": "Which word begins with /r/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "rain",
+        "fan",
+        "map",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF86-Q02",
+      "question": "Which word ends with /r/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "star",
+        "cat",
+        "cap",
+        "can"
+      ]
+    },
+    {
+      "questionId": "PF86-Q03",
+      "question": "Blend /r/ /æ/ /g/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "rag",
+        "rig",
+        "rog",
+        "rug"
+      ]
+    },
+    {
+      "questionId": "PF86-Q04",
+      "question": "Blend /r/ /ʌ/ /n/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "run",
+        "ran",
+        "rin",
+        "ron"
+      ]
+    },
+    {
+      "questionId": "PF86-Q05",
+      "question": "Which spelling matches /r/ /ɪ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "rip",
+        "rap",
+        "rop",
+        "rup"
+      ]
+    },
+    {
+      "questionId": "PF86-Q06",
+      "question": "Which spelling matches /r/ /ɛ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "red",
+        "rid",
+        "rad",
+        "rod"
+      ]
+    },
+    {
+      "questionId": "PF86-Q07",
+      "question": "In “Ria has a red rag,” who has the rag?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Ria",
+        "The rag",
+        "The rat",
+        "The rug"
+      ]
+    },
+    {
+      "questionId": "PF86-Q08",
+      "question": "In “The rat is under the rug,” where is the rat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Under the rug",
+        "In the box",
+        "On the mat",
+        "In the cup"
+      ]
+    },
+    {
+      "questionId": "PF86-Q09",
+      "question": "What happens first: Ria gets the rag, or Ria puts it on the rug?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Ria gets the rag.",
+        "Ria puts it on the rug.",
+        "The rat runs away.",
+        "The rug moves."
+      ]
+    },
+    {
+      "questionId": "PF86-Q10",
+      "question": "Which word belongs to the -ip family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "rip",
+        "rag",
+        "red",
+        "run"
+      ]
+    },
+    {
+      "questionId": "PF86-Q11",
+      "question": "A learner hears /r/ as /l/. Which component should be targeted?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Sound recognition",
+        "Encoding",
+        "Comprehension",
+        "Fluency"
+      ]
+    },
+    {
+      "questionId": "PF86-Q12",
+      "question": "A learner hears and decodes /r/ correctly but spells “run” as “ren.” Which component needs targeted practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Encoding",
+        "Sound recognition",
+        "Comprehension",
+        "Fluency"
+      ]
+    },
+    {
+      "questionId": "PF86-Q13",
+      "question": "A learner decodes accurately but cannot answer questions about a controlled /r/ passage. Which component needs support?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Comprehension",
+        "Encoding",
+        "Sound recognition",
+        "Letter formation"
+      ]
+    },
+    {
+      "questionId": "PF86-Q14",
+      "question": "A learner reads accurately but with many pauses. What is the best targeted intervention?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Accurate repeated rereading of controlled /r/ text",
+        "Increase speed immediately",
+        "Skip difficult words",
+        "Guess unfamiliar words"
+      ]
+    },
+    {
+      "questionId": "PF86-Q15",
+      "question": "After fresh reassessment reaches 80% and no critical component remains weak, what should the system do?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Advance to the next phonics pattern",
+        "Reteach the same target indefinitely",
+        "Delete the reassessment",
+        "Skip future diagnostics"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF86-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF86-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ remediation reassessment item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-86-r-remediation-reassessment-v1"
+  }
+}
