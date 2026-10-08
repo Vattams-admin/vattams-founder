@@ -1,0 +1,425 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-106",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "106-g-word-families-controlled-reading",
+    "topic": "controlled-reading",
+    "subtopic": "g-word-families",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognise taught /g/ CVC word families.",
+      "Identify shared onset-rime patterns.",
+      "Read controlled /g/ words accurately.",
+      "Build fluency through repeated controlled reading."
+    ],
+    "concepts": [
+      "A word family shares a common rime.",
+      "Onset-rime awareness supports efficient word recognition.",
+      "Controlled text limits patterns to taught correspondences.",
+      "Fluency requires accuracy, smoothness, and meaning."
+    ],
+    "definitions": [
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a common rime pattern."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and sounds that follow the onset in a syllable."
+      },
+      {
+        "term": "controlled text",
+        "definition": "Text designed to use taught decoding patterns and vocabulary."
+      }
+    ],
+    "workedExamples": [
+      "bag, gag, rag share -ag.",
+      "big, gig, pig share -ig.",
+      "bug, mug, rug share -ug."
+    ],
+    "commonMistakes": [
+      "Confusing -ag and -ig.",
+      "Guessing a family word from context.",
+      "Reading quickly while losing accuracy.",
+      "Ignoring sentence meaning."
+    ],
+    "keyTakeaways": [
+      "Notice the rime.",
+      "Decode the whole word.",
+      "Reread controlled sentences.",
+      "Keep meaning while building fluency."
+    ],
+    "revisionPoints": [
+      "-ag",
+      "-ig",
+      "-ug",
+      "onset-rime",
+      "controlled reading",
+      "fluency"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Sort /g/ words into word families."
+    ],
+    "conceptual": [
+      "Compare shared rimes and identify outliers."
+    ],
+    "application": [
+      "Read controlled sentences and answer literal questions."
+    ],
+    "higherOrderThinking": [
+      "Explain how repeated rime patterns support fluent decoding."
+    ],
+    "mixedReview": [
+      "Mix /g/ word-family recognition with controlled reading."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "notice rime → decode → read sentence → reread"
+    ],
+    "flashRecall": [
+      "-ag",
+      "-ig",
+      "-ug",
+      "onset",
+      "rime",
+      "fluency"
+    ],
+    "formulaOrFactBank": [
+      "Word-family fluency grows when the shared rime becomes automatic while the onset is decoded accurately."
+    ],
+    "mistakeBasedRevision": [
+      "Return to the onset and rime when a family word is misread."
+    ],
+    "weakTopicRevision": [
+      "Practise the specific word family that remains slow or inaccurate."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Family sort",
+      "steps": [
+        "Read each word.",
+        "Identify the rime.",
+        "Place it in the family.",
+        "Reread the family list."
+      ]
+    },
+    {
+      "name": "Controlled sentence reading",
+      "steps": [
+        "Decode each word.",
+        "Read the full sentence.",
+        "Answer a meaning question.",
+        "Reread smoothly."
+      ]
+    },
+    {
+      "name": "Fluency reread",
+      "steps": [
+        "Read once for accuracy.",
+        "Correct errors.",
+        "Read again with phrasing.",
+        "Confirm meaning."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner recognises taught /g/ word families.",
+    "Learner reads controlled /g/ words accurately.",
+    "Learner improves fluency through rereading without losing meaning."
+  ],
+  "questions": [
+    {
+      "questionId": "PF106-Q01",
+      "question": "Which word belongs to the -ag family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "bag",
+        "bed",
+        "big",
+        "bug"
+      ]
+    },
+    {
+      "questionId": "PF106-Q02",
+      "question": "Which word belongs to the -ig family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "big",
+        "bag",
+        "beg",
+        "bug"
+      ]
+    },
+    {
+      "questionId": "PF106-Q03",
+      "question": "Which word belongs to the -ug family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "bug",
+        "bag",
+        "beg",
+        "big"
+      ]
+    },
+    {
+      "questionId": "PF106-Q04",
+      "question": "Which pair shares the -ag rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "bag and gag",
+        "big and bug",
+        "get and gum",
+        "gap and gig"
+      ]
+    },
+    {
+      "questionId": "PF106-Q05",
+      "question": "Which pair shares the -ig rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "big and gig",
+        "bag and bug",
+        "gum and gap",
+        "get and gag"
+      ]
+    },
+    {
+      "questionId": "PF106-Q06",
+      "question": "Which pair shares the -ug rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "bug and mug",
+        "bag and big",
+        "get and gig",
+        "gap and gag"
+      ]
+    },
+    {
+      "questionId": "PF106-Q07",
+      "question": "Read: “Gus has a bug.” What does Gus have?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "a bug",
+        "a bag",
+        "a big",
+        "a bed"
+      ]
+    },
+    {
+      "questionId": "PF106-Q08",
+      "question": "Read: “Gag has a bag.” Which word names the object?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "bag",
+        "Gag",
+        "has",
+        "the"
+      ]
+    },
+    {
+      "questionId": "PF106-Q09",
+      "question": "Read: “A big bug is on a rug.” What is big?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "the bug",
+        "the rug",
+        "the bag",
+        "the boy"
+      ]
+    },
+    {
+      "questionId": "PF106-Q10",
+      "question": "Which word completes: “Gus has a ___.”",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "bag",
+        "bed",
+        "pin",
+        "cat"
+      ]
+    },
+    {
+      "questionId": "PF106-Q11",
+      "question": "A learner reads every -ag word accurately but struggles with -ig words. What should be practised?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "-ig word family",
+        "-ag word family",
+        "sentence punctuation",
+        "passage sequencing"
+      ]
+    },
+    {
+      "questionId": "PF106-Q12",
+      "question": "Which word does not belong with bag, gag, and tag?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "big",
+        "rag",
+        "lag",
+        "nag"
+      ]
+    },
+    {
+      "questionId": "PF106-Q13",
+      "question": "Why does reading a word family help fluency?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "It lets the learner notice a repeated rime pattern quickly.",
+        "It removes the need to decode.",
+        "It teaches every word by picture.",
+        "It avoids reading whole words."
+      ]
+    },
+    {
+      "questionId": "PF106-Q14",
+      "question": "Which strategy supports accurate controlled reading?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Blend unfamiliar words and reread the sentence smoothly.",
+        "Guess from the first letter.",
+        "Skip words that are difficult.",
+        "Read only the last letter."
+      ]
+    },
+    {
+      "questionId": "PF106-Q15",
+      "question": "After reading “Gus has a big bug,” which rereading goal is best?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Read accurately, smoothly, and with meaning.",
+        "Read as fast as possible with errors.",
+        "Spell every word aloud.",
+        "Ignore the sentence meaning."
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF106-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    },
+    {
+      "questionId": "PF106-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled word-family or reading item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-106-v1"
+  }
+}
