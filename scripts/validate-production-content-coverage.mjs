@@ -52,6 +52,15 @@ const competitionTargets = Object.values(competitionRegistry.competitions ?? {})
   answerKeyBundle: item.answer_key_bundle
 }));
 
+const courseTargets = manifests.filter((item) => item.domain === 'course').map((item) => ({
+  targetType: 'course',
+  id: item.locator?.course ?? item.packageId,
+  slug: item.locator?.course ?? item.packageId,
+  title: item.packageId,
+  enabled: item.status !== 'retired',
+  authoringPackages: item.assets?.authoringPackages ?? []
+}));
+
 const assessmentTargets = Object.values(assessmentRegistry.assessments ?? {}).map((item) => ({
   targetType: 'assessment',
   id: item.assessment_id,
@@ -77,6 +86,10 @@ const includesAsset = (manifest, candidates) => {
 const findManifest = (target) => manifests.find((item) => {
   if (item.invalid) return false;
 
+  if (target.targetType === 'course') {
+    return (manifest.assets?.authoringPackages ?? []).length > 0;
+  }
+
   if (target.targetType === 'competition') {
     if (item.domain !== 'competition' || item.locator?.competition !== target.slug) return false;
     return includesAsset(item, [
@@ -97,6 +110,7 @@ const findManifest = (target) => manifests.find((item) => {
 });
 
 const targets = [
+  ...courseTargets,
   ...competitionTargets,
   ...assessmentTargets
 ].map((target) => {
@@ -124,7 +138,10 @@ const summary = {
   inReviewCount: count('in_review'),
   approvedCount: count('approved'),
   publishedCount: count('published'),
-  retiredCount: count('retired')
+  retiredCount: count('retired'),
+  courseTargetCount: courseTargets.length,
+  competitionTargetCount: competitionTargets.length,
+  assessmentTargetCount: assessmentTargets.length
 };
 
 const report = { version: 1, generatedAt: summary.generatedAt, summary, targets, manifests };
