@@ -1,0 +1,421 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-56",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "56-decode-cvc-short-u",
+    "topic": "short-u-vowel",
+    "subtopic": "cvc-decoding",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode taught short-/u/ CVC words using sound-by-sound blending.",
+      "Maintain accurate grapheme-to-phoneme mapping.",
+      "Distinguish short /u/ from familiar short vowels.",
+      "Repair vowel confusions by returning to the middle grapheme and blending again."
+    ],
+    "concepts": [
+      "CVC decoding requires attention to every grapheme.",
+      "Short /u/ is represented by u in the taught words.",
+      "Blending combines segmented phonemes into a spoken word."
+    ],
+    "definitions": [
+      {
+        "term": "decoding",
+        "definition": "Using printed graphemes and their sounds to read a word."
+      },
+      {
+        "term": "blending",
+        "definition": "Combining individual phonemes smoothly to produce a word."
+      },
+      {
+        "term": "CVC",
+        "definition": "A consonant-vowel-consonant word pattern such as sun."
+      }
+    ],
+    "workedExamples": [
+      "sun → /s/ /u/ /n/ → sun.",
+      "mud → /m/ /u/ /d/ → mud.",
+      "cup versus cop → isolate the middle vowel, then blend again."
+    ],
+    "commonMistakes": [
+      "Guessing from the first letter.",
+      "Replacing /u/ with /a/ or /o/.",
+      "Skipping the middle grapheme.",
+      "Saying isolated sounds without blending."
+    ],
+    "keyTakeaways": [
+      "Read every grapheme.",
+      "Say its phoneme.",
+      "Blend the phonemes.",
+      "Check the middle vowel."
+    ],
+    "revisionPoints": [
+      "CVC = consonant + vowel + consonant",
+      "short /u/ → u",
+      "sun, mud, cup, tub, fun"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Blend short-/u/ CVC phonemes into words."
+    ],
+    "conceptual": [
+      "Explain why changing the middle vowel changes the word."
+    ],
+    "application": [
+      "Decode taught-pattern CVC items without guessing."
+    ],
+    "higherOrderThinking": [
+      "Identify and repair a vowel-mapping error during decoding."
+    ],
+    "mixedReview": [
+      "Mix short-/u/ words with familiar short-vowel contrasts."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Look → sound → blend → check."
+    ],
+    "flashRecall": [
+      "sun",
+      "mud",
+      "cup",
+      "tub",
+      "fun"
+    ],
+    "formulaOrFactBank": [
+      "CVC decoding = grapheme recognition + phoneme production + blending"
+    ],
+    "mistakeBasedRevision": [
+      "If u is read as o or a, isolate the middle sound and remap printed u before blending."
+    ],
+    "weakTopicRevision": [
+      "Repeat short-/u/ sound-by-sound decoding with fresh CVC words."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-by-sound decoding",
+      "steps": [
+        "Show one CVC word.",
+        "Point to each grapheme.",
+        "Say each sound.",
+        "Blend without guessing."
+      ]
+    },
+    {
+      "name": "Vowel repair",
+      "steps": [
+        "Present a short-/u/ word and a common misread.",
+        "Isolate the middle grapheme.",
+        "Say /u/.",
+        "Blend again."
+      ]
+    },
+    {
+      "name": "Blend and reread",
+      "steps": [
+        "Segment the word.",
+        "Blend slowly.",
+        "Blend smoothly.",
+        "Reread for automaticity."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner accurately decodes taught short-/u/ CVC words.",
+    "Learner maintains grapheme-to-phoneme accuracy across all three positions.",
+    "Learner distinguishes short /u/ from short /a/, /i/, /o/, and /e/ in controlled decoding.",
+    "Learner repairs a vowel error by returning to the middle grapheme and blending again."
+  ],
+  "questions": [
+    {
+      "questionId": "PF56-Q01",
+      "question": "Which word is made by blending /s/ /u/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "sun",
+        "san",
+        "sin",
+        "son"
+      ]
+    },
+    {
+      "questionId": "PF56-Q02",
+      "question": "Which word has short /u/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "mud",
+        "mad",
+        "mid",
+        "mod"
+      ]
+    },
+    {
+      "questionId": "PF56-Q03",
+      "question": "Which word matches c-u-p?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "cup",
+        "cap",
+        "cip",
+        "cop"
+      ]
+    },
+    {
+      "questionId": "PF56-Q04",
+      "question": "What is the best way to decode tub?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say /t/ /u/ /b/, then blend",
+        "Guess from the first letter",
+        "Skip the vowel",
+        "Read only the final sound"
+      ]
+    },
+    {
+      "questionId": "PF56-Q05",
+      "question": "Which word has the same middle vowel as fun?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "run",
+        "fan",
+        "fin",
+        "fon"
+      ]
+    },
+    {
+      "questionId": "PF56-Q06",
+      "question": "Which word is formed by /h/ /u/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hug",
+        "hag",
+        "hig",
+        "hog"
+      ]
+    },
+    {
+      "questionId": "PF56-Q07",
+      "question": "Which letter represents the middle sound in sun?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "u",
+        "a",
+        "i",
+        "o"
+      ]
+    },
+    {
+      "questionId": "PF56-Q08",
+      "question": "A learner reads cup as cop. What should they check?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The middle vowel /u/ versus /o/",
+        "The final consonant",
+        "The initial consonant",
+        "The word length"
+      ]
+    },
+    {
+      "questionId": "PF56-Q09",
+      "question": "Which word has the same vowel sound as mud?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "bud",
+        "bad",
+        "bid",
+        "bod"
+      ]
+    },
+    {
+      "questionId": "PF56-Q10",
+      "question": "Which sequence supports accurate CVC decoding?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Look at each grapheme → say each sound → blend",
+        "Guess → use a picture → say the word",
+        "Read the final consonant → guess the vowel",
+        "Skip the middle sound → blend"
+      ]
+    },
+    {
+      "questionId": "PF56-Q11",
+      "question": "Which word is different because it has short /a/?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "map",
+        "mug",
+        "mud",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF56-Q12",
+      "question": "If a learner says “cap” for cup, what needs checking?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Accurate middle-vowel grapheme-to-phoneme matching",
+        "Final consonant formation",
+        "Word spacing",
+        "Sentence punctuation"
+      ]
+    },
+    {
+      "questionId": "PF56-Q13",
+      "question": "Which word can be decoded with h-u-t?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hut",
+        "hat",
+        "hit",
+        "hot"
+      ]
+    },
+    {
+      "questionId": "PF56-Q14",
+      "question": "Why blend after saying individual sounds?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "To combine the phonemes into the spoken word",
+        "To avoid hearing the vowel",
+        "To memorize spelling",
+        "To skip decoding"
+      ]
+    },
+    {
+      "questionId": "PF56-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Accurately decode short-/u/ CVC words sound by sound and blend them",
+        "Master long /u/",
+        "Read multisyllable words",
+        "Teach punctuation"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF56-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    },
+    {
+      "questionId": "PF56-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/u/ CVC decoding, vowel mapping, or blending."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-56-v1"
+  }
+}
