@@ -30,6 +30,8 @@ jobs:
       - run: npm ci
       - name: Validate all authoring packages
         run: npm run content:authoring:package:validate
+      - name: Validate course structure and manifest links
+        run: npm run content:course:structure:validate
       - name: Validate content package schema
         run: npm run content:schema:validate
       - name: Validate content library registry
