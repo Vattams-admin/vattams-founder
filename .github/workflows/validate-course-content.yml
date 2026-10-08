@@ -1,0 +1,40 @@
+name: Validate Course Content Production
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "content/courses/**"
+      - "scripts/validate-content-authoring-package.mjs"
+      - "config/content-authoring-package.schema.json"
+      - "config/content-package.schema.json"
+      - "config/atomic-content-authoring-matrix.json"
+      - "config/production-content-coverage-plan.json"
+      - ".github/workflows/validate-course-content.yml"
+      - "package.json"
+      - "package-lock.json"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Validate all authoring packages
+        run: npm run content:authoring:package:validate
+      - name: Validate content package schema
+        run: npm run content:schema:validate
+      - name: Validate content library registry
+        run: npm run content:library:validate
+      - name: Validate atomic authoring matrix
+        run: npm run content:authoring:matrix:validate
+      - name: Validate production coverage plan
+        run: npm run content:coverage:plan:validate
