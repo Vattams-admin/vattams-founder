@@ -1,0 +1,468 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-61",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "61-short-u-fluency-consolidation-diagnostic",
+    "topic": "short-u-vowel",
+    "subtopic": "fluency-consolidation-diagnostic",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Check short-/u/ sound recognition.",
+      "Check decoding and encoding of short-/u/ CVC words.",
+      "Check sentence and passage comprehension.",
+      "Check connected-text fluency.",
+      "Route learners to targeted remediation based on component evidence."
+    ],
+    "concepts": [
+      "A diagnostic samples multiple related skills.",
+      "Skill-specific errors require skill-specific support.",
+      "Fluency depends on accurate decoding plus connected reading."
+    ],
+    "definitions": [
+      {
+        "term": "diagnostic",
+        "definition": "An assessment used to identify strengths, needs, and the next instructional step."
+      },
+      {
+        "term": "fluency",
+        "definition": "Accurate, appropriately paced, connected reading with meaning."
+      },
+      {
+        "term": "component score",
+        "definition": "A score representing performance in one specific skill area."
+      }
+    ],
+    "workedExamples": [
+      "If a learner misses /u/ recognition items, route to sound-recognition practice.",
+      "If a learner reads cup as cop, route to short-/u/ decoding.",
+      "If a learner decodes accurately but cannot answer where questions, route to comprehension.",
+      "If decoding is accurate but reading is very hesitant, route to fluency."
+    ],
+    "commonMistakes": [
+      "Treating all errors as the same problem.",
+      "Rushing through the diagnostic without reading carefully.",
+      "Guessing a word from context instead of decoding.",
+      "Confusing accurate word reading with fluent connected reading."
+    ],
+    "keyTakeaways": [
+      "Measure each component.",
+      "Use error evidence to choose support.",
+      "Do not reteach mastered components unnecessarily.",
+      "Reassess after targeted remediation."
+    ],
+    "revisionPoints": [
+      "sound recognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review short-/u/ sound, decoding, encoding, and literal comprehension."
+    ],
+    "conceptual": [
+      "Distinguish the five diagnostic components."
+    ],
+    "application": [
+      "Interpret sample errors and identify the appropriate support."
+    ],
+    "higherOrderThinking": [
+      "Use multiple evidence points to distinguish decoding from fluency or comprehension needs."
+    ],
+    "mixedReview": [
+      "Combine short-/u/ recognition, word reading, spelling, comprehension, and fluency decisions."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Recognize → decode → encode → comprehend → read fluently."
+    ],
+    "flashRecall": [
+      "sound",
+      "decode",
+      "encode",
+      "meaning",
+      "fluency"
+    ],
+    "formulaOrFactBank": [
+      "Targeted remediation = component evidence → specific practice"
+    ],
+    "mistakeBasedRevision": [
+      "Name the skill behind an error before choosing remediation."
+    ],
+    "weakTopicRevision": [
+      "Repeat the item type for the weakest component, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Skill sort",
+      "steps": [
+        "Review each error.",
+        "Name the skill component.",
+        "Group errors by component.",
+        "Choose targeted practice."
+      ]
+    },
+    {
+      "name": "Fluency check",
+      "steps": [
+        "Read a short controlled passage aloud.",
+        "Check accuracy.",
+        "Check smoothness.",
+        "Check whether meaning is retained."
+      ]
+    },
+    {
+      "name": "Diagnostic reflection",
+      "steps": [
+        "Review results.",
+        "Identify strongest component.",
+        "Identify weakest component.",
+        "Select one targeted next step."
+      ]
+    }
+  ],
+  "assessment": {
+    "assessmentId": "PF61-DIAG-01",
+    "type": "diagnostic",
+    "components": [
+      "soundRecognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "itemCount": 15,
+    "scoring": {
+      "method": "component-level accuracy",
+      "masteryTarget": 0.8
+    },
+    "routing": {
+      "rules": [
+        "If soundRecognition < 0.8, route to short-/u/ sound recognition review.",
+        "If decoding < 0.8, route to targeted short-/u/ decoding.",
+        "If encoding < 0.8, route to targeted short-/u/ spelling.",
+        "If comprehension < 0.8, route to controlled sentence/passage comprehension.",
+        "If fluency < 0.8, route to controlled rereading and fluency practice.",
+        "If all components >= 0.8, route to reassessment/next-pattern readiness."
+      ]
+    },
+    "freshItemPolicy": false
+  },
+  "outcomes": [
+    "Learner demonstrates short-/u/ sound recognition.",
+    "Learner demonstrates short-/u/ decoding and encoding.",
+    "Learner demonstrates controlled-text comprehension.",
+    "Learner demonstrates developing short-/u/ fluency.",
+    "System can route the learner to component-specific remediation."
+  ],
+  "questions": [
+    {
+      "questionId": "PF61-Q01",
+      "question": "Which word has the short /u/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "sun",
+        "sit",
+        "set",
+        "sock"
+      ],
+      "component": "soundRecognition"
+    },
+    {
+      "questionId": "PF61-Q02",
+      "question": "Which word has the short /u/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "mud",
+        "mad",
+        "mid",
+        "met"
+      ],
+      "component": "soundRecognition"
+    },
+    {
+      "questionId": "PF61-Q03",
+      "question": "Which word is read correctly as /s/ /u/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "sun",
+        "sin",
+        "son",
+        "seen"
+      ],
+      "component": "decoding"
+    },
+    {
+      "questionId": "PF61-Q04",
+      "question": "Which word can be blended from /c/ /u/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cup",
+        "cap",
+        "cop",
+        "kip"
+      ],
+      "component": "decoding"
+    },
+    {
+      "questionId": "PF61-Q05",
+      "question": "Which spelling matches the sounds /m/ /u/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "mud",
+        "mad",
+        "mid",
+        "med"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF61-Q06",
+      "question": "Which spelling matches /t/ /u/ /b/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "tub",
+        "tab",
+        "tib",
+        "tob"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF61-Q07",
+      "question": "In “The pup is up,” who is up?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The pup",
+        "The cup",
+        "The sun",
+        "The tub"
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF61-Q08",
+      "question": "In “Gus puts the cup in the tub,” where is the cup?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "In the tub",
+        "In the hut",
+        "On the bed",
+        "On the rug"
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF61-Q09",
+      "question": "What happened first: Gus got the cup, or the pup ran up?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Gus got the cup",
+        "The pup ran up",
+        "They happened together",
+        "The passage does not say"
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF61-Q10",
+      "question": "Which sentence can be read smoothly without stopping between every word?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The pup is in the tub.",
+        "The pup... is... in... the... tub.",
+        "Pup tub the is in.",
+        "The is pup tub in."
+      ],
+      "component": "fluency"
+    },
+    {
+      "questionId": "PF61-Q11",
+      "question": "Which word family is shown by sun, fun, and run?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "-un",
+        "-at",
+        "-ip",
+        "-op"
+      ],
+      "component": "fluency"
+    },
+    {
+      "questionId": "PF61-Q12",
+      "question": "A learner reads “cup” as “cop.” Which skill needs support first?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Short-/u/ decoding",
+        "Capital letters",
+        "Question marks",
+        "Story prediction"
+      ],
+      "component": "decoding"
+    },
+    {
+      "questionId": "PF61-Q13",
+      "question": "A learner reads every word correctly but cannot say where the cup is. Which component needs support?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Comprehension",
+        "Encoding",
+        "Sound recognition",
+        "Letter formation"
+      ],
+      "component": "comprehension"
+    },
+    {
+      "questionId": "PF61-Q14",
+      "question": "A learner identifies /u/ and decodes words but reads a sentence word-by-word with long pauses. Which component needs support?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Fluency",
+        "Encoding",
+        "Sound recognition",
+        "Vocabulary copying"
+      ],
+      "component": "fluency"
+    },
+    {
+      "questionId": "PF61-Q15",
+      "question": "What is the purpose of this diagnostic?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Identify strengths and needs across short-/u/ sound, decoding, encoding, comprehension, and fluency",
+        "Teach a new vowel pattern",
+        "Replace all previous lessons",
+        "Test handwriting only"
+      ],
+      "component": "diagnostic"
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF61-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    },
+    {
+      "questionId": "PF61-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the assessed short-/u/ skill component and the evidence presented in the item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-61-v1"
+  }
+}
