@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-09",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "09-cvc-reading-fluency",
+    "topic": "cvc-reading",
+    "subtopic": "accuracy-and-automaticity",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read familiar CVC words accurately by blending known phonemes.",
+      "Notice first, middle and final sound differences in CVC words.",
+      "Build early automaticity through short, accurate repeated reading."
+    ],
+    "concepts": [
+      "Accurate decoding comes before speed.",
+      "Repeated reading of familiar words can build automaticity.",
+      "A changed phoneme can change the whole word."
+    ],
+    "definitions": [
+      {
+        "term": "fluency",
+        "definition": "Reading accurately and smoothly with appropriate automaticity for the learner's stage."
+      },
+      {
+        "term": "automaticity",
+        "definition": "Recognising a familiar word quickly with little conscious effort after it has been accurately learned."
+      }
+    ],
+    "workedExamples": [
+      "m-a-t → mat; reread smoothly: mat",
+      "s-a-t → sat; compare sat with mat by first sound",
+      "m-a-p → map; check final /p/",
+      "tap → change first sound /t/ to /m/ to make map"
+    ],
+    "commonMistakes": [
+      "Guessing from a picture instead of decoding.",
+      "Rushing and replacing the final sound.",
+      "Treating speed as more important than accuracy.",
+      "Failing to reread after an error."
+    ],
+    "keyTakeaways": [
+      "Accuracy first.",
+      "Blend all three sounds.",
+      "Check the changed sound when words look similar.",
+      "Reread familiar words for automaticity."
+    ],
+    "revisionPoints": [
+      "Look → sound → blend → smooth reread.",
+      "First, middle and final sounds all matter."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read familiar CVC word cards accurately."
+    ],
+    "conceptual": [
+      "Compare CVC words by first, middle and final phonemes."
+    ],
+    "application": [
+      "Correct a misread CVC word by checking its graphemes."
+    ],
+    "higherOrderThinking": [
+      "Diagnose why a learner confused two visually similar CVC words.",
+      "Choose a practice sequence that builds accuracy before speed."
+    ],
+    "mixedReview": [
+      "Blend, compare, correct and reread familiar CVC words."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "See the graphemes.",
+      "Say each sound.",
+      "Blend.",
+      "Reread smoothly."
+    ],
+    "flashRecall": [
+      "mat",
+      "sat",
+      "map",
+      "tap"
+    ],
+    "formulaOrFactBank": [
+      "Fluency = accurate decoding + repeated familiar reading + increasing automaticity"
+    ],
+    "mistakeBasedRevision": [
+      "If the final sound changes, reread the whole word after correcting it.",
+      "If a learner guesses, return to grapheme-by-grapheme decoding."
+    ],
+    "weakTopicRevision": [
+      "Practise short sets of familiar CVC words, repeating only words that were read inaccurately."
+    ]
+  },
+  "activities": [
+    {
+      "name": "CVC word ladder",
+      "steps": [
+        "Read mat.",
+        "Change the first sound to make sat.",
+        "Read both words.",
+        "Change the final sound to make sap or map when the grapheme is known."
+      ]
+    },
+    {
+      "name": "Accuracy reread",
+      "steps": [
+        "Read five familiar CVC words slowly.",
+        "Mark any word that needs correction.",
+        "Decode and reread only the missed words.",
+        "Read the full set again smoothly."
+      ]
+    },
+    {
+      "name": "Sound detective",
+      "steps": [
+        "Read two similar CVC words.",
+        "Identify the sound that changes.",
+        "Blend each word carefully.",
+        "Explain the difference aloud."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner reads at least 8 of 10 familiar CVC words accurately.",
+    "Learner identifies first, middle and final phoneme differences in familiar CVC words.",
+    "Learner rereads corrected words accurately and more smoothly."
+  ],
+  "questions": [
+    {
+      "questionId": "PF09-Q01",
+      "question": "Which word can be read by blending /m/ /a/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat",
+        "sat",
+        "map",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF09-Q02",
+      "question": "Which word begins with /s/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat",
+        "sat",
+        "tap",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF09-Q03",
+      "question": "Which word ends with /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sat",
+        "mat",
+        "map",
+        "sam"
+      ]
+    },
+    {
+      "questionId": "PF09-Q04",
+      "question": "Which word has short /a/ in the middle?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat",
+        "me",
+        "mi",
+        "mu"
+      ]
+    },
+    {
+      "questionId": "PF09-Q05",
+      "question": "What is a good way to read an unfamiliar CVC word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Look at each sound and blend them",
+        "Guess from the picture only",
+        "Skip the middle sound",
+        "Say any word that looks similar"
+      ]
+    },
+    {
+      "questionId": "PF09-Q06",
+      "question": "Which pair has the same middle sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat and sat",
+        "mat and sit",
+        "map and mop",
+        "tap and tip"
+      ]
+    },
+    {
+      "questionId": "PF09-Q07",
+      "question": "Which pair begins with the same sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat and map",
+        "sat and tap",
+        "map and sat",
+        "tap and sat"
+      ]
+    },
+    {
+      "questionId": "PF09-Q08",
+      "question": "Which pair ends with the same sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat and sat",
+        "map and mat",
+        "sat and sap",
+        "tap and mat"
+      ]
+    },
+    {
+      "questionId": "PF09-Q09",
+      "question": "What helps fluent reading most at this stage?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Accurate repeated reading of familiar CVC words",
+        "Skipping difficult words",
+        "Reading as fast as possible",
+        "Memorising random letters"
+      ]
+    },
+    {
+      "questionId": "PF09-Q10",
+      "question": "A learner reads 'mat' as 'map'. Which part should they check?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Final sound",
+        "Middle sound",
+        "First sound",
+        "Number of letters"
+      ]
+    },
+    {
+      "questionId": "PF09-Q11",
+      "question": "Which word can be made by changing the first sound in 'sat' to /m/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat",
+        "map",
+        "tap",
+        "sam"
+      ]
+    },
+    {
+      "questionId": "PF09-Q12",
+      "question": "Which word can be made by changing the final sound in 'mat' to /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "sat",
+        "tap",
+        "sam"
+      ]
+    },
+    {
+      "questionId": "PF09-Q13",
+      "question": "Why should a learner reread familiar CVC words?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Repeated accurate reading builds automaticity",
+        "It changes the spelling",
+        "It removes the need to blend",
+        "It makes every word longer"
+      ]
+    },
+    {
+      "questionId": "PF09-Q14",
+      "question": "Which sequence supports careful CVC reading?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Look → sound out → blend → read smoothly",
+        "Guess → skip → continue",
+        "Read the last letter only → guess",
+        "Spell a different word → move on"
+      ]
+    },
+    {
+      "questionId": "PF09-Q15",
+      "question": "What should a learner do after reading a CVC word incorrectly?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Look back at each grapheme, blend again and reread",
+        "Memorise the wrong reading",
+        "Skip all future words",
+        "Add another vowel"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF09-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q08",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    },
+    {
+      "questionId": "PF09-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught CVC decoding and accurate rereading process."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-09-v1"
+  }
+}
