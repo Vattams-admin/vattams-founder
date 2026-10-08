@@ -204,7 +204,8 @@
           "Can identify shared CVC rimes and accurately decode controlled /b/ word-family chains.",
           "Can decode controlled /b/ sentences, answer literal questions, and support answers with sentence evidence.",
           "Can sequence first/next/last events and retell a short controlled /b/ passage using text evidence.",
-          "Can demonstrate /b/ consolidation across recognition, decoding, encoding, comprehension and fluency at the defined mastery threshold."
+          "Can demonstrate /b/ consolidation across recognition, decoding, encoding, comprehension and fluency at the defined mastery threshold.",
+          "Can demonstrate /g/ consolidation across recognition, decoding, encoding, comprehension and fluency at the defined mastery threshold."
         ]
       },
       "lessons": [
@@ -781,6 +782,13 @@
           "sequence": 108,
           "title": "Controlled /g/ Passage Sequencing",
           "authoringPackage": "content/courses/phonics-foundation/108-controlled-g-passage-sequencing/authoring-package.json"
+        },
+        {
+          "lessonId": "109-g-fluency-consolidation-diagnostic",
+          "sequence": 109,
+          "title": "/g/ Fluency Consolidation Diagnostic",
+          "authoringPackage": "content/courses/phonics-foundation/109-g-fluency-consolidation-diagnostic/authoring-package.json",
+          "assessmentId": "PF109-DIAG-01"
         }
       ]
     }
