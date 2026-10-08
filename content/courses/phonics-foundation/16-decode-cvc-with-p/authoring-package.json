@@ -1,0 +1,418 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-16",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "16-decode-cvc-with-p",
+    "topic": "phonics-decoding",
+    "subtopic": "cvc-decoding-with-p",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode familiar CVC words containing the newly taught /p/ grapheme.",
+      "Blend /p/ with known m, s, t and short-a sounds.",
+      "Notice whether /p/ occurs at the beginning or end of a word."
+    ],
+    "concepts": [
+      "New graphemes become useful when integrated with secure previous correspondences.",
+      "Position changes the phoneme sequence even when the same grapheme is used.",
+      "Accurate decoding requires checking every grapheme."
+    ],
+    "definitions": [
+      {
+        "term": "blending",
+        "definition": "Combining individual phonemes smoothly to pronounce a whole word."
+      },
+      {
+        "term": "CVC word",
+        "definition": "A simple consonant-vowel-consonant word pattern."
+      }
+    ],
+    "workedExamples": [
+      "p-a-t → pat",
+      "m-a-p → map",
+      "t-a-p → tap",
+      "pat vs sat → initial phoneme changes",
+      "map vs mat → final phoneme changes"
+    ],
+    "commonMistakes": [
+      "Confusing initial /p/ with /m/ or /s/.",
+      "Confusing final /p/ with /t/.",
+      "Skipping the vowel while blending.",
+      "Guessing a familiar word instead of reading all graphemes."
+    ],
+    "keyTakeaways": [
+      "Read every grapheme.",
+      "Say each sound.",
+      "Blend smoothly.",
+      "Check the position of /p/."
+    ],
+    "revisionPoints": [
+      "pat = /p/ /a/ /t/",
+      "map = /m/ /a/ /p/",
+      "tap = /t/ /a/ /p/"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Blend pat, map and tap."
+    ],
+    "conceptual": [
+      "Compare words with /p/ in different positions."
+    ],
+    "application": [
+      "Decode new combinations using taught graphemes."
+    ],
+    "higherOrderThinking": [
+      "Diagnose whether an error came from the first or final phoneme."
+    ],
+    "mixedReview": [
+      "Sound, blend, compare and reread CVC words with p."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Look.",
+      "Say sounds.",
+      "Blend.",
+      "Check /p/ position."
+    ],
+    "flashRecall": [
+      "pat",
+      "map",
+      "tap"
+    ],
+    "formulaOrFactBank": [
+      "CVC decoding = grapheme → phoneme → blend → word"
+    ],
+    "mistakeBasedRevision": [
+      "If pat is read as sat, check the initial sound; if map is read as mat, check the final sound."
+    ],
+    "weakTopicRevision": [
+      "Practise mixed initial/final /p/ CVC words with immediate rereading after errors."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Blend and read",
+      "steps": [
+        "Show pat, map and tap.",
+        "Say each phoneme.",
+        "Blend.",
+        "Reread the word smoothly."
+      ]
+    },
+    {
+      "name": "Position sort",
+      "steps": [
+        "Read a p-word.",
+        "Identify whether /p/ is first or final.",
+        "Say the full word.",
+        "Repeat with another word."
+      ]
+    },
+    {
+      "name": "Minimal contrast",
+      "steps": [
+        "Read pat and sat.",
+        "Read map and mat.",
+        "Identify the changed sound.",
+        "Reread both words."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner decodes at least 8 of 10 familiar CVC words containing p.",
+    "Learner accurately identifies /p/ in initial and final positions.",
+    "Learner blends three-phoneme sequences without omitting the middle vowel."
+  ],
+  "questions": [
+    {
+      "questionId": "PF16-Q01",
+      "question": "Which word begins with /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "pat",
+        "mat",
+        "sat",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF16-Q02",
+      "question": "Which word ends with /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sat",
+        "map",
+        "mat",
+        "sam"
+      ]
+    },
+    {
+      "questionId": "PF16-Q03",
+      "question": "Which word can be blended from /p/ /a/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "pat",
+        "sat",
+        "mat",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF16-Q04",
+      "question": "Which word can be blended from /m/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "mat",
+        "sap",
+        "pat"
+      ]
+    },
+    {
+      "questionId": "PF16-Q05",
+      "question": "Which word can be blended from /t/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "tap",
+        "pat",
+        "sat",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF16-Q06",
+      "question": "What should you do first when decoding a new CVC word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Look at each grapheme and say its sound",
+        "Guess from the picture",
+        "Skip the vowel",
+        "Read only the first letter"
+      ]
+    },
+    {
+      "questionId": "PF16-Q07",
+      "question": "Which word has /p/ as its first sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "pat",
+        "map",
+        "mat",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF16-Q08",
+      "question": "Which word has /p/ as its final sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "pat",
+        "sat",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF16-Q09",
+      "question": "Which word is different from the others because /p/ is not present?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "pat",
+        "map",
+        "tap",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF16-Q10",
+      "question": "A learner reads 'pat' as 'sat'. Which sound should they check?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "First sound",
+        "Middle sound",
+        "Final sound",
+        "No sound"
+      ]
+    },
+    {
+      "questionId": "PF16-Q11",
+      "question": "A learner reads 'map' as 'mat'. Which sound should they check?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Final sound",
+        "First sound",
+        "Middle sound",
+        "No sound"
+      ]
+    },
+    {
+      "questionId": "PF16-Q12",
+      "question": "Which sequence is correct for decoding 'tap'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/t/ → /a/ → /p/ → tap",
+        "/p/ → /a/ → /t/ → tap",
+        "/t/ → /p/ → /a/ → tap",
+        "tap → /t/ → /a/"
+      ]
+    },
+    {
+      "questionId": "PF16-Q13",
+      "question": "Why is blending useful after saying the separate sounds?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "It combines the sounds into the spoken word",
+        "It removes the middle sound",
+        "It changes the letters",
+        "It makes guessing easier"
+      ]
+    },
+    {
+      "questionId": "PF16-Q14",
+      "question": "Which activity gives useful /p/ decoding practice?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Read pat, map and tap by sounding and blending",
+        "Memorise a paragraph",
+        "Skip all words with p",
+        "Copy letters without saying sounds"
+      ]
+    },
+    {
+      "questionId": "PF16-Q15",
+      "question": "What shows secure /p/ decoding?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "The learner accurately decodes familiar CVC words with p in different positions",
+        "The learner guesses p-words from pictures",
+        "The learner avoids final p",
+        "The learner names p without reading words"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF16-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q09",
+      "correctOptionIndex": 3,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    },
+    {
+      "questionId": "PF16-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding and blending process."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-16-v1"
+  }
+}
