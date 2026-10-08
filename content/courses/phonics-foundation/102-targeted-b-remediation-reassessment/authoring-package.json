@@ -1,0 +1,448 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-102",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "102-targeted-b-remediation-reassessment",
+    "topic": "phonics-remediation",
+    "subtopic": "b-targeted-reassessment",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Reteach weak /b/ components identified by diagnostic evidence.",
+      "Reassess /b/ recognition, decoding, encoding, comprehension, and fluency with fresh items.",
+      "Route the learner to advancement or another targeted reteach cycle."
+    ],
+    "concepts": [
+      "Remediation should target the demonstrated weak component.",
+      "Fresh assessment items provide a cleaner reassessment signal.",
+      "Mastery requires both threshold performance and adequate critical-component performance.",
+      "Comprehension and fluency remain part of phonics consolidation."
+    ],
+    "definitions": [
+      {
+        "term": "targeted remediation",
+        "definition": "Focused instruction and practice for a specific skill component identified as weak."
+      },
+      {
+        "term": "reassessment",
+        "definition": "A fresh measurement after remediation used to determine whether mastery has been reached."
+      },
+      {
+        "term": "fresh item",
+        "definition": "A new assessment item testing the same skill without repeating the prior diagnostic item."
+      }
+    ],
+    "workedExamples": [
+      "If /b/ versus /p/ is weak, practise listening and identifying the two sounds before decoding.",
+      "If short-vowel encoding is weak, segment CVC words and map each phoneme to a grapheme.",
+      "If comprehension is weak, reread controlled text and answer using explicit evidence.",
+      "If fluency is weak, reread accurately with phrasing and then check meaning."
+    ],
+    "commonMistakes": [
+      "Repeating the same diagnostic items instead of using fresh evidence.",
+      "Practising a strong component while ignoring the weak one.",
+      "Advancing because of speed despite inaccurate reading.",
+      "Advancing despite a critical comprehension gap."
+    ],
+    "keyTakeaways": [
+      "Target the weak component.",
+      "Use fresh items.",
+      "Accuracy and meaning matter.",
+      "Advance only after mastery criteria are met."
+    ],
+    "revisionPoints": [
+      "/b/ recognition",
+      "CVC decoding",
+      "CVC encoding",
+      "controlled comprehension",
+      "fluency",
+      "80% mastery"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Identify /b/ in initial and final word positions.",
+      "Blend and segment /b/ CVC words."
+    ],
+    "conceptual": [
+      "Distinguish /b/ from similar consonants and short-vowel spellings."
+    ],
+    "application": [
+      "Choose the correct remediation response for a learner error.",
+      "Use controlled sentences and passages to verify understanding."
+    ],
+    "higherOrderThinking": [
+      "Interpret reassessment evidence and decide whether to advance or reteach."
+    ],
+    "mixedReview": [
+      "Combine sound recognition, decoding, encoding, comprehension, and fluency."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "hear → identify → blend → spell → understand → read smoothly"
+    ],
+    "flashRecall": [
+      "/b/",
+      "CVC",
+      "-at",
+      "-ig",
+      "-un",
+      "text evidence",
+      "80%"
+    ],
+    "formulaOrFactBank": [
+      "Advance = overall score >= 0.80 AND no critical component below target."
+    ],
+    "mistakeBasedRevision": [
+      "If an error persists, identify the exact component before selecting the next practice."
+    ],
+    "weakTopicRevision": [
+      "Reteach only the component(s) below target, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Targeted /b/ reteach",
+      "steps": [
+        "Review the diagnostic weakness.",
+        "Model the target skill.",
+        "Guide learner practice.",
+        "Check immediate accuracy."
+      ]
+    },
+    {
+      "name": "Fresh reassessment",
+      "steps": [
+        "Complete fresh items.",
+        "Score each component.",
+        "Compare against mastery target.",
+        "Route the learner."
+      ]
+    },
+    {
+      "name": "Fluency and meaning reread",
+      "steps": [
+        "Read controlled text accurately.",
+        "Improve phrasing.",
+        "Answer a meaning question.",
+        "Record the result."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner improves the weak /b/ component(s).",
+    "Learner demonstrates fresh evidence of /b/ consolidation.",
+    "System routes the learner to advancement or another targeted remediation cycle."
+  ],
+  "assessments": [
+    {
+      "assessmentId": "PF102-REASSESS-01",
+      "type": "reassessment",
+      "title": "Targeted /b/ Remediation & Reassessment",
+      "masteryTarget": 0.8,
+      "components": [
+        "soundRecognition",
+        "decoding",
+        "encoding",
+        "comprehension",
+        "fluency"
+      ],
+      "freshItemPolicy": true,
+      "decision": {
+        "advance": "Advance when reassessment score is at least 0.80 and no critical component remains below target.",
+        "reteach": "Reteach the specific component(s) that remain below target and reassess again with fresh items."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "PF102-Q01",
+      "question": "Which word begins with the /b/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "bus",
+        "sun",
+        "fun",
+        "run"
+      ]
+    },
+    {
+      "questionId": "PF102-Q02",
+      "question": "Which word ends with /b/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "cab",
+        "cat",
+        "can",
+        "cap"
+      ]
+    },
+    {
+      "questionId": "PF102-Q03",
+      "question": "Which word has /b/ at the beginning and /g/ at the end?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "big",
+        "dig",
+        "pig",
+        "fig"
+      ]
+    },
+    {
+      "questionId": "PF102-Q04",
+      "question": "Blend /b/ /æ/ /t/. Which word do you hear?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "bat",
+        "bet",
+        "bit",
+        "but"
+      ]
+    },
+    {
+      "questionId": "PF102-Q05",
+      "question": "Blend /b/ /ɛ/ /d/. Which word do you hear?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "bed",
+        "bad",
+        "bid",
+        "bud"
+      ]
+    },
+    {
+      "questionId": "PF102-Q06",
+      "question": "Which spelling matches “big”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "b-i-g",
+        "b-e-g",
+        "b-a-g",
+        "b-u-g"
+      ]
+    },
+    {
+      "questionId": "PF102-Q07",
+      "question": "Which spelling matches “bun”?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "b-u-n",
+        "b-a-n",
+        "b-e-n",
+        "b-i-n"
+      ]
+    },
+    {
+      "questionId": "PF102-Q08",
+      "question": "Which word belongs with the “-at” family?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "bat",
+        "bed",
+        "big",
+        "bun"
+      ]
+    },
+    {
+      "questionId": "PF102-Q09",
+      "question": "Read: “Bob has a big bag.” What does Bob have?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "a big bag",
+        "a red bed",
+        "a big bug",
+        "a hot bun"
+      ]
+    },
+    {
+      "questionId": "PF102-Q10",
+      "question": "Read: “Ben sat. Ben got up.” What happened first?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Ben sat.",
+        "Ben got up.",
+        "Ben ran.",
+        "Ben slept."
+      ]
+    },
+    {
+      "questionId": "PF102-Q11",
+      "question": "A learner reads “bat” as “pat.” What should be practised first?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Distinguishing /b/ from /p/",
+        "Final /t/",
+        "Short /u/",
+        "Passage order"
+      ]
+    },
+    {
+      "questionId": "PF102-Q12",
+      "question": "A learner writes “big” as “beg.” What should be practised?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Short-vowel spelling",
+        "Initial /b/ recognition",
+        "Final /g/ recognition",
+        "Sentence punctuation"
+      ]
+    },
+    {
+      "questionId": "PF102-Q13",
+      "question": "A learner reads a sentence accurately but cannot explain what happened. What needs reteaching?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Comprehension and retelling",
+        "Initial sound only",
+        "Letter formation only",
+        "Counting words"
+      ]
+    },
+    {
+      "questionId": "PF102-Q14",
+      "question": "Which reading shows improved fluency?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Accurate, smooth reading with appropriate phrasing and meaning.",
+        "Fast reading with skipped words.",
+        "Guessing unfamiliar words.",
+        "Stopping after every letter."
+      ]
+    },
+    {
+      "questionId": "PF102-Q15",
+      "question": "When should the learner advance after reassessment?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Score at least 80% with no critical weak component.",
+        "After one correct response.",
+        "Whenever reading is fast.",
+        "When decoding is strong even if comprehension is weak."
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF102-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The /b/ sound is identified by the first option."
+    },
+    {
+      "questionId": "PF102-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The word with the target final /b/ is the first option."
+    },
+    {
+      "questionId": "PF102-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option has the target initial and final sounds."
+    },
+    {
+      "questionId": "PF102-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Blending the phonemes produces the first option."
+    },
+    {
+      "questionId": "PF102-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Blending the phonemes produces the first option."
+    },
+    {
+      "questionId": "PF102-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option gives the correct grapheme sequence."
+    },
+    {
+      "questionId": "PF102-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option gives the correct CVC spelling."
+    },
+    {
+      "questionId": "PF102-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option shares the -at rime."
+    },
+    {
+      "questionId": "PF102-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence states that Bob has a big bag."
+    },
+    {
+      "questionId": "PF102-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first stated event is that Ben sat."
+    },
+    {
+      "questionId": "PF102-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The error shows /b/ and /p/ confusion."
+    },
+    {
+      "questionId": "PF102-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The error changes the short vowel, so encoding needs practice."
+    },
+    {
+      "questionId": "PF102-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Accurate reading without meaning indicates a comprehension gap."
+    },
+    {
+      "questionId": "PF102-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Fluency combines accuracy, smoothness, phrasing, and meaning."
+    },
+    {
+      "questionId": "PF102-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Advancement requires the defined mastery threshold without a critical weak component."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-102-v1"
+  }
+}
