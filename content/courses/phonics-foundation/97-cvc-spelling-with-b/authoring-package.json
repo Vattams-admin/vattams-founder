@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-97",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "97-cvc-spelling-with-b",
+    "topic": "cvc-spelling",
+    "subtopic": "spell-cvc-b",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment taught b CVC words into phonemes.",
+      "Map each phoneme to the correct grapheme.",
+      "Spell b CVC words from spoken dictation.",
+      "Self-correct initial and short-vowel spelling errors."
+    ],
+    "concepts": [
+      "CVC spelling requires ordered phoneme segmentation.",
+      "The grapheme b represents /b/.",
+      "Short vowels determine the middle grapheme.",
+      "Reading back the spelling supports self-correction."
+    ],
+    "definitions": [
+      {
+        "term": "segment",
+        "definition": "Separate a spoken word into its individual phonemes."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A letter or letter group representing a speech sound."
+      },
+      {
+        "term": "encoding",
+        "definition": "Using phoneme knowledge to write the graphemes in a spoken word."
+      }
+    ],
+    "workedExamples": [
+      "/b/ /æ/ /t/ → b-a-t → bat.",
+      "/b/ /ɛ/ /d/ → b-e-d → bed.",
+      "/b/ /ʌ/ /g/ → b-u-g → bug."
+    ],
+    "commonMistakes": [
+      "Confusing short vowels.",
+      "Replacing b with d or p.",
+      "Leaving out the final consonant.",
+      "Writing letter names instead of graphemes."
+    ],
+    "keyTakeaways": [
+      "Hear the whole word.",
+      "Segment every phoneme.",
+      "Write sounds in order.",
+      "Read back and check."
+    ],
+    "revisionPoints": [
+      "segment CVC",
+      "b = /b/",
+      "short vowels",
+      "final consonants",
+      "read-back check"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Spell taught b CVC words from dictation."
+    ],
+    "conceptual": [
+      "Identify the phoneme represented by each grapheme."
+    ],
+    "application": [
+      "Repair CVC spelling errors by isolating the incorrect sound."
+    ],
+    "higherOrderThinking": [
+      "Explain how changing the middle vowel changes a CVC spelling."
+    ],
+    "mixedReview": [
+      "Mix b CVC spelling with previously taught consonants and short vowels."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "hear → segment → map → write → check"
+    ],
+    "flashRecall": [
+      "bat",
+      "bed",
+      "big",
+      "bug",
+      "bag"
+    ],
+    "formulaOrFactBank": [
+      "CVC spelling = phoneme sequence mapped to graphemes in order."
+    ],
+    "mistakeBasedRevision": [
+      "If spelling is wrong, say the word slowly and identify the mismatched sound."
+    ],
+    "weakTopicRevision": [
+      "Practise the weakest short-vowel pattern with fresh b CVC words."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound boxes",
+      "steps": [
+        "Say a b CVC word.",
+        "Push one counter for each phoneme.",
+        "Write one grapheme for each sound.",
+        "Read the completed word."
+      ]
+    },
+    {
+      "name": "Vowel contrast dictation",
+      "steps": [
+        "Say two similar b CVC words.",
+        "Identify the middle phoneme.",
+        "Write the matching vowel.",
+        "Read both words back."
+      ]
+    },
+    {
+      "name": "Spell and repair",
+      "steps": [
+        "Write a dictated word.",
+        "Compare each grapheme with the sound sequence.",
+        "Circle the mismatch.",
+        "Rewrite and reread."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments taught b CVC words accurately.",
+    "Learner maps phonemes to graphemes in order.",
+    "Learner spells taught b CVC words and self-corrects common errors."
+  ],
+  "questions": [
+    {
+      "questionId": "PF97-Q01",
+      "question": "Which spelling matches /b/ /æ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "b-a-t",
+        "b-e-t",
+        "b-i-t",
+        "b-u-t"
+      ]
+    },
+    {
+      "questionId": "PF97-Q02",
+      "question": "Which spelling matches /b/ /ɛ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "b-e-d",
+        "b-a-d",
+        "b-i-d",
+        "b-u-d"
+      ]
+    },
+    {
+      "questionId": "PF97-Q03",
+      "question": "Which spelling matches /b/ /ɪ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "b-i-g",
+        "b-a-g",
+        "b-o-g",
+        "b-u-g"
+      ]
+    },
+    {
+      "questionId": "PF97-Q04",
+      "question": "Which spelling matches /b/ /ʌ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "b-u-g",
+        "b-a-g",
+        "b-e-g",
+        "b-i-g"
+      ]
+    },
+    {
+      "questionId": "PF97-Q05",
+      "question": "How many sounds are in “bat”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "3",
+        "2",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "questionId": "PF97-Q06",
+      "question": "What letter represents /b/ at the start of “bed”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "b",
+        "d",
+        "p",
+        "g"
+      ]
+    },
+    {
+      "questionId": "PF97-Q07",
+      "question": "What letter represents the middle sound in “big”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "i",
+        "a",
+        "o",
+        "u"
+      ]
+    },
+    {
+      "questionId": "PF97-Q08",
+      "question": "What is the final letter in “rub”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "b",
+        "r",
+        "u",
+        "g"
+      ]
+    },
+    {
+      "questionId": "PF97-Q09",
+      "question": "A learner hears /b/ /æ/ /g/. Which word should they spell?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "bag",
+        "beg",
+        "big",
+        "bug"
+      ]
+    },
+    {
+      "questionId": "PF97-Q10",
+      "question": "What should a learner do before writing a dictated CVC word?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Say and segment each phoneme in order.",
+        "Guess from a picture.",
+        "Write the final letter first.",
+        "Skip the middle sound."
+      ]
+    },
+    {
+      "questionId": "PF97-Q11",
+      "question": "A learner writes “bed” for “bad.” Which sound needs checking?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle vowel /æ/.",
+        "The initial /b/.",
+        "The final /d/.",
+        "The number of sounds."
+      ]
+    },
+    {
+      "questionId": "PF97-Q12",
+      "question": "A learner writes “dig” for “big.” Which sound should be corrected?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The initial /b/.",
+        "The middle /ɪ/.",
+        "The final /g/.",
+        "The word spacing."
+      ]
+    },
+    {
+      "questionId": "PF97-Q13",
+      "question": "Why should the learner read the completed spelling back?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "It helps check whether the written graphemes match the spoken sounds.",
+        "It makes the word longer.",
+        "It removes the need to segment.",
+        "It replaces phoneme practice."
+      ]
+    },
+    {
+      "questionId": "PF97-Q14",
+      "question": "A learner spells “bug” correctly but confuses “bag” and “beg.” What is the best next practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Contrast the short-vowel sounds and spell fresh dictated words.",
+        "Practise only the first letter.",
+        "Skip vowel work.",
+        "Move to advanced spelling."
+      ]
+    },
+    {
+      "questionId": "PF97-Q15",
+      "question": "After accurate spelling of taught b CVC words, what should follow?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Controlled b word-family reading and sentence spelling",
+        "Untaught multisyllabic spelling",
+        "Stop reading words",
+        "Skip final-sound checks"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF97-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    },
+    {
+      "questionId": "PF97-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /b/ CVC spelling item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-97-v1"
+  }
+}
