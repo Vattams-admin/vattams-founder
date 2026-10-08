@@ -131,7 +131,8 @@
         ],
         "exitSkills": [
           "Can identify /p/ and connect it to p before independent use.",
-          "Can decode familiar CVC words containing p in initial or final position."
+          "Can decode familiar CVC words containing p in initial or final position.",
+          "Can spell familiar CVC words containing p in initial or final position."
         ]
       },
       "lessons": [
@@ -146,6 +147,12 @@
           "sequence": 16,
           "title": "Decode CVC Words with /p/",
           "authoringPackage": "content/courses/phonics-foundation/16-decode-cvc-with-p/authoring-package.json"
+        },
+        {
+          "lessonId": "17-cvc-spelling-with-p",
+          "sequence": 17,
+          "title": "Spell CVC Words with /p/",
+          "authoringPackage": "content/courses/phonics-foundation/17-cvc-spelling-with-p/authoring-package.json"
         }
       ]
     }
