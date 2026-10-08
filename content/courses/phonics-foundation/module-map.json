@@ -151,7 +151,8 @@
           "Can decode controlled CVC words with short /i/ and distinguish /i/ from /a/ during reading.",
           "Can segment and spell taught CVC words containing short /i/ and self-check through read-back.",
           "Can recognize -it and -in patterns while decoding each complete short /i/ word accurately.",
-          "Can read controlled short /i/ sentences and answer literal who, what and where questions using text evidence."
+          "Can read controlled short /i/ sentences and answer literal who, what and where questions using text evidence.",
+          "Can read a controlled short /i/ passage, sequence key events and support details with text evidence."
         ]
       },
       "lessons": [
@@ -280,6 +281,12 @@
           "sequence": 35,
           "title": "Controlled Short /i/ Sentences and Comprehension",
           "authoringPackage": "content/courses/phonics-foundation/35-controlled-short-i-sentences-comprehension/authoring-package.json"
+        },
+        {
+          "lessonId": "36-controlled-short-i-passage-sequencing",
+          "sequence": 36,
+          "title": "Controlled Short /i/ Passage, Sequencing and Comprehension",
+          "authoringPackage": "content/courses/phonics-foundation/36-controlled-short-i-passage-sequencing/authoring-package.json"
         }
       ]
     }
