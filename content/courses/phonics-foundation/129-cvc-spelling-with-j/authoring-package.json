@@ -1,1 +1,415 @@
-{}
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-129",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "129-cvc-spelling-with-j",
+    "topic": "cvc-encoding",
+    "subtopic": "consonant-j",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment j-initial CVC words.",
+      "Map /j/ to j during spelling.",
+      "Spell controlled CVC words from dictation.",
+      "Use read-back to self-correct."
+    ],
+    "concepts": [
+      "CVC words contain three phonemes in these controlled examples.",
+      "Initial /j/ maps to grapheme j.",
+      "Encoding requires hearing phonemes in order.",
+      "Read-back checks sound-letter correspondence."
+    ],
+    "definitions": [
+      {
+        "term": "segment",
+        "definition": "Separate a word into its individual phonemes."
+      },
+      {
+        "term": "encode",
+        "definition": "Represent spoken phonemes with written graphemes."
+      },
+      {
+        "term": "dictation",
+        "definition": "Writing a word after hearing it spoken."
+      }
+    ],
+    "workedExamples": [
+      "jam → /j/ /a/ /m/ → j-a-m",
+      "jet → /j/ /e/ /t/ → j-e-t",
+      "job → /j/ /o/ /b/ → j-o-b"
+    ],
+    "commonMistakes": [
+      "Writing d instead of j.",
+      "Skipping the vowel.",
+      "Changing the final consonant.",
+      "Not reading the spelling back."
+    ],
+    "keyTakeaways": [
+      "Say it.",
+      "Segment it.",
+      "Map each sound.",
+      "Read it back."
+    ],
+    "revisionPoints": [
+      "/j/ → j",
+      "CVC segmentation",
+      "encoding",
+      "dictation",
+      "self-correction"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Segment and spell j-initial CVC words."
+    ],
+    "conceptual": [
+      "Match phonemes to graphemes."
+    ],
+    "application": [
+      "Spell j-initial CVC words from dictation."
+    ],
+    "higherOrderThinking": [
+      "Explain how read-back catches an encoding error."
+    ],
+    "mixedReview": [
+      "Alternate segmentation, mapping, and spelling."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "say → segment → map → write → read back"
+    ],
+    "flashRecall": [
+      "j-a-m",
+      "j-e-t",
+      "j-i-g",
+      "j-o-b",
+      "j-u-g"
+    ],
+    "formulaOrFactBank": [
+      "j commonly represents /j/ in these taught words."
+    ],
+    "mistakeBasedRevision": [
+      "Stretch the word and check the first phoneme before writing j."
+    ],
+    "weakTopicRevision": [
+      "Practise j-initial words with one short vowel at a time."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Phoneme boxes",
+      "steps": [
+        "Say the word.",
+        "Push one token per phoneme.",
+        "Write the grapheme for each sound."
+      ]
+    },
+    {
+      "name": "Dictation and check",
+      "steps": [
+        "Hear the word.",
+        "Segment it.",
+        "Write it.",
+        "Read it back.",
+        "Correct any mismatch."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments j-initial CVC words.",
+    "Learner writes j for initial /j/.",
+    "Learner spells controlled CVC words from dictation.",
+    "Learner checks spelling by reading it back."
+  ],
+  "questions": [
+    {
+      "questionId": "PF129-Q01",
+      "question": "Which letter represents /j/ at the start of “jam”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "j",
+        "g",
+        "4",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q02",
+      "question": "Which letter represents /j/ at the start of “jet”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "j",
+        "d",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q03",
+      "question": "Which letter represents /j/ at the start of “jig”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "j",
+        "g",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q04",
+      "question": "Which letter represents /j/ at the start of “job”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "j",
+        "d",
+        "4",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q05",
+      "question": "Which letter represents /j/ at the start of “jug”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "j",
+        "g",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q06",
+      "question": "How many phonemes are in “jam”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "3",
+        "d",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q07",
+      "question": "How many phonemes are in “jet”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "3",
+        "g",
+        "4",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q08",
+      "question": "How many phonemes are in “job”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "3",
+        "d",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q09",
+      "question": "Which word can be spelled j-a-m?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "jam",
+        "g",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q10",
+      "question": "Which word can be spelled j-e-t?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "jet",
+        "d",
+        "4",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q11",
+      "question": "Which word can be spelled j-i-g?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "jig",
+        "g",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q12",
+      "question": "Which word can be spelled j-o-b?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "job",
+        "d",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q13",
+      "question": "What should you do before writing a CVC word?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "say and segment each sound",
+        "g",
+        "4",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q14",
+      "question": "If “jam” is written “dam”, which sound needs correction?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "the first /j/",
+        "d",
+        "2",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF129-Q15",
+      "question": "What should you do after spelling a word?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "read it back and check each sound",
+        "g",
+        "2",
+        "sun"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF129-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    },
+    {
+      "questionId": "PF129-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the target spelling or encoding skill."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-129-v1"
+  }
+}
