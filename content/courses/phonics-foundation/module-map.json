@@ -141,7 +141,8 @@
           "Can complete a targeted remediation cycle and use reassessment evidence to advance or reteach.",
           "Can hear /n/ initially and finally, distinguish it from /m/, and connect it to n.",
           "Can decode taught CVC words containing n in initial or final position.",
-          "Can segment and spell taught CVC words containing n, including initial and final n."
+          "Can segment and spell taught CVC words containing n, including initial and final n.",
+          "Can recognize -an and -ap families while decoding each full word accurately."
         ]
       },
       "lessons": [
@@ -210,6 +211,12 @@
           "sequence": 25,
           "title": "Spell CVC Words with /n/",
           "authoringPackage": "content/courses/phonics-foundation/25-cvc-spelling-with-n/authoring-package.json"
+        },
+        {
+          "lessonId": "26-n-word-families-controlled-reading",
+          "sequence": 26,
+          "title": "/n/ Word Families and Controlled Reading",
+          "authoringPackage": "content/courses/phonics-foundation/26-n-word-families-controlled-reading/authoring-package.json"
         }
       ]
     }
