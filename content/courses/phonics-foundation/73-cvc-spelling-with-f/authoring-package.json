@@ -1,0 +1,424 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-73",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "73-cvc-spelling-with-f",
+    "topic": "cvc-encoding",
+    "subtopic": "cvc-spelling-with-f",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment /f/ CVC words into phonemes.",
+      "Map each phoneme to an appropriate grapheme.",
+      "Spell new /f/ CVC words from dictation.",
+      "Identify and repair vowel or final-sound spelling errors."
+    ],
+    "concepts": [
+      "Encoding moves from spoken phonemes to written graphemes.",
+      "Every phoneme in a regular CVC word needs representation.",
+      "Vowel accuracy is essential for distinguishing CVC words."
+    ],
+    "definitions": [
+      {
+        "term": "encoding",
+        "definition": "Representing spoken language with written symbols."
+      },
+      {
+        "term": "phoneme segmentation",
+        "definition": "Breaking a spoken word into its individual sounds."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A letter or group of letters representing a sound."
+      }
+    ],
+    "workedExamples": [
+      "/f/ /æ/ /n/ → fan",
+      "/f/ /ɪ/ /t/ → fit",
+      "/f/ /ʌ/ /n/ → fun",
+      "/f/ /ɒ/ /g/ → fog",
+      "/f/ /ɛ/ /d/ → fed"
+    ],
+    "commonMistakes": [
+      "Substituting one short vowel for another.",
+      "Omitting the final consonant.",
+      "Writing a guessed word without segmenting.",
+      "Confusing a spoken sound with a letter name."
+    ],
+    "keyTakeaways": [
+      "Say the word.",
+      "Stretch and segment.",
+      "Map each sound.",
+      "Reread what you wrote."
+    ],
+    "revisionPoints": [
+      "segment",
+      "map",
+      "write",
+      "reread",
+      "repair"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Dictate regular /f/ CVC words and segment before writing."
+    ],
+    "conceptual": [
+      "Compare spellings that differ only in the middle vowel."
+    ],
+    "application": [
+      "Repair misspelled /f/ CVC words by locating the incorrect phoneme-grapheme mapping."
+    ],
+    "higherOrderThinking": [
+      "Explain why segmentation reduces spelling errors."
+    ],
+    "mixedReview": [
+      "Mix /f/ CVC spelling with previously learned consonants."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "hear → segment → map → write → reread"
+    ],
+    "flashRecall": [
+      "fan",
+      "fit",
+      "fun",
+      "fog",
+      "fed"
+    ],
+    "formulaOrFactBank": [
+      "CVC spelling = one grapheme mapped for each phoneme in the regular word."
+    ],
+    "mistakeBasedRevision": [
+      "If the vowel is wrong, rehear and isolate the middle phoneme before rewriting."
+    ],
+    "weakTopicRevision": [
+      "Practice the weakest short-vowel family with fresh dictation items."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound boxes",
+      "steps": [
+        "Say a target word.",
+        "Push one counter for each phoneme.",
+        "Replace counters with graphemes.",
+        "Read the completed spelling."
+      ]
+    },
+    {
+      "name": "Dictation repair",
+      "steps": [
+        "Dictate an /f/ CVC word.",
+        "Have learner segment and write it.",
+        "Circle the incorrect mapping if any.",
+        "Reread and correct."
+      ]
+    },
+    {
+      "name": "Vowel contrast writing",
+      "steps": [
+        "Dictate two words with different short vowels.",
+        "Segment both.",
+        "Compare the middle graphemes.",
+        "Explain the difference."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments /f/ CVC words accurately.",
+    "Learner maps phonemes to graphemes in spelling.",
+    "Learner repairs common vowel and final-sound errors."
+  ],
+  "questions": [
+    {
+      "questionId": "PF73-Q01",
+      "question": "Which spelling matches /f/ /æ/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fan",
+        "fin",
+        "fun",
+        "fen"
+      ]
+    },
+    {
+      "questionId": "PF73-Q02",
+      "question": "Which spelling matches /f/ /ɪ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fit",
+        "fat",
+        "fot",
+        "fut"
+      ]
+    },
+    {
+      "questionId": "PF73-Q03",
+      "question": "Which spelling matches /f/ /ʌ/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fun",
+        "fan",
+        "fin",
+        "fon"
+      ]
+    },
+    {
+      "questionId": "PF73-Q04",
+      "question": "Which spelling matches /f/ /ɒ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fog",
+        "fig",
+        "fug",
+        "feg"
+      ]
+    },
+    {
+      "questionId": "PF73-Q05",
+      "question": "Which spelling matches /f/ /ɛ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fed",
+        "fid",
+        "fad",
+        "fod"
+      ]
+    },
+    {
+      "questionId": "PF73-Q06",
+      "question": "Which word has the correct spelling for /f/ /æ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fat",
+        "fit",
+        "fot",
+        "fut"
+      ]
+    },
+    {
+      "questionId": "PF73-Q07",
+      "question": "Which word has the correct spelling for /f/ /ɪ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fig",
+        "fag",
+        "fug",
+        "fog"
+      ]
+    },
+    {
+      "questionId": "PF73-Q08",
+      "question": "Which word has the correct spelling for /f/ /ʌ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fud",
+        "fed",
+        "fid",
+        "fod"
+      ]
+    },
+    {
+      "questionId": "PF73-Q09",
+      "question": "Which word correctly represents /f/ /ɒ/ /x/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fox",
+        "fax",
+        "fix",
+        "fux"
+      ]
+    },
+    {
+      "questionId": "PF73-Q10",
+      "question": "Which word correctly represents /f/ /ɛ/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "fen",
+        "fin",
+        "fan",
+        "fon"
+      ]
+    },
+    {
+      "questionId": "PF73-Q11",
+      "question": "A learner spells “fan” as “fin.” Which sound should be checked?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle vowel",
+        "The first sound",
+        "The final sound",
+        "The word boundary"
+      ]
+    },
+    {
+      "questionId": "PF73-Q12",
+      "question": "What should a learner do before writing a CVC word from dictation?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Segment the word into its phonemes",
+        "Guess from a picture",
+        "Write the first letter only",
+        "Skip the vowel"
+      ]
+    },
+    {
+      "questionId": "PF73-Q13",
+      "question": "Why is sound-to-letter mapping important for spelling?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "It connects each heard phoneme to the grapheme used to represent it",
+        "It removes the need to listen",
+        "It makes every word multisyllabic",
+        "It teaches punctuation"
+      ]
+    },
+    {
+      "questionId": "PF73-Q14",
+      "question": "A learner writes “fot” for /f/ /ɒ/ /g/. What is the likely repair?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Rehear the final /g/ and map it to the final grapheme",
+        "Change the first /f/",
+        "Remove the vowel",
+        "Add another syllable"
+      ]
+    },
+    {
+      "questionId": "PF73-Q15",
+      "question": "After accurate spelling of new /f/ CVC words, what should be practiced next?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Controlled reading and sentence use",
+        "Only letter names",
+        "Unrelated advanced spelling",
+        "No further practice"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF73-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    },
+    {
+      "questionId": "PF73-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the spelling that correctly maps the requested phoneme sequence."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-73-v1"
+  }
+}
