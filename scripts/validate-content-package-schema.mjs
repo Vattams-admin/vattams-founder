@@ -7,8 +7,8 @@ const file = path.resolve(root, process.argv[2] || 'config/content-package.schem
 const schema = JSON.parse(fs.readFileSync(file, 'utf8'))
 const fail = (m) => { throw new Error('CONTENT PACKAGE SCHEMA INVALID: ' + m) }
 
-if (schema.version !== 2) fail('version must be 2')
-const domains = new Set(['school','competitive-exam','entrance-exam','professional','competition'])
+if (schema.version !== 3) fail('version must be 3')
+const domains = new Set(['course','school','competitive-exam','entrance-exam','professional','competition'])
 const modes = new Set(['practice','topic_test','chapter_test','subject_test','sectional_test','mock_test','official_attempt'])
 for (const d of schema.domains || []) if (!domains.has(d)) fail('unknown domain '+d)
 for (const m of schema.assessment_modes || []) if (!modes.has(m)) fail('unknown assessment mode '+m)
