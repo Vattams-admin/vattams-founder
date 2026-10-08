@@ -191,7 +191,8 @@
           "Can demonstrate /r/ recognition, decoding, encoding, comprehension and connected-reading fluency and identify any component requiring remediation.",
           "Can complete targeted /r/ remediation and demonstrate readiness through fresh reassessment evidence.",
           "Can hear /l/ initially and finally, distinguish it from /r/ and other taught consonants, and connect it to l before decoding.",
-          "Can decode taught CVC words containing /l/ by accurate grapheme-to-phoneme mapping, blending and self-correction."
+          "Can decode taught CVC words containing /l/ by accurate grapheme-to-phoneme mapping, blending and self-correction.",
+          "Can segment and spell taught CVC words containing /l/ by ordered phoneme-to-grapheme mapping and self-correction."
         ]
       },
       "lessons": [
@@ -644,6 +645,12 @@
           "sequence": 88,
           "title": "Decode CVC Words with /l/",
           "authoringPackage": "content/courses/phonics-foundation/88-decode-cvc-with-l/authoring-package.json"
+        },
+        {
+          "lessonId": "89-cvc-spelling-with-l",
+          "sequence": 89,
+          "title": "CVC Spelling with /l/",
+          "authoringPackage": "content/courses/phonics-foundation/89-cvc-spelling-with-l/authoring-package.json"
         }
       ]
     }
