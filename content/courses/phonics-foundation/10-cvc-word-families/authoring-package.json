@@ -1,0 +1,414 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-10",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "10-cvc-word-families",
+    "topic": "cvc-reading",
+    "subtopic": "word-families-and-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognise repeated -at and -ap CVC spelling and sound patterns.",
+      "Compare CVC words by identifying the phoneme that changes.",
+      "Use a familiar word-family pattern as a decoding support while still reading every grapheme."
+    ],
+    "concepts": [
+      "A word family contains words sharing a common ending pattern.",
+      "Changing one phoneme can create a new word.",
+      "Patterns support decoding but should not replace grapheme-by-grapheme reading."
+    ],
+    "definitions": [
+      {
+        "term": "word family",
+        "definition": "A group of words that share a common ending sound and spelling pattern."
+      },
+      {
+        "term": "controlled reading",
+        "definition": "Reading text or word sets that mainly use sound-spelling patterns already taught."
+      }
+    ],
+    "workedExamples": [
+      "mat, sat, pat share -at",
+      "map, tap, sap share -ap",
+      "mat → sat changes /m/ to /s/",
+      "map → mat changes final /p/ to /t/"
+    ],
+    "commonMistakes": [
+      "Guessing a word from the family without checking its first or final sound.",
+      "Confusing similar final consonants.",
+      "Treating rhyming words as identical words."
+    ],
+    "keyTakeaways": [
+      "Notice the repeated pattern.",
+      "Decode every grapheme.",
+      "Identify which phoneme changes.",
+      "Reread the set accurately."
+    ],
+    "revisionPoints": [
+      "-at: mat, sat, pat",
+      "-ap: map, tap, sap",
+      "Pattern is a support, not a substitute for decoding."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read -at and -ap word sets."
+    ],
+    "conceptual": [
+      "Identify the shared pattern and changing phoneme."
+    ],
+    "application": [
+      "Build a new CVC word by changing one known sound."
+    ],
+    "higherOrderThinking": [
+      "Explain why a word-family pattern can support but cannot replace decoding."
+    ],
+    "mixedReview": [
+      "Decode, compare, classify and reread CVC word families."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Find the shared ending.",
+      "Say every sound.",
+      "Blend.",
+      "Check the changing sound."
+    ],
+    "flashRecall": [
+      "-at: mat, sat, pat",
+      "-ap: map, tap, sap"
+    ],
+    "formulaOrFactBank": [
+      "Word family = shared ending sound + spelling pattern"
+    ],
+    "mistakeBasedRevision": [
+      "If two words are confused, isolate the differing phoneme and reread both words."
+    ],
+    "weakTopicRevision": [
+      "Sort familiar CVC cards into -at and -ap families, then decode each card aloud."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Family sort",
+      "steps": [
+        "Read each word.",
+        "Say its sounds.",
+        "Place it under -at or -ap.",
+        "Reread each family."
+      ]
+    },
+    {
+      "name": "Change one sound",
+      "steps": [
+        "Start with mat.",
+        "Change the first sound to make sat.",
+        "Change it again to make pat.",
+        "Read all three."
+      ]
+    },
+    {
+      "name": "Controlled word reading",
+      "steps": [
+        "Read a short set from one family.",
+        "Decode each word.",
+        "Reread the complete set smoothly."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner accurately classifies at least 8 of 10 familiar CVC words into taught word families.",
+    "Learner identifies the changing phoneme when two related CVC words are compared.",
+    "Learner uses a repeated pattern as decoding support while checking every grapheme."
+  ],
+  "questions": [
+    {
+      "questionId": "PF10-Q01",
+      "question": "Which word belongs to the -at family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat",
+        "map",
+        "sit",
+        "top"
+      ]
+    },
+    {
+      "questionId": "PF10-Q02",
+      "question": "Which word belongs to the -ap family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sat",
+        "tap",
+        "mat",
+        "tin"
+      ]
+    },
+    {
+      "questionId": "PF10-Q03",
+      "question": "Which pair belongs to the same word family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat and sat",
+        "mat and map",
+        "tap and sat",
+        "map and sit"
+      ]
+    },
+    {
+      "questionId": "PF10-Q04",
+      "question": "What stays the same in mat and sat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "The ending -at",
+        "The first sound",
+        "The last letter only",
+        "The number of vowels"
+      ]
+    },
+    {
+      "questionId": "PF10-Q05",
+      "question": "What changes in mat → sat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "The first sound and first letter",
+        "The middle sound",
+        "The final sound",
+        "All three sounds"
+      ]
+    },
+    {
+      "questionId": "PF10-Q06",
+      "question": "Which word completes the -at family: m-at, s-at, t-at?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "pat",
+        "pit",
+        "pot",
+        "pet"
+      ]
+    },
+    {
+      "questionId": "PF10-Q07",
+      "question": "Which word completes the -ap family: m-ap, t-ap?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sap",
+        "sit",
+        "sat",
+        "sam"
+      ]
+    },
+    {
+      "questionId": "PF10-Q08",
+      "question": "Why are word families useful?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "They help learners notice repeated sound and spelling patterns",
+        "They allow learners to guess every word",
+        "They remove the need to decode",
+        "They make vowels unnecessary"
+      ]
+    },
+    {
+      "questionId": "PF10-Q09",
+      "question": "A learner sees 'sat'. What should they do first?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Look at the letters and say the sounds",
+        "Guess from the picture",
+        "Say 'mat' because it looks similar",
+        "Skip the first letter"
+      ]
+    },
+    {
+      "questionId": "PF10-Q10",
+      "question": "Which pair differs only in the first sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat and sat",
+        "mat and map",
+        "map and mop",
+        "tap and top"
+      ]
+    },
+    {
+      "questionId": "PF10-Q11",
+      "question": "Which pair differs only in the final sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat and map",
+        "mat and sat",
+        "sat and sap",
+        "tap and top"
+      ]
+    },
+    {
+      "questionId": "PF10-Q12",
+      "question": "Which word rhymes with mat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sat",
+        "map",
+        "sit",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF10-Q13",
+      "question": "Which reading practice is best for a new word-family pattern?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Decode each word, then reread the set smoothly",
+        "Memorise the whole list without looking at sounds",
+        "Skip words that are difficult",
+        "Read only the first letter"
+      ]
+    },
+    {
+      "questionId": "PF10-Q14",
+      "question": "If a learner reads 'map' as 'mat', which part needs checking?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Final sound /p/",
+        "Middle sound /a/",
+        "First sound /m/",
+        "Number of letters"
+      ]
+    },
+    {
+      "questionId": "PF10-Q15",
+      "question": "What is the safest way to use a familiar word family when reading a new word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Use the pattern as a clue, then decode all graphemes",
+        "Guess the word without decoding",
+        "Ignore the first sound",
+        "Ignore the vowel"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF10-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    },
+    {
+      "questionId": "PF10-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught word-family and controlled-decoding strategy."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-10-v1"
+  }
+}
