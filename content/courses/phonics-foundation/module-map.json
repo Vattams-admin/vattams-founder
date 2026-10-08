@@ -136,7 +136,8 @@
           "Can recognise and read p-containing -ap and -at word families while decoding each grapheme.",
           "Can read controlled sentences containing p and answer simple text-based questions.",
           "Can read a short controlled p passage, sequence events and answer text-based questions.",
-          "Can demonstrate m/s/t/a/p decoding, spelling and controlled-text comprehension and identify a skill needing remediation."
+          "Can demonstrate m/s/t/a/p decoding, spelling and controlled-text comprehension and identify a skill needing remediation.",
+          "Can complete a targeted remediation cycle and use reassessment evidence to advance or reteach."
         ]
       },
       "lessons": [
@@ -181,6 +182,12 @@
           "sequence": 21,
           "title": "Phonics Consolidation and Diagnostic Checkpoint 2",
           "authoringPackage": "content/courses/phonics-foundation/21-phonics-consolidation-diagnostic-2/authoring-package.json"
+        },
+        {
+          "lessonId": "22-targeted-remediation-and-reassessment-2",
+          "sequence": 22,
+          "title": "Targeted Phonics Remediation and Reassessment 2",
+          "authoringPackage": "content/courses/phonics-foundation/22-targeted-remediation-and-reassessment-2/authoring-package.json"
         }
       ]
     }
