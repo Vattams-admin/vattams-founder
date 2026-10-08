@@ -1,0 +1,573 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-01",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "01-hear-and-identify-m",
+    "topic": "/m/-sound",
+    "subtopic": "initial-sound-identification",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Hear /m/ at the beginning of familiar spoken words.",
+      "Connect the /m/ sound to the letters M and m.",
+      "Distinguish /m/ from the contrasting initial sounds /s/ and /t/."
+    ],
+    "concepts": [
+      "Phonemes are individual speech sounds.",
+      "The sound /m/ can occur at the beginning of words such as moon, map and mat.",
+      "The graphemes M and m commonly represent /m/."
+    ],
+    "definitions": [
+      {
+        "term": "phoneme",
+        "definition": "The smallest unit of sound that can change a word's meaning."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A letter or group of letters used to represent a speech sound."
+      },
+      {
+        "term": "initial sound",
+        "definition": "The first sound heard in a spoken word."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Say moon slowly: /m/ /oo/ /n/. What sound comes first?",
+        "solution": "/m/ is the initial sound."
+      },
+      {
+        "prompt": "Compare map and sun. Which begins with /m/?",
+        "solution": "Map begins with /m/; sun begins with /s/."
+      }
+    ],
+    "commonMistakes": [
+      "Naming the letter instead of saying its sound.",
+      "Listening for the first letter name rather than the first speech sound.",
+      "Adding a vowel after /m/ and saying 'muh' when the task requires the isolated sound."
+    ],
+    "keyTakeaways": [
+      "Listen before looking at the word.",
+      "/m/ is the sound heard at the start of moon, map and mat.",
+      "M and m are common written representations of /m/."
+    ],
+    "revisionPoints": [
+      "Say /m/ as a continuous sound.",
+      "Sort spoken words by their initial sound.",
+      "Match M/m to /m/."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word starts with /m/: map, sun, top?",
+        "answer": "map"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which lowercase letter represents /m/: m, s, t?",
+        "answer": "m"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word starts with /m/: moon, fish, pen?",
+        "answer": "moon"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Why does mat belong in the /m/ group?",
+        "answer": "Its first speech sound is /m/."
+      },
+      {
+        "id": "C2",
+        "prompt": "What is the difference between M and /m/?",
+        "answer": "M is a written letter; /m/ is the speech sound."
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "A learner hears 'milk'. Ask them to identify the first sound without naming the letter.",
+        "answer": "/m/"
+      },
+      {
+        "id": "A2",
+        "prompt": "Sort map, sun, moon, top into /m/ and not /m/.",
+        "answer": "/m/: map, moon; not /m/: sun, top."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "A learner says 'moon starts with M' but cannot produce /m/. What should be practised first?",
+        "answer": "Isolated /m/ sound recognition and production before letter naming."
+      },
+      {
+        "id": "H2",
+        "prompt": "Why can a learner know the letter M but still struggle to identify /m/ in spoken words?",
+        "answer": "Letter knowledge and phonemic listening are related but distinct skills; the learner needs explicit sound-identification practice."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Choose the word with the same initial sound as map: moon, sun, top.",
+        "answer": "moon"
+      },
+      {
+        "id": "R2",
+        "prompt": "Choose the correct lowercase grapheme for /m/: m, n, r.",
+        "answer": "m"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "/m/ is a continuous consonant sound.",
+      "M/m commonly represent /m/.",
+      "Listen for the first sound in a spoken word."
+    ],
+    "flashRecall": [
+      {
+        "front": "Sound in moon?",
+        "back": "/m/"
+      },
+      {
+        "front": "Lowercase grapheme for /m/?",
+        "back": "m"
+      },
+      {
+        "front": "Initial sound in map?",
+        "back": "/m/"
+      }
+    ],
+    "formulaOrFactBank": [
+      "moon → /m/",
+      "map → /m/",
+      "mat → /m/",
+      "M/m → /m/"
+    ],
+    "mistakeBasedRevision": [
+      "Do not say the letter name when asked for the sound.",
+      "Do not turn /m/ into an extra-syllable 'muh' during isolated-sound practice."
+    ],
+    "weakTopicRevision": [
+      "If initial-sound identification is weak, repeat spoken-word sorting before introducing new graphemes.",
+      "If letter-sound matching is weak, alternate M/m recognition with oral /m/ production."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "listen-and-sort",
+      "instruction": "Adult says ten familiar words. Learner places each word/image into /m/ or not /m/."
+    },
+    {
+      "id": "ACT2",
+      "type": "mirror-sound",
+      "instruction": "Learner watches mouth position and sustains /m/ briefly, then repeats without the mirror."
+    },
+    {
+      "id": "ACT3",
+      "type": "letter-match",
+      "instruction": "Learner matches uppercase M and lowercase m cards to /m/."
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "O1",
+      "statement": "Learner identifies /m/ as the initial sound in at least 8 of 10 spoken words.",
+      "measure": "initial-sound accuracy",
+      "target": "80%+"
+    },
+    {
+      "id": "O2",
+      "statement": "Learner matches M and m to /m/ with at least 90% accuracy.",
+      "measure": "grapheme-sound matching",
+      "target": "90%+"
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "PHON-M-001",
+      "question": "Which word begins with the /m/ sound?",
+      "options": [
+        "map",
+        "sun",
+        "top",
+        "fish"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-M-002",
+      "question": "Which lowercase letter commonly represents /m/?",
+      "options": [
+        "m",
+        "t",
+        "s",
+        "p"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 15
+    },
+    {
+      "questionId": "PHON-M-003",
+      "question": "Which pair begins with the same sound?",
+      "options": [
+        "moon and map",
+        "moon and sun",
+        "map and top",
+        "mat and fish"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-M-004",
+      "question": "What is the initial sound in 'mat'?",
+      "options": [
+        "/m/",
+        "/s/",
+        "/t/",
+        "/p/"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 15
+    },
+    {
+      "questionId": "PHON-M-005",
+      "question": "Which word does NOT begin with /m/?",
+      "options": [
+        "moon",
+        "milk",
+        "sun",
+        "map"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-M-006",
+      "question": "A learner hears 'mouse'. Which sound should they identify first?",
+      "options": [
+        "/m/",
+        "/s/",
+        "/t/",
+        "/f/"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 15
+    },
+    {
+      "questionId": "PHON-M-007",
+      "question": "What is the written symbol M called?",
+      "options": [
+        "a letter",
+        "a phoneme",
+        "a syllable",
+        "a sentence"
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-M-008",
+      "question": "Why does 'map' belong in an /m/ sound group?",
+      "options": [
+        "It starts with /m/.",
+        "It has three letters.",
+        "It ends with p.",
+        "It is a short word."
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-M-009",
+      "question": "Which written form is also commonly used for /m/?",
+      "options": [
+        "M",
+        "T",
+        "S",
+        "R"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 15
+    },
+    {
+      "questionId": "PHON-M-010",
+      "question": "Which sequence contains only words beginning with /m/?",
+      "options": [
+        "map, moon, mat",
+        "map, sun, mat",
+        "moon, top, milk",
+        "mat, fish, map"
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-M-011",
+      "question": "A learner says the letter name 'em' when asked for the sound. What is the better response?",
+      "options": [
+        "Produce /m/ as the isolated sound.",
+        "Say the alphabet from A to Z.",
+        "Spell the whole word.",
+        "Name the final letter."
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PHON-M-012",
+      "question": "Which activity best develops initial /m/ listening?",
+      "options": [
+        "Sorting spoken words by first sound",
+        "Copying the alphabet ten times",
+        "Memorising a paragraph",
+        "Counting letters in a book"
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-M-013",
+      "question": "A learner can recognise M but cannot hear /m/ in 'milk'. Which skill needs more practice?",
+      "options": [
+        "Phonemic listening",
+        "Handwriting speed",
+        "Counting",
+        "Punctuation"
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-M-014",
+      "question": "Which word starts with the same sound as 'mat'?",
+      "options": [
+        "moon",
+        "sun",
+        "top",
+        "fish"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-M-015",
+      "question": "Which statement is accurate?",
+      "options": [
+        "M is a written letter and /m/ is a speech sound.",
+        "M and /m/ are both letter names.",
+        "/m/ is a sentence.",
+        "M is a syllable."
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PHON-M-016",
+      "question": "Which pair should be placed together in a spoken /m/ sort?",
+      "options": [
+        "milk and map",
+        "milk and sun",
+        "map and top",
+        "moon and fish"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-M-017",
+      "question": "Why is listening before looking at the spelling useful in phonics?",
+      "options": [
+        "It builds attention to speech sounds.",
+        "It removes the need to hear words.",
+        "It makes every word rhyme.",
+        "It teaches punctuation first."
+      ],
+      "difficulty": "hard",
+      "marks": 35,
+      "timeSeconds": 35
+    },
+    {
+      "questionId": "PHON-M-018",
+      "question": "A child identifies 'moon' as beginning with M but says 'em'. What should the teacher model?",
+      "options": [
+        "The isolated sound /m/.",
+        "The whole alphabet.",
+        "The final /n/ only.",
+        "The word 'moon' without listening."
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-M-019",
+      "question": "Which assessment gives the clearest evidence of initial /m/ recognition?",
+      "options": [
+        "Ten spoken words requiring first-sound identification",
+        "Copying M twenty times",
+        "Naming five colours",
+        "Counting to twenty"
+      ],
+      "difficulty": "hard",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PHON-M-020",
+      "question": "Which next step is most appropriate after secure /m/ recognition and M/m matching?",
+      "options": [
+        "Introduce the next planned sound while revisiting /m/.",
+        "Skip all sound practice.",
+        "Move directly to paragraph writing.",
+        "Stop phonics instruction."
+      ],
+      "difficulty": "hard",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PHON-M-001",
+      "correctOptionIndex": 0,
+      "explanation": "Map begins with /m/."
+    },
+    {
+      "questionId": "PHON-M-002",
+      "correctOptionIndex": 0,
+      "explanation": "Lowercase m commonly represents /m/."
+    },
+    {
+      "questionId": "PHON-M-003",
+      "correctOptionIndex": 0,
+      "explanation": "Moon and map both begin with /m/."
+    },
+    {
+      "questionId": "PHON-M-004",
+      "correctOptionIndex": 0,
+      "explanation": "Mat begins with /m/."
+    },
+    {
+      "questionId": "PHON-M-005",
+      "correctOptionIndex": 2,
+      "explanation": "Sun begins with /s/."
+    },
+    {
+      "questionId": "PHON-M-006",
+      "correctOptionIndex": 0,
+      "explanation": "Mouse begins with /m/."
+    },
+    {
+      "questionId": "PHON-M-007",
+      "correctOptionIndex": 0,
+      "explanation": "M is a letter."
+    },
+    {
+      "questionId": "PHON-M-008",
+      "correctOptionIndex": 0,
+      "explanation": "The initial sound in map is /m/."
+    },
+    {
+      "questionId": "PHON-M-009",
+      "correctOptionIndex": 0,
+      "explanation": "Uppercase M represents /m/."
+    },
+    {
+      "questionId": "PHON-M-010",
+      "correctOptionIndex": 0,
+      "explanation": "All three words begin with /m/."
+    },
+    {
+      "questionId": "PHON-M-011",
+      "correctOptionIndex": 0,
+      "explanation": "The learner needs the isolated /m/ sound rather than the letter name."
+    },
+    {
+      "questionId": "PHON-M-012",
+      "correctOptionIndex": 0,
+      "explanation": "Spoken-word sorting directly practises initial-sound listening."
+    },
+    {
+      "questionId": "PHON-M-013",
+      "correctOptionIndex": 0,
+      "explanation": "The difficulty is phonemic listening, not letter recognition."
+    },
+    {
+      "questionId": "PHON-M-014",
+      "correctOptionIndex": 0,
+      "explanation": "Moon begins with /m/."
+    },
+    {
+      "questionId": "PHON-M-015",
+      "correctOptionIndex": 0,
+      "explanation": "A letter is written; a phoneme is a speech sound."
+    },
+    {
+      "questionId": "PHON-M-016",
+      "correctOptionIndex": 0,
+      "explanation": "Milk and map both begin with /m/."
+    },
+    {
+      "questionId": "PHON-M-017",
+      "correctOptionIndex": 0,
+      "explanation": "Phonics depends on accurate attention to speech sounds."
+    },
+    {
+      "questionId": "PHON-M-018",
+      "correctOptionIndex": 0,
+      "explanation": "Modeling /m/ connects the sound to the task."
+    },
+    {
+      "questionId": "PHON-M-019",
+      "correctOptionIndex": 0,
+      "explanation": "Spoken initial-sound identification directly measures the target skill."
+    },
+    {
+      "questionId": "PHON-M-020",
+      "correctOptionIndex": 0,
+      "explanation": "Progress should continue while retaining cumulative review."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia authored phonics curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-01-lesson-01-v1"
+  }
+}
