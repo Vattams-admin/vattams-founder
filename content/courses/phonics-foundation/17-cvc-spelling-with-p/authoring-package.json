@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-17",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "17-cvc-spelling-with-p",
+    "topic": "phonics-encoding",
+    "subtopic": "cvc-spelling-with-p",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Spell familiar CVC words containing p.",
+      "Map each spoken phoneme to its corresponding grapheme.",
+      "Self-check p-containing spellings by reading them back."
+    ],
+    "concepts": [
+      "Encoding reverses the decoding direction: spoken phonemes are mapped to written graphemes.",
+      "The position of /p/ determines where p appears in the written word.",
+      "Segmenting provides the ordered sequence needed for spelling."
+    ],
+    "definitions": [
+      {
+        "term": "encoding",
+        "definition": "Using known sound-letter relationships to write spoken words."
+      },
+      {
+        "term": "dictation",
+        "definition": "Writing a word after hearing it spoken."
+      }
+    ],
+    "workedExamples": [
+      "/p/ /a/ /t/ → p-a-t → pat",
+      "/m/ /a/ /p/ → m-a-p → map",
+      "/t/ /a/ /p/ → t-a-p → tap"
+    ],
+    "commonMistakes": [
+      "Writing p in the wrong position.",
+      "Omitting the middle vowel.",
+      "Confusing final /p/ with /t/.",
+      "Writing without first segmenting the word."
+    ],
+    "keyTakeaways": [
+      "Hear the word.",
+      "Segment it.",
+      "Map each sound.",
+      "Write the word.",
+      "Read it back."
+    ],
+    "revisionPoints": [
+      "pat → p-a-t",
+      "map → m-a-p",
+      "tap → t-a-p"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Spell pat, map and tap from dictation."
+    ],
+    "conceptual": [
+      "Identify the phoneme represented by each letter in a p-containing CVC word."
+    ],
+    "application": [
+      "Correct a p-position spelling error."
+    ],
+    "higherOrderThinking": [
+      "Diagnose whether an encoding error is initial, medial or final."
+    ],
+    "mixedReview": [
+      "Segment, map, write and check CVC words with p."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Say.",
+      "Segment.",
+      "Map.",
+      "Write.",
+      "Read back."
+    ],
+    "flashRecall": [
+      "/p/ → p",
+      "pat → p-a-t",
+      "map → m-a-p",
+      "tap → t-a-p"
+    ],
+    "formulaOrFactBank": [
+      "Encoding = phoneme sequence → grapheme sequence"
+    ],
+    "mistakeBasedRevision": [
+      "If p is misplaced, say the word slowly and identify where /p/ occurs."
+    ],
+    "weakTopicRevision": [
+      "Dictate short p-containing CVC words and repeat only words with sound-to-letter errors."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-to-letter dictation",
+      "steps": [
+        "Say a p-containing CVC word.",
+        "Learner segments it.",
+        "Learner writes one grapheme per sound.",
+        "Learner reads it back."
+      ]
+    },
+    {
+      "name": "Position check",
+      "steps": [
+        "Say pat or map.",
+        "Identify where /p/ occurs.",
+        "Write p in that position.",
+        "Read the word back."
+      ]
+    },
+    {
+      "name": "Build and spell",
+      "steps": [
+        "Build a word with letter cards.",
+        "Say each sound.",
+        "Write the word without cards.",
+        "Compare and correct."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner spells at least 8 of 10 familiar p-containing CVC words correctly from dictation.",
+    "Learner places p accurately in initial or final position.",
+    "Learner self-checks spelling by reading the written word back."
+  ],
+  "questions": [
+    {
+      "questionId": "PF17-Q01",
+      "question": "Which spelling matches /p/ /a/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "pat",
+        "sat",
+        "tap",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF17-Q02",
+      "question": "Which spelling matches /m/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat",
+        "map",
+        "pat",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF17-Q03",
+      "question": "Which spelling matches /t/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "tap",
+        "pat",
+        "map",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF17-Q04",
+      "question": "What should you do before writing a CVC word you hear?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Say and segment each sound",
+        "Guess from a picture",
+        "Skip the vowel",
+        "Write any familiar word"
+      ]
+    },
+    {
+      "questionId": "PF17-Q05",
+      "question": "Which letter should be written for /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "p",
+        "m",
+        "s",
+        "t"
+      ]
+    },
+    {
+      "questionId": "PF17-Q06",
+      "question": "A learner spells 'pat' as 'sat'. Which sound needs checking?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "First sound",
+        "Middle sound",
+        "Final sound",
+        "No sound"
+      ]
+    },
+    {
+      "questionId": "PF17-Q07",
+      "question": "A learner spells 'map' as 'mat'. Which sound needs checking?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Final sound",
+        "First sound",
+        "Middle sound",
+        "No sound"
+      ]
+    },
+    {
+      "questionId": "PF17-Q08",
+      "question": "Which word has p as its first letter?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "pat",
+        "map",
+        "mat",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF17-Q09",
+      "question": "Which word has p as its final letter?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "pat",
+        "sat",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF17-Q10",
+      "question": "Why should the learner segment before spelling?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "It gives the ordered sound sequence to map to letters",
+        "It makes guessing easier",
+        "It removes the need to listen",
+        "It changes the word"
+      ]
+    },
+    {
+      "questionId": "PF17-Q11",
+      "question": "Which sequence correctly spells 'map'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/m/ → m, /a/ → a, /p/ → p",
+        "/p/ → p, /a/ → a, /m/ → m",
+        "/m/ → a, /a/ → m, /p/ → p",
+        "map → m → a"
+      ]
+    },
+    {
+      "questionId": "PF17-Q12",
+      "question": "Which activity best practises /p/ spelling?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Dictate pat, map and tap and have the learner segment and write them",
+        "Copy a long paragraph",
+        "Avoid p words",
+        "Name letters without sounds"
+      ]
+    },
+    {
+      "questionId": "PF17-Q13",
+      "question": "What should the learner do after spelling a word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Read it back and check each sound",
+        "Add another letter",
+        "Erase the vowel",
+        "Skip checking"
+      ]
+    },
+    {
+      "questionId": "PF17-Q14",
+      "question": "Which spelling shows correct p mapping?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "mat",
+        "mas",
+        "mak"
+      ]
+    },
+    {
+      "questionId": "PF17-Q15",
+      "question": "What shows secure /p/ encoding?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "The learner spells familiar CVC words with p accurately from dictation",
+        "The learner only identifies p visually",
+        "The learner guesses p words",
+        "The learner avoids p"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF17-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    },
+    {
+      "questionId": "PF17-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught segment-and-map encoding process."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-17-v1"
+  }
+}
