@@ -168,7 +168,8 @@
           "Can segment and encode taught short-/e/ CVC words using accurate sound-to-letter mapping.",
           "Can read taught short-/e/ word families and apply them in controlled text while checking every grapheme.",
           "Can read controlled short-/e/ sentences and answer literal questions using text evidence.",
-          "Can read controlled short-/e/ connected text and sequence explicit events using evidence."
+          "Can read controlled short-/e/ connected text and sequence explicit events using evidence.",
+          "Can distinguish short-/e/ recognition, decoding, encoding, comprehension and developing fluency needs through diagnostic evidence."
         ]
       },
       "lessons": [
@@ -399,6 +400,15 @@
           "sequence": 52,
           "title": "Controlled Short /e/ Passage and Sequencing",
           "authoringPackage": "content/courses/phonics-foundation/52-controlled-short-e-passage-sequencing/authoring-package.json"
+        },
+        {
+          "lessonId": "53-short-e-fluency-consolidation-diagnostic",
+          "sequence": 53,
+          "title": "Short /e/ Fluency Consolidation Diagnostic",
+          "authoringPackage": "content/courses/phonics-foundation/53-short-e-fluency-consolidation-diagnostic/authoring-package.json",
+          "assessmentIds": [
+            "PF53-DIAG-01"
+          ]
         }
       ]
     }
