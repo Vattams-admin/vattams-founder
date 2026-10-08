@@ -1,0 +1,433 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-21",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "21-phonics-consolidation-diagnostic-2",
+    "topic": "phonics-consolidation",
+    "subtopic": "m-s-t-a-p-diagnostic",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Consolidate the taught m/s/t/a/p sound-symbol relationships.",
+      "Check decoding, phoneme discrimination, spelling and connected-text comprehension separately.",
+      "Identify specific needs for targeted remediation before new phonics content."
+    ],
+    "concepts": [
+      "A phonics checkpoint should separate component skills.",
+      "Accurate decoding requires blending all taught phonemes.",
+      "Comprehension depends on reading the words and retaining meaning."
+    ],
+    "definitions": [
+      {
+        "term": "diagnostic checkpoint",
+        "definition": "An assessment used to identify strengths and specific learning needs for the next teaching step."
+      },
+      {
+        "term": "decoding",
+        "definition": "Using known letter-sound relationships to read a word."
+      },
+      {
+        "term": "encoding",
+        "definition": "Using sounds to construct the written spelling of a word."
+      }
+    ],
+    "workedExamples": [
+      "/m/ /a/ /p/ → map.",
+      "/p/ /a/ /t/ → pat.",
+      "If a learner misses the final sound in tap, practise final phoneme identification before advancing."
+    ],
+    "commonMistakes": [
+      "Guessing from the first letter.",
+      "Dropping the final consonant.",
+      "Confusing /p/ and /m/.",
+      "Answering comprehension questions without returning to the text."
+    ],
+    "keyTakeaways": [
+      "Check each component separately.",
+      "Blend every taught sound.",
+      "Encode from sounds.",
+      "Use the text for meaning."
+    ],
+    "revisionPoints": [
+      "m/s/t/a/p → identify → blend → decode → spell → comprehend."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Identify initial and final sounds."
+    ],
+    "conceptual": [
+      "Match sound sequences to CVC words."
+    ],
+    "application": [
+      "Decode and spell taught CVC words."
+    ],
+    "higherOrderThinking": [
+      "Choose an appropriate response when decoding breaks down."
+    ],
+    "mixedReview": [
+      "Combine phoneme identification, decoding, spelling and comprehension."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Hear.",
+      "Segment.",
+      "Blend.",
+      "Spell.",
+      "Read.",
+      "Understand."
+    ],
+    "flashRecall": [
+      "map = m-a-p",
+      "pat = p-a-t",
+      "sat = s-a-t",
+      "tap = t-a-p"
+    ],
+    "formulaOrFactBank": [
+      "CVC decoding = sound-by-sound blending"
+    ],
+    "mistakeBasedRevision": [
+      "Missing initial sound → practise onset identification.",
+      "Missing final sound → practise final phoneme.",
+      "Wrong vowel → isolate middle sound.",
+      "Comprehension error → reread the sentence."
+    ],
+    "weakTopicRevision": [
+      "Use the missed skill category for targeted practice rather than repeating the whole lesson."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound diagnostic",
+      "steps": [
+        "Say each target word.",
+        "Identify initial and final sounds.",
+        "Record accuracy by sound."
+      ]
+    },
+    {
+      "name": "Blend-and-read check",
+      "steps": [
+        "Present a CVC word.",
+        "Say each taught phoneme.",
+        "Blend without adding extra sounds.",
+        "Record accuracy."
+      ]
+    },
+    {
+      "name": "Spell-and-read-back",
+      "steps": [
+        "Say a target word.",
+        "Segment it.",
+        "Write the graphemes.",
+        "Read the completed word back."
+      ]
+    },
+    {
+      "name": "Meaning check",
+      "steps": [
+        "Read the controlled sentence.",
+        "Answer a literal question.",
+        "Return to the sentence to verify."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner identifies taught m/s/t/a/p sound relationships with at least 80% accuracy.",
+    "Learner decodes taught CVC words with at least 80% accuracy.",
+    "Learner spells taught CVC words with at least 80% accuracy.",
+    "Learner answers controlled-text comprehension questions with at least 80% accuracy.",
+    "Learner's errors can be assigned to a specific remediation category."
+  ],
+  "questions": [
+    {
+      "questionId": "PF21-Q01",
+      "question": "Which sound begins “map”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "/m/",
+        "/s/",
+        "/t/",
+        "/p/"
+      ]
+    },
+    {
+      "questionId": "PF21-Q02",
+      "question": "Which sound ends “tap”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "/p/",
+        "/m/",
+        "/s/",
+        "/a/"
+      ]
+    },
+    {
+      "questionId": "PF21-Q03",
+      "question": "Which word matches /m/ /a/ /p/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "map",
+        "mat",
+        "tap",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF21-Q04",
+      "question": "Which word matches /p/ /a/ /t/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "pat",
+        "sat",
+        "map",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF21-Q05",
+      "question": "Which word has /s/ at the beginning?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "sat",
+        "map",
+        "tap",
+        "pat"
+      ]
+    },
+    {
+      "questionId": "PF21-Q06",
+      "question": "Which word has /t/ at the beginning?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "tap",
+        "map",
+        "sat",
+        "pat"
+      ]
+    },
+    {
+      "questionId": "PF21-Q07",
+      "question": "Which spelling represents /m/ /a/ /t/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "mat",
+        "map",
+        "pat",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF21-Q08",
+      "question": "Which spelling represents /s/ /a/ /t/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "sat",
+        "mat",
+        "map",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF21-Q09",
+      "question": "Read: “Pat sat.” What did Pat do?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Sat",
+        "Ran",
+        "Mapped",
+        "Tapped"
+      ]
+    },
+    {
+      "questionId": "PF21-Q10",
+      "question": "Read: “Pat sat at a mat.” Where did Pat sit?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "At a mat",
+        "At a map",
+        "At a tap",
+        "At a pat"
+      ]
+    },
+    {
+      "questionId": "PF21-Q11",
+      "question": "Which learner response shows accurate decoding?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Blending all taught sounds into the word",
+        "Guessing from the first letter",
+        "Skipping the middle sound",
+        "Naming letters without blending"
+      ]
+    },
+    {
+      "questionId": "PF21-Q12",
+      "question": "What should you do if you cannot read a CVC word?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say each taught sound and blend again",
+        "Guess quickly",
+        "Skip every word",
+        "Change the word"
+      ]
+    },
+    {
+      "questionId": "PF21-Q13",
+      "question": "Which area does a sentence question measure?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Comprehension",
+        "Letter naming only",
+        "Handwriting only",
+        "Counting"
+      ]
+    },
+    {
+      "questionId": "PF21-Q14",
+      "question": "Which pattern is correct for the word “map”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "m-a-p",
+        "m-p-a",
+        "a-m-p",
+        "p-a-m"
+      ]
+    },
+    {
+      "questionId": "PF21-Q15",
+      "question": "What is the purpose of this checkpoint?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Find strengths and needs before targeted practice",
+        "Introduce an unrelated sound",
+        "Replace all phonics teaching",
+        "Test memory only"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF21-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    },
+    {
+      "questionId": "PF21-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "This response matches the taught phonics progression and diagnostic purpose of the checkpoint."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-21-v1"
+  }
+}
