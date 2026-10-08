@@ -1,0 +1,414 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-11",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "11-controlled-cvc-sentences-comprehension",
+    "topic": "early-reading",
+    "subtopic": "controlled-sentences-and-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read short controlled CVC sentences using taught sound-spelling patterns.",
+      "Answer literal comprehension questions about simple sentences.",
+      "Connect accurate decoding with meaning rather than treating reading as word calling only."
+    ],
+    "concepts": [
+      "Reading combines accurate word decoding with meaning-making.",
+      "Controlled sentences limit unfamiliar patterns so the learner can practise successfully.",
+      "A sentence should be reread when meaning is unclear."
+    ],
+    "definitions": [
+      {
+        "term": "controlled sentence",
+        "definition": "A short sentence designed mainly from sound-spelling patterns and words already taught."
+      },
+      {
+        "term": "literal comprehension",
+        "definition": "Understanding and answering what the text directly states."
+      }
+    ],
+    "workedExamples": [
+      "Sam sat. → identify who and what Sam did.",
+      "Sam sat at a mat. → identify the person, action and object.",
+      "Decode first, then reread the complete sentence for meaning."
+    ],
+    "commonMistakes": [
+      "Reading words accurately but not thinking about meaning.",
+      "Guessing a sentence from one familiar word.",
+      "Rushing through short function words.",
+      "Accepting a decoded sentence without checking whether it makes sense."
+    ],
+    "keyTakeaways": [
+      "Decode every word.",
+      "Read the whole sentence.",
+      "Think about meaning.",
+      "Reread if meaning is unclear."
+    ],
+    "revisionPoints": [
+      "Accurate words + connected meaning = successful early reading.",
+      "Ask: Who? What happened? What/where?"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read short controlled CVC sentences aloud."
+    ],
+    "conceptual": [
+      "Identify who, action and object in a simple sentence."
+    ],
+    "application": [
+      "Reread a sentence to answer a literal question."
+    ],
+    "higherOrderThinking": [
+      "Explain why decoding alone is not enough for successful reading."
+    ],
+    "mixedReview": [
+      "Decode, reread, identify sentence meaning and answer literal questions."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Decode.",
+      "Blend.",
+      "Read the sentence.",
+      "Think about meaning."
+    ],
+    "flashRecall": [
+      "Sam sat.",
+      "Sam sat at a mat.",
+      "A map sat."
+    ],
+    "formulaOrFactBank": [
+      "Reading = accurate decoding + connected meaning"
+    ],
+    "mistakeBasedRevision": [
+      "If a sentence is decoded but does not make sense, reread each word and check the sentence meaning."
+    ],
+    "weakTopicRevision": [
+      "Use three short controlled sentences; ask who, action and object questions after each reread."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sentence strip reading",
+      "steps": [
+        "Place a short controlled sentence in front of the learner.",
+        "Learner decodes each word.",
+        "Learner rereads the full sentence smoothly.",
+        "Ask one literal question."
+      ]
+    },
+    {
+      "name": "Who did what?",
+      "steps": [
+        "Read a sentence.",
+        "Point to the person or thing.",
+        "Point to the action.",
+        "Say the meaning in simple words."
+      ]
+    },
+    {
+      "name": "Sense check",
+      "steps": [
+        "Read a controlled sentence.",
+        "Ask whether it makes sense.",
+        "If unsure, reread and discuss each word."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner reads at least 4 of 5 short controlled CVC sentences accurately.",
+    "Learner answers at least 4 of 5 literal comprehension questions.",
+    "Learner can explain that accurate decoding should be followed by meaning-making."
+  ],
+  "questions": [
+    {
+      "questionId": "PF11-Q01",
+      "question": "Read: “Sam sat.” Who sat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Sam",
+        "Mat",
+        "Map",
+        "Tap"
+      ]
+    },
+    {
+      "questionId": "PF11-Q02",
+      "question": "Read: “Sam sat at a mat.” What did Sam sit at?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "a map",
+        "a mat",
+        "a tap",
+        "a cat"
+      ]
+    },
+    {
+      "questionId": "PF11-Q03",
+      "question": "Read: “A sap sat.” What sat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "a sap",
+        "a map",
+        "Sam",
+        "a mat"
+      ]
+    },
+    {
+      "questionId": "PF11-Q04",
+      "question": "Read: “Sam sat.” What did Sam do?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "sat",
+        "tap",
+        "map",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF11-Q05",
+      "question": "Why should a learner read the whole sentence?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "To connect the words and understand the meaning",
+        "To avoid reading the words",
+        "To guess every word",
+        "To skip the final word"
+      ]
+    },
+    {
+      "questionId": "PF11-Q06",
+      "question": "Read: “Sam sat at a mat.” Which word names a person?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Sam",
+        "sat",
+        "mat",
+        "at"
+      ]
+    },
+    {
+      "questionId": "PF11-Q07",
+      "question": "Read: “Sam sat at a mat.” Which word tells the action?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Sam",
+        "sat",
+        "at",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF11-Q08",
+      "question": "Read: “A map sat.” What is unusual about this sentence?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "A map is not normally something that sits",
+        "It has no vowel",
+        "It has no ending",
+        "It cannot be decoded"
+      ]
+    },
+    {
+      "questionId": "PF11-Q09",
+      "question": "What should you do if you can decode a sentence but do not understand it?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Reread it and think about what each word means",
+        "Read faster",
+        "Skip the sentence",
+        "Guess from the first word"
+      ]
+    },
+    {
+      "questionId": "PF11-Q10",
+      "question": "Read: “Sam sat.” Which statement is true?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Sam is sitting",
+        "Sam is running",
+        "Sam is tapping",
+        "Sam is mapping"
+      ]
+    },
+    {
+      "questionId": "PF11-Q11",
+      "question": "Which sentence has the same meaning as “Sam sat”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Sam is sitting.",
+        "Sam can tap.",
+        "Sam has a map.",
+        "Sam sat at a mat."
+      ]
+    },
+    {
+      "questionId": "PF11-Q12",
+      "question": "Which word completes: “Sam ___ at a mat.”",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "sat",
+        "sap",
+        "map",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF11-Q13",
+      "question": "What is the best first step when reading a controlled sentence?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Decode each word accurately",
+        "Guess the sentence",
+        "Look only at pictures",
+        "Skip short words"
+      ]
+    },
+    {
+      "questionId": "PF11-Q14",
+      "question": "After decoding a sentence, what should the learner check?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Whether the sentence makes sense",
+        "Whether every word is longer",
+        "Whether the vowels are removed",
+        "Whether the first letter is repeated"
+      ]
+    },
+    {
+      "questionId": "PF11-Q15",
+      "question": "Which skill combines decoding and comprehension?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 35,
+      "options": [
+        "Reading the words accurately and thinking about their meaning",
+        "Copying letters only",
+        "Naming the alphabet",
+        "Counting letters without reading"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF11-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q07",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    },
+    {
+      "questionId": "PF11-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught controlled-reading and literal-comprehension process."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-11-v1"
+  }
+}
