@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 61,
-    "studyMaterials": 61,
-    "questionBank": 905,
-    "assessments": 13
+    "lessons": 62,
+    "studyMaterials": 62,
+    "questionBank": 920,
+    "assessments": 14
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -82,7 +82,8 @@
       "content/courses/phonics-foundation/58-short-u-word-families-controlled-reading/authoring-package.json",
       "content/courses/phonics-foundation/59-controlled-short-u-sentences-comprehension/authoring-package.json",
       "content/courses/phonics-foundation/60-controlled-short-u-passage-sequencing/authoring-package.json",
-      "content/courses/phonics-foundation/61-short-u-fluency-consolidation-diagnostic/authoring-package.json"
+      "content/courses/phonics-foundation/61-short-u-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/62-targeted-short-u-remediation-reassessment/authoring-package.json"
     ]
   },
   "governance": {
@@ -98,6 +99,7 @@
     "approvedAt": null
   },
   "assessments": [
-    "PF61-DIAG-01"
+    "PF61-DIAG-01",
+    "PF62-REASSESS-01"
   ]
 }
