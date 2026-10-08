@@ -1,0 +1,445 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-93",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "93-l-fluency-consolidation-diagnostic",
+    "topic": "phonics-diagnostic",
+    "subtopic": "l-fluency-mastery",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Measure /l/ sound recognition and discrimination.",
+      "Measure decoding and encoding of taught /l/ CVC words.",
+      "Measure controlled-text comprehension and sequencing.",
+      "Check emerging fluency and determine the next learning route."
+    ],
+    "concepts": [
+      "A diagnostic samples multiple skills rather than one isolated task.",
+      "Mastery requires accuracy across critical phonics components.",
+      "Fluency includes accuracy, smoothness, and meaning.",
+      "Diagnostic results should route learners to targeted remediation when needed."
+    ],
+    "definitions": [
+      {
+        "term": "diagnostic",
+        "definition": "An assessment used to identify strengths, gaps, and next instructional needs."
+      },
+      {
+        "term": "fluency",
+        "definition": "Reading accurately, smoothly, and with appropriate phrasing while maintaining meaning."
+      },
+      {
+        "term": "mastery",
+        "definition": "Performance meeting the defined threshold across required skills."
+      }
+    ],
+    "workedExamples": [
+      "Sound recognition: identify /l/ in a spoken or printed word.",
+      "Decoding: map l to /l/, blend with the vowel and final consonant.",
+      "Encoding: segment a CVC word and write each grapheme.",
+      "Comprehension: answer using information explicitly stated in the controlled text."
+    ],
+    "commonMistakes": [
+      "Moving forward after weak /l/ recognition.",
+      "Confusing short vowels in spelling.",
+      "Reading accurately but not understanding the passage.",
+      "Reading quickly while making frequent decoding errors."
+    ],
+    "keyTakeaways": [
+      "Check every component.",
+      "Accuracy comes before speed.",
+      "Use text evidence.",
+      "Route weak skills to targeted remediation."
+    ],
+    "revisionPoints": [
+      "sound recognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency",
+      "80% mastery"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review taught /l/ sound, decoding, and spelling items."
+    ],
+    "conceptual": [
+      "Explain which phonics component an error belongs to."
+    ],
+    "application": [
+      "Select an appropriate remediation response from diagnostic evidence."
+    ],
+    "higherOrderThinking": [
+      "Interpret a mixed-skill result and determine whether the learner is ready to advance."
+    ],
+    "mixedReview": [
+      "Revisit /l/ skills across recognition, decoding, encoding, comprehension, and fluency."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "recognise → decode → spell → comprehend → read fluently"
+    ],
+    "flashRecall": [
+      "/l/",
+      "CVC",
+      "onset/rime",
+      "text evidence",
+      "fluency",
+      "mastery"
+    ],
+    "formulaOrFactBank": [
+      "Mastery target = 0.80 overall with no critical component below target."
+    ],
+    "mistakeBasedRevision": [
+      "Identify the weak component first, then reteach and reassess that skill."
+    ],
+    "weakTopicRevision": [
+      "Use the diagnostic component score to select targeted /l/ remediation."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Diagnostic review",
+      "steps": [
+        "Review each component result.",
+        "Identify the weakest critical skill.",
+        "Select the matching remediation.",
+        "Reassess with fresh items."
+      ]
+    },
+    {
+      "name": "Fluency check",
+      "steps": [
+        "Read a controlled passage aloud.",
+        "Record accuracy and smoothness.",
+        "Check comprehension.",
+        "Repeat after targeted correction."
+      ]
+    },
+    {
+      "name": "Error classification",
+      "steps": [
+        "Review a learner error.",
+        "Classify it as recognition, decoding, encoding, comprehension, or fluency.",
+        "Choose the next practice activity."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner demonstrates measurable /l/ consolidation across critical phonics components.",
+    "Teacher/system can identify weak components for targeted remediation.",
+    "Learner advances only when the defined mastery threshold is met."
+  ],
+  "assessments": [
+    {
+      "assessmentId": "PF93-DIAG-01",
+      "type": "diagnostic",
+      "title": "/l/ Fluency Consolidation Diagnostic",
+      "masteryTarget": 0.8,
+      "components": [
+        "soundRecognition",
+        "decoding",
+        "encoding",
+        "comprehension",
+        "fluency"
+      ],
+      "routing": {
+        "advance": "Advance when overall score is at least 0.80 and no critical component is below target.",
+        "remediate": "Route to targeted remediation for any critical component below target."
+      },
+      "freshItemPolicy": false
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "PF93-Q01",
+      "question": "Which sound does the letter l represent in “lip”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "/l/",
+        "/r/",
+        "/f/",
+        "/m/"
+      ]
+    },
+    {
+      "questionId": "PF93-Q02",
+      "question": "Which word begins with /l/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "log",
+        "rat",
+        "fan",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF93-Q03",
+      "question": "Which word matches /l/ /ɪ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "lip",
+        "lap",
+        "log",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF93-Q04",
+      "question": "Which word matches /l/ /ʌ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "lug",
+        "lag",
+        "leg",
+        "log"
+      ]
+    },
+    {
+      "questionId": "PF93-Q05",
+      "question": "Which spelling represents the spoken word “lap”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "l-a-p",
+        "l-i-p",
+        "l-o-p",
+        "l-u-p"
+      ]
+    },
+    {
+      "questionId": "PF93-Q06",
+      "question": "Which spelling represents the spoken word “let”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "l-e-t",
+        "l-a-t",
+        "l-i-t",
+        "l-o-t"
+      ]
+    },
+    {
+      "questionId": "PF93-Q07",
+      "question": "How many phonemes are in “log”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "3",
+        "2",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "questionId": "PF93-Q08",
+      "question": "Which pair shares the same rime?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "lip and sip",
+        "lap and log",
+        "let and lug",
+        "log and leg"
+      ]
+    },
+    {
+      "questionId": "PF93-Q09",
+      "question": "Read: “Lil sat.” What did Lil do?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "sat",
+        "ran",
+        "slept",
+        "hid"
+      ]
+    },
+    {
+      "questionId": "PF93-Q10",
+      "question": "Which event comes first in a controlled passage about Lil?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Lil sat.",
+        "Lil got up.",
+        "Lil ran away.",
+        "Lil slept."
+      ]
+    },
+    {
+      "questionId": "PF93-Q11",
+      "question": "A learner reads “lip” as “rip.” Which component needs targeted review?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Sound recognition and decoding of /l/",
+        "Final punctuation",
+        "Story sequencing",
+        "Handwriting spacing"
+      ]
+    },
+    {
+      "questionId": "PF93-Q12",
+      "question": "A learner spells “log” as “lag.” Which component needs targeted review?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Short-vowel encoding",
+        "Initial /l/ recognition",
+        "Final /g/ recognition",
+        "Sentence sequencing"
+      ]
+    },
+    {
+      "questionId": "PF93-Q13",
+      "question": "A learner answers a passage question incorrectly but decoded every word. What should be checked?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Comprehension and use of text evidence",
+        "Letter formation only",
+        "Initial sound recognition only",
+        "Word counting only"
+      ]
+    },
+    {
+      "questionId": "PF93-Q14",
+      "question": "What shows fluent controlled reading?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Accurate, smooth reading with appropriate phrasing and understanding.",
+        "Fast guessing from pictures.",
+        "Skipping difficult words.",
+        "Reading letter names instead of words."
+      ]
+    },
+    {
+      "questionId": "PF93-Q15",
+      "question": "Which result best supports moving forward from this diagnostic?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "At least 80% overall with no critical component below target.",
+        "One correct item only.",
+        "Fast reading with many decoding errors.",
+        "Accurate spelling without reading ability."
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF93-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF93-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /l/ consolidation diagnostic item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-93-v1"
+  }
+}
