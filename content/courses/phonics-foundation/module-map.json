@@ -118,5 +118,29 @@
   "governance": {
     "status": "draft",
     "contentHash": "sha256:course-phonics-foundation-module-01-v1"
-  }
+  },
+  "modules": [
+    {
+      "moduleId": "next-consonant-patterns",
+      "title": "Next Consonant Patterns",
+      "sequence": 2,
+      "progression": {
+        "entrySkills": [
+          "Secure m, s, t and short-a correspondences.",
+          "Can decode and segment familiar CVC words."
+        ],
+        "exitSkills": [
+          "Can identify /p/ and connect it to p before independent use."
+        ]
+      },
+      "lessons": [
+        {
+          "lessonId": "15-hear-and-identify-p",
+          "sequence": 15,
+          "title": "Hear and Identify /p/",
+          "authoringPackage": "content/courses/phonics-foundation/15-hear-and-identify-p/authoring-package.json"
+        }
+      ]
+    }
+  ]
 }
