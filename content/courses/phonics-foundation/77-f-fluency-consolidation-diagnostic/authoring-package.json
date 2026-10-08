@@ -1,0 +1,446 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-77",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "77-f-fluency-consolidation-diagnostic",
+    "topic": "fluency-diagnostic",
+    "subtopic": "f-fluency-consolidation",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Consolidate /f/ sound recognition, decoding, encoding, comprehension, and fluency.",
+      "Identify component-level strengths and weaknesses.",
+      "Measure connected-reading fluency with accuracy and appropriate pacing.",
+      "Route learners to targeted remediation when needed."
+    ],
+    "concepts": [
+      "Fluency depends on accurate decoding and repeated connected reading.",
+      "A diagnostic should sample multiple related skills.",
+      "Component-level results support targeted intervention."
+    ],
+    "definitions": [
+      {
+        "term": "fluency",
+        "definition": "Accurate, appropriately paced, and increasingly automatic reading."
+      },
+      {
+        "term": "diagnostic",
+        "definition": "An assessment used to identify current strengths and instructional needs."
+      },
+      {
+        "term": "component",
+        "definition": "A distinct skill area measured within a broader phonics outcome."
+      }
+    ],
+    "workedExamples": [
+      "Sound recognition: identify /f/ in spoken words.",
+      "Decoding: read unfamiliar /f/ CVC words.",
+      "Encoding: spell dictated /f/ CVC words.",
+      "Comprehension: answer evidence-based questions.",
+      "Fluency: reread controlled text accurately and smoothly."
+    ],
+    "commonMistakes": [
+      "Treating speed as more important than accuracy.",
+      "Advancing despite a critical weak component.",
+      "Using the same item repeatedly as evidence of mastery.",
+      "Ignoring comprehension while measuring reading rate."
+    ],
+    "keyTakeaways": [
+      "Accuracy first.",
+      "Check every component.",
+      "Use evidence.",
+      "Route targeted support."
+    ],
+    "revisionPoints": [
+      "recognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency",
+      "routing"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review each /f/ component with short controlled tasks."
+    ],
+    "conceptual": [
+      "Match observed errors to the correct diagnostic component."
+    ],
+    "application": [
+      "Interpret sample diagnostic results and choose a support route."
+    ],
+    "higherOrderThinking": [
+      "Explain why fluency must be measured with accuracy as well as pace."
+    ],
+    "mixedReview": [
+      "Combine /f/ recognition, CVC decoding, spelling, comprehension, and fluency."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "sample → score → identify weakness → route"
+    ],
+    "flashRecall": [
+      "recognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "formulaOrFactBank": [
+      "Mastery target = 0.8"
+    ],
+    "mistakeBasedRevision": [
+      "If fluency is low, check decoding accuracy before increasing reading speed."
+    ],
+    "weakTopicRevision": [
+      "Revisit the lowest-performing component with targeted practice."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Five-component check",
+      "steps": [
+        "Check /f/ recognition.",
+        "Check CVC decoding.",
+        "Check encoding.",
+        "Check comprehension.",
+        "Observe controlled reading fluency."
+      ]
+    },
+    {
+      "name": "Error conference",
+      "steps": [
+        "Review diagnostic errors.",
+        "Group them by component.",
+        "Identify the highest-priority gap.",
+        "Select targeted practice."
+      ]
+    },
+    {
+      "name": "Fluency reread",
+      "steps": [
+        "Read a controlled /f/ passage.",
+        "Mark decoding errors.",
+        "Reread after repair.",
+        "Compare accuracy and smoothness."
+      ]
+    }
+  ],
+  "assessment": {
+    "assessmentId": "PF77-DIAG-01",
+    "type": "diagnostic",
+    "components": [
+      "soundRecognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "itemCount": 15,
+    "masteryTarget": 0.8,
+    "scoring": {
+      "method": "component-level accuracy with overall mastery gate"
+    },
+    "routingRules": {
+      "atOrAboveMastery": "Advance to the next consolidation/reassessment stage when overall mastery is at least 0.8 and no critical component is below target.",
+      "belowMastery": "Route to targeted remediation for the weakest component before reassessment."
+    }
+  },
+  "outcomes": [
+    "Learner demonstrates consolidated /f/ phonics knowledge.",
+    "System identifies component-level gaps.",
+    "Learner receives evidence-based routing for remediation or progression."
+  ],
+  "questions": [
+    {
+      "questionId": "PF77-Q01",
+      "question": "Which word begins with /f/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fan",
+        "sun",
+        "cat",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF77-Q02",
+      "question": "Which word ends with /f/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "leaf",
+        "bed",
+        "sun",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF77-Q03",
+      "question": "Which word matches /f/ /ɪ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fit",
+        "fat",
+        "fog",
+        "fun"
+      ]
+    },
+    {
+      "questionId": "PF77-Q04",
+      "question": "Which word matches /f/ /ʌ/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fun",
+        "fin",
+        "fan",
+        "fed"
+      ]
+    },
+    {
+      "questionId": "PF77-Q05",
+      "question": "Which spelling matches /f/ /ɒ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fog",
+        "fig",
+        "fug",
+        "feg"
+      ]
+    },
+    {
+      "questionId": "PF77-Q06",
+      "question": "Which spelling matches /f/ /ɛ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fed",
+        "fid",
+        "fad",
+        "fod"
+      ]
+    },
+    {
+      "questionId": "PF77-Q07",
+      "question": "In “Finn has a fan,” who has the fan?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Finn",
+        "The fan",
+        "The fox",
+        "The mat"
+      ]
+    },
+    {
+      "questionId": "PF77-Q08",
+      "question": "In “The fox is on the log,” where is the fox?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "On the log",
+        "In the box",
+        "On the mat",
+        "In the cup"
+      ]
+    },
+    {
+      "questionId": "PF77-Q09",
+      "question": "Which event happens first: Finn gets the fan, or Finn puts it on the mat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Finn gets the fan",
+        "Finn puts it on the mat",
+        "They happen together",
+        "The passage does not say"
+      ]
+    },
+    {
+      "questionId": "PF77-Q10",
+      "question": "Which word belongs to the -un family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fun",
+        "fit",
+        "fog",
+        "fed"
+      ]
+    },
+    {
+      "questionId": "PF77-Q11",
+      "question": "A learner decodes /f/ words accurately but reads a controlled passage very slowly. Which component needs support?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Fluency",
+        "Sound recognition",
+        "Encoding",
+        "Letter naming"
+      ]
+    },
+    {
+      "questionId": "PF77-Q12",
+      "question": "A learner spells /f/ CVC words accurately but confuses /f/ and /m/ when listening. Which component needs support?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Sound recognition",
+        "Encoding",
+        "Comprehension",
+        "Fluency"
+      ]
+    },
+    {
+      "questionId": "PF77-Q13",
+      "question": "Why does a consolidation diagnostic include several components?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "It checks whether the phonics skill is secure across related abilities",
+        "It makes the lesson longer",
+        "It replaces teaching",
+        "It tests unrelated subjects"
+      ]
+    },
+    {
+      "questionId": "PF77-Q14",
+      "question": "What is the best evidence of improving fluency?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "More accurate connected reading with smoother, appropriately paced rereading",
+        "Faster guessing",
+        "Skipping difficult words",
+        "Reading without checking accuracy"
+      ]
+    },
+    {
+      "questionId": "PF77-Q15",
+      "question": "If a learner is below the mastery target in one critical component, what should happen?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Route targeted remediation to that component",
+        "Advance without support",
+        "Delete the result",
+        "Skip reassessment"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF77-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF77-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ consolidation diagnostic item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-77-v1"
+  }
+}
