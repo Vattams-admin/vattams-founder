@@ -186,7 +186,8 @@
           "Can read controlled /k/ sentences and answer meaning questions using text evidence.",
           "Can read a controlled /k/ passage, sequence events, and retell using text evidence.",
           "Can demonstrate /k/ sound recognition, decoding, encoding, comprehension, and fluency for diagnostic routing.",
-          "Can complete targeted /k/ remediation and demonstrate transfer on fresh reassessment items."
+          "Can complete targeted /k/ remediation and demonstrate transfer on fresh reassessment items.",
+          "Can read a controlled /r/ passage, sequence three events, retell key details and repair decoding or comprehension errors."
         ]
       },
       "lessons": [
@@ -609,6 +610,12 @@
           "sequence": 83,
           "title": "Controlled /r/ Sentences and Comprehension",
           "authoringPackage": "content/courses/phonics-foundation/83-controlled-r-sentences-comprehension/authoring-package.json"
+        },
+        {
+          "lessonId": "84-controlled-r-passage-sequencing",
+          "sequence": 84,
+          "title": "Controlled /r/ Passage, Sequencing and Comprehension",
+          "authoringPackage": "content/courses/phonics-foundation/84-controlled-r-passage-sequencing/authoring-package.json"
         }
       ]
     }
