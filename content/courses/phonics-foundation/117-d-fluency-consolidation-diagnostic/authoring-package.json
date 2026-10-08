@@ -1,0 +1,428 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-117",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "117-d-fluency-consolidation-diagnostic",
+    "topic": "mastery-diagnostic",
+    "subtopic": "d-fluency-diagnostic",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Measure /d/ sound recognition.",
+      "Measure taught /d/ CVC decoding.",
+      "Measure taught /d/ CVC encoding.",
+      "Measure controlled-text comprehension and fluency."
+    ],
+    "concepts": [
+      "Mastery requires multiple phonics components.",
+      "Weak components need targeted support.",
+      "Fresh evidence guides the next learning step."
+    ],
+    "definitions": [
+      {
+        "term": "diagnostic",
+        "definition": "An assessment used to identify strengths and learning needs."
+      },
+      {
+        "term": "mastery target",
+        "definition": "The minimum performance level used to determine readiness to advance."
+      }
+    ],
+    "workedExamples": [
+      "Sound recognition: identify /d/.",
+      "Decoding: read dad, dig, dug.",
+      "Encoding: spell a dictated CVC word.",
+      "Comprehension: answer a controlled-text question."
+    ],
+    "commonMistakes": [
+      "Advancing while a critical component is weak.",
+      "Ignoring comprehension after decoding.",
+      "Sacrificing accuracy during fluency."
+    ],
+    "keyTakeaways": [
+      "Check every component.",
+      "Use 0.80 as the target.",
+      "Route weak components to remediation."
+    ],
+    "revisionPoints": [
+      "sound recognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency",
+      "0.80 mastery"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review /d/ sound and CVC patterns."
+    ],
+    "conceptual": [
+      "Distinguish the measured skill components."
+    ],
+    "application": [
+      "Identify a weak component from diagnostic evidence."
+    ],
+    "higherOrderThinking": [
+      "Explain why component-level routing is useful."
+    ],
+    "mixedReview": [
+      "Review all /d/ skills before assessment."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "recognize → decode → encode → comprehend → read fluently"
+    ],
+    "flashRecall": [
+      "/d/",
+      "d",
+      "dad",
+      "dig",
+      "dug",
+      "0.80"
+    ],
+    "formulaOrFactBank": [
+      "Advance at ≥0.80 with no critical component below target."
+    ],
+    "mistakeBasedRevision": [
+      "Revisit the component that produced the error."
+    ],
+    "weakTopicRevision": [
+      "Target the weak component and reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Component check",
+      "steps": [
+        "Complete each diagnostic component.",
+        "Record evidence separately.",
+        "Identify the weakest component."
+      ]
+    },
+    {
+      "name": "Routing",
+      "steps": [
+        "Review component results.",
+        "Check the mastery target.",
+        "Advance or route to remediation."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner demonstrates /d/ recognition, decoding and encoding.",
+    "Learner demonstrates controlled-text comprehension and fluency.",
+    "System routes according to component-level mastery."
+  ],
+  "assessments": [
+    {
+      "assessmentId": "PF117-DIAG-01",
+      "title": "/d/ Fluency Consolidation Diagnostic",
+      "type": "diagnostic",
+      "components": [
+        "soundRecognition",
+        "decoding",
+        "encoding",
+        "comprehension",
+        "fluency"
+      ],
+      "masteryTarget": 0.8,
+      "routing": {
+        "advance": "Advance at or above 0.80 with no critical component below target.",
+        "remediation": "Route to targeted remediation when below target or a critical component remains weak."
+      },
+      "freshItemPolicy": true
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-117-v1"
+  },
+  "questions": [
+    {
+      "questionId": "PF117-Q01",
+      "question": "Which sound begins “dad”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "/d/",
+        "b",
+        "dug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q02",
+      "question": "Which letter represents /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "d",
+        "/t/",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q03",
+      "question": "Blend /d/ /a/ /d/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "dad",
+        "b",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q04",
+      "question": "Blend /d/ /i/ /g/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "dig",
+        "/t/",
+        "dug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q05",
+      "question": "Blend /d/ /u/ /g/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "dug",
+        "b",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q06",
+      "question": "Which word starts with /d/ and ends with /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "dig",
+        "/t/",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q07",
+      "question": "Which spelling matches /d/ /a/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "d-a-d",
+        "b",
+        "dug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q08",
+      "question": "Which spelling matches /d/ /i/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "d-i-g",
+        "/t/",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q09",
+      "question": "Which spelling matches /d/ /u/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "d-u-g",
+        "b",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q10",
+      "question": "Read: “Dad digs.” Who digs?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Dad",
+        "/t/",
+        "dug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q11",
+      "question": "Read: “Dad digs.” What does Dad do?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "digs",
+        "b",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q12",
+      "question": "Read: “A dog is big.” What is big?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "A dog",
+        "/t/",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q13",
+      "question": "Which strategy supports fluent reading?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Accurate reading followed by rereading.",
+        "b",
+        "dug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q14",
+      "question": "What should happen when one diagnostic component is weak?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Target that component for remediation.",
+        "/t/",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF117-Q15",
+      "question": "What is the mastery target?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "0.80",
+        "b",
+        "dig",
+        "not this"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF117-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    },
+    {
+      "questionId": "PF117-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct diagnostic response."
+    }
+  ]
+}
