@@ -1,1 +1,412 @@
-{}
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-139",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "139-controlled-w-sentences-comprehension",
+    "topic": "controlled-sentences",
+    "subtopic": "comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode short controlled sentences containing taught CVC patterns.",
+      "Answer literal comprehension questions using sentence evidence.",
+      "Identify who, what and sequence information in controlled text.",
+      "Reread sentences accurately and fluently."
+    ],
+    "concepts": [
+      "Comprehension begins with accurate decoding.",
+      "Text evidence comes directly from the words read.",
+      "Rereading supports accuracy, phrasing and fluency."
+    ],
+    "definitions": [
+      {
+        "term": "sentence evidence",
+        "definition": "Words in a sentence that directly support an answer."
+      },
+      {
+        "term": "comprehension",
+        "definition": "Understanding and responding to what has been read."
+      },
+      {
+        "term": "fluency",
+        "definition": "Reading accurately, smoothly and with appropriate phrasing."
+      }
+    ],
+    "workedExamples": [
+      "Read “Wag can tag.” Ask what Wag can do; the answer is tag.",
+      "Read “The web is wet.” Identify the subject and its description.",
+      "Reread “Wig is big.” to make the sentence smooth and accurate."
+    ],
+    "commonMistakes": [
+      "Answering from memory instead of the sentence.",
+      "Guessing from the first letter.",
+      "Changing a word while reading.",
+      "Skipping rereading after an error."
+    ],
+    "keyTakeaways": [
+      "Decode every word.",
+      "Look back for evidence.",
+      "Answer from the text.",
+      "Reread for fluency."
+    ],
+    "revisionPoints": [
+      "who",
+      "what",
+      "where",
+      "text evidence",
+      "rereading"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read short w-CVC sentences and identify explicit details."
+    ],
+    "conceptual": [
+      "Match questions to evidence in a sentence."
+    ],
+    "application": [
+      "Answer who/what questions from controlled text."
+    ],
+    "higherOrderThinking": [
+      "Explain why rereading helps confirm meaning."
+    ],
+    "mixedReview": [
+      "Mix decoding, sentence comprehension and word-family review."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "read → check words → find evidence → answer → reread"
+    ],
+    "flashRecall": [
+      "Wag can tag.",
+      "Wig is big.",
+      "Win can sit.",
+      "The web is wet."
+    ],
+    "formulaOrFactBank": [
+      "answer = evidence from the sentence"
+    ],
+    "mistakeBasedRevision": [
+      "If an answer is unsupported, reread the sentence and locate the exact words that support it."
+    ],
+    "weakTopicRevision": [
+      "Practise the question type—who, what or sequence—that causes difficulty."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Read and prove",
+      "steps": [
+        "Read the sentence.",
+        "Underline the evidence.",
+        "Answer the question.",
+        "Reread the sentence."
+      ]
+    },
+    {
+      "name": "Fluency reread",
+      "steps": [
+        "Decode carefully.",
+        "Read once for accuracy.",
+        "Read again smoothly.",
+        "Check meaning."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner decodes controlled w-CVC sentences accurately.",
+    "Learner answers literal comprehension questions using text evidence.",
+    "Learner rereads controlled sentences with improved fluency."
+  ],
+  "questions": [
+    {
+      "questionId": "PF139-Q01",
+      "question": "Read: “Wag can tag.” What can Wag do?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "tag",
+        "wet",
+        "win",
+        "wig"
+      ]
+    },
+    {
+      "questionId": "PF139-Q02",
+      "question": "Read: “Wig is big.” Which word describes Wig?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "big",
+        "wet",
+        "red",
+        "hot"
+      ]
+    },
+    {
+      "questionId": "PF139-Q03",
+      "question": "Read: “Win can sit.” Who can sit?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Win",
+        "Wag",
+        "Wig",
+        "Web"
+      ]
+    },
+    {
+      "questionId": "PF139-Q04",
+      "question": "Read: “The web is wet.” What is wet?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "the web",
+        "the wig",
+        "the wag",
+        "the win"
+      ]
+    },
+    {
+      "questionId": "PF139-Q05",
+      "question": "Read: “Wag sat.” Where is Wag?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "sat",
+        "wet",
+        "big",
+        "web"
+      ]
+    },
+    {
+      "questionId": "PF139-Q06",
+      "question": "Which word completes: “Wag can ___.”",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "tag",
+        "wet",
+        "win",
+        "web"
+      ]
+    },
+    {
+      "questionId": "PF139-Q07",
+      "question": "Which sentence tells what the web is like?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The web is wet.",
+        "Wag can tag.",
+        "Wig can win.",
+        "Win can sit."
+      ]
+    },
+    {
+      "questionId": "PF139-Q08",
+      "question": "What should you do to find an answer in a controlled sentence?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "look back at the words",
+        "guess from a picture",
+        "skip the sentence",
+        "choose the longest word"
+      ]
+    },
+    {
+      "questionId": "PF139-Q09",
+      "question": "Read: “Wag can tag. Wag can sit.” What can Wag do?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "tag and sit",
+        "wet and win",
+        "wig and web",
+        "run and hop"
+      ]
+    },
+    {
+      "questionId": "PF139-Q10",
+      "question": "Read: “The web is wet.” Which word comes first?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The",
+        "web",
+        "is",
+        "wet"
+      ]
+    },
+    {
+      "questionId": "PF139-Q11",
+      "question": "Read: “Wig is big.” What is the rime in wig?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "-ig",
+        "-ag",
+        "-et",
+        "-eb"
+      ]
+    },
+    {
+      "questionId": "PF139-Q12",
+      "question": "Read: “Win can sit.” Which word names the person or character?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Win",
+        "can",
+        "sit",
+        "the"
+      ]
+    },
+    {
+      "questionId": "PF139-Q13",
+      "question": "Why reread a controlled sentence?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "to improve accuracy and fluency",
+        "to skip unknown words",
+        "to change the story",
+        "to avoid decoding"
+      ]
+    },
+    {
+      "questionId": "PF139-Q14",
+      "question": "A learner says “Wag can wet” instead of “Wag can tag.” What should they do?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "look at the final sounds and reread",
+        "guess again from memory",
+        "skip the sentence",
+        "change every word"
+      ]
+    },
+    {
+      "questionId": "PF139-Q15",
+      "question": "Which response uses evidence from the sentence “The web is wet”?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The web is wet.",
+        "Wag can tag.",
+        "Wig is big.",
+        "Win can sit."
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF139-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    },
+    {
+      "questionId": "PF139-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is directly supported by the controlled sentence or target comprehension skill."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-139-v1"
+  }
+}
