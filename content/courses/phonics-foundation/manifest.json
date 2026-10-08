@@ -9,15 +9,16 @@
   },
   "status": "draft",
   "coverage": {
-    "modules": 1,
-    "lessons": 14,
-    "studyMaterials": 14,
-    "questionBank": 200,
+    "modules": 2,
+    "lessons": 15,
+    "studyMaterials": 15,
+    "questionBank": 215,
     "assessments": 2
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
     "moduleMaps": [
+      "content/courses/phonics-foundation/module-map.json",
       "content/courses/phonics-foundation/module-map.json"
     ],
     "authoringPackages": [
@@ -34,7 +35,8 @@
       "content/courses/phonics-foundation/11-controlled-cvc-sentences-comprehension/authoring-package.json",
       "content/courses/phonics-foundation/12-controlled-cvc-passage-sequencing/authoring-package.json",
       "content/courses/phonics-foundation/13-phonics-consolidation-diagnostic/authoring-package.json",
-      "content/courses/phonics-foundation/14-targeted-remediation-and-reassessment/authoring-package.json"
+      "content/courses/phonics-foundation/14-targeted-remediation-and-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/15-hear-and-identify-p/authoring-package.json"
     ]
   },
   "governance": {
