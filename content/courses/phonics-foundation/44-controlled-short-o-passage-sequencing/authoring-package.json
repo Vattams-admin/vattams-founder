@@ -1,0 +1,420 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-44",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "44-controlled-short-o-passage-sequencing",
+    "topic": "short-o-vowel",
+    "subtopic": "controlled-passage-sequencing",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a controlled short /o/ passage accurately.",
+      "Sequence key events in the order stated.",
+      "Identify details and main idea using text evidence.",
+      "Monitor short /o/ decoding while reading connected text."
+    ],
+    "concepts": [
+      "Connected reading combines accurate decoding with meaning monitoring.",
+      "Sequence depends on the order of events in the text.",
+      "Evidence should come from the passage rather than memory or guessing."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "The order in which events happen."
+      },
+      {
+        "term": "main idea",
+        "definition": "The central meaning of a short passage."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Information in the passage that supports an answer."
+      }
+    ],
+    "workedExamples": [
+      "First: Tom has a mop.",
+      "Next: Tom sees the dog.",
+      "Last: Tom pats the dog.",
+      "dog read as dag → compare the middle vowel and decode again."
+    ],
+    "commonMistakes": [
+      "Mixing event order.",
+      "Answering without checking the passage.",
+      "Confusing short /o/ with short /a/.",
+      "Guessing a word from its first letter."
+    ],
+    "keyTakeaways": [
+      "Decode accurately.",
+      "Track events.",
+      "Find evidence.",
+      "Reread to confirm meaning."
+    ],
+    "revisionPoints": [
+      "First → next → last.",
+      "Main idea + detail.",
+      "Check short /o/ in connected text."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read the passage and identify events."
+    ],
+    "conceptual": [
+      "Explain event order using evidence."
+    ],
+    "application": [
+      "Answer detail and main-idea questions."
+    ],
+    "higherOrderThinking": [
+      "Explain why passage evidence is stronger than a guess."
+    ],
+    "mixedReview": [
+      "Decode, sequence and answer passage questions."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Read → sequence → detail → evidence."
+    ],
+    "flashRecall": [
+      "first = beginning event",
+      "next = following event",
+      "last = final event"
+    ],
+    "formulaOrFactBank": [
+      "Sequence = order of events"
+    ],
+    "mistakeBasedRevision": [
+      "dog/dag → recheck the middle vowel."
+    ],
+    "weakTopicRevision": [
+      "Reread each event and point to its position in the passage."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Event sequencing",
+      "steps": [
+        "Read the passage.",
+        "Identify each event.",
+        "Place events first, next and last.",
+        "Reread to confirm."
+      ]
+    },
+    {
+      "name": "Evidence hunt",
+      "steps": [
+        "Read a question.",
+        "Find the supporting phrase.",
+        "Point to it.",
+        "Answer."
+      ]
+    },
+    {
+      "name": "Vowel repair",
+      "steps": [
+        "Read dog and dag.",
+        "Say the middle sounds.",
+        "Choose o or a.",
+        "Reread the sentence."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner reads the controlled short /o/ passage with at least 80% accuracy.",
+    "Learner sequences key events with at least 80% accuracy.",
+    "Learner retrieves stated details using text evidence.",
+    "Learner identifies the main idea of a short controlled passage."
+  ],
+  "questions": [
+    {
+      "questionId": "PF44-Q01",
+      "question": "Who is the main person in the passage?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Tom",
+        "Dog",
+        "Mop",
+        "Pot"
+      ]
+    },
+    {
+      "questionId": "PF44-Q02",
+      "question": "What does Tom have first?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "A mop",
+        "A pot",
+        "A dog",
+        "A log"
+      ]
+    },
+    {
+      "questionId": "PF44-Q03",
+      "question": "Where does Tom put the mop?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "On a log",
+        "In a pot",
+        "On a mat",
+        "In a pit"
+      ]
+    },
+    {
+      "questionId": "PF44-Q04",
+      "question": "What does Tom see?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "A dog",
+        "A pin",
+        "A sun",
+        "A cat"
+      ]
+    },
+    {
+      "questionId": "PF44-Q05",
+      "question": "Which event happens first?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Tom has a mop.",
+        "Tom sees a dog.",
+        "Tom puts the mop on a log.",
+        "Tom sits."
+      ]
+    },
+    {
+      "questionId": "PF44-Q06",
+      "question": "Which event happens next after Tom sees the dog?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Tom pats the dog.",
+        "Tom drops the pot.",
+        "Tom gets a pin.",
+        "Tom runs to a pit."
+      ]
+    },
+    {
+      "questionId": "PF44-Q07",
+      "question": "Which event happens last?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Tom pats the dog.",
+        "Tom sees the dog.",
+        "Tom has a mop.",
+        "Tom sits by the log."
+      ]
+    },
+    {
+      "questionId": "PF44-Q08",
+      "question": "What is the passage mainly about?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Tom using a mop and meeting a dog",
+        "Tom finding a pin",
+        "A dog in a pit",
+        "A pot on a mat"
+      ]
+    },
+    {
+      "questionId": "PF44-Q09",
+      "question": "Which word shows where the mop is?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "log",
+        "Tom",
+        "sees",
+        "dog"
+      ]
+    },
+    {
+      "questionId": "PF44-Q10",
+      "question": "What evidence shows Tom met the dog?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The passage says Tom sees and pats the dog.",
+        "The title says Tom has a mop.",
+        "The first letter says dog.",
+        "There is no evidence."
+      ]
+    },
+    {
+      "questionId": "PF44-Q11",
+      "question": "Which sequence is correct?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "has mop → sees dog → pats dog",
+        "pats dog → has mop → sees dog",
+        "sees dog → has mop → pats dog",
+        "has mop → pats dog → sees dog"
+      ]
+    },
+    {
+      "questionId": "PF44-Q12",
+      "question": "Why should the learner reread the passage?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "To check decoding, event order and meaning",
+        "To guess difficult words",
+        "To skip vowels",
+        "To change the events"
+      ]
+    },
+    {
+      "questionId": "PF44-Q13",
+      "question": "Which word contains short /o/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "dog",
+        "dig",
+        "dug",
+        "dag"
+      ]
+    },
+    {
+      "questionId": "PF44-Q14",
+      "question": "If “dog” is read as “dag,” what should the learner check?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle vowel o versus a",
+        "The initial d",
+        "The final g",
+        "The word length"
+      ]
+    },
+    {
+      "questionId": "PF44-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Read a controlled short /o/ passage and explain sequence and details",
+        "Memorize the passage without decoding",
+        "Teach all vowels",
+        "Skip connected reading"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF44-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    },
+    {
+      "questionId": "PF44-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response follows the stated event order, passage detail, text evidence, or short /o/ decoding strategy."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-44-v1"
+  }
+}
