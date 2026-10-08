@@ -144,7 +144,8 @@
           "Can segment and spell taught CVC words containing n, including initial and final n.",
           "Can recognize -an and -ap families while decoding each full word accurately.",
           "Can decode controlled /n/ sentences and answer explicit who, action and location questions from text.",
-          "Can read a controlled /n/ passage, sequence three events and answer using explicit text evidence."
+          "Can read a controlled /n/ passage, sequence three events and answer using explicit text evidence.",
+          "Can read taught n patterns accurately and increasingly smoothly while retaining comprehension, with remaining needs identified."
         ]
       },
       "lessons": [
@@ -231,6 +232,12 @@
           "sequence": 28,
           "title": "Controlled /n/ Passage, Sequencing and Comprehension",
           "authoringPackage": "content/courses/phonics-foundation/28-controlled-n-passage-sequencing/authoring-package.json"
+        },
+        {
+          "lessonId": "29-n-fluency-consolidation-diagnostic",
+          "sequence": 29,
+          "title": "/n/ Fluency and Consolidation Diagnostic",
+          "authoringPackage": "content/courses/phonics-foundation/29-n-fluency-consolidation-diagnostic/authoring-package.json"
         }
       ]
     }
