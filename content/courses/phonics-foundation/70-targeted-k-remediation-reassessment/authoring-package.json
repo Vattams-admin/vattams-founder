@@ -1,0 +1,444 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-70",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "70-targeted-k-remediation-reassessment",
+    "topic": "new-consonant-pattern",
+    "subtopic": "targeted-k-remediation-and-reassessment",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Target the weakest /k/ component identified by Lesson 69.",
+      "Repair sound, decoding, encoding, comprehension, or fluency errors.",
+      "Use fresh items to check transfer.",
+      "Apply an explicit advance or reteach decision."
+    ],
+    "concepts": [
+      "Remediation should match the diagnosed component.",
+      "Fresh reassessment items test transfer.",
+      "Mastery decisions should be evidence-based."
+    ],
+    "definitions": [
+      {
+        "term": "targeted remediation",
+        "definition": "Instruction focused on a specific diagnosed skill gap."
+      },
+      {
+        "term": "fresh-item reassessment",
+        "definition": "A follow-up assessment using new items that measure the same skill."
+      },
+      {
+        "term": "mastery target",
+        "definition": "The minimum performance level required to advance."
+      }
+    ],
+    "workedExamples": [
+      "Weak /k/ recognition → discriminate /k/ from known consonants.",
+      "Weak decoding → blend /k/ CVC words with short vowels.",
+      "Weak encoding → segment and map /k/ CVC words.",
+      "Weak comprehension → reread controlled /k/ text and locate evidence.",
+      "Weak fluency → repeated accurate rereading."
+    ],
+    "commonMistakes": [
+      "Giving identical support for different errors.",
+      "Treating repeated practice items as proof of transfer.",
+      "Advancing while a critical component remains weak.",
+      "Remediating without measuring the outcome."
+    ],
+    "keyTakeaways": [
+      "Match support to evidence.",
+      "Use fresh items.",
+      "Check the mastery target.",
+      "Advance or reteach."
+    ],
+    "revisionPoints": [
+      "diagnose",
+      "target",
+      "practice",
+      "fresh reassessment",
+      "advance/reteach"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review /k/ recognition and CVC words."
+    ],
+    "conceptual": [
+      "Match /k/ errors to the correct remediation component."
+    ],
+    "application": [
+      "Apply targeted decoding, encoding, comprehension, and fluency repair."
+    ],
+    "higherOrderThinking": [
+      "Explain why fresh reassessment improves confidence in mastery."
+    ],
+    "mixedReview": [
+      "Combine /k/ word reading, comprehension, and routing decisions."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "find weakness → target → practice → reassess → decide"
+    ],
+    "flashRecall": [
+      "target",
+      "repair",
+      "fresh",
+      "80%",
+      "advance/reteach"
+    ],
+    "formulaOrFactBank": [
+      "Mastery target = 0.8"
+    ],
+    "mistakeBasedRevision": [
+      "If a component remains below target, reteach that component before advancing."
+    ],
+    "weakTopicRevision": [
+      "Repeat the weakest /k/ component with fresh controlled examples."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Targeted repair",
+      "steps": [
+        "Review Lesson 69 results.",
+        "Choose the weakest component.",
+        "Practice controlled /k/ items.",
+        "Record performance."
+      ]
+    },
+    {
+      "name": "Fresh-item check",
+      "steps": [
+        "Use unseen /k/ items.",
+        "Score each component.",
+        "Compare against the mastery target.",
+        "Identify remaining gaps."
+      ]
+    },
+    {
+      "name": "Advance or reteach",
+      "steps": [
+        "Review reassessment evidence.",
+        "Advance when the target is met.",
+        "Reteach the weak component when it is not met."
+      ]
+    }
+  ],
+  "assessment": {
+    "assessmentId": "PF70-REASSESS-01",
+    "type": "reassessment",
+    "components": [
+      "soundRecognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "itemCount": 15,
+    "masteryTarget": 0.8,
+    "scoring": {
+      "method": "component-level accuracy with overall mastery gate"
+    },
+    "freshItemPolicy": true,
+    "decisionRules": {
+      "advance": "Advance when reassessment reaches 0.8 and no critical component remains below target.",
+      "reteach": "Reteach the specific component when performance remains below 0.8."
+    }
+  },
+  "outcomes": [
+    "Learner receives targeted /k/ remediation.",
+    "Learner demonstrates transfer on fresh /k/ items.",
+    "Learner is routed to advance or reteach using explicit mastery evidence."
+  ],
+  "questions": [
+    {
+      "questionId": "PF70-Q01",
+      "question": "Which word begins with /k/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cat",
+        "sun",
+        "mud",
+        "pen"
+      ]
+    },
+    {
+      "questionId": "PF70-Q02",
+      "question": "Which word ends with /k/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "sock",
+        "sun",
+        "map",
+        "bed"
+      ]
+    },
+    {
+      "questionId": "PF70-Q03",
+      "question": "Blend /k/ /ɪ/ /d/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "kid",
+        "ked",
+        "kad",
+        "kod"
+      ]
+    },
+    {
+      "questionId": "PF70-Q04",
+      "question": "Blend /k/ /ʌ/ /b/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cub",
+        "cab",
+        "cob",
+        "kib"
+      ]
+    },
+    {
+      "questionId": "PF70-Q05",
+      "question": "Which spelling matches /k/ /æ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cap",
+        "cup",
+        "cop",
+        "kip"
+      ]
+    },
+    {
+      "questionId": "PF70-Q06",
+      "question": "Which spelling matches /k/ /ɒ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cot",
+        "cat",
+        "cut",
+        "kit"
+      ]
+    },
+    {
+      "questionId": "PF70-Q07",
+      "question": "In “The cat is on the mat,” where is the cat?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "On the mat",
+        "In the cup",
+        "In the hut",
+        "On the bed"
+      ]
+    },
+    {
+      "questionId": "PF70-Q08",
+      "question": "In “Kim has a cup,” who has the cup?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Kim",
+        "The cup",
+        "The cat",
+        "The kid"
+      ]
+    },
+    {
+      "questionId": "PF70-Q09",
+      "question": "What happened first: Kim got the cup, or Kim put it on the mat?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Kim got the cup",
+        "Kim put it on the mat",
+        "They happened together",
+        "The text does not say"
+      ]
+    },
+    {
+      "questionId": "PF70-Q10",
+      "question": "Which pair shares the same beginning sound?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cat and cup",
+        "cat and sun",
+        "kid and mud",
+        "cop and bed"
+      ]
+    },
+    {
+      "questionId": "PF70-Q11",
+      "question": "A learner reads “kid” as “ked.” What should be checked?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle vowel sound",
+        "The final sound",
+        "The first sound",
+        "The capital letter"
+      ]
+    },
+    {
+      "questionId": "PF70-Q12",
+      "question": "A learner decodes /k/ words correctly but cannot answer where questions. What should be practiced?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Comprehension",
+        "Encoding",
+        "Sound recognition",
+        "Letter formation"
+      ]
+    },
+    {
+      "questionId": "PF70-Q13",
+      "question": "A learner answers correctly but reads controlled text with long pauses. What should be practiced?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Fluent rereading",
+        "New consonants",
+        "Letter naming",
+        "Copying"
+      ]
+    },
+    {
+      "questionId": "PF70-Q14",
+      "question": "Why should reassessment use fresh items?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "To check transfer of the skill rather than memorization",
+        "To make the test longer",
+        "To avoid measuring learning",
+        "To teach a different sound"
+      ]
+    },
+    {
+      "questionId": "PF70-Q15",
+      "question": "What should happen when mastery reaches 80% with no critical weak component?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Advance to the next phonics pattern",
+        "Repeat the same lesson indefinitely",
+        "Delete the results",
+        "Skip all future assessment"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF70-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    },
+    {
+      "questionId": "PF70-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the targeted /k/ skill or reassessment decision."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-70-v1"
+  }
+}
