@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-42",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "42-short-o-word-families-controlled-reading",
+    "topic": "short-o-vowel",
+    "subtopic": "word-families-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognize recurring short /o/ word-family patterns.",
+      "Compare changing initial consonants while preserving shared endings.",
+      "Use word-family knowledge to support, not replace, complete decoding.",
+      "Read controlled short /o/ words and simple text accurately."
+    ],
+    "concepts": [
+      "Word families share a recurring ending sound-spelling pattern.",
+      "Onsets can change while the rime stays stable.",
+      "Automaticity grows through repeated accurate decoding."
+    ],
+    "definitions": [
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a common ending sound-spelling pattern."
+      },
+      {
+        "term": "onset",
+        "definition": "The initial consonant sound before the vowel and following sounds."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and following sounds in a syllable, such as -ot or -op."
+      }
+    ],
+    "workedExamples": [
+      "hot and pot share -ot.",
+      "mop and hop share -op.",
+      "dog and log share -og; decode the whole word rather than guessing from -og."
+    ],
+    "commonMistakes": [
+      "Guessing from the ending.",
+      "Changing the wrong onset.",
+      "Confusing -ot and -op.",
+      "Skipping the full blend because the family is familiar."
+    ],
+    "keyTakeaways": [
+      "Notice the shared pattern.",
+      "Check the onset.",
+      "Blend the whole word.",
+      "Use patterns to support accurate reading."
+    ],
+    "revisionPoints": [
+      "Shared rime + changing onset = word family."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Sort hot, pot, mop, hop, dog and log by family."
+    ],
+    "conceptual": [
+      "Identify the shared rime and changing onset."
+    ],
+    "application": [
+      "Read short /o/ family words accurately."
+    ],
+    "higherOrderThinking": [
+      "Explain why family recognition must not become guessing."
+    ],
+    "mixedReview": [
+      "Sort, decode and read a controlled sentence."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "-ot: hot, pot",
+      "-op: mop, hop",
+      "-og: dog, log"
+    ],
+    "flashRecall": [
+      "hot → -ot",
+      "mop → -op",
+      "dog → -og"
+    ],
+    "formulaOrFactBank": [
+      "Word family = shared rime pattern"
+    ],
+    "mistakeBasedRevision": [
+      "If the ending is familiar but the word is wrong, return to full decoding."
+    ],
+    "weakTopicRevision": [
+      "Decode each family word sound by sound, then reread the family."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Family sort",
+      "steps": [
+        "Read each word.",
+        "Identify its ending pattern.",
+        "Sort it.",
+        "Decode it again."
+      ]
+    },
+    {
+      "name": "Onset swap",
+      "steps": [
+        "Read hot.",
+        "Change h to p.",
+        "Read pot.",
+        "Repeat with mop and hop."
+      ]
+    },
+    {
+      "name": "Controlled reading",
+      "steps": [
+        "Read the family list.",
+        "Reread for accuracy.",
+        "Read a controlled sentence.",
+        "Point to the evidence."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner sorts taught short /o/ words into families with at least 80% accuracy.",
+    "Learner identifies shared rime and changing onset.",
+    "Learner reads family words accurately without guessing.",
+    "Learner reads a controlled sentence and identifies its stated detail."
+  ],
+  "questions": [
+    {
+      "questionId": "PF42-Q01",
+      "question": "Which word belongs to the -ot family?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "hot",
+        "hop",
+        "hog",
+        "hat"
+      ]
+    },
+    {
+      "questionId": "PF42-Q02",
+      "question": "Which word belongs to the -op family?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "mop",
+        "pot",
+        "hot",
+        "log"
+      ]
+    },
+    {
+      "questionId": "PF42-Q03",
+      "question": "Which word belongs to the -og family?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "dog",
+        "dot",
+        "dig",
+        "dag"
+      ]
+    },
+    {
+      "questionId": "PF42-Q04",
+      "question": "Which pair shares the -ot ending?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "hot and pot",
+        "mop and dog",
+        "log and hot",
+        "hat and hit"
+      ]
+    },
+    {
+      "questionId": "PF42-Q05",
+      "question": "Which pair shares the -op ending?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "mop and hop",
+        "hot and pot",
+        "dog and log",
+        "hat and map"
+      ]
+    },
+    {
+      "questionId": "PF42-Q06",
+      "question": "What stays the same in hot and pot?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "The -ot ending",
+        "The initial consonant",
+        "The whole word",
+        "The middle consonant"
+      ]
+    },
+    {
+      "questionId": "PF42-Q07",
+      "question": "What changes between hot and pot?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "The initial consonant",
+        "The -ot ending",
+        "The vowel",
+        "The final sound"
+      ]
+    },
+    {
+      "questionId": "PF42-Q08",
+      "question": "Which word completes h-ot, p-ot?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pot",
+        "pat",
+        "pit",
+        "pin"
+      ]
+    },
+    {
+      "questionId": "PF42-Q09",
+      "question": "Which word completes m-op, h-op?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "hop",
+        "hot",
+        "hip",
+        "hat"
+      ]
+    },
+    {
+      "questionId": "PF42-Q10",
+      "question": "Why are word families useful?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "They highlight recurring sound-spelling patterns",
+        "They allow guessing without decoding",
+        "They remove the need to blend",
+        "They teach every vowel at once"
+      ]
+    },
+    {
+      "questionId": "PF42-Q11",
+      "question": "When reading a familiar family word, what should the learner still do?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Check each grapheme and blend the whole word",
+        "Guess from the ending only",
+        "Ignore the onset",
+        "Skip the vowel"
+      ]
+    },
+    {
+      "questionId": "PF42-Q12",
+      "question": "Which word does NOT belong with hot and pot?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "mop",
+        "hot",
+        "pot",
+        "log"
+      ]
+    },
+    {
+      "questionId": "PF42-Q13",
+      "question": "Which word does NOT belong with mop and hop?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "hot",
+        "mop",
+        "hop",
+        "dog"
+      ]
+    },
+    {
+      "questionId": "PF42-Q14",
+      "question": "Read: “Tom has a mop.” What does Tom have?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "A mop",
+        "A pot",
+        "A dog",
+        "A hat"
+      ]
+    },
+    {
+      "questionId": "PF42-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Recognize short /o/ word families while maintaining accurate controlled reading",
+        "Memorize family endings without decoding",
+        "Teach all vowels",
+        "Skip connected reading"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF42-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF42-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /o/ family pattern or controlled-reading evidence."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-42-v1"
+  }
+}
