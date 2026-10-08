@@ -193,7 +193,8 @@
           "Can hear /l/ initially and finally, distinguish it from /r/ and other taught consonants, and connect it to l before decoding.",
           "Can decode taught CVC words containing /l/ by accurate grapheme-to-phoneme mapping, blending and self-correction.",
           "Can segment and spell taught CVC words containing /l/ by ordered phoneme-to-grapheme mapping and self-correction.",
-          "Can identify shared CVC rimes and accurately decode controlled /l/ word-family chains."
+          "Can identify shared CVC rimes and accurately decode controlled /l/ word-family chains.",
+          "Can decode controlled /l/ sentences, answer literal comprehension questions, and cite sentence evidence."
         ]
       },
       "lessons": [
@@ -658,6 +659,12 @@
           "sequence": 90,
           "title": "/l/ Word Families & Controlled Reading",
           "authoringPackage": "content/courses/phonics-foundation/90-l-word-families-controlled-reading/authoring-package.json"
+        },
+        {
+          "lessonId": "91-controlled-l-sentences-comprehension",
+          "sequence": 91,
+          "title": "Controlled /l/ Sentences & Comprehension",
+          "authoringPackage": "content/courses/phonics-foundation/91-controlled-l-sentences-comprehension/authoring-package.json"
         }
       ]
     }
