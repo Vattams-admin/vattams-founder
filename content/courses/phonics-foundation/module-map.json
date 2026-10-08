@@ -203,7 +203,8 @@
           "Can segment and spell taught CVC words containing /b/ by ordered phoneme-to-grapheme mapping and self-correction.",
           "Can identify shared CVC rimes and accurately decode controlled /b/ word-family chains.",
           "Can decode controlled /b/ sentences, answer literal questions, and support answers with sentence evidence.",
-          "Can sequence first/next/last events and retell a short controlled /b/ passage using text evidence."
+          "Can sequence first/next/last events and retell a short controlled /b/ passage using text evidence.",
+          "Can demonstrate /b/ consolidation across recognition, decoding, encoding, comprehension and fluency at the defined mastery threshold."
         ]
       },
       "lessons": [
@@ -730,6 +731,13 @@
           "sequence": 100,
           "title": "Controlled /b/ Passage Sequencing",
           "authoringPackage": "content/courses/phonics-foundation/100-controlled-b-passage-sequencing/authoring-package.json"
+        },
+        {
+          "lessonId": "101-b-fluency-consolidation-diagnostic",
+          "sequence": 101,
+          "title": "/b/ Fluency Consolidation Diagnostic",
+          "authoringPackage": "content/courses/phonics-foundation/101-b-fluency-consolidation-diagnostic/authoring-package.json",
+          "assessmentId": "PF101-DIAG-01"
         }
       ]
     }
