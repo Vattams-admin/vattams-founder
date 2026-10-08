@@ -180,7 +180,8 @@
           "Can demonstrate short-/u/ sound recognition, decoding, encoding, comprehension, and fluency for diagnostic routing.",
           "Can complete targeted short-/u/ remediation and demonstrate transfer on fresh reassessment items.",
           "Can hear and identify /k/ in initial and final positions and connect it to c/k.",
-          "Can decode /k/ CVC words by blending phonemes and checking the middle vowel."
+          "Can decode /k/ CVC words by blending phonemes and checking the middle vowel.",
+          "Can segment and spell /k/ CVC words by mapping each phoneme to a letter."
         ]
       },
       "lessons": [
@@ -489,6 +490,12 @@
           "sequence": 64,
           "title": "Decode CVC Words with /k/",
           "authoringPackage": "content/courses/phonics-foundation/64-decode-cvc-with-k/authoring-package.json"
+        },
+        {
+          "lessonId": "65-cvc-spelling-with-k",
+          "sequence": 65,
+          "title": "CVC Spelling with /k/",
+          "authoringPackage": "content/courses/phonics-foundation/65-cvc-spelling-with-k/authoring-package.json"
         }
       ]
     }
