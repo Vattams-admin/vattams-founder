@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-06",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "06-decode-cvc-m-s-t-a",
+    "topic": "cvc-decoding",
+    "subtopic": "grapheme-to-phoneme-blending",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Match the letters m, s, t and a to their taught sounds.",
+      "Blend printed graphemes to decode simple CVC words.",
+      "Read familiar CVC words without relying only on pictures."
+    ],
+    "concepts": [
+      "Decoding connects printed graphemes to known phonemes.",
+      "A CVC word can be decoded from left to right.",
+      "The learner should sound out, blend and then check the whole word."
+    ],
+    "definitions": [
+      {
+        "term": "decoding",
+        "definition": "Using known letter-sound relationships to read a printed word."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A letter or group of letters representing a speech sound."
+      }
+    ],
+    "workedExamples": [
+      "m-a-t → mat",
+      "s-a-t → sat",
+      "m-a-p → map",
+      "t-a-p → tap"
+    ],
+    "commonMistakes": [
+      "Guessing from a picture instead of reading the letters.",
+      "Skipping the middle vowel.",
+      "Reading letters in the wrong order."
+    ],
+    "keyTakeaways": [
+      "Look at every grapheme.",
+      "Say its known sound.",
+      "Blend from left to right.",
+      "Check the whole word."
+    ],
+    "revisionPoints": [
+      "See → sound → blend → read.",
+      "Keep left-to-right order.",
+      "Use known sounds only."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Decode mat, sat, map and tap.",
+      "Match printed CVC words to spoken words."
+    ],
+    "conceptual": [
+      "Explain how decoding differs from guessing.",
+      "Identify the grapheme representing each sound."
+    ],
+    "application": [
+      "Read a printed word and select its meaning.",
+      "Decode a word without picture support."
+    ],
+    "higherOrderThinking": [
+      "Identify why a learner's decoded word is incorrect.",
+      "Choose the best correction when a learner skips a grapheme."
+    ],
+    "mixedReview": [
+      "Mix grapheme recognition, decoding, sound sequence and word meaning."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Look at letters.",
+      "Say sounds.",
+      "Blend.",
+      "Read."
+    ],
+    "flashRecall": [
+      "m-a-t → mat",
+      "s-a-t → sat",
+      "m-a-p → map",
+      "t-a-p → tap"
+    ],
+    "formulaOrFactBank": [
+      "Grapheme → phoneme → blend → word"
+    ],
+    "mistakeBasedRevision": [
+      "If a learner guesses from a picture, cover the picture and decode the letters.",
+      "If a sound is skipped, point to each grapheme in sequence."
+    ],
+    "weakTopicRevision": [
+      "Read ten familiar CVC words and repeat any word that was decoded incorrectly."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound buttons",
+      "steps": [
+        "Point under each grapheme.",
+        "Say each known sound.",
+        "Sweep under the word while blending."
+      ]
+    },
+    {
+      "name": "Read and match",
+      "steps": [
+        "Show a printed CVC word.",
+        "Learner decodes it.",
+        "Learner matches it to the spoken word or picture."
+      ]
+    },
+    {
+      "name": "Picture-free reading",
+      "steps": [
+        "Show familiar CVC words without pictures.",
+        "Learner decodes from print.",
+        "Learner says the whole word."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner decodes at least 8 of 10 familiar CVC words correctly.",
+    "Learner applies left-to-right grapheme-sound mapping.",
+    "Learner reads familiar CVC words without depending on picture guessing."
+  ],
+  "questions": [
+    {
+      "questionId": "PF06-Q01",
+      "question": "Which word is made by m-a-t?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat",
+        "sat",
+        "map",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF06-Q02",
+      "question": "Which word is made by s-a-t?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "sat",
+        "mat",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF06-Q03",
+      "question": "Which word is made by m-a-p?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sat",
+        "map",
+        "tap",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF06-Q04",
+      "question": "Which word is made by t-a-p?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "tap",
+        "mat",
+        "map",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF06-Q05",
+      "question": "What should you do first when decoding a printed CVC word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Look at the graphemes",
+        "Guess from a picture",
+        "Skip the vowel",
+        "Say the whole word immediately"
+      ]
+    },
+    {
+      "questionId": "PF06-Q06",
+      "question": "Why should you read from left to right?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "It keeps the sound sequence in order",
+        "It removes the middle sound",
+        "It changes the word",
+        "It makes pictures clearer"
+      ]
+    },
+    {
+      "questionId": "PF06-Q07",
+      "question": "In 'map', which letter represents the middle sound /a/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "m",
+        "a",
+        "p",
+        "none"
+      ]
+    },
+    {
+      "questionId": "PF06-Q08",
+      "question": "Which printed word matches /s/ /a/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sat",
+        "mat",
+        "tap",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF06-Q09",
+      "question": "A learner skips the 'a' in mat. What should the teacher do?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Point to each grapheme and decode in order",
+        "Ask the learner to guess",
+        "Remove the m",
+        "Skip the final sound"
+      ]
+    },
+    {
+      "questionId": "PF06-Q10",
+      "question": "Which strategy is decoding?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Reading m-a-t as mat",
+        "Guessing a word from its picture",
+        "Memorising a whole page",
+        "Choosing the longest word"
+      ]
+    },
+    {
+      "questionId": "PF06-Q11",
+      "question": "Which letter represents /t/ in 'tap'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "t",
+        "a",
+        "p",
+        "m"
+      ]
+    },
+    {
+      "questionId": "PF06-Q12",
+      "question": "Which word begins with the grapheme m?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "sat",
+        "tap",
+        "sad"
+      ]
+    },
+    {
+      "questionId": "PF06-Q13",
+      "question": "Which word ends with /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "mat",
+        "sat",
+        "sam"
+      ]
+    },
+    {
+      "questionId": "PF06-Q14",
+      "question": "What should you check after blending the sounds?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Whether the whole word is correct",
+        "Whether the picture is large",
+        "Whether the letters are colourful",
+        "Whether the word has five letters"
+      ]
+    },
+    {
+      "questionId": "PF06-Q15",
+      "question": "Which learner is decoding correctly?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Learner A sounds each grapheme and blends",
+        "Learner B guesses from a picture",
+        "Learner C skips the vowel",
+        "Learner D reverses the letters"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF06-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q07",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    },
+    {
+      "questionId": "PF06-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the taught grapheme-to-phoneme decoding process."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-06-v1"
+  }
+}
