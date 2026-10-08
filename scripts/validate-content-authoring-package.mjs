@@ -8,16 +8,30 @@ const readiness=fs.existsSync(readinessPath)
   : null;
 
 const cliPath=process.argv[2];
-const pkgPath=cliPath
-  ? path.resolve(root,cliPath)
-  : path.join(root,"content/school/cbse/class-1/authoring-package.json");
+const packagePaths=cliPath
+  ? [path.resolve(root,cliPath)]
+  : [];
 
-if(!fs.existsSync(pkgPath)){
-  console.log("CONTENT AUTHORING PACKAGE: NOT PRESENT");
-  console.log("Path: "+path.relative(root,pkgPath));
+if(!cliPath){
+  const walk=(dir)=>{
+    if(!fs.existsSync(dir)) return;
+    for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
+      const full=path.join(dir,entry.name);
+      if(entry.isDirectory()) walk(full);
+      else if(entry.isFile() && entry.name==="authoring-package.json") packagePaths.push(full);
+    }
+  };
+  walk(path.join(root,"content"));
+}
+
+if(packagePaths.length===0){
+  console.log("CONTENT AUTHORING PACKAGE: NO PACKAGES FOUND");
   process.exit(0);
 }
 
+let totalErrors=0;
+let totalQuestions=0;
+for(const pkgPath of packagePaths){
 const pkg=JSON.parse(fs.readFileSync(pkgPath,"utf8"));
 const errors=[]; const fail=m=>errors.push(m);
 const isCourse=pkg.locator?.domain==="course";
@@ -66,12 +80,14 @@ if(!pkg.governance?.provenance || !Array.isArray(pkg.governance.provenance) || p
 if(!pkg.governance?.contentHash) fail("governance.contentHash is required");
 
 if(errors.length){
-  console.error("CONTENT AUTHORING PACKAGE: INVALID");
+  console.error("INVALID: "+path.relative(root,pkgPath));
   errors.forEach(e=>console.error("- "+e));
-  process.exit(1);
+  totalErrors+=errors.length;
+}else{
+  console.log("VALID: "+path.relative(root,pkgPath)+" | "+pkg.locator.domain+" | "+pkg.questions.length+" questions");
 }
-console.log("CONTENT AUTHORING PACKAGE: VALID");
-console.log("Domain: "+pkg.locator.domain);
-console.log("Package: "+pkg.packageId);
-console.log("Questions: "+pkg.questions.length);
-console.log("Private answer keys: "+pkg.answerKeys.length);
+totalQuestions+=pkg.questions.length;
+}
+console.log("Packages checked: "+packagePaths.length);
+console.log("Questions checked: "+totalQuestions);
+if(totalErrors) process.exit(1);
