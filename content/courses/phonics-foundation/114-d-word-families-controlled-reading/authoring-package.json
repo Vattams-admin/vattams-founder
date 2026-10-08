@@ -1,0 +1,431 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-114",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "114-d-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "d-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognize taught CVC word families containing /d/.",
+      "Read controlled CVC word-family chains accurately.",
+      "Compare onset and rime patterns.",
+      "Build fluency through repeated controlled reading."
+    ],
+    "concepts": [
+      "Words can share a rime while changing the onset.",
+      "Word families support decoding by pattern recognition.",
+      "Controlled text limits spelling patterns to taught correspondences.",
+      "Repeated accurate reading supports automaticity."
+    ],
+    "definitions": [
+      {
+        "term": "onset",
+        "definition": "The initial consonant or consonant group before the vowel in a word or syllable."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and sounds that follow it in a word or syllable."
+      },
+      {
+        "term": "word family",
+        "definition": "A group of words sharing the same rime pattern."
+      },
+      {
+        "term": "controlled text",
+        "definition": "Text restricted to taught sound-spelling patterns."
+      }
+    ],
+    "workedExamples": [
+      "-ad: dad, sad, had.",
+      "-ig: dig, pig, big.",
+      "-ug: dug, bug, rug."
+    ],
+    "commonMistakes": [
+      "Changing the rime when only the onset changes.",
+      "Guessing instead of blending.",
+      "Skipping the final consonant.",
+      "Reading a familiar word but losing the pattern in a new word."
+    ],
+    "keyTakeaways": [
+      "Spot the rime.",
+      "Change only the onset when appropriate.",
+      "Blend the whole word.",
+      "Reread for fluency."
+    ],
+    "revisionPoints": [
+      "onset",
+      "rime",
+      "-ad",
+      "-ig",
+      "-ug",
+      "controlled reading"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Match /d/ CVC words to their word families."
+    ],
+    "conceptual": [
+      "Identify whether two words share the same rime."
+    ],
+    "application": [
+      "Read and complete controlled word-family chains."
+    ],
+    "higherOrderThinking": [
+      "Explain how changing the onset creates a new word while keeping the rime."
+    ],
+    "mixedReview": [
+      "Read mixed /d/ word families fluently."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "spot rime → blend onset + rime → read → reread"
+    ],
+    "flashRecall": [
+      "dad",
+      "had",
+      "sad",
+      "dig",
+      "big",
+      "dug",
+      "bug",
+      "rug"
+    ],
+    "formulaOrFactBank": [
+      "Word-family reading = stable rime + changing onset."
+    ],
+    "mistakeBasedRevision": [
+      "Return to onset/rime blending when a family word is misread."
+    ],
+    "weakTopicRevision": [
+      "Practise the specific rime family causing errors."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Word-family sort",
+      "steps": [
+        "Read each word.",
+        "Underline the rime.",
+        "Group matching rimes.",
+        "Read each group aloud."
+      ]
+    },
+    {
+      "name": "Family chain",
+      "steps": [
+        "Start with one word.",
+        "Change only the onset.",
+        "Read the new word.",
+        "Continue the chain."
+      ]
+    },
+    {
+      "name": "Controlled reread",
+      "steps": [
+        "Read the list slowly.",
+        "Blend accurately.",
+        "Reread smoothly.",
+        "Record the best accurate read."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner identifies taught /d/ word families.",
+    "Learner reads controlled CVC word-family lists accurately.",
+    "Learner improves fluency through repeated controlled reading."
+  ],
+  "questions": [
+    {
+      "questionId": "PF114-Q01",
+      "question": "Which word belongs to the -ad family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "dad",
+        "-ig",
+        "dad",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q02",
+      "question": "Which word belongs to the -ig family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "dig",
+        "-ad",
+        "rug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q03",
+      "question": "Which word belongs to the -ug family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "dug",
+        "-ig",
+        "rug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q04",
+      "question": "Which pair shares the same rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "dad and sad",
+        "-ad",
+        "dad",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q05",
+      "question": "Which pair shares the same rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "dig and pig",
+        "-ig",
+        "rug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q06",
+      "question": "Which pair shares the same rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "dug and bug",
+        "-ad",
+        "rug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q07",
+      "question": "In “dad,” what is the rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "-ad",
+        "-ig",
+        "dad",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q08",
+      "question": "In “dig,” what is the rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "-ig",
+        "-ad",
+        "rug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q09",
+      "question": "In “dug,” what is the rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "-ug",
+        "-ig",
+        "rug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q10",
+      "question": "Which word changes only the onset from “sad”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "dad",
+        "-ad",
+        "dad",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q11",
+      "question": "Which word completes the -ig family: dig, pig, ___?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "big",
+        "-ig",
+        "rug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q12",
+      "question": "Which word completes the -ug family: dug, bug, ___?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "rug",
+        "-ad",
+        "rug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q13",
+      "question": "Which strategy supports accurate word-family reading?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Blend the onset and rime, then reread.",
+        "-ig",
+        "dad",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q14",
+      "question": "Why use controlled text in early phonics?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "It uses taught spelling patterns.",
+        "-ad",
+        "rug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF114-Q15",
+      "question": "Why reread a word-family list?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "To build accurate, smoother reading.",
+        "-ig",
+        "rug",
+        "not this"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF114-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    },
+    {
+      "questionId": "PF114-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct word-family or controlled-reading response."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-114-v1"
+  }
+}
