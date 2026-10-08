@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-50",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "50-short-e-word-families-controlled-reading",
+    "topic": "short-e-vowel",
+    "subtopic": "word-families-and-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognize and read common short-/e/ CVC word families.",
+      "Identify onset and rime in controlled word-family patterns.",
+      "Apply word-family knowledge without abandoning grapheme-by-grapheme decoding.",
+      "Read short-/e/ words in controlled connected text."
+    ],
+    "concepts": [
+      "Words in a family share a rime.",
+      "Changing the onset creates a new word while preserving the rime.",
+      "Word-family recognition supports efficiency but must not replace decoding."
+    ],
+    "definitions": [
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a common rime, such as -et or -en."
+      },
+      {
+        "term": "onset",
+        "definition": "The initial consonant or consonant cluster before the vowel in a syllable."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and any following sounds in a syllable."
+      }
+    ],
+    "workedExamples": [
+      "pet → p + et; change p to g → get.",
+      "hen → h + en; change h to p → pen.",
+      "bed and red share -ed while their onsets differ."
+    ],
+    "commonMistakes": [
+      "Guessing a family word from context.",
+      "Reading only the rime.",
+      "Confusing short /e/ with short /i/.",
+      "Using an untaught pattern in controlled text."
+    ],
+    "keyTakeaways": [
+      "Notice the family.",
+      "Decode the onset.",
+      "Read the rime.",
+      "Blend the whole word.",
+      "Check every grapheme."
+    ],
+    "revisionPoints": [
+      "-et: pet, get, wet",
+      "-en: hen, pen, men",
+      "-ed: bed, red, fed"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Sort short-/e/ CVC words by family."
+    ],
+    "conceptual": [
+      "Identify onset and rime in taught words."
+    ],
+    "application": [
+      "Generate a new family word by changing the onset."
+    ],
+    "higherOrderThinking": [
+      "Choose whether a word-family strategy still requires full grapheme checking."
+    ],
+    "mixedReview": [
+      "Read short-/e/ families and previously taught vowel families while preserving decoding accuracy."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Family → onset → rime → blend → check."
+    ],
+    "flashRecall": [
+      "-et",
+      "-en",
+      "-ed"
+    ],
+    "formulaOrFactBank": [
+      "Word family = shared rime + changing onset"
+    ],
+    "mistakeBasedRevision": [
+      "If guessing occurs, return to grapheme-by-grapheme decoding."
+    ],
+    "weakTopicRevision": [
+      "Practise the specific family causing confusion, then reread controlled text."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Family sort",
+      "steps": [
+        "Read each word.",
+        "Identify the rime.",
+        "Place words into -et, -en, or -ed groups.",
+        "Decode each word again."
+      ]
+    },
+    {
+      "name": "Onset swap",
+      "steps": [
+        "Read a base word.",
+        "Change only the onset.",
+        "Blend the new word.",
+        "Confirm the meaning."
+      ]
+    },
+    {
+      "name": "Controlled reading",
+      "steps": [
+        "Read each word accurately.",
+        "Read a short controlled sentence.",
+        "Reread smoothly without guessing."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner accurately reads taught short-/e/ word families.",
+    "Learner identifies shared rimes and changing onsets.",
+    "Learner uses family patterns as support while checking every grapheme.",
+    "Learner applies short-/e/ decoding in controlled connected reading."
+  ],
+  "questions": [
+    {
+      "questionId": "PF50-Q01",
+      "question": "Which words belong to the -et family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "pet and get",
+        "pin and tin",
+        "hot and pot",
+        "map and tap"
+      ]
+    },
+    {
+      "questionId": "PF50-Q02",
+      "question": "Which words belong to the -en family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hen and pen",
+        "hat and bat",
+        "sit and fit",
+        "log and dog"
+      ]
+    },
+    {
+      "questionId": "PF50-Q03",
+      "question": "What stays the same in pet and get?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The -et rime",
+        "The first consonant",
+        "The first letter",
+        "The word meaning"
+      ]
+    },
+    {
+      "questionId": "PF50-Q04",
+      "question": "What changes when pet becomes get?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The onset",
+        "The vowel sound",
+        "The final two letters",
+        "The rime"
+      ]
+    },
+    {
+      "questionId": "PF50-Q05",
+      "question": "Which word can be made by changing the first sound in hen to /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "pen",
+        "pan",
+        "pin",
+        "pon"
+      ]
+    },
+    {
+      "questionId": "PF50-Q06",
+      "question": "Which word belongs with bed and red?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "fed",
+        "bid",
+        "bad",
+        "rod"
+      ]
+    },
+    {
+      "questionId": "PF50-Q07",
+      "question": "Why should a learner still sound out a word in a word family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "To verify every grapheme and avoid guessing",
+        "To ignore the vowel",
+        "To memorize the family",
+        "To skip blending"
+      ]
+    },
+    {
+      "questionId": "PF50-Q08",
+      "question": "Which pair has the same rime?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "men and hen",
+        "map and men",
+        "sit and set",
+        "dog and dig"
+      ]
+    },
+    {
+      "questionId": "PF50-Q09",
+      "question": "Which word does NOT belong with pet, get, and wet?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "win",
+        "wet",
+        "get",
+        "pet"
+      ]
+    },
+    {
+      "questionId": "PF50-Q10",
+      "question": "If a learner reads pen as pin, what should they check?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The middle vowel /e/",
+        "The final consonant",
+        "The first consonant",
+        "The word length"
+      ]
+    },
+    {
+      "questionId": "PF50-Q11",
+      "question": "Which word completes the controlled sentence: “The hen is ___.”",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "wet",
+        "wit",
+        "wat",
+        "wot"
+      ]
+    },
+    {
+      "questionId": "PF50-Q12",
+      "question": "What is the safest strategy when reading a new -en word?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Decode the onset and rime, then check each grapheme",
+        "Guess from the family alone",
+        "Skip the vowel",
+        "Use the longest word"
+      ]
+    },
+    {
+      "questionId": "PF50-Q13",
+      "question": "Which set contains only short-/e/ CVC words?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "bed, hen, pen",
+        "bad, map, cat",
+        "sit, pin, fit",
+        "hot, log, pot"
+      ]
+    },
+    {
+      "questionId": "PF50-Q14",
+      "question": "Why use controlled text after word-family practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "To apply accurate decoding in connected reading",
+        "To replace phonics instruction",
+        "To encourage guessing",
+        "To introduce unrelated spelling patterns"
+      ]
+    },
+    {
+      "questionId": "PF50-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Read short-/e/ word families accurately while maintaining full decoding and controlled reading",
+        "Memorize every word family",
+        "Read long-vowel words",
+        "Skip sound-by-sound decoding"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF50-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    },
+    {
+      "questionId": "PF50-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response demonstrates accurate short-/e/ word-family recognition, decoding, or controlled-reading application."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-50-v1"
+  }
+}
