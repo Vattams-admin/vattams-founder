@@ -188,7 +188,8 @@
           "Can demonstrate /k/ sound recognition, decoding, encoding, comprehension, and fluency for diagnostic routing.",
           "Can complete targeted /k/ remediation and demonstrate transfer on fresh reassessment items.",
           "Can read a controlled /r/ passage, sequence three events, retell key details and repair decoding or comprehension errors.",
-          "Can demonstrate /r/ recognition, decoding, encoding, comprehension and connected-reading fluency and identify any component requiring remediation."
+          "Can demonstrate /r/ recognition, decoding, encoding, comprehension and connected-reading fluency and identify any component requiring remediation.",
+          "Can complete targeted /r/ remediation and demonstrate readiness through fresh reassessment evidence."
         ]
       },
       "lessons": [
@@ -623,6 +624,12 @@
           "sequence": 85,
           "title": "/r/ Fluency Consolidation and Diagnostic Checkpoint",
           "authoringPackage": "content/courses/phonics-foundation/85-r-fluency-consolidation-diagnostic/authoring-package.json"
+        },
+        {
+          "lessonId": "86-targeted-r-remediation-reassessment",
+          "sequence": 86,
+          "title": "Targeted /r/ Remediation and Reassessment",
+          "authoringPackage": "content/courses/phonics-foundation/86-targeted-r-remediation-reassessment/authoring-package.json"
         }
       ]
     }
