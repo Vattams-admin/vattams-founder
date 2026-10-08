@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-34",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "34-short-i-word-families-controlled-reading",
+    "topic": "short-i-vowel",
+    "subtopic": "word-families-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognize recurring -it and -in patterns in taught short /i/ words.",
+      "Compare changing initial consonants while preserving the shared ending.",
+      "Apply word-family knowledge without replacing full decoding."
+    ],
+    "concepts": [
+      "Word families share recurring sound-spelling endings.",
+      "The onset can change while the rime stays stable.",
+      "Pattern recognition supports automaticity but every grapheme still needs checking."
+    ],
+    "definitions": [
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a common ending sound-spelling pattern."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and following sounds in a syllable, such as -it or -in."
+      },
+      {
+        "term": "controlled reading",
+        "definition": "Reading text that mainly uses previously taught sound-spelling patterns."
+      }
+    ],
+    "workedExamples": [
+      "sit and pit share -it but have different initial consonants.",
+      "pin and tin share -in but have different initial consonants.",
+      "Even when -in is familiar, decode the complete word."
+    ],
+    "commonMistakes": [
+      "Guessing from the ending.",
+      "Confusing -it and -in.",
+      "Changing the onset incorrectly.",
+      "Skipping full decoding because the family looks familiar."
+    ],
+    "keyTakeaways": [
+      "Notice the pattern.",
+      "Check the onset.",
+      "Blend the whole word.",
+      "Use families to support, not replace, decoding."
+    ],
+    "revisionPoints": [
+      "Shared rime + changing onset = word family."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Sort taught words into -it and -in families."
+    ],
+    "conceptual": [
+      "Identify shared ending and changing onset."
+    ],
+    "application": [
+      "Read short /i/ family lists accurately."
+    ],
+    "higherOrderThinking": [
+      "Explain why word-family recognition should not become guessing."
+    ],
+    "mixedReview": [
+      "Sort, decode and read controlled sentences."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "-it: sit, pit",
+      "-in: pin, tin",
+      "check every grapheme"
+    ],
+    "flashRecall": [
+      "sit → -it",
+      "pit → -it",
+      "pin → -in",
+      "tin → -in"
+    ],
+    "formulaOrFactBank": [
+      "Word family = shared rime pattern"
+    ],
+    "mistakeBasedRevision": [
+      "If a familiar ending leads to a wrong word, return to full decoding."
+    ],
+    "weakTopicRevision": [
+      "Read each word sound by sound, then reread the family."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Family sort",
+      "steps": [
+        "Read each word.",
+        "Identify -it or -in.",
+        "Sort it.",
+        "Decode it again."
+      ]
+    },
+    {
+      "name": "Onset swap",
+      "steps": [
+        "Read pin.",
+        "Change p to t.",
+        "Read tin.",
+        "Repeat with sit and pit."
+      ]
+    },
+    {
+      "name": "Controlled reading",
+      "steps": [
+        "Read a short list.",
+        "Reread for accuracy.",
+        "Identify one shared pattern.",
+        "Read a controlled sentence."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner sorts short /i/ words into -it and -in families with at least 80% accuracy.",
+    "Learner identifies shared rime and changing onset.",
+    "Learner reads family words accurately without guessing.",
+    "Learner answers simple controlled-text questions with at least 80% accuracy."
+  ],
+  "questions": [
+    {
+      "questionId": "PF34-Q01",
+      "question": "Which word belongs to the -it family?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "sit",
+        "sat",
+        "pin",
+        "pan"
+      ]
+    },
+    {
+      "questionId": "PF34-Q02",
+      "question": "Which word belongs to the -in family?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pin",
+        "pit",
+        "pat",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF34-Q03",
+      "question": "Which pair shares the -it ending?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "sit and pit",
+        "pin and pan",
+        "sit and sat",
+        "tin and tan"
+      ]
+    },
+    {
+      "questionId": "PF34-Q04",
+      "question": "Which pair shares the -in ending?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pin and tin",
+        "sit and sat",
+        "pit and pat",
+        "map and man"
+      ]
+    },
+    {
+      "questionId": "PF34-Q05",
+      "question": "What stays the same in pin and tin?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "The -in ending",
+        "The initial consonant",
+        "The final /t/",
+        "The whole word"
+      ]
+    },
+    {
+      "questionId": "PF34-Q06",
+      "question": "What changes between pin and tin?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "The initial consonant",
+        "The vowel /i/",
+        "The final /n/",
+        "The ending"
+      ]
+    },
+    {
+      "questionId": "PF34-Q07",
+      "question": "Which word completes p-in, t-in?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "tin",
+        "sit",
+        "pit",
+        "pan"
+      ]
+    },
+    {
+      "questionId": "PF34-Q08",
+      "question": "Which word completes s-it, p-it?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pit",
+        "pin",
+        "sat",
+        "pat"
+      ]
+    },
+    {
+      "questionId": "PF34-Q09",
+      "question": "Why are word families useful?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "They highlight recurring sound-spelling patterns",
+        "They replace decoding",
+        "They encourage guessing",
+        "They remove the need to read"
+      ]
+    },
+    {
+      "questionId": "PF34-Q10",
+      "question": "When reading a familiar word family, what should the learner still do?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Check all graphemes and blend the word",
+        "Guess from the ending only",
+        "Ignore the first sound",
+        "Skip the word"
+      ]
+    },
+    {
+      "questionId": "PF34-Q11",
+      "question": "Which word does NOT belong with sit and pit?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pin",
+        "sit",
+        "pit",
+        "pan"
+      ]
+    },
+    {
+      "questionId": "PF34-Q12",
+      "question": "Which word does NOT belong with pin and tin?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pit",
+        "pin",
+        "tin",
+        "sit"
+      ]
+    },
+    {
+      "questionId": "PF34-Q13",
+      "question": "Read: “Tim sat.” Who sat?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Tim",
+        "Sit",
+        "Pin",
+        "Mat"
+      ]
+    },
+    {
+      "questionId": "PF34-Q14",
+      "question": "Read: “Tim sat at a mat.” Where did Tim sit?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "At a mat",
+        "At a pin",
+        "At a pan",
+        "At a pit"
+      ]
+    },
+    {
+      "questionId": "PF34-Q15",
+      "question": "What is the goal of this lesson?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Recognize short /i/ word families while maintaining accurate controlled reading",
+        "Memorize whole words without sounds",
+        "Introduce all vowels",
+        "Skip connected reading"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF34-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    },
+    {
+      "questionId": "PF34-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response matches the taught short /i/ word-family or controlled-reading evidence."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-34-v1"
+  }
+}
