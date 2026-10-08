@@ -197,7 +197,8 @@
           "Can decode controlled /l/ sentences, answer literal comprehension questions, and cite sentence evidence.",
           "Can sequence first/next/last events and retell a short controlled /l/ passage using text evidence.",
           "Can demonstrate /l/ consolidation across recognition, decoding, encoding, comprehension and fluency at the defined mastery threshold.",
-          "Can use diagnostic evidence to complete targeted /l/ remediation and demonstrate improvement on fresh reassessment items."
+          "Can use diagnostic evidence to complete targeted /l/ remediation and demonstrate improvement on fresh reassessment items.",
+          "Can hear and identify /b/ in initial and final positions and distinguish it from similar taught consonants."
         ]
       },
       "lessons": [
@@ -688,6 +689,12 @@
           "title": "Targeted /l/ Remediation & Reassessment",
           "authoringPackage": "content/courses/phonics-foundation/94-targeted-l-remediation-reassessment/authoring-package.json",
           "assessmentId": "PF94-REASSESS-01"
+        },
+        {
+          "lessonId": "95-hear-and-identify-new-consonant-b",
+          "sequence": 95,
+          "title": "Hear and Identify New Consonant /b/",
+          "authoringPackage": "content/courses/phonics-foundation/95-hear-and-identify-new-consonant-b/authoring-package.json"
         }
       ]
     }
