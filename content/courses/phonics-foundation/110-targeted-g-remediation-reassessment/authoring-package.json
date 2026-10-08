@@ -1,0 +1,446 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-110",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "110-targeted-g-remediation-reassessment",
+    "topic": "phonics-remediation",
+    "subtopic": "g-targeted-reassessment",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Reteach weak /g/ components identified by diagnostic evidence.",
+      "Reassess /g/ recognition, decoding, encoding, comprehension, and fluency with fresh items.",
+      "Route the learner to advancement or another targeted reteach cycle."
+    ],
+    "concepts": [
+      "Remediation targets demonstrated weaknesses.",
+      "Fresh items provide new evidence of learning.",
+      "Mastery requires the threshold and adequate critical components.",
+      "Comprehension and fluency remain part of phonics consolidation."
+    ],
+    "definitions": [
+      {
+        "term": "targeted remediation",
+        "definition": "Focused instruction for a specific skill component identified as weak."
+      },
+      {
+        "term": "reassessment",
+        "definition": "Fresh measurement after remediation used to determine mastery."
+      },
+      {
+        "term": "fresh item",
+        "definition": "A new item testing the same skill without repeating a prior assessment item."
+      }
+    ],
+    "workedExamples": [
+      "If /g/ versus /k/ is weak, practise listening and identifying the contrast.",
+      "If a short vowel is weak, segment and spell CVC words with that vowel.",
+      "If comprehension is weak, reread controlled text and answer from evidence.",
+      "If fluency is weak, reread accurately with phrasing and meaning."
+    ],
+    "commonMistakes": [
+      "Repeating the same diagnostic items.",
+      "Practising a strong component instead of the weak one.",
+      "Advancing because of speed despite errors.",
+      "Ignoring comprehension while checking decoding."
+    ],
+    "keyTakeaways": [
+      "Target the weak component.",
+      "Use fresh evidence.",
+      "Accuracy and meaning matter.",
+      "Advance only after mastery."
+    ],
+    "revisionPoints": [
+      "/g/ recognition",
+      "CVC decoding",
+      "CVC encoding",
+      "comprehension",
+      "fluency",
+      "80%"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Practise /g/ recognition, decoding, and spelling."
+    ],
+    "conceptual": [
+      "Distinguish /g/ from /k/ and short-vowel contrasts."
+    ],
+    "application": [
+      "Select the appropriate response to a learner error."
+    ],
+    "higherOrderThinking": [
+      "Interpret reassessment evidence and decide whether to advance."
+    ],
+    "mixedReview": [
+      "Combine all /g/ skill components."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "target → practise → reassess → route"
+    ],
+    "flashRecall": [
+      "/g/",
+      "CVC",
+      "-ag",
+      "-ig",
+      "-ug",
+      "evidence",
+      "80%"
+    ],
+    "formulaOrFactBank": [
+      "Advance = score >= 0.80 AND no critical component below target."
+    ],
+    "mistakeBasedRevision": [
+      "Identify the exact component before selecting another practice cycle."
+    ],
+    "weakTopicRevision": [
+      "Reteach only components below target, then use fresh reassessment items."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Targeted /g/ reteach",
+      "steps": [
+        "Review diagnostic weakness.",
+        "Model the target.",
+        "Guide practice.",
+        "Check accuracy."
+      ]
+    },
+    {
+      "name": "Fresh reassessment",
+      "steps": [
+        "Complete new items.",
+        "Score components.",
+        "Compare with target.",
+        "Route learner."
+      ]
+    },
+    {
+      "name": "Fluency and meaning reread",
+      "steps": [
+        "Read controlled text.",
+        "Improve phrasing.",
+        "Answer a meaning question.",
+        "Record result."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner improves weak /g/ components.",
+    "Learner demonstrates fresh evidence of /g/ consolidation.",
+    "System routes the learner to advancement or another targeted remediation cycle."
+  ],
+  "assessments": [
+    {
+      "assessmentId": "PF110-REASSESS-01",
+      "type": "reassessment",
+      "title": "Targeted /g/ Remediation & Reassessment",
+      "masteryTarget": 0.8,
+      "components": [
+        "soundRecognition",
+        "decoding",
+        "encoding",
+        "comprehension",
+        "fluency"
+      ],
+      "freshItemPolicy": true,
+      "decision": {
+        "advance": "Advance when reassessment is at least 0.80 and no critical component remains below target.",
+        "reteach": "Reteach the specific component(s) that remain below target and reassess again with fresh items."
+      }
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "PF110-Q01",
+      "question": "Which word starts with /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "go",
+        "so",
+        "no",
+        "fo"
+      ]
+    },
+    {
+      "questionId": "PF110-Q02",
+      "question": "Which word ends with /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "pig",
+        "pin",
+        "pit",
+        "pip"
+      ]
+    },
+    {
+      "questionId": "PF110-Q03",
+      "question": "Which word has /g/ in the middle?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "mug",
+        "mat",
+        "map",
+        "man"
+      ]
+    },
+    {
+      "questionId": "PF110-Q04",
+      "question": "Blend /g/ /a/ /g/. Which word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "gag",
+        "gig",
+        "gug",
+        "geg"
+      ]
+    },
+    {
+      "questionId": "PF110-Q05",
+      "question": "Blend /g/ /i/ /g/. Which word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "gig",
+        "gag",
+        "gog",
+        "gug"
+      ]
+    },
+    {
+      "questionId": "PF110-Q06",
+      "question": "Blend /g/ /u/ /m/. Which word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "gum",
+        "gam",
+        "gem",
+        "gim"
+      ]
+    },
+    {
+      "questionId": "PF110-Q07",
+      "question": "Which spelling matches “gag”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "g-a-g",
+        "g-i-g",
+        "g-u-g",
+        "g-e-g"
+      ]
+    },
+    {
+      "questionId": "PF110-Q08",
+      "question": "Which spelling matches “pig”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "p-i-g",
+        "p-a-g",
+        "p-e-g",
+        "p-u-g"
+      ]
+    },
+    {
+      "questionId": "PF110-Q09",
+      "question": "Read: “Gus has a mug.” What does Gus have?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "a mug",
+        "a bag",
+        "a bug",
+        "a rug"
+      ]
+    },
+    {
+      "questionId": "PF110-Q10",
+      "question": "Read: “Gus got a bug. The bug is on a rug.” What happened second?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "The bug is on a rug.",
+        "Gus got a bug.",
+        "Gus ran.",
+        "Gus slept."
+      ]
+    },
+    {
+      "questionId": "PF110-Q11",
+      "question": "A learner reads “gag” as “kag.” What should be practised?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "/g/ versus /k/",
+        "final /g/",
+        "short /u/",
+        "sequencing"
+      ]
+    },
+    {
+      "questionId": "PF110-Q12",
+      "question": "A learner spells “gig” as “gug.” What needs practice?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "short-vowel encoding",
+        "initial /g/",
+        "final /g/",
+        "fluency"
+      ]
+    },
+    {
+      "questionId": "PF110-Q13",
+      "question": "A learner answers a passage question incorrectly after accurate reading. What should be reviewed?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Comprehension and text evidence",
+        "Initial sound only",
+        "Letter formation",
+        "Phoneme counting"
+      ]
+    },
+    {
+      "questionId": "PF110-Q14",
+      "question": "Which reading shows improved fluency?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Accurate, smooth reading with phrasing and meaning.",
+        "Fast reading with skipped words.",
+        "Guessing unfamiliar words.",
+        "Stopping after every phoneme."
+      ]
+    },
+    {
+      "questionId": "PF110-Q15",
+      "question": "When should the learner advance?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "At least 80% with no critical weak component.",
+        "After one correct answer.",
+        "When reading is fast regardless of accuracy.",
+        "When decoding is strong despite weak comprehension."
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF110-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF110-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-110-v1"
+  }
+}
