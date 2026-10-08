@@ -1,0 +1,33 @@
+{
+  "packageId": "course-phonics-foundation-map",
+  "version": "1.0.0",
+  "domain": "course",
+  "status": "draft",
+  "course": {
+    "courseId": "phonics-foundation",
+    "title": "Phonics Foundation",
+    "language": "en",
+    "ageBand": "4-6",
+    "family": "phonics_early_learning"
+  },
+  "outcome": "Build foundational phonemic awareness, letter-sound knowledge, blending readiness and early reading confidence.",
+  "modules": [
+    {
+      "moduleId": "sound-awareness-and-letter-sounds",
+      "title": "Sound Awareness and Letter Sounds",
+      "sequence": 1,
+      "lessons": [
+        {
+          "lessonId": "01-hear-and-identify-m",
+          "title": "Hear and Identify /m/",
+          "sequence": 1,
+          "package": "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
+        }
+      ]
+    }
+  ],
+  "governance": {
+    "status": "draft",
+    "contentHash": "sha256:course-phonics-foundation-map-v1"
+  }
+}
