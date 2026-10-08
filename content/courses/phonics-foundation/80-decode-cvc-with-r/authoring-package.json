@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-80",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "80-decode-cvc-with-r",
+    "topic": "cvc-decoding",
+    "subtopic": "decode-cvc-words-with-r",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Blend /r/ with short vowels and final consonants in CVC words.",
+      "Decode new /r/ CVC words accurately.",
+      "Distinguish short-vowel contrasts in /r/ words.",
+      "Repair decoding errors at the phoneme level."
+    ],
+    "concepts": [
+      "Accurate decoding requires each phoneme to be identified and blended.",
+      "The middle vowel determines many CVC word contrasts.",
+      "Continuous blending supports automatic word recognition."
+    ],
+    "definitions": [
+      {
+        "term": "CVC",
+        "definition": "A consonant-vowel-consonant word pattern."
+      },
+      {
+        "term": "blending",
+        "definition": "Combining individual phonemes to pronounce a word."
+      },
+      {
+        "term": "decoding",
+        "definition": "Using grapheme-sound knowledge to read written words."
+      }
+    ],
+    "workedExamples": [
+      "r-a-t → rat",
+      "r-i-p → rip",
+      "r-u-g → rug",
+      "r-o-b → rob",
+      "r-e-d → red"
+    ],
+    "commonMistakes": [
+      "Confusing short vowels.",
+      "Guessing from the first letter.",
+      "Dropping the final consonant.",
+      "Stopping between sounds rather than blending."
+    ],
+    "keyTakeaways": [
+      "Track every sound.",
+      "Check the middle vowel.",
+      "Blend smoothly.",
+      "Repair errors by phoneme."
+    ],
+    "revisionPoints": [
+      "/r/ CVC",
+      "short vowels",
+      "continuous blending",
+      "decoding repair"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Blend /r/ CVC words across all short vowels."
+    ],
+    "conceptual": [
+      "Compare /r/ words that differ by their middle vowel."
+    ],
+    "application": [
+      "Decode unfamiliar /r/ CVC words and repair errors."
+    ],
+    "higherOrderThinking": [
+      "Explain how the middle vowel changes the decoded word."
+    ],
+    "mixedReview": [
+      "Mix /r/ CVC decoding with known consonant patterns."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "look → sound → blend → check"
+    ],
+    "flashRecall": [
+      "rat",
+      "rip",
+      "rug",
+      "rob",
+      "red"
+    ],
+    "formulaOrFactBank": [
+      "CVC = consonant + vowel + consonant."
+    ],
+    "mistakeBasedRevision": [
+      "If rat becomes rit, isolate and rehearse /æ/ versus /ɪ/."
+    ],
+    "weakTopicRevision": [
+      "Practice the weakest short-vowel family with fresh /r/ words."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound-slide decoding",
+      "steps": [
+        "Point to each grapheme.",
+        "Say each phoneme.",
+        "Slide through the word.",
+        "Blend continuously."
+      ]
+    },
+    {
+      "name": "Vowel contrast",
+      "steps": [
+        "Present two /r/ CVC words.",
+        "Identify the middle vowel.",
+        "Read both.",
+        "Explain the difference."
+      ]
+    },
+    {
+      "name": "Decode and repair",
+      "steps": [
+        "Read the target word.",
+        "Identify the incorrect phoneme.",
+        "Model the correct sound.",
+        "Reread the whole word."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner decodes new /r/ CVC words.",
+    "Learner distinguishes short-vowel contrasts.",
+    "Learner repairs decoding errors using phoneme-level feedback."
+  ],
+  "questions": [
+    {
+      "questionId": "PF80-Q01",
+      "question": "Blend /r/ /æ/ /t/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "rat",
+        "rit",
+        "rut",
+        "ret"
+      ]
+    },
+    {
+      "questionId": "PF80-Q02",
+      "question": "Blend /r/ /ɪ/ /p/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "rip",
+        "rap",
+        "rop",
+        "rup"
+      ]
+    },
+    {
+      "questionId": "PF80-Q03",
+      "question": "Blend /r/ /ʌ/ /g/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "rug",
+        "rag",
+        "rig",
+        "rog"
+      ]
+    },
+    {
+      "questionId": "PF80-Q04",
+      "question": "Which word matches /r/ /ɒ/ /b/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "rob",
+        "rib",
+        "rub",
+        "reb"
+      ]
+    },
+    {
+      "questionId": "PF80-Q05",
+      "question": "Which word matches /r/ /ɛ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "red",
+        "rid",
+        "rad",
+        "rod"
+      ]
+    },
+    {
+      "questionId": "PF80-Q06",
+      "question": "Which word has the short /a/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "rat",
+        "rip",
+        "rug",
+        "red"
+      ]
+    },
+    {
+      "questionId": "PF80-Q07",
+      "question": "Which word has the short /i/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "rip",
+        "rat",
+        "rob",
+        "rug"
+      ]
+    },
+    {
+      "questionId": "PF80-Q08",
+      "question": "Which word has the short /u/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "rug",
+        "rag",
+        "rig",
+        "red"
+      ]
+    },
+    {
+      "questionId": "PF80-Q09",
+      "question": "Which word has the short /o/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "rob",
+        "rib",
+        "rug",
+        "rat"
+      ]
+    },
+    {
+      "questionId": "PF80-Q10",
+      "question": "Which word has the short /e/ sound?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "red",
+        "rad",
+        "rob",
+        "rug"
+      ]
+    },
+    {
+      "questionId": "PF80-Q11",
+      "question": "A learner reads “rat” as “rit.” Which part should be checked first?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "The middle vowel sound",
+        "The first consonant",
+        "The final consonant",
+        "The word length"
+      ]
+    },
+    {
+      "questionId": "PF80-Q12",
+      "question": "What is the best strategy for decoding “rug”?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say each sound and blend them smoothly",
+        "Guess from the first letter",
+        "Skip the middle sound",
+        "Memorize a picture"
+      ]
+    },
+    {
+      "questionId": "PF80-Q13",
+      "question": "Why does continuous blending support CVC decoding?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "It links the phonemes into one spoken word",
+        "It removes the need to hear sounds",
+        "It changes the final sound",
+        "It teaches punctuation"
+      ]
+    },
+    {
+      "questionId": "PF80-Q14",
+      "question": "A learner identifies /r/ correctly but cannot blend /r/ /ɪ/ /p/. What needs targeted practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Phoneme blending",
+        "Sound recognition",
+        "Handwriting",
+        "Paragraph comprehension"
+      ]
+    },
+    {
+      "questionId": "PF80-Q15",
+      "question": "After accurate decoding of new /r/ CVC words, what should come next?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "CVC spelling and controlled reading",
+        "Stop phonics practice",
+        "Advanced unrelated text",
+        "Only letter-name practice"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF80-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    },
+    {
+      "questionId": "PF80-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option correctly represents the requested /r/ CVC decoding target."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-80-v1"
+  }
+}
