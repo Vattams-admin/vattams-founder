@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-99",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "99-controlled-b-sentences-comprehension",
+    "topic": "controlled-sentence-reading",
+    "subtopic": "b-sentence-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read controlled /b/ sentences accurately.",
+      "Answer literal comprehension questions from connected text.",
+      "Use text evidence to support answers.",
+      "Reread sentences smoothly while maintaining meaning."
+    ],
+    "concepts": [
+      "Sentence reading combines decoding with comprehension.",
+      "Text evidence supports reliable answers.",
+      "Rereading improves accuracy and fluency.",
+      "Readers should decode rather than guess."
+    ],
+    "definitions": [
+      {
+        "term": "sentence",
+        "definition": "A group of words expressing a complete thought."
+      },
+      {
+        "term": "comprehension",
+        "definition": "Understanding the meaning of decoded text."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Information stated in the text that supports an answer."
+      }
+    ],
+    "workedExamples": [
+      "“Ben had a bag.” → Who? Ben. What did he have? A bag.",
+      "“The bag had a bug.” → What had a bug? The bag.",
+      "Decode each word, then reread the sentence for meaning."
+    ],
+    "commonMistakes": [
+      "Answering from a guess instead of the sentence.",
+      "Decoding correctly but ignoring meaning.",
+      "Skipping small words.",
+      "Changing a word after decoding it."
+    ],
+    "keyTakeaways": [
+      "Decode every word.",
+      "Reread for meaning.",
+      "Use stated evidence.",
+      "Check answers against the sentence."
+    ],
+    "revisionPoints": [
+      "controlled sentence",
+      "decode + understand",
+      "literal questions",
+      "text evidence",
+      "fluency"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read short controlled /b/ sentences."
+    ],
+    "conceptual": [
+      "Identify who, what, and action details."
+    ],
+    "application": [
+      "Repair decoding errors and reread for meaning."
+    ],
+    "higherOrderThinking": [
+      "Explain why an answer must be supported by the sentence."
+    ],
+    "mixedReview": [
+      "Read controlled /b/ sentences with previously taught CVC patterns."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "decode → reread → understand → answer"
+    ],
+    "flashRecall": [
+      "who",
+      "what",
+      "action",
+      "detail",
+      "evidence"
+    ],
+    "formulaOrFactBank": [
+      "Sentence reading = accurate decoding + comprehension."
+    ],
+    "mistakeBasedRevision": [
+      "If an answer is unsupported, reread and locate the exact evidence."
+    ],
+    "weakTopicRevision": [
+      "Reread short controlled sentences and answer fresh literal questions."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sentence decode",
+      "steps": [
+        "Point to each word.",
+        "Blend CVC words.",
+        "Read the sentence.",
+        "Reread smoothly."
+      ]
+    },
+    {
+      "name": "Who and what",
+      "steps": [
+        "Read the sentence.",
+        "Identify the person or thing.",
+        "Identify the action or detail.",
+        "Answer using the text."
+      ]
+    },
+    {
+      "name": "Evidence check",
+      "steps": [
+        "Read the sentence.",
+        "Answer a question.",
+        "Point to supporting words.",
+        "Reread the sentence."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner reads controlled /b/ sentences accurately.",
+    "Learner answers comprehension questions using text evidence.",
+    "Learner rereads controlled sentences with increasing fluency."
+  ],
+  "questions": [
+    {
+      "questionId": "PF99-Q01",
+      "question": "Which sentence is controlled for the taught CVC patterns?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Ben had a bag.",
+        "Ben will play.",
+        "Ben likes music.",
+        "The baby is happy."
+      ]
+    },
+    {
+      "questionId": "PF99-Q02",
+      "question": "Read: “Ben had a bag.” Who had a bag?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Ben",
+        "Lil",
+        "Sam",
+        "Tom"
+      ]
+    },
+    {
+      "questionId": "PF99-Q03",
+      "question": "What did Ben have?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "a bag",
+        "a log",
+        "a bed",
+        "a bug"
+      ]
+    },
+    {
+      "questionId": "PF99-Q04",
+      "question": "Which word names a thing in “Ben had a bag”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "bag",
+        "had",
+        "Ben",
+        "a"
+      ]
+    },
+    {
+      "questionId": "PF99-Q05",
+      "question": "Which sentence contains the word “bug”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Ben had a bug.",
+        "Ben sat.",
+        "Ben ran.",
+        "Ben had a hat."
+      ]
+    },
+    {
+      "questionId": "PF99-Q06",
+      "question": "Read: “Ben had a big bag.” Which word tells about the bag?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "big",
+        "had",
+        "Ben",
+        "a"
+      ]
+    },
+    {
+      "questionId": "PF99-Q07",
+      "question": "Which action is shown in “Ben had a bag”?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "had",
+        "bag",
+        "Ben",
+        "a"
+      ]
+    },
+    {
+      "questionId": "PF99-Q08",
+      "question": "Why should a reader decode each CVC word before answering a question?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Accurate word reading gives access to the sentence meaning.",
+        "Pictures always provide the answer.",
+        "Only the first word matters.",
+        "Comprehension replaces decoding."
+      ]
+    },
+    {
+      "questionId": "PF99-Q09",
+      "question": "A learner reads “bag” as “beg.” What should they do?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Check the middle vowel, blend the word, and reread the sentence.",
+        "Guess from context.",
+        "Skip the word.",
+        "Change the first sound."
+      ]
+    },
+    {
+      "questionId": "PF99-Q10",
+      "question": "Read: “Ben had a bag. The bag had a bug.” What had a bug?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "the bag",
+        "Ben",
+        "the bug",
+        "the bed"
+      ]
+    },
+    {
+      "questionId": "PF99-Q11",
+      "question": "Which question checks sentence meaning?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "What did Ben have?",
+        "What letter starts Ben?",
+        "How many letters are in bag?",
+        "What sound does b make?"
+      ]
+    },
+    {
+      "questionId": "PF99-Q12",
+      "question": "A learner answers a question with information not stated in the sentence. What should they do?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Reread and use only evidence stated in the text.",
+        "Add details from a picture.",
+        "Guess a longer answer.",
+        "Skip the sentence."
+      ]
+    },
+    {
+      "questionId": "PF99-Q13",
+      "question": "Which sentence sequence makes the most sense?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Ben had a bag. The bag had a bug.",
+        "The bug had Ben. Bag had the Ben.",
+        "Had a bug Ben. The bag.",
+        "Ben bag the had. Bug a."
+      ]
+    },
+    {
+      "questionId": "PF99-Q14",
+      "question": "What is a good way to improve controlled sentence fluency?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Reread accurately with smooth phrasing while keeping meaning.",
+        "Read faster while guessing.",
+        "Skip difficult words.",
+        "Read letter names."
+      ]
+    },
+    {
+      "questionId": "PF99-Q15",
+      "question": "After accurate controlled /b/ sentence reading, what should follow?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Controlled passage reading and sequencing",
+        "Untaught advanced text",
+        "Stop comprehension work",
+        "Skip rereading"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF99-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF99-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /b/ sentence and comprehension item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-99-v1"
+  }
+}
