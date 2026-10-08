@@ -1,0 +1,421 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-39",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "39-short-o-sound",
+    "topic": "short-o-vowel",
+    "subtopic": "hear-and-identify-short-o",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Hear and identify short /o/ in simple spoken words.",
+      "Discriminate short /o/ from previously taught short /a/, /i/ and /u/ sounds.",
+      "Connect short /o/ to the grapheme o.",
+      "Identify short /o/ in initial teaching examples without requiring independent decoding yet."
+    ],
+    "concepts": [
+      "Short vowels are identified by their sounds in words.",
+      "The middle vowel is critical in CVC word discrimination.",
+      "Auditory discrimination should precede independent decoding of a new vowel pattern."
+    ],
+    "definitions": [
+      {
+        "term": "short /o/",
+        "definition": "The short vowel sound represented by o in taught CVC words such as hot and mop."
+      },
+      {
+        "term": "phoneme",
+        "definition": "The smallest sound unit in a spoken word."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A letter or group of letters used to represent a sound."
+      }
+    ],
+    "workedExamples": [
+      "hot → identify /o/ in the middle.",
+      "mop → identify /o/ and connect it to o.",
+      "hot versus hat → listen for the changed middle vowel."
+    ],
+    "commonMistakes": [
+      "Confusing short /o/ with short /a/.",
+      "Confusing short /o/ with short /i/.",
+      "Naming the letter without attending to its sound.",
+      "Focusing on the first or final consonant instead of the middle vowel."
+    ],
+    "keyTakeaways": [
+      "Listen first.",
+      "Find the middle sound.",
+      "Compare minimal contrasts.",
+      "Connect /o/ to o."
+    ],
+    "revisionPoints": [
+      "short /o/ → o → middle vowel in CVC words."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Identify short /o/ in spoken examples."
+    ],
+    "conceptual": [
+      "Compare /o/ with /a/ and /i/."
+    ],
+    "application": [
+      "Connect /o/ to o in taught examples."
+    ],
+    "higherOrderThinking": [
+      "Explain which sound changes in a minimal pair."
+    ],
+    "mixedReview": [
+      "Discriminate short /o/ from previously taught short vowels."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Hear /o/.",
+      "Find the middle sound.",
+      "Connect o.",
+      "Compare."
+    ],
+    "flashRecall": [
+      "hot → /o/",
+      "mop → /o/",
+      "pot → /o/"
+    ],
+    "formulaOrFactBank": [
+      "short /o/ → o"
+    ],
+    "mistakeBasedRevision": [
+      "hot/hat → compare middle vowel.",
+      "hot/hit → compare middle vowel."
+    ],
+    "weakTopicRevision": [
+      "Repeat auditory minimal pairs before adding new decoding demands."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound detective",
+      "steps": [
+        "Say a word.",
+        "Stretch the middle sound.",
+        "Identify /o/.",
+        "Point to o."
+      ]
+    },
+    {
+      "name": "Vowel contrast",
+      "steps": [
+        "Say hot and hat.",
+        "Identify the changed middle sound.",
+        "Repeat with hot and hit.",
+        "Record the target vowel."
+      ]
+    },
+    {
+      "name": "Grapheme connection",
+      "steps": [
+        "Hear /o/.",
+        "Say o.",
+        "Point to o.",
+        "Say a taught /o/ word."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner identifies short /o/ in taught spoken examples with at least 80% accuracy.",
+    "Learner distinguishes short /o/ from short /a/ and /i/ in minimal contrasts.",
+    "Learner connects short /o/ with the grapheme o with at least 90% accuracy.",
+    "Learner identifies the middle vowel as the key contrast in CVC words."
+  ],
+  "questions": [
+    {
+      "questionId": "PF39-Q01",
+      "question": "Which word has short /o/ in the middle?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "hot",
+        "hat",
+        "hit",
+        "hut"
+      ]
+    },
+    {
+      "questionId": "PF39-Q02",
+      "question": "Which word begins with /m/ and has short /o/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "mop",
+        "map",
+        "met",
+        "mud"
+      ]
+    },
+    {
+      "questionId": "PF39-Q03",
+      "question": "Which word begins with /p/ and has short /o/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "pot",
+        "pat",
+        "pit",
+        "put"
+      ]
+    },
+    {
+      "questionId": "PF39-Q04",
+      "question": "Which middle sound do you hear in “hot”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "/o/",
+        "/a/",
+        "/i/",
+        "/e/"
+      ]
+    },
+    {
+      "questionId": "PF39-Q05",
+      "question": "Which middle sound do you hear in “mop”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "/o/",
+        "/a/",
+        "/i/",
+        "/u/"
+      ]
+    },
+    {
+      "questionId": "PF39-Q06",
+      "question": "Which word has the same middle vowel as hot?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "mop",
+        "mat",
+        "sit",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF39-Q07",
+      "question": "Which word has a different middle vowel from hot?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "hat",
+        "mop",
+        "pot",
+        "log"
+      ]
+    },
+    {
+      "questionId": "PF39-Q08",
+      "question": "Which grapheme represents the short /o/ sound in “pot”?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "o",
+        "a",
+        "i",
+        "u"
+      ]
+    },
+    {
+      "questionId": "PF39-Q09",
+      "question": "Which word contains the short /o/ sound?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "log",
+        "leg",
+        "lag",
+        "lug"
+      ]
+    },
+    {
+      "questionId": "PF39-Q10",
+      "question": "Which pair contrasts short /o/ and short /a/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "hot and hat",
+        "mop and top",
+        "pot and hot",
+        "log and mop"
+      ]
+    },
+    {
+      "questionId": "PF39-Q11",
+      "question": "Which pair contrasts short /o/ and short /i/?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "hot and hit",
+        "mop and top",
+        "pot and hot",
+        "log and dog"
+      ]
+    },
+    {
+      "questionId": "PF39-Q12",
+      "question": "What should you notice when comparing hot and hat?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "The middle vowel sound changes",
+        "The final sound changes",
+        "The initial sound changes",
+        "Nothing changes"
+      ]
+    },
+    {
+      "questionId": "PF39-Q13",
+      "question": "What should you do before connecting o to a spoken word?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Hear and identify the target sound",
+        "Guess the letter",
+        "Skip the middle sound",
+        "Memorize the word"
+      ]
+    },
+    {
+      "questionId": "PF39-Q14",
+      "question": "Which word is a useful short /o/ listening example?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "dog",
+        "dig",
+        "dug",
+        "dag"
+      ]
+    },
+    {
+      "questionId": "PF39-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "mixed",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Hear, identify and connect short /o/ with the grapheme o",
+        "Teach all vowels at once",
+        "Memorize whole words without sounds",
+        "Begin advanced spelling"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF39-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    },
+    {
+      "questionId": "PF39-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response identifies the taught short /o/ sound, its grapheme, or the relevant middle-vowel contrast."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-39-v1"
+  }
+}
