@@ -190,7 +190,8 @@
           "Can read a controlled /r/ passage, sequence three events, retell key details and repair decoding or comprehension errors.",
           "Can demonstrate /r/ recognition, decoding, encoding, comprehension and connected-reading fluency and identify any component requiring remediation.",
           "Can complete targeted /r/ remediation and demonstrate readiness through fresh reassessment evidence.",
-          "Can hear /l/ initially and finally, distinguish it from /r/ and other taught consonants, and connect it to l before decoding."
+          "Can hear /l/ initially and finally, distinguish it from /r/ and other taught consonants, and connect it to l before decoding.",
+          "Can decode taught CVC words containing /l/ by accurate grapheme-to-phoneme mapping, blending and self-correction."
         ]
       },
       "lessons": [
@@ -637,6 +638,12 @@
           "sequence": 87,
           "title": "Hear and Identify /l/",
           "authoringPackage": "content/courses/phonics-foundation/87-hear-and-identify-new-consonant/authoring-package.json"
+        },
+        {
+          "lessonId": "88-decode-cvc-with-l",
+          "sequence": 88,
+          "title": "Decode CVC Words with /l/",
+          "authoringPackage": "content/courses/phonics-foundation/88-decode-cvc-with-l/authoring-package.json"
         }
       ]
     }
