@@ -134,7 +134,8 @@
           "Can decode familiar CVC words containing p in initial or final position.",
           "Can spell familiar CVC words containing p in initial or final position.",
           "Can recognise and read p-containing -ap and -at word families while decoding each grapheme.",
-          "Can read controlled sentences containing p and answer simple text-based questions."
+          "Can read controlled sentences containing p and answer simple text-based questions.",
+          "Can read a short controlled p passage, sequence events and answer text-based questions."
         ]
       },
       "lessons": [
@@ -167,6 +168,12 @@
           "sequence": 19,
           "title": "Controlled /p/ Sentences and Comprehension",
           "authoringPackage": "content/courses/phonics-foundation/19-controlled-p-sentences-comprehension/authoring-package.json"
+        },
+        {
+          "lessonId": "20-controlled-p-passage-sequencing",
+          "sequence": 20,
+          "title": "Controlled /p/ Passage, Sequencing and Comprehension",
+          "authoringPackage": "content/courses/phonics-foundation/20-controlled-p-passage-sequencing/authoring-package.json"
         }
       ]
     }
