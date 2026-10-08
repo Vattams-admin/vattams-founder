@@ -1,0 +1,444 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-118",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "118-targeted-d-remediation-reassessment",
+    "topic": "remediation",
+    "subtopic": "d-reassessment",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Use diagnostic evidence to target a weak /d/ component.",
+      "Provide focused practice for sound recognition, decoding, encoding, comprehension, or fluency.",
+      "Reassess with fresh items after remediation.",
+      "Advance only when mastery criteria are met."
+    ],
+    "concepts": [
+      "Remediation should match the observed weak component.",
+      "Fresh items reduce practice-memory effects.",
+      "Mastery requires both adequate performance and no critical weak component.",
+      "Specific feedback supports efficient reteaching."
+    ],
+    "definitions": [
+      {
+        "term": "targeted remediation",
+        "definition": "Focused instruction and practice for an identified weak skill."
+      },
+      {
+        "term": "reassessment",
+        "definition": "A new measurement after remediation to determine whether the skill is secure."
+      },
+      {
+        "term": "fresh item",
+        "definition": "An assessment item not previously used for the learner's earlier diagnostic."
+      }
+    ],
+    "workedExamples": [
+      "Weak decoding → segment and blend new /d/ CVC words.",
+      "Weak encoding → dictate new /d/ CVC words and map phonemes.",
+      "Weak comprehension → reread controlled text and locate evidence.",
+      "Weak fluency → accurate repeated reading of fresh controlled text."
+    ],
+    "commonMistakes": [
+      "Repeating the exact diagnostic items.",
+      "Remediating every skill when only one is weak.",
+      "Advancing despite a critical component below target."
+    ],
+    "keyTakeaways": [
+      "Target the weak component.",
+      "Use fresh evidence.",
+      "Use 0.80 mastery.",
+      "Reteach and reassess when needed."
+    ],
+    "revisionPoints": [
+      "targeted remediation",
+      "fresh items",
+      "0.80 mastery",
+      "component routing",
+      "reassessment"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Practise the identified weak /d/ component."
+    ],
+    "conceptual": [
+      "Match an error pattern to the correct remediation component."
+    ],
+    "application": [
+      "Apply targeted practice before reassessment."
+    ],
+    "higherOrderThinking": [
+      "Explain why fresh items are required for reassessment."
+    ],
+    "mixedReview": [
+      "Review all /d/ components before final routing."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "diagnose → target → practise → reassess → route"
+    ],
+    "flashRecall": [
+      "weak component",
+      "fresh item",
+      "0.80",
+      "advance",
+      "reteach"
+    ],
+    "formulaOrFactBank": [
+      "Advance when reassessment ≥0.80 and no critical component is below target."
+    ],
+    "mistakeBasedRevision": [
+      "Reteach the exact component linked to the error."
+    ],
+    "weakTopicRevision": [
+      "Use a short focused cycle, then reassess with new items."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Targeted reteach",
+      "steps": [
+        "Identify the weak component.",
+        "Model the correct skill.",
+        "Guide practice.",
+        "Check independent performance."
+      ]
+    },
+    {
+      "name": "Fresh-item reassessment",
+      "steps": [
+        "Present new items.",
+        "Record component scores.",
+        "Compare with mastery target.",
+        "Route the learner."
+      ]
+    },
+    {
+      "name": "Feedback loop",
+      "steps": [
+        "Name the successful skill.",
+        "Identify any remaining error.",
+        "Assign focused practice.",
+        "Schedule another fresh reassessment when needed."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner receives component-specific remediation.",
+    "Learner demonstrates improvement using fresh assessment items.",
+    "System advances learners who meet mastery criteria.",
+    "System routes learners below mastery to further targeted reteaching."
+  ],
+  "assessments": [
+    {
+      "assessmentId": "PF118-REASSESS-01",
+      "title": "Targeted /d/ Remediation & Reassessment",
+      "type": "reassessment",
+      "components": [
+        "soundRecognition",
+        "decoding",
+        "encoding",
+        "comprehension",
+        "fluency"
+      ],
+      "masteryTarget": 0.8,
+      "freshItemPolicy": true,
+      "routing": {
+        "advance": "Advance when reassessment is at least 0.80 and no critical component is below target.",
+        "reteach": "Reteach only the component(s) below 0.80 and reassess with fresh items."
+      }
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-118-v1"
+  },
+  "questions": [
+    {
+      "questionId": "PF118-Q01",
+      "question": "Which sound is the focus of this reassessment?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "/d/",
+        "b",
+        "dug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q02",
+      "question": "Which letter represents /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "d",
+        "/t/",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q03",
+      "question": "Blend /d/ /a/ /g/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "dag",
+        "b",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q04",
+      "question": "Blend /d/ /i/ /g/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "dig",
+        "/t/",
+        "dug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q05",
+      "question": "Blend /d/ /u/ /g/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "dug",
+        "b",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q06",
+      "question": "Spell /d/ /a/ /d/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "d-a-d",
+        "/t/",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q07",
+      "question": "Spell /d/ /i/ /g/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "d-i-g",
+        "b",
+        "dug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q08",
+      "question": "Spell /d/ /u/ /g/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "d-u-g",
+        "/t/",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q09",
+      "question": "Read: “Dad digs.” Who digs?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Dad",
+        "b",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q10",
+      "question": "Read: “A dog is big.” What is big?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "A dog",
+        "/t/",
+        "dug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q11",
+      "question": "Which action best remediates weak decoding?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Segment and blend fresh CVC words.",
+        "b",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q12",
+      "question": "Which action best remediates weak encoding?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Dictate fresh CVC words and map phonemes.",
+        "/t/",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q13",
+      "question": "What should happen after targeted practice?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Use fresh reassessment items.",
+        "b",
+        "dug",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q14",
+      "question": "When should the learner advance?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "At least 0.80 with no critical weak component.",
+        "/t/",
+        "dig",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF118-Q15",
+      "question": "What should happen if a component remains below 0.80?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Reteach that component and reassess with fresh items.",
+        "b",
+        "dig",
+        "not this"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF118-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    },
+    {
+      "questionId": "PF118-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct remediation or reassessment response."
+    }
+  ]
+}
