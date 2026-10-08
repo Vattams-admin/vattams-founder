@@ -1,0 +1,423 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-91",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "91-controlled-l-sentences-comprehension",
+    "topic": "controlled-sentence-reading",
+    "subtopic": "l-sentence-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read controlled /l/ CVC sentences accurately.",
+      "Answer literal comprehension questions from a controlled sentence.",
+      "Use text evidence to identify actions and details.",
+      "Reread decoded sentences for fluency and meaning."
+    ],
+    "concepts": [
+      "Sentence reading combines decoding with meaning.",
+      "Comprehension can be checked with direct text evidence.",
+      "Rereading supports accuracy and fluency.",
+      "Readers should not guess when a word can be decoded."
+    ],
+    "definitions": [
+      {
+        "term": "sentence",
+        "definition": "A group of words that expresses a complete thought."
+      },
+      {
+        "term": "comprehension",
+        "definition": "Understanding what a reader has decoded."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Information stated in the text that supports an answer."
+      }
+    ],
+    "workedExamples": [
+      "“Lil sat.” → Who sat? Lil. What did Lil do? Sat.",
+      "“Lil sat by a log.” → Identify the named thing: log.",
+      "Decode each word, then reread the full sentence for meaning."
+    ],
+    "commonMistakes": [
+      "Answering from a guess instead of the text.",
+      "Decoding a word correctly but not checking sentence meaning.",
+      "Skipping small words.",
+      "Changing a decoded word to make it sound familiar."
+    ],
+    "keyTakeaways": [
+      "Decode every word.",
+      "Reread the sentence.",
+      "Ask who/what/where questions.",
+      "Use the text to answer."
+    ],
+    "revisionPoints": [
+      "controlled sentence",
+      "decode then understand",
+      "literal questions",
+      "text evidence",
+      "rereading"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read short controlled /l/ sentences."
+    ],
+    "conceptual": [
+      "Identify who, what, and where details from a sentence."
+    ],
+    "application": [
+      "Correct a decoding error and reread for meaning."
+    ],
+    "higherOrderThinking": [
+      "Explain why accurate decoding and comprehension must work together."
+    ],
+    "mixedReview": [
+      "Read controlled sentences using /l/ and previously taught CVC patterns."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "decode → reread → understand → answer"
+    ],
+    "flashRecall": [
+      "who",
+      "what",
+      "where",
+      "action",
+      "detail"
+    ],
+    "formulaOrFactBank": [
+      "Good sentence reading = accurate decoding + meaning."
+    ],
+    "mistakeBasedRevision": [
+      "If an answer is unsupported, reread the exact sentence and find the evidence."
+    ],
+    "weakTopicRevision": [
+      "Reread short controlled sentences and answer one literal question after each."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sentence decode",
+      "steps": [
+        "Point to each word.",
+        "Blend unknown CVC words.",
+        "Read the complete sentence.",
+        "Reread smoothly."
+      ]
+    },
+    {
+      "name": "Who and what",
+      "steps": [
+        "Read a sentence.",
+        "Circle the person or thing.",
+        "Underline the action.",
+        "Answer the question using the text."
+      ]
+    },
+    {
+      "name": "Evidence check",
+      "steps": [
+        "Read the sentence.",
+        "Answer a question.",
+        "Point to the words that support the answer.",
+        "Reread the sentence."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner reads controlled /l/ sentences accurately.",
+    "Learner answers literal comprehension questions using text evidence.",
+    "Learner rereads sentences with increasing fluency."
+  ],
+  "questions": [
+    {
+      "questionId": "PF91-Q01",
+      "question": "Which sentence can be decoded using the taught CVC patterns?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Lil sat.",
+        "Lil will play.",
+        "Liam can swim.",
+        "The lion is large."
+      ]
+    },
+    {
+      "questionId": "PF91-Q02",
+      "question": "Which sentence tells what Lil did?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Lil sat.",
+        "Lil ran fast.",
+        "Lil had lunch.",
+        "Lil is happy."
+      ]
+    },
+    {
+      "questionId": "PF91-Q03",
+      "question": "Read: “Lil sat.” Who sat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Lil",
+        "Sam",
+        "Tom",
+        "A dog"
+      ]
+    },
+    {
+      "questionId": "PF91-Q04",
+      "question": "Read: “Lil sat.” What did Lil do?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "sat",
+        "ran",
+        "hid",
+        "slept"
+      ]
+    },
+    {
+      "questionId": "PF91-Q05",
+      "question": "Which word completes “Lil ___.”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "sat",
+        "swim",
+        "jump",
+        "read"
+      ]
+    },
+    {
+      "questionId": "PF91-Q06",
+      "question": "Which sentence has the word “log”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Lil sat by a log.",
+        "Lil can sing.",
+        "Lil has a hat.",
+        "Lil ran home."
+      ]
+    },
+    {
+      "questionId": "PF91-Q07",
+      "question": "In “Lil sat by a log,” which word names a thing?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "log",
+        "sat",
+        "by",
+        "Lil"
+      ]
+    },
+    {
+      "questionId": "PF91-Q08",
+      "question": "Which sentence is easiest to read by blending each CVC word?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Lil sat.",
+        "Lil will sing.",
+        "Lil likes music.",
+        "Lil is laughing."
+      ]
+    },
+    {
+      "questionId": "PF91-Q09",
+      "question": "Read: “Lil sat. Lil had a lap tap.” Which action happens first?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Lil sat.",
+        "Lil had a lap tap.",
+        "Lil ran.",
+        "Lil slept."
+      ]
+    },
+    {
+      "questionId": "PF91-Q10",
+      "question": "Why should a reader reread a sentence after decoding each word?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "To confirm the sentence makes sense.",
+        "To skip difficult words.",
+        "To avoid understanding the text.",
+        "To replace sound blending."
+      ]
+    },
+    {
+      "questionId": "PF91-Q11",
+      "question": "A learner reads “Lil sat” as “Lil sip.” What should the learner do?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Look at each grapheme, blend “sat,” and reread the sentence.",
+        "Guess from the first letter.",
+        "Skip the word.",
+        "Read only the name."
+      ]
+    },
+    {
+      "questionId": "PF91-Q12",
+      "question": "Read: “Lil sat. A log sat?” Which statement is supported by the text?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Lil sat.",
+        "Lil ran.",
+        "A cat slept.",
+        "Lil ate."
+      ]
+    },
+    {
+      "questionId": "PF91-Q13",
+      "question": "Which question checks meaning rather than just decoding?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "What did Lil do?",
+        "What is the first letter of Lil?",
+        "How many letters are in sat?",
+        "What sound does l make?"
+      ]
+    },
+    {
+      "questionId": "PF91-Q14",
+      "question": "After reading a controlled sentence, what is the best fluency practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Reread it accurately and smoothly.",
+        "Guess faster.",
+        "Skip the final word.",
+        "Change the words."
+      ]
+    },
+    {
+      "questionId": "PF91-Q15",
+      "question": "What is the main goal of controlled sentence reading?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Accurate decoding plus understanding of the sentence.",
+        "Memorising pictures instead of words.",
+        "Reading without looking at letters.",
+        "Skipping comprehension."
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF91-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    },
+    {
+      "questionId": "PF91-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this controlled /l/ sentence and comprehension item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-91-v1"
+  }
+}
