@@ -1,0 +1,444 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-78",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "78-targeted-f-remediation-reassessment",
+    "topic": "targeted-remediation",
+    "subtopic": "f-remediation-reassessment",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Use Lesson 77 evidence to select a weak /f/ component.",
+      "Provide targeted remediation for recognition, decoding, encoding, comprehension, or fluency.",
+      "Measure transfer using fresh reassessment items.",
+      "Apply an explicit advance or reteach decision."
+    ],
+    "concepts": [
+      "Remediation must match the diagnosed weakness.",
+      "Fresh items provide stronger evidence of transfer.",
+      "Mastery requires adequate overall performance without a critical component gap."
+    ],
+    "definitions": [
+      {
+        "term": "targeted remediation",
+        "definition": "Instruction focused on the specific skill component identified as weak."
+      },
+      {
+        "term": "fresh-item reassessment",
+        "definition": "A follow-up check using unseen items measuring the same target."
+      },
+      {
+        "term": "mastery gate",
+        "definition": "A defined performance threshold used to decide whether a learner progresses."
+      }
+    ],
+    "workedExamples": [
+      "Recognition gap → oral /f/ discrimination.",
+      "Decoding gap → /f/ CVC blending.",
+      "Encoding gap → phoneme segmentation and spelling.",
+      "Comprehension gap → controlled sentence evidence.",
+      "Fluency gap → accurate repeated rereading."
+    ],
+    "commonMistakes": [
+      "Remediating every component when only one is weak.",
+      "Using identical assessment items.",
+      "Advancing despite a critical weak component.",
+      "Increasing speed before accuracy is secure."
+    ],
+    "keyTakeaways": [
+      "Use diagnostic evidence.",
+      "Target the gap.",
+      "Use fresh items.",
+      "Advance only after mastery."
+    ],
+    "revisionPoints": [
+      "diagnose",
+      "target",
+      "practice",
+      "fresh check",
+      "advance/reteach"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review the weakest /f/ component with controlled examples."
+    ],
+    "conceptual": [
+      "Match common errors to the appropriate remediation path."
+    ],
+    "application": [
+      "Apply targeted /f/ repair and interpret reassessment evidence."
+    ],
+    "higherOrderThinking": [
+      "Explain why mastery must include both accuracy and component stability."
+    ],
+    "mixedReview": [
+      "Combine all /f/ components in fresh transfer tasks."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "diagnose → target → practice → reassess → route"
+    ],
+    "flashRecall": [
+      "recognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "formulaOrFactBank": [
+      "Mastery target = 0.8"
+    ],
+    "mistakeBasedRevision": [
+      "If one critical component remains below target, reteach that component."
+    ],
+    "weakTopicRevision": [
+      "Repeat the lowest-performing /f/ component with new controlled items."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Targeted repair",
+      "steps": [
+        "Review diagnostic results.",
+        "Identify the weakest component.",
+        "Practice only that component first.",
+        "Record improvement."
+      ]
+    },
+    {
+      "name": "Fresh transfer check",
+      "steps": [
+        "Present unseen /f/ items.",
+        "Score by component.",
+        "Compare with the mastery gate.",
+        "Identify remaining gaps."
+      ]
+    },
+    {
+      "name": "Advance or reteach",
+      "steps": [
+        "Review component results.",
+        "Advance when mastery is met.",
+        "Reteach the specific gap when it is not met."
+      ]
+    }
+  ],
+  "assessment": {
+    "assessmentId": "PF78-REASSESS-01",
+    "type": "reassessment",
+    "components": [
+      "soundRecognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "itemCount": 15,
+    "masteryTarget": 0.8,
+    "scoring": {
+      "method": "component-level accuracy with overall mastery gate"
+    },
+    "freshItemPolicy": true,
+    "decisionRules": {
+      "advance": "Advance when reassessment reaches 0.8 and no critical component remains below target.",
+      "reteach": "Reteach the specific component when performance remains below 0.8."
+    }
+  },
+  "outcomes": [
+    "Learner receives targeted /f/ remediation.",
+    "Learner demonstrates transfer on fresh /f/ items.",
+    "System routes the learner to progression or additional remediation."
+  ],
+  "questions": [
+    {
+      "questionId": "PF78-Q01",
+      "question": "Which word begins with /f/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fish",
+        "sun",
+        "cat",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF78-Q02",
+      "question": "Which word ends with /f/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "roof",
+        "bed",
+        "sun",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF78-Q03",
+      "question": "Blend /f/ /æ/ /n/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fan",
+        "fin",
+        "fun",
+        "fog"
+      ]
+    },
+    {
+      "questionId": "PF78-Q04",
+      "question": "Blend /f/ /ɪ/ /g/.",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fig",
+        "fag",
+        "fog",
+        "fug"
+      ]
+    },
+    {
+      "questionId": "PF78-Q05",
+      "question": "Which spelling matches /f/ /ʌ/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fun",
+        "fan",
+        "fin",
+        "fen"
+      ]
+    },
+    {
+      "questionId": "PF78-Q06",
+      "question": "Which spelling matches /f/ /ɛ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fed",
+        "fid",
+        "fad",
+        "fod"
+      ]
+    },
+    {
+      "questionId": "PF78-Q07",
+      "question": "In “The fish is in the box,” where is the fish?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "In the box",
+        "On the log",
+        "On the mat",
+        "In the cup"
+      ]
+    },
+    {
+      "questionId": "PF78-Q08",
+      "question": "In “Finn has a fan,” who has the fan?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Finn",
+        "The fan",
+        "The fox",
+        "The mat"
+      ]
+    },
+    {
+      "questionId": "PF78-Q09",
+      "question": "Which happens first: Finn gets the fan, or Finn puts it on the mat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Finn gets the fan",
+        "Finn puts it on the mat",
+        "They happen together",
+        "The text does not say"
+      ]
+    },
+    {
+      "questionId": "PF78-Q10",
+      "question": "Which word belongs to the -og family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "fog",
+        "fit",
+        "fun",
+        "fed"
+      ]
+    },
+    {
+      "questionId": "PF78-Q11",
+      "question": "A learner confuses /f/ with /m/ when listening. What needs practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Sound recognition",
+        "Encoding",
+        "Comprehension",
+        "Fluency"
+      ]
+    },
+    {
+      "questionId": "PF78-Q12",
+      "question": "A learner reads /f/ CVC words accurately but spells the middle vowel incorrectly. What needs practice?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Encoding",
+        "Sound recognition",
+        "Fluency",
+        "Comprehension"
+      ]
+    },
+    {
+      "questionId": "PF78-Q13",
+      "question": "A learner answers comprehension questions correctly but reads very slowly. What should be targeted?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Fluency rereading",
+        "Letter naming",
+        "Sound isolation only",
+        "Copying"
+      ]
+    },
+    {
+      "questionId": "PF78-Q14",
+      "question": "Why should the reassessment use new items?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "To measure transfer rather than memorization",
+        "To avoid measuring learning",
+        "To make the lesson harder for no reason",
+        "To remove the phonics target"
+      ]
+    },
+    {
+      "questionId": "PF78-Q15",
+      "question": "When the learner reaches 80% mastery with no critical weak component, what is the correct route?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Advance to the next phonics pattern",
+        "Repeat remediation forever",
+        "Delete the assessment",
+        "Skip all future checks"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF78-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    },
+    {
+      "questionId": "PF78-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /f/ remediation reassessment item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-78-v1"
+  }
+}
