@@ -1,0 +1,419 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-138",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "138-w-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognize common CVC word families in controlled w-reading.",
+      "Blend and read w-initial CVC words accurately.",
+      "Compare onsets and rimes in simple CVC words.",
+      "Read controlled phrases and sentences with increasing fluency."
+    ],
+    "concepts": [
+      "A word family shares the same rime.",
+      "Changing the onset can create another word in the same family.",
+      "Accurate blending supports controlled-text reading.",
+      "Rereading supports automaticity and fluency."
+    ],
+    "definitions": [
+      {
+        "term": "word family",
+        "definition": "A group of words that share the same ending sound and spelling pattern."
+      },
+      {
+        "term": "onset",
+        "definition": "The initial consonant sound or consonant group before the rime in a syllable."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and sounds that follow the onset in a syllable."
+      },
+      {
+        "term": "controlled reading",
+        "definition": "Reading text built mainly from phonics patterns that have been explicitly taught."
+      }
+    ],
+    "workedExamples": [
+      "wag → tag: onset changes, -ag stays the same.",
+      "wet → jet: onset changes, -et stays the same.",
+      "wig → big: onset changes, -ig stays the same."
+    ],
+    "commonMistakes": [
+      "Treating the whole word as one memorized unit.",
+      "Changing the rime when only the onset should change.",
+      "Guessing a word from its first letter.",
+      "Skipping a word instead of blending and rereading."
+    ],
+    "keyTakeaways": [
+      "Look for the shared rime.",
+      "Blend left to right.",
+      "Use the known family pattern.",
+      "Reread controlled sentences smoothly."
+    ],
+    "revisionPoints": [
+      "-ag: wag, tag",
+      "-et: wet, jet",
+      "-in: win, sin",
+      "-ig: wig, big",
+      "-eb: web"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Sort simple CVC words by shared rime."
+    ],
+    "conceptual": [
+      "Identify whether two CVC words share a word family."
+    ],
+    "application": [
+      "Read controlled w-CVC phrases and sentences."
+    ],
+    "higherOrderThinking": [
+      "Explain how changing the onset changes a word while preserving the rime."
+    ],
+    "mixedReview": [
+      "Mix word-family recognition, decoding and controlled reading."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "find the rime → blend the onset → read the word → reread the sentence"
+    ],
+    "flashRecall": [
+      "wag/tag",
+      "wet/jet",
+      "win/sin",
+      "wig/big",
+      "web/"
+    ],
+    "formulaOrFactBank": [
+      "word = onset + rime",
+      "same rime = same word-family pattern"
+    ],
+    "mistakeBasedRevision": [
+      "If a word is guessed, return to the letters, segment the sounds and blend again."
+    ],
+    "weakTopicRevision": [
+      "Practise the specific rime that is not yet automatic."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Word-family sort",
+      "steps": [
+        "Read each CVC word.",
+        "Underline the shared rime.",
+        "Group words with the same rime.",
+        "Read each group aloud."
+      ]
+    },
+    {
+      "name": "Controlled reread",
+      "steps": [
+        "Blend each unfamiliar word.",
+        "Read the sentence once accurately.",
+        "Reread it smoothly.",
+        "Check that every word was decoded."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner identifies shared rimes in taught CVC words.",
+    "Learner reads w-initial CVC words accurately.",
+    "Learner reads controlled sentences with improved accuracy and fluency."
+  ],
+  "questions": [
+    {
+      "questionId": "PF138-Q01",
+      "question": "Which word belongs to the -ag family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "wag",
+        "wet",
+        "win",
+        "web"
+      ]
+    },
+    {
+      "questionId": "PF138-Q02",
+      "question": "Which word belongs to the -et family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "wet",
+        "wag",
+        "wig",
+        "win"
+      ]
+    },
+    {
+      "questionId": "PF138-Q03",
+      "question": "Which word belongs to the -in family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "win",
+        "web",
+        "wag",
+        "wet"
+      ]
+    },
+    {
+      "questionId": "PF138-Q04",
+      "question": "Which word belongs to the -ig family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "wig",
+        "wet",
+        "web",
+        "wag"
+      ]
+    },
+    {
+      "questionId": "PF138-Q05",
+      "question": "Which word belongs to the -eb family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "web",
+        "win",
+        "wig",
+        "wag"
+      ]
+    },
+    {
+      "questionId": "PF138-Q06",
+      "question": "What stays the same in wag and tag?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "the ending /ag/",
+        "the first sound",
+        "the vowel sound only",
+        "the whole word"
+      ]
+    },
+    {
+      "questionId": "PF138-Q07",
+      "question": "What stays the same in wet and jet?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "the ending /et/",
+        "the first sound",
+        "the middle sound only",
+        "the whole word"
+      ]
+    },
+    {
+      "questionId": "PF138-Q08",
+      "question": "Which pair has the same word family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "wag and tag",
+        "wet and win",
+        "web and wag",
+        "wig and wet"
+      ]
+    },
+    {
+      "questionId": "PF138-Q09",
+      "question": "Read: 'Wag can tag.' What can Wag do?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "tag",
+        "wet",
+        "win",
+        "wig"
+      ]
+    },
+    {
+      "questionId": "PF138-Q10",
+      "question": "Read: 'The wet web.' What is wet?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "the web",
+        "the wig",
+        "the wag",
+        "the tag"
+      ]
+    },
+    {
+      "questionId": "PF138-Q11",
+      "question": "Read: 'Wig is big.' Which word rhymes with wig?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "big",
+        "wet",
+        "web",
+        "wag"
+      ]
+    },
+    {
+      "questionId": "PF138-Q12",
+      "question": "Read: 'Win can sit.' Who can sit?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Win",
+        "Wag",
+        "Web",
+        "Wig"
+      ]
+    },
+    {
+      "questionId": "PF138-Q13",
+      "question": "Which strategy supports fluent controlled reading?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "blend unfamiliar words and reread the sentence",
+        "guess from the first letter",
+        "skip difficult words",
+        "read only the pictures"
+      ]
+    },
+    {
+      "questionId": "PF138-Q14",
+      "question": "After reading 'Wag can tag.' what should a learner do to build fluency?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "reread the sentence smoothly",
+        "change wag to wet",
+        "skip the sentence",
+        "spell only tag"
+      ]
+    },
+    {
+      "questionId": "PF138-Q15",
+      "question": "Which sentence is fully decodable using the taught w-CVC pattern?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Wag can tag.",
+        "Wag is wet and windy.",
+        "The web is wide.",
+        "Wig will win."
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF138-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    },
+    {
+      "questionId": "PF138-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for the target word-family or controlled-reading task."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-138-v1"
+  }
+}
