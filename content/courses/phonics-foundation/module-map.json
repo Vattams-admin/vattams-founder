@@ -173,7 +173,8 @@
           "Can remediate a diagnosed short-/e/ weakness and demonstrate readiness on fresh reassessment items.",
           "Can hear and identify short /u/ and connect the phoneme to grapheme u in controlled CVC words.",
           "Can decode taught short-/u/ CVC words by accurate grapheme-to-phoneme mapping and blending.",
-          "Can segment and encode taught short-/u/ CVC words using accurate sound-to-letter mapping."
+          "Can segment and encode taught short-/u/ CVC words using accurate sound-to-letter mapping.",
+          "Can read taught short-/u/ word families and apply them in controlled text while checking every grapheme."
         ]
       },
       "lessons": [
@@ -440,6 +441,12 @@
           "sequence": 57,
           "title": "CVC Spelling with Short /u/",
           "authoringPackage": "content/courses/phonics-foundation/57-cvc-spelling-short-u/authoring-package.json"
+        },
+        {
+          "lessonId": "58-short-u-word-families-controlled-reading",
+          "sequence": 58,
+          "title": "Short /u/ Word Families and Controlled Reading",
+          "authoringPackage": "content/courses/phonics-foundation/58-short-u-word-families-controlled-reading/authoring-package.json"
         }
       ]
     }
