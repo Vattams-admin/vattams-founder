@@ -1,0 +1,447 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-85",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "85-r-fluency-consolidation-diagnostic",
+    "topic": "fluency-diagnostic",
+    "subtopic": "r-fluency-consolidation",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Consolidate /r/ sound recognition, decoding, encoding, comprehension and fluency.",
+      "Identify component-level strengths and weaknesses.",
+      "Check connected-reading accuracy, smoothness and appropriate pacing.",
+      "Route learners to targeted remediation when a critical component remains below target."
+    ],
+    "concepts": [
+      "Fluency depends on accurate decoding and repeated connected reading.",
+      "A diagnostic samples several related skills to locate instructional needs.",
+      "Accuracy must be protected while fluency develops.",
+      "Component-level evidence supports targeted intervention."
+    ],
+    "definitions": [
+      {
+        "term": "fluency",
+        "definition": "Accurate, appropriately paced and increasingly automatic reading."
+      },
+      {
+        "term": "diagnostic",
+        "definition": "An assessment used to identify current strengths and instructional needs."
+      },
+      {
+        "term": "component",
+        "definition": "A distinct skill area measured within a broader phonics outcome."
+      }
+    ],
+    "workedExamples": [
+      "Recognition: identify /r/ in spoken words.",
+      "Decoding: read unfamiliar taught /r/ CVC words.",
+      "Encoding: spell dictated /r/ CVC words.",
+      "Comprehension: answer questions from controlled text.",
+      "Fluency: reread controlled text accurately and smoothly."
+    ],
+    "commonMistakes": [
+      "Treating speed as more important than accuracy.",
+      "Advancing despite a critical weak component.",
+      "Guessing unknown words instead of decoding them.",
+      "Ignoring comprehension while judging fluency."
+    ],
+    "keyTakeaways": [
+      "Accuracy first.",
+      "Check every component.",
+      "Use text evidence.",
+      "Route targeted support."
+    ],
+    "revisionPoints": [
+      "recognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency",
+      "routing"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Review each /r/ component with short controlled tasks."
+    ],
+    "conceptual": [
+      "Match observed errors to the correct diagnostic component."
+    ],
+    "application": [
+      "Interpret sample diagnostic results and choose an evidence-based support route."
+    ],
+    "higherOrderThinking": [
+      "Explain why accurate connected reading matters when developing fluency."
+    ],
+    "mixedReview": [
+      "Combine /r/ recognition, CVC decoding, spelling, comprehension and fluency."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "sample → score → identify weakness → route"
+    ],
+    "flashRecall": [
+      "recognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "formulaOrFactBank": [
+      "Mastery target = 0.8"
+    ],
+    "mistakeBasedRevision": [
+      "If fluency is low, check decoding accuracy before increasing reading speed."
+    ],
+    "weakTopicRevision": [
+      "Revisit the lowest-performing component with targeted practice."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Five-component check",
+      "steps": [
+        "Check /r/ recognition.",
+        "Check CVC decoding.",
+        "Check encoding.",
+        "Check comprehension.",
+        "Observe controlled reading fluency."
+      ]
+    },
+    {
+      "name": "Error conference",
+      "steps": [
+        "Review diagnostic errors.",
+        "Group them by component.",
+        "Identify the highest-priority gap.",
+        "Select targeted practice."
+      ]
+    },
+    {
+      "name": "Fluency reread",
+      "steps": [
+        "Read a controlled /r/ passage.",
+        "Mark decoding errors.",
+        "Reread after repair.",
+        "Compare accuracy and smoothness."
+      ]
+    }
+  ],
+  "assessment": {
+    "assessmentId": "PF85-DIAG-01",
+    "type": "diagnostic",
+    "components": [
+      "soundRecognition",
+      "decoding",
+      "encoding",
+      "comprehension",
+      "fluency"
+    ],
+    "itemCount": 15,
+    "masteryTarget": 0.8,
+    "scoring": {
+      "method": "component-level accuracy with overall mastery gate"
+    },
+    "routingRules": {
+      "atOrAboveMastery": "Advance to the next consolidation/reassessment stage when overall mastery is at least 0.8 and no critical component is below target.",
+      "belowMastery": "Route to targeted remediation for the weakest component before reassessment."
+    }
+  },
+  "outcomes": [
+    "Learner demonstrates consolidated /r/ phonics knowledge.",
+    "System identifies component-level gaps.",
+    "Learner receives evidence-based routing for remediation or progression."
+  ],
+  "questions": [
+    {
+      "questionId": "PF85-Q01",
+      "question": "Which word begins with /r/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "rat",
+        "fan",
+        "map",
+        "sun"
+      ]
+    },
+    {
+      "questionId": "PF85-Q02",
+      "question": "Which word ends with /r/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "car",
+        "cat",
+        "cap",
+        "can"
+      ]
+    },
+    {
+      "questionId": "PF85-Q03",
+      "question": "Which word matches /r/ /æ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "rat",
+        "rot",
+        "rut",
+        "red"
+      ]
+    },
+    {
+      "questionId": "PF85-Q04",
+      "question": "Which word matches /r/ /ɪ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "rip",
+        "rap",
+        "rop",
+        "rup"
+      ]
+    },
+    {
+      "questionId": "PF85-Q05",
+      "question": "Which spelling matches /r/ /ɒ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "rog",
+        "rag",
+        "rig",
+        "rug"
+      ]
+    },
+    {
+      "questionId": "PF85-Q06",
+      "question": "Which spelling matches /r/ /ʌ/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "rug",
+        "rag",
+        "rig",
+        "rog"
+      ]
+    },
+    {
+      "questionId": "PF85-Q07",
+      "question": "In “Rin has a red rag,” who has the rag?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Rin",
+        "The rag",
+        "The rat",
+        "The rug"
+      ]
+    },
+    {
+      "questionId": "PF85-Q08",
+      "question": "In “The rat is on the rug,” where is the rat?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "On the rug",
+        "In the box",
+        "On the mat",
+        "In the cup"
+      ]
+    },
+    {
+      "questionId": "PF85-Q09",
+      "question": "What happens first in “Rin gets a red rag. Rin puts it on the rug.”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Rin gets a red rag.",
+        "Rin puts it on the rug.",
+        "The rat runs away.",
+        "The rug moves."
+      ]
+    },
+    {
+      "questionId": "PF85-Q10",
+      "question": "Which word belongs to the -ug family?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "rug",
+        "rat",
+        "red",
+        "rip"
+      ]
+    },
+    {
+      "questionId": "PF85-Q11",
+      "question": "A learner decodes /r/ words accurately but reads a controlled passage with many pauses. Which component needs support?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Fluency",
+        "Sound recognition",
+        "Encoding",
+        "Comprehension"
+      ]
+    },
+    {
+      "questionId": "PF85-Q12",
+      "question": "A learner reads /r/ words accurately but cannot explain what happened in a short passage. Which component needs support?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Comprehension",
+        "Sound recognition",
+        "Encoding",
+        "Letter formation"
+      ]
+    },
+    {
+      "questionId": "PF85-Q13",
+      "question": "Why should fluency be checked together with accuracy?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "A fast reading with errors does not show secure reading.",
+        "Speed always matters more than accuracy.",
+        "Accuracy can be ignored during reading.",
+        "Guessing is a fluency skill."
+      ]
+    },
+    {
+      "questionId": "PF85-Q14",
+      "question": "A learner makes several decoding errors while reading a controlled /r/ passage. What is the best diagnostic response?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Record the decoding weakness and route targeted practice before judging fluency.",
+        "Tell the learner to read faster.",
+        "Ignore the errors and score only speed.",
+        "Skip the passage."
+      ]
+    },
+    {
+      "questionId": "PF85-Q15",
+      "question": "If the learner reaches the mastery target and has no critical component below target, what is the appropriate next step?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 55,
+      "options": [
+        "Advance to the next consolidation/reassessment stage.",
+        "Repeat the same diagnostic forever.",
+        "Stop phonics instruction.",
+        "Move to unrelated advanced text."
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF85-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    },
+    {
+      "questionId": "PF85-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct response for this /r/ consolidation diagnostic item."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-85-r-fluency-consolidation-diagnostic-v1"
+  }
+}
