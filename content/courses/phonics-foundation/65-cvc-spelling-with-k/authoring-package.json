@@ -1,0 +1,441 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-65",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "65-cvc-spelling-with-k",
+    "topic": "new-consonant-pattern",
+    "subtopic": "cvc-spelling-with-k",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment /k/ CVC words into phonemes.",
+      "Map each phoneme to a letter.",
+      "Spell controlled /k/ CVC words with short vowels.",
+      "Repair spelling errors by locating the incorrect sound-letter mapping."
+    ],
+    "concepts": [
+      "Encoding moves from spoken sounds to written letters.",
+      "CVC spelling depends on hearing all three phonemes.",
+      "Middle-vowel errors can change the word."
+    ],
+    "definitions": [
+      {
+        "term": "encoding",
+        "definition": "Representing spoken sounds with written letters."
+      },
+      {
+        "term": "phoneme segmentation",
+        "definition": "Separating a spoken word into its individual sounds."
+      },
+      {
+        "term": "sound-to-letter mapping",
+        "definition": "Choosing the letter that represents each heard phoneme."
+      }
+    ],
+    "workedExamples": [
+      "/k/ /æ/ /t/ → cat.",
+      "/k/ /ʌ/ /p/ → cup.",
+      "/k/ /ɪ/ /d/ → kid.",
+      "If cup is spelled cap, isolate and correct the middle /u/ sound."
+    ],
+    "commonMistakes": [
+      "Leaving out a phoneme.",
+      "Confusing c and k at the beginning.",
+      "Using the wrong short vowel.",
+      "Writing from memory without saying the sounds."
+    ],
+    "keyTakeaways": [
+      "Say it.",
+      "Stretch it.",
+      "Segment it.",
+      "Map each sound.",
+      "Reread it."
+    ],
+    "revisionPoints": [
+      "segment",
+      "initial sound",
+      "middle vowel",
+      "final sound",
+      "reread"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Segment and spell /k/ CVC words."
+    ],
+    "conceptual": [
+      "Identify each phoneme position in a CVC word."
+    ],
+    "application": [
+      "Repair incorrect /k/ CVC spellings using sound evidence."
+    ],
+    "higherOrderThinking": [
+      "Explain how a single vowel change creates a different spelling and word."
+    ],
+    "mixedReview": [
+      "Combine sound segmentation with /k/ CVC encoding across short vowels."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "say → segment → map → write → reread"
+    ],
+    "flashRecall": [
+      "cat",
+      "cup",
+      "kid",
+      "cop",
+      "keg"
+    ],
+    "formulaOrFactBank": [
+      "CVC spelling = one written representation for each heard phoneme"
+    ],
+    "mistakeBasedRevision": [
+      "If spelling is wrong, say the word slowly and locate the sound that was mapped incorrectly."
+    ],
+    "weakTopicRevision": [
+      "Repeat sound-box spelling for the weakest vowel contrast."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound boxes",
+      "steps": [
+        "Say the word.",
+        "Push one counter for each sound.",
+        "Choose a letter for each sound.",
+        "Read the completed spelling."
+      ]
+    },
+    {
+      "name": "Dictation repair",
+      "steps": [
+        "Hear a target word.",
+        "Write the spelling.",
+        "Say each sound.",
+        "Circle the incorrect mapping if present.",
+        "Rewrite correctly."
+      ]
+    },
+    {
+      "name": "Vowel switch",
+      "steps": [
+        "Spell a /k/ CVC word.",
+        "Change only the middle vowel.",
+        "Read both words.",
+        "Compare the meanings."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments /k/ CVC words accurately.",
+    "Learner maps phonemes to letters.",
+    "Learner spells controlled /k/ CVC words.",
+    "Learner repairs vowel and initial-letter spelling errors."
+  ],
+  "questions": [
+    {
+      "questionId": "PF65-Q01",
+      "question": "Which spelling matches /k/ /æ/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cat",
+        "cut",
+        "kit",
+        "cot"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF65-Q02",
+      "question": "Which spelling matches /k/ /ʌ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cup",
+        "cap",
+        "cop",
+        "kep"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF65-Q03",
+      "question": "Which spelling matches /k/ /ɪ/ /d/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "kid",
+        "kad",
+        "kod",
+        "kud"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF65-Q04",
+      "question": "Which spelling matches /k/ /ɒ/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cop",
+        "cap",
+        "cup",
+        "kip"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF65-Q05",
+      "question": "Which spelling matches /k/ /e/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "keg",
+        "kag",
+        "kig",
+        "kog"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF65-Q06",
+      "question": "Which letter represents the first sound in “cat”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "c",
+        "a",
+        "t",
+        "p"
+      ],
+      "component": "soundToLetter"
+    },
+    {
+      "questionId": "PF65-Q07",
+      "question": "Which letter represents the first sound in “kid”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "k",
+        "i",
+        "d",
+        "c"
+      ],
+      "component": "soundToLetter"
+    },
+    {
+      "questionId": "PF65-Q08",
+      "question": "What is the middle sound in “cup”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "/u/",
+        "/k/",
+        "/p/",
+        "/t/"
+      ],
+      "component": "segmentation"
+    },
+    {
+      "questionId": "PF65-Q09",
+      "question": "What is the last sound in “cop”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "/p/",
+        "/k/",
+        "/o/",
+        "/t/"
+      ],
+      "component": "segmentation"
+    },
+    {
+      "questionId": "PF65-Q10",
+      "question": "A learner spells “cup” as “cap.” Which part needs checking?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The middle vowel",
+        "The first sound",
+        "The final sound",
+        "The capital letter"
+      ],
+      "component": "repair"
+    },
+    {
+      "questionId": "PF65-Q11",
+      "question": "What should you do before spelling “kid”?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Say the word and segment /k/ /i/ /d/",
+        "Guess the spelling",
+        "Write the word from memory without saying it",
+        "Skip the middle sound"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF65-Q12",
+      "question": "Which sequence is best for spelling a CVC word?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "say → segment → map sounds to letters → reread",
+        "guess → write → skip sounds → move on",
+        "write first letter → guess the rest → stop",
+        "say letter names → copy"
+      ],
+      "component": "encoding"
+    },
+    {
+      "questionId": "PF65-Q13",
+      "question": "Which pair changes only the middle vowel sound?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cat and cut",
+        "cat and kid",
+        "cup and cop",
+        "kid and keg"
+      ],
+      "component": "segmentation"
+    },
+    {
+      "questionId": "PF65-Q14",
+      "question": "Why is rereading the spelled word useful?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "It checks whether the letters represent the intended sounds",
+        "It makes the word longer",
+        "It removes the need to segment",
+        "It changes the vowel"
+      ],
+      "component": "repair"
+    },
+    {
+      "questionId": "PF65-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "higherOrderThinking",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Spell /k/ CVC words by segmenting sounds and mapping each sound to a letter",
+        "Memorize whole words without sound analysis",
+        "Teach long vowels",
+        "Skip dictation"
+      ],
+      "component": "encoding"
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF65-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    },
+    {
+      "questionId": "PF65-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The response correctly maps the spoken /k/ CVC phonemes to their written representation."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-65-v1"
+  }
+}
