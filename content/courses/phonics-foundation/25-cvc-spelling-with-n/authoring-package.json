@@ -1,0 +1,422 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-25",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "25-cvc-spelling-with-n",
+    "topic": "n-sound",
+    "subtopic": "cvc-spelling-with-n",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment spoken CVC words containing /n/.",
+      "Map each phoneme to a known grapheme and write the complete word.",
+      "Read back the written word to verify the encoding."
+    ],
+    "concepts": [
+      "Encoding moves from spoken word to phonemes to graphemes.",
+      "The new n grapheme can represent /n/ initially or finally in taught CVC words.",
+      "Read-back provides an immediate check between intended sounds and written form."
+    ],
+    "definitions": [
+      {
+        "term": "encoding",
+        "definition": "Representing spoken sounds with written graphemes to spell a word."
+      },
+      {
+        "term": "phoneme segmentation",
+        "definition": "Separating a spoken word into its individual sounds."
+      },
+      {
+        "term": "grapheme mapping",
+        "definition": "Connecting each phoneme to the written symbol that represents it."
+      }
+    ],
+    "workedExamples": [
+      "nap → /n/ /a/ /p/ → n-a-p → nap.",
+      "man → /m/ /a/ /n/ → m-a-n → man.",
+      "map for nap → compare the first sound and replace m with n."
+    ],
+    "commonMistakes": [
+      "Omitting final n.",
+      "Confusing n with m.",
+      "Changing final n to t.",
+      "Writing from memory without segmenting."
+    ],
+    "keyTakeaways": [
+      "Say it.",
+      "Segment it.",
+      "Map every sound.",
+      "Write it.",
+      "Read it back."
+    ],
+    "revisionPoints": [
+      "Word → phonemes → graphemes → written word → read-back."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Segment and spell nap and man."
+    ],
+    "conceptual": [
+      "Identify which phoneme caused a spelling error."
+    ],
+    "application": [
+      "Spell taught n-containing CVC words from dictation."
+    ],
+    "higherOrderThinking": [
+      "Choose the correction step that matches the error."
+    ],
+    "mixedReview": [
+      "Encode and read back CVC words using m/s/t/a/p/n."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Hear.",
+      "Segment.",
+      "Map.",
+      "Write.",
+      "Read back."
+    ],
+    "flashRecall": [
+      "nap = n-a-p",
+      "man = m-a-n"
+    ],
+    "formulaOrFactBank": [
+      "Encoding = phoneme segmentation + grapheme mapping"
+    ],
+    "mistakeBasedRevision": [
+      "map for nap → check initial /n/.",
+      "mat for man → check final /n/."
+    ],
+    "weakTopicRevision": [
+      "Practise one-sound contrasts before spelling the full CVC word again."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Dictation map",
+      "steps": [
+        "Say a taught word.",
+        "Repeat it.",
+        "Segment each sound.",
+        "Map each sound to a grapheme.",
+        "Write the word."
+      ]
+    },
+    {
+      "name": "Read-back check",
+      "steps": [
+        "Look at the written word.",
+        "Point to each grapheme.",
+        "Say each sound.",
+        "Blend and compare with the original word."
+      ]
+    },
+    {
+      "name": "n error repair",
+      "steps": [
+        "Compare nap/map or man/mat.",
+        "Say the differing sound.",
+        "Write the corrected grapheme.",
+        "Read both words."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments taught CVC words with at least 80% accuracy.",
+    "Learner spells n-containing CVC words with at least 80% accuracy.",
+    "Learner correctly represents initial and final /n/ with n.",
+    "Learner uses read-back to detect and correct an encoding error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF25-Q01",
+      "question": "Which spelling matches /n/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap",
+        "map",
+        "nat",
+        "man"
+      ]
+    },
+    {
+      "questionId": "PF25-Q02",
+      "question": "Which spelling matches /m/ /a/ /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "man",
+        "mat",
+        "map",
+        "nap"
+      ]
+    },
+    {
+      "questionId": "PF25-Q03",
+      "question": "Which spelling ends with n?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "man",
+        "map",
+        "mat",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF25-Q04",
+      "question": "Which spelling begins with n?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap",
+        "map",
+        "mat",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF25-Q05",
+      "question": "Which letters spell the word “nap”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "n-a-p",
+        "m-a-p",
+        "n-a-t",
+        "m-a-n"
+      ]
+    },
+    {
+      "questionId": "PF25-Q06",
+      "question": "Which letters spell the word “man”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "m-a-n",
+        "m-a-t",
+        "m-a-p",
+        "n-a-p"
+      ]
+    },
+    {
+      "questionId": "PF25-Q07",
+      "question": "What should you do first when spelling a word you hear?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Say the word and segment its sounds",
+        "Guess the letters",
+        "Write the longest word",
+        "Skip the middle sound"
+      ]
+    },
+    {
+      "questionId": "PF25-Q08",
+      "question": "After segmenting /m/ /a/ /n/, what should you do?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Map each sound to its grapheme and write it",
+        "Change /n/ to /t/",
+        "Skip the final sound",
+        "Guess from a picture"
+      ]
+    },
+    {
+      "questionId": "PF25-Q09",
+      "question": "A learner writes “mat” for “man.” Which sound needs checking?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Final /n/",
+        "Initial /m/",
+        "Middle /a/",
+        "No sound"
+      ]
+    },
+    {
+      "questionId": "PF25-Q10",
+      "question": "A learner writes “map” for “nap.” Which sound needs checking?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Initial /n/",
+        "Final /p/",
+        "Middle /a/",
+        "Final /n/"
+      ]
+    },
+    {
+      "questionId": "PF25-Q11",
+      "question": "Why should the learner read the word after writing it?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "To check that the written graphemes represent the intended sounds",
+        "To erase the word",
+        "To avoid segmentation",
+        "To add another letter"
+      ]
+    },
+    {
+      "questionId": "PF25-Q12",
+      "question": "Which spelling has three graphemes and represents /n/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap",
+        "man",
+        "mat",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF25-Q13",
+      "question": "Which spelling has final /n/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "man",
+        "map",
+        "mat",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF25-Q14",
+      "question": "Which spelling has initial /n/ and final /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "nap",
+        "man",
+        "mat",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF25-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 40,
+      "options": [
+        "Encode taught CVC words containing n accurately",
+        "Memorize unrelated spellings",
+        "Introduce an untaught vowel",
+        "Skip sound segmentation"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF25-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    },
+    {
+      "questionId": "PF25-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The selected response follows the taught segmentation, grapheme mapping and read-back process."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-25-v1"
+  }
+}
