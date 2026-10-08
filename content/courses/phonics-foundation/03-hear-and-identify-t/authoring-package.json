@@ -1,0 +1,337 @@
+{
+  "packageId": "course-phonics-foundation-03-hear-and-identify-t",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "03-hear-and-identify-t",
+    "topic": "/t/-sound",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Hear /t/ at the beginning of familiar spoken words.",
+      "Connect /t/ to t/T.",
+      "Distinguish the target sound from contrasting sounds."
+    ],
+    "concepts": [
+      "/t/ is a phoneme.",
+      "t/T is a common grapheme for /t/."
+    ],
+    "definitions": [
+      {
+        "term": "phoneme",
+        "definition": "The smallest unit of sound that can change a word's meaning."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A written representation of a speech sound."
+      }
+    ],
+    "workedExamples": [
+      {
+        "word": "top",
+        "letter": "t",
+        "example": "top begins with /t/."
+      },
+      {
+        "word": "ten",
+        "letter": "t",
+        "example": "ten begins with /t/."
+      }
+    ],
+    "commonMistakes": [
+      "Naming the letter instead of producing the sound.",
+      "Adding an unnecessary vowel to an isolated consonant."
+    ],
+    "keyTakeaways": [
+      "/t/ is the target initial sound.",
+      "Listen first, then connect the sound to t/T."
+    ],
+    "revisionPoints": [
+      "Identify /t/ in spoken words.",
+      "Match t/T to /t/."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Choose a word beginning with /t/.",
+        "answer": "top"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Why does top belong in the /t/ group?",
+        "answer": "Its initial speech sound is /t/."
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Sort words by whether they begin with /t/.",
+        "answer": "Place target words in the matching sound group."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "A learner knows the letter but cannot hear the sound. What should be practised?",
+        "answer": "Oral phonemic listening and isolated sound production."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which written letter represents /t/?",
+        "answer": "t"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "/t/ is the target sound.",
+      "t/T represents /t/."
+    ],
+    "flashRecall": [
+      {
+        "front": "Target sound?",
+        "back": "/t/"
+      }
+    ],
+    "formulaOrFactBank": [
+      "top → /t/"
+    ],
+    "mistakeBasedRevision": [
+      "Do not substitute the letter name for the speech sound."
+    ],
+    "weakTopicRevision": [
+      "Repeat spoken-word sorting if /t/ identification is weak."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "listen-and-sort",
+      "instruction": "Sort spoken words beginning with /t/."
+    },
+    {
+      "id": "ACT2",
+      "type": "sound-match",
+      "instruction": "Match t/T to /t/."
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "O1",
+      "statement": "Identify /t/ in at least 8 of 10 spoken words.",
+      "measure": "initial-sound accuracy",
+      "target": "80%+"
+    },
+    {
+      "id": "O2",
+      "statement": "Match t/T to /t/ with at least 90% accuracy.",
+      "measure": "grapheme-sound matching",
+      "target": "90%+"
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "PHON-T-001",
+      "question": "Which word begins with /t/?",
+      "options": [
+        "top",
+        "m",
+        "s",
+        "p"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-T-002",
+      "question": "Which lowercase letter commonly represents /t/?",
+      "options": [
+        "t",
+        "m",
+        "s",
+        "p"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-T-003",
+      "question": "Which pair begins with /t/?",
+      "options": [
+        "top and ten",
+        "top and m",
+        "ten and s",
+        "tap and p"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-T-004",
+      "question": "What is the initial sound in 'top'?",
+      "options": [
+        "/t/",
+        "/m/",
+        "/s/",
+        "/p/"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-T-005",
+      "question": "Which word does NOT begin with /t/?",
+      "options": [
+        "top",
+        "ten",
+        "m",
+        "tap"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-T-006",
+      "question": "Which uppercase letter commonly represents /t/?",
+      "options": [
+        "T",
+        "M",
+        "S",
+        "P"
+      ],
+      "difficulty": "easy",
+      "marks": 1,
+      "timeSeconds": 20
+    },
+    {
+      "questionId": "PHON-T-007",
+      "question": "What is the written symbol t?",
+      "options": [
+        "a letter",
+        "a phoneme",
+        "a syllable",
+        "a sentence"
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-T-008",
+      "question": "Why does 'ten' belong in a /t/ group?",
+      "options": [
+        "It starts with /t/.",
+        "It has four letters.",
+        "It ends with k.",
+        "It is a noun."
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-T-009",
+      "question": "Which sequence contains only words beginning with /t/?",
+      "options": [
+        "top, ten, tap",
+        "top, m, ten",
+        "ten, s, top",
+        "tap, p, top"
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    },
+    {
+      "questionId": "PHON-T-010",
+      "question": "A learner knows the letter but cannot hear the sound. What should be practised?",
+      "options": [
+        "Oral phonemic listening and isolated sound production",
+        "Copying the alphabet",
+        "Counting letters",
+        "Punctuation"
+      ],
+      "difficulty": "medium",
+      "marks": 1,
+      "timeSeconds": 25
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PHON-T-001",
+      "correctOptionIndex": 0,
+      "explanation": "\"top\" begins with /t/."
+    },
+    {
+      "questionId": "PHON-T-002",
+      "correctOptionIndex": 0,
+      "explanation": "Lowercase t commonly represents /t/."
+    },
+    {
+      "questionId": "PHON-T-003",
+      "correctOptionIndex": 0,
+      "explanation": "Both target words begin with /t/."
+    },
+    {
+      "questionId": "PHON-T-004",
+      "correctOptionIndex": 0,
+      "explanation": "top begins with /t/."
+    },
+    {
+      "questionId": "PHON-T-005",
+      "correctOptionIndex": 2,
+      "explanation": "m does not begin with /t/."
+    },
+    {
+      "questionId": "PHON-T-006",
+      "correctOptionIndex": 0,
+      "explanation": "Uppercase T commonly represents /t/."
+    },
+    {
+      "questionId": "PHON-T-007",
+      "correctOptionIndex": 0,
+      "explanation": "t is a written letter."
+    },
+    {
+      "questionId": "PHON-T-008",
+      "correctOptionIndex": 0,
+      "explanation": "Its initial speech sound is /t/."
+    },
+    {
+      "questionId": "PHON-T-009",
+      "correctOptionIndex": 0,
+      "explanation": "All three target words begin with the target sound."
+    },
+    {
+      "questionId": "PHON-T-010",
+      "correctOptionIndex": 0,
+      "explanation": "The learner needs oral phonemic listening and sound production practice."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia authored phonics curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:03-hear-and-identify-t-v1"
+  }
+}
