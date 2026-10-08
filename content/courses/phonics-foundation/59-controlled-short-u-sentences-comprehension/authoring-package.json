@@ -1,0 +1,421 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-59",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "59-controlled-short-u-sentences-comprehension",
+    "topic": "short-u-vowel",
+    "subtopic": "controlled-sentences-and-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read controlled short-/u/ sentences accurately.",
+      "Answer who, what, where, and sequence questions from text.",
+      "Use exact words from the sentence as evidence.",
+      "Repair decoding errors when they interfere with comprehension."
+    ],
+    "concepts": [
+      "Accurate decoding supports access to sentence meaning.",
+      "Simple questions can be answered directly from controlled text.",
+      "Rereading connects decoded words into meaning."
+    ],
+    "definitions": [
+      {
+        "term": "text evidence",
+        "definition": "A word or detail from the text that supports an answer."
+      },
+      {
+        "term": "sentence comprehension",
+        "definition": "Understanding who, what, where, and what happened in a sentence."
+      },
+      {
+        "term": "rereading",
+        "definition": "Reading a sentence again to confirm accuracy and meaning."
+      }
+    ],
+    "workedExamples": [
+      "“Gus has a cup.” → Who? Gus. What? A cup.",
+      "“The pup is in the hut.” → Where? In the hut.",
+      "“Gus got the cup and then fed the pup.” → First: got the cup. Next: fed the pup."
+    ],
+    "commonMistakes": [
+      "Answering from memory instead of the sentence.",
+      "Missing a detail because a word was decoded incorrectly.",
+      "Confusing who with what or where.",
+      "Stopping after decoding without checking meaning."
+    ],
+    "keyTakeaways": [
+      "Decode accurately.",
+      "Reread the sentence.",
+      "Ask who/what/where.",
+      "Point to the evidence."
+    ],
+    "revisionPoints": [
+      "who = person",
+      "what = thing/action",
+      "where = place",
+      "first/next = sequence"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Read controlled short-/u/ sentences and identify explicit details."
+    ],
+    "conceptual": [
+      "Distinguish who, what, and where questions."
+    ],
+    "application": [
+      "Answer comprehension questions using exact text evidence."
+    ],
+    "higherOrderThinking": [
+      "Identify how a decoding error changes sentence meaning."
+    ],
+    "mixedReview": [
+      "Combine short-/u/ decoding with sentence-level meaning and sequencing."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Read → reread → question → evidence."
+    ],
+    "flashRecall": [
+      "who",
+      "what",
+      "where",
+      "first/next"
+    ],
+    "formulaOrFactBank": [
+      "Accurate decoding + evidence = supported comprehension"
+    ],
+    "mistakeBasedRevision": [
+      "If an answer is wrong, reread the exact sentence and locate the supporting word."
+    ],
+    "weakTopicRevision": [
+      "Repeat the question type that caused the error, then reread controlled sentences."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Who/what/where hunt",
+      "steps": [
+        "Read a sentence.",
+        "Identify the person.",
+        "Identify the thing or action.",
+        "Locate the place if present."
+      ]
+    },
+    {
+      "name": "Evidence finder",
+      "steps": [
+        "Read the question.",
+        "Reread the sentence.",
+        "Find the exact supporting word.",
+        "State the answer."
+      ]
+    },
+    {
+      "name": "Meaning repair",
+      "steps": [
+        "Read a sentence with a vowel error.",
+        "Correct the word.",
+        "Reread the full sentence.",
+        "Check the meaning again."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner reads controlled short-/u/ sentences accurately.",
+    "Learner answers literal comprehension questions from the text.",
+    "Learner identifies text evidence for an answer.",
+    "Learner recognizes when decoding accuracy must be repaired to preserve meaning."
+  ],
+  "questions": [
+    {
+      "questionId": "PF59-Q01",
+      "question": "In “The pup is up,” who is up?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The pup",
+        "The cup",
+        "The sun",
+        "The mud"
+      ]
+    },
+    {
+      "questionId": "PF59-Q02",
+      "question": "Where is the pup?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Up",
+        "In the cup",
+        "On the bed",
+        "In the pot"
+      ]
+    },
+    {
+      "questionId": "PF59-Q03",
+      "question": "In “Gus has a cup,” who has the cup?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Gus",
+        "The cup",
+        "The pup",
+        "No one"
+      ]
+    },
+    {
+      "questionId": "PF59-Q04",
+      "question": "What does Gus have?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "A cup",
+        "A pen",
+        "A red bed",
+        "A hot pot"
+      ]
+    },
+    {
+      "questionId": "PF59-Q05",
+      "question": "In “The sun is up,” what is up?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The sun",
+        "The pup",
+        "The cup",
+        "The hut"
+      ]
+    },
+    {
+      "questionId": "PF59-Q06",
+      "question": "Which word tells what Gus has?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "cup",
+        "Gus",
+        "has",
+        "the"
+      ]
+    },
+    {
+      "questionId": "PF59-Q07",
+      "question": "Which sentence is supported by “The pup is in the hut”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "The pup is in the hut.",
+        "The pup is in the bed.",
+        "The hut is a pup.",
+        "The pup has a pen."
+      ]
+    },
+    {
+      "questionId": "PF59-Q08",
+      "question": "What happened first in “Gus got the cup and then fed the pup”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Gus got the cup.",
+        "Gus fed the pup.",
+        "The pup got the cup.",
+        "The cup fed Gus."
+      ]
+    },
+    {
+      "questionId": "PF59-Q09",
+      "question": "Which word is evidence that the pup is in the hut?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "hut",
+        "pup",
+        "is",
+        "the"
+      ]
+    },
+    {
+      "questionId": "PF59-Q10",
+      "question": "A learner reads cup as cop and misses the sentence meaning. What should be repaired?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Accurate short-/u/ decoding",
+        "Final punctuation only",
+        "Word spacing only",
+        "Picture naming"
+      ]
+    },
+    {
+      "questionId": "PF59-Q11",
+      "question": "Which question asks for a person?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Who has the cup?",
+        "What does Gus have?",
+        "Where is the pup?",
+        "What happened first?"
+      ]
+    },
+    {
+      "questionId": "PF59-Q12",
+      "question": "Which question asks for a place?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Where is the pup?",
+        "Who fed the pup?",
+        "What did Gus get?",
+        "What color is the cup?"
+      ]
+    },
+    {
+      "questionId": "PF59-Q13",
+      "question": "Why reread a controlled sentence after decoding it?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "To confirm that the words make sense together",
+        "To skip difficult words",
+        "To guess the next word",
+        "To ignore the vowel"
+      ]
+    },
+    {
+      "questionId": "PF59-Q14",
+      "question": "Which skill combines decoding and comprehension?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Read the words accurately and use them to answer with text evidence",
+        "Guess the sentence from one word",
+        "Read only the first word",
+        "Ignore sentence meaning"
+      ]
+    },
+    {
+      "questionId": "PF59-Q15",
+      "question": "What is the main goal of this lesson?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "Read controlled short-/u/ sentences accurately and answer meaning questions using text evidence",
+        "Memorize sentence patterns without reading",
+        "Teach long /u/",
+        "Skip comprehension"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF59-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    },
+    {
+      "questionId": "PF59-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The correct response is directly supported by the controlled sentence, its details, or the decoding-to-meaning relationship."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-59-v1"
+  }
+}
