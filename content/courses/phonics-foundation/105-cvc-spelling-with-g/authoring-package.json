@@ -1,0 +1,424 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-105",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "105-cvc-spelling-with-g",
+    "topic": "cvc-encoding",
+    "subtopic": "g-cvc-spelling",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment /g/ CVC words into phonemes.",
+      "Map each phoneme to a grapheme.",
+      "Spell taught CVC words containing /g/.",
+      "Self-correct vowel and consonant spelling errors."
+    ],
+    "concepts": [
+      "Encoding moves from spoken phonemes to written graphemes.",
+      "Each CVC phoneme must be represented in sequence.",
+      "Short-vowel accuracy changes the written word.",
+      "Read-back helps confirm spelling."
+    ],
+    "definitions": [
+      {
+        "term": "encode",
+        "definition": "Represent spoken sounds with written graphemes."
+      },
+      {
+        "term": "segment",
+        "definition": "Separate a spoken word into its individual phonemes."
+      },
+      {
+        "term": "dictation",
+        "definition": "Writing a word or sentence that is spoken aloud."
+      }
+    ],
+    "workedExamples": [
+      "Say gap → /g/ /a/ /p/ → g-a-p.",
+      "Say gig → /g/ /i/ /g/ → g-i-g.",
+      "Say gum → /g/ /u/ /m/ → g-u-m."
+    ],
+    "commonMistakes": [
+      "Writing k instead of g.",
+      "Confusing short vowels.",
+      "Leaving out the final consonant.",
+      "Adding an extra letter."
+    ],
+    "keyTakeaways": [
+      "Hear every phoneme.",
+      "Write graphemes in order.",
+      "Check the vowel.",
+      "Read the spelling back."
+    ],
+    "revisionPoints": [
+      "segment",
+      "g → /g/",
+      "short vowels",
+      "CVC spelling",
+      "read-back"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Segment and spell /g/ CVC words."
+    ],
+    "conceptual": [
+      "Compare spellings that differ by one vowel or consonant."
+    ],
+    "application": [
+      "Correct common CVC spelling errors."
+    ],
+    "higherOrderThinking": [
+      "Explain why every phoneme must be represented."
+    ],
+    "mixedReview": [
+      "Spell a mixed set of taught /g/ CVC words."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "hear → segment → map → write → read back"
+    ],
+    "flashRecall": [
+      "/g/",
+      "g",
+      "gap",
+      "gig",
+      "gum",
+      "CVC"
+    ],
+    "formulaOrFactBank": [
+      "CVC encoding = one grapheme for each taught phoneme in sequence."
+    ],
+    "mistakeBasedRevision": [
+      "Find the phoneme whose grapheme is incorrect or missing."
+    ],
+    "weakTopicRevision": [
+      "Practise the specific short vowel or consonant mapping causing errors."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Phoneme mapping",
+      "steps": [
+        "Say the word.",
+        "Stretch the word.",
+        "Count phonemes.",
+        "Write graphemes."
+      ]
+    },
+    {
+      "name": "Dictation",
+      "steps": [
+        "Hear the word.",
+        "Segment it.",
+        "Write it.",
+        "Read it back."
+      ]
+    },
+    {
+      "name": "Error repair",
+      "steps": [
+        "Compare spoken phonemes with spelling.",
+        "Find the mismatch.",
+        "Rewrite.",
+        "Read back."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner segments taught /g/ CVC words accurately.",
+    "Learner spells taught /g/ CVC words with correct grapheme sequence.",
+    "Learner self-corrects common encoding errors."
+  ],
+  "questions": [
+    {
+      "questionId": "PF105-Q01",
+      "question": "How do you spell “gap”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "g-a-p",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q02",
+      "question": "How do you spell “gig”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "g-i-g",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q03",
+      "question": "How do you spell “gum”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "g-u-m",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q04",
+      "question": "How do you spell “get”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "g-e-t",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q05",
+      "question": "How do you spell “got”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "g-o-t",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q06",
+      "question": "Which spelling matches /g/ /a/ /b/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "g-a-b",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q07",
+      "question": "Which spelling matches /g/ /a/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "g-a-g",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q08",
+      "question": "Which spelling matches /g/ /i/ /g/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "g-i-g",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q09",
+      "question": "Which spelling matches /g/ /u/ /m/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "g-u-m",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q10",
+      "question": "Which spelling matches /g/ /e/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "g-e-t",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q11",
+      "question": "A learner writes “cap” for “gap.” Which grapheme needs correction?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "initial g",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q12",
+      "question": "A learner writes “gem” for “gum.” Which part needs correction?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "short vowel",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q13",
+      "question": "A learner writes “ga” for “gap.” What is missing?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "final p",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q14",
+      "question": "Why segment before spelling?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "to hear each phoneme",
+        "another",
+        "different",
+        "not this"
+      ]
+    },
+    {
+      "questionId": "PF105-Q15",
+      "question": "Why read the spelling back?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 50,
+      "options": [
+        "to check the written word matches the spoken word",
+        "another",
+        "different",
+        "not this"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF105-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    },
+    {
+      "questionId": "PF105-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is the correct encoding response."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-105-v1"
+  }
+}
