@@ -1,0 +1,418 @@
+{
+  "packageId": "course-phonics-foundation-module-01-lesson-05",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "sound-awareness-and-letter-sounds",
+    "lesson": "05-oral-blending-m-s-t-a",
+    "topic": "oral-blending",
+    "subtopic": "blend-familiar-phonemes",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Blend familiar phonemes /m/, /s/, /t/ and /a/ orally.",
+      "Produce simple spoken CVC words after hearing their phonemes.",
+      "Use a consistent hear-join-say strategy without guessing."
+    ],
+    "concepts": [
+      "Oral blending joins phonemes in sequence to form a spoken word.",
+      "The learner should hear the complete sequence before producing the whole word.",
+      "Continuous consonants such as /m/ and /s/ can be stretched briefly to support smooth joining."
+    ],
+    "definitions": [
+      {
+        "term": "oral blending",
+        "definition": "Joining separately spoken phonemes to say a whole word."
+      },
+      {
+        "term": "CVC word",
+        "definition": "A simple word with a consonant, vowel and consonant sound pattern."
+      }
+    ],
+    "workedExamples": [
+      "/m/ /a/ /t/ → mat",
+      "/s/ /a/ /t/ → sat",
+      "/m/ /a/ /p/ → map",
+      "/t/ /a/ /p/ → tap"
+    ],
+    "commonMistakes": [
+      "Guessing before hearing the final sound.",
+      "Adding an extra vowel after a consonant.",
+      "Changing the order of the sounds."
+    ],
+    "keyTakeaways": [
+      "Hear every sound.",
+      "Keep the sound order.",
+      "Join the sounds and say the whole word."
+    ],
+    "revisionPoints": [
+      "Hear → hold → join → say.",
+      "Use known phonemes.",
+      "Check the whole word."
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Blend /m/ /a/ /t/.",
+      "Blend /s/ /a/ /t/.",
+      "Blend /t/ /a/ /p/."
+    ],
+    "conceptual": [
+      "Explain why the sound sequence must stay in order.",
+      "Identify the difference between blending and guessing."
+    ],
+    "application": [
+      "Blend spoken sounds and choose the matching picture.",
+      "Blend the same word a second time more smoothly."
+    ],
+    "higherOrderThinking": [
+      "Identify where a learner broke a three-sound blend.",
+      "Choose the best support for a learner who adds 'uh' after consonants."
+    ],
+    "mixedReview": [
+      "Mix sound sequence, word identity and blending strategy."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Listen.",
+      "Join.",
+      "Say the word."
+    ],
+    "flashRecall": [
+      "/m/ /a/ /t/ → mat",
+      "/s/ /a/ /t/ → sat",
+      "/m/ /a/ /p/ → map",
+      "/t/ /a/ /p/ → tap"
+    ],
+    "formulaOrFactBank": [
+      "CVC blending: first sound + middle sound + final sound → whole word"
+    ],
+    "mistakeBasedRevision": [
+      "If the learner guesses early, require all sounds first.",
+      "If the learner adds vowels, model smoother continuous joining."
+    ],
+    "weakTopicRevision": [
+      "Practise ten familiar CVC blends and repeat any missed sequence."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound train",
+      "steps": [
+        "Adult says three phonemes.",
+        "Learner repeats the sequence.",
+        "Learner joins the sounds and says the word."
+      ]
+    },
+    {
+      "name": "Blend and choose",
+      "steps": [
+        "Present two or three picture choices.",
+        "Say the phonemes.",
+        "Learner blends and chooses the matching meaning."
+      ]
+    },
+    {
+      "name": "Smooth blend",
+      "steps": [
+        "Model separated sounds.",
+        "Model a smoother blend.",
+        "Learner repeats the smoother blend."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner orally blends at least 8 of 10 familiar three-phoneme sequences correctly.",
+    "Learner maintains phoneme order in at least 8 of 10 attempts.",
+    "Learner produces the whole word without an added vowel in at least 8 of 10 attempts."
+  ],
+  "questions": [
+    {
+      "questionId": "PF05-Q01",
+      "question": "What word is /m/ /a/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "mat",
+        "sat",
+        "map",
+        "tap"
+      ]
+    },
+    {
+      "questionId": "PF05-Q02",
+      "question": "What word is /s/ /a/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "tap",
+        "sat",
+        "mat",
+        "map"
+      ]
+    },
+    {
+      "questionId": "PF05-Q03",
+      "question": "What word is /m/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sat",
+        "tap",
+        "map",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF05-Q04",
+      "question": "What word is /t/ /a/ /p/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "map",
+        "mat",
+        "tap",
+        "sat"
+      ]
+    },
+    {
+      "questionId": "PF05-Q05",
+      "question": "What should you do before saying the whole word?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Hear all the sounds",
+        "Guess the word",
+        "Skip the last sound",
+        "Change the middle sound"
+      ]
+    },
+    {
+      "questionId": "PF05-Q06",
+      "question": "Why must the sounds stay in order?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "The order helps form the correct word",
+        "It makes the word longer",
+        "It removes the vowel",
+        "It changes every consonant"
+      ]
+    },
+    {
+      "questionId": "PF05-Q07",
+      "question": "A learner says 'muh-a-tuh'. What is the best support?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Join the sounds more smoothly",
+        "Add another vowel",
+        "Skip the middle sound",
+        "Guess from a picture"
+      ]
+    },
+    {
+      "questionId": "PF05-Q08",
+      "question": "Which sequence makes 'map'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/m/ /a/ /p/",
+        "/p/ /a/ /m/",
+        "/a/ /m/ /p/",
+        "/m/ /p/ /a/"
+      ]
+    },
+    {
+      "questionId": "PF05-Q09",
+      "question": "Which learner is blending correctly?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Learner A hears all three sounds and says the word",
+        "Learner B guesses after one sound",
+        "Learner C changes the sound order",
+        "Learner D skips the final sound"
+      ]
+    },
+    {
+      "questionId": "PF05-Q10",
+      "question": "What is the final sound in 'sat'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/s/",
+        "/a/",
+        "/t/",
+        "/m/"
+      ]
+    },
+    {
+      "questionId": "PF05-Q11",
+      "question": "What is the first sound in 'tap'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/t/",
+        "/a/",
+        "/p/",
+        "/s/"
+      ]
+    },
+    {
+      "questionId": "PF05-Q12",
+      "question": "What is the middle sound in 'mat'?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "/m/",
+        "/a/",
+        "/t/",
+        "/p/"
+      ]
+    },
+    {
+      "questionId": "PF05-Q13",
+      "question": "Which word can be made from /s/ /a/ /t/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "sat",
+        "map",
+        "tap",
+        "mat"
+      ]
+    },
+    {
+      "questionId": "PF05-Q14",
+      "question": "What is oral blending?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Joining spoken sounds into a whole word",
+        "Copying letters",
+        "Counting pictures",
+        "Naming letters only"
+      ]
+    },
+    {
+      "questionId": "PF05-Q15",
+      "question": "What should you do if your first blend does not sound right?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30,
+      "options": [
+        "Listen again and keep the sounds in order",
+        "Change the sounds randomly",
+        "Skip the middle sound",
+        "Guess a different word"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF05-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q12",
+      "correctOptionIndex": 1,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    },
+    {
+      "questionId": "PF05-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The answer follows the oral-blending strategy and familiar phoneme sequence taught in this lesson."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation progression design"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-05-v1"
+  }
+}
