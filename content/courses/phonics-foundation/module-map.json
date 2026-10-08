@@ -194,7 +194,8 @@
           "Can decode taught CVC words containing /l/ by accurate grapheme-to-phoneme mapping, blending and self-correction.",
           "Can segment and spell taught CVC words containing /l/ by ordered phoneme-to-grapheme mapping and self-correction.",
           "Can identify shared CVC rimes and accurately decode controlled /l/ word-family chains.",
-          "Can decode controlled /l/ sentences, answer literal comprehension questions, and cite sentence evidence."
+          "Can decode controlled /l/ sentences, answer literal comprehension questions, and cite sentence evidence.",
+          "Can sequence first/next/last events and retell a short controlled /l/ passage using text evidence."
         ]
       },
       "lessons": [
@@ -665,6 +666,12 @@
           "sequence": 91,
           "title": "Controlled /l/ Sentences & Comprehension",
           "authoringPackage": "content/courses/phonics-foundation/91-controlled-l-sentences-comprehension/authoring-package.json"
+        },
+        {
+          "lessonId": "92-controlled-l-passage-sequencing",
+          "sequence": 92,
+          "title": "Controlled /l/ Passage Sequencing",
+          "authoringPackage": "content/courses/phonics-foundation/92-controlled-l-passage-sequencing/authoring-package.json"
         }
       ]
     }
