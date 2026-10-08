@@ -1,1 +1,413 @@
-{}
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-119",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "119-hear-and-identify-new-consonant-h",
+    "topic": "phoneme-recognition",
+    "subtopic": "consonant-h",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Hear and identify /h/ in spoken words.",
+      "Recognize /h/ in initial position in controlled examples.",
+      "Contrast /h/ with previously taught consonants.",
+      "Prepare h to /h/ correspondence."
+    ],
+    "concepts": [
+      "/h/ uses open airflow.",
+      "Early controlled practice places /h/ at the start of words.",
+      "Listening to the first phoneme supports identification.",
+      "The letter h commonly represents /h/."
+    ],
+    "definitions": [
+      {
+        "term": "phoneme",
+        "definition": "A smallest contrastive sound unit in spoken language."
+      },
+      {
+        "term": "initial sound",
+        "definition": "The first phoneme heard in a word."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A written symbol representing a phoneme."
+      }
+    ],
+    "workedExamples": [
+      "hat begins with /h/.",
+      "hen begins with /h/.",
+      "hop begins with /h/.",
+      "hut begins with /h/."
+    ],
+    "commonMistakes": [
+      "Adding a vowel after /h/.",
+      "Confusing /h/ with another initial consonant.",
+      "Dropping the light /h/ sound."
+    ],
+    "keyTakeaways": [
+      "Listen to the beginning.",
+      "Keep /h/ separate from the vowel.",
+      "Connect /h/ with h."
+    ],
+    "revisionPoints": [
+      "/h/",
+      "initial sound",
+      "sound contrast",
+      "h grapheme"
+    ]
+  },
+  "practice": {
+    "basic": [
+      "Identify whether a word begins with /h/."
+    ],
+    "conceptual": [
+      "Compare /h/ with taught consonants."
+    ],
+    "application": [
+      "Sort controlled words by initial phoneme."
+    ],
+    "higherOrderThinking": [
+      "Explain how to separate /h/ from the following vowel."
+    ],
+    "mixedReview": [
+      "Identify /h/ among taught consonants."
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "listen → isolate first sound → identify /h/ → connect to h"
+    ],
+    "flashRecall": [
+      "/h/",
+      "h",
+      "hat",
+      "hen",
+      "hop",
+      "hut"
+    ],
+    "formulaOrFactBank": [
+      "h commonly represents /h/."
+    ],
+    "mistakeBasedRevision": [
+      "Repeat the word slowly and isolate the first phoneme."
+    ],
+    "weakTopicRevision": [
+      "Practise /h/ against one contrast at a time."
+    ]
+  },
+  "activities": [
+    {
+      "name": "Sound hunt",
+      "steps": [
+        "Hear a word.",
+        "Repeat slowly.",
+        "Identify the first phoneme.",
+        "Sort as /h/ or not /h/."
+      ]
+    },
+    {
+      "name": "Grapheme preview",
+      "steps": [
+        "Hear /h/.",
+        "View h.",
+        "Say /h/.",
+        "Match sound and grapheme."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Learner identifies initial /h/.",
+    "Learner distinguishes /h/ from taught consonants.",
+    "Learner connects h with /h/."
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-lesson-119-v1"
+  },
+  "questions": [
+    {
+      "questionId": "PF119-Q01",
+      "question": "Which sound begins “hat”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "/h/",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q02",
+      "question": "Which sound begins “hen”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "/h/",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q03",
+      "question": "Which sound begins “hop”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "/h/",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q04",
+      "question": "Which sound begins “hut”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "/h/",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q05",
+      "question": "Which word begins with /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hat",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q06",
+      "question": "Which word begins with /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hen",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q07",
+      "question": "Which word begins with /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hop",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q08",
+      "question": "Which word begins with /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hut",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q09",
+      "question": "Which letter commonly represents /h/?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "h",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q10",
+      "question": "Where is /h/ in “hat”?",
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "at the beginning",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q11",
+      "question": "Which pair both begins with /h/?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "hat and hen",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q12",
+      "question": "What should you listen for?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "the first phoneme",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q13",
+      "question": "How can you isolate /h/?",
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "Say the word slowly and isolate the first sound.",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q14",
+      "question": "Why practise sound contrasts?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "To distinguish /h/ from other consonants.",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    },
+    {
+      "questionId": "PF119-Q15",
+      "question": "What sound-letter link is introduced?",
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45,
+      "options": [
+        "h → /h/",
+        "/d/",
+        "dog",
+        "not /h/"
+      ]
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF119-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    },
+    {
+      "questionId": "PF119-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The first option is correct."
+    }
+  ]
+}
