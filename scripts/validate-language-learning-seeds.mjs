@@ -73,11 +73,12 @@ const examplesMatch = seedSource.match(/const REVIEWED_EXAMPLES: Record<string, 
 if (!examplesMatch) fail('reviewed example registry is missing')
 else {
   const examplesBody = examplesMatch[1]
-  const exampleLanguageIds = [...examplesBody.matchAll(/^  '([^']+)':\s*\{$/gm)].map((match) => match[1])
+  const languageHeaderPattern = /^  (?:'([^']+)'|([a-z][a-z0-9-]*)):\s*\{$/gm
+  const exampleLanguageIds = [...examplesBody.matchAll(languageHeaderPattern)].map((match) => match[1] ?? match[2])
   for (const id of exampleLanguageIds) {
     if (!ids.includes(id)) fail('reviewed examples reference unknown language: ' + id)
   }
-  const languageHeaders = [...examplesBody.matchAll(/^  '([^']+)':\s*\{$/gm)]
+  const languageHeaders = [...examplesBody.matchAll(/^  (?:'([^']+)'|([a-z][a-z0-9-]*)):\s*\{$/gm)]
   const exampleUnits = [...examplesBody.matchAll(/^ {4}'([^']+)':\s*\{\s*text:\s*'([^']*)',\s*meaning:\s*'([^']*)'\s*\}/gm)]
   const examplesByLanguage = new Map()
   for (const example of exampleUnits) {
@@ -87,7 +88,7 @@ else {
       fail('localized example appears outside a language block')
       continue
     }
-    const languageId = languageHeader[1]
+    const languageId = languageHeader[1] ?? languageHeader[2]
     const seenUnits = examplesByLanguage.get(languageId) ?? new Set()
     if (seenUnits.has(unit)) fail('duplicate localized example unit ID for ' + languageId + ': ' + unit)
     seenUnits.add(unit)
