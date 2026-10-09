@@ -5,7 +5,7 @@ import { LANGUAGE_DATABASE_SEEDS, LANGUAGE_LEARNING_STARTER_SEEDS, LANGUAGE_SEED
 import { useSeo } from '@/hooks/useSeo'
 
 export default function Languages() {
-  useSeo('Languages | VATTAMS Academia', 'Explore the Indian-connected and global language catalogue planned for VATTAMS Academia.')
+  useSeo({ title: 'Languages', description: 'Explore the Indian-connected and global language catalogue planned for VATTAMS Academia.' })
   const [search, setSearch] = useState('')
   const [group, setGroup] = useState<AcademiaLanguageGroupFilter>('All')
   const filtered = useMemo(() => {
