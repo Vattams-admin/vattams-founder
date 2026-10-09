@@ -197,7 +197,7 @@ export default function Courses() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search courses by name or topic…"
-              className="input pl-10"
+              className="input pl-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             />
           </label>
 
@@ -312,8 +312,8 @@ export default function Courses() {
         {/* Results */}
         {state === 'loaded' && filteredCourses.length > 0 && (
           <>
-            <p className="mt-8 text-sm text-slate-muted">
-              {filteredCourses.length} course{filteredCourses.length === 1 ? '' : 's'} available
+            <p className="mt-8 text-sm text-slate-muted" aria-live="polite" aria-atomic="true">
+              Showing {filteredCourses.length} of {courses.length} published {courses.length === 1 ? 'course' : 'courses'}
             </p>
             <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filteredCourses.map((course) => (
