@@ -8,6 +8,7 @@ import { useSeo } from '@/hooks/useSeo'
 import { CATALOG_CATEGORIES } from '@/lib/catalog'
 import { DEFAULT_PRICING_CONFIG, type PricingConfig } from '@/lib/pricingModel'
 import { getPricingConfig } from '@/lib/pricingConfig'
+import { ACADEMIA_PILLARS } from '@/lib/academiaPillars'
 
 type LoadState = 'loading' | 'loaded' | 'error'
 
@@ -192,6 +193,40 @@ export default function Courses() {
             </div>
           )}
         </div>
+
+        {/* Topic discovery: selecting a suggestion uses the existing catalogue search. */}
+        <section aria-labelledby="suggested-topics-heading" className="mt-7 rounded-2xl border border-white/10 bg-white/[0.025] p-4 sm:p-5">
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="eyebrow">Find your next step</p>
+              <h2 id="suggested-topics-heading" className="mt-2 text-lg font-semibold text-parchment">Explore by learning goal</h2>
+            </div>
+            <p className="text-xs text-slate-muted">Suggestions search published courses; they do not imply a topic is already available.</p>
+          </div>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            {ACADEMIA_PILLARS.map((pillar) => (
+              <div key={pillar.id} className="min-w-0">
+                <h3 className="text-sm font-semibold text-parchment">{pillar.title}</h3>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {pillar.suggestedTopics.slice(0, 3).map((topic) => (
+                    <button
+                      key={topic}
+                      type="button"
+                      onClick={() => {
+                        setSearchTerm(topic)
+                        setLevelFilter('all')
+                        setCategoryFilter('all')
+                      }}
+                      className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-left text-xs leading-4 text-slate-muted transition-colors hover:border-azure/40 hover:text-parchment focus-visible:outline-offset-2"
+                    >
+                      {topic}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {availableCategories.length > 0 && (
           <div className="mt-4 flex flex-wrap items-center gap-2">
