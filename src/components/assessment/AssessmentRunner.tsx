@@ -74,6 +74,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
   const [reviewUnansweredOnly, setReviewUnansweredOnly] = useState(false);
   const [result, setResult] = useState<AssessmentResult | null>(null);
   const [busy, setBusy] = useState(false);
+  const [answerSyncState, setAnswerSyncState] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [error, setError] = useState("");
   const autoSubmit = useRef(false);
   const timeoutSubmissionAttempted = useRef(false);
@@ -186,14 +187,18 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     if (!attemptId) return;
     setAnswers((prev) => ({ ...prev, [questionId]: selected }));
     pendingAnswers.current[questionId] = selected;
+    setAnswerSyncState("saving");
 
     const existing = saveTimers.current[questionId];
     if (existing) window.clearTimeout(existing);
 
     saveTimers.current[questionId] = window.setTimeout(() => {
       delete saveTimers.current[questionId];
-      void persistAnswer(questionId, selected).catch((e) => {
+      void persistAnswer(questionId, selected).then(() => {
+        if (Object.keys(pendingAnswers.current).length === 0) setAnswerSyncState("saved");
+      }).catch((e) => {
         console.error("Assessment answer save failed", e);
+        setAnswerSyncState("error");
         setError("Answer could not be saved. Please retry before submitting.");
       });
     }, 250);
@@ -212,8 +217,10 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
         ),
       );
       setError("");
+      setAnswerSyncState("saved");
     } catch (e) {
       console.error("Assessment answer retry failed", e);
+      setAnswerSyncState("error");
       setError(assessmentRecoveryMessage(e, "Answers could not be saved. Check your connection and retry."));
     } finally {
       setBusy(false);
@@ -462,6 +469,15 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
           <span>Question {currentIndex + 1} of {questions.length}</span>
           <span>Answered {answeredCount}/{questions.length}</span>
         </div>
+        <p className="mt-2 text-xs text-slate-muted" role="status" aria-live="polite" aria-atomic="true">
+          {answerSyncState === "saving"
+            ? "Saving your answers…"
+            : answerSyncState === "saved"
+              ? "All answer changes saved."
+              : answerSyncState === "error"
+                ? "An answer could not be saved. Retry saving before submitting."
+                : "Choose an option to record your answer."}
+        </p>
         <div
           className="mt-3 h-2 overflow-hidden rounded-full bg-white/10"
           role="progressbar"
