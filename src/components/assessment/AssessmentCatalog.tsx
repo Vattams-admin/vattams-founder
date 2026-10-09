@@ -32,8 +32,12 @@ export default function AssessmentCatalog({ courseId }: Props) {
   const [loadError, setLoadError] = useState(false);
   const [retryToken, setRetryToken] = useState(0);
   const [searchTerm, setSearchTerm] = useState("");
+  const [activeKind, setActiveKind] = useState("all");
+  const assessmentKinds = Array.from(new Set(assessments.map((assessment) => assessment.kind)))
+    .sort((a, b) => label(a).localeCompare(label(b)));
 
   const filteredAssessments = assessments.filter((assessment) => {
+    if (activeKind !== "all" && assessment.kind !== activeKind) return false;
     const term = searchTerm.trim().toLocaleLowerCase();
     if (!term) return true;
     return [assessment.title, assessment.domain, assessment.kind, assessment.slug]
@@ -116,6 +120,27 @@ export default function AssessmentCatalog({ courseId }: Props) {
               </button>
             )}
           </div>
+          <div className="mt-3 flex flex-wrap gap-2" aria-label="Filter assessments by type">
+            <button
+              type="button"
+              onClick={() => setActiveKind("all")}
+              aria-pressed={activeKind === "all"}
+              className={`rounded-full border px-3 py-1.5 text-xs transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${activeKind === "all" ? "border-gold bg-gold/15 text-gold" : "border-white/15 text-parchment hover:border-gold/50"}`}
+            >
+              All types
+            </button>
+            {assessmentKinds.map((kind) => (
+              <button
+                key={kind}
+                type="button"
+                onClick={() => setActiveKind(kind)}
+                aria-pressed={activeKind === kind}
+                className={`rounded-full border px-3 py-1.5 text-xs transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${activeKind === kind ? "border-gold bg-gold/15 text-gold" : "border-white/15 text-parchment hover:border-gold/50"}`}
+              >
+                {label(kind)}
+              </button>
+            ))}
+          </div>
           <p className="mt-2 text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
             Showing {filteredAssessments.length} of {assessments.length} assessments
           </p>
@@ -139,7 +164,7 @@ export default function AssessmentCatalog({ courseId }: Props) {
         </p>
       ) : filteredAssessments.length === 0 ? (
         <div className="mt-5 rounded-card border border-white/10 p-4">
-          <p className="text-sm text-slate-muted">No assessments match “{searchTerm}”.</p>
+          <p className="text-sm text-slate-muted">No assessments match the current search and type filters.</p>
           <button type="button" onClick={() => setSearchTerm("")} className="btn-secondary mt-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
             Clear search
           </button>
