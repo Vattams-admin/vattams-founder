@@ -505,6 +505,13 @@ export default function CourseLearn() {
     }
   }, [activeLesson?.id, activeLesson?.video_path, activeLesson?.pdf_path, lessonFilesRetryToken])
 
+  const activeLessonIndex = lessons.findIndex((lesson) => lesson.id === activeLessonId)
+  const previousLesson = activeLessonIndex > 0 ? lessons[activeLessonIndex - 1] : null
+  const nextLesson = activeLessonIndex >= 0 && activeLessonIndex < lessons.length - 1
+    ? lessons[activeLessonIndex + 1]
+    : null
+  const completedLessonCount = lessons.filter((lesson) => progress[lesson.id]).length
+
   const percentComplete = lessons.length
     ? Math.round(
         (100 *
@@ -606,25 +613,30 @@ export default function CourseLearn() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-4">
         <h1 className="font-display text-2xl">
           {courseName}
         </h1>
 
-        <span className="text-sm text-slate-muted">
-          {percentComplete}% complete
-        </span>
+        <div className="text-right">
+          <p className="text-sm font-semibold text-parchment">{percentComplete}% complete</p>
+          <p className="text-xs text-slate-muted">{completedLessonCount} of {lessons.length} lessons</p>
+        </div>
       </div>
 
       {error && (
         <p className="mt-2 text-sm text-danger">{error}</p>
       )}
 
-      <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-        <div
-          className="h-full bg-gold"
-          style={{ width: `${percentComplete}%` }}
-        />
+      <div
+        className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/10"
+        role="progressbar"
+        aria-label="Course completion"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={percentComplete}
+      >
+        <div className="h-full bg-gold transition-[width] duration-300" style={{ width: `${percentComplete}%` }} />
       </div>
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[280px_1fr]">
@@ -634,9 +646,15 @@ export default function CourseLearn() {
               key={module.id}
               className="mb-2"
             >
-              <p className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-gold">
-                {module.title}
-              </p>
+              <div className="flex items-center justify-between gap-2 px-2 py-1">
+                <p className="text-xs font-semibold uppercase tracking-wide text-gold">
+                  {module.title}
+                </p>
+                <span className="text-[11px] tabular-nums text-slate-muted">
+                  {lessons.filter((lesson) => lesson.module_id === module.id && progress[lesson.id]).length}/
+                  {lessons.filter((lesson) => lesson.module_id === module.id).length}
+                </span>
+              </div>
 
               {lessons
                 .filter(
@@ -649,7 +667,8 @@ export default function CourseLearn() {
                     onClick={() =>
                       setActiveLessonId(lesson.id)
                     }
-                    className={`flex w-full items-center gap-2 rounded-card px-2 py-2 text-left text-sm ${
+                    aria-current={lesson.id === activeLessonId ? 'step' : undefined}
+                    className={`flex w-full items-center gap-2 rounded-card px-2 py-2 text-left text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
                       lesson.id === activeLessonId
                         ? 'bg-gold/15 text-gold-bright'
                         : 'text-parchment/90 hover:bg-white/5'
@@ -752,17 +771,36 @@ export default function CourseLearn() {
                 </div>
               )}
 
-              <button
-                onClick={() =>
-                  markComplete(activeLesson.id)
-                }
-                disabled={progress[activeLesson.id]}
-                className="btn-primary mt-6 disabled:opacity-50"
-              >
-                {progress[activeLesson.id]
-                  ? 'Completed'
-                  : 'Mark as complete'}
-              </button>
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-5">
+                <button
+                  type="button"
+                  onClick={() => previousLesson && setActiveLessonId(previousLesson.id)}
+                  disabled={!previousLesson}
+                  className="btn-secondary disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Previous lesson
+                </button>
+                <button
+                  type="button"
+                  onClick={() => markComplete(activeLesson.id)}
+                  disabled={progress[activeLesson.id]}
+                  className="btn-primary disabled:opacity-50"
+                >
+                  {progress[activeLesson.id] ? 'Completed' : 'Mark as complete'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => nextLesson && setActiveLessonId(nextLesson.id)}
+                  disabled={!nextLesson}
+                  className="btn-secondary disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Next lesson
+                </button>
+              </div>
+              <p className="mt-3 text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
+                {activeLessonIndex >= 0 ? `Lesson ${activeLessonIndex + 1} of ${lessons.length}` : 'Choose a lesson'}
+                {progress[activeLesson.id] ? ' · Completed' : ''}
+              </p>
             </>
           )}
         </section>
