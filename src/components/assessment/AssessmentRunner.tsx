@@ -336,6 +336,38 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
             </p>
           )}
           <div className="mt-7">
+            <h3 className="font-display text-lg font-semibold">Topic revision guide</h3>
+            <p className="mt-1 text-sm text-slate-muted">
+              Use these topic counts to choose what to revise next. They show coverage and unanswered responses, not topic-level correctness.
+            </p>
+            <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+              {Array.from(
+                questions.reduce((groups, question) => {
+                  const topic = question.topic?.trim() || "General review";
+                  const group = groups.get(topic) ?? { total: 0, unanswered: 0 };
+                  group.total += 1;
+                  if (!Number.isInteger(answers[question.question_id])) group.unanswered += 1;
+                  groups.set(topic, group);
+                  return groups;
+                }, new Map<string, { total: number; unanswered: number }>()),
+                ([topic, counts]) => ({ topic, ...counts })
+              ).map(({ topic, total, unanswered }) => (
+                <li key={topic} className="rounded-card border border-white/10 p-4">
+                  <p className="font-medium">{topic}</p>
+                  <p className="mt-2 text-sm text-slate-muted">
+                    {total} {total === 1 ? "question" : "questions"}
+                    {unanswered > 0 ? ` · ${unanswered} unanswered` : " · All answered"}
+                  </p>
+                  <p className="mt-2 text-xs text-slate-muted">
+                    {unanswered > 0
+                      ? "Suggested focus: revisit this topic and try answering without help."
+                      : "Suggested focus: revisit the lesson and practise a fresh question set."}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mt-7">
             <h3 className="font-display text-lg font-semibold">Your response review</h3>
             <p className="mt-1 text-sm text-slate-muted">
               Review the answers you selected and identify questions to revisit. Correct-answer explanations are shown only when the assessment service provides them.
