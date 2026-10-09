@@ -188,6 +188,7 @@ export default function CourseLearn() {
   const [materials, setMaterials] = useState<Material[]>([])
   const [materialSearch, setMaterialSearch] = useState('')
   const [activeLessonId, setActiveLessonId] = useState<string | null>(null)
+  const [revisionChecks, setRevisionChecks] = useState<Record<string, boolean[]>>({})
   const [lessonFileUrls, setLessonFileUrls] = useState<{
     video: string | null
     pdf: string | null
@@ -840,11 +841,11 @@ export default function CourseLearn() {
                 <h3 id="lesson-revision-heading" className="font-semibold">Before you finish this lesson</h3>
                 <p className="mt-1 text-sm text-slate-muted">
                   {structuredLessonContent
-                    ? 'Use the authored lesson sections below as your revision guide. Checking these items does not mark the lesson complete.'
-                    : 'Use this quick revision checklist to consolidate what you learned. Checking these items does not mark the lesson complete.'}
+                    ? 'Use the authored lesson sections below as your revision guide. This checklist is a personal reminder and does not mark the lesson complete.'
+                    : 'Use this quick revision checklist to consolidate what you learned. This checklist is a personal reminder and does not mark the lesson complete.'}
                 </p>
-                <ul className="mt-3 space-y-2 text-sm">
-                  {[
+                {(() => {
+                  const items = [
                     {
                       available: Boolean(structuredLessonContent?.objective),
                       text: 'Revisit the lesson objective and explain the main idea in your own words.',
@@ -865,13 +866,39 @@ export default function CourseLearn() {
                       text: 'Use the authored reflection prompt to identify what you understand and what needs revision.',
                       fallback: 'Identify one point you need to revise before moving on.',
                     },
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <span aria-hidden="true" className="mt-0.5 text-gold">•</span>
-                      <span>{item.available ? item.text : item.fallback}</span>
-                    </li>
-                  ))}
-                </ul>
+                  ]
+                  const checks = revisionChecks[activeLesson.id] ?? []
+                  const checkedCount = items.filter((_, index) => checks[index]).length
+                  return (
+                    <>
+                      <p className="mt-3 text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
+                        {checkedCount} of {items.length} revision steps checked
+                      </p>
+                      <ul className="mt-3 space-y-3 text-sm">
+                        {items.map((item, index) => (
+                          <li key={index}>
+                            <label className="flex cursor-pointer items-start gap-3 rounded-card border border-white/10 p-3 hover:bg-white/5">
+                              <input
+                                type="checkbox"
+                                checked={Boolean(checks[index])}
+                                onChange={(event) => setRevisionChecks((current) => {
+                                  const lessonChecks = [...(current[activeLesson.id] ?? [])]
+                                  lessonChecks[index] = event.target.checked
+                                  return { ...current, [activeLesson.id]: lessonChecks }
+                                })}
+                                className="mt-1 h-4 w-4 shrink-0 accent-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+                              />
+                              <span>{item.available ? item.text : item.fallback}</span>
+                            </label>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )
+                })()}
+                <p className="mt-3 text-xs text-slate-muted">
+                  These checks are kept only in the current page session; course completion is tracked separately.
+                </p>
               </section>
 
               <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-5">
