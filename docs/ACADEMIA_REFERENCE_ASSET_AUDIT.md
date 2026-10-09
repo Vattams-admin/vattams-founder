@@ -118,3 +118,22 @@ This section records a read-only live Supabase control-plane inspection performe
 
 The content authoring scope remains explicitly excluded for question banks and study materials. Continue only with platform integration, package/registry path consistency, course/exam/competition navigation, assessment and competition runtime correctness, security, and CI/runtime validation. Missing source packages must remain blocked rather than filled with invented questions or materials.
 
+## Latest verified checkpoint — 2026-10-09
+
+Branch: `feat/academia-core-redesign`. The changes below are branch commits only; no direct `main` update, production content publication, Supabase migration, or Edge Function deployment was performed.
+
+- Cross-pillar quality gate: **31/31 validators passed** on commit `f0aa0d40ab450b330fe86cbb1ccaea9b123f98c9`.
+- Production package-manifest validation: passed on the draft-manifest commits.
+- Android Debug APK: **passed** on commit `65cdfecb21d483ff1b9afe8cff2672b0da6f5ca3`; the workflow uploaded artifact `vattams-academia-debug-apk`.
+- Production E2E: **passed** in run `37969861706`; 6 Playwright tests passed, including public site load, Thirukkural public route, unauthenticated redirect, enrolled-student official competition UI, 30-question mock launch, and anonymous private-answer-key protection. Isolated E2E accounts were cleaned up by the workflow.
+- Thirukkural canonical package generation/validation passed locally within CI: 9,443 objective questions, 9,443 private answer keys, 120 official questions (four 30-question papers), and four age-band pools. The package was not published.
+- Added 23 draft competition manifests and three draft TNPSC assessment manifests, with registered bundle paths and zero claimed question/material coverage. The three TNPSC manifests use unique assessment locators while retaining all suite assessment IDs for registry linkage.
+- Corrected the language-seed key parser, content-coverage schema/flow checks, generated-runtime asset handling, assessment-review JSX conditional, Languages SEO hook call, and nullable active-lesson narrowing.
+
+## Still explicitly blocked by the content-scope boundary
+
+- The 23 non-Thirukkural competitions now have draft manifests only. Their public question bundles, private answer-key bundles, age pools and production runtime packages are not thereby created or certified.
+- The three TNPSC mock-test manifests remain drafts. Their question-bank and private answer-key files remain absent at the audited repository paths.
+- Phonics Foundation has 143 lesson packages against the 1,200-lesson target. The quality gate verifies current draft-package structure; it does not mean the 1,200-lesson content target is complete.
+- No question-bank or study-material authoring was performed in this checkpoint. Do not mark draft manifests as production-ready until the excluded content is supplied, reviewed and the release/package checks are rerun.
+
