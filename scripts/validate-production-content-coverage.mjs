@@ -323,12 +323,11 @@ const assessmentTargets = Object.values(assessmentRegistry.assessments ?? {}).ma
 
 const hasAllRequiredAssets = (manifest, candidates) => {
   const assets = manifest?.assets ?? {};
-  const values = new Set([
-    ...(assets.questionBanksPublic ?? []),
-    ...(assets.answerKeysPrivate ?? []),
-    ...(assets.assessments ?? [])
-  ]);
-  return candidates.length > 0 && candidates.every((candidate) => values.has(candidate));
+  const publicBanks = new Set(assets.questionBanksPublic ?? []);
+  const privateKeys = new Set(assets.answerKeysPrivate ?? []);
+  return candidates.length > 0 && candidates.every((candidate) =>
+    publicBanks.has(candidate) || privateKeys.has(candidate)
+  ) && publicBanks.size > 0 && privateKeys.size > 0;
 };
 
 const findManifest = (target) => manifests.find((item) => {
