@@ -75,7 +75,8 @@
     "content:assessment:weak-topic:test": "node scripts/test-assessment-weak-topic-analytics.mjs",
     "content:assessment:remediation:test": "node scripts/test-assessment-remediation-engine.mjs",
     "content:assessment:adaptive:test": "node scripts/test-assessment-adaptive-selection.mjs",
-    "content:course:structure:validate": "node scripts/validate-course-content-structure.mjs"
+    "content:course:structure:validate": "node scripts/validate-course-content-structure.mjs",
+    "academia:content:quality-gates": "node scripts/validate-academia-content-quality-gates.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",
