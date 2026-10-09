@@ -378,6 +378,20 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
           <span>Question {currentIndex + 1} of {questions.length}</span>
           <span>Answered {answeredCount}/{questions.length}</span>
         </div>
+        <div
+          className="mt-3 h-2 overflow-hidden rounded-full bg-white/10"
+          role="progressbar"
+          aria-label="Assessment navigation progress"
+          aria-valuemin={0}
+          aria-valuemax={questions.length}
+          aria-valuenow={currentIndex + 1}
+          aria-valuetext={`Question ${currentIndex + 1} of ${questions.length}`}
+        >
+          <div
+            className="h-full rounded-full bg-gold transition-[width]"
+            style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
+          />
+        </div>
 
         <div className="mt-5 rounded-card border border-white/10 p-5">
           <div className="flex items-center justify-between gap-3">
