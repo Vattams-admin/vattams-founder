@@ -72,6 +72,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
   const [assessmentTimeSeconds, setAssessmentTimeSeconds] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [reviewUnansweredOnly, setReviewUnansweredOnly] = useState(false);
+  const [reviewTopic, setReviewTopic] = useState("all");
   const [result, setResult] = useState<AssessmentResult | null>(null);
   const [busy, setBusy] = useState(false);
   const [answerSyncState, setAnswerSyncState] = useState<"idle" | "saving" | "saved" | "error">("idle");
@@ -385,6 +386,31 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
             <p className="mt-4 text-sm text-slate-muted">
               Identify questions to revisit. Correct-answer explanations are shown only when the assessment service provides them.
             </p>
+            <div className="mt-4 flex flex-wrap items-end gap-3">
+              <div className="min-w-[200px] flex-1">
+                <label htmlFor="assessment-review-topic" className="mb-1 block text-sm font-medium">Filter by topic</label>
+                <select
+                  id="assessment-review-topic"
+                  value={reviewTopic}
+                  onChange={(event) => setReviewTopic(event.target.value)}
+                  className="w-full rounded-card border border-white/15 bg-slate-900 px-3 py-2 text-sm text-parchment focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                >
+                  <option value="all">All topics</option>
+                  {Array.from(new Set(questions.map((question) => question.topic?.trim() || "General review"))).sort((a, b) => a.localeCompare(b)).map((topic) => (
+                    <option key={topic} value={topic}>{topic}</option>
+                  ))}
+                </select>
+              </div>
+              {reviewTopic !== "all" && (
+                <button
+                  type="button"
+                  onClick={() => setReviewTopic("all")}
+                  className="btn-secondary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                >
+                  Clear topic filter
+                </button>
+              )}
+            </div>
             <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
               <p className="text-sm text-slate-muted">
                 {reviewUnansweredOnly
@@ -409,6 +435,8 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
               {questions.map((question, index) => {
                 const selectedIndex = answers[question.question_id];
                 const answered = Number.isInteger(selectedIndex) && selectedIndex !== null;
+                const topic = question.topic?.trim() || "General review";
+                if (reviewTopic !== "all" && topic !== reviewTopic) return null;
                 if (reviewUnansweredOnly && answered) return null;
                 return (
                   <li key={question.question_id} className="rounded-card border border-white/10 p-4">
