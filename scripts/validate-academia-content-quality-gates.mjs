@@ -72,6 +72,7 @@ if (process.argv.includes('--list')) {
 
 let passed = 0
 const failed = []
+const outcomes = []
 const startedAt = Date.now()
 console.log('VATTAMS Academia cross-pillar content quality gates')
 console.log('Scope: existing local validators only; no publish, promotion, seed, repair, or remote-write commands.\n')
@@ -88,20 +89,40 @@ for (const [label, relativePath] of validators) {
   })
   if (result.error) {
     failed.push({ label, reason: result.error.message })
+    outcomes.push({ label, status: 'FAIL', durationSeconds: (Date.now() - validatorStartedAt) / 1000, reason: result.error.message })
     console.error('NOT PASSED: ' + label + ' — ' + result.error.message)
     console.error('Duration: ' + ((Date.now() - validatorStartedAt) / 1000).toFixed(1) + 's')
   } else if (result.status !== 0) {
     failed.push({ label, reason: result.signal ? 'terminated by ' + result.signal : 'exit code ' + result.status })
+    outcomes.push({ label, status: 'FAIL', durationSeconds: (Date.now() - validatorStartedAt) / 1000, reason: failed[failed.length - 1].reason })
     console.error('NOT PASSED: ' + label + ' — ' + failed[failed.length - 1].reason)
     console.error('Duration: ' + ((Date.now() - validatorStartedAt) / 1000).toFixed(1) + 's')
   } else {
     passed += 1
+    outcomes.push({ label, status: 'PASS', durationSeconds: (Date.now() - validatorStartedAt) / 1000 })
     console.log('PASSED: ' + label + ' (' + ((Date.now() - validatorStartedAt) / 1000).toFixed(1) + 's)')
   }
 }
 
 console.log('\nCross-pillar validation summary: ' + passed + '/' + validators.length + ' passed; ' + failed.length + ' failed.')
 console.log('Total duration: ' + ((Date.now() - startedAt) / 1000).toFixed(1) + 's')
+
+if (process.env.GITHUB_STEP_SUMMARY) {
+  const lines = [
+    '# VATTAMS Academia Content Quality Gates',
+    '',
+    '- Result: **' + (failed.length ? 'FAIL' : 'PASS') + '**',
+    '- Passed: ' + passed + '/' + validators.length,
+    '- Failed: ' + failed.length,
+    '- Total duration: ' + ((Date.now() - startedAt) / 1000).toFixed(1) + 's',
+    '',
+    '| Validator | Result | Duration (s) | Details |',
+    '|---|---:|---:|---|',
+    ...outcomes.map((item) => '| ' + item.label.replace(/\\|/g, '\\\\|') + ' | ' + item.status + ' | ' + item.durationSeconds.toFixed(1) + ' | ' + (item.reason ? item.reason.replace(/\\|/g, '\\\\|') : '—') + ' |'),
+    '',
+  ]
+  fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\\n'))
+}
 if (failed.length) {
   for (const item of failed) console.error('- ' + item.label + ': ' + item.reason)
   process.exitCode = 1
