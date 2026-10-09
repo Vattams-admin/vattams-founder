@@ -295,7 +295,7 @@ export default function Courses() {
         {state === 'loaded' && courses.length > 0 && filteredCourses.length === 0 && (
           <div className="mt-10 card p-10 text-center">
             <p className="text-lg font-semibold">No courses match your search</p>
-            <p className="mt-2 text-sm text-slate-muted">Try a different keyword or clear the level filter.</p>
+            <p className="mt-2 text-sm text-slate-muted">Try another keyword or clear the search, level and category filters.</p>
             <button
               onClick={() => {
                 setSearchTerm('')
@@ -340,6 +340,7 @@ function FilterChip({
     <button
       type="button"
       onClick={onClick}
+      aria-pressed={active}
       className={`whitespace-nowrap rounded-pill border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy ${
         active
           ? 'border-azure bg-azure/15 text-azure-bright'
