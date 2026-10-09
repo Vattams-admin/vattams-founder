@@ -22,10 +22,42 @@ const registry = readJson(path.join(ROOT, 'config/content-library-registry.json'
 const competitionRegistry = readJson(path.join(ROOT, 'config/competition-registry.json'));
 const assessmentRegistry = readJson(path.join(ROOT, 'config/assessment-registry.json'));
 
+const resolveRepositoryAsset = (assetPath) => {
+  if (typeof assetPath !== 'string' || assetPath.trim() === '') {
+    return { valid: false, reason: 'asset path must be a non-empty string' };
+  }
+  if (path.isAbsolute(assetPath)) {
+    return { valid: false, reason: 'absolute paths are not allowed' };
+  }
+  const resolved = path.resolve(ROOT, assetPath);
+  const relative = path.relative(ROOT, resolved);
+  if (relative === '..' || relative.startsWith('..' + path.sep) || path.isAbsolute(relative)) {
+    return { valid: false, reason: 'path escapes repository root' };
+  }
+  return { valid: true, resolved, repositoryPath: relative.split(path.sep).join('/') };
+};
+
 const manifests = walk(CONTENT_ROOT).map((file) => {
   const relative = path.relative(ROOT, file).split(path.sep).join('/');
   try {
     const data = readJson(file);
+    const assets = data.assets ?? null;
+    const missingAssetPaths = [];
+    for (const field of ['authoringPackages', 'questionBanksPublic', 'answerKeysPrivate']) {
+      const entries = assets?.[field] ?? [];
+      if (!Array.isArray(entries)) {
+        missingAssetPaths.push({ field, value: entries, reason: 'asset field must be an array' });
+        continue;
+      }
+      for (const assetPath of entries) {
+        const resolved = resolveRepositoryAsset(assetPath);
+        if (!resolved.valid) {
+          missingAssetPaths.push({ field, value: assetPath, reason: resolved.reason });
+        } else if (!exists(resolved.resolved)) {
+          missingAssetPaths.push({ field, value: assetPath, reason: 'file does not exist in repository' });
+        }
+      }
+    }
     return {
       file: relative,
       packageId: data.packageId ?? null,
@@ -35,7 +67,8 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
       status: data.status ?? null,
       coverage: data.coverage ?? null,
       governance: data.governance ?? null,
-      assets: data.assets ?? null
+      assets,
+      missingAssetPaths
     };
   } catch (error) {
     return { file: relative, invalid: true, error: error.message };
@@ -153,6 +186,7 @@ const summary = {
   contentRoot: registry.library_root,
   actualManifestCount: manifests.length,
   invalidManifestCount: manifests.filter((m) => m.invalid).length,
+  missingAssetPathCount: manifests.reduce((total, manifest) => total + (manifest.missingAssetPaths?.length ?? 0), 0),
   targetCount: targets.length,
   missingCount: count('missing'),
   draftCount: count('draft'),
@@ -173,6 +207,18 @@ if (summary.invalidManifestCount > 0) {
   console.error('Production content coverage failed: invalid manifest files detected.');
   process.exit(1);
 }
+const manifestsWithMissingAssets = manifests.filter((manifest) => (manifest.missingAssetPaths?.length ?? 0) > 0);
+if (manifestsWithMissingAssets.length > 0) {
+  console.error('Production content coverage failed: manifest asset paths are invalid or missing from the repository.');
+  for (const manifest of manifestsWithMissingAssets) {
+    for (const asset of manifest.missingAssetPaths) {
+      console.error('- ' + manifest.file + ' [' + asset.field + ']: ' + String(asset.value) + ' (' + asset.reason + ')');
+    }
+  }
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+
 if (duplicatePackageIdEntries.length > 0) {
   console.error('Production content coverage failed: duplicate packageId values detected.');
   for (const [packageId, files] of duplicatePackageIdEntries) {
