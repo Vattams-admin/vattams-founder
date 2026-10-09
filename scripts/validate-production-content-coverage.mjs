@@ -96,6 +96,16 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
       }
     }
     const missingAssetPaths = [];
+    if (assets?.manifestPath !== undefined) {
+      const resolvedManifestPath = resolveRepositoryAsset(assets.manifestPath);
+      if (!resolvedManifestPath.valid) {
+        missingAssetPaths.push({ field: 'manifestPath', value: assets.manifestPath, reason: resolvedManifestPath.reason });
+      } else if (!exists(resolvedManifestPath.resolved)) {
+        missingAssetPaths.push({ field: 'manifestPath', value: assets.manifestPath, reason: 'file does not exist in repository' });
+      } else if (!resolvedManifestPath.resolved.endsWith(path.join('manifest.json'))) {
+        missingAssetPaths.push({ field: 'manifestPath', value: assets.manifestPath, reason: 'manifestPath must reference a manifest.json file' });
+      }
+    }
     for (const field of ['authoringPackages', 'questionBanksPublic', 'answerKeysPrivate']) {
       const entries = assets?.[field] ?? [];
       if (!Array.isArray(entries)) {
