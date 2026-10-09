@@ -400,7 +400,12 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
                 {reviewUnansweredOnly ? "Show all questions" : "Review unanswered only"}
               </button>
             </div>
-            <ol className="mt-4 space-y-3">
+            {reviewUnansweredOnly && questions.every((question) => Number.isInteger(answers[question.question_id])) ? (
+              <p className="mt-4 rounded-card border border-white/10 p-4 text-sm text-slate-muted" role="status">
+                All questions have been answered. There are no unanswered questions to review.
+              </p>
+            ) : (
+              <ol className="mt-4 space-y-3">
               {questions.map((question, index) => {
                 const selectedIndex = answers[question.question_id];
                 const answered = Number.isInteger(selectedIndex) && selectedIndex !== null;
@@ -424,7 +429,8 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
                   </li>
                 );
               })}
-            </ol>
+              </ol>
+            )}
           </details>
         </div>
       </section>
