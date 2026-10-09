@@ -45,6 +45,19 @@ const validators = [
   ['Thirukkural reference package', 'scripts/validate-thirukkural-production.mjs'],
 ]
 
+const validatorPaths = validators.map(([, relativePath]) => relativePath)
+if (new Set(validatorPaths).size !== validatorPaths.length) {
+  console.error('Configuration error: duplicate validator paths are listed.')
+  process.exit(1)
+}
+
+if (process.argv.includes('--list')) {
+  console.log('Configured VATTAMS Academia content validators (' + validators.length + '):')
+  for (const [label, relativePath] of validators) console.log('- ' + label + ': ' + relativePath)
+  console.log('List-only mode: no validators executed.')
+  process.exit(0)
+}
+
 let passed = 0
 const failed = []
 const startedAt = Date.now()
