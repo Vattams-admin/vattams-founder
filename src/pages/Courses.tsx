@@ -28,7 +28,7 @@ export default function Courses() {
     path: '/courses',
   })
 
-  const [searchParams] = useSearchParams()
+  const [searchParams, setSearchParams] = useSearchParams()
   const [courses, setCourses] = useState<Course[]>([])
   const [state, setState] = useState<LoadState>('loading')
   const [searchTerm, setSearchTerm] = useState(() => searchParams.get('search') ?? '')
@@ -36,6 +36,25 @@ export default function Courses() {
   const [categoryFilter, setCategoryFilter] = useState<string>('all')
   const [retryToken, setRetryToken] = useState(0)
   const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  // Keep catalogue searches deep-linkable and shareable without adding a
+  // history entry for every keystroke. Preserve any unrelated query params.
+  useEffect(() => {
+    const nextSearch = searchTerm.trim()
+    setSearchParams((current) => {
+      if ((current.get('search') ?? '') === nextSearch) return current
+      const next = new URLSearchParams(current)
+      if (nextSearch) next.set('search', nextSearch)
+      else next.delete('search')
+      return next
+    }, { replace: true })
+  }, [searchTerm, setSearchParams])
+
+  // Reflect query changes from browser navigation or an external in-app link.
+  useEffect(() => {
+    const querySearch = searchParams.get('search') ?? ''
+    if (querySearch !== searchTerm) setSearchTerm(querySearch)
+  }, [searchParams, searchTerm])
 
   useEffect(() => {
     let cancelled = false
