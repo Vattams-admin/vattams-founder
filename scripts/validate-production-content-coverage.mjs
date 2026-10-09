@@ -391,9 +391,24 @@ const targets = [
     owners.push({ targetType: target.targetType, id: target.id ?? target.courseId ?? target.slug, title: target.title ?? null });
     targetManifestMatches.set(manifest.file, owners);
   }
+  const state = manifest?.status ?? 'missing';
+  const remediation = state === 'missing'
+    ? 'Create a manifest with the correct locator and required assets, then add evidence and review metadata.'
+    : state === 'draft'
+      ? 'Complete authoring, verify source evidence and private answer-key separation, then submit for review.'
+      : state === 'in_review'
+        ? 'Resolve reviewer feedback and record the approval decision before publication.'
+        : state === 'approved'
+          ? 'Verify release readiness and publish only after all production gates pass.'
+          : state === 'retired'
+            ? 'Confirm retirement is intentional; replace or re-enable the target if it remains in scope.'
+            : state === 'published'
+              ? 'Maintain version, evidence, and release integrity; no immediate status action required.'
+              : 'Inspect manifest and registry alignment.';
   return {
     ...target,
-    state: manifest?.status ?? 'missing',
+    state,
+    remediation,
     packageId: manifest?.packageId ?? null,
     version: manifest?.version ?? null,
     coverage: manifest?.coverage ?? null,
