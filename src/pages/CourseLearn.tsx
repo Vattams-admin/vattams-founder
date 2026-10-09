@@ -542,7 +542,7 @@ export default function CourseLearn() {
     ? modules.find((module) => module.id === activeLesson.module_id)?.title ?? ''
     : ''
   const lessonSearchTerm = lessonListSearch.trim().toLocaleLowerCase()
-  const activeLessonVisibleInList = Boolean(activeLesson) &&
+  const activeLessonVisibleInList = activeLesson !== null && activeLesson !== undefined &&
     (!lessonSearchTerm ||
       activeLesson.title.toLocaleLowerCase().includes(lessonSearchTerm) ||
       activeLessonModuleTitle.toLocaleLowerCase().includes(lessonSearchTerm)) &&
