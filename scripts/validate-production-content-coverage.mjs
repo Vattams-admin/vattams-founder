@@ -93,14 +93,14 @@ const assessmentTargets = Object.values(assessmentRegistry.assessments ?? {}).ma
   answerKey: item.answer_key
 }));
 
-const includesAsset = (manifest, candidates) => {
+const hasAllRequiredAssets = (manifest, candidates) => {
   const assets = manifest?.assets ?? {};
-  const values = [
+  const values = new Set([
     ...(assets.questionBanksPublic ?? []),
     ...(assets.answerKeysPrivate ?? []),
     ...(assets.assessments ?? [])
-  ];
-  return candidates.some((candidate) => values.includes(candidate));
+  ]);
+  return candidates.length > 0 && candidates.every((candidate) => values.has(candidate));
 };
 
 const findManifest = (target) => manifests.find((item) => {
@@ -113,7 +113,7 @@ const findManifest = (target) => manifests.find((item) => {
 
   if (target.targetType === 'competition') {
     if (item.domain !== 'competition' || item.locator?.competition !== target.slug) return false;
-    return includesAsset(item, [
+    return hasAllRequiredAssets(item, [
       target.questionBundle,
       target.answerKeyBundle
     ].filter(Boolean));
@@ -124,10 +124,10 @@ const findManifest = (target) => manifests.find((item) => {
     return false;
   }
 
-  return includesAsset(item, [
+  return hasAllRequiredAssets(item, [
     target.questionBankPublic,
     target.answerKey
-  ].filter(Boolean)) || (item.assets?.assessments ?? []).includes(target.id);
+  ].filter(Boolean));
 });
 
 const targets = [
