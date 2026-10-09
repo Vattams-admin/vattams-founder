@@ -115,35 +115,41 @@ export default function AdminCompetitionDetail() {
         throw new Error('The selected course is not marked as a competition.')
       }
 
-      const [enrolmentSnapshot, paymentSnapshot, attemptSnapshot, mockAttemptSnapshot] =
-        await Promise.all([
-          getDocs(
-            query(
-              collection(firestore, 'enrolments'),
-              where('course_id', '==', id),
-            ),
-          ),
-          getDocs(
-            query(
-              collection(firestore, 'payments'),
-              where('course_id', '==', id),
-            ),
-          ),
-          getDocs(
-            query(
-              collection(firestore, 'competition_attempts'),
-              where('course_id', '==', id),
-            ),
-          ),
-          getDocs(
-            query(
-              collection(firestore, 'competition_mock_attempts'),
-              where('course_id', '==', id),
-            ),
-          ),
-        ])
+      // Load each admin panel independently: one legacy/optional collection
+      // failing to read must not blank the entire competition management page.
+      const reads = await Promise.allSettled([
+        getDocs(query(collection(firestore, 'enrolments'), where('course_id', '==', id))),
+        getDocs(query(collection(firestore, 'payments'), where('course_id', '==', id))),
+        getDocs(query(collection(firestore, 'competition_attempts'), where('course_id', '==', id))),
+        getDocs(query(collection(firestore, 'competition_mock_attempts'), where('course_id', '==', id))),
+      ])
 
-      const attempts = attemptSnapshot.docs.map(
+      const [enrolmentRead, paymentRead, attemptRead, mockAttemptRead] = reads
+      const enrolmentSnapshot = enrolmentRead.status === 'fulfilled'
+        ? enrolmentRead.value
+        : null
+      const paymentSnapshot = paymentRead.status === 'fulfilled'
+        ? paymentRead.value
+        : null
+      const attemptSnapshot = attemptRead.status === 'fulfilled'
+        ? attemptRead.value
+        : null
+      const mockAttemptSnapshot = mockAttemptRead.status === 'fulfilled'
+        ? mockAttemptRead.value
+        : null
+
+      for (const [name, result] of [
+        ['enrolments', enrolmentRead],
+        ['payments', paymentRead],
+        ['official attempts', attemptRead],
+        ['mock attempts', mockAttemptRead],
+      ] as const) {
+        if (result.status === 'rejected') {
+          console.error(`[AdminCompetitionDetail] Failed to load ${name}; keeping the rest of the page available.`, result.reason)
+        }
+      }
+
+      const attempts = (attemptSnapshot?.docs ?? []).map(
         (item) =>
           ({
             id: item.id,
@@ -151,7 +157,7 @@ export default function AdminCompetitionDetail() {
           }) as OfficialAttemptRow,
       )
 
-      const mockAttemptsLoaded = mockAttemptSnapshot.docs.map(
+      const mockAttemptsLoaded = (mockAttemptSnapshot?.docs ?? []).map(
         (item) =>
           ({
             id: item.id,
@@ -221,7 +227,7 @@ export default function AdminCompetitionDetail() {
       setCompetition(course)
 
       setEnrolments(
-        enrolmentSnapshot.docs.map(
+        (enrolmentSnapshot?.docs ?? []).map(
           (item) =>
             ({
               id: item.id,
@@ -231,7 +237,7 @@ export default function AdminCompetitionDetail() {
       )
 
       setPayments(
-        paymentSnapshot.docs.map(
+        (paymentSnapshot?.docs ?? []).map(
           (item) =>
             ({
               id: item.id,
