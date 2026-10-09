@@ -71,6 +71,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
   const [remainingSeconds, setRemainingSeconds] = useState(0);
   const [assessmentTimeSeconds, setAssessmentTimeSeconds] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [reviewUnansweredOnly, setReviewUnansweredOnly] = useState(false);
   const [result, setResult] = useState<AssessmentResult | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
@@ -377,10 +378,26 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
             <p className="mt-4 text-sm text-slate-muted">
               Identify questions to revisit. Correct-answer explanations are shown only when the assessment service provides them.
             </p>
+            <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+              <p className="text-sm text-slate-muted">
+                {reviewUnansweredOnly
+                  ? `Showing ${questions.filter((question) => !Number.isInteger(answers[question.question_id])).length} unanswered questions`
+                  : `Showing all ${questions.length} questions`}
+              </p>
+              <button
+                type="button"
+                onClick={() => setReviewUnansweredOnly((value) => !value)}
+                aria-pressed={reviewUnansweredOnly}
+                className="btn-secondary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              >
+                {reviewUnansweredOnly ? "Show all questions" : "Review unanswered only"}
+              </button>
+            </div>
             <ol className="mt-4 space-y-3">
               {questions.map((question, index) => {
                 const selectedIndex = answers[question.question_id];
                 const answered = Number.isInteger(selectedIndex) && selectedIndex !== null;
+                if (reviewUnansweredOnly && answered) return null;
                 return (
                   <li key={question.question_id} className="rounded-card border border-white/10 p-4">
                     <div className="flex flex-wrap items-start justify-between gap-2">
