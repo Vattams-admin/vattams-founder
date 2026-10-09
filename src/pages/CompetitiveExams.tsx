@@ -127,7 +127,7 @@ export default function CompetitiveExams() {
           <>
             <div className="mb-6">
               <label htmlFor="exam-programme-search" className="sr-only">Search published exam programmes</label>
-              <input id="exam-programme-search" type="search" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder="Search published programmes by exam or topic…" className="input w-full max-w-xl" />
+              <input id="exam-programme-search" type="search" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder="Search published programmes by exam or topic…" className="input w-full max-w-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy" />
             </div>
             {filteredCourses.length === 0 ? (
               <div className="card p-8 text-center">
@@ -137,7 +137,7 @@ export default function CompetitiveExams() {
               </div>
             ) : (
               <>
-                <p className="mb-4 text-sm text-slate-muted" aria-live="polite">Showing {filteredCourses.length} of {courses.length} published {courses.length === 1 ? 'programme' : 'programmes'}</p>
+                <p className="mb-4 text-sm text-slate-muted" aria-live="polite" aria-atomic="true">Showing {filteredCourses.length} of {courses.length} published {courses.length === 1 ? 'programme' : 'programmes'}</p>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {filteredCourses.map((course) => <CourseCard key={course.id} course={course} pricingConfig={pricingConfig} />)}
                 </div>
