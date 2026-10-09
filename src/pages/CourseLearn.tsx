@@ -474,6 +474,9 @@ export default function CourseLearn() {
     let cancelled = false
 
     async function loadActiveLessonFiles() {
+      // Clear the previous lesson's short-lived signed URLs immediately;
+      // never leave stale media available while the next lesson is loading.
+      setLessonFileUrls({ video: null, pdf: null })
       setLessonFilesLoading(true)
       setLessonFilesError(null)
 
@@ -722,8 +725,9 @@ export default function CourseLearn() {
                 <div className="mt-4 rounded-card border border-danger/40 bg-danger/5 p-3 text-sm text-danger">
                   {lessonFilesError}
                   <button
+                    type="button"
                     onClick={() => setLessonFilesRetryToken((t) => t + 1)}
-                    className="btn-secondary ml-3 text-xs"
+                    className="btn-secondary ml-3 text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
                   >
                     Retry
                   </button>
