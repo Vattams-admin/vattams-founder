@@ -64,6 +64,15 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
       schemaErrors.push('governance must include sourceEvidence, a valid reviewStatus, and answerKeyPrivate=true');
     }
     if (data.status === 'published') {
+      const publishedAssets = data.assets ?? {};
+      const requiredPublishedAssets = data.domain === 'course'
+        ? ['authoringPackages']
+        : ['questionBanksPublic', 'answerKeysPrivate'];
+      for (const field of requiredPublishedAssets) {
+        if (!Array.isArray(publishedAssets[field]) || publishedAssets[field].length === 0) {
+          schemaErrors.push('published packages require non-empty assets.' + field);
+        }
+      }
       for (const field of ['studyMaterials', 'questions', 'assessments']) {
         const value = field === 'questions' && data.domain === 'course' && data.coverage?.questions === undefined
           ? data.coverage?.questionBank
