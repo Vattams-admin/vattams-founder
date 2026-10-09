@@ -296,6 +296,38 @@ for (const target of courseTargets) {
         courseStructureErrors.push(target.slug + ': authoring package course locator mismatch: ' + packagePath);
       }
       const lessonId = pkg.locator?.lesson;
+      const questionIds = new Set();
+      for (const [questionIndex, question] of (Array.isArray(pkg.questions) ? pkg.questions : []).entries()) {
+        const questionId = question?.questionId ?? question?.id;
+        if (typeof questionId !== 'string' || questionId.trim() === '') {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question #' + (questionIndex + 1) + ' has no questionId/id');
+        } else if (questionIds.has(questionId)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate question ID ' + questionId);
+        } else {
+          questionIds.add(questionId);
+        }
+      }
+      const answerKeyEntries = Array.isArray(pkg.answerKeys) ? pkg.answerKeys : [];
+      const answerKeyIds = new Set();
+      for (const [answerIndex, answer] of answerKeyEntries.entries()) {
+        const answerId = answer?.questionId ?? answer?.id;
+        if (typeof answerId !== 'string' || answerId.trim() === '') {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' answer key #' + (answerIndex + 1) + ' has no questionId/id');
+        } else if (answerKeyIds.has(answerId)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate answer-key ID ' + answerId);
+        } else {
+          answerKeyIds.add(answerId);
+        }
+      }
+      for (const questionId of questionIds) {
+        if (!answerKeyIds.has(questionId)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + questionId + ' has no matching answer key');
+      }
+      for (const answerId of answerKeyIds) {
+        if (!questionIds.has(answerId)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' answer key references unknown question ' + answerId);
+      }
+      if (questionIds.size > 0 && answerKeyIds.size === 0) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has questions but no answer keys');
+      }
       // Validate the authored package schema used by the actual lesson library.
       // Older/current packages store learning content under studyMaterial, practice,
       // activities, outcomes, questions and revision rather than one flat set of fields.
