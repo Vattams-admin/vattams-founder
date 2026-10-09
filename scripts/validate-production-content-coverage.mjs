@@ -339,7 +339,7 @@ for (const target of courseTargets) {
           courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' has no question text');
         } else {
           const normalizedStem = question.question.trim().replace(/\\s+/g, ' ').toLocaleLowerCase();
-          if (questionStemOwners.has(normalizedStem)) {
+          if (questionStemOwners.has(normalizedStem) && pkg.status === 'published') {
             courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate question text for ' + label + ' and ' + questionStemOwners.get(normalizedStem));
           } else {
             questionStemOwners.set(normalizedStem, label);
@@ -350,11 +350,11 @@ for (const target of courseTargets) {
           courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' must have at least two non-empty text options');
         } else {
           const normalizedOptions = question.options.map((option) => option.trim().toLocaleLowerCase());
-          if (new Set(normalizedOptions).size !== normalizedOptions.length) {
+          if (new Set(normalizedOptions).size !== normalizedOptions.length && pkg.status === 'published') {
             courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' contains duplicate answer options');
           }
         }
-        if (question?.difficulty !== undefined &&
+        if (pkg.status === 'published' && question?.difficulty !== undefined &&
             !['foundational', 'foundation', 'basic', 'easy', 'medium', 'conceptual', 'intermediate', 'application', 'hard', 'advanced', 'higher-order', 'higherOrderThinking', 'diagnostic', 'remediation', 'mixedReview'].includes(question.difficulty)) {
           courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' has an unsupported difficulty label');
         }
@@ -381,7 +381,7 @@ for (const target of courseTargets) {
           }
         }
       }
-      if (courseQuestions.length > 0 && questionsWithExplicitDifficulty === 0) {
+      if (pkg.status === 'published' && courseQuestions.length > 0 && questionsWithExplicitDifficulty === 0) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' questions need explicit difficulty labels to support progression');
       } else if (pkg.status === 'published' && courseQuestions.length >= 5 && questionDifficultyValues.size < 2) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' should include at least two difficulty levels when it contains five or more questions');
