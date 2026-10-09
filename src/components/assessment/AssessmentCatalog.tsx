@@ -165,8 +165,15 @@ export default function AssessmentCatalog({ courseId }: Props) {
       ) : filteredAssessments.length === 0 ? (
         <div className="mt-5 rounded-card border border-white/10 p-4">
           <p className="text-sm text-slate-muted">No assessments match the current search and type filters.</p>
-          <button type="button" onClick={() => setSearchTerm("")} className="btn-secondary mt-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
-            Clear search
+          <button
+            type="button"
+            onClick={() => {
+              setSearchTerm("")
+              setActiveKind("all")
+            }}
+            className="btn-secondary mt-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          >
+            Clear search and filters
           </button>
         </div>
       ) : (
