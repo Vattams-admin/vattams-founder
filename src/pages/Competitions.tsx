@@ -167,14 +167,26 @@ export default function Competitions() {
               </p>
             </div>
             <label htmlFor="competition-search" className="sr-only">Search published competitions</label>
-            <input
-              id="competition-search"
-              type="search"
-              value={searchTerm}
-              onChange={(event) => setSearchTerm(event.target.value)}
-              placeholder="Search competition name or description"
-              className="input w-full max-w-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
-            />
+            <div className="flex w-full max-w-xl items-center gap-2">
+              <input
+                id="competition-search"
+                type="search"
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                placeholder="Search competition name or description"
+                className="input min-w-0 flex-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+              />
+              {searchTerm && (
+                <button
+                  type="button"
+                  onClick={() => setSearchTerm('')}
+                  className="shrink-0 rounded-lg border border-white/15 px-3 py-2 text-sm text-parchment hover:border-gold/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                  aria-label="Clear competition search"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
             <div className="mt-4 flex flex-wrap gap-2">
               {COMPETITION_DISCOVERY_TOPICS.map((topic) => (
                 <button
