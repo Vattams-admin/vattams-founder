@@ -1,5 +1,5 @@
 {
-  "packageId": "assessment-tnpsc-group-iv-vao-mock-03",
+  "packageId": "assessment-tnpsc-group-iv-vao-mock-suite",
   "version": "1.0.0",
   "domain": "competitive-exam",
   "locator": {
@@ -10,18 +10,26 @@
   "coverage": {
     "studyMaterials": 0,
     "questions": 0,
-    "assessments": 0
+    "assessments": 3
   },
   "assets": {
-    "manifestPath": "content/assessments/tnpsc-group-iv-vao-mock-03/manifest.json",
+    "manifestPath": "content/assessments/tnpsc-group-iv-vao/manifest.json",
     "studyMaterials": [],
     "questionBanksPublic": [
+      "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-01.public.json",
+      "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-02.public.json",
       "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-03.public.json"
     ],
     "answerKeysPrivate": [
+      "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-01.private.json",
+      "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-02.private.json",
       "assessments/competitive-exam/tnpsc-group-iv-vao/tnpsc-group-iv-vao-mock-03.private.json"
     ],
-    "assessments": []
+    "assessments": [
+      "tnpsc-group-iv-vao-mock-01",
+      "tnpsc-group-iv-vao-mock-02",
+      "tnpsc-group-iv-vao-mock-03"
+    ]
   },
   "governance": {
     "sourceEvidence": [
