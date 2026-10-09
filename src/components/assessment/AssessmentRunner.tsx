@@ -96,16 +96,20 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     const ordered = ids.map((id: string) => byId.get(id));
     if (ordered.some((q: AssessmentQuestion | undefined) => !q)) throw new Error("Assessment question ordering is invalid.");
 
+    const orderedQuestions = ordered as AssessmentQuestion[];
+    const validQuestionIds = new Set(orderedQuestions.map((question) => question.question_id));
     const restored: Record<string, number | null> = {};
     for (const answer of (Array.isArray(data?.answers) ? data.answers : []) as AssessmentAnswer[]) {
-      if (typeof answer.question_id === "string") {
-        restored[answer.question_id] = Number.isInteger(answer.selected_option_index)
-          ? answer.selected_option_index as number
+      if (typeof answer.question_id !== "string" || !validQuestionIds.has(answer.question_id)) continue;
+      const selected = answer.selected_option_index;
+      restored[answer.question_id] =
+        Number.isInteger(selected) && (selected as number) >= 0 && (selected as number) < 4
+          ? selected as number
           : null;
-      }
     }
 
-    setQuestions(ordered as AssessmentQuestion[]);
+    setQuestions(orderedQuestions);
+    setCurrentIndex(0);
     setAnswers(restored);
     setAttemptId(data.attempt_id);
     const configuredSeconds = Number(data?.time_seconds);
