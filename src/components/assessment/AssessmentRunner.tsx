@@ -61,6 +61,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
   const [error, setError] = useState("");
   const autoSubmit = useRef(false);
   const saveTimers = useRef<Record<string, number>>({});
+  const pendingAnswers = useRef<Record<string, number | null>>({});
 
   const current = questions[currentIndex];
   const answeredCount = useMemo(
@@ -129,33 +130,40 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     setView("attempt");
   }, [assessmentId, courseId]);
 
+  const persistAnswer = useCallback(async (questionId: string, selected: number | null) => {
+    const authToken = await token();
+    const { error: saveError } = await supabase.functions.invoke("assessment-answer", {
+      body: {
+        action: "save_answer",
+        attempt_id: attemptId,
+        question_id: questionId,
+        selected_option_index: selected,
+        answer: selected === null ? "" : String(selected),
+      },
+      headers: { Authorization: `Bearer ${authToken}` },
+    });
+    if (saveError) throw saveError;
+    if (pendingAnswers.current[questionId] === selected) {
+      delete pendingAnswers.current[questionId];
+    }
+  }, [attemptId]);
+
   const saveAnswer = useCallback(async (questionId: string, selected: number | null) => {
     if (!attemptId) return;
     setAnswers((prev) => ({ ...prev, [questionId]: selected }));
+    pendingAnswers.current[questionId] = selected;
 
     const existing = saveTimers.current[questionId];
     if (existing) window.clearTimeout(existing);
 
-    saveTimers.current[questionId] = window.setTimeout(async () => {
-      try {
-        const authToken = await token();
-        const { error: saveError } = await supabase.functions.invoke("assessment-answer", {
-          body: {
-            action: "save_answer",
-            attempt_id: attemptId,
-            question_id: questionId,
-            selected_option_index: selected,
-            answer: selected === null ? "" : String(selected),
-          },
-          headers: { Authorization: `Bearer ${authToken}` },
-        });
-        if (saveError) throw saveError;
-      } catch (e) {
+    saveTimers.current[questionId] = window.setTimeout(() => {
+      delete saveTimers.current[questionId];
+      void persistAnswer(questionId, selected).catch((e) => {
         console.error("Assessment answer save failed", e);
         setError("Answer could not be saved. Please retry before submitting.");
-      }
+      });
     }, 250);
-  }, [attemptId]);
+  }, [attemptId, persistAnswer]);
 
   const submit = useCallback(async () => {
     if (!attemptId || busy || autoSubmit.current) return;
@@ -163,6 +171,12 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     setBusy(true);
     setError("");
     try {
+      // Flush debounced answers before submission so the server scores the latest selections.
+      const pending = Object.entries(pendingAnswers.current);
+      for (const timer of Object.values(saveTimers.current)) window.clearTimeout(timer);
+      saveTimers.current = {};
+      await Promise.all(pending.map(([questionId, selected]) => persistAnswer(questionId, selected)));
+
       const authToken = await token();
       const { data, error: invokeError } = await supabase.functions.invoke("assessment-submit", {
         body: { action: "submit", attempt_id: attemptId },
@@ -182,7 +196,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     } finally {
       setBusy(false);
     }
-  }, [attemptId, busy]);
+  }, [attemptId, busy, persistAnswer]);
 
   useEffect(() => {
     if (view !== "attempt" || startedAt === null) return;
