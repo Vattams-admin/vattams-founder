@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
@@ -25,7 +25,15 @@ export default function CompetitiveExams() {
 
   const [courses, setCourses] = useState<Course[]>([])
   const [state, setState] = useState<'loading' | 'loaded' | 'error'>('loading')
+  const [retryToken, setRetryToken] = useState(0)
+  const [searchTerm, setSearchTerm] = useState('')
   const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  const filteredCourses = useMemo(() => {
+    const term = searchTerm.trim().toLowerCase()
+    if (!term) return courses
+    return courses.filter((course) => [course.name, course.slug, course.short_description ?? '', course.description ?? ''].join(' ').toLowerCase().includes(term))
+  }, [courses, searchTerm])
 
   useEffect(() => {
     let cancelled = false
@@ -57,7 +65,7 @@ export default function CompetitiveExams() {
     }
     load()
     return () => { cancelled = true }
-  }, [])
+  }, [retryToken])
 
   return (
     <div>
