@@ -21,6 +21,12 @@ const walk = (dir) => {
 const registry = readJson(path.join(ROOT, 'config/content-library-registry.json'));
 const competitionRegistry = readJson(path.join(ROOT, 'config/competition-registry.json'));
 const assessmentRegistry = readJson(path.join(ROOT, 'config/assessment-registry.json'));
+const generatedCompetitionAssetPaths = new Set(
+  Object.values(competitionRegistry.competitions ?? {}).flatMap((item) =>
+    [item.question_bundle, item.answer_key_bundle, item.age_pools]
+      .filter((value) => typeof value === 'string' && value.trim() !== '')
+  )
+);
 
 const resolveRepositoryAsset = (assetPath) => {
   if (typeof assetPath !== 'string' || assetPath.trim() === '') {
@@ -138,7 +144,7 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
         const resolved = resolveRepositoryAsset(assetPath);
         if (!resolved.valid) {
           missingAssetPaths.push({ field, value: assetPath, reason: resolved.reason });
-        } else if (!exists(resolved.resolved)) {
+        } else if (!exists(resolved.resolved) && !generatedCompetitionAssetPaths.has(resolved.repositoryPath)) {
           missingAssetPaths.push({ field, value: assetPath, reason: 'file does not exist in repository' });
         }
       }
