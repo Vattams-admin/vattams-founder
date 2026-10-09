@@ -33,7 +33,7 @@ export default function Languages() {
       <div className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         <div className="card p-4"><p className="text-sm text-slate-muted">India-connected catalogue</p><p className="mt-1 text-2xl font-semibold">{indiaCount} languages</p></div>
         <div className="card p-4"><p className="text-sm text-slate-muted">Global catalogue</p><p className="mt-1 text-2xl font-semibold">{globalCount} languages</p></div>
-        <div className="card p-4"><p className="text-sm text-slate-muted">Beginner starter curriculum</p><p className="mt-1 text-2xl font-semibold">{LANGUAGE_SEED_SUMMARY.starterLessonCount} lesson seeds</p><p className="mt-1 text-xs text-slate-muted">{LANGUAGE_SEED_SUMMARY.languagesWithLocalizedExamples} languages have localized examples; others are flagged for review.</p></div>
+        <div className="card p-4"><p className="text-sm text-slate-muted">Beginner starter curriculum</p><p className="mt-1 text-2xl font-semibold">{LANGUAGE_SEED_SUMMARY.starterLessonCount} lesson seeds</p><p className="mt-1 text-xs text-slate-muted">{LANGUAGE_LEARNING_STARTER_SEEDS.filter((item) => !item.reviewRequired).length} lesson seeds include localized examples</p><p className="mt-1 text-xs text-slate-muted">{LANGUAGE_LEARNING_STARTER_SEEDS.filter((item) => item.reviewRequired).length} lesson seeds need localization or review</p></div>
       </div>
 
       <section className="card p-4 sm:p-6" aria-label="Browse language catalogue">
@@ -55,7 +55,7 @@ export default function Languages() {
                 <p className="mt-1 text-lg text-gold-bright" lang={language.id}>{language.nativeName}</p>
                 <p className="mt-2 text-xs text-slate-muted">{language.group === 'India' ? 'India-connected' : 'Global'} · {language.id}</p>
                 <p className="mt-2 text-xs text-slate-muted">5 beginner lesson seeds</p>
-                <p className="mt-1 text-xs font-medium text-gold-bright">{LANGUAGE_LEARNING_STARTER_SEEDS.some((item) => item.languageId === language.id && !item.reviewRequired) ? 'Localized examples included' : 'Localization review needed'}</p>
+                <p className="mt-1 text-xs font-medium text-gold-bright">{LANGUAGE_LEARNING_STARTER_SEEDS.some((item) => item.languageId === language.id && !item.reviewRequired) ? 'Some localized examples included' : 'Localization review needed'}</p>
               </li>
             ))}
           </ul>
