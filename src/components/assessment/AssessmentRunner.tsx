@@ -178,6 +178,27 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     }, 250);
   }, [attemptId, persistAnswer]);
 
+  const retryPendingSaves = useCallback(async () => {
+    if (!attemptId || busy) return;
+    setBusy(true);
+    setError("");
+    try {
+      for (const timer of Object.values(saveTimers.current)) window.clearTimeout(timer);
+      saveTimers.current = {};
+      await Promise.all(
+        Object.entries(pendingAnswers.current).map(([questionId, selected]) =>
+          persistAnswer(questionId, selected),
+        ),
+      );
+      setError("");
+    } catch (e) {
+      console.error("Assessment answer retry failed", e);
+      setError(e instanceof Error ? e.message : "Answers could not be saved. Check your connection and retry.");
+    } finally {
+      setBusy(false);
+    }
+  }, [attemptId, busy, persistAnswer]);
+
   const submit = useCallback(async () => {
     if (!attemptId || busy || autoSubmit.current) return;
     autoSubmit.current = true;
@@ -306,7 +327,17 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
           <div className="rounded-card border border-gold/20 bg-white/5 px-4 py-2 text-center"><p className="text-[11px] text-slate-muted">Time</p><p className="mt-1 font-semibold">{formatTime(remainingSeconds)}</p></div>
         </div>
 
-        {error && <div className="mt-5 rounded-card border border-danger/30 bg-danger/10 px-4 py-3 text-sm text-danger">{error}</div>}
+        {error && (
+          <div role="alert" className="mt-5 rounded-card border border-danger/30 bg-danger/10 px-4 py-3 text-sm text-danger">
+            <p>{error}</p>
+            {Object.keys(pendingAnswers.current).length > 0 && (
+              <button type="button" onClick={() => void retryPendingSaves()} disabled={busy}
+                className="mt-3 rounded-card border border-danger/40 px-3 py-2 font-semibold text-danger underline underline-offset-4 disabled:opacity-50">
+                {busy ? "Retrying saves..." : "Retry saving answers"}
+              </button>
+            )}
+          </div>
+        )}
 
         <div className="mt-6 flex items-center justify-between text-sm text-slate-muted">
           <span>Question {currentIndex + 1} of {questions.length}</span>
