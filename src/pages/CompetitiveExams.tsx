@@ -75,6 +75,25 @@ export default function CompetitiveExams() {
         </div>
       </section>
 
+      <section className="border-y border-white/5 bg-white/[0.02] py-8">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className="eyebrow">Explore exam pathways</p>
+          <h2 className="mt-2 text-xl font-semibold text-parchment">Find preparation by goal</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-muted">These are discovery topics, not a claim that every programme is currently published. Select a topic to open the existing course catalogue with that search.</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {[
+              'TNPSC', 'UPSC', 'SSC', 'Banking', 'Railways', 'Police & Defence',
+              'JEE & Engineering', 'NEET & Medical', 'CUET & University Entrance',
+              'Law & Management', 'Pharmacy & Agriculture', 'CA & Auditing',
+            ].map((topic) => (
+              <Link key={topic} to={`/courses?search=${encodeURIComponent(topic)}`} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-xs font-medium text-parchment/85 transition-colors hover:border-azure/40 hover:text-white">
+                {topic}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         {state === 'loading' && (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
