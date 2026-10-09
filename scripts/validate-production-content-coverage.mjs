@@ -59,6 +59,14 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
         data.governance?.answerKeyPrivate !== true) {
       schemaErrors.push('governance must include sourceEvidence, a valid reviewStatus, and answerKeyPrivate=true');
     }
+    if (data.status === 'published') {
+      if (!['reviewed', 'approved'].includes(data.governance?.reviewStatus)) schemaErrors.push('published packages require reviewed or approved governance.reviewStatus');
+      for (const field of ['approvedBy', 'approvedAt', 'contentHash']) {
+        if (typeof data.governance?.[field] !== 'string' || data.governance[field].trim() === '') {
+          schemaErrors.push('published packages require non-empty governance.' + field);
+        }
+      }
+    }
     const assets = data.assets ?? null;
     const missingAssetPaths = [];
     for (const field of ['authoringPackages', 'questionBanksPublic', 'answerKeysPrivate']) {
