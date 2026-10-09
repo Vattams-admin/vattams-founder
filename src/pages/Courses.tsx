@@ -34,6 +34,7 @@ export default function Courses() {
   const [searchTerm, setSearchTerm] = useState(() => searchParams.get('search') ?? '')
   const [levelFilter, setLevelFilter] = useState<string>('all')
   const [categoryFilter, setCategoryFilter] = useState<string>('all')
+  const [sortOrder, setSortOrder] = useState<'featured' | 'name'>('featured')
   const [retryToken, setRetryToken] = useState(0)
   const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
 
@@ -139,8 +140,7 @@ export default function Courses() {
 
   const filteredCourses = useMemo(() => {
     const term = searchTerm.trim().toLowerCase()
-
-    return courses.filter((c) => {
+    const matchingCourses = courses.filter((c) => {
       if (levelFilter !== 'all' && c.level !== levelFilter) return false
       if (categoryFilter !== 'all' && c.category_id !== categoryFilter) return false
 
@@ -153,7 +153,15 @@ export default function Courses() {
 
       return haystack.includes(term)
     })
-  }, [courses, searchTerm, levelFilter, categoryFilter])
+
+    return matchingCourses.sort((a, b) => {
+      if (sortOrder === 'featured') {
+        const featuredDifference = Number(Boolean(b.is_featured)) - Number(Boolean(a.is_featured))
+        if (featuredDifference !== 0) return featuredDifference
+      }
+      return getCourseDisplayName(a.name).localeCompare(getCourseDisplayName(b.name))
+    })
+  }, [courses, searchTerm, levelFilter, categoryFilter, sortOrder])
 
   return (
     <div>
@@ -213,6 +221,19 @@ export default function Courses() {
               ))}
             </div>
           )}
+        </div>
+
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+          <label htmlFor="course-sort-order" className="text-sm text-slate-muted">Sort courses</label>
+          <select
+            id="course-sort-order"
+            value={sortOrder}
+            onChange={(event) => setSortOrder(event.target.value as 'featured' | 'name')}
+            className="input w-full max-w-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+          >
+            <option value="featured">Featured first, then A–Z</option>
+            <option value="name">Name: A–Z</option>
+          </select>
         </div>
 
         {/* Topic discovery: selecting a suggestion uses the existing catalogue search. */}
