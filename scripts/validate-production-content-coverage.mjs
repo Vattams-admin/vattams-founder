@@ -464,7 +464,8 @@ const targets = [
   const state = manifest?.status ?? 'missing';
   const releaseBlockers = [];
   const diagnostics = [];
-  const addDiagnostic = (severity, code, message, questionId = null, action = 'Correct the source content and rerun the validator.') => diagnostics.push({ severity, code, message, questionId, action });
+  const priorityForCode = (code) => code === 'PUBLIC_ANSWER_LEAK' ? 'critical' : ['ANSWER_KEY_MISSING', 'ANSWER_KEY_ORPHAN', 'ANSWER_OPTION_MISMATCH', 'ANSWER_INDEX_OUT_OF_RANGE', 'PUBLIC_QUESTION_ID_DUPLICATE', 'ANSWER_KEY_ID_DUPLICATE'].includes(code) ? 'high' : ['PUBLIC_QUESTION_ID_MISSING', 'ANSWER_KEY_ID_MISSING', 'QUESTION_OPTIONS_INSUFFICIENT'].includes(code) ? 'medium' : 'low';
+  const addDiagnostic = (severity, code, message, questionId = null, action = 'Correct the source content and rerun the validator.') => diagnostics.push({ severity, code, priority: priorityForCode(code), message, questionId, action });
   if (!manifest) releaseBlockers.push('content manifest is missing');
   if (manifest?.invalid) releaseBlockers.push('manifest schema validation failed');
   if ((manifest?.missingAssetPaths?.length ?? 0) > 0) releaseBlockers.push('one or more asset paths are invalid or missing');
@@ -599,9 +600,11 @@ const diagnosticTargets = targets
     diagnostics: target.diagnostics
   }));
 const diagnosticCodeCounts = {};
+const diagnosticPriorityCounts = { critical: 0, high: 0, medium: 0, low: 0 };
 for (const target of diagnosticTargets) {
   for (const diagnostic of target.diagnostics) {
     diagnosticCodeCounts[diagnostic.code] = (diagnosticCodeCounts[diagnostic.code] ?? 0) + 1;
+    diagnosticPriorityCounts[diagnostic.priority] = (diagnosticPriorityCounts[diagnostic.priority] ?? 0) + 1;
   }
 }
 const diagnosticSummary = {
@@ -615,6 +618,7 @@ const diagnosticSummary = {
     }];
   })),
   byCode: diagnosticCodeCounts,
+  byPriority: diagnosticPriorityCounts,
   targets: diagnosticTargets
 };
 const report = { version: 1, generatedAt: summary.generatedAt, summary, diagnosticSummary, targets, manifests };
