@@ -14,90 +14,20 @@
       "title": "Sound Awareness and Letter Sounds",
       "sequence": 1,
       "lessons": [
-        {
-          "lessonId": "01-hear-and-identify-m",
-          "sequence": 1,
-          "title": "Hear and Identify /m/",
-          "authoringPackage": "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
-        },
-        {
-          "lessonId": "02-hear-and-identify-s",
-          "sequence": 2,
-          "title": "Hear and Identify /s/",
-          "authoringPackage": "content/courses/phonics-foundation/02-hear-and-identify-s/authoring-package.json"
-        },
-        {
-          "lessonId": "03-hear-and-identify-t",
-          "sequence": 3,
-          "title": "Hear and Identify /t/",
-          "authoringPackage": "content/courses/phonics-foundation/03-hear-and-identify-t/authoring-package.json"
-        },
-        {
-          "lessonId": "04-short-a-sound",
-          "sequence": 4,
-          "title": "Hear and Identify Short /a/",
-          "authoringPackage": "content/courses/phonics-foundation/04-short-a-sound/authoring-package.json"
-        },
-        {
-          "lessonId": "05-oral-blending-m-s-t-a",
-          "sequence": 5,
-          "title": "Oral Blending with /m/, /s/, /t/ and /a/",
-          "authoringPackage": "content/courses/phonics-foundation/05-oral-blending-m-s-t-a/authoring-package.json"
-        },
-        {
-          "lessonId": "06-decode-cvc-m-s-t-a",
-          "sequence": 6,
-          "title": "Decode CVC Words with m, s, t and a",
-          "authoringPackage": "content/courses/phonics-foundation/06-decode-cvc-m-s-t-a/authoring-package.json"
-        },
-        {
-          "lessonId": "07-phoneme-segmenting-cvc",
-          "sequence": 7,
-          "title": "Segment CVC Words into Phonemes",
-          "authoringPackage": "content/courses/phonics-foundation/07-phoneme-segmenting-cvc/authoring-package.json"
-        },
-        {
-          "lessonId": "08-cvc-spelling-m-s-t-a",
-          "sequence": 8,
-          "title": "Spell CVC Words with m, s, t and a",
-          "authoringPackage": "content/courses/phonics-foundation/08-cvc-spelling-m-s-t-a/authoring-package.json"
-        },
-        {
-          "lessonId": "09-cvc-reading-fluency",
-          "sequence": 9,
-          "title": "Read CVC Words with Accuracy and Early Fluency",
-          "authoringPackage": "content/courses/phonics-foundation/09-cvc-reading-fluency/authoring-package.json"
-        },
-        {
-          "lessonId": "10-cvc-word-families",
-          "sequence": 10,
-          "title": "CVC Word Families and Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/10-cvc-word-families/authoring-package.json"
-        },
-        {
-          "lessonId": "11-controlled-cvc-sentences-comprehension",
-          "sequence": 11,
-          "title": "Controlled CVC Sentences and Early Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/11-controlled-cvc-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "12-controlled-cvc-passage-sequencing",
-          "sequence": 12,
-          "title": "Controlled CVC Passage, Sequencing and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/12-controlled-cvc-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "13-phonics-consolidation-diagnostic",
-          "sequence": 13,
-          "title": "Phonics Consolidation and Diagnostic Checkpoint",
-          "authoringPackage": "content/courses/phonics-foundation/13-phonics-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "14-targeted-remediation-and-reassessment",
-          "sequence": 14,
-          "title": "Targeted Phonics Remediation and Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/14-targeted-remediation-and-reassessment/authoring-package.json"
-        }
+        "01-hear-and-identify-m",
+        "02-hear-and-identify-s",
+        "03-hear-and-identify-t",
+        "04-short-a-sound",
+        "05-oral-blending-m-s-t-a",
+        "06-decode-cvc-m-s-t-a",
+        "07-phoneme-segmenting-cvc",
+        "08-cvc-spelling-m-s-t-a",
+        "09-cvc-reading-fluency",
+        "10-cvc-word-families",
+        "11-controlled-cvc-sentences-comprehension",
+        "12-controlled-cvc-passage-sequencing",
+        "13-phonics-consolidation-diagnostic",
+        "14-targeted-remediation-and-reassessment"
       ],
       "progression": {
         "entrySkills": [
@@ -128,780 +58,135 @@
       "title": "Expanded Sound–Letter Patterns and Controlled Reading",
       "sequence": 2,
       "lessons": [
-        {
-          "lessonId": "15-hear-and-identify-p",
-          "sequence": 1,
-          "title": "Hear and Identify /p/",
-          "authoringPackage": "content/courses/phonics-foundation/15-hear-and-identify-p/authoring-package.json"
-        },
-        {
-          "lessonId": "16-decode-cvc-with-p",
-          "sequence": 2,
-          "title": "Decode CVC Words with /p/",
-          "authoringPackage": "content/courses/phonics-foundation/16-decode-cvc-with-p/authoring-package.json"
-        },
-        {
-          "lessonId": "17-cvc-spelling-with-p",
-          "sequence": 3,
-          "title": "Spell CVC Words with /p/",
-          "authoringPackage": "content/courses/phonics-foundation/17-cvc-spelling-with-p/authoring-package.json"
-        },
-        {
-          "lessonId": "18-p-word-families-controlled-reading",
-          "sequence": 4,
-          "title": "/p/ Word Families and Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/18-p-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "19-controlled-p-sentences-comprehension",
-          "sequence": 5,
-          "title": "Controlled /p/ Sentences and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/19-controlled-p-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "20-controlled-p-passage-sequencing",
-          "sequence": 6,
-          "title": "Controlled /p/ Passage, Sequencing and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/20-controlled-p-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "21-phonics-consolidation-diagnostic-2",
-          "sequence": 7,
-          "title": "Phonics Consolidation and Diagnostic Checkpoint 2",
-          "authoringPackage": "content/courses/phonics-foundation/21-phonics-consolidation-diagnostic-2/authoring-package.json"
-        },
-        {
-          "lessonId": "22-targeted-remediation-and-reassessment-2",
-          "sequence": 8,
-          "title": "Targeted Phonics Remediation and Reassessment 2",
-          "authoringPackage": "content/courses/phonics-foundation/22-targeted-remediation-and-reassessment-2/authoring-package.json"
-        },
-        {
-          "lessonId": "23-hear-and-identify-n",
-          "sequence": 9,
-          "title": "Hear and Identify /n/",
-          "authoringPackage": "content/courses/phonics-foundation/23-hear-and-identify-n/authoring-package.json"
-        },
-        {
-          "lessonId": "24-decode-cvc-with-n",
-          "sequence": 10,
-          "title": "Decode CVC Words with /n/",
-          "authoringPackage": "content/courses/phonics-foundation/24-decode-cvc-with-n/authoring-package.json"
-        },
-        {
-          "lessonId": "25-cvc-spelling-with-n",
-          "sequence": 11,
-          "title": "Spell CVC Words with /n/",
-          "authoringPackage": "content/courses/phonics-foundation/25-cvc-spelling-with-n/authoring-package.json"
-        },
-        {
-          "lessonId": "26-n-word-families-controlled-reading",
-          "sequence": 12,
-          "title": "/n/ Word Families and Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/26-n-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "27-controlled-n-sentences-comprehension",
-          "sequence": 13,
-          "title": "Controlled /n/ Sentences and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/27-controlled-n-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "28-controlled-n-passage-sequencing",
-          "sequence": 14,
-          "title": "Controlled /n/ Passage, Sequencing and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/28-controlled-n-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "29-n-fluency-consolidation-diagnostic",
-          "sequence": 15,
-          "title": "/n/ Fluency and Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/29-n-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "30-targeted-n-remediation-reassessment",
-          "sequence": 16,
-          "title": "Targeted /n/ Remediation and Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/30-targeted-n-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "31-short-i-sound",
-          "sequence": 17,
-          "title": "Hear and Identify Short /i/",
-          "authoringPackage": "content/courses/phonics-foundation/31-short-i-sound/authoring-package.json"
-        },
-        {
-          "lessonId": "32-decode-cvc-short-i",
-          "sequence": 18,
-          "title": "Decode CVC Words with Short /i/",
-          "authoringPackage": "content/courses/phonics-foundation/32-decode-cvc-short-i/authoring-package.json"
-        },
-        {
-          "lessonId": "33-cvc-spelling-short-i",
-          "sequence": 19,
-          "title": "Spell CVC Words with Short /i/",
-          "authoringPackage": "content/courses/phonics-foundation/33-cvc-spelling-short-i/authoring-package.json"
-        },
-        {
-          "lessonId": "34-short-i-word-families-controlled-reading",
-          "sequence": 20,
-          "title": "Short /i/ Word Families and Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/34-short-i-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "35-controlled-short-i-sentences-comprehension",
-          "sequence": 21,
-          "title": "Controlled Short /i/ Sentences and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/35-controlled-short-i-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "36-controlled-short-i-passage-sequencing",
-          "sequence": 22,
-          "title": "Controlled Short /i/ Passage, Sequencing and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/36-controlled-short-i-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "37-short-i-fluency-consolidation-diagnostic",
-          "sequence": 23,
-          "title": "Short /i/ Fluency and Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/37-short-i-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "38-targeted-short-i-remediation-reassessment",
-          "sequence": 24,
-          "title": "Targeted Short /i/ Remediation and Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/38-targeted-short-i-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "39-short-o-sound",
-          "sequence": 25,
-          "title": "Hear and Identify Short /o/",
-          "authoringPackage": "content/courses/phonics-foundation/39-short-o-sound/authoring-package.json"
-        },
-        {
-          "lessonId": "40-decode-cvc-short-o",
-          "sequence": 26,
-          "title": "Decode CVC Words with Short /o/",
-          "authoringPackage": "content/courses/phonics-foundation/40-decode-cvc-short-o/authoring-package.json"
-        },
-        {
-          "lessonId": "41-cvc-spelling-short-o",
-          "sequence": 27,
-          "title": "Spell CVC Words with Short /o/",
-          "authoringPackage": "content/courses/phonics-foundation/41-cvc-spelling-short-o/authoring-package.json"
-        },
-        {
-          "lessonId": "42-short-o-word-families-controlled-reading",
-          "sequence": 28,
-          "title": "Short /o/ Word Families and Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/42-short-o-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "43-controlled-short-o-sentences-comprehension",
-          "sequence": 29,
-          "title": "Controlled Short /o/ Sentences and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/43-controlled-short-o-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "44-controlled-short-o-passage-sequencing",
-          "sequence": 30,
-          "title": "Controlled Short /o/ Passage, Sequencing and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/44-controlled-short-o-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "45-short-o-fluency-consolidation-diagnostic",
-          "sequence": 31,
-          "title": "Short /o/ Fluency and Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/45-short-o-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "46-targeted-short-o-remediation-reassessment",
-          "sequence": 32,
-          "title": "Targeted Short /o/ Remediation and Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/46-targeted-short-o-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "47-short-e-sound",
-          "sequence": 33,
-          "title": "Short /e/ Sound",
-          "authoringPackage": "content/courses/phonics-foundation/47-short-e-sound/authoring-package.json"
-        },
-        {
-          "lessonId": "48-decode-cvc-short-e",
-          "sequence": 34,
-          "title": "Decode CVC Words with Short /e/",
-          "authoringPackage": "content/courses/phonics-foundation/48-decode-cvc-short-e/authoring-package.json"
-        },
-        {
-          "lessonId": "49-cvc-spelling-short-e",
-          "sequence": 35,
-          "title": "CVC Spelling with Short /e/",
-          "authoringPackage": "content/courses/phonics-foundation/49-cvc-spelling-short-e/authoring-package.json"
-        },
-        {
-          "lessonId": "50-short-e-word-families-controlled-reading",
-          "sequence": 36,
-          "title": "Short /e/ Word Families and Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/50-short-e-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "51-controlled-short-e-sentences-comprehension",
-          "sequence": 37,
-          "title": "Controlled Short /e/ Sentences and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/51-controlled-short-e-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "52-controlled-short-e-passage-sequencing",
-          "sequence": 38,
-          "title": "Controlled Short /e/ Passage and Sequencing",
-          "authoringPackage": "content/courses/phonics-foundation/52-controlled-short-e-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "53-short-e-fluency-consolidation-diagnostic",
-          "sequence": 39,
-          "title": "Short /e/ Fluency Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/53-short-e-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "54-targeted-short-e-remediation-reassessment",
-          "sequence": 40,
-          "title": "Targeted Short /e/ Remediation and Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/54-targeted-short-e-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "55-short-u-sound",
-          "sequence": 41,
-          "title": "Short /u/ Sound",
-          "authoringPackage": "content/courses/phonics-foundation/55-short-u-sound/authoring-package.json"
-        },
-        {
-          "lessonId": "56-decode-cvc-short-u",
-          "sequence": 42,
-          "title": "Decode CVC Words with Short /u/",
-          "authoringPackage": "content/courses/phonics-foundation/56-decode-cvc-short-u/authoring-package.json"
-        },
-        {
-          "lessonId": "57-cvc-spelling-short-u",
-          "sequence": 43,
-          "title": "CVC Spelling with Short /u/",
-          "authoringPackage": "content/courses/phonics-foundation/57-cvc-spelling-short-u/authoring-package.json"
-        },
-        {
-          "lessonId": "58-short-u-word-families-controlled-reading",
-          "sequence": 44,
-          "title": "Short /u/ Word Families and Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/58-short-u-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "59-controlled-short-u-sentences-comprehension",
-          "sequence": 45,
-          "title": "Controlled Short /u/ Sentences and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/59-controlled-short-u-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "60-controlled-short-u-passage-sequencing",
-          "sequence": 46,
-          "title": "Controlled Short /u/ Passage and Sequencing",
-          "authoringPackage": "content/courses/phonics-foundation/60-controlled-short-u-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "61-short-u-fluency-consolidation-diagnostic",
-          "sequence": 47,
-          "title": "Short /u/ Fluency Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/61-short-u-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "62-targeted-short-u-remediation-reassessment",
-          "sequence": 48,
-          "title": "Targeted Short /u/ Remediation and Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/62-targeted-short-u-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "63-hear-and-identify-c",
-          "sequence": 49,
-          "title": "Hear and Identify /k/",
-          "authoringPackage": "content/courses/phonics-foundation/63-hear-and-identify-c/authoring-package.json"
-        },
-        {
-          "lessonId": "64-decode-cvc-with-k",
-          "sequence": 50,
-          "title": "Decode CVC Words with /k/",
-          "authoringPackage": "content/courses/phonics-foundation/64-decode-cvc-with-k/authoring-package.json"
-        },
-        {
-          "lessonId": "65-cvc-spelling-with-k",
-          "sequence": 51,
-          "title": "CVC Spelling with /k/",
-          "authoringPackage": "content/courses/phonics-foundation/65-cvc-spelling-with-k/authoring-package.json"
-        },
-        {
-          "lessonId": "66-k-word-families-controlled-reading",
-          "sequence": 52,
-          "title": "/k/ Word Families and Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/66-k-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "67-controlled-k-sentences-comprehension",
-          "sequence": 53,
-          "title": "Controlled /k/ Sentences and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/67-controlled-k-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "68-controlled-k-passage-sequencing",
-          "sequence": 54,
-          "title": "Controlled /k/ Passage and Sequencing",
-          "authoringPackage": "content/courses/phonics-foundation/68-controlled-k-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "69-k-fluency-consolidation-diagnostic",
-          "sequence": 55,
-          "title": "/k/ Fluency Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/69-k-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "70-targeted-k-remediation-reassessment",
-          "sequence": 56,
-          "title": "Targeted /k/ Remediation and Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/70-targeted-k-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "71-hear-and-identify-new-consonant",
-          "sequence": 57,
-          "title": "Hear and Identify /f/",
-          "authoringPackage": "content/courses/phonics-foundation/71-hear-and-identify-new-consonant/authoring-package.json"
-        },
-        {
-          "lessonId": "72-decode-cvc-with-f",
-          "sequence": 58,
-          "title": "Decode CVC Words with /f/",
-          "authoringPackage": "content/courses/phonics-foundation/72-decode-cvc-with-f/authoring-package.json"
-        },
-        {
-          "lessonId": "73-cvc-spelling-with-f",
-          "sequence": 59,
-          "title": "CVC Spelling with /f/",
-          "authoringPackage": "content/courses/phonics-foundation/73-cvc-spelling-with-f/authoring-package.json"
-        },
-        {
-          "lessonId": "74-f-word-families-controlled-reading",
-          "sequence": 60,
-          "title": "/f/ Word Families and Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/74-f-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "75-controlled-f-sentences-comprehension",
-          "sequence": 61,
-          "title": "Controlled /f/ Sentences and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/75-controlled-f-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "76-controlled-f-passage-sequencing",
-          "sequence": 62,
-          "title": "Controlled /f/ Passage Sequencing",
-          "authoringPackage": "content/courses/phonics-foundation/76-controlled-f-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "77-f-fluency-consolidation-diagnostic",
-          "sequence": 63,
-          "title": "/f/ Fluency Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/77-f-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "78-targeted-f-remediation-reassessment",
-          "sequence": 64,
-          "title": "Targeted /f/ Remediation and Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/78-targeted-f-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "79-hear-and-identify-new-consonant",
-          "sequence": 65,
-          "title": "Hear and Identify /r/",
-          "authoringPackage": "content/courses/phonics-foundation/79-hear-and-identify-new-consonant/authoring-package.json"
-        },
-        {
-          "lessonId": "80-decode-cvc-with-r",
-          "sequence": 66,
-          "title": "Decode CVC Words with /r/",
-          "authoringPackage": "content/courses/phonics-foundation/80-decode-cvc-with-r/authoring-package.json"
-        },
-        {
-          "lessonId": "81-cvc-spelling-with-r",
-          "sequence": 67,
-          "title": "CVC Spelling with /r/",
-          "authoringPackage": "content/courses/phonics-foundation/81-cvc-spelling-with-r/authoring-package.json"
-        },
-        {
-          "lessonId": "82-r-word-families-controlled-reading",
-          "sequence": 68,
-          "title": "/r/ Word Families and Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/82-r-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "83-controlled-r-sentences-comprehension",
-          "sequence": 69,
-          "title": "Controlled /r/ Sentences and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/83-controlled-r-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "84-controlled-r-passage-sequencing",
-          "sequence": 70,
-          "title": "Controlled /r/ Passage, Sequencing and Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/84-controlled-r-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "85-r-fluency-consolidation-diagnostic",
-          "sequence": 71,
-          "title": "/r/ Fluency Consolidation and Diagnostic Checkpoint",
-          "authoringPackage": "content/courses/phonics-foundation/85-r-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "86-targeted-r-remediation-reassessment",
-          "sequence": 72,
-          "title": "Targeted /r/ Remediation and Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/86-targeted-r-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "87-hear-and-identify-new-consonant",
-          "sequence": 73,
-          "title": "Hear and Identify /l/",
-          "authoringPackage": "content/courses/phonics-foundation/87-hear-and-identify-new-consonant/authoring-package.json"
-        },
-        {
-          "lessonId": "88-decode-cvc-with-l",
-          "sequence": 74,
-          "title": "Decode CVC Words with /l/",
-          "authoringPackage": "content/courses/phonics-foundation/88-decode-cvc-with-l/authoring-package.json"
-        },
-        {
-          "lessonId": "89-cvc-spelling-with-l",
-          "sequence": 75,
-          "title": "CVC Spelling with /l/",
-          "authoringPackage": "content/courses/phonics-foundation/89-cvc-spelling-with-l/authoring-package.json"
-        },
-        {
-          "lessonId": "90-l-word-families-controlled-reading",
-          "sequence": 76,
-          "title": "/l/ Word Families & Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/90-l-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "91-controlled-l-sentences-comprehension",
-          "sequence": 77,
-          "title": "Controlled /l/ Sentences & Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/91-controlled-l-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "92-controlled-l-passage-sequencing",
-          "sequence": 78,
-          "title": "Controlled /l/ Passage Sequencing",
-          "authoringPackage": "content/courses/phonics-foundation/92-controlled-l-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "93-l-fluency-consolidation-diagnostic",
-          "sequence": 79,
-          "title": "/l/ Fluency Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/93-l-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "94-targeted-l-remediation-reassessment",
-          "sequence": 80,
-          "title": "Targeted /l/ Remediation & Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/94-targeted-l-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "95-hear-and-identify-new-consonant-b",
-          "sequence": 81,
-          "title": "Hear and Identify New Consonant /b/",
-          "authoringPackage": "content/courses/phonics-foundation/95-hear-and-identify-new-consonant-b/authoring-package.json"
-        },
-        {
-          "lessonId": "96-decode-cvc-with-b",
-          "sequence": 82,
-          "title": "Decode CVC Words with /b/",
-          "authoringPackage": "content/courses/phonics-foundation/96-decode-cvc-with-b/authoring-package.json"
-        },
-        {
-          "lessonId": "97-cvc-spelling-with-b",
-          "sequence": 83,
-          "title": "CVC Spelling with /b/",
-          "authoringPackage": "content/courses/phonics-foundation/97-cvc-spelling-with-b/authoring-package.json"
-        },
-        {
-          "lessonId": "98-b-word-families-controlled-reading",
-          "sequence": 84,
-          "title": "/b/ Word Families & Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/98-b-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "99-controlled-b-sentences-comprehension",
-          "sequence": 85,
-          "title": "Controlled /b/ Sentences & Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/99-controlled-b-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "100-controlled-b-passage-sequencing",
-          "sequence": 86,
-          "title": "Controlled /b/ Passage Sequencing",
-          "authoringPackage": "content/courses/phonics-foundation/100-controlled-b-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "101-b-fluency-consolidation-diagnostic",
-          "sequence": 87,
-          "title": "/b/ Fluency Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/101-b-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "102-targeted-b-remediation-reassessment",
-          "sequence": 88,
-          "title": "Targeted /b/ Remediation & Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/102-targeted-b-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "103-hear-and-identify-new-consonant-g",
-          "sequence": 89,
-          "title": "Hear & Identify New Consonant /g/",
-          "authoringPackage": "content/courses/phonics-foundation/103-hear-and-identify-new-consonant-g/authoring-package.json"
-        },
-        {
-          "lessonId": "104-decode-cvc-with-g",
-          "sequence": 90,
-          "title": "Decode CVC with /g/",
-          "authoringPackage": "content/courses/phonics-foundation/104-decode-cvc-with-g/authoring-package.json"
-        },
-        {
-          "lessonId": "105-cvc-spelling-with-g",
-          "sequence": 91,
-          "title": "CVC Spelling with /g/",
-          "authoringPackage": "content/courses/phonics-foundation/105-cvc-spelling-with-g/authoring-package.json"
-        },
-        {
-          "lessonId": "106-g-word-families-controlled-reading",
-          "sequence": 92,
-          "title": "/g/ Word Families & Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/106-g-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "107-controlled-g-sentences-comprehension",
-          "sequence": 93,
-          "title": "Controlled /g/ Sentences & Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/107-controlled-g-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "108-controlled-g-passage-sequencing",
-          "sequence": 94,
-          "title": "Controlled /g/ Passage Sequencing",
-          "authoringPackage": "content/courses/phonics-foundation/108-controlled-g-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "109-g-fluency-consolidation-diagnostic",
-          "sequence": 95,
-          "title": "/g/ Fluency Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/109-g-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "110-targeted-g-remediation-reassessment",
-          "sequence": 96,
-          "title": "Targeted /g/ Remediation & Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/110-targeted-g-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "111-hear-and-identify-new-consonant-d",
-          "sequence": 97,
-          "title": "Hear & Identify New Consonant /d/",
-          "authoringPackage": "content/courses/phonics-foundation/111-hear-and-identify-new-consonant-d/authoring-package.json"
-        },
-        {
-          "lessonId": "112-decode-cvc-with-d",
-          "sequence": 98,
-          "title": "Decode CVC with /d/",
-          "authoringPackage": "content/courses/phonics-foundation/112-decode-cvc-with-d/authoring-package.json"
-        },
-        {
-          "lessonId": "113-cvc-spelling-with-d",
-          "sequence": 99,
-          "title": "CVC Spelling with /d/",
-          "authoringPackage": "content/courses/phonics-foundation/113-cvc-spelling-with-d/authoring-package.json"
-        },
-        {
-          "lessonId": "114-d-word-families-controlled-reading",
-          "sequence": 100,
-          "title": "/d/ Word Families & Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/114-d-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "115-controlled-d-sentences-comprehension",
-          "sequence": 101,
-          "title": "Controlled /d/ Sentences & Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/115-controlled-d-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "116-controlled-d-passage-sequencing",
-          "sequence": 102,
-          "title": "Controlled /d/ Passage Sequencing",
-          "authoringPackage": "content/courses/phonics-foundation/116-controlled-d-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "117-d-fluency-consolidation-diagnostic",
-          "sequence": 103,
-          "title": "/d/ Fluency Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/117-d-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "118-targeted-d-remediation-reassessment",
-          "sequence": 104,
-          "title": "Targeted /d/ Remediation & Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/118-targeted-d-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "119-hear-and-identify-new-consonant-h",
-          "sequence": 105,
-          "title": "Hear & Identify New Consonant /h/",
-          "authoringPackage": "content/courses/phonics-foundation/119-hear-and-identify-new-consonant-h/authoring-package.json"
-        },
-        {
-          "lessonId": "120-decode-cvc-with-h",
-          "sequence": 106,
-          "title": "Decode CVC with /h/",
-          "authoringPackage": "content/courses/phonics-foundation/120-decode-cvc-with-h/authoring-package.json"
-        },
-        {
-          "lessonId": "121-cvc-spelling-with-h",
-          "sequence": 107,
-          "title": "CVC Spelling with /h/",
-          "authoringPackage": "content/courses/phonics-foundation/121-cvc-spelling-with-h/authoring-package.json"
-        },
-        {
-          "lessonId": "122-h-word-families-controlled-reading",
-          "sequence": 108,
-          "title": "h Word Families & Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "123-controlled-h-sentences-comprehension",
-          "sequence": 109,
-          "title": "Controlled h Sentences & Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/123-controlled-h-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "124-controlled-h-passage-sequencing",
-          "sequence": 110,
-          "title": "Controlled h Passage Sequencing",
-          "authoringPackage": "content/courses/phonics-foundation/124-controlled-h-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "125-h-fluency-consolidation-diagnostic",
-          "sequence": 111,
-          "title": "h Fluency Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/125-h-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "126-targeted-h-remediation-reassessment",
-          "sequence": 112,
-          "title": "Targeted h Remediation & Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/126-targeted-h-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "127-hear-and-identify-new-consonant-j",
-          "sequence": 113,
-          "title": "Hear & Identify New Consonant /j/",
-          "authoringPackage": "content/courses/phonics-foundation/127-hear-and-identify-new-consonant-j/authoring-package.json"
-        },
-        {
-          "lessonId": "128-decode-cvc-with-j",
-          "sequence": 114,
-          "title": "Decode CVC with /j/",
-          "authoringPackage": "content/courses/phonics-foundation/128-decode-cvc-with-j/authoring-package.json"
-        },
-        {
-          "lessonId": "129-cvc-spelling-with-j",
-          "sequence": 115,
-          "title": "CVC Spelling with /j/",
-          "authoringPackage": "content/courses/phonics-foundation/129-cvc-spelling-with-j/authoring-package.json"
-        },
-        {
-          "lessonId": "130-j-word-families-controlled-reading",
-          "sequence": 116,
-          "title": "/j/ Word Families & Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/130-j-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "131-controlled-j-sentences-comprehension",
-          "sequence": 117,
-          "title": "Controlled /j/ Sentences & Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/131-controlled-j-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "132-controlled-j-passage-sequencing",
-          "sequence": 118,
-          "title": "Controlled /j/ Passage Sequencing",
-          "authoringPackage": "content/courses/phonics-foundation/132-controlled-j-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "133-j-fluency-consolidation-diagnostic",
-          "sequence": 119,
-          "title": "/j/ Fluency Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/133-j-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "134-targeted-j-remediation-reassessment",
-          "sequence": 120,
-          "title": "Targeted /j/ Remediation & Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/134-targeted-j-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "135-hear-and-identify-new-consonant-w",
-          "sequence": 121,
-          "title": "Hear & Identify New Consonant /w/",
-          "authoringPackage": "content/courses/phonics-foundation/135-hear-and-identify-new-consonant-w/authoring-package.json"
-        },
-        {
-          "lessonId": "136-decode-cvc-with-w",
-          "sequence": 122,
-          "title": "Decode CVC with /w/",
-          "authoringPackage": "content/courses/phonics-foundation/136-decode-cvc-with-w/authoring-package.json"
-        },
-        {
-          "lessonId": "137-cvc-spelling-with-w",
-          "sequence": 123,
-          "title": "CVC Spelling with /w/",
-          "authoringPackage": "content/courses/phonics-foundation/137-cvc-spelling-with-w/authoring-package.json"
-        },
-        {
-          "lessonId": "138-w-word-families-controlled-reading",
-          "sequence": 124,
-          "title": "/w/ Word Families & Controlled Reading",
-          "authoringPackage": "content/courses/phonics-foundation/138-w-word-families-controlled-reading/authoring-package.json"
-        },
-        {
-          "lessonId": "139-controlled-w-sentences-comprehension",
-          "sequence": 125,
-          "title": "Controlled /w/ Sentences & Comprehension",
-          "authoringPackage": "content/courses/phonics-foundation/139-controlled-w-sentences-comprehension/authoring-package.json"
-        },
-        {
-          "lessonId": "140-controlled-w-passage-sequencing",
-          "sequence": 126,
-          "title": "Controlled /w/ Passage Sequencing",
-          "authoringPackage": "content/courses/phonics-foundation/140-controlled-w-passage-sequencing/authoring-package.json"
-        },
-        {
-          "lessonId": "141-w-fluency-consolidation-diagnostic",
-          "sequence": 127,
-          "title": "/w/ Fluency Consolidation Diagnostic",
-          "authoringPackage": "content/courses/phonics-foundation/141-w-fluency-consolidation-diagnostic/authoring-package.json"
-        },
-        {
-          "lessonId": "142-targeted-w-remediation-reassessment",
-          "sequence": 128,
-          "title": "Targeted /w/ Remediation & Reassessment",
-          "authoringPackage": "content/courses/phonics-foundation/142-targeted-w-remediation-reassessment/authoring-package.json"
-        },
-        {
-          "lessonId": "143-hear-and-identify-new-consonant-y",
-          "sequence": 129,
-          "title": "Hear & Identify New Consonant /y/",
-          "authoringPackage": "content/courses/phonics-foundation/143-hear-and-identify-new-consonant-y/authoring-package.json"
-        }
+        "15-hear-and-identify-p",
+        "16-decode-cvc-with-p",
+        "17-cvc-spelling-with-p",
+        "18-p-word-families-controlled-reading",
+        "19-controlled-p-sentences-comprehension",
+        "20-controlled-p-passage-sequencing",
+        "21-phonics-consolidation-diagnostic-2",
+        "22-targeted-remediation-and-reassessment-2",
+        "23-hear-and-identify-n",
+        "24-decode-cvc-with-n",
+        "25-cvc-spelling-with-n",
+        "26-n-word-families-controlled-reading",
+        "27-controlled-n-sentences-comprehension",
+        "28-controlled-n-passage-sequencing",
+        "29-n-fluency-consolidation-diagnostic",
+        "30-targeted-n-remediation-reassessment",
+        "31-short-i-sound",
+        "32-decode-cvc-short-i",
+        "33-cvc-spelling-short-i",
+        "34-short-i-word-families-controlled-reading",
+        "35-controlled-short-i-sentences-comprehension",
+        "36-controlled-short-i-passage-sequencing",
+        "37-short-i-fluency-consolidation-diagnostic",
+        "38-targeted-short-i-remediation-reassessment",
+        "39-short-o-sound",
+        "40-decode-cvc-short-o",
+        "41-cvc-spelling-short-o",
+        "42-short-o-word-families-controlled-reading",
+        "43-controlled-short-o-sentences-comprehension",
+        "44-controlled-short-o-passage-sequencing",
+        "45-short-o-fluency-consolidation-diagnostic",
+        "46-targeted-short-o-remediation-reassessment",
+        "47-short-e-sound",
+        "48-decode-cvc-short-e",
+        "49-cvc-spelling-short-e",
+        "50-short-e-word-families-controlled-reading",
+        "51-controlled-short-e-sentences-comprehension",
+        "52-controlled-short-e-passage-sequencing",
+        "53-short-e-fluency-consolidation-diagnostic",
+        "54-targeted-short-e-remediation-reassessment",
+        "55-short-u-sound",
+        "56-decode-cvc-short-u",
+        "57-cvc-spelling-short-u",
+        "58-short-u-word-families-controlled-reading",
+        "59-controlled-short-u-sentences-comprehension",
+        "60-controlled-short-u-passage-sequencing",
+        "61-short-u-fluency-consolidation-diagnostic",
+        "62-targeted-short-u-remediation-reassessment",
+        "63-hear-and-identify-c",
+        "64-decode-cvc-with-k",
+        "65-cvc-spelling-with-k",
+        "66-k-word-families-controlled-reading",
+        "67-controlled-k-sentences-comprehension",
+        "68-controlled-k-passage-sequencing",
+        "69-k-fluency-consolidation-diagnostic",
+        "70-targeted-k-remediation-reassessment",
+        "71-hear-and-identify-new-consonant",
+        "72-decode-cvc-with-f",
+        "73-cvc-spelling-with-f",
+        "74-f-word-families-controlled-reading",
+        "75-controlled-f-sentences-comprehension",
+        "76-controlled-f-passage-sequencing",
+        "77-f-fluency-consolidation-diagnostic",
+        "78-targeted-f-remediation-reassessment",
+        "79-hear-and-identify-new-consonant",
+        "80-decode-cvc-with-r",
+        "81-cvc-spelling-with-r",
+        "82-r-word-families-controlled-reading",
+        "83-controlled-r-sentences-comprehension",
+        "84-controlled-r-passage-sequencing",
+        "85-r-fluency-consolidation-diagnostic",
+        "86-targeted-r-remediation-reassessment",
+        "87-hear-and-identify-new-consonant",
+        "88-decode-cvc-with-l",
+        "89-cvc-spelling-with-l",
+        "90-l-word-families-controlled-reading",
+        "91-controlled-l-sentences-comprehension",
+        "92-controlled-l-passage-sequencing",
+        "93-l-fluency-consolidation-diagnostic",
+        "94-targeted-l-remediation-reassessment",
+        "95-hear-and-identify-new-consonant-b",
+        "96-decode-cvc-with-b",
+        "97-cvc-spelling-with-b",
+        "98-b-word-families-controlled-reading",
+        "99-controlled-b-sentences-comprehension",
+        "100-controlled-b-passage-sequencing",
+        "101-b-fluency-consolidation-diagnostic",
+        "102-targeted-b-remediation-reassessment",
+        "103-hear-and-identify-new-consonant-g",
+        "104-decode-cvc-with-g",
+        "105-cvc-spelling-with-g",
+        "106-g-word-families-controlled-reading",
+        "107-controlled-g-sentences-comprehension",
+        "108-controlled-g-passage-sequencing",
+        "109-g-fluency-consolidation-diagnostic",
+        "110-targeted-g-remediation-reassessment",
+        "111-hear-and-identify-new-consonant-d",
+        "112-decode-cvc-with-d",
+        "113-cvc-spelling-with-d",
+        "114-d-word-families-controlled-reading",
+        "115-controlled-d-sentences-comprehension",
+        "116-controlled-d-passage-sequencing",
+        "117-d-fluency-consolidation-diagnostic",
+        "118-targeted-d-remediation-reassessment",
+        "119-hear-and-identify-new-consonant-h",
+        "120-decode-cvc-with-h",
+        "121-cvc-spelling-with-h",
+        "122-h-word-families-controlled-reading",
+        "123-controlled-h-sentences-comprehension",
+        "124-controlled-h-passage-sequencing",
+        "125-h-fluency-consolidation-diagnostic",
+        "126-targeted-h-remediation-reassessment",
+        "127-hear-and-identify-new-consonant-j",
+        "128-decode-cvc-with-j",
+        "129-cvc-spelling-with-j",
+        "130-j-word-families-controlled-reading",
+        "131-controlled-j-sentences-comprehension",
+        "132-controlled-j-passage-sequencing",
+        "133-j-fluency-consolidation-diagnostic",
+        "134-targeted-j-remediation-reassessment",
+        "135-hear-and-identify-new-consonant-w",
+        "136-decode-cvc-with-w",
+        "137-cvc-spelling-with-w",
+        "138-w-word-families-controlled-reading",
+        "139-controlled-w-sentences-comprehension",
+        "140-controlled-w-passage-sequencing",
+        "141-w-fluency-consolidation-diagnostic",
+        "142-targeted-w-remediation-reassessment",
+        "143-hear-and-identify-new-consonant-y"
       ],
       "progression": {
         "entrySkills": [
