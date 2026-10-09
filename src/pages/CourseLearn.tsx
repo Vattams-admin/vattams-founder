@@ -838,24 +838,39 @@ export default function CourseLearn() {
 
               <section className="mt-6 rounded-card border border-gold/20 bg-gold/5 p-4" aria-labelledby="lesson-revision-heading">
                 <h3 id="lesson-revision-heading" className="font-semibold">Before you finish this lesson</h3>
-                <p className="mt-1 text-sm text-slate-muted">Use this quick revision checklist to consolidate what you learned. Checking these items here does not mark the lesson complete.</p>
+                <p className="mt-1 text-sm text-slate-muted">
+                  {structuredLessonContent
+                    ? 'Use the authored lesson sections below as your revision guide. Checking these items does not mark the lesson complete.'
+                    : 'Use this quick revision checklist to consolidate what you learned. Checking these items does not mark the lesson complete.'}
+                </p>
                 <ul className="mt-3 space-y-2 text-sm">
-                  <li className="flex items-start gap-2">
-                    <span aria-hidden="true" className="mt-0.5 text-gold">•</span>
-                    <span>Explain the main idea in your own words.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span aria-hidden="true" className="mt-0.5 text-gold">•</span>
-                    <span>Review the examples, key terms and any study material provided.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span aria-hidden="true" className="mt-0.5 text-gold">•</span>
-                    <span>Try the practice or assessment questions, if available.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span aria-hidden="true" className="mt-0.5 text-gold">•</span>
-                    <span>Identify one point you need to revise before moving on.</span>
-                  </li>
+                  {[
+                    {
+                      available: Boolean(structuredLessonContent?.objective),
+                      text: 'Revisit the lesson objective and explain the main idea in your own words.',
+                      fallback: 'Explain the main idea in your own words.',
+                    },
+                    {
+                      available: Boolean(structuredLessonContent?.examples),
+                      text: 'Work through the authored examples and explain each key step.',
+                      fallback: 'Review the examples, key terms and any study material provided.',
+                    },
+                    {
+                      available: Boolean(structuredLessonContent?.independent_practice || structuredLessonContent?.practical_activity || structuredLessonContent?.assessment_checkpoint),
+                      text: 'Complete the available practice, activity or assessment checkpoint.',
+                      fallback: 'Try the practice or assessment questions, if available.',
+                    },
+                    {
+                      available: Boolean(structuredLessonContent?.reflection_completion),
+                      text: 'Use the authored reflection prompt to identify what you understand and what needs revision.',
+                      fallback: 'Identify one point you need to revise before moving on.',
+                    },
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <span aria-hidden="true" className="mt-0.5 text-gold">•</span>
+                      <span>{item.available ? item.text : item.fallback}</span>
+                    </li>
+                  ))}
                 </ul>
               </section>
 
