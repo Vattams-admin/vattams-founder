@@ -78,7 +78,7 @@ else {
     if (!ids.includes(id)) fail('reviewed examples reference unknown language: ' + id)
   }
   const languageHeaders = [...examplesBody.matchAll(/^  '([^']+)':\s*\{$/gm)]
-  const exampleUnits = [...examplesBody.matchAll(/^\s*'([^']+)':\s*\{\s*text:\s*'([^']*)',\s*meaning:\s*'([^']*)'\s*\}/gm)]
+  const exampleUnits = [...examplesBody.matchAll(/^ {4}'([^']+)':\s*\{\s*text:\s*'([^']*)',\s*meaning:\s*'([^']*)'\s*\}/gm)]
   const examplesByLanguage = new Map()
   for (const example of exampleUnits) {
     const [, unit, sampleText, meaning] = example
