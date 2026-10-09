@@ -143,6 +143,8 @@ export default function AssessmentCatalog({ courseId }: Props) {
           </div>
           <p className="mt-2 text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
             Showing {filteredAssessments.length} of {assessments.length} assessments
+            {searchTerm.trim() ? ` for “${searchTerm.trim()}”` : ''}
+            {activeKind !== "all" ? ` · Type: ${label(activeKind)}` : ''}
           </p>
         </div>
       )}
