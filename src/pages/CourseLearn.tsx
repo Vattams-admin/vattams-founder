@@ -186,6 +186,7 @@ export default function CourseLearn() {
   const [progressSavingId, setProgressSavingId] = useState<string | null>(null)
   const [progressSaveRetryId, setProgressSaveRetryId] = useState<string | null>(null)
   const [materials, setMaterials] = useState<Material[]>([])
+  const [materialSearch, setMaterialSearch] = useState('')
   const [activeLessonId, setActiveLessonId] = useState<string | null>(null)
   const [lessonFileUrls, setLessonFileUrls] = useState<{
     video: string | null
@@ -201,6 +202,16 @@ export default function CourseLearn() {
   >('loading')
   const [retryToken, setRetryToken] = useState(0)
   const [diagnosticError, setDiagnosticError] = useState<string | null>(null)
+
+  const filteredMaterials = useMemo(() => {
+    const term = materialSearch.trim().toLocaleLowerCase()
+    if (!term) return materials
+    return materials.filter((material) =>
+      [material.title, getMaterialTypeLabel(material.type)]
+        .some((value) => value.toLocaleLowerCase().includes(term))
+    )
+  }, [materials, materialSearch])
+
 
   useEffect(() => {
     if (authLoading) return
@@ -845,40 +856,82 @@ export default function CourseLearn() {
       {courseId && <AssessmentCatalog courseId={courseId} />}
 
       {materials.length > 0 && (
-        <section className="card mt-6 p-6">
-          <h2 className="font-display text-lg">Course Materials</h2>
-          <div className="mt-4 space-y-2">
-            {materials.map((material) => (
-              <div key={material.id} className="flex items-center justify-between gap-3 rounded-card border border-white/10 p-3 text-sm">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-card bg-gold/15 text-gold">
-                    <MaterialTypeIcon type={material.type} />
-                  </span>
-                  <div>
-                    <p className="font-medium">{material.title}</p>
-                    <p className="text-xs text-slate-muted">
-                      {getMaterialTypeLabel(material.type)}
-                      {material.file_size ? ` · ${formatFileSize(material.file_size)}` : ''}
-                    </p>
-                  </div>
-                </div>
-                {material.type === 'link' ? (
-                  material.url && (
-                    <a href={material.url} target="_blank" rel="noreferrer" className="btn-secondary text-xs">
-                      Open
-                    </a>
-                  )
-                ) : (
-                  <button
-                    onClick={() => setViewerMaterial(material)}
-                    className="btn-secondary text-xs"
-                  >
-                    {material.type === 'notes' ? 'Read' : 'Open'}
-                  </button>
-                )}
-              </div>
-            ))}
+        <section className="card mt-6 p-6" aria-labelledby="course-materials-heading">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 id="course-materials-heading" className="font-display text-lg">Course Materials</h2>
+              <p className="mt-1 text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
+                Showing {filteredMaterials.length} of {materials.length} resources
+              </p>
+            </div>
+            <div className="flex min-w-0 flex-1 items-center gap-2 sm:max-w-sm">
+              <label className="sr-only" htmlFor="course-material-search">Search course materials</label>
+              <input
+                id="course-material-search"
+                type="search"
+                value={materialSearch}
+                onChange={(event) => setMaterialSearch(event.target.value)}
+                placeholder="Search title or type…"
+                className="input min-w-0 flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+              />
+              {materialSearch && (
+                <button
+                  type="button"
+                  onClick={() => setMaterialSearch('')}
+                  className="btn-secondary text-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
           </div>
+          {filteredMaterials.length > 0 ? (
+            <div className="mt-4 space-y-2">
+              {filteredMaterials.map((material) => (
+                <div key={material.id} className="flex flex-wrap items-center justify-between gap-3 rounded-card border border-white/10 p-3 text-sm">
+                  <div className="flex min-w-0 items-center gap-3">
+                    <span className="flex h-8 w-8 flex-none items-center justify-center rounded-card bg-gold/15 text-gold">
+                      <MaterialTypeIcon type={material.type} />
+                    </span>
+                    <div className="min-w-0">
+                      <p className="break-words font-medium">{material.title}</p>
+                      <p className="text-xs text-slate-muted">
+                        {getMaterialTypeLabel(material.type)}
+                        {material.file_size ? ` · ${formatFileSize(material.file_size)}` : ''}
+                      </p>
+                    </div>
+                  </div>
+                  {material.type === 'link' ? (
+                    material.url && (
+                      <a href={material.url} target="_blank" rel="noreferrer" className="btn-secondary text-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold">
+                        Open
+                      </a>
+                    )
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setViewerMaterial(material)}
+                      className="btn-secondary text-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+                    >
+                      {material.type === 'notes' ? 'Read' : 'Open'}
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="mt-4 rounded-card border border-white/10 p-5 text-sm" role="status">
+              <p className="font-medium">No matching materials</p>
+              <p className="mt-1 text-slate-muted">Try another title or resource type.</p>
+              <button
+                type="button"
+                onClick={() => setMaterialSearch('')}
+                className="btn-secondary mt-3 text-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+              >
+                Show all materials
+              </button>
+            </div>
+          )}
         </section>
       )}
 
