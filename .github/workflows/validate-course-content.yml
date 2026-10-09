@@ -2,6 +2,17 @@ name: Validate Course Content Production
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - "content/courses/**"
+      - "scripts/validate-content-authoring-package.mjs"
+      - "config/content-authoring-package.schema.json"
+      - "config/content-package.schema.json"
+      - "config/atomic-content-authoring-matrix.json"
+      - "config/production-content-coverage-plan.json"
+      - ".github/workflows/validate-course-content.yml"
+      - "package.json"
+      - "package-lock.json"
   push:
     branches: [main]
     paths:
