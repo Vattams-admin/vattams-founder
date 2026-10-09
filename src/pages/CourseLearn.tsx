@@ -836,6 +836,29 @@ export default function CourseLearn() {
                 </div>
               )}
 
+              <section className="mt-6 rounded-card border border-gold/20 bg-gold/5 p-4" aria-labelledby="lesson-revision-heading">
+                <h3 id="lesson-revision-heading" className="font-semibold">Before you finish this lesson</h3>
+                <p className="mt-1 text-sm text-slate-muted">Use this quick revision checklist to consolidate what you learned. Checking these items here does not mark the lesson complete.</p>
+                <ul className="mt-3 space-y-2 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span aria-hidden="true" className="mt-0.5 text-gold">•</span>
+                    <span>Explain the main idea in your own words.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span aria-hidden="true" className="mt-0.5 text-gold">•</span>
+                    <span>Review the examples, key terms and any study material provided.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span aria-hidden="true" className="mt-0.5 text-gold">•</span>
+                    <span>Try the practice or assessment questions, if available.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span aria-hidden="true" className="mt-0.5 text-gold">•</span>
+                    <span>Identify one point you need to revise before moving on.</span>
+                  </li>
+                </ul>
+              </section>
+
               <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-5">
                 <button
                   type="button"
