@@ -57,6 +57,7 @@ for (const [label, relativePath] of validators) {
     cwd: root,
     stdio: 'inherit',
     env: process.env,
+    timeout: 120_000,
   })
   if (result.error) {
     failed.push({ label, reason: result.error.message })
