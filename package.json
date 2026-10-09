@@ -17,7 +17,7 @@
     "thirukkural:audit": "node scripts/audit-thirukkural-production.mjs",
     "thirukkural:repair-course": "node scripts/repair-thirukkural-course.mjs",
     "thirukkural:build-official": "node scripts/build-thirukkural-official-objective.mjs",
-    "thirukkural:production-gate": "npm run thirukkural:build-official && npm run thirukkural:validate && npm run thirukkural:package",
+    "thirukkural:production-gate": "node scripts/build-thirukkural-full-bank.mjs && python3 scripts/build-thirukkural-objective-bank.py && node scripts/build-thirukkural-age-pools.mjs && node scripts/build-thirukkural-official-objective-local.mjs && node scripts/validate-thirukkural-production.mjs && node scripts/package-thirukkural-production.mjs",
     "competition:package": "node scripts/package-competition-runtime.mjs",
     "seo:validate": "node scripts/validate-seo.mjs",
     "india:validate": "node scripts/validate-india-education-registry.mjs",
