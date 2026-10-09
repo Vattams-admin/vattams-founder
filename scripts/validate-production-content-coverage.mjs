@@ -452,6 +452,8 @@ const summary = {
   inReviewCount: count('in_review'),
   approvedCount: count('approved'),
   publishedCount: count('published'),
+  releaseReadyCount: targets.filter((item) => item.releaseReady).length,
+  releaseBlockedCount: targets.filter((item) => !item.releaseReady).length,
   retiredCount: count('retired'),
   courseTargetCount: courseTargets.length,
   competitiveExamTargetCount: assessmentTargets.filter((item) => item.domain === 'competitive-exam').length,
