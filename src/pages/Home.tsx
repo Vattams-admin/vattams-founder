@@ -249,6 +249,17 @@ export default function Home() {
                     <span key={area} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs text-parchment/85">{area}</span>
                   ))}
                 </div>
+                <div className="mt-5 border-t border-white/10 pt-4">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-parchment/70">Suggested learning areas</p>
+                  <ul className="mt-3 space-y-2">
+                    {pillar.suggestedTopics.slice(0, 3).map((topic) => (
+                      <li key={topic} className="flex gap-2 text-sm leading-5 text-slate-muted">
+                        <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                        <span>{topic}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <Link to={pillar.route} className="btn-secondary mt-7 w-full sm:w-auto">
                   Explore {pillar.title}
                 </Link>
