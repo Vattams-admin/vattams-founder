@@ -423,10 +423,14 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
               )}
             </div>
             <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-              <p className="text-sm text-slate-muted">
-                {reviewUnansweredOnly
-                  ? `Showing ${questions.filter((question) => !Number.isInteger(answers[question.question_id])).length} unanswered questions`
-                  : `Showing all ${questions.length} questions`}
+              <p className="text-sm text-slate-muted" aria-live="polite" aria-atomic="true">
+                Showing {questions.filter((question) => {
+                  const answered = Number.isInteger(answers[question.question_id]);
+                  const topic = question.topic?.trim() || "General review";
+                  return (reviewTopic === "all" || topic === reviewTopic) && (!reviewUnansweredOnly || !answered);
+                }).length} of {questions.length} questions
+                {reviewUnansweredOnly ? " · unanswered only" : ""}
+                {reviewTopic !== "all" ? ` · ${reviewTopic}` : ""}
               </p>
               <button
                 type="button"
@@ -442,7 +446,16 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
                 All questions have been answered. There are no unanswered questions to review.
               </p>
             ) : (
-              <ol className="mt-4 space-y-3">
+              {questions.every((question) => {
+              const answered = Number.isInteger(answers[question.question_id]);
+              const topic = question.topic?.trim() || "General review";
+              return (reviewTopic !== "all" && topic !== reviewTopic) || (reviewUnansweredOnly && answered);
+            }) ? (
+              <p className="mt-4 rounded-card border border-white/10 p-4 text-sm text-slate-muted" role="status">
+                No questions match these filters. Clear the topic filter or show all questions.
+              </p>
+            ) : (
+            <ol className="mt-4 space-y-3">
               {questions.map((question, index) => {
                 const selectedIndex = answers[question.question_id];
                 const answered = Number.isInteger(selectedIndex) && selectedIndex !== null;
@@ -468,7 +481,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
                   </li>
                 );
               })}
-              </ol>
+            </ol>
             )}
           </details>
         </div>
