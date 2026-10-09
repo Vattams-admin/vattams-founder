@@ -36,7 +36,8 @@ const validators = [
   ['Assessment blueprint registry', 'scripts/validate-assessment-blueprint-registry.mjs'],
   ['Assessment blueprint coverage', 'scripts/validate-assessment-blueprint-coverage.mjs'],
   ['Assessment blueprint authoring', 'scripts/validate-assessment-blueprint-authoring.mjs'],
-  ['Production question ingestion', 'scripts/validate-production-question-ingestion.mjs'],
+// Production question ingestion is package-specific and requires an explicit package.json path.
+  // Run it from the authoring/ingestion workflow for the selected package, not as a zero-argument global gate.
   ['Assessment bank registration', 'scripts/validate-assessment-bank-registration.mjs'],
   ['Assessment production readiness', 'scripts/validate-assessment-production-readiness.mjs'],
   ['Assessment publication audit', 'scripts/validate-assessment-publication-audit.mjs'],
