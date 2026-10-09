@@ -49,7 +49,14 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
         missingAssetPaths.push({ field, value: entries, reason: 'asset field must be an array' });
         continue;
       }
+      const seenAssetPaths = new Set();
       for (const assetPath of entries) {
+        if (typeof assetPath === 'string') {
+          if (seenAssetPaths.has(assetPath)) {
+            missingAssetPaths.push({ field, value: assetPath, reason: 'duplicate asset reference in manifest' });
+          }
+          seenAssetPaths.add(assetPath);
+        }
         const resolved = resolveRepositoryAsset(assetPath);
         if (!resolved.valid) {
           missingAssetPaths.push({ field, value: assetPath, reason: resolved.reason });
