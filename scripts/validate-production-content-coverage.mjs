@@ -68,6 +68,21 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
       }
     }
     const assets = data.assets ?? null;
+    if (!assets || typeof assets !== 'object' || Array.isArray(assets)) {
+      schemaErrors.push('assets must be an object');
+    } else {
+      for (const field of ['studyMaterials', 'questionBanksPublic', 'answerKeysPrivate', 'assessments', 'authoringPackages', 'moduleMaps']) {
+        if (assets[field] !== undefined &&
+            (!Array.isArray(assets[field]) || assets[field].some((entry) => typeof entry !== 'string'))) {
+          schemaErrors.push('assets.' + field + ' must be an array of strings');
+        }
+      }
+      for (const field of ['manifestPath', 'courseMap']) {
+        if (assets[field] !== undefined && typeof assets[field] !== 'string') {
+          schemaErrors.push('assets.' + field + ' must be a string when provided');
+        }
+      }
+    }
     const missingAssetPaths = [];
     for (const field of ['authoringPackages', 'questionBanksPublic', 'answerKeysPrivate']) {
       const entries = assets?.[field] ?? [];
