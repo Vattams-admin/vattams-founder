@@ -716,7 +716,7 @@ export default function CourseLearn() {
                 type="search"
                 value={lessonListSearch}
                 onChange={(event) => setLessonListSearch(event.target.value)}
-                placeholder="Search lesson titles…"
+                placeholder="Search lessons or modules…"
                 className="min-w-0 flex-1 rounded-card border border-white/15 bg-white/5 px-3 py-2 text-sm text-parchment focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
               />
               {lessonListSearch && (
@@ -752,16 +752,20 @@ export default function CourseLearn() {
               ))}
             </div>
             <p className="mt-1 text-[11px] text-slate-muted" aria-live="polite" aria-atomic="true">
-              {lessons.filter((lesson) =>
-                lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase()) &&
-                (lessonStatusFilter === 'all' || (lessonStatusFilter === 'completed' ? Boolean(progress[lesson.id]) : !progress[lesson.id]))
-              ).length} matching lessons · {lessons.length} total
+              {lessons.filter((lesson) => {
+                const term = lessonListSearch.trim().toLocaleLowerCase()
+                const moduleTitle = modules.find((module) => module.id === lesson.module_id)?.title ?? ''
+                return (!term || lesson.title.toLocaleLowerCase().includes(term) || moduleTitle.toLocaleLowerCase().includes(term)) &&
+                  (lessonStatusFilter === 'all' || (lessonStatusFilter === 'completed' ? Boolean(progress[lesson.id]) : !progress[lesson.id]))
+              }).length} matching lessons · {lessons.length} total
             </p>
           </div>
           {modules.map((module) => {
             const moduleLessons = lessons.filter((lesson) => lesson.module_id === module.id)
+            const term = lessonListSearch.trim().toLocaleLowerCase()
+            const moduleMatches = module.title.toLocaleLowerCase().includes(term)
             const visibleLessons = moduleLessons.filter((lesson) =>
-              lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase()) &&
+              (!term || moduleMatches || lesson.title.toLocaleLowerCase().includes(term)) &&
               (lessonStatusFilter === 'all' || (lessonStatusFilter === 'completed' ? Boolean(progress[lesson.id]) : !progress[lesson.id]))
             )
             if (visibleLessons.length === 0) return null
@@ -822,12 +826,14 @@ export default function CourseLearn() {
               No lessons published yet.
             </p>
           )}
-          {lessons.length > 0 && !lessons.some((lesson) =>
-            lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase()) &&
-            (lessonStatusFilter === 'all' || (lessonStatusFilter === 'completed' ? Boolean(progress[lesson.id]) : !progress[lesson.id]))
-          ) && (
+          {lessons.length > 0 && !lessons.some((lesson) => {
+            const term = lessonListSearch.trim().toLocaleLowerCase()
+            const moduleTitle = modules.find((module) => module.id === lesson.module_id)?.title ?? ''
+            return (!term || lesson.title.toLocaleLowerCase().includes(term) || moduleTitle.toLocaleLowerCase().includes(term)) &&
+              (lessonStatusFilter === 'all' || (lessonStatusFilter === 'completed' ? Boolean(progress[lesson.id]) : !progress[lesson.id]))
+          }) && (
             <div className="p-4 text-sm text-slate-muted" role="status">
-              <p>No lessons match the current search and completion filter.</p>
+              <p>No lessons or modules match the current search and completion filter.</p>
               <button
                 type="button"
                 onClick={() => {
