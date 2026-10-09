@@ -343,13 +343,13 @@ validateUniqueTargets('course registry', courseTargets);
 validateUniqueTargets('competition registry', competitionTargets);
 validateUniqueTargets('assessment registry', assessmentTargets);
 
-const hasAllRequiredAssets = (manifest, candidates) => {
+const hasAllRequiredAssets = (manifest, publicCandidates, privateCandidates) => {
   const assets = manifest?.assets ?? {};
   const publicBanks = new Set(assets.questionBanksPublic ?? []);
   const privateKeys = new Set(assets.answerKeysPrivate ?? []);
-  return candidates.length > 0 && candidates.every((candidate) =>
-    publicBanks.has(candidate) || privateKeys.has(candidate)
-  ) && publicBanks.size > 0 && privateKeys.size > 0;
+  return publicCandidates.length > 0 && privateCandidates.length > 0 &&
+    publicCandidates.every((candidate) => publicBanks.has(candidate)) &&
+    privateCandidates.every((candidate) => privateKeys.has(candidate));
 };
 
 const findManifest = (target) => manifests.find((item) => {
@@ -362,10 +362,7 @@ const findManifest = (target) => manifests.find((item) => {
 
   if (target.targetType === 'competition') {
     if (item.domain !== 'competition' || item.locator?.competition !== target.slug) return false;
-    return hasAllRequiredAssets(item, [
-      target.questionBundle,
-      target.answerKeyBundle
-    ].filter(Boolean));
+    return hasAllRequiredAssets(item, [target.questionBundle].filter(Boolean), [target.answerKeyBundle].filter(Boolean));
   }
 
   if (item.domain !== 'competitive-exam' ||
@@ -373,10 +370,7 @@ const findManifest = (target) => manifests.find((item) => {
     return false;
   }
 
-  return hasAllRequiredAssets(item, [
-    target.questionBankPublic,
-    target.answerKey
-  ].filter(Boolean));
+  return hasAllRequiredAssets(item, [target.questionBankPublic].filter(Boolean), [target.answerKey].filter(Boolean));
 });
 
 const targetManifestMatches = new Map();
