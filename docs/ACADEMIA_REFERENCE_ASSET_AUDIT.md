@@ -88,3 +88,17 @@ A second tree pass compared registry file references against tracked branch path
 - Competitions: 24 definitions are registered, but their 72 configured bundle targets are absent from the tracked source tree. Some may be build/package outputs; inspect the package pipeline and source banks per competition before treating this as missing authored content.
 
 These findings are repository-path checks only. No package command, validator, runtime test, CI job, or live Firebase/Supabase operation was run.
+## Follow-up — correct source-versus-runtime path distinction
+
+A deeper inspection of `scripts/prepare-competition-runtime-sources.mjs`, `scripts/package-competition-runtime.mjs`, `scripts/generate-competition-runtime-registry.mjs`, and `.github/workflows/generate-competition-runtime-registry.yml` clarified the earlier path finding.
+
+- **23 non-Thirukkural competitions have all five expected source assets in the tracked tree** at `data/competitions/<slug>/full-bank/objective/`: `questions.objective.public.json`, `answer-key.objective.private.json`, `official.objective.json`, `age-pools.json`, and `selection-blueprint.json`.
+- **All 24 competitions have authored study-material core files and four-layer coverage files** under `content/competition-study-materials/authored-v2/` (24 of each filename pattern). These are present assets, not proof that every lesson/question has passed quality review.
+- **Thirukkural remains the exception in the shared source layout**: its age pools and selection blueprint exist under `data/competitions/thirukkural-mastery-championship/full-bank/objective/`, but the public question bank, private answer-key bank, and official bank are absent there. Its dedicated `data/thirukkural/` builder chain is meant to regenerate these from canonical Kural sources before the prepare step materializes them into the shared layout.
+- The previous count of 0/24 registry bundle targets describes generated runtime paths such as `competitions/<slug>/objective/questions.private.json`, not the tracked source-bank paths. Those runtime bundles are expected to be created by the packaging/publishing pipeline; that count must not be read as 24 absent source banks.
+
+### Runtime workflow guardrail
+
+- `.github/workflows/generate-competition-runtime-registry.yml` is triggered manually or by matching pushes to `main`; it generates a registry using Firebase service-account access, validates banks, publishes packages to Supabase Storage using a service-role key, and can commit/push generated files.
+- Do not dispatch this workflow as a diagnostic on the feature branch or run the publisher casually: it performs external writes and requires a deliberate production release decision. This audit only read the workflow file; it did not run it or query Firebase/Supabase.
+- Next safe step is to inspect source-bank content and quality counts (IDs, topic/age/difficulty coverage, duplicate stems/options, answer-key mappings, review status, official-paper overlap) on the feature branch, then run read-only/local validators in a proper execution environment before any publish action.
