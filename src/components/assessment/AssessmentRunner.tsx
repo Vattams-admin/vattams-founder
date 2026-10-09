@@ -335,6 +335,36 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
               {unansweredCount} {unansweredCount === 1 ? "question was" : "questions were"} left unanswered. Consider reviewing those topics before your next attempt.
             </p>
           )}
+          <div className="mt-7">
+            <h3 className="font-display text-lg font-semibold">Your response review</h3>
+            <p className="mt-1 text-sm text-slate-muted">
+              Review the answers you selected and identify questions to revisit. Correct-answer explanations are shown only when the assessment service provides them.
+            </p>
+            <ol className="mt-4 space-y-3">
+              {questions.map((question, index) => {
+                const selectedIndex = answers[question.question_id];
+                const answered = Number.isInteger(selectedIndex) && selectedIndex !== null;
+                return (
+                  <li key={question.question_id} className="rounded-card border border-white/10 p-4">
+                    <div className="flex flex-wrap items-start justify-between gap-2">
+                      <p className="font-medium">Question {index + 1}: {question.question}</p>
+                      <span className={`rounded-full border px-2 py-1 text-xs ${answered ? "border-white/15 text-parchment" : "border-gold/30 text-gold"}`}>
+                        {answered ? "Answered" : "Unanswered"}
+                      </span>
+                    </div>
+                    {answered ? (
+                      <p className="mt-3 text-sm text-slate-muted">
+                        Your answer: <span className="text-parchment">{String.fromCharCode(65 + (selectedIndex as number))}. {question.options[selectedIndex as number]}</span>
+                      </p>
+                    ) : (
+                      <p className="mt-3 text-sm text-slate-muted">No answer was selected for this question.</p>
+                    )}
+                    <p className="mt-2 text-xs text-slate-muted">Topic: {question.topic}</p>
+                  </li>
+                );
+              })}
+            </ol>
+          </div>
         </div>
       </section>
     );
