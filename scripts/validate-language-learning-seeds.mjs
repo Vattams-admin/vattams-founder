@@ -77,10 +77,21 @@ else {
   for (const id of exampleLanguageIds) {
     if (!ids.includes(id)) fail('reviewed examples reference unknown language: ' + id)
   }
+  const languageHeaders = [...examplesBody.matchAll(/^  '([^']+)':\s*\{$/gm)]
   const exampleUnits = [...examplesBody.matchAll(/^\s*'([^']+)':\s*\{\s*text:\s*'([^']*)',\s*meaning:\s*'([^']*)'\s*\}/gm)]
-  const exampleKeys = exampleUnits.map(([, unit]) => unit)
-  if (new Set(exampleKeys).size !== exampleKeys.length) fail('duplicate localized example unit IDs within a language')
-  for (const [, unit, sampleText, meaning] of exampleUnits) {
+  const examplesByLanguage = new Map()
+  for (const example of exampleUnits) {
+    const [, unit, sampleText, meaning] = example
+    const languageHeader = languageHeaders.filter((header) => header.index < example.index).at(-1)
+    if (!languageHeader) {
+      fail('localized example appears outside a language block')
+      continue
+    }
+    const languageId = languageHeader[1]
+    const seenUnits = examplesByLanguage.get(languageId) ?? new Set()
+    if (seenUnits.has(unit)) fail('duplicate localized example unit ID for ' + languageId + ': ' + unit)
+    seenUnits.add(unit)
+    examplesByLanguage.set(languageId, seenUnits)
     if (!unitIds.includes(unit)) fail('reviewed example references unknown starter unit: ' + unit)
     if (!sampleText.trim() || !meaning.trim()) fail('reviewed example has empty sample text or meaning')
   }
