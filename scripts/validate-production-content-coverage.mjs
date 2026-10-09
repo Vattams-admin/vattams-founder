@@ -154,6 +154,116 @@ const courseTargets = exists(coursesRoot)
       })
   : [];
 
+// Validate the course-level maps and package cross-links as part of production coverage.
+const courseStructureErrors = [];
+for (const target of courseTargets) {
+  const courseRoot = path.join(coursesRoot, target.slug);
+  const manifest = manifests.find((item) =>
+    item.domain === 'course' && item.locator?.course === target.slug
+  );
+  const manifestPath = path.join(courseRoot, 'manifest.json');
+  const courseMapPath = path.join(courseRoot, 'course-map.json');
+  const moduleMapPath = path.join(courseRoot, 'module-map.json');
+
+  if (!exists(manifestPath)) courseStructureErrors.push(target.slug + ': missing manifest.json');
+  if (!exists(courseMapPath)) courseStructureErrors.push(target.slug + ': missing course-map.json');
+  if (!exists(moduleMapPath)) courseStructureErrors.push(target.slug + ': missing module-map.json');
+  if (!manifest || manifest.invalid) continue;
+  if (!exists(courseMapPath) || !exists(moduleMapPath)) continue;
+
+  let courseMap;
+  let moduleMap;
+  try {
+    courseMap = readJson(courseMapPath);
+    moduleMap = readJson(moduleMapPath);
+  } catch (error) {
+    courseStructureErrors.push(target.slug + ': course/module map JSON is invalid (' + error.message + ')');
+    continue;
+  }
+
+  const modules = Array.isArray(courseMap.modules) ? courseMap.modules : [];
+  if (modules.length === 0) courseStructureErrors.push(target.slug + ': course-map must contain at least one module');
+  const lessonIds = new Set();
+  let expectedModuleSequence = 1;
+  for (const module of modules) {
+    if (module.sequence !== expectedModuleSequence) {
+      courseStructureErrors.push(target.slug + ': course-map module sequence must be contiguous at ' + String(module.moduleId ?? expectedModuleSequence));
+    }
+    expectedModuleSequence += 1;
+    if (!Array.isArray(module.lessons)) {
+      courseStructureErrors.push(target.slug + ': module ' + String(module.moduleId ?? '(unknown)') + ' must contain a lessons array');
+      continue;
+    }
+    let expectedLessonSequence = 1;
+    for (const lesson of module.lessons) {
+      if (typeof lesson.lessonId !== 'string' || lesson.lessonId.length === 0) {
+        courseStructureErrors.push(target.slug + ': lesson is missing lessonId');
+      } else if (lessonIds.has(lesson.lessonId)) {
+        courseStructureErrors.push(target.slug + ': duplicate lessonId ' + lesson.lessonId);
+      } else {
+        lessonIds.add(lesson.lessonId);
+      }
+      if (lesson.sequence !== expectedLessonSequence) {
+        courseStructureErrors.push(target.slug + ': lesson sequence must be contiguous in module ' + String(module.moduleId ?? '(unknown)'));
+      }
+      expectedLessonSequence += 1;
+      if (typeof lesson.package !== 'string' || lesson.package.trim() === '') {
+        courseStructureErrors.push(target.slug + ': lesson ' + String(lesson.lessonId ?? '(unknown)') + ' has no package path');
+      } else {
+        const resolved = resolveRepositoryAsset(lesson.package);
+        if (!resolved.valid || !exists(resolved.resolved)) {
+          courseStructureErrors.push(target.slug + ': lesson package missing or unsafe: ' + lesson.package);
+        }
+      }
+    }
+  }
+
+  const packagePaths = manifest.assets?.authoringPackages;
+  if (!Array.isArray(packagePaths) || packagePaths.length === 0) {
+    courseStructureErrors.push(target.slug + ': manifest must reference authoringPackages');
+    continue;
+  }
+  const packageLessonIds = new Set();
+  for (const packagePath of packagePaths) {
+    const resolved = resolveRepositoryAsset(packagePath);
+    if (!resolved.valid || !exists(resolved.resolved)) {
+      courseStructureErrors.push(target.slug + ': manifest authoring package missing or unsafe: ' + String(packagePath));
+      continue;
+    }
+    try {
+      const pkg = readJson(resolved.resolved);
+      if (pkg.locator?.course !== target.slug) {
+        courseStructureErrors.push(target.slug + ': authoring package course locator mismatch: ' + packagePath);
+      }
+      const lessonId = pkg.locator?.lesson;
+      if (typeof lessonId !== 'string' || !lessonIds.has(lessonId)) {
+        courseStructureErrors.push(target.slug + ': package lesson is absent from course-map: ' + packagePath);
+      }
+      if (typeof lessonId === 'string') packageLessonIds.add(lessonId);
+    } catch (error) {
+      courseStructureErrors.push(target.slug + ': authoring package JSON is invalid: ' + packagePath + ' (' + error.message + ')');
+    }
+  }
+  for (const lessonId of lessonIds) {
+    if (!packageLessonIds.has(lessonId)) {
+      courseStructureErrors.push(target.slug + ': course-map lesson is missing from manifest authoringPackages: ' + lessonId);
+    }
+  }
+
+  const moduleIds = new Set(modules.map((module) => module.moduleId).filter((id) => typeof id === 'string'));
+  const moduleMapModules = Array.isArray(moduleMap.modules) ? moduleMap.modules : [];
+  for (const module of moduleMapModules) {
+    if (!moduleIds.has(module.moduleId)) {
+      courseStructureErrors.push(target.slug + ': module-map references unknown module ' + String(module.moduleId ?? '(unknown)'));
+    }
+    for (const lessonId of Array.isArray(module.lessons) ? module.lessons : []) {
+      if (!lessonIds.has(lessonId)) {
+        courseStructureErrors.push(target.slug + ': module-map references unknown lesson ' + String(lessonId));
+      }
+    }
+  }
+}
+
 const assessmentTargets = Object.values(assessmentRegistry.assessments ?? {}).map((item) => ({
   targetType: 'assessment',
   id: item.assessment_id,
@@ -242,6 +352,13 @@ const summary = {
 const report = { version: 1, generatedAt: summary.generatedAt, summary, targets, manifests };
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(report, null, 2) + '\n');
+
+if (courseStructureErrors.length > 0) {
+  console.error('Production content coverage failed: course structure is incomplete or inconsistent.');
+  for (const error of courseStructureErrors) console.error('- ' + error);
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
 
 if (summary.invalidManifestCount > 0) {
   console.error('Production content coverage failed: invalid manifest files detected.');
