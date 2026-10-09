@@ -321,6 +321,27 @@ const assessmentTargets = Object.values(assessmentRegistry.assessments ?? {}).ma
   answerKey: item.answer_key
 }));
 
+const registryTargetErrors = [];
+const validateUniqueTargets = (label, entries) => {
+  const seen = new Map();
+  for (const item of entries) {
+    const id = item.id ?? item.courseId ?? item.slug;
+    if (typeof id !== 'string' || id.trim() === '') {
+      registryTargetErrors.push(label + ': target is missing a non-empty identifier');
+      continue;
+    }
+    if (seen.has(id)) {
+      registryTargetErrors.push(label + ': duplicate target identifier ' + id);
+    } else {
+      seen.set(id, item);
+    }
+  }
+};
+
+validateUniqueTargets('course registry', courseTargets);
+validateUniqueTargets('competition registry', competitionTargets);
+validateUniqueTargets('assessment registry', assessmentTargets);
+
 const hasAllRequiredAssets = (manifest, candidates) => {
   const assets = manifest?.assets ?? {};
   const publicBanks = new Set(assets.questionBanksPublic ?? []);
