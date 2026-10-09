@@ -64,6 +64,12 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
       schemaErrors.push('governance must include sourceEvidence, a valid reviewStatus, and answerKeyPrivate=true');
     }
     if (data.status === 'published') {
+      for (const field of ['studyMaterials', 'questions', 'assessments']) {
+        const value = field === 'questions' && data.domain === 'course' && data.coverage?.questions === undefined
+          ? data.coverage?.questionBank
+          : data.coverage?.[field];
+        if (!Number.isInteger(value) || value <= 0) schemaErrors.push('published packages require coverage.' + field + ' greater than zero');
+      }
       if (!['reviewed', 'approved'].includes(data.governance?.reviewStatus)) schemaErrors.push('published packages require reviewed or approved governance.reviewStatus');
       for (const field of ['approvedBy', 'approvedAt', 'contentHash']) {
         if (typeof data.governance?.[field] !== 'string' || data.governance[field].trim() === '') {
