@@ -183,6 +183,7 @@ export default function CourseLearn() {
   const [modules, setModules] = useState<Module[]>([])
   const [lessons, setLessons] = useState<Lesson[]>([])
   const [progress, setProgress] = useState<Record<string, boolean>>({})
+  const [progressSavingId, setProgressSavingId] = useState<string | null>(null)
   const [materials, setMaterials] = useState<Material[]>([])
   const [activeLessonId, setActiveLessonId] = useState<string | null>(null)
   const [lessonFileUrls, setLessonFileUrls] = useState<{
@@ -521,8 +522,10 @@ export default function CourseLearn() {
     : 0
 
   async function markComplete(lessonId: string) {
-    if (!enrolmentId || !user) return
+    if (!enrolmentId || !user || progress[lessonId] || progressSavingId) return
 
+    setProgressSavingId(lessonId)
+    setError(null)
     try {
       // Use a deterministic document ID so the same lesson
       // cannot create duplicate progress records.
@@ -546,8 +549,9 @@ export default function CourseLearn() {
       }))
     } catch (err) {
       console.error('Progress update error:', err)
-
       setError('Unable to save your progress right now. Please check your connection and try again.')
+    } finally {
+      setProgressSavingId(null)
     }
   }
 
@@ -783,10 +787,15 @@ export default function CourseLearn() {
                 <button
                   type="button"
                   onClick={() => markComplete(activeLesson.id)}
-                  disabled={progress[activeLesson.id]}
+                  disabled={progress[activeLesson.id] || progressSavingId !== null}
+                  aria-busy={progressSavingId === activeLesson.id}
                   className="btn-primary disabled:opacity-50"
                 >
-                  {progress[activeLesson.id] ? 'Completed' : 'Mark as complete'}
+                  {progress[activeLesson.id]
+                    ? 'Completed'
+                    : progressSavingId === activeLesson.id
+                      ? 'Saving progress…'
+                      : 'Mark as complete'}
                 </button>
                 <button
                   type="button"
