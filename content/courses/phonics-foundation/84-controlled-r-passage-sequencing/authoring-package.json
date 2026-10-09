@@ -421,7 +421,9 @@
   "governance": {
     "reviewStatus": "draft",
     "answerKeyPrivate": true,
-    "provenance": "VATTAMS Academia authored phonics curriculum package; controlled /r/ progression.",
+    "provenance": [
+      "VATTAMS Academia authored phonics curriculum package; controlled /r/ progression."
+    ],
     "contentHash": "sha256:course-phonics-foundation-lesson-84-controlled-r-passage-sequencing-v1"
   }
 }
