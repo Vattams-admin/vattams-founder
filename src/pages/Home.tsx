@@ -7,6 +7,7 @@ import type { Course } from '@/types/database'
 import CourseCard from '@/components/CourseCard'
 import { DEFAULT_PRICING_CONFIG, type PricingConfig } from '@/lib/pricingModel'
 import { getPricingConfig } from '@/lib/pricingConfig'
+import { ACADEMIA_PILLARS } from '@/lib/academiaPillars'
 
 // NOTE ON DATA SOURCES (read this before touching this file again):
 // Courses are the only offering with a working data layer right now —
@@ -221,6 +222,50 @@ export default function Home() {
               </Link>
             )
           })}
+        </div>
+      </section>
+
+      {/* Three-pillar discovery architecture */}
+      <section className="border-y border-white/5 bg-gradient-to-b from-navy/50 to-transparent py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <SectionHeading
+            eyebrow="The Academia learning map"
+            title="One platform. Three connected learning journeys."
+          />
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-muted sm:text-base">
+            Start with a course, prepare for a specific exam, or build mastery through a competition. Each pillar has a clear purpose and room to grow into a deeper catalogue.
+          </p>
+          <div className="mt-8 grid gap-5 lg:grid-cols-3">
+            {ACADEMIA_PILLARS.map((pillar) => (
+              <article key={pillar.id} className="card flex min-w-0 flex-col p-6 sm:p-7">
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-xs font-bold tracking-[0.22em] text-azure-bright">PILLAR {pillar.number}</span>
+                  <span aria-hidden="true" className="h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_16px_rgba(34,211,238,.65)]" />
+                </div>
+                <h3 className="mt-5 text-xl font-bold text-parchment">{pillar.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-muted">{pillar.summary}</p>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {pillar.focusAreas.map((area) => (
+                    <span key={area} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs text-parchment/85">{area}</span>
+                  ))}
+                </div>
+                <div className="mt-5 border-t border-white/10 pt-4">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-parchment/70">Suggested learning areas</p>
+                  <ul className="mt-3 space-y-2">
+                    {pillar.suggestedTopics.slice(0, 3).map((topic) => (
+                      <li key={topic} className="flex gap-2 text-sm leading-5 text-slate-muted">
+                        <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                        <span>{topic}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <Link to={pillar.route} className="btn-secondary mt-7 w-full sm:w-auto">
+                  Explore {pillar.title}
+                </Link>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
