@@ -118,10 +118,10 @@ if (process.env.GITHUB_STEP_SUMMARY) {
     '',
     '| Validator | Result | Duration (s) | Details |',
     '|---|---:|---:|---|',
-    ...outcomes.map((item) => '| ' + item.label.replace(/\\|/g, '\\\\|') + ' | ' + item.status + ' | ' + item.durationSeconds.toFixed(1) + ' | ' + (item.reason ? item.reason.replace(/\\|/g, '\\\\|') : '—') + ' |'),
+    ...outcomes.map((item) => '| ' + item.label.replace(/\|/g, '\\|') + ' | ' + item.status + ' | ' + item.durationSeconds.toFixed(1) + ' | ' + (item.reason ? item.reason.replace(/\|/g, '\\|') : '—') + ' |'),
     '',
   ]
-  fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\\n'))
+  fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join('\n'))
 }
 if (failed.length) {
   for (const item of failed) console.error('- ' + item.label + ': ' + item.reason)
