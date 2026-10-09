@@ -325,6 +325,32 @@ for (const target of courseTargets) {
       for (const answerId of answerKeyIds) {
         if (!questionIds.has(answerId)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' answer key references unknown question ' + answerId);
       }
+      // Course MCQs must have usable options and a valid, private answer-key mapping.
+      // This validates the course schema independently from competition/exam bank formats.
+      const courseQuestions = Array.isArray(pkg.questions) ? pkg.questions : [];
+      const answerKeysById = new Map(answerKeyEntries.map((answer) => [answer?.questionId ?? answer?.id, answer]));
+      for (const [questionIndex, question] of courseQuestions.entries()) {
+        const questionId = question?.questionId ?? question?.id;
+        const label = String(questionId ?? 'row ' + (questionIndex + 1));
+        if (typeof question?.question !== 'string' || question.question.trim() === '') {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' has no question text');
+        }
+        if (!Array.isArray(question?.options) || question.options.length < 2 ||
+            question.options.some((option) => typeof option !== 'string' || option.trim() === '')) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' must have at least two non-empty text options');
+        }
+        const answerKey = answerKeysById.get(questionId);
+        if (answerKey) {
+          const correctIndex = answerKey.correctOptionIndex ?? answerKey.correct_option_index;
+          if (!Number.isInteger(correctIndex) || correctIndex < 0 ||
+              !Array.isArray(question?.options) || correctIndex >= question.options.length) {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' answer key for ' + label + ' has an invalid correct-option index');
+          }
+          if (typeof answerKey.explanation !== 'string' || answerKey.explanation.trim() === '') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' answer key for ' + label + ' is missing an explanation');
+          }
+        }
+      }
       if (questionIds.size > 0 && answerKeyIds.size === 0) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has questions but no answer keys');
       }
