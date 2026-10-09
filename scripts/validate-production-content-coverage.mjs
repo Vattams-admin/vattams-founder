@@ -41,6 +41,24 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
   const relative = path.relative(ROOT, file).split(path.sep).join('/');
   try {
     const data = readJson(file);
+    const schemaErrors = [];
+    const requiredFields = ['packageId', 'version', 'domain', 'locator', 'status', 'coverage', 'assets', 'governance'];
+    for (const field of requiredFields) {
+      if (!Object.prototype.hasOwnProperty.call(data, field)) schemaErrors.push('missing required field: ' + field);
+    }
+    if (typeof data.packageId !== 'string' || data.packageId.length < 3) schemaErrors.push('packageId must be a string of at least 3 characters');
+    if (typeof data.version !== 'string' || !/^\\d+\\.\\d+\\.\\d+$/.test(data.version)) schemaErrors.push('version must use semantic version format x.y.z');
+    if (!['course', 'school', 'competitive-exam', 'entrance-exam', 'professional', 'competition'].includes(data.domain)) schemaErrors.push('domain is not supported by the production manifest schema');
+    if (!data.locator || typeof data.locator !== 'object' || Array.isArray(data.locator) || typeof data.locator.language !== 'string' || data.locator.language.length < 2) schemaErrors.push('locator must be an object with a language code');
+    if (!['draft', 'in_review', 'approved', 'published', 'retired'].includes(data.status)) schemaErrors.push('status is not supported by the production manifest schema');
+    for (const field of ['studyMaterials', 'questions', 'assessments']) {
+      if (!Number.isInteger(data.coverage?.[field]) || data.coverage[field] < 0) schemaErrors.push('coverage.' + field + ' must be a non-negative integer');
+    }
+    if (!Array.isArray(data.governance?.sourceEvidence) ||
+        !['unreviewed', 'reviewed', 'approved'].includes(data.governance?.reviewStatus) ||
+        data.governance?.answerKeyPrivate !== true) {
+      schemaErrors.push('governance must include sourceEvidence, a valid reviewStatus, and answerKeyPrivate=true');
+    }
     const assets = data.assets ?? null;
     const missingAssetPaths = [];
     for (const field of ['authoringPackages', 'questionBanksPublic', 'answerKeysPrivate']) {
@@ -67,6 +85,7 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
     }
     return {
       file: relative,
+      ...(schemaErrors.length > 0 ? { invalid: true, schemaErrors } : {}),
       packageId: data.packageId ?? null,
       version: data.version ?? null,
       domain: data.domain ?? null,
@@ -212,6 +231,12 @@ fs.writeFileSync(OUT, JSON.stringify(report, null, 2) + '\n');
 
 if (summary.invalidManifestCount > 0) {
   console.error('Production content coverage failed: invalid manifest files detected.');
+  for (const manifest of manifests.filter((item) => item.invalid)) {
+    console.error('- ' + manifest.file);
+    for (const error of manifest.schemaErrors ?? []) console.error('  - ' + error);
+    if (manifest.error) console.error('  - ' + manifest.error);
+  }
+  console.error('Coverage report written to reports/production-content-coverage.json');
   process.exit(1);
 }
 const manifestsWithMissingAssets = manifests.filter((manifest) => (manifest.missingAssetPaths?.length ?? 0) > 0);
