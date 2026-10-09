@@ -586,7 +586,38 @@ const summary = {
   }))
 };
 
-const report = { version: 1, generatedAt: summary.generatedAt, summary, targets, manifests };
+const diagnosticTargets = targets
+  .filter((target) => (target.diagnostics ?? []).length > 0)
+  .map((target) => ({
+    targetType: target.targetType,
+    targetId: target.id ?? target.courseId ?? target.slug ?? null,
+    title: target.title ?? null,
+    state: target.state,
+    releaseReady: target.releaseReady,
+    manifestFile: target.manifestFile,
+    diagnosticCount: target.diagnostics.length,
+    diagnostics: target.diagnostics
+  }));
+const diagnosticCodeCounts = {};
+for (const target of diagnosticTargets) {
+  for (const diagnostic of target.diagnostics) {
+    diagnosticCodeCounts[diagnostic.code] = (diagnosticCodeCounts[diagnostic.code] ?? 0) + 1;
+  }
+}
+const diagnosticSummary = {
+  affectedTargetCount: diagnosticTargets.length,
+  diagnosticCount: diagnosticTargets.reduce((total, target) => total + target.diagnosticCount, 0),
+  byTargetType: Object.fromEntries(['course', 'competitive-exam', 'competition', 'assessment'].map((type) => {
+    const group = diagnosticTargets.filter((target) => target.targetType === type);
+    return [type, {
+      affectedTargets: group.length,
+      diagnostics: group.reduce((total, target) => total + target.diagnosticCount, 0)
+    }];
+  })),
+  byCode: diagnosticCodeCounts,
+  targets: diagnosticTargets
+};
+const report = { version: 1, generatedAt: summary.generatedAt, summary, diagnosticSummary, targets, manifests };
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(report, null, 2) + '\n');
 
