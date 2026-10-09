@@ -940,9 +940,15 @@ export default function CourseLearn() {
                   type="button"
                   onClick={() => previousLesson && setActiveLessonId(previousLesson.id)}
                   disabled={!previousLesson}
-                  className="btn-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:cursor-not-allowed disabled:opacity-40"
+                  aria-label={previousLesson ? `Previous lesson: ${previousLesson.title}${progress[previousLesson.id] ? ', completed' : ''}` : 'No previous lesson'}
+                  className="btn-secondary max-w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:cursor-not-allowed disabled:opacity-40"
                 >
-                  Previous lesson
+                  <span className="block text-xs">← Previous lesson</span>
+                  {previousLesson && (
+                    <span className="mt-1 block max-w-48 truncate text-left text-[11px] text-slate-muted">
+                      {previousLesson.title}{progress[previousLesson.id] ? ' · Done' : ''}
+                    </span>
+                  )}
                 </button>
                 <button
                   type="button"
@@ -961,9 +967,15 @@ export default function CourseLearn() {
                   type="button"
                   onClick={() => nextLesson && setActiveLessonId(nextLesson.id)}
                   disabled={!nextLesson}
-                  className="btn-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:cursor-not-allowed disabled:opacity-40"
+                  aria-label={nextLesson ? `Next lesson: ${nextLesson.title}${progress[nextLesson.id] ? ', completed' : ''}` : 'No next lesson'}
+                  className="btn-secondary max-w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:cursor-not-allowed disabled:opacity-40"
                 >
-                  Next lesson
+                  <span className="block text-xs">Next lesson →</span>
+                  {nextLesson && (
+                    <span className="mt-1 block max-w-48 truncate text-left text-[11px] text-slate-muted">
+                      {nextLesson.title}{progress[nextLesson.id] ? ' · Done' : ''}
+                    </span>
+                  )}
                 </button>
               </div>
               <p className="mt-3 text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
