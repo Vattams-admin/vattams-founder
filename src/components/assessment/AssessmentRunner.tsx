@@ -47,6 +47,21 @@ async function token() {
   return user.getIdToken();
 }
 
+function assessmentRecoveryMessage(error: unknown, fallback: string) {
+  const message = error instanceof Error ? error.message : String(error ?? "");
+  const normalized = message.toLowerCase();
+  if (normalized.includes("session has expired") || normalized.includes("jwt") || normalized.includes("unauthorized") || normalized.includes("401")) {
+    return "Your sign-in session may have expired. Sign in again, then reopen this assessment to resume your saved attempt.";
+  }
+  if (normalized.includes("failed to fetch") || normalized.includes("network") || normalized.includes("timeout") || normalized.includes("fetch")) {
+    return "We couldn't reach the assessment service. Check your internet connection and retry. Your existing attempt has not been intentionally reset.";
+  }
+  if (normalized.includes("question set is incomplete") || normalized.includes("question ordering is invalid") || normalized.includes("invalid attempt")) {
+    return "The saved assessment data could not be loaded completely. Retry once; if the problem continues, contact support and include the assessment title.";
+  }
+  return message || fallback;
+}
+
 export default function AssessmentRunner({ courseId, assessmentId, title }: Props) {
   const [view, setView] = useState<View>("ready");
   const [questions, setQuestions] = useState<AssessmentQuestion[]>([]);
@@ -197,7 +212,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
       setError("");
     } catch (e) {
       console.error("Assessment answer retry failed", e);
-      setError(e instanceof Error ? e.message : "Answers could not be saved. Check your connection and retry.");
+      setError(assessmentRecoveryMessage(e, "Answers could not be saved. Check your connection and retry."));
     } finally {
       setBusy(false);
     }
@@ -259,7 +274,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     try {
       await loadAttempt();
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Unable to start assessment.");
+      setError(assessmentRecoveryMessage(e, "Unable to start assessment. Please retry."));
     } finally {
       setBusy(false);
     }
