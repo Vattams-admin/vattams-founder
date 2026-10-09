@@ -538,6 +538,16 @@ export default function CourseLearn() {
     ? lessons.filter((lesson) => lesson.module_id === currentModule.id)
     : []
   const currentModuleCompletedCount = currentModuleLessons.filter((lesson) => progress[lesson.id]).length
+  const activeLessonModuleTitle = activeLesson
+    ? modules.find((module) => module.id === activeLesson.module_id)?.title ?? ''
+    : ''
+  const lessonSearchTerm = lessonListSearch.trim().toLocaleLowerCase()
+  const activeLessonVisibleInList = Boolean(activeLesson) &&
+    (!lessonSearchTerm ||
+      activeLesson.title.toLocaleLowerCase().includes(lessonSearchTerm) ||
+      activeLessonModuleTitle.toLocaleLowerCase().includes(lessonSearchTerm)) &&
+    (lessonStatusFilter === 'all' ||
+      (lessonStatusFilter === 'completed' ? Boolean(progress[activeLesson!.id]) : !progress[activeLesson!.id]))
 
   const percentComplete = lessons.length
     ? Math.round(
@@ -751,6 +761,18 @@ export default function CourseLearn() {
                 </button>
               ))}
             </div>
+            {activeLesson && !activeLessonVisibleInList && (
+              <button
+                type="button"
+                onClick={() => {
+                  setLessonListSearch('')
+                  setLessonStatusFilter('all')
+                }}
+                className="mt-2 w-full rounded-card border border-gold/30 px-3 py-2 text-left text-xs text-gold-bright focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              >
+                Show current lesson in list: {activeLesson.title}
+              </button>
+            )}
             <p className="mt-1 text-[11px] text-slate-muted" aria-live="polite" aria-atomic="true">
               {lessons.filter((lesson) => {
                 const term = lessonListSearch.trim().toLocaleLowerCase()
