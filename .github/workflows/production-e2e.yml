@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - main
+      - feat/academia-core-redesign
     paths:
       - "e2e/**"
       - "scripts/provision-production-e2e-v2.mjs"
