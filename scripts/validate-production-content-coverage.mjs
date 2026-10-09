@@ -296,6 +296,12 @@ for (const target of courseTargets) {
         courseStructureErrors.push(target.slug + ': authoring package course locator mismatch: ' + packagePath);
       }
       const lessonId = pkg.locator?.lesson;
+      const requiredLearningSections = ['learningObjectives', 'explanation', 'workedExamples', 'activities', 'practiceQuestions', 'assessment'];
+      for (const field of requiredLearningSections) {
+        const value = pkg[field] ?? pkg.content?.[field] ?? pkg.lesson?.[field];
+        const hasContent = Array.isArray(value) ? value.length > 0 : typeof value === 'string' ? value.trim().length > 0 : value && typeof value === 'object' ? Object.keys(value).length > 0 : false;
+        if (!hasContent) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing meaningful ' + field + ' content');
+      }
       if (typeof lessonId !== 'string' || !lessonIds.has(lessonId)) {
         courseStructureErrors.push(target.slug + ': package lesson is absent from course-map: ' + packagePath);
       }
