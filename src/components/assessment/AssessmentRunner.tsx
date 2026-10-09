@@ -360,10 +360,16 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
               </button>
             )}
             {remainingSeconds === 0 && (
-              <button type="button" onClick={() => void submit()} disabled={busy}
-                className="ml-2 mt-3 rounded-card border border-danger/40 px-3 py-2 font-semibold text-danger underline underline-offset-4 disabled:opacity-50">
-                {busy ? "Retrying submission..." : "Retry submission"}
-              </button>
+              <>
+                <button type="button" onClick={() => void submit()} disabled={busy}
+                  className="ml-2 mt-3 rounded-card border border-danger/40 px-3 py-2 font-semibold text-danger underline underline-offset-4 disabled:opacity-50">
+                  {busy ? "Retrying submission..." : "Retry submission"}
+                </button>
+                <button type="button" onClick={() => void start()} disabled={busy}
+                  className="ml-2 mt-3 rounded-card border border-danger/40 px-3 py-2 font-semibold text-danger underline underline-offset-4 disabled:opacity-50">
+                  {busy ? "Checking status..." : "Check submission status"}
+                </button>
+              </>
             )}
           </div>
         )}
