@@ -56,6 +56,23 @@ if (!seedSource.includes('LANGUAGE_DATABASE_SEEDS: readonly LanguageDatabaseSeed
 if (!seedSource.includes('LANGUAGE_LEARNING_STARTER_SEEDS: readonly LanguageStarterItem[]')) fail('learning starter seed export is missing')
 if (!seedSource.includes('reviewRequired: !reviewed')) fail('unreviewed content must remain explicitly flagged')
 if (!seedSource.includes('writingDirection: RTL_LANGUAGES.has(language.id) ? \'rtl\' : \'ltr\'')) fail('writing direction mapping is missing')
+const examplesMatch = seedSource.match(/const REVIEWED_EXAMPLES: Record<string, Record<string, \{ text: string; meaning: string \}>> = \{([\s\S]*?)\n\}/)
+if (!examplesMatch) fail('reviewed example registry is missing')
+else {
+  const examplesBody = examplesMatch[1]
+  const exampleLanguageIds = [...examplesBody.matchAll(/^\s*'([^']+)':\s*\{/gm)].map((match) => match[1])
+  for (const id of exampleLanguageIds) {
+    if (!ids.includes(id)) fail('reviewed examples reference unknown language: ' + id)
+  }
+  const exampleUnits = [...examplesBody.matchAll(/^\s*'([^']+)':\s*\{\s*text:\s*'([^']*)',\s*meaning:\s*'([^']*)'\s*\}/gm)]
+  for (const [, unit, sampleText, meaning] of exampleUnits) {
+    if (!unitIds.includes(unit)) fail('reviewed example references unknown starter unit: ' + unit)
+    if (!sampleText.trim() || !meaning.trim()) fail('reviewed example has empty sample text or meaning')
+  }
+  if (exampleUnits.length === 0) fail('no reviewed localized examples found')
+  console.log(`Localized example entries: ${exampleUnits.length}`)
+  console.log(`Languages with example blocks: ${exampleLanguageIds.length}`)
+}
 
 if (process.exitCode) process.exit(process.exitCode)
 console.log('LANGUAGE SEEDS VALID')
