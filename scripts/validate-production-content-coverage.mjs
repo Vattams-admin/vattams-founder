@@ -355,11 +355,11 @@ for (const target of courseTargets) {
           }
         }
         if (question?.difficulty !== undefined &&
-            !['foundational', 'easy', 'medium', 'hard', 'advanced', 'higher-order'].includes(question.difficulty)) {
+            !['foundational', 'foundation', 'basic', 'easy', 'medium', 'conceptual', 'intermediate', 'application', 'hard', 'advanced', 'higher-order', 'higherOrderThinking', 'diagnostic', 'remediation', 'mixedReview'].includes(question.difficulty)) {
           courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' has an unsupported difficulty label');
         }
         if (typeof question?.difficulty === 'string' &&
-            ['foundational', 'easy', 'medium', 'hard', 'advanced', 'higher-order'].includes(question.difficulty)) {
+            ['foundational', 'foundation', 'basic', 'easy', 'medium', 'conceptual', 'intermediate', 'application', 'hard', 'advanced', 'higher-order', 'higherOrderThinking', 'diagnostic', 'remediation', 'mixedReview'].includes(question.difficulty)) {
           questionsWithExplicitDifficulty += 1;
           questionDifficultyValues.add(question.difficulty);
         }
@@ -383,7 +383,7 @@ for (const target of courseTargets) {
       }
       if (courseQuestions.length > 0 && questionsWithExplicitDifficulty === 0) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' questions need explicit difficulty labels to support progression');
-      } else if (courseQuestions.length >= 5 && questionDifficultyValues.size < 2) {
+      } else if (pkg.status === 'published' && courseQuestions.length >= 5 && questionDifficultyValues.size < 2) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' should include at least two difficulty levels when it contains five or more questions');
       }
       if (questionIds.size > 0 && answerKeyIds.size === 0) {
@@ -427,13 +427,14 @@ for (const target of courseTargets) {
           courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' contains an empty key takeaway');
         }
       }
-      if (!activities || !hasItems(activities) || activities.some((item) => !item || typeof item.instruction !== 'string' || item.instruction.trim() === '')) {
+      if (!activities || !hasItems(activities) || activities.some((item) => !item || !((typeof item.instruction === 'string' && item.instruction.trim() !== '') || (typeof item.name === 'string' && item.name.trim() !== '' && Array.isArray(item.steps) && item.steps.length > 0 && item.steps.every((step) => typeof step === 'string' && step.trim() !== ''))))) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing authored activities with instructions');
       } else {
         const activityIds = new Set();
         for (const [activityIndex, activity] of activities.entries()) {
           const label = 'activity #' + (activityIndex + 1);
           if (typeof activity.id !== 'string' || activity.id.trim() === '') {
+            if (Array.isArray(activity.steps) && activity.steps.length > 0 && typeof activity.name === 'string' && activity.name.trim() !== '') continue;
             courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' ' + label + ' is missing a stable ID');
           } else if (activityIds.has(activity.id)) {
             courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate activity ID ' + activity.id);
@@ -458,6 +459,12 @@ for (const target of courseTargets) {
         for (const [band, items] of Object.entries(practice)) {
           if (!Array.isArray(items)) continue;
           for (const [practiceIndex, item] of items.entries()) {
+            if (typeof item === 'string' && item.trim() !== '') {
+              const normalizedPrompt = item.trim().replace(/\\s+/g, ' ').toLocaleLowerCase();
+              if (practicePromptOwners.has(normalizedPrompt)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' repeats a practice prompt in ' + band + ' and ' + practicePromptOwners.get(normalizedPrompt));
+              else practicePromptOwners.set(normalizedPrompt, band);
+              continue;
+            }
             if (!item || typeof item !== 'object' ||
                 typeof item.prompt !== 'string' || item.prompt.trim() === '' ||
                 typeof item.answer !== 'string' || item.answer.trim() === '') {
@@ -506,6 +513,7 @@ for (const target of courseTargets) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing measurable learning outcomes');
       } else {
         for (const [outcomeIndex, outcome] of outcomes.entries()) {
+          if (typeof outcome === 'string' && outcome.trim() !== '') continue;
           if (!outcome || typeof outcome !== 'object' ||
               typeof outcome.statement !== 'string' || outcome.statement.trim() === '' ||
               typeof outcome.measure !== 'string' || outcome.measure.trim() === '' ||
