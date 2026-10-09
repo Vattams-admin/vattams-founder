@@ -51,6 +51,7 @@ export default function Competitions() {
         competition.name,
         competition.slug,
         competition.short_description ?? '',
+        competition.description ?? '',
       ].join(' ').toLocaleLowerCase()
       return searchableText.includes(term)
     })
@@ -154,7 +155,7 @@ export default function Competitions() {
               value={searchTerm}
               onChange={(event) => setSearchTerm(event.target.value)}
               placeholder="Search competition name or description"
-              className="input w-full max-w-xl"
+              className="input w-full max-w-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             />
             <div className="mt-4 flex flex-wrap gap-2">
               {COMPETITION_DISCOVERY_TOPICS.map((topic) => (
@@ -172,7 +173,7 @@ export default function Competitions() {
                 <button
                   type="button"
                   onClick={() => setSearchTerm('')}
-                  className="rounded-full px-3 py-2 text-sm text-slate-muted underline underline-offset-4 hover:text-parchment"
+                  className="rounded-full px-3 py-2 text-sm text-slate-muted underline underline-offset-4 hover:text-parchment focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
                 >
                   Clear search
                 </button>
