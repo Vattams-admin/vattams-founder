@@ -238,7 +238,7 @@ export default function Courses() {
                         setLevelFilter('all')
                         setCategoryFilter('all')
                       }}
-                      className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-left text-xs leading-4 text-slate-muted transition-colors hover:border-azure/40 hover:text-parchment focus-visible:outline-offset-2"
+                      className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-left text-xs leading-4 text-slate-muted transition-colors hover:border-azure/40 hover:text-parchment focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
                     >
                       {topic}
                     </button>
@@ -340,7 +340,7 @@ function FilterChip({
     <button
       type="button"
       onClick={onClick}
-      className={`whitespace-nowrap rounded-pill border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors ${
+      className={`whitespace-nowrap rounded-pill border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy ${
         active
           ? 'border-azure bg-azure/15 text-azure-bright'
           : 'border-white/15 text-slate-muted hover:border-azure/40 hover:text-parchment'
