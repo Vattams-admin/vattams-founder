@@ -55,6 +55,7 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
       if (!Number.isInteger(data.coverage?.[field]) || data.coverage[field] < 0) schemaErrors.push('coverage.' + field + ' must be a non-negative integer');
     }
     if (!Array.isArray(data.governance?.sourceEvidence) ||
+        data.governance.sourceEvidence.some((source) => typeof source !== 'string' || source.trim() === '') ||
         !['unreviewed', 'reviewed', 'approved'].includes(data.governance?.reviewStatus) ||
         data.governance?.answerKeyPrivate !== true) {
       schemaErrors.push('governance must include sourceEvidence, a valid reviewStatus, and answerKeyPrivate=true');
