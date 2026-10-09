@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ACADEMIA_LANGUAGES, ACADEMIA_LANGUAGE_GROUPS, type AcademiaLanguageGroupFilter } from '@/lib/globalLanguages'
-import { LANGUAGE_LEARNING_STARTER_SEEDS, LANGUAGE_SEED_SUMMARY } from '@/lib/languageLearningSeeds'
+import { LANGUAGE_DATABASE_SEEDS, LANGUAGE_LEARNING_STARTER_SEEDS, LANGUAGE_SEED_SUMMARY } from '@/lib/languageLearningSeeds'
 import { useSeo } from '@/hooks/useSeo'
 
 export default function Languages() {
@@ -18,6 +18,10 @@ export default function Languages() {
   }, [search, group])
   const indiaCount = ACADEMIA_LANGUAGES.filter((language) => language.group === 'India').length
   const globalCount = ACADEMIA_LANGUAGES.filter((language) => language.group === 'Global').length
+  const reviewedLanguageCount = LANGUAGE_DATABASE_SEEDS.filter((language) => language.contentReadiness === 'starter-reviewed').length
+  const scaffoldLanguageCount = LANGUAGE_DATABASE_SEEDS.filter((language) => language.contentReadiness === 'scaffold-localization-needed').length
+  const reviewedLessonCount = LANGUAGE_LEARNING_STARTER_SEEDS.filter((item) => !item.reviewRequired).length
+  const scaffoldLessonCount = LANGUAGE_LEARNING_STARTER_SEEDS.filter((item) => item.reviewRequired).length
 
   return (
     <main className="mx-auto w-full max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
