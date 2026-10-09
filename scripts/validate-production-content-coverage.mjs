@@ -329,11 +329,19 @@ for (const target of courseTargets) {
       // This validates the course schema independently from competition/exam bank formats.
       const courseQuestions = Array.isArray(pkg.questions) ? pkg.questions : [];
       const answerKeysById = new Map(answerKeyEntries.map((answer) => [answer?.questionId ?? answer?.id, answer]));
+      const questionStemOwners = new Map();
       for (const [questionIndex, question] of courseQuestions.entries()) {
         const questionId = question?.questionId ?? question?.id;
         const label = String(questionId ?? 'row ' + (questionIndex + 1));
         if (typeof question?.question !== 'string' || question.question.trim() === '') {
           courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' has no question text');
+        } else {
+          const normalizedStem = question.question.trim().replace(/\\s+/g, ' ').toLocaleLowerCase();
+          if (questionStemOwners.has(normalizedStem)) {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate question text for ' + label + ' and ' + questionStemOwners.get(normalizedStem));
+          } else {
+            questionStemOwners.set(normalizedStem, label);
+          }
         }
         if (!Array.isArray(question?.options) || question.options.length < 2 ||
             question.options.some((option) => typeof option !== 'string' || option.trim() === '')) {
