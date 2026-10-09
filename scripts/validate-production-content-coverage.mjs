@@ -311,6 +311,7 @@ for (const target of courseTargets) {
 
 const assessmentTargets = Object.values(assessmentRegistry.assessments ?? {}).map((item) => ({
   targetType: 'assessment',
+  domain: item.domain ?? 'assessment',
   id: item.assessment_id,
   courseId: item.course_id,
   title: item.title ?? item.assessment_id,
@@ -418,8 +419,13 @@ const summary = {
   publishedCount: count('published'),
   retiredCount: count('retired'),
   courseTargetCount: courseTargets.length,
+  competitiveExamTargetCount: assessmentTargets.filter((item) => item.domain === 'competitive-exam').length,
   competitionTargetCount: competitionTargets.length,
-  assessmentTargetCount: assessmentTargets.length
+  assessmentTargetCount: assessmentTargets.length,
+  byTargetType: Object.fromEntries(['course', 'competitive-exam', 'competition', 'assessment'].map((type) => {
+    const group = targets.filter((item) => item.targetType === type || (type === 'competitive-exam' && item.domain === type));
+    return [type, { total: group.length, missing: group.filter((item) => item.state === 'missing').length, draft: group.filter((item) => item.state === 'draft').length, inReview: group.filter((item) => item.state === 'in_review').length, approved: group.filter((item) => item.state === 'approved').length, published: group.filter((item) => item.state === 'published').length, retired: group.filter((item) => item.state === 'retired').length }];
+  }))
 };
 
 const report = { version: 1, generatedAt: summary.generatedAt, summary, targets, manifests };
