@@ -452,6 +452,15 @@ if (duplicateLocatorEntries.length > 0) {
   process.exit(1);
 }
 
+if (reusedManifestMatches.length > 0) {
+  console.error('Production content coverage failed: a manifest matches multiple registry targets.');
+  for (const [file, owners] of reusedManifestMatches) {
+    console.error('- ' + file + ': ' + owners.map((owner) => '[' + owner.targetType + '] ' + (owner.title ?? owner.id ?? 'unnamed target')).join(' <> '));
+  }
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+
 const missingEnabledTargets = targets.filter((target) => target.enabled && target.state === 'missing');
 if (missingEnabledTargets.length > 0) {
   console.error('Production content coverage failed: ' + missingEnabledTargets.length + ' enabled target(s) have no matching content manifest.');
