@@ -448,6 +448,8 @@ for (const target of courseTargets) {
       if (!practice || typeof practice !== 'object' || !Object.values(practice).some(hasItems)) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing practice questions');
       } else {
+        const practicePromptOwners = new Map();
+        const practiceItemIds = new Set();
         const recommendedPracticeBands = ['basic', 'conceptual', 'application', 'higherOrderThinking', 'mixedReview'];
         const populatedPracticeBands = recommendedPracticeBands.filter((band) => hasItems(practice[band]));
         if (populatedPracticeBands.length < 3) {
@@ -460,6 +462,23 @@ for (const target of courseTargets) {
                 typeof item.prompt !== 'string' || item.prompt.trim() === '' ||
                 typeof item.answer !== 'string' || item.answer.trim() === '') {
               courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' practice ' + band + ' item #' + (practiceIndex + 1) + ' must include a non-empty prompt and answer');
+            }
+            if (item && typeof item === 'object') {
+              if (typeof item.id !== 'string' || item.id.trim() === '') {
+                courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' practice ' + band + ' item #' + (practiceIndex + 1) + ' is missing a stable ID');
+              } else if (practiceItemIds.has(item.id)) {
+                courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate practice item ID ' + item.id);
+              } else {
+                practiceItemIds.add(item.id);
+              }
+              if (typeof item.prompt === 'string' && item.prompt.trim() !== '') {
+                const normalizedPrompt = item.prompt.trim().replace(/\\s+/g, ' ').toLocaleLowerCase();
+                if (practicePromptOwners.has(normalizedPrompt)) {
+                  courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' repeats a practice prompt in ' + band + ' and ' + practicePromptOwners.get(normalizedPrompt));
+                } else {
+                  practicePromptOwners.set(normalizedPrompt, band);
+                }
+              }
             }
           }
         }
