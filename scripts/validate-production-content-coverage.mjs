@@ -521,6 +521,14 @@ for (const target of courseTargets) {
         if (!revisionSections.some((section) => hasItems(revision[section]))) {
           courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' needs quick revision, flash recall, mistake-based, or weak-topic revision content');
         }
+        for (const section of revisionSections) {
+          if (revision[section] !== undefined &&
+              (!Array.isArray(revision[section]) || revision[section].some((item) =>
+                typeof item !== 'string' && (!item || typeof item !== 'object' ||
+                  !Object.values(item).some((value) => typeof value === 'string' && value.trim() !== ''))))) {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' revision section ' + section + ' contains empty or unauthored content');
+          }
+        }
       }
       if (typeof lessonId !== 'string' || !lessonIds.has(lessonId)) {
         courseStructureErrors.push(target.slug + ': package lesson is absent from course-map: ' + packagePath);
