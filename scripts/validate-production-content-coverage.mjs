@@ -408,6 +408,7 @@ const targets = [
   if (manifest && !['approved', 'published'].includes(state)) releaseBlockers.push('content has not reached an approved release state');
   if (manifest && state === 'published' && (!['reviewed', 'approved'].includes(manifest.governance?.reviewStatus) || !manifest.governance?.approvedBy || !manifest.governance?.approvedAt || !manifest.governance?.contentHash)) releaseBlockers.push('publication governance metadata is incomplete');
   if (manifest && target.targetType === 'course' && !(manifest.assets?.authoringPackages ?? []).length) releaseBlockers.push('course authoring packages are missing');
+  if (manifest && target.targetType === 'course' && courseStructureErrors.some((error) => error.startsWith(target.slug + ':'))) releaseBlockers.push('course map, module map, or lesson authoring package integrity checks failed');
   if (manifest && ['competition', 'assessment'].includes(target.targetType) && (!(manifest.assets?.questionBanksPublic ?? []).length || !(manifest.assets?.answerKeysPrivate ?? []).length)) releaseBlockers.push('public question bank or private answer key is missing');
   if (manifest && target.targetType === 'competition') {
     if (typeof target.questionBundle !== 'string' || !target.questionBundle.trim() || !(manifest.assets?.questionBanksPublic ?? []).includes(target.questionBundle)) releaseBlockers.push('registry question bundle is not referenced by assets.questionBanksPublic');
