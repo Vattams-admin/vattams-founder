@@ -1,6 +1,6 @@
 import { useSeo, SITE_URL } from '@/hooks/useSeo'
 import { useEffect, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
@@ -36,11 +36,29 @@ export default function Competitions() {
     path: '/competitions',
     jsonLd: { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'VATTAMS ACADEMIA Academic Competitions', url: `${SITE_URL}/competitions`, isPartOf: { '@type': 'WebSite', name: 'VATTAMS ACADEMIA', url: SITE_URL } },
   })
+  const [searchParams, setSearchParams] = useSearchParams()
   const [competitions, setCompetitions] = useState<Course[]>([])
   const [state, setState] = useState<LoadState>('loading')
   const [retryToken, setRetryToken] = useState(0)
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState(() => searchParams.get('search') ?? '')
   const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  // Keep competition searches shareable and in sync with browser navigation.
+  useEffect(() => {
+    const nextSearch = searchTerm.trim()
+    setSearchParams((current) => {
+      if ((current.get('search') ?? '') === nextSearch) return current
+      const next = new URLSearchParams(current)
+      if (nextSearch) next.set('search', nextSearch)
+      else next.delete('search')
+      return next
+    }, { replace: true })
+  }, [searchTerm, setSearchParams])
+
+  useEffect(() => {
+    const querySearch = searchParams.get('search') ?? ''
+    if (querySearch !== searchTerm) setSearchTerm(querySearch)
+  }, [searchParams, searchTerm])
 
   const filteredCompetitions = useMemo(() => {
     const term = searchTerm.trim().toLocaleLowerCase()
