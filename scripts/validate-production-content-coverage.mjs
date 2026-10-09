@@ -50,6 +50,17 @@ for (const manifest of manifests.filter((item) => !item.invalid && item.packageI
 }
 const duplicatePackageIdEntries = [...duplicatePackageIds.entries()].filter(([, files]) => files.length > 1);
 
+const locatorOwners = new Map();
+for (const manifest of manifests.filter((item) => !item.invalid && item.locator && typeof item.locator === 'object')) {
+  const canonicalLocator = JSON.stringify(
+    Object.entries(manifest.locator).sort(([left], [right]) => left.localeCompare(right))
+  );
+  const owners = locatorOwners.get(canonicalLocator) ?? [];
+  owners.push({ file: manifest.file, packageId: manifest.packageId ?? '(missing packageId)' });
+  locatorOwners.set(canonicalLocator, owners);
+}
+const duplicateLocatorEntries = [...locatorOwners.entries()].filter(([, owners]) => owners.length > 1);
+
 const competitionTargets = Object.values(competitionRegistry.competitions ?? {}).map((item) => ({
   targetType: 'competition',
   id: item.course_id,
@@ -167,6 +178,15 @@ if (duplicatePackageIdEntries.length > 0) {
   for (const [packageId, files] of duplicatePackageIdEntries) {
     console.error('- ' + packageId + ': ' + files.join(', '));
   }
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+if (duplicateLocatorEntries.length > 0) {
+  console.error('Production content coverage failed: duplicate full locator values detected.');
+  for (const [, owners] of duplicateLocatorEntries) {
+    console.error('- ' + owners.map((owner) => owner.file + ' [' + owner.packageId + ']').join(' <> '));
+  }
+  console.error('Only exact full-locator duplicates are flagged; shared course-level locators across different lessons remain valid.');
   console.error('Coverage report written to reports/production-content-coverage.json');
   process.exit(1);
 }
