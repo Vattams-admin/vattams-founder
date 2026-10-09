@@ -527,6 +527,7 @@ export default function CourseLearn() {
     ? lessons[activeLessonIndex + 1]
     : null
   const completedLessonCount = lessons.filter((lesson) => progress[lesson.id]).length
+  const nextIncompleteLesson = lessons.find((lesson) => !progress[lesson.id]) ?? null
 
   const percentComplete = lessons.length
     ? Math.round(
@@ -672,6 +673,21 @@ export default function CourseLearn() {
       >
         <div className="h-full bg-gold transition-[width] duration-300" style={{ width: `${percentComplete}%` }} />
       </div>
+
+      {nextIncompleteLesson && nextIncompleteLesson.id !== activeLessonId && (
+        <button
+          type="button"
+          onClick={() => setActiveLessonId(nextIncompleteLesson.id)}
+          className="mt-3 text-sm font-medium text-gold underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+        >
+          Continue learning: {nextIncompleteLesson.title}
+        </button>
+      )}
+      {!nextIncompleteLesson && lessons.length > 0 && (
+        <p className="mt-3 text-sm text-slate-muted" role="status">
+          All lessons completed. You can revisit any lesson from the list.
+        </p>
+      )}
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[280px_1fr]">
         <aside className="card max-h-[70vh] overflow-y-auto p-2">
