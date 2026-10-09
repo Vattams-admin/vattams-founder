@@ -40,6 +40,12 @@ export default function Languages() {
         <div className="card p-4"><p className="text-sm text-slate-muted">Beginner starter curriculum</p><p className="mt-1 text-2xl font-semibold">{LANGUAGE_SEED_SUMMARY.starterLessonCount} lesson seeds</p><p className="mt-1 text-xs text-slate-muted">{LANGUAGE_LEARNING_STARTER_SEEDS.filter((item) => !item.reviewRequired).length} lesson seeds include localized examples</p><p className="mt-1 text-xs text-slate-muted">{LANGUAGE_LEARNING_STARTER_SEEDS.filter((item) => item.reviewRequired).length} lesson seeds need localization or review</p></div>
       </div>
 
+      <section className="mb-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4" aria-label="Language content readiness">
+        <div className="card p-4"><p className="text-sm text-slate-muted">Languages with starter examples</p><p className="mt-1 text-2xl font-semibold">{reviewedLanguageCount}</p><p className="mt-1 text-xs text-slate-muted">Starter examples exist; not full-course certification.</p></div>
+        <div className="card p-4"><p className="text-sm text-slate-muted">Languages needing localization</p><p className="mt-1 text-2xl font-semibold">{scaffoldLanguageCount}</p><p className="mt-1 text-xs text-slate-muted">Scaffold only; native-speaker review remains required.</p></div>
+        <div className="card p-4"><p className="text-sm text-slate-muted">Starter lessons with examples</p><p className="mt-1 text-2xl font-semibold">{reviewedLessonCount}</p></div>
+        <div className="card p-4"><p className="text-sm text-slate-muted">Starter lessons awaiting localization</p><p className="mt-1 text-2xl font-semibold">{scaffoldLessonCount}</p></div>
+      </section>
       <section className="card p-4 sm:p-6" aria-label="Browse language catalogue">
         <label htmlFor="language-search" className="mb-2 block text-sm font-medium">Search by language or native name</label>
         <input id="language-search" type="search" value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Try Tamil, தமிழ், Spanish…" className="w-full rounded-card border border-white/15 bg-white/5 px-3 py-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold" />
@@ -58,7 +64,7 @@ export default function Languages() {
                 <p className="font-semibold">{language.name}</p>
                 <p className="mt-1 text-lg text-gold-bright" lang={language.id}>{language.nativeName}</p>
                 <p className="mt-2 text-xs text-slate-muted">{language.group === 'India' ? 'India-connected' : 'Global'} · {language.id}</p>
-                <p className="mt-2 text-xs text-slate-muted">5 beginner lesson seeds</p>
+                <p className="mt-2 text-xs text-slate-muted">{LANGUAGE_LEARNING_STARTER_SEEDS.filter((item) => item.languageId === language.id).length} beginner lesson seeds</p>
                 <p className="mt-1 text-xs font-medium text-gold-bright">{LANGUAGE_LEARNING_STARTER_SEEDS.some((item) => item.languageId === language.id && !item.reviewRequired) ? 'Some localized examples included' : 'Localization review needed'}</p>
               </li>
             ))}
