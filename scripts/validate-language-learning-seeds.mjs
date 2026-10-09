@@ -24,6 +24,26 @@ if (new Set(ids).size !== ids.length) fail('duplicate language IDs')
 if (rowIds.some((row) => !row[1].trim() || !row[2].trim() || !row[3].trim())) fail('catalogue row has empty ID/name/native name')
 if (!rowIds.some((row) => row[4] === 'India') || !rowIds.some((row) => row[4] === 'Global')) fail('both India and Global groups must be present')
 
+const overridesMatch = seedSource.match(/const SCRIPT_OVERRIDES: Record<string, LanguageScriptFamily> = \{([\s\S]*?)\n\}/)
+if (!overridesMatch) {
+  fail('could not locate script-family overrides')
+  process.exit()
+}
+const scriptIds = [...overridesMatch[1].matchAll(/(?:^|[,\n])\s*([a-z][a-z0-9-]*):\s*'/g)].map((match) => match[1])
+const scriptIdSet = new Set(scriptIds)
+for (const id of ['ta', 'te', 'kn', 'ml', 'hi', 'bn', 'gu', 'pa', 'or', 'ar', 'ur', 'he', 'zh', 'ja', 'ko', 'th', 'lo', 'km', 'my', 'bo', 'am', 'ka', 'hy', 'el', 'ru', 'uk', 'bg', 'be', 'kk', 'ky']) {
+  if (ids.includes(id) && !scriptIdSet.has(id)) fail('missing explicit script-family override for ' + id)
+}
+const rtlMatch = seedSource.match(/const RTL_LANGUAGES = new Set\(\[([^\]]*)\]\)/)
+if (!rtlMatch) fail('RTL language registry is missing')
+else {
+  const rtlIds = [...rtlMatch[1].matchAll(/'([^']+)'/g)].map((match) => match[1])
+  for (const id of rtlIds) {
+    if (!ids.includes(id)) fail('RTL language is not in catalogue: ' + id)
+    if (!scriptIdSet.has(id)) fail('RTL language needs explicit script metadata: ' + id)
+  }
+}
+
 const unitsMatch = seedSource.match(/const STARTER_UNITS = \[([\s\S]*?)\n\] as const/)
 if (!unitsMatch) {
   fail('could not locate starter curriculum units')
