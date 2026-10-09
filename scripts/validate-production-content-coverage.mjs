@@ -513,7 +513,8 @@ const targets = [
           else if (privateIds.has(id)) releaseBlockers.push('private answer key has duplicate question ID ' + id);
           else privateIds.add(id);
           const answerIndexValue = answer?.correct_option_index ?? answer?.correctOptionIndex;
-          if (answerIndexValue !== undefined && (!Number.isInteger(answerIndexValue) || answerIndexValue < 0)) releaseBlockers.push('private answer key has an invalid correct option index for ' + String(id ?? answerIndex + 1));
+          const matchingQuestion = publicBank.find((question) => (question?.question_id ?? question?.questionId ?? question?.id) === id);
+          if (answerIndexValue !== undefined && (!Number.isInteger(answerIndexValue) || answerIndexValue < 0 || !Array.isArray(matchingQuestion?.options) || answerIndexValue >= matchingQuestion.options.length)) releaseBlockers.push('private answer key has an out-of-range correct option index for ' + String(id ?? answerIndex + 1));
         }
         for (const id of publicIds) if (!privateIds.has(id)) releaseBlockers.push('public question ' + id + ' has no matching private answer key');
         for (const id of privateIds) if (!publicIds.has(id)) releaseBlockers.push('private answer key references unknown public question ' + id);
