@@ -446,8 +446,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
               <p className="mt-4 rounded-card border border-white/10 p-4 text-sm text-slate-muted" role="status">
                 All questions have been answered. There are no unanswered questions to review.
               </p>
-            ) : (
-              {questions.every((question) => {
+            ) : questions.every((question) => {
               const answered = Number.isInteger(answers[question.question_id]);
               const topic = question.topic?.trim() || "General review";
               return (reviewTopic !== "all" && topic !== reviewTopic) || (reviewUnansweredOnly && answered);
