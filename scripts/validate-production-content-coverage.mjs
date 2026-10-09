@@ -47,7 +47,7 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
       if (!Object.prototype.hasOwnProperty.call(data, field)) schemaErrors.push('missing required field: ' + field);
     }
     if (typeof data.packageId !== 'string' || data.packageId.length < 3) schemaErrors.push('packageId must be a string of at least 3 characters');
-    if (typeof data.version !== 'string' || !/^\\d+\\.\\d+\\.\\d+$/.test(data.version)) schemaErrors.push('version must use semantic version format x.y.z');
+    if (typeof data.version !== 'string' || !/^\d+\.\d+\.\d+$/.test(data.version)) schemaErrors.push('version must use semantic version format x.y.z');
     if (!['course', 'school', 'competitive-exam', 'entrance-exam', 'professional', 'competition'].includes(data.domain)) schemaErrors.push('domain is not supported by the production manifest schema');
     if (!data.locator || typeof data.locator !== 'object' || Array.isArray(data.locator) || typeof data.locator.language !== 'string' || data.locator.language.length < 2) schemaErrors.push('locator must be an object with a language code');
     if (!['draft', 'in_review', 'approved', 'published', 'retired'].includes(data.status)) schemaErrors.push('status is not supported by the production manifest schema');
