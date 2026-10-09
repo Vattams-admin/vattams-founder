@@ -75,6 +75,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const autoSubmit = useRef(false);
+  const timeoutSubmissionAttempted = useRef(false);
   const saveTimers = useRef<Record<string, number>>({});
   const pendingAnswers = useRef<Record<string, number | null>>({});
   const answerSaveChains = useRef<Record<string, Promise<void>>>({});
@@ -245,7 +246,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
       setView("result");
     } catch (e) {
       autoSubmit.current = false;
-      setError(e instanceof Error ? e.message : "Unable to submit assessment.");
+      setError(assessmentRecoveryMessage(e, "Unable to submit assessment. Please retry."));
     } finally {
       setBusy(false);
     }
@@ -256,7 +257,10 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     const tick = () => {
       const remaining = Math.max(0, assessmentTimeSeconds - Math.floor((Date.now() - startedAt) / 1000));
       setRemainingSeconds(remaining);
-      if (remaining === 0 && !autoSubmit.current) void submit();
+      if (remaining === 0 && !timeoutSubmissionAttempted.current && !autoSubmit.current) {
+        timeoutSubmissionAttempted.current = true;
+        void submit();
+      }
     };
     tick();
     const timer = window.setInterval(tick, 1000);
