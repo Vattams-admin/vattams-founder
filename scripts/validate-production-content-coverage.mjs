@@ -296,11 +296,34 @@ for (const target of courseTargets) {
         courseStructureErrors.push(target.slug + ': authoring package course locator mismatch: ' + packagePath);
       }
       const lessonId = pkg.locator?.lesson;
-      const requiredLearningSections = ['learningObjectives', 'explanation', 'workedExamples', 'activities', 'practiceQuestions', 'assessment'];
-      for (const field of requiredLearningSections) {
-        const value = pkg[field] ?? pkg.content?.[field] ?? pkg.lesson?.[field];
-        const hasContent = Array.isArray(value) ? value.length > 0 : typeof value === 'string' ? value.trim().length > 0 : value && typeof value === 'object' ? Object.keys(value).length > 0 : false;
-        if (!hasContent) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing meaningful ' + field + ' content');
+      // Validate the authored package schema used by the actual lesson library.
+      // Older/current packages store learning content under studyMaterial, practice,
+      // activities, outcomes, questions and revision rather than one flat set of fields.
+      const studyMaterial = pkg.studyMaterial ?? pkg.content?.studyMaterial ?? pkg.lesson?.studyMaterial;
+      const practice = pkg.practice ?? pkg.content?.practice ?? pkg.lesson?.practice;
+      const activities = pkg.activities ?? pkg.content?.activities ?? pkg.lesson?.activities;
+      const outcomes = pkg.outcomes ?? pkg.content?.outcomes ?? pkg.lesson?.outcomes;
+      const questions = pkg.questions ?? pkg.content?.questions ?? pkg.lesson?.questions;
+      const revision = pkg.revision ?? pkg.content?.revision ?? pkg.lesson?.revision;
+      const hasItems = (value) => Array.isArray(value) && value.length > 0;
+      const hasTextItems = (value) => hasItems(value) && value.every((item) => typeof item === 'string' ? item.trim().length > 0 : item && typeof item === 'object');
+      if (!studyMaterial || typeof studyMaterial !== 'object') {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing studyMaterial');
+      } else {
+        if (!hasTextItems(studyMaterial.objectives)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing studyMaterial.objectives');
+        if (!(hasTextItems(studyMaterial.concepts) || hasTextItems(studyMaterial.definitions))) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' needs concepts or definitions');
+        if (!hasTextItems(studyMaterial.workedExamples)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing worked examples');
+      }
+      if (!activities || !hasItems(activities) || activities.some((item) => !item || typeof item.instruction !== 'string' || item.instruction.trim() === '')) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing authored activities with instructions');
+      }
+      if (!practice || typeof practice !== 'object' || !Object.values(practice).some(hasItems)) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing practice questions');
+      }
+      if (!hasItems(questions)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing assessment questions');
+      if (!hasTextItems(outcomes)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing measurable learning outcomes');
+      if (!revision || typeof revision !== 'object' || !Object.values(revision).some(hasItems)) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing revision content');
       }
       if (typeof lessonId !== 'string' || !lessonIds.has(lessonId)) {
         courseStructureErrors.push(target.slug + ': package lesson is absent from course-map: ' + packagePath);
