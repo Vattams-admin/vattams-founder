@@ -417,6 +417,21 @@ for (const target of courseTargets) {
       }
       if (!activities || !hasItems(activities) || activities.some((item) => !item || typeof item.instruction !== 'string' || item.instruction.trim() === '')) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing authored activities with instructions');
+      } else {
+        const activityIds = new Set();
+        for (const [activityIndex, activity] of activities.entries()) {
+          const label = 'activity #' + (activityIndex + 1);
+          if (typeof activity.id !== 'string' || activity.id.trim() === '') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' ' + label + ' is missing a stable ID');
+          } else if (activityIds.has(activity.id)) {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate activity ID ' + activity.id);
+          } else {
+            activityIds.add(activity.id);
+          }
+          if (typeof activity.type !== 'string' || activity.type.trim() === '') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' ' + label + ' is missing an activity type');
+          }
+        }
       }
       if (!practice || typeof practice !== 'object' || !Object.values(practice).some(hasItems)) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing practice questions');
