@@ -102,3 +102,19 @@ A deeper inspection of `scripts/prepare-competition-runtime-sources.mjs`, `scrip
 - `.github/workflows/generate-competition-runtime-registry.yml` is triggered manually or by matching pushes to `main`; it generates a registry using Firebase service-account access, validates banks, publishes packages to Supabase Storage using a service-role key, and can commit/push generated files.
 - Do not dispatch this workflow as a diagnostic on the feature branch or run the publisher casually: it performs external writes and requires a deliberate production release decision. This audit only read the workflow file; it did not run it or query Firebase/Supabase.
 - Next safe step is to inspect source-bank content and quality counts (IDs, topic/age/difficulty coverage, duplicate stems/options, answer-key mappings, review status, official-paper overlap) on the feature branch, then run read-only/local validators in a proper execution environment before any publish action.
+
+## Follow-up — live Supabase project identity and deployment inventory (2026-10-09)
+
+This section records a read-only live Supabase control-plane inspection performed after the repository-only checks above.
+
+- The Academia project is `ljnfktzrjewqjxxchvud` (`vattams-academy`), region `ap-southeast-2`, status `ACTIVE_HEALTHY`.
+- The separate project `nfcibyprftnowaiwlxxc` is named `Vattams-admin's Project` and its deployed functions reference the legacy home-services repository path. Do not treat that project as Academia or deploy Academia migrations/functions there.
+- The Academia project reports migrations through `20261007210000 / assessment_option_order_security`, including mock-test, competition access, official Thirukkural paper, generic assessment, assessment admin lifecycle, and option-order security migrations.
+- The live Academia project lists the expected competition and assessment runtime tables, including `competition_attempts`, `competition_answers`, `competition_results`, `assessment_attempts`, `assessment_answers`, `assessment_results`, `assessment_access_cache`, and `assessment_admin_audit`. RLS is reported enabled on those tables by the Supabase table inventory.
+- Deployed Academia Edge Functions include competition mock/official attempt, question-content, scoring, and assessment catalog/admin/attempt/answer/question-content/submit endpoints. These are deployment-inventory findings, not proof that every production path passes end-to-end.
+- The live inspection did not read or alter student answers, assessment attempts, course materials, Firebase/Firestore documents, or storage objects. No migration, function deployment, or production E2E was run as part of this inspection.
+
+## Updated execution boundary
+
+The content authoring scope remains explicitly excluded for question banks and study materials. Continue only with platform integration, package/registry path consistency, course/exam/competition navigation, assessment and competition runtime correctness, security, and CI/runtime validation. Missing source packages must remain blocked rather than filled with invented questions or materials.
+
