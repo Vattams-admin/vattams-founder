@@ -188,6 +188,7 @@ export default function CourseLearn() {
   const [materials, setMaterials] = useState<Material[]>([])
   const [materialSearch, setMaterialSearch] = useState('')
   const [activeLessonId, setActiveLessonId] = useState<string | null>(null)
+  const [lessonListSearch, setLessonListSearch] = useState('')
   const [revisionChecks, setRevisionChecks] = useState<Record<string, boolean[]>>({})
   const [lessonFileUrls, setLessonFileUrls] = useState<{
     video: string | null
@@ -703,8 +704,42 @@ export default function CourseLearn() {
       )}
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[280px_1fr]">
-        <aside className="card max-h-[70vh] overflow-y-auto p-2">
-          {modules.map((module) => (
+        <aside className="card max-h-[70vh] overflow-y-auto p-2" aria-label="Course lesson navigation">
+          <div className="sticky top-0 z-10 border-b border-white/10 bg-slate-950 p-2">
+            <label htmlFor="lesson-list-search" className="mb-1 block text-xs font-medium text-slate-muted">
+              Find a lesson
+            </label>
+            <div className="flex gap-2">
+              <input
+                id="lesson-list-search"
+                type="search"
+                value={lessonListSearch}
+                onChange={(event) => setLessonListSearch(event.target.value)}
+                placeholder="Search lesson titles…"
+                className="min-w-0 flex-1 rounded-card border border-white/15 bg-white/5 px-3 py-2 text-sm text-parchment focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              />
+              {lessonListSearch && (
+                <button
+                  type="button"
+                  onClick={() => setLessonListSearch('')}
+                  className="rounded-card px-2 text-xs text-gold underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                  aria-label="Clear lesson search"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+            <p className="mt-1 text-[11px] text-slate-muted" aria-live="polite" aria-atomic="true">
+              {lessons.filter((lesson) => lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase())).length} of {lessons.length} lessons
+            </p>
+          </div>
+          {modules.map((module) => {
+            const moduleLessons = lessons.filter((lesson) => lesson.module_id === module.id)
+            const visibleLessons = moduleLessons.filter((lesson) =>
+              lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase())
+            )
+            if (visibleLessons.length === 0) return null
+            return (
             <div
               key={module.id}
               className="mb-2"
@@ -719,12 +754,9 @@ export default function CourseLearn() {
                 </span>
               </div>
 
-              {lessons
-                .filter(
-                  (lesson) =>
-                    lesson.module_id === module.id
-                )
-                .map((lesson, lessonIndex) => (
+              {visibleLessons.map((lesson) => {
+                const lessonIndex = moduleLessons.findIndex((item) => item.id === lesson.id)
+                return (
                   <button
                     key={lesson.id}
                     onClick={() =>
@@ -754,13 +786,19 @@ export default function CourseLearn() {
                       {progress[lesson.id] ? 'Done' : lesson.id === activeLessonId ? 'Current' : 'Next'}
                     </span>
                   </button>
-                ))}
+                )
+              })}
             </div>
-          ))}
+          )})}
 
           {lessons.length === 0 && (
             <p className="p-3 text-sm text-slate-muted">
               No lessons published yet.
+            </p>
+          )}
+          {lessons.length > 0 && !lessons.some((lesson) => lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase())) && (
+            <p className="p-4 text-sm text-slate-muted" role="status">
+              No lesson titles match “{lessonListSearch}”. Try another search or clear it to see every lesson.
             </p>
           )}
         </aside>
