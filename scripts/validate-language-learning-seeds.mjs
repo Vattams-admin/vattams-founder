@@ -19,6 +19,8 @@ if (!rowsMatch) {
 }
 const rowIds = [...rowsMatch[1].matchAll(/\['([^']+)',\s*'([^']+)',\s*'([^']+)',\s*'(India|Global)'\]/g)]
 const ids = rowIds.map((row) => row[1])
+const declaredRowCount = (rowsMatch[1].match(/\['/g) ?? []).length
+if (declaredRowCount !== rowIds.length) fail(`could not parse every catalogue row (${rowIds.length} parsed of ${declaredRowCount} declared)`)
 const languageNames = rowIds.map((row) => row[2].trim().toLocaleLowerCase())
 if (new Set(languageNames).size !== languageNames.length) fail('duplicate English language names; review aliases and canonical labels')
 if (ids.length === 0) fail('no catalogue rows found')
