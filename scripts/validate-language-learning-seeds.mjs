@@ -72,7 +72,7 @@ const examplesMatch = seedSource.match(/const REVIEWED_EXAMPLES: Record<string, 
 if (!examplesMatch) fail('reviewed example registry is missing')
 else {
   const examplesBody = examplesMatch[1]
-  const exampleLanguageIds = [...examplesBody.matchAll(/^\s*'([^']+)':\s*\{/gm)].map((match) => match[1])
+  const exampleLanguageIds = [...examplesBody.matchAll(/^  '([^']+)':\s*\{$/gm)].map((match) => match[1])
   for (const id of exampleLanguageIds) {
     if (!ids.includes(id)) fail('reviewed examples reference unknown language: ' + id)
   }
