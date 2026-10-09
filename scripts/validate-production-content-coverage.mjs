@@ -87,8 +87,8 @@ const findManifest = (target) => manifests.find((item) => {
   if (item.invalid) return false;
 
   if (target.targetType === 'course') {
-    if (manifest.domain !== 'course') return false;
-    return manifest.locator?.course === target.slug && (manifest.assets?.authoringPackages ?? []).length > 0;
+    if (item.domain !== 'course') return false;
+    return item.locator?.course === target.slug && (item.assets?.authoringPackages ?? []).length > 0;
   }
 
   if (target.targetType === 'competition') {
