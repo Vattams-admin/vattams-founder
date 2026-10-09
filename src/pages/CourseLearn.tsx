@@ -788,7 +788,9 @@ export default function CourseLearn() {
               {!lessonFilesLoading && !lessonFilesError && lessonFileUrls.video && (
                 <video
                   controls
-                  className="mt-4 w-full rounded-card bg-black"
+                  aria-label={`Lesson video: ${activeLesson.title}`}
+                  preload="metadata"
+                  className="mt-4 w-full rounded-card bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
                   src={lessonFileUrls.video}
                 />
               )}
@@ -798,7 +800,8 @@ export default function CourseLearn() {
                   href={lessonFileUrls.pdf}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-secondary mt-4 inline-flex"
+                  className="btn-secondary mt-4 inline-flex focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                  aria-label={`Open PDF for lesson: ${activeLesson.title}`}
                 >
                   Open PDF
                 </a>
@@ -906,7 +909,7 @@ export default function CourseLearn() {
                   type="button"
                   onClick={() => previousLesson && setActiveLessonId(previousLesson.id)}
                   disabled={!previousLesson}
-                  className="btn-secondary disabled:cursor-not-allowed disabled:opacity-40"
+                  className="btn-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   Previous lesson
                 </button>
@@ -927,7 +930,7 @@ export default function CourseLearn() {
                   type="button"
                   onClick={() => nextLesson && setActiveLessonId(nextLesson.id)}
                   disabled={!nextLesson}
-                  className="btn-secondary disabled:cursor-not-allowed disabled:opacity-40"
+                  className="btn-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   Next lesson
                 </button>
@@ -995,7 +998,7 @@ export default function CourseLearn() {
                   </div>
                   {material.type === 'link' ? (
                     material.url && (
-                      <a href={material.url} target="_blank" rel="noreferrer" className="btn-secondary text-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold">
+                      <a href={material.url} target="_blank" rel="noreferrer" className="btn-secondary text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
                         Open
                       </a>
                     )
