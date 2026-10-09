@@ -874,9 +874,23 @@ export default function CourseLearn() {
                   const checkedCount = items.filter((_, index) => checks[index]).length
                   return (
                     <>
-                      <p className="mt-3 text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
-                        {checkedCount} of {items.length} revision steps checked
-                      </p>
+                      <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
+                        <p className="text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
+                          {checkedCount} of {items.length} revision steps checked
+                        </p>
+                        {checkedCount > 0 && (
+                          <button
+                            type="button"
+                            onClick={() => setRevisionChecks((current) => ({
+                              ...current,
+                              [activeLesson.id]: [],
+                            }))}
+                            className="text-xs text-slate-muted underline underline-offset-4 hover:text-parchment focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                          >
+                            Reset checklist
+                          </button>
+                        )}
+                      </div>
                       <ul className="mt-3 space-y-3 text-sm">
                         {items.map((item, index) => (
                           <li key={index}>
