@@ -452,7 +452,25 @@ for (const target of courseTargets) {
           }
         }
       }
-      if (!hasItems(questions)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing assessment questions');
+      if (!hasItems(questions)) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing assessment questions');
+      } else {
+        const assessmentIds = new Set();
+        for (const [assessmentIndex, assessment] of questions.entries()) {
+          const assessmentId = assessment?.questionId ?? assessment?.id;
+          const label = String(assessmentId ?? 'row ' + (assessmentIndex + 1));
+          if (typeof assessmentId !== 'string' || assessmentId.trim() === '') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' assessment question #' + (assessmentIndex + 1) + ' is missing a stable ID');
+          } else if (assessmentIds.has(assessmentId)) {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate assessment question ID ' + assessmentId);
+          } else {
+            assessmentIds.add(assessmentId);
+          }
+          if (typeof assessment?.difficulty !== 'string' || assessment.difficulty.trim() === '') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' assessment question ' + label + ' is missing difficulty metadata');
+          }
+        }
+      }
       if (!hasTextItems(outcomes)) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing measurable learning outcomes');
       } else {
