@@ -330,6 +330,8 @@ for (const target of courseTargets) {
       const courseQuestions = Array.isArray(pkg.questions) ? pkg.questions : [];
       const answerKeysById = new Map(answerKeyEntries.map((answer) => [answer?.questionId ?? answer?.id, answer]));
       const questionStemOwners = new Map();
+      const questionDifficultyValues = new Set();
+      let questionsWithExplicitDifficulty = 0;
       for (const [questionIndex, question] of courseQuestions.entries()) {
         const questionId = question?.questionId ?? question?.id;
         const label = String(questionId ?? 'row ' + (questionIndex + 1));
@@ -356,6 +358,11 @@ for (const target of courseTargets) {
             !['foundational', 'easy', 'medium', 'hard', 'advanced', 'higher-order'].includes(question.difficulty)) {
           courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' has an unsupported difficulty label');
         }
+        if (typeof question?.difficulty === 'string' &&
+            ['foundational', 'easy', 'medium', 'hard', 'advanced', 'higher-order'].includes(question.difficulty)) {
+          questionsWithExplicitDifficulty += 1;
+          questionDifficultyValues.add(question.difficulty);
+        }
         if (question?.marks !== undefined && (!Number.isFinite(question.marks) || question.marks <= 0)) {
           courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' must have positive marks when marks are supplied');
         }
@@ -373,6 +380,11 @@ for (const target of courseTargets) {
             courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' answer key for ' + label + ' is missing an explanation');
           }
         }
+      }
+      if (courseQuestions.length > 0 && questionsWithExplicitDifficulty === 0) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' questions need explicit difficulty labels to support progression');
+      } else if (courseQuestions.length >= 5 && questionDifficultyValues.size < 2) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' should include at least two difficulty levels when it contains five or more questions');
       }
       if (questionIds.size > 0 && answerKeyIds.size === 0) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has questions but no answer keys');
