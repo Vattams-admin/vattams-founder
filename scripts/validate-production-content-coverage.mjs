@@ -401,6 +401,15 @@ const targets = [
     targetManifestMatches.set(manifest.file, owners);
   }
   const state = manifest?.status ?? 'missing';
+  const releaseBlockers = [];
+  if (!manifest) releaseBlockers.push('content manifest is missing');
+  if (manifest?.invalid) releaseBlockers.push('manifest schema validation failed');
+  if ((manifest?.missingAssetPaths?.length ?? 0) > 0) releaseBlockers.push('one or more asset paths are invalid or missing');
+  if (manifest && !['approved', 'published'].includes(state)) releaseBlockers.push('content has not reached an approved release state');
+  if (manifest && state === 'published' && (!['reviewed', 'approved'].includes(manifest.governance?.reviewStatus) || !manifest.governance?.approvedBy || !manifest.governance?.approvedAt || !manifest.governance?.contentHash)) releaseBlockers.push('publication governance metadata is incomplete');
+  if (manifest && target.targetType === 'course' && !(manifest.assets?.authoringPackages ?? []).length) releaseBlockers.push('course authoring packages are missing');
+  if (manifest && ['competition', 'assessment'].includes(target.targetType) && (!(manifest.assets?.questionBanksPublic ?? []).length || !(manifest.assets?.answerKeysPrivate ?? []).length)) releaseBlockers.push('public question bank or private answer key is missing');
+  const releaseReady = releaseBlockers.length === 0 && state === 'published';
   const remediation = state === 'missing'
     ? 'Create a manifest with the correct locator and required assets, then add evidence and review metadata.'
     : state === 'draft'
@@ -417,6 +426,8 @@ const targets = [
   return {
     ...target,
     state,
+    releaseReady,
+    releaseBlockers,
     remediation,
     packageId: manifest?.packageId ?? null,
     version: manifest?.version ?? null,
