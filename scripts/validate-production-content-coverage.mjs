@@ -71,6 +71,14 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
         }
       }
     }
+    if (data.locator && typeof data.locator === 'object' && !Array.isArray(data.locator)) {
+      for (const field of ['course', 'exam', 'competition', 'subject', 'language', 'board', 'classNumber', 'region']) {
+        if (data.locator[field] !== undefined &&
+            (typeof data.locator[field] !== 'string' || data.locator[field].trim() === '')) {
+          schemaErrors.push('locator.' + field + ' must be a non-empty string when provided');
+        }
+      }
+    }
     const assets = data.assets ?? null;
     if (!assets || typeof assets !== 'object' || Array.isArray(assets)) {
       schemaErrors.push('assets must be an object');
