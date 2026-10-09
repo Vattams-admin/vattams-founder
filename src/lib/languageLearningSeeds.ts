@@ -66,7 +66,7 @@ const REVIEWED_STARTER_IDS = new Set([
 export const LANGUAGE_DATABASE_SEEDS: readonly LanguageDatabaseSeed[] = ACADEMIA_LANGUAGES.map((language) => ({
   ...language,
   locale: language.id,
-  scriptFamily: SCRIPT_OVERRIDES[language.id] ?? 'Latin',
+  scriptFamily: SCRIPT_OVERRIDES[language.id] ?? 'Mixed-or-needs-review',
   writingDirection: RTL_LANGUAGES.has(language.id) ? 'rtl' : 'ltr',
   seedVersion: 1,
   enabledForDiscovery: true,
