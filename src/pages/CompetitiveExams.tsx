@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
@@ -23,11 +23,29 @@ export default function CompetitiveExams() {
     },
   })
 
+  const [searchParams, setSearchParams] = useSearchParams()
   const [courses, setCourses] = useState<Course[]>([])
   const [state, setState] = useState<'loading' | 'loaded' | 'error'>('loading')
   const [retryToken, setRetryToken] = useState(0)
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState(() => searchParams.get('search') ?? '')
   const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  // Keep exam searches shareable and support browser back/forward navigation.
+  useEffect(() => {
+    const nextSearch = searchTerm.trim()
+    setSearchParams((current) => {
+      if ((current.get('search') ?? '') === nextSearch) return current
+      const next = new URLSearchParams(current)
+      if (nextSearch) next.set('search', nextSearch)
+      else next.delete('search')
+      return next
+    }, { replace: true })
+  }, [searchTerm, setSearchParams])
+
+  useEffect(() => {
+    const querySearch = searchParams.get('search') ?? ''
+    if (querySearch !== searchTerm) setSearchTerm(querySearch)
+  }, [searchParams, searchTerm])
 
   const filteredCourses = useMemo(() => {
     const term = searchTerm.trim().toLowerCase()
@@ -95,7 +113,7 @@ export default function CompetitiveExams() {
               'JEE & Engineering', 'NEET & Medical', 'CUET & University Entrance',
               'Law & Management', 'Pharmacy & Agriculture', 'CA & Auditing',
             ].map((topic) => (
-              <Link key={topic} to={`/courses?search=${encodeURIComponent(topic)}`} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-xs font-medium text-parchment/85 transition-colors hover:border-azure/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy">
+              <Link key={topic} to={`/competitive-exams?search=${encodeURIComponent(topic)}`} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-xs font-medium text-parchment/85 transition-colors hover:border-azure/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy">
                 {topic}
               </Link>
             ))}
