@@ -54,6 +54,8 @@ const SCRIPT_OVERRIDES: Record<string, LanguageScriptFamily> = {
   or: 'Odia', mni: 'Meitei-Mayek', sat: 'Ol-Chiki', ks: 'Perso-Arabic', zh: 'CJK', yue: 'CJK',
   ja: 'CJK', ko: 'CJK', bo: 'Tibetan', th: 'Thai', lo: 'Lao', km: 'Khmer', my: 'Myanmar',
   am: 'Ethiopic', ka: 'Georgian', hy: 'Armenian', el: 'Greek', he: 'Hebrew',
+  ru: 'Cyrillic', uk: 'Cyrillic', bg: 'Cyrillic', be: 'Cyrillic', kk: 'Cyrillic', ky: 'Cyrillic',
+  mn: 'Mixed-or-needs-review',
 }
 const RTL_LANGUAGES = new Set(['ar', 'sd', 'ur', 'fa', 'ps', 'he', 'ks'])
 const REVIEWED_STARTER_IDS = new Set([
