@@ -691,6 +691,11 @@ export default function CourseLearn() {
           Continue learning: {nextIncompleteLesson.title}
         </button>
       )}
+      {nextIncompleteLesson && activeLessonId === nextIncompleteLesson.id && (
+        <p className="mt-3 text-sm text-slate-muted" role="status">
+          You’re on your next incomplete lesson. Mark it complete when you’re ready to record your progress.
+        </p>
+      )}
       {!nextIncompleteLesson && lessons.length > 0 && (
         <p className="mt-3 text-sm text-slate-muted" role="status">
           All lessons completed. You can revisit any lesson from the list.
