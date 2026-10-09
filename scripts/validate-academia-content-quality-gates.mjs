@@ -47,12 +47,14 @@ const validators = [
 
 let passed = 0
 const failed = []
+const startedAt = Date.now()
 console.log('VATTAMS Academia cross-pillar content quality gates')
 console.log('Scope: existing local validators only; no publish, promotion, seed, repair, or remote-write commands.\n')
 
 for (const [label, relativePath] of validators) {
   const absolutePath = path.join(root, relativePath)
   console.log('\n=== ' + label + ' ===')
+  const validatorStartedAt = Date.now()
   const result = spawnSync(process.execPath, [absolutePath], {
     cwd: root,
     stdio: 'inherit',
@@ -62,16 +64,19 @@ for (const [label, relativePath] of validators) {
   if (result.error) {
     failed.push({ label, reason: result.error.message })
     console.error('NOT PASSED: ' + label + ' — ' + result.error.message)
+    console.error('Duration: ' + ((Date.now() - validatorStartedAt) / 1000).toFixed(1) + 's')
   } else if (result.status !== 0) {
     failed.push({ label, reason: result.signal ? 'terminated by ' + result.signal : 'exit code ' + result.status })
     console.error('NOT PASSED: ' + label + ' — ' + failed[failed.length - 1].reason)
+    console.error('Duration: ' + ((Date.now() - validatorStartedAt) / 1000).toFixed(1) + 's')
   } else {
     passed += 1
-    console.log('PASSED: ' + label)
+    console.log('PASSED: ' + label + ' (' + ((Date.now() - validatorStartedAt) / 1000).toFixed(1) + 's)')
   }
 }
 
 console.log('\nCross-pillar validation summary: ' + passed + '/' + validators.length + ' passed; ' + failed.length + ' failed.')
+console.log('Total duration: ' + ((Date.now() - startedAt) / 1000).toFixed(1) + 's')
 if (failed.length) {
   for (const item of failed) console.error('- ' + item.label + ': ' + item.reason)
   process.exitCode = 1
