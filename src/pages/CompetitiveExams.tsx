@@ -143,9 +143,20 @@ export default function CompetitiveExams() {
         )}
         {state === 'loaded' && courses.length > 0 && (
           <>
-            <div className="mb-6">
-              <label htmlFor="exam-programme-search" className="sr-only">Search published exam programmes</label>
-              <input id="exam-programme-search" type="search" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder="Search published programmes by exam or topic…" className="input w-full max-w-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy" />
+            <div className="mb-6 flex max-w-xl items-center gap-2">
+              <div className="min-w-0 flex-1">
+                <label htmlFor="exam-programme-search" className="sr-only">Search published exam programmes</label>
+                <input id="exam-programme-search" type="search" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder="Search published programmes by exam or topic…" className="input w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy" />
+              </div>
+              {searchTerm && (
+                <button
+                  type="button"
+                  onClick={() => setSearchTerm('')}
+                  className="btn-secondary shrink-0 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                >
+                  Clear
+                </button>
+              )}
             </div>
             {filteredCourses.length === 0 ? (
               <div className="card p-8 text-center">
