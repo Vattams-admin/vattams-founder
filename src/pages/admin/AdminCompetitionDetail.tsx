@@ -169,18 +169,26 @@ export default function AdminCompetitionDetail() {
         mockAttemptsLoaded
           .filter((attempt) => attempt.status === 'submitted')
           .map(async (attempt) => {
-            const result = await getDoc(
-              doc(
-                firestore,
-                'competition_mock_results',
-                `${attempt.student_id}_${attempt.id}`,
-              ),
-            )
+            try {
+              const result = await getDoc(
+                doc(
+                  firestore,
+                  'competition_mock_results',
+                  `${attempt.student_id}_${attempt.id}`,
+                ),
+              )
 
-            return [
-              attempt.id,
-              result.exists() ? result.data() : null,
-            ] as const
+              return [
+                attempt.id,
+                result.exists() ? result.data() : null,
+              ] as const
+            } catch (error) {
+              console.error(
+                '[AdminCompetitionDetail] Failed to load mock result.',
+                { attemptId: attempt.id, error },
+              )
+              return [attempt.id, null] as const
+            }
           }),
       )
 
@@ -196,18 +204,26 @@ export default function AdminCompetitionDetail() {
         attempts
           .filter((attempt) => attempt.status === 'submitted')
           .map(async (attempt) => {
-            const result = await getDoc(
-              doc(
-                firestore,
-                'competition_results',
-                `${attempt.student_id}_${attempt.id}`,
-              ),
-            )
+            try {
+              const result = await getDoc(
+                doc(
+                  firestore,
+                  'competition_results',
+                  `${attempt.student_id}_${attempt.id}`,
+                ),
+              )
 
-            return [
-              attempt.id,
-              result.exists() ? result.data() : null,
-            ] as const
+              return [
+                attempt.id,
+                result.exists() ? result.data() : null,
+              ] as const
+            } catch (error) {
+              console.error(
+                '[AdminCompetitionDetail] Failed to load official result.',
+                { attemptId: attempt.id, error },
+              )
+              return [attempt.id, null] as const
+            }
           }),
       )
 
