@@ -42,6 +42,14 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
   }
 });
 
+const duplicatePackageIds = new Map();
+for (const manifest of manifests.filter((item) => !item.invalid && item.packageId)) {
+  const files = duplicatePackageIds.get(manifest.packageId) ?? [];
+  files.push(manifest.file);
+  duplicatePackageIds.set(manifest.packageId, files);
+}
+const duplicatePackageIdEntries = [...duplicatePackageIds.entries()].filter(([, files]) => files.length > 1);
+
 const competitionTargets = Object.values(competitionRegistry.competitions ?? {}).map((item) => ({
   targetType: 'competition',
   id: item.course_id,
@@ -152,6 +160,14 @@ fs.writeFileSync(OUT, JSON.stringify(report, null, 2) + '\n');
 
 if (summary.invalidManifestCount > 0) {
   console.error('Production content coverage failed: invalid manifest files detected.');
+  process.exit(1);
+}
+if (duplicatePackageIdEntries.length > 0) {
+  console.error('Production content coverage failed: duplicate packageId values detected.');
+  for (const [packageId, files] of duplicatePackageIdEntries) {
+    console.error('- ' + packageId + ': ' + files.join(', '));
+  }
+  console.error('Coverage report written to reports/production-content-coverage.json');
   process.exit(1);
 }
 
