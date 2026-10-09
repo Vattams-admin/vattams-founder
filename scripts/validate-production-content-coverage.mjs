@@ -479,6 +479,51 @@ const targets = [
     if (typeof target.questionBankPublic !== 'string' || !target.questionBankPublic.trim() || !(manifest.assets?.questionBanksPublic ?? []).includes(target.questionBankPublic)) releaseBlockers.push('registry question bank is not referenced by assets.questionBanksPublic');
     if (typeof target.answerKey !== 'string' || !target.answerKey.trim() || !(manifest.assets?.answerKeysPrivate ?? []).includes(target.answerKey)) releaseBlockers.push('registry answer key is not referenced by assets.answerKeysPrivate');
   }
+  if (manifest && ['competition', 'assessment'].includes(target.targetType)) {
+    const publicPaths = target.targetType === 'competition' ? [target.questionBundle] : [target.questionBankPublic];
+    const privatePaths = target.targetType === 'competition' ? [target.answerKeyBundle] : [target.answerKey];
+    for (const [index, publicPath] of publicPaths.entries()) {
+      const privatePath = privatePaths[index];
+      if (typeof publicPath !== 'string' || typeof privatePath !== 'string') continue;
+      const publicResolved = resolveRepositoryAsset(publicPath);
+      const privateResolved = resolveRepositoryAsset(privatePath);
+      if (!publicResolved.valid || !privateResolved.valid || !exists(publicResolved.resolved) || !exists(privateResolved.resolved)) continue;
+      try {
+        const publicBank = readJson(publicResolved.resolved);
+        const privateBank = readJson(privateResolved.resolved);
+        if (!Array.isArray(publicBank) || !Array.isArray(privateBank)) {
+          releaseBlockers.push('question bank and answer key must both be JSON arrays');
+          continue;
+        }
+        const publicIds = new Set();
+        const privateIds = new Set();
+        for (const [questionIndex, question] of publicBank.entries()) {
+          const id = question?.question_id ?? question?.questionId ?? question?.id;
+          if (typeof id !== 'string' || !id.trim()) releaseBlockers.push('public bank has a question without an ID at row ' + (questionIndex + 1));
+          else if (publicIds.has(id)) releaseBlockers.push('public bank has duplicate question ID ' + id);
+          else publicIds.add(id);
+          if (!Array.isArray(question?.options) || question.options.length < 2) releaseBlockers.push('public question ' + String(id ?? questionIndex + 1) + ' has fewer than two options');
+          if (question?.correct_option_index !== undefined || question?.correctOptionIndex !== undefined || question?.answer !== undefined) {
+            releaseBlockers.push('public question bank exposes answer data for question ' + String(id ?? questionIndex + 1));
+          }
+        }
+        for (const [answerIndex, answer] of privateBank.entries()) {
+          const id = answer?.question_id ?? answer?.questionId ?? answer?.id;
+          if (typeof id !== 'string' || !id.trim()) releaseBlockers.push('private answer key has a row without a question ID at row ' + (answerIndex + 1));
+          else if (privateIds.has(id)) releaseBlockers.push('private answer key has duplicate question ID ' + id);
+          else privateIds.add(id);
+          const answerIndexValue = answer?.correct_option_index ?? answer?.correctOptionIndex;
+          if (answerIndexValue !== undefined && (!Number.isInteger(answerIndexValue) || answerIndexValue < 0)) releaseBlockers.push('private answer key has an invalid correct option index for ' + String(id ?? answerIndex + 1));
+        }
+        for (const id of publicIds) if (!privateIds.has(id)) releaseBlockers.push('public question ' + id + ' has no matching private answer key');
+        for (const id of privateIds) if (!publicIds.has(id)) releaseBlockers.push('private answer key references unknown public question ' + id);
+        if (publicIds.size === 0) releaseBlockers.push('public question bank is empty');
+        if (privateIds.size === 0) releaseBlockers.push('private answer key is empty');
+      } catch (error) {
+        releaseBlockers.push('question bank or private answer key is invalid JSON: ' + error.message);
+      }
+    }
+  }
   const releaseReady = releaseBlockers.length === 0 && state === 'published';
   const remediation = state === 'missing'
     ? 'Create a manifest with the correct locator and required assets, then add evidence and review metadata.'
