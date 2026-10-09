@@ -106,7 +106,7 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
         missingAssetPaths.push({ field: 'manifestPath', value: assets.manifestPath, reason: 'manifestPath must reference a manifest.json file' });
       }
     }
-    for (const field of ['authoringPackages', 'questionBanksPublic', 'answerKeysPrivate']) {
+    for (const field of ['studyMaterials', 'assessments', 'authoringPackages', 'questionBanksPublic', 'answerKeysPrivate', 'moduleMaps']) {
       const entries = assets?.[field] ?? [];
       if (!Array.isArray(entries)) {
         missingAssetPaths.push({ field, value: entries, reason: 'asset field must be an array' });
