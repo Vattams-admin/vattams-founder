@@ -35,6 +35,7 @@ if (!overridesMatch) {
 }
 const scriptIds = [...overridesMatch[1].matchAll(/(?:^|[,\n])\s*([a-z][a-z0-9-]*):\s*'/g)].map((match) => match[1])
 const scriptIdSet = new Set(scriptIds)
+if (scriptIdSet.size !== scriptIds.length) fail('duplicate script-family override IDs')
 for (const id of scriptIds) {
   if (!ids.includes(id)) fail('script-family override references unknown language: ' + id)
 }
@@ -77,6 +78,8 @@ else {
     if (!ids.includes(id)) fail('reviewed examples reference unknown language: ' + id)
   }
   const exampleUnits = [...examplesBody.matchAll(/^\s*'([^']+)':\s*\{\s*text:\s*'([^']*)',\s*meaning:\s*'([^']*)'\s*\}/gm)]
+  const exampleKeys = exampleUnits.map(([, unit]) => unit)
+  if (new Set(exampleKeys).size !== exampleKeys.length) fail('duplicate localized example unit IDs within a language')
   for (const [, unit, sampleText, meaning] of exampleUnits) {
     if (!unitIds.includes(unit)) fail('reviewed example references unknown starter unit: ' + unit)
     if (!sampleText.trim() || !meaning.trim()) fail('reviewed example has empty sample text or meaning')
