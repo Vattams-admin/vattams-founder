@@ -372,11 +372,22 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
                       ? "Suggested focus: revisit this topic and try answering without help."
                       : "Suggested focus: revisit the lesson and practise a fresh question set."}
                   </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setReviewTopic(topic);
+                      setReviewUnansweredOnly(false);
+                      document.getElementById("assessment-response-review")?.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }}
+                    className="btn-secondary mt-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                  >
+                    Review this topic
+                  </button>
                 </li>
               ))}
             </ul>
           </div>
-          <details className="mt-7 rounded-card border border-white/10 p-4 sm:p-5">
+          <details id="assessment-response-review" className="mt-7 rounded-card border border-white/10 p-4 sm:p-5">
             <summary className="cursor-pointer rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
               <span className="font-display text-lg font-semibold">Your response review</span>
               <span className="mt-1 block text-sm text-slate-muted">
