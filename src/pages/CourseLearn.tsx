@@ -529,6 +529,13 @@ export default function CourseLearn() {
     : null
   const completedLessonCount = lessons.filter((lesson) => progress[lesson.id]).length
   const nextIncompleteLesson = lessons.find((lesson) => !progress[lesson.id]) ?? null
+  const currentModule = activeLesson
+    ? modules.find((module) => module.id === activeLesson.module_id) ?? null
+    : null
+  const currentModuleLessons = currentModule
+    ? lessons.filter((lesson) => lesson.module_id === currentModule.id)
+    : []
+  const currentModuleCompletedCount = currentModuleLessons.filter((lesson) => progress[lesson.id]).length
 
   const percentComplete = lessons.length
     ? Math.round(
@@ -765,6 +772,11 @@ export default function CourseLearn() {
               <h2 className="font-display text-xl">
                 {activeLesson.title}
               </h2>
+              {currentModule && (
+                <p className="mt-2 text-sm text-slate-muted" aria-live="polite" aria-atomic="true">
+                  Module: {currentModule.title} · {currentModuleCompletedCount} of {currentModuleLessons.length} lessons completed
+                </p>
+              )}
 
               {lessonFilesLoading && (activeLesson.video_path || activeLesson.pdf_path) && (
                 <p className="mt-4 text-sm text-slate-muted">
