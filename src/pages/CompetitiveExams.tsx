@@ -121,6 +121,32 @@ export default function CompetitiveExams() {
         </div>
       </section>
 
+      <section className="border-b border-white/5 py-10">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className="eyebrow">A structured way to prepare</p>
+          <h2 className="mt-2 text-2xl font-semibold text-parchment">From syllabus to exam-day readiness</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-muted">
+            Use these stages to evaluate a preparation programme and plan your study. They describe a recommended learning journey, not a guarantee that every published course currently includes every stage.
+          </p>
+          <ol className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { number: '01', title: 'Understand the exam', detail: 'Confirm eligibility, the latest official syllabus, exam pattern and important dates.' },
+              { number: '02', title: 'Map the syllabus', detail: 'Break the syllabus into subjects, units and specific learning objectives.' },
+              { number: '03', title: 'Learn concepts', detail: 'Study explanations and worked examples before moving to timed practice.' },
+              { number: '04', title: 'Practise deliberately', detail: 'Use topic-wise questions and review the reasoning behind each response.' },
+              { number: '05', title: 'Simulate the exam', detail: 'Attempt timed mock tests under conditions similar to the actual examination.' },
+              { number: '06', title: 'Revise weak areas', detail: 'Review errors, revisit weak topics and practise them again before the next mock.' },
+            ].map((stage) => (
+              <li key={stage.number} className="rounded-card border border-white/10 bg-white/[0.025] p-4">
+                <p className="text-xs font-semibold tracking-widest text-gold">{stage.number}</p>
+                <h3 className="mt-2 font-semibold text-parchment">{stage.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-muted">{stage.detail}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         {state === 'loading' && (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
