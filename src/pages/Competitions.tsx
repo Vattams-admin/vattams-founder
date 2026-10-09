@@ -213,7 +213,7 @@ export default function Competitions() {
                 const pricing = getEffectiveCoursePricing(c, pricingConfig)
                 const finalPrice = pricing.amount
                 return (
-                  <Link key={c.id} to={`/courses/${c.slug}`} className="card group flex flex-col gap-2 p-5">
+                  <Link key={c.id} to={`/courses/${c.slug}`} className="card group flex flex-col gap-2 p-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy">
                     <h3 className="font-display text-lg leading-snug">{getCourseDisplayName(c.name)}</h3>
                     {c.short_description && (
                       <p className="line-clamp-2 text-sm text-slate-muted">{c.short_description}</p>
