@@ -393,7 +393,27 @@ for (const target of courseTargets) {
       } else {
         if (!hasTextItems(studyMaterial.objectives)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing studyMaterial.objectives');
         if (!(hasTextItems(studyMaterial.concepts) || hasTextItems(studyMaterial.definitions))) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' needs concepts or definitions');
-        if (!hasTextItems(studyMaterial.workedExamples)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing worked examples');
+        if (!hasTextItems(studyMaterial.workedExamples)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing worked examples');
+        } else {
+          for (const [exampleIndex, example] of studyMaterial.workedExamples.entries()) {
+            const hasExampleContent = typeof example === 'string'
+              ? example.trim() !== ''
+              : example && typeof example === 'object' &&
+                Object.values(example).some((value) => typeof value === 'string' && value.trim() !== '');
+            if (!hasExampleContent) {
+              courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' worked example #' + (exampleIndex + 1) + ' has no explanatory content');
+            }
+          }
+        }
+        if (hasItems(studyMaterial.commonMistakes) &&
+            studyMaterial.commonMistakes.some((item) => typeof item === 'string' ? item.trim() === '' : !item || typeof item !== 'object' || !Object.values(item).some((value) => typeof value === 'string' && value.trim() !== ''))) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' contains an empty or unauthored common-mistake entry');
+        }
+        if (hasItems(studyMaterial.keyTakeaways) &&
+            studyMaterial.keyTakeaways.some((item) => typeof item !== 'string' || item.trim() === '')) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' contains an empty key takeaway');
+        }
       }
       if (!activities || !hasItems(activities) || activities.some((item) => !item || typeof item.instruction !== 'string' || item.instruction.trim() === '')) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing authored activities with instructions');
