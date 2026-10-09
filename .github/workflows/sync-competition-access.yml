@@ -44,6 +44,51 @@ jobs:
             -H "Content-Type: application/json" \
             --data-binary @config/competition-registry.json
 
+      - name: Diagnose Thirukkural Firebase enrolment (read-only)
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/firebase-service-account.json
+          TARGET_STUDENT_UID: 0e8VQNkf5tfTVkgJEkNBjjI83hA2
+          TARGET_COURSE_ID: DNWt3cPE4ZSJG90CTC1e
+        run: |
+          node --input-type=module <<'NODE'
+          import admin from 'firebase-admin';
+          import fs from 'node:fs';
+          const serviceAccount = JSON.parse(fs.readFileSync(process.env.GOOGLE_APPLICATION_CREDENTIALS, 'utf8'));
+          admin.initializeApp({ credential: admin.credential.cert(serviceAccount) });
+          const db = admin.firestore();
+          const uid = process.env.TARGET_STUDENT_UID;
+          const courseId = process.env.TARGET_COURSE_ID;
+          const resolvedId = d => String(d.student_id ?? d.user_id ?? d.uid ?? '').trim();
+          const courseSnap = await db.collection('enrolments').where('course_id', '==', courseId).get();
+          const uidMatches = [];
+          for (const field of ['student_id', 'user_id', 'uid']) {
+            const snap = await db.collection('enrolments').where(field, '==', uid).get();
+            for (const doc of snap.docs) if (!uidMatches.some(x => x.id === doc.id)) uidMatches.push(doc);
+          }
+          const targetDocs = [...new Map([...courseSnap.docs, ...uidMatches].map(d => [d.id, d])).values()];
+          console.log('DIAGNOSTIC target course enrolment docs:', courseSnap.size);
+          console.log('DIAGNOSTIC enrolment docs matching student UID across ID fields:', uidMatches.length);
+          for (const doc of targetDocs) {
+            const d = doc.data();
+            const sid = resolvedId(d) || doc.id.split('_')[0];
+            const studentSnap = sid ? await db.collection('students').doc(sid).get() : null;
+            const student = studentSnap?.exists ? studentSnap.data() : null;
+            const dob = student?.date_of_birth ?? student?.dob ?? null;
+            const date = dob?.toDate ? dob.toDate() : (dob ? new Date(dob) : null);
+            const validDob = Boolean(date && Number.isFinite(date.getTime()) && date <= new Date() && date >= new Date(Date.now() - 120 * 366 * 24 * 60 * 60 * 1000));
+            console.log(JSON.stringify({
+              enrolment_doc_id: doc.id,
+              course_id: d.course_id ?? null,
+              status: d.status ?? null,
+              resolved_student_id_matches_target_uid: sid === uid,
+              student_document_exists: Boolean(studentSnap?.exists),
+              valid_dob_present: validDob,
+              active_status_exact_match: d.status === 'active'
+            }));
+          }
+          await admin.app().delete();
+          NODE
+
       - name: Sync competition access
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ runner.temp }}/firebase-service-account.json
