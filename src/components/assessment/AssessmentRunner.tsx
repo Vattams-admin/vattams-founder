@@ -347,7 +347,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
           <div className="mt-7">
             <h3 className="font-display text-lg font-semibold">Topic revision guide</h3>
             <p className="mt-1 text-sm text-slate-muted">
-              Use these topic counts to choose what to revise next. They show coverage and unanswered responses, not topic-level correctness.
+              Topics with more unanswered responses appear first to help you prioritise revision. These counts show coverage, not topic-level correctness.
             </p>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2">
               {Array.from(
@@ -360,7 +360,8 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
                   return groups;
                 }, new Map<string, { total: number; unanswered: number }>()),
                 ([topic, counts]) => ({ topic, ...counts })
-              ).map(({ topic, total, unanswered }) => (
+              ).sort((a, b) => b.unanswered - a.unanswered || a.topic.localeCompare(b.topic))
+              .map(({ topic, total, unanswered }) => (
                 <li key={topic} className="rounded-card border border-white/10 p-4">
                   <p className="font-medium">{topic}</p>
                   <p className="mt-2 text-sm text-slate-muted">
