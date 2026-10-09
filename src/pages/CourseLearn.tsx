@@ -784,12 +784,19 @@ export default function CourseLearn() {
                     if (!rendered) return null
 
                     return (
-                      <div key={key}>
-                        <p className="text-xs font-semibold uppercase tracking-wide text-gold">
+                      <section
+                        key={key}
+                        aria-labelledby={`lesson-section-${key}`}
+                        className="rounded-card border border-white/10 bg-black/10 p-4"
+                      >
+                        <h3
+                          id={`lesson-section-${key}`}
+                          className="text-xs font-semibold uppercase tracking-wide text-gold"
+                        >
                           {label}
-                        </p>
-                        <div className="mt-1">{rendered}</div>
-                      </div>
+                        </h3>
+                        <div className="mt-2 leading-7">{rendered}</div>
+                      </section>
                     )
                   })}
                 </div>
