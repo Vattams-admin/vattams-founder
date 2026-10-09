@@ -400,11 +400,33 @@ for (const target of courseTargets) {
       }
       if (!practice || typeof practice !== 'object' || !Object.values(practice).some(hasItems)) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing practice questions');
+      } else {
+        const recommendedPracticeBands = ['basic', 'conceptual', 'application', 'higherOrderThinking', 'mixedReview'];
+        const populatedPracticeBands = recommendedPracticeBands.filter((band) => hasItems(practice[band]));
+        if (populatedPracticeBands.length < 3) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' should populate at least three practice bands (basic, conceptual, application, higherOrderThinking, mixedReview)');
+        }
       }
       if (!hasItems(questions)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing assessment questions');
-      if (!hasTextItems(outcomes)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing measurable learning outcomes');
+      if (!hasTextItems(outcomes)) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing measurable learning outcomes');
+      } else {
+        for (const [outcomeIndex, outcome] of outcomes.entries()) {
+          if (!outcome || typeof outcome !== 'object' ||
+              typeof outcome.statement !== 'string' || outcome.statement.trim() === '' ||
+              typeof outcome.measure !== 'string' || outcome.measure.trim() === '' ||
+              typeof outcome.target !== 'string' || outcome.target.trim() === '') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' outcome #' + (outcomeIndex + 1) + ' must include statement, measure, and target');
+          }
+        }
+      }
       if (!revision || typeof revision !== 'object' || !Object.values(revision).some(hasItems)) {
         courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing revision content');
+      } else {
+        const revisionSections = ['quickRevision', 'flashRecall', 'mistakeBasedRevision', 'weakTopicRevision'];
+        if (!revisionSections.some((section) => hasItems(revision[section]))) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' needs quick revision, flash recall, mistake-based, or weak-topic revision content');
+        }
       }
       if (typeof lessonId !== 'string' || !lessonIds.has(lessonId)) {
         courseStructureErrors.push(target.slug + ': package lesson is absent from course-map: ' + packagePath);
