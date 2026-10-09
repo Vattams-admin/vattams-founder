@@ -357,12 +357,18 @@ const findManifest = (target) => manifests.find((item) => {
   ].filter(Boolean));
 });
 
+const targetManifestMatches = new Map();
 const targets = [
   ...courseTargets,
   ...competitionTargets,
   ...assessmentTargets
 ].map((target) => {
   const manifest = findManifest(target);
+  if (manifest) {
+    const owners = targetManifestMatches.get(manifest.file) ?? [];
+    owners.push({ targetType: target.targetType, id: target.id ?? target.courseId ?? target.slug, title: target.title ?? null });
+    targetManifestMatches.set(manifest.file, owners);
+  }
   return {
     ...target,
     state: manifest?.status ?? 'missing',
@@ -372,6 +378,8 @@ const targets = [
     manifestFile: manifest?.file ?? null
   };
 });
+
+const reusedManifestMatches = [...targetManifestMatches.entries()].filter(([, owners]) => owners.length > 1);
 
 const count = (state) => targets.filter((item) => item.state === state).length;
 const summary = {
