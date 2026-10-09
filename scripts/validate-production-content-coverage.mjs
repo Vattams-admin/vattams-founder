@@ -406,6 +406,16 @@ for (const target of courseTargets) {
         if (populatedPracticeBands.length < 3) {
           courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' should populate at least three practice bands (basic, conceptual, application, higherOrderThinking, mixedReview)');
         }
+        for (const [band, items] of Object.entries(practice)) {
+          if (!Array.isArray(items)) continue;
+          for (const [practiceIndex, item] of items.entries()) {
+            if (!item || typeof item !== 'object' ||
+                typeof item.prompt !== 'string' || item.prompt.trim() === '' ||
+                typeof item.answer !== 'string' || item.answer.trim() === '') {
+              courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' practice ' + band + ' item #' + (practiceIndex + 1) + ' must include a non-empty prompt and answer');
+            }
+          }
+        }
       }
       if (!hasItems(questions)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing assessment questions');
       if (!hasTextItems(outcomes)) {
