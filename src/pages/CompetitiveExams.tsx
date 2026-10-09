@@ -95,7 +95,7 @@ export default function CompetitiveExams() {
               'JEE & Engineering', 'NEET & Medical', 'CUET & University Entrance',
               'Law & Management', 'Pharmacy & Agriculture', 'CA & Auditing',
             ].map((topic) => (
-              <Link key={topic} to={`/courses?search=${encodeURIComponent(topic)}`} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-xs font-medium text-parchment/85 transition-colors hover:border-azure/40 hover:text-white">
+              <Link key={topic} to={`/courses?search=${encodeURIComponent(topic)}`} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-xs font-medium text-parchment/85 transition-colors hover:border-azure/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy">
                 {topic}
               </Link>
             ))}
