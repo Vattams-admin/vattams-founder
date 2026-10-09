@@ -1,12 +1,7 @@
 import { Component, type ReactNode } from 'react'
 
-// Safety net only — does not change any existing routes/UI/features.
-// Without this, any uncaught exception thrown while mounting or rendering
-// (e.g. a client SDK failing to initialize because a required env var is
-// missing in a given deployment) leaves React's root <div id="root"></div>
-// empty, which reads as a blank dark screen against the page's #0B1730
-// background. This surfaces something visible + logs the real error to the
-// console instead.
+// Safety net for uncaught render/lifecycle failures. Show a concise diagnostic
+// so production failures can be fixed without guessing from a generic message.
 export default class RootErrorBoundary extends Component<
   { children: ReactNode },
   { error: Error | null }
@@ -27,8 +22,14 @@ export default class RootErrorBoundary extends Component<
         <div className="flex min-h-screen flex-col items-center justify-center gap-3 bg-ink px-6 text-center text-parchment">
           <p className="font-display text-lg font-semibold">Something went wrong loading VATTAMS ACADEMIA.</p>
           <p className="max-w-md text-sm text-slate-muted">
-            Please refresh the page. If this keeps happening, contact support.
+            {this.state.error.message || 'An unexpected rendering error occurred.'}
           </p>
+          <details className="max-w-2xl text-left text-xs text-slate-muted">
+            <summary className="cursor-pointer">Technical details</summary>
+            <pre className="mt-2 max-h-48 overflow-auto whitespace-pre-wrap break-words">
+              {this.state.error.stack || this.state.error.message}
+            </pre>
+          </details>
           <button
             onClick={() => window.location.reload()}
             className="btn-primary text-sm"
