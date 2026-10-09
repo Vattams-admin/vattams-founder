@@ -62,6 +62,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
   const autoSubmit = useRef(false);
   const saveTimers = useRef<Record<string, number>>({});
   const pendingAnswers = useRef<Record<string, number | null>>({});
+  const answerSaveChains = useRef<Record<string, Promise<void>>>({});
 
   const current = questions[currentIndex];
   const answeredCount = useMemo(
@@ -131,20 +132,32 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
   }, [assessmentId, courseId]);
 
   const persistAnswer = useCallback(async (questionId: string, selected: number | null) => {
-    const authToken = await token();
-    const { error: saveError } = await supabase.functions.invoke("assessment-answer", {
-      body: {
-        action: "save_answer",
-        attempt_id: attemptId,
-        question_id: questionId,
-        selected_option_index: selected,
-        answer: selected === null ? "" : String(selected),
-      },
-      headers: { Authorization: `Bearer ${authToken}` },
+    // Serialize writes per question so a slower, older request cannot overwrite a newer selection.
+    const previous = answerSaveChains.current[questionId] ?? Promise.resolve();
+    const operation = previous.catch(() => undefined).then(async () => {
+      const authToken = await token();
+      const { error: saveError } = await supabase.functions.invoke("assessment-answer", {
+        body: {
+          action: "save_answer",
+          attempt_id: attemptId,
+          question_id: questionId,
+          selected_option_index: selected,
+          answer: selected === null ? "" : String(selected),
+        },
+        headers: { Authorization: `Bearer ${authToken}` },
+      });
+      if (saveError) throw saveError;
+      if (pendingAnswers.current[questionId] === selected) {
+        delete pendingAnswers.current[questionId];
+      }
     });
-    if (saveError) throw saveError;
-    if (pendingAnswers.current[questionId] === selected) {
-      delete pendingAnswers.current[questionId];
+    answerSaveChains.current[questionId] = operation;
+    try {
+      await operation;
+    } finally {
+      if (answerSaveChains.current[questionId] === operation) {
+        delete answerSaveChains.current[questionId];
+      }
     }
   }, [attemptId]);
 
