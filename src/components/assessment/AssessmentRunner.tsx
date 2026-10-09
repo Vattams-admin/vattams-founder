@@ -367,10 +367,15 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
               ))}
             </ul>
           </div>
-          <div className="mt-7">
-            <h3 className="font-display text-lg font-semibold">Your response review</h3>
-            <p className="mt-1 text-sm text-slate-muted">
-              Review the answers you selected and identify questions to revisit. Correct-answer explanations are shown only when the assessment service provides them.
+          <details className="mt-7 rounded-card border border-white/10 p-4 sm:p-5">
+            <summary className="cursor-pointer rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+              <span className="font-display text-lg font-semibold">Your response review</span>
+              <span className="mt-1 block text-sm text-slate-muted">
+                Review {questions.length} {questions.length === 1 ? "question" : "questions"} and your saved answers.
+              </span>
+            </summary>
+            <p className="mt-4 text-sm text-slate-muted">
+              Identify questions to revisit. Correct-answer explanations are shown only when the assessment service provides them.
             </p>
             <ol className="mt-4 space-y-3">
               {questions.map((question, index) => {
@@ -396,7 +401,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
                 );
               })}
             </ol>
-          </div>
+          </details>
         </div>
       </section>
     );
