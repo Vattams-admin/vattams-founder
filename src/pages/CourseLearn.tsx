@@ -189,6 +189,7 @@ export default function CourseLearn() {
   const [materialSearch, setMaterialSearch] = useState('')
   const [activeLessonId, setActiveLessonId] = useState<string | null>(null)
   const [lessonListSearch, setLessonListSearch] = useState('')
+  const [lessonStatusFilter, setLessonStatusFilter] = useState<'all' | 'incomplete' | 'completed'>('all')
   const [revisionChecks, setRevisionChecks] = useState<Record<string, boolean[]>>({})
   const [lessonFileUrls, setLessonFileUrls] = useState<{
     video: string | null
@@ -729,14 +730,39 @@ export default function CourseLearn() {
                 </button>
               )}
             </div>
+            <div className="mt-2 flex flex-wrap gap-1" aria-label="Filter lessons by completion">
+              {([
+                { value: 'all', label: 'All' },
+                { value: 'incomplete', label: 'To do' },
+                { value: 'completed', label: 'Completed' },
+              ] as const).map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  onClick={() => setLessonStatusFilter(option.value)}
+                  aria-pressed={lessonStatusFilter === option.value}
+                  className={`rounded-full border px-2 py-1 text-[11px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                    lessonStatusFilter === option.value
+                      ? 'border-gold/50 bg-gold/15 text-gold-bright'
+                      : 'border-white/10 text-slate-muted hover:bg-white/5'
+                  }`}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
             <p className="mt-1 text-[11px] text-slate-muted" aria-live="polite" aria-atomic="true">
-              {lessons.filter((lesson) => lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase())).length} of {lessons.length} lessons
+              {lessons.filter((lesson) =>
+                lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase()) &&
+                (lessonStatusFilter === 'all' || (lessonStatusFilter === 'completed' ? Boolean(progress[lesson.id]) : !progress[lesson.id]))
+              ).length} matching lessons · {lessons.length} total
             </p>
           </div>
           {modules.map((module) => {
             const moduleLessons = lessons.filter((lesson) => lesson.module_id === module.id)
             const visibleLessons = moduleLessons.filter((lesson) =>
-              lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase())
+              lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase()) &&
+              (lessonStatusFilter === 'all' || (lessonStatusFilter === 'completed' ? Boolean(progress[lesson.id]) : !progress[lesson.id]))
             )
             if (visibleLessons.length === 0) return null
             return (
@@ -796,10 +822,23 @@ export default function CourseLearn() {
               No lessons published yet.
             </p>
           )}
-          {lessons.length > 0 && !lessons.some((lesson) => lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase())) && (
-            <p className="p-4 text-sm text-slate-muted" role="status">
-              No lesson titles match “{lessonListSearch}”. Try another search or clear it to see every lesson.
-            </p>
+          {lessons.length > 0 && !lessons.some((lesson) =>
+            lesson.title.toLocaleLowerCase().includes(lessonListSearch.trim().toLocaleLowerCase()) &&
+            (lessonStatusFilter === 'all' || (lessonStatusFilter === 'completed' ? Boolean(progress[lesson.id]) : !progress[lesson.id]))
+          ) && (
+            <div className="p-4 text-sm text-slate-muted" role="status">
+              <p>No lessons match the current search and completion filter.</p>
+              <button
+                type="button"
+                onClick={() => {
+                  setLessonListSearch('')
+                  setLessonStatusFilter('all')
+                }}
+                className="mt-2 text-gold underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              >
+                Clear search and filters
+              </button>
+            </div>
           )}
         </aside>
 
