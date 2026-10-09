@@ -711,7 +711,7 @@ export default function CourseLearn() {
                   (lesson) =>
                     lesson.module_id === module.id
                 )
-                .map((lesson) => (
+                .map((lesson, lessonIndex) => (
                   <button
                     key={lesson.id}
                     onClick={() =>
@@ -725,14 +725,21 @@ export default function CourseLearn() {
                     }`}
                   >
                     <span
-                      className={`h-1.5 w-1.5 rounded-full ${
+                      aria-hidden="true"
+                      className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-semibold ${
                         progress[lesson.id]
-                          ? 'bg-success'
-                          : 'bg-white/20'
+                          ? 'bg-success/15 text-success'
+                          : lesson.id === activeLessonId
+                            ? 'bg-gold/20 text-gold-bright'
+                            : 'bg-white/5 text-slate-muted'
                       }`}
-                    />
-
-                    {lesson.title}
+                    >
+                      {progress[lesson.id] ? '✓' : lessonIndex + 1}
+                    </span>
+                    <span className="min-w-0 flex-1">{lesson.title}</span>
+                    <span className="shrink-0 text-[10px] uppercase tracking-wide text-slate-muted">
+                      {progress[lesson.id] ? 'Done' : lesson.id === activeLessonId ? 'Current' : 'Next'}
+                    </span>
                   </button>
                 ))}
             </div>
