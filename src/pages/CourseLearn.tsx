@@ -184,6 +184,7 @@ export default function CourseLearn() {
   const [lessons, setLessons] = useState<Lesson[]>([])
   const [progress, setProgress] = useState<Record<string, boolean>>({})
   const [progressSavingId, setProgressSavingId] = useState<string | null>(null)
+  const [progressSaveRetryId, setProgressSaveRetryId] = useState<string | null>(null)
   const [materials, setMaterials] = useState<Material[]>([])
   const [activeLessonId, setActiveLessonId] = useState<string | null>(null)
   const [lessonFileUrls, setLessonFileUrls] = useState<{
@@ -528,6 +529,7 @@ export default function CourseLearn() {
     if (!enrolmentId || !user || progress[lessonId] || progressSavingId) return
 
     setProgressSavingId(lessonId)
+    setProgressSaveRetryId(null)
     setError(null)
     try {
       // Use a deterministic document ID so the same lesson
@@ -550,8 +552,10 @@ export default function CourseLearn() {
         ...current,
         [lessonId]: true,
       }))
+      setProgressSaveRetryId(null)
     } catch (err) {
       console.error('Progress update error:', err)
+      setProgressSaveRetryId(lessonId)
       setError('Unable to save your progress right now. Please check your connection and try again.')
     } finally {
       setProgressSavingId(null)
@@ -632,7 +636,19 @@ export default function CourseLearn() {
       </div>
 
       {error && (
-        <p className="mt-2 text-sm text-danger">{error}</p>
+        <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-danger" role="alert">
+          <p>{error}</p>
+          {progressSaveRetryId && (
+            <button
+              type="button"
+              onClick={() => void markComplete(progressSaveRetryId)}
+              disabled={progressSavingId !== null}
+              className="btn-secondary text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:opacity-50"
+            >
+              {progressSavingId === progressSaveRetryId ? 'Retrying save…' : 'Retry progress save'}
+            </button>
+          )}
+        </div>
       )}
 
       <div
