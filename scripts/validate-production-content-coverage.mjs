@@ -47,7 +47,8 @@ const competitionTargets = Object.values(competitionRegistry.competitions ?? {})
   id: item.course_id,
   slug: item.slug,
   title: item.competition,
-  enabled: item.enabled === true,
+  // Registry entries are considered enabled unless explicitly disabled; missing flags must not silently skip coverage checks.
+  enabled: item.enabled !== false,
   questionBundle: item.question_bundle,
   answerKeyBundle: item.answer_key_bundle
 }));
