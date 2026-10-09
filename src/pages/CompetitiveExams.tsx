@@ -46,6 +46,7 @@ export default function CompetitiveExams() {
   useEffect(() => {
     let cancelled = false
     async function load() {
+      setState('loading')
       try {
         const snapshot = await getDocs(query(
           collection(firestore, 'courses'),
@@ -111,7 +112,8 @@ export default function CompetitiveExams() {
         {state === 'error' && (
           <div className="card p-8 text-center">
             <h2 className="font-display text-xl">Couldn’t load programmes</h2>
-            <p className="mt-2 text-sm text-slate-muted">Please refresh and try again.</p>
+            <p className="mt-2 text-sm text-slate-muted">Please try again.</p>
+            <button type="button" onClick={() => setRetryToken((token) => token + 1)} className="btn-secondary mt-5">Retry</button>
           </div>
         )}
         {state === 'loaded' && courses.length === 0 && (
@@ -122,11 +124,26 @@ export default function CompetitiveExams() {
           </div>
         )}
         {state === 'loaded' && courses.length > 0 && (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {courses.map((course) => (
-              <CourseCard key={course.id} course={course} pricingConfig={pricingConfig} />
-            ))}
-          </div>
+          <>
+            <div className="mb-6">
+              <label htmlFor="exam-programme-search" className="sr-only">Search published exam programmes</label>
+              <input id="exam-programme-search" type="search" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder="Search published programmes by exam or topic…" className="input w-full max-w-xl" />
+            </div>
+            {filteredCourses.length === 0 ? (
+              <div className="card p-8 text-center">
+                <h2 className="font-display text-xl">No matching programmes</h2>
+                <p className="mt-2 text-sm text-slate-muted">Try another exam name or clear your search.</p>
+                <button type="button" onClick={() => setSearchTerm('')} className="btn-secondary mt-5">Show all programmes</button>
+              </div>
+            ) : (
+              <>
+                <p className="mb-4 text-sm text-slate-muted" aria-live="polite">Showing {filteredCourses.length} of {courses.length} published {courses.length === 1 ? 'programme' : 'programmes'}</p>
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {filteredCourses.map((course) => <CourseCard key={course.id} course={course} pricingConfig={pricingConfig} />)}
+                </div>
+              </>
+            )}
+          </>
         )}
       </section>
     </div>
