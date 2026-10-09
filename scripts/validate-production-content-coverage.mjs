@@ -426,6 +426,13 @@ const report = { version: 1, generatedAt: summary.generatedAt, summary, targets,
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(report, null, 2) + '\n');
 
+if (registryTargetErrors.length > 0) {
+  console.error('Production content coverage failed: invalid registry targets detected.');
+  for (const error of registryTargetErrors) console.error('- ' + error);
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+
 if (courseStructureErrors.length > 0) {
   console.error('Production content coverage failed: course structure is incomplete or inconsistent.');
   for (const error of courseStructureErrors) console.error('- ' + error);
