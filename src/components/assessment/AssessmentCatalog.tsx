@@ -191,6 +191,9 @@ export default function AssessmentCatalog({ courseId }: Props) {
               {label(assessment.kind)}
             </span>
             <h3 className="mt-2 font-semibold">{assessment.title}</h3>
+            {assessment.domain.trim() && (
+              <p className="mt-1 text-xs text-slate-muted">Subject / domain: {assessment.domain}</p>
+            )}
             <p className="mt-2 text-xs text-slate-muted">
               {assessment.question_count} questions · {duration(assessment.time_seconds)}
               {assessment.pass_percent != null ? ` · Pass ${assessment.pass_percent}%` : ""}
