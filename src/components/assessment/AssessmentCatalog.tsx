@@ -31,6 +31,14 @@ export default function AssessmentCatalog({ courseId }: Props) {
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState(false);
   const [retryToken, setRetryToken] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredAssessments = assessments.filter((assessment) => {
+    const term = searchTerm.trim().toLocaleLowerCase();
+    if (!term) return true;
+    return [assessment.title, assessment.domain, assessment.kind, assessment.slug]
+      .some((value) => value.toLocaleLowerCase().includes(term));
+  });
 
   useEffect(() => {
     let cancelled = false;
@@ -84,6 +92,25 @@ export default function AssessmentCatalog({ courseId }: Props) {
         </div>
       </div>
 
+      {!loadError && assessments.length > 0 && (
+        <div className="mt-5">
+          <label htmlFor="assessment-catalog-search" className="mb-2 block text-sm font-medium text-parchment/90">
+            Find a practice set or mock exam
+          </label>
+          <input
+            id="assessment-catalog-search"
+            type="search"
+            value={searchTerm}
+            onChange={(event) => setSearchTerm(event.target.value)}
+            placeholder="Search by title, subject, or assessment type…"
+            className="input w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+          />
+          <p className="mt-2 text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
+            Showing {filteredAssessments.length} of {assessments.length} assessments
+          </p>
+        </div>
+      )}
+
       {loadError ? (
         <div className="mt-5 rounded-card border border-danger/30 p-4">
           <p className="text-sm text-slate-muted">Assessments could not be loaded. Please try again.</p>
@@ -99,9 +126,16 @@ export default function AssessmentCatalog({ courseId }: Props) {
         <p className="mt-5 rounded-card border border-white/10 p-4 text-sm text-slate-muted">
           No published assessments are available for this course yet. Check back later for practice and mock exams.
         </p>
+      ) : filteredAssessments.length === 0 ? (
+        <div className="mt-5 rounded-card border border-white/10 p-4">
+          <p className="text-sm text-slate-muted">No assessments match “{searchTerm}”.</p>
+          <button type="button" onClick={() => setSearchTerm("")} className="btn-secondary mt-3 text-sm">
+            Clear search
+          </button>
+        </div>
       ) : (
       <div className="mt-5 grid gap-3 sm:grid-cols-2">
-        {assessments.map((assessment) => (
+        {filteredAssessments.map((assessment) => (
           <button
             key={assessment.assessment_id}
             type="button"
