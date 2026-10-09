@@ -338,6 +338,21 @@ for (const target of courseTargets) {
         if (!Array.isArray(question?.options) || question.options.length < 2 ||
             question.options.some((option) => typeof option !== 'string' || option.trim() === '')) {
           courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' must have at least two non-empty text options');
+        } else {
+          const normalizedOptions = question.options.map((option) => option.trim().toLocaleLowerCase());
+          if (new Set(normalizedOptions).size !== normalizedOptions.length) {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' contains duplicate answer options');
+          }
+        }
+        if (question?.difficulty !== undefined &&
+            !['foundational', 'easy', 'medium', 'hard', 'advanced', 'higher-order'].includes(question.difficulty)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' has an unsupported difficulty label');
+        }
+        if (question?.marks !== undefined && (!Number.isFinite(question.marks) || question.marks <= 0)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' must have positive marks when marks are supplied');
+        }
+        if (question?.timeSeconds !== undefined && (!Number.isInteger(question.timeSeconds) || question.timeSeconds <= 0)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' must have a positive integer timeSeconds when supplied');
         }
         const answerKey = answerKeysById.get(questionId);
         if (answerKey) {
