@@ -352,11 +352,17 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
 
         {error && (
           <div role="alert" className="mt-5 rounded-card border border-danger/30 bg-danger/10 px-4 py-3 text-sm text-danger">
-            <p>{error}</p>
+            <p>{assessmentRecoveryMessage(error, error)}</p>
             {Object.keys(pendingAnswers.current).length > 0 && (
               <button type="button" onClick={() => void retryPendingSaves()} disabled={busy}
                 className="mt-3 rounded-card border border-danger/40 px-3 py-2 font-semibold text-danger underline underline-offset-4 disabled:opacity-50">
                 {busy ? "Retrying saves..." : "Retry saving answers"}
+              </button>
+            )}
+            {remainingSeconds === 0 && (
+              <button type="button" onClick={() => void submit()} disabled={busy}
+                className="ml-2 mt-3 rounded-card border border-danger/40 px-3 py-2 font-semibold text-danger underline underline-offset-4 disabled:opacity-50">
+                {busy ? "Retrying submission..." : "Retry submission"}
               </button>
             )}
           </div>
