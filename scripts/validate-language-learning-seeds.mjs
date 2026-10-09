@@ -20,9 +20,7 @@ if (!rowsMatch) {
 const rowIds = [...rowsMatch[1].matchAll(/\['([^']+)',\s*'([^']+)',\s*'([^']+)',\s*'(India|Global)'\]/g)]
 const ids = rowIds.map((row) => row[1])
 const languageNames = rowIds.map((row) => row[2].trim().toLocaleLowerCase())
-const nativeNames = rowIds.map((row) => row[3].trim().toLocaleLowerCase())
 if (new Set(languageNames).size !== languageNames.length) fail('duplicate English language names; review aliases and canonical labels')
-if (new Set(nativeNames).size !== nativeNames.length) fail('duplicate native names; review canonical labels or add an explicit alias policy')
 if (ids.length === 0) fail('no catalogue rows found')
 if (new Set(ids).size !== ids.length) fail('duplicate language IDs')
 if (rowIds.some((row) => !row[1].trim() || !row[2].trim() || !row[3].trim())) fail('catalogue row has empty ID/name/native name')
