@@ -50,3 +50,17 @@ This is a source-repository inventory, not a live Firebase/Supabase production a
 ## Verification limitation
 
 No local build, validator, test suite, CI workflow, or live backend query was executed during this repository inventory. Counts and missing paths above reflect the inspected GitHub source tree only.
+
+## Thirukkural recovery dependency chain (follow-up inspection)
+
+The checked-in npm scripts define `thirukkural:production-gate` as:
+
+```sh
+npm run thirukkural:build-official
+npm run thirukkural:validate
+npm run thirukkural:package
+```
+
+This chain cannot be assumed to work in the current source snapshot because the official builder requires the objective public bank, private key bank, and age pools; the validator also requires the full objective banks and official-120 output. The source tree inspection found age pools and a selection blueprint, but not these required JSON artifacts. The upstream builder `scripts/build-thirukkural-objective-bank.py` itself expects `data/thirukkural/full-bank/questions.public.json` and `answer-key.private.json`, which were also absent from the inspected tree.
+
+Recovery must therefore start by locating an authoritative copy of those 9,443 source question/answer rows or rebuilding them through the approved source-generation pipeline. Do not run a partial downstream build and do not create placeholder banks. Once the authoritative inputs are restored, execute the documented production-gate command in a proper Node/Python environment, inspect the generated manifest/registry paths, and run the relevant E2E check before calling the competition ready.
