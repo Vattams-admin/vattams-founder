@@ -1,0 +1,37 @@
+{
+  "packageId": "competition-international-knowledge-challenge",
+  "version": "1.0.0",
+  "domain": "competition",
+  "locator": {
+    "competition": "international-knowledge-challenge",
+    "language": "en"
+  },
+  "status": "draft",
+  "coverage": {
+    "studyMaterials": 0,
+    "questions": 0,
+    "assessments": 0
+  },
+  "assets": {
+    "manifestPath": "content/competitions/international-knowledge-challenge/manifest.json",
+    "studyMaterials": [],
+    "questionBanksPublic": [
+      "competitions/international-knowledge-challenge/objective/questions.private.json"
+    ],
+    "answerKeysPrivate": [
+      "competitions/international-knowledge-challenge/objective/answer-keys.private.json"
+    ],
+    "assessments": []
+  },
+  "governance": {
+    "sourceEvidence": [
+      "config/competition-registry.json",
+      "scripts/package-competition-runtime.mjs",
+      "scripts/validate-production-package-registry-links.mjs"
+    ],
+    "reviewStatus": "unreviewed",
+    "answerKeyPrivate": true,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

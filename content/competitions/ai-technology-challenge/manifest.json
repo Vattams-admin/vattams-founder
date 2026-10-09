@@ -1,0 +1,37 @@
+{
+  "packageId": "competition-ai-technology-challenge",
+  "version": "1.0.0",
+  "domain": "competition",
+  "locator": {
+    "competition": "ai-technology-challenge",
+    "language": "en"
+  },
+  "status": "draft",
+  "coverage": {
+    "studyMaterials": 0,
+    "questions": 0,
+    "assessments": 0
+  },
+  "assets": {
+    "manifestPath": "content/competitions/ai-technology-challenge/manifest.json",
+    "studyMaterials": [],
+    "questionBanksPublic": [
+      "competitions/ai-technology-challenge/objective/questions.private.json"
+    ],
+    "answerKeysPrivate": [
+      "competitions/ai-technology-challenge/objective/answer-keys.private.json"
+    ],
+    "assessments": []
+  },
+  "governance": {
+    "sourceEvidence": [
+      "config/competition-registry.json",
+      "scripts/package-competition-runtime.mjs",
+      "scripts/validate-production-package-registry-links.mjs"
+    ],
+    "reviewStatus": "unreviewed",
+    "answerKeyPrivate": true,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

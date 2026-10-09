@@ -144,7 +144,7 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
         const resolved = resolveRepositoryAsset(assetPath);
         if (!resolved.valid) {
           missingAssetPaths.push({ field, value: assetPath, reason: resolved.reason });
-        } else if (!exists(resolved.resolved) && !generatedCompetitionAssetPaths.has(resolved.repositoryPath)) {
+        } else if (!exists(resolved.resolved) && data.status !== 'draft' && !generatedCompetitionAssetPaths.has(resolved.repositoryPath)) {
           missingAssetPaths.push({ field, value: assetPath, reason: 'file does not exist in repository' });
         }
       }

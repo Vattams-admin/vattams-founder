@@ -1,0 +1,37 @@
+{
+  "packageId": "competition-national-coding-challenge",
+  "version": "1.0.0",
+  "domain": "competition",
+  "locator": {
+    "competition": "national-coding-challenge",
+    "language": "en"
+  },
+  "status": "draft",
+  "coverage": {
+    "studyMaterials": 0,
+    "questions": 0,
+    "assessments": 0
+  },
+  "assets": {
+    "manifestPath": "content/competitions/national-coding-challenge/manifest.json",
+    "studyMaterials": [],
+    "questionBanksPublic": [
+      "competitions/national-coding-challenge/objective/questions.private.json"
+    ],
+    "answerKeysPrivate": [
+      "competitions/national-coding-challenge/objective/answer-keys.private.json"
+    ],
+    "assessments": []
+  },
+  "governance": {
+    "sourceEvidence": [
+      "config/competition-registry.json",
+      "scripts/package-competition-runtime.mjs",
+      "scripts/validate-production-package-registry-links.mjs"
+    ],
+    "reviewStatus": "unreviewed",
+    "answerKeyPrivate": true,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}
