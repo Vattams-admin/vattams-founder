@@ -97,14 +97,25 @@ export default function AssessmentCatalog({ courseId }: Props) {
           <label htmlFor="assessment-catalog-search" className="mb-2 block text-sm font-medium text-parchment/90">
             Find a practice set or mock exam
           </label>
-          <input
-            id="assessment-catalog-search"
-            type="search"
-            value={searchTerm}
-            onChange={(event) => setSearchTerm(event.target.value)}
-            placeholder="Search by title, subject, or assessment type…"
-            className="input w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
-          />
+          <div className="flex flex-wrap gap-2">
+            <input
+              id="assessment-catalog-search"
+              type="search"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+              placeholder="Search by title, subject, or assessment type…"
+              className="input min-w-0 flex-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+            />
+            {searchTerm && (
+              <button
+                type="button"
+                onClick={() => setSearchTerm("")}
+                className="btn-secondary text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              >
+                Clear search
+              </button>
+            )}
+          </div>
           <p className="mt-2 text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
             Showing {filteredAssessments.length} of {assessments.length} assessments
           </p>
@@ -129,7 +140,7 @@ export default function AssessmentCatalog({ courseId }: Props) {
       ) : filteredAssessments.length === 0 ? (
         <div className="mt-5 rounded-card border border-white/10 p-4">
           <p className="text-sm text-slate-muted">No assessments match “{searchTerm}”.</p>
-          <button type="button" onClick={() => setSearchTerm("")} className="btn-secondary mt-3 text-sm">
+          <button type="button" onClick={() => setSearchTerm("")} className="btn-secondary mt-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
             Clear search
           </button>
         </div>
@@ -140,7 +151,7 @@ export default function AssessmentCatalog({ courseId }: Props) {
             key={assessment.assessment_id}
             type="button"
             onClick={() => navigate(`/assessment/${courseId}/${assessment.assessment_id}`)}
-            className="rounded-card border border-white/10 bg-black/10 p-4 text-left transition hover:border-gold/40 hover:bg-gold/5"
+            className="rounded-card border border-white/10 bg-black/10 p-4 text-left transition hover:border-gold/40 hover:bg-gold/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
           >
             <span className="text-xs font-semibold uppercase tracking-wide text-gold">
               {label(assessment.kind)}
