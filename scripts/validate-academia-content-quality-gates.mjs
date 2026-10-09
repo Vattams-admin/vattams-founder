@@ -6,6 +6,7 @@
  * capture/repair/promote commands, and anything that writes remote data.
  */
 import { spawnSync } from 'node:child_process'
+import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -48,6 +49,17 @@ const validators = [
 const validatorPaths = validators.map(([, relativePath]) => relativePath)
 if (new Set(validatorPaths).size !== validatorPaths.length) {
   console.error('Configuration error: duplicate validator paths are listed.')
+  process.exit(1)
+}
+
+const missingValidators = validators
+  .filter(([, relativePath]) => !fs.existsSync(path.join(root, relativePath)))
+  .map(([label, relativePath]) => ({ label, relativePath }))
+
+if (missingValidators.length) {
+  console.error('Configuration error: one or more configured validator files are missing:')
+  for (const item of missingValidators) console.error('- ' + item.label + ': ' + item.relativePath)
+  console.error('No validators were executed.')
   process.exit(1)
 }
 
