@@ -52,7 +52,10 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
     if (!data.locator || typeof data.locator !== 'object' || Array.isArray(data.locator) || typeof data.locator.language !== 'string' || data.locator.language.length < 2) schemaErrors.push('locator must be an object with a language code');
     if (!['draft', 'in_review', 'approved', 'published', 'retired'].includes(data.status)) schemaErrors.push('status is not supported by the production manifest schema');
     for (const field of ['studyMaterials', 'questions', 'assessments']) {
-      if (!Number.isInteger(data.coverage?.[field]) || data.coverage[field] < 0) schemaErrors.push('coverage.' + field + ' must be a non-negative integer');
+      const value = field === 'questions' && data.domain === 'course' && data.coverage?.questions === undefined
+        ? data.coverage?.questionBank
+        : data.coverage?.[field];
+      if (!Number.isInteger(value) || value < 0) schemaErrors.push('coverage.' + field + ' must be a non-negative integer');
     }
     if (!Array.isArray(data.governance?.sourceEvidence) ||
         data.governance.sourceEvidence.some((source) => typeof source !== 'string' || source.trim() === '') ||
