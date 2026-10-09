@@ -224,8 +224,9 @@ export default function Competitions() {
 
         {state === 'loaded' && filteredCompetitions.length > 0 && (
           <>
-            <p className="mb-4 text-sm text-slate-muted" aria-live="polite">
+            <p className="mb-4 text-sm text-slate-muted" aria-live="polite" aria-atomic="true">
               Showing {filteredCompetitions.length} of {competitions.length} published {competitions.length === 1 ? 'competition' : 'competitions'}
+              {searchTerm.trim() ? ` for “${searchTerm.trim()}”` : ''}
             </p>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filteredCompetitions.map((c) => {
