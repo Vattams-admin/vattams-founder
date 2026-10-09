@@ -916,8 +916,7 @@ export default function CourseLearn() {
 
       {courseId && <AssessmentCatalog courseId={courseId} />}
 
-      {materials.length > 0 && (
-        <section className="card mt-6 p-6" aria-labelledby="course-materials-heading">
+      <section className="card mt-6 p-6" aria-labelledby="course-materials-heading">
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <h2 id="course-materials-heading" className="font-display text-lg">Course Materials</h2>
@@ -946,7 +945,12 @@ export default function CourseLearn() {
               )}
             </div>
           </div>
-          {filteredMaterials.length > 0 ? (
+          {materials.length === 0 ? (
+            <div className="mt-4 rounded-card border border-white/10 p-5 text-sm" role="status">
+              <p className="font-medium">No course materials published yet</p>
+              <p className="mt-1 text-slate-muted">Published notes, videos and other resources will appear here when they are available for this course.</p>
+            </div>
+          ) : filteredMaterials.length > 0 ? (
             <div className="mt-4 space-y-2">
               {filteredMaterials.map((material) => (
                 <div key={material.id} className="flex flex-wrap items-center justify-between gap-3 rounded-card border border-white/10 p-3 text-sm">
@@ -993,8 +997,7 @@ export default function CourseLearn() {
               </button>
             </div>
           )}
-        </section>
-      )}
+      </section>
 
       {viewerMaterial && (
         <MaterialViewerModal
