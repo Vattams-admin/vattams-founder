@@ -125,7 +125,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     const startMs = Number.isFinite(started) ? started : Date.now();
     setStartedAt(startMs);
 
-    setRemainingSeconds(Math.max(0, assessmentTimeSeconds - Math.floor((Date.now() - startMs) / 1000)));
+    setRemainingSeconds(Math.max(0, configuredSeconds - Math.floor((Date.now() - startMs) / 1000)));
     setView("attempt");
   }, [assessmentId, courseId]);
 
@@ -139,7 +139,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
     saveTimers.current[questionId] = window.setTimeout(async () => {
       try {
         const authToken = await token();
-        await supabase.functions.invoke("assessment-answer", {
+        const { error: saveError } = await supabase.functions.invoke("assessment-answer", {
           body: {
             action: "save_answer",
             attempt_id: attemptId,
@@ -149,6 +149,7 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
           },
           headers: { Authorization: `Bearer ${authToken}` },
         });
+        if (saveError) throw saveError;
       } catch (e) {
         console.error("Assessment answer save failed", e);
         setError("Answer could not be saved. Please retry before submitting.");
@@ -231,16 +232,38 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
   }
 
   if (view === "result" && result) {
+    const scorePercent = result.max_score > 0
+      ? Math.round((result.score / result.max_score) * 100)
+      : null;
+    const unansweredCount = Math.max(0, questions.length - result.answered_count);
     return (
       <section className="mt-8">
         <div className="card p-6 sm:p-8">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Assessment Result</span>
           <h2 className="mt-3 font-display text-2xl font-semibold">{title}</h2>
+          <div className="mt-7 rounded-card border border-gold/20 bg-gold/5 p-5">
+            <p className="text-sm text-slate-muted">Your score percentage</p>
+            <p className="mt-2 text-3xl font-bold text-gold">{scorePercent === null ? "—" : `${scorePercent}%`}</p>
+            <p className="mt-2 text-sm text-slate-muted">
+              {scorePercent === null
+                ? "This assessment did not return a score maximum, so a percentage cannot be calculated."
+                : scorePercent >= 80
+                  ? "Strong result. Review any unanswered questions and revisit topics you found difficult."
+                  : scorePercent >= 50
+                    ? "Good progress. Review the lesson material for topics that need more practice."
+                    : "Use this attempt as a learning guide: revisit the lessons and practise the topics again."}
+            </p>
+          </div>
           <div className="mt-7 grid gap-4 sm:grid-cols-3">
             <div className="rounded-card border border-white/10 p-5"><p className="text-sm text-slate-muted">Score</p><p className="mt-2 text-3xl font-bold text-gold">{result.score}</p></div>
             <div className="rounded-card border border-white/10 p-5"><p className="text-sm text-slate-muted">Maximum</p><p className="mt-2 text-3xl font-bold">{result.max_score}</p></div>
             <div className="rounded-card border border-white/10 p-5"><p className="text-sm text-slate-muted">Answered</p><p className="mt-2 text-3xl font-bold">{result.answered_count}/{questions.length}</p></div>
           </div>
+          {unansweredCount > 0 && (
+            <p className="mt-4 rounded-card border border-white/10 p-4 text-sm text-slate-muted">
+              {unansweredCount} {unansweredCount === 1 ? "question was" : "questions were"} left unanswered. Consider reviewing those topics before your next attempt.
+            </p>
+          )}
         </div>
       </section>
     );
@@ -277,7 +300,8 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
                 <button key={`${current.question_id}-${index}`} type="button"
                   onClick={() => void saveAnswer(current.question_id, index)}
                   disabled={busy}
-                  className={`w-full rounded-card border px-4 py-4 text-left text-sm transition ${selected ? "border-gold bg-gold/15 text-gold" : "border-white/10 bg-black/20 hover:border-gold/40"} disabled:opacity-60`}>
+                  aria-pressed={selected}
+                  className={`w-full rounded-card border px-4 py-4 text-left text-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${selected ? "border-gold bg-gold/15 text-gold" : "border-white/10 bg-black/20 hover:border-gold/40"} disabled:opacity-60`}>
                   <span className="mr-3 font-semibold">{String.fromCharCode(65 + index)}.</span>{option}
                 </button>
               );
@@ -299,7 +323,9 @@ export default function AssessmentRunner({ courseId, assessmentId, title }: Prop
         <div className="mt-5 flex flex-wrap gap-2">
           {questions.map((question, index) => (
             <button key={question.question_id} type="button" onClick={() => setCurrentIndex(index)}
-              className={`h-9 min-w-9 rounded-full border px-2 text-xs ${index === currentIndex ? "border-gold bg-gold/20 text-gold" : Number.isInteger(answers[question.question_id]) ? "border-gold/40 bg-gold/10 text-gold" : "border-white/10 text-slate-muted"}`}>
+              aria-label={`Go to question ${index + 1}${Number.isInteger(answers[question.question_id]) ? ", answered" : ", unanswered"}`}
+              aria-current={index === currentIndex ? "step" : undefined}
+              className={`h-9 min-w-9 rounded-full border px-2 text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${index === currentIndex ? "border-gold bg-gold/20 text-gold" : Number.isInteger(answers[question.question_id]) ? "border-gold/40 bg-gold/10 text-gold" : "border-white/10 text-slate-muted"}`}>
               {index + 1}
             </button>
           ))}
