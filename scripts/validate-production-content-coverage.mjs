@@ -153,4 +153,15 @@ if (summary.invalidManifestCount > 0) {
   console.error('Production content coverage failed: invalid manifest files detected.');
   process.exit(1);
 }
+
+const missingEnabledTargets = targets.filter((target) => target.enabled && target.state === 'missing');
+if (missingEnabledTargets.length > 0) {
+  console.error('Production content coverage failed: ' + missingEnabledTargets.length + ' enabled target(s) have no matching content manifest.');
+  for (const target of missingEnabledTargets) {
+    console.error('- [' + target.targetType + '] ' + (target.title ?? target.id ?? target.slug ?? 'unnamed target'));
+  }
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+
 console.log(JSON.stringify(summary, null, 2));
