@@ -131,14 +131,28 @@ const competitionTargets = Object.values(competitionRegistry.competitions ?? {})
   answerKeyBundle: item.answer_key_bundle
 }));
 
-const courseTargets = manifests.filter((item) => item.domain === 'course').map((item) => ({
-  targetType: 'course',
-  id: item.locator?.course ?? item.packageId,
-  slug: item.locator?.course ?? item.packageId,
-  title: item.packageId,
-  enabled: item.status !== 'retired',
-  authoringPackages: item.assets?.authoringPackages ?? []
-}));
+// Discover course targets from the canonical content/courses directory, not from manifests.
+// This makes a course with a missing manifest visible as a missing target instead of silently
+// disappearing from the coverage denominator.
+const coursesRoot = path.join(CONTENT_ROOT, 'courses');
+const courseTargets = exists(coursesRoot)
+  ? fs.readdirSync(coursesRoot, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => {
+        const slug = entry.name;
+        const manifest = manifests.find((item) =>
+          item.domain === 'course' && item.locator?.course === slug
+        );
+        return {
+          targetType: 'course',
+          id: slug,
+          slug,
+          title: manifest?.packageId ?? slug,
+          enabled: manifest?.status !== 'retired',
+          authoringPackages: manifest?.assets?.authoringPackages ?? []
+        };
+      })
+  : [];
 
 const assessmentTargets = Object.values(assessmentRegistry.assessments ?? {}).map((item) => ({
   targetType: 'assessment',
