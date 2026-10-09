@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
@@ -27,9 +28,10 @@ export default function Courses() {
     path: '/courses',
   })
 
+  const [searchParams] = useSearchParams()
   const [courses, setCourses] = useState<Course[]>([])
   const [state, setState] = useState<LoadState>('loading')
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState(() => searchParams.get('search') ?? '')
   const [levelFilter, setLevelFilter] = useState<string>('all')
   const [categoryFilter, setCategoryFilter] = useState<string>('all')
   const [retryToken, setRetryToken] = useState(0)
