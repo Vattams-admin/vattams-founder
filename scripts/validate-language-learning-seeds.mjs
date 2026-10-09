@@ -31,6 +31,9 @@ if (!overridesMatch) {
 }
 const scriptIds = [...overridesMatch[1].matchAll(/(?:^|[,\n])\s*([a-z][a-z0-9-]*):\s*'/g)].map((match) => match[1])
 const scriptIdSet = new Set(scriptIds)
+for (const id of scriptIds) {
+  if (!ids.includes(id)) fail('script-family override references unknown language: ' + id)
+}
 for (const id of ['ta', 'te', 'kn', 'ml', 'hi', 'bn', 'gu', 'pa', 'or', 'ar', 'ur', 'he', 'zh', 'ja', 'ko', 'th', 'lo', 'km', 'my', 'bo', 'am', 'ka', 'hy', 'el', 'ru', 'uk', 'bg', 'be', 'kk', 'ky']) {
   if (ids.includes(id) && !scriptIdSet.has(id)) fail('missing explicit script-family override for ' + id)
 }
