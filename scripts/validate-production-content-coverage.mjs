@@ -409,6 +409,14 @@ const targets = [
   if (manifest && state === 'published' && (!['reviewed', 'approved'].includes(manifest.governance?.reviewStatus) || !manifest.governance?.approvedBy || !manifest.governance?.approvedAt || !manifest.governance?.contentHash)) releaseBlockers.push('publication governance metadata is incomplete');
   if (manifest && target.targetType === 'course' && !(manifest.assets?.authoringPackages ?? []).length) releaseBlockers.push('course authoring packages are missing');
   if (manifest && ['competition', 'assessment'].includes(target.targetType) && (!(manifest.assets?.questionBanksPublic ?? []).length || !(manifest.assets?.answerKeysPrivate ?? []).length)) releaseBlockers.push('public question bank or private answer key is missing');
+  if (manifest && target.targetType === 'competition') {
+    if (typeof target.questionBundle !== 'string' || !target.questionBundle.trim() || !(manifest.assets?.questionBanksPublic ?? []).includes(target.questionBundle)) releaseBlockers.push('registry question bundle is not referenced by assets.questionBanksPublic');
+    if (typeof target.answerKeyBundle !== 'string' || !target.answerKeyBundle.trim() || !(manifest.assets?.answerKeysPrivate ?? []).includes(target.answerKeyBundle)) releaseBlockers.push('registry answer-key bundle is not referenced by assets.answerKeysPrivate');
+  }
+  if (manifest && target.targetType === 'assessment') {
+    if (typeof target.questionBankPublic !== 'string' || !target.questionBankPublic.trim() || !(manifest.assets?.questionBanksPublic ?? []).includes(target.questionBankPublic)) releaseBlockers.push('registry question bank is not referenced by assets.questionBanksPublic');
+    if (typeof target.answerKey !== 'string' || !target.answerKey.trim() || !(manifest.assets?.answerKeysPrivate ?? []).includes(target.answerKey)) releaseBlockers.push('registry answer key is not referenced by assets.answerKeysPrivate');
+  }
   const releaseReady = releaseBlockers.length === 0 && state === 'published';
   const remediation = state === 'missing'
     ? 'Create a manifest with the correct locator and required assets, then add evidence and review metadata.'
