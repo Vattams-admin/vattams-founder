@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-384",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "384-controlled-str-passage-sequencing-comprehension",
+    "topic": "connected-text",
+    "subtopic": "sequence-events-and-answer-literal-questions-in-controlled-str-passage",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a controlled passage with taught str-words accurately.",
+      "Sequence stated events as first, next, and last.",
+      "Answer literal questions using passage evidence.",
+      "Reread to repair a missed sound and retain meaning."
+    ],
+    "concepts": [
+      "A passage connects related sentences.",
+      "Sequence language identifies event order.",
+      "Literal answers must match stated text.",
+      "Rereading supports decoding and comprehension."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "The order in which events happen."
+      },
+      {
+        "term": "passage",
+        "definition": "A short connected text made of related sentences."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Words in a passage that support an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Read: “Stan gets a strap. Stan puts it on the bag. Stan rests.” What happens first?",
+        "solution": "Stan gets a strap."
+      },
+      {
+        "prompt": "What happens after Stan puts it on the bag?",
+        "solution": "Stan rests."
+      },
+      {
+        "prompt": "How do you verify the order?",
+        "solution": "Reread the sentences in sequence."
+      }
+    ],
+    "commonMistakes": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Misreading a str-word.",
+      "Answering without evidence."
+    ],
+    "keyTakeaways": [
+      "Read every sentence accurately.",
+      "Retell events in order.",
+      "Use the passage to support answers.",
+      "Reread when meaning does not match."
+    ],
+    "revisionPoints": [
+      "Stan gets a strap.",
+      "Stan puts it on the bag.",
+      "Stan rests.",
+      "Use text evidence to sequence events."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What does Stan get first?",
+        "answer": "A strap"
+      },
+      {
+        "id": "B2",
+        "prompt": "Where does Stan put it?",
+        "answer": "On the bag"
+      },
+      {
+        "id": "B3",
+        "prompt": "What happens last?",
+        "answer": "Stan rests"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which event follows putting it on the bag?",
+        "answer": "Stan rests"
+      },
+      {
+        "id": "C2",
+        "prompt": "What does sequencing show?",
+        "answer": "The order of events"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which answer stays within the passage?",
+        "answer": "Stan rests"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word begins with str?",
+        "answer": "strap"
+      },
+      {
+        "id": "A2",
+        "prompt": "If strap is read as sap, which sounds are missing?",
+        "answer": "/t/ and /r/"
+      },
+      {
+        "id": "A3",
+        "prompt": "What is a passage?",
+        "answer": "Related sentences forming connected text"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Why reread the passage?",
+        "answer": "To check words and event order"
+      },
+      {
+        "id": "H2",
+        "prompt": "What should you do if the retelling is out of order?",
+        "answer": "Reread the sentences in order"
+      },
+      {
+        "id": "H3",
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Sequence a passage and answer with text evidence"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What does “after” help identify?",
+        "answer": "An event that follows another"
+      },
+      {
+        "id": "R2",
+        "prompt": "Why point to a sentence when answering?",
+        "answer": "It shows the evidence"
+      },
+      {
+        "id": "R3",
+        "prompt": "What should you remember when completing this connected-text task?",
+        "answer": "Read every sentence accurately."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Stan gets a strap.",
+      "Stan puts it on the bag.",
+      "Stan rests.",
+      "Use text evidence to sequence events."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Stan gets a strap."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Stan puts it on the bag."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Stan rests."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Use text evidence to sequence events."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Stan gets a strap.",
+      "Stan puts it on the bag.",
+      "Stan rests.",
+      "Use text evidence to sequence events."
+    ],
+    "mistakeBasedRevision": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Misreading a str-word.",
+      "Answering without evidence."
+    ],
+    "weakTopicRevision": [
+      "If connected-text is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "passage-sequencing-with-text-evidence",
+      "name": "Retell a controlled str passage in order",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete a guided example and explain the sound or text evidence.",
+        "Try a fresh example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with one target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Correct the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read a controlled passage with taught str-words accurately.",
+    "Sequence stated events as first, next, and last.",
+    "Answer literal questions using passage evidence.",
+    "Reread to repair a missed sound and retain meaning."
+  ],
+  "questions": [
+    {
+      "questionId": "PF384-Q01",
+      "question": "What does Stan get first?",
+      "options": [
+        "A strap",
+        "A spring",
+        "A string",
+        "A flag"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q02",
+      "question": "Where does Stan put it?",
+      "options": [
+        "On a ship",
+        "On a tree",
+        "On the bag",
+        "On a step"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q03",
+      "question": "What happens last?",
+      "options": [
+        "Stan gets a strap",
+        "Stan rests",
+        "Stan puts it on the bag",
+        "Stan runs a race"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q04",
+      "question": "Which event happens first?",
+      "options": [
+        "Stan rests",
+        "Stan puts it on the bag",
+        "Stan swims",
+        "Stan gets a strap"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q05",
+      "question": "Which event follows putting it on the bag?",
+      "options": [
+        "Stan gets a strap",
+        "Stan rests",
+        "Stan finds a flag",
+        "Stan skates"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q06",
+      "question": "What does sequencing show?",
+      "options": [
+        "The order of events",
+        "The number of letters",
+        "A guessed ending",
+        "The colour of a page"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q07",
+      "question": "Which word begins with str?",
+      "options": [
+        "spring",
+        "splat",
+        "strap",
+        "stop"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q08",
+      "question": "If strap is read as sap, which sounds are missing?",
+      "options": [
+        "/s/",
+        "/æ/",
+        "/p/",
+        "/t/ and /r/"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q09",
+      "question": "What is a passage?",
+      "options": [
+        "Related sentences forming connected text",
+        "A random set of letters",
+        "Only a title",
+        "An answer key"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q10",
+      "question": "Which answer stays within the passage?",
+      "options": [
+        "Stan wins a race",
+        "Stan flies a plane",
+        "Stan rests",
+        "Stan eats a cake"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q11",
+      "question": "Why reread the passage?",
+      "options": [
+        "To invent a new event",
+        "To check words and event order",
+        "To skip the middle sentence",
+        "To change the ending"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q12",
+      "question": "What does “after” help identify?",
+      "options": [
+        "The first letter only",
+        "An unstated character",
+        "The longest word",
+        "An event that follows another"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q13",
+      "question": "Why point to a sentence when answering?",
+      "options": [
+        "It shows the evidence",
+        "It changes the story",
+        "It makes a guess true",
+        "It replaces reading"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q14",
+      "question": "What should you do if the retelling is out of order?",
+      "options": [
+        "Add an invented event",
+        "Skip the second sentence",
+        "Reread the sentences in order",
+        "Choose the longest answer"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF384-Q15",
+      "question": "What is the main goal of this lesson?",
+      "options": [
+        "Memorize options",
+        "Sequence a passage and answer with text evidence",
+        "Skip str-words",
+        "Invent a new ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF384-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first sentence says Stan gets a strap."
+    },
+    {
+      "questionId": "PF384-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "The second sentence says it goes on the bag."
+    },
+    {
+      "questionId": "PF384-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The last sentence says Stan rests."
+    },
+    {
+      "questionId": "PF384-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The passage begins with getting a strap."
+    },
+    {
+      "questionId": "PF384-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Resting follows the second event."
+    },
+    {
+      "questionId": "PF384-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Sequencing shows event order."
+    },
+    {
+      "questionId": "PF384-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Strap begins with str."
+    },
+    {
+      "questionId": "PF384-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "The onset has lost /t/ and /r/."
+    },
+    {
+      "questionId": "PF384-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "A passage is connected text."
+    },
+    {
+      "questionId": "PF384-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Only resting is stated among these options."
+    },
+    {
+      "questionId": "PF384-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Rereading verifies decoding and sequence."
+    },
+    {
+      "questionId": "PF384-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "After signals sequence."
+    },
+    {
+      "questionId": "PF384-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence supports the answer."
+    },
+    {
+      "questionId": "PF384-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "The text establishes the order."
+    },
+    {
+      "questionId": "PF384-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "The lesson targets connected reading and comprehension."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-384-v1"
+  }
+}
