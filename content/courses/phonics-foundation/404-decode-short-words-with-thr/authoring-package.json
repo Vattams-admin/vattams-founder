@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-404",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "404-decode-short-words-with-thr",
+    "topic": "decoding",
+    "subtopic": "decode-short-words-with-thr",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode taught thr-words from left to right.",
+      "Map th to /θ/ and r to /r/.",
+      "Distinguish thr-words from words beginning with tr.",
+      "Reread and self-correct when a sound is missed."
+    ],
+    "concepts": [
+      "The th digraph represents /θ/ in these taught words.",
+      "The onset combines /θ/ followed by /r/.",
+      "The vowel and ending complete the word.",
+      "Rereading the whole word checks sound mapping."
+    ],
+    "definitions": [
+      {
+        "term": "decode",
+        "definition": "Use letter-sound knowledge to read a word."
+      },
+      {
+        "term": "digraph",
+        "definition": "Two letters representing one speech sound."
+      },
+      {
+        "term": "self-correction",
+        "definition": "Noticing an error and repairing it by checking the word again."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Decode th-r-ee.",
+        "solution": "Map /θ/ /r/ /iː/ to read three."
+      },
+      {
+        "prompt": "Compare throw and tree.",
+        "solution": "Throw begins thr; tree begins tr."
+      },
+      {
+        "prompt": "If thrift is read as rift, what is missing?",
+        "solution": "The initial /θ/ sound represented by th."
+      }
+    ],
+    "commonMistakes": [
+      "Reading th as /t/.",
+      "Skipping r.",
+      "Confusing thr and tr.",
+      "Guessing from the first letters only."
+    ],
+    "keyTakeaways": [
+      "Map th to /θ/.",
+      "Keep /r/ after /θ/.",
+      "Check the vowel and ending.",
+      "Reread the complete word."
+    ],
+    "revisionPoints": [
+      "three begins /θ/ /r/.",
+      "th is a digraph.",
+      "Throw and tree have different onsets.",
+      "Reread to confirm the word."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word matches /θ/ /r/ /iː/?",
+        "answer": "three"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word begins thr and ends with ow?",
+        "answer": "throw"
+      },
+      {
+        "id": "B3",
+        "prompt": "If thrift is read as rift, which sound is missing?",
+        "answer": "/θ/"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which word begins with tr rather than thr?",
+        "answer": "tree"
+      },
+      {
+        "id": "C2",
+        "prompt": "What does left-to-right decoding mean?",
+        "answer": "Map each grapheme in order"
+      },
+      {
+        "id": "C3",
+        "prompt": "What is a digraph?",
+        "answer": "Two letters representing one speech sound"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word begins thr and ends with t?",
+        "answer": "thrift"
+      },
+      {
+        "id": "A2",
+        "prompt": "What should you check when throw and tree are confused?",
+        "answer": "The onset sounds"
+      },
+      {
+        "id": "A3",
+        "prompt": "What should you do after blending the onset?",
+        "answer": "Blend the vowel and ending too"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which word begins with th but not thr?",
+        "answer": "thin"
+      },
+      {
+        "id": "H2",
+        "prompt": "Why must the ending be read?",
+        "answer": "It can change one word into another"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which word begins thr and ends with ee?",
+        "answer": "three"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "How can a reader self-correct?",
+        "answer": "Reread and compare every sound"
+      },
+      {
+        "id": "R2",
+        "prompt": "What is the first sound represented by th in three?",
+        "answer": "/θ/"
+      },
+      {
+        "id": "R3",
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Decode thr-words accurately and self-correct"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "three begins /θ/ /r/.",
+      "th is a digraph.",
+      "Throw and tree have different onsets.",
+      "Reread to confirm the word."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "three begins /θ/ /r/."
+      },
+      {
+        "front": "Recall 2",
+        "back": "th is a digraph."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Throw and tree have different onsets."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Reread to confirm the word."
+      }
+    ],
+    "formulaOrFactBank": [
+      "three begins /θ/ /r/.",
+      "th is a digraph.",
+      "Throw and tree have different onsets.",
+      "Reread to confirm the word."
+    ],
+    "mistakeBasedRevision": [
+      "Reading th as /t/.",
+      "Skipping r.",
+      "Confusing thr and tr.",
+      "Guessing from the first letters only."
+    ],
+    "weakTopicRevision": [
+      "If decoding is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-practice",
+      "name": "Map, blend, and reread thr words",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete a guided example and explain the sound or text evidence.",
+        "Try a fresh example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item",
+      "steps": [
+        "Review a sample response with one target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Correct the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Decode taught thr-words from left to right.",
+    "Map th to /θ/ and r to /r/.",
+    "Distinguish thr-words from words beginning with tr.",
+    "Reread and self-correct when a sound is missed."
+  ],
+  "questions": [
+    {
+      "questionId": "PF404-Q01",
+      "question": "Which word matches /θ/ /r/ /iː/?",
+      "options": [
+        "three",
+        "tree",
+        "thin",
+        "train"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q02",
+      "question": "Which word begins thr and ends with ow?",
+      "options": [
+        "three",
+        "tree",
+        "throw",
+        "thin"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q03",
+      "question": "If thrift is read as rift, which sound is missing?",
+      "options": [
+        "/r/",
+        "/θ/",
+        "/ɪ/",
+        "/t/"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q04",
+      "question": "Which word begins with tr rather than thr?",
+      "options": [
+        "throw",
+        "three",
+        "thrift",
+        "tree"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q05",
+      "question": "What does left-to-right decoding mean?",
+      "options": [
+        "Guess from a picture",
+        "Map each grapheme in order",
+        "Read only the first letter",
+        "Skip the vowel"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q06",
+      "question": "What is a digraph?",
+      "options": [
+        "Two letters representing one speech sound",
+        "A sentence with two clauses",
+        "A punctuation mark",
+        "A guessed word"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q07",
+      "question": "Which word begins thr and ends with t?",
+      "options": [
+        "three",
+        "throw",
+        "thrift",
+        "tree"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q08",
+      "question": "What should you check when throw and tree are confused?",
+      "options": [
+        "Only the first letter shape",
+        "The punctuation",
+        "The page number",
+        "The onset sounds"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q09",
+      "question": "What should you do after blending the onset?",
+      "options": [
+        "Blend the vowel and ending too",
+        "Stop after thr",
+        "Ignore the ending",
+        "Add a vowel inside the onset"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q10",
+      "question": "Which word begins with th but not thr?",
+      "options": [
+        "three",
+        "throw",
+        "thin",
+        "thrift"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q11",
+      "question": "Why must the ending be read?",
+      "options": [
+        "It is always silent",
+        "It can change one word into another",
+        "It replaces the onset",
+        "It never matters"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q12",
+      "question": "Which word begins thr and ends with ee?",
+      "options": [
+        "throw",
+        "thrift",
+        "tree",
+        "three"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q13",
+      "question": "How can a reader self-correct?",
+      "options": [
+        "Reread and compare every sound",
+        "Guess from the first letter",
+        "Skip the middle sounds",
+        "Ignore meaning"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q14",
+      "question": "What is the first sound represented by th in three?",
+      "options": [
+        "/t/",
+        "/s/",
+        "/θ/",
+        "/f/"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF404-Q15",
+      "question": "What is the main goal of this lesson?",
+      "options": [
+        "Memorize answer positions",
+        "Decode thr-words accurately and self-correct",
+        "Skip the onset",
+        "Guess from the first letter"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF404-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The sound sequence maps to three."
+    },
+    {
+      "questionId": "PF404-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "Throw begins thr and ends with ow."
+    },
+    {
+      "questionId": "PF404-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The initial th sound is missing."
+    },
+    {
+      "questionId": "PF404-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "Tree begins with tr."
+    },
+    {
+      "questionId": "PF404-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Ordered mapping checks every part."
+    },
+    {
+      "questionId": "PF404-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Th represents one sound in these words."
+    },
+    {
+      "questionId": "PF404-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Thrift ends with t."
+    },
+    {
+      "questionId": "PF404-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Throw begins /θr/ and tree begins /tr/."
+    },
+    {
+      "questionId": "PF404-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The whole word includes the rime."
+    },
+    {
+      "questionId": "PF404-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Thin begins with th followed by a vowel."
+    },
+    {
+      "questionId": "PF404-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Endings distinguish words."
+    },
+    {
+      "questionId": "PF404-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Three begins thr and has ee."
+    },
+    {
+      "questionId": "PF404-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Rereading checks the complete word."
+    },
+    {
+      "questionId": "PF404-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "The th digraph represents /θ/."
+    },
+    {
+      "questionId": "PF404-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "The lesson develops accurate decoding."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-404-v1"
+  }
+}

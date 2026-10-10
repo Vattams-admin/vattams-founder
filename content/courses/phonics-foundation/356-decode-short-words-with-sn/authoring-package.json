@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-356",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "356-decode-short-words-with-sn",
+    "topic": "decoding",
+    "subtopic": "decode-taught-sn-words-left-to-right-and-check-whole-word",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode taught sn-words by mapping graphemes from left to right.",
+      "Blend the sn onset with the vowel and ending.",
+      "Distinguish sn from other taught consonant blends.",
+      "Reread to repair a missed grapheme and check the complete word."
+    ],
+    "definitions": [
+      {
+        "term": "grapheme",
+        "definition": "A letter or letter group representing a speech sound."
+      },
+      {
+        "term": "decode",
+        "definition": "Use grapheme-sound knowledge to read a written word."
+      },
+      {
+        "term": "self-correction",
+        "definition": "Notice and repair an error using sound and print evidence."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Decode snip.",
+        "solution": "Map s-n-i-p, blend, and reread snip."
+      },
+      {
+        "prompt": "Decode snap.",
+        "solution": "Keep s and n in order, then map a and p."
+      },
+      {
+        "prompt": "A learner reads snap as sap.",
+        "solution": "Return to n after s and decode each grapheme."
+      }
+    ],
+    "commonMistakes": [
+      "Skipping n after s.",
+      "Guessing instead of mapping graphemes.",
+      "Ignoring the ending.",
+      "Not rereading the word."
+    ],
+    "keyTakeaways": [
+      "Map every grapheme left to right.",
+      "Keep s and n in the onset.",
+      "Read the vowel and ending.",
+      "Reread to check the complete word."
+    ],
+    "revisionPoints": [
+      "Map every grapheme left to right.",
+      "Keep s and n in the onset.",
+      "Read the vowel and ending.",
+      "Reread to check the complete word."
+    ],
+    "concepts": [
+      "Decoding maps graphemes to sounds in order.",
+      "The sn onset contains s then n.",
+      "The vowel and ending also carry information.",
+      "Rereading checks the full written word."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word begins with sn?",
+        "answer": "snap"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which letters begin snip?",
+        "answer": "s then n"
+      },
+      {
+        "id": "B3",
+        "prompt": "If snap is read as sap, which grapheme was skipped?",
+        "answer": "n"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which word begins with sn and ends with g?",
+        "answer": "snug"
+      },
+      {
+        "id": "C2",
+        "prompt": "What is a good first step for decoding?",
+        "answer": "map graphemes from left to right"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which word contains the sn onset?",
+        "answer": "snip"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What does decoding mean?",
+        "answer": "using grapheme-sound knowledge to read a word"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which spelling matches /s/ /n/ /ɪ/ /p/?",
+        "answer": "snip"
+      },
+      {
+        "id": "A3",
+        "prompt": "What should a reader do after skipping n?",
+        "answer": "return and map each grapheme"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which word begins with /s/ alone?",
+        "answer": "sit"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which pair shares the sn onset?",
+        "answer": "snap, snug"
+      },
+      {
+        "id": "H3",
+        "prompt": "What should be checked after blending?",
+        "answer": "the complete word matches the print"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word does not begin with sn?",
+        "answer": "skid"
+      },
+      {
+        "id": "R2",
+        "prompt": "What is self-correction?",
+        "answer": "noticing and repairing an error using evidence"
+      },
+      {
+        "id": "R3",
+        "prompt": "What final check confirms an sn decoding response?",
+        "answer": "Match each sound to each grapheme."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Map every grapheme left to right.",
+      "Keep s and n in the onset.",
+      "Read the vowel and ending.",
+      "Reread to check the complete word."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Map every grapheme left to right."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Keep s and n in the onset."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Read the vowel and ending."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Reread to check the complete word."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Map every grapheme left to right.",
+      "Keep s and n in the onset.",
+      "Read the vowel and ending.",
+      "Reread to check the complete word."
+    ],
+    "mistakeBasedRevision": [
+      "Skipping n after s.",
+      "Guessing instead of mapping graphemes.",
+      "Ignoring the ending.",
+      "Not rereading the word."
+    ],
+    "weakTopicRevision": [
+      "If decode short words with sn is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-practice-and-explain",
+      "name": "Model, practise, explain, and check.",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete one example with guidance and explain the evidence.",
+        "Try a new example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with a target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Repair the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Decode taught sn-words by mapping graphemes from left to right.",
+    "Blend the sn onset with the vowel and ending.",
+    "Distinguish sn from other taught consonant blends.",
+    "Reread to repair a missed grapheme and check the complete word."
+  ],
+  "questions": [
+    {
+      "questionId": "PF356-Q01",
+      "question": "Which word begins with sn?",
+      "options": [
+        "snap",
+        "slip",
+        "skip",
+        "stop"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q02",
+      "question": "Which letters begin snip?",
+      "options": [
+        "n then s",
+        "s then p",
+        "s then w",
+        "s then n"
+      ],
+      "difficulty": "grapheme_mapping",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q03",
+      "question": "If snap is read as sap, which grapheme was skipped?",
+      "options": [
+        "a",
+        "p",
+        "n",
+        "s"
+      ],
+      "difficulty": "error_analysis",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q04",
+      "question": "Which word begins with sn and ends with g?",
+      "options": [
+        "snub",
+        "snug",
+        "snip",
+        "snap"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q05",
+      "question": "What is a good first step for decoding?",
+      "options": [
+        "map graphemes from left to right",
+        "guess from the first letter",
+        "skip the onset",
+        "read only the ending"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q06",
+      "question": "Which word contains the sn onset?",
+      "options": [
+        "swim",
+        "spot",
+        "slip",
+        "snip"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q07",
+      "question": "What does decoding mean?",
+      "options": [
+        "guessing from a picture only",
+        "counting spaces",
+        "using grapheme-sound knowledge to read a word",
+        "memorizing option positions"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q08",
+      "question": "Which spelling matches /s/ /n/ /ɪ/ /p/?",
+      "options": [
+        "slip",
+        "snip",
+        "sip",
+        "snipp"
+      ],
+      "difficulty": "grapheme_mapping",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q09",
+      "question": "What should a reader do after skipping n?",
+      "options": [
+        "return and map each grapheme",
+        "ignore the mismatch",
+        "replace it with sun",
+        "stop reading"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q10",
+      "question": "Which word begins with /s/ alone?",
+      "options": [
+        "snip",
+        "snap",
+        "snug",
+        "sit"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q11",
+      "question": "Which pair shares the sn onset?",
+      "options": [
+        "snip, swim",
+        "sit, snap",
+        "snap, snug",
+        "slip, snap"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q12",
+      "question": "What should be checked after blending?",
+      "options": [
+        "a guessed meaning only",
+        "the complete word matches the print",
+        "only the first letter",
+        "the longest option"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q13",
+      "question": "Which word does not begin with sn?",
+      "options": [
+        "skid",
+        "snip",
+        "snap",
+        "snug"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q14",
+      "question": "What is self-correction?",
+      "options": [
+        "hiding a mistake",
+        "choosing randomly",
+        "skipping hard words",
+        "noticing and repairing an error using evidence"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF356-Q15",
+      "question": "What final check confirms an sn decoding response?",
+      "options": [
+        "ignore the ending",
+        "guess without looking",
+        "match each sound to each grapheme",
+        "say only /s/"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF356-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Snap begins with sn."
+    },
+    {
+      "questionId": "PF356-Q02",
+      "correctOptionIndex": 3,
+      "explanation": "The first two graphemes are s and n."
+    },
+    {
+      "questionId": "PF356-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "The n in the onset was skipped."
+    },
+    {
+      "questionId": "PF356-Q04",
+      "correctOptionIndex": 1,
+      "explanation": "Snug begins with sn and ends with g."
+    },
+    {
+      "questionId": "PF356-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Left-to-right mapping checks each grapheme."
+    },
+    {
+      "questionId": "PF356-Q06",
+      "correctOptionIndex": 3,
+      "explanation": "Snip begins with sn."
+    },
+    {
+      "questionId": "PF356-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Decoding connects print to speech sounds."
+    },
+    {
+      "questionId": "PF356-Q08",
+      "correctOptionIndex": 1,
+      "explanation": "Snip maps the sounds in order."
+    },
+    {
+      "questionId": "PF356-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Rereading repairs the omitted grapheme."
+    },
+    {
+      "questionId": "PF356-Q10",
+      "correctOptionIndex": 3,
+      "explanation": "Sit begins with /s/ alone."
+    },
+    {
+      "questionId": "PF356-Q11",
+      "correctOptionIndex": 2,
+      "explanation": "Both snap and snug begin with sn."
+    },
+    {
+      "questionId": "PF356-Q12",
+      "correctOptionIndex": 1,
+      "explanation": "Whole-word checking catches omissions."
+    },
+    {
+      "questionId": "PF356-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Skid begins with sk."
+    },
+    {
+      "questionId": "PF356-Q14",
+      "correctOptionIndex": 3,
+      "explanation": "Self-correction uses print and sound evidence."
+    },
+    {
+      "questionId": "PF356-Q15",
+      "correctOptionIndex": 2,
+      "explanation": "Accurate decoding includes every sound."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-356-v1"
+  }
+}

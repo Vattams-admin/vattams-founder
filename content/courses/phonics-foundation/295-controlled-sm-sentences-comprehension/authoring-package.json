@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-295",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "295-controlled-sm-sentences-comprehension",
+    "topic": "sentence-reading",
+    "subtopic": "initial-sm-controlled-sentences-literal-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read controlled sentences containing taught sm-words accurately.",
+      "Answer literal questions using explicit sentence evidence.",
+      "Use meaning to check decoding without inventing details.",
+      "Reread to repair a missed sound and confirm comprehension."
+    ],
+    "concepts": [
+      "Sentence reading combines decoding with meaning.",
+      "Literal answers are stated directly in the sentence.",
+      "Evidence comes from the sentence wording.",
+      "Rereading checks both sm decoding and meaning."
+    ],
+    "definitions": [
+      {
+        "term": "literal question",
+        "definition": "A question answered directly by information stated in the text."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Words in a sentence that support an answer."
+      },
+      {
+        "term": "rereading",
+        "definition": "Reading again to check accuracy and meaning."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Read: “The smell is strong.” What is strong?",
+        "solution": "The smell."
+      },
+      {
+        "prompt": "Read: “Sam has a smock.” What does Sam have?",
+        "solution": "A smock."
+      },
+      {
+        "prompt": "Read: “The small smock is soft.” What is soft?",
+        "solution": "The small smock."
+      }
+    ],
+    "commonMistakes": [
+      "Answering from imagination instead of the sentence.",
+      "Skipping m in an sm-word.",
+      "Confusing who and what questions.",
+      "Reading quickly without checking meaning."
+    ],
+    "keyTakeaways": [
+      "Decode each sm-word accurately.",
+      "Use the sentence to answer literal questions.",
+      "Point to the phrase that supports the answer.",
+      "Reread when the word or meaning does not match."
+    ],
+    "revisionPoints": [
+      "Sam has a smock.",
+      "The smell is strong.",
+      "The small smock is soft.",
+      "Use sentence evidence and reread to check."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Read: “Sam has a smock.” What does Sam have?",
+        "answer": "A smock"
+      },
+      {
+        "id": "B2",
+        "prompt": "Read: “The smell is strong.” What is strong?",
+        "answer": "The smell"
+      },
+      {
+        "id": "B3",
+        "prompt": "In “Sam has a smock,” which word names the person?",
+        "answer": "Sam"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which question asks about the object Sam has?",
+        "answer": "What does Sam have?"
+      },
+      {
+        "id": "C2",
+        "prompt": "What is text evidence?",
+        "answer": "Words that support an answer"
+      },
+      {
+        "id": "C3",
+        "prompt": "If smock is read as sock, what should the reader do?",
+        "answer": "Reread and include /m/"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which sentence tells what is soft?",
+        "answer": "The small smock is soft."
+      },
+      {
+        "id": "A2",
+        "prompt": "Why reread after decoding?",
+        "answer": "To check accuracy and meaning"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which word begins with sm?",
+        "answer": "smock"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What does “The smell is strong” tell us?",
+        "answer": "The smell is strong"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which word names the thing Sam has?",
+        "answer": "smock"
+      },
+      {
+        "id": "H3",
+        "prompt": "If a sentence does not state a detail, what should you do?",
+        "answer": "Avoid inventing it and reread the text"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which sentence contains the word smile?",
+        "answer": "Sam has a smile."
+      },
+      {
+        "id": "R2",
+        "prompt": "What helps you answer accurately?",
+        "answer": "Decode the words and use sentence evidence"
+      },
+      {
+        "id": "R3",
+        "prompt": "What is the goal of controlled sentence reading?",
+        "answer": "Read accurately and answer from stated evidence"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Sam has a smock.",
+      "The smell is strong.",
+      "The small smock is soft.",
+      "Use sentence evidence and reread to check."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Sam has a smock."
+      },
+      {
+        "front": "Recall 2",
+        "back": "The smell is strong."
+      },
+      {
+        "front": "Recall 3",
+        "back": "The small smock is soft."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Use sentence evidence and reread to check."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Sam has a smock.",
+      "The smell is strong.",
+      "The small smock is soft.",
+      "Use sentence evidence and reread to check."
+    ],
+    "mistakeBasedRevision": [
+      "Answering from imagination instead of the sentence.",
+      "Skipping m in an sm-word.",
+      "Confusing who and what questions.",
+      "Reading quickly without checking meaning."
+    ],
+    "weakTopicRevision": [
+      "If controlled sm sentences comprehension is weak, use the learner's item-level evidence to model the specific skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-practice-and-explain",
+      "name": "Model, practise, explain, and check.",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete one example with guidance and explain the evidence.",
+        "Try a new example independently.",
+        "Reread or recheck the response and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with a target-skill error.",
+        "Identify the sound, grapheme, sequence, or evidence that does not match.",
+        "Repair the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read controlled sentences containing taught sm-words accurately.",
+    "Answer literal questions using explicit sentence evidence.",
+    "Use meaning to check decoding without inventing details.",
+    "Reread to repair a missed sound and confirm comprehension."
+  ],
+  "questions": [
+    {
+      "questionId": "PF295-Q01",
+      "question": "Read: “Sam has a smock.” What does Sam have?",
+      "options": [
+        "A sled",
+        "A smock",
+        "A flag",
+        "A drum"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q02",
+      "question": "Read: “The smell is strong.” What is strong?",
+      "options": [
+        "The smock",
+        "The sled",
+        "The grass",
+        "The smell"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q03",
+      "question": "In “Sam has a smock,” which word names the person?",
+      "options": [
+        "Sam",
+        "has",
+        "a",
+        "smock"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q04",
+      "question": "Which question asks about the object Sam has?",
+      "options": [
+        "Who is Sam?",
+        "Where is Sam?",
+        "What does Sam have?",
+        "Which word begins sm?"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q05",
+      "question": "What is text evidence?",
+      "options": [
+        "A guess about a picture",
+        "Words that support an answer",
+        "A detail not in the sentence",
+        "The longest option"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q06",
+      "question": "If smock is read as sock, what should the reader do?",
+      "options": [
+        "Reread and include /m/",
+        "Skip the word",
+        "Change the sentence",
+        "Guess from the next word"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q07",
+      "question": "Which sentence tells what is soft?",
+      "options": [
+        "Sam has a smock.",
+        "The smell is strong.",
+        "The small smock is soft.",
+        "The sled slips."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q08",
+      "question": "Why reread after decoding?",
+      "options": [
+        "To invent another detail",
+        "To ignore punctuation",
+        "To skip the final sound",
+        "To check accuracy and meaning"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q09",
+      "question": "Which word begins with sm?",
+      "options": [
+        "slip",
+        "smock",
+        "sun",
+        "cat"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q10",
+      "question": "What does “The smell is strong” tell us?",
+      "options": [
+        "Who made the smell",
+        "Where the smell went",
+        "The smell is strong",
+        "What the smell ate"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q11",
+      "question": "Which word names the thing Sam has?",
+      "options": [
+        "smock",
+        "Sam",
+        "has",
+        "the"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q12",
+      "question": "If a sentence does not state a detail, what should you do?",
+      "options": [
+        "Choose any detail",
+        "Make up an answer",
+        "Ignore the question",
+        "Avoid inventing it and reread the text"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q13",
+      "question": "Which sentence contains the word smile?",
+      "options": [
+        "Sam has a smock.",
+        "The smell is strong.",
+        "Sam has a smile.",
+        "The sled slips."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q14",
+      "question": "What helps you answer accurately?",
+      "options": [
+        "Guess from the first letter only",
+        "Decode the words and use sentence evidence",
+        "Ignore word order",
+        "Choose the longest answer"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF295-Q15",
+      "question": "What is the goal of controlled sentence reading?",
+      "options": [
+        "Read accurately and answer from stated evidence",
+        "Guess what the writer meant",
+        "Skip sm-words",
+        "Memorize answer positions"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF295-Q01",
+      "correctOptionIndex": 1,
+      "explanation": "The sentence says Sam has a smock."
+    },
+    {
+      "questionId": "PF295-Q02",
+      "correctOptionIndex": 3,
+      "explanation": "The sentence directly describes the smell."
+    },
+    {
+      "questionId": "PF295-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Sam names the person."
+    },
+    {
+      "questionId": "PF295-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "The question asks for the object."
+    },
+    {
+      "questionId": "PF295-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Evidence comes from the sentence wording."
+    },
+    {
+      "questionId": "PF295-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The sm onset requires both consonants."
+    },
+    {
+      "questionId": "PF295-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "The first sentence states what is soft."
+    },
+    {
+      "questionId": "PF295-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Rereading checks the word and sentence."
+    },
+    {
+      "questionId": "PF295-Q09",
+      "correctOptionIndex": 1,
+      "explanation": "Smock begins with sm."
+    },
+    {
+      "questionId": "PF295-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "The sentence states only that the smell is strong."
+    },
+    {
+      "questionId": "PF295-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Smock names the object."
+    },
+    {
+      "questionId": "PF295-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Literal comprehension stays within the text."
+    },
+    {
+      "questionId": "PF295-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "The first sentence contains smile."
+    },
+    {
+      "questionId": "PF295-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Accurate decoding and text evidence support the answer."
+    },
+    {
+      "questionId": "PF295-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Sentence reading checks decoding and comprehension."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-295-v1"
+  }
+}

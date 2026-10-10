@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-368",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "368-controlled-spl-passage-sequencing-comprehension",
+    "topic": "connected-text",
+    "subtopic": "sequence-events-and-answer-literal-questions-in-controlled-spl-passage",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a controlled passage containing taught spl-words accurately.",
+      "Sequence stated events as first, next, and last.",
+      "Answer literal questions using passage evidence.",
+      "Reread to repair a missed sound and retain meaning."
+    ],
+    "concepts": [
+      "A passage connects related sentences.",
+      "Sequence language identifies event order.",
+      "Literal answers must match stated text.",
+      "Rereading supports decoding and comprehension."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "The order in which events happen."
+      },
+      {
+        "term": "passage",
+        "definition": "A short connected text made of related sentences."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Words in a passage that support an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Read: “Pam splats mud. Pam splits a plum. Pam rests.” What happens first?",
+        "solution": "Pam splats mud."
+      },
+      {
+        "prompt": "What happens after Pam splits a plum?",
+        "solution": "Pam rests."
+      },
+      {
+        "prompt": "How do you verify the order?",
+        "solution": "Reread the sentences in sequence."
+      }
+    ],
+    "commonMistakes": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Misreading a spl-word.",
+      "Answering without evidence."
+    ],
+    "keyTakeaways": [
+      "Read every sentence accurately.",
+      "Retell events in order.",
+      "Use the passage to support answers.",
+      "Reread when meaning does not match."
+    ],
+    "revisionPoints": [
+      "Pam splats mud.",
+      "Pam splits a plum.",
+      "Pam rests.",
+      "Use text evidence to sequence events."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What does Pam do first?",
+        "answer": "Splats mud"
+      },
+      {
+        "id": "B2",
+        "prompt": "What does Pam split?",
+        "answer": "A plum"
+      },
+      {
+        "id": "B3",
+        "prompt": "What happens last?",
+        "answer": "Pam rests"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which event follows splitting a plum?",
+        "answer": "Pam rests"
+      },
+      {
+        "id": "C2",
+        "prompt": "What does sequencing show?",
+        "answer": "The order of events"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which answer stays within the passage?",
+        "answer": "Pam rests"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word begins with spl?",
+        "answer": "splats"
+      },
+      {
+        "id": "A2",
+        "prompt": "If splat is read as slat, which sound is missing?",
+        "answer": "/p/"
+      },
+      {
+        "id": "A3",
+        "prompt": "What is a passage?",
+        "answer": "Related sentences forming connected text"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Why reread the passage?",
+        "answer": "To check words and event order"
+      },
+      {
+        "id": "H2",
+        "prompt": "What should you do if the retelling is out of order?",
+        "answer": "Reread the sentences in order"
+      },
+      {
+        "id": "H3",
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Sequence a passage and answer with text evidence"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What does “after” help identify?",
+        "answer": "An event that follows another"
+      },
+      {
+        "id": "R2",
+        "prompt": "Why point to a sentence when answering?",
+        "answer": "It shows the evidence"
+      },
+      {
+        "id": "R3",
+        "prompt": "What should you remember when completing this connected-text task?",
+        "answer": "Read every sentence accurately."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Pam splats mud.",
+      "Pam splits a plum.",
+      "Pam rests.",
+      "Use text evidence to sequence events."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Pam splats mud."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Pam splits a plum."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Pam rests."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Use text evidence to sequence events."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Pam splats mud.",
+      "Pam splits a plum.",
+      "Pam rests.",
+      "Use text evidence to sequence events."
+    ],
+    "mistakeBasedRevision": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Misreading a spl-word.",
+      "Answering without evidence."
+    ],
+    "weakTopicRevision": [
+      "If connected-text is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "passage-sequencing-with-text-evidence",
+      "name": "Retell a controlled spl passage in order",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete a guided example and explain the sound or text evidence.",
+        "Try a fresh example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with one target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Correct the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read a controlled passage containing taught spl-words accurately.",
+    "Sequence stated events as first, next, and last.",
+    "Answer literal questions using passage evidence.",
+    "Reread to repair a missed sound and retain meaning."
+  ],
+  "questions": [
+    {
+      "questionId": "PF368-Q01",
+      "question": "What does Pam do first?",
+      "options": [
+        "Splats mud",
+        "Splits a plum",
+        "Rests",
+        "Skates"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q02",
+      "question": "What does Pam split?",
+      "options": [
+        "A flag",
+        "A ship",
+        "A plum",
+        "A sock"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q03",
+      "question": "What happens last?",
+      "options": [
+        "Pam splats mud",
+        "Pam rests",
+        "Pam splits a plum",
+        "Pam runs"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q04",
+      "question": "Which event happens first?",
+      "options": [
+        "Pam rests",
+        "Pam splits a plum",
+        "Pam swims",
+        "Pam splats mud"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q05",
+      "question": "Which event follows splitting a plum?",
+      "options": [
+        "Pam splats mud",
+        "Pam rests",
+        "Pam finds a flag",
+        "Pam skates"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q06",
+      "question": "What does sequencing show?",
+      "options": [
+        "The order of events",
+        "The number of letters",
+        "A guessed ending",
+        "The colour of a page"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q07",
+      "question": "Which word begins with spl?",
+      "options": [
+        "slip",
+        "stop",
+        "splats",
+        "swim"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q08",
+      "question": "If splat is read as slat, which sound is missing?",
+      "options": [
+        "/s/",
+        "/æ/",
+        "/t/",
+        "/p/"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q09",
+      "question": "What is a passage?",
+      "options": [
+        "Related sentences forming connected text",
+        "A random set of letters",
+        "Only a title",
+        "An answer key"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q10",
+      "question": "Which answer stays within the passage?",
+      "options": [
+        "Pam wins a race",
+        "Pam flies a plane",
+        "Pam rests",
+        "Pam eats a cake"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q11",
+      "question": "Why reread the passage?",
+      "options": [
+        "To invent a new event",
+        "To check words and event order",
+        "To skip the middle sentence",
+        "To change the ending"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q12",
+      "question": "What does “after” help identify?",
+      "options": [
+        "The first letter only",
+        "An unstated character",
+        "The longest word",
+        "An event that follows another"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q13",
+      "question": "Why point to a sentence when answering?",
+      "options": [
+        "It shows the evidence",
+        "It changes the story",
+        "It makes a guess true",
+        "It replaces reading"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q14",
+      "question": "What should you do if the retelling is out of order?",
+      "options": [
+        "Add an invented event",
+        "Skip the second sentence",
+        "Reread the sentences in order",
+        "Choose the longest answer"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF368-Q15",
+      "question": "What is the main goal of this lesson?",
+      "options": [
+        "Memorize options",
+        "Sequence a passage and answer with text evidence",
+        "Skip spl-words",
+        "Invent a new ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF368-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first sentence says Pam splats mud."
+    },
+    {
+      "questionId": "PF368-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "The second sentence says Pam splits a plum."
+    },
+    {
+      "questionId": "PF368-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The last sentence says Pam rests."
+    },
+    {
+      "questionId": "PF368-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The passage begins with splatting mud."
+    },
+    {
+      "questionId": "PF368-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Resting follows the second event."
+    },
+    {
+      "questionId": "PF368-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Sequencing shows event order."
+    },
+    {
+      "questionId": "PF368-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Splats begins with spl."
+    },
+    {
+      "questionId": "PF368-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "The /p/ sound is omitted."
+    },
+    {
+      "questionId": "PF368-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "A passage is connected text."
+    },
+    {
+      "questionId": "PF368-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Only resting is stated among these options."
+    },
+    {
+      "questionId": "PF368-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Rereading verifies decoding and sequence."
+    },
+    {
+      "questionId": "PF368-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "After signals sequence."
+    },
+    {
+      "questionId": "PF368-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence supports the answer."
+    },
+    {
+      "questionId": "PF368-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "The text establishes the order."
+    },
+    {
+      "questionId": "PF368-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "The lesson targets connected reading and comprehension."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-368-v1"
+  }
+}

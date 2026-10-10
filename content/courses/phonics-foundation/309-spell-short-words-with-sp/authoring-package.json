@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-309",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "309-spell-short-words-with-sp",
+    "topic": "encoding",
+    "subtopic": "segment-and-spell-taught-sp-words",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment taught sp-words into ordered phonemes before writing.",
+      "Represent s and p in the initial onset in the correct order.",
+      "Spell taught sp-words and read them back to check each grapheme.",
+      "Repair omissions using sound-by-sound mapping."
+    ],
+    "concepts": [
+      "Encoding maps spoken phonemes to written graphemes.",
+      "The sp onset requires s then p.",
+      "Read-back checks whether spelling matches the spoken word.",
+      "An omitted consonant changes the word."
+    ],
+    "definitions": [
+      {
+        "term": "encode",
+        "definition": "Write a word using sound-to-letter knowledge."
+      },
+      {
+        "term": "segment",
+        "definition": "Separate a spoken word into ordered sounds."
+      },
+      {
+        "term": "read-back",
+        "definition": "Read a written response to check it against the intended word."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Spell spin.",
+        "solution": "Segment /s/ /p/ /i/ /n/, write s-p-i-n, then read it back."
+      },
+      {
+        "prompt": "A learner writes sot for spot. What is missing?",
+        "solution": "The p after s."
+      },
+      {
+        "prompt": "How can a learner check spill?",
+        "solution": "Say each sound in order, write the graphemes, and read spill back."
+      }
+    ],
+    "commonMistakes": [
+      "Omitting p after s.",
+      "Reversing the onset letters.",
+      "Leaving out the final consonant.",
+      "Not reading the written word back."
+    ],
+    "keyTakeaways": [
+      "Hear all phonemes before writing.",
+      "Write s then p at the start.",
+      "Check the whole word.",
+      "Repair the exact missing grapheme."
+    ],
+    "revisionPoints": [
+      "Segment first, then write.",
+      "Keep s and p in order.",
+      "Spell spin, spot, spill, spell.",
+      "Read the written word back."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which spelling begins with sp?",
+        "answer": "spill"
+      },
+      {
+        "id": "B2",
+        "prompt": "What letter follows s at the start of spin?",
+        "answer": "p"
+      },
+      {
+        "id": "B3",
+        "prompt": "A learner writes sot for spot. Which letter is missing?",
+        "answer": "p"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which spelling represents spin?",
+        "answer": "spin"
+      },
+      {
+        "id": "C2",
+        "prompt": "What should a learner do before spelling a word?",
+        "answer": "Say and segment its sounds"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which word begins with sp and ends with t?",
+        "answer": "spot"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What should follow writing a word?",
+        "answer": "Read it back and check each grapheme"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which spelling keeps both initial consonants?",
+        "answer": "spell"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which pair both begins with sp?",
+        "answer": "spin, spot"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What is encoding?",
+        "answer": "Writing using sound-to-letter knowledge"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which error occurs in “sin” for “spin”?",
+        "answer": "The p is omitted"
+      },
+      {
+        "id": "H3",
+        "prompt": "What is the first part of spill?",
+        "answer": "sp"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word has the same onset as spell?",
+        "answer": "spin"
+      },
+      {
+        "id": "R2",
+        "prompt": "Why spell sounds in order?",
+        "answer": "To represent the spoken word accurately"
+      },
+      {
+        "id": "R3",
+        "prompt": "What is the goal of sp spelling practice?",
+        "answer": "Write both onset consonants and check the whole word"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Segment first, then write.",
+      "Keep s and p in order.",
+      "Spell spin, spot, spill, spell.",
+      "Read the written word back."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Segment first, then write."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Keep s and p in order."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Spell spin, spot, spill, spell."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Read the written word back."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Segment first, then write.",
+      "Keep s and p in order.",
+      "Spell spin, spot, spill, spell.",
+      "Read the written word back."
+    ],
+    "mistakeBasedRevision": [
+      "Omitting p after s.",
+      "Reversing the onset letters.",
+      "Leaving out the final consonant.",
+      "Not reading the written word back."
+    ],
+    "weakTopicRevision": [
+      "If spell short words with sp is weak, use item-level evidence to model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-practice-and-explain",
+      "name": "Model, practise, explain, and check.",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete one example with guidance and explain the evidence.",
+        "Try a new example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with a target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Repair the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Segment taught sp-words into ordered phonemes before writing.",
+    "Represent s and p in the initial onset in the correct order.",
+    "Spell taught sp-words and read them back to check each grapheme.",
+    "Repair omissions using sound-by-sound mapping."
+  ],
+  "questions": [
+    {
+      "questionId": "PF309-Q01",
+      "question": "Which spelling begins with sp?",
+      "options": [
+        "sill",
+        "spill",
+        "pill",
+        "slill"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q02",
+      "question": "What letter follows s at the start of spin?",
+      "options": [
+        "l",
+        "t",
+        "n",
+        "p"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q03",
+      "question": "A learner writes sot for spot. Which letter is missing?",
+      "options": [
+        "p",
+        "s",
+        "o",
+        "t"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q04",
+      "question": "Which spelling represents spin?",
+      "options": [
+        "sin",
+        "pin",
+        "spin",
+        "spit"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q05",
+      "question": "What should a learner do before spelling a word?",
+      "options": [
+        "Guess the shape",
+        "Say and segment its sounds",
+        "Write the last letter only",
+        "Skip the onset"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q06",
+      "question": "Which word begins with sp and ends with t?",
+      "options": [
+        "spot",
+        "spin",
+        "spill",
+        "spell"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q07",
+      "question": "What should follow writing a word?",
+      "options": [
+        "Cover it and stop",
+        "Add a vowel",
+        "Read it back and check each grapheme",
+        "Ignore a mismatch"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q08",
+      "question": "Which spelling keeps both initial consonants?",
+      "options": [
+        "sell",
+        "pell",
+        "swell",
+        "spell"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q09",
+      "question": "Which pair both begins with sp?",
+      "options": [
+        "slip, spot",
+        "spin, spot",
+        "sun, spill",
+        "map, spell"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q10",
+      "question": "What is encoding?",
+      "options": [
+        "Reading punctuation",
+        "Guessing from length",
+        "Writing using sound-to-letter knowledge",
+        "Sequencing a story"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q11",
+      "question": "Which error occurs in “sin” for “spin”?",
+      "options": [
+        "The p is omitted",
+        "The n is doubled",
+        "The vowel is missing",
+        "The s is reversed"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q12",
+      "question": "What is the first part of spill?",
+      "options": [
+        "pi",
+        "ill",
+        "ll",
+        "sp"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q13",
+      "question": "Which word has the same onset as spell?",
+      "options": [
+        "slip",
+        "stop",
+        "spin",
+        "frog"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q14",
+      "question": "Why spell sounds in order?",
+      "options": [
+        "To make words longer",
+        "To represent the spoken word accurately",
+        "To avoid listening",
+        "To replace reading"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF309-Q15",
+      "question": "What is the goal of sp spelling practice?",
+      "options": [
+        "Write both onset consonants and check the whole word",
+        "Write only s",
+        "Skip middle sounds",
+        "Memorize options"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF309-Q01",
+      "correctOptionIndex": 1,
+      "explanation": "Spill begins with s then p."
+    },
+    {
+      "questionId": "PF309-Q02",
+      "correctOptionIndex": 3,
+      "explanation": "The initial spelling is sp."
+    },
+    {
+      "questionId": "PF309-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Spot includes p after s."
+    },
+    {
+      "questionId": "PF309-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "Spin contains s-p-i-n."
+    },
+    {
+      "questionId": "PF309-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Segmentation preserves phoneme order."
+    },
+    {
+      "questionId": "PF309-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Spot ends with t."
+    },
+    {
+      "questionId": "PF309-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Read-back checks the spelling."
+    },
+    {
+      "questionId": "PF309-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Spell begins with s and p."
+    },
+    {
+      "questionId": "PF309-Q09",
+      "correctOptionIndex": 1,
+      "explanation": "Spin and spot both begin with sp."
+    },
+    {
+      "questionId": "PF309-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Encoding maps sounds to graphemes."
+    },
+    {
+      "questionId": "PF309-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The spelling omits p."
+    },
+    {
+      "questionId": "PF309-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "The onset is sp."
+    },
+    {
+      "questionId": "PF309-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "Spin begins with sp."
+    },
+    {
+      "questionId": "PF309-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Ordered mapping preserves the word."
+    },
+    {
+      "questionId": "PF309-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Accurate encoding represents the full word."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-309-v1"
+  }
+}

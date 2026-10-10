@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-464",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "464-controlled-silent-t-passage-sequencing-comprehension",
+    "topic": "connected-text",
+    "subtopic": "sequence-events-and-answer-literal-questions-in-silent-t-passage",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a controlled passage with taught silent-t words accurately.",
+      "Sequence stated events as first, next, and last.",
+      "Answer literal questions using passage evidence.",
+      "Reread to repair a missed sound and retain meaning."
+    ],
+    "concepts": [
+      "A passage connects related sentences.",
+      "Sequence language identifies event order.",
+      "Literal answers must match stated text.",
+      "The t is silent in the taught words."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "The order in which events happen."
+      },
+      {
+        "term": "passage",
+        "definition": "A short connected text made of related sentences."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Words in a passage that support an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Read: “We listen to a bell. We walk to the castle. We rest.” What happens first?",
+        "solution": "We listen to a bell."
+      },
+      {
+        "prompt": "What happens after we walk to the castle?",
+        "solution": "We rest."
+      },
+      {
+        "prompt": "How do you verify the order?",
+        "solution": "Reread the sentences in sequence."
+      }
+    ],
+    "commonMistakes": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Adding /t/ in listen.",
+      "Answering without evidence."
+    ],
+    "keyTakeaways": [
+      "Read every sentence accurately.",
+      "Retell events in order.",
+      "Use the passage to support answers.",
+      "Remember t is silent in the taught words."
+    ],
+    "revisionPoints": [
+      "We listen to a bell.",
+      "We walk to the castle.",
+      "We rest.",
+      "Use text evidence to sequence events."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What happens first?",
+        "answer": "We listen to a bell"
+      },
+      {
+        "id": "B2",
+        "prompt": "Where do we walk?",
+        "answer": "To the castle"
+      },
+      {
+        "id": "B3",
+        "prompt": "What happens last?",
+        "answer": "We rest"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which event follows walking to the castle?",
+        "answer": "We rest"
+      },
+      {
+        "id": "C2",
+        "prompt": "What does sequencing show?",
+        "answer": "The order of events"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which answer stays within the passage?",
+        "answer": "We rest"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word has silent t in the taught pronunciation?",
+        "answer": "listen"
+      },
+      {
+        "id": "A2",
+        "prompt": "What should you avoid when reading listen?",
+        "answer": "Adding a /t/ sound"
+      },
+      {
+        "id": "A3",
+        "prompt": "What is a passage?",
+        "answer": "Related sentences forming connected text"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Why reread the passage?",
+        "answer": "To check words and event order"
+      },
+      {
+        "id": "H2",
+        "prompt": "What should you do if the retelling is out of order?",
+        "answer": "Reread the sentences in order"
+      },
+      {
+        "id": "H3",
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Sequence a passage and answer with text evidence"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What does “after” help identify?",
+        "answer": "An event that follows another"
+      },
+      {
+        "id": "R2",
+        "prompt": "Why point to a sentence when answering?",
+        "answer": "It shows the evidence"
+      },
+      {
+        "id": "R3",
+        "prompt": "What should you remember when completing this connected-text task?",
+        "answer": "Read every sentence accurately."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "We listen to a bell.",
+      "We walk to the castle.",
+      "We rest.",
+      "Use text evidence to sequence events."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "We listen to a bell."
+      },
+      {
+        "front": "Recall 2",
+        "back": "We walk to the castle."
+      },
+      {
+        "front": "Recall 3",
+        "back": "We rest."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Use text evidence to sequence events."
+      }
+    ],
+    "formulaOrFactBank": [
+      "We listen to a bell.",
+      "We walk to the castle.",
+      "We rest.",
+      "Use text evidence to sequence events."
+    ],
+    "mistakeBasedRevision": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Adding /t/ in listen.",
+      "Answering without evidence."
+    ],
+    "weakTopicRevision": [
+      "If connected-text is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "passage-sequencing-with-text-evidence",
+      "name": "Retell a controlled silent-t passage in order",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete a guided example and explain the sound or text evidence.",
+        "Try a fresh example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with one target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Correct the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read a controlled passage with taught silent-t words accurately.",
+    "Sequence stated events as first, next, and last.",
+    "Answer literal questions using passage evidence.",
+    "Reread to repair a missed sound and retain meaning."
+  ],
+  "questions": [
+    {
+      "questionId": "PF464-Q01",
+      "question": "What happens first?",
+      "options": [
+        "We listen to a bell",
+        "We walk to the castle",
+        "We rest",
+        "We whistle"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q02",
+      "question": "Where do we walk?",
+      "options": [
+        "To a shop",
+        "To a park",
+        "To the castle",
+        "To a hill"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q03",
+      "question": "What happens last?",
+      "options": [
+        "We listen to a bell",
+        "We rest",
+        "We walk to the castle",
+        "We run home"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q04",
+      "question": "Which event happens first?",
+      "options": [
+        "We rest",
+        "We walk to the castle",
+        "We climb a tree",
+        "We listen to a bell"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q05",
+      "question": "Which event follows walking to the castle?",
+      "options": [
+        "We listen to a bell",
+        "We rest",
+        "We find a flag",
+        "We whistle"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q06",
+      "question": "What does sequencing show?",
+      "options": [
+        "The order of events",
+        "The number of letters",
+        "A guessed ending",
+        "The colour of a page"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q07",
+      "question": "Which word has silent t in the taught pronunciation?",
+      "options": [
+        "castle",
+        "walk",
+        "listen",
+        "rest"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q08",
+      "question": "What should you avoid when reading listen?",
+      "options": [
+        "Reading the whole word",
+        "Checking the meaning",
+        "Rereading the sentence",
+        "Adding a /t/ sound"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q09",
+      "question": "What is a passage?",
+      "options": [
+        "Related sentences forming connected text",
+        "A random set of letters",
+        "Only a title",
+        "An answer key"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q10",
+      "question": "Which answer stays within the passage?",
+      "options": [
+        "We win a race",
+        "We fly a plane",
+        "We rest",
+        "We eat a cake"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q11",
+      "question": "Why reread the passage?",
+      "options": [
+        "To invent a new event",
+        "To check words and event order",
+        "To skip the middle sentence",
+        "To change the ending"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q12",
+      "question": "What does “after” help identify?",
+      "options": [
+        "The first letter only",
+        "An unstated character",
+        "The longest word",
+        "An event that follows another"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q13",
+      "question": "Why point to a sentence when answering?",
+      "options": [
+        "It shows the evidence",
+        "It changes the story",
+        "It makes a guess true",
+        "It replaces reading"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q14",
+      "question": "What should you do if the retelling is out of order?",
+      "options": [
+        "Add an invented event",
+        "Skip the second sentence",
+        "Reread the sentences in order",
+        "Choose the longest answer"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF464-Q15",
+      "question": "What is the main goal of this lesson?",
+      "options": [
+        "Memorize options",
+        "Sequence a passage and answer with text evidence",
+        "Pronounce silent t",
+        "Invent a new ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF464-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first sentence says we listen to a bell."
+    },
+    {
+      "questionId": "PF464-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "The second sentence says to the castle."
+    },
+    {
+      "questionId": "PF464-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The last sentence says we rest."
+    },
+    {
+      "questionId": "PF464-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The passage begins with listening."
+    },
+    {
+      "questionId": "PF464-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Resting follows the second event."
+    },
+    {
+      "questionId": "PF464-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Sequencing shows event order."
+    },
+    {
+      "questionId": "PF464-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Listen has silent t."
+    },
+    {
+      "questionId": "PF464-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "The t is silent."
+    },
+    {
+      "questionId": "PF464-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "A passage is connected text."
+    },
+    {
+      "questionId": "PF464-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Only resting is stated."
+    },
+    {
+      "questionId": "PF464-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Rereading verifies decoding and sequence."
+    },
+    {
+      "questionId": "PF464-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "After signals sequence."
+    },
+    {
+      "questionId": "PF464-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence supports the answer."
+    },
+    {
+      "questionId": "PF464-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "The text establishes the order."
+    },
+    {
+      "questionId": "PF464-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "The lesson targets connected reading and comprehension."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-464-v1"
+  }
+}

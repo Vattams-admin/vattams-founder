@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-318",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "318-st-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "identify-st-onset-and-compare-word-rimes",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Identify the shared st onset in taught words.",
+      "Compare word endings while decoding every grapheme.",
+      "Group words by shared patterns without confusing onset and rime.",
+      "Read controlled word chains and explain which pattern stays the same or changes."
+    ],
+    "concepts": [
+      "The onset is the beginning consonant sound or blend.",
+      "The rime contains the vowel and following sounds.",
+      "Words can share an onset but have different rimes.",
+      "Word-family work requires decoding the complete word."
+    ],
+    "definitions": [
+      {
+        "term": "onset",
+        "definition": "The initial consonant sound or blend before the vowel."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and sounds that follow it."
+      },
+      {
+        "term": "word family",
+        "definition": "Words that share a spelling or sound pattern."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Compare stop and step.",
+        "solution": "Both begin with st; their rimes differ."
+      },
+      {
+        "prompt": "Compare stem and stand.",
+        "solution": "Both begin with st but their remaining patterns differ."
+      },
+      {
+        "prompt": "How do you sort a new st-word?",
+        "solution": "Read every grapheme, identify the onset, then compare the remaining pattern."
+      }
+    ],
+    "commonMistakes": [
+      "Sorting by s only and ignoring t.",
+      "Assuming every st-word has the same ending.",
+      "Guessing from the onset without decoding the rest.",
+      "Confusing onset with rime."
+    ],
+    "keyTakeaways": [
+      "The onset is st.",
+      "Read the rest of each word carefully.",
+      "Group by the stated feature.",
+      "Decode the whole word before sorting."
+    ],
+    "revisionPoints": [
+      "stop and step share the st onset.",
+      "stem and stand share the onset but have different rimes.",
+      "Onset = beginning; rime = vowel and following sounds.",
+      "Read every grapheme before sorting."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What is the onset in stop?",
+        "answer": "st"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which pair shares the st onset?",
+        "answer": "stop, step"
+      },
+      {
+        "id": "B3",
+        "prompt": "What is the rime in stop?",
+        "answer": "op"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which word begins with st but has a different ending from stop?",
+        "answer": "step"
+      },
+      {
+        "id": "C2",
+        "prompt": "What should you do before grouping words?",
+        "answer": "Decode each complete word"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which pair does not share the same onset?",
+        "answer": "stop, slip"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which part comes after the onset?",
+        "answer": "The rime"
+      },
+      {
+        "id": "A2",
+        "prompt": "What do stem and step share?",
+        "answer": "The st onset"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which word begins with st and ends with ep?",
+        "answer": "step"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Why read every grapheme?",
+        "answer": "A shared onset does not tell you the whole word"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which word does not begin with st?",
+        "answer": "slip"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which pair shares st but has different rimes?",
+        "answer": "stop, stand"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What is a word family?",
+        "answer": "Words sharing a spelling or sound pattern"
+      },
+      {
+        "id": "R2",
+        "prompt": "How should you read a word chain?",
+        "answer": "Decode each full word and compare the pattern"
+      },
+      {
+        "id": "R3",
+        "prompt": "What is the goal of st word-family reading?",
+        "answer": "Read full words and compare onset and rime"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "stop and step share the st onset.",
+      "stem and stand share the onset but have different rimes.",
+      "Onset = beginning; rime = vowel and following sounds.",
+      "Read every grapheme before sorting."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "stop and step share the st onset."
+      },
+      {
+        "front": "Recall 2",
+        "back": "stem and stand share the onset but have different rimes."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Onset = beginning; rime = vowel and following sounds."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Read every grapheme before sorting."
+      }
+    ],
+    "formulaOrFactBank": [
+      "stop and step share the st onset.",
+      "stem and stand share the onset but have different rimes.",
+      "Onset = beginning; rime = vowel and following sounds.",
+      "Read every grapheme before sorting."
+    ],
+    "mistakeBasedRevision": [
+      "Sorting by s only and ignoring t.",
+      "Assuming every st-word has the same ending.",
+      "Guessing from the onset without decoding the rest.",
+      "Confusing onset with rime."
+    ],
+    "weakTopicRevision": [
+      "If st word families controlled reading is weak, use item-level evidence to model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-practice-and-explain",
+      "name": "Model, practise, explain, and check.",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete one example with guidance and explain the evidence.",
+        "Try a new example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with a target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Repair the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Identify the shared st onset in taught words.",
+    "Compare word endings while decoding every grapheme.",
+    "Group words by shared patterns without confusing onset and rime.",
+    "Read controlled word chains and explain which pattern stays the same or changes."
+  ],
+  "questions": [
+    {
+      "questionId": "PF318-Q01",
+      "question": "What is the onset in stop?",
+      "options": [
+        "op",
+        "st",
+        "o",
+        "p"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q02",
+      "question": "Which pair shares the st onset?",
+      "options": [
+        "slip, stop",
+        "sun, step",
+        "map, stand",
+        "stop, step"
+      ],
+      "difficulty": "word_family",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q03",
+      "question": "What is the rime in stop?",
+      "options": [
+        "op",
+        "st",
+        "s",
+        "t"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q04",
+      "question": "Which word begins with st but has a different ending from stop?",
+      "options": [
+        "slip",
+        "sun",
+        "step",
+        "map"
+      ],
+      "difficulty": "word_family",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q05",
+      "question": "What should you do before grouping words?",
+      "options": [
+        "Look only at the first letter",
+        "Decode each complete word",
+        "Guess by length",
+        "Ignore the vowel"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q06",
+      "question": "Which pair does not share the same onset?",
+      "options": [
+        "stop, slip",
+        "step, stem",
+        "stand, stop",
+        "stem, step"
+      ],
+      "difficulty": "word_family",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q07",
+      "question": "Which part comes after the onset?",
+      "options": [
+        "The title",
+        "The punctuation",
+        "The rime",
+        "The answer key"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q08",
+      "question": "What do stem and step share?",
+      "options": [
+        "The same rime",
+        "The same final letters",
+        "The same meaning",
+        "The st onset"
+      ],
+      "difficulty": "word_family",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q09",
+      "question": "Which word begins with st and ends with ep?",
+      "options": [
+        "stop",
+        "step",
+        "stand",
+        "stem"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q10",
+      "question": "Why read every grapheme?",
+      "options": [
+        "The onset determines every ending",
+        "Vowels never matter",
+        "A shared onset does not tell you the whole word",
+        "Endings are silent"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q11",
+      "question": "Which word does not begin with st?",
+      "options": [
+        "slip",
+        "stop",
+        "step",
+        "stem"
+      ],
+      "difficulty": "word_family",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q12",
+      "question": "Which pair shares st but has different rimes?",
+      "options": [
+        "stop, stop",
+        "step, step",
+        "stem, stem",
+        "stop, stand"
+      ],
+      "difficulty": "word_family",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q13",
+      "question": "What is a word family?",
+      "options": [
+        "Words with exactly the same meaning",
+        "Words with no letters in common",
+        "Words sharing a spelling or sound pattern",
+        "Random words"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q14",
+      "question": "How should you read a word chain?",
+      "options": [
+        "Guess from the first letter",
+        "Decode each full word and compare the pattern",
+        "Ignore endings",
+        "Read only the onset"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF318-Q15",
+      "question": "What is the goal of st word-family reading?",
+      "options": [
+        "Read full words and compare onset and rime",
+        "Memorize only the first letter",
+        "Ignore endings",
+        "Guess from length"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF318-Q01",
+      "correctOptionIndex": 1,
+      "explanation": "The onset is st."
+    },
+    {
+      "questionId": "PF318-Q02",
+      "correctOptionIndex": 3,
+      "explanation": "Stop and step both begin st."
+    },
+    {
+      "questionId": "PF318-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The rime contains the vowel and following sound."
+    },
+    {
+      "questionId": "PF318-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "Step begins st but has a different rime."
+    },
+    {
+      "questionId": "PF318-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Accurate grouping depends on reading the whole word."
+    },
+    {
+      "questionId": "PF318-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Stop begins st; slip begins sl."
+    },
+    {
+      "questionId": "PF318-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "The rime follows the onset."
+    },
+    {
+      "questionId": "PF318-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Both begin with st."
+    },
+    {
+      "questionId": "PF318-Q09",
+      "correctOptionIndex": 1,
+      "explanation": "Step has the ending ep."
+    },
+    {
+      "questionId": "PF318-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "The rime distinguishes words."
+    },
+    {
+      "questionId": "PF318-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Slip begins with sl."
+    },
+    {
+      "questionId": "PF318-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "The onset is shared while endings differ."
+    },
+    {
+      "questionId": "PF318-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "Word families share a pattern."
+    },
+    {
+      "questionId": "PF318-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Full decoding supports accurate comparison."
+    },
+    {
+      "questionId": "PF318-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The learner compares patterns while decoding each word."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-318-v1"
+  }
+}
