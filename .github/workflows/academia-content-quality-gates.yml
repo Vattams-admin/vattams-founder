@@ -14,6 +14,7 @@ on:
       - "docs/**"
       - "scripts/validate-*.mjs"
       - "scripts/validate-academia-content-quality-gates.mjs"
+      - "scripts/test-assessment-*.mjs"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/academia-content-quality-gates.yml"
