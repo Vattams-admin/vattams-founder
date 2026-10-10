@@ -13,8 +13,8 @@ BEGIN
     RAISE EXCEPTION
       'Legacy storage bucket contains objects; review contents before retiring legacy access policies.';
   END IF;
-END
-$$;
+END;
+$;
 
 -- No technician photos currently exist. Make this empty legacy bucket private
 -- so a future upload cannot become world-readable by default.
