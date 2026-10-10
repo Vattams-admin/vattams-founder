@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-317",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "317-spell-short-words-with-st",
+    "topic": "encoding",
+    "subtopic": "segment-and-spell-taught-st-words",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment taught st-words into ordered phonemes before writing.",
+      "Represent s and t in the initial onset in the correct order.",
+      "Spell taught st-words and read them back to check each grapheme.",
+      "Repair omissions using sound-by-sound mapping."
+    ],
+    "concepts": [
+      "Encoding maps spoken phonemes to written graphemes.",
+      "The st onset requires s then t.",
+      "Read-back checks whether spelling matches the spoken word.",
+      "An omitted consonant changes the word."
+    ],
+    "definitions": [
+      {
+        "term": "encode",
+        "definition": "Write a word using sound-to-letter knowledge."
+      },
+      {
+        "term": "segment",
+        "definition": "Separate a spoken word into ordered sounds."
+      },
+      {
+        "term": "read-back",
+        "definition": "Read a written response to check it against the intended word."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Spell stop.",
+        "solution": "Segment /s/ /t/ /o/ /p/, write s-t-o-p, then read it back."
+      },
+      {
+        "prompt": "A learner writes sop for stop. What is missing?",
+        "solution": "The t after s."
+      },
+      {
+        "prompt": "How can a learner check stem?",
+        "solution": "Say each sound in order, write the graphemes, and read stem back."
+      }
+    ],
+    "commonMistakes": [
+      "Omitting t after s.",
+      "Reversing the onset letters.",
+      "Leaving out the final consonant.",
+      "Not reading the written word back."
+    ],
+    "keyTakeaways": [
+      "Hear all phonemes before writing.",
+      "Write s then t at the start.",
+      "Check the whole word.",
+      "Repair the exact missing grapheme."
+    ],
+    "revisionPoints": [
+      "Segment first, then write.",
+      "Keep s and t in order.",
+      "Spell stop, step, stem, stand.",
+      "Read the written word back."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which spelling begins with st?",
+        "answer": "stem"
+      },
+      {
+        "id": "B2",
+        "prompt": "What letter follows s at the start of stop?",
+        "answer": "t"
+      },
+      {
+        "id": "B3",
+        "prompt": "A learner writes sop for stop. Which letter is missing?",
+        "answer": "t"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which spelling represents stop?",
+        "answer": "stop"
+      },
+      {
+        "id": "C2",
+        "prompt": "What should a learner do before spelling a word?",
+        "answer": "Say and segment its sounds"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which word begins with st and ends with p?",
+        "answer": "stop"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What should follow writing a word?",
+        "answer": "Read it back and check each grapheme"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which spelling keeps both initial consonants?",
+        "answer": "stand"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which pair both begins with st?",
+        "answer": "stop, step"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What is encoding?",
+        "answer": "Writing using sound-to-letter knowledge"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which error occurs in “sop” for “stop”?",
+        "answer": "The t is omitted"
+      },
+      {
+        "id": "H3",
+        "prompt": "What is the first part of stand?",
+        "answer": "st"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word has the same onset as stem?",
+        "answer": "step"
+      },
+      {
+        "id": "R2",
+        "prompt": "Why spell sounds in order?",
+        "answer": "To represent the spoken word accurately"
+      },
+      {
+        "id": "R3",
+        "prompt": "What is the goal of st spelling practice?",
+        "answer": "Write both onset consonants and check the whole word"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Segment first, then write.",
+      "Keep s and t in order.",
+      "Spell stop, step, stem, stand.",
+      "Read the written word back."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Segment first, then write."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Keep s and t in order."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Spell stop, step, stem, stand."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Read the written word back."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Segment first, then write.",
+      "Keep s and t in order.",
+      "Spell stop, step, stem, stand.",
+      "Read the written word back."
+    ],
+    "mistakeBasedRevision": [
+      "Omitting t after s.",
+      "Reversing the onset letters.",
+      "Leaving out the final consonant.",
+      "Not reading the written word back."
+    ],
+    "weakTopicRevision": [
+      "If spell short words with st is weak, use item-level evidence to model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-practice-and-explain",
+      "name": "Model, practise, explain, and check.",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete one example with guidance and explain the evidence.",
+        "Try a new example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with a target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Repair the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Segment taught st-words into ordered phonemes before writing.",
+    "Represent s and t in the initial onset in the correct order.",
+    "Spell taught st-words and read them back to check each grapheme.",
+    "Repair omissions using sound-by-sound mapping."
+  ],
+  "questions": [
+    {
+      "questionId": "PF317-Q01",
+      "question": "Which spelling begins with st?",
+      "options": [
+        "sem",
+        "stem",
+        "tem",
+        "slem"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q02",
+      "question": "What letter follows s at the start of stop?",
+      "options": [
+        "l",
+        "p",
+        "n",
+        "t"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q03",
+      "question": "A learner writes sop for stop. Which letter is missing?",
+      "options": [
+        "t",
+        "s",
+        "o",
+        "p"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q04",
+      "question": "Which spelling represents stop?",
+      "options": [
+        "sop",
+        "top",
+        "stop",
+        "stot"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q05",
+      "question": "What should a learner do before spelling a word?",
+      "options": [
+        "Guess the shape",
+        "Say and segment its sounds",
+        "Write the last letter only",
+        "Skip the onset"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q06",
+      "question": "Which word begins with st and ends with p?",
+      "options": [
+        "stop",
+        "step",
+        "stem",
+        "stand"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q07",
+      "question": "What should follow writing a word?",
+      "options": [
+        "Cover it and stop",
+        "Add a vowel",
+        "Read it back and check each grapheme",
+        "Ignore a mismatch"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q08",
+      "question": "Which spelling keeps both initial consonants?",
+      "options": [
+        "sand",
+        "tand",
+        "sland",
+        "stand"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q09",
+      "question": "Which pair both begins with st?",
+      "options": [
+        "slip, step",
+        "stop, step",
+        "sun, stand",
+        "map, stem"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q10",
+      "question": "What is encoding?",
+      "options": [
+        "Reading punctuation",
+        "Guessing from length",
+        "Writing using sound-to-letter knowledge",
+        "Sequencing a story"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q11",
+      "question": "Which error occurs in “sop” for “stop”?",
+      "options": [
+        "The t is omitted",
+        "The p is doubled",
+        "The vowel is missing",
+        "The s is reversed"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q12",
+      "question": "What is the first part of stand?",
+      "options": [
+        "ta",
+        "and",
+        "nd",
+        "st"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q13",
+      "question": "Which word has the same onset as stem?",
+      "options": [
+        "slip",
+        "stop? no",
+        "step",
+        "frog"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q14",
+      "question": "Why spell sounds in order?",
+      "options": [
+        "To make words longer",
+        "To represent the spoken word accurately",
+        "To avoid listening",
+        "To replace reading"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF317-Q15",
+      "question": "What is the goal of st spelling practice?",
+      "options": [
+        "Write both onset consonants and check the whole word",
+        "Write only s",
+        "Skip middle sounds",
+        "Memorize options"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF317-Q01",
+      "correctOptionIndex": 1,
+      "explanation": "Stem begins with s then t."
+    },
+    {
+      "questionId": "PF317-Q02",
+      "correctOptionIndex": 3,
+      "explanation": "The initial spelling is st."
+    },
+    {
+      "questionId": "PF317-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Stop includes t after s."
+    },
+    {
+      "questionId": "PF317-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "Stop contains s-t-o-p."
+    },
+    {
+      "questionId": "PF317-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Segmentation preserves phoneme order."
+    },
+    {
+      "questionId": "PF317-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Stop ends with p."
+    },
+    {
+      "questionId": "PF317-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Read-back checks the spelling."
+    },
+    {
+      "questionId": "PF317-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Stand begins with s and t."
+    },
+    {
+      "questionId": "PF317-Q09",
+      "correctOptionIndex": 1,
+      "explanation": "Stop and step both begin with st."
+    },
+    {
+      "questionId": "PF317-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Encoding maps sounds to graphemes."
+    },
+    {
+      "questionId": "PF317-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The spelling omits t."
+    },
+    {
+      "questionId": "PF317-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "The onset is st."
+    },
+    {
+      "questionId": "PF317-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "Step begins with st."
+    },
+    {
+      "questionId": "PF317-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Ordered mapping preserves the word."
+    },
+    {
+      "questionId": "PF317-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Accurate encoding represents the full word."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-317-v1"
+  }
+}
