@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-400",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "400-controlled-squ-passage-sequencing-comprehension",
+    "topic": "connected-text",
+    "subtopic": "controlled-squ-passage-sequencing-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a controlled passage with taught squ-words accurately.",
+      "Sequence stated events as first, next, and last.",
+      "Answer literal questions using passage evidence.",
+      "Reread to repair a missed sound and retain meaning."
+    ],
+    "concepts": [
+      "A passage connects related sentences.",
+      "Sequence words identify event order.",
+      "Literal answers must match stated text.",
+      "Rereading supports decoding and comprehension."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "The order in which events happen."
+      },
+      {
+        "term": "passage",
+        "definition": "A short connected text made of related sentences."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Words in a passage that support an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Read: “Quin spots a squid. Quin sketches the squid. Quin shows the sketch.” What happens first?",
+        "solution": "Quin spots a squid."
+      },
+      {
+        "prompt": "What does Quin do after spotting the squid?",
+        "solution": "Quin sketches the squid."
+      },
+      {
+        "prompt": "How do you verify the order?",
+        "solution": "Reread the sentences in sequence."
+      }
+    ],
+    "commonMistakes": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Misreading a squ-word.",
+      "Answering without evidence."
+    ],
+    "keyTakeaways": [
+      "Read every sentence accurately.",
+      "Retell events in order.",
+      "Use the passage to support answers.",
+      "Reread when meaning does not match."
+    ],
+    "revisionPoints": [
+      "Quin spots a squid.",
+      "Quin sketches the squid.",
+      "Quin shows the sketch.",
+      "Use text evidence to sequence events."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What does Quin spot first?",
+        "answer": "A squid"
+      },
+      {
+        "id": "B2",
+        "prompt": "What does Quin do after spotting the squid?",
+        "answer": "Sketches the squid"
+      },
+      {
+        "id": "B3",
+        "prompt": "What happens last?",
+        "answer": "Quin shows the sketch"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which event happens first?",
+        "answer": "Quin spots a squid"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which event follows spotting the squid?",
+        "answer": "Quin sketches the squid"
+      },
+      {
+        "id": "C3",
+        "prompt": "What does sequencing show?",
+        "answer": "The order of events"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word begins with squ?",
+        "answer": "squid"
+      },
+      {
+        "id": "A2",
+        "prompt": "If squid is read as sid, which sounds are missing?",
+        "answer": "/k/ and /w/"
+      },
+      {
+        "id": "A3",
+        "prompt": "What is a passage?",
+        "answer": "Related sentences forming connected text"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which answer stays within the passage?",
+        "answer": "Quin shows the sketch"
+      },
+      {
+        "id": "H2",
+        "prompt": "Why reread the passage?",
+        "answer": "To check words and event order"
+      },
+      {
+        "id": "H3",
+        "prompt": "What does “after” help identify?",
+        "answer": "An event that follows another"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Why point to a sentence when answering?",
+        "answer": "It shows the evidence"
+      },
+      {
+        "id": "R2",
+        "prompt": "What should you do if the retelling is out of order?",
+        "answer": "Reread the sentences in order"
+      },
+      {
+        "id": "R3",
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Sequence a passage and answer with text evidence"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Quin spots a squid.",
+      "Quin sketches the squid.",
+      "Quin shows the sketch.",
+      "Use text evidence to sequence events."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Quin spots a squid."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Quin sketches the squid."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Quin shows the sketch."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Use text evidence to sequence events."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Quin spots a squid.",
+      "Quin sketches the squid.",
+      "Quin shows the sketch.",
+      "Use text evidence to sequence events."
+    ],
+    "mistakeBasedRevision": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Misreading a squ-word.",
+      "Answering without evidence."
+    ],
+    "weakTopicRevision": [
+      "If connected-text is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-practice",
+      "name": "Retell a controlled squ passage in order",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete a guided example and explain the sound or text evidence.",
+        "Try a fresh example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item",
+      "steps": [
+        "Review a sample response with one target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Correct the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read a controlled passage with taught squ-words accurately.",
+    "Sequence stated events as first, next, and last.",
+    "Answer literal questions using passage evidence.",
+    "Reread to repair a missed sound and retain meaning."
+  ],
+  "questions": [
+    {
+      "questionId": "PF400-Q01",
+      "question": "What does Quin spot first?",
+      "options": [
+        "A squid",
+        "A squash",
+        "A strap",
+        "A screen"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q02",
+      "question": "What does Quin do after spotting the squid?",
+      "options": [
+        "Shows the sketch",
+        "Goes to sleep",
+        "Sketches the squid",
+        "Finds a strap"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q03",
+      "question": "What happens last?",
+      "options": [
+        "Quin spots the squid",
+        "Quin shows the sketch",
+        "Quin sketches the squid",
+        "Quin finds a shell"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q04",
+      "question": "Which event happens first?",
+      "options": [
+        "Quin shows the sketch",
+        "Quin sketches the squid",
+        "Quin finds a strap",
+        "Quin spots a squid"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q05",
+      "question": "Which event follows spotting the squid?",
+      "options": [
+        "Quin shows the sketch",
+        "Quin sketches the squid",
+        "Quin runs away",
+        "Quin eats lunch"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q06",
+      "question": "What does sequencing show?",
+      "options": [
+        "The order of events",
+        "The number of letters",
+        "A guessed ending",
+        "The colour of a page"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q07",
+      "question": "Which word begins with squ?",
+      "options": [
+        "strap",
+        "step",
+        "squid",
+        "slap"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q08",
+      "question": "If squid is read as sid, which sounds are missing?",
+      "options": [
+        "/s/",
+        "/ɪ/",
+        "/d/",
+        "/k/ and /w/"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q09",
+      "question": "What is a passage?",
+      "options": [
+        "Related sentences forming connected text",
+        "A random set of letters",
+        "Only a title",
+        "An answer key"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q10",
+      "question": "Which answer stays within the passage?",
+      "options": [
+        "Quin wins a race",
+        "Quin flies a plane",
+        "Quin shows the sketch",
+        "Quin eats a cake"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q11",
+      "question": "Why reread the passage?",
+      "options": [
+        "To invent a new event",
+        "To check words and event order",
+        "To skip the middle sentence",
+        "To change the ending"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q12",
+      "question": "What does “after” help identify?",
+      "options": [
+        "The first letter only",
+        "An unstated character",
+        "The longest word",
+        "An event that follows another"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q13",
+      "question": "Why point to a sentence when answering?",
+      "options": [
+        "It shows the evidence",
+        "It changes the story",
+        "It makes a guess true",
+        "It replaces reading"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q14",
+      "question": "What should you do if the retelling is out of order?",
+      "options": [
+        "Add an invented event",
+        "Skip the second sentence",
+        "Reread the sentences in order",
+        "Choose the longest answer"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF400-Q15",
+      "question": "What is the main goal of this lesson?",
+      "options": [
+        "Memorize options",
+        "Sequence a passage and answer with text evidence",
+        "Skip squ-words",
+        "Invent a new ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF400-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The passage begins with Quin spotting a squid."
+    },
+    {
+      "questionId": "PF400-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "The second sentence says Quin sketches the squid."
+    },
+    {
+      "questionId": "PF400-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The last sentence says Quin shows the sketch."
+    },
+    {
+      "questionId": "PF400-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The passage begins with spotting a squid."
+    },
+    {
+      "questionId": "PF400-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Sketching the squid is the next stated event."
+    },
+    {
+      "questionId": "PF400-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Sequencing shows event order."
+    },
+    {
+      "questionId": "PF400-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Squid begins with squ."
+    },
+    {
+      "questionId": "PF400-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Squid includes /k/ and /w/ after /s/."
+    },
+    {
+      "questionId": "PF400-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "A passage is connected text."
+    },
+    {
+      "questionId": "PF400-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Only showing the sketch is stated."
+    },
+    {
+      "questionId": "PF400-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Rereading verifies decoding and sequence."
+    },
+    {
+      "questionId": "PF400-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "After signals sequence."
+    },
+    {
+      "questionId": "PF400-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence supports the answer."
+    },
+    {
+      "questionId": "PF400-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "The text establishes the order."
+    },
+    {
+      "questionId": "PF400-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "The lesson targets connected reading and comprehension."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-400-v1"
+  }
+}
