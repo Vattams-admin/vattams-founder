@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-440",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "440-controlled-wr-passage-sequencing-comprehension",
+    "topic": "connected-text",
+    "subtopic": "sequence-events-and-answer-literal-questions-in-controlled-wr-passage",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a controlled passage with taught wr-words accurately.",
+      "Sequence stated events as first, next, and last.",
+      "Answer literal questions using passage evidence.",
+      "Reread to repair a missed sound and retain meaning."
+    ],
+    "concepts": [
+      "A passage connects related sentences.",
+      "Sequence language identifies event order.",
+      "Literal answers must match stated text.",
+      "The initial w is silent in taught wr words."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "The order in which events happen."
+      },
+      {
+        "term": "passage",
+        "definition": "A short connected text made of related sentences."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Words in a passage that support an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Read: “Ria gets a gift. Ria wraps the gift. Ria rests.” What happens first?",
+        "solution": "Ria gets a gift."
+      },
+      {
+        "prompt": "What happens after Ria wraps the gift?",
+        "solution": "Ria rests."
+      },
+      {
+        "prompt": "How do you verify the order?",
+        "solution": "Reread the sentences in sequence."
+      }
+    ],
+    "commonMistakes": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Pronouncing the silent w.",
+      "Answering without evidence."
+    ],
+    "keyTakeaways": [
+      "Read every sentence accurately.",
+      "Retell events in order.",
+      "Use the passage to support answers.",
+      "Remember initial w is silent."
+    ],
+    "revisionPoints": [
+      "Ria gets a gift.",
+      "Ria wraps the gift.",
+      "Ria rests.",
+      "Use text evidence to sequence events."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What does Ria get first?",
+        "answer": "A gift"
+      },
+      {
+        "id": "B2",
+        "prompt": "What does Ria wrap?",
+        "answer": "The gift"
+      },
+      {
+        "id": "B3",
+        "prompt": "What happens last?",
+        "answer": "Ria rests"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which event follows wrapping the gift?",
+        "answer": "Ria rests"
+      },
+      {
+        "id": "C2",
+        "prompt": "What does sequencing show?",
+        "answer": "The order of events"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which answer stays within the passage?",
+        "answer": "Ria rests"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word begins with wr spelling?",
+        "answer": "wraps"
+      },
+      {
+        "id": "A2",
+        "prompt": "What is the first spoken sound in wraps?",
+        "answer": "/r/"
+      },
+      {
+        "id": "A3",
+        "prompt": "What is a passage?",
+        "answer": "Related sentences forming connected text"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Why reread the passage?",
+        "answer": "To check words and event order"
+      },
+      {
+        "id": "H2",
+        "prompt": "What should you do if the retelling is out of order?",
+        "answer": "Reread the sentences in order"
+      },
+      {
+        "id": "H3",
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Sequence a passage and answer with text evidence"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What does “after” help identify?",
+        "answer": "An event that follows another"
+      },
+      {
+        "id": "R2",
+        "prompt": "Why point to a sentence when answering?",
+        "answer": "It shows the evidence"
+      },
+      {
+        "id": "R3",
+        "prompt": "What should you remember when completing this connected-text task?",
+        "answer": "Read every sentence accurately."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Ria gets a gift.",
+      "Ria wraps the gift.",
+      "Ria rests.",
+      "Use text evidence to sequence events."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Ria gets a gift."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Ria wraps the gift."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Ria rests."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Use text evidence to sequence events."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Ria gets a gift.",
+      "Ria wraps the gift.",
+      "Ria rests.",
+      "Use text evidence to sequence events."
+    ],
+    "mistakeBasedRevision": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Pronouncing the silent w.",
+      "Answering without evidence."
+    ],
+    "weakTopicRevision": [
+      "If connected-text is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "passage-sequencing-with-text-evidence",
+      "name": "Retell a controlled wr passage in order",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete a guided example and explain the sound or text evidence.",
+        "Try a fresh example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with one target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Correct the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read a controlled passage with taught wr-words accurately.",
+    "Sequence stated events as first, next, and last.",
+    "Answer literal questions using passage evidence.",
+    "Reread to repair a missed sound and retain meaning."
+  ],
+  "questions": [
+    {
+      "questionId": "PF440-Q01",
+      "question": "What does Ria get first?",
+      "options": [
+        "A gift",
+        "A wristband",
+        "A rope",
+        "A flag"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q02",
+      "question": "What does Ria wrap?",
+      "options": [
+        "A shoe",
+        "A strap",
+        "The gift",
+        "A screen"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q03",
+      "question": "What happens last?",
+      "options": [
+        "Ria gets a gift",
+        "Ria rests",
+        "Ria wraps the gift",
+        "Ria runs a race"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q04",
+      "question": "Which event happens first?",
+      "options": [
+        "Ria rests",
+        "Ria wraps the gift",
+        "Ria swims",
+        "Ria gets a gift"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q05",
+      "question": "Which event follows wrapping the gift?",
+      "options": [
+        "Ria gets a gift",
+        "Ria rests",
+        "Ria finds a flag",
+        "Ria skates"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q06",
+      "question": "What does sequencing show?",
+      "options": [
+        "The order of events",
+        "The number of letters",
+        "A guessed ending",
+        "The colour of a page"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q07",
+      "question": "Which word begins with wr spelling?",
+      "options": [
+        "gift",
+        "gets",
+        "wraps",
+        "rests"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q08",
+      "question": "What is the first spoken sound in wraps?",
+      "options": [
+        "/w/",
+        "/æ/",
+        "/s/",
+        "/r/"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q09",
+      "question": "What is a passage?",
+      "options": [
+        "Related sentences forming connected text",
+        "A random set of letters",
+        "Only a title",
+        "An answer key"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q10",
+      "question": "Which answer stays within the passage?",
+      "options": [
+        "Ria wins a race",
+        "Ria flies a plane",
+        "Ria rests",
+        "Ria eats a cake"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q11",
+      "question": "Why reread the passage?",
+      "options": [
+        "To invent a new event",
+        "To check words and event order",
+        "To skip the middle sentence",
+        "To change the ending"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q12",
+      "question": "What does “after” help identify?",
+      "options": [
+        "The first letter only",
+        "An unstated character",
+        "The longest word",
+        "An event that follows another"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q13",
+      "question": "Why point to a sentence when answering?",
+      "options": [
+        "It shows the evidence",
+        "It changes the story",
+        "It makes a guess true",
+        "It replaces reading"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q14",
+      "question": "What should you do if the retelling is out of order?",
+      "options": [
+        "Add an invented event",
+        "Skip the second sentence",
+        "Reread the sentences in order",
+        "Choose the longest answer"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF440-Q15",
+      "question": "What is the main goal of this lesson?",
+      "options": [
+        "Memorize options",
+        "Sequence a passage and answer with text evidence",
+        "Pronounce silent w",
+        "Invent a new ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF440-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first sentence says Ria gets a gift."
+    },
+    {
+      "questionId": "PF440-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "The second sentence says Ria wraps the gift."
+    },
+    {
+      "questionId": "PF440-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The last sentence says Ria rests."
+    },
+    {
+      "questionId": "PF440-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The passage begins with getting a gift."
+    },
+    {
+      "questionId": "PF440-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Resting follows the second event."
+    },
+    {
+      "questionId": "PF440-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Sequencing shows event order."
+    },
+    {
+      "questionId": "PF440-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Wraps begins with wr."
+    },
+    {
+      "questionId": "PF440-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "The initial w is silent."
+    },
+    {
+      "questionId": "PF440-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "A passage is connected text."
+    },
+    {
+      "questionId": "PF440-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Only resting is stated among these options."
+    },
+    {
+      "questionId": "PF440-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Rereading verifies decoding and sequence."
+    },
+    {
+      "questionId": "PF440-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "After signals sequence."
+    },
+    {
+      "questionId": "PF440-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence supports the answer."
+    },
+    {
+      "questionId": "PF440-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "The text establishes the order."
+    },
+    {
+      "questionId": "PF440-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "The lesson targets connected reading and comprehension."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-440-v1"
+  }
+}
