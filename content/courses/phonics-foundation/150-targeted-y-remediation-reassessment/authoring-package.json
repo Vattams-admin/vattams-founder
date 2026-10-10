@@ -1,0 +1,504 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-150",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "150-targeted-y-remediation-reassessment",
+    "topic": "remediation",
+    "subtopic": "y-reassessment",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Use the diagnostic profile to select focused /y/ remediation.",
+      "Teach and practise the specific weak component using explicit modelling and guided response.",
+      "Reassess with fresh items across the same target components.",
+      "Apply the 80% mastery threshold to decide progression or further remediation."
+    ],
+    "concepts": [
+      "Remediation is most effective when it matches the diagnosed error.",
+      "Fresh items check transfer rather than memory of the diagnostic.",
+      "A learner may be secure in decoding but still need spelling or comprehension practice.",
+      "Progression follows evidence of mastery and includes cumulative review."
+    ],
+    "definitions": [
+      {
+        "term": "targeted remediation",
+        "definition": "Focused instruction and practice designed for a specific identified learning gap."
+      },
+      {
+        "term": "fresh-item reassessment",
+        "definition": "A new set of items used to test whether a skill transfers beyond the original questions."
+      },
+      {
+        "term": "transfer",
+        "definition": "Applying a skill successfully to new words, sentences, or contexts."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Weak decoding",
+        "solution": "Model y-a-k, blend yak, then practise fresh words while pointing to every grapheme."
+      },
+      {
+        "prompt": "Weak encoding",
+        "solution": "Say a fresh CVC word, segment the three sounds, write each grapheme, and reread the word."
+      },
+      {
+        "prompt": "Weak comprehension",
+        "solution": "Reread a controlled sentence, underline the evidence, and answer a literal question from the text."
+      }
+    ],
+    "commonMistakes": [
+      "Repeating the exact diagnostic questions instead of using fresh items.",
+      "Giving general practice when the error is specifically the medial vowel.",
+      "Advancing below the mastery threshold without a documented reason.",
+      "Using speed as a substitute for accurate reading."
+    ],
+    "keyTakeaways": [
+      "Target the weakest diagnosed component first.",
+      "Model, guide, practise independently, and then reassess.",
+      "Use new items in the reassessment.",
+      "At 80% or higher, advance with cumulative review; below 80%, repeat focused remediation."
+    ],
+    "revisionPoints": [
+      "Listen for initial /y/.",
+      "Blend all three phonemes in CVC words.",
+      "Segment and spell each sound.",
+      "Sort by rime, not only by initial letter.",
+      "Reread sentences for meaning.",
+      "Sequence passage events using text evidence."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "If /y/ recognition is weak, what should be practised first?",
+        "answer": "Oral listening and production of /y/ contrasted with other initial sounds."
+      },
+      {
+        "id": "B2",
+        "prompt": "If the learner reads yak as yap, what is the focus?",
+        "answer": "Final-consonant discrimination and complete CVC blending."
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Why must reassessment items be fresh?",
+        "answer": "To check transfer rather than recall of the earlier answers."
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What is the routing threshold for this sequence?",
+        "answer": "80%."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What should happen after a score below 80%?",
+        "answer": "Continue targeted remediation and reassess the weak component with new items."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Identify the target sound, blend or segment the word, then explain how you checked the result.",
+        "answer": "Use phoneme-level evidence and reread the word or sentence."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Listen for initial /y/.",
+      "Blend all three phonemes in CVC words.",
+      "Segment and spell each sound.",
+      "Sort by rime, not only by initial letter."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Listen for initial /y/."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Blend all three phonemes in CVC words."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Segment and spell each sound."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Sort by rime, not only by initial letter."
+      },
+      {
+        "front": "Recall 5",
+        "back": "Reread sentences for meaning."
+      },
+      {
+        "front": "Recall 6",
+        "back": "Sequence passage events using text evidence."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Listen for initial /y/.",
+      "Blend all three phonemes in CVC words.",
+      "Segment and spell each sound.",
+      "Sort by rime, not only by initial letter.",
+      "Reread sentences for meaning.",
+      "Sequence passage events using text evidence."
+    ],
+    "mistakeBasedRevision": [
+      "Repeating the exact diagnostic questions instead of using fresh items.",
+      "Giving general practice when the error is specifically the medial vowel.",
+      "Advancing below the mastery threshold without a documented reason.",
+      "Using speed as a substitute for accurate reading."
+    ],
+    "weakTopicRevision": [
+      "If remediation accuracy is below target, isolate the weak sound or reading step, model it, practise with guided examples, then reassess using fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "component-specific-remediation",
+      "name": "type",
+      "steps": [
+        "Review the diagnostic error profile.",
+        "Model the target sound, word, or sentence skill explicitly.",
+        "Use guided practice followed by independent fresh examples.",
+        "Record whether the learner now performs the skill accurately."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "fresh-item-reassessment",
+      "name": "type",
+      "steps": [
+        "Administer the reassessment without giving answers during the attempt.",
+        "Score the 15 items against the private answer key.",
+        "Compare the score and component pattern with the diagnostic.",
+        "Route at 80% or higher to the next cycle; otherwise repeat targeted support."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Complete the fresh 15-item reassessment across all target components.",
+    "Demonstrate at least 80% accuracy to advance from the y-cycle.",
+    "Receive a specific next-step plan when accuracy remains below threshold."
+  ],
+  "questions": [
+    {
+      "questionId": "PF150-Q01",
+      "question": "Which word begins with /y/?",
+      "options": [
+        "yet",
+        "map",
+        "sun",
+        "pen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q02",
+      "question": "Blend /y/ /a/ /p/.",
+      "options": [
+        "yap",
+        "yak",
+        "yam",
+        "yen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q03",
+      "question": "Which spelling represents /y/ /e/ /n/?",
+      "options": [
+        "yen",
+        "yan",
+        "yap",
+        "yak"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q04",
+      "question": "Which word shares -am with yam?",
+      "options": [
+        "ham",
+        "yak",
+        "yet",
+        "yap"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q05",
+      "question": "In “The yak can yap,” what can the yak do?",
+      "options": [
+        "yap",
+        "yam",
+        "yet",
+        "yen"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q06",
+      "question": "What is the final sound in yak?",
+      "options": [
+        "/k/",
+        "/y/",
+        "/a/",
+        "/p/"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q07",
+      "question": "Which word contains short /e/?",
+      "options": [
+        "yes",
+        "yak",
+        "yam",
+        "yap"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q08",
+      "question": "Complete the CVC spelling y-a-_.",
+      "options": [
+        "k",
+        "e",
+        "m",
+        "s"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q09",
+      "question": "Which spelling matches the sounds /y/ /e/ /t/?",
+      "options": [
+        "yet",
+        "yat",
+        "yit",
+        "yot"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q10",
+      "question": "Which word belongs to the -et family?",
+      "options": [
+        "yet",
+        "yam",
+        "yak",
+        "yap"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q11",
+      "question": "What follows “A yak can yap” in the controlled passage?",
+      "options": [
+        "The yak sat by Sam.",
+        "Sam has a yam.",
+        "The passage ends.",
+        "The yam can yap."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q12",
+      "question": "Which sentence contains the word yam?",
+      "options": [
+        "Sam has a yam.",
+        "The yak can yap.",
+        "The yak sat.",
+        "Yes, Sam can yap."
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q13",
+      "question": "Which spelling matches /y/ /a/ /p/?",
+      "options": [
+        "yap",
+        "yak",
+        "yam",
+        "yen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q14",
+      "question": "Which word does NOT begin with /y/?",
+      "options": [
+        "map",
+        "yes",
+        "yet",
+        "yam"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF150-Q15",
+      "question": "A learner scores 11 out of 15. What is the correct route?",
+      "options": [
+        "Repeat targeted remediation because 11/15 is below 80%",
+        "Advance with cumulative review because the score is above 80%",
+        "Delete the assessment result",
+        "Skip all future checks"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF150-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Yet begins with /y/."
+    },
+    {
+      "questionId": "PF150-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The sounds blend to yap."
+    },
+    {
+      "questionId": "PF150-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Yen spells /y/ /e/ /n/."
+    },
+    {
+      "questionId": "PF150-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Ham and yam share -am."
+    },
+    {
+      "questionId": "PF150-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence states that the yak can yap."
+    },
+    {
+      "questionId": "PF150-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Yak ends with /k/."
+    },
+    {
+      "questionId": "PF150-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Yes contains short /e/."
+    },
+    {
+      "questionId": "PF150-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Yak ends in k."
+    },
+    {
+      "questionId": "PF150-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Yet uses e for short /e/."
+    },
+    {
+      "questionId": "PF150-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "Yet shares -et with words such as pet."
+    },
+    {
+      "questionId": "PF150-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The next event is the yak sitting by Sam."
+    },
+    {
+      "questionId": "PF150-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The first sentence contains yam."
+    },
+    {
+      "questionId": "PF150-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Yap ends in p."
+    },
+    {
+      "questionId": "PF150-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Map begins with /m/."
+    },
+    {
+      "questionId": "PF150-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "11 out of 15 is about 73%, below the 80% mastery threshold, so targeted remediation is required."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-150-v1"
+  },
+  "assessment": {
+    "assessmentId": "PF150-REASSESS-01",
+    "title": "Phonics Foundation /y/ Targeted Remediation Reassessment",
+    "type": "reassessment",
+    "questionCount": 15,
+    "masteryThresholdPercent": 80,
+    "components": [
+      "sound_recognition",
+      "decoding",
+      "encoding",
+      "word_families",
+      "comprehension",
+      "fluency"
+    ],
+    "routing": {
+      "atOrAboveThreshold": "advance_to_next_phonics_cycle",
+      "belowThreshold": "repeat_targeted_remediation"
+    },
+    "freshItemsRequired": true,
+    "linkedDiagnosticId": "PF149-DIAG-01"
+  }
+}

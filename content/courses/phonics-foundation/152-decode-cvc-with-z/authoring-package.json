@@ -1,0 +1,483 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-152",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "152-decode-cvc-with-z",
+    "topic": "decoding",
+    "subtopic": "z-cvc-blending",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Blend initial /z/, a short vowel, and a final consonant to read taught CVC words.",
+      "Decode zip, zap, zig, zag, zit, and zen from graphemes rather than pictures.",
+      "Track all three phonemes from left to right.",
+      "Distinguish short /a/, /e/, and /i/ while preserving the final consonant."
+    ],
+    "concepts": [
+      "CVC decoding requires attention to the initial consonant, medial vowel, and final consonant.",
+      "The grapheme z represents initial /z/ in this set.",
+      "The medial vowel differentiates words such as zap, zip, and zen.",
+      "The final consonant completes the word and must be checked."
+    ],
+    "definitions": [
+      {
+        "term": "blend",
+        "definition": "Combine speech sounds in order to read a word."
+      },
+      {
+        "term": "CVC word",
+        "definition": "A consonant-vowel-consonant word pattern."
+      },
+      {
+        "term": "medial vowel",
+        "definition": "The vowel sound in the middle of a word."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Blend z-i-p.",
+        "solution": "Say /z/ /i/ /p/, then blend to zip."
+      },
+      {
+        "prompt": "Compare zap and zip.",
+        "solution": "The initial /z/ and final /p/ remain; the vowel changes from /a/ to /i/."
+      },
+      {
+        "prompt": "Decode zen.",
+        "solution": "Say /z/ /e/ /n/ in order and blend the word zen."
+      }
+    ],
+    "commonMistakes": [
+      "Guessing from a picture instead of blending.",
+      "Confusing short /a/, /e/, and /i/.",
+      "Ignoring the final consonant.",
+      "Adding an extra vowel after /z/."
+    ],
+    "keyTakeaways": [
+      "Point to each grapheme from left to right.",
+      "Keep the medial vowel clear.",
+      "Check the final sound before saying the whole word.",
+      "Reread the blended word to verify it matches the spelling."
+    ],
+    "revisionPoints": [
+      "z-a-p → zap.",
+      "z-i-p → zip.",
+      "z-i-g → zig.",
+      "z-a-g → zag.",
+      "z-i-t → zit.",
+      "z-e-n → zen."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Blend /z/ /i/ /p/.",
+        "answer": "zip"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word has short /a/: zap, zip, or zen?",
+        "answer": "zap"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "What changes between zap and zip?",
+        "answer": "The medial vowel changes from /a/ to /i/."
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Decode z-e-n from left to right.",
+        "answer": "zen"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "If zig is read as zip, what must be checked?",
+        "answer": "The final consonant: g versus p."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Identify the target sound, blend or segment the word, then explain how you checked the result.",
+        "answer": "Use phoneme-level evidence and reread the word or sentence."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "z-a-p → zap.",
+      "z-i-p → zip.",
+      "z-i-g → zig.",
+      "z-a-g → zag."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "z-a-p → zap."
+      },
+      {
+        "front": "Recall 2",
+        "back": "z-i-p → zip."
+      },
+      {
+        "front": "Recall 3",
+        "back": "z-i-g → zig."
+      },
+      {
+        "front": "Recall 4",
+        "back": "z-a-g → zag."
+      },
+      {
+        "front": "Recall 5",
+        "back": "z-i-t → zit."
+      },
+      {
+        "front": "Recall 6",
+        "back": "z-e-n → zen."
+      }
+    ],
+    "formulaOrFactBank": [
+      "z-a-p → zap.",
+      "z-i-p → zip.",
+      "z-i-g → zig.",
+      "z-a-g → zag.",
+      "z-i-t → zit.",
+      "z-e-n → zen."
+    ],
+    "mistakeBasedRevision": [
+      "Guessing from a picture instead of blending.",
+      "Confusing short /a/, /e/, and /i/.",
+      "Ignoring the final consonant.",
+      "Adding an extra vowel after /z/."
+    ],
+    "weakTopicRevision": [
+      "If decoding accuracy is below target, isolate the weak sound or reading step, model it, practise with guided examples, then reassess using fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "three-sound-blending",
+      "name": "type",
+      "steps": [
+        "Place one counter for each of three phonemes.",
+        "Say /z/, then the vowel, then the final sound.",
+        "Sweep under the graphemes and blend the word.",
+        "Repeat with zip, zap, zig, zag, zit, and zen."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "medial-vowel-contrast",
+      "name": "type",
+      "steps": [
+        "Read zap, zip, and zen.",
+        "Keep the initial /z/ in place.",
+        "Identify the vowel in each word.",
+        "Blend each word and explain how the vowel changes it."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Decode at least 8 of 10 taught z-initial CVC words accurately.",
+    "Identify initial, medial, and final phonemes in a CVC word.",
+    "Self-correct vowel or final-consonant errors by tracking each grapheme."
+  ],
+  "questions": [
+    {
+      "questionId": "PF152-Q01",
+      "question": "Which word matches /z/ /i/ /p/?",
+      "options": [
+        "zip",
+        "zap",
+        "zig",
+        "zen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q02",
+      "question": "Which word contains short /a/?",
+      "options": [
+        "zap",
+        "zip",
+        "zen",
+        "zit"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q03",
+      "question": "Which grapheme sequence spells zen?",
+      "options": [
+        "z-e-n",
+        "z-a-p",
+        "z-i-p",
+        "z-a-g"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q04",
+      "question": "Which word ends with /g/?",
+      "options": [
+        "zig",
+        "zip",
+        "zit",
+        "zen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q05",
+      "question": "Which word begins with /z/ and ends with /t/?",
+      "options": [
+        "zit",
+        "zip",
+        "zap",
+        "zag"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q06",
+      "question": "Which word contains short /e/?",
+      "options": [
+        "zen",
+        "zap",
+        "zip",
+        "zig"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q07",
+      "question": "What is the initial phoneme in zag?",
+      "options": [
+        "/z/",
+        "/a/",
+        "/g/",
+        "/s/"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q08",
+      "question": "What is the final phoneme in zip?",
+      "options": [
+        "/p/",
+        "/z/",
+        "/i/",
+        "/g/"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q09",
+      "question": "Which word does NOT begin with /z/?",
+      "options": [
+        "sip",
+        "zip",
+        "zag",
+        "zen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q10",
+      "question": "Which pair has the same initial and final sounds but different vowels?",
+      "options": [
+        "zap and zip",
+        "zip and zen",
+        "zig and zag",
+        "zit and zen"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q11",
+      "question": "Which sequence spells zig?",
+      "options": [
+        "z-i-g",
+        "z-a-g",
+        "z-i-p",
+        "z-e-n"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q12",
+      "question": "Why must a reader check the final consonant?",
+      "options": [
+        "It distinguishes words such as zig and zip",
+        "It makes the vowel disappear",
+        "It replaces the initial sound",
+        "It means the word has no ending"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q13",
+      "question": "Which word rhymes with zip?",
+      "options": [
+        "sip",
+        "zap",
+        "zen",
+        "zag"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF152-Q14",
+      "question": "A learner reads zap as zip. What should be practised?",
+      "options": [
+        "Discriminating short /a/ and short /i/",
+        "Only uppercase Z writing",
+        "Sentence punctuation",
+        "Counting syllables in long words"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF152-Q15",
+      "question": "What is the best way to decode an unfamiliar z-CVC word?",
+      "options": [
+        "Say each sound in order and blend the whole word",
+        "Guess from the first letter only",
+        "Skip the vowel",
+        "Read the final sound twice"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF152-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The sounds blend to zip."
+    },
+    {
+      "questionId": "PF152-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "Zap contains short /a/."
+    },
+    {
+      "questionId": "PF152-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Z-e-n spells zen."
+    },
+    {
+      "questionId": "PF152-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Zig ends with /g/."
+    },
+    {
+      "questionId": "PF152-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Zit ends with /t/."
+    },
+    {
+      "questionId": "PF152-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Zen contains short /e/."
+    },
+    {
+      "questionId": "PF152-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Zag begins with /z/."
+    },
+    {
+      "questionId": "PF152-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Zip ends with /p/."
+    },
+    {
+      "questionId": "PF152-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Sip begins with /s/."
+    },
+    {
+      "questionId": "PF152-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "Zap and zip begin /z/ and end /p/ but use different vowels."
+    },
+    {
+      "questionId": "PF152-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Z-i-g spells zig."
+    },
+    {
+      "questionId": "PF152-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The final grapheme changes the word."
+    },
+    {
+      "questionId": "PF152-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Sip and zip share the rime -ip."
+    },
+    {
+      "questionId": "PF152-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The initial and final sounds are stable; the vowel needs attention."
+    },
+    {
+      "questionId": "PF152-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Complete left-to-right blending checks all three graphemes."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-152-v1"
+  }
+}
