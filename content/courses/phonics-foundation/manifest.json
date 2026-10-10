@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 163,
-    "studyMaterials": 163,
-    "questionBank": 2435,
-    "assessments": 38
+    "lessons": 168,
+    "studyMaterials": 168,
+    "questionBank": 2510,
+    "assessments": 40
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -183,7 +183,12 @@
       "content/courses/phonics-foundation/160-decode-cvc-with-sh/authoring-package.json",
       "content/courses/phonics-foundation/161-spell-cvc-with-sh/authoring-package.json",
       "content/courses/phonics-foundation/162-sh-word-families-controlled-reading/authoring-package.json",
-      "content/courses/phonics-foundation/163-controlled-sh-sentences-comprehension/authoring-package.json"
+      "content/courses/phonics-foundation/163-controlled-sh-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/164-controlled-sh-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/165-sh-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/166-targeted-sh-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/167-hear-and-identify-new-digraph-ch/authoring-package.json",
+      "content/courses/phonics-foundation/168-decode-cvc-with-ch/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -209,7 +214,9 @@
     "PF117-DIAG-01",
     "PF118-REASSESS-01",
     "PF141-DIAG-01",
-    "PF142-REASSESS-01"
+    "PF142-REASSESS-01",
+    "PF165-DIAG-01",
+    "PF166-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
