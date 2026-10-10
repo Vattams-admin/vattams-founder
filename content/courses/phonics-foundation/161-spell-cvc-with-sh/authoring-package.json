@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-161",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "161-spell-cvc-with-sh",
+    "topic": "encoding",
+    "subtopic": "segment-and-spell-sh-words",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment short sh-words into phonemes before spelling.",
+      "Use sh together to represent one /sh/ sound.",
+      "Spell taught words such as ship, shop, shut, fish, dish and wish.",
+      "Read each written word back to check the spelling."
+    ],
+    "concepts": [
+      "Encoding moves from spoken sounds to written graphemes.",
+      "The /sh/ phoneme is written with the two letters sh in taught words.",
+      "Sound boxes can represent phonemes, so sh may occupy one sound box.",
+      "Read-back helps detect omitted letters and vowel substitutions."
+    ],
+    "definitions": [
+      {
+        "term": "segment",
+        "definition": "Separate a spoken word into its ordered phonemes."
+      },
+      {
+        "term": "encode",
+        "definition": "Represent spoken phonemes with written graphemes."
+      },
+      {
+        "term": "sound box",
+        "definition": "A box used to map one phoneme; a digraph may share one box."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "ship",
+        "solution": "Map /sh/ | /i/ | /p/; write sh-i-p."
+      },
+      {
+        "prompt": "fish",
+        "solution": "Map /f/ | /i/ | /sh/; write f-i-sh."
+      },
+      {
+        "prompt": "shop",
+        "solution": "Map /sh/ | /o/ | /p/; write sh-o-p."
+      }
+    ],
+    "commonMistakes": [
+      "Writing only s for the /sh/ phoneme.",
+      "Putting s and h in separate sound boxes when mapping phonemes.",
+      "Confusing short i in fish with short a in cash.",
+      "Not reading the completed word back."
+    ],
+    "keyTakeaways": [
+      "Say the word slowly, then segment its sounds.",
+      "Keep sh together for one /sh/ phoneme.",
+      "Choose the correct short vowel.",
+      "Read the spelling aloud and compare it with the target word."
+    ],
+    "revisionPoints": [
+      "ship = sh + i + p.",
+      "shop = sh + o + p.",
+      "fish = f + i + sh.",
+      "cash = c + a + sh."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which spelling represents /sh/ at the start of ship?",
+        "answer": "sh"
+      },
+      {
+        "id": "B2",
+        "prompt": "How many phoneme boxes are needed for ship?",
+        "answer": "Three"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which is the correct spelling of /sh/ /o/ /p/?",
+        "answer": "shop"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which spelling is correct for /f/ /i/ /sh/?",
+        "answer": "fish"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which word is spelled correctly?",
+        "answer": "dish"
+      },
+      {
+        "id": "C3",
+        "prompt": "When mapping the sounds in wish, how should sh be treated?",
+        "answer": "One phoneme"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which spelling matches /sh/ /u/ /t/?",
+        "answer": "shut"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word correctly uses short /a/ and final sh?",
+        "answer": "cash"
+      },
+      {
+        "id": "A3",
+        "prompt": "What is the first step when spelling fish?",
+        "answer": "Say and segment its sounds"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which spelling changes only the vowel from ship to shop?",
+        "answer": "shop"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which is the correct sound-box mapping for dish?",
+        "answer": "/d/ | /i/ | /sh/"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which word is spelled incorrectly?",
+        "answer": "fesh for fish"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which spelling represents /w/ /i/ /sh/?",
+        "answer": "wish"
+      },
+      {
+        "id": "R2",
+        "prompt": "Why should you read a spelled word back?",
+        "answer": "To check the graphemes match the spoken word"
+      },
+      {
+        "id": "R3",
+        "prompt": "A learner writes sip for ship. What needs correcting?",
+        "answer": "The initial grapheme must be sh"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "ship = sh + i + p.",
+      "shop = sh + o + p.",
+      "fish = f + i + sh.",
+      "cash = c + a + sh."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "ship = sh + i + p."
+      },
+      {
+        "front": "Recall 2",
+        "back": "shop = sh + o + p."
+      },
+      {
+        "front": "Recall 3",
+        "back": "fish = f + i + sh."
+      },
+      {
+        "front": "Recall 4",
+        "back": "cash = c + a + sh."
+      }
+    ],
+    "formulaOrFactBank": [
+      "ship = sh + i + p.",
+      "shop = sh + o + p.",
+      "fish = f + i + sh.",
+      "cash = c + a + sh."
+    ],
+    "mistakeBasedRevision": [
+      "Writing only s for the /sh/ phoneme.",
+      "Putting s and h in separate sound boxes when mapping phonemes.",
+      "Confusing short i in fish with short a in cash.",
+      "Not reading the completed word back."
+    ],
+    "weakTopicRevision": [
+      "If encoding accuracy is below target, model the specific sound or reading step, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "phoneme-grapheme-encoding",
+      "name": "Segment a word and map sh as one phoneme.",
+      "steps": [
+        "Say the target word aloud.",
+        "Stretch and segment its phonemes.",
+        "Write sh together for /sh/.",
+        "Read the completed spelling and self-correct."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "contrast-and-self-check",
+      "name": "Contrast close examples and explain the evidence.",
+      "steps": [
+        "Compare two similar words.",
+        "Name the sound or rime that changes.",
+        "Use the written graphemes to justify the answer.",
+        "Read the words or sentence again to confirm."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Spell at least 8 of 10 taught sh-words accurately.",
+    "Map sh to one phoneme during segmentation.",
+    "Read each spelling back to verify it."
+  ],
+  "questions": [
+    {
+      "questionId": "PF161-Q01",
+      "question": "Which spelling represents /sh/ at the start of ship?",
+      "options": [
+        "s",
+        "h",
+        "ch",
+        "sh"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF161-Q02",
+      "question": "How many phoneme boxes are needed for ship?",
+      "options": [
+        "Two",
+        "Four",
+        "Three",
+        "Five"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF161-Q03",
+      "question": "Which is the correct spelling of /sh/ /o/ /p/?",
+      "options": [
+        "shap",
+        "shop",
+        "shup",
+        "sop"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF161-Q04",
+      "question": "Which spelling is correct for /f/ /i/ /sh/?",
+      "options": [
+        "fish",
+        "fesh",
+        "fiss",
+        "fich"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF161-Q05",
+      "question": "Which word is spelled correctly?",
+      "options": [
+        "dich",
+        "dis",
+        "dush",
+        "dish"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF161-Q06",
+      "question": "When mapping the sounds in wish, how should sh be treated?",
+      "options": [
+        "Two phonemes",
+        "A silent letter",
+        "One phoneme",
+        "A vowel"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF161-Q07",
+      "question": "Which spelling matches /sh/ /u/ /t/?",
+      "options": [
+        "shot",
+        "shut",
+        "shit",
+        "shat"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF161-Q08",
+      "question": "Which word correctly uses short /a/ and final sh?",
+      "options": [
+        "cash",
+        "cish",
+        "cush",
+        "cahs"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF161-Q09",
+      "question": "What is the first step when spelling fish?",
+      "options": [
+        "Copy a random word",
+        "Write only f",
+        "Skip the final sound",
+        "Say and segment its sounds"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF161-Q10",
+      "question": "Which spelling changes only the vowel from ship to shop?",
+      "options": [
+        "shup",
+        "ship",
+        "shop",
+        "sip"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF161-Q11",
+      "question": "Which is the correct sound-box mapping for dish?",
+      "options": [
+        "/d/ | /i/ | /s/ | /h/",
+        "/d/ | /i/ | /sh/",
+        "/di/ | /sh/",
+        "/d/ | /sh/"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF161-Q12",
+      "question": "Which word is spelled incorrectly?",
+      "options": [
+        "fesh for fish",
+        "shop",
+        "shut",
+        "wish"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF161-Q13",
+      "question": "Which spelling represents /w/ /i/ /sh/?",
+      "options": [
+        "wesh",
+        "wisch",
+        "wis",
+        "wish"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF161-Q14",
+      "question": "Why should you read a spelled word back?",
+      "options": [
+        "To make the word longer",
+        "To ignore the vowel",
+        "To check the graphemes match the spoken word",
+        "To replace sh with s"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF161-Q15",
+      "question": "A learner writes sip for ship. What needs correcting?",
+      "options": [
+        "The vowel must be o",
+        "The initial grapheme must be sh",
+        "The final p must be removed",
+        "The word needs four vowels"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF161-Q01",
+      "correctOptionIndex": 3,
+      "explanation": "The /sh/ sound is represented by sh."
+    },
+    {
+      "questionId": "PF161-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "Ship has /sh/, /i/, /p/—three phonemes."
+    },
+    {
+      "questionId": "PF161-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The word is shop."
+    },
+    {
+      "questionId": "PF161-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Fish ends in sh."
+    },
+    {
+      "questionId": "PF161-Q05",
+      "correctOptionIndex": 3,
+      "explanation": "Dish uses sh for the final phoneme."
+    },
+    {
+      "questionId": "PF161-Q06",
+      "correctOptionIndex": 2,
+      "explanation": "The digraph represents one sound."
+    },
+    {
+      "questionId": "PF161-Q07",
+      "correctOptionIndex": 1,
+      "explanation": "Shut has short /u/."
+    },
+    {
+      "questionId": "PF161-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Cash uses a for short /a/."
+    },
+    {
+      "questionId": "PF161-Q09",
+      "correctOptionIndex": 3,
+      "explanation": "Segmentation identifies the ordered phonemes."
+    },
+    {
+      "questionId": "PF161-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Ship to shop changes i to o."
+    },
+    {
+      "questionId": "PF161-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Dish has three phonemes, with sh as one."
+    },
+    {
+      "questionId": "PF161-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "Fesh uses e instead of the short i in fish."
+    },
+    {
+      "questionId": "PF161-Q13",
+      "correctOptionIndex": 3,
+      "explanation": "Wish is w-i-sh."
+    },
+    {
+      "questionId": "PF161-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "Read-back checks the spelling against the target."
+    },
+    {
+      "questionId": "PF161-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "Ship starts with sh, not s."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-161-v1"
+  }
+}
