@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 760,
-    "studyMaterials": 760,
-    "questionBank": 11390,
-    "assessments": 174
+    "lessons": 780,
+    "studyMaterials": 780,
+    "questionBank": 11690,
+    "assessments": 180
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -780,6 +780,26 @@
       "content/courses/phonics-foundation/758-soft-c-hard-c-connected-reading-transfer/authoring-package.json",
       "content/courses/phonics-foundation/759-soft-c-hard-c-fluency-diagnostic/authoring-package.json",
       "content/courses/phonics-foundation/760-soft-c-hard-c-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/761-recognize-soft-g-pattern/authoring-package.json",
+      "content/courses/phonics-foundation/762-decode-words-with-soft-g/authoring-package.json",
+      "content/courses/phonics-foundation/763-spell-words-with-soft-g/authoring-package.json",
+      "content/courses/phonics-foundation/764-soft-g-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/765-controlled-soft-g-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/766-controlled-soft-g-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/767-soft-g-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/768-soft-g-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/769-recognize-hard-g-pattern/authoring-package.json",
+      "content/courses/phonics-foundation/770-decode-words-with-hard-g/authoring-package.json",
+      "content/courses/phonics-foundation/771-spell-words-with-hard-g/authoring-package.json",
+      "content/courses/phonics-foundation/772-hard-g-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/773-controlled-hard-g-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/774-controlled-hard-g-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/775-hard-g-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/776-hard-g-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/777-soft-g-hard-g-patterns-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/778-soft-g-hard-g-connected-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/779-soft-g-hard-g-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/780-soft-g-hard-g-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
@@ -935,7 +955,13 @@
     "PF755-DIAG-01",
     "PF756-REASSESS-01",
     "PF759-DIAG-01",
-    "PF760-REASSESS-01"
+    "PF760-REASSESS-01",
+    "PF767-DIAG-01",
+    "PF768-REASSESS-01",
+    "PF775-DIAG-01",
+    "PF776-REASSESS-01",
+    "PF779-DIAG-01",
+    "PF780-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/02-hear-and-identify-s/authoring-package.json",
@@ -1697,6 +1723,26 @@
     "content/courses/phonics-foundation/758-soft-c-hard-c-connected-reading-transfer/authoring-package.json",
     "content/courses/phonics-foundation/759-soft-c-hard-c-fluency-diagnostic/authoring-package.json",
     "content/courses/phonics-foundation/760-soft-c-hard-c-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/761-recognize-soft-g-pattern/authoring-package.json",
+    "content/courses/phonics-foundation/762-decode-words-with-soft-g/authoring-package.json",
+    "content/courses/phonics-foundation/763-spell-words-with-soft-g/authoring-package.json",
+    "content/courses/phonics-foundation/764-soft-g-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/765-controlled-soft-g-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/766-controlled-soft-g-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/767-soft-g-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/768-soft-g-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/769-recognize-hard-g-pattern/authoring-package.json",
+    "content/courses/phonics-foundation/770-decode-words-with-hard-g/authoring-package.json",
+    "content/courses/phonics-foundation/771-spell-words-with-hard-g/authoring-package.json",
+    "content/courses/phonics-foundation/772-hard-g-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/773-controlled-hard-g-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/774-controlled-hard-g-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/775-hard-g-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/776-hard-g-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/777-soft-g-hard-g-patterns-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/778-soft-g-hard-g-connected-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/779-soft-g-hard-g-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/780-soft-g-hard-g-remediation-reassessment/authoring-package.json",
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
   ]
 }
