@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 392,
-    "studyMaterials": 392,
-    "questionBank": 5870,
-    "assessments": 75
+    "lessons": 397,
+    "studyMaterials": 397,
+    "questionBank": 5945,
+    "assessments": 77
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -412,7 +412,12 @@
       "content/courses/phonics-foundation/389-spell-short-words-with-scr/authoring-package.json",
       "content/courses/phonics-foundation/390-scr-word-families-controlled-reading/authoring-package.json",
       "content/courses/phonics-foundation/391-controlled-scr-sentences-comprehension/authoring-package.json",
-      "content/courses/phonics-foundation/392-controlled-scr-passage-sequencing-comprehension/authoring-package.json"
+      "content/courses/phonics-foundation/392-controlled-scr-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/393-scr-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/394-targeted-scr-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/395-hear-and-blend-initial-squ/authoring-package.json",
+      "content/courses/phonics-foundation/396-decode-short-words-with-squ/authoring-package.json",
+      "content/courses/phonics-foundation/397-spell-short-words-with-squ/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -467,7 +472,9 @@
     "PF370-REASSESS-01",
     "PF377-DIAG-01",
     "PF378-REASSESS-01",
-    "PF385-DIAG-01"
+    "PF385-DIAG-01",
+    "PF393-DIAG-01",
+    "PF394-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
