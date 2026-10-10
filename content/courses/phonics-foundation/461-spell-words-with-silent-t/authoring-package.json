@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-461",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "461-spell-words-with-silent-t",
+    "topic": "encoding",
+    "subtopic": "spell-taught-words-with-silent-t",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Spell taught silent-t words accurately.",
+      "Recognise that t is not pronounced in the taught examples.",
+      "Keep t in the conventional spelling.",
+      "Reread the written word and repair mismatched letters."
+    ],
+    "concepts": [
+      "In the taught words, t is silent.",
+      "The spelling retains t even though it is not pronounced.",
+      "The spoken sounds must be mapped without inserting /t/.",
+      "Rereading checks sound-to-letter correspondence."
+    ],
+    "definitions": [
+      {
+        "term": "segment",
+        "definition": "Separate a word into its individual speech sounds."
+      },
+      {
+        "term": "silent letter",
+        "definition": "A written letter that is not pronounced."
+      },
+      {
+        "term": "encoding",
+        "definition": "Using sounds and spelling knowledge to write a word."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Spell listen.",
+        "solution": "Map the spoken sounds and retain the conventional silent t."
+      },
+      {
+        "prompt": "Compare castle and cattle.",
+        "solution": "Castle has silent t; cattle pronounces t."
+      },
+      {
+        "prompt": "A learner writes lisen for listen. What is missing?",
+        "solution": "The silent t in the spelling."
+      }
+    ],
+    "commonMistakes": [
+      "Removing t because it is silent.",
+      "Pronouncing t while reading.",
+      "Confusing words with different pronunciations.",
+      "Omitting another letter."
+    ],
+    "keyTakeaways": [
+      "t is silent in the taught words.",
+      "Keep t in spelling.",
+      "Do not insert an extra /t/ sound.",
+      "Reread after spelling."
+    ],
+    "revisionPoints": [
+      "listen, castle, whistle, and fasten have silent t in the taught set.",
+      "Keep t in spelling.",
+      "Read the word naturally.",
+      "Reread to check the spelling."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which spelling matches the taught word pronounced /ˈlɪsən/?",
+        "answer": "listen"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which spelling contains silent t?",
+        "answer": "castle"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which letter is silent in whistle?",
+        "answer": "t"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "What should you keep when spelling listen?",
+        "answer": "The t"
+      },
+      {
+        "id": "C2",
+        "prompt": "What should you do before spelling?",
+        "answer": "Say the spoken sounds and recall the spelling pattern"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which pair differs in whether t is spoken?",
+        "answer": "castle and cattle"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word has silent t and begins with wh?",
+        "answer": "whistle"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which spelling is correct for the taught word fasten?",
+        "answer": "fasten"
+      },
+      {
+        "id": "A3",
+        "prompt": "If castle is written as casle, what is missing?",
+        "answer": "The silent t"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What is a silent letter?",
+        "answer": "A written letter that is not pronounced"
+      },
+      {
+        "id": "H2",
+        "prompt": "Why keep t when spelling whistle?",
+        "answer": "It belongs to the conventional spelling pattern"
+      },
+      {
+        "id": "H3",
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Spell taught silent-t words accurately"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "After writing a word, what is the best check?",
+        "answer": "Reread and compare the spoken word with the spelling"
+      },
+      {
+        "id": "R2",
+        "prompt": "Which word has silent t in the taught pronunciation?",
+        "answer": "listen"
+      },
+      {
+        "id": "R3",
+        "prompt": "What should you remember when completing this encoding task?",
+        "answer": "t is silent in the taught words."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "listen, castle, whistle, and fasten have silent t in the taught set.",
+      "Keep t in spelling.",
+      "Read the word naturally.",
+      "Reread to check the spelling."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "listen, castle, whistle, and fasten have silent t in the taught set."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Keep t in spelling."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Read the word naturally."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Reread to check the spelling."
+      }
+    ],
+    "formulaOrFactBank": [
+      "listen, castle, whistle, and fasten have silent t in the taught set.",
+      "Keep t in spelling.",
+      "Read the word naturally.",
+      "Reread to check the spelling."
+    ],
+    "mistakeBasedRevision": [
+      "Removing t because it is silent.",
+      "Pronouncing t while reading.",
+      "Confusing words with different pronunciations.",
+      "Omitting another letter."
+    ],
+    "weakTopicRevision": [
+      "If encoding is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "silent-letter-encoding",
+      "name": "Say, spell, and check silent-t words",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete a guided example and explain the sound or text evidence.",
+        "Try a fresh example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with one target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Correct the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Spell taught silent-t words accurately.",
+    "Recognise that t is not pronounced in the taught examples.",
+    "Keep t in the conventional spelling.",
+    "Reread the written word and repair mismatched letters."
+  ],
+  "questions": [
+    {
+      "questionId": "PF461-Q01",
+      "question": "Which spelling matches the taught word pronounced /ˈlɪsən/?",
+      "options": [
+        "listen",
+        "lisen",
+        "listten",
+        "lissten"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q02",
+      "question": "Which spelling contains silent t?",
+      "options": [
+        "cattle",
+        "table",
+        "castle",
+        "tent"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q03",
+      "question": "Which letter is silent in whistle?",
+      "options": [
+        "w",
+        "t",
+        "h",
+        "l"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q04",
+      "question": "Which word pronounces t?",
+      "options": [
+        "castle",
+        "listen",
+        "whistle",
+        "cattle"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q05",
+      "question": "What should you keep when spelling listen?",
+      "options": [
+        "Only l",
+        "The t",
+        "A silent extra vowel",
+        "No middle letters"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q06",
+      "question": "What should you do before spelling?",
+      "options": [
+        "Say the spoken sounds and recall the spelling pattern",
+        "Pronounce t clearly",
+        "Skip the ending",
+        "Copy another word"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q07",
+      "question": "Which word has silent t and begins with wh?",
+      "options": [
+        "white",
+        "wheel",
+        "whistle",
+        "winter"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q08",
+      "question": "Which spelling is correct for the taught word fasten?",
+      "options": [
+        "fasen",
+        "fastten",
+        "faston",
+        "fasten"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q09",
+      "question": "If castle is written as casle, what is missing?",
+      "options": [
+        "The silent t",
+        "The c",
+        "The vowel a",
+        "The final e"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q10",
+      "question": "Which pair differs in whether t is spoken?",
+      "options": [
+        "listen and listen",
+        "whistle and whistle",
+        "castle and cattle",
+        "fasten and fasten"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q11",
+      "question": "What is a silent letter?",
+      "options": [
+        "A letter said twice",
+        "A written letter that is not pronounced",
+        "A punctuation mark",
+        "A word with no vowels"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q12",
+      "question": "After writing a word, what is the best check?",
+      "options": [
+        "Ignore the middle letters",
+        "Add a random letter",
+        "Stop after s",
+        "Reread and compare the spoken word with the spelling"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q13",
+      "question": "Which word has silent t in the taught pronunciation?",
+      "options": [
+        "listen",
+        "little",
+        "winter",
+        "table"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q14",
+      "question": "Why keep t when spelling whistle?",
+      "options": [
+        "It is pronounced as /t/",
+        "It replaces the vowel",
+        "It belongs to the conventional spelling pattern",
+        "It marks the beginning"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF461-Q15",
+      "question": "What is the main goal of this lesson?",
+      "options": [
+        "Memorize option positions",
+        "Spell taught silent-t words accurately",
+        "Pronounce every letter",
+        "Guess from the first letter"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF461-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The conventional spelling is listen."
+    },
+    {
+      "questionId": "PF461-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "Castle has silent t."
+    },
+    {
+      "questionId": "PF461-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The t is silent in the taught pronunciation."
+    },
+    {
+      "questionId": "PF461-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "Cattle pronounces t."
+    },
+    {
+      "questionId": "PF461-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "The spelling keeps t even though it is silent."
+    },
+    {
+      "questionId": "PF461-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Sound mapping and pattern knowledge support spelling."
+    },
+    {
+      "questionId": "PF461-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Whistle has silent t."
+    },
+    {
+      "questionId": "PF461-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "The conventional spelling is fasten."
+    },
+    {
+      "questionId": "PF461-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Castle keeps the silent t."
+    },
+    {
+      "questionId": "PF461-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Castle has silent t; cattle pronounces t."
+    },
+    {
+      "questionId": "PF461-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Silent letters remain in spelling but are not spoken."
+    },
+    {
+      "questionId": "PF461-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Rereading checks the spelling pattern."
+    },
+    {
+      "questionId": "PF461-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Listen has silent t."
+    },
+    {
+      "questionId": "PF461-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "The silent t remains part of the spelling."
+    },
+    {
+      "questionId": "PF461-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "The lesson targets silent-t encoding."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-461-v1"
+  }
+}
