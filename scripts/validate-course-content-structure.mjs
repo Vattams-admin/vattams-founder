@@ -3,7 +3,7 @@ import path from "node:path";
 
 const root=process.cwd();
 const coursesRoot=path.join(root,"content","courses");
-if(!fs.existsSync(coursesRoot)){console.log("COURSE STRUCTURE: NO COURSE DIRECTORY");process.exit(0);}
+if(!fs.existsSync(coursesRoot)){console.error("COURSE STRUCTURE: FAIL — required content/courses directory is missing; refusing to report a passing result for an absent course catalogue.");process.exit(1);}
 
 const errors=[];
 const readJson=(p)=>JSON.parse(fs.readFileSync(p,"utf8"));

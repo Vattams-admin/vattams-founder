@@ -1,0 +1,37 @@
+{
+  "packageId": "competition-indian-language-literature-masters-series",
+  "version": "1.0.0",
+  "domain": "competition",
+  "locator": {
+    "competition": "indian-language-literature-masters-series",
+    "language": "en"
+  },
+  "status": "draft",
+  "coverage": {
+    "studyMaterials": 0,
+    "questions": 0,
+    "assessments": 0
+  },
+  "assets": {
+    "manifestPath": "content/competitions/indian-language-literature-masters-series/manifest.json",
+    "studyMaterials": [],
+    "questionBanksPublic": [
+      "competitions/indian-language-literature-masters-series/objective/questions.private.json"
+    ],
+    "answerKeysPrivate": [
+      "competitions/indian-language-literature-masters-series/objective/answer-keys.private.json"
+    ],
+    "assessments": []
+  },
+  "governance": {
+    "sourceEvidence": [
+      "config/competition-registry.json",
+      "scripts/package-competition-runtime.mjs",
+      "scripts/validate-production-package-registry-links.mjs"
+    ],
+    "reviewStatus": "unreviewed",
+    "answerKeyPrivate": true,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

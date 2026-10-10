@@ -1,10 +1,7 @@
 -- Server-authoritative student assessment analytics.
 -- Analytics derive only from immutable submitted results; in-progress attempts
 -- and client-provided scores are never accepted.
-
-create or replace function public.get_assessment_analytics(
-  p_student_id text
-)
+create or replace function public.get_assessment_analytics(p_student_id text)
 returns jsonb
 language plpgsql
 security definer
@@ -18,7 +15,8 @@ declare
   v_accuracy numeric;
   v_items jsonb;
 begin
-  select count(*), count(*) filter (where status = 'submitted'),
+  select count(*),
+         count(*) filter (where status = 'submitted'),
          coalesce(sum(score) filter (where status = 'submitted'), 0),
          coalesce(sum(max_score) filter (where status = 'submitted'), 0)
     into v_total, v_completed, v_score, v_max
@@ -31,19 +29,27 @@ begin
     v_accuracy := 0;
   end if;
 
+  -- Aggregate rows in a subquery to avoid illegal nested aggregate calls.
   select coalesce(jsonb_agg(
     jsonb_build_object(
-      'assessment_id', assessment_id,
-      'attempt_count', count(*),
-      'best_score', max(score),
-      'best_max_score', (array_agg(max_score order by score desc))[1],
-      'last_submitted_at', max(submitted_at)
-    ) order by max(submitted_at) desc
+      'assessment_id', s.assessment_id,
+      'attempt_count', s.attempt_count,
+      'best_score', s.best_score,
+      'best_max_score', s.best_max_score,
+      'last_submitted_at', s.last_submitted_at
+    ) order by s.last_submitted_at desc
   ), '[]'::jsonb)
     into v_items
-    from public.assessment_results
-    where student_id = p_student_id
-    group by assessment_id;
+    from (
+      select assessment_id,
+             count(*) as attempt_count,
+             max(score) as best_score,
+             (array_agg(max_score order by score desc))[1] as best_max_score,
+             max(submitted_at) as last_submitted_at
+        from public.assessment_results
+        where student_id = p_student_id
+        group by assessment_id
+    ) s;
 
   return jsonb_build_object(
     'total_attempts', v_total,

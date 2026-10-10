@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
@@ -8,6 +9,7 @@ import { useSeo } from '@/hooks/useSeo'
 import { CATALOG_CATEGORIES } from '@/lib/catalog'
 import { DEFAULT_PRICING_CONFIG, type PricingConfig } from '@/lib/pricingModel'
 import { getPricingConfig } from '@/lib/pricingConfig'
+import { ACADEMIA_PILLARS } from '@/lib/academiaPillars'
 
 type LoadState = 'loading' | 'loaded' | 'error'
 
@@ -26,13 +28,34 @@ export default function Courses() {
     path: '/courses',
   })
 
+  const [searchParams, setSearchParams] = useSearchParams()
   const [courses, setCourses] = useState<Course[]>([])
   const [state, setState] = useState<LoadState>('loading')
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState(() => searchParams.get('search') ?? '')
   const [levelFilter, setLevelFilter] = useState<string>('all')
   const [categoryFilter, setCategoryFilter] = useState<string>('all')
+  const [sortOrder, setSortOrder] = useState<'featured' | 'name'>('featured')
   const [retryToken, setRetryToken] = useState(0)
   const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  // Keep catalogue searches deep-linkable and shareable without adding a
+  // history entry for every keystroke. Preserve any unrelated query params.
+  useEffect(() => {
+    const nextSearch = searchTerm.trim()
+    setSearchParams((current) => {
+      if ((current.get('search') ?? '') === nextSearch) return current
+      const next = new URLSearchParams(current)
+      if (nextSearch) next.set('search', nextSearch)
+      else next.delete('search')
+      return next
+    }, { replace: true })
+  }, [searchTerm, setSearchParams])
+
+  // Reflect query changes from browser navigation or an external in-app link.
+  useEffect(() => {
+    const querySearch = searchParams.get('search') ?? ''
+    if (querySearch !== searchTerm) setSearchTerm(querySearch)
+  }, [searchParams, searchTerm])
 
   useEffect(() => {
     let cancelled = false
@@ -117,8 +140,7 @@ export default function Courses() {
 
   const filteredCourses = useMemo(() => {
     const term = searchTerm.trim().toLowerCase()
-
-    return courses.filter((c) => {
+    const matchingCourses = courses.filter((c) => {
       if (levelFilter !== 'all' && c.level !== levelFilter) return false
       if (categoryFilter !== 'all' && c.category_id !== categoryFilter) return false
 
@@ -131,7 +153,15 @@ export default function Courses() {
 
       return haystack.includes(term)
     })
-  }, [courses, searchTerm, levelFilter, categoryFilter])
+
+    return matchingCourses.sort((a, b) => {
+      if (sortOrder === 'featured') {
+        const featuredDifference = Number(Boolean(b.is_featured)) - Number(Boolean(a.is_featured))
+        if (featuredDifference !== 0) return featuredDifference
+      }
+      return getCourseDisplayName(a.name).localeCompare(getCourseDisplayName(b.name))
+    })
+  }, [courses, searchTerm, levelFilter, categoryFilter, sortOrder])
 
   return (
     <div>
@@ -175,7 +205,7 @@ export default function Courses() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search courses by name or topic…"
-              className="input pl-10"
+              className="input pl-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             />
           </label>
 
@@ -192,6 +222,53 @@ export default function Courses() {
             </div>
           )}
         </div>
+
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+          <label htmlFor="course-sort-order" className="text-sm text-slate-muted">Sort courses</label>
+          <select
+            id="course-sort-order"
+            value={sortOrder}
+            onChange={(event) => setSortOrder(event.target.value as 'featured' | 'name')}
+            className="input w-full max-w-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+          >
+            <option value="featured">Featured first, then A–Z</option>
+            <option value="name">Name: A–Z</option>
+          </select>
+        </div>
+
+        {/* Topic discovery: selecting a suggestion uses the existing catalogue search. */}
+        <section aria-labelledby="suggested-topics-heading" className="mt-7 rounded-2xl border border-white/10 bg-white/[0.025] p-4 sm:p-5">
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="eyebrow">Find your next step</p>
+              <h2 id="suggested-topics-heading" className="mt-2 text-lg font-semibold text-parchment">Explore by learning goal</h2>
+            </div>
+            <p className="text-xs text-slate-muted">Suggestions search published courses; they do not imply a topic is already available.</p>
+          </div>
+          <div className="mt-4 grid gap-4 md:grid-cols-3">
+            {ACADEMIA_PILLARS.map((pillar) => (
+              <div key={pillar.id} className="min-w-0">
+                <h3 className="text-sm font-semibold text-parchment">{pillar.title}</h3>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {pillar.suggestedTopics.slice(0, 3).map((topic) => (
+                    <button
+                      key={topic}
+                      type="button"
+                      onClick={() => {
+                        setSearchTerm(topic)
+                        setLevelFilter('all')
+                        setCategoryFilter('all')
+                      }}
+                      className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-left text-xs leading-4 text-slate-muted transition-colors hover:border-azure/40 hover:text-parchment focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                    >
+                      {topic}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {availableCategories.length > 0 && (
           <div className="mt-4 flex flex-wrap items-center gap-2">
@@ -239,7 +316,7 @@ export default function Courses() {
         {state === 'loaded' && courses.length > 0 && filteredCourses.length === 0 && (
           <div className="mt-10 card p-10 text-center">
             <p className="text-lg font-semibold">No courses match your search</p>
-            <p className="mt-2 text-sm text-slate-muted">Try a different keyword or clear the level filter.</p>
+            <p className="mt-2 text-sm text-slate-muted">Try another keyword or clear the search, level and category filters.</p>
             <button
               onClick={() => {
                 setSearchTerm('')
@@ -256,8 +333,8 @@ export default function Courses() {
         {/* Results */}
         {state === 'loaded' && filteredCourses.length > 0 && (
           <>
-            <p className="mt-8 text-sm text-slate-muted">
-              {filteredCourses.length} course{filteredCourses.length === 1 ? '' : 's'} available
+            <p className="mt-8 text-sm text-slate-muted" aria-live="polite" aria-atomic="true">
+              Showing {filteredCourses.length} of {courses.length} published {courses.length === 1 ? 'course' : 'courses'}
             </p>
             <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {filteredCourses.map((course) => (
@@ -284,7 +361,8 @@ function FilterChip({
     <button
       type="button"
       onClick={onClick}
-      className={`whitespace-nowrap rounded-pill border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors ${
+      aria-pressed={active}
+      className={`whitespace-nowrap rounded-pill border px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy ${
         active
           ? 'border-azure bg-azure/15 text-azure-bright'
           : 'border-white/15 text-slate-muted hover:border-azure/40 hover:text-parchment'

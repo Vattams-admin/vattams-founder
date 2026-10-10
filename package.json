@@ -17,10 +17,11 @@
     "thirukkural:audit": "node scripts/audit-thirukkural-production.mjs",
     "thirukkural:repair-course": "node scripts/repair-thirukkural-course.mjs",
     "thirukkural:build-official": "node scripts/build-thirukkural-official-objective.mjs",
-    "thirukkural:production-gate": "npm run thirukkural:build-official && npm run thirukkural:validate && npm run thirukkural:package",
+    "thirukkural:production-gate": "node scripts/build-thirukkural-full-bank.mjs && python3 scripts/build-thirukkural-objective-bank.py && node scripts/build-thirukkural-age-pools.mjs && node scripts/build-thirukkural-official-objective-local.mjs && node scripts/validate-thirukkural-production.mjs && node scripts/package-thirukkural-production.mjs",
     "competition:package": "node scripts/package-competition-runtime.mjs",
     "seo:validate": "node scripts/validate-seo.mjs",
     "india:validate": "node scripts/validate-india-education-registry.mjs",
+    "languages:seeds:validate": "node scripts/validate-language-learning-seeds.mjs",
     "content:schema:validate": "node scripts/validate-content-package-schema.mjs",
     "content:library:validate": "node scripts/validate-content-library-registry.mjs",
     "content:coverage:validate": "node scripts/validate-production-content-coverage.mjs",
@@ -74,7 +75,8 @@
     "content:assessment:weak-topic:test": "node scripts/test-assessment-weak-topic-analytics.mjs",
     "content:assessment:remediation:test": "node scripts/test-assessment-remediation-engine.mjs",
     "content:assessment:adaptive:test": "node scripts/test-assessment-adaptive-selection.mjs",
-    "content:course:structure:validate": "node scripts/validate-course-content-structure.mjs"
+    "content:course:structure:validate": "node scripts/validate-course-content-structure.mjs",
+    "academia:content:quality-gates": "node scripts/validate-academia-content-quality-gates.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",

@@ -1,0 +1,79 @@
+name: Academia Content Quality Gates
+
+on:
+  pull_request:
+    paths:
+      - "content/**"
+      - "data/**"
+      - "config/**"
+      - "src/**"
+      - "public/**"
+      - "supabase/functions/**"
+      - "supabase/migrations/**"
+      - "e2e/**"
+      - "docs/**"
+      - "scripts/validate-*.mjs"
+      - "scripts/validate-academia-content-quality-gates.mjs"
+      - "scripts/test-assessment-*.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/academia-content-quality-gates.yml"
+  push:
+    branches:
+      - "feat/academia-core-redesign"
+    paths:
+      - "content/**"
+      - "data/**"
+      - "config/**"
+      - "src/**"
+      - "public/**"
+      - "supabase/functions/**"
+      - "e2e/**"
+      - "docs/**"
+      - "scripts/validate-*.mjs"
+      - "scripts/validate-academia-content-quality-gates.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/academia-content-quality-gates.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  content-quality-gates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build and validate canonical Thirukkural package (local CI only)
+        run: npm run thirukkural:production-gate
+      - name: Run cross-pillar content validators
+        run: npm run academia:content:quality-gates
+      - name: Run assessment lifecycle and security contract tests
+        run: |
+          npm run content:assessment:attempt:lifecycle:test
+          npm run content:assessment:result:isolation:test
+          npm run content:assessment:answer:integrity:test
+          npm run content:assessment:retry:test
+          npm run content:assessment:review:payload:test
+          npm run content:assessment:history:test
+          npm run content:assessment:attempt:snapshot:test
+          npm run content:assessment:attempt:integrity:test
+          npm run content:assessment:attempt:deadline:test
+          npm run content:assessment:attempt:state:test
+          npm run content:assessment:scoring:test
+          npm run content:assessment:review:release:test
+          npm run content:assessment:analytics:test
+          npm run content:assessment:weak-topic:test
+          npm run content:assessment:remediation:test
+          npm run content:assessment:adaptive:test
+          npm run content:assessment:promotion:test

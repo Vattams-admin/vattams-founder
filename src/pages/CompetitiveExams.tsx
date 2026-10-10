@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useMemo, useState } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
@@ -23,9 +23,35 @@ export default function CompetitiveExams() {
     },
   })
 
+  const [searchParams, setSearchParams] = useSearchParams()
   const [courses, setCourses] = useState<Course[]>([])
   const [state, setState] = useState<'loading' | 'loaded' | 'error'>('loading')
+  const [retryToken, setRetryToken] = useState(0)
+  const [searchTerm, setSearchTerm] = useState(() => searchParams.get('search') ?? '')
   const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  // Keep exam searches shareable and support browser back/forward navigation.
+  useEffect(() => {
+    const nextSearch = searchTerm.trim()
+    setSearchParams((current) => {
+      if ((current.get('search') ?? '') === nextSearch) return current
+      const next = new URLSearchParams(current)
+      if (nextSearch) next.set('search', nextSearch)
+      else next.delete('search')
+      return next
+    }, { replace: true })
+  }, [searchTerm, setSearchParams])
+
+  useEffect(() => {
+    const querySearch = searchParams.get('search') ?? ''
+    if (querySearch !== searchTerm) setSearchTerm(querySearch)
+  }, [searchParams, searchTerm])
+
+  const filteredCourses = useMemo(() => {
+    const term = searchTerm.trim().toLowerCase()
+    if (!term) return courses
+    return courses.filter((course) => [course.name, course.slug, course.short_description ?? '', course.description ?? ''].join(' ').toLowerCase().includes(term))
+  }, [courses, searchTerm])
 
   useEffect(() => {
     let cancelled = false
@@ -38,6 +64,7 @@ export default function CompetitiveExams() {
   useEffect(() => {
     let cancelled = false
     async function load() {
+      setState('loading')
       try {
         const snapshot = await getDocs(query(
           collection(firestore, 'courses'),
@@ -57,7 +84,7 @@ export default function CompetitiveExams() {
     }
     load()
     return () => { cancelled = true }
-  }, [])
+  }, [retryToken])
 
   return (
     <div>
@@ -75,6 +102,51 @@ export default function CompetitiveExams() {
         </div>
       </section>
 
+      <section className="border-y border-white/5 bg-white/[0.02] py-8">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className="eyebrow">Explore exam pathways</p>
+          <h2 className="mt-2 text-xl font-semibold text-parchment">Find preparation by goal</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-muted">These are discovery topics, not a claim that every programme is currently published. Select a topic to open the existing course catalogue with that search.</p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {[
+              'TNPSC', 'UPSC', 'SSC', 'Banking', 'Railways', 'Police & Defence',
+              'JEE & Engineering', 'NEET & Medical', 'CUET & University Entrance',
+              'Law & Management', 'Pharmacy & Agriculture', 'CA & Auditing',
+            ].map((topic) => (
+              <Link key={topic} to={`/competitive-exams?search=${encodeURIComponent(topic)}`} className="rounded-full border border-white/10 bg-white/[0.035] px-3 py-2 text-xs font-medium text-parchment/85 transition-colors hover:border-azure/40 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy">
+                {topic}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-white/5 py-10">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <p className="eyebrow">A structured way to prepare</p>
+          <h2 className="mt-2 text-2xl font-semibold text-parchment">From syllabus to exam-day readiness</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-muted">
+            Use these stages to evaluate a preparation programme and plan your study. They describe a recommended learning journey, not a guarantee that every published course currently includes every stage.
+          </p>
+          <ol className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { number: '01', title: 'Understand the exam', detail: 'Confirm eligibility, the latest official syllabus, exam pattern and important dates.' },
+              { number: '02', title: 'Map the syllabus', detail: 'Break the syllabus into subjects, units and specific learning objectives.' },
+              { number: '03', title: 'Learn concepts', detail: 'Study explanations and worked examples before moving to timed practice.' },
+              { number: '04', title: 'Practise deliberately', detail: 'Use topic-wise questions and review the reasoning behind each response.' },
+              { number: '05', title: 'Simulate the exam', detail: 'Attempt timed mock tests under conditions similar to the actual examination.' },
+              { number: '06', title: 'Revise weak areas', detail: 'Review errors, revisit weak topics and practise them again before the next mock.' },
+            ].map((stage) => (
+              <li key={stage.number} className="rounded-card border border-white/10 bg-white/[0.025] p-4">
+                <p className="text-xs font-semibold tracking-widest text-gold">{stage.number}</p>
+                <h3 className="mt-2 font-semibold text-parchment">{stage.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-muted">{stage.detail}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         {state === 'loading' && (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -84,7 +156,8 @@ export default function CompetitiveExams() {
         {state === 'error' && (
           <div className="card p-8 text-center">
             <h2 className="font-display text-xl">Couldn’t load programmes</h2>
-            <p className="mt-2 text-sm text-slate-muted">Please refresh and try again.</p>
+            <p className="mt-2 text-sm text-slate-muted">Please try again.</p>
+            <button type="button" onClick={() => setRetryToken((token) => token + 1)} className="btn-secondary mt-5">Retry</button>
           </div>
         )}
         {state === 'loaded' && courses.length === 0 && (
@@ -95,11 +168,37 @@ export default function CompetitiveExams() {
           </div>
         )}
         {state === 'loaded' && courses.length > 0 && (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {courses.map((course) => (
-              <CourseCard key={course.id} course={course} pricingConfig={pricingConfig} />
-            ))}
-          </div>
+          <>
+            <div className="mb-6 flex max-w-xl items-center gap-2">
+              <div className="min-w-0 flex-1">
+                <label htmlFor="exam-programme-search" className="sr-only">Search published exam programmes</label>
+                <input id="exam-programme-search" type="search" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} placeholder="Search published programmes by exam or topic…" className="input w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy" />
+              </div>
+              {searchTerm && (
+                <button
+                  type="button"
+                  onClick={() => setSearchTerm('')}
+                  className="btn-secondary shrink-0 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-azure focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+            {filteredCourses.length === 0 ? (
+              <div className="card p-8 text-center">
+                <h2 className="font-display text-xl">No matching programmes</h2>
+                <p className="mt-2 text-sm text-slate-muted">Try another exam name or clear your search.</p>
+                <button type="button" onClick={() => setSearchTerm('')} className="btn-secondary mt-5">Show all programmes</button>
+              </div>
+            ) : (
+              <>
+                <p className="mb-4 text-sm text-slate-muted" aria-live="polite" aria-atomic="true">Showing {filteredCourses.length} of {courses.length} published {courses.length === 1 ? 'programme' : 'programmes'}{searchTerm.trim() ? ` for “${searchTerm.trim()}”` : ''}</p>
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                  {filteredCourses.map((course) => <CourseCard key={course.id} course={course} pricingConfig={pricingConfig} />)}
+                </div>
+              </>
+            )}
+          </>
         )}
       </section>
     </div>

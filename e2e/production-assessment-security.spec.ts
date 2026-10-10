@@ -9,6 +9,32 @@ const PRIVATE_KEY_ASSESSMENT_IDS = [
   "tnpsc-group-iv-vao-mock-02",
   "tnpsc-group-iv-vao-mock-03",
 ];
+const PRIVATE_COMPETITION_SLUGS = [
+  "mathematics-challenge",
+  "science-challenge",
+  "english-challenge",
+  "computer-challenge",
+  "gk-challenge",
+  "reasoning-challenge",
+  "india-gk-championship",
+  "national-quiz-championship",
+  "ai-technology-challenge",
+  "international-knowledge-challenge",
+  "national-mathematics-championship",
+  "national-science-championship",
+  "national-english-championship",
+  "national-aptitude-championship",
+  "national-coding-challenge",
+  "national-ai-challenge",
+  "mega-inter-school-championship",
+  "indian-classical-literature-wisdom-championship",
+  "indian-language-literature-masters-series",
+  "thirukkural-mastery-championship",
+  "fun-with-maths-challenge",
+  "azhagu-tamil-challenge",
+  "handwriting-excellence-challenge",
+  "spoken-hindi-challenge",
+];
 const SUPABASE_URL = process.env.SUPABASE_URL || "";
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || "";
 const FIREBASE_SERVICE_ACCOUNT_JSON = process.env.FIREBASE_SERVICE_ACCOUNT_JSON || "";
@@ -177,6 +203,29 @@ test.describe("production assessment security boundary", () => {
     }
   });
 
+  test("assessment history, results, analytics and topic recommendations reject anonymous access", async ({ request }) => {
+    expect(SUPABASE_URL).toBeTruthy();
+    expect(SUPABASE_ANON_KEY).toBeTruthy();
+    const cases = [
+      { functionName: "assessment-history", expectedStatus: 401, data: { limit: 10, offset: 0 } },
+      { functionName: "assessment-result", expectedStatus: 401, data: { attempt_id: "00000000-0000-0000-0000-000000000000" } },
+      { functionName: "assessment-analytics", expectedStatus: 401, data: {} },
+      { functionName: "assessment-topic-performance", expectedStatus: 400, data: {} },
+    ];
+    for (const item of cases) {
+      const response = await request.post(`${SUPABASE_URL}/functions/v1/${item.functionName}`, {
+        headers: { apikey: SUPABASE_ANON_KEY, "Content-Type": "application/json" },
+        data: item.data,
+      });
+      expect(response.status(), `${item.functionName} accepted an anonymous request`).toBe(item.expectedStatus);
+      const body = await response.json();
+      expect(body).toHaveProperty("error");
+      expect(body).not.toHaveProperty("result");
+      expect(body).not.toHaveProperty("items");
+      expect(body).not.toHaveProperty("recommendations");
+    }
+  });
+
   test("private answer keys are not anonymously downloadable", async ({ request }) => {
     expect(SUPABASE_URL).toBeTruthy();
     expect(SUPABASE_ANON_KEY).toBeTruthy();
@@ -186,6 +235,24 @@ test.describe("production assessment security boundary", () => {
         headers: { apikey: SUPABASE_ANON_KEY },
       });
       expect(response.status(), `Private key exposed for ${assessmentId}`).not.toBe(200);
+    }
+  });
+
+  test("all 24 competition question and answer-key bundles reject anonymous downloads", async ({ request }) => {
+    expect(SUPABASE_URL).toBeTruthy();
+    expect(SUPABASE_ANON_KEY).toBeTruthy();
+    for (const slug of PRIVATE_COMPETITION_SLUGS) {
+      for (const filename of ["questions.private.json", "answer-keys.private.json"]) {
+        const objectPath = `competitions/${slug}/objective/${filename}`;
+        const response = await request.get(
+          `${SUPABASE_URL}/storage/v1/object/academia-course-materials/${objectPath}`,
+          { headers: { apikey: SUPABASE_ANON_KEY } },
+        );
+        expect(
+          response.status(),
+          `Competition private bundle anonymously downloadable: ${objectPath}`,
+        ).not.toBe(200);
+      }
     }
   });
 });

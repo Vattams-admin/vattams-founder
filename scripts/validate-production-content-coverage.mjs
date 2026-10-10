@@ -21,13 +21,137 @@ const walk = (dir) => {
 const registry = readJson(path.join(ROOT, 'config/content-library-registry.json'));
 const competitionRegistry = readJson(path.join(ROOT, 'config/competition-registry.json'));
 const assessmentRegistry = readJson(path.join(ROOT, 'config/assessment-registry.json'));
+const generatedCompetitionAssetPaths = new Set(
+  Object.values(competitionRegistry.competitions ?? {}).flatMap((item) =>
+    [item.question_bundle, item.answer_key_bundle, item.age_pools]
+      .filter((value) => typeof value === 'string' && value.trim() !== '')
+  )
+);
+
+const resolveRepositoryAsset = (assetPath) => {
+  if (typeof assetPath !== 'string' || assetPath.trim() === '') {
+    return { valid: false, reason: 'asset path must be a non-empty string' };
+  }
+  if (path.isAbsolute(assetPath)) {
+    return { valid: false, reason: 'absolute paths are not allowed' };
+  }
+  const resolved = path.resolve(ROOT, assetPath);
+  const relative = path.relative(ROOT, resolved);
+  if (relative === '..' || relative.startsWith('..' + path.sep) || path.isAbsolute(relative)) {
+    return { valid: false, reason: 'path escapes repository root' };
+  }
+  return { valid: true, resolved, repositoryPath: relative.split(path.sep).join('/') };
+};
 
 const manifests = walk(CONTENT_ROOT).map((file) => {
   const relative = path.relative(ROOT, file).split(path.sep).join('/');
   try {
     const data = readJson(file);
+    const schemaErrors = [];
+    const requiredFields = ['packageId', 'version', 'domain', 'locator', 'status', 'coverage', 'assets', 'governance'];
+    for (const field of requiredFields) {
+      if (!Object.prototype.hasOwnProperty.call(data, field)) schemaErrors.push('missing required field: ' + field);
+    }
+    if (typeof data.packageId !== 'string' || data.packageId.length < 3) schemaErrors.push('packageId must be a string of at least 3 characters');
+    if (typeof data.version !== 'string' || !/^\d+\.\d+\.\d+$/.test(data.version)) schemaErrors.push('version must use semantic version format x.y.z');
+    if (!['course', 'school', 'competitive-exam', 'entrance-exam', 'professional', 'competition'].includes(data.domain)) schemaErrors.push('domain is not supported by the production manifest schema');
+    if (!data.locator || typeof data.locator !== 'object' || Array.isArray(data.locator) || typeof data.locator.language !== 'string' || data.locator.language.length < 2) schemaErrors.push('locator must be an object with a language code');
+    if (!['draft', 'in_review', 'approved', 'published', 'retired'].includes(data.status)) schemaErrors.push('status is not supported by the production manifest schema');
+    for (const field of ['studyMaterials', 'questions', 'assessments']) {
+      const value = field === 'questions' && data.domain === 'course' && data.coverage?.questions === undefined
+        ? data.coverage?.questionBank
+        : data.coverage?.[field];
+      if (!Number.isInteger(value) || value < 0) schemaErrors.push('coverage.' + field + ' must be a non-negative integer');
+    }
+    if (!Array.isArray(data.governance?.sourceEvidence) ||
+        data.governance.sourceEvidence.some((source) => typeof source !== 'string' || source.trim() === '') ||
+        !['unreviewed', 'reviewed', 'approved'].includes(data.governance?.reviewStatus) ||
+        data.governance?.answerKeyPrivate !== true) {
+      schemaErrors.push('governance must include sourceEvidence, a valid reviewStatus, and answerKeyPrivate=true');
+    }
+    if (data.status === 'published') {
+      const publishedAssets = data.assets ?? {};
+      const requiredPublishedAssets = data.domain === 'course'
+        ? ['authoringPackages']
+        : ['questionBanksPublic', 'answerKeysPrivate'];
+      for (const field of requiredPublishedAssets) {
+        if (!Array.isArray(publishedAssets[field]) || publishedAssets[field].length === 0) {
+          schemaErrors.push('published packages require non-empty assets.' + field);
+        }
+      }
+      for (const field of ['studyMaterials', 'questions', 'assessments']) {
+        const value = field === 'questions' && data.domain === 'course' && data.coverage?.questions === undefined
+          ? data.coverage?.questionBank
+          : data.coverage?.[field];
+        if (!Number.isInteger(value) || value <= 0) schemaErrors.push('published packages require coverage.' + field + ' greater than zero');
+      }
+      if (!['reviewed', 'approved'].includes(data.governance?.reviewStatus)) schemaErrors.push('published packages require reviewed or approved governance.reviewStatus');
+      for (const field of ['approvedBy', 'approvedAt', 'contentHash']) {
+        if (typeof data.governance?.[field] !== 'string' || data.governance[field].trim() === '') {
+          schemaErrors.push('published packages require non-empty governance.' + field);
+        }
+      }
+    }
+    if (data.locator && typeof data.locator === 'object' && !Array.isArray(data.locator)) {
+      for (const field of ['course', 'exam', 'competition', 'subject', 'language', 'board', 'classNumber', 'region']) {
+        if (data.locator[field] !== undefined &&
+            (typeof data.locator[field] !== 'string' || data.locator[field].trim() === '')) {
+          schemaErrors.push('locator.' + field + ' must be a non-empty string when provided');
+        }
+      }
+    }
+    const assets = data.assets ?? null;
+    if (!assets || typeof assets !== 'object' || Array.isArray(assets)) {
+      schemaErrors.push('assets must be an object');
+    } else {
+      for (const field of ['studyMaterials', 'questionBanksPublic', 'answerKeysPrivate', 'assessments', 'authoringPackages', 'moduleMaps']) {
+        if (assets[field] !== undefined &&
+            (!Array.isArray(assets[field]) || assets[field].some((entry) => typeof entry !== 'string'))) {
+          schemaErrors.push('assets.' + field + ' must be an array of strings');
+        }
+      }
+      for (const field of ['manifestPath', 'courseMap']) {
+        if (assets[field] !== undefined && typeof assets[field] !== 'string') {
+          schemaErrors.push('assets.' + field + ' must be a string when provided');
+        }
+      }
+    }
+    const missingAssetPaths = [];
+    if (assets?.manifestPath !== undefined) {
+      const resolvedManifestPath = resolveRepositoryAsset(assets.manifestPath);
+      if (!resolvedManifestPath.valid) {
+        missingAssetPaths.push({ field: 'manifestPath', value: assets.manifestPath, reason: resolvedManifestPath.reason });
+      } else if (!exists(resolvedManifestPath.resolved)) {
+        missingAssetPaths.push({ field: 'manifestPath', value: assets.manifestPath, reason: 'file does not exist in repository' });
+      } else if (!resolvedManifestPath.resolved.endsWith(path.join('manifest.json'))) {
+        missingAssetPaths.push({ field: 'manifestPath', value: assets.manifestPath, reason: 'manifestPath must reference a manifest.json file' });
+      }
+    }
+    for (const field of ['studyMaterials', 'assessments', 'authoringPackages', 'questionBanksPublic', 'answerKeysPrivate', 'moduleMaps']) {
+      const entries = assets?.[field] ?? [];
+      if (!Array.isArray(entries)) {
+        missingAssetPaths.push({ field, value: entries, reason: 'asset field must be an array' });
+        continue;
+      }
+      const seenAssetPaths = new Set();
+      for (const assetPath of entries) {
+        if (typeof assetPath === 'string') {
+          if (seenAssetPaths.has(assetPath)) {
+            missingAssetPaths.push({ field, value: assetPath, reason: 'duplicate asset reference in manifest' });
+          }
+          seenAssetPaths.add(assetPath);
+        }
+        const resolved = resolveRepositoryAsset(assetPath);
+        if (!resolved.valid) {
+          missingAssetPaths.push({ field, value: assetPath, reason: resolved.reason });
+        } else if (!exists(resolved.resolved) && data.status !== 'draft' && !generatedCompetitionAssetPaths.has(resolved.repositoryPath)) {
+          missingAssetPaths.push({ field, value: assetPath, reason: 'file does not exist in repository' });
+        }
+      }
+    }
     return {
       file: relative,
+      ...(schemaErrors.length > 0 ? { invalid: true, schemaErrors } : {}),
       packageId: data.packageId ?? null,
       version: data.version ?? null,
       domain: data.domain ?? null,
@@ -35,34 +159,422 @@ const manifests = walk(CONTENT_ROOT).map((file) => {
       status: data.status ?? null,
       coverage: data.coverage ?? null,
       governance: data.governance ?? null,
-      assets: data.assets ?? null
+      assets,
+      missingAssetPaths
     };
   } catch (error) {
     return { file: relative, invalid: true, error: error.message };
   }
 });
 
+const duplicatePackageIds = new Map();
+for (const manifest of manifests.filter((item) => !item.invalid && item.packageId)) {
+  const files = duplicatePackageIds.get(manifest.packageId) ?? [];
+  files.push(manifest.file);
+  duplicatePackageIds.set(manifest.packageId, files);
+}
+const duplicatePackageIdEntries = [...duplicatePackageIds.entries()].filter(([, files]) => files.length > 1);
+
+const locatorOwners = new Map();
+for (const manifest of manifests.filter((item) => !item.invalid && item.locator && typeof item.locator === 'object')) {
+  const canonicalLocator = JSON.stringify(
+    Object.entries(manifest.locator).sort(([left], [right]) => left.localeCompare(right))
+  );
+  const owners = locatorOwners.get(canonicalLocator) ?? [];
+  owners.push({ file: manifest.file, packageId: manifest.packageId ?? '(missing packageId)' });
+  locatorOwners.set(canonicalLocator, owners);
+}
+const duplicateLocatorEntries = [...locatorOwners.entries()].filter(([, owners]) => owners.length > 1);
+
 const competitionTargets = Object.values(competitionRegistry.competitions ?? {}).map((item) => ({
   targetType: 'competition',
   id: item.course_id,
   slug: item.slug,
   title: item.competition,
-  enabled: item.enabled === true,
+  // Registry entries are considered enabled unless explicitly disabled; missing flags must not silently skip coverage checks.
+  enabled: item.enabled !== false,
   questionBundle: item.question_bundle,
   answerKeyBundle: item.answer_key_bundle
 }));
 
-const courseTargets = manifests.filter((item) => item.domain === 'course').map((item) => ({
-  targetType: 'course',
-  id: item.locator?.course ?? item.packageId,
-  slug: item.locator?.course ?? item.packageId,
-  title: item.packageId,
-  enabled: item.status !== 'retired',
-  authoringPackages: item.assets?.authoringPackages ?? []
-}));
+// Discover course targets from the canonical content/courses directory, not from manifests.
+// This makes a course with a missing manifest visible as a missing target instead of silently
+// disappearing from the coverage denominator.
+const coursesRoot = path.join(CONTENT_ROOT, 'courses');
+const courseTargets = exists(coursesRoot)
+  ? fs.readdirSync(coursesRoot, { withFileTypes: true })
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => {
+        const slug = entry.name;
+        const manifest = manifests.find((item) =>
+          item.domain === 'course' && item.locator?.course === slug
+        );
+        return {
+          targetType: 'course',
+          id: slug,
+          slug,
+          title: manifest?.packageId ?? slug,
+          enabled: manifest?.status !== 'retired',
+          authoringPackages: manifest?.assets?.authoringPackages ?? []
+        };
+      })
+  : [];
+
+// Validate the course-level maps and package cross-links as part of production coverage.
+const courseStructureErrors = [];
+for (const target of courseTargets) {
+  const courseRoot = path.join(coursesRoot, target.slug);
+  const manifest = manifests.find((item) =>
+    item.domain === 'course' && item.locator?.course === target.slug
+  );
+  const manifestPath = path.join(courseRoot, 'manifest.json');
+  const courseMapPath = path.join(courseRoot, 'course-map.json');
+  const moduleMapPath = path.join(courseRoot, 'module-map.json');
+
+  if (!exists(manifestPath)) courseStructureErrors.push(target.slug + ': missing manifest.json');
+  if (!exists(courseMapPath)) courseStructureErrors.push(target.slug + ': missing course-map.json');
+  if (!exists(moduleMapPath)) courseStructureErrors.push(target.slug + ': missing module-map.json');
+  if (!manifest || manifest.invalid) continue;
+  if (!exists(courseMapPath) || !exists(moduleMapPath)) continue;
+
+  let courseMap;
+  let moduleMap;
+  try {
+    courseMap = readJson(courseMapPath);
+    moduleMap = readJson(moduleMapPath);
+  } catch (error) {
+    courseStructureErrors.push(target.slug + ': course/module map JSON is invalid (' + error.message + ')');
+    continue;
+  }
+
+  const modules = Array.isArray(courseMap.modules) ? courseMap.modules : [];
+  if (modules.length === 0) courseStructureErrors.push(target.slug + ': course-map must contain at least one module');
+  const lessonIds = new Set();
+  let expectedModuleSequence = 1;
+  for (const module of modules) {
+    if (module.sequence !== expectedModuleSequence) {
+      courseStructureErrors.push(target.slug + ': course-map module sequence must be contiguous at ' + String(module.moduleId ?? expectedModuleSequence));
+    }
+    expectedModuleSequence += 1;
+    if (!Array.isArray(module.lessons)) {
+      courseStructureErrors.push(target.slug + ': module ' + String(module.moduleId ?? '(unknown)') + ' must contain a lessons array');
+      continue;
+    }
+    let expectedLessonSequence = 1;
+    for (const lesson of module.lessons) {
+      if (typeof lesson.lessonId !== 'string' || lesson.lessonId.length === 0) {
+        courseStructureErrors.push(target.slug + ': lesson is missing lessonId');
+      } else if (lessonIds.has(lesson.lessonId)) {
+        courseStructureErrors.push(target.slug + ': duplicate lessonId ' + lesson.lessonId);
+      } else {
+        lessonIds.add(lesson.lessonId);
+      }
+      if (lesson.sequence !== expectedLessonSequence) {
+        courseStructureErrors.push(target.slug + ': lesson sequence must be contiguous in module ' + String(module.moduleId ?? '(unknown)'));
+      }
+      expectedLessonSequence += 1;
+      if (typeof lesson.package !== 'string' || lesson.package.trim() === '') {
+        courseStructureErrors.push(target.slug + ': lesson ' + String(lesson.lessonId ?? '(unknown)') + ' has no package path');
+      } else {
+        const resolved = resolveRepositoryAsset(lesson.package);
+        if (!resolved.valid || !exists(resolved.resolved)) {
+          courseStructureErrors.push(target.slug + ': lesson package missing or unsafe: ' + lesson.package);
+        }
+      }
+    }
+  }
+
+  const packagePaths = manifest.assets?.authoringPackages;
+  if (!Array.isArray(packagePaths) || packagePaths.length === 0) {
+    courseStructureErrors.push(target.slug + ': manifest must reference authoringPackages');
+    continue;
+  }
+  const packageLessonIds = new Set();
+  for (const packagePath of packagePaths) {
+    const resolved = resolveRepositoryAsset(packagePath);
+    if (!resolved.valid || !exists(resolved.resolved)) {
+      courseStructureErrors.push(target.slug + ': manifest authoring package missing or unsafe: ' + String(packagePath));
+      continue;
+    }
+    try {
+      const pkg = readJson(resolved.resolved);
+      if (pkg.locator?.course !== target.slug) {
+        courseStructureErrors.push(target.slug + ': authoring package course locator mismatch: ' + packagePath);
+      }
+      const lessonId = pkg.locator?.lesson;
+      const questionIds = new Set();
+      for (const [questionIndex, question] of (Array.isArray(pkg.questions) ? pkg.questions : []).entries()) {
+        const questionId = question?.questionId ?? question?.id;
+        if (typeof questionId !== 'string' || questionId.trim() === '') {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question #' + (questionIndex + 1) + ' has no questionId/id');
+        } else if (questionIds.has(questionId)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate question ID ' + questionId);
+        } else {
+          questionIds.add(questionId);
+        }
+      }
+      const answerKeyEntries = Array.isArray(pkg.answerKeys) ? pkg.answerKeys : [];
+      const answerKeyIds = new Set();
+      for (const [answerIndex, answer] of answerKeyEntries.entries()) {
+        const answerId = answer?.questionId ?? answer?.id;
+        if (typeof answerId !== 'string' || answerId.trim() === '') {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' answer key #' + (answerIndex + 1) + ' has no questionId/id');
+        } else if (answerKeyIds.has(answerId)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate answer-key ID ' + answerId);
+        } else {
+          answerKeyIds.add(answerId);
+        }
+      }
+      for (const questionId of questionIds) {
+        if (!answerKeyIds.has(questionId)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + questionId + ' has no matching answer key');
+      }
+      for (const answerId of answerKeyIds) {
+        if (!questionIds.has(answerId)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' answer key references unknown question ' + answerId);
+      }
+      // Course MCQs must have usable options and a valid, private answer-key mapping.
+      // This validates the course schema independently from competition/exam bank formats.
+      const courseQuestions = Array.isArray(pkg.questions) ? pkg.questions : [];
+      const answerKeysById = new Map(answerKeyEntries.map((answer) => [answer?.questionId ?? answer?.id, answer]));
+      const questionStemOwners = new Map();
+      const questionDifficultyValues = new Set();
+      let questionsWithExplicitDifficulty = 0;
+      for (const [questionIndex, question] of courseQuestions.entries()) {
+        const questionId = question?.questionId ?? question?.id;
+        const label = String(questionId ?? 'row ' + (questionIndex + 1));
+        if (typeof question?.question !== 'string' || question.question.trim() === '') {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' has no question text');
+        } else {
+          const normalizedStem = question.question.trim().replace(/\\s+/g, ' ').toLocaleLowerCase();
+          if (questionStemOwners.has(normalizedStem) && pkg.status === 'published') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate question text for ' + label + ' and ' + questionStemOwners.get(normalizedStem));
+          } else {
+            questionStemOwners.set(normalizedStem, label);
+          }
+        }
+        if (!Array.isArray(question?.options) || question.options.length < 2 ||
+            question.options.some((option) => typeof option !== 'string' || option.trim() === '')) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' must have at least two non-empty text options');
+        } else {
+          const normalizedOptions = question.options.map((option) => option.trim().toLocaleLowerCase());
+          if (new Set(normalizedOptions).size !== normalizedOptions.length && pkg.status === 'published') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' contains duplicate answer options');
+          }
+        }
+        if (pkg.status === 'published' && question?.difficulty !== undefined &&
+            !['foundational', 'foundation', 'basic', 'easy', 'medium', 'conceptual', 'intermediate', 'application', 'hard', 'advanced', 'higher-order', 'higherOrderThinking', 'diagnostic', 'remediation', 'mixedReview'].includes(question.difficulty)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' has an unsupported difficulty label');
+        }
+        if (typeof question?.difficulty === 'string' &&
+            ['foundational', 'foundation', 'basic', 'easy', 'medium', 'conceptual', 'intermediate', 'application', 'hard', 'advanced', 'higher-order', 'higherOrderThinking', 'diagnostic', 'remediation', 'mixedReview'].includes(question.difficulty)) {
+          questionsWithExplicitDifficulty += 1;
+          questionDifficultyValues.add(question.difficulty);
+        }
+        if (question?.marks !== undefined && (!Number.isFinite(question.marks) || question.marks <= 0)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' must have positive marks when marks are supplied');
+        }
+        if (question?.timeSeconds !== undefined && (!Number.isInteger(question.timeSeconds) || question.timeSeconds <= 0)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' question ' + label + ' must have a positive integer timeSeconds when supplied');
+        }
+        const answerKey = answerKeysById.get(questionId);
+        if (answerKey) {
+          const correctIndex = answerKey.correctOptionIndex ?? answerKey.correct_option_index;
+          if (!Number.isInteger(correctIndex) || correctIndex < 0 ||
+              !Array.isArray(question?.options) || correctIndex >= question.options.length) {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' answer key for ' + label + ' has an invalid correct-option index');
+          }
+          if (typeof answerKey.explanation !== 'string' || answerKey.explanation.trim() === '') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' answer key for ' + label + ' is missing an explanation');
+          }
+        }
+      }
+      if (pkg.status === 'published' && courseQuestions.length > 0 && questionsWithExplicitDifficulty === 0) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' questions need explicit difficulty labels to support progression');
+      } else if (pkg.status === 'published' && courseQuestions.length >= 5 && questionDifficultyValues.size < 2) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' should include at least two difficulty levels when it contains five or more questions');
+      }
+      if (questionIds.size > 0 && answerKeyIds.size === 0) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has questions but no answer keys');
+      }
+      // Validate the authored package schema used by the actual lesson library.
+      // Older/current packages store learning content under studyMaterial, practice,
+      // activities, outcomes, questions and revision rather than one flat set of fields.
+      const studyMaterial = pkg.studyMaterial ?? pkg.content?.studyMaterial ?? pkg.lesson?.studyMaterial;
+      const practice = pkg.practice ?? pkg.content?.practice ?? pkg.lesson?.practice;
+      const activities = pkg.activities ?? pkg.content?.activities ?? pkg.lesson?.activities;
+      const outcomes = pkg.outcomes ?? pkg.content?.outcomes ?? pkg.lesson?.outcomes;
+      const questions = pkg.questions ?? pkg.content?.questions ?? pkg.lesson?.questions;
+      const revision = pkg.revision ?? pkg.content?.revision ?? pkg.lesson?.revision;
+      const hasItems = (value) => Array.isArray(value) && value.length > 0;
+      const hasTextItems = (value) => hasItems(value) && value.every((item) => typeof item === 'string' ? item.trim().length > 0 : item && typeof item === 'object');
+      if (!studyMaterial || typeof studyMaterial !== 'object') {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing studyMaterial');
+      } else {
+        if (!hasTextItems(studyMaterial.objectives)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing studyMaterial.objectives');
+        if (!(hasTextItems(studyMaterial.concepts) || hasTextItems(studyMaterial.definitions))) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' needs concepts or definitions');
+        if (!hasTextItems(studyMaterial.workedExamples)) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing worked examples');
+        } else {
+          for (const [exampleIndex, example] of studyMaterial.workedExamples.entries()) {
+            const hasExampleContent = typeof example === 'string'
+              ? example.trim() !== ''
+              : example && typeof example === 'object' &&
+                Object.values(example).some((value) => typeof value === 'string' && value.trim() !== '');
+            if (!hasExampleContent) {
+              courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' worked example #' + (exampleIndex + 1) + ' has no explanatory content');
+            }
+          }
+        }
+        if (hasItems(studyMaterial.commonMistakes) &&
+            studyMaterial.commonMistakes.some((item) => typeof item === 'string' ? item.trim() === '' : !item || typeof item !== 'object' || !Object.values(item).some((value) => typeof value === 'string' && value.trim() !== ''))) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' contains an empty or unauthored common-mistake entry');
+        }
+        if (hasItems(studyMaterial.keyTakeaways) &&
+            studyMaterial.keyTakeaways.some((item) => typeof item !== 'string' || item.trim() === '')) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' contains an empty key takeaway');
+        }
+      }
+      if (!activities || !hasItems(activities) || activities.some((item) => !item || !((typeof item.instruction === 'string' && item.instruction.trim() !== '') || (typeof item.name === 'string' && item.name.trim() !== '' && Array.isArray(item.steps) && item.steps.length > 0 && item.steps.every((step) => typeof step === 'string' && step.trim() !== ''))))) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing authored activities with instructions');
+      } else {
+        const activityIds = new Set();
+        for (const [activityIndex, activity] of activities.entries()) {
+          const label = 'activity #' + (activityIndex + 1);
+          if (typeof activity.id !== 'string' || activity.id.trim() === '') {
+            if (Array.isArray(activity.steps) && activity.steps.length > 0 && typeof activity.name === 'string' && activity.name.trim() !== '') continue;
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' ' + label + ' is missing a stable ID');
+          } else if (activityIds.has(activity.id)) {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate activity ID ' + activity.id);
+          } else {
+            activityIds.add(activity.id);
+          }
+          if (typeof activity.type !== 'string' || activity.type.trim() === '') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' ' + label + ' is missing an activity type');
+          }
+        }
+      }
+      if (!practice || typeof practice !== 'object' || !Object.values(practice).some(hasItems)) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing practice questions');
+      } else {
+        const practicePromptOwners = new Map();
+        const practiceItemIds = new Set();
+        const recommendedPracticeBands = ['basic', 'conceptual', 'application', 'higherOrderThinking', 'mixedReview'];
+        const populatedPracticeBands = recommendedPracticeBands.filter((band) => hasItems(practice[band]));
+        if (populatedPracticeBands.length < 3) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' should populate at least three practice bands (basic, conceptual, application, higherOrderThinking, mixedReview)');
+        }
+        for (const [band, items] of Object.entries(practice)) {
+          if (!Array.isArray(items)) continue;
+          for (const [practiceIndex, item] of items.entries()) {
+            if (typeof item === 'string' && item.trim() !== '') {
+              const normalizedPrompt = item.trim().replace(/\\s+/g, ' ').toLocaleLowerCase();
+              if (practicePromptOwners.has(normalizedPrompt)) courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' repeats a practice prompt in ' + band + ' and ' + practicePromptOwners.get(normalizedPrompt));
+              else practicePromptOwners.set(normalizedPrompt, band);
+              continue;
+            }
+            if (!item || typeof item !== 'object' ||
+                typeof item.prompt !== 'string' || item.prompt.trim() === '' ||
+                typeof item.answer !== 'string' || item.answer.trim() === '') {
+              courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' practice ' + band + ' item #' + (practiceIndex + 1) + ' must include a non-empty prompt and answer');
+            }
+            if (item && typeof item === 'object') {
+              if (typeof item.id !== 'string' || item.id.trim() === '') {
+                courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' practice ' + band + ' item #' + (practiceIndex + 1) + ' is missing a stable ID');
+              } else if (practiceItemIds.has(item.id)) {
+                courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate practice item ID ' + item.id);
+              } else {
+                practiceItemIds.add(item.id);
+              }
+              if (typeof item.prompt === 'string' && item.prompt.trim() !== '') {
+                const normalizedPrompt = item.prompt.trim().replace(/\\s+/g, ' ').toLocaleLowerCase();
+                if (practicePromptOwners.has(normalizedPrompt)) {
+                  courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' repeats a practice prompt in ' + band + ' and ' + practicePromptOwners.get(normalizedPrompt));
+                } else {
+                  practicePromptOwners.set(normalizedPrompt, band);
+                }
+              }
+            }
+          }
+        }
+      }
+      if (!hasItems(questions)) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing assessment questions');
+      } else {
+        const assessmentIds = new Set();
+        for (const [assessmentIndex, assessment] of questions.entries()) {
+          const assessmentId = assessment?.questionId ?? assessment?.id;
+          const label = String(assessmentId ?? 'row ' + (assessmentIndex + 1));
+          if (typeof assessmentId !== 'string' || assessmentId.trim() === '') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' assessment question #' + (assessmentIndex + 1) + ' is missing a stable ID');
+          } else if (assessmentIds.has(assessmentId)) {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' has duplicate assessment question ID ' + assessmentId);
+          } else {
+            assessmentIds.add(assessmentId);
+          }
+          if (typeof assessment?.difficulty !== 'string' || assessment.difficulty.trim() === '') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' assessment question ' + label + ' is missing difficulty metadata');
+          }
+        }
+      }
+      if (!hasTextItems(outcomes)) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing measurable learning outcomes');
+      } else {
+        for (const [outcomeIndex, outcome] of outcomes.entries()) {
+          if (typeof outcome === 'string' && outcome.trim() !== '') continue;
+          if (!outcome || typeof outcome !== 'object' ||
+              typeof outcome.statement !== 'string' || outcome.statement.trim() === '' ||
+              typeof outcome.measure !== 'string' || outcome.measure.trim() === '' ||
+              typeof outcome.target !== 'string' || outcome.target.trim() === '') {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' outcome #' + (outcomeIndex + 1) + ' must include statement, measure, and target');
+          }
+        }
+      }
+      if (!revision || typeof revision !== 'object' || !Object.values(revision).some(hasItems)) {
+        courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' is missing revision content');
+      } else {
+        const revisionSections = ['quickRevision', 'flashRecall', 'mistakeBasedRevision', 'weakTopicRevision'];
+        if (!revisionSections.some((section) => hasItems(revision[section]))) {
+          courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' needs quick revision, flash recall, mistake-based, or weak-topic revision content');
+        }
+        for (const section of revisionSections) {
+          if (revision[section] !== undefined &&
+              (!Array.isArray(revision[section]) || revision[section].some((item) =>
+                typeof item !== 'string' && (!item || typeof item !== 'object' ||
+                  !Object.values(item).some((value) => typeof value === 'string' && value.trim() !== ''))))) {
+            courseStructureErrors.push(target.slug + ': lesson package ' + packagePath + ' revision section ' + section + ' contains empty or unauthored content');
+          }
+        }
+      }
+      if (typeof lessonId !== 'string' || !lessonIds.has(lessonId)) {
+        courseStructureErrors.push(target.slug + ': package lesson is absent from course-map: ' + packagePath);
+      }
+      if (typeof lessonId === 'string') packageLessonIds.add(lessonId);
+    } catch (error) {
+      courseStructureErrors.push(target.slug + ': authoring package JSON is invalid: ' + packagePath + ' (' + error.message + ')');
+    }
+  }
+  for (const lessonId of lessonIds) {
+    if (!packageLessonIds.has(lessonId)) {
+      courseStructureErrors.push(target.slug + ': course-map lesson is missing from manifest authoringPackages: ' + lessonId);
+    }
+  }
+
+  const moduleIds = new Set(modules.map((module) => module.moduleId).filter((id) => typeof id === 'string'));
+  const moduleMapModules = Array.isArray(moduleMap.modules) ? moduleMap.modules : [];
+  for (const module of moduleMapModules) {
+    if (!moduleIds.has(module.moduleId)) {
+      courseStructureErrors.push(target.slug + ': module-map references unknown module ' + String(module.moduleId ?? '(unknown)'));
+    }
+    for (const lessonId of Array.isArray(module.lessons) ? module.lessons : []) {
+      if (!lessonIds.has(lessonId)) {
+        courseStructureErrors.push(target.slug + ': module-map references unknown lesson ' + String(lessonId));
+      }
+    }
+  }
+}
 
 const assessmentTargets = Object.values(assessmentRegistry.assessments ?? {}).map((item) => ({
   targetType: 'assessment',
+  domain: item.domain ?? 'assessment',
   id: item.assessment_id,
   courseId: item.course_id,
   title: item.title ?? item.assessment_id,
@@ -73,14 +585,34 @@ const assessmentTargets = Object.values(assessmentRegistry.assessments ?? {}).ma
   answerKey: item.answer_key
 }));
 
-const includesAsset = (manifest, candidates) => {
+const registryTargetErrors = [];
+const validateUniqueTargets = (label, entries) => {
+  const seen = new Map();
+  for (const item of entries) {
+    const id = item.id ?? item.courseId ?? item.slug;
+    if (typeof id !== 'string' || id.trim() === '') {
+      registryTargetErrors.push(label + ': target is missing a non-empty identifier');
+      continue;
+    }
+    if (seen.has(id)) {
+      registryTargetErrors.push(label + ': duplicate target identifier ' + id);
+    } else {
+      seen.set(id, item);
+    }
+  }
+};
+
+validateUniqueTargets('course registry', courseTargets);
+validateUniqueTargets('competition registry', competitionTargets);
+validateUniqueTargets('assessment registry', assessmentTargets);
+
+const hasAllRequiredAssets = (manifest, publicCandidates, privateCandidates) => {
   const assets = manifest?.assets ?? {};
-  const values = [
-    ...(assets.questionBanksPublic ?? []),
-    ...(assets.answerKeysPrivate ?? []),
-    ...(assets.assessments ?? [])
-  ];
-  return candidates.some((candidate) => values.includes(candidate));
+  const publicBanks = new Set(assets.questionBanksPublic ?? []);
+  const privateKeys = new Set(assets.answerKeysPrivate ?? []);
+  return publicCandidates.length > 0 && privateCandidates.length > 0 &&
+    publicCandidates.every((candidate) => publicBanks.has(candidate)) &&
+    privateCandidates.every((candidate) => privateKeys.has(candidate));
 };
 
 const findManifest = (target) => manifests.find((item) => {
@@ -93,10 +625,7 @@ const findManifest = (target) => manifests.find((item) => {
 
   if (target.targetType === 'competition') {
     if (item.domain !== 'competition' || item.locator?.competition !== target.slug) return false;
-    return includesAsset(item, [
-      target.questionBundle,
-      target.answerKeyBundle
-    ].filter(Boolean));
+    return hasAllRequiredAssets(item, [target.questionBundle].filter(Boolean), [target.answerKeyBundle].filter(Boolean));
   }
 
   if (item.domain !== 'competitive-exam' ||
@@ -104,27 +633,119 @@ const findManifest = (target) => manifests.find((item) => {
     return false;
   }
 
-  return includesAsset(item, [
-    target.questionBankPublic,
-    target.answerKey
-  ].filter(Boolean)) || (item.assets?.assessments ?? []).includes(target.id);
+  return hasAllRequiredAssets(item, [target.questionBankPublic].filter(Boolean), [target.answerKey].filter(Boolean));
 });
 
+const targetManifestMatches = new Map();
 const targets = [
   ...courseTargets,
   ...competitionTargets,
   ...assessmentTargets
 ].map((target) => {
   const manifest = findManifest(target);
+  if (manifest) {
+    const owners = targetManifestMatches.get(manifest.file) ?? [];
+    owners.push({ targetType: target.targetType, id: target.id ?? target.courseId ?? target.slug, title: target.title ?? null });
+    targetManifestMatches.set(manifest.file, owners);
+  }
+  const state = manifest?.status ?? 'missing';
+  const releaseBlockers = [];
+  const diagnostics = [];
+  const priorityForCode = (code) => code === 'PUBLIC_ANSWER_LEAK' ? 'critical' : ['ANSWER_KEY_MISSING', 'ANSWER_KEY_ORPHAN', 'ANSWER_OPTION_MISMATCH', 'ANSWER_INDEX_OUT_OF_RANGE', 'PUBLIC_QUESTION_ID_DUPLICATE', 'ANSWER_KEY_ID_DUPLICATE'].includes(code) ? 'high' : ['PUBLIC_QUESTION_ID_MISSING', 'ANSWER_KEY_ID_MISSING', 'QUESTION_OPTIONS_INSUFFICIENT'].includes(code) ? 'medium' : 'low';
+  const addDiagnostic = (severity, code, message, questionId = null, action = 'Correct the source content and rerun the validator.') => diagnostics.push({ severity, code, priority: priorityForCode(code), message, questionId, action });
+  if (!manifest) releaseBlockers.push('content manifest is missing');
+  if (manifest?.invalid) releaseBlockers.push('manifest schema validation failed');
+  if ((manifest?.missingAssetPaths?.length ?? 0) > 0) releaseBlockers.push('one or more asset paths are invalid or missing');
+  if (manifest && !['approved', 'published'].includes(state)) releaseBlockers.push('content has not reached an approved release state');
+  if (manifest && state === 'published' && (!['reviewed', 'approved'].includes(manifest.governance?.reviewStatus) || !manifest.governance?.approvedBy || !manifest.governance?.approvedAt || !manifest.governance?.contentHash)) releaseBlockers.push('publication governance metadata is incomplete');
+  if (manifest && target.targetType === 'course' && !(manifest.assets?.authoringPackages ?? []).length) releaseBlockers.push('course authoring packages are missing');
+  if (manifest && target.targetType === 'course' && courseStructureErrors.some((error) => error.startsWith(target.slug + ':'))) releaseBlockers.push('course map, module map, or lesson authoring package integrity checks failed');
+  if (manifest && ['competition', 'assessment'].includes(target.targetType) && (!(manifest.assets?.questionBanksPublic ?? []).length || !(manifest.assets?.answerKeysPrivate ?? []).length)) releaseBlockers.push('public question bank or private answer key is missing');
+  if (manifest && target.targetType === 'competition') {
+    if (typeof target.questionBundle !== 'string' || !target.questionBundle.trim() || !(manifest.assets?.questionBanksPublic ?? []).includes(target.questionBundle)) releaseBlockers.push('registry question bundle is not referenced by assets.questionBanksPublic');
+    if (typeof target.answerKeyBundle !== 'string' || !target.answerKeyBundle.trim() || !(manifest.assets?.answerKeysPrivate ?? []).includes(target.answerKeyBundle)) releaseBlockers.push('registry answer-key bundle is not referenced by assets.answerKeysPrivate');
+  }
+  if (manifest && target.targetType === 'assessment') {
+    if (typeof target.questionBankPublic !== 'string' || !target.questionBankPublic.trim() || !(manifest.assets?.questionBanksPublic ?? []).includes(target.questionBankPublic)) releaseBlockers.push('registry question bank is not referenced by assets.questionBanksPublic');
+    if (typeof target.answerKey !== 'string' || !target.answerKey.trim() || !(manifest.assets?.answerKeysPrivate ?? []).includes(target.answerKey)) releaseBlockers.push('registry answer key is not referenced by assets.answerKeysPrivate');
+  }
+  if (manifest && ['competition', 'assessment'].includes(target.targetType)) {
+    const publicPaths = target.targetType === 'competition' ? [target.questionBundle] : [target.questionBankPublic];
+    const privatePaths = target.targetType === 'competition' ? [target.answerKeyBundle] : [target.answerKey];
+    for (const [index, publicPath] of publicPaths.entries()) {
+      const privatePath = privatePaths[index];
+      if (typeof publicPath !== 'string' || typeof privatePath !== 'string') continue;
+      const publicResolved = resolveRepositoryAsset(publicPath);
+      const privateResolved = resolveRepositoryAsset(privatePath);
+      if (!publicResolved.valid || !privateResolved.valid || !exists(publicResolved.resolved) || !exists(privateResolved.resolved)) continue;
+      try {
+        const publicBank = readJson(publicResolved.resolved);
+        const privateBank = readJson(privateResolved.resolved);
+        if (!Array.isArray(publicBank) || !Array.isArray(privateBank)) {
+          releaseBlockers.push('question bank and answer key must both be JSON arrays');
+          continue;
+        }
+        const publicIds = new Set();
+        const privateIds = new Set();
+        for (const [questionIndex, question] of publicBank.entries()) {
+          const id = question?.question_id ?? question?.questionId ?? question?.id;
+          if (typeof id !== 'string' || !id.trim()) { addDiagnostic('error', 'PUBLIC_QUESTION_ID_MISSING', 'Public question has no ID at row ' + (questionIndex + 1), null, 'Add a stable question_id, questionId, or id.'); releaseBlockers.push('public bank has a question without an ID at row ' + (questionIndex + 1)); }
+          else if (publicIds.has(id)) { addDiagnostic('error', 'PUBLIC_QUESTION_ID_DUPLICATE', 'Duplicate public question ID', id, 'Assign a unique ID to each public question.'); releaseBlockers.push('public bank has duplicate question ID ' + id); }
+          else publicIds.add(id);
+          if (!Array.isArray(question?.options) || question.options.length < 2) { addDiagnostic('error', 'QUESTION_OPTIONS_INSUFFICIENT', 'Question has fewer than two options', typeof id === 'string' ? id : null, 'Add at least two answer options.'); releaseBlockers.push('public question ' + String(id ?? questionIndex + 1) + ' has fewer than two options'); }
+          if (question?.correct_option_index !== undefined || question?.correctOptionIndex !== undefined || question?.answer !== undefined) {
+            addDiagnostic('error', 'PUBLIC_ANSWER_LEAK', 'Public question record contains answer data', typeof id === 'string' ? id : null, 'Remove answer and correctness fields from the public bank; keep them in the private key.'); releaseBlockers.push('public question bank exposes answer data for question ' + String(id ?? questionIndex + 1));
+          }
+        }
+        for (const [answerIndex, answer] of privateBank.entries()) {
+          const id = answer?.question_id ?? answer?.questionId ?? answer?.id;
+          if (typeof id !== 'string' || !id.trim()) { addDiagnostic('error', 'ANSWER_KEY_ID_MISSING', 'Private answer-key row has no question ID at row ' + (answerIndex + 1), null, 'Add the matching public question ID.'); releaseBlockers.push('private answer key has a row without a question ID at row ' + (answerIndex + 1)); }
+          else if (privateIds.has(id)) { addDiagnostic('error', 'ANSWER_KEY_ID_DUPLICATE', 'Duplicate private answer-key ID', id, 'Keep exactly one answer-key entry per question ID.'); releaseBlockers.push('private answer key has duplicate question ID ' + id); }
+          else privateIds.add(id);
+          const answerIndexValue = answer?.correct_option_index ?? answer?.correctOptionIndex;
+          const suppliedAnswer = answer?.answer ?? answer?.correct_answer ?? answer?.correctAnswer;
+          const matchingQuestion = publicBank.find((question) => (question?.question_id ?? question?.questionId ?? question?.id) === id);
+          if (matchingQuestion && typeof suppliedAnswer === 'string' && Array.isArray(matchingQuestion.options) && !matchingQuestion.options.some((option) => String(option).trim() === suppliedAnswer.trim())) { addDiagnostic('error', 'ANSWER_OPTION_MISMATCH', 'Private answer value does not match a public option', String(id), 'Correct the private answer or the public options so they agree.'); releaseBlockers.push('private answer value is not present among options for question ' + String(id)); }
+          if (answerIndexValue !== undefined && (!Number.isInteger(answerIndexValue) || answerIndexValue < 0 || !Array.isArray(matchingQuestion?.options) || answerIndexValue >= matchingQuestion.options.length)) { addDiagnostic('error', 'ANSWER_INDEX_OUT_OF_RANGE', 'Correct-option index is outside the public option range', typeof id === 'string' ? id : null, 'Set the zero-based correct_option_index to an existing option index.'); releaseBlockers.push('private answer key has an out-of-range correct option index for ' + String(id ?? answerIndex + 1)); }
+        }
+        for (const id of publicIds) if (!privateIds.has(id)) { addDiagnostic('error', 'ANSWER_KEY_MISSING', 'Public question has no matching private answer key', id, 'Add one private answer-key entry with this exact question ID.'); releaseBlockers.push('public question ' + id + ' has no matching private answer key'); }
+        for (const id of privateIds) if (!publicIds.has(id)) { addDiagnostic('error', 'ANSWER_KEY_ORPHAN', 'Private answer key references an unknown public question', id, 'Add the matching public question or remove the orphan answer-key entry.'); releaseBlockers.push('private answer key references unknown public question ' + id); }
+        if (publicIds.size === 0) releaseBlockers.push('public question bank is empty');
+        if (privateIds.size === 0) releaseBlockers.push('private answer key is empty');
+      } catch (error) {
+        releaseBlockers.push('question bank or private answer key is invalid JSON: ' + error.message);
+      }
+    }
+  }
+  const releaseReady = releaseBlockers.length === 0 && state === 'published';
+  const remediation = state === 'missing'
+    ? 'Create a manifest with the correct locator and required assets, then add evidence and review metadata.'
+    : state === 'draft'
+      ? 'Complete authoring, verify source evidence and private answer-key separation, then submit for review.'
+      : state === 'in_review'
+        ? 'Resolve reviewer feedback and record the approval decision before publication.'
+        : state === 'approved'
+          ? 'Verify release readiness and publish only after all production gates pass.'
+          : state === 'retired'
+            ? 'Confirm retirement is intentional; replace or re-enable the target if it remains in scope.'
+            : state === 'published'
+              ? 'Maintain version, evidence, and release integrity; no immediate status action required.'
+              : 'Inspect manifest and registry alignment.';
   return {
     ...target,
-    state: manifest?.status ?? 'missing',
+    state,
+    releaseReady,
+    releaseBlockers,
+    diagnostics,
+    remediation,
     packageId: manifest?.packageId ?? null,
     version: manifest?.version ?? null,
     coverage: manifest?.coverage ?? null,
     manifestFile: manifest?.file ?? null
   };
 });
+
+const reusedManifestMatches = [...targetManifestMatches.entries()].filter(([, owners]) => owners.length > 1);
 
 const count = (state) => targets.filter((item) => item.state === state).length;
 const summary = {
@@ -133,24 +754,135 @@ const summary = {
   contentRoot: registry.library_root,
   actualManifestCount: manifests.length,
   invalidManifestCount: manifests.filter((m) => m.invalid).length,
+  missingAssetPathCount: manifests.reduce((total, manifest) => total + (manifest.missingAssetPaths?.length ?? 0), 0),
   targetCount: targets.length,
   missingCount: count('missing'),
   draftCount: count('draft'),
   inReviewCount: count('in_review'),
   approvedCount: count('approved'),
   publishedCount: count('published'),
+  releaseReadyCount: targets.filter((item) => item.releaseReady).length,
+  releaseBlockedCount: targets.filter((item) => !item.releaseReady).length,
   retiredCount: count('retired'),
   courseTargetCount: courseTargets.length,
+  competitiveExamTargetCount: assessmentTargets.filter((item) => item.domain === 'competitive-exam').length,
   competitionTargetCount: competitionTargets.length,
-  assessmentTargetCount: assessmentTargets.length
+  assessmentTargetCount: assessmentTargets.length,
+  byTargetType: Object.fromEntries(['course', 'competitive-exam', 'competition', 'assessment'].map((type) => {
+    const group = targets.filter((item) => item.targetType === type || (type === 'competitive-exam' && item.domain === type));
+    return [type, { total: group.length, missing: group.filter((item) => item.state === 'missing').length, draft: group.filter((item) => item.state === 'draft').length, inReview: group.filter((item) => item.state === 'in_review').length, approved: group.filter((item) => item.state === 'approved').length, published: group.filter((item) => item.state === 'published').length, retired: group.filter((item) => item.state === 'retired').length }];
+  }))
 };
 
-const report = { version: 1, generatedAt: summary.generatedAt, summary, targets, manifests };
+const diagnosticTargets = targets
+  .filter((target) => (target.diagnostics ?? []).length > 0)
+  .map((target) => ({
+    targetType: target.targetType,
+    targetId: target.id ?? target.courseId ?? target.slug ?? null,
+    title: target.title ?? null,
+    state: target.state,
+    releaseReady: target.releaseReady,
+    manifestFile: target.manifestFile,
+    diagnosticCount: target.diagnostics.length,
+    diagnostics: target.diagnostics
+  }));
+const diagnosticCodeCounts = {};
+const diagnosticPriorityCounts = { critical: 0, high: 0, medium: 0, low: 0 };
+for (const target of diagnosticTargets) {
+  for (const diagnostic of target.diagnostics) {
+    diagnosticCodeCounts[diagnostic.code] = (diagnosticCodeCounts[diagnostic.code] ?? 0) + 1;
+    diagnosticPriorityCounts[diagnostic.priority] = (diagnosticPriorityCounts[diagnostic.priority] ?? 0) + 1;
+  }
+}
+const diagnosticSummary = {
+  affectedTargetCount: diagnosticTargets.length,
+  diagnosticCount: diagnosticTargets.reduce((total, target) => total + target.diagnosticCount, 0),
+  byTargetType: Object.fromEntries(['course', 'competitive-exam', 'competition', 'assessment'].map((type) => {
+    const group = diagnosticTargets.filter((target) => target.targetType === type);
+    return [type, {
+      affectedTargets: group.length,
+      diagnostics: group.reduce((total, target) => total + target.diagnosticCount, 0)
+    }];
+  })),
+  byCode: diagnosticCodeCounts,
+  byPriority: diagnosticPriorityCounts,
+  targets: diagnosticTargets
+};
+const report = { version: 1, generatedAt: summary.generatedAt, summary, diagnosticSummary, targets, manifests };
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, JSON.stringify(report, null, 2) + '\n');
 
-if (summary.invalidManifestCount > 0) {
-  console.error('Production content coverage failed: invalid manifest files detected.');
+if (registryTargetErrors.length > 0) {
+  console.error('Production content coverage failed: invalid registry targets detected.');
+  for (const error of registryTargetErrors) console.error('- ' + error);
+  console.error('Coverage report written to reports/production-content-coverage.json');
   process.exit(1);
 }
+
+if (courseStructureErrors.length > 0) {
+  console.error('Production content coverage failed: course structure is incomplete or inconsistent.');
+  for (const error of courseStructureErrors) console.error('- ' + error);
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+
+if (summary.invalidManifestCount > 0) {
+  console.error('Production content coverage failed: invalid manifest files detected.');
+  for (const manifest of manifests.filter((item) => item.invalid)) {
+    console.error('- ' + manifest.file);
+    for (const error of manifest.schemaErrors ?? []) console.error('  - ' + error);
+    if (manifest.error) console.error('  - ' + manifest.error);
+  }
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+const manifestsWithMissingAssets = manifests.filter((manifest) => (manifest.missingAssetPaths?.length ?? 0) > 0);
+if (manifestsWithMissingAssets.length > 0) {
+  console.error('Production content coverage failed: manifest asset paths are invalid or missing from the repository.');
+  for (const manifest of manifestsWithMissingAssets) {
+    for (const asset of manifest.missingAssetPaths) {
+      console.error('- ' + manifest.file + ' [' + asset.field + ']: ' + String(asset.value) + ' (' + asset.reason + ')');
+    }
+  }
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+
+if (duplicatePackageIdEntries.length > 0) {
+  console.error('Production content coverage failed: duplicate packageId values detected.');
+  for (const [packageId, files] of duplicatePackageIdEntries) {
+    console.error('- ' + packageId + ': ' + files.join(', '));
+  }
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+if (duplicateLocatorEntries.length > 0) {
+  console.error('Production content coverage failed: duplicate full locator values detected.');
+  for (const [, owners] of duplicateLocatorEntries) {
+    console.error('- ' + owners.map((owner) => owner.file + ' [' + owner.packageId + ']').join(' <> '));
+  }
+  console.error('Only exact full-locator duplicates are flagged; shared course-level locators across different lessons remain valid.');
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+
+if (reusedManifestMatches.length > 0) {
+  console.error('Production content coverage failed: a manifest matches multiple registry targets.');
+  for (const [file, owners] of reusedManifestMatches) {
+    console.error('- ' + file + ': ' + owners.map((owner) => '[' + owner.targetType + '] ' + (owner.title ?? owner.id ?? 'unnamed target')).join(' <> '));
+  }
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+
+const missingEnabledTargets = targets.filter((target) => target.enabled && target.state === 'missing');
+if (missingEnabledTargets.length > 0) {
+  console.error('Production content coverage failed: ' + missingEnabledTargets.length + ' enabled target(s) have no matching content manifest.');
+  for (const target of missingEnabledTargets) {
+    console.error('- [' + target.targetType + '] ' + (target.title ?? target.id ?? target.slug ?? 'unnamed target'));
+  }
+  console.error('Coverage report written to reports/production-content-coverage.json');
+  process.exit(1);
+}
+
 console.log(JSON.stringify(summary, null, 2));

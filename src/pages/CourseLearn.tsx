@@ -183,8 +183,14 @@ export default function CourseLearn() {
   const [modules, setModules] = useState<Module[]>([])
   const [lessons, setLessons] = useState<Lesson[]>([])
   const [progress, setProgress] = useState<Record<string, boolean>>({})
+  const [progressSavingId, setProgressSavingId] = useState<string | null>(null)
+  const [progressSaveRetryId, setProgressSaveRetryId] = useState<string | null>(null)
   const [materials, setMaterials] = useState<Material[]>([])
+  const [materialSearch, setMaterialSearch] = useState('')
   const [activeLessonId, setActiveLessonId] = useState<string | null>(null)
+  const [lessonListSearch, setLessonListSearch] = useState('')
+  const [lessonStatusFilter, setLessonStatusFilter] = useState<'all' | 'incomplete' | 'completed'>('all')
+  const [revisionChecks, setRevisionChecks] = useState<Record<string, boolean[]>>({})
   const [lessonFileUrls, setLessonFileUrls] = useState<{
     video: string | null
     pdf: string | null
@@ -199,6 +205,16 @@ export default function CourseLearn() {
   >('loading')
   const [retryToken, setRetryToken] = useState(0)
   const [diagnosticError, setDiagnosticError] = useState<string | null>(null)
+
+  const filteredMaterials = useMemo(() => {
+    const term = materialSearch.trim().toLocaleLowerCase()
+    if (!term) return materials
+    return materials.filter((material) =>
+      [material.title, getMaterialTypeLabel(material.type)]
+        .some((value) => value.toLocaleLowerCase().includes(term))
+    )
+  }, [materials, materialSearch])
+
 
   useEffect(() => {
     if (authLoading) return
@@ -473,6 +489,9 @@ export default function CourseLearn() {
     let cancelled = false
 
     async function loadActiveLessonFiles() {
+      // Clear the previous lesson's short-lived signed URLs immediately;
+      // never leave stale media available while the next lesson is loading.
+      setLessonFileUrls({ video: null, pdf: null })
       setLessonFilesLoading(true)
       setLessonFilesError(null)
 
@@ -505,6 +524,31 @@ export default function CourseLearn() {
     }
   }, [activeLesson?.id, activeLesson?.video_path, activeLesson?.pdf_path, lessonFilesRetryToken])
 
+  const activeLessonIndex = lessons.findIndex((lesson) => lesson.id === activeLessonId)
+  const previousLesson = activeLessonIndex > 0 ? lessons[activeLessonIndex - 1] : null
+  const nextLesson = activeLessonIndex >= 0 && activeLessonIndex < lessons.length - 1
+    ? lessons[activeLessonIndex + 1]
+    : null
+  const completedLessonCount = lessons.filter((lesson) => progress[lesson.id]).length
+  const nextIncompleteLesson = lessons.find((lesson) => !progress[lesson.id]) ?? null
+  const currentModule = activeLesson
+    ? modules.find((module) => module.id === activeLesson.module_id) ?? null
+    : null
+  const currentModuleLessons = currentModule
+    ? lessons.filter((lesson) => lesson.module_id === currentModule.id)
+    : []
+  const currentModuleCompletedCount = currentModuleLessons.filter((lesson) => progress[lesson.id]).length
+  const activeLessonModuleTitle = activeLesson
+    ? modules.find((module) => module.id === activeLesson.module_id)?.title ?? ''
+    : ''
+  const lessonSearchTerm = lessonListSearch.trim().toLocaleLowerCase()
+  const activeLessonVisibleInList = activeLesson !== null && activeLesson !== undefined &&
+    (!lessonSearchTerm ||
+      activeLesson.title.toLocaleLowerCase().includes(lessonSearchTerm) ||
+      activeLessonModuleTitle.toLocaleLowerCase().includes(lessonSearchTerm)) &&
+    (lessonStatusFilter === 'all' ||
+      (lessonStatusFilter === 'completed' ? Boolean(progress[activeLesson!.id]) : !progress[activeLesson!.id]))
+
   const percentComplete = lessons.length
     ? Math.round(
         (100 *
@@ -514,8 +558,11 @@ export default function CourseLearn() {
     : 0
 
   async function markComplete(lessonId: string) {
-    if (!enrolmentId || !user) return
+    if (!enrolmentId || !user || progress[lessonId] || progressSavingId) return
 
+    setProgressSavingId(lessonId)
+    setProgressSaveRetryId(null)
+    setError(null)
     try {
       // Use a deterministic document ID so the same lesson
       // cannot create duplicate progress records.
@@ -537,10 +584,13 @@ export default function CourseLearn() {
         ...current,
         [lessonId]: true,
       }))
+      setProgressSaveRetryId(null)
     } catch (err) {
       console.error('Progress update error:', err)
-
+      setProgressSaveRetryId(lessonId)
       setError('Unable to save your progress right now. Please check your connection and try again.')
+    } finally {
+      setProgressSavingId(null)
     }
   }
 
@@ -606,73 +656,217 @@ export default function CourseLearn() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between gap-4">
         <h1 className="font-display text-2xl">
           {courseName}
         </h1>
 
-        <span className="text-sm text-slate-muted">
-          {percentComplete}% complete
-        </span>
+        <div className="text-right">
+          <p className="text-sm font-semibold text-parchment">{percentComplete}% complete</p>
+          <p className="text-xs text-slate-muted">{completedLessonCount} of {lessons.length} lessons</p>
+        </div>
       </div>
 
       {error && (
-        <p className="mt-2 text-sm text-danger">{error}</p>
+        <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-danger" role="alert">
+          <p>{error}</p>
+          {progressSaveRetryId && (
+            <button
+              type="button"
+              onClick={() => void markComplete(progressSaveRetryId)}
+              disabled={progressSavingId !== null}
+              className="btn-secondary text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:opacity-50"
+            >
+              {progressSavingId === progressSaveRetryId ? 'Retrying save…' : 'Retry progress save'}
+            </button>
+          )}
+        </div>
       )}
 
-      <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
-        <div
-          className="h-full bg-gold"
-          style={{ width: `${percentComplete}%` }}
-        />
+      <div
+        className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/10"
+        role="progressbar"
+        aria-label="Course completion"
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={percentComplete}
+      >
+        <div className="h-full bg-gold transition-[width] duration-300" style={{ width: `${percentComplete}%` }} />
       </div>
 
+      {nextIncompleteLesson && nextIncompleteLesson.id !== activeLessonId && (
+        <button
+          type="button"
+          onClick={() => setActiveLessonId(nextIncompleteLesson.id)}
+          className="mt-3 text-sm font-medium text-gold underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+        >
+          Continue learning: {nextIncompleteLesson.title}
+        </button>
+      )}
+      {nextIncompleteLesson && activeLessonId === nextIncompleteLesson.id && (
+        <p className="mt-3 text-sm text-slate-muted" role="status">
+          You’re on your next incomplete lesson. Mark it complete when you’re ready to record your progress.
+        </p>
+      )}
+      {!nextIncompleteLesson && lessons.length > 0 && (
+        <p className="mt-3 text-sm text-slate-muted" role="status">
+          All lessons completed. You can revisit any lesson from the list.
+        </p>
+      )}
+
       <div className="mt-8 grid gap-6 lg:grid-cols-[280px_1fr]">
-        <aside className="card max-h-[70vh] overflow-y-auto p-2">
-          {modules.map((module) => (
+        <aside className="card max-h-[70vh] overflow-y-auto p-2" aria-label="Course lesson navigation">
+          <div className="sticky top-0 z-10 border-b border-white/10 bg-slate-950 p-2">
+            <label htmlFor="lesson-list-search" className="mb-1 block text-xs font-medium text-slate-muted">
+              Find a lesson
+            </label>
+            <div className="flex gap-2">
+              <input
+                id="lesson-list-search"
+                type="search"
+                value={lessonListSearch}
+                onChange={(event) => setLessonListSearch(event.target.value)}
+                placeholder="Search lessons or modules…"
+                className="min-w-0 flex-1 rounded-card border border-white/15 bg-white/5 px-3 py-2 text-sm text-parchment focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              />
+              {lessonListSearch && (
+                <button
+                  type="button"
+                  onClick={() => setLessonListSearch('')}
+                  className="rounded-card px-2 text-xs text-gold underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                  aria-label="Clear lesson search"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+            <div className="mt-2 flex flex-wrap gap-1" aria-label="Filter lessons by completion">
+              {([
+                { value: 'all', label: 'All' },
+                { value: 'incomplete', label: 'To do' },
+                { value: 'completed', label: 'Completed' },
+              ] as const).map((option) => (
+                <button
+                  key={option.value}
+                  type="button"
+                  onClick={() => setLessonStatusFilter(option.value)}
+                  aria-pressed={lessonStatusFilter === option.value}
+                  className={`rounded-full border px-2 py-1 text-[11px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
+                    lessonStatusFilter === option.value
+                      ? 'border-gold/50 bg-gold/15 text-gold-bright'
+                      : 'border-white/10 text-slate-muted hover:bg-white/5'
+                  }`}
+                >
+                  {option.label}
+                </button>
+              ))}
+            </div>
+            {activeLesson && !activeLessonVisibleInList && (
+              <button
+                type="button"
+                onClick={() => {
+                  setLessonListSearch('')
+                  setLessonStatusFilter('all')
+                }}
+                className="mt-2 w-full rounded-card border border-gold/30 px-3 py-2 text-left text-xs text-gold-bright focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              >
+                Show current lesson in list: {activeLesson.title}
+              </button>
+            )}
+            <p className="mt-1 text-[11px] text-slate-muted" aria-live="polite" aria-atomic="true">
+              {lessons.filter((lesson) => {
+                const term = lessonListSearch.trim().toLocaleLowerCase()
+                const moduleTitle = modules.find((module) => module.id === lesson.module_id)?.title ?? ''
+                return (!term || lesson.title.toLocaleLowerCase().includes(term) || moduleTitle.toLocaleLowerCase().includes(term)) &&
+                  (lessonStatusFilter === 'all' || (lessonStatusFilter === 'completed' ? Boolean(progress[lesson.id]) : !progress[lesson.id]))
+              }).length} matching lessons · {lessons.length} total
+            </p>
+          </div>
+          {modules.map((module) => {
+            const moduleLessons = lessons.filter((lesson) => lesson.module_id === module.id)
+            const term = lessonListSearch.trim().toLocaleLowerCase()
+            const moduleMatches = module.title.toLocaleLowerCase().includes(term)
+            const visibleLessons = moduleLessons.filter((lesson) =>
+              (!term || moduleMatches || lesson.title.toLocaleLowerCase().includes(term)) &&
+              (lessonStatusFilter === 'all' || (lessonStatusFilter === 'completed' ? Boolean(progress[lesson.id]) : !progress[lesson.id]))
+            )
+            if (visibleLessons.length === 0) return null
+            return (
             <div
               key={module.id}
               className="mb-2"
             >
-              <p className="px-2 py-1 text-xs font-semibold uppercase tracking-wide text-gold">
-                {module.title}
-              </p>
+              <div className="flex items-center justify-between gap-2 px-2 py-1">
+                <p className="text-xs font-semibold uppercase tracking-wide text-gold">
+                  {module.title}
+                </p>
+                <span className="text-[11px] tabular-nums text-slate-muted">
+                  {lessons.filter((lesson) => lesson.module_id === module.id && progress[lesson.id]).length}/
+                  {lessons.filter((lesson) => lesson.module_id === module.id).length}
+                </span>
+              </div>
 
-              {lessons
-                .filter(
-                  (lesson) =>
-                    lesson.module_id === module.id
-                )
-                .map((lesson) => (
+              {visibleLessons.map((lesson) => {
+                const lessonIndex = moduleLessons.findIndex((item) => item.id === lesson.id)
+                return (
                   <button
                     key={lesson.id}
                     onClick={() =>
                       setActiveLessonId(lesson.id)
                     }
-                    className={`flex w-full items-center gap-2 rounded-card px-2 py-2 text-left text-sm ${
+                    aria-current={lesson.id === activeLessonId ? 'step' : undefined}
+                    className={`flex w-full items-center gap-2 rounded-card px-2 py-2 text-left text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${
                       lesson.id === activeLessonId
                         ? 'bg-gold/15 text-gold-bright'
                         : 'text-parchment/90 hover:bg-white/5'
                     }`}
                   >
                     <span
-                      className={`h-1.5 w-1.5 rounded-full ${
+                      aria-hidden="true"
+                      className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px] font-semibold ${
                         progress[lesson.id]
-                          ? 'bg-success'
-                          : 'bg-white/20'
+                          ? 'bg-success/15 text-success'
+                          : lesson.id === activeLessonId
+                            ? 'bg-gold/20 text-gold-bright'
+                            : 'bg-white/5 text-slate-muted'
                       }`}
-                    />
-
-                    {lesson.title}
+                    >
+                      {progress[lesson.id] ? '✓' : lessonIndex + 1}
+                    </span>
+                    <span className="min-w-0 flex-1">{lesson.title}</span>
+                    <span className="shrink-0 text-[10px] uppercase tracking-wide text-slate-muted">
+                      {progress[lesson.id] ? 'Done' : lesson.id === activeLessonId ? 'Current' : 'Next'}
+                    </span>
                   </button>
-                ))}
+                )
+              })}
             </div>
-          ))}
+          )})}
 
           {lessons.length === 0 && (
             <p className="p-3 text-sm text-slate-muted">
               No lessons published yet.
             </p>
+          )}
+          {lessons.length > 0 && !lessons.some((lesson) => {
+            const term = lessonListSearch.trim().toLocaleLowerCase()
+            const moduleTitle = modules.find((module) => module.id === lesson.module_id)?.title ?? ''
+            return (!term || lesson.title.toLocaleLowerCase().includes(term) || moduleTitle.toLocaleLowerCase().includes(term)) &&
+              (lessonStatusFilter === 'all' || (lessonStatusFilter === 'completed' ? Boolean(progress[lesson.id]) : !progress[lesson.id]))
+          }) && (
+            <div className="p-4 text-sm text-slate-muted" role="status">
+              <p>No lessons or modules match the current search and completion filter.</p>
+              <button
+                type="button"
+                onClick={() => {
+                  setLessonListSearch('')
+                  setLessonStatusFilter('all')
+                }}
+                className="mt-2 text-gold underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              >
+                Clear search and filters
+              </button>
+            </div>
           )}
         </aside>
 
@@ -688,6 +882,11 @@ export default function CourseLearn() {
               <h2 className="font-display text-xl">
                 {activeLesson.title}
               </h2>
+              {currentModule && (
+                <p className="mt-2 text-sm text-slate-muted" aria-live="polite" aria-atomic="true">
+                  Module: {currentModule.title} · {currentModuleCompletedCount} of {currentModuleLessons.length} lessons completed
+                </p>
+              )}
 
               {lessonFilesLoading && (activeLesson.video_path || activeLesson.pdf_path) && (
                 <p className="mt-4 text-sm text-slate-muted">
@@ -699,8 +898,9 @@ export default function CourseLearn() {
                 <div className="mt-4 rounded-card border border-danger/40 bg-danger/5 p-3 text-sm text-danger">
                   {lessonFilesError}
                   <button
+                    type="button"
                     onClick={() => setLessonFilesRetryToken((t) => t + 1)}
-                    className="btn-secondary ml-3 text-xs"
+                    className="btn-secondary ml-3 text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
                   >
                     Retry
                   </button>
@@ -710,7 +910,9 @@ export default function CourseLearn() {
               {!lessonFilesLoading && !lessonFilesError && lessonFileUrls.video && (
                 <video
                   controls
-                  className="mt-4 w-full rounded-card bg-black"
+                  aria-label={`Lesson video: ${activeLesson.title}`}
+                  preload="metadata"
+                  className="mt-4 w-full rounded-card bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
                   src={lessonFileUrls.video}
                 />
               )}
@@ -720,7 +922,8 @@ export default function CourseLearn() {
                   href={lessonFileUrls.pdf}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-secondary mt-4 inline-flex"
+                  className="btn-secondary mt-4 inline-flex focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                  aria-label={`Open PDF for lesson: ${activeLesson.title}`}
                 >
                   Open PDF
                 </a>
@@ -741,28 +944,149 @@ export default function CourseLearn() {
                     if (!rendered) return null
 
                     return (
-                      <div key={key}>
-                        <p className="text-xs font-semibold uppercase tracking-wide text-gold">
+                      <section
+                        key={key}
+                        aria-labelledby={`lesson-section-${key}`}
+                        className="rounded-card border border-white/10 bg-black/10 p-4"
+                      >
+                        <h3
+                          id={`lesson-section-${key}`}
+                          className="text-xs font-semibold uppercase tracking-wide text-gold"
+                        >
                           {label}
-                        </p>
-                        <div className="mt-1">{rendered}</div>
-                      </div>
+                        </h3>
+                        <div className="mt-2 leading-7">{rendered}</div>
+                      </section>
                     )
                   })}
                 </div>
               )}
 
-              <button
-                onClick={() =>
-                  markComplete(activeLesson.id)
-                }
-                disabled={progress[activeLesson.id]}
-                className="btn-primary mt-6 disabled:opacity-50"
-              >
-                {progress[activeLesson.id]
-                  ? 'Completed'
-                  : 'Mark as complete'}
-              </button>
+              <section className="mt-6 rounded-card border border-gold/20 bg-gold/5 p-4" aria-labelledby="lesson-revision-heading">
+                <h3 id="lesson-revision-heading" className="font-semibold">Before you finish this lesson</h3>
+                <p className="mt-1 text-sm text-slate-muted">
+                  {structuredLessonContent
+                    ? 'Use the authored lesson sections below as your revision guide. This checklist is a personal reminder and does not mark the lesson complete.'
+                    : 'Use this quick revision checklist to consolidate what you learned. This checklist is a personal reminder and does not mark the lesson complete.'}
+                </p>
+                {(() => {
+                  const items = [
+                    {
+                      available: Boolean(structuredLessonContent?.objective),
+                      text: 'Revisit the lesson objective and explain the main idea in your own words.',
+                      fallback: 'Explain the main idea in your own words.',
+                    },
+                    {
+                      available: Boolean(structuredLessonContent?.examples),
+                      text: 'Work through the authored examples and explain each key step.',
+                      fallback: 'Review the examples, key terms and any study material provided.',
+                    },
+                    {
+                      available: Boolean(structuredLessonContent?.independent_practice || structuredLessonContent?.practical_activity || structuredLessonContent?.assessment_checkpoint),
+                      text: 'Complete the available practice, activity or assessment checkpoint.',
+                      fallback: 'Try the practice or assessment questions, if available.',
+                    },
+                    {
+                      available: Boolean(structuredLessonContent?.reflection_completion),
+                      text: 'Use the authored reflection prompt to identify what you understand and what needs revision.',
+                      fallback: 'Identify one point you need to revise before moving on.',
+                    },
+                  ]
+                  const checks = revisionChecks[activeLesson.id] ?? []
+                  const checkedCount = items.filter((_, index) => checks[index]).length
+                  return (
+                    <>
+                      <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
+                        <p className="text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
+                          {checkedCount} of {items.length} revision steps checked
+                        </p>
+                        {checkedCount > 0 && (
+                          <button
+                            type="button"
+                            onClick={() => setRevisionChecks((current) => ({
+                              ...current,
+                              [activeLesson.id]: [],
+                            }))}
+                            className="text-xs text-slate-muted underline underline-offset-4 hover:text-parchment focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                          >
+                            Reset checklist
+                          </button>
+                        )}
+                      </div>
+                      <ul className="mt-3 space-y-3 text-sm">
+                        {items.map((item, index) => (
+                          <li key={index}>
+                            <label className="flex cursor-pointer items-start gap-3 rounded-card border border-white/10 p-3 hover:bg-white/5">
+                              <input
+                                type="checkbox"
+                                checked={Boolean(checks[index])}
+                                onChange={(event) => setRevisionChecks((current) => {
+                                  const lessonChecks = [...(current[activeLesson.id] ?? [])]
+                                  lessonChecks[index] = event.target.checked
+                                  return { ...current, [activeLesson.id]: lessonChecks }
+                                })}
+                                className="mt-1 h-4 w-4 shrink-0 accent-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+                              />
+                              <span>{item.available ? item.text : item.fallback}</span>
+                            </label>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )
+                })()}
+                <p className="mt-3 text-xs text-slate-muted">
+                  These checks are kept only in the current page session; course completion is tracked separately.
+                </p>
+              </section>
+
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-5">
+                <button
+                  type="button"
+                  onClick={() => previousLesson && setActiveLessonId(previousLesson.id)}
+                  disabled={!previousLesson}
+                  aria-label={previousLesson ? `Previous lesson: ${previousLesson.title}${progress[previousLesson.id] ? ', completed' : ''}` : 'No previous lesson'}
+                  className="btn-secondary max-w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  <span className="block text-xs">← Previous lesson</span>
+                  {previousLesson && (
+                    <span className="mt-1 block max-w-48 truncate text-left text-[11px] text-slate-muted">
+                      {previousLesson.title}{progress[previousLesson.id] ? ' · Done' : ''}
+                    </span>
+                  )}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => markComplete(activeLesson.id)}
+                  disabled={progress[activeLesson.id] || progressSavingId !== null}
+                  aria-busy={progressSavingId === activeLesson.id}
+                  className="btn-primary disabled:opacity-50"
+                >
+                  {progress[activeLesson.id]
+                    ? 'Completed'
+                    : progressSavingId === activeLesson.id
+                      ? 'Saving progress…'
+                      : 'Mark as complete'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => nextLesson && setActiveLessonId(nextLesson.id)}
+                  disabled={!nextLesson}
+                  aria-label={nextLesson ? `Next lesson: ${nextLesson.title}${progress[nextLesson.id] ? ', completed' : ''}` : 'No next lesson'}
+                  className="btn-secondary max-w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  <span className="block text-xs">Next lesson →</span>
+                  {nextLesson && (
+                    <span className="mt-1 block max-w-48 truncate text-left text-[11px] text-slate-muted">
+                      {nextLesson.title}{progress[nextLesson.id] ? ' · Done' : ''}
+                    </span>
+                  )}
+                </button>
+              </div>
+              <p className="mt-3 text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
+                {activeLessonIndex >= 0 ? `Lesson ${activeLessonIndex + 1} of ${lessons.length}` : 'Choose a lesson'}
+                {progress[activeLesson.id] ? ' · Completed' : ''}
+              </p>
             </>
           )}
         </section>
@@ -770,43 +1094,88 @@ export default function CourseLearn() {
 
       {courseId && <AssessmentCatalog courseId={courseId} />}
 
-      {materials.length > 0 && (
-        <section className="card mt-6 p-6">
-          <h2 className="font-display text-lg">Course Materials</h2>
-          <div className="mt-4 space-y-2">
-            {materials.map((material) => (
-              <div key={material.id} className="flex items-center justify-between gap-3 rounded-card border border-white/10 p-3 text-sm">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-card bg-gold/15 text-gold">
-                    <MaterialTypeIcon type={material.type} />
-                  </span>
-                  <div>
-                    <p className="font-medium">{material.title}</p>
-                    <p className="text-xs text-slate-muted">
-                      {getMaterialTypeLabel(material.type)}
-                      {material.file_size ? ` · ${formatFileSize(material.file_size)}` : ''}
-                    </p>
-                  </div>
-                </div>
-                {material.type === 'link' ? (
-                  material.url && (
-                    <a href={material.url} target="_blank" rel="noreferrer" className="btn-secondary text-xs">
-                      Open
-                    </a>
-                  )
-                ) : (
-                  <button
-                    onClick={() => setViewerMaterial(material)}
-                    className="btn-secondary text-xs"
-                  >
-                    {material.type === 'notes' ? 'Read' : 'Open'}
-                  </button>
-                )}
-              </div>
-            ))}
+      <section className="card mt-6 p-6" aria-labelledby="course-materials-heading">
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <h2 id="course-materials-heading" className="font-display text-lg">Course Materials</h2>
+              <p className="mt-1 text-xs text-slate-muted" aria-live="polite" aria-atomic="true">
+                Showing {filteredMaterials.length} of {materials.length} resources
+              </p>
+            </div>
+            <div className="flex min-w-0 flex-1 items-center gap-2 sm:max-w-sm">
+              <label className="sr-only" htmlFor="course-material-search">Search course materials</label>
+              <input
+                id="course-material-search"
+                type="search"
+                value={materialSearch}
+                onChange={(event) => setMaterialSearch(event.target.value)}
+                placeholder="Search title or type…"
+                className="input min-w-0 flex-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+              />
+              {materialSearch && (
+                <button
+                  type="button"
+                  onClick={() => setMaterialSearch('')}
+                  className="btn-secondary text-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
           </div>
-        </section>
-      )}
+          {materials.length === 0 ? (
+            <div className="mt-4 rounded-card border border-white/10 p-5 text-sm" role="status">
+              <p className="font-medium">No course materials published yet</p>
+              <p className="mt-1 text-slate-muted">Published notes, videos and other resources will appear here when they are available for this course.</p>
+            </div>
+          ) : filteredMaterials.length > 0 ? (
+            <div className="mt-4 space-y-2">
+              {filteredMaterials.map((material) => (
+                <div key={material.id} className="flex flex-wrap items-center justify-between gap-3 rounded-card border border-white/10 p-3 text-sm">
+                  <div className="flex min-w-0 items-center gap-3">
+                    <span className="flex h-8 w-8 flex-none items-center justify-center rounded-card bg-gold/15 text-gold">
+                      <MaterialTypeIcon type={material.type} />
+                    </span>
+                    <div className="min-w-0">
+                      <p className="break-words font-medium">{material.title}</p>
+                      <p className="text-xs text-slate-muted">
+                        {getMaterialTypeLabel(material.type)}
+                        {material.file_size ? ` · ${formatFileSize(material.file_size)}` : ''}
+                      </p>
+                    </div>
+                  </div>
+                  {material.type === 'link' ? (
+                    material.url && (
+                      <a href={material.url} target="_blank" rel="noreferrer" className="btn-secondary text-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold">
+                        Open
+                      </a>
+                    )
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setViewerMaterial(material)}
+                      className="btn-secondary text-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+                    >
+                      {material.type === 'notes' ? 'Read' : 'Open'}
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="mt-4 rounded-card border border-white/10 p-5 text-sm" role="status">
+              <p className="font-medium">No matching materials</p>
+              <p className="mt-1 text-slate-muted">Try another title or resource type.</p>
+              <button
+                type="button"
+                onClick={() => setMaterialSearch('')}
+                className="btn-secondary mt-3 text-xs focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+              >
+                Show all materials
+              </button>
+            </div>
+          )}
+      </section>
 
       {viewerMaterial && (
         <MaterialViewerModal

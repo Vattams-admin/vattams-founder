@@ -269,6 +269,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Multilingual learning discovery */}
+      <section className="border-b border-white/5 bg-navy/30 py-12">
+        <div className="mx-auto flex max-w-6xl flex-col gap-5 px-4 sm:px-6 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Multilingual learning</p>
+            <h2 className="mt-2 font-display text-2xl font-bold">Indian languages and languages from around the world</h2>
+            <p className="mt-2 text-sm leading-6 text-slate-muted">Explore the language coverage catalogue, including native names, regional languages, and global languages.</p>
+          </div>
+          <Link to="/languages" className="btn-secondary inline-flex shrink-0 items-center justify-center">Explore languages →</Link>
+        </div>
+      </section>
+
       {/* Featured courses */}
       <section className="border-t border-white/5 bg-navy/40 py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">

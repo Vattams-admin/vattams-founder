@@ -7,6 +7,7 @@ import Home from '@/pages/Home'
 import NetworkStatus from '@/components/NetworkStatus'
 
 const Courses = lazy(() => import('@/pages/Courses'))
+const Languages = lazy(() => import('@/pages/Languages'))
 const CourseDetail = lazy(() => import('@/pages/CourseDetail'))
 const Competitions = lazy(() => import('@/pages/Competitions'))
 const CompetitiveExams = lazy(() => import('@/pages/CompetitiveExams'))
@@ -80,6 +81,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/courses" element={<Courses />} />
+            <Route path="/languages" element={<Languages />} />
             <Route path="/courses/:slug" element={<CourseDetail />} />
             <Route path="/competitions" element={<Competitions />} />
             <Route path="/competitive-exams" element={<CompetitiveExams />} />

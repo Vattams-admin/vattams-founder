@@ -103,7 +103,10 @@ async function submit(attemptId: string, studentId: string, token: string) {
   }
   if (Date.now() > startedAtMs + definition.time_seconds * 1000) {
     throw new Error("Assessment time has expired");
-  }\n\n  const publicBankForIntegrity = await loadJson(definition.question_bank_public, "public question bank");\n  await verifyRegisteredBank(definition, publicBankForIntegrity);
+  }
+
+  const publicBankForIntegrity = await loadJson(definition.question_bank_public, "public question bank");
+  await verifyRegisteredBank(definition, publicBankForIntegrity);
 
   const publicParsed = await downloadJson(definition.question_bank_public, "public question bank");
   const publicQuestions = Array.isArray(publicParsed) ? publicParsed : publicParsed?.questions;

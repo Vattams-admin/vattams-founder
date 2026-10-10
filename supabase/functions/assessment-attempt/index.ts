@@ -64,7 +64,8 @@ async function verifyFirebaseToken(authorization: string | null): Promise<{ uid:
   return { uid, token, claims: payload as Record<string, unknown> };
 }
 
-\nasync function canonicalSha256(value: unknown): Promise<string> {
+
+async function canonicalSha256(value: unknown): Promise<string> {
   const canonical = JSON.stringify(value);
   const bytes = new TextEncoder().encode(canonical);
   const digest = await crypto.subtle.digest("SHA-256", bytes);
@@ -380,14 +381,14 @@ async function checkAccess(studentId: string, courseId: string, assessmentId: st
   if (error) throw new Error(`Assessment access lookup failed: ${error.message}`);
   if (!data || (!data.is_admin && !data.enrolment_active)) throw new Error("You do not have access to this assessment");
   const checkedAt = new Date(data.checked_at).getTime();
-  if (!Number.isFinite(checkedAt) || Date.now() - checkedAt > 60 * 60 * 1000) {
+  if (!Number.isFinite(checkedAt) || checkedAt > Date.now() + 60 * 1000 || Date.now() - checkedAt > 60 * 60 * 1000) {
     throw new Error("Your assessment access information is out of date");
   }
 }
 
 async function findLatestAttempt(studentId: string, assessmentId: string): Promise<AttemptRow | null> {
   const { data, error } = await supabase.from("assessment_attempts")
-    .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,expires_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders,expires_at")
+    .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,expires_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders")
     .eq("student_id", studentId).eq("assessment_id", assessmentId)
     .order("started_at", { ascending: false }).limit(1).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);

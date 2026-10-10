@@ -25,6 +25,17 @@ async function uid(request: Request) {
   return payload.sub;
 }
 
+
+async function hasActiveCompetitionAccess(studentId: string, courseId: string): Promise<boolean> {
+  const { data, error } = await supabase.from("competition_access_cache")
+    .select("student_id,course_id,is_admin,enrolment_active,checked_at")
+    .eq("student_id", studentId).eq("course_id", courseId).maybeSingle();
+  if (error) throw new Error("Unable to verify competition access.");
+  if (!data || (!data.is_admin && !data.enrolment_active)) return false;
+  const checkedAt = new Date(data.checked_at).getTime();
+  return Number.isFinite(checkedAt) && checkedAt <= Date.now() + 60_000 && Date.now() - checkedAt <= 60 * 60 * 1000;
+}
+
 async function loadRegistryEntry(courseId: string) {
   const { data, error } = await supabase.storage.from(BUCKET).download(REGISTRY_BUNDLE);
   if (error || !data) throw new Error("Competition registry is unavailable.");
@@ -68,6 +79,7 @@ Deno.serve(async (request) => {
       return json({ error: "This competition attempt has already been submitted." }, 409);
     }
     if (attempt.status !== "in_progress") return json({ error: "Invalid competition attempt status." }, 409);
+    if (!(await hasActiveCompetitionAccess(studentId, attempt.course_id))) return json({ error: "You no longer have access to this competition." }, 403);
 
     const questionIds = Array.isArray(attempt.question_ids) ? attempt.question_ids : [];
     if (questionIds.length !== competition.per_attempt || new Set(questionIds).size !== competition.per_attempt) {

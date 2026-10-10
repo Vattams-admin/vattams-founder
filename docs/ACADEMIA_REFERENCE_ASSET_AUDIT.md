@@ -1,0 +1,139 @@
+# VATTAMS Academia Reference Asset Audit
+
+Audit scope: repository tree and file contents on `feat/academia-core-redesign`.
+This is a source-repository inventory, not a live Firebase/Supabase production audit.
+
+## Pillar 1 — Phonics Foundation
+
+- Course directory exists at `content/courses/phonics-foundation/`.
+- Manifest currently declares status `draft`, 2 modules, 143 lessons, 143 study materials, 2,135 questions, and 34 assessments.
+- The repository tree contains 143 lesson `authoring-package.json` files.
+- Project target remains 1,200 lessons. The observed 143 packages are a partial source inventory, not evidence that the 1,200-lesson target is complete.
+- Keep Phonics as its own course package and do not copy its content into competition or exam banks.
+
+## Pillar 2 — Competitive and Entrance Exams
+
+- `config/assessment-registry.json` contains 3 registered TNPSC Group IV / VAO mock assessments.
+- Assessment blueprint, selection, registration, publication and runtime tooling exists.
+- In the inspected source tree, `content/courses/` contains only `phonics-foundation`; no broad course-style entrance-exam lesson library was found there.
+- Treat the three registered mocks as existing assets, not as proof of comprehensive exam coverage across engineering, medical, law, management, professional qualifications or other entrance pathways.
+
+## Pillar 3 — Thirukkural Mastery Championship
+
+- Competition registry contains 24 competition entries, including Thirukkural Mastery Championship.
+- Thirukkural manifest is marked `approved` and declares 9,443 questions, 2 study-material assets and 2 assessments.
+- Authored reference files exist:
+  - `content/competition-study-materials/authored-v2/thirukkural-mastery-championship-core.json`
+  - `content/competition-study-materials/authored-v2/thirukkural-mastery-championship-four-layer-coverage.json`
+- Age pools and selection blueprint exist under `data/competitions/thirukkural-mastery-championship/full-bank/objective/`.
+- The competition registry defines 30 questions per attempt and separate age-specific official paper IDs.
+- The source tree inspected does **not** contain the following paths referenced by the current manifest/registry:
+  - `competitions/thirukkural-mastery-championship/objective/questions.private.json`
+  - `competitions/thirukkural-mastery-championship/objective/answer-keys.private.json`
+  - `competitions/thirukkural-mastery-championship/objective/age-pools.json`
+- The tracked source tree also does not contain the files currently required by `scripts/validate-thirukkural-production.mjs`:
+  - `data/thirukkural/full-bank/objective/questions.objective.public.json`
+  - `data/thirukkural/full-bank/objective/answer-key.objective.private.json`
+  - `data/thirukkural/full-bank/objective/official-120.objective.json`
+- The canonical Kural source `data/thirukkural/thirukkural.json` and `data/thirukkural/detail.json` do exist. Build/package scripts exist to generate downstream assets, but generation has not been executed as part of this audit.
+- Do not mark the bank runtime-ready solely from manifest counts. Regenerate the intended artifacts using the project scripts, verify generated paths and private/public separation, then run the dedicated Thirukkural validator and runtime E2E checks.
+
+## Required next actions
+
+1. Regenerate and validate the missing Thirukkural bank/package artifacts in a proper repository execution environment; do not fabricate a replacement bank.
+2. Reconcile manifest and registry references with the intended generated output paths without exposing private answer keys.
+3. Audit the 143 existing Phonics lesson packages against the learning-quality standard, then expand toward the 1,200-lesson target.
+4. Expand exam preparation from the existing registered TNPSC mocks into syllabus-specific course/subject libraries and exam-specific question banks.
+5. Audit the remaining 23 competition entries for their own subject-specific study materials, public banks, private answer keys, age/difficulty blueprints and independent official selectors.
+6. Run validation scripts and CI before declaring any pillar production-ready.
+
+## Verification limitation
+
+No local build, validator, test suite, CI workflow, or live backend query was executed during this repository inventory. Counts and missing paths above reflect the inspected GitHub source tree only.
+
+## Thirukkural recovery dependency chain (follow-up inspection)
+
+The checked-in npm scripts define `thirukkural:production-gate` as:
+
+```sh
+npm run thirukkural:build-official
+npm run thirukkural:validate
+npm run thirukkural:package
+```
+
+This chain cannot be assumed to work in the current source snapshot because the official builder requires the objective public bank, private key bank, and age pools; the validator also requires the full objective banks and official-120 output. The source tree inspection found age pools and a selection blueprint, but not these required JSON artifacts. The upstream builder `scripts/build-thirukkural-objective-bank.py` itself expects `data/thirukkural/full-bank/questions.public.json` and `answer-key.private.json`, which were also absent from the inspected tree.
+
+Recovery must therefore start by locating an authoritative copy of those 9,443 source question/answer rows or rebuilding them through the approved source-generation pipeline. Do not run a partial downstream build and do not create placeholder banks. Once the authoritative inputs are restored, execute the documented production-gate command in a proper Node/Python environment, inspect the generated manifest/registry paths, and run the relevant E2E check before calling the competition ready.
+
+## Follow-up — registry target existence audit
+
+A second tree pass compared registry file references against tracked branch paths. This did not query live storage or execute packaging scripts.
+
+### Competition package targets
+
+- The registry has 24 competitions. For each entry, the configured question bundle, private answer-key bundle, and age-pool bundle are absent at their configured `competitions/<slug>/objective/` paths in this source snapshot (0 of 24 sets found at those exact targets).
+- This is a target-path availability finding, not proof that all 24 source banks are absent: registry paths may be generated by the packaging pipeline. Thirukkural is the only competition with the detailed source/build-chain investigation documented above; the other 23 need a per-competition source and packaging audit before readiness can be asserted.
+- Do not expose or create public answer-key files to make the paths exist. Confirm each competition's trusted source assets, packaging output, and runtime loader contract first.
+
+### Competitive-exam assessment targets
+
+- All three TNPSC Group IV / VAO assessment entries are marked `draft` in `config/assessment-registry.json`.
+- For each, the configured public question bank, private answer key, and per-assessment manifest are absent at their exact tracked paths under `assessments/competitive-exam/tnpsc-group-iv-vao/` (0 of 9 target files found).
+- Blueprint, registry and tooling exist, but the three entries and their declared 200-question counts do not establish that usable question-bank assets are present. Restore or generate approved exam-specific banks and private keys, then validate blueprint coverage, answer mapping and publishing behavior before changing draft status.
+
+### Pillar-level interpretation
+
+- Courses / Phonics: 143 lesson authoring packages are present against the 1,200-lesson target; the manifest is draft.
+- Competitive exams: 3 TNPSC mock definitions are registered, but their 9 declared target files are absent from the tracked source tree.
+- Competitions: 24 definitions are registered, but their 72 configured bundle targets are absent from the tracked source tree. Some may be build/package outputs; inspect the package pipeline and source banks per competition before treating this as missing authored content.
+
+These findings are repository-path checks only. No package command, validator, runtime test, CI job, or live Firebase/Supabase operation was run.
+## Follow-up — correct source-versus-runtime path distinction
+
+A deeper inspection of `scripts/prepare-competition-runtime-sources.mjs`, `scripts/package-competition-runtime.mjs`, `scripts/generate-competition-runtime-registry.mjs`, and `.github/workflows/generate-competition-runtime-registry.yml` clarified the earlier path finding.
+
+- **23 non-Thirukkural competitions have all five expected source assets in the tracked tree** at `data/competitions/<slug>/full-bank/objective/`: `questions.objective.public.json`, `answer-key.objective.private.json`, `official.objective.json`, `age-pools.json`, and `selection-blueprint.json`.
+- **All 24 competitions have authored study-material core files and four-layer coverage files** under `content/competition-study-materials/authored-v2/` (24 of each filename pattern). These are present assets, not proof that every lesson/question has passed quality review.
+- **Thirukkural remains the exception in the shared source layout**: its age pools and selection blueprint exist under `data/competitions/thirukkural-mastery-championship/full-bank/objective/`, but the public question bank, private answer-key bank, and official bank are absent there. Its dedicated `data/thirukkural/` builder chain is meant to regenerate these from canonical Kural sources before the prepare step materializes them into the shared layout.
+- The previous count of 0/24 registry bundle targets describes generated runtime paths such as `competitions/<slug>/objective/questions.private.json`, not the tracked source-bank paths. Those runtime bundles are expected to be created by the packaging/publishing pipeline; that count must not be read as 24 absent source banks.
+
+### Runtime workflow guardrail
+
+- `.github/workflows/generate-competition-runtime-registry.yml` is triggered manually or by matching pushes to `main`; it generates a registry using Firebase service-account access, validates banks, publishes packages to Supabase Storage using a service-role key, and can commit/push generated files.
+- Do not dispatch this workflow as a diagnostic on the feature branch or run the publisher casually: it performs external writes and requires a deliberate production release decision. This audit only read the workflow file; it did not run it or query Firebase/Supabase.
+- Next safe step is to inspect source-bank content and quality counts (IDs, topic/age/difficulty coverage, duplicate stems/options, answer-key mappings, review status, official-paper overlap) on the feature branch, then run read-only/local validators in a proper execution environment before any publish action.
+
+## Follow-up — live Supabase project identity and deployment inventory (2026-10-09)
+
+This section records a read-only live Supabase control-plane inspection performed after the repository-only checks above.
+
+- The Academia project is `ljnfktzrjewqjxxchvud` (`vattams-academy`), region `ap-southeast-2`, status `ACTIVE_HEALTHY`.
+- The separate project `nfcibyprftnowaiwlxxc` is named `Vattams-admin's Project` and its deployed functions reference the legacy home-services repository path. Do not treat that project as Academia or deploy Academia migrations/functions there.
+- The Academia project reports migrations through `20261007210000 / assessment_option_order_security`, including mock-test, competition access, official Thirukkural paper, generic assessment, assessment admin lifecycle, and option-order security migrations.
+- The live Academia project lists the expected competition and assessment runtime tables, including `competition_attempts`, `competition_answers`, `competition_results`, `assessment_attempts`, `assessment_answers`, `assessment_results`, `assessment_access_cache`, and `assessment_admin_audit`. RLS is reported enabled on those tables by the Supabase table inventory.
+- Deployed Academia Edge Functions include competition mock/official attempt, question-content, scoring, and assessment catalog/admin/attempt/answer/question-content/submit endpoints. These are deployment-inventory findings, not proof that every production path passes end-to-end.
+- The live inspection did not read or alter student answers, assessment attempts, course materials, Firebase/Firestore documents, or storage objects. No migration, function deployment, or production E2E was run as part of this inspection.
+
+## Updated execution boundary
+
+The content authoring scope remains explicitly excluded for question banks and study materials. Continue only with platform integration, package/registry path consistency, course/exam/competition navigation, assessment and competition runtime correctness, security, and CI/runtime validation. Missing source packages must remain blocked rather than filled with invented questions or materials.
+
+## Latest verified checkpoint — 2026-10-09
+
+Branch: `feat/academia-core-redesign`. The changes below are branch commits only; no direct `main` update, production content publication, Supabase migration, or Edge Function deployment was performed.
+
+- Cross-pillar quality gate: **31/31 validators passed** on commit `f0aa0d40ab450b330fe86cbb1ccaea9b123f98c9`.
+- Production package-manifest validation: passed on the draft-manifest commits.
+- Android Debug APK: **passed** on commit `65cdfecb21d483ff1b9afe8cff2672b0da6f5ca3`; the workflow uploaded artifact `vattams-academia-debug-apk`.
+- Production E2E: **passed** in run `37969861706`; 6 Playwright tests passed, including public site load, Thirukkural public route, unauthenticated redirect, enrolled-student official competition UI, 30-question mock launch, and anonymous private-answer-key protection. Isolated E2E accounts were cleaned up by the workflow.
+- Thirukkural canonical package generation/validation passed locally within CI: 9,443 objective questions, 9,443 private answer keys, 120 official questions (four 30-question papers), and four age-band pools. The package was not published.
+- Added 23 draft competition manifests and three draft TNPSC assessment manifests, with registered bundle paths and zero claimed question/material coverage. The three TNPSC manifests use unique assessment locators while retaining all suite assessment IDs for registry linkage.
+- Corrected the language-seed key parser, content-coverage schema/flow checks, generated-runtime asset handling, assessment-review JSX conditional, Languages SEO hook call, and nullable active-lesson narrowing.
+
+## Still explicitly blocked by the content-scope boundary
+
+- The 23 non-Thirukkural competitions now have draft manifests only. Their public question bundles, private answer-key bundles, age pools and production runtime packages are not thereby created or certified.
+- The three TNPSC mock-test manifests remain drafts. Their question-bank and private answer-key files remain absent at the audited repository paths.
+- Phonics Foundation has 143 lesson packages against the 1,200-lesson target. The quality gate verifies current draft-package structure; it does not mean the 1,200-lesson content target is complete.
+- No question-bank or study-material authoring was performed in this checkpoint. Do not mark draft manifests as production-ready until the excluded content is supplied, reviewed and the release/package checks are rerun.
+

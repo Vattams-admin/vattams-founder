@@ -1,6 +1,6 @@
 import { useSeo, SITE_URL } from '@/hooks/useSeo'
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useMemo, useState } from 'react'
+import { Link, useSearchParams } from 'react-router-dom'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { firestore } from '@/lib/firebase'
 import type { Course } from '@/types/database'
@@ -10,6 +10,17 @@ import { getPricingConfig } from '@/lib/pricingConfig'
 import { getEffectiveCoursePricing } from '@/lib/coursePricing'
 
 type LoadState = 'loading' | 'loaded' | 'error'
+
+const COMPETITION_DISCOVERY_TOPICS = [
+  'Thirukkural',
+  'Classical Literature',
+  'Language & Literature',
+  'Mathematics',
+  'Science',
+  'Reasoning',
+  'General Knowledge',
+  'Technology',
+] as const
 
 // VATTAMS Competitions are catalog rows in the same Firestore `courses`
 // collection as every other course (same pricing/publish architecture,
@@ -25,10 +36,44 @@ export default function Competitions() {
     path: '/competitions',
     jsonLd: { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'VATTAMS ACADEMIA Academic Competitions', url: `${SITE_URL}/competitions`, isPartOf: { '@type': 'WebSite', name: 'VATTAMS ACADEMIA', url: SITE_URL } },
   })
+  const [searchParams, setSearchParams] = useSearchParams()
   const [competitions, setCompetitions] = useState<Course[]>([])
   const [state, setState] = useState<LoadState>('loading')
   const [retryToken, setRetryToken] = useState(0)
+  const [searchTerm, setSearchTerm] = useState(() => searchParams.get('search') ?? '')
   const [pricingConfig, setPricingConfig] = useState<PricingConfig>(DEFAULT_PRICING_CONFIG)
+
+  // Keep competition searches shareable and in sync with browser navigation.
+  useEffect(() => {
+    const nextSearch = searchTerm.trim()
+    setSearchParams((current) => {
+      if ((current.get('search') ?? '') === nextSearch) return current
+      const next = new URLSearchParams(current)
+      if (nextSearch) next.set('search', nextSearch)
+      else next.delete('search')
+      return next
+    }, { replace: true })
+  }, [searchTerm, setSearchParams])
+
+  useEffect(() => {
+    const querySearch = searchParams.get('search') ?? ''
+    if (querySearch !== searchTerm) setSearchTerm(querySearch)
+  }, [searchParams, searchTerm])
+
+  const filteredCompetitions = useMemo(() => {
+    const term = searchTerm.trim().toLocaleLowerCase()
+    if (!term) return competitions
+    return competitions.filter((competition) => {
+      const searchableText = [
+        getCourseDisplayName(competition.name),
+        competition.name,
+        competition.slug,
+        competition.short_description ?? '',
+        competition.description ?? '',
+      ].join(' ').toLocaleLowerCase()
+      return searchableText.includes(term)
+    })
+  }, [competitions, searchTerm])
 
   useEffect(() => {
     let cancelled = false
@@ -109,8 +154,66 @@ export default function Competitions() {
           </div>
         )}
 
+        {state === 'loaded' && competitions.length > 0 && (
+          <section aria-labelledby="competition-discovery-title" className="mb-8">
+            <div className="mb-4">
+              <p className="eyebrow">Find your interest</p>
+              <h2 id="competition-discovery-title" className="mt-2 font-display text-2xl font-semibold">
+                Explore competitions by topic
+              </h2>
+              <p className="mt-2 max-w-2xl text-sm text-slate-muted">
+                Search and topic shortcuts filter the published competitions currently listed below.
+                They do not imply that a separate competition is available for every topic.
+              </p>
+            </div>
+            <label htmlFor="competition-search" className="sr-only">Search published competitions</label>
+            <div className="flex w-full max-w-xl items-center gap-2">
+              <input
+                id="competition-search"
+                type="search"
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                placeholder="Search competition name or description"
+                className="input min-w-0 flex-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+              />
+              {searchTerm && (
+                <button
+                  type="button"
+                  onClick={() => setSearchTerm('')}
+                  className="shrink-0 rounded-lg border border-white/15 px-3 py-2 text-sm text-parchment hover:border-gold/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                  aria-label="Clear competition search"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {COMPETITION_DISCOVERY_TOPICS.map((topic) => (
+                <button
+                  key={topic}
+                  type="button"
+                  onClick={() => setSearchTerm(topic)}
+                  aria-pressed={searchTerm === topic}
+                  className={`rounded-full border px-3 py-2 text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold ${searchTerm === topic ? 'border-gold bg-gold/15 text-gold' : 'border-white/15 text-parchment hover:border-gold/50'}`}
+                >
+                  {topic}
+                </button>
+              ))}
+              {searchTerm && (
+                <button
+                  type="button"
+                  onClick={() => setSearchTerm('')}
+                  className="rounded-full px-3 py-2 text-sm text-slate-muted underline underline-offset-4 hover:text-parchment focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                >
+                  Clear search
+                </button>
+              )}
+            </div>
+          </section>
+        )}
+
         {state === 'loaded' && competitions.length === 0 && (
-            <div className="card p-10 text-center">
+          <div className="card p-10 text-center">
             <p className="font-display text-lg">No competitions open right now</p>
             <p className="mt-2 text-sm text-slate-muted">Check back soon, or explore courses in the meantime.</p>
             <Link to="/courses" className="btn-primary mt-6 inline-flex">
@@ -119,29 +222,47 @@ export default function Competitions() {
           </div>
         )}
 
-        {state === 'loaded' && competitions.length > 0 && (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {competitions.map((c) => {
-              const pricing = getEffectiveCoursePricing(c, pricingConfig)
-              const finalPrice = pricing.amount
-              return (
-                <Link key={c.id} to={`/courses/${c.slug}`} className="card group flex flex-col gap-2 p-5">
-                  <h3 className="font-display text-lg leading-snug">{getCourseDisplayName(c.name)}</h3>
-                  {c.short_description && (
-                    <p className="line-clamp-2 text-sm text-slate-muted">{c.short_description}</p>
-                  )}
-                  <div className="mt-auto flex items-center justify-between pt-3">
-                    <span className="font-semibold text-parchment">
-                      {c.is_free ? 'Free' : `₹${finalPrice.toLocaleString('en-IN')}`}
-                    </span>
-                    <span className="text-xs font-semibold uppercase tracking-wide text-gold group-hover:text-gold-bright">
-                      Details →
-                    </span>
-                  </div>
-                </Link>
-              )
-            })}
+        {state === 'loaded' && competitions.length > 0 && filteredCompetitions.length === 0 && (
+          <div className="card p-8 text-center">
+            <p className="font-display text-lg">No matching competitions found</p>
+            <p className="mt-2 text-sm text-slate-muted">
+              Try another keyword or clear the search to see all published competitions.
+            </p>
+            <button type="button" onClick={() => setSearchTerm('')} className="btn-secondary mt-5">
+              Show all competitions
+            </button>
           </div>
+        )}
+
+        {state === 'loaded' && filteredCompetitions.length > 0 && (
+          <>
+            <p className="mb-4 text-sm text-slate-muted" aria-live="polite" aria-atomic="true">
+              Showing {filteredCompetitions.length} of {competitions.length} published {competitions.length === 1 ? 'competition' : 'competitions'}
+              {searchTerm.trim() ? ` for “${searchTerm.trim()}”` : ''}
+            </p>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {filteredCompetitions.map((c) => {
+                const pricing = getEffectiveCoursePricing(c, pricingConfig)
+                const finalPrice = pricing.amount
+                return (
+                  <Link key={c.id} to={`/courses/${c.slug}`} className="card group flex flex-col gap-2 p-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-navy">
+                    <h3 className="font-display text-lg leading-snug">{getCourseDisplayName(c.name)}</h3>
+                    {c.short_description && (
+                      <p className="line-clamp-2 text-sm text-slate-muted">{c.short_description}</p>
+                    )}
+                    <div className="mt-auto flex items-center justify-between pt-3">
+                      <span className="font-semibold text-parchment">
+                        {c.is_free ? 'Free' : `₹${finalPrice.toLocaleString('en-IN')}`}
+                      </span>
+                      <span className="text-xs font-semibold uppercase tracking-wide text-gold group-hover:text-gold-bright">
+                        Details →
+                      </span>
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          </>
         )}
       </div>
     </div>
