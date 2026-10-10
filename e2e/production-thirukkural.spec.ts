@@ -119,13 +119,23 @@ test.describe('production Thirukkural authenticated smoke', () => {
       throw new Error(`Could not start official 30-question attempt for revocation test: ${JSON.stringify(attempt)}`)
     }
 
+    const headers = {
+      apikey: process.env.SUPABASE_ANON_KEY!,
+      Authorization: authorization,
+      'Content-Type': 'application/json',
+    }
+    const mockStartResponse = await page.request.post(`${process.env.SUPABASE_URL}/functions/v1/competition-mock-attempt`, {
+      headers,
+      data: { course_id: competitionCourseId },
+    })
+    expect(mockStartResponse.status()).toBe(200)
+    const mockAttempt = await mockStartResponse.json()
+    if (typeof mockAttempt?.attempt_id !== 'string' || !Array.isArray(mockAttempt.question_ids) || mockAttempt.question_ids.length !== 30) {
+      throw new Error(`Could not start mock attempt for revocation test: ${JSON.stringify(mockAttempt)}`)
+    }
+
     try {
       await setCompetitionCacheAccess(email, false)
-      const headers = {
-        apikey: process.env.SUPABASE_ANON_KEY!,
-        Authorization: authorization,
-        'Content-Type': 'application/json',
-      }
       const questionResponse = await page.request.post(`${process.env.SUPABASE_URL}/functions/v1/competition-official-question-content`, {
         headers,
         data: { attempt_id: attemptId, question_ids: questionIds },
@@ -146,6 +156,27 @@ test.describe('production Thirukkural authenticated smoke', () => {
       })
       expect(submitResponse.status()).toBe(403)
       expect((await submitResponse.json()).error).toContain('no longer have access')
+
+      const mockQuestionResponse = await page.request.post(`${process.env.SUPABASE_URL}/functions/v1/competition-question-content`, {
+        headers,
+        data: { course_id: competitionCourseId, attempt_id: mockAttempt.attempt_id, question_ids: mockAttempt.question_ids },
+      })
+      expect(mockQuestionResponse.status()).toBe(403)
+      expect((await mockQuestionResponse.json()).error).toContain('no longer have access')
+
+      const mockSaveResponse = await page.request.post(`${process.env.SUPABASE_URL}/functions/v1/competition-mock-scoring`, {
+        headers,
+        data: { action: 'save_answer', attemptId: mockAttempt.attempt_id, questionId: mockAttempt.question_ids[0], answer: 'E2E revocation test' },
+      })
+      expect(mockSaveResponse.status()).toBe(403)
+      expect((await mockSaveResponse.json()).error).toContain('no longer have access')
+
+      const mockSubmitResponse = await page.request.post(`${process.env.SUPABASE_URL}/functions/v1/competition-mock-scoring`, {
+        headers,
+        data: { action: 'submit_mock', attemptId: mockAttempt.attempt_id, answers: [] },
+      })
+      expect(mockSubmitResponse.status()).toBe(403)
+      expect((await mockSubmitResponse.json()).error).toContain('no longer have access')
     } finally {
       await setCompetitionCacheAccess(email, true)
     }
