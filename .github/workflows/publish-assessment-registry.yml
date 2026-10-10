@@ -43,7 +43,7 @@ jobs:
 
       - name: Upload production assessment registry
         env:
-          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_URL: https://ljnfktzrjewqjxxchvud.supabase.co
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
           set -euo pipefail
@@ -84,7 +84,7 @@ jobs:
 
       - name: Upload verified assessment bank assets
         env:
-          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_URL: https://ljnfktzrjewqjxxchvud.supabase.co
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
           set -euo pipefail
