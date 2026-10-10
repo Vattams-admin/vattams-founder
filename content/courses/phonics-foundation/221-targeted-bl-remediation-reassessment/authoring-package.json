@@ -76,37 +76,6 @@
       "Decoding: blend every phoneme in order.",
       "Encoding: segment and map all graphemes.",
       "Comprehension: reread and point to text evidence."
-    ],
-    "weakTopicRevision": "If reassessment remains below 80%, continue focused practice on the same diagnosed component, then use a new set of items before routing again.",
-    "outcomes": [
-      "Complete targeted practice matched to the diagnosed component.",
-      "Score at least 80% on fresh reassessment items to advance.",
-      "Explain a corrected response using sound or text evidence.",
-      "Continue targeted support if the score remains below threshold."
-    ],
-    "activities": [
-      {
-        "id": "ACT1",
-        "type": "targeted-remediation",
-        "name": "Select a practice path from diagnostic evidence.",
-        "steps": [
-          "Review the component-level error pattern.",
-          "Model the specific sound, decoding, spelling, word-family or comprehension skill.",
-          "Practise with guided examples and immediate feedback.",
-          "Use fresh examples to check transfer."
-        ]
-      },
-      {
-        "id": "ACT2",
-        "type": "fresh-reassessment",
-        "name": "Complete a new reassessment and explain the route.",
-        "steps": [
-          "Answer the 15 fresh items independently.",
-          "Check responses against the answer key privately.",
-          "Calculate the score against the 80% threshold.",
-          "Advance or continue targeted remediation based on the score."
-        ]
-      }
     ]
   },
   "practice": {
