@@ -139,8 +139,8 @@
       },
       {
         "id": "H3",
-        "prompt": "Which word is spelled incorrectly?",
-        "answer": "chop spelled shop"
+        "prompt": "A learner writes shop for the spoken word chop. What should be corrected?",
+        "answer": "The initial grapheme must be ch"
       }
     ],
     "mixedReview": [
@@ -377,12 +377,12 @@
     },
     {
       "questionId": "PF169-Q12",
-      "question": "Which word is spelled incorrectly?",
+      "question": "A learner writes shop for the spoken word chop. What should be corrected?",
       "options": [
-        "chop spelled shop",
-        "chat",
-        "chin",
-        "much"
+        "The initial grapheme must be ch",
+        "The vowel must be a",
+        "The final p must be removed",
+        "The word needs four vowels"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -487,7 +487,7 @@
     {
       "questionId": "PF169-Q12",
       "correctOptionIndex": 0,
-      "explanation": "Shop starts with /sh/, while chop starts with /ch/."
+      "explanation": "Chop begins with /ch/; shop begins with /sh/."
     },
     {
       "questionId": "PF169-Q13",
