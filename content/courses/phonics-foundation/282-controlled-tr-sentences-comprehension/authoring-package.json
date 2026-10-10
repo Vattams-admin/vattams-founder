@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-282",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "282-controlled-tr-sentences-comprehension",
+    "topic": "sentence-reading",
+    "subtopic": "initial-tr-controlled-sentences-literal-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read controlled sentences containing taught tr-words accurately.",
+      "Answer who, what, and where questions using explicit sentence evidence.",
+      "Use meaning to check decoding without guessing details.",
+      "Reread to repair a missed sound and confirm comprehension."
+    ],
+    "concepts": [
+      "Sentence reading joins accurate decoding with meaning.",
+      "Literal answers are stated directly in the sentence.",
+      "Text evidence is the word or phrase that supports an answer.",
+      "Rereading checks the tr blend and sentence meaning."
+    ],
+    "definitions": [
+      {
+        "term": "literal question",
+        "definition": "A question answered directly by information stated in the text."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Words in a sentence that support an answer."
+      },
+      {
+        "term": "rereading",
+        "definition": "Reading a sentence again to check accuracy and meaning."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Read: “The trip is fun.” What is fun?",
+        "solution": "The trip."
+      },
+      {
+        "prompt": "Read: “Trim the grass.” What should you trim?",
+        "solution": "The grass."
+      },
+      {
+        "prompt": "Read: “The track is flat.” What is flat?",
+        "solution": "The track."
+      }
+    ],
+    "commonMistakes": [
+      "Answering from imagination instead of the sentence.",
+      "Skipping /r/ in a tr-word.",
+      "Confusing who and what questions.",
+      "Reading quickly without checking meaning."
+    ],
+    "keyTakeaways": [
+      "Decode each tr-word accurately.",
+      "Use the sentence to answer literal questions.",
+      "Point to the phrase that supports the answer.",
+      "Reread when the word or meaning does not match."
+    ],
+    "revisionPoints": [
+      "The trip is fun.",
+      "Trim the grass.",
+      "The track is flat.",
+      "Use sentence evidence and reread to check."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Read: “The trip is fun.” What is fun?",
+        "answer": "The trip"
+      },
+      {
+        "id": "B2",
+        "prompt": "Read: “Trim the grass.” What should you trim?",
+        "answer": "The grass"
+      },
+      {
+        "id": "B3",
+        "prompt": "Read: “The track is flat.” What is flat?",
+        "answer": "The track"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "In “The trip is fun,” which word names the activity?",
+        "answer": "trip"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which question asks what action to take?",
+        "answer": "What should you trim?"
+      },
+      {
+        "id": "C3",
+        "prompt": "What is text evidence?",
+        "answer": "Words that support an answer"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "If trip is read as tip, what should the reader do?",
+        "answer": "Reread and include /r/"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which sentence tells what is flat?",
+        "answer": "The track is flat."
+      },
+      {
+        "id": "A3",
+        "prompt": "Why reread after decoding?",
+        "answer": "To check accuracy and meaning"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which activity is described as fun?",
+        "answer": "The trip"
+      },
+      {
+        "id": "H2",
+        "prompt": "What does “The track is flat” tell us?",
+        "answer": "The track is flat"
+      },
+      {
+        "id": "H3",
+        "prompt": "In “Trim the grass,” which word names the action?",
+        "answer": "Trim"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "If a sentence does not state a detail, what should you do?",
+        "answer": "Avoid inventing it and reread the text"
+      },
+      {
+        "id": "R2",
+        "prompt": "Which sentence contains the word trip?",
+        "answer": "The trip is fun."
+      },
+      {
+        "id": "R3",
+        "prompt": "What helps you answer accurately?",
+        "answer": "Decode the words and use sentence evidence"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "The trip is fun.",
+      "Trim the grass.",
+      "The track is flat.",
+      "Use sentence evidence and reread to check."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "The trip is fun."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Trim the grass."
+      },
+      {
+        "front": "Recall 3",
+        "back": "The track is flat."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Use sentence evidence and reread to check."
+      }
+    ],
+    "formulaOrFactBank": [
+      "The trip is fun.",
+      "Trim the grass.",
+      "The track is flat.",
+      "Use sentence evidence and reread to check."
+    ],
+    "mistakeBasedRevision": [
+      "Answering from imagination instead of the sentence.",
+      "Skipping /r/ in a tr-word.",
+      "Confusing who and what questions.",
+      "Reading quickly without checking meaning."
+    ],
+    "weakTopicRevision": [
+      "If sentence-reading is weak, revisit the worked examples, say the sound evidence aloud, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "read-answer-point-to-evidence-and-reread",
+      "name": "Read, answer, point to evidence, and reread.",
+      "steps": [
+        "Listen to or read each target word carefully.",
+        "Say or map each sound in the correct order.",
+        "Complete the task and explain the sound or text evidence.",
+        "Reread or repeat the word to check accuracy."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-repair",
+      "name": "Find and repair a target-pattern error.",
+      "steps": [
+        "Review a word or sentence with one target-pattern error.",
+        "Identify the sound, spelling, or evidence that does not match.",
+        "Correct the item and explain the correction.",
+        "Try a fresh item without looking at the answer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read controlled sentences containing taught tr-words accurately.",
+    "Answer who, what, and where questions using explicit sentence evidence.",
+    "Use meaning to check decoding without guessing details.",
+    "Reread to repair a missed sound and confirm comprehension."
+  ],
+  "questions": [
+    {
+      "questionId": "PF282-Q01",
+      "question": "Read: “The trip is fun.” What is fun?",
+      "options": [
+        "The trip",
+        "The track",
+        "The grass",
+        "The trap"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q02",
+      "question": "Read: “Trim the grass.” What should you trim?",
+      "options": [
+        "The track",
+        "The grass",
+        "The trip",
+        "The trap"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q03",
+      "question": "Read: “The track is flat.” What is flat?",
+      "options": [
+        "The trip",
+        "The grass",
+        "The track",
+        "The trap"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q04",
+      "question": "In “The trip is fun,” which word names the activity?",
+      "options": [
+        "the",
+        "is",
+        "fun",
+        "trip"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q05",
+      "question": "Which question asks what action to take?",
+      "options": [
+        "What should you trim?",
+        "Who has a hat?",
+        "Where is the track?",
+        "Which word begins tr?"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q06",
+      "question": "What is text evidence?",
+      "options": [
+        "A guess about a picture",
+        "Words that support an answer",
+        "A detail not in the sentence",
+        "The longest option"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q07",
+      "question": "If trip is read as tip, what should the reader do?",
+      "options": [
+        "Skip the word",
+        "Change the sentence",
+        "Reread and include /r/",
+        "Guess from the next word"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q08",
+      "question": "Which sentence tells what is flat?",
+      "options": [
+        "The trip is fun.",
+        "Trim the grass.",
+        "Trish has a red hat.",
+        "The track is flat."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q09",
+      "question": "Why reread after decoding?",
+      "options": [
+        "To check accuracy and meaning",
+        "To invent another detail",
+        "To ignore punctuation",
+        "To skip the final sound"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q10",
+      "question": "Which activity is described as fun?",
+      "options": [
+        "The track",
+        "The trip",
+        "The grass",
+        "The trap"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q11",
+      "question": "What does “The track is flat” tell us?",
+      "options": [
+        "Who built the track",
+        "Where the track goes",
+        "The track is flat",
+        "What the track ate"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q12",
+      "question": "In “Trim the grass,” which word names the action?",
+      "options": [
+        "the",
+        "grass",
+        "a",
+        "Trim"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q13",
+      "question": "If a sentence does not state a detail, what should you do?",
+      "options": [
+        "Avoid inventing it and reread the text",
+        "Choose any detail",
+        "Make up an answer",
+        "Ignore the question"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q14",
+      "question": "Which sentence contains the word trip?",
+      "options": [
+        "The track is flat.",
+        "The trip is fun.",
+        "Trim the grass.",
+        "Trish has a red hat."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF282-Q15",
+      "question": "What helps you answer accurately?",
+      "options": [
+        "Guess from the first letter only",
+        "Ignore word order",
+        "Decode the words and use sentence evidence",
+        "Choose the longest answer"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF282-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence says the trip is fun."
+    },
+    {
+      "questionId": "PF282-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The sentence tells you to trim the grass."
+    },
+    {
+      "questionId": "PF282-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "The sentence says the track is flat."
+    },
+    {
+      "questionId": "PF282-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "Trip names the activity."
+    },
+    {
+      "questionId": "PF282-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "What should you trim asks about the action's object."
+    },
+    {
+      "questionId": "PF282-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "Evidence comes from the sentence wording."
+    },
+    {
+      "questionId": "PF282-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "The tr onset requires both consonants."
+    },
+    {
+      "questionId": "PF282-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "This sentence states what is flat."
+    },
+    {
+      "questionId": "PF282-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Rereading checks the word and sentence."
+    },
+    {
+      "questionId": "PF282-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "The sentence says the trip is fun."
+    },
+    {
+      "questionId": "PF282-Q11",
+      "correctOptionIndex": 2,
+      "explanation": "The sentence directly describes the track."
+    },
+    {
+      "questionId": "PF282-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Trim tells the reader what to do."
+    },
+    {
+      "questionId": "PF282-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Literal comprehension must stay within the text."
+    },
+    {
+      "questionId": "PF282-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "The first sentence contains trip."
+    },
+    {
+      "questionId": "PF282-Q15",
+      "correctOptionIndex": 2,
+      "explanation": "Accurate decoding and text evidence support the answer."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-282-v1"
+  }
+}
