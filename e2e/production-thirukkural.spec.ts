@@ -65,6 +65,7 @@ async function login(page: Page) {
 }
 
 test.describe('production Thirukkural authenticated smoke', () => {
+  test.describe.configure({ mode: 'serial' })
   test('enrolled student can start the 30-question mock test', async ({ page }) => {
     await login(page)
 
