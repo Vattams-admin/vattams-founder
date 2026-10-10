@@ -2,9 +2,9 @@ import { createRemoteJWKSet, jwtVerify } from "npm:jose@6";
 import { createClient } from "npm:@supabase/supabase-js@2";
 
 const PROJECT_ID = Deno.env.get("FIREBASE_PROJECT_ID") || Deno.env.get("VITE_FIREBASE_PROJECT_ID") || "";
-const URL = Deno.env.get("SUPABASE_URL") || "";
+const SUPABASE_URL = Deno.env.get("SUPABASE_URL") || "";
 const KEYS = JSON.parse(Deno.env.get("SUPABASE_SECRET_KEYS") || "{}");
-const supabase = createClient(URL, KEYS["default"] || "", { auth: { persistSession: false, autoRefreshToken: false } });
+const supabase = createClient(SUPABASE_URL, KEYS["default"] || "", { auth: { persistSession: false, autoRefreshToken: false } });
 const jwks = createRemoteJWKSet(new URL("https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com"));
 
 async function verify(auth: string | null): Promise<{ uid: string; token: string }> {
@@ -45,7 +45,7 @@ async function verifyRegisteredBank(definition: any, publicParsed: unknown, priv
   if (typeof definition.bank_manifest !== "string" || !definition.bank_manifest) {
     throw new Error("Assessment bank manifest is not registered");
   }
-  const manifestFile = await supabase.storage.from(academia-course-materials).download(definition.bank_manifest);
+  const manifestFile = await supabase.storage.from("academia-course-materials").download(definition.bank_manifest);
   if (manifestFile.error || !manifestFile.data) throw new Error("Unable to load assessment bank manifest");
   const manifest = JSON.parse(await manifestFile.data.text());
   if (manifest.assessmentId !== definition.assessment_id || manifest.questionCount !== definition.question_count || manifest.answerKeyPrivate !== true) {

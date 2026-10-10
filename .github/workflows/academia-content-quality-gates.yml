@@ -14,6 +14,7 @@ on:
       - "docs/**"
       - "scripts/validate-*.mjs"
       - "scripts/validate-academia-content-quality-gates.mjs"
+      - "scripts/test-edge-function-url-global-contract.mjs"
       - "scripts/test-assessment-*.mjs"
       - "package.json"
       - "package-lock.json"
@@ -32,6 +33,7 @@ on:
       - "docs/**"
       - "scripts/validate-*.mjs"
       - "scripts/validate-academia-content-quality-gates.mjs"
+      - "scripts/test-edge-function-url-global-contract.mjs"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/academia-content-quality-gates.yml"
@@ -58,6 +60,8 @@ jobs:
         run: npm run thirukkural:production-gate
       - name: Run cross-pillar content validators
         run: npm run academia:content:quality-gates
+      - name: Run Edge Function URL-constructor contract
+        run: node scripts/test-edge-function-url-global-contract.mjs
       - name: Run assessment lifecycle and security contract tests
         run: |
           npm run content:assessment:attempt:lifecycle:test
