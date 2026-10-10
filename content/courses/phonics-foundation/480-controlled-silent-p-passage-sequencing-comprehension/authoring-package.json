@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-480",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "480-controlled-silent-p-passage-sequencing-comprehension",
+    "topic": "connected-text",
+    "subtopic": "controlled-silent-p-passage-sequencing-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a controlled passage with taught ps-words accurately.",
+      "Sequence stated events as first, next, and last.",
+      "Answer literal questions using passage evidence.",
+      "Keep initial p silent while reading connected text."
+    ],
+    "concepts": [
+      "A passage connects related sentences.",
+      "Sequence words identify event order.",
+      "Initial p is silent in the taught ps-words.",
+      "Rereading supports decoding and comprehension."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "The order in which events happen."
+      },
+      {
+        "term": "passage",
+        "definition": "A short connected text made of related sentences."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Words in a passage that support an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Read: “Sam reads a psalm. Sam marks the page. Sam shuts the book.” What happens first?",
+        "solution": "Sam reads a psalm."
+      },
+      {
+        "prompt": "What does Sam do after reading the psalm?",
+        "solution": "Marks the page."
+      },
+      {
+        "prompt": "How do you verify the order?",
+        "solution": "Reread the sentences in sequence."
+      }
+    ],
+    "commonMistakes": [
+      "Voicing p at the start of ps-words.",
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Answering without evidence."
+    ],
+    "keyTakeaways": [
+      "Read every sentence accurately.",
+      "Keep initial p silent in the taught words.",
+      "Retell events in order.",
+      "Use the passage to support answers."
+    ],
+    "revisionPoints": [
+      "Sam reads a psalm.",
+      "Sam marks the page.",
+      "Sam shuts the book.",
+      "Use text evidence to sequence events."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What does Sam do first?",
+        "answer": "Reads a psalm"
+      },
+      {
+        "id": "B2",
+        "prompt": "What does Sam do after reading the psalm?",
+        "answer": "Marks the page"
+      },
+      {
+        "id": "B3",
+        "prompt": "What happens last?",
+        "answer": "Sam shuts the book"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which event happens first?",
+        "answer": "Sam reads a psalm"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which event follows reading the psalm?",
+        "answer": "Sam marks the page"
+      },
+      {
+        "id": "C3",
+        "prompt": "What does sequencing show?",
+        "answer": "The order of events"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word begins with ps?",
+        "answer": "psalm"
+      },
+      {
+        "id": "A2",
+        "prompt": "If psalm is read with /p/ at the start, what was wrong?",
+        "answer": "The silent p was voiced"
+      },
+      {
+        "id": "A3",
+        "prompt": "What is a passage?",
+        "answer": "Related sentences forming connected text"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which answer stays within the passage?",
+        "answer": "Sam shuts the book"
+      },
+      {
+        "id": "H2",
+        "prompt": "Why reread the passage?",
+        "answer": "To check words and event order"
+      },
+      {
+        "id": "H3",
+        "prompt": "What does “after” help identify?",
+        "answer": "An event that follows another"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Why point to a sentence when answering?",
+        "answer": "It shows the evidence"
+      },
+      {
+        "id": "R2",
+        "prompt": "What should you do if the retelling is out of order?",
+        "answer": "Reread the sentences in order"
+      },
+      {
+        "id": "R3",
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Sequence a passage and answer with text evidence"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Sam reads a psalm.",
+      "Sam marks the page.",
+      "Sam shuts the book.",
+      "Use text evidence to sequence events."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Sam reads a psalm."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Sam marks the page."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Sam shuts the book."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Use text evidence to sequence events."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Sam reads a psalm.",
+      "Sam marks the page.",
+      "Sam shuts the book.",
+      "Use text evidence to sequence events."
+    ],
+    "mistakeBasedRevision": [
+      "Voicing p at the start of ps-words.",
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Answering without evidence."
+    ],
+    "weakTopicRevision": [
+      "If connected-text is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-practice",
+      "name": "Retell a controlled silent-p passage in order",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete a guided example and explain the sound or text evidence.",
+        "Try a fresh example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item",
+      "steps": [
+        "Review a sample response with one target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Correct the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read a controlled passage with taught ps-words accurately.",
+    "Sequence stated events as first, next, and last.",
+    "Answer literal questions using passage evidence.",
+    "Keep initial p silent while reading connected text."
+  ],
+  "questions": [
+    {
+      "questionId": "PF480-Q01",
+      "question": "What does Sam do first?",
+      "options": [
+        "Reads a psalm",
+        "Marks the page",
+        "Shuts the book",
+        "Finds a note"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q02",
+      "question": "What does Sam do after reading the psalm?",
+      "options": [
+        "Shuts the book",
+        "Finds a note",
+        "Marks the page",
+        "Leaves the room"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q03",
+      "question": "What happens last?",
+      "options": [
+        "Sam reads a psalm",
+        "Sam shuts the book",
+        "Sam marks the page",
+        "Sam finds a note"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q04",
+      "question": "Which event happens first?",
+      "options": [
+        "Sam shuts the book",
+        "Sam marks the page",
+        "Sam finds a note",
+        "Sam reads a psalm"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q05",
+      "question": "Which event follows reading the psalm?",
+      "options": [
+        "Sam shuts the book",
+        "Sam marks the page",
+        "Sam leaves the room",
+        "Sam finds a note"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q06",
+      "question": "What does sequencing show?",
+      "options": [
+        "The order of events",
+        "The number of letters",
+        "A guessed ending",
+        "The colour of a page"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q07",
+      "question": "Which word begins with ps?",
+      "options": [
+        "spin",
+        "spoon",
+        "psalm",
+        "speak"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q08",
+      "question": "If psalm is read with /p/ at the start, what was wrong?",
+      "options": [
+        "The vowel changed",
+        "The ending disappeared",
+        "The s was silent",
+        "The silent p was voiced"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q09",
+      "question": "What is a passage?",
+      "options": [
+        "Related sentences forming connected text",
+        "A random set of letters",
+        "Only a title",
+        "An answer key"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q10",
+      "question": "Which answer stays within the passage?",
+      "options": [
+        "Sam wins a race",
+        "Sam flies a plane",
+        "Sam shuts the book",
+        "Sam eats a cake"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q11",
+      "question": "Why reread the passage?",
+      "options": [
+        "To invent a new event",
+        "To check words and event order",
+        "To skip the middle sentence",
+        "To change the ending"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q12",
+      "question": "What does “after” help identify?",
+      "options": [
+        "The first letter only",
+        "An unstated character",
+        "The longest word",
+        "An event that follows another"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q13",
+      "question": "Why point to a sentence when answering?",
+      "options": [
+        "It shows the evidence",
+        "It changes the story",
+        "It makes a guess true",
+        "It replaces reading"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q14",
+      "question": "What should you do if the retelling is out of order?",
+      "options": [
+        "Add an invented event",
+        "Skip the second sentence",
+        "Reread the sentences in order",
+        "Choose the longest answer"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF480-Q15",
+      "question": "What is the main goal of this lesson?",
+      "options": [
+        "Memorize options",
+        "Sequence a passage and answer with text evidence",
+        "Pronounce silent p",
+        "Invent a new ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF480-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The passage begins with Sam reading a psalm."
+    },
+    {
+      "questionId": "PF480-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "The second sentence says Sam marks the page."
+    },
+    {
+      "questionId": "PF480-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The last sentence says Sam shuts the book."
+    },
+    {
+      "questionId": "PF480-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The first sentence gives the first event."
+    },
+    {
+      "questionId": "PF480-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Marking the page is the next event."
+    },
+    {
+      "questionId": "PF480-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Sequencing shows event order."
+    },
+    {
+      "questionId": "PF480-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Psalm begins with ps."
+    },
+    {
+      "questionId": "PF480-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Initial p is silent."
+    },
+    {
+      "questionId": "PF480-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "A passage is connected text."
+    },
+    {
+      "questionId": "PF480-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Only shutting the book is stated."
+    },
+    {
+      "questionId": "PF480-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Rereading verifies decoding and sequence."
+    },
+    {
+      "questionId": "PF480-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "After signals sequence."
+    },
+    {
+      "questionId": "PF480-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence supports the answer."
+    },
+    {
+      "questionId": "PF480-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "The text establishes the order."
+    },
+    {
+      "questionId": "PF480-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "The lesson targets connected reading and comprehension."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-480-v1"
+  }
+}
