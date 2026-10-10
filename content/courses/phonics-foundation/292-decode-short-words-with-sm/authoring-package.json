@@ -78,261 +78,86 @@
     "basic": [
       {
         "id": "B1",
-        "prompt": [
-          "Which word begins with sm?",
-          "smog",
-          "sun",
-          "map",
-          "cat"
-        ]
+        "prompt": "Which word begins with sm?",
+        "answer": "smog"
       },
       {
         "id": "B2",
-        "prompt": [
-          "What should be mapped after s in smile?",
-          "m",
-          "t",
-          "p",
-          "n"
-        ]
+        "prompt": "When decoding smile, which letters begin the word?",
+        "answer": "s then m"
       },
       {
         "id": "B3",
-        "prompt": [
-          "If smell is read as sell, what was missed?",
-          "m",
-          "e",
-          "l",
-          "s"
-        ]
-      },
-      {
-        "id": "B4",
-        "prompt": [
-          "Which strategy supports accurate decoding?",
-          "Map graphemes left to right and blend",
-          "Guess from the first letter only",
-          "Skip the onset",
-          "Read the ending only"
-        ]
-      },
-      {
-        "id": "B5",
-        "prompt": [
-          "What should happen after blending?",
-          "Reread and check the whole word",
-          "Stop after the onset",
-          "Add a new sound",
-          "Ignore the spelling"
-        ]
+        "prompt": "If smell is read as sell, which grapheme was skipped?",
+        "answer": "m"
       }
     ],
     "conceptual": [
       {
         "id": "C1",
-        "prompt": [
-          "Which word begins with sm?",
-          "smog",
-          "sun",
-          "map",
-          "cat"
-        ]
+        "prompt": "Which word contains the sm onset and ends with g?",
+        "answer": "smog"
       },
       {
         "id": "C2",
-        "prompt": [
-          "What should be mapped after s in smile?",
-          "m",
-          "t",
-          "p",
-          "n"
-        ]
+        "prompt": "What is the best first step for decoding an unfamiliar taught sm-word?",
+        "answer": "Map each grapheme from left to right"
       },
       {
         "id": "C3",
-        "prompt": [
-          "If smell is read as sell, what was missed?",
-          "m",
-          "e",
-          "l",
-          "s"
-        ]
-      },
-      {
-        "id": "C4",
-        "prompt": [
-          "Which strategy supports accurate decoding?",
-          "Map graphemes left to right and blend",
-          "Guess from the first letter only",
-          "Skip the onset",
-          "Read the ending only"
-        ]
-      },
-      {
-        "id": "C5",
-        "prompt": [
-          "What should happen after blending?",
-          "Reread and check the whole word",
-          "Stop after the onset",
-          "Add a new sound",
-          "Ignore the spelling"
-        ]
+        "prompt": "Which pair begins with the same sm onset?",
+        "answer": "smell, smog"
       }
     ],
     "application": [
       {
         "id": "A1",
-        "prompt": [
-          "Which word begins with sm?",
-          "smog",
-          "sun",
-          "map",
-          "cat"
-        ]
+        "prompt": "What should a learner do if the spoken word does not match the spelling?",
+        "answer": "Reread and check each grapheme"
       },
       {
         "id": "A2",
-        "prompt": [
-          "What should be mapped after s in smile?",
-          "m",
-          "t",
-          "p",
-          "n"
-        ]
+        "prompt": "Which word does not begin with sm?",
+        "answer": "slip"
       },
       {
         "id": "A3",
-        "prompt": [
-          "If smell is read as sell, what was missed?",
-          "m",
-          "e",
-          "l",
-          "s"
-        ]
-      },
-      {
-        "id": "A4",
-        "prompt": [
-          "Which strategy supports accurate decoding?",
-          "Map graphemes left to right and blend",
-          "Guess from the first letter only",
-          "Skip the onset",
-          "Read the ending only"
-        ]
-      },
-      {
-        "id": "A5",
-        "prompt": [
-          "What should happen after blending?",
-          "Reread and check the whole word",
-          "Stop after the onset",
-          "Add a new sound",
-          "Ignore the spelling"
-        ]
+        "prompt": "Which spelling keeps both initial consonants?",
+        "answer": "smock"
       }
     ],
     "higherOrderThinking": [
       {
         "id": "H1",
-        "prompt": [
-          "Which word begins with sm?",
-          "smog",
-          "sun",
-          "map",
-          "cat"
-        ]
+        "prompt": "What is decoding?",
+        "answer": "Using grapheme-sound knowledge to read a word"
       },
       {
         "id": "H2",
-        "prompt": [
-          "What should be mapped after s in smile?",
-          "m",
-          "t",
-          "p",
-          "n"
-        ]
+        "prompt": "Which word starts with sm and has a short o vowel?",
+        "answer": "smog"
       },
       {
         "id": "H3",
-        "prompt": [
-          "If smell is read as sell, what was missed?",
-          "m",
-          "e",
-          "l",
-          "s"
-        ]
-      },
-      {
-        "id": "H4",
-        "prompt": [
-          "Which strategy supports accurate decoding?",
-          "Map graphemes left to right and blend",
-          "Guess from the first letter only",
-          "Skip the onset",
-          "Read the ending only"
-        ]
-      },
-      {
-        "id": "H5",
-        "prompt": [
-          "What should happen after blending?",
-          "Reread and check the whole word",
-          "Stop after the onset",
-          "Add a new sound",
-          "Ignore the spelling"
-        ]
+        "prompt": "What does self-correction mean?",
+        "answer": "Notice an error and repair it using sound evidence"
       }
     ],
     "mixedReview": [
       {
         "id": "R1",
-        "prompt": [
-          "Which word begins with sm?",
-          "smog",
-          "sun",
-          "map",
-          "cat"
-        ]
+        "prompt": "Which sequence is the correct approach?",
+        "answer": "Map, blend, say the whole word, check"
       },
       {
         "id": "R2",
-        "prompt": [
-          "What should be mapped after s in smile?",
-          "m",
-          "t",
-          "p",
-          "n"
-        ]
+        "prompt": "If a learner says sile for smile, what should they check?",
+        "answer": "The m after s and the remaining graphemes"
       },
       {
         "id": "R3",
-        "prompt": [
-          "If smell is read as sell, what was missed?",
-          "m",
-          "e",
-          "l",
-          "s"
-        ]
-      },
-      {
-        "id": "R4",
-        "prompt": [
-          "Which strategy supports accurate decoding?",
-          "Map graphemes left to right and blend",
-          "Guess from the first letter only",
-          "Skip the onset",
-          "Read the ending only"
-        ]
-      },
-      {
-        "id": "R5",
-        "prompt": [
-          "What should happen after blending?",
-          "Reread and check the whole word",
-          "Stop after the onset",
-          "Add a new sound",
-          "Ignore the spelling"
-        ]
+        "prompt": "What is the goal of decoding taught sm-words?",
+        "answer": "Read every grapheme in order and blend accurately"
       }
     ]
   },
@@ -412,8 +237,8 @@
       "questionId": "PF292-Q01",
       "question": "Which word begins with sm?",
       "options": [
-        "smog",
         "sun",
+        "smog",
         "map",
         "cat"
       ],
@@ -425,10 +250,10 @@
       "questionId": "PF292-Q02",
       "question": "When decoding smile, which letters begin the word?",
       "options": [
-        "s then m",
         "m then s",
         "s then l",
-        "t then m"
+        "t then m",
+        "s then m"
       ],
       "difficulty": "decoding",
       "marks": 1,
@@ -451,9 +276,9 @@
       "questionId": "PF292-Q04",
       "question": "Which word contains the sm onset and ends with g?",
       "options": [
-        "smog",
         "slip",
         "flag",
+        "smog",
         "sun"
       ],
       "difficulty": "decoding",
@@ -464,8 +289,8 @@
       "questionId": "PF292-Q05",
       "question": "What is the best first step for decoding an unfamiliar taught sm-word?",
       "options": [
-        "Map each grapheme from left to right",
         "Guess using the picture only",
+        "Map each grapheme from left to right",
         "Skip the second consonant",
         "Read only the final letter"
       ],
@@ -490,9 +315,9 @@
       "questionId": "PF292-Q07",
       "question": "What should a learner do if the spoken word does not match the spelling?",
       "options": [
-        "Reread and check each grapheme",
         "Ignore the mismatch",
         "Add an unrelated sound",
+        "Reread and check each grapheme",
         "Choose the longest option"
       ],
       "difficulty": "application",
@@ -503,10 +328,10 @@
       "questionId": "PF292-Q08",
       "question": "Which word does not begin with sm?",
       "options": [
-        "slip",
         "smile",
         "smell",
-        "smog"
+        "smog",
+        "slip"
       ],
       "difficulty": "decoding",
       "marks": 1,
@@ -516,8 +341,8 @@
       "questionId": "PF292-Q09",
       "question": "Which spelling keeps both initial consonants?",
       "options": [
-        "smock",
         "sock",
+        "smock",
         "mock",
         "slock"
       ],
@@ -529,9 +354,9 @@
       "questionId": "PF292-Q10",
       "question": "What is decoding?",
       "options": [
-        "Using grapheme-sound knowledge to read a word",
         "Copying the word shape without sound",
         "Guessing from length",
+        "Using grapheme-sound knowledge to read a word",
         "Naming punctuation"
       ],
       "difficulty": "conceptual",
@@ -555,10 +380,10 @@
       "questionId": "PF292-Q12",
       "question": "What does self-correction mean?",
       "options": [
-        "Notice an error and repair it using sound evidence",
         "Repeat an error without checking",
         "Skip difficult words",
-        "Wait for another person to guess"
+        "Wait for another person to guess",
+        "Notice an error and repair it using sound evidence"
       ],
       "difficulty": "conceptual",
       "marks": 1,
@@ -568,9 +393,9 @@
       "questionId": "PF292-Q13",
       "question": "Which sequence is the correct approach?",
       "options": [
-        "Map, blend, say the whole word, check",
         "Guess, skip, stop",
         "Reverse letters, then guess",
+        "Map, blend, say the whole word, check",
         "Read the ending only"
       ],
       "difficulty": "application",
@@ -581,8 +406,8 @@
       "questionId": "PF292-Q14",
       "question": "If a learner says sile for smile, what should they check?",
       "options": [
-        "The m after s and the remaining graphemes",
         "Only the final e",
+        "The m after s and the remaining graphemes",
         "The number of spaces",
         "A punctuation mark"
       ],
@@ -607,12 +432,12 @@
   "answerKeys": [
     {
       "questionId": "PF292-Q01",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Smog begins with the graphemes s and m."
     },
     {
       "questionId": "PF292-Q02",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "The initial onset is written sm."
     },
     {
@@ -622,12 +447,12 @@
     },
     {
       "questionId": "PF292-Q04",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Smog begins sm and ends with g."
     },
     {
       "questionId": "PF292-Q05",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Left-to-right mapping preserves every grapheme."
     },
     {
@@ -637,22 +462,22 @@
     },
     {
       "questionId": "PF292-Q07",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Self-correction requires checking the grapheme sequence."
     },
     {
       "questionId": "PF292-Q08",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Slip begins with sl rather than sm."
     },
     {
       "questionId": "PF292-Q09",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Smock begins with both s and m in order."
     },
     {
       "questionId": "PF292-Q10",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Decoding maps written graphemes to sounds."
     },
     {
@@ -662,17 +487,17 @@
     },
     {
       "questionId": "PF292-Q12",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Self-correction uses evidence to fix a reading error."
     },
     {
       "questionId": "PF292-Q13",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "The complete decoding routine maps, blends, and checks."
     },
     {
       "questionId": "PF292-Q14",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The onset and complete spelling need checking."
     },
     {
