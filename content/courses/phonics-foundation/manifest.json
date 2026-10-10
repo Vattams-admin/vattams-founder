@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 520,
-    "studyMaterials": 520,
-    "questionBank": 7790,
-    "assessments": 108
+    "lessons": 540,
+    "studyMaterials": 540,
+    "questionBank": 8090,
+    "assessments": 113
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -540,7 +540,27 @@
       "content/courses/phonics-foundation/517-recognize-silent-h-in-honest-hour/authoring-package.json",
       "content/courses/phonics-foundation/518-decode-words-with-silent-h/authoring-package.json",
       "content/courses/phonics-foundation/519-spell-words-with-silent-h/authoring-package.json",
-      "content/courses/phonics-foundation/520-silent-letter-patterns-integrated-review/authoring-package.json"
+      "content/courses/phonics-foundation/520-silent-letter-patterns-integrated-review/authoring-package.json",
+      "content/courses/phonics-foundation/521-recognize-silent-n-in-mn-words/authoring-package.json",
+      "content/courses/phonics-foundation/522-decode-words-with-silent-n-in-mn/authoring-package.json",
+      "content/courses/phonics-foundation/523-spell-words-with-silent-n-in-mn/authoring-package.json",
+      "content/courses/phonics-foundation/524-mn-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/525-controlled-mn-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/526-controlled-mn-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/527-mn-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/528-targeted-mn-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/529-recognize-silent-g-in-final-gn/authoring-package.json",
+      "content/courses/phonics-foundation/530-decode-words-with-final-gn/authoring-package.json",
+      "content/courses/phonics-foundation/531-spell-words-with-final-gn/authoring-package.json",
+      "content/courses/phonics-foundation/532-gn-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/533-controlled-gn-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/534-controlled-gn-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/535-gn-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/536-targeted-gn-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/537-silent-letter-patterns-mixed-review-2/authoring-package.json",
+      "content/courses/phonics-foundation/538-silent-letter-patterns-sentence-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/539-silent-letter-patterns-passage-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/540-silent-letter-patterns-mastery-checkpoint/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -625,7 +645,12 @@
     "PF507-DIAG-01",
     "PF508-REASSESS-01",
     "PF515-DIAG-01",
-    "PF516-REASSESS-01"
+    "PF516-REASSESS-01",
+    "PF527-DIAG-01",
+    "PF528-REASSESS-01",
+    "PF535-DIAG-01",
+    "PF536-REASSESS-01",
+    "PF540-CUMULATIVE-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
@@ -1147,6 +1172,26 @@
     "content/courses/phonics-foundation/517-recognize-silent-h-in-honest-hour/authoring-package.json",
     "content/courses/phonics-foundation/518-decode-words-with-silent-h/authoring-package.json",
     "content/courses/phonics-foundation/519-spell-words-with-silent-h/authoring-package.json",
-    "content/courses/phonics-foundation/520-silent-letter-patterns-integrated-review/authoring-package.json"
+    "content/courses/phonics-foundation/520-silent-letter-patterns-integrated-review/authoring-package.json",
+    "content/courses/phonics-foundation/521-recognize-silent-n-in-mn-words/authoring-package.json",
+    "content/courses/phonics-foundation/522-decode-words-with-silent-n-in-mn/authoring-package.json",
+    "content/courses/phonics-foundation/523-spell-words-with-silent-n-in-mn/authoring-package.json",
+    "content/courses/phonics-foundation/524-mn-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/525-controlled-mn-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/526-controlled-mn-passage-sequencing-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/527-mn-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/528-targeted-mn-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/529-recognize-silent-g-in-final-gn/authoring-package.json",
+    "content/courses/phonics-foundation/530-decode-words-with-final-gn/authoring-package.json",
+    "content/courses/phonics-foundation/531-spell-words-with-final-gn/authoring-package.json",
+    "content/courses/phonics-foundation/532-gn-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/533-controlled-gn-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/534-controlled-gn-passage-sequencing-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/535-gn-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/536-targeted-gn-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/537-silent-letter-patterns-mixed-review-2/authoring-package.json",
+    "content/courses/phonics-foundation/538-silent-letter-patterns-sentence-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/539-silent-letter-patterns-passage-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/540-silent-letter-patterns-mastery-checkpoint/authoring-package.json"
   ]
 }
