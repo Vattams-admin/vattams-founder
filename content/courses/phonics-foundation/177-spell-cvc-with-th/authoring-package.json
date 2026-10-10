@@ -129,8 +129,8 @@
     "higherOrderThinking": [
       {
         "id": "H1",
-        "prompt": "Which spelling changes only the vowel from thin to than?",
-        "answer": "than"
+        "prompt": "Which pair begins with unvoiced th but has different short vowels?",
+        "answer": "thin and thud"
       },
       {
         "id": "H2",
@@ -351,12 +351,12 @@
     },
     {
       "questionId": "PF177-Q10",
-      "question": "Which spelling changes only the vowel from thin to than?",
+      "question": "Which pair begins with unvoiced th but has different short vowels?",
       "options": [
-        "thun",
-        "then",
-        "fin",
-        "than"
+        "thin and fin",
+        "bath and path",
+        "moth and math",
+        "thin and thud"
       ],
       "difficulty": "conceptual",
       "marks": 1,
@@ -477,7 +477,7 @@
     {
       "questionId": "PF177-Q10",
       "correctOptionIndex": 3,
-      "explanation": "Thin and than differ in the vowel, though than has voiced/unvoiced context considerations; compare spelling pattern."
+      "explanation": "Thin has short i and thud has short u; both begin with unvoiced /th/."
     },
     {
       "questionId": "PF177-Q11",
