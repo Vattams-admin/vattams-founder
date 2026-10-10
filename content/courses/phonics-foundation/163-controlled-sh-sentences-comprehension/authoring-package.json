@@ -236,8 +236,8 @@
       "questionId": "PF163-Q01",
       "question": "In “Sam has a fish,” what does Sam have?",
       "options": [
-        "A fish",
         "A ship",
+        "A fish",
         "A dish",
         "A shell"
       ],
@@ -262,10 +262,10 @@
       "questionId": "PF163-Q03",
       "question": "Which word in “Sam can shut the lid” begins with sh?",
       "options": [
-        "shut",
         "Sam",
         "can",
-        "lid"
+        "lid",
+        "shut"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -275,9 +275,9 @@
       "questionId": "PF163-Q04",
       "question": "Which sentence tells what Sam has?",
       "options": [
-        "Sam has a fish.",
         "The fish is in a dish.",
         "Sam can shut the lid.",
+        "Sam has a fish.",
         "The lid is shut."
       ],
       "difficulty": "basic",
@@ -288,8 +288,8 @@
       "questionId": "PF163-Q05",
       "question": "Which pair of words rhymes in “The fish is in a dish”?",
       "options": [
-        "fish and dish",
         "fish and is",
+        "fish and dish",
         "in and dish",
         "the and fish"
       ],
@@ -314,10 +314,10 @@
       "questionId": "PF163-Q07",
       "question": "Which word contains the /sh/ sound at the end?",
       "options": [
-        "fish",
         "Sam",
         "lid",
-        "can"
+        "can",
+        "fish"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -327,9 +327,9 @@
       "questionId": "PF163-Q08",
       "question": "Which word differs from fish by its vowel?",
       "options": [
-        "cash",
         "dish",
         "wish",
+        "cash",
         "fish"
       ],
       "difficulty": "conceptual",
@@ -340,8 +340,8 @@
       "questionId": "PF163-Q09",
       "question": "What does “Sam can shut the lid” tell us?",
       "options": [
-        "Sam can close the lid",
         "Sam has a ship",
+        "Sam can close the lid",
         "The fish can read",
         "The lid is a dish"
       ],
@@ -366,10 +366,10 @@
       "questionId": "PF163-Q11",
       "question": "If a learner reads dish as dig, what should be checked?",
       "options": [
-        "The final digraph sh",
         "Only the first letter",
         "The spaces",
-        "The capital S"
+        "The capital S",
+        "The final digraph sh"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -379,9 +379,9 @@
       "questionId": "PF163-Q12",
       "question": "Which word begins with the same sound as shut?",
       "options": [
-        "ship",
         "Sam",
         "lid",
+        "ship",
         "fish"
       ],
       "difficulty": "basic",
@@ -392,8 +392,8 @@
       "questionId": "PF163-Q13",
       "question": "What is the best evidence that Sam can close something?",
       "options": [
-        "Sam can shut the lid.",
         "Sam has a fish.",
+        "Sam can shut the lid.",
         "The fish is in a dish.",
         "The dish is big."
       ],
@@ -418,10 +418,10 @@
       "questionId": "PF163-Q15",
       "question": "Which strategy helps when a sentence does not make sense?",
       "options": [
-        "Reread each word and check the sounds",
         "Ignore the ending",
         "Guess the next word",
-        "Skip the sentence"
+        "Skip the sentence",
+        "Reread each word and check the sounds"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -431,7 +431,7 @@
   "answerKeys": [
     {
       "questionId": "PF163-Q01",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The sentence says Sam has a fish."
     },
     {
@@ -441,17 +441,17 @@
     },
     {
       "questionId": "PF163-Q03",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Shut begins with sh."
     },
     {
       "questionId": "PF163-Q04",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "The first sentence states what Sam has."
     },
     {
       "questionId": "PF163-Q05",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Fish and dish share -ish."
     },
     {
@@ -461,17 +461,17 @@
     },
     {
       "questionId": "PF163-Q07",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Fish ends in sh."
     },
     {
       "questionId": "PF163-Q08",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Cash uses short a; fish uses short i."
     },
     {
       "questionId": "PF163-Q09",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Shut means close in this sentence."
     },
     {
@@ -481,17 +481,17 @@
     },
     {
       "questionId": "PF163-Q11",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Dish ends in sh, not g."
     },
     {
       "questionId": "PF163-Q12",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Ship and shut both begin with /sh/."
     },
     {
       "questionId": "PF163-Q13",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The first sentence directly states the action."
     },
     {
@@ -501,7 +501,7 @@
     },
     {
       "questionId": "PF163-Q15",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Rereading helps repair decoding and meaning."
     }
   ],
