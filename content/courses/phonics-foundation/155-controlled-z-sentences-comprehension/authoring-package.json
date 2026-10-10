@@ -1,0 +1,471 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-155",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "155-controlled-z-sentences-comprehension",
+    "topic": "sentence-reading",
+    "subtopic": "z-controlled-sentences",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read short controlled sentences containing taught z-initial words.",
+      "Answer literal questions using evidence from the sentence.",
+      "Distinguish target words such as zip, zap, zig, zag, and zen.",
+      "Reread a sentence to self-correct a decoding error and preserve meaning."
+    ],
+    "concepts": [
+      "A sentence expresses a complete idea.",
+      "Decoding each word supports accurate comprehension.",
+      "Literal answers should match details stated in the text.",
+      "Rereading allows the reader to check both words and meaning."
+    ],
+    "definitions": [
+      {
+        "term": "sentence",
+        "definition": "A group of words that expresses a complete thought."
+      },
+      {
+        "term": "literal comprehension",
+        "definition": "Understanding information directly stated in a text."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A word or detail that supports an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Read: “Zac has a zip.”",
+        "solution": "The sentence tells us Zac has a zip."
+      },
+      {
+        "prompt": "Read: “The zip is in a bag.”",
+        "solution": "The zip is located in a bag."
+      },
+      {
+        "prompt": "Read: “Zac can zip the bag.”",
+        "solution": "Zip is the action; the bag is what Zac zips."
+      }
+    ],
+    "commonMistakes": [
+      "Confusing zip with zap because they share initial /z/.",
+      "Answering from memory without rereading.",
+      "Skipping small words such as the and a.",
+      "Reading a sentence quickly without checking its meaning."
+    ],
+    "keyTakeaways": [
+      "Decode every word before answering.",
+      "Reread the sentence for evidence.",
+      "Point to the words that support an answer.",
+      "Check the vowel and final consonant in target z-words."
+    ],
+    "revisionPoints": [
+      "Zac has a zip.",
+      "The zip is in a bag.",
+      "Zac can zip the bag.",
+      "Zac has the bag."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "In “Zac has a zip,” what does Zac have?",
+        "answer": "a zip"
+      },
+      {
+        "id": "B2",
+        "prompt": "Where is the zip in “The zip is in a bag”?",
+        "answer": "in a bag"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "What does Zac do in “Zac can zip the bag”?",
+        "answer": "he can zip the bag"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Why reread a sentence before answering?",
+        "answer": "To check the words and use text evidence."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What should be checked if zip is read as zap?",
+        "answer": "The medial vowel /i/ versus /a/."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Identify the target sound, decode or segment the word, and explain how you checked the result.",
+        "answer": "Use phoneme-level evidence and reread the word or sentence."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Zac has a zip.",
+      "The zip is in a bag.",
+      "Zac can zip the bag.",
+      "Zac has the bag."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Zac has a zip."
+      },
+      {
+        "front": "Recall 2",
+        "back": "The zip is in a bag."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Zac can zip the bag."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Zac has the bag."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Zac has a zip.",
+      "The zip is in a bag.",
+      "Zac can zip the bag.",
+      "Zac has the bag."
+    ],
+    "mistakeBasedRevision": [
+      "Confusing zip with zap because they share initial /z/.",
+      "Answering from memory without rereading.",
+      "Skipping small words such as the and a.",
+      "Reading a sentence quickly without checking its meaning."
+    ],
+    "weakTopicRevision": [
+      "If sentence-reading accuracy is below target, isolate the weak sound or reading step, model it, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "sentence-reading-comprehension",
+      "name": "Read controlled z-sentences and answer literal questions.",
+      "steps": [
+        "Read one sentence aloud.",
+        "Learner points to each word while rereading.",
+        "Ask a who/what/where question.",
+        "Learner points to the supporting words."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "sentence-strip-order",
+      "name": "Arrange the four controlled sentences into a meaningful sequence.",
+      "steps": [
+        "Read all four sentence strips.",
+        "Place the sentence introducing Zac and the zip first.",
+        "Order the location and action sentences.",
+        "Reread the sequence and explain the meaning."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read at least 4 of 5 controlled z-sentences accurately.",
+    "Answer at least 4 of 5 literal questions using text evidence.",
+    "Self-correct a vowel or final-sound error by rereading."
+  ],
+  "questions": [
+    {
+      "questionId": "PF155-Q01",
+      "question": "In “Zac has a zip,” what does Zac have?",
+      "options": [
+        "a zip",
+        "a map",
+        "a yak",
+        "a pen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF155-Q02",
+      "question": "Where is the zip in “The zip is in a bag”?",
+      "options": [
+        "in a bag",
+        "on a map",
+        "by a yak",
+        "in a pen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF155-Q03",
+      "question": "What can Zac do in “Zac can zip the bag”?",
+      "options": [
+        "zip the bag",
+        "yap at the bag",
+        "sit on a map",
+        "read a pen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF155-Q04",
+      "question": "Which word begins with /z/ in the sentence “Zac has a zip”?",
+      "options": [
+        "Zac",
+        "has",
+        "a",
+        "the"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF155-Q05",
+      "question": "Which word contains short /i/?",
+      "options": [
+        "zip",
+        "zap",
+        "zag",
+        "zen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF155-Q06",
+      "question": "Which sentence tells where the zip is?",
+      "options": [
+        "The zip is in a bag.",
+        "Zac can zip the bag.",
+        "Zac has the bag.",
+        "The bag is shut."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF155-Q07",
+      "question": "What should a reader do before answering a question about the sentence?",
+      "options": [
+        "Reread and find the supporting words",
+        "Guess from memory",
+        "Skip the sentence",
+        "Choose the longest option"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF155-Q08",
+      "question": "Which two words in “Zac can zip the bag” begin with /z/?",
+      "options": [
+        "Zac and zip",
+        "can and the",
+        "the and bag",
+        "can and bag"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF155-Q09",
+      "question": "Which word differs from zip by its medial vowel?",
+      "options": [
+        "zap",
+        "sip",
+        "dip",
+        "lip"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF155-Q10",
+      "question": "Which sentence contains the word bag?",
+      "options": [
+        "The zip is in a bag.",
+        "Zac has a zip.",
+        "Zac has the zip.",
+        "Zen is a word."
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF155-Q11",
+      "question": "What does “Zac can zip the bag” tell us?",
+      "options": [
+        "Zac can close the bag with its zip",
+        "The bag is a letter",
+        "The zip can read",
+        "Zac has a yak"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF155-Q12",
+      "question": "Which sentence is the best match for the story?",
+      "options": [
+        "The zip is in a bag.",
+        "The zip is a vowel.",
+        "The bag can read.",
+        "Zac is a phoneme."
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF155-Q13",
+      "question": "If zip is read as zap, what should be checked?",
+      "options": [
+        "The medial vowel",
+        "The capital letter only",
+        "The spaces only",
+        "The last word in the sentence"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF155-Q14",
+      "question": "Which detail supports the answer “Zac has an item that closes a bag”?",
+      "options": [
+        "Zac has a zip.",
+        "Zac can read.",
+        "The bag is a sound.",
+        "Zen is in a pen."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF155-Q15",
+      "question": "Why is accurate decoding important for sentence meaning?",
+      "options": [
+        "Changing one sound can change the word and the idea",
+        "All CVC words mean the same thing",
+        "Only the first letter matters",
+        "Sentences do not need words"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF155-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence says Zac has a zip."
+    },
+    {
+      "questionId": "PF155-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence states the zip is in a bag."
+    },
+    {
+      "questionId": "PF155-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence names zip as the action."
+    },
+    {
+      "questionId": "PF155-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Zac begins with /z/."
+    },
+    {
+      "questionId": "PF155-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Zip contains short /i/."
+    },
+    {
+      "questionId": "PF155-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The first sentence gives the location."
+    },
+    {
+      "questionId": "PF155-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Rereading helps connect the answer to the text."
+    },
+    {
+      "questionId": "PF155-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Zac and zip begin with /z/."
+    },
+    {
+      "questionId": "PF155-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Zap uses short /a/ while zip uses short /i/."
+    },
+    {
+      "questionId": "PF155-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The first sentence contains bag."
+    },
+    {
+      "questionId": "PF155-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence describes using the zip on the bag."
+    },
+    {
+      "questionId": "PF155-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "This sentence matches the controlled story details."
+    },
+    {
+      "questionId": "PF155-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The vowel distinguishes zip and zap."
+    },
+    {
+      "questionId": "PF155-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "A zip is the item used to close a bag."
+    },
+    {
+      "questionId": "PF155-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Accurate phoneme mapping preserves the sentence's meaning."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-155-v1"
+  }
+}
