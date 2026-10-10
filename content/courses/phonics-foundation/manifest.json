@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 780,
-    "studyMaterials": 780,
-    "questionBank": 11690,
-    "assessments": 180
+    "lessons": 800,
+    "studyMaterials": 800,
+    "questionBank": 11990,
+    "assessments": 186
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -800,6 +800,26 @@
       "content/courses/phonics-foundation/778-soft-g-hard-g-connected-reading-transfer/authoring-package.json",
       "content/courses/phonics-foundation/779-soft-g-hard-g-fluency-diagnostic/authoring-package.json",
       "content/courses/phonics-foundation/780-soft-g-hard-g-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/781-recognize-dge-ending/authoring-package.json",
+      "content/courses/phonics-foundation/782-decode-words-with-dge/authoring-package.json",
+      "content/courses/phonics-foundation/783-spell-words-with-dge/authoring-package.json",
+      "content/courses/phonics-foundation/784-dge-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/785-controlled-dge-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/786-controlled-dge-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/787-dge-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/788-dge-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/789-recognize-tch-ending/authoring-package.json",
+      "content/courses/phonics-foundation/790-decode-words-with-tch/authoring-package.json",
+      "content/courses/phonics-foundation/791-spell-words-with-tch/authoring-package.json",
+      "content/courses/phonics-foundation/792-tch-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/793-controlled-tch-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/794-controlled-tch-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/795-tch-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/796-tch-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/797-dge-tch-spelling-patterns-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/798-dge-tch-connected-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/799-dge-tch-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/800-dge-tch-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
@@ -961,7 +981,13 @@
     "PF775-DIAG-01",
     "PF776-REASSESS-01",
     "PF779-DIAG-01",
-    "PF780-REASSESS-01"
+    "PF780-REASSESS-01",
+    "PF787-DIAG-01",
+    "PF788-REASSESS-01",
+    "PF795-DIAG-01",
+    "PF796-REASSESS-01",
+    "PF799-DIAG-01",
+    "PF800-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/02-hear-and-identify-s/authoring-package.json",
@@ -1743,6 +1769,26 @@
     "content/courses/phonics-foundation/778-soft-g-hard-g-connected-reading-transfer/authoring-package.json",
     "content/courses/phonics-foundation/779-soft-g-hard-g-fluency-diagnostic/authoring-package.json",
     "content/courses/phonics-foundation/780-soft-g-hard-g-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/781-recognize-dge-ending/authoring-package.json",
+    "content/courses/phonics-foundation/782-decode-words-with-dge/authoring-package.json",
+    "content/courses/phonics-foundation/783-spell-words-with-dge/authoring-package.json",
+    "content/courses/phonics-foundation/784-dge-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/785-controlled-dge-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/786-controlled-dge-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/787-dge-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/788-dge-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/789-recognize-tch-ending/authoring-package.json",
+    "content/courses/phonics-foundation/790-decode-words-with-tch/authoring-package.json",
+    "content/courses/phonics-foundation/791-spell-words-with-tch/authoring-package.json",
+    "content/courses/phonics-foundation/792-tch-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/793-controlled-tch-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/794-controlled-tch-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/795-tch-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/796-tch-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/797-dge-tch-spelling-patterns-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/798-dge-tch-connected-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/799-dge-tch-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/800-dge-tch-remediation-reassessment/authoring-package.json",
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
   ]
 }
