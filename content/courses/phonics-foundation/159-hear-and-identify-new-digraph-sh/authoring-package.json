@@ -229,8 +229,8 @@
       "questionId": "PF159-Q01",
       "question": "Which word begins with /sh/?",
       "options": [
-        "ship",
         "sip",
+        "ship",
         "sun",
         "map"
       ],
@@ -242,8 +242,8 @@
       "questionId": "PF159-Q02",
       "question": "Which word ends with /sh/?",
       "options": [
-        "fit",
         "fish",
+        "fit",
         "fin",
         "fig"
       ],
@@ -256,9 +256,9 @@
       "question": "How many letters are in the digraph sh?",
       "options": [
         "One",
-        "Two",
         "Three",
-        "Four"
+        "Four",
+        "Two"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -269,8 +269,8 @@
       "question": "In common early words, sh usually represents…",
       "options": [
         "two sounds /s/ and /h/",
-        "one sound /sh/",
         "the vowel /i/",
+        "one sound /sh/",
         "no sound"
       ],
       "difficulty": "conceptual",
@@ -282,8 +282,8 @@
       "question": "What is the first sound in shop?",
       "options": [
         "/s/",
-        "/h/",
         "/sh/",
+        "/h/",
         "/p/"
       ],
       "difficulty": "basic",
@@ -294,9 +294,9 @@
       "questionId": "PF159-Q06",
       "question": "What is the final sound in dish?",
       "options": [
+        "/sh/",
         "/d/",
         "/i/",
-        "/sh/",
         "/s/"
       ],
       "difficulty": "basic",
@@ -307,10 +307,10 @@
       "questionId": "PF159-Q07",
       "question": "Which word contains sh at the beginning?",
       "options": [
-        "shed",
         "sun",
         "sit",
-        "mat"
+        "mat",
+        "shed"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -322,8 +322,8 @@
       "options": [
         "wish",
         "dish",
-        "ship",
-        "sock"
+        "sock",
+        "ship"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -333,8 +333,8 @@
       "questionId": "PF159-Q09",
       "question": "Which word begins with the same sound as ship?",
       "options": [
-        "shop",
         "sip",
+        "shop",
         "tap",
         "fish"
       ],
@@ -359,10 +359,10 @@
       "questionId": "PF159-Q11",
       "question": "What changes between sip and ship?",
       "options": [
-        "The first sound",
         "The middle vowel",
         "The last sound",
-        "Nothing"
+        "Nothing",
+        "The first sound"
       ],
       "difficulty": "conceptual",
       "marks": 1,
@@ -372,9 +372,9 @@
       "questionId": "PF159-Q12",
       "question": "Which word starts with the digraph sh?",
       "options": [
-        "shell",
         "bell",
         "fell",
+        "shell",
         "tell"
       ],
       "difficulty": "basic",
@@ -385,8 +385,8 @@
       "questionId": "PF159-Q13",
       "question": "Why is sh called a digraph?",
       "options": [
-        "Two letters represent one phoneme",
         "One letter represents two words",
+        "Two letters represent one phoneme",
         "It has no sound",
         "It always appears at the end"
       ],
@@ -411,10 +411,10 @@
       "questionId": "PF159-Q15",
       "question": "Which word has /sh/ at the end?",
       "options": [
-        "rush",
         "run",
         "rug",
-        "rub"
+        "rub",
+        "rush"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -424,47 +424,47 @@
   "answerKeys": [
     {
       "questionId": "PF159-Q01",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Ship begins with the digraph sh."
     },
     {
       "questionId": "PF159-Q02",
-      "correctOptionIndex": 1,
+      "correctOptionIndex": 0,
       "explanation": "Fish ends with the sound /sh/."
     },
     {
       "questionId": "PF159-Q03",
-      "correctOptionIndex": 1,
+      "correctOptionIndex": 3,
       "explanation": "The digraph has two letters."
     },
     {
       "questionId": "PF159-Q04",
-      "correctOptionIndex": 1,
+      "correctOptionIndex": 2,
       "explanation": "The two letters work together for one phoneme."
     },
     {
       "questionId": "PF159-Q05",
-      "correctOptionIndex": 2,
+      "correctOptionIndex": 1,
       "explanation": "Shop begins with /sh/."
     },
     {
       "questionId": "PF159-Q06",
-      "correctOptionIndex": 2,
+      "correctOptionIndex": 0,
       "explanation": "Dish ends with /sh/."
     },
     {
       "questionId": "PF159-Q07",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Shed begins with sh."
     },
     {
       "questionId": "PF159-Q08",
-      "correctOptionIndex": 3,
+      "correctOptionIndex": 2,
       "explanation": "Sock has /s/, not the /sh/ digraph."
     },
     {
       "questionId": "PF159-Q09",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Ship and shop both begin with /sh/."
     },
     {
@@ -474,17 +474,17 @@
     },
     {
       "questionId": "PF159-Q11",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "The initial phoneme changes from /s/ to /sh/."
     },
     {
       "questionId": "PF159-Q12",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Shell begins with sh."
     },
     {
       "questionId": "PF159-Q13",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "A digraph is two letters representing one phoneme."
     },
     {
@@ -494,7 +494,7 @@
     },
     {
       "questionId": "PF159-Q15",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Rush ends in the digraph sh."
     }
   ],
