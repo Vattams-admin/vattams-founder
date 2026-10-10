@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 445,
-    "studyMaterials": 445,
-    "questionBank": 6665,
-    "assessments": 89
+    "lessons": 450,
+    "studyMaterials": 450,
+    "questionBank": 6740,
+    "assessments": 91
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -465,7 +465,12 @@
       "content/courses/phonics-foundation/442-targeted-wr-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/443-recognize-silent-b-in-final-mb/authoring-package.json",
       "content/courses/phonics-foundation/444-decode-short-words-with-final-mb/authoring-package.json",
-      "content/courses/phonics-foundation/445-spell-short-words-with-final-mb/authoring-package.json"
+      "content/courses/phonics-foundation/445-spell-short-words-with-final-mb/authoring-package.json",
+      "content/courses/phonics-foundation/446-final-mb-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/447-controlled-final-mb-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/448-controlled-final-mb-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/449-final-mb-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/450-targeted-final-mb-remediation-reassessment/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -534,7 +539,9 @@
     "PF433-DIAG-01",
     "PF434-REASSESS-01",
     "PF441-DIAG-01",
-    "PF442-REASSESS-01"
+    "PF442-REASSESS-01",
+    "PF449-DIAG-01",
+    "PF450-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
