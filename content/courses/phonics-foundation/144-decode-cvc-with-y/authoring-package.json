@@ -1,0 +1,481 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-144",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "144-decode-cvc-with-y",
+    "topic": "decoding",
+    "subtopic": "y-cvc-blending",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Blend initial /y/, a short vowel, and a final consonant to decode taught CVC words.",
+      "Decode yak, yam, yap, yes, yet, and yen without relying on pictures.",
+      "Track each grapheme from left to right and check the final consonant.",
+      "Distinguish /y/ from similar initial sounds while preserving the vowel and ending."
+    ],
+    "concepts": [
+      "A CVC word has a consonant, vowel, and consonant sequence.",
+      "The initial grapheme y represents /y/ in these taught words.",
+      "Left-to-right blending combines each sound in order.",
+      "The final consonant distinguishes words such as yak, yam, and yap."
+    ],
+    "definitions": [
+      {
+        "term": "CVC word",
+        "definition": "A word with a consonant sound, a short vowel sound, and a final consonant sound."
+      },
+      {
+        "term": "blend",
+        "definition": "To combine individual speech sounds in order to read a word."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A letter or letter group representing a speech sound."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Blend y-a-m.",
+        "solution": "Say /y/, /a/, /m/; blend the sounds to read yam."
+      },
+      {
+        "prompt": "Compare yak and yap.",
+        "solution": "Both begin /y/ and contain short /a/; the final /k/ or /p/ changes the word."
+      },
+      {
+        "prompt": "Decode y-e-t.",
+        "solution": "Say /y/, /e/, /t/ in order, then blend yet."
+      }
+    ],
+    "commonMistakes": [
+      "Guessing from a picture before blending the letters.",
+      "Changing the short vowel while blending.",
+      "Ignoring the final consonant and reading yak as yap.",
+      "Adding an extra vowel after /y/."
+    ],
+    "keyTakeaways": [
+      "Point to each grapheme from left to right.",
+      "Keep the short vowel clear.",
+      "Say the final consonant before blending the whole word.",
+      "Check that the blended word matches every letter."
+    ],
+    "revisionPoints": [
+      "Blend y-a-k → yak.",
+      "Blend y-a-m → yam.",
+      "Blend y-a-p → yap.",
+      "Blend y-e-s → yes.",
+      "Blend y-e-t → yet.",
+      "Blend y-e-n → yen."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Choose the word that begins /y/ and ends /k/.",
+        "answer": "yak"
+      },
+      {
+        "id": "B2",
+        "prompt": "Blend /y/ /a/ /m/ to read a word.",
+        "answer": "yam"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Read y-e-t by blending the sounds in order.",
+        "answer": "yet"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Compare yak and yap; identify the sound that changes.",
+        "answer": "The final sound changes from /k/ to /p/."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Decode a fresh card by pointing to each grapheme before blending.",
+        "answer": "Blend the initial consonant, vowel, and final consonant in order."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Read one target word, identify its initial sound, vowel, and final sound, then explain how the sounds make the word.",
+        "answer": "Name and blend the three phonemes in order."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Blend y-a-k → yak.",
+      "Blend y-a-m → yam.",
+      "Blend y-a-p → yap.",
+      "Blend y-e-s → yes."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Blend y-a-k → yak."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Blend y-a-m → yam."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Blend y-a-p → yap."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Blend y-e-s → yes."
+      },
+      {
+        "front": "Recall 5",
+        "back": "Blend y-e-t → yet."
+      },
+      {
+        "front": "Recall 6",
+        "back": "Blend y-e-n → yen."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Blend y-a-k → yak.",
+      "Blend y-a-m → yam.",
+      "Blend y-a-p → yap.",
+      "Blend y-e-s → yes.",
+      "Blend y-e-t → yet.",
+      "Blend y-e-n → yen."
+    ],
+    "mistakeBasedRevision": [
+      "Guessing from a picture before blending the letters.",
+      "Changing the short vowel while blending.",
+      "Ignoring the final consonant and reading yak as yap.",
+      "Adding an extra vowel after /y/."
+    ],
+    "weakTopicRevision": [
+      "If decoding accuracy is below target, isolate the weak phoneme or reading step, model it, practise with guided examples, then reassess with fresh words."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "name": "Sound-box blending",
+      "steps": [
+        "Place one counter in each of three boxes.",
+        "Say the sound for y, the vowel, and the final consonant.",
+        "Sweep a finger under all three boxes and blend the word.",
+        "Repeat with yak, yam, yap, yes, yet, and yen."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "name": "Final-sound contrast",
+      "steps": [
+        "Read yak and yap aloud.",
+        "Hold the initial /y/ and short /a/ steady.",
+        "Change only the final sound.",
+        "Explain how the final consonant changes the word."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Decode at least 8 of 10 taught y-initial CVC words by sound blending.",
+    "Identify the initial, medial-vowel, and final sounds in a CVC word.",
+    "Self-correct a misread word by checking every grapheme."
+  ],
+  "questions": [
+    {
+      "questionId": "PF144-Q01",
+      "question": "Which word begins with /y/ and ends with /k/?",
+      "options": [
+        "yak",
+        "yam",
+        "map",
+        "yet"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q02",
+      "question": "Blend /y/ /a/ /m/.",
+      "options": [
+        "yam",
+        "yak",
+        "yap",
+        "yen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q03",
+      "question": "Which word matches y-e-t?",
+      "options": [
+        "yet",
+        "yak",
+        "yam",
+        "yap"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q04",
+      "question": "Which word ends with /p/?",
+      "options": [
+        "yap",
+        "yak",
+        "yam",
+        "yes"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q05",
+      "question": "Which sound sequence matches yes?",
+      "options": [
+        "/y/ /e/ /s/",
+        "/y/ /a/ /m/",
+        "/y/ /a/ /k/",
+        "/m/ /e/ /s/"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q06",
+      "question": "Which word contains short /a/?",
+      "options": [
+        "yam",
+        "yet",
+        "yes",
+        "yen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q07",
+      "question": "Which word ends with /k/?",
+      "options": [
+        "yak",
+        "yam",
+        "yap",
+        "yet"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q08",
+      "question": "Which word starts with /y/ and ends with /t/?",
+      "options": [
+        "yet",
+        "yam",
+        "yak",
+        "yap"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q09",
+      "question": "Which word does NOT begin with /y/?",
+      "options": [
+        "map",
+        "yak",
+        "yam",
+        "yet"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q10",
+      "question": "Which grapheme sequence spells yak?",
+      "options": [
+        "y-a-k",
+        "y-e-t",
+        "m-a-p",
+        "y-a-m"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q11",
+      "question": "Which word has the same final sound as yak?",
+      "options": [
+        "pack",
+        "yam",
+        "yet",
+        "yes"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q12",
+      "question": "Which word contains short /e/?",
+      "options": [
+        "yet",
+        "yak",
+        "yam",
+        "yap"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q13",
+      "question": "Blend y-e-n.",
+      "options": [
+        "yen",
+        "yes",
+        "yak",
+        "yam"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF144-Q14",
+      "question": "Why should a learner point to letters from left to right?",
+      "options": [
+        "To blend each sound in order",
+        "To guess from a picture",
+        "To skip the vowel",
+        "To read only the last sound"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF144-Q15",
+      "question": "A learner reads yak as yap. What needs checking?",
+      "options": [
+        "The final /k/ was replaced by /p/",
+        "The initial /y/ changed",
+        "The vowel disappeared",
+        "The word has no vowel"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF144-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Yak begins with /y/ and ends with /k/."
+    },
+    {
+      "questionId": "PF144-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The ordered sounds blend to form yam."
+    },
+    {
+      "questionId": "PF144-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The graphemes y-e-t spell yet."
+    },
+    {
+      "questionId": "PF144-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Yap ends with /p/."
+    },
+    {
+      "questionId": "PF144-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Yes contains initial /y/, short /e/, and final /s/."
+    },
+    {
+      "questionId": "PF144-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Yam contains the short /a/ vowel."
+    },
+    {
+      "questionId": "PF144-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Yak ends with /k/."
+    },
+    {
+      "questionId": "PF144-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Yet starts with /y/ and ends with /t/."
+    },
+    {
+      "questionId": "PF144-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Map begins with /m/, not /y/."
+    },
+    {
+      "questionId": "PF144-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The graphemes y-a-k spell yak."
+    },
+    {
+      "questionId": "PF144-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Pack and yak both end with /k/."
+    },
+    {
+      "questionId": "PF144-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "Yet contains short /e/."
+    },
+    {
+      "questionId": "PF144-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The sequence y-e-n blends to yen."
+    },
+    {
+      "questionId": "PF144-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Left-to-right tracking preserves the order of the phonemes."
+    },
+    {
+      "questionId": "PF144-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Yak and yap differ in their final consonant."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum sequence; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-144-v1"
+  }
+}
