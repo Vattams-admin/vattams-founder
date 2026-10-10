@@ -27,7 +27,7 @@ async function setCompetitionCacheAccess(email: string, active: boolean) {
       body: JSON.stringify({ enrolment_active: active, checked_at: new Date().toISOString() }),
     },
   )
-  if (!response.ok) throw new Error(`Unable to update isolated E2E competition access cache: HTTP ${response.status}`)
+  if (!response.ok) throw new Error(`Unable to update isolated E2E competition access cache: HTTP ${response.status}: ${(await response.text()).slice(0,500)}`)
 }
 
 test.describe('production Thirukkural smoke', () => {
