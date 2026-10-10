@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 660,
-    "studyMaterials": 660,
-    "questionBank": 9890,
-    "assessments": 144
+    "lessons": 680,
+    "studyMaterials": 680,
+    "questionBank": 10190,
+    "assessments": 150
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -680,7 +680,27 @@
       "content/courses/phonics-foundation/657-r-controlled-vowel-mixed-review-2/authoring-package.json",
       "content/courses/phonics-foundation/658-r-controlled-vowel-connected-reading-transfer/authoring-package.json",
       "content/courses/phonics-foundation/659-r-controlled-vowel-fluency-diagnostic-2/authoring-package.json",
-      "content/courses/phonics-foundation/660-r-controlled-vowel-remediation-reassessment-2/authoring-package.json"
+      "content/courses/phonics-foundation/660-r-controlled-vowel-remediation-reassessment-2/authoring-package.json",
+      "content/courses/phonics-foundation/661-recognize-long-oo-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/662-decode-words-with-long-oo/authoring-package.json",
+      "content/courses/phonics-foundation/663-spell-words-with-long-oo/authoring-package.json",
+      "content/courses/phonics-foundation/664-long-oo-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/665-controlled-long-oo-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/666-controlled-long-oo-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/667-long-oo-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/668-targeted-long-oo-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/669-recognize-short-oo-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/670-decode-words-with-short-oo/authoring-package.json",
+      "content/courses/phonics-foundation/671-spell-words-with-short-oo/authoring-package.json",
+      "content/courses/phonics-foundation/672-short-oo-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/673-controlled-short-oo-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/674-controlled-short-oo-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/675-short-oo-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/676-targeted-short-oo-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/677-oo-vowel-team-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/678-oo-vowel-team-connected-reading/authoring-package.json",
+      "content/courses/phonics-foundation/679-oo-vowel-team-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/680-oo-vowel-team-remediation-reassessment/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -805,7 +825,13 @@
     "PF655-DIAG-01",
     "PF656-REASSESS-01",
     "PF659-DIAG-01",
-    "PF660-REASSESS-01"
+    "PF660-REASSESS-01",
+    "PF667-DIAG-01",
+    "PF668-REASSESS-01",
+    "PF675-DIAG-01",
+    "PF676-REASSESS-01",
+    "PF679-DIAG-01",
+    "PF680-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
@@ -1467,6 +1493,26 @@
     "content/courses/phonics-foundation/657-r-controlled-vowel-mixed-review-2/authoring-package.json",
     "content/courses/phonics-foundation/658-r-controlled-vowel-connected-reading-transfer/authoring-package.json",
     "content/courses/phonics-foundation/659-r-controlled-vowel-fluency-diagnostic-2/authoring-package.json",
-    "content/courses/phonics-foundation/660-r-controlled-vowel-remediation-reassessment-2/authoring-package.json"
+    "content/courses/phonics-foundation/660-r-controlled-vowel-remediation-reassessment-2/authoring-package.json",
+    "content/courses/phonics-foundation/661-recognize-long-oo-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/662-decode-words-with-long-oo/authoring-package.json",
+    "content/courses/phonics-foundation/663-spell-words-with-long-oo/authoring-package.json",
+    "content/courses/phonics-foundation/664-long-oo-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/665-controlled-long-oo-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/666-controlled-long-oo-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/667-long-oo-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/668-targeted-long-oo-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/669-recognize-short-oo-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/670-decode-words-with-short-oo/authoring-package.json",
+    "content/courses/phonics-foundation/671-spell-words-with-short-oo/authoring-package.json",
+    "content/courses/phonics-foundation/672-short-oo-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/673-controlled-short-oo-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/674-controlled-short-oo-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/675-short-oo-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/676-targeted-short-oo-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/677-oo-vowel-team-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/678-oo-vowel-team-connected-reading/authoring-package.json",
+    "content/courses/phonics-foundation/679-oo-vowel-team-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/680-oo-vowel-team-remediation-reassessment/authoring-package.json"
   ]
 }
