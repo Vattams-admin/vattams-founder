@@ -10,6 +10,7 @@ on:
       - "e2e/**"
       - "scripts/provision-production-e2e-v2.mjs"
       - "scripts/cleanup-production-e2e.mjs"
+      - "scripts/test-assessment-*.mjs"
       - "playwright.config.ts"
       - "package.json"
       - "package-lock.json"
