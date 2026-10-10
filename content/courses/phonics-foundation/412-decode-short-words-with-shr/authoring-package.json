@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-412",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "412-decode-short-words-with-shr",
+    "topic": "decoding",
+    "subtopic": "left-to-right-grapheme-mapping-for-shr-words",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode taught shr-words from left to right.",
+      "Map sh to /ʃ/ and r to /r/ in the onset.",
+      "Distinguish the vowel and ending in shrub, shred, and shrimp.",
+      "Reread and self-correct when a sound is missed."
+    ],
+    "concepts": [
+      "The sh digraph represents /ʃ/.",
+      "The r after sh represents /r/.",
+      "The vowel and ending must also be decoded.",
+      "Rereading the whole word checks sound mapping."
+    ],
+    "definitions": [
+      {
+        "term": "decode",
+        "definition": "Use letter-sound knowledge to read a word."
+      },
+      {
+        "term": "digraph",
+        "definition": "Two letters that represent one sound."
+      },
+      {
+        "term": "self-correction",
+        "definition": "Noticing an error and repairing it by checking the word again."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Decode s-h-r-e-d.",
+        "solution": "Map /ʃ/ /r/ then blend the vowel and ending to read shred."
+      },
+      {
+        "prompt": "Compare shrub and scrub.",
+        "solution": "Their onset sounds differ: /ʃr/ versus /skr/."
+      },
+      {
+        "prompt": "If shrimp is read as shimp, what is missing?",
+        "solution": "The /r/ sound."
+      }
+    ],
+    "commonMistakes": [
+      "Treating sh as two separate sounds.",
+      "Skipping r in the onset.",
+      "Changing the vowel.",
+      "Guessing from the first letters only."
+    ],
+    "keyTakeaways": [
+      "sh represents /ʃ/.",
+      "r represents /r/.",
+      "Check the vowel and ending.",
+      "Reread the complete word."
+    ],
+    "revisionPoints": [
+      "shred begins /ʃ/ /r/.",
+      "The sh digraph represents one sound.",
+      "The vowel and ending matter.",
+      "Reread to confirm the word."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word begins with shr?",
+        "answer": "shrub"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word begins shr and ends with p?",
+        "answer": "shrimp"
+      },
+      {
+        "id": "B3",
+        "prompt": "What sounds begin shred?",
+        "answer": "/ʃ/ then /r/"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "What sound does sh represent?",
+        "answer": "/ʃ/"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which word begins with str rather than shr?",
+        "answer": "string"
+      },
+      {
+        "id": "C3",
+        "prompt": "What should you check when shrub and scrub are confused?",
+        "answer": "The first onset sound"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What does left-to-right decoding mean?",
+        "answer": "Map each grapheme in order"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word shares the shr onset with shred?",
+        "answer": "shrub"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which word begins with sh but not shr?",
+        "answer": "ship"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What is a digraph?",
+        "answer": "Two letters that represent one sound"
+      },
+      {
+        "id": "H2",
+        "prompt": "Why must the ending be read?",
+        "answer": "It can change one word into another"
+      },
+      {
+        "id": "H3",
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Decode shr-words accurately and self-correct"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What should you do after blending the sounds?",
+        "answer": "Read the whole word again"
+      },
+      {
+        "id": "R2",
+        "prompt": "Which word has short i and ends with p?",
+        "answer": "shrimp"
+      },
+      {
+        "id": "R3",
+        "prompt": "What should you remember when completing this decoding task?",
+        "answer": "sh represents /ʃ/."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "shred begins /ʃ/ /r/.",
+      "The sh digraph represents one sound.",
+      "The vowel and ending matter.",
+      "Reread to confirm the word."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "shred begins /ʃ/ /r/."
+      },
+      {
+        "front": "Recall 2",
+        "back": "The sh digraph represents one sound."
+      },
+      {
+        "front": "Recall 3",
+        "back": "The vowel and ending matter."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Reread to confirm the word."
+      }
+    ],
+    "formulaOrFactBank": [
+      "shred begins /ʃ/ /r/.",
+      "The sh digraph represents one sound.",
+      "The vowel and ending matter.",
+      "Reread to confirm the word."
+    ],
+    "mistakeBasedRevision": [
+      "Treating sh as two separate sounds.",
+      "Skipping r in the onset.",
+      "Changing the vowel.",
+      "Guessing from the first letters only."
+    ],
+    "weakTopicRevision": [
+      "If decoding is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "left-to-right-decode-shr-words",
+      "name": "Map, blend, and reread shr words",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete a guided example and explain the sound or text evidence.",
+        "Try a fresh example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with one target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Correct the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Decode taught shr-words from left to right.",
+    "Map sh to /ʃ/ and r to /r/ in the onset.",
+    "Distinguish the vowel and ending in shrub, shred, and shrimp.",
+    "Reread and self-correct when a sound is missed."
+  ],
+  "questions": [
+    {
+      "questionId": "PF412-Q01",
+      "question": "Which word begins with shr?",
+      "options": [
+        "shrub",
+        "scrub",
+        "strap",
+        "ship"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q02",
+      "question": "Which word begins shr and ends with p?",
+      "options": [
+        "shred",
+        "shrub",
+        "shrimp",
+        "ship"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q03",
+      "question": "What sounds begin shred?",
+      "options": [
+        "/s/ then /t/",
+        "/ʃ/ then /r/",
+        "/ʃ/ then /l/",
+        "/r/ then /ʃ/"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q04",
+      "question": "If shrimp is read as shimp, which sound is missing?",
+      "options": [
+        "/ʃ/",
+        "/ɪ/",
+        "/p/",
+        "/r/"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q05",
+      "question": "What sound does sh represent?",
+      "options": [
+        "/s/",
+        "/ʃ/",
+        "/h/",
+        "/r/"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q06",
+      "question": "Which word begins with str rather than shr?",
+      "options": [
+        "string",
+        "shrub",
+        "shred",
+        "shrimp"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q07",
+      "question": "What does left-to-right decoding mean?",
+      "options": [
+        "Guess from a picture",
+        "Read only the first letter",
+        "Map each grapheme in order",
+        "Skip the vowel"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q08",
+      "question": "Which word shares the shr onset with shred?",
+      "options": [
+        "ship",
+        "scrub",
+        "strap",
+        "shrub"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q09",
+      "question": "Which word begins with sh but not shr?",
+      "options": [
+        "ship",
+        "shred",
+        "shrub",
+        "shrimp"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q10",
+      "question": "What should you check when shrub and scrub are confused?",
+      "options": [
+        "Only the final b",
+        "The punctuation",
+        "The first onset sound",
+        "The page number"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q11",
+      "question": "What is a digraph?",
+      "options": [
+        "A paragraph",
+        "Two letters that represent one sound",
+        "A punctuation mark only",
+        "A guessed word"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q12",
+      "question": "What should you do after blending the sounds?",
+      "options": [
+        "Stop after the onset",
+        "Ignore the ending",
+        "Add a vowel",
+        "Read the whole word again"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q13",
+      "question": "Which word has short i and ends with p?",
+      "options": [
+        "shrimp",
+        "shred",
+        "shrub",
+        "ship"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q14",
+      "question": "Why must the ending be read?",
+      "options": [
+        "It is always silent",
+        "It replaces the onset",
+        "It can change one word into another",
+        "It never matters"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF412-Q15",
+      "question": "What is the main goal of this lesson?",
+      "options": [
+        "Memorize answer positions",
+        "Decode shr-words accurately and self-correct",
+        "Skip the onset",
+        "Guess from the first letter"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF412-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Shrub begins with shr."
+    },
+    {
+      "questionId": "PF412-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "Shrimp ends with p."
+    },
+    {
+      "questionId": "PF412-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "Shred begins with /ʃr/."
+    },
+    {
+      "questionId": "PF412-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The /r/ sound is omitted."
+    },
+    {
+      "questionId": "PF412-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Sh represents one sound, /ʃ/."
+    },
+    {
+      "questionId": "PF412-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "String begins with str."
+    },
+    {
+      "questionId": "PF412-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Ordered mapping checks every part."
+    },
+    {
+      "questionId": "PF412-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Shrub begins with shr."
+    },
+    {
+      "questionId": "PF412-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Ship begins with sh followed by a vowel."
+    },
+    {
+      "questionId": "PF412-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Shrub begins /ʃr/; scrub begins /skr/."
+    },
+    {
+      "questionId": "PF412-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "A digraph represents one sound."
+    },
+    {
+      "questionId": "PF412-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Rereading checks the complete word."
+    },
+    {
+      "questionId": "PF412-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Shrimp has short i and ends p."
+    },
+    {
+      "questionId": "PF412-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "Endings distinguish the words."
+    },
+    {
+      "questionId": "PF412-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "The lesson develops accurate decoding."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-412-v1"
+  }
+}
