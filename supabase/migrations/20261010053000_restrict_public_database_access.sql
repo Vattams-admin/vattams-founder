@@ -64,6 +64,7 @@ DROP POLICY IF EXISTS public_delete_support ON public.support_messages;
 DROP POLICY IF EXISTS public_select_support ON public.support_messages;
 DROP POLICY IF EXISTS public_update_support ON public.support_messages;
 DROP POLICY IF EXISTS anon_delete_applications ON public.technician_applications;
+DROP POLICY IF EXISTS anon_insert_applications ON public.technician_applications;
 DROP POLICY IF EXISTS anon_select_applications ON public.technician_applications;
 DROP POLICY IF EXISTS anon_update_applications ON public.technician_applications;
 DROP POLICY IF EXISTS anon_all_technician_attendance ON public.technician_attendance;
