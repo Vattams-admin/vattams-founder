@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 580,
-    "studyMaterials": 580,
-    "questionBank": 8690,
-    "assessments": 120
+    "lessons": 600,
+    "studyMaterials": 600,
+    "questionBank": 8990,
+    "assessments": 126
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -600,7 +600,27 @@
       "content/courses/phonics-foundation/577-recognize-ee-ea-long-e-contrast/authoring-package.json",
       "content/courses/phonics-foundation/578-decode-ee-ea-word-contrast/authoring-package.json",
       "content/courses/phonics-foundation/579-ee-ea-spelling-and-reading-transfer/authoring-package.json",
-      "content/courses/phonics-foundation/580-vowel-team-cumulative-checkpoint/authoring-package.json"
+      "content/courses/phonics-foundation/580-vowel-team-cumulative-checkpoint/authoring-package.json",
+      "content/courses/phonics-foundation/581-recognize-ou-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/582-decode-words-with-ou/authoring-package.json",
+      "content/courses/phonics-foundation/583-spell-words-with-ou/authoring-package.json",
+      "content/courses/phonics-foundation/584-ou-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/585-controlled-ou-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/586-controlled-ou-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/587-ou-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/588-targeted-ou-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/589-recognize-ow-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/590-decode-words-with-ow/authoring-package.json",
+      "content/courses/phonics-foundation/591-spell-words-with-ow/authoring-package.json",
+      "content/courses/phonics-foundation/592-ow-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/593-controlled-ow-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/594-controlled-ow-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/595-ow-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/596-targeted-ow-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/597-vowel-teams-ai-ee-ou-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/598-vowel-team-connected-reading/authoring-package.json",
+      "content/courses/phonics-foundation/599-vowel-team-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/600-vowel-team-remediation-reassessment/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -701,7 +721,13 @@
     "PF568-REASSESS-01",
     "PF575-DIAG-01",
     "PF576-REASSESS-01",
-    "PF580-CUMULATIVE-01"
+    "PF580-CUMULATIVE-01",
+    "PF587-DIAG-01",
+    "PF588-REASSESS-01",
+    "PF595-DIAG-01",
+    "PF596-REASSESS-01",
+    "PF599-DIAG-01",
+    "PF600-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
@@ -1283,6 +1309,26 @@
     "content/courses/phonics-foundation/577-recognize-ee-ea-long-e-contrast/authoring-package.json",
     "content/courses/phonics-foundation/578-decode-ee-ea-word-contrast/authoring-package.json",
     "content/courses/phonics-foundation/579-ee-ea-spelling-and-reading-transfer/authoring-package.json",
-    "content/courses/phonics-foundation/580-vowel-team-cumulative-checkpoint/authoring-package.json"
+    "content/courses/phonics-foundation/580-vowel-team-cumulative-checkpoint/authoring-package.json",
+    "content/courses/phonics-foundation/581-recognize-ou-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/582-decode-words-with-ou/authoring-package.json",
+    "content/courses/phonics-foundation/583-spell-words-with-ou/authoring-package.json",
+    "content/courses/phonics-foundation/584-ou-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/585-controlled-ou-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/586-controlled-ou-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/587-ou-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/588-targeted-ou-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/589-recognize-ow-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/590-decode-words-with-ow/authoring-package.json",
+    "content/courses/phonics-foundation/591-spell-words-with-ow/authoring-package.json",
+    "content/courses/phonics-foundation/592-ow-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/593-controlled-ow-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/594-controlled-ow-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/595-ow-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/596-targeted-ow-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/597-vowel-teams-ai-ee-ou-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/598-vowel-team-connected-reading/authoring-package.json",
+    "content/courses/phonics-foundation/599-vowel-team-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/600-vowel-team-remediation-reassessment/authoring-package.json"
   ]
 }
