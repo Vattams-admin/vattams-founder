@@ -12,8 +12,10 @@ on:
       - "supabase/migrations/**"
       - "e2e/**"
       - "docs/**"
+      - ".github/workflows/**"
       - "scripts/validate-*.mjs"
       - "scripts/validate-academia-content-quality-gates.mjs"
+      - "scripts/test-supabase-project-lock.mjs"
       - "scripts/test-edge-function-url-global-contract.mjs"
       - "scripts/test-assessment-*.mjs"
       - "package.json"
@@ -31,8 +33,10 @@ on:
       - "supabase/functions/**"
       - "e2e/**"
       - "docs/**"
+      - ".github/workflows/**"
       - "scripts/validate-*.mjs"
       - "scripts/validate-academia-content-quality-gates.mjs"
+      - "scripts/test-supabase-project-lock.mjs"
       - "scripts/test-edge-function-url-global-contract.mjs"
       - "package.json"
       - "package-lock.json"
@@ -58,6 +62,8 @@ jobs:
         run: npm ci
       - name: Build and validate canonical Thirukkural package (local CI only)
         run: npm run thirukkural:production-gate
+      - name: Verify canonical Supabase project lock
+        run: node scripts/test-supabase-project-lock.mjs
       - name: Run cross-pillar content validators
         run: npm run academia:content:quality-gates
       - name: Run Edge Function URL-constructor contract

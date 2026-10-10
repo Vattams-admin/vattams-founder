@@ -54,7 +54,7 @@ jobs:
           node scripts/validate-thirukkural-production.mjs
       - name: Verify publisher inputs
         env:
-          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_URL: https://ljnfktzrjewqjxxchvud.supabase.co
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
           test -n "$SUPABASE_URL"
@@ -62,7 +62,7 @@ jobs:
           echo "Supabase publisher credentials are available to the runner"
       - name: Publish validated runtime packages to Supabase Storage
         env:
-          SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          SUPABASE_URL: https://ljnfktzrjewqjxxchvud.supabase.co
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node scripts/publish-competition-runtime.mjs
 
