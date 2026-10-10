@@ -19,7 +19,7 @@ for(const file of files.slice(1)){
  if(!s.includes("Assessment attempt time has expired")) throw new Error(file+": deadline enforcement missing");
 }
 
-const migration=fs.readFileSync("supabase/migrations/20261007140000_assessment_attempt_deadline.sql","utf8");
+const migration=fs.readFileSync("supabase/migrations/20261010040518_assessment_attempt_deadline.sql","utf8");
 if(!migration.includes("add column if not exists expires_at")) throw new Error("deadline migration missing column");
 
 console.log("ASSESSMENT ATTEMPT DEADLINE: VALID");
