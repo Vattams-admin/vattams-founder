@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 342,
-    "studyMaterials": 342,
-    "questionBank": 5120,
-    "assessments": 64
+    "lessons": 347,
+    "studyMaterials": 347,
+    "questionBank": 5195,
+    "assessments": 66
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -362,7 +362,12 @@
       "content/courses/phonics-foundation/339-hear-and-blend-initial-sl/authoring-package.json",
       "content/courses/phonics-foundation/340-decode-short-words-with-sl/authoring-package.json",
       "content/courses/phonics-foundation/341-spell-short-words-with-sl/authoring-package.json",
-      "content/courses/phonics-foundation/342-sl-word-families-controlled-reading/authoring-package.json"
+      "content/courses/phonics-foundation/342-sl-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/343-controlled-sl-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/344-controlled-sl-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/345-sl-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/346-targeted-sl-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/347-hear-and-blend-initial-sm/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -406,7 +411,9 @@
     "PF329-DIAG-01",
     "PF330-REASSESS-01",
     "PF337-DIAG-01",
-    "PF338-REASSESS-01"
+    "PF338-REASSESS-01",
+    "PF345-DIAG-01",
+    "PF346-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
