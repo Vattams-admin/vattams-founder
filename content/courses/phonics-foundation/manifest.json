@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 337,
-    "studyMaterials": 337,
-    "questionBank": 5045,
-    "assessments": 63
+    "lessons": 342,
+    "studyMaterials": 342,
+    "questionBank": 5120,
+    "assessments": 64
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -357,7 +357,12 @@
       "content/courses/phonics-foundation/334-sk-word-families-controlled-reading/authoring-package.json",
       "content/courses/phonics-foundation/335-controlled-sk-sentences-comprehension/authoring-package.json",
       "content/courses/phonics-foundation/336-controlled-sk-passage-sequencing-comprehension/authoring-package.json",
-      "content/courses/phonics-foundation/337-sk-fluency-consolidation-diagnostic/authoring-package.json"
+      "content/courses/phonics-foundation/337-sk-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/338-targeted-sk-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/339-hear-and-blend-initial-sl/authoring-package.json",
+      "content/courses/phonics-foundation/340-decode-short-words-with-sl/authoring-package.json",
+      "content/courses/phonics-foundation/341-spell-short-words-with-sl/authoring-package.json",
+      "content/courses/phonics-foundation/342-sl-word-families-controlled-reading/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -401,6 +406,7 @@
     "PF329-DIAG-01",
     "PF330-REASSESS-01",
     "PF337-DIAG-01",
+    "PF338-REASSESS-01",
     "PF338-REASSESS-01"
   ],
   "contentPackages": [
