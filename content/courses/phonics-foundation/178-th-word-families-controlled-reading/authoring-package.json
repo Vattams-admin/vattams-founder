@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-178",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "178-th-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "unvoiced-th-rimes-and-word-family-decoding",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Group th-words by their vowel-plus-ending rime rather than by th alone.",
+      "Read -in, -ick, -ath and -oth examples accurately.",
+      "Explain why thin and thick do not share the same rime.",
+      "Decode every word fully even when a familiar family pattern is recognised."
+    ],
+    "concepts": [
+      "The onset is the sound or sounds before the vowel.",
+      "The rime includes the vowel and any following sounds.",
+      "Words can share th but belong to different rime families.",
+      "Word families support pattern recognition but do not replace full decoding."
+    ],
+    "definitions": [
+      {
+        "term": "onset",
+        "definition": "The sound or sounds before the vowel."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and the sounds that follow it."
+      },
+      {
+        "term": "word family",
+        "definition": "Words that share a rime pattern."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "thin and fin",
+        "solution": "Both share -in; their onsets differ."
+      },
+      {
+        "prompt": "thick and sick",
+        "solution": "Both share -ick."
+      },
+      {
+        "prompt": "bath and path",
+        "solution": "Both share -ath."
+      }
+    ],
+    "commonMistakes": [
+      "Grouping every th-word together regardless of the rime.",
+      "Sorting by the first two letters only.",
+      "Ignoring the vowel when comparing thin and thick.",
+      "Guessing a new word from a familiar family without decoding it."
+    ],
+    "keyTakeaways": [
+      "Compare the vowel and ending to identify a rime.",
+      "The th onset does not make every word rhyme.",
+      "Read each word after sorting.",
+      "Use a family as a clue, then check every grapheme."
+    ],
+    "revisionPoints": [
+      "-in: thin, fin.",
+      "-ick: thick, sick.",
+      "-ath: bath, path.",
+      "-oth: moth, cloth."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word shares the -in rime with thin?",
+        "answer": "fin"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word belongs to the -ick family?",
+        "answer": "thick"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which pair shares -ath?",
+        "answer": "bath and path"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Do thin and thick share the same rime?",
+        "answer": "No; -in and -ick differ"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which word belongs with thick in the -ick family?",
+        "answer": "sick"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which word belongs to the -oth family?",
+        "answer": "moth"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What is the rime in path?",
+        "answer": "-ath"
+      },
+      {
+        "id": "A2",
+        "prompt": "What is the onset in thin?",
+        "answer": "/th/"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which word does NOT belong in an -ath group?",
+        "answer": "moth"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which set contains only -in words?",
+        "answer": "thin, fin, pin"
+      },
+      {
+        "id": "H2",
+        "prompt": "Why is sorting only by th not enough?",
+        "answer": "The vowel and ending may differ"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which word shares -ath with bath?",
+        "answer": "math"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word family is shown by thick and sick?",
+        "answer": "-ick"
+      },
+      {
+        "id": "R2",
+        "prompt": "A learner groups thin with thick because both start with th. What should be checked?",
+        "answer": "The rime after the onset"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which statement about word families is accurate?",
+        "answer": "A shared rime supports reading but each word still needs decoding"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "-in: thin, fin.",
+      "-ick: thick, sick.",
+      "-ath: bath, path.",
+      "-oth: moth, cloth."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "-in: thin, fin."
+      },
+      {
+        "front": "Recall 2",
+        "back": "-ick: thick, sick."
+      },
+      {
+        "front": "Recall 3",
+        "back": "-ath: bath, path."
+      },
+      {
+        "front": "Recall 4",
+        "back": "-oth: moth, cloth."
+      }
+    ],
+    "formulaOrFactBank": [
+      "-in: thin, fin.",
+      "-ick: thick, sick.",
+      "-ath: bath, path.",
+      "-oth: moth, cloth."
+    ],
+    "mistakeBasedRevision": [
+      "Grouping every th-word together regardless of the rime.",
+      "Sorting by the first two letters only.",
+      "Ignoring the vowel when comparing thin and thick.",
+      "Guessing a new word from a familiar family without decoding it."
+    ],
+    "weakTopicRevision": [
+      "If word families accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "word-family-sort",
+      "name": "Sort th-words by rime, then decode each word.",
+      "steps": [
+        "Read each word aloud.",
+        "Identify the vowel and final sounds.",
+        "Group words with matching rimes.",
+        "Read each group and explain the shared pattern."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using sound evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme supporting the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Sort at least 8 of 10 words by rime accurately.",
+    "Explain the difference between onset and rime.",
+    "Decode each word after grouping."
+  ],
+  "questions": [
+    {
+      "questionId": "PF178-Q01",
+      "question": "Which word shares the -in rime with thin?",
+      "options": [
+        "thick",
+        "fin",
+        "bath",
+        "moth"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q02",
+      "question": "Which word belongs to the -ick family?",
+      "options": [
+        "thick",
+        "thin",
+        "bath",
+        "moth"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q03",
+      "question": "Which pair shares -ath?",
+      "options": [
+        "thin and thick",
+        "moth and math",
+        "fin and thick",
+        "bath and path"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q04",
+      "question": "Do thin and thick share the same rime?",
+      "options": [
+        "Yes; both begin with th",
+        "Yes; both have four letters",
+        "No; -in and -ick differ",
+        "No; thin has no vowel"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q05",
+      "question": "Which word belongs with thick in the -ick family?",
+      "options": [
+        "path",
+        "sick",
+        "moth",
+        "bath"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q06",
+      "question": "Which word belongs to the -oth family?",
+      "options": [
+        "moth",
+        "thin",
+        "bath",
+        "thick"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q07",
+      "question": "What is the rime in path?",
+      "options": [
+        "-th",
+        "-pa",
+        "-p",
+        "-ath"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q08",
+      "question": "What is the onset in thin?",
+      "options": [
+        "/in/",
+        "/i/",
+        "/th/",
+        "/n/"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q09",
+      "question": "Which word does NOT belong in an -ath group?",
+      "options": [
+        "bath",
+        "moth",
+        "path",
+        "math"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q10",
+      "question": "Which set contains only -in words?",
+      "options": [
+        "thin, fin, pin",
+        "thin, thick, fin",
+        "fin, bath, pin",
+        "thin, path, pin"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q11",
+      "question": "Why is sorting only by th not enough?",
+      "options": [
+        "All th words share one rime",
+        "Vowels do not matter",
+        "Every th word ends in th",
+        "The vowel and ending may differ"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF178-Q12",
+      "question": "Which word shares -ath with bath?",
+      "options": [
+        "moth",
+        "thin",
+        "math",
+        "thick"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q13",
+      "question": "Which word family is shown by thick and sick?",
+      "options": [
+        "-in",
+        "-ick",
+        "-ath",
+        "-oth"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF178-Q14",
+      "question": "A learner groups thin with thick because both start with th. What should be checked?",
+      "options": [
+        "The rime after the onset",
+        "Only word length",
+        "The capital letter",
+        "The spaces"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF178-Q15",
+      "question": "Which statement about word families is accurate?",
+      "options": [
+        "Words with th all rhyme",
+        "Only the first two letters determine the family",
+        "A family word can be guessed without reading",
+        "A shared rime supports reading but each word still needs decoding"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF178-Q01",
+      "correctOptionIndex": 1,
+      "explanation": "Thin and fin share -in."
+    },
+    {
+      "questionId": "PF178-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "Thick contains -ick."
+    },
+    {
+      "questionId": "PF178-Q03",
+      "correctOptionIndex": 3,
+      "explanation": "Bath and path share -ath."
+    },
+    {
+      "questionId": "PF178-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "The vowel and rime differ."
+    },
+    {
+      "questionId": "PF178-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Thick and sick share -ick."
+    },
+    {
+      "questionId": "PF178-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Moth contains -oth."
+    },
+    {
+      "questionId": "PF178-Q07",
+      "correctOptionIndex": 3,
+      "explanation": "The rime includes the vowel and following sounds."
+    },
+    {
+      "questionId": "PF178-Q08",
+      "correctOptionIndex": 2,
+      "explanation": "The onset is the initial /th/ phoneme."
+    },
+    {
+      "questionId": "PF178-Q09",
+      "correctOptionIndex": 1,
+      "explanation": "Moth has -oth, not -ath."
+    },
+    {
+      "questionId": "PF178-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "Thin, fin and pin share -in."
+    },
+    {
+      "questionId": "PF178-Q11",
+      "correctOptionIndex": 3,
+      "explanation": "Rime depends on the vowel and following sounds."
+    },
+    {
+      "questionId": "PF178-Q12",
+      "correctOptionIndex": 2,
+      "explanation": "Math and bath share -ath."
+    },
+    {
+      "questionId": "PF178-Q13",
+      "correctOptionIndex": 1,
+      "explanation": "Both share -ick."
+    },
+    {
+      "questionId": "PF178-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Thin has -in; thick has -ick."
+    },
+    {
+      "questionId": "PF178-Q15",
+      "correctOptionIndex": 3,
+      "explanation": "Family patterns support but do not replace full decoding."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-178-v1"
+  }
+}
