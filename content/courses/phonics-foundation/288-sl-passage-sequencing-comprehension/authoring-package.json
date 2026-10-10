@@ -78,261 +78,86 @@
     "basic": [
       {
         "id": "B1",
-        "prompt": [
-          "What does sequencing show?",
-          "The order of events",
-          "The colour of every object",
-          "The number of letters only",
-          "A made-up ending"
-        ]
+        "prompt": "What does Stan have at the start?",
+        "answer": "A sled"
       },
       {
         "id": "B2",
-        "prompt": [
-          "What should you do before sequencing a passage?",
-          "Read the sentences carefully",
-          "Guess from the title only",
-          "Skip the last sentence",
-          "Choose the longest option"
-        ]
+        "prompt": "What happens to the sled?",
+        "answer": "It slips"
       },
       {
         "id": "B3",
-        "prompt": [
-          "What is text evidence?",
-          "Words that support an answer",
-          "A detail invented by the reader",
-          "A random picture",
-          "A word unrelated to the question"
-        ]
-      },
-      {
-        "id": "B4",
-        "prompt": [
-          "If the order is unclear, what should you do?",
-          "Reread and check the stated events",
-          "Invent a new event",
-          "Ignore the passage",
-          "Change the words"
-        ]
-      },
-      {
-        "id": "B5",
-        "prompt": [
-          "Which word can signal event order?",
-          "Next",
-          "Purple",
-          "Loudly",
-          "Maybe"
-        ]
+        "prompt": "What does Stan do after the sled slips?",
+        "answer": "He stops and rests"
       }
     ],
     "conceptual": [
       {
         "id": "C1",
-        "prompt": [
-          "What does sequencing show?",
-          "The order of events",
-          "The colour of every object",
-          "The number of letters only",
-          "A made-up ending"
-        ]
+        "prompt": "Which event happens first?",
+        "answer": "Stan has a sled"
       },
       {
         "id": "C2",
-        "prompt": [
-          "What should you do before sequencing a passage?",
-          "Read the sentences carefully",
-          "Guess from the title only",
-          "Skip the last sentence",
-          "Choose the longest option"
-        ]
+        "prompt": "Which event happens after the sled slips?",
+        "answer": "Stan stops and rests"
       },
       {
         "id": "C3",
-        "prompt": [
-          "What is text evidence?",
-          "Words that support an answer",
-          "A detail invented by the reader",
-          "A random picture",
-          "A word unrelated to the question"
-        ]
-      },
-      {
-        "id": "C4",
-        "prompt": [
-          "If the order is unclear, what should you do?",
-          "Reread and check the stated events",
-          "Invent a new event",
-          "Ignore the passage",
-          "Change the words"
-        ]
-      },
-      {
-        "id": "C5",
-        "prompt": [
-          "Which word can signal event order?",
-          "Next",
-          "Purple",
-          "Loudly",
-          "Maybe"
-        ]
+        "prompt": "What is the best way to check event order?",
+        "answer": "Reread the passage and find each event"
       }
     ],
     "application": [
       {
         "id": "A1",
-        "prompt": [
-          "What does sequencing show?",
-          "The order of events",
-          "The colour of every object",
-          "The number of letters only",
-          "A made-up ending"
-        ]
+        "prompt": "Which word begins with the sl blend?",
+        "answer": "slips"
       },
       {
         "id": "A2",
-        "prompt": [
-          "What should you do before sequencing a passage?",
-          "Read the sentences carefully",
-          "Guess from the title only",
-          "Skip the last sentence",
-          "Choose the longest option"
-        ]
+        "prompt": "If sled is read as sed, which sound was missed?",
+        "answer": "/l/"
       },
       {
         "id": "A3",
-        "prompt": [
-          "What is text evidence?",
-          "Words that support an answer",
-          "A detail invented by the reader",
-          "A random picture",
-          "A word unrelated to the question"
-        ]
-      },
-      {
-        "id": "A4",
-        "prompt": [
-          "If the order is unclear, what should you do?",
-          "Reread and check the stated events",
-          "Invent a new event",
-          "Ignore the passage",
-          "Change the words"
-        ]
-      },
-      {
-        "id": "A5",
-        "prompt": [
-          "Which word can signal event order?",
-          "Next",
-          "Purple",
-          "Loudly",
-          "Maybe"
-        ]
+        "prompt": "What does a passage contain?",
+        "answer": "Related sentences"
       }
     ],
     "higherOrderThinking": [
       {
         "id": "H1",
-        "prompt": [
-          "What does sequencing show?",
-          "The order of events",
-          "The colour of every object",
-          "The number of letters only",
-          "A made-up ending"
-        ]
+        "prompt": "Which answer uses evidence rather than a guess?",
+        "answer": "The sled slips because the passage says so"
       },
       {
         "id": "H2",
-        "prompt": [
-          "What should you do before sequencing a passage?",
-          "Read the sentences carefully",
-          "Guess from the title only",
-          "Skip the last sentence",
-          "Choose the longest option"
-        ]
+        "prompt": "What can “next” help you identify?",
+        "answer": "An event that follows another"
       },
       {
         "id": "H3",
-        "prompt": [
-          "What is text evidence?",
-          "Words that support an answer",
-          "A detail invented by the reader",
-          "A random picture",
-          "A word unrelated to the question"
-        ]
-      },
-      {
-        "id": "H4",
-        "prompt": [
-          "If the order is unclear, what should you do?",
-          "Reread and check the stated events",
-          "Invent a new event",
-          "Ignore the passage",
-          "Change the words"
-        ]
-      },
-      {
-        "id": "H5",
-        "prompt": [
-          "Which word can signal event order?",
-          "Next",
-          "Purple",
-          "Loudly",
-          "Maybe"
-        ]
+        "prompt": "When meaning does not match your reading, what helps?",
+        "answer": "Reread and check each sound"
       }
     ],
     "mixedReview": [
       {
         "id": "R1",
-        "prompt": [
-          "What does sequencing show?",
-          "The order of events",
-          "The colour of every object",
-          "The number of letters only",
-          "A made-up ending"
-        ]
+        "prompt": "Which should come last in a retell?",
+        "answer": "The final event stated in the passage"
       },
       {
         "id": "R2",
-        "prompt": [
-          "What should you do before sequencing a passage?",
-          "Read the sentences carefully",
-          "Guess from the title only",
-          "Skip the last sentence",
-          "Choose the longest option"
-        ]
+        "prompt": "Why point to a sentence when answering?",
+        "answer": "It shows the evidence for the answer"
       },
       {
         "id": "R3",
-        "prompt": [
-          "What is text evidence?",
-          "Words that support an answer",
-          "A detail invented by the reader",
-          "A random picture",
-          "A word unrelated to the question"
-        ]
-      },
-      {
-        "id": "R4",
-        "prompt": [
-          "If the order is unclear, what should you do?",
-          "Reread and check the stated events",
-          "Invent a new event",
-          "Ignore the passage",
-          "Change the words"
-        ]
-      },
-      {
-        "id": "R5",
-        "prompt": [
-          "Which word can signal event order?",
-          "Next",
-          "Purple",
-          "Loudly",
-          "Maybe"
-        ]
+        "prompt": "What is the main goal in this passage lesson?",
+        "answer": "Read accurately and sequence stated events"
       }
     ]
   },
@@ -412,8 +237,8 @@
       "questionId": "PF288-Q01",
       "question": "What does Stan have at the start?",
       "options": [
-        "A sled",
         "A flag",
+        "A sled",
         "A drum",
         "A snack"
       ],
@@ -425,10 +250,10 @@
       "questionId": "PF288-Q02",
       "question": "What happens to the sled?",
       "options": [
-        "It slips",
         "It sings",
         "It melts",
-        "It flies"
+        "It flies",
+        "It slips"
       ],
       "difficulty": "comprehension",
       "marks": 1,
@@ -451,9 +276,9 @@
       "questionId": "PF288-Q04",
       "question": "Which event happens first?",
       "options": [
-        "Stan has a sled",
         "Stan rests",
         "The sled slips",
+        "Stan has a sled",
         "Stan tells a new story"
       ],
       "difficulty": "application",
@@ -464,8 +289,8 @@
       "questionId": "PF288-Q05",
       "question": "Which event happens after the sled slips?",
       "options": [
-        "Stan stops and rests",
         "Stan gets the sled before it exists",
+        "Stan stops and rests",
         "The sun sings",
         "A ship arrives"
       ],
@@ -490,9 +315,9 @@
       "questionId": "PF288-Q07",
       "question": "Which word begins with the sl blend?",
       "options": [
-        "slips",
         "sun",
         "map",
+        "slips",
         "cat"
       ],
       "difficulty": "sound_recognition",
@@ -503,10 +328,10 @@
       "questionId": "PF288-Q08",
       "question": "If sled is read as sed, which sound was missed?",
       "options": [
-        "/l/",
         "/m/",
         "/t/",
-        "/n/"
+        "/n/",
+        "/l/"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -516,8 +341,8 @@
       "questionId": "PF288-Q09",
       "question": "What does a passage contain?",
       "options": [
-        "Related sentences",
         "Only unrelated letters",
+        "Related sentences",
         "Only answer choices",
         "A list of invented events"
       ],
@@ -529,9 +354,9 @@
       "questionId": "PF288-Q10",
       "question": "Which answer uses evidence rather than a guess?",
       "options": [
-        "The sled slips because the passage says so",
         "Stan wins a race that is never mentioned",
         "The sled is blue without any clue",
+        "The sled slips because the passage says so",
         "A dog appears though none is stated"
       ],
       "difficulty": "higher_order_thinking",
@@ -555,10 +380,10 @@
       "questionId": "PF288-Q12",
       "question": "When meaning does not match your reading, what helps?",
       "options": [
-        "Reread and check each sound",
         "Skip the difficult word",
         "Guess and move on",
-        "Ignore the sentence"
+        "Ignore the sentence",
+        "Reread and check each sound"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -568,9 +393,9 @@
       "questionId": "PF288-Q13",
       "question": "Which should come last in a retell?",
       "options": [
-        "The final event stated in the passage",
         "Any event the reader invents",
         "Always the longest word",
+        "The final event stated in the passage",
         "A detail from another story"
       ],
       "difficulty": "application",
@@ -581,8 +406,8 @@
       "questionId": "PF288-Q14",
       "question": "Why point to a sentence when answering?",
       "options": [
-        "It shows the evidence for the answer",
         "It makes an answer longer",
+        "It shows the evidence for the answer",
         "It changes the event order",
         "It avoids reading"
       ],
@@ -607,12 +432,12 @@
   "answerKeys": [
     {
       "questionId": "PF288-Q01",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The first sentence says Stan has a sled."
     },
     {
       "questionId": "PF288-Q02",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "The passage states that the sled slips."
     },
     {
@@ -622,12 +447,12 @@
     },
     {
       "questionId": "PF288-Q04",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "The first sentence introduces the sled."
     },
     {
       "questionId": "PF288-Q05",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The passage places resting after the slip."
     },
     {
@@ -637,22 +462,22 @@
     },
     {
       "questionId": "PF288-Q07",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Slips begins with /s/ followed by /l/."
     },
     {
       "questionId": "PF288-Q08",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Sled begins with both /s/ and /l/."
     },
     {
       "questionId": "PF288-Q09",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "A passage connects sentences around a topic or event."
     },
     {
       "questionId": "PF288-Q10",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Evidence must be stated in the text."
     },
     {
@@ -662,17 +487,17 @@
     },
     {
       "questionId": "PF288-Q12",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Rereading helps repair decoding and comprehension."
     },
     {
       "questionId": "PF288-Q13",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "A retell preserves the passage's stated order."
     },
     {
       "questionId": "PF288-Q14",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The supporting sentence demonstrates text evidence."
     },
     {
