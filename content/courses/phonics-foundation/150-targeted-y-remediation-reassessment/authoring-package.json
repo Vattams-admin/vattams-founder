@@ -385,10 +385,10 @@
       "questionId": "PF150-Q15",
       "question": "A learner scores 11 out of 15. What is the correct route?",
       "options": [
+        "Repeat targeted remediation because 11/15 is below 80%",
         "Advance with cumulative review because the score is above 80%",
-        "Repeat all lessons forever",
         "Delete the assessment result",
-        "Skip future checks"
+        "Skip all future checks"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -469,7 +469,7 @@
     {
       "questionId": "PF150-Q15",
       "correctOptionIndex": 0,
-      "explanation": "11/15 is about 73%, below the 80% threshold, so targeted remediation is required."
+      "explanation": "11 out of 15 is about 73%, below the 80% mastery threshold, so targeted remediation is required."
     }
   ],
   "governance": {
