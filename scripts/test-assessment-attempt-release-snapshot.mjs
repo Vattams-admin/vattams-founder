@@ -16,6 +16,6 @@ for(const f of files.slice(1)){
  const s=fs.readFileSync(f,"utf8");
  if(!s.includes("Assessment release changed after this attempt started")) throw new Error(f+": missing snapshot lock");
 }
-const migration=fs.readFileSync("supabase/migrations/20261007120000_assessment_attempt_release_snapshot.sql","utf8");
+const migration=fs.readFileSync("supabase/migrations/20261010040505_assessment_attempt_release_snapshot.sql","utf8");
 if(!migration.includes("add column if not exists release_version")) throw new Error("migration missing release_version");
 console.log("ASSESSMENT ATTEMPT RELEASE SNAPSHOT: VALID");
