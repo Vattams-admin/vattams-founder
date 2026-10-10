@@ -88,6 +88,70 @@ test.describe('production Thirukkural authenticated smoke', () => {
     await expect(page.getByRole('heading', { name: 'Study Materials', exact: true })).toBeVisible({ timeout: 30_000 })
   })
 
+
+  test('revoked competition access blocks question delivery, answer saving and submission', async ({ page }) => {
+    const email = process.env.E2E_STUDENT_A_EMAIL
+    const password = process.env.E2E_STUDENT_A_PASSWORD
+    if (!email || !password) throw new Error('E2E Student A credentials were not provisioned.')
+
+    await loginAs(page, email, password)
+    await page.goto(`/competition/${competitionSlug}`, { waitUntil: 'domcontentloaded' })
+    const attemptRequestPromise = page.waitForRequest(
+      request => request.url().includes('/functions/v1/competition-official-attempt') && request.method() === 'POST',
+      { timeout: 20_000 },
+    )
+    const attemptResponsePromise = page.waitForResponse(
+      response => response.url().includes('/functions/v1/competition-official-attempt') && response.request().method() === 'POST',
+      { timeout: 20_000 },
+    )
+    const questionRequestPromise = page.waitForRequest(
+      request => request.url().includes('/functions/v1/competition-official-question-content') && request.method() === 'POST',
+      { timeout: 20_000 },
+    )
+    await page.getByRole('button', { name: /Start Competition/i }).click()
+    const [attemptRequest, attemptResponse] = await Promise.all([attemptRequestPromise, attemptResponsePromise])
+    const attempt = await attemptResponse.json()
+    const questionRequest = await questionRequestPromise
+    const authorization = attemptRequest.headers().authorization
+    const attemptId = attempt?.attempt_id
+    const questionIds = attempt?.question_ids
+    if (!authorization || typeof attemptId !== 'string' || !Array.isArray(questionIds) || questionIds.length !== 30) {
+      throw new Error(`Could not start official 30-question attempt for revocation test: ${JSON.stringify(attempt)}`)
+    }
+
+    try {
+      await setCompetitionCacheAccess(email, false)
+      const headers = {
+        apikey: process.env.SUPABASE_ANON_KEY!,
+        Authorization: authorization,
+        'Content-Type': 'application/json',
+      }
+      const questionResponse = await page.request.post(`${process.env.SUPABASE_URL}/functions/v1/competition-official-question-content`, {
+        headers,
+        data: { attempt_id: attemptId, question_ids: questionIds },
+      })
+      expect(questionResponse.status()).toBe(403)
+      expect((await questionResponse.json()).error).toContain('no longer have access')
+
+      const saveResponse = await page.request.post(`${process.env.SUPABASE_URL}/functions/v1/competition-official-scoring`, {
+        headers,
+        data: { action: 'save_answer', attempt_id: attemptId, questionId: questionIds[0], answer: 'E2E revocation test' },
+      })
+      expect(saveResponse.status()).toBe(403)
+      expect((await saveResponse.json()).error).toContain('no longer have access')
+
+      const submitResponse = await page.request.post(`${process.env.SUPABASE_URL}/functions/v1/competition-official-scoring`, {
+        headers,
+        data: { action: 'submit', attempt_id: attemptId, answers: [] },
+      })
+      expect(submitResponse.status()).toBe(403)
+      expect((await submitResponse.json()).error).toContain('no longer have access')
+    } finally {
+      await setCompetitionCacheAccess(email, true)
+    }
+    expect(questionRequest.url()).toContain('/functions/v1/competition-official-question-content')
+  })
+
   test('Student B cannot fetch Student A\'s mock-test question content', async ({ browser }) => {
     const emailA = process.env.E2E_STUDENT_A_EMAIL
     const passwordA = process.env.E2E_STUDENT_A_PASSWORD
