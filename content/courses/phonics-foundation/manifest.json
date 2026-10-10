@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 600,
-    "studyMaterials": 600,
-    "questionBank": 8990,
-    "assessments": 126
+    "lessons": 620,
+    "studyMaterials": 620,
+    "questionBank": 9290,
+    "assessments": 132
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -620,7 +620,27 @@
       "content/courses/phonics-foundation/597-vowel-teams-ai-ee-ou-mixed-review/authoring-package.json",
       "content/courses/phonics-foundation/598-vowel-team-connected-reading/authoring-package.json",
       "content/courses/phonics-foundation/599-vowel-team-fluency-diagnostic/authoring-package.json",
-      "content/courses/phonics-foundation/600-vowel-team-remediation-reassessment/authoring-package.json"
+      "content/courses/phonics-foundation/600-vowel-team-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/601-recognize-oa-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/602-decode-words-with-oa/authoring-package.json",
+      "content/courses/phonics-foundation/603-spell-words-with-oa/authoring-package.json",
+      "content/courses/phonics-foundation/604-oa-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/605-controlled-oa-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/606-controlled-oa-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/607-oa-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/608-targeted-oa-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/609-recognize-igh-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/610-decode-words-with-igh/authoring-package.json",
+      "content/courses/phonics-foundation/611-spell-words-with-igh/authoring-package.json",
+      "content/courses/phonics-foundation/612-igh-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/613-controlled-igh-sentences-comprehension-2/authoring-package.json",
+      "content/courses/phonics-foundation/614-controlled-igh-passage-sequencing-2/authoring-package.json",
+      "content/courses/phonics-foundation/615-igh-fluency-consolidation-diagnostic-2/authoring-package.json",
+      "content/courses/phonics-foundation/616-targeted-igh-remediation-reassessment-2/authoring-package.json",
+      "content/courses/phonics-foundation/617-vowel-team-patterns-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/618-vowel-team-connected-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/619-vowel-team-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/620-vowel-team-remediation-reassessment/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -727,7 +747,13 @@
     "PF595-DIAG-01",
     "PF596-REASSESS-01",
     "PF599-DIAG-01",
-    "PF600-REASSESS-01"
+    "PF600-REASSESS-01",
+    "PF607-DIAG-01",
+    "PF608-REASSESS-01",
+    "PF615-DIAG-01",
+    "PF616-REASSESS-01",
+    "PF619-DIAG-01",
+    "PF620-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
@@ -1329,6 +1355,26 @@
     "content/courses/phonics-foundation/597-vowel-teams-ai-ee-ou-mixed-review/authoring-package.json",
     "content/courses/phonics-foundation/598-vowel-team-connected-reading/authoring-package.json",
     "content/courses/phonics-foundation/599-vowel-team-fluency-diagnostic/authoring-package.json",
-    "content/courses/phonics-foundation/600-vowel-team-remediation-reassessment/authoring-package.json"
+    "content/courses/phonics-foundation/600-vowel-team-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/601-recognize-oa-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/602-decode-words-with-oa/authoring-package.json",
+    "content/courses/phonics-foundation/603-spell-words-with-oa/authoring-package.json",
+    "content/courses/phonics-foundation/604-oa-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/605-controlled-oa-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/606-controlled-oa-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/607-oa-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/608-targeted-oa-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/609-recognize-igh-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/610-decode-words-with-igh/authoring-package.json",
+    "content/courses/phonics-foundation/611-spell-words-with-igh/authoring-package.json",
+    "content/courses/phonics-foundation/612-igh-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/613-controlled-igh-sentences-comprehension-2/authoring-package.json",
+    "content/courses/phonics-foundation/614-controlled-igh-passage-sequencing-2/authoring-package.json",
+    "content/courses/phonics-foundation/615-igh-fluency-consolidation-diagnostic-2/authoring-package.json",
+    "content/courses/phonics-foundation/616-targeted-igh-remediation-reassessment-2/authoring-package.json",
+    "content/courses/phonics-foundation/617-vowel-team-patterns-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/618-vowel-team-connected-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/619-vowel-team-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/620-vowel-team-remediation-reassessment/authoring-package.json"
   ]
 }
