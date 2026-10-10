@@ -1,0 +1,545 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-215",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "215-decode-short-words-with-bl",
+    "topic": "decoding",
+    "subtopic": "initial-bl-short-word-decoding",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode taught words beginning with bl by mapping every grapheme in order.",
+      "Blend /b/ and /l/ smoothly before the vowel and final consonants.",
+      "Distinguish bl-words by their rime, including -ob, -ip, -ot, -ack and -ock.",
+      "Self-correct by checking the complete word rather than guessing from its first letter."
+    ],
+    "concepts": [
+      "The onset bl contains two audible phonemes, /b/ followed by /l/.",
+      "The rest of a word must also be decoded; the blend alone does not identify the word.",
+      "Rimes help compare words but do not replace full grapheme-by-grapheme decoding.",
+      "Self-correction means returning to the graphemes when the spoken word does not make sense."
+    ],
+    "definitions": [
+      {
+        "term": "decode",
+        "definition": "Use grapheme-to-phoneme knowledge to read a written word."
+      },
+      {
+        "term": "onset",
+        "definition": "The initial consonant sound or consonant group before the vowel in a syllable."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and following sounds in a syllable, such as -ob in blob."
+      },
+      {
+        "term": "self-correction",
+        "definition": "Notice a mismatch and reread the word accurately."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Decode blob.",
+        "solution": "Map b-l-o-b to /b/ /l/ /o/ /b/, then blend: blob."
+      },
+      {
+        "prompt": "Decode black.",
+        "solution": "Keep bl together as two sounds, map a, then ck for final /k/: black."
+      },
+      {
+        "prompt": "Compare blob and blip.",
+        "solution": "Both begin with bl; the vowel and final consonant differ, so the words differ."
+      },
+      {
+        "prompt": "Correct a reading of block as bock.",
+        "solution": "Return to the print, say /l/ after /b/, then blend block."
+      }
+    ],
+    "commonMistakes": [
+      "Skipping /l/ and reading block as bock.",
+      "Adding a vowel between /b/ and /l/.",
+      "Guessing from the onset without decoding the rime.",
+      "Confusing -ob, -ip, -ot, -ack and -ock."
+    ],
+    "keyTakeaways": [
+      "Read bl as /b/ followed by /l/ without an extra vowel.",
+      "Decode the vowel and ending as carefully as the onset.",
+      "Compare rimes to notice differences among bl-words.",
+      "Reread and self-correct when the word does not match the print."
+    ],
+    "revisionPoints": [
+      "bl = /b/ + /l/.",
+      "blob has the rime -ob; blip has -ip.",
+      "blot has -ot; black has -ack; block has -ock.",
+      "Check every grapheme and reread the whole word."
+    ],
+    "outcomes": [
+      "Decode taught bl-words accurately from left to right.",
+      "Identify the rime in a taught bl-word.",
+      "Correct a missed consonant by checking the written word.",
+      "Read a new taught-pattern word without adding a vowel to the blend."
+    ],
+    "activityOneName": "Map and blend a chain of bl-words.",
+    "activityOneSteps": [
+      "Point to each grapheme in order.",
+      "Say /b/ then /l/ closely, without an added vowel.",
+      "Blend through the vowel and final consonant.",
+      "Reread the whole word and confirm it matches the print."
+    ],
+    "activityTwoName": "Sort bl-words by rime and decode each word.",
+    "activityTwoSteps": [
+      "Read blob, blip, blot, black and block.",
+      "Group words with matching rimes.",
+      "Say the onset and rime for each word.",
+      "Explain why the same onset does not make the words identical."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Decode /b/ /l/ /o/ /b/.",
+        "answer": "blob"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word ends in the rime -ip?",
+        "answer": "blip"
+      },
+      {
+        "id": "B3",
+        "prompt": "What sound follows /b/ in block?",
+        "answer": "/l/"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Why must you read beyond bl?",
+        "answer": "The vowel and ending distinguish words such as blob and blip."
+      },
+      {
+        "id": "C2",
+        "prompt": "What is the rime in blot?",
+        "answer": "-ot"
+      },
+      {
+        "id": "C3",
+        "prompt": "What should you do if block is read as bock?",
+        "answer": "Return to the print and include /l/."
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Blend /b/ /l/ /i/ /p/.",
+        "answer": "blip"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word has the rime -ack?",
+        "answer": "black"
+      },
+      {
+        "id": "A3",
+        "prompt": "Read the onset and rime in block.",
+        "answer": "Onset bl; rime -ock"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "How do blob and block differ after the onset?",
+        "answer": "They have different vowels and endings: -ob and -ock."
+      },
+      {
+        "id": "H2",
+        "prompt": "Which word could fit a picture of a dark square toy: black or blip?",
+        "answer": "black, if the picture and context show the colour black."
+      },
+      {
+        "id": "H3",
+        "prompt": "Why is sounding out safer than guessing from the first two letters?",
+        "answer": "It checks every grapheme and avoids confusing words with the same onset."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word shares -ob with blob?",
+        "answer": "sob"
+      },
+      {
+        "id": "R2",
+        "prompt": "Which word ends in -ock?",
+        "answer": "block"
+      },
+      {
+        "id": "R3",
+        "prompt": "What should you avoid between /b/ and /l/?",
+        "answer": "An extra vowel"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Read bl as /b/ followed by /l/ without an extra vowel.",
+      "Decode the vowel and ending as carefully as the onset.",
+      "Compare rimes to notice differences among bl-words.",
+      "Reread and self-correct when the word does not match the print."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Read bl as /b/ followed by /l/ without an extra vowel."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Decode the vowel and ending as carefully as the onset."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Compare rimes to notice differences among bl-words."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Reread and self-correct when the word does not match the print."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Read bl as /b/ followed by /l/ without an extra vowel.",
+      "Decode the vowel and ending as carefully as the onset.",
+      "Compare rimes to notice differences among bl-words.",
+      "Reread and self-correct when the word does not match the print."
+    ],
+    "mistakeBasedRevision": [
+      "Skipping /l/ and reading block as bock.",
+      "Adding a vowel between /b/ and /l/.",
+      "Guessing from the onset without decoding the rime.",
+      "Confusing -ob, -ip, -ot, -ack and -ock."
+    ],
+    "weakTopicRevision": [
+      "If decode short words with bl accuracy is below target, model the specific step, practise with guided examples, and check transfer with fresh words."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-phonics-practice",
+      "name": "Map and blend a chain of bl-words.",
+      "steps": [
+        "Point to each grapheme in order.",
+        "Say /b/ then /l/ closely, without an added vowel.",
+        "Blend through the vowel and final consonant.",
+        "Reread the whole word and confirm it matches the print."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "self-check-and-transfer",
+      "name": "Sort bl-words by rime and decode each word.",
+      "steps": [
+        "Read blob, blip, blot, black and block.",
+        "Group words with matching rimes.",
+        "Say the onset and rime for each word.",
+        "Explain why the same onset does not make the words identical."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Decode taught bl-words accurately from left to right.",
+    "Identify the rime in a taught bl-word.",
+    "Correct a missed consonant by checking the written word.",
+    "Read a new taught-pattern word without adding a vowel to the blend."
+  ],
+  "questions": [
+    {
+      "questionId": "PF215-Q01",
+      "question": "Which word matches /b/ /l/ /o/ /b/?",
+      "options": [
+        "blob",
+        "blip",
+        "blot",
+        "block"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q02",
+      "question": "Which bl-word ends with /p/?",
+      "options": [
+        "blip",
+        "blob",
+        "black",
+        "block"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q03",
+      "question": "Blend /b/ /l/ /a/ /k/ to read the word.",
+      "options": [
+        "black",
+        "back",
+        "block",
+        "blot"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q04",
+      "question": "Which word has short /o/ followed by /t/ after bl?",
+      "options": [
+        "blot",
+        "blip",
+        "black",
+        "blue"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q05",
+      "question": "What is the onset in block?",
+      "options": [
+        "bl",
+        "-ock",
+        "ock",
+        "bock"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q06",
+      "question": "Which word begins with /b/ alone, not /bl/?",
+      "options": [
+        "bag",
+        "blob",
+        "black",
+        "block"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q07",
+      "question": "Which word has the rime -ock?",
+      "options": [
+        "block",
+        "blot",
+        "blob",
+        "blip"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q08",
+      "question": "What is the first phoneme in black?",
+      "options": [
+        "/b/",
+        "/l/",
+        "/a/",
+        "/k/"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q09",
+      "question": "Blend /b/ /l/ /i/ /p/.",
+      "options": [
+        "blip",
+        "blob",
+        "blot",
+        "black"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q10",
+      "question": "Which word shares the rime -ob with blob?",
+      "options": [
+        "sob",
+        "sock",
+        "sit",
+        "sat"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q11",
+      "question": "Which action is the best way to decode a bl-word?",
+      "options": [
+        "Say /b/ and /l/ close together, then blend the rest",
+        "Guess from b only",
+        "Skip l",
+        "Insert “uh” after both consonants"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q12",
+      "question": "Which word matches bl + -ot?",
+      "options": [
+        "blot",
+        "blip",
+        "black",
+        "block"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q13",
+      "question": "Which word contains bl and the rime -ack?",
+      "options": [
+        "black",
+        "blob",
+        "blot",
+        "blip"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q14",
+      "question": "When decoding block, which sound must not be skipped?",
+      "options": [
+        "/l/",
+        "/s/",
+        "/m/",
+        "/r/"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF215-Q15",
+      "question": "Read: “A black blob is on the block.” What is on the block?",
+      "options": [
+        "a black blob",
+        "a red bag",
+        "a blue cup",
+        "a wet sock"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF215-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The sequence ends with /o/ /b/, so the word is blob."
+    },
+    {
+      "questionId": "PF215-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "Blip ends with the final phoneme /p/."
+    },
+    {
+      "questionId": "PF215-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The onset is bl and the rime is -ack: black."
+    },
+    {
+      "questionId": "PF215-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Blot has the rime -ot."
+    },
+    {
+      "questionId": "PF215-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The initial consonant group is bl."
+    },
+    {
+      "questionId": "PF215-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Bag begins with /b/ and has no /l/ after it."
+    },
+    {
+      "questionId": "PF215-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Block ends with -ock."
+    },
+    {
+      "questionId": "PF215-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The first phoneme is /b/."
+    },
+    {
+      "questionId": "PF215-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The vowel is short /i/ and the final sound is /p/: blip."
+    },
+    {
+      "questionId": "PF215-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "Sob and blob share the -ob rime."
+    },
+    {
+      "questionId": "PF215-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Smooth blending keeps the blend intact and uses every sound."
+    },
+    {
+      "questionId": "PF215-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "Blot has onset bl and rime -ot."
+    },
+    {
+      "questionId": "PF215-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Black contains bl + -ack."
+    },
+    {
+      "questionId": "PF215-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The /l/ is the second phoneme in the initial blend."
+    },
+    {
+      "questionId": "PF215-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence states that a black blob is on the block."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-215-v1"
+  }
+}
