@@ -1,0 +1,509 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-159",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "159-hear-and-identify-new-digraph-sh",
+    "topic": "phoneme-grapheme-correspondence",
+    "subtopic": "sh-digraph-initial-final",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Hear /sh/ in initial and final positions of familiar words.",
+      "Recognise sh as a two-letter grapheme representing one phoneme.",
+      "Distinguish /sh/ from /s/ and /h/ without adding an extra vowel.",
+      "Match ship, shop, fish and dish to their sound pattern."
+    ],
+    "concepts": [
+      "A digraph uses two letters to represent one phoneme.",
+      "In common early words, sh can appear at the beginning or end.",
+      "The phoneme /sh/ is one continuous unvoiced sound, not two separate sounds /s/ plus /h/.",
+      "Listening carefully prevents sound substitutions."
+    ],
+    "definitions": [
+      {
+        "term": "digraph",
+        "definition": "Two letters working together to represent one phoneme."
+      },
+      {
+        "term": "phoneme",
+        "definition": "The smallest sound unit that can distinguish words."
+      },
+      {
+        "term": "grapheme",
+        "definition": "A letter or group of letters used to represent a sound."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "ship",
+        "solution": "The first sound is /sh/, represented by sh."
+      },
+      {
+        "prompt": "fish",
+        "solution": "The final sound is /sh/, represented by sh."
+      },
+      {
+        "prompt": "sip and ship",
+        "solution": "The initial sound changes from /s/ to /sh/."
+      }
+    ],
+    "commonMistakes": [
+      "Saying /s/ and /h/ as two separate sounds in sh.",
+      "Calling every word that begins with s a sh-word.",
+      "Adding an extra vowel after /sh/.",
+      "Ignoring the last sound when listening to fish or dish."
+    ],
+    "keyTakeaways": [
+      "sh is two letters but one sound.",
+      "Listen for /sh/ at the beginning and end of a word.",
+      "Compare ship with sip and fish with fit.",
+      "Say the word naturally, then identify the target sound."
+    ],
+    "revisionPoints": [
+      "Initial sh: ship, shop, shut, shed.",
+      "Final sh: fish, dish, wish, cash.",
+      "sh represents one phoneme, /sh/."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word begins with /sh/?",
+        "answer": "ship"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word ends with /sh/?",
+        "answer": "fish"
+      },
+      {
+        "id": "B3",
+        "prompt": "How many letters are in the digraph sh?",
+        "answer": "Two"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "In common early words, sh usually represents…",
+        "answer": "one sound /sh/"
+      },
+      {
+        "id": "C2",
+        "prompt": "What is the first sound in shop?",
+        "answer": "/sh/"
+      },
+      {
+        "id": "C3",
+        "prompt": "What is the final sound in dish?",
+        "answer": "/sh/"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word contains sh at the beginning?",
+        "answer": "shed"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word does NOT contain sh?",
+        "answer": "sock"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which word begins with the same sound as ship?",
+        "answer": "shop"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which pair ends with the same /sh/ sound?",
+        "answer": "fish and wish"
+      },
+      {
+        "id": "H2",
+        "prompt": "What changes between sip and ship?",
+        "answer": "The first sound"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which word starts with the digraph sh?",
+        "answer": "shell"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Why is sh called a digraph?",
+        "answer": "Two letters represent one phoneme"
+      },
+      {
+        "id": "R2",
+        "prompt": "When saying /sh/, what should the learner avoid?",
+        "answer": "Adding an extra vowel"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which word has /sh/ at the end?",
+        "answer": "rush"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Initial sh: ship, shop, shut, shed.",
+      "Final sh: fish, dish, wish, cash.",
+      "sh represents one phoneme, /sh/."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Initial sh: ship, shop, shut, shed."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Final sh: fish, dish, wish, cash."
+      },
+      {
+        "front": "Recall 3",
+        "back": "sh represents one phoneme, /sh/."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Initial sh: ship, shop, shut, shed.",
+      "Final sh: fish, dish, wish, cash.",
+      "sh represents one phoneme, /sh/."
+    ],
+    "mistakeBasedRevision": [
+      "Saying /s/ and /h/ as two separate sounds in sh.",
+      "Calling every word that begins with s a sh-word.",
+      "Adding an extra vowel after /sh/.",
+      "Ignoring the last sound when listening to fish or dish."
+    ],
+    "weakTopicRevision": [
+      "If phoneme grapheme correspondence accuracy is below target, model the specific sound or reading step, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "phoneme-listening-sort",
+      "name": "Listen for /sh/ at the beginning and end of spoken words.",
+      "steps": [
+        "Say ship and sip; identify the different first sound.",
+        "Say fish and fit; identify the different final sound.",
+        "Sort word cards by whether /sh/ is heard.",
+        "Say each target word naturally without adding a vowel."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "contrast-and-self-check",
+      "name": "Contrast close examples and explain the evidence.",
+      "steps": [
+        "Compare two similar words.",
+        "Name the sound or rime that changes.",
+        "Use the written graphemes to justify the answer.",
+        "Read the words or sentence again to confirm."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Identify /sh/ in initial and final positions in at least 8 of 10 examples.",
+    "Explain that sh represents one phoneme.",
+    "Distinguish /sh/ from /s/ in taught contrasts."
+  ],
+  "questions": [
+    {
+      "questionId": "PF159-Q01",
+      "question": "Which word begins with /sh/?",
+      "options": [
+        "ship",
+        "sip",
+        "sun",
+        "map"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF159-Q02",
+      "question": "Which word ends with /sh/?",
+      "options": [
+        "fit",
+        "fish",
+        "fin",
+        "fig"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF159-Q03",
+      "question": "How many letters are in the digraph sh?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF159-Q04",
+      "question": "In common early words, sh usually represents…",
+      "options": [
+        "two sounds /s/ and /h/",
+        "one sound /sh/",
+        "the vowel /i/",
+        "no sound"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF159-Q05",
+      "question": "What is the first sound in shop?",
+      "options": [
+        "/s/",
+        "/h/",
+        "/sh/",
+        "/p/"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF159-Q06",
+      "question": "What is the final sound in dish?",
+      "options": [
+        "/d/",
+        "/i/",
+        "/sh/",
+        "/s/"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF159-Q07",
+      "question": "Which word contains sh at the beginning?",
+      "options": [
+        "shed",
+        "sun",
+        "sit",
+        "mat"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF159-Q08",
+      "question": "Which word does NOT contain sh?",
+      "options": [
+        "wish",
+        "dish",
+        "ship",
+        "sock"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF159-Q09",
+      "question": "Which word begins with the same sound as ship?",
+      "options": [
+        "shop",
+        "sip",
+        "tap",
+        "fish"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF159-Q10",
+      "question": "Which pair ends with the same /sh/ sound?",
+      "options": [
+        "fish and wish",
+        "fish and fit",
+        "dish and dig",
+        "cash and cap"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF159-Q11",
+      "question": "What changes between sip and ship?",
+      "options": [
+        "The first sound",
+        "The middle vowel",
+        "The last sound",
+        "Nothing"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF159-Q12",
+      "question": "Which word starts with the digraph sh?",
+      "options": [
+        "shell",
+        "bell",
+        "fell",
+        "tell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF159-Q13",
+      "question": "Why is sh called a digraph?",
+      "options": [
+        "Two letters represent one phoneme",
+        "One letter represents two words",
+        "It has no sound",
+        "It always appears at the end"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF159-Q14",
+      "question": "When saying /sh/, what should the learner avoid?",
+      "options": [
+        "Adding an extra vowel",
+        "Listening carefully",
+        "Noticing the sound",
+        "Comparing ship and sip"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF159-Q15",
+      "question": "Which word has /sh/ at the end?",
+      "options": [
+        "rush",
+        "run",
+        "rug",
+        "rub"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF159-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Ship begins with the digraph sh."
+    },
+    {
+      "questionId": "PF159-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "Fish ends with the sound /sh/."
+    },
+    {
+      "questionId": "PF159-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The digraph has two letters."
+    },
+    {
+      "questionId": "PF159-Q04",
+      "correctOptionIndex": 1,
+      "explanation": "The two letters work together for one phoneme."
+    },
+    {
+      "questionId": "PF159-Q05",
+      "correctOptionIndex": 2,
+      "explanation": "Shop begins with /sh/."
+    },
+    {
+      "questionId": "PF159-Q06",
+      "correctOptionIndex": 2,
+      "explanation": "Dish ends with /sh/."
+    },
+    {
+      "questionId": "PF159-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Shed begins with sh."
+    },
+    {
+      "questionId": "PF159-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Sock has /s/, not the /sh/ digraph."
+    },
+    {
+      "questionId": "PF159-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Ship and shop both begin with /sh/."
+    },
+    {
+      "questionId": "PF159-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "Fish and wish both end with sh."
+    },
+    {
+      "questionId": "PF159-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The initial phoneme changes from /s/ to /sh/."
+    },
+    {
+      "questionId": "PF159-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "Shell begins with sh."
+    },
+    {
+      "questionId": "PF159-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "A digraph is two letters representing one phoneme."
+    },
+    {
+      "questionId": "PF159-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The target sound should be spoken without an added vowel."
+    },
+    {
+      "questionId": "PF159-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Rush ends in the digraph sh."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-159-v1"
+  }
+}
