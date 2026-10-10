@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 620,
-    "studyMaterials": 620,
-    "questionBank": 9290,
-    "assessments": 132
+    "lessons": 640,
+    "studyMaterials": 640,
+    "questionBank": 9590,
+    "assessments": 138
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -640,7 +640,27 @@
       "content/courses/phonics-foundation/617-vowel-team-patterns-mixed-review/authoring-package.json",
       "content/courses/phonics-foundation/618-vowel-team-connected-reading-transfer/authoring-package.json",
       "content/courses/phonics-foundation/619-vowel-team-fluency-diagnostic/authoring-package.json",
-      "content/courses/phonics-foundation/620-vowel-team-remediation-reassessment/authoring-package.json"
+      "content/courses/phonics-foundation/620-vowel-team-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/621-recognize-ar-r-controlled-vowel/authoring-package.json",
+      "content/courses/phonics-foundation/622-decode-words-with-ar/authoring-package.json",
+      "content/courses/phonics-foundation/623-spell-words-with-ar/authoring-package.json",
+      "content/courses/phonics-foundation/624-ar-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/625-controlled-ar-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/626-controlled-ar-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/627-ar-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/628-targeted-ar-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/629-recognize-or-r-controlled-vowel/authoring-package.json",
+      "content/courses/phonics-foundation/630-decode-words-with-or/authoring-package.json",
+      "content/courses/phonics-foundation/631-spell-words-with-or/authoring-package.json",
+      "content/courses/phonics-foundation/632-or-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/633-controlled-or-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/634-controlled-or-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/635-or-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/636-targeted-or-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/637-r-controlled-vowels-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/638-r-controlled-vowel-connected-reading/authoring-package.json",
+      "content/courses/phonics-foundation/639-r-controlled-vowel-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/640-r-controlled-vowel-remediation-reassessment/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -753,7 +773,13 @@
     "PF615-DIAG-01",
     "PF616-REASSESS-01",
     "PF619-DIAG-01",
-    "PF620-REASSESS-01"
+    "PF620-REASSESS-01",
+    "PF627-DIAG-01",
+    "PF628-REASSESS-01",
+    "PF635-DIAG-01",
+    "PF636-REASSESS-01",
+    "PF639-DIAG-01",
+    "PF640-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
@@ -1375,6 +1401,26 @@
     "content/courses/phonics-foundation/617-vowel-team-patterns-mixed-review/authoring-package.json",
     "content/courses/phonics-foundation/618-vowel-team-connected-reading-transfer/authoring-package.json",
     "content/courses/phonics-foundation/619-vowel-team-fluency-diagnostic/authoring-package.json",
-    "content/courses/phonics-foundation/620-vowel-team-remediation-reassessment/authoring-package.json"
+    "content/courses/phonics-foundation/620-vowel-team-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/621-recognize-ar-r-controlled-vowel/authoring-package.json",
+    "content/courses/phonics-foundation/622-decode-words-with-ar/authoring-package.json",
+    "content/courses/phonics-foundation/623-spell-words-with-ar/authoring-package.json",
+    "content/courses/phonics-foundation/624-ar-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/625-controlled-ar-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/626-controlled-ar-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/627-ar-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/628-targeted-ar-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/629-recognize-or-r-controlled-vowel/authoring-package.json",
+    "content/courses/phonics-foundation/630-decode-words-with-or/authoring-package.json",
+    "content/courses/phonics-foundation/631-spell-words-with-or/authoring-package.json",
+    "content/courses/phonics-foundation/632-or-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/633-controlled-or-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/634-controlled-or-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/635-or-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/636-targeted-or-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/637-r-controlled-vowels-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/638-r-controlled-vowel-connected-reading/authoring-package.json",
+    "content/courses/phonics-foundation/639-r-controlled-vowel-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/640-r-controlled-vowel-remediation-reassessment/authoring-package.json"
   ]
 }
