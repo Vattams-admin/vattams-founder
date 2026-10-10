@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-193",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "193-ng-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "ng-rimes-and-word-family-decoding",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Group taught ng-words by their vowel-plus-ending rime.",
+      "Read -ing, -ang, -ong and -ung examples accurately.",
+      "Explain why sing and song do not share the same rime.",
+      "Decode every word fully even when a familiar family pattern is recognised."
+    ],
+    "concepts": [
+      "The onset is the sound or sounds before the vowel.",
+      "The rime includes the vowel and any following sounds.",
+      "The final ng grapheme is shared by several word families.",
+      "Word families support pattern recognition but do not replace full decoding."
+    ],
+    "definitions": [
+      {
+        "term": "onset",
+        "definition": "The sound or sounds before the vowel."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and the sounds that follow it."
+      },
+      {
+        "term": "word family",
+        "definition": "Words that share a rime pattern."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "ring and sing",
+        "solution": "Both share -ing."
+      },
+      {
+        "prompt": "bang and rang",
+        "solution": "Both share -ang."
+      },
+      {
+        "prompt": "song and long",
+        "solution": "Both share -ong."
+      }
+    ],
+    "commonMistakes": [
+      "Grouping every ng-word together regardless of the vowel.",
+      "Sorting by the final letters only.",
+      "Ignoring the vowel when comparing sing and song.",
+      "Guessing a new word from a familiar family without decoding it."
+    ],
+    "keyTakeaways": [
+      "Compare the vowel and ending to identify a rime.",
+      "ng appears across several different rime families.",
+      "Read each word after sorting.",
+      "Use a family as a clue, then check every grapheme."
+    ],
+    "revisionPoints": [
+      "-ing: ring, sing.",
+      "-ang: bang, rang.",
+      "-ong: song, long.",
+      "-ung: hung, sung."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word shares the -ing rime with ring?",
+        "answer": "sing"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word belongs to the -ang family?",
+        "answer": "rang"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which pair shares -ong?",
+        "answer": "song and long"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Do sing and song share the same rime?",
+        "answer": "No; -ing and -ong differ"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which word belongs with hung in the -ung family?",
+        "answer": "sung"
+      },
+      {
+        "id": "C3",
+        "prompt": "What is the rime in bang?",
+        "answer": "-ang"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What is the onset in ring?",
+        "answer": "/r/"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word does NOT belong in an -ing group?",
+        "answer": "song"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which set contains only -ang words?",
+        "answer": "bang, rang, sang"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Why is sorting only by ng not enough?",
+        "answer": "The vowel and rime may differ"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which word shares -ing with sing?",
+        "answer": "ring"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which pair shares -ung?",
+        "answer": "hung and sung"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word family is shown by song and long?",
+        "answer": "-ong"
+      },
+      {
+        "id": "R2",
+        "prompt": "A learner groups sing with song because both end in ng. What should be checked?",
+        "answer": "The vowel and rime"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which statement about word families is accurate?",
+        "answer": "A shared rime supports reading but each word still needs decoding"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "-ing: ring, sing.",
+      "-ang: bang, rang.",
+      "-ong: song, long.",
+      "-ung: hung, sung."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "-ing: ring, sing."
+      },
+      {
+        "front": "Recall 2",
+        "back": "-ang: bang, rang."
+      },
+      {
+        "front": "Recall 3",
+        "back": "-ong: song, long."
+      },
+      {
+        "front": "Recall 4",
+        "back": "-ung: hung, sung."
+      }
+    ],
+    "formulaOrFactBank": [
+      "-ing: ring, sing.",
+      "-ang: bang, rang.",
+      "-ong: song, long.",
+      "-ung: hung, sung."
+    ],
+    "mistakeBasedRevision": [
+      "Grouping every ng-word together regardless of the vowel.",
+      "Sorting by the final letters only.",
+      "Ignoring the vowel when comparing sing and song.",
+      "Guessing a new word from a familiar family without decoding it."
+    ],
+    "weakTopicRevision": [
+      "If word families accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "word-family-sort",
+      "name": "Sort ng-words by rime, then decode each word.",
+      "steps": [
+        "Read each word aloud.",
+        "Identify the vowel and final ng.",
+        "Group words with matching rimes.",
+        "Read each group and explain the shared pattern."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using sound or spelling evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme supporting the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Sort at least 8 of 10 words by rime accurately.",
+    "Explain the difference between onset and rime.",
+    "Decode each word after grouping."
+  ],
+  "questions": [
+    {
+      "questionId": "PF193-Q01",
+      "question": "Which word shares the -ing rime with ring?",
+      "options": [
+        "song",
+        "sing",
+        "bang",
+        "hung"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q02",
+      "question": "Which word belongs to the -ang family?",
+      "options": [
+        "rang",
+        "ring",
+        "song",
+        "sung"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q03",
+      "question": "Which pair shares -ong?",
+      "options": [
+        "ring and sing",
+        "bang and rang",
+        "hung and sung",
+        "song and long"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q04",
+      "question": "Do sing and song share the same rime?",
+      "options": [
+        "Yes; both end in ng",
+        "Yes; both have four letters",
+        "No; -ing and -ong differ",
+        "No; sing has no vowel"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q05",
+      "question": "Which word belongs with hung in the -ung family?",
+      "options": [
+        "song",
+        "sung",
+        "rang",
+        "ring"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q06",
+      "question": "What is the rime in bang?",
+      "options": [
+        "-ang",
+        "-ng",
+        "-ba",
+        "-b"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q07",
+      "question": "What is the onset in ring?",
+      "options": [
+        "/ing/",
+        "/i/",
+        "/ŋ/",
+        "/r/"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q08",
+      "question": "Which word does NOT belong in an -ing group?",
+      "options": [
+        "ring",
+        "sing",
+        "song",
+        "wing"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q09",
+      "question": "Which set contains only -ang words?",
+      "options": [
+        "bang, ring, sang",
+        "bang, rang, sang",
+        "rang, song, sang",
+        "bang, hung, rang"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q10",
+      "question": "Why is sorting only by ng not enough?",
+      "options": [
+        "The vowel and rime may differ",
+        "All ng words rhyme",
+        "Vowels do not matter",
+        "Every ng word starts with ng"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF193-Q11",
+      "question": "Which word shares -ing with sing?",
+      "options": [
+        "song",
+        "hung",
+        "rang",
+        "ring"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q12",
+      "question": "Which pair shares -ung?",
+      "options": [
+        "song and long",
+        "bang and rang",
+        "hung and sung",
+        "ring and sing"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q13",
+      "question": "Which word family is shown by song and long?",
+      "options": [
+        "-ing",
+        "-ong",
+        "-ang",
+        "-ung"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF193-Q14",
+      "question": "A learner groups sing with song because both end in ng. What should be checked?",
+      "options": [
+        "The vowel and rime",
+        "Only the word length",
+        "The capital letter",
+        "The spaces"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF193-Q15",
+      "question": "Which statement about word families is accurate?",
+      "options": [
+        "Words ending in ng all rhyme",
+        "Only the last two letters determine the family",
+        "A family word can be guessed without reading",
+        "A shared rime supports reading but each word still needs decoding"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF193-Q01",
+      "correctOptionIndex": 1,
+      "explanation": "Ring and sing share -ing."
+    },
+    {
+      "questionId": "PF193-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "Rang contains -ang."
+    },
+    {
+      "questionId": "PF193-Q03",
+      "correctOptionIndex": 3,
+      "explanation": "Song and long share -ong."
+    },
+    {
+      "questionId": "PF193-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "The vowel and rime differ."
+    },
+    {
+      "questionId": "PF193-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Hung and sung share -ung."
+    },
+    {
+      "questionId": "PF193-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The rime includes the vowel and final ng."
+    },
+    {
+      "questionId": "PF193-Q07",
+      "correctOptionIndex": 3,
+      "explanation": "The onset is the sound before the vowel."
+    },
+    {
+      "questionId": "PF193-Q08",
+      "correctOptionIndex": 2,
+      "explanation": "Song has -ong."
+    },
+    {
+      "questionId": "PF193-Q09",
+      "correctOptionIndex": 1,
+      "explanation": "Bang, rang and sang share -ang."
+    },
+    {
+      "questionId": "PF193-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The rime depends on the vowel and following sounds."
+    },
+    {
+      "questionId": "PF193-Q11",
+      "correctOptionIndex": 3,
+      "explanation": "Ring and sing share -ing."
+    },
+    {
+      "questionId": "PF193-Q12",
+      "correctOptionIndex": 2,
+      "explanation": "Hung and sung share -ung."
+    },
+    {
+      "questionId": "PF193-Q13",
+      "correctOptionIndex": 1,
+      "explanation": "Both share -ong."
+    },
+    {
+      "questionId": "PF193-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Sing has -ing; song has -ong."
+    },
+    {
+      "questionId": "PF193-Q15",
+      "correctOptionIndex": 3,
+      "explanation": "Family patterns support but do not replace full decoding."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-193-v1"
+  }
+}
