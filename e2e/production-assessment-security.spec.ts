@@ -203,6 +203,29 @@ test.describe("production assessment security boundary", () => {
     }
   });
 
+  test("assessment history, results, analytics and topic recommendations reject anonymous access", async ({ request }) => {
+    expect(SUPABASE_URL).toBeTruthy();
+    expect(SUPABASE_ANON_KEY).toBeTruthy();
+    const cases = [
+      { functionName: "assessment-history", expectedStatus: 401, data: { limit: 10, offset: 0 } },
+      { functionName: "assessment-result", expectedStatus: 401, data: { attempt_id: "00000000-0000-0000-0000-000000000000" } },
+      { functionName: "assessment-analytics", expectedStatus: 401, data: {} },
+      { functionName: "assessment-topic-performance", expectedStatus: 400, data: {} },
+    ];
+    for (const item of cases) {
+      const response = await request.post(`${SUPABASE_URL}/functions/v1/${item.functionName}`, {
+        headers: { apikey: SUPABASE_ANON_KEY, "Content-Type": "application/json" },
+        data: item.data,
+      });
+      expect(response.status(), `${item.functionName} accepted an anonymous request`).toBe(item.expectedStatus);
+      const body = await response.json();
+      expect(body).toHaveProperty("error");
+      expect(body).not.toHaveProperty("result");
+      expect(body).not.toHaveProperty("items");
+      expect(body).not.toHaveProperty("recommendations");
+    }
+  });
+
   test("private answer keys are not anonymously downloadable", async ({ request }) => {
     expect(SUPABASE_URL).toBeTruthy();
     expect(SUPABASE_ANON_KEY).toBeTruthy();
