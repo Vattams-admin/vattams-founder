@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 560,
-    "studyMaterials": 560,
-    "questionBank": 8390,
-    "assessments": 118
+    "lessons": 580,
+    "studyMaterials": 580,
+    "questionBank": 8690,
+    "assessments": 120
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -580,7 +580,27 @@
       "content/courses/phonics-foundation/557-silent-letter-patterns-mixed-practice/authoring-package.json",
       "content/courses/phonics-foundation/558-silent-letter-patterns-connected-reading/authoring-package.json",
       "content/courses/phonics-foundation/559-silent-letter-patterns-fluency-diagnostic/authoring-package.json",
-      "content/courses/phonics-foundation/560-silent-letter-patterns-remediation-reassessment/authoring-package.json"
+      "content/courses/phonics-foundation/560-silent-letter-patterns-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/561-recognize-ai-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/562-decode-words-with-ai/authoring-package.json",
+      "content/courses/phonics-foundation/563-spell-words-with-ai/authoring-package.json",
+      "content/courses/phonics-foundation/564-ai-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/565-controlled-ai-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/566-controlled-ai-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/567-ai-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/568-targeted-ai-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/569-recognize-ee-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/570-decode-words-with-ee/authoring-package.json",
+      "content/courses/phonics-foundation/571-spell-words-with-ee/authoring-package.json",
+      "content/courses/phonics-foundation/572-ee-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/573-controlled-ee-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/574-controlled-ee-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/575-ee-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/576-targeted-ee-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/577-recognize-ee-ea-long-e-contrast/authoring-package.json",
+      "content/courses/phonics-foundation/578-decode-ee-ea-word-contrast/authoring-package.json",
+      "content/courses/phonics-foundation/579-ee-ea-spelling-and-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/580-vowel-team-cumulative-checkpoint/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -676,7 +696,12 @@
     "PF555-DIAG-01",
     "PF556-REASSESS-01",
     "PF559-DIAG-01",
-    "PF560-REASSESS-01"
+    "PF560-REASSESS-01",
+    "PF567-DIAG-01",
+    "PF568-REASSESS-01",
+    "PF575-DIAG-01",
+    "PF576-REASSESS-01",
+    "PF580-CUMULATIVE-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
@@ -1238,6 +1263,26 @@
     "content/courses/phonics-foundation/557-silent-letter-patterns-mixed-practice/authoring-package.json",
     "content/courses/phonics-foundation/558-silent-letter-patterns-connected-reading/authoring-package.json",
     "content/courses/phonics-foundation/559-silent-letter-patterns-fluency-diagnostic/authoring-package.json",
-    "content/courses/phonics-foundation/560-silent-letter-patterns-remediation-reassessment/authoring-package.json"
+    "content/courses/phonics-foundation/560-silent-letter-patterns-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/561-recognize-ai-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/562-decode-words-with-ai/authoring-package.json",
+    "content/courses/phonics-foundation/563-spell-words-with-ai/authoring-package.json",
+    "content/courses/phonics-foundation/564-ai-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/565-controlled-ai-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/566-controlled-ai-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/567-ai-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/568-targeted-ai-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/569-recognize-ee-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/570-decode-words-with-ee/authoring-package.json",
+    "content/courses/phonics-foundation/571-spell-words-with-ee/authoring-package.json",
+    "content/courses/phonics-foundation/572-ee-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/573-controlled-ee-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/574-controlled-ee-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/575-ee-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/576-targeted-ee-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/577-recognize-ee-ea-long-e-contrast/authoring-package.json",
+    "content/courses/phonics-foundation/578-decode-ee-ea-word-contrast/authoring-package.json",
+    "content/courses/phonics-foundation/579-ee-ea-spelling-and-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/580-vowel-team-cumulative-checkpoint/authoring-package.json"
   ]
 }
