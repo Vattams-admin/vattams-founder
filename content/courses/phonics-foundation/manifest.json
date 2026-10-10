@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 455,
-    "studyMaterials": 455,
-    "questionBank": 6815,
-    "assessments": 91
+    "lessons": 460,
+    "studyMaterials": 460,
+    "questionBank": 6890,
+    "assessments": 93
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -475,7 +475,12 @@
       "content/courses/phonics-foundation/452-decode-short-words-with-final-lk/authoring-package.json",
       "content/courses/phonics-foundation/453-spell-short-words-with-final-lk/authoring-package.json",
       "content/courses/phonics-foundation/454-final-lk-word-families-controlled-reading/authoring-package.json",
-      "content/courses/phonics-foundation/455-controlled-final-lk-sentences-comprehension/authoring-package.json"
+      "content/courses/phonics-foundation/455-controlled-final-lk-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/456-controlled-final-lk-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/457-final-lk-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/458-targeted-final-lk-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/459-recognize-silent-t-in-medial-stle/authoring-package.json",
+      "content/courses/phonics-foundation/460-decode-words-with-silent-t/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -546,7 +551,9 @@
     "PF441-DIAG-01",
     "PF442-REASSESS-01",
     "PF449-DIAG-01",
-    "PF450-REASSESS-01"
+    "PF450-REASSESS-01",
+    "PF457-DIAG-01",
+    "PF458-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
