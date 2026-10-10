@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-261",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "261-cr-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "initial-cr-rime-sorting-and-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Identify shared rimes in taught cr-words and familiar partner words.",
+      "Sort words by vowel-and-ending patterns rather than onset alone.",
+      "Decode every word fully after sorting.",
+      "Use controlled word groups to read a short, accurate line."
+    ],
+    "concepts": [
+      "A rime includes the vowel and the sounds that follow it.",
+      "Words can share cr but have different rimes.",
+      "Words with different onsets can share a rime.",
+      "Sorting helps reading only when the whole word is decoded."
+    ],
+    "definitions": [
+      {
+        "term": "rime",
+        "definition": "The vowel and sounds that follow it in a syllable."
+      },
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a rime, such as crab and grab (-ab)."
+      },
+      {
+        "term": "onset",
+        "definition": "The consonant or consonant blend before the vowel."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Compare crab and grab.",
+        "solution": "They share -ab but have different onsets."
+      },
+      {
+        "prompt": "Compare crib and rib.",
+        "solution": "They share -ib."
+      },
+      {
+        "prompt": "Compare crop and stop.",
+        "solution": "They share -op even though the onsets differ."
+      }
+    ],
+    "commonMistakes": [
+      "Grouping all cr-words together despite different rimes.",
+      "Sorting only by the first two letters.",
+      "Ignoring the ending consonant.",
+      "Guessing from rhyme without decoding the full word."
+    ],
+    "keyTakeaways": [
+      "Compare the vowel and ending to find a rime.",
+      "The same onset does not guarantee the same word family.",
+      "Different onsets can share a rime.",
+      "Decode every word after sorting."
+    ],
+    "revisionPoints": [
+      "crab and grab share -ab.",
+      "crib and rib share -ib.",
+      "crop and stop share -op.",
+      "Sort by rime, then read each whole word."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word shares -ab with crab?",
+        "answer": "grab"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word shares -ib with crib?",
+        "answer": "rib"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word shares -op with crop?",
+        "answer": "stop"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "What part forms the rime in crab?",
+        "answer": "-ab"
+      },
+      {
+        "id": "C2",
+        "prompt": "Do all cr-words belong to one rime family?",
+        "answer": "No, their vowels and endings can differ"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which pair has different onsets but the same rime?",
+        "answer": "crab and grab"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What rime do rib and crib share?",
+        "answer": "-ib"
+      },
+      {
+        "id": "A2",
+        "prompt": "When sorting words, what should you compare?",
+        "answer": "The vowel and ending"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which family includes crop, stop, and drop?",
+        "answer": "-op"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which pair shares an onset but not a rime?",
+        "answer": "crab and crib"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which controlled line has two words from the -ab family?",
+        "answer": "The crab can grab."
+      },
+      {
+        "id": "H3",
+        "prompt": "What is a good check after a word-family sort?",
+        "answer": "Decode each whole word aloud"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word shares the rime -ack with crack?",
+        "answer": "snack"
+      },
+      {
+        "id": "R2",
+        "prompt": "What does a word family help a reader notice?",
+        "answer": "A shared vowel-and-ending pattern"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which statement is accurate?",
+        "answer": "Words can share a rime and have different onsets"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "crab and grab share -ab.",
+      "crib and rib share -ib.",
+      "crop and stop share -op.",
+      "Sort by rime, then read each whole word."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "crab and grab share -ab."
+      },
+      {
+        "front": "Recall 2",
+        "back": "crib and rib share -ib."
+      },
+      {
+        "front": "Recall 3",
+        "back": "crop and stop share -op."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Sort by rime, then read each whole word."
+      }
+    ],
+    "formulaOrFactBank": [
+      "crab and grab share -ab.",
+      "crib and rib share -ib.",
+      "crop and stop share -op.",
+      "Sort by rime, then read each whole word."
+    ],
+    "mistakeBasedRevision": [
+      "Grouping all cr-words together despite different rimes.",
+      "Sorting only by the first two letters.",
+      "Ignoring the ending consonant.",
+      "Guessing from rhyme without decoding the full word."
+    ],
+    "weakTopicRevision": [
+      "If word-families is weak, revisit the worked examples, say the sound evidence aloud, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "sort-rimes-and-read-controlled-word-lines",
+      "name": "Sort rimes and read controlled word lines.",
+      "steps": [
+        "Listen to or read each target word carefully.",
+        "Say or map each sound in the correct order.",
+        "Complete the task and explain the sound or text evidence.",
+        "Reread or repeat the word to check accuracy."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-repair",
+      "name": "Find and repair a target-pattern error.",
+      "steps": [
+        "Review a word or sentence with one target-pattern error.",
+        "Identify the sound, spelling, or evidence that does not match.",
+        "Correct the item and explain the correction.",
+        "Try a fresh item without looking at the answer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Identify shared rimes in taught cr-words and familiar partner words.",
+    "Sort words by vowel-and-ending patterns rather than onset alone.",
+    "Decode every word fully after sorting.",
+    "Use controlled word groups to read a short, accurate line."
+  ],
+  "questions": [
+    {
+      "questionId": "PF261-Q01",
+      "question": "Which word shares -ab with crab?",
+      "options": [
+        "grab",
+        "crib",
+        "crop",
+        "crust"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q02",
+      "question": "Which word shares -ib with crib?",
+      "options": [
+        "grab",
+        "rib",
+        "crop",
+        "crack"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q03",
+      "question": "Which word shares -op with crop?",
+      "options": [
+        "crib",
+        "crab",
+        "stop",
+        "crust"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q04",
+      "question": "What part forms the rime in crab?",
+      "options": [
+        "cr-",
+        "cra-",
+        "c-r",
+        "-ab"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q05",
+      "question": "Do all cr-words belong to one rime family?",
+      "options": [
+        "No, their vowels and endings can differ",
+        "Yes, every cr-word rhymes",
+        "Only long words do",
+        "Only words with four letters do"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q06",
+      "question": "Which pair has different onsets but the same rime?",
+      "options": [
+        "crab and crib",
+        "crab and grab",
+        "crop and crack",
+        "crib and crust"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q07",
+      "question": "Which word shares -ib with crib?",
+      "options": [
+        "rib",
+        "crop",
+        "crab",
+        "crack"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q08",
+      "question": "When sorting words, what should you compare?",
+      "options": [
+        "Only the first letter",
+        "Only the number of letters",
+        "The picture colour",
+        "The vowel and ending"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q09",
+      "question": "Which family includes crop, stop, and drop?",
+      "options": [
+        "-op",
+        "-ab",
+        "-ib",
+        "-ust"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q10",
+      "question": "Which pair shares an onset but not a rime?",
+      "options": [
+        "crab and grab",
+        "crab and crib",
+        "crop and stop",
+        "crib and rib"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q11",
+      "question": "Which controlled line has two words from the -ab family?",
+      "options": [
+        "The crib is big.",
+        "The crop can stop.",
+        "The crab can grab.",
+        "The crust is crisp."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q12",
+      "question": "What is a good check after a word-family sort?",
+      "options": [
+        "Read only cr",
+        "Skip unfamiliar endings",
+        "Assume the words rhyme",
+        "Decode each whole word aloud"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q13",
+      "question": "Which word shares the rime -ack with crack?",
+      "options": [
+        "snack",
+        "crib",
+        "crop",
+        "crab"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q14",
+      "question": "What does a word family help a reader notice?",
+      "options": [
+        "That every word starts alike",
+        "A shared vowel-and-ending pattern",
+        "That endings can be ignored",
+        "That all words mean the same"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF261-Q15",
+      "question": "Which statement is accurate?",
+      "options": [
+        "Different onsets never rhyme",
+        "Every cr-word shares one rime",
+        "Words can share a rime and have different onsets",
+        "The onset includes the ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF261-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Grab shares the -ab rime with crab."
+    },
+    {
+      "questionId": "PF261-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "Rib and crib share -ib."
+    },
+    {
+      "questionId": "PF261-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "Stop and crop share -op."
+    },
+    {
+      "questionId": "PF261-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The rime is the vowel and ending, -ab."
+    },
+    {
+      "questionId": "PF261-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "A shared onset does not determine the rime."
+    },
+    {
+      "questionId": "PF261-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "Crab and grab share -ab."
+    },
+    {
+      "questionId": "PF261-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Rib and crib share the -ib rime."
+    },
+    {
+      "questionId": "PF261-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "The vowel and ending reveal the rime."
+    },
+    {
+      "questionId": "PF261-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Crop, stop, and drop share -op."
+    },
+    {
+      "questionId": "PF261-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "Crab and crib begin cr but have different rimes."
+    },
+    {
+      "questionId": "PF261-Q11",
+      "correctOptionIndex": 2,
+      "explanation": "Crab and grab share -ab."
+    },
+    {
+      "questionId": "PF261-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Whole-word decoding confirms the sort."
+    },
+    {
+      "questionId": "PF261-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Snack and crack share -ack."
+    },
+    {
+      "questionId": "PF261-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Word families highlight rime patterns."
+    },
+    {
+      "questionId": "PF261-Q15",
+      "correctOptionIndex": 2,
+      "explanation": "A shared rime can appear with different onsets."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-261-v1"
+  }
+}
