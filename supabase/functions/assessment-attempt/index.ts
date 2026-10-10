@@ -64,7 +64,8 @@ async function verifyFirebaseToken(authorization: string | null): Promise<{ uid:
   return { uid, token, claims: payload as Record<string, unknown> };
 }
 
-\nasync function canonicalSha256(value: unknown): Promise<string> {
+
+async function canonicalSha256(value: unknown): Promise<string> {
   const canonical = JSON.stringify(value);
   const bytes = new TextEncoder().encode(canonical);
   const digest = await crypto.subtle.digest("SHA-256", bytes);
