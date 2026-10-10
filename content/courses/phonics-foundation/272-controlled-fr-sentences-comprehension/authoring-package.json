@@ -134,8 +134,8 @@
       },
       {
         "id": "H2",
-        "prompt": "What does “The frog is with the dog” tell us?",
-        "answer": "Which animal is with the frog"
+        "prompt": "What relationship does “The frog is with the dog” describe?",
+        "answer": "The frog and dog are together"
       },
       {
         "id": "H3",
@@ -365,12 +365,12 @@
     },
     {
       "questionId": "PF272-Q11",
-      "question": "What does “The frog is with the dog” tell us?",
+      "question": "What relationship does “The frog is with the dog” describe?",
       "options": [
-        "Who fed the dog",
-        "How old the frog is",
-        "Which animal is with the frog",
-        "What the dog ate"
+        "The frog is alone",
+        "The fish is red",
+        "The frog and dog are together",
+        "The dog is in a tub"
       ],
       "difficulty": "comprehension",
       "marks": 1,
@@ -483,7 +483,7 @@
     {
       "questionId": "PF272-Q11",
       "correctOptionIndex": 2,
-      "explanation": "The sentence identifies the dog as the frog's companion."
+      "explanation": "The sentence says the frog is with the dog, so they are together."
     },
     {
       "questionId": "PF272-Q12",
