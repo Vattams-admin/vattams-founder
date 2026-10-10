@@ -5,6 +5,11 @@ on:
   push:
     paths:
       - 'android/**'
+      - 'src/**'
+      - 'public/**'
+      - 'config/**'
+      - 'content/**'
+      - 'data/**'
       - 'capacitor.config.ts'
       - 'package.json'
       - 'package-lock.json'
