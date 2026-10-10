@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-163",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "163-controlled-sh-sentences-comprehension",
+    "topic": "sentence-reading",
+    "subtopic": "sh-sentences-literal-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read short controlled sentences containing taught sh-words.",
+      "Answer literal questions using details stated in the sentence.",
+      "Reread when a decoded word does not fit the meaning.",
+      "Identify sh-words and explain how their sounds support accurate reading."
+    ],
+    "concepts": [
+      "A sentence expresses a complete idea.",
+      "Accurate decoding supports understanding.",
+      "Literal answers should match information stated in the text.",
+      "Rereading allows readers to check both words and meaning."
+    ],
+    "definitions": [
+      {
+        "term": "literal comprehension",
+        "definition": "Understanding information directly stated in a text."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A word or detail from the text that supports an answer."
+      },
+      {
+        "term": "rereading",
+        "definition": "Reading the text again to check accuracy and meaning."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Sam has a fish.",
+        "solution": "The sentence says Sam has a fish."
+      },
+      {
+        "prompt": "The fish is in a dish.",
+        "solution": "The dish is where the fish is placed in the sentence."
+      },
+      {
+        "prompt": "Sam can shut the lid.",
+        "solution": "The action word is shut."
+      }
+    ],
+    "commonMistakes": [
+      "Answering from memory without rereading.",
+      "Confusing fish with dish because they share -ish.",
+      "Skipping small words such as the and a.",
+      "Reading a sentence accurately but not checking its meaning."
+    ],
+    "keyTakeaways": [
+      "Decode each word before answering.",
+      "Reread and point to the evidence.",
+      "Check the vowel and ending in sh-words.",
+      "Use the sentence, not a guess, to support an answer."
+    ],
+    "revisionPoints": [
+      "Sam has a fish.",
+      "The fish is in a dish.",
+      "Sam can shut the lid.",
+      "Sam can wish for a ship."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "In “Sam has a fish,” what does Sam have?",
+        "answer": "A fish"
+      },
+      {
+        "id": "B2",
+        "prompt": "In “The fish is in a dish,” where is the fish?",
+        "answer": "In a dish"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word in “Sam can shut the lid” begins with sh?",
+        "answer": "shut"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which sentence tells what Sam has?",
+        "answer": "Sam has a fish."
+      },
+      {
+        "id": "C2",
+        "prompt": "Which pair of words rhymes in “The fish is in a dish”?",
+        "answer": "fish and dish"
+      },
+      {
+        "id": "C3",
+        "prompt": "What should a reader do before answering a text question?",
+        "answer": "Reread and find the supporting words"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word contains the /sh/ sound at the end?",
+        "answer": "fish"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word differs from fish by its vowel?",
+        "answer": "cash"
+      },
+      {
+        "id": "A3",
+        "prompt": "What does “Sam can shut the lid” tell us?",
+        "answer": "Sam can close the lid"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which sentence contains both a fish and a dish?",
+        "answer": "The fish is in a dish."
+      },
+      {
+        "id": "H2",
+        "prompt": "If a learner reads dish as dig, what should be checked?",
+        "answer": "The final digraph sh"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which word begins with the same sound as shut?",
+        "answer": "ship"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What is the best evidence that Sam can close something?",
+        "answer": "Sam can shut the lid."
+      },
+      {
+        "id": "R2",
+        "prompt": "Why does accurate decoding matter in these sentences?",
+        "answer": "A changed sound can change a word and its meaning"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which strategy helps when a sentence does not make sense?",
+        "answer": "Reread each word and check the sounds"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Sam has a fish.",
+      "The fish is in a dish.",
+      "Sam can shut the lid.",
+      "Sam can wish for a ship."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Sam has a fish."
+      },
+      {
+        "front": "Recall 2",
+        "back": "The fish is in a dish."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Sam can shut the lid."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Sam can wish for a ship."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Sam has a fish.",
+      "The fish is in a dish.",
+      "Sam can shut the lid.",
+      "Sam can wish for a ship."
+    ],
+    "mistakeBasedRevision": [
+      "Answering from memory without rereading.",
+      "Confusing fish with dish because they share -ish.",
+      "Skipping small words such as the and a.",
+      "Reading a sentence accurately but not checking its meaning."
+    ],
+    "weakTopicRevision": [
+      "If sentence reading accuracy is below target, model the specific sound or reading step, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "sentence-reading-comprehension",
+      "name": "Read controlled sh-sentences and answer literal questions.",
+      "steps": [
+        "Read each sentence aloud while tracking each word.",
+        "Reread the sentence before answering.",
+        "Point to the words that support the answer.",
+        "Correct a sound error and explain how meaning is restored."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "contrast-and-self-check",
+      "name": "Contrast close examples and explain the evidence.",
+      "steps": [
+        "Compare two similar words.",
+        "Name the sound or rime that changes.",
+        "Use the written graphemes to justify the answer.",
+        "Read the words or sentence again to confirm."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read at least 4 of 5 controlled sentences accurately.",
+    "Answer at least 4 of 5 literal questions using text evidence.",
+    "Reread and correct a sound error that changes meaning."
+  ],
+  "questions": [
+    {
+      "questionId": "PF163-Q01",
+      "question": "In “Sam has a fish,” what does Sam have?",
+      "options": [
+        "A fish",
+        "A ship",
+        "A dish",
+        "A shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF163-Q02",
+      "question": "In “The fish is in a dish,” where is the fish?",
+      "options": [
+        "In a dish",
+        "On a ship",
+        "In a shop",
+        "Under a shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF163-Q03",
+      "question": "Which word in “Sam can shut the lid” begins with sh?",
+      "options": [
+        "shut",
+        "Sam",
+        "can",
+        "lid"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF163-Q04",
+      "question": "Which sentence tells what Sam has?",
+      "options": [
+        "Sam has a fish.",
+        "The fish is in a dish.",
+        "Sam can shut the lid.",
+        "The lid is shut."
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF163-Q05",
+      "question": "Which pair of words rhymes in “The fish is in a dish”?",
+      "options": [
+        "fish and dish",
+        "fish and is",
+        "in and dish",
+        "the and fish"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF163-Q06",
+      "question": "What should a reader do before answering a text question?",
+      "options": [
+        "Reread and find the supporting words",
+        "Guess from memory",
+        "Skip the text",
+        "Choose the longest answer"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF163-Q07",
+      "question": "Which word contains the /sh/ sound at the end?",
+      "options": [
+        "fish",
+        "Sam",
+        "lid",
+        "can"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF163-Q08",
+      "question": "Which word differs from fish by its vowel?",
+      "options": [
+        "cash",
+        "dish",
+        "wish",
+        "fish"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF163-Q09",
+      "question": "What does “Sam can shut the lid” tell us?",
+      "options": [
+        "Sam can close the lid",
+        "Sam has a ship",
+        "The fish can read",
+        "The lid is a dish"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF163-Q10",
+      "question": "Which sentence contains both a fish and a dish?",
+      "options": [
+        "The fish is in a dish.",
+        "Sam has a ship.",
+        "The lid is shut.",
+        "A shell is on sand."
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF163-Q11",
+      "question": "If a learner reads dish as dig, what should be checked?",
+      "options": [
+        "The final digraph sh",
+        "Only the first letter",
+        "The spaces",
+        "The capital S"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF163-Q12",
+      "question": "Which word begins with the same sound as shut?",
+      "options": [
+        "ship",
+        "Sam",
+        "lid",
+        "fish"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF163-Q13",
+      "question": "What is the best evidence that Sam can close something?",
+      "options": [
+        "Sam can shut the lid.",
+        "Sam has a fish.",
+        "The fish is in a dish.",
+        "The dish is big."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF163-Q14",
+      "question": "Why does accurate decoding matter in these sentences?",
+      "options": [
+        "A changed sound can change a word and its meaning",
+        "Every word means the same thing",
+        "Only punctuation matters",
+        "Readers should skip short words"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF163-Q15",
+      "question": "Which strategy helps when a sentence does not make sense?",
+      "options": [
+        "Reread each word and check the sounds",
+        "Ignore the ending",
+        "Guess the next word",
+        "Skip the sentence"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF163-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence says Sam has a fish."
+    },
+    {
+      "questionId": "PF163-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence states that the fish is in a dish."
+    },
+    {
+      "questionId": "PF163-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Shut begins with sh."
+    },
+    {
+      "questionId": "PF163-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The first sentence states what Sam has."
+    },
+    {
+      "questionId": "PF163-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Fish and dish share -ish."
+    },
+    {
+      "questionId": "PF163-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Text evidence supports the answer."
+    },
+    {
+      "questionId": "PF163-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Fish ends in sh."
+    },
+    {
+      "questionId": "PF163-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Cash uses short a; fish uses short i."
+    },
+    {
+      "questionId": "PF163-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Shut means close in this sentence."
+    },
+    {
+      "questionId": "PF163-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence names both fish and dish."
+    },
+    {
+      "questionId": "PF163-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Dish ends in sh, not g."
+    },
+    {
+      "questionId": "PF163-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "Ship and shut both begin with /sh/."
+    },
+    {
+      "questionId": "PF163-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first sentence directly states the action."
+    },
+    {
+      "questionId": "PF163-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Sound substitutions can change the meaning."
+    },
+    {
+      "questionId": "PF163-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Rereading helps repair decoding and meaning."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-163-v1"
+  }
+}
