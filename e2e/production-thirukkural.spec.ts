@@ -5,6 +5,8 @@ import { getAuth } from 'firebase-admin/auth'
 const competitionSlug = 'thirukkural-mastery-championship'
 const competitionCourseId = 'DNWt3cPE4ZSJG90CTC1e'
 
+const originalCompetitionAccess = new Map<string, Record<string, unknown>>()
+
 async function setCompetitionCacheAccess(email: string, active: boolean) {
   const serviceAccountJson = process.env.FIREBASE_SERVICE_ACCOUNT_JSON
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
@@ -14,20 +16,34 @@ async function setCompetitionCacheAccess(email: string, active: boolean) {
   }
   const app = getApps()[0] ?? initializeApp({ credential: cert(JSON.parse(serviceAccountJson)) })
   const user = await getAuth(app).getUserByEmail(email)
-  const response = await fetch(
-    `${supabaseUrl}/rest/v1/competition_access_cache?student_id=eq.${encodeURIComponent(user.uid)}&course_id=eq.${encodeURIComponent(competitionCourseId)}`,
-    {
-      method: 'PATCH',
-      headers: {
-        apikey: serviceRoleKey,
-        Authorization: `Bearer ${serviceRoleKey}`,
-        'Content-Type': 'application/json',
-        Prefer: 'return=minimal',
-      },
-      body: JSON.stringify({ enrolment_active: active, checked_at: new Date().toISOString() }),
-    },
-  )
-  if (!response.ok) throw new Error(`Unable to update isolated E2E competition access cache: HTTP ${response.status}: ${(await response.text()).slice(0,500)}`)
+  const endpoint = `${supabaseUrl}/rest/v1/competition_access_cache?student_id=eq.${encodeURIComponent(user.uid)}&course_id=eq.${encodeURIComponent(competitionCourseId)}`
+  const headers = {
+    apikey: serviceRoleKey,
+    Authorization: `Bearer ${serviceRoleKey}`,
+    'Content-Type': 'application/json',
+    Prefer: 'return=representation',
+  }
+
+  if (!active) {
+    const read = await fetch(endpoint, { headers })
+    if (!read.ok) throw new Error(`Unable to read isolated E2E access cache: HTTP ${read.status}: ${(await read.text()).slice(0,500)}`)
+    const rows = await read.json() as Record<string, unknown>[]
+    if (rows.length !== 1) throw new Error(`Expected one isolated E2E access row; found ${rows.length}`)
+    originalCompetitionAccess.set(email, rows[0])
+    const deleted = await fetch(endpoint, { method: 'DELETE', headers })
+    if (!deleted.ok) throw new Error(`Unable to revoke isolated E2E cache row: HTTP ${deleted.status}: ${(await deleted.text()).slice(0,500)}`)
+    return
+  }
+
+  const original = originalCompetitionAccess.get(email)
+  if (!original) throw new Error('Cannot restore E2E access cache because its original row was not captured.')
+  const restored = await fetch(`${supabaseUrl}/rest/v1/competition_access_cache?on_conflict=student_id,course_id`, {
+    method: 'POST',
+    headers: { ...headers, Prefer: 'resolution=merge-duplicates,return=minimal' },
+    body: JSON.stringify(original),
+  })
+  if (!restored.ok) throw new Error(`Unable to restore isolated E2E access cache: HTTP ${restored.status}: ${(await restored.text()).slice(0,500)}`)
+  originalCompetitionAccess.delete(email)
 }
 
 test.describe('production Thirukkural smoke', () => {
