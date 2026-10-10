@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 188,
-    "studyMaterials": 188,
-    "questionBank": 2810,
-    "assessments": 46
+    "lessons": 193,
+    "studyMaterials": 193,
+    "questionBank": 2885,
+    "assessments": 47
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -208,7 +208,12 @@
       "content/courses/phonics-foundation/185-spell-wh-words/authoring-package.json",
       "content/courses/phonics-foundation/186-wh-word-families-controlled-reading/authoring-package.json",
       "content/courses/phonics-foundation/187-controlled-wh-sentences-comprehension/authoring-package.json",
-      "content/courses/phonics-foundation/188-wh-fluency-consolidation-diagnostic/authoring-package.json"
+      "content/courses/phonics-foundation/188-wh-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/189-targeted-wh-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/190-hear-and-identify-final-digraph-ng/authoring-package.json",
+      "content/courses/phonics-foundation/191-decode-words-with-ng/authoring-package.json",
+      "content/courses/phonics-foundation/192-spell-words-with-ng/authoring-package.json",
+      "content/courses/phonics-foundation/193-ng-word-families-controlled-reading/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -241,7 +246,8 @@
     "PF174-REASSESS-01",
     "PF181-DIAG-01",
     "PF182-REASSESS-01",
-    "PF188-DIAG-01"
+    "PF188-DIAG-01",
+    "PF189-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
