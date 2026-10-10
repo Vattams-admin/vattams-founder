@@ -1,0 +1,511 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-354",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "354-targeted-sm-remediation-reassessment",
+    "topic": "targeted-remediation",
+    "subtopic": "repair-sm-onset-errors-and-check-transfer-with-fresh-items",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Use item-level evidence to identify a specific sm decoding or spelling gap.",
+      "Repair omission or order errors in taught sm-words.",
+      "Apply the corrected skill to fresh taught words.",
+      "Use reassessment evidence to decide whether more practice is needed."
+    ],
+    "definitions": [
+      {
+        "term": "diagnostic",
+        "definition": "An assessment used to identify strengths and learning needs."
+      },
+      {
+        "term": "reassessment",
+        "definition": "A fresh check to see whether a taught skill has improved."
+      },
+      {
+        "term": "self-correction",
+        "definition": "Noticing an error and repairing it by checking the word again."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "A learner reads smell as sell.",
+        "solution": "Identify the omitted /m/, model sm, then try a fresh word."
+      },
+      {
+        "prompt": "A fresh item is still incorrect.",
+        "solution": "Reteach the specific gap and reassess with another new item."
+      },
+      {
+        "prompt": "When can the learner advance?",
+        "solution": "When fresh evidence meets the mastery criterion."
+      }
+    ],
+    "commonMistakes": [
+      "Repeating a memorized item instead of checking transfer.",
+      "Omitting m from sm.",
+      "Choosing unrelated practice.",
+      "Marking mastery without fresh evidence."
+    ],
+    "keyTakeaways": [
+      "Target the error shown by evidence.",
+      "Model the sm onset /s/ then /m/.",
+      "Practise, then use fresh items.",
+      "Advance only after the mastery check."
+    ],
+    "revisionPoints": [
+      "Target the error shown by evidence.",
+      "Model the sm onset /s/ then /m/.",
+      "Practise, then use fresh items.",
+      "Advance only after the mastery check."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "If smell is read as sell, which sound is missing?",
+        "answer": "/m/"
+      },
+      {
+        "id": "B2",
+        "prompt": "If small is written as sall, which letter is missing?",
+        "answer": "m"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which onset is correct?",
+        "answer": "/s/ then /m/"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "What should focused practice do first?",
+        "answer": "model the specific error"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which word is a fresh sm example?",
+        "answer": "smock"
+      },
+      {
+        "id": "C3",
+        "prompt": "What checks transfer?",
+        "answer": "a fresh item using the same skill"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "After guided practice, what is next?",
+        "answer": "try a new item independently"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which spelling is correct?",
+        "answer": "small"
+      },
+      {
+        "id": "A3",
+        "prompt": "What if the fresh check still shows an error?",
+        "answer": "reteach the specific gap and reassess"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which word ends with l?",
+        "answer": "smell"
+      },
+      {
+        "id": "H2",
+        "prompt": "Why keep the answer key separate during reassessment?",
+        "answer": "to measure independent responses"
+      },
+      {
+        "id": "H3",
+        "prompt": "What should a useful record include?",
+        "answer": "skill, fresh result and next step"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word does not begin with sm?",
+        "answer": "slip"
+      },
+      {
+        "id": "R2",
+        "prompt": "What is self-correction?",
+        "answer": "noticing and repairing an error using evidence"
+      },
+      {
+        "id": "R3",
+        "prompt": "What evidence is needed before closing the remediation cycle?",
+        "answer": "A fresh correct response for the target skill."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Target the error shown by evidence.",
+      "Model the sm onset /s/ then /m/.",
+      "Practise, then use fresh items.",
+      "Advance only after the mastery check."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Target the error shown by evidence."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Model the sm onset /s/ then /m/."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Practise, then use fresh items."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Advance only after the mastery check."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Target the error shown by evidence.",
+      "Model the sm onset /s/ then /m/.",
+      "Practise, then use fresh items.",
+      "Advance only after the mastery check."
+    ],
+    "mistakeBasedRevision": [
+      "Repeating a memorized item instead of checking transfer.",
+      "Omitting m from sm.",
+      "Choosing unrelated practice.",
+      "Marking mastery without fresh evidence."
+    ],
+    "weakTopicRevision": [
+      "If targeted sm remediation and reassessment is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-practice-and-explain",
+      "name": "Model, practise, explain, and check.",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete one example with guidance and explain the evidence.",
+        "Try a new example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with a target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Repair the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Use item-level evidence to identify a specific sm decoding or spelling gap.",
+    "Repair omission or order errors in taught sm-words.",
+    "Apply the corrected skill to fresh taught words.",
+    "Use reassessment evidence to decide whether more practice is needed."
+  ],
+  "questions": [
+    {
+      "questionId": "PF354-Q01",
+      "question": "If smell is read as sell, which sound is missing?",
+      "options": [
+        "/m/",
+        "/s/",
+        "/e/",
+        "/l/"
+      ],
+      "difficulty": "error_analysis",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q02",
+      "question": "If small is written as sall, which letter is missing?",
+      "options": [
+        "s",
+        "a",
+        "l",
+        "m"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q03",
+      "question": "Which onset is correct?",
+      "options": [
+        "/s/ then /l/",
+        "/t/ then /m/",
+        "/s/ then /m/",
+        "/m/ then /s/"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q04",
+      "question": "What should focused practice do first?",
+      "options": [
+        "give only a score",
+        "model the specific error",
+        "repeat a random list",
+        "skip the error"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q05",
+      "question": "Which word is a fresh sm example?",
+      "options": [
+        "smock",
+        "skit",
+        "slip",
+        "swim"
+      ],
+      "difficulty": "transfer",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q06",
+      "question": "What checks transfer?",
+      "options": [
+        "the same memorized question only",
+        "a random unrelated task",
+        "guessing",
+        "a fresh item using the same skill"
+      ],
+      "difficulty": "assessment",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q07",
+      "question": "After guided practice, what is next?",
+      "options": [
+        "stop checking",
+        "change the skill",
+        "try a new item independently",
+        "repeat the model forever"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q08",
+      "question": "Which spelling is correct?",
+      "options": [
+        "sall",
+        "small",
+        "saml",
+        "smallm"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q09",
+      "question": "What if the fresh check still shows an error?",
+      "options": [
+        "reteach the specific gap and reassess",
+        "mark mastery anyway",
+        "remove feedback",
+        "switch to an unrelated sound"
+      ],
+      "difficulty": "remediation",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q10",
+      "question": "Which word ends with l?",
+      "options": [
+        "smock",
+        "smash",
+        "smog",
+        "smell"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q11",
+      "question": "Why keep the answer key separate during reassessment?",
+      "options": [
+        "to make words harder",
+        "to avoid explanations",
+        "to measure independent responses",
+        "to hide the learning goal"
+      ],
+      "difficulty": "assessment",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q12",
+      "question": "What should a useful record include?",
+      "options": [
+        "unrelated details",
+        "skill, fresh result and next step",
+        "only time taken",
+        "a guessed label"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q13",
+      "question": "Which word does not begin with sm?",
+      "options": [
+        "slip",
+        "small",
+        "smell",
+        "smock"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q14",
+      "question": "What is self-correction?",
+      "options": [
+        "hiding an error",
+        "choosing randomly",
+        "skipping hard words",
+        "noticing and repairing an error using evidence"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF354-Q15",
+      "question": "What evidence is needed before closing the remediation cycle?",
+      "options": [
+        "the timer ending",
+        "no check at all",
+        "a fresh correct response for the target skill",
+        "one memorized answer"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF354-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The /m/ sound is missing from the onset."
+    },
+    {
+      "questionId": "PF354-Q02",
+      "correctOptionIndex": 3,
+      "explanation": "The m represents the second onset sound."
+    },
+    {
+      "questionId": "PF354-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "The sm onset keeps /s/ before /m/."
+    },
+    {
+      "questionId": "PF354-Q04",
+      "correctOptionIndex": 1,
+      "explanation": "Practice should address the observed gap."
+    },
+    {
+      "questionId": "PF354-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Smock begins with sm."
+    },
+    {
+      "questionId": "PF354-Q06",
+      "correctOptionIndex": 3,
+      "explanation": "Fresh items show whether learning generalizes."
+    },
+    {
+      "questionId": "PF354-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Independent fresh practice checks learning."
+    },
+    {
+      "questionId": "PF354-Q08",
+      "correctOptionIndex": 1,
+      "explanation": "Small represents the taught sounds in order."
+    },
+    {
+      "questionId": "PF354-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Next instruction should respond to evidence."
+    },
+    {
+      "questionId": "PF354-Q10",
+      "correctOptionIndex": 3,
+      "explanation": "Smell ends with l."
+    },
+    {
+      "questionId": "PF354-Q11",
+      "correctOptionIndex": 2,
+      "explanation": "Independent responses provide useful evidence."
+    },
+    {
+      "questionId": "PF354-Q12",
+      "correctOptionIndex": 1,
+      "explanation": "The record connects evidence to instruction."
+    },
+    {
+      "questionId": "PF354-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Slip begins with sl."
+    },
+    {
+      "questionId": "PF354-Q14",
+      "correctOptionIndex": 3,
+      "explanation": "Self-correction checks print and sound."
+    },
+    {
+      "questionId": "PF354-Q15",
+      "correctOptionIndex": 2,
+      "explanation": "Fresh evidence demonstrates transfer."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-354-v1"
+  }
+}
