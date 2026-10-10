@@ -56,3 +56,11 @@ jobs:
         run: npm run thirukkural:production-gate
       - name: Run cross-pillar content validators
         run: npm run academia:content:quality-gates
+      - name: Run assessment lifecycle and security contract tests
+        run: |
+          npm run content:assessment:attempt:lifecycle:test
+          npm run content:assessment:result:isolation:test
+          npm run content:assessment:answer:integrity:test
+          npm run content:assessment:retry:test
+          npm run content:assessment:review:payload:test
+          npm run content:assessment:history:test
