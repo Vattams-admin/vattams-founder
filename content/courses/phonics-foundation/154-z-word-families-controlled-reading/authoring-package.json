@@ -1,0 +1,477 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-154",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "154-z-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "z-cvc-rimes",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Group z-initial CVC words by shared vowel-plus-ending rimes.",
+      "Read zip/sip, zap/map, zig/big, zag/bag, and zen/pen contrasts accurately.",
+      "Explain how an onset can change while the rime stays the same.",
+      "Decode each word rather than guessing from its family."
+    ],
+    "concepts": [
+      "The onset is the consonant sound before the vowel.",
+      "The rime includes the vowel and the sounds after it.",
+      "Words can share a rime without sharing the same initial sound.",
+      "A family pattern supports decoding but does not replace checking every grapheme."
+    ],
+    "definitions": [
+      {
+        "term": "onset",
+        "definition": "The consonant sound or sounds before the vowel."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and the sounds that follow it."
+      },
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a rime pattern."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "zip and sip",
+        "solution": "Both share -ip; the onset changes from /z/ to /s/."
+      },
+      {
+        "prompt": "zap and map",
+        "solution": "Both share -ap; only the onset changes."
+      },
+      {
+        "prompt": "zig and big",
+        "solution": "Both share -ig; the first consonant distinguishes the words."
+      }
+    ],
+    "commonMistakes": [
+      "Grouping every z-word together even when the rime differs.",
+      "Ignoring the vowel and sorting by final consonant only.",
+      "Assuming similar spelling means identical onset sounds.",
+      "Guessing a word from the family without blending it."
+    ],
+    "keyTakeaways": [
+      "Listen for the vowel and ending together.",
+      "Name the onset separately from the rime.",
+      "Read each word after sorting.",
+      "Check all graphemes before confirming the word."
+    ],
+    "revisionPoints": [
+      "-ip: zip, sip.",
+      "-ap: zap, map, cap.",
+      "-ig: zig, big, dig.",
+      "-ag: zag, bag, tag.",
+      "-en: zen, pen, ten."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which pair shares -ip?",
+        "answer": "zip and sip"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word shares -ap with zap?",
+        "answer": "map"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Do zip and zap share a rime?",
+        "answer": "No; zip has -ip and zap has -ap."
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What changes between zig and big?",
+        "answer": "The onset changes while -ig stays the same."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Why must a learner still decode each word?",
+        "answer": "The onset and rime must both match the written word."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Identify the target sound, decode or segment the word, and explain how you checked the result.",
+        "answer": "Use phoneme-level evidence and reread the word or sentence."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "-ip: zip, sip.",
+      "-ap: zap, map, cap.",
+      "-ig: zig, big, dig.",
+      "-ag: zag, bag, tag."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "-ip: zip, sip."
+      },
+      {
+        "front": "Recall 2",
+        "back": "-ap: zap, map, cap."
+      },
+      {
+        "front": "Recall 3",
+        "back": "-ig: zig, big, dig."
+      },
+      {
+        "front": "Recall 4",
+        "back": "-ag: zag, bag, tag."
+      },
+      {
+        "front": "Recall 5",
+        "back": "-en: zen, pen, ten."
+      }
+    ],
+    "formulaOrFactBank": [
+      "-ip: zip, sip.",
+      "-ap: zap, map, cap.",
+      "-ig: zig, big, dig.",
+      "-ag: zag, bag, tag.",
+      "-en: zen, pen, ten."
+    ],
+    "mistakeBasedRevision": [
+      "Grouping every z-word together even when the rime differs.",
+      "Ignoring the vowel and sorting by final consonant only.",
+      "Assuming similar spelling means identical onset sounds.",
+      "Guessing a word from the family without blending it."
+    ],
+    "weakTopicRevision": [
+      "If word-families accuracy is below target, isolate the weak sound or reading step, model it, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "word-family-sort",
+      "name": "Sort the words zip, sip, zap, map, zig, big, zag, bag, zen, and pen by rime.",
+      "steps": [
+        "Read each word aloud.",
+        "Underline the vowel and final sound.",
+        "Group words with the same rime.",
+        "Read each group again and explain the shared pattern."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "onset-substitution",
+      "name": "Build new words by changing only the onset.",
+      "steps": [
+        "Start with map.",
+        "Change /m/ to /z/ to read zap.",
+        "Keep -ap fixed while reading both words.",
+        "Explain which sound changed and which stayed."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Sort at least 8 of 10 words by rime accurately.",
+    "Distinguish onset from rime in a CVC word.",
+    "Decode the complete word after sorting."
+  ],
+  "questions": [
+    {
+      "questionId": "PF154-Q01",
+      "question": "Which pair shares -ip?",
+      "options": [
+        "zip and sip",
+        "zip and zap",
+        "zip and zen",
+        "zip and zag"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q02",
+      "question": "Which word shares -ap with zap?",
+      "options": [
+        "map",
+        "zip",
+        "zig",
+        "zen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q03",
+      "question": "Which word belongs to the -ig family?",
+      "options": [
+        "zig",
+        "zap",
+        "zip",
+        "zen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q04",
+      "question": "Which pair shares -ag?",
+      "options": [
+        "zag and bag",
+        "zag and zip",
+        "zag and zen",
+        "zag and zap"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q05",
+      "question": "Which word shares -en with zen?",
+      "options": [
+        "pen",
+        "zip",
+        "map",
+        "zag"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q06",
+      "question": "Do zip and zap share the same rime?",
+      "options": [
+        "No; -ip and -ap differ",
+        "Yes; both begin with z",
+        "Yes; both have three letters",
+        "No; one has no vowel"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q07",
+      "question": "What is the onset in zig?",
+      "options": [
+        "/z/",
+        "/i/",
+        "/g/",
+        "/ig/"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q08",
+      "question": "What is the rime in zap?",
+      "options": [
+        "/ap/",
+        "/z/",
+        "/za/",
+        "/p/"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q09",
+      "question": "Which word does NOT belong in an -ip group?",
+      "options": [
+        "zap",
+        "zip",
+        "sip",
+        "dip"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q10",
+      "question": "Which set contains only -ag words?",
+      "options": [
+        "zag, bag, tag",
+        "zag, zip, zen",
+        "bag, big, zag",
+        "tag, ten, zip"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q11",
+      "question": "Which word family is shown by zig and big?",
+      "options": [
+        "-ig",
+        "-ap",
+        "-en",
+        "-ip"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q12",
+      "question": "How can map become zap while keeping the rime?",
+      "options": [
+        "Change the onset from /m/ to /z/",
+        "Change the vowel from /a/ to /i/",
+        "Change final /p/ to /g/",
+        "Remove the vowel"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF154-Q13",
+      "question": "Which word shares the rime in pen?",
+      "options": [
+        "zen",
+        "zap",
+        "zip",
+        "zag"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF154-Q14",
+      "question": "Why is sorting only by initial z not enough?",
+      "options": [
+        "The vowel and final sound can differ",
+        "Every z-word has the same rime",
+        "The vowel is silent in all CVC words",
+        "The final sound never matters"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF154-Q15",
+      "question": "A learner groups zig with zap because both start with z. What should be reviewed?",
+      "options": [
+        "Sort by vowel-plus-ending rime",
+        "Ignore the vowel",
+        "Sort only by word length",
+        "Read only the first letter"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF154-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Zip and sip share the rime -ip."
+    },
+    {
+      "questionId": "PF154-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "Map and zap share -ap."
+    },
+    {
+      "questionId": "PF154-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Zig contains -ig."
+    },
+    {
+      "questionId": "PF154-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Zag and bag share -ag."
+    },
+    {
+      "questionId": "PF154-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Pen and zen share -en."
+    },
+    {
+      "questionId": "PF154-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The medial vowel and ending differ."
+    },
+    {
+      "questionId": "PF154-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The onset is the initial consonant /z/."
+    },
+    {
+      "questionId": "PF154-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The rime includes /a/ and final /p/."
+    },
+    {
+      "questionId": "PF154-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Zap ends in -ap, not -ip."
+    },
+    {
+      "questionId": "PF154-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "Zag, bag, and tag share -ag."
+    },
+    {
+      "questionId": "PF154-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Zig and big share -ig."
+    },
+    {
+      "questionId": "PF154-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "Only the initial sound changes."
+    },
+    {
+      "questionId": "PF154-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Zen and pen share -en."
+    },
+    {
+      "questionId": "PF154-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Z-initial words can belong to different rime families."
+    },
+    {
+      "questionId": "PF154-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Zig has -ig; zap has -ap."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-154-v1"
+  }
+}
