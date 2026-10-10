@@ -80,12 +80,35 @@ test.describe('production Thirukkural authenticated smoke', () => {
         response => response.url().includes('/functions/v1/competition-mock-attempt') && response.request().method() === 'POST',
         { timeout: 20_000 },
       )
-      await pageA.getByRole('button', { name: /Start Mock Test/i }).click()
+      const questionContentRequestA = pageA.waitForRequest(
+        request => request.url().includes('/functions/v1/competition-question-content') && request.method() === 'POST',
+        { timeout: 20_000 },
+      )
+      await pageA.getByRole('button', { name: /Start Mock Test|Resume Mock Test/i }).click()
       const startA = await (await startAResponse).json()
+      const requestA = await questionContentRequestA
+      const authorizationA = requestA.headers().authorization
       const attemptId = startA?.attempt_id
       const questionIds = startA?.question_ids
-      if (typeof attemptId !== 'string' || !Array.isArray(questionIds) || questionIds.length !== 30) {
+      if (typeof attemptId !== 'string' || !Array.isArray(questionIds) || questionIds.length !== 30 || !authorizationA) {
         throw new Error(`Student A could not start a valid 30-question mock attempt: ${JSON.stringify(startA)}`)
+      }
+
+      const ownContentResponse = await pageA.request.post(`${process.env.SUPABASE_URL}/functions/v1/competition-question-content`, {
+        headers: {
+          apikey: process.env.SUPABASE_ANON_KEY!,
+          Authorization: authorizationA,
+          'Content-Type': 'application/json',
+        },
+        data: { course_id: 'DNWt3cPE4ZSJG90CTC1e', attempt_id: attemptId, question_ids: questionIds },
+      })
+      expect(ownContentResponse.status()).toBe(200)
+      const ownContent = await ownContentResponse.json()
+      expect(ownContent.questions).toHaveLength(30)
+      for (const question of ownContent.questions) {
+        expect(question).not.toHaveProperty('answer')
+        expect(question).not.toHaveProperty('correct_option_index')
+        expect(question).not.toHaveProperty('explanation')
       }
 
       await loginAs(pageB, emailB, passwordB)
@@ -94,7 +117,7 @@ test.describe('production Thirukkural authenticated smoke', () => {
         request => request.url().includes('/functions/v1/competition-mock-attempt') && request.method() === 'POST',
         { timeout: 20_000 },
       )
-      await pageB.getByRole('button', { name: /Start Mock Test/i }).click()
+      await pageB.getByRole('button', { name: /Start Mock Test|Resume Mock Test/i }).click()
       const requestB = await startBRequest
       const authorizationB = requestB.headers().authorization
       if (!authorizationB) throw new Error('Student B Firebase authorization header was not captured.')
