@@ -1,0 +1,483 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-145",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "145-cvc-spelling-with-y",
+    "topic": "encoding",
+    "subtopic": "y-cvc-spelling",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment taught y-initial CVC words into three phonemes.",
+      "Map each heard phoneme to its grapheme in left-to-right order.",
+      "Spell yak, yam, yap, yes, yet, and yen from dictation.",
+      "Check the medial vowel and final consonant before confirming a spelling."
+    ],
+    "concepts": [
+      "Encoding begins by hearing and segmenting the word.",
+      "A three-sound CVC word needs an initial consonant, a vowel, and a final consonant.",
+      "The vowel /a/ and /e/ must not be confused.",
+      "Rereading the spelling supports self-correction."
+    ],
+    "definitions": [
+      {
+        "term": "segment",
+        "definition": "To separate a spoken word into its individual sounds."
+      },
+      {
+        "term": "encode",
+        "definition": "To represent spoken sounds with written graphemes."
+      },
+      {
+        "term": "dictation",
+        "definition": "Writing a word or sentence that is spoken aloud."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Spell yam.",
+        "solution": "Hear /y/ /a/ /m/; write y-a-m; reread yam."
+      },
+      {
+        "prompt": "Spell yet.",
+        "solution": "Hear /y/ /e/ /t/; select e for the short vowel and t for the final sound."
+      },
+      {
+        "prompt": "Contrast yak and yap.",
+        "solution": "Keep y and a; change only the final grapheme k or p."
+      }
+    ],
+    "commonMistakes": [
+      "Writing the letter name instead of the sound sequence.",
+      "Using a for the short /e/ vowel in yet.",
+      "Leaving out the final consonant.",
+      "Writing a second consonant because the word sounds unfamiliar."
+    ],
+    "keyTakeaways": [
+      "Say the word, then segment it.",
+      "Map one sound at a time.",
+      "Check the vowel and final consonant.",
+      "Reread the written word and blend it."
+    ],
+    "revisionPoints": [
+      "/y/ /a/ /k/ → yak.",
+      "/y/ /a/ /m/ → yam.",
+      "/y/ /a/ /p/ → yap.",
+      "/y/ /e/ /s/ → yes.",
+      "/y/ /e/ /t/ → yet.",
+      "/y/ /e/ /n/ → yen."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Write the word after hearing /y/ /a/ /k/.",
+        "answer": "yak"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which grapheme represents the middle vowel in yet?",
+        "answer": "e"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Spell a word that begins /y/ and ends /p/.",
+        "answer": "yap"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Explain how yak and yam spellings differ.",
+        "answer": "The final grapheme changes from k to m."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "After writing a dictated CVC word, what should the learner do?",
+        "answer": "Point to each grapheme and blend the word to check it."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Read one target word, identify its initial sound, vowel, and final sound, then explain how the sounds make the word.",
+        "answer": "Name and blend the three phonemes in order."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "/y/ /a/ /k/ → yak.",
+      "/y/ /a/ /m/ → yam.",
+      "/y/ /a/ /p/ → yap.",
+      "/y/ /e/ /s/ → yes."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "/y/ /a/ /k/ → yak."
+      },
+      {
+        "front": "Recall 2",
+        "back": "/y/ /a/ /m/ → yam."
+      },
+      {
+        "front": "Recall 3",
+        "back": "/y/ /a/ /p/ → yap."
+      },
+      {
+        "front": "Recall 4",
+        "back": "/y/ /e/ /s/ → yes."
+      },
+      {
+        "front": "Recall 5",
+        "back": "/y/ /e/ /t/ → yet."
+      },
+      {
+        "front": "Recall 6",
+        "back": "/y/ /e/ /n/ → yen."
+      }
+    ],
+    "formulaOrFactBank": [
+      "/y/ /a/ /k/ → yak.",
+      "/y/ /a/ /m/ → yam.",
+      "/y/ /a/ /p/ → yap.",
+      "/y/ /e/ /s/ → yes.",
+      "/y/ /e/ /t/ → yet.",
+      "/y/ /e/ /n/ → yen."
+    ],
+    "mistakeBasedRevision": [
+      "Writing the letter name instead of the sound sequence.",
+      "Using a for the short /e/ vowel in yet.",
+      "Leaving out the final consonant.",
+      "Writing a second consonant because the word sounds unfamiliar."
+    ],
+    "weakTopicRevision": [
+      "If encoding accuracy is below target, isolate the weak phoneme or reading step, model it, practise with guided examples, then reassess with fresh words."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "name": "Three-box encoding",
+      "steps": [
+        "Say the target word naturally.",
+        "Stretch the word and count three phonemes.",
+        "Write one grapheme in each box.",
+        "Reread the word and correct any mismatch."
+      ],
+      "type": "phoneme-segmentation-dictation"
+    },
+    {
+      "id": "ACT2",
+      "name": "Vowel contrast dictation",
+      "steps": [
+        "Dictate yam, then yet.",
+        "Learner identifies the middle vowel before writing.",
+        "Compare a and e in the completed words.",
+        "Read both words aloud and explain the difference."
+      ],
+      "type": "short-vowel-contrast"
+    }
+  ],
+  "outcomes": [
+    "Spell at least 8 of 10 taught y-initial CVC words from dictation.",
+    "Represent all three phonemes in the correct order.",
+    "Self-correct a vowel or final-consonant error by rereading."
+  ],
+  "questions": [
+    {
+      "questionId": "PF145-Q01",
+      "question": "Which spelling matches /y/ /a/ /k/?",
+      "options": [
+        "yak",
+        "yam",
+        "yap",
+        "yet"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q02",
+      "question": "Which word is spelled y-a-m?",
+      "options": [
+        "yam",
+        "yak",
+        "yen",
+        "yes"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q03",
+      "question": "Which spelling matches /y/ /a/ /p/?",
+      "options": [
+        "yap",
+        "yak",
+        "yam",
+        "yet"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q04",
+      "question": "Which word is spelled y-e-s?",
+      "options": [
+        "yes",
+        "yam",
+        "yak",
+        "yen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q05",
+      "question": "Which spelling matches /y/ /e/ /t/?",
+      "options": [
+        "yet",
+        "yat",
+        "yit",
+        "yap"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q06",
+      "question": "Which word is spelled y-e-n?",
+      "options": [
+        "yen",
+        "yan",
+        "yam",
+        "yak"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q07",
+      "question": "Which spelling is correct for the word that rhymes with map and begins /y/?",
+      "options": [
+        "yap",
+        "yep",
+        "yak",
+        "yam"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q08",
+      "question": "Complete the spelling: _am (the word is yam).",
+      "options": [
+        "y",
+        "m",
+        "s",
+        "t"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q09",
+      "question": "Complete the spelling: ya_ (the word is yap).",
+      "options": [
+        "p",
+        "k",
+        "m",
+        "t"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q10",
+      "question": "Which spelling uses e for the middle vowel?",
+      "options": [
+        "yet",
+        "yak",
+        "yam",
+        "yap"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q11",
+      "question": "Which word ends with the grapheme k?",
+      "options": [
+        "yak",
+        "yam",
+        "yap",
+        "yen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q12",
+      "question": "Which is the correct spelling?",
+      "options": [
+        "yes",
+        "yess",
+        "yis",
+        "yas"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q13",
+      "question": "Which sound sequence matches yam?",
+      "options": [
+        "/y/ /a/ /m/",
+        "/y/ /e/ /m/",
+        "/m/ /a/ /y/",
+        "/y/ /a/ /p/"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF145-Q14",
+      "question": "A learner writes yit for yet. What should be reviewed?",
+      "options": [
+        "The difference between short /e/ and short /i/",
+        "The initial /y/ only",
+        "The final /t/ only",
+        "Word spacing"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF145-Q15",
+      "question": "What is the best final check after spelling a CVC word?",
+      "options": [
+        "Point to each grapheme and blend the word",
+        "Add another letter just in case",
+        "Read only the first letter",
+        "Guess from the picture"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF145-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Yak represents /y/ /a/ /k/."
+    },
+    {
+      "questionId": "PF145-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "Y-a-m spells yam."
+    },
+    {
+      "questionId": "PF145-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Yap ends with p."
+    },
+    {
+      "questionId": "PF145-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Y-e-s spells yes."
+    },
+    {
+      "questionId": "PF145-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Yet uses e for the short /e/ vowel."
+    },
+    {
+      "questionId": "PF145-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Y-e-n spells yen."
+    },
+    {
+      "questionId": "PF145-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Yap shares the /ap/ ending with map."
+    },
+    {
+      "questionId": "PF145-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "The initial grapheme is y."
+    },
+    {
+      "questionId": "PF145-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The final grapheme is p."
+    },
+    {
+      "questionId": "PF145-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "Yet contains short /e/."
+    },
+    {
+      "questionId": "PF145-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Yak ends with k."
+    },
+    {
+      "questionId": "PF145-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The taught word is spelled yes."
+    },
+    {
+      "questionId": "PF145-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Yam has initial /y/, short /a/, and final /m/."
+    },
+    {
+      "questionId": "PF145-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The initial and final sounds are correct; the medial vowel needs attention."
+    },
+    {
+      "questionId": "PF145-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Rereading confirms that each written grapheme matches the spoken word."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum sequence; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-145-v1"
+  }
+}
