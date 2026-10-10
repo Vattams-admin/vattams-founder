@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 405,
-    "studyMaterials": 405,
-    "questionBank": 6065,
-    "assessments": 79
+    "lessons": 410,
+    "studyMaterials": 410,
+    "questionBank": 6140,
+    "assessments": 81
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -425,7 +425,12 @@
       "content/courses/phonics-foundation/402-targeted-squ-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/403-hear-and-blend-initial-thr/authoring-package.json",
       "content/courses/phonics-foundation/404-decode-short-words-with-thr/authoring-package.json",
-      "content/courses/phonics-foundation/405-spell-short-words-with-thr/authoring-package.json"
+      "content/courses/phonics-foundation/405-spell-short-words-with-thr/authoring-package.json",
+      "content/courses/phonics-foundation/406-thr-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/407-controlled-thr-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/408-controlled-thr-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/409-thr-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/410-targeted-thr-remediation-reassessment/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -484,7 +489,9 @@
     "PF393-DIAG-01",
     "PF394-REASSESS-01",
     "PF401-DIAG-01",
-    "PF402-REASSESS-01"
+    "PF402-REASSESS-01",
+    "PF409-DIAG-01",
+    "PF410-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
