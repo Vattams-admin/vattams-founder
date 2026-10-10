@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 820,
-    "studyMaterials": 820,
-    "questionBank": 12290,
-    "assessments": 192
+    "lessons": 840,
+    "studyMaterials": 840,
+    "questionBank": 12590,
+    "assessments": 198
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -840,6 +840,26 @@
       "content/courses/phonics-foundation/818-final-consonant-patterns-connected-reading/authoring-package.json",
       "content/courses/phonics-foundation/819-final-consonant-patterns-fluency-diagnostic/authoring-package.json",
       "content/courses/phonics-foundation/820-final-consonant-patterns-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/821-recognize-ng-ending/authoring-package.json",
+      "content/courses/phonics-foundation/822-decode-words-with-ng/authoring-package.json",
+      "content/courses/phonics-foundation/823-spell-words-with-ng/authoring-package.json",
+      "content/courses/phonics-foundation/824-ng-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/825-controlled-ng-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/826-controlled-ng-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/827-ng-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/828-ng-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/829-recognize-nk-ending/authoring-package.json",
+      "content/courses/phonics-foundation/830-decode-words-with-nk/authoring-package.json",
+      "content/courses/phonics-foundation/831-spell-words-with-nk/authoring-package.json",
+      "content/courses/phonics-foundation/832-nk-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/833-controlled-nk-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/834-controlled-nk-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/835-nk-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/836-nk-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/837-ng-nk-ending-patterns-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/838-ng-nk-connected-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/839-ng-nk-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/840-ng-nk-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
@@ -1013,7 +1033,13 @@
     "PF815-DIAG-01",
     "PF816-REASSESS-01",
     "PF819-DIAG-01",
-    "PF820-REASSESS-01"
+    "PF820-REASSESS-01",
+    "PF827-DIAG-01",
+    "PF828-REASSESS-01",
+    "PF835-DIAG-01",
+    "PF836-REASSESS-01",
+    "PF839-DIAG-01",
+    "PF840-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/02-hear-and-identify-s/authoring-package.json",
@@ -1835,6 +1861,26 @@
     "content/courses/phonics-foundation/818-final-consonant-patterns-connected-reading/authoring-package.json",
     "content/courses/phonics-foundation/819-final-consonant-patterns-fluency-diagnostic/authoring-package.json",
     "content/courses/phonics-foundation/820-final-consonant-patterns-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/821-recognize-ng-ending/authoring-package.json",
+    "content/courses/phonics-foundation/822-decode-words-with-ng/authoring-package.json",
+    "content/courses/phonics-foundation/823-spell-words-with-ng/authoring-package.json",
+    "content/courses/phonics-foundation/824-ng-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/825-controlled-ng-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/826-controlled-ng-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/827-ng-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/828-ng-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/829-recognize-nk-ending/authoring-package.json",
+    "content/courses/phonics-foundation/830-decode-words-with-nk/authoring-package.json",
+    "content/courses/phonics-foundation/831-spell-words-with-nk/authoring-package.json",
+    "content/courses/phonics-foundation/832-nk-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/833-controlled-nk-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/834-controlled-nk-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/835-nk-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/836-nk-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/837-ng-nk-ending-patterns-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/838-ng-nk-connected-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/839-ng-nk-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/840-ng-nk-remediation-reassessment/authoring-package.json",
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
   ]
 }
