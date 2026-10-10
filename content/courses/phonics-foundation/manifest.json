@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 178,
-    "studyMaterials": 178,
-    "questionBank": 2660,
-    "assessments": 42
+    "lessons": 183,
+    "studyMaterials": 183,
+    "questionBank": 2735,
+    "assessments": 44
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -198,7 +198,12 @@
       "content/courses/phonics-foundation/175-hear-and-identify-new-digraph-th/authoring-package.json",
       "content/courses/phonics-foundation/176-decode-cvc-with-th/authoring-package.json",
       "content/courses/phonics-foundation/177-spell-cvc-with-th/authoring-package.json",
-      "content/courses/phonics-foundation/178-th-word-families-controlled-reading/authoring-package.json"
+      "content/courses/phonics-foundation/178-th-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/179-controlled-th-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/180-controlled-th-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/181-th-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/182-targeted-th-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/183-recognise-wh-grapheme-in-words/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -228,7 +233,9 @@
     "PF165-DIAG-01",
     "PF166-REASSESS-01",
     "PF173-DIAG-01",
-    "PF174-REASSESS-01"
+    "PF174-REASSESS-01",
+    "PF181-DIAG-01",
+    "PF182-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
