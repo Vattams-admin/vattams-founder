@@ -129,8 +129,8 @@
     "higherOrderThinking": [
       {
         "id": "H1",
-        "prompt": "Which pair changes only the vowel sound in a controlled family comparison?",
-        "answer": "catch and ketch"
+        "prompt": "Which pair keeps the same initial and final sounds but changes the short vowel?",
+        "answer": "patch and pitch"
       },
       {
         "id": "H2",
@@ -351,12 +351,12 @@
     },
     {
       "questionId": "PF208-Q10",
-      "question": "Which pair changes only the vowel sound in a controlled family comparison?",
+      "question": "Which pair keeps the same initial and final sounds but changes the short vowel?",
       "options": [
-        "match and patch",
-        "catch and ketch",
-        "pitch and ditch",
-        "fetch and match"
+        "catch and match",
+        "patch and pitch",
+        "fetch and ditch",
+        "pitch and ditch"
       ],
       "difficulty": "conceptual",
       "marks": 1,
@@ -477,7 +477,7 @@
     {
       "questionId": "PF208-Q10",
       "correctOptionIndex": 1,
-      "explanation": "Catch and ketch share onset and final tch but differ in the vowel, though ketch is a less common spelling; use for sound contrast only."
+      "explanation": "Patch has short a and pitch has short i; both begin with /p/ and end with tch."
     },
     {
       "questionId": "PF208-Q11",
