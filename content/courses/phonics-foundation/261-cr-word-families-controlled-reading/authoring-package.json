@@ -112,8 +112,8 @@
     "application": [
       {
         "id": "A1",
-        "prompt": "Which word does not share -ib with crib?",
-        "answer": "crop"
+        "prompt": "Which word shares -ib with crib?",
+        "answer": "rib"
       },
       {
         "id": "A2",
@@ -313,12 +313,12 @@
     },
     {
       "questionId": "PF261-Q07",
-      "question": "Which word does not share -ib with crib?",
+      "question": "Which word shares -ib with crib?",
       "options": [
         "rib",
-        "crib",
         "crop",
-        "crab"
+        "crab",
+        "crack"
       ],
       "difficulty": "word_families",
       "marks": 1,
@@ -462,8 +462,8 @@
     },
     {
       "questionId": "PF261-Q07",
-      "correctOptionIndex": 2,
-      "explanation": "Crop has -op, not -ib."
+      "correctOptionIndex": 0,
+      "explanation": "Rib and crib share the -ib rime."
     },
     {
       "questionId": "PF261-Q08",
