@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-256",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "256-br-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "initial-br-rime-sorting-and-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Identify shared rimes in taught br-words and familiar partner words.",
+      "Sort words by vowel-and-ending patterns rather than by onset alone.",
+      "Decode every word fully after sorting.",
+      "Use controlled word groups to read a short, accurate line."
+    ],
+    "concepts": [
+      "A rime includes the vowel and any sounds after it.",
+      "Words can share an onset but have different rimes.",
+      "Words with different onsets can share a rime.",
+      "Sorting supports reading only when each full word is decoded."
+    ],
+    "definitions": [
+      {
+        "term": "rime",
+        "definition": "The vowel and sounds that follow it in a syllable."
+      },
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a rime, such as brick and trick (-ick)."
+      },
+      {
+        "term": "onset",
+        "definition": "The consonant or consonant blend before the vowel."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Compare brick and trick.",
+        "solution": "They share the -ick rime but have different onsets."
+      },
+      {
+        "prompt": "Compare brag and flag.",
+        "solution": "They share the -ag rime; their onsets differ."
+      },
+      {
+        "prompt": "Compare brim and trim.",
+        "solution": "They share -im, but the first consonants differ."
+      }
+    ],
+    "commonMistakes": [
+      "Grouping all br-words together despite different rimes.",
+      "Looking only at the first two letters.",
+      "Ignoring the ending consonant when sorting.",
+      "Reading by rhyme without decoding the whole word."
+    ],
+    "keyTakeaways": [
+      "Compare the vowel and ending to find a rime.",
+      "Same onset does not mean same word family.",
+      "Different onsets can share a rime.",
+      "Decode every word after sorting."
+    ],
+    "revisionPoints": [
+      "brag and flag share -ag.",
+      "brick and trick share -ick.",
+      "brim and trim share -im.",
+      "Sort by the rime, then read each whole word."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word shares -ick with brick?",
+        "answer": "trick"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word shares -ag with brag?",
+        "answer": "flag"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word shares -im with brim?",
+        "answer": "trim"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "What part forms the rime in brick?",
+        "answer": "-ick"
+      },
+      {
+        "id": "C2",
+        "prompt": "Do all words beginning br belong to one rime family?",
+        "answer": "No, their vowels and endings can differ"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which pair has different onsets but the same rime?",
+        "answer": "brag and flag"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word does not share -im with brim?",
+        "answer": "brick"
+      },
+      {
+        "id": "A2",
+        "prompt": "When sorting words, what should you compare after the onset?",
+        "answer": "The vowel and ending"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which word family includes brick, trick, and quick?",
+        "answer": "-ick"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which pair shares an onset but not a rime?",
+        "answer": "brag and brim"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which controlled line has two words from the -ick family?",
+        "answer": "The brick is thick."
+      },
+      {
+        "id": "H3",
+        "prompt": "What is a good check after a word-family sort?",
+        "answer": "Decode each whole word aloud"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word has the same rime as brush?",
+        "answer": "flush"
+      },
+      {
+        "id": "R2",
+        "prompt": "What does a word family help a reader notice?",
+        "answer": "A shared vowel-and-ending pattern"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which statement is accurate?",
+        "answer": "Words can share a rime and have different onsets"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "brag and flag share -ag.",
+      "brick and trick share -ick.",
+      "brim and trim share -im.",
+      "Sort by the rime, then read each whole word."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "brag and flag share -ag."
+      },
+      {
+        "front": "Recall 2",
+        "back": "brick and trick share -ick."
+      },
+      {
+        "front": "Recall 3",
+        "back": "brim and trim share -im."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Sort by the rime, then read each whole word."
+      }
+    ],
+    "formulaOrFactBank": [
+      "brag and flag share -ag.",
+      "brick and trick share -ick.",
+      "brim and trim share -im.",
+      "Sort by the rime, then read each whole word."
+    ],
+    "mistakeBasedRevision": [
+      "Grouping all br-words together despite different rimes.",
+      "Looking only at the first two letters.",
+      "Ignoring the ending consonant when sorting.",
+      "Reading by rhyme without decoding the whole word."
+    ],
+    "weakTopicRevision": [
+      "If word-families is weak, revisit the worked examples, say the sound evidence aloud, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "sort-rimes-and-read-controlled-word-lines",
+      "name": "Sort rimes and read controlled word lines.",
+      "steps": [
+        "Listen to or read each target word carefully.",
+        "Say or map each sound in the correct order.",
+        "Complete the task and explain the sound or text evidence.",
+        "Reread or repeat the word to check accuracy."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-repair",
+      "name": "Find and repair a target-pattern error.",
+      "steps": [
+        "Review a word or sentence with one target-pattern error.",
+        "Identify the sound, spelling, or evidence that does not match.",
+        "Correct the item and explain the correction.",
+        "Try a fresh item without looking at the answer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Identify shared rimes in taught br-words and familiar partner words.",
+    "Sort words by vowel-and-ending patterns rather than by onset alone.",
+    "Decode every word fully after sorting.",
+    "Use controlled word groups to read a short, accurate line."
+  ],
+  "questions": [
+    {
+      "questionId": "PF256-Q01",
+      "question": "Which word shares -ick with brick?",
+      "options": [
+        "trick",
+        "brag",
+        "brim",
+        "brush"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q02",
+      "question": "Which word shares -ag with brag?",
+      "options": [
+        "brick",
+        "flag",
+        "trim",
+        "brush"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q03",
+      "question": "Which word shares -im with brim?",
+      "options": [
+        "brag",
+        "brick",
+        "trim",
+        "brush"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q04",
+      "question": "What part forms the rime in brick?",
+      "options": [
+        "br-",
+        "bri-",
+        "br",
+        "-ick"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q05",
+      "question": "Do all words beginning br belong to one rime family?",
+      "options": [
+        "No, their vowels and endings can differ",
+        "Yes, every br-word rhymes",
+        "Only long words do",
+        "Only words with four letters do"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q06",
+      "question": "Which pair has different onsets but the same rime?",
+      "options": [
+        "brag and brim",
+        "brag and flag",
+        "brick and brush",
+        "brim and brush"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q07",
+      "question": "Which word does not share -im with brim?",
+      "options": [
+        "trim",
+        "slim",
+        "brick",
+        "brim"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q08",
+      "question": "When sorting words, what should you compare after the onset?",
+      "options": [
+        "Only the first letter",
+        "The number of syllables only",
+        "The picture colour",
+        "The vowel and ending"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q09",
+      "question": "Which word family includes brick, trick, and quick?",
+      "options": [
+        "-ick",
+        "-ag",
+        "-im",
+        "-ush"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q10",
+      "question": "Which pair shares an onset but not a rime?",
+      "options": [
+        "brick and trick",
+        "brag and brim",
+        "brim and trim",
+        "brag and flag"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q11",
+      "question": "Which controlled line has two words from the -ick family?",
+      "options": [
+        "The brush is brown.",
+        "Brag at the flag.",
+        "The brick is thick.",
+        "The brim is slim."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q12",
+      "question": "What is a good check after a word-family sort?",
+      "options": [
+        "Read only the onset",
+        "Skip unfamiliar endings",
+        "Assume the words rhyme",
+        "Decode each whole word aloud"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q13",
+      "question": "Which word has the same rime as brush?",
+      "options": [
+        "flush",
+        "flag",
+        "trick",
+        "trim"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q14",
+      "question": "What does a word family help a reader notice?",
+      "options": [
+        "That every word starts alike",
+        "A shared vowel-and-ending pattern",
+        "That endings can be ignored",
+        "That every word means the same"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF256-Q15",
+      "question": "Which statement is accurate?",
+      "options": [
+        "Words with different onsets never rhyme",
+        "Every br-word shares one rime",
+        "Words can share a rime and have different onsets",
+        "The onset includes the ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF256-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Trick shares the -ick rime with brick."
+    },
+    {
+      "questionId": "PF256-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "Flag and brag share -ag."
+    },
+    {
+      "questionId": "PF256-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "Trim and brim share -im."
+    },
+    {
+      "questionId": "PF256-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The rime is the vowel and ending, -ick."
+    },
+    {
+      "questionId": "PF256-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "The shared onset does not determine the rime."
+    },
+    {
+      "questionId": "PF256-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "Brag and flag both end with -ag."
+    },
+    {
+      "questionId": "PF256-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Brick has -ick, not -im."
+    },
+    {
+      "questionId": "PF256-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "The vowel and ending reveal the rime."
+    },
+    {
+      "questionId": "PF256-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "All three share the rime -ick."
+    },
+    {
+      "questionId": "PF256-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "Brag and brim begin br but have different rimes."
+    },
+    {
+      "questionId": "PF256-Q11",
+      "correctOptionIndex": 2,
+      "explanation": "Brick and thick share -ick."
+    },
+    {
+      "questionId": "PF256-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Whole-word decoding confirms the sort."
+    },
+    {
+      "questionId": "PF256-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Brush and flush share -ush."
+    },
+    {
+      "questionId": "PF256-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Word families highlight rime patterns."
+    },
+    {
+      "questionId": "PF256-Q15",
+      "correctOptionIndex": 2,
+      "explanation": "A shared rime can appear with different onsets."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-256-v1"
+  }
+}
