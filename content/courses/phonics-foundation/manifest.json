@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 640,
-    "studyMaterials": 640,
-    "questionBank": 9590,
-    "assessments": 138
+    "lessons": 660,
+    "studyMaterials": 660,
+    "questionBank": 9890,
+    "assessments": 144
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -660,7 +660,27 @@
       "content/courses/phonics-foundation/637-r-controlled-vowels-mixed-review/authoring-package.json",
       "content/courses/phonics-foundation/638-r-controlled-vowel-connected-reading/authoring-package.json",
       "content/courses/phonics-foundation/639-r-controlled-vowel-fluency-diagnostic/authoring-package.json",
-      "content/courses/phonics-foundation/640-r-controlled-vowel-remediation-reassessment/authoring-package.json"
+      "content/courses/phonics-foundation/640-r-controlled-vowel-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/641-recognize-er-r-controlled-vowel/authoring-package.json",
+      "content/courses/phonics-foundation/642-decode-words-with-er/authoring-package.json",
+      "content/courses/phonics-foundation/643-spell-words-with-er/authoring-package.json",
+      "content/courses/phonics-foundation/644-er-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/645-controlled-er-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/646-controlled-er-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/647-er-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/648-targeted-er-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/649-recognize-ir-r-controlled-vowel/authoring-package.json",
+      "content/courses/phonics-foundation/650-decode-words-with-ir/authoring-package.json",
+      "content/courses/phonics-foundation/651-spell-words-with-ir/authoring-package.json",
+      "content/courses/phonics-foundation/652-ir-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/653-controlled-ir-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/654-controlled-ir-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/655-ir-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/656-targeted-ir-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/657-r-controlled-vowel-mixed-review-2/authoring-package.json",
+      "content/courses/phonics-foundation/658-r-controlled-vowel-connected-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/659-r-controlled-vowel-fluency-diagnostic-2/authoring-package.json",
+      "content/courses/phonics-foundation/660-r-controlled-vowel-remediation-reassessment-2/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -779,7 +799,13 @@
     "PF635-DIAG-01",
     "PF636-REASSESS-01",
     "PF639-DIAG-01",
-    "PF640-REASSESS-01"
+    "PF640-REASSESS-01",
+    "PF647-DIAG-01",
+    "PF648-REASSESS-01",
+    "PF655-DIAG-01",
+    "PF656-REASSESS-01",
+    "PF659-DIAG-01",
+    "PF660-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
@@ -1421,6 +1447,26 @@
     "content/courses/phonics-foundation/637-r-controlled-vowels-mixed-review/authoring-package.json",
     "content/courses/phonics-foundation/638-r-controlled-vowel-connected-reading/authoring-package.json",
     "content/courses/phonics-foundation/639-r-controlled-vowel-fluency-diagnostic/authoring-package.json",
-    "content/courses/phonics-foundation/640-r-controlled-vowel-remediation-reassessment/authoring-package.json"
+    "content/courses/phonics-foundation/640-r-controlled-vowel-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/641-recognize-er-r-controlled-vowel/authoring-package.json",
+    "content/courses/phonics-foundation/642-decode-words-with-er/authoring-package.json",
+    "content/courses/phonics-foundation/643-spell-words-with-er/authoring-package.json",
+    "content/courses/phonics-foundation/644-er-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/645-controlled-er-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/646-controlled-er-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/647-er-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/648-targeted-er-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/649-recognize-ir-r-controlled-vowel/authoring-package.json",
+    "content/courses/phonics-foundation/650-decode-words-with-ir/authoring-package.json",
+    "content/courses/phonics-foundation/651-spell-words-with-ir/authoring-package.json",
+    "content/courses/phonics-foundation/652-ir-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/653-controlled-ir-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/654-controlled-ir-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/655-ir-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/656-targeted-ir-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/657-r-controlled-vowel-mixed-review-2/authoring-package.json",
+    "content/courses/phonics-foundation/658-r-controlled-vowel-connected-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/659-r-controlled-vowel-fluency-diagnostic-2/authoring-package.json",
+    "content/courses/phonics-foundation/660-r-controlled-vowel-remediation-reassessment-2/authoring-package.json"
   ]
 }
