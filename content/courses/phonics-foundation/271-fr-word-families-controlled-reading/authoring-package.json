@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-271",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "271-fr-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "initial-fr-rime-sorting-and-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Identify shared rimes in taught fr-words and familiar partner words.",
+      "Sort words by vowel-and-ending patterns rather than onset alone.",
+      "Decode every word fully after sorting.",
+      "Use controlled word groups to read a short, accurate line."
+    ],
+    "concepts": [
+      "A rime includes the vowel and the sounds that follow it.",
+      "Words can share fr but have different rimes.",
+      "Words with different onsets can share a rime.",
+      "Sorting supports reading only when the whole word is decoded."
+    ],
+    "definitions": [
+      {
+        "term": "rime",
+        "definition": "The vowel and sounds that follow it in a syllable."
+      },
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a rime, such as frog and dog (-og)."
+      },
+      {
+        "term": "onset",
+        "definition": "The consonant or consonant blend before the vowel."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Compare frog and dog.",
+        "solution": "They share -og but have different onsets."
+      },
+      {
+        "prompt": "Compare fret and wet.",
+        "solution": "They share -et."
+      },
+      {
+        "prompt": "Compare frill and grill.",
+        "solution": "They share -ill even though the onsets differ."
+      }
+    ],
+    "commonMistakes": [
+      "Grouping all fr-words together despite different rimes.",
+      "Sorting only by the first two letters.",
+      "Ignoring the ending consonant or digraph.",
+      "Guessing from rhyme without decoding the full word."
+    ],
+    "keyTakeaways": [
+      "Compare the vowel and ending to find a rime.",
+      "The same onset does not guarantee the same word family.",
+      "Different onsets can share a rime.",
+      "Decode every word after sorting."
+    ],
+    "revisionPoints": [
+      "frog and dog share -og.",
+      "fret and wet share -et.",
+      "frill and grill share -ill.",
+      "Sort by rime, then read each whole word."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word shares -og with frog?",
+        "answer": "dog"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word shares -et with fret?",
+        "answer": "wet"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word shares -ill with frill?",
+        "answer": "grill"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "What part forms the rime in frog?",
+        "answer": "-og"
+      },
+      {
+        "id": "C2",
+        "prompt": "Do all fr-words belong to one rime family?",
+        "answer": "No, their vowels and endings can differ"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which pair has different onsets but the same rime?",
+        "answer": "frog and dog"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word does not share -et with fret?",
+        "answer": "frog"
+      },
+      {
+        "id": "A2",
+        "prompt": "When sorting words, what should you compare?",
+        "answer": "The vowel and ending"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which family includes frill, grill, and hill?",
+        "answer": "-ill"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which pair shares an onset but not a rime?",
+        "answer": "frog and fret"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which controlled line has two words from the -og family?",
+        "answer": "The frog is with the dog."
+      },
+      {
+        "id": "H3",
+        "prompt": "What is a good check after a word-family sort?",
+        "answer": "Decode each whole word aloud"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word shares the rime -esh with fresh?",
+        "answer": "mesh"
+      },
+      {
+        "id": "R2",
+        "prompt": "What does a word family help a reader notice?",
+        "answer": "A shared vowel-and-ending pattern"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which statement is accurate?",
+        "answer": "Words can share a rime and have different onsets"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "frog and dog share -og.",
+      "fret and wet share -et.",
+      "frill and grill share -ill.",
+      "Sort by rime, then read each whole word."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "frog and dog share -og."
+      },
+      {
+        "front": "Recall 2",
+        "back": "fret and wet share -et."
+      },
+      {
+        "front": "Recall 3",
+        "back": "frill and grill share -ill."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Sort by rime, then read each whole word."
+      }
+    ],
+    "formulaOrFactBank": [
+      "frog and dog share -og.",
+      "fret and wet share -et.",
+      "frill and grill share -ill.",
+      "Sort by rime, then read each whole word."
+    ],
+    "mistakeBasedRevision": [
+      "Grouping all fr-words together despite different rimes.",
+      "Sorting only by the first two letters.",
+      "Ignoring the ending consonant or digraph.",
+      "Guessing from rhyme without decoding the full word."
+    ],
+    "weakTopicRevision": [
+      "If word-families is weak, revisit the worked examples, say the sound evidence aloud, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "sort-rimes-and-read-controlled-word-lines",
+      "name": "Sort rimes and read controlled word lines.",
+      "steps": [
+        "Listen to or read each target word carefully.",
+        "Say or map each sound in the correct order.",
+        "Complete the task and explain the sound or text evidence.",
+        "Reread or repeat the word to check accuracy."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-repair",
+      "name": "Find and repair a target-pattern error.",
+      "steps": [
+        "Review a word or sentence with one target-pattern error.",
+        "Identify the sound, spelling, or evidence that does not match.",
+        "Correct the item and explain the correction.",
+        "Try a fresh item without looking at the answer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Identify shared rimes in taught fr-words and familiar partner words.",
+    "Sort words by vowel-and-ending patterns rather than onset alone.",
+    "Decode every word fully after sorting.",
+    "Use controlled word groups to read a short, accurate line."
+  ],
+  "questions": [
+    {
+      "questionId": "PF271-Q01",
+      "question": "Which word shares -og with frog?",
+      "options": [
+        "dog",
+        "fret",
+        "frill",
+        "fresh"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q02",
+      "question": "Which word shares -et with fret?",
+      "options": [
+        "frog",
+        "wet",
+        "frill",
+        "fresh"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q03",
+      "question": "Which word shares -ill with frill?",
+      "options": [
+        "frog",
+        "fret",
+        "grill",
+        "fresh"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q04",
+      "question": "What part forms the rime in frog?",
+      "options": [
+        "fr-",
+        "fro-",
+        "f-r",
+        "-og"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q05",
+      "question": "Do all fr-words belong to one rime family?",
+      "options": [
+        "No, their vowels and endings can differ",
+        "Yes, every fr-word rhymes",
+        "Only long words do",
+        "Only words with four letters do"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q06",
+      "question": "Which pair has different onsets but the same rime?",
+      "options": [
+        "frog and fret",
+        "frog and dog",
+        "frill and fresh",
+        "fret and frill"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q07",
+      "question": "Which word does not share -et with fret?",
+      "options": [
+        "wet",
+        "jet",
+        "frog",
+        "fret"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q08",
+      "question": "When sorting words, what should you compare?",
+      "options": [
+        "Only the first letter",
+        "Only the number of letters",
+        "The picture colour",
+        "The vowel and ending"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q09",
+      "question": "Which family includes frill, grill, and hill?",
+      "options": [
+        "-ill",
+        "-og",
+        "-et",
+        "-esh"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q10",
+      "question": "Which pair shares an onset but not a rime?",
+      "options": [
+        "frog and dog",
+        "frog and fret",
+        "fret and wet",
+        "frill and grill"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q11",
+      "question": "Which controlled line has two words from the -og family?",
+      "options": [
+        "The fret is wet.",
+        "The frill is still.",
+        "The frog is with the dog.",
+        "The fresh fish is red."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q12",
+      "question": "What is a good check after a word-family sort?",
+      "options": [
+        "Read only fr",
+        "Skip unfamiliar endings",
+        "Assume the words rhyme",
+        "Decode each whole word aloud"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q13",
+      "question": "Which word shares the rime -esh with fresh?",
+      "options": [
+        "mesh",
+        "frog",
+        "fret",
+        "frill"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q14",
+      "question": "What does a word family help a reader notice?",
+      "options": [
+        "That every word starts alike",
+        "A shared vowel-and-ending pattern",
+        "That endings can be ignored",
+        "That all words mean the same"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF271-Q15",
+      "question": "Which statement is accurate?",
+      "options": [
+        "Different onsets never rhyme",
+        "Every fr-word shares one rime",
+        "Words can share a rime and have different onsets",
+        "The onset includes the ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF271-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Dog shares the -og rime with frog."
+    },
+    {
+      "questionId": "PF271-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "Wet and fret share -et."
+    },
+    {
+      "questionId": "PF271-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "Grill and frill share -ill."
+    },
+    {
+      "questionId": "PF271-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The rime is the vowel and ending, -og."
+    },
+    {
+      "questionId": "PF271-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "A shared onset does not determine the rime."
+    },
+    {
+      "questionId": "PF271-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "Frog and dog share -og."
+    },
+    {
+      "questionId": "PF271-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Frog has -og, not -et."
+    },
+    {
+      "questionId": "PF271-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "The vowel and ending reveal the rime."
+    },
+    {
+      "questionId": "PF271-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Frill, grill, and hill share -ill."
+    },
+    {
+      "questionId": "PF271-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "Frog and fret begin fr but have different rimes."
+    },
+    {
+      "questionId": "PF271-Q11",
+      "correctOptionIndex": 2,
+      "explanation": "Frog and dog share -og."
+    },
+    {
+      "questionId": "PF271-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Whole-word decoding confirms the sort."
+    },
+    {
+      "questionId": "PF271-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Mesh and fresh share -esh."
+    },
+    {
+      "questionId": "PF271-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Word families highlight rime patterns."
+    },
+    {
+      "questionId": "PF271-Q15",
+      "correctOptionIndex": 2,
+      "explanation": "A shared rime can appear with different onsets."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-271-v1"
+  }
+}
