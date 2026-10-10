@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 840,
-    "studyMaterials": 840,
-    "questionBank": 12590,
-    "assessments": 198
+    "lessons": 860,
+    "studyMaterials": 860,
+    "questionBank": 12890,
+    "assessments": 204
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -860,6 +860,26 @@
       "content/courses/phonics-foundation/838-ng-nk-connected-reading-transfer/authoring-package.json",
       "content/courses/phonics-foundation/839-ng-nk-fluency-diagnostic/authoring-package.json",
       "content/courses/phonics-foundation/840-ng-nk-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/841-recognize-kn-silent-k/authoring-package.json",
+      "content/courses/phonics-foundation/842-decode-words-with-kn/authoring-package.json",
+      "content/courses/phonics-foundation/843-spell-words-with-kn/authoring-package.json",
+      "content/courses/phonics-foundation/844-kn-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/845-controlled-kn-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/846-controlled-kn-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/847-kn-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/848-kn-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/849-recognize-wr-silent-w/authoring-package.json",
+      "content/courses/phonics-foundation/850-decode-words-with-wr/authoring-package.json",
+      "content/courses/phonics-foundation/851-spell-words-with-wr/authoring-package.json",
+      "content/courses/phonics-foundation/852-wr-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/853-controlled-wr-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/854-controlled-wr-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/855-wr-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/856-wr-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/857-kn-wr-silent-letter-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/858-kn-wr-connected-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/859-kn-wr-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/860-kn-wr-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
@@ -1039,7 +1059,13 @@
     "PF835-DIAG-01",
     "PF836-REASSESS-01",
     "PF839-DIAG-01",
-    "PF840-REASSESS-01"
+    "PF840-REASSESS-01",
+    "PF847-DIAG-01",
+    "PF848-REASSESS-01",
+    "PF855-DIAG-01",
+    "PF856-REASSESS-01",
+    "PF859-DIAG-01",
+    "PF860-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/02-hear-and-identify-s/authoring-package.json",
@@ -1881,6 +1907,26 @@
     "content/courses/phonics-foundation/838-ng-nk-connected-reading-transfer/authoring-package.json",
     "content/courses/phonics-foundation/839-ng-nk-fluency-diagnostic/authoring-package.json",
     "content/courses/phonics-foundation/840-ng-nk-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/841-recognize-kn-silent-k/authoring-package.json",
+    "content/courses/phonics-foundation/842-decode-words-with-kn/authoring-package.json",
+    "content/courses/phonics-foundation/843-spell-words-with-kn/authoring-package.json",
+    "content/courses/phonics-foundation/844-kn-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/845-controlled-kn-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/846-controlled-kn-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/847-kn-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/848-kn-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/849-recognize-wr-silent-w/authoring-package.json",
+    "content/courses/phonics-foundation/850-decode-words-with-wr/authoring-package.json",
+    "content/courses/phonics-foundation/851-spell-words-with-wr/authoring-package.json",
+    "content/courses/phonics-foundation/852-wr-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/853-controlled-wr-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/854-controlled-wr-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/855-wr-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/856-wr-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/857-kn-wr-silent-letter-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/858-kn-wr-connected-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/859-kn-wr-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/860-kn-wr-remediation-reassessment/authoring-package.json",
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
   ]
 }
