@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-281",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "281-tr-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "initial-tr-rime-sorting-and-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Identify shared rimes in taught tr-words and familiar partner words.",
+      "Sort words by vowel-and-ending patterns rather than onset alone.",
+      "Decode every word fully after sorting.",
+      "Use controlled word groups to read a short, accurate line."
+    ],
+    "concepts": [
+      "A rime includes the vowel and the sounds that follow it.",
+      "Words can share tr but have different rimes.",
+      "Words with different onsets can share a rime.",
+      "Sorting supports reading only when the whole word is decoded."
+    ],
+    "definitions": [
+      {
+        "term": "rime",
+        "definition": "The vowel and sounds that follow it in a syllable."
+      },
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a rime, such as trap and clap (-ap)."
+      },
+      {
+        "term": "onset",
+        "definition": "The consonant or consonant blend before the vowel."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Compare trap and clap.",
+        "solution": "They share -ap but have different onsets."
+      },
+      {
+        "prompt": "Compare trip and grip.",
+        "solution": "They share -ip."
+      },
+      {
+        "prompt": "Compare trim and brim.",
+        "solution": "They share -im even though the onsets differ."
+      }
+    ],
+    "commonMistakes": [
+      "Grouping all tr-words together despite different rimes.",
+      "Sorting only by the first two letters.",
+      "Ignoring the ending consonant.",
+      "Guessing from rhyme without decoding the full word."
+    ],
+    "keyTakeaways": [
+      "Compare the vowel and ending to find a rime.",
+      "The same onset does not guarantee the same word family.",
+      "Different onsets can share a rime.",
+      "Decode every word after sorting."
+    ],
+    "revisionPoints": [
+      "trap and clap share -ap.",
+      "trip and grip share -ip.",
+      "trim and brim share -im.",
+      "Sort by rime, then read each whole word."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word shares -ap with trap?",
+        "answer": "clap"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word shares -ip with trip?",
+        "answer": "grip"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word shares -im with trim?",
+        "answer": "brim"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "What part forms the rime in trap?",
+        "answer": "-ap"
+      },
+      {
+        "id": "C2",
+        "prompt": "Do all tr-words belong to one rime family?",
+        "answer": "No, their vowels and endings can differ"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which pair has different onsets but the same rime?",
+        "answer": "trap and clap"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word does not share -ip with trip?",
+        "answer": "trap"
+      },
+      {
+        "id": "A2",
+        "prompt": "When sorting words, what should you compare?",
+        "answer": "The vowel and ending"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which family includes track, black, and snack?",
+        "answer": "-ack"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which pair shares an onset but not a rime?",
+        "answer": "trap and trim"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which controlled line has two words from the -ap family?",
+        "answer": "The trap is in the gap."
+      },
+      {
+        "id": "H3",
+        "prompt": "What is a good check after a word-family sort?",
+        "answer": "Decode each whole word aloud"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word shares the rime -ot with trot?",
+        "answer": "spot"
+      },
+      {
+        "id": "R2",
+        "prompt": "What does a word family help a reader notice?",
+        "answer": "A shared vowel-and-ending pattern"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which statement is accurate?",
+        "answer": "Words can share a rime and have different onsets"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "trap and clap share -ap.",
+      "trip and grip share -ip.",
+      "trim and brim share -im.",
+      "Sort by rime, then read each whole word."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "trap and clap share -ap."
+      },
+      {
+        "front": "Recall 2",
+        "back": "trip and grip share -ip."
+      },
+      {
+        "front": "Recall 3",
+        "back": "trim and brim share -im."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Sort by rime, then read each whole word."
+      }
+    ],
+    "formulaOrFactBank": [
+      "trap and clap share -ap.",
+      "trip and grip share -ip.",
+      "trim and brim share -im.",
+      "Sort by rime, then read each whole word."
+    ],
+    "mistakeBasedRevision": [
+      "Grouping all tr-words together despite different rimes.",
+      "Sorting only by the first two letters.",
+      "Ignoring the ending consonant.",
+      "Guessing from rhyme without decoding the full word."
+    ],
+    "weakTopicRevision": [
+      "If word-families is weak, revisit the worked examples, say the sound evidence aloud, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "sort-rimes-and-read-controlled-word-lines",
+      "name": "Sort rimes and read controlled word lines.",
+      "steps": [
+        "Listen to or read each target word carefully.",
+        "Say or map each sound in the correct order.",
+        "Complete the task and explain the sound or text evidence.",
+        "Reread or repeat the word to check accuracy."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-repair",
+      "name": "Find and repair a target-pattern error.",
+      "steps": [
+        "Review a word or sentence with one target-pattern error.",
+        "Identify the sound, spelling, or evidence that does not match.",
+        "Correct the item and explain the correction.",
+        "Try a fresh item without looking at the answer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Identify shared rimes in taught tr-words and familiar partner words.",
+    "Sort words by vowel-and-ending patterns rather than onset alone.",
+    "Decode every word fully after sorting.",
+    "Use controlled word groups to read a short, accurate line."
+  ],
+  "questions": [
+    {
+      "questionId": "PF281-Q01",
+      "question": "Which word shares -ap with trap?",
+      "options": [
+        "clap",
+        "trip",
+        "trim",
+        "trot"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q02",
+      "question": "Which word shares -ip with trip?",
+      "options": [
+        "trap",
+        "grip",
+        "trim",
+        "trot"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q03",
+      "question": "Which word shares -im with trim?",
+      "options": [
+        "trap",
+        "trip",
+        "brim",
+        "track"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q04",
+      "question": "What part forms the rime in trap?",
+      "options": [
+        "tr-",
+        "tra-",
+        "t-r",
+        "-ap"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q05",
+      "question": "Do all tr-words belong to one rime family?",
+      "options": [
+        "No, their vowels and endings can differ",
+        "Yes, every tr-word rhymes",
+        "Only long words do",
+        "Only words with four letters do"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q06",
+      "question": "Which pair has different onsets but the same rime?",
+      "options": [
+        "trap and trip",
+        "trap and clap",
+        "trim and trot",
+        "trip and track"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q07",
+      "question": "Which word does not share -ip with trip?",
+      "options": [
+        "grip",
+        "trip",
+        "trap",
+        "ship"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q08",
+      "question": "When sorting words, what should you compare?",
+      "options": [
+        "Only the first letter",
+        "Only the number of letters",
+        "The picture colour",
+        "The vowel and ending"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q09",
+      "question": "Which family includes track, black, and snack?",
+      "options": [
+        "-ack",
+        "-ap",
+        "-ip",
+        "-im"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q10",
+      "question": "Which pair shares an onset but not a rime?",
+      "options": [
+        "trap and clap",
+        "trap and trim",
+        "trip and grip",
+        "trim and brim"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q11",
+      "question": "Which controlled line has two words from the -ap family?",
+      "options": [
+        "The trip is fun.",
+        "Trim the grass.",
+        "The trap is in the gap.",
+        "The track is flat."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q12",
+      "question": "What is a good check after a word-family sort?",
+      "options": [
+        "Read only tr",
+        "Skip unfamiliar endings",
+        "Assume the words rhyme",
+        "Decode each whole word aloud"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q13",
+      "question": "Which word shares the rime -ot with trot?",
+      "options": [
+        "spot",
+        "trap",
+        "trip",
+        "trim"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q14",
+      "question": "What does a word family help a reader notice?",
+      "options": [
+        "That every word starts alike",
+        "A shared vowel-and-ending pattern",
+        "That endings can be ignored",
+        "That all words mean the same"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF281-Q15",
+      "question": "Which statement is accurate?",
+      "options": [
+        "Different onsets never rhyme",
+        "Every tr-word shares one rime",
+        "Words can share a rime and have different onsets",
+        "The onset includes the ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF281-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Clap shares the -ap rime with trap."
+    },
+    {
+      "questionId": "PF281-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "Grip and trip share -ip."
+    },
+    {
+      "questionId": "PF281-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "Brim and trim share -im."
+    },
+    {
+      "questionId": "PF281-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The rime is the vowel and ending, -ap."
+    },
+    {
+      "questionId": "PF281-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "A shared onset does not determine the rime."
+    },
+    {
+      "questionId": "PF281-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "Trap and clap share -ap."
+    },
+    {
+      "questionId": "PF281-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Trap has -ap, not -ip."
+    },
+    {
+      "questionId": "PF281-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "The vowel and ending reveal the rime."
+    },
+    {
+      "questionId": "PF281-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Track, black, and snack share -ack."
+    },
+    {
+      "questionId": "PF281-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "Trap and trim begin tr but have different rimes."
+    },
+    {
+      "questionId": "PF281-Q11",
+      "correctOptionIndex": 2,
+      "explanation": "Trap and gap share -ap."
+    },
+    {
+      "questionId": "PF281-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Whole-word decoding confirms the sort."
+    },
+    {
+      "questionId": "PF281-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Spot and trot share -ot."
+    },
+    {
+      "questionId": "PF281-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Word families highlight rime patterns."
+    },
+    {
+      "questionId": "PF281-Q15",
+      "correctOptionIndex": 2,
+      "explanation": "A shared rime can appear with different onsets."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-281-v1"
+  }
+}
