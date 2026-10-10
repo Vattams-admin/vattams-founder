@@ -256,10 +256,10 @@
       "questionId": "PF162-Q02",
       "question": "Which word belongs to the -op family?",
       "options": [
-        "shop",
         "ship",
         "fish",
-        "dish"
+        "dish",
+        "shop"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -269,9 +269,9 @@
       "questionId": "PF162-Q03",
       "question": "Which pair shares -ish?",
       "options": [
-        "fish and dish",
         "ship and shop",
         "shut and cash",
+        "fish and dish",
         "shed and ship"
       ],
       "difficulty": "basic",
@@ -282,8 +282,8 @@
       "questionId": "PF162-Q04",
       "question": "Do ship and shop share the same rime?",
       "options": [
-        "No; -ip and -op differ",
         "Yes; both begin with sh",
+        "No; -ip and -op differ",
         "Yes; both have three letters",
         "No; ship has no vowel"
       ],
@@ -308,10 +308,10 @@
       "questionId": "PF162-Q06",
       "question": "Which word belongs to the -ash family?",
       "options": [
-        "cash",
         "fish",
         "shop",
-        "shell"
+        "shell",
+        "cash"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -321,9 +321,9 @@
       "questionId": "PF162-Q07",
       "question": "What is the rime in dish?",
       "options": [
-        "-ish",
         "-sh",
         "-di",
+        "-ish",
         "-d"
       ],
       "difficulty": "conceptual",
@@ -334,8 +334,8 @@
       "questionId": "PF162-Q08",
       "question": "What is the onset in ship?",
       "options": [
-        "/sh/",
         "/ip/",
+        "/sh/",
         "/i/",
         "/p/"
       ],
@@ -360,10 +360,10 @@
       "questionId": "PF162-Q10",
       "question": "Which set contains only -ish words?",
       "options": [
-        "fish, dish, wish",
         "fish, shop, wish",
         "dish, cash, fish",
-        "wish, shut, dish"
+        "wish, shut, dish",
+        "fish, dish, wish"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -373,9 +373,9 @@
       "questionId": "PF162-Q11",
       "question": "Why is sorting only by sh not enough?",
       "options": [
-        "The vowel and ending may differ",
         "All sh words share one rime",
         "Vowels do not matter",
+        "The vowel and ending may differ",
         "Every sh word ends in sh"
       ],
       "difficulty": "application",
@@ -386,8 +386,8 @@
       "questionId": "PF162-Q12",
       "question": "Which word shares -ell with shell?",
       "options": [
-        "bell",
         "ship",
+        "bell",
         "cash",
         "shut"
       ],
@@ -412,10 +412,10 @@
       "questionId": "PF162-Q14",
       "question": "A learner groups fish with ship because both contain sh. What should be checked?",
       "options": [
-        "The rime after the onset",
         "Only the word length",
         "The capital letter",
-        "The spaces"
+        "The spaces",
+        "The rime after the onset"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -425,9 +425,9 @@
       "questionId": "PF162-Q15",
       "question": "Which statement about word families is accurate?",
       "options": [
-        "A shared rime supports reading but each word still needs decoding",
         "Words with sh all rhyme",
         "Only the first letter determines the family",
+        "A shared rime supports reading but each word still needs decoding",
         "A family word can be guessed without reading"
       ],
       "difficulty": "application",
@@ -443,17 +443,17 @@
     },
     {
       "questionId": "PF162-Q02",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Shop contains the rime -op."
     },
     {
       "questionId": "PF162-Q03",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Fish and dish share -ish."
     },
     {
       "questionId": "PF162-Q04",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Their vowels and rimes differ."
     },
     {
@@ -463,17 +463,17 @@
     },
     {
       "questionId": "PF162-Q06",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Cash contains -ash."
     },
     {
       "questionId": "PF162-Q07",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "The rime includes the vowel and ending: -ish."
     },
     {
       "questionId": "PF162-Q08",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The onset is the initial sound /sh/."
     },
     {
@@ -483,17 +483,17 @@
     },
     {
       "questionId": "PF162-Q10",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "All three share -ish."
     },
     {
       "questionId": "PF162-Q11",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "The rime depends on the vowel and following sounds."
     },
     {
       "questionId": "PF162-Q12",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Shell and bell share -ell."
     },
     {
@@ -503,12 +503,12 @@
     },
     {
       "questionId": "PF162-Q14",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Fish has -ish; ship has -ip."
     },
     {
       "questionId": "PF162-Q15",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Family patterns support but do not replace full decoding."
     }
   ],
