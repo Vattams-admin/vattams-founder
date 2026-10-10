@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-276",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "276-gr-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "initial-gr-rime-sorting-and-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Identify shared rimes in taught gr-words and familiar partner words.",
+      "Sort words by vowel-and-ending patterns rather than onset alone.",
+      "Decode every word fully after sorting.",
+      "Use controlled word groups to read a short, accurate line."
+    ],
+    "concepts": [
+      "A rime includes the vowel and the sounds that follow it.",
+      "Words can share gr but have different rimes.",
+      "Words with different onsets can share a rime.",
+      "Sorting supports reading only when the whole word is decoded."
+    ],
+    "definitions": [
+      {
+        "term": "rime",
+        "definition": "The vowel and sounds that follow it in a syllable."
+      },
+      {
+        "term": "word family",
+        "definition": "A group of words sharing a rime, such as grab and crab (-ab)."
+      },
+      {
+        "term": "onset",
+        "definition": "The consonant or consonant blend before the vowel."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Compare grab and crab.",
+        "solution": "They share -ab but have different onsets."
+      },
+      {
+        "prompt": "Compare grin and spin.",
+        "solution": "They share -in."
+      },
+      {
+        "prompt": "Compare grip and ship.",
+        "solution": "They share -ip even though the onsets differ."
+      }
+    ],
+    "commonMistakes": [
+      "Grouping all gr-words together despite different rimes.",
+      "Sorting only by the first two letters.",
+      "Ignoring the ending consonant.",
+      "Guessing from rhyme without decoding the full word."
+    ],
+    "keyTakeaways": [
+      "Compare the vowel and ending to find a rime.",
+      "The same onset does not guarantee the same word family.",
+      "Different onsets can share a rime.",
+      "Decode every word after sorting."
+    ],
+    "revisionPoints": [
+      "grab and crab share -ab.",
+      "grin and spin share -in.",
+      "grip and ship share -ip.",
+      "Sort by rime, then read each whole word."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word shares -ab with grab?",
+        "answer": "crab"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word shares -in with grin?",
+        "answer": "spin"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word shares -ip with grip?",
+        "answer": "ship"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "What part forms the rime in grab?",
+        "answer": "-ab"
+      },
+      {
+        "id": "C2",
+        "prompt": "Do all gr-words belong to one rime family?",
+        "answer": "No, their vowels and endings can differ"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which pair has different onsets but the same rime?",
+        "answer": "grab and crab"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word does not share -ip with grip?",
+        "answer": "grass"
+      },
+      {
+        "id": "A2",
+        "prompt": "When sorting words, what should you compare?",
+        "answer": "The vowel and ending"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which family includes grin, spin, and skin?",
+        "answer": "-in"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which pair shares an onset but not a rime?",
+        "answer": "grin and grass"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which controlled line has two words from the -ab family?",
+        "answer": "The crab can grab."
+      },
+      {
+        "id": "H3",
+        "prompt": "What is a good check after a word-family sort?",
+        "answer": "Decode each whole word aloud"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word shares the rime -ass with grass?",
+        "answer": "class"
+      },
+      {
+        "id": "R2",
+        "prompt": "What does a word family help a reader notice?",
+        "answer": "A shared vowel-and-ending pattern"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which statement is accurate?",
+        "answer": "Words can share a rime and have different onsets"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "grab and crab share -ab.",
+      "grin and spin share -in.",
+      "grip and ship share -ip.",
+      "Sort by rime, then read each whole word."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "grab and crab share -ab."
+      },
+      {
+        "front": "Recall 2",
+        "back": "grin and spin share -in."
+      },
+      {
+        "front": "Recall 3",
+        "back": "grip and ship share -ip."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Sort by rime, then read each whole word."
+      }
+    ],
+    "formulaOrFactBank": [
+      "grab and crab share -ab.",
+      "grin and spin share -in.",
+      "grip and ship share -ip.",
+      "Sort by rime, then read each whole word."
+    ],
+    "mistakeBasedRevision": [
+      "Grouping all gr-words together despite different rimes.",
+      "Sorting only by the first two letters.",
+      "Ignoring the ending consonant.",
+      "Guessing from rhyme without decoding the full word."
+    ],
+    "weakTopicRevision": [
+      "If word-families is weak, revisit the worked examples, say the sound evidence aloud, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "sort-rimes-and-read-controlled-word-lines",
+      "name": "Sort rimes and read controlled word lines.",
+      "steps": [
+        "Listen to or read each target word carefully.",
+        "Say or map each sound in the correct order.",
+        "Complete the task and explain the sound or text evidence.",
+        "Reread or repeat the word to check accuracy."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-repair",
+      "name": "Find and repair a target-pattern error.",
+      "steps": [
+        "Review a word or sentence with one target-pattern error.",
+        "Identify the sound, spelling, or evidence that does not match.",
+        "Correct the item and explain the correction.",
+        "Try a fresh item without looking at the answer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Identify shared rimes in taught gr-words and familiar partner words.",
+    "Sort words by vowel-and-ending patterns rather than onset alone.",
+    "Decode every word fully after sorting.",
+    "Use controlled word groups to read a short, accurate line."
+  ],
+  "questions": [
+    {
+      "questionId": "PF276-Q01",
+      "question": "Which word shares -ab with grab?",
+      "options": [
+        "crab",
+        "grin",
+        "grip",
+        "grass"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q02",
+      "question": "Which word shares -in with grin?",
+      "options": [
+        "grab",
+        "spin",
+        "grip",
+        "grass"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q03",
+      "question": "Which word shares -ip with grip?",
+      "options": [
+        "grab",
+        "grin",
+        "ship",
+        "grass"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q04",
+      "question": "What part forms the rime in grab?",
+      "options": [
+        "gr-",
+        "gra-",
+        "g-r",
+        "-ab"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q05",
+      "question": "Do all gr-words belong to one rime family?",
+      "options": [
+        "No, their vowels and endings can differ",
+        "Yes, every gr-word rhymes",
+        "Only long words do",
+        "Only words with four letters do"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q06",
+      "question": "Which pair has different onsets but the same rime?",
+      "options": [
+        "grab and grin",
+        "grab and crab",
+        "grip and grass",
+        "grin and grass"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q07",
+      "question": "Which word does not share -ip with grip?",
+      "options": [
+        "ship",
+        "grip",
+        "grass",
+        "slip"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q08",
+      "question": "When sorting words, what should you compare?",
+      "options": [
+        "Only the first letter",
+        "Only the number of letters",
+        "The picture colour",
+        "The vowel and ending"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q09",
+      "question": "Which family includes grin, spin, and skin?",
+      "options": [
+        "-in",
+        "-ab",
+        "-ip",
+        "-ass"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q10",
+      "question": "Which pair shares an onset but not a rime?",
+      "options": [
+        "grab and crab",
+        "grin and grass",
+        "grip and ship",
+        "grin and spin"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q11",
+      "question": "Which controlled line has two words from the -ab family?",
+      "options": [
+        "The grin is big.",
+        "The grip is firm.",
+        "The crab can grab.",
+        "The grass is wet."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q12",
+      "question": "What is a good check after a word-family sort?",
+      "options": [
+        "Read only gr",
+        "Skip unfamiliar endings",
+        "Assume the words rhyme",
+        "Decode each whole word aloud"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q13",
+      "question": "Which word shares the rime -ass with grass?",
+      "options": [
+        "class",
+        "grin",
+        "grip",
+        "grab"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q14",
+      "question": "What does a word family help a reader notice?",
+      "options": [
+        "That every word starts alike",
+        "A shared vowel-and-ending pattern",
+        "That endings can be ignored",
+        "That all words mean the same"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF276-Q15",
+      "question": "Which statement is accurate?",
+      "options": [
+        "Different onsets never rhyme",
+        "Every gr-word shares one rime",
+        "Words can share a rime and have different onsets",
+        "The onset includes the ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF276-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Crab shares the -ab rime with grab."
+    },
+    {
+      "questionId": "PF276-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "Spin and grin share -in."
+    },
+    {
+      "questionId": "PF276-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "Ship and grip share -ip."
+    },
+    {
+      "questionId": "PF276-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The rime is the vowel and ending, -ab."
+    },
+    {
+      "questionId": "PF276-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "A shared onset does not determine the rime."
+    },
+    {
+      "questionId": "PF276-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "Grab and crab share -ab."
+    },
+    {
+      "questionId": "PF276-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Grass has -ass, not -ip."
+    },
+    {
+      "questionId": "PF276-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "The vowel and ending reveal the rime."
+    },
+    {
+      "questionId": "PF276-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Grin, spin, and skin share -in."
+    },
+    {
+      "questionId": "PF276-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "Grin and grass begin gr but have different rimes."
+    },
+    {
+      "questionId": "PF276-Q11",
+      "correctOptionIndex": 2,
+      "explanation": "Crab and grab share -ab."
+    },
+    {
+      "questionId": "PF276-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Whole-word decoding confirms the sort."
+    },
+    {
+      "questionId": "PF276-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Class and grass share -ass."
+    },
+    {
+      "questionId": "PF276-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Word families highlight rime patterns."
+    },
+    {
+      "questionId": "PF276-Q15",
+      "correctOptionIndex": 2,
+      "explanation": "A shared rime can appear with different onsets."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-276-v1"
+  }
+}
