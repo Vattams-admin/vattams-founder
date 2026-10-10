@@ -172,7 +172,8 @@
         "Learner points to each word while rereading.",
         "Ask one who/what/where question.",
         "Learner points to the words that support the answer."
-      ]
+      ],
+      "type": "sentence-reading-comprehension"
     },
     {
       "id": "ACT2",
@@ -182,7 +183,8 @@
         "Read the sequence from beginning to end.",
         "Explain one detail from each sentence.",
         "Reread any sentence that does not make sense."
-      ]
+      ],
+      "type": "sentence-strip-sequencing"
     }
   ],
   "outcomes": [
