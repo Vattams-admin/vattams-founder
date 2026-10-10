@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 367,
-    "studyMaterials": 367,
-    "questionBank": 5495,
-    "assessments": 70
+    "lessons": 372,
+    "studyMaterials": 372,
+    "questionBank": 5570,
+    "assessments": 72
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -387,7 +387,12 @@
       "content/courses/phonics-foundation/364-decode-short-words-with-spl/authoring-package.json",
       "content/courses/phonics-foundation/365-spell-short-words-with-spl/authoring-package.json",
       "content/courses/phonics-foundation/366-spl-word-families-controlled-reading/authoring-package.json",
-      "content/courses/phonics-foundation/367-controlled-spl-sentences-comprehension/authoring-package.json"
+      "content/courses/phonics-foundation/367-controlled-spl-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/368-controlled-spl-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/369-spl-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/370-targeted-spl-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/371-hear-and-blend-initial-spr/authoring-package.json",
+      "content/courses/phonics-foundation/372-decode-short-words-with-spr/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -437,7 +442,9 @@
     "PF353-DIAG-01",
     "PF354-REASSESS-01",
     "PF361-DIAG-01",
-    "PF362-REASSESS-01"
+    "PF362-REASSESS-01",
+    "PF369-DIAG-01",
+    "PF370-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
