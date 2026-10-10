@@ -13,6 +13,6 @@ for(const f of files){
 }
 const start=fs.readFileSync(files[0],"utf8");
 if(!start.includes("integrity_sha256: await attemptIntegrityHash")) throw new Error("attempt creation does not persist integrity commitment");
-const migration=fs.readFileSync("supabase/migrations/20261007130000_assessment_attempt_integrity.sql","utf8");
+const migration=fs.readFileSync("supabase/migrations/20261010040512_assessment_attempt_integrity.sql","utf8");
 if(!migration.includes("add column if not exists integrity_sha256")) throw new Error("integrity migration missing column");
 console.log("ASSESSMENT ATTEMPT INTEGRITY: VALID");

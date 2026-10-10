@@ -37,20 +37,6 @@ jobs:
         run: |
           supabase migration list
 
-      - name: Repair remote-only migration history
-        env:
-          SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-        run: |
-          # These versions were confirmed by the diagnostic migration list:
-          # they exist on production but have no corresponding local migration file.
-          supabase migration repair --status reverted --yes \
-            20260728010808 20260728140357 20260728142855 20260728144026 \
-            20260728145340 20260728152558 20260728204325 20260728204336 \
-            20260728205726 20260728210113 20260801095448 20260802025415 \
-            20260803003901 20260803005633 20260804003828 20260804003933 \
-            20260804003959 20260808120000 20260812120000 20260814010000 \
-            20260814020000 20260815010000 20260815020000 20260815030000 \
-            20260816010000
 
       - name: Apply database migrations
         env:

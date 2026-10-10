@@ -6,7 +6,7 @@ for(const token of ["correct_option_index","marks_awarded","is_correct","private
 }
 if(submit.includes('body?.score') || submit.includes('body?.max_score') || submit.includes('body?.is_correct')) throw new Error("client scoring fields are trusted");
 if(submit.includes('.from("assessment_results").insert')) throw new Error("direct result insert remains");
-const migration=fs.readFileSync("supabase/migrations/20261007170000_assessment_authoritative_scoring.sql","utf8");
+const migration=fs.readFileSync("supabase/migrations/20261010040551_assessment_authoritative_scoring.sql","utf8");
 for(const token of ["for update","status <> 'in_progress'","ASSESSMENT_SCORE_INVALID","ASSESSMENT_ANSWER_COUNT_INVALID","revoke all on function","grant execute on function"]) {
  if(!migration.includes(token)) throw new Error("authoritative scoring migration missing: "+token);
 }

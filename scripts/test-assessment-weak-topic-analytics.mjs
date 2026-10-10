@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from "node:fs";
-const m=fs.readFileSync("supabase/migrations/20261007220000_assessment_topic_performance.sql","utf8");
+const m=fs.readFileSync("supabase/migrations/20261010040624_assessment_topic_performance.sql","utf8");
 const s=fs.readFileSync("supabase/functions/assessment-submit/index.ts","utf8");
 const e=fs.readFileSync("supabase/functions/assessment-topic-performance/index.ts","utf8");
 for(const x of ["status = 'submitted'","aa.is_correct = true","aa.subject","aa.topic","p_student_id","security definer"]) if(!m.includes(x)&&!e.includes(x)) throw new Error("missing weak-topic control: "+x);
