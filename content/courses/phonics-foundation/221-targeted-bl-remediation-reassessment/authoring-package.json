@@ -1,0 +1,542 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-221",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "221-targeted-bl-remediation-reassessment",
+    "topic": "remediation",
+    "subtopic": "initial-bl-component-targeted-remediation-fresh-reassessment",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Use diagnostic evidence to select a specific bl-cycle skill for practice.",
+      "Re-teach the diagnosed component with explicit modelling and guided examples.",
+      "Demonstrate transfer on 15 fresh reassessment items.",
+      "Advance at or above 80%; continue targeted support below the threshold."
+    ],
+    "concepts": [
+      "Remediation should match the component shown by diagnostic evidence.",
+      "Sound-recognition errors need listening contrasts; decoding errors need blending practice.",
+      "Encoding errors need segmentation and grapheme mapping; comprehension errors need text evidence.",
+      "Fresh reassessment checks transfer after teaching."
+    ],
+    "definitions": [
+      {
+        "term": "remediation",
+        "definition": "Focused teaching and practice for a diagnosed learning need."
+      },
+      {
+        "term": "reassessment",
+        "definition": "A new assessment after targeted instruction."
+      },
+      {
+        "term": "transfer item",
+        "definition": "A fresh example that checks whether a skill generalises."
+      },
+      {
+        "term": "mastery threshold",
+        "definition": "The minimum score required to advance."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "A learner omits /l/ in block.",
+        "solution": "Model /b/ /l/ smoothly, use sound boxes, then decode fresh bl-words."
+      },
+      {
+        "prompt": "A learner writes black as bak.",
+        "solution": "Segment the word, map both initial consonants and the taught ck ending, then read it back."
+      },
+      {
+        "prompt": "A learner answers where incorrectly.",
+        "solution": "Reread the sentence, locate the place phrase and point to the text evidence."
+      }
+    ],
+    "commonMistakes": [
+      "Repeating every lesson instead of targeting the diagnosed component.",
+      "Reusing the diagnostic questions during reassessment.",
+      "Advancing below 80%.",
+      "Using speed alone as evidence of fluency."
+    ],
+    "keyTakeaways": [
+      "Select the practice path from component-level evidence.",
+      "Model, practise with feedback, then use fresh items.",
+      "Use the 80% threshold consistently.",
+      "Keep question answer keys private and use text evidence for comprehension."
+    ],
+    "revisionPoints": [
+      "Recognition: hear /b/ then /l/.",
+      "Decoding: blend every phoneme in order.",
+      "Encoding: segment and map all graphemes.",
+      "Comprehension: reread and point to text evidence."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What are the first two sounds in blush?",
+        "answer": "/b/ then /l/"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word has the rime -ess?",
+        "answer": "bless"
+      },
+      {
+        "id": "B3",
+        "prompt": "What is the onset in blink?",
+        "answer": "bl"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Why must reassessment items be fresh?",
+        "answer": "To test transfer instead of memorised answers."
+      },
+      {
+        "id": "C2",
+        "prompt": "What score meets 80% on 15 questions?",
+        "answer": "12 correct"
+      },
+      {
+        "id": "C3",
+        "prompt": "What should remediation target?",
+        "answer": "The component shown as weak by diagnostic evidence."
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Correct “buh-lush.”",
+        "answer": "Blend /b/ and /l/ without an extra vowel to read blush."
+      },
+      {
+        "id": "A2",
+        "prompt": "Which practice helps a learner who omits l when reading?",
+        "answer": "Guided blending with sound boxes and fresh bl-words."
+      },
+      {
+        "id": "A3",
+        "prompt": "What route applies to 11 out of 15?",
+        "answer": "Continue targeted remediation; 11 is below 12/15."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "How can you distinguish a decoding need from a comprehension need?",
+        "answer": "Check whether the word was decoded accurately and whether the learner can use text evidence."
+      },
+      {
+        "id": "H2",
+        "prompt": "Why not repeat the same diagnostic after practice?",
+        "answer": "The learner may remember answers without transferring the skill."
+      },
+      {
+        "id": "H3",
+        "prompt": "What should happen after a score of 13 out of 15?",
+        "answer": "Advance because 13/15 is above the 80% threshold."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which spelling represents the blend /b/ /l/?",
+        "answer": "bl"
+      },
+      {
+        "id": "R2",
+        "prompt": "What helps check a spelling?",
+        "answer": "Read the word back and check each grapheme."
+      },
+      {
+        "id": "R3",
+        "prompt": "What evidence supports a literal answer?",
+        "answer": "The exact words in the sentence or passage"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Select the practice path from component-level evidence.",
+      "Model, practise with feedback, then use fresh items.",
+      "Use the 80% threshold consistently.",
+      "Keep question answer keys private and use text evidence for comprehension."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Select the practice path from component-level evidence."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Model, practise with feedback, then use fresh items."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Use the 80% threshold consistently."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Keep question answer keys private and use text evidence for comprehension."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Select the practice path from component-level evidence.",
+      "Model, practise with feedback, then use fresh items.",
+      "Use the 80% threshold consistently.",
+      "Keep question answer keys private and use text evidence for comprehension."
+    ],
+    "mistakeBasedRevision": [
+      "Repeating every lesson instead of targeting the diagnosed component.",
+      "Reusing the diagnostic questions during reassessment.",
+      "Advancing below 80%.",
+      "Using speed alone as evidence of fluency."
+    ],
+    "weakTopicRevision": [
+      "If reassessment remains below 80%, continue focused practice on the same diagnosed component, then use a new set of items before routing again."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "targeted-remediation",
+      "name": "Select a practice path from diagnostic evidence.",
+      "steps": [
+        "Review the component-level error pattern.",
+        "Model the specific sound, decoding, spelling, word-family or comprehension skill.",
+        "Practise with guided examples and immediate feedback.",
+        "Use fresh examples to check transfer."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "fresh-reassessment",
+      "name": "Complete a new reassessment and explain the route.",
+      "steps": [
+        "Answer the 15 fresh items independently.",
+        "Check responses against the answer key privately.",
+        "Calculate the score against the 80% threshold.",
+        "Advance or continue targeted remediation based on the score."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Complete targeted practice matched to the diagnosed component.",
+    "Score at least 80% on fresh reassessment items to advance.",
+    "Explain a corrected response using sound or text evidence.",
+    "Continue targeted support if the score remains below threshold."
+  ],
+  "questions": [
+    {
+      "questionId": "PF221-Q01",
+      "question": "Which word begins with /bl/?",
+      "options": [
+        "bless",
+        "brick",
+        "flag",
+        "crab"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q02",
+      "question": "What are the first two phonemes in blush?",
+      "options": [
+        "/b/, /l/",
+        "/l/, /b/",
+        "/b/, /r/",
+        "/u/, /sh/"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q03",
+      "question": "Blend /b/ /l/ /u/ /sh/ to read the word.",
+      "options": [
+        "blush",
+        "brush",
+        "block",
+        "bless"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q04",
+      "question": "Which word begins with bl and rhymes with mess?",
+      "options": [
+        "bless",
+        "blot",
+        "blink",
+        "black"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q05",
+      "question": "Which spelling correctly represents blush?",
+      "options": [
+        "blush",
+        "bulsh",
+        "blushh",
+        "bush"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q06",
+      "question": "What is the onset in bless?",
+      "options": [
+        "bl",
+        "-ess",
+        "ess",
+        "bess"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q07",
+      "question": "Which pair shares the rime -ess?",
+      "options": [
+        "bless and mess",
+        "bless and black",
+        "blush and block",
+        "blink and blank"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q08",
+      "question": "Which word has a different rime from bless?",
+      "options": [
+        "block",
+        "mess",
+        "less",
+        "dress"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q09",
+      "question": "Read: “A black block is on the mat.” What is on the mat?",
+      "options": [
+        "a black block",
+        "a red rag",
+        "a wet sock",
+        "a blue cup"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q10",
+      "question": "Read: “Ben can dab a blob.” What action does Ben do?",
+      "options": [
+        "dab",
+        "run",
+        "mix",
+        "kick"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q11",
+      "question": "A learner says “buh-lush.” What feedback is best?",
+      "options": [
+        "Blend /b/ and /l/ without an extra vowel",
+        "Skip /l/",
+        "Say only the letter names",
+        "Add another vowel"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q12",
+      "question": "Which word contains bl and the rime -ink?",
+      "options": [
+        "blink",
+        "bless",
+        "blush",
+        "blot"
+      ],
+      "difficulty": "decoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q13",
+      "question": "What best supports a literal comprehension answer?",
+      "options": [
+        "Pointing to the exact sentence words",
+        "Guessing from a picture",
+        "Choosing the longest answer",
+        "Using a detail not in the text"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q14",
+      "question": "Which is the best fluency goal after practice?",
+      "options": [
+        "Read accurately and smoothly while keeping meaning",
+        "Read as fast as possible even if words are skipped",
+        "Guess from the first letter",
+        "Avoid rereading"
+      ],
+      "difficulty": "fluency",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF221-Q15",
+      "question": "If a learner scores 11 out of 15 on fresh reassessment, what happens next?",
+      "options": [
+        "Continue targeted remediation because 11 is below 12/15",
+        "Advance because 11 is above 8",
+        "Stop all practice",
+        "Repeat the same questions until memorised"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF221-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Bless begins with /b/ followed by /l/."
+    },
+    {
+      "questionId": "PF221-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The initial blend is /b/ then /l/."
+    },
+    {
+      "questionId": "PF221-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The sounds form blush."
+    },
+    {
+      "questionId": "PF221-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Bless shares the -ess rime with mess."
+    },
+    {
+      "questionId": "PF221-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Blush keeps bl at the start and sh at the end."
+    },
+    {
+      "questionId": "PF221-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The onset is bl; the rime is -ess."
+    },
+    {
+      "questionId": "PF221-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Bless and mess share -ess."
+    },
+    {
+      "questionId": "PF221-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Block ends in -ock, while the others share -ess."
+    },
+    {
+      "questionId": "PF221-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence directly says a black block is on the mat."
+    },
+    {
+      "questionId": "PF221-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "Dab is the action stated in the sentence."
+    },
+    {
+      "questionId": "PF221-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The blend should remain smooth without an inserted vowel."
+    },
+    {
+      "questionId": "PF221-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "Blink ends with -ink."
+    },
+    {
+      "questionId": "PF221-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Literal answers should be supported by explicit text evidence."
+    },
+    {
+      "questionId": "PF221-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Fluency includes accuracy, smoothness and comprehension."
+    },
+    {
+      "questionId": "PF221-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Eleven is below the 80% threshold of 12 correct out of 15."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-221-v1"
+  },
+  "assessment": {
+    "assessmentId": "PF221-REASSESS-01",
+    "title": "Phonics Foundation Targeted bl Remediation Reassessment",
+    "type": "reassessment",
+    "questionCount": 15,
+    "masteryThresholdPercent": 80,
+    "components": [
+      "sound_recognition",
+      "decoding",
+      "encoding",
+      "word_families",
+      "comprehension",
+      "fluency"
+    ],
+    "routing": {
+      "atOrAboveThreshold": "advance_to_next_phonics_cycle",
+      "belowThreshold": "repeat_targeted_remediation"
+    },
+    "freshItemsRequired": true,
+    "linkedDiagnosticId": "PF220-DIAG-01"
+  }
+}

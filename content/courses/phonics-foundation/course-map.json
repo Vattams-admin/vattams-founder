@@ -1371,9 +1371,23 @@
           "title": "Controlled bl Passage Sequencing and Comprehension",
           "sequence": 205,
           "package": "content/courses/phonics-foundation/219-controlled-bl-passage-sequencing/authoring-package.json"
+        },
+        {
+          "lessonId": "220-bl-fluency-consolidation-diagnostic",
+          "title": "bl Fluency Consolidation Diagnostic",
+          "sequence": 206,
+          "package": "content/courses/phonics-foundation/220-bl-fluency-consolidation-diagnostic/authoring-package.json",
+          "assessmentId": "PF220-DIAG-01"
+        },
+        {
+          "lessonId": "221-targeted-bl-remediation-reassessment",
+          "title": "Targeted bl Remediation and Reassessment",
+          "sequence": 207,
+          "package": "content/courses/phonics-foundation/221-targeted-bl-remediation-reassessment/authoring-package.json",
+          "assessmentId": "PF221-REASSESS-01"
         }
       ],
-      "lessonCount": 205
+      "lessonCount": 207
     }
   ],
   "governance": {
