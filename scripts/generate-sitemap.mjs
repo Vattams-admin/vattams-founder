@@ -6,7 +6,7 @@
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { initializeApp } from 'firebase/app'
-import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
+import { collection, getDocs, getFirestore, query, where, terminate } from 'firebase/firestore'
 
 const SITE_URL = 'https://academia.vattams.net'
 
@@ -96,7 +96,19 @@ async function main() {
     where('is_published', '==', true),
   )
 
-  const snapshot = await getDocs(coursesQuery)
+  let timeoutId
+  const snapshot = await Promise.race([
+    getDocs(coursesQuery),
+    new Promise((_, reject) => {
+      timeoutId = setTimeout(() => reject(new Error('Firestore sitemap query timed out after 30 seconds')), 30_000)
+    }),
+  ]).catch(async (error) => {
+    console.warn(`Sitemap refresh skipped: ${error.message}. Preserving the checked-in sitemap.xml.`)
+    await terminate(db).catch(() => {})
+    return null
+  }).finally(() => clearTimeout(timeoutId))
+
+  if (!snapshot) return
 
   const courseRoutes = snapshot.docs
     .map((doc) => doc.data())
@@ -128,6 +140,7 @@ ${entries}
   console.log(
     `Wrote ${STATIC_ROUTES.length} static + ${courseRoutes.length} published course URLs to public/sitemap.xml`,
   )
+  await terminate(db)
 }
 
 main().catch((err) => {
