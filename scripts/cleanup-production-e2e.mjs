@@ -36,6 +36,26 @@ if (supabase && studentIds.length) {
     .eq('course_id', competitionCourseId)
     .in('student_id', studentIds)
   if (error) throw new Error(`Competition access cache cleanup failed: ${error.message}`)
+
+  async function removeAttempts(attemptTable, answerTables, resultTable) {
+    const { data: attempts, error: attemptsError } = await supabase
+      .from(attemptTable).select('id').in('student_id', studentIds)
+    if (attemptsError) throw new Error(`Unable to inspect isolated ${attemptTable}: ${attemptsError.message}`)
+    const attemptIds = (attempts || []).map((row) => row.id).filter(Boolean)
+    if (!attemptIds.length) return
+    for (const answerTable of answerTables) {
+      const { error: answerError } = await supabase.from(answerTable).delete().in('attempt_id', attemptIds)
+      if (answerError) throw new Error(`Unable to clean isolated ${answerTable}: ${answerError.message}`)
+    }
+    const { error: resultError } = await supabase.from(resultTable).delete().in('attempt_id', attemptIds)
+    if (resultError) throw new Error(`Unable to clean isolated ${resultTable}: ${resultError.message}`)
+    const { error: deleteAttemptsError } = await supabase.from(attemptTable).delete().in('id', attemptIds)
+    if (deleteAttemptsError) throw new Error(`Unable to clean isolated ${attemptTable}: ${deleteAttemptsError.message}`)
+  }
+
+  await removeAttempts('competition_mock_attempts', ['competition_mock_answers'], 'competition_mock_results')
+  await removeAttempts('competition_attempts', ['competition_answers'], 'competition_results')
+  await removeAttempts('assessment_attempts', ['assessment_answers'], 'assessment_results')
 }
 
 if (studentIds.length) {
