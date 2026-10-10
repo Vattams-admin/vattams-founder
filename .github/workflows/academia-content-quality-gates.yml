@@ -9,6 +9,7 @@ on:
       - "src/**"
       - "public/**"
       - "supabase/functions/**"
+      - "supabase/migrations/**"
       - "e2e/**"
       - "docs/**"
       - "scripts/validate-*.mjs"
