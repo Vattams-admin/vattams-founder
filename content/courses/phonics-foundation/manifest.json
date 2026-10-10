@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 440,
-    "studyMaterials": 440,
-    "questionBank": 6590,
-    "assessments": 87
+    "lessons": 445,
+    "studyMaterials": 445,
+    "questionBank": 6665,
+    "assessments": 89
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -460,7 +460,12 @@
       "content/courses/phonics-foundation/437-spell-short-words-with-wr/authoring-package.json",
       "content/courses/phonics-foundation/438-wr-word-families-controlled-reading/authoring-package.json",
       "content/courses/phonics-foundation/439-controlled-wr-sentences-comprehension/authoring-package.json",
-      "content/courses/phonics-foundation/440-controlled-wr-passage-sequencing-comprehension/authoring-package.json"
+      "content/courses/phonics-foundation/440-controlled-wr-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/441-wr-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/442-targeted-wr-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/443-recognize-silent-b-in-final-mb/authoring-package.json",
+      "content/courses/phonics-foundation/444-decode-short-words-with-final-mb/authoring-package.json",
+      "content/courses/phonics-foundation/445-spell-short-words-with-final-mb/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -527,7 +532,9 @@
     "PF425-DIAG-01",
     "PF426-REASSESS-01",
     "PF433-DIAG-01",
-    "PF434-REASSESS-01"
+    "PF434-REASSESS-01",
+    "PF441-DIAG-01",
+    "PF442-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",

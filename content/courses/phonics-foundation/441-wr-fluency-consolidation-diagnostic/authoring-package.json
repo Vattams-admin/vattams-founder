@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-441",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "441-wr-fluency-consolidation-diagnostic",
+    "topic": "assessment",
+    "subtopic": "diagnose-wr-recognition-decoding-encoding-comprehension-and-fluency",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognise wr spelling and remember that initial w is silent.",
+      "Decode and spell taught wr-words accurately.",
+      "Read controlled wr-text and answer literal questions.",
+      "Use diagnostic evidence to identify a skill for targeted review."
+    ],
+    "concepts": [
+      "A diagnostic samples several related skills.",
+      "The initial w is silent in the taught wr words.",
+      "The first spoken sound is /r/.",
+      "Results guide the next teaching step."
+    ],
+    "definitions": [
+      {
+        "term": "diagnostic",
+        "definition": "An assessment that identifies strengths and learning needs."
+      },
+      {
+        "term": "fluency",
+        "definition": "Accurate reading with appropriate pace and phrasing."
+      },
+      {
+        "term": "remediation",
+        "definition": "Targeted practice for a skill that needs support."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Compare wrap and west.",
+        "solution": "Wrap begins /r/; west begins /w/."
+      },
+      {
+        "prompt": "If a learner writes wrist as rist, what spelling element is missing?",
+        "solution": "The silent w."
+      },
+      {
+        "prompt": "What follows a diagnostic showing weak decoding?",
+        "solution": "Targeted practice and fresh reassessment."
+      }
+    ],
+    "commonMistakes": [
+      "Pronouncing w in wr words.",
+      "Removing w from spelling.",
+      "Guessing instead of checking the first sound.",
+      "Ignoring a diagnosed weakness."
+    ],
+    "keyTakeaways": [
+      "Initial w is silent in taught wr words.",
+      "The first spoken sound is /r/.",
+      "Keep wr in the spelling.",
+      "Use results to plan targeted review."
+    ],
+    "revisionPoints": [
+      "wrap, wrist, and write begin with wr spelling.",
+      "Initial w is silent.",
+      "Read connected text for meaning.",
+      "Target weaknesses and reassess."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word begins with wr spelling?",
+        "answer": "wrist"
+      },
+      {
+        "id": "B2",
+        "prompt": "What is the first spoken sound in write?",
+        "answer": "/r/"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word begins with /w/, not /r/?",
+        "answer": "west"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which spelling matches the word wrap?",
+        "answer": "wrap"
+      },
+      {
+        "id": "C2",
+        "prompt": "What does a diagnostic identify?",
+        "answer": "Strengths and learning needs"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which word begins wr and ends with p?",
+        "answer": "wrap"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which pair begins with the same spoken sound?",
+        "answer": "wrap and rest"
+      },
+      {
+        "id": "A2",
+        "prompt": "What is fluency?",
+        "answer": "Accurate reading with appropriate pace and phrasing"
+      },
+      {
+        "id": "A3",
+        "prompt": "What should follow evidence of a weak skill?",
+        "answer": "Targeted practice and fresh reassessment"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which is good decoding practice?",
+        "answer": "Remember w is silent, then map the rest"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which response uses sound evidence?",
+        "answer": "wr begins with /r/ because w is silent"
+      },
+      {
+        "id": "H3",
+        "prompt": "What is the checkpoint's purpose?",
+        "answer": "Identify mastery and skills needing review"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What should a reader do after correcting a word?",
+        "answer": "Reread it in the sentence"
+      },
+      {
+        "id": "R2",
+        "prompt": "What does a word-family task compare?",
+        "answer": "Vowels and endings in complete words"
+      },
+      {
+        "id": "R3",
+        "prompt": "What should you remember when completing this assessment task?",
+        "answer": "Initial w is silent in taught wr words."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "wrap, wrist, and write begin with wr spelling.",
+      "Initial w is silent.",
+      "Read connected text for meaning.",
+      "Target weaknesses and reassess."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "wrap, wrist, and write begin with wr spelling."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Initial w is silent."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Read connected text for meaning."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Target weaknesses and reassess."
+      }
+    ],
+    "formulaOrFactBank": [
+      "wrap, wrist, and write begin with wr spelling.",
+      "Initial w is silent.",
+      "Read connected text for meaning.",
+      "Target weaknesses and reassess."
+    ],
+    "mistakeBasedRevision": [
+      "Pronouncing w in wr words.",
+      "Removing w from spelling.",
+      "Guessing instead of checking the first sound.",
+      "Ignoring a diagnosed weakness."
+    ],
+    "weakTopicRevision": [
+      "If assessment is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "diagnostic-skill-sampling",
+      "name": "Complete the wr skill check and review results",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete a guided example and explain the sound or text evidence.",
+        "Try a fresh example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with one target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Correct the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Recognise wr spelling and remember that initial w is silent.",
+    "Decode and spell taught wr-words accurately.",
+    "Read controlled wr-text and answer literal questions.",
+    "Use diagnostic evidence to identify a skill for targeted review."
+  ],
+  "questions": [
+    {
+      "questionId": "PF441-Q01",
+      "question": "Which word begins with wr spelling?",
+      "options": [
+        "wrist",
+        "west",
+        "rest",
+        "cat"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q02",
+      "question": "What is the first spoken sound in write?",
+      "options": [
+        "/w/",
+        "/aɪ/",
+        "/r/",
+        "/t/"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q03",
+      "question": "Which word begins with /w/, not /r/?",
+      "options": [
+        "wrap",
+        "west",
+        "wrist",
+        "write"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q04",
+      "question": "If wrist is written as rist, what is missing?",
+      "options": [
+        "The r",
+        "The short i",
+        "The final t",
+        "The silent w"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q05",
+      "question": "Which spelling matches the word wrap?",
+      "options": [
+        "rap",
+        "wrap",
+        "wap",
+        "wrapp"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q06",
+      "question": "What does a diagnostic identify?",
+      "options": [
+        "Strengths and learning needs",
+        "Only a favourite word",
+        "A guessed score",
+        "The longest sentence"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q07",
+      "question": "Which pair begins with the same spoken sound?",
+      "options": [
+        "wrap and west",
+        "write and win",
+        "wrap and rest",
+        "wrist and wet"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q08",
+      "question": "What is fluency?",
+      "options": [
+        "Fast reading with many errors",
+        "Guessing from pictures",
+        "Skipping punctuation",
+        "Accurate reading with appropriate pace and phrasing"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q09",
+      "question": "What should follow evidence of a weak skill?",
+      "options": [
+        "Targeted practice and fresh reassessment",
+        "Ignore the result",
+        "Publish answer keys",
+        "Skip all future lessons"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q10",
+      "question": "Which word begins wr and ends with p?",
+      "options": [
+        "wrist",
+        "write",
+        "wrap",
+        "wreck"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q11",
+      "question": "Which is good decoding practice?",
+      "options": [
+        "Pronounce every letter",
+        "Remember w is silent, then map the rest",
+        "Skip the final sound",
+        "Guess from the first letter"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q12",
+      "question": "What should a reader do after correcting a word?",
+      "options": [
+        "Stop immediately",
+        "Change the text",
+        "Guess the next answer",
+        "Reread it in the sentence"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q13",
+      "question": "What does a word-family task compare?",
+      "options": [
+        "Vowels and endings in complete words",
+        "Only page numbers",
+        "Unrelated pictures",
+        "Only punctuation"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q14",
+      "question": "Which response uses sound evidence?",
+      "options": [
+        "It looks longest",
+        "I picked option B",
+        "wr begins with /r/ because w is silent",
+        "The word is familiar"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF441-Q15",
+      "question": "What is the checkpoint's purpose?",
+      "options": [
+        "Guarantee perfection without evidence",
+        "Identify mastery and skills needing review",
+        "Replace all lessons",
+        "Memorize option order"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF441-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Wrist begins with wr."
+    },
+    {
+      "questionId": "PF441-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "The initial w is silent."
+    },
+    {
+      "questionId": "PF441-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "West begins with /w/."
+    },
+    {
+      "questionId": "PF441-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The conventional spelling keeps w."
+    },
+    {
+      "questionId": "PF441-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Wrap keeps silent w."
+    },
+    {
+      "questionId": "PF441-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "A diagnostic informs instruction."
+    },
+    {
+      "questionId": "PF441-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Wrap and rest begin with /r/."
+    },
+    {
+      "questionId": "PF441-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Fluency combines accuracy and phrasing."
+    },
+    {
+      "questionId": "PF441-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Results guide next steps."
+    },
+    {
+      "questionId": "PF441-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Wrap ends with p."
+    },
+    {
+      "questionId": "PF441-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "The initial w is silent."
+    },
+    {
+      "questionId": "PF441-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Rereading confirms meaning."
+    },
+    {
+      "questionId": "PF441-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Word-family work compares shared patterns."
+    },
+    {
+      "questionId": "PF441-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "The response identifies the spoken onset."
+    },
+    {
+      "questionId": "PF441-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "The checkpoint guides review."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-441-v1"
+  }
+}
