@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-180",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "180-controlled-th-passage-sequencing",
+    "topic": "passage-reading",
+    "subtopic": "unvoiced-th-controlled-passage-sequencing",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a short controlled passage containing taught unvoiced th-words.",
+      "Sequence events or details in the order stated by the text.",
+      "Answer literal questions using evidence from the passage.",
+      "Reread and self-correct a word that changes meaning."
+    ],
+    "concepts": [
+      "A passage connects sentences around a simple idea.",
+      "Sequencing uses details to identify what happens first, next and last.",
+      "Text evidence supports literal answers.",
+      "Accurate decoding of th-words supports comprehension."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "Place events or details in the order they appear in a text."
+      },
+      {
+        "term": "passage",
+        "definition": "A connected group of sentences about a topic or event."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A word or detail in the text that supports an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Beth has a bath. The bath is hot.",
+        "solution": "The passage introduces the bath, then describes it."
+      },
+      {
+        "prompt": "Beth can sit and rest.",
+        "solution": "The action follows the bath detail in the controlled passage."
+      },
+      {
+        "prompt": "Reread a sentence",
+        "solution": "Use printed words to verify the sequence and answer."
+      }
+    ],
+    "commonMistakes": [
+      "Putting details in an order not stated by the text.",
+      "Answering from memory without checking the passage.",
+      "Confusing /th/ and /t/ in a final position.",
+      "Skipping small words that change sentence meaning."
+    ],
+    "keyTakeaways": [
+      "Read the whole passage before sequencing.",
+      "Use first, next and last to explain the order.",
+      "Point to text evidence for each answer.",
+      "Decode th-words fully and reread when meaning is unclear."
+    ],
+    "revisionPoints": [
+      "Beth has a bath.",
+      "The bath is hot.",
+      "Beth can sit.",
+      "Beth can rest."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What is mentioned first in the passage?",
+        "answer": "Beth has a bath"
+      },
+      {
+        "id": "B2",
+        "prompt": "What does the passage say about the bath?",
+        "answer": "It is hot"
+      },
+      {
+        "id": "B3",
+        "prompt": "What can Beth do after the bath detail?",
+        "answer": "Sit and rest"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which detail happens first?",
+        "answer": "Beth has a bath"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which detail follows “Beth has a bath”?",
+        "answer": "The bath is hot"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which word ends with th?",
+        "answer": "bath"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which pair shares -ath?",
+        "answer": "bath and path"
+      },
+      {
+        "id": "A2",
+        "prompt": "What should support an answer about the passage?",
+        "answer": "Words stated in the passage"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which sentence describes the bath?",
+        "answer": "The bath is hot."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What does rest mean here?",
+        "answer": "Relax"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which detail is last in the passage?",
+        "answer": "Beth can rest"
+      },
+      {
+        "id": "H3",
+        "prompt": "Why reread before answering?",
+        "answer": "To check details and order"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word begins with unvoiced th?",
+        "answer": "thin"
+      },
+      {
+        "id": "R2",
+        "prompt": "Which order matches the passage?",
+        "answer": "bath, hot, sit, rest"
+      },
+      {
+        "id": "R3",
+        "prompt": "What helps a learner read the passage accurately?",
+        "answer": "Decode each word and check its sounds"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Beth has a bath.",
+      "The bath is hot.",
+      "Beth can sit.",
+      "Beth can rest."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Beth has a bath."
+      },
+      {
+        "front": "Recall 2",
+        "back": "The bath is hot."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Beth can sit."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Beth can rest."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Beth has a bath.",
+      "The bath is hot.",
+      "Beth can sit.",
+      "Beth can rest."
+    ],
+    "mistakeBasedRevision": [
+      "Putting details in an order not stated by the text.",
+      "Answering from memory without checking the passage.",
+      "Confusing /th/ and /t/ in a final position.",
+      "Skipping small words that change sentence meaning."
+    ],
+    "weakTopicRevision": [
+      "If passage reading accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "passage-sequencing",
+      "name": "Read the controlled th-passage and sequence details.",
+      "steps": [
+        "Read the passage once for meaning.",
+        "Reread and number details first, next and last.",
+        "Answer literal questions using text evidence.",
+        "Retell the passage in order."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using sound, spelling or text evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme or words supporting the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Sequence at least three passage details in the stated order.",
+    "Answer at least 4 of 5 literal questions using text evidence.",
+    "Reread and correct one decoding error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF180-Q01",
+      "question": "What is mentioned first in the passage?",
+      "options": [
+        "Beth can rest",
+        "The path is long",
+        "The bath is hot",
+        "Beth has a bath"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF180-Q02",
+      "question": "What does the passage say about the bath?",
+      "options": [
+        "It is thin",
+        "It is rich",
+        "It is hot",
+        "It is long"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF180-Q03",
+      "question": "What can Beth do after the bath detail?",
+      "options": [
+        "Chop a log",
+        "Sit and rest",
+        "Find a ship",
+        "Wash a shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF180-Q04",
+      "question": "Which detail happens first?",
+      "options": [
+        "Beth has a bath",
+        "Beth can rest",
+        "Beth can sit",
+        "The path is long"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF180-Q05",
+      "question": "Which detail follows “Beth has a bath”?",
+      "options": [
+        "Beth can rest",
+        "Beth can sit",
+        "The path is long",
+        "The bath is hot"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF180-Q06",
+      "question": "Which word ends with th?",
+      "options": [
+        "bat",
+        "bag",
+        "bath",
+        "bad"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF180-Q07",
+      "question": "Which pair shares -ath?",
+      "options": [
+        "thin and thick",
+        "bath and path",
+        "moth and math",
+        "fin and thick"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF180-Q08",
+      "question": "What should support an answer about the passage?",
+      "options": [
+        "Words stated in the passage",
+        "A guess",
+        "A different story",
+        "The longest option"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF180-Q09",
+      "question": "Which sentence describes the bath?",
+      "options": [
+        "Beth has a bath.",
+        "Beth can sit.",
+        "Beth can rest.",
+        "The bath is hot."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF180-Q10",
+      "question": "What does rest mean here?",
+      "options": [
+        "Run fast",
+        "Chop wood",
+        "Relax",
+        "Take a path"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF180-Q11",
+      "question": "Which detail is last in the passage?",
+      "options": [
+        "Beth has a bath",
+        "Beth can rest",
+        "The bath is hot",
+        "Beth can sit"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF180-Q12",
+      "question": "Why reread before answering?",
+      "options": [
+        "To check details and order",
+        "To skip hard words",
+        "To choose by memory only",
+        "To read only the first word"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF180-Q13",
+      "question": "Which word begins with unvoiced th?",
+      "options": [
+        "bath",
+        "path",
+        "moth",
+        "thin"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF180-Q14",
+      "question": "Which order matches the passage?",
+      "options": [
+        "rest, bath, sit, hot",
+        "hot, rest, bath, sit",
+        "bath, hot, sit, rest",
+        "sit, bath, rest, hot"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF180-Q15",
+      "question": "What helps a learner read the passage accurately?",
+      "options": [
+        "Guess from a picture only",
+        "Decode each word and check its sounds",
+        "Skip all th-words",
+        "Read only first letters"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF180-Q01",
+      "correctOptionIndex": 3,
+      "explanation": "The first sentence introduces the bath."
+    },
+    {
+      "questionId": "PF180-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "The passage says the bath is hot."
+    },
+    {
+      "questionId": "PF180-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The passage says Beth can sit and rest."
+    },
+    {
+      "questionId": "PF180-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The passage introduces the bath first."
+    },
+    {
+      "questionId": "PF180-Q05",
+      "correctOptionIndex": 3,
+      "explanation": "The next sentence describes the bath."
+    },
+    {
+      "questionId": "PF180-Q06",
+      "correctOptionIndex": 2,
+      "explanation": "Bath ends with th."
+    },
+    {
+      "questionId": "PF180-Q07",
+      "correctOptionIndex": 1,
+      "explanation": "Bath and path share -ath."
+    },
+    {
+      "questionId": "PF180-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Answers should be grounded in text evidence."
+    },
+    {
+      "questionId": "PF180-Q09",
+      "correctOptionIndex": 3,
+      "explanation": "This sentence describes the bath."
+    },
+    {
+      "questionId": "PF180-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Rest means relax in this context."
+    },
+    {
+      "questionId": "PF180-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "The final sentence says Beth can rest."
+    },
+    {
+      "questionId": "PF180-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "Rereading verifies details and sequence."
+    },
+    {
+      "questionId": "PF180-Q13",
+      "correctOptionIndex": 3,
+      "explanation": "Thin begins with th."
+    },
+    {
+      "questionId": "PF180-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "This order follows the passage."
+    },
+    {
+      "questionId": "PF180-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "Full decoding supports meaning."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-180-v1"
+  }
+}
