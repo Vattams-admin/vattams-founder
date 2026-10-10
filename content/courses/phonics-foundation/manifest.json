@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 740,
-    "studyMaterials": 740,
-    "questionBank": 11090,
-    "assessments": 168
+    "lessons": 760,
+    "studyMaterials": 760,
+    "questionBank": 11390,
+    "assessments": 174
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -760,6 +760,26 @@
       "content/courses/phonics-foundation/738-ew-ue-connected-reading-transfer/authoring-package.json",
       "content/courses/phonics-foundation/739-ew-ue-fluency-diagnostic/authoring-package.json",
       "content/courses/phonics-foundation/740-ew-ue-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/741-recognize-y-long-i-word-ending/authoring-package.json",
+      "content/courses/phonics-foundation/742-decode-words-final-y-long-i/authoring-package.json",
+      "content/courses/phonics-foundation/743-spell-words-final-y-long-i/authoring-package.json",
+      "content/courses/phonics-foundation/744-final-y-long-i-word-families-reading/authoring-package.json",
+      "content/courses/phonics-foundation/745-controlled-final-y-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/746-controlled-final-y-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/747-final-y-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/748-final-y-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/749-recognize-soft-c-pattern/authoring-package.json",
+      "content/courses/phonics-foundation/750-decode-words-with-soft-c/authoring-package.json",
+      "content/courses/phonics-foundation/751-spell-words-with-soft-c/authoring-package.json",
+      "content/courses/phonics-foundation/752-soft-c-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/753-controlled-soft-c-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/754-controlled-soft-c-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/755-soft-c-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/756-soft-c-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/757-soft-c-hard-c-patterns-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/758-soft-c-hard-c-connected-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/759-soft-c-hard-c-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/760-soft-c-hard-c-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
@@ -909,7 +929,13 @@
     "PF735-DIAG-01",
     "PF736-REASSESS-01",
     "PF739-DIAG-01",
-    "PF740-REASSESS-01"
+    "PF740-REASSESS-01",
+    "PF747-DIAG-01",
+    "PF748-REASSESS-01",
+    "PF755-DIAG-01",
+    "PF756-REASSESS-01",
+    "PF759-DIAG-01",
+    "PF760-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/02-hear-and-identify-s/authoring-package.json",
@@ -1651,6 +1677,26 @@
     "content/courses/phonics-foundation/738-ew-ue-connected-reading-transfer/authoring-package.json",
     "content/courses/phonics-foundation/739-ew-ue-fluency-diagnostic/authoring-package.json",
     "content/courses/phonics-foundation/740-ew-ue-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/741-recognize-y-long-i-word-ending/authoring-package.json",
+    "content/courses/phonics-foundation/742-decode-words-final-y-long-i/authoring-package.json",
+    "content/courses/phonics-foundation/743-spell-words-final-y-long-i/authoring-package.json",
+    "content/courses/phonics-foundation/744-final-y-long-i-word-families-reading/authoring-package.json",
+    "content/courses/phonics-foundation/745-controlled-final-y-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/746-controlled-final-y-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/747-final-y-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/748-final-y-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/749-recognize-soft-c-pattern/authoring-package.json",
+    "content/courses/phonics-foundation/750-decode-words-with-soft-c/authoring-package.json",
+    "content/courses/phonics-foundation/751-spell-words-with-soft-c/authoring-package.json",
+    "content/courses/phonics-foundation/752-soft-c-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/753-controlled-soft-c-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/754-controlled-soft-c-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/755-soft-c-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/756-soft-c-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/757-soft-c-hard-c-patterns-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/758-soft-c-hard-c-connected-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/759-soft-c-hard-c-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/760-soft-c-hard-c-remediation-reassessment/authoring-package.json",
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
   ]
 }
