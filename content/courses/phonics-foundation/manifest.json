@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 470,
-    "studyMaterials": 470,
-    "questionBank": 7040,
-    "assessments": 96
+    "lessons": 475,
+    "studyMaterials": 475,
+    "questionBank": 7115,
+    "assessments": 98
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -490,7 +490,12 @@
       "content/courses/phonics-foundation/467-recognize-silent-b-in-medial-bt/authoring-package.json",
       "content/courses/phonics-foundation/468-decode-words-with-silent-b/authoring-package.json",
       "content/courses/phonics-foundation/469-spell-words-with-silent-b/authoring-package.json",
-      "content/courses/phonics-foundation/470-silent-b-word-families-controlled-reading/authoring-package.json"
+      "content/courses/phonics-foundation/470-silent-b-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/471-controlled-silent-b-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/472-controlled-silent-b-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/473-silent-b-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/474-targeted-silent-b-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/475-recognize-silent-p-in-initial-ps/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -566,7 +571,9 @@
     "PF458-REASSESS-01",
     "PF465-DIAG-01",
     "PF466-REASSESS-01",
-    "PF467-DIAG-01"
+    "PF467-DIAG-01",
+    "PF473-DIAG-01",
+    "PF474-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
