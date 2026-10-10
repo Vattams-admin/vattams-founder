@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 700,
-    "studyMaterials": 700,
-    "questionBank": 10490,
-    "assessments": 156
+    "lessons": 720,
+    "studyMaterials": 720,
+    "questionBank": 10790,
+    "assessments": 162
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -720,7 +720,27 @@
       "content/courses/phonics-foundation/697-diphthong-vowel-teams-mixed-review/authoring-package.json",
       "content/courses/phonics-foundation/698-diphthong-vowel-team-connected-reading/authoring-package.json",
       "content/courses/phonics-foundation/699-diphthong-vowel-team-fluency-diagnostic/authoring-package.json",
-      "content/courses/phonics-foundation/700-diphthong-vowel-team-remediation-reassessment/authoring-package.json"
+      "content/courses/phonics-foundation/700-diphthong-vowel-team-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/701-recognize-au-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/702-decode-words-with-au/authoring-package.json",
+      "content/courses/phonics-foundation/703-spell-words-with-au/authoring-package.json",
+      "content/courses/phonics-foundation/704-au-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/705-controlled-au-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/706-controlled-au-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/707-au-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/708-targeted-au-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/709-recognize-aw-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/710-decode-words-with-aw/authoring-package.json",
+      "content/courses/phonics-foundation/711-spell-words-with-aw/authoring-package.json",
+      "content/courses/phonics-foundation/712-aw-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/713-controlled-aw-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/714-controlled-aw-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/715-aw-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/716-targeted-aw-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/717-au-aw-vowel-spelling-contrast/authoring-package.json",
+      "content/courses/phonics-foundation/718-au-aw-connected-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/719-au-aw-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/720-au-aw-remediation-reassessment/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -857,7 +877,13 @@
     "PF695-DIAG-01",
     "PF696-REASSESS-01",
     "PF699-DIAG-01",
-    "PF700-REASSESS-01"
+    "PF700-REASSESS-01",
+    "PF707-DIAG-01",
+    "PF708-REASSESS-01",
+    "PF715-DIAG-01",
+    "PF716-REASSESS-01",
+    "PF719-DIAG-01",
+    "PF720-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
@@ -1559,6 +1585,26 @@
     "content/courses/phonics-foundation/697-diphthong-vowel-teams-mixed-review/authoring-package.json",
     "content/courses/phonics-foundation/698-diphthong-vowel-team-connected-reading/authoring-package.json",
     "content/courses/phonics-foundation/699-diphthong-vowel-team-fluency-diagnostic/authoring-package.json",
-    "content/courses/phonics-foundation/700-diphthong-vowel-team-remediation-reassessment/authoring-package.json"
+    "content/courses/phonics-foundation/700-diphthong-vowel-team-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/701-recognize-au-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/702-decode-words-with-au/authoring-package.json",
+    "content/courses/phonics-foundation/703-spell-words-with-au/authoring-package.json",
+    "content/courses/phonics-foundation/704-au-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/705-controlled-au-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/706-controlled-au-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/707-au-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/708-targeted-au-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/709-recognize-aw-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/710-decode-words-with-aw/authoring-package.json",
+    "content/courses/phonics-foundation/711-spell-words-with-aw/authoring-package.json",
+    "content/courses/phonics-foundation/712-aw-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/713-controlled-aw-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/714-controlled-aw-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/715-aw-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/716-targeted-aw-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/717-au-aw-vowel-spelling-contrast/authoring-package.json",
+    "content/courses/phonics-foundation/718-au-aw-connected-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/719-au-aw-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/720-au-aw-remediation-reassessment/authoring-package.json"
   ]
 }
