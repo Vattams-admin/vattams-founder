@@ -78,8 +78,8 @@
     "basic": [
       {
         "id": "B1",
-        "prompt": "Read: “The brick is thick.” What is thick?",
-        "answer": "The brick"
+        "prompt": "In “Brad has a brush,” which word names the person?",
+        "answer": "Brad"
       },
       {
         "id": "B2",
@@ -112,8 +112,8 @@
     "application": [
       {
         "id": "A1",
-        "prompt": "If brick is read as bick, what should the reader do?",
-        "answer": "Reread and include /r/"
+        "prompt": "In “Brad has a brush,” which word names the object Brad has?",
+        "answer": "brush"
       },
       {
         "id": "A2",
@@ -274,12 +274,12 @@
     },
     {
       "questionId": "PF257-Q04",
-      "question": "Which word begins with br in “Brad has a brush”?",
+      "question": "In “Brad has a brush,” which word names the person?",
       "options": [
+        "Brad",
         "has",
         "a",
-        "brush? no",
-        "Brad"
+        "brush"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -378,12 +378,12 @@
     },
     {
       "questionId": "PF257-Q12",
-      "question": "Which word in “Brad has a brush” begins with /b/ followed by /r/?",
+      "question": "In “Brad has a brush,” which word names the object Brad has?",
       "options": [
+        "Brad",
+        "brush",
         "has",
-        "a",
-        "brush? no",
-        "Brad"
+        "a"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -447,8 +447,8 @@
     },
     {
       "questionId": "PF257-Q04",
-      "correctOptionIndex": 3,
-      "explanation": "Brad begins with br."
+      "correctOptionIndex": 0,
+      "explanation": "Brad is the person named in the sentence."
     },
     {
       "questionId": "PF257-Q05",
@@ -487,8 +487,8 @@
     },
     {
       "questionId": "PF257-Q12",
-      "correctOptionIndex": 3,
-      "explanation": "Brad begins with the br blend."
+      "correctOptionIndex": 1,
+      "explanation": "The sentence states that Brad has a brush."
     },
     {
       "questionId": "PF257-Q13",
