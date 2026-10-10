@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 900,
-    "studyMaterials": 900,
-    "questionBank": 13490,
-    "assessments": 216
+    "lessons": 920,
+    "studyMaterials": 920,
+    "questionBank": 13790,
+    "assessments": 222
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -920,6 +920,26 @@
       "content/courses/phonics-foundation/898-multisyllable-connected-reading-transfer/authoring-package.json",
       "content/courses/phonics-foundation/899-multisyllable-fluency-diagnostic/authoring-package.json",
       "content/courses/phonics-foundation/900-multisyllable-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/901-recognize-vcv-syllable-division/authoring-package.json",
+      "content/courses/phonics-foundation/902-decode-vcv-two-syllable-words/authoring-package.json",
+      "content/courses/phonics-foundation/903-spell-vcv-two-syllable-words/authoring-package.json",
+      "content/courses/phonics-foundation/904-vcv-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/905-controlled-vcv-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/906-controlled-vcv-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/907-vcv-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/908-vcv-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/909-recognize-compound-words/authoring-package.json",
+      "content/courses/phonics-foundation/910-decode-compound-words/authoring-package.json",
+      "content/courses/phonics-foundation/911-spell-compound-words/authoring-package.json",
+      "content/courses/phonics-foundation/912-compound-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/913-controlled-compound-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/914-controlled-compound-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/915-compound-word-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/916-compound-word-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/917-syllable-division-strategies-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/918-syllable-division-connected-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/919-syllable-division-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/920-syllable-division-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
@@ -1117,7 +1137,13 @@
     "PF895-DIAG-01",
     "PF896-REASSESS-01",
     "PF899-DIAG-01",
-    "PF900-REASSESS-01"
+    "PF900-REASSESS-01",
+    "PF907-DIAG-01",
+    "PF908-REASSESS-01",
+    "PF915-DIAG-01",
+    "PF916-REASSESS-01",
+    "PF919-DIAG-01",
+    "PF920-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/02-hear-and-identify-s/authoring-package.json",
@@ -2019,6 +2045,26 @@
     "content/courses/phonics-foundation/898-multisyllable-connected-reading-transfer/authoring-package.json",
     "content/courses/phonics-foundation/899-multisyllable-fluency-diagnostic/authoring-package.json",
     "content/courses/phonics-foundation/900-multisyllable-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/901-recognize-vcv-syllable-division/authoring-package.json",
+    "content/courses/phonics-foundation/902-decode-vcv-two-syllable-words/authoring-package.json",
+    "content/courses/phonics-foundation/903-spell-vcv-two-syllable-words/authoring-package.json",
+    "content/courses/phonics-foundation/904-vcv-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/905-controlled-vcv-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/906-controlled-vcv-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/907-vcv-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/908-vcv-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/909-recognize-compound-words/authoring-package.json",
+    "content/courses/phonics-foundation/910-decode-compound-words/authoring-package.json",
+    "content/courses/phonics-foundation/911-spell-compound-words/authoring-package.json",
+    "content/courses/phonics-foundation/912-compound-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/913-controlled-compound-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/914-controlled-compound-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/915-compound-word-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/916-compound-word-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/917-syllable-division-strategies-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/918-syllable-division-connected-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/919-syllable-division-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/920-syllable-division-remediation-reassessment/authoring-package.json",
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
   ]
 }
