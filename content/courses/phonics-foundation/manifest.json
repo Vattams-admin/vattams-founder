@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 680,
-    "studyMaterials": 680,
-    "questionBank": 10190,
-    "assessments": 150
+    "lessons": 700,
+    "studyMaterials": 700,
+    "questionBank": 10490,
+    "assessments": 156
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -700,7 +700,27 @@
       "content/courses/phonics-foundation/677-oo-vowel-team-mixed-review/authoring-package.json",
       "content/courses/phonics-foundation/678-oo-vowel-team-connected-reading/authoring-package.json",
       "content/courses/phonics-foundation/679-oo-vowel-team-fluency-diagnostic/authoring-package.json",
-      "content/courses/phonics-foundation/680-oo-vowel-team-remediation-reassessment/authoring-package.json"
+      "content/courses/phonics-foundation/680-oo-vowel-team-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/681-recognize-oi-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/682-decode-words-with-oi/authoring-package.json",
+      "content/courses/phonics-foundation/683-spell-words-with-oi/authoring-package.json",
+      "content/courses/phonics-foundation/684-oi-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/685-controlled-oi-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/686-controlled-oi-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/687-oi-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/688-targeted-oi-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/689-recognize-oy-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/690-decode-words-with-oy/authoring-package.json",
+      "content/courses/phonics-foundation/691-spell-words-with-oy/authoring-package.json",
+      "content/courses/phonics-foundation/692-oy-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/693-controlled-oy-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/694-controlled-oy-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/695-oy-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/696-targeted-oy-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/697-diphthong-vowel-teams-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/698-diphthong-vowel-team-connected-reading/authoring-package.json",
+      "content/courses/phonics-foundation/699-diphthong-vowel-team-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/700-diphthong-vowel-team-remediation-reassessment/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -831,7 +851,13 @@
     "PF675-DIAG-01",
     "PF676-REASSESS-01",
     "PF679-DIAG-01",
-    "PF680-REASSESS-01"
+    "PF680-REASSESS-01",
+    "PF687-DIAG-01",
+    "PF688-REASSESS-01",
+    "PF695-DIAG-01",
+    "PF696-REASSESS-01",
+    "PF699-DIAG-01",
+    "PF700-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
@@ -1513,6 +1539,26 @@
     "content/courses/phonics-foundation/677-oo-vowel-team-mixed-review/authoring-package.json",
     "content/courses/phonics-foundation/678-oo-vowel-team-connected-reading/authoring-package.json",
     "content/courses/phonics-foundation/679-oo-vowel-team-fluency-diagnostic/authoring-package.json",
-    "content/courses/phonics-foundation/680-oo-vowel-team-remediation-reassessment/authoring-package.json"
+    "content/courses/phonics-foundation/680-oo-vowel-team-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/681-recognize-oi-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/682-decode-words-with-oi/authoring-package.json",
+    "content/courses/phonics-foundation/683-spell-words-with-oi/authoring-package.json",
+    "content/courses/phonics-foundation/684-oi-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/685-controlled-oi-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/686-controlled-oi-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/687-oi-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/688-targeted-oi-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/689-recognize-oy-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/690-decode-words-with-oy/authoring-package.json",
+    "content/courses/phonics-foundation/691-spell-words-with-oy/authoring-package.json",
+    "content/courses/phonics-foundation/692-oy-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/693-controlled-oy-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/694-controlled-oy-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/695-oy-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/696-targeted-oy-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/697-diphthong-vowel-teams-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/698-diphthong-vowel-team-connected-reading/authoring-package.json",
+    "content/courses/phonics-foundation/699-diphthong-vowel-team-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/700-diphthong-vowel-team-remediation-reassessment/authoring-package.json"
   ]
 }
