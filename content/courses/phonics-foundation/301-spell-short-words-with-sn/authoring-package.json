@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-301",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "301-spell-short-words-with-sn",
+    "topic": "encoding",
+    "subtopic": "segment-and-spell-taught-sn-words",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment taught sn-words into ordered phonemes before writing.",
+      "Represent s and n in the initial onset in the correct order.",
+      "Spell taught sn-words and read them back to check each grapheme.",
+      "Repair omissions using sound-by-sound mapping."
+    ],
+    "concepts": [
+      "Encoding maps spoken phonemes to written graphemes.",
+      "The sn onset requires s then n.",
+      "Read-back checks whether spelling matches the spoken word.",
+      "An omitted consonant changes the word."
+    ],
+    "definitions": [
+      {
+        "term": "encode",
+        "definition": "Write a word using sound-to-letter knowledge."
+      },
+      {
+        "term": "segment",
+        "definition": "Separate a spoken word into ordered sounds."
+      },
+      {
+        "term": "read-back",
+        "definition": "Read a written response to check it against the intended word."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Spell snap.",
+        "solution": "Segment /s/ /n/ /a/ /p/, write s-n-a-p, then read it back."
+      },
+      {
+        "prompt": "A learner writes sip for snip. What is missing?",
+        "solution": "The n after s."
+      },
+      {
+        "prompt": "How can a learner check snack?",
+        "solution": "Say each sound in order, write the graphemes, and read snack back."
+      }
+    ],
+    "commonMistakes": [
+      "Omitting n after s.",
+      "Reversing the onset letters.",
+      "Leaving out the final consonant.",
+      "Not reading the written word back."
+    ],
+    "keyTakeaways": [
+      "Hear all phonemes before writing.",
+      "Write s then n at the start.",
+      "Check the whole word.",
+      "Repair the exact missing grapheme."
+    ],
+    "revisionPoints": [
+      "Segment first, then write.",
+      "Keep s and n in order.",
+      "Spell snap, snip, snack, snail.",
+      "Read the written word back."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which spelling begins with sn?",
+        "answer": "snack"
+      },
+      {
+        "id": "B2",
+        "prompt": "What letter follows s at the start of snap?",
+        "answer": "n"
+      },
+      {
+        "id": "B3",
+        "prompt": "A learner writes sip for snip. Which letter is missing?",
+        "answer": "n"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which spelling represents snap?",
+        "answer": "snap"
+      },
+      {
+        "id": "C2",
+        "prompt": "What should a learner do before spelling a word?",
+        "answer": "Say and segment its sounds"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which word begins with sn and ends with ck?",
+        "answer": "snack"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What should follow writing a word?",
+        "answer": "Read it back and check each grapheme"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which spelling keeps both initial consonants?",
+        "answer": "snail"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which pair both begins with sn?",
+        "answer": "snip, snap"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What is encoding?",
+        "answer": "Writing using sound-to-letter knowledge"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which error occurs in “sap” for “snap”?",
+        "answer": "The n is omitted"
+      },
+      {
+        "id": "H3",
+        "prompt": "What is the first part of snack?",
+        "answer": "sn"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word has the same onset as snail?",
+        "answer": "snip"
+      },
+      {
+        "id": "R2",
+        "prompt": "Why spell sounds in order?",
+        "answer": "To represent the spoken word accurately"
+      },
+      {
+        "id": "R3",
+        "prompt": "What is the goal of sn spelling practice?",
+        "answer": "Write both onset consonants and check the whole word"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Segment first, then write.",
+      "Keep s and n in order.",
+      "Spell snap, snip, snack, snail.",
+      "Read the written word back."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Segment first, then write."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Keep s and n in order."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Spell snap, snip, snack, snail."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Read the written word back."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Segment first, then write.",
+      "Keep s and n in order.",
+      "Spell snap, snip, snack, snail.",
+      "Read the written word back."
+    ],
+    "mistakeBasedRevision": [
+      "Omitting n after s.",
+      "Reversing the onset letters.",
+      "Leaving out the final consonant.",
+      "Not reading the written word back."
+    ],
+    "weakTopicRevision": [
+      "If spell short words with sn is weak, use item-level evidence to model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-practice-and-explain",
+      "name": "Model, practise, explain, and check.",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete one example with guidance and explain the evidence.",
+        "Try a new example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with a target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Repair the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Segment taught sn-words into ordered phonemes before writing.",
+    "Represent s and n in the initial onset in the correct order.",
+    "Spell taught sn-words and read them back to check each grapheme.",
+    "Repair omissions using sound-by-sound mapping."
+  ],
+  "questions": [
+    {
+      "questionId": "PF301-Q01",
+      "question": "Which spelling begins with sn?",
+      "options": [
+        "sack",
+        "snack",
+        "nack",
+        "slack"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q02",
+      "question": "What letter follows s at the start of snap?",
+      "options": [
+        "l",
+        "t",
+        "p",
+        "n"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q03",
+      "question": "A learner writes sip for snip. Which letter is missing?",
+      "options": [
+        "n",
+        "s",
+        "i",
+        "p"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q04",
+      "question": "Which spelling represents snap?",
+      "options": [
+        "sap",
+        "nap",
+        "snap",
+        "snat"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q05",
+      "question": "What should a learner do before spelling a word?",
+      "options": [
+        "Guess the shape",
+        "Say and segment its sounds",
+        "Write the last letter only",
+        "Skip the onset"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q06",
+      "question": "Which word begins with sn and ends with ck?",
+      "options": [
+        "snack",
+        "snip",
+        "snail",
+        "snap"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q07",
+      "question": "What should follow writing a word?",
+      "options": [
+        "Cover it and stop",
+        "Add a vowel",
+        "Read it back and check each grapheme",
+        "Ignore a mismatch"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q08",
+      "question": "Which spelling keeps both initial consonants?",
+      "options": [
+        "sail",
+        "nail",
+        "slail",
+        "snail"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q09",
+      "question": "Which pair both begins with sn?",
+      "options": [
+        "slip, snap",
+        "snip, snap",
+        "sun, snail",
+        "map, snack"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q10",
+      "question": "What is encoding?",
+      "options": [
+        "Reading punctuation",
+        "Guessing from length",
+        "Writing using sound-to-letter knowledge",
+        "Sequencing a story"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q11",
+      "question": "Which error occurs in “sap” for “snap”?",
+      "options": [
+        "The n is omitted",
+        "The p is doubled",
+        "The vowel is missing",
+        "The s is reversed"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q12",
+      "question": "What is the first part of snack?",
+      "options": [
+        "na",
+        "ack",
+        "ck",
+        "sn"
+      ],
+      "difficulty": "encoding",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q13",
+      "question": "Which word has the same onset as snail?",
+      "options": [
+        "slip",
+        "stop",
+        "snip",
+        "frog"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q14",
+      "question": "Why spell sounds in order?",
+      "options": [
+        "To make words longer",
+        "To represent the spoken word accurately",
+        "To avoid listening",
+        "To replace reading"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF301-Q15",
+      "question": "What is the goal of sn spelling practice?",
+      "options": [
+        "Write both onset consonants and check the whole word",
+        "Write only s",
+        "Skip middle sounds",
+        "Memorize options"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF301-Q01",
+      "correctOptionIndex": 1,
+      "explanation": "Snack begins with s then n."
+    },
+    {
+      "questionId": "PF301-Q02",
+      "correctOptionIndex": 3,
+      "explanation": "The initial spelling is sn."
+    },
+    {
+      "questionId": "PF301-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Snip includes n after s."
+    },
+    {
+      "questionId": "PF301-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "Snap contains s-n-a-p."
+    },
+    {
+      "questionId": "PF301-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Segmentation helps preserve phoneme order."
+    },
+    {
+      "questionId": "PF301-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Snack ends with ck."
+    },
+    {
+      "questionId": "PF301-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Read-back checks the spelling."
+    },
+    {
+      "questionId": "PF301-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Snail begins with s and n."
+    },
+    {
+      "questionId": "PF301-Q09",
+      "correctOptionIndex": 1,
+      "explanation": "Snip and snap both begin with sn."
+    },
+    {
+      "questionId": "PF301-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Encoding maps sounds to graphemes."
+    },
+    {
+      "questionId": "PF301-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The spelling omits n."
+    },
+    {
+      "questionId": "PF301-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "The onset is sn."
+    },
+    {
+      "questionId": "PF301-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "Snip begins with sn."
+    },
+    {
+      "questionId": "PF301-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Ordered mapping preserves the word."
+    },
+    {
+      "questionId": "PF301-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Accurate encoding represents the full word."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-301-v1"
+  }
+}
