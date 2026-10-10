@@ -9,22 +9,22 @@
     "module": "next-consonant-patterns",
     "lesson": "433-gn-fluency-consolidation-diagnostic",
     "topic": "assessment",
-    "subtopic": "diagnose-gn-recognition-decoding-encoding-comprehension-and-fluency",
+    "subtopic": "gn-fluency-consolidation-diagnostic",
     "language": "en",
     "ageBand": "4-6"
   },
   "status": "draft",
   "studyMaterial": {
     "objectives": [
-      "Recognise gn spelling and remember that initial g is silent.",
+      "Recognise the silent initial g pattern in gn-words.",
       "Decode and spell taught gn-words accurately.",
       "Read controlled gn-text and answer literal questions.",
       "Use diagnostic evidence to identify a skill for targeted review."
     ],
     "concepts": [
       "A diagnostic samples several related skills.",
-      "The initial g is silent in the taught gn words.",
-      "The first spoken sound is /n/.",
+      "Initial g is silent and n is pronounced first in taught gn-words.",
+      "Fluency includes accuracy and phrasing.",
       "Results guide the next teaching step."
     ],
     "definitions": [
@@ -43,32 +43,32 @@
     ],
     "workedExamples": [
       {
-        "prompt": "Compare gnat and gap.",
-        "solution": "Gnat begins /n/; gap begins /g/."
+        "prompt": "Compare gnat and nap.",
+        "solution": "Both begin /n/, but gnat uses the gn spelling pattern."
       },
       {
-        "prompt": "If a learner writes gnat as nat, what spelling element is missing?",
-        "solution": "The silent g."
+        "prompt": "A learner says guh-nat. What needs correction?",
+        "solution": "Do not pronounce the initial g."
       },
       {
-        "prompt": "What follows a diagnostic showing weak decoding?",
+        "prompt": "What follows a diagnostic showing weak pattern recognition?",
         "solution": "Targeted practice and fresh reassessment."
       }
     ],
     "commonMistakes": [
-      "Pronouncing g in gn words.",
-      "Removing g from spelling.",
-      "Guessing instead of checking the first sound.",
+      "Voicing initial g.",
+      "Leaving out /n/.",
+      "Guessing instead of using sound evidence.",
       "Ignoring a diagnosed weakness."
     ],
     "keyTakeaways": [
-      "Initial g is silent in taught gn words.",
-      "The first spoken sound is /n/.",
-      "Keep gn in the spelling.",
+      "Keep initial g silent.",
+      "Pronounce n first.",
+      "Read connected text for meaning.",
       "Use results to plan targeted review."
     ],
     "revisionPoints": [
-      "gnat, gnaw, and gnome begin with gn spelling.",
+      "gnat begins /n/.",
       "Initial g is silent.",
       "Use sentence evidence for comprehension.",
       "Target weaknesses and reassess."
@@ -78,42 +78,42 @@
     "basic": [
       {
         "id": "B1",
-        "prompt": "Which word begins with gn spelling?",
-        "answer": "gnaw"
-      },
-      {
-        "id": "B2",
-        "prompt": "What is the first spoken sound in gnome?",
+        "prompt": "What is the first pronounced sound in gnat?",
         "answer": "/n/"
       },
       {
+        "id": "B2",
+        "prompt": "Which word begins with gn?",
+        "answer": "gnome"
+      },
+      {
         "id": "B3",
-        "prompt": "Which word begins with /g/, not /n/?",
-        "answer": "game"
+        "prompt": "Which word begins with n without silent initial g?",
+        "answer": "nap"
       }
     ],
     "conceptual": [
       {
         "id": "C1",
-        "prompt": "Which spelling matches the word gnome?",
-        "answer": "gnome"
+        "prompt": "If gnat is read as gat, what is missing?",
+        "answer": "/n/"
       },
       {
         "id": "C2",
-        "prompt": "What does a diagnostic identify?",
-        "answer": "Strengths and learning needs"
+        "prompt": "Which spelling matches the word gnaw?",
+        "answer": "gnaw"
       },
       {
         "id": "C3",
-        "prompt": "Which word begins with gn and ends with t?",
-        "answer": "gnat"
+        "prompt": "What does a diagnostic identify?",
+        "answer": "Strengths and learning needs"
       }
     ],
     "application": [
       {
         "id": "A1",
-        "prompt": "Which pair begins with the same spoken sound?",
-        "answer": "gnat and net"
+        "prompt": "Which pair begins with the same pronounced sound?",
+        "answer": "gnat and nap"
       },
       {
         "id": "A2",
@@ -129,41 +129,41 @@
     "higherOrderThinking": [
       {
         "id": "H1",
-        "prompt": "Which is good decoding practice?",
-        "answer": "Remember g is silent, then map the rest"
+        "prompt": "Which word ends with t?",
+        "answer": "gnat"
       },
       {
         "id": "H2",
-        "prompt": "Which response uses sound evidence?",
-        "answer": "gn begins with /n/ because g is silent"
+        "prompt": "Which is good decoding practice?",
+        "answer": "Use the silent-g pattern and read all pronounced sounds"
       },
       {
         "id": "H3",
-        "prompt": "What is the checkpoint's purpose?",
-        "answer": "Identify mastery and skills needing review"
+        "prompt": "What should a reader do after correcting a word?",
+        "answer": "Reread it in the sentence"
       }
     ],
     "mixedReview": [
       {
         "id": "R1",
-        "prompt": "What should a reader do after correcting a word?",
-        "answer": "Reread it in the sentence"
+        "prompt": "What does a word-family task compare?",
+        "answer": "Rimes in complete words"
       },
       {
         "id": "R2",
-        "prompt": "What does a word-family task compare?",
-        "answer": "Vowels and endings in complete words"
+        "prompt": "Which response uses sound evidence?",
+        "answer": "The initial g is silent and n begins the spoken word"
       },
       {
         "id": "R3",
-        "prompt": "What should you remember when completing this assessment task?",
-        "answer": "Initial g is silent in taught gn words."
+        "prompt": "What is the checkpoint's purpose?",
+        "answer": "Identify mastery and skills needing review"
       }
     ]
   },
   "revision": {
     "quickRevision": [
-      "gnat, gnaw, and gnome begin with gn spelling.",
+      "gnat begins /n/.",
       "Initial g is silent.",
       "Use sentence evidence for comprehension.",
       "Target weaknesses and reassess."
@@ -171,7 +171,7 @@
     "flashRecall": [
       {
         "front": "Recall 1",
-        "back": "gnat, gnaw, and gnome begin with gn spelling."
+        "back": "gnat begins /n/."
       },
       {
         "front": "Recall 2",
@@ -187,15 +187,15 @@
       }
     ],
     "formulaOrFactBank": [
-      "gnat, gnaw, and gnome begin with gn spelling.",
+      "gnat begins /n/.",
       "Initial g is silent.",
       "Use sentence evidence for comprehension.",
       "Target weaknesses and reassess."
     ],
     "mistakeBasedRevision": [
-      "Pronouncing g in gn words.",
-      "Removing g from spelling.",
-      "Guessing instead of checking the first sound.",
+      "Voicing initial g.",
+      "Leaving out /n/.",
+      "Guessing instead of using sound evidence.",
       "Ignoring a diagnosed weakness."
     ],
     "weakTopicRevision": [
@@ -205,7 +205,7 @@
   "activities": [
     {
       "id": "ACT1",
-      "type": "diagnostic-skill-sampling",
+      "type": "guided-practice",
       "name": "Complete the gn skill check and review results",
       "steps": [
         "Review the target skill and a worked example.",
@@ -217,7 +217,7 @@
     {
       "id": "ACT2",
       "type": "error-detection-and-transfer",
-      "name": "Find the error and repair a fresh item.",
+      "name": "Find the error and repair a fresh item",
       "steps": [
         "Review a sample response with one target-skill error.",
         "Identify the sound, grapheme, or evidence that does not match.",
@@ -227,7 +227,7 @@
     }
   ],
   "outcomes": [
-    "Recognise gn spelling and remember that initial g is silent.",
+    "Recognise the silent initial g pattern in gn-words.",
     "Decode and spell taught gn-words accurately.",
     "Read controlled gn-text and answer literal questions.",
     "Use diagnostic evidence to identify a skill for targeted review."
@@ -235,12 +235,12 @@
   "questions": [
     {
       "questionId": "PF433-Q01",
-      "question": "Which word begins with gn spelling?",
+      "question": "What is the first pronounced sound in gnat?",
       "options": [
-        "gnaw",
-        "game",
-        "net",
-        "cat"
+        "/n/",
+        "/g/",
+        "/æ/",
+        "/t/"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -248,12 +248,12 @@
     },
     {
       "questionId": "PF433-Q02",
-      "question": "What is the first spoken sound in gnome?",
+      "question": "Which word begins with gn?",
       "options": [
-        "/g/",
-        "/m/",
-        "/n/",
-        "/oʊ/"
+        "gate",
+        "net",
+        "gnome",
+        "nap"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -261,10 +261,10 @@
     },
     {
       "questionId": "PF433-Q03",
-      "question": "Which word begins with /g/, not /n/?",
+      "question": "Which word begins with n without silent initial g?",
       "options": [
         "gnat",
-        "game",
+        "nap",
         "gnaw",
         "gnome"
       ],
@@ -274,12 +274,12 @@
     },
     {
       "questionId": "PF433-Q04",
-      "question": "If gnat is written as nat, what is missing?",
+      "question": "If gnat is read as gat, what is missing?",
       "options": [
-        "The n",
-        "The short a",
-        "The final t",
-        "The silent g"
+        "/g/",
+        "/æ/",
+        "/t/",
+        "/n/"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -287,12 +287,12 @@
     },
     {
       "questionId": "PF433-Q05",
-      "question": "Which spelling matches the word gnome?",
+      "question": "Which spelling matches the word gnaw?",
       "options": [
-        "nome",
-        "gnome",
-        "gnom",
-        "gnomee"
+        "naw",
+        "gnaw",
+        "gate",
+        "gnat"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -313,12 +313,12 @@
     },
     {
       "questionId": "PF433-Q07",
-      "question": "Which pair begins with the same spoken sound?",
+      "question": "Which pair begins with the same pronounced sound?",
       "options": [
-        "gnat and game",
-        "gnome and game",
-        "gnat and net",
-        "gnaw and go"
+        "gnat and gate",
+        "gnaw and goat",
+        "gnat and nap",
+        "gnome and game"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -352,12 +352,12 @@
     },
     {
       "questionId": "PF433-Q10",
-      "question": "Which word begins with gn and ends with t?",
+      "question": "Which word ends with t?",
       "options": [
         "gnaw",
         "gnome",
         "gnat",
-        "game"
+        "nap"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -368,9 +368,9 @@
       "question": "Which is good decoding practice?",
       "options": [
         "Pronounce every letter",
-        "Remember g is silent, then map the rest",
-        "Skip the vowel",
-        "Guess from the first letter"
+        "Use the silent-g pattern and read all pronounced sounds",
+        "Skip the final sound",
+        "Read only the first letter"
       ],
       "difficulty": "conceptual",
       "marks": 1,
@@ -393,7 +393,7 @@
       "questionId": "PF433-Q13",
       "question": "What does a word-family task compare?",
       "options": [
-        "Vowels and endings in complete words",
+        "Rimes in complete words",
         "Only page numbers",
         "Unrelated pictures",
         "Only punctuation"
@@ -408,7 +408,7 @@
       "options": [
         "It looks longest",
         "I picked option B",
-        "gn begins with /n/ because g is silent",
+        "The initial g is silent and n begins the spoken word",
         "The word is familiar"
       ],
       "difficulty": "mixed_review",
@@ -433,27 +433,27 @@
     {
       "questionId": "PF433-Q01",
       "correctOptionIndex": 0,
-      "explanation": "Gnaw begins with gn."
+      "explanation": "The initial g is silent."
     },
     {
       "questionId": "PF433-Q02",
       "correctOptionIndex": 2,
-      "explanation": "The initial g is silent."
+      "explanation": "Gnome begins with gn."
     },
     {
       "questionId": "PF433-Q03",
       "correctOptionIndex": 1,
-      "explanation": "Game begins with /g/."
+      "explanation": "Nap begins with n only."
     },
     {
       "questionId": "PF433-Q04",
       "correctOptionIndex": 3,
-      "explanation": "The spelling keeps g before n."
+      "explanation": "The /n/ sound is missing."
     },
     {
       "questionId": "PF433-Q05",
       "correctOptionIndex": 1,
-      "explanation": "Gnome uses the conventional gn spelling."
+      "explanation": "Gnaw is spelled g-n-a-w."
     },
     {
       "questionId": "PF433-Q06",
@@ -463,7 +463,7 @@
     {
       "questionId": "PF433-Q07",
       "correctOptionIndex": 2,
-      "explanation": "Gnat and net begin with /n/."
+      "explanation": "Both gnat and nap begin /n/."
     },
     {
       "questionId": "PF433-Q08",
@@ -483,7 +483,7 @@
     {
       "questionId": "PF433-Q11",
       "correctOptionIndex": 1,
-      "explanation": "The initial g is silent."
+      "explanation": "The pattern guides pronunciation."
     },
     {
       "questionId": "PF433-Q12",
@@ -498,7 +498,7 @@
     {
       "questionId": "PF433-Q14",
       "correctOptionIndex": 2,
-      "explanation": "The response identifies the spoken onset."
+      "explanation": "The response identifies the pattern."
     },
     {
       "questionId": "PF433-Q15",

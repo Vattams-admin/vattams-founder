@@ -9,7 +9,7 @@
     "module": "next-consonant-patterns",
     "lesson": "432-controlled-gn-passage-sequencing-comprehension",
     "topic": "connected-text",
-    "subtopic": "sequence-events-and-answer-literal-questions-in-controlled-gn-passage",
+    "subtopic": "controlled-gn-passage-sequencing-comprehension",
     "language": "en",
     "ageBand": "4-6"
   },
@@ -19,13 +19,13 @@
       "Read a controlled passage with taught gn-words accurately.",
       "Sequence stated events as first, next, and last.",
       "Answer literal questions using passage evidence.",
-      "Reread to repair a missed sound and retain meaning."
+      "Keep initial g silent while reading connected text."
     ],
     "concepts": [
       "A passage connects related sentences.",
-      "Sequence language identifies event order.",
-      "Literal answers must match stated text.",
-      "The initial g is silent in the taught gn words."
+      "Sequence words identify event order.",
+      "Initial g is silent in the taught gn-words.",
+      "Rereading supports decoding and comprehension."
     ],
     "definitions": [
       {
@@ -43,12 +43,12 @@
     ],
     "workedExamples": [
       {
-        "prompt": "Read: “A gnat lands. The gnat rests on a leaf. The gnat flies off.” What happens first?",
-        "solution": "A gnat lands."
+        "prompt": "Read: “A gnat lands on a leaf. The gnat flies to a net. The gnat rests.” What happens first?",
+        "solution": "A gnat lands on a leaf."
       },
       {
-        "prompt": "What happens after the gnat rests on a leaf?",
-        "solution": "The gnat flies off."
+        "prompt": "Where does the gnat fly next?",
+        "solution": "To a net."
       },
       {
         "prompt": "How do you verify the order?",
@@ -56,21 +56,21 @@
       }
     ],
     "commonMistakes": [
+      "Voicing g at the start of gn-words.",
       "Reordering events based on a guess.",
       "Skipping a sentence while retelling.",
-      "Pronouncing the silent g.",
       "Answering without evidence."
     ],
     "keyTakeaways": [
       "Read every sentence accurately.",
+      "Keep initial g silent.",
       "Retell events in order.",
-      "Use the passage to support answers.",
-      "Remember initial g is silent."
+      "Use the passage to support answers."
     ],
     "revisionPoints": [
-      "A gnat lands.",
-      "The gnat rests on a leaf.",
-      "The gnat flies off.",
+      "A gnat lands on a leaf.",
+      "The gnat flies to a net.",
+      "The gnat rests.",
       "Use text evidence to sequence events."
     ]
   },
@@ -78,47 +78,47 @@
     "basic": [
       {
         "id": "B1",
-        "prompt": "What happens first?",
-        "answer": "A gnat lands"
+        "prompt": "What does the gnat do first?",
+        "answer": "Lands on a leaf"
       },
       {
         "id": "B2",
-        "prompt": "Where does the gnat rest?",
-        "answer": "On a leaf"
+        "prompt": "Where does the gnat fly next?",
+        "answer": "To a net"
       },
       {
         "id": "B3",
         "prompt": "What happens last?",
-        "answer": "The gnat flies off"
+        "answer": "The gnat rests"
       }
     ],
     "conceptual": [
       {
         "id": "C1",
-        "prompt": "Which event follows resting on a leaf?",
-        "answer": "The gnat flies off"
+        "prompt": "Which event happens first?",
+        "answer": "The gnat lands on a leaf"
       },
       {
         "id": "C2",
-        "prompt": "What does sequencing show?",
-        "answer": "The order of events"
+        "prompt": "Which event follows landing on a leaf?",
+        "answer": "The gnat flies to a net"
       },
       {
         "id": "C3",
-        "prompt": "Which answer stays within the passage?",
-        "answer": "The gnat flies off"
+        "prompt": "What does sequencing show?",
+        "answer": "The order of events"
       }
     ],
     "application": [
       {
         "id": "A1",
-        "prompt": "Which word begins with gn spelling?",
+        "prompt": "Which word begins with gn?",
         "answer": "gnat"
       },
       {
         "id": "A2",
-        "prompt": "What is the first spoken sound in gnat?",
-        "answer": "/n/"
+        "prompt": "If gnat is read as gat, what was missed?",
+        "answer": "The /n/ sound"
       },
       {
         "id": "A3",
@@ -129,57 +129,57 @@
     "higherOrderThinking": [
       {
         "id": "H1",
+        "prompt": "Which answer stays within the passage?",
+        "answer": "The gnat rests"
+      },
+      {
+        "id": "H2",
         "prompt": "Why reread the passage?",
         "answer": "To check words and event order"
       },
       {
-        "id": "H2",
-        "prompt": "What should you do if the retelling is out of order?",
-        "answer": "Reread the sentences in order"
-      },
-      {
         "id": "H3",
-        "prompt": "What is the main goal of this lesson?",
-        "answer": "Sequence a passage and answer with text evidence"
+        "prompt": "What does “next” help identify?",
+        "answer": "An event that follows another"
       }
     ],
     "mixedReview": [
       {
         "id": "R1",
-        "prompt": "What does “after” help identify?",
-        "answer": "An event that follows another"
-      },
-      {
-        "id": "R2",
         "prompt": "Why point to a sentence when answering?",
         "answer": "It shows the evidence"
       },
       {
+        "id": "R2",
+        "prompt": "What should you do if the retelling is out of order?",
+        "answer": "Reread the sentences in order"
+      },
+      {
         "id": "R3",
-        "prompt": "What should you remember when completing this connected-text task?",
-        "answer": "Read every sentence accurately."
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Sequence a passage and answer with text evidence"
       }
     ]
   },
   "revision": {
     "quickRevision": [
-      "A gnat lands.",
-      "The gnat rests on a leaf.",
-      "The gnat flies off.",
+      "A gnat lands on a leaf.",
+      "The gnat flies to a net.",
+      "The gnat rests.",
       "Use text evidence to sequence events."
     ],
     "flashRecall": [
       {
         "front": "Recall 1",
-        "back": "A gnat lands."
+        "back": "A gnat lands on a leaf."
       },
       {
         "front": "Recall 2",
-        "back": "The gnat rests on a leaf."
+        "back": "The gnat flies to a net."
       },
       {
         "front": "Recall 3",
-        "back": "The gnat flies off."
+        "back": "The gnat rests."
       },
       {
         "front": "Recall 4",
@@ -187,15 +187,15 @@
       }
     ],
     "formulaOrFactBank": [
-      "A gnat lands.",
-      "The gnat rests on a leaf.",
-      "The gnat flies off.",
+      "A gnat lands on a leaf.",
+      "The gnat flies to a net.",
+      "The gnat rests.",
       "Use text evidence to sequence events."
     ],
     "mistakeBasedRevision": [
+      "Voicing g at the start of gn-words.",
       "Reordering events based on a guess.",
       "Skipping a sentence while retelling.",
-      "Pronouncing the silent g.",
       "Answering without evidence."
     ],
     "weakTopicRevision": [
@@ -205,7 +205,7 @@
   "activities": [
     {
       "id": "ACT1",
-      "type": "passage-sequencing-with-text-evidence",
+      "type": "guided-practice",
       "name": "Retell a controlled gn passage in order",
       "steps": [
         "Review the target skill and a worked example.",
@@ -217,7 +217,7 @@
     {
       "id": "ACT2",
       "type": "error-detection-and-transfer",
-      "name": "Find the error and repair a fresh item.",
+      "name": "Find the error and repair a fresh item",
       "steps": [
         "Review a sample response with one target-skill error.",
         "Identify the sound, grapheme, or evidence that does not match.",
@@ -230,17 +230,17 @@
     "Read a controlled passage with taught gn-words accurately.",
     "Sequence stated events as first, next, and last.",
     "Answer literal questions using passage evidence.",
-    "Reread to repair a missed sound and retain meaning."
+    "Keep initial g silent while reading connected text."
   ],
   "questions": [
     {
       "questionId": "PF432-Q01",
-      "question": "What happens first?",
+      "question": "What does the gnat do first?",
       "options": [
-        "A gnat lands",
-        "The gnat rests on a leaf",
-        "The gnat flies off",
-        "The gnat gnaws a nut"
+        "Lands on a leaf",
+        "Flies to a net",
+        "Rests",
+        "Finds a gnome"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -248,12 +248,12 @@
     },
     {
       "questionId": "PF432-Q02",
-      "question": "Where does the gnat rest?",
+      "question": "Where does the gnat fly next?",
       "options": [
-        "On a mat",
-        "In a bag",
-        "On a leaf",
-        "On a ship"
+        "To a tree",
+        "To a box",
+        "To a net",
+        "To a ship"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -263,10 +263,10 @@
       "questionId": "PF432-Q03",
       "question": "What happens last?",
       "options": [
-        "A gnat lands",
-        "The gnat flies off",
-        "The gnat rests on a leaf",
-        "The gnat sleeps"
+        "The gnat lands on a leaf",
+        "The gnat rests",
+        "The gnat flies to a net",
+        "The gnat finds a gnome"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -276,10 +276,10 @@
       "questionId": "PF432-Q04",
       "question": "Which event happens first?",
       "options": [
-        "The gnat flies off",
-        "The gnat rests on a leaf",
-        "The gnat eats",
-        "A gnat lands"
+        "The gnat rests",
+        "The gnat flies to a net",
+        "The gnat finds a net",
+        "The gnat lands on a leaf"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -287,12 +287,12 @@
     },
     {
       "questionId": "PF432-Q05",
-      "question": "Which event follows resting on a leaf?",
+      "question": "Which event follows landing on a leaf?",
       "options": [
-        "A gnat lands",
-        "The gnat flies off",
-        "The gnat finds a nest",
-        "The gnat naps"
+        "The gnat rests",
+        "The gnat flies to a net",
+        "The gnat goes to sleep",
+        "The gnat finds a gnome"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -313,12 +313,12 @@
     },
     {
       "questionId": "PF432-Q07",
-      "question": "Which word begins with gn spelling?",
+      "question": "Which word begins with gn?",
       "options": [
-        "leaf",
-        "lands",
+        "net",
+        "nap",
         "gnat",
-        "flies"
+        "gate"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -326,12 +326,12 @@
     },
     {
       "questionId": "PF432-Q08",
-      "question": "What is the first spoken sound in gnat?",
+      "question": "If gnat is read as gat, what was missed?",
       "options": [
-        "/g/",
-        "/æ/",
-        "/t/",
-        "/n/"
+        "The /g/ sound",
+        "The vowel",
+        "The ending",
+        "The /n/ sound"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -355,8 +355,8 @@
       "question": "Which answer stays within the passage?",
       "options": [
         "The gnat wins a race",
-        "The gnat flies to the moon",
-        "The gnat flies off",
+        "The gnat flies a plane",
+        "The gnat rests",
         "The gnat eats a cake"
       ],
       "difficulty": "application",
@@ -378,7 +378,7 @@
     },
     {
       "questionId": "PF432-Q12",
-      "question": "What does “after” help identify?",
+      "question": "What does “next” help identify?",
       "options": [
         "The first letter only",
         "An unstated character",
@@ -421,7 +421,7 @@
       "options": [
         "Memorize options",
         "Sequence a passage and answer with text evidence",
-        "Pronounce silent g",
+        "Voice the silent g",
         "Invent a new ending"
       ],
       "difficulty": "mixed_review",
@@ -433,27 +433,27 @@
     {
       "questionId": "PF432-Q01",
       "correctOptionIndex": 0,
-      "explanation": "The first sentence says a gnat lands."
+      "explanation": "The first sentence says the gnat lands on a leaf."
     },
     {
       "questionId": "PF432-Q02",
       "correctOptionIndex": 2,
-      "explanation": "The second sentence says it rests on a leaf."
+      "explanation": "The second sentence says it flies to a net."
     },
     {
       "questionId": "PF432-Q03",
       "correctOptionIndex": 1,
-      "explanation": "The last sentence says the gnat flies off."
+      "explanation": "The last sentence says the gnat rests."
     },
     {
       "questionId": "PF432-Q04",
       "correctOptionIndex": 3,
-      "explanation": "The passage begins with landing."
+      "explanation": "The passage begins with landing on a leaf."
     },
     {
       "questionId": "PF432-Q05",
       "correctOptionIndex": 1,
-      "explanation": "Flying off follows the second event."
+      "explanation": "Flying to a net is the next event."
     },
     {
       "questionId": "PF432-Q06",
@@ -468,7 +468,7 @@
     {
       "questionId": "PF432-Q08",
       "correctOptionIndex": 3,
-      "explanation": "The initial g is silent."
+      "explanation": "The /n/ sound is omitted."
     },
     {
       "questionId": "PF432-Q09",
@@ -478,7 +478,7 @@
     {
       "questionId": "PF432-Q10",
       "correctOptionIndex": 2,
-      "explanation": "Only flying off is stated."
+      "explanation": "Only resting is stated."
     },
     {
       "questionId": "PF432-Q11",
@@ -488,7 +488,7 @@
     {
       "questionId": "PF432-Q12",
       "correctOptionIndex": 3,
-      "explanation": "After signals sequence."
+      "explanation": "Next signals sequence."
     },
     {
       "questionId": "PF432-Q13",

@@ -9,7 +9,7 @@
     "module": "next-consonant-patterns",
     "lesson": "431-controlled-gn-sentences-comprehension",
     "topic": "sentence-reading",
-    "subtopic": "decode-controlled-gn-sentences-and-answer-literal-questions-with-evidence",
+    "subtopic": "controlled-gn-sentences-comprehension",
     "language": "en",
     "ageBand": "4-6"
   },
@@ -17,13 +17,13 @@
   "studyMaterial": {
     "objectives": [
       "Read controlled sentences with taught gn-words accurately.",
-      "Remember that initial g is silent and gn begins with /n/.",
+      "Keep initial g silent and pronounce n first.",
       "Answer literal questions using sentence evidence.",
       "Reread to repair errors and confirm meaning."
     ],
     "concepts": [
-      "In taught initial gn words, g is silent.",
-      "The first spoken sound is /n/.",
+      "In taught initial gn-words, g is silent and n is pronounced first.",
+      "A sentence expresses a complete thought.",
       "Literal answers are stated directly in the sentence.",
       "Rereading checks decoding and meaning."
     ],
@@ -43,12 +43,12 @@
     ],
     "workedExamples": [
       {
-        "prompt": "Read: “A gnat is on the mat.” Where is the gnat?",
-        "solution": "On the mat."
+        "prompt": "Read: “A gnat is on the net.” What is on the net?",
+        "solution": "A gnat."
       },
       {
-        "prompt": "Read: “The gnome can gnaw a nut.” What can the gnome do?",
-        "solution": "Gnaw a nut."
+        "prompt": "Read: “The gnome can gnaw.” What can the gnome do?",
+        "solution": "Gnaw."
       },
       {
         "prompt": "How can you check an answer?",
@@ -56,20 +56,20 @@
       }
     ],
     "commonMistakes": [
-      "Pronouncing g in gn words.",
+      "Voicing the initial g.",
       "Answering from prior knowledge instead of the sentence.",
       "Changing a word by guessing.",
-      "Ignoring details in the sentence."
+      "Ignoring sentence details."
     ],
     "keyTakeaways": [
-      "Initial g is silent in taught gn words.",
+      "Keep initial g silent in taught gn-words.",
       "Read the whole sentence.",
       "Answer what the sentence states.",
       "Reread and point to evidence."
     ],
     "revisionPoints": [
       "gnat begins with /n/.",
-      "g is silent in initial gn.",
+      "The initial g is silent.",
       "Literal answers match the sentence.",
       "Reread to verify evidence."
     ]
@@ -78,13 +78,13 @@
     "basic": [
       {
         "id": "B1",
-        "prompt": "In “A gnat is on the mat,” where is the gnat?",
-        "answer": "On the mat"
+        "prompt": "In “A gnat is on the net,” what is on the net?",
+        "answer": "A gnat"
       },
       {
         "id": "B2",
-        "prompt": "Which word begins with gn spelling?",
-        "answer": "gnat"
+        "prompt": "What is the first sound in gnat?",
+        "answer": "/n/"
       },
       {
         "id": "B3",
@@ -95,18 +95,18 @@
     "conceptual": [
       {
         "id": "C1",
-        "prompt": "Which sentence contains a gn word?",
-        "answer": "The gnome can gnaw a nut."
+        "prompt": "If gnat is read as gat, what sound is missing?",
+        "answer": "/n/"
       },
       {
         "id": "C2",
-        "prompt": "What is literal comprehension?",
-        "answer": "Understanding information stated directly"
+        "prompt": "Which sentence contains a word beginning with gn?",
+        "answer": "The gnome can gnaw."
       },
       {
         "id": "C3",
-        "prompt": "Why read the whole sentence?",
-        "answer": "To understand how the words fit together"
+        "prompt": "What is literal comprehension?",
+        "answer": "Understanding information stated directly"
       }
     ],
     "application": [
@@ -117,54 +117,54 @@
       },
       {
         "id": "A2",
-        "prompt": "Which answer is supported by “The gnome can gnaw a nut”?",
-        "answer": "The gnome can gnaw a nut"
+        "prompt": "What can the gnome do in “The gnome can gnaw”?",
+        "answer": "Gnaw"
       },
       {
         "id": "A3",
-        "prompt": "Which word begins with /g/?",
-        "answer": "game"
+        "prompt": "Which word begins with n but has no silent initial g?",
+        "answer": "net"
       }
     ],
     "higherOrderThinking": [
       {
         "id": "H1",
-        "prompt": "Which question asks for a stated detail?",
-        "answer": "What can the gnome gnaw?"
+        "prompt": "Why read the whole sentence?",
+        "answer": "To understand how the words fit together"
       },
       {
         "id": "H2",
-        "prompt": "What should a reader do if a sentence does not make sense?",
-        "answer": "Reread and check each sound"
+        "prompt": "Which question asks for a stated detail?",
+        "answer": "What can the gnome do?"
       },
       {
         "id": "H3",
-        "prompt": "What is the main goal of this lesson?",
-        "answer": "Read controlled gn-sentences and answer with evidence"
+        "prompt": "Which spelling begins gn and ends with t?",
+        "answer": "gnat"
       }
     ],
     "mixedReview": [
       {
         "id": "R1",
-        "prompt": "Which spelling begins gn and ends with t?",
-        "answer": "gnat"
-      },
-      {
-        "id": "R2",
         "prompt": "How can a learner verify an answer?",
         "answer": "Find words that support it"
       },
       {
+        "id": "R2",
+        "prompt": "What should a reader do if a sentence does not make sense?",
+        "answer": "Reread and check each sound"
+      },
+      {
         "id": "R3",
-        "prompt": "What should you remember when completing this sentence-reading task?",
-        "answer": "Initial g is silent in taught gn words."
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Read controlled gn-sentences and answer with evidence"
       }
     ]
   },
   "revision": {
     "quickRevision": [
       "gnat begins with /n/.",
-      "g is silent in initial gn.",
+      "The initial g is silent.",
       "Literal answers match the sentence.",
       "Reread to verify evidence."
     ],
@@ -175,7 +175,7 @@
       },
       {
         "front": "Recall 2",
-        "back": "g is silent in initial gn."
+        "back": "The initial g is silent."
       },
       {
         "front": "Recall 3",
@@ -188,15 +188,15 @@
     ],
     "formulaOrFactBank": [
       "gnat begins with /n/.",
-      "g is silent in initial gn.",
+      "The initial g is silent.",
       "Literal answers match the sentence.",
       "Reread to verify evidence."
     ],
     "mistakeBasedRevision": [
-      "Pronouncing g in gn words.",
+      "Voicing the initial g.",
       "Answering from prior knowledge instead of the sentence.",
       "Changing a word by guessing.",
-      "Ignoring details in the sentence."
+      "Ignoring sentence details."
     ],
     "weakTopicRevision": [
       "If sentence-reading is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
@@ -205,8 +205,8 @@
   "activities": [
     {
       "id": "ACT1",
-      "type": "controlled-sentence-reading-and-comprehension",
-      "name": "Read, answer, and point to sentence evidence",
+      "type": "guided-practice",
+      "name": "Read gn sentences and point to evidence",
       "steps": [
         "Review the target skill and a worked example.",
         "Complete a guided example and explain the sound or text evidence.",
@@ -217,7 +217,7 @@
     {
       "id": "ACT2",
       "type": "error-detection-and-transfer",
-      "name": "Find the error and repair a fresh item.",
+      "name": "Find the error and repair a fresh item",
       "steps": [
         "Review a sample response with one target-skill error.",
         "Identify the sound, grapheme, or evidence that does not match.",
@@ -228,19 +228,19 @@
   ],
   "outcomes": [
     "Read controlled sentences with taught gn-words accurately.",
-    "Remember that initial g is silent and gn begins with /n/.",
+    "Keep initial g silent and pronounce n first.",
     "Answer literal questions using sentence evidence.",
     "Reread to repair errors and confirm meaning."
   ],
   "questions": [
     {
       "questionId": "PF431-Q01",
-      "question": "In “A gnat is on the mat,” where is the gnat?",
+      "question": "In “A gnat is on the net,” what is on the net?",
       "options": [
-        "On the mat",
-        "In a bag",
-        "On a ship",
-        "In a nest"
+        "A gnat",
+        "A gnome",
+        "A nap",
+        "A hat"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -248,12 +248,12 @@
     },
     {
       "questionId": "PF431-Q02",
-      "question": "Which word begins with gn spelling?",
+      "question": "What is the first sound in gnat?",
       "options": [
-        "game",
-        "net",
-        "gnat",
-        "cat"
+        "/g/",
+        "/t/",
+        "/n/",
+        "/m/"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -274,7 +274,7 @@
     },
     {
       "questionId": "PF431-Q04",
-      "question": "What is the first spoken sound in gnat?",
+      "question": "If gnat is read as gat, what sound is missing?",
       "options": [
         "/g/",
         "/æ/",
@@ -287,10 +287,10 @@
     },
     {
       "questionId": "PF431-Q05",
-      "question": "Which sentence contains a gn word?",
+      "question": "Which sentence contains a word beginning with gn?",
       "options": [
         "The ship is red.",
-        "The gnome can gnaw a nut.",
+        "The gnome can gnaw.",
         "The flag is wet.",
         "A cat can nap."
       ],
@@ -326,12 +326,12 @@
     },
     {
       "questionId": "PF431-Q08",
-      "question": "Which answer is supported by “The gnome can gnaw a nut”?",
+      "question": "What can the gnome do in “The gnome can gnaw”?",
       "options": [
-        "The gnome can knit a sock",
-        "The gnome can fly",
-        "The gnome can swim",
-        "The gnome can gnaw a nut"
+        "Run",
+        "Fly",
+        "Swim",
+        "Gnaw"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -339,9 +339,9 @@
     },
     {
       "questionId": "PF431-Q09",
-      "question": "Which word begins with /g/?",
+      "question": "Which word begins with n but has no silent initial g?",
       "options": [
-        "game",
+        "net",
         "gnat",
         "gnaw",
         "gnome"
@@ -368,7 +368,7 @@
       "question": "Which question asks for a stated detail?",
       "options": [
         "What happens tomorrow?",
-        "What can the gnome gnaw?",
+        "What can the gnome do?",
         "What is the reader's favourite?",
         "What colour is not mentioned?"
       ],
@@ -382,7 +382,7 @@
       "options": [
         "gnaw",
         "gnome",
-        "game",
+        "net",
         "gnat"
       ],
       "difficulty": "conceptual",
@@ -421,7 +421,7 @@
       "options": [
         "Memorize answer order",
         "Read controlled gn-sentences and answer with evidence",
-        "Pronounce silent g",
+        "Voice the silent g",
         "Invent details"
       ],
       "difficulty": "mixed_review",
@@ -433,12 +433,12 @@
     {
       "questionId": "PF431-Q01",
       "correctOptionIndex": 0,
-      "explanation": "The sentence says the gnat is on the mat."
+      "explanation": "The sentence says a gnat is on the net."
     },
     {
       "questionId": "PF431-Q02",
       "correctOptionIndex": 2,
-      "explanation": "Gnat begins with gn."
+      "explanation": "The initial g is silent."
     },
     {
       "questionId": "PF431-Q03",
@@ -448,7 +448,7 @@
     {
       "questionId": "PF431-Q04",
       "correctOptionIndex": 3,
-      "explanation": "The initial g is silent."
+      "explanation": "Gnat begins with /n/."
     },
     {
       "questionId": "PF431-Q05",
@@ -468,12 +468,12 @@
     {
       "questionId": "PF431-Q08",
       "correctOptionIndex": 3,
-      "explanation": "Only gnawing a nut is stated."
+      "explanation": "The sentence says the gnome can gnaw."
     },
     {
       "questionId": "PF431-Q09",
       "correctOptionIndex": 0,
-      "explanation": "Game begins with /g/."
+      "explanation": "Net begins with n only."
     },
     {
       "questionId": "PF431-Q10",
@@ -483,7 +483,7 @@
     {
       "questionId": "PF431-Q11",
       "correctOptionIndex": 1,
-      "explanation": "The sentence directly answers the question."
+      "explanation": "The sentence directly states what the gnome can do."
     },
     {
       "questionId": "PF431-Q12",
