@@ -78,8 +78,8 @@
     "basic": [
       {
         "id": "B1",
-        "prompt": "In “Brad has a brush,” which word names the person?",
-        "answer": "Brad"
+        "prompt": "Read: “The brick is thick.” What is thick?",
+        "answer": "The brick"
       },
       {
         "id": "B2",
@@ -95,7 +95,7 @@
     "conceptual": [
       {
         "id": "C1",
-        "prompt": "Which word begins with br in “Brad has a brush”?",
+        "prompt": "In “Brad has a brush,” which word names the person?",
         "answer": "Brad"
       },
       {
@@ -112,8 +112,8 @@
     "application": [
       {
         "id": "A1",
-        "prompt": "In “Brad has a brush,” which word names the object Brad has?",
-        "answer": "brush"
+        "prompt": "If brick is read as bick, what should the reader do?",
+        "answer": "Reread and include /r/"
       },
       {
         "id": "A2",
@@ -139,8 +139,8 @@
       },
       {
         "id": "H3",
-        "prompt": "Which word in “Brad has a brush” begins with /b/ followed by /r/?",
-        "answer": "Brad"
+        "prompt": "In “Brad has a brush,” which word names the object Brad has?",
+        "answer": "brush"
       }
     ],
     "mixedReview": [
