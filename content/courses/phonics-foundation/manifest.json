@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 880,
-    "studyMaterials": 880,
-    "questionBank": 13190,
-    "assessments": 210
+    "lessons": 900,
+    "studyMaterials": 900,
+    "questionBank": 13490,
+    "assessments": 216
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -900,6 +900,26 @@
       "content/courses/phonics-foundation/878-ph-wh-connected-reading-transfer/authoring-package.json",
       "content/courses/phonics-foundation/879-ph-wh-fluency-diagnostic/authoring-package.json",
       "content/courses/phonics-foundation/880-ph-wh-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/881-recognize-consonant-le-syllable/authoring-package.json",
+      "content/courses/phonics-foundation/882-decode-consonant-le-words/authoring-package.json",
+      "content/courses/phonics-foundation/883-spell-consonant-le-words/authoring-package.json",
+      "content/courses/phonics-foundation/884-consonant-le-word-families-reading/authoring-package.json",
+      "content/courses/phonics-foundation/885-controlled-consonant-le-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/886-controlled-consonant-le-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/887-consonant-le-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/888-consonant-le-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/889-recognize-vccv-syllable-division/authoring-package.json",
+      "content/courses/phonics-foundation/890-decode-vccv-two-syllable-words/authoring-package.json",
+      "content/courses/phonics-foundation/891-spell-vccv-two-syllable-words/authoring-package.json",
+      "content/courses/phonics-foundation/892-vccv-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/893-controlled-vccv-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/894-controlled-vccv-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/895-vccv-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/896-vccv-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/897-multisyllable-division-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/898-multisyllable-connected-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/899-multisyllable-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/900-multisyllable-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
@@ -1091,7 +1111,13 @@
     "PF875-DIAG-01",
     "PF876-REASSESS-01",
     "PF879-DIAG-01",
-    "PF880-REASSESS-01"
+    "PF880-REASSESS-01",
+    "PF887-DIAG-01",
+    "PF888-REASSESS-01",
+    "PF895-DIAG-01",
+    "PF896-REASSESS-01",
+    "PF899-DIAG-01",
+    "PF900-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/02-hear-and-identify-s/authoring-package.json",
@@ -1973,6 +1999,26 @@
     "content/courses/phonics-foundation/878-ph-wh-connected-reading-transfer/authoring-package.json",
     "content/courses/phonics-foundation/879-ph-wh-fluency-diagnostic/authoring-package.json",
     "content/courses/phonics-foundation/880-ph-wh-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/881-recognize-consonant-le-syllable/authoring-package.json",
+    "content/courses/phonics-foundation/882-decode-consonant-le-words/authoring-package.json",
+    "content/courses/phonics-foundation/883-spell-consonant-le-words/authoring-package.json",
+    "content/courses/phonics-foundation/884-consonant-le-word-families-reading/authoring-package.json",
+    "content/courses/phonics-foundation/885-controlled-consonant-le-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/886-controlled-consonant-le-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/887-consonant-le-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/888-consonant-le-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/889-recognize-vccv-syllable-division/authoring-package.json",
+    "content/courses/phonics-foundation/890-decode-vccv-two-syllable-words/authoring-package.json",
+    "content/courses/phonics-foundation/891-spell-vccv-two-syllable-words/authoring-package.json",
+    "content/courses/phonics-foundation/892-vccv-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/893-controlled-vccv-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/894-controlled-vccv-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/895-vccv-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/896-vccv-targeted-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/897-multisyllable-division-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/898-multisyllable-connected-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/899-multisyllable-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/900-multisyllable-remediation-reassessment/authoring-package.json",
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json"
   ]
 }
