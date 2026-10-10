@@ -65,3 +65,14 @@ jobs:
           npm run content:assessment:retry:test
           npm run content:assessment:review:payload:test
           npm run content:assessment:history:test
+          npm run content:assessment:attempt:snapshot:test
+          npm run content:assessment:attempt:integrity:test
+          npm run content:assessment:attempt:deadline:test
+          npm run content:assessment:attempt:state:test
+          npm run content:assessment:scoring:test
+          npm run content:assessment:review:release:test
+          npm run content:assessment:analytics:test
+          npm run content:assessment:weak-topic:test
+          npm run content:assessment:remediation:test
+          npm run content:assessment:adaptive:test
+          npm run content:assessment:promotion:test
