@@ -78,261 +78,86 @@
     "basic": [
       {
         "id": "B1",
-        "prompt": [
-          "Which two sounds begin smile?",
-          "/s/ then /m/",
-          "/m/ then /s/",
-          "/s/ then /l/",
-          "/t/ then /s/"
-        ]
+        "prompt": "Which two sounds begin smile?",
+        "answer": "/s/ then /m/"
       },
       {
         "id": "B2",
-        "prompt": [
-          "Which word begins with sm?",
-          "smell",
-          "sun",
-          "map",
-          "cat"
-        ]
+        "prompt": "Which word begins with sm?",
+        "answer": "smell"
       },
       {
         "id": "B3",
-        "prompt": [
-          "What should you do after blending the onset?",
-          "Say and check the whole word",
-          "Stop after /s/",
-          "Add a vowel between the sounds",
-          "Ignore the ending"
-        ]
-      },
-      {
-        "id": "B4",
-        "prompt": [
-          "Which error changes smile to sile?",
-          "Leaving out /m/",
-          "Adding /t/ at the end",
-          "Changing /s/ to /n/",
-          "Keeping both onset sounds"
-        ]
-      },
-      {
-        "id": "B5",
-        "prompt": [
-          "How should /s/ and /m/ be blended?",
-          "In order without an extra vowel",
-          "With a long vowel between them",
-          "In reverse order",
-          "By omitting one sound"
-        ]
+        "prompt": "Which word begins with /s/ alone rather than sm?",
+        "answer": "sun"
       }
     ],
     "conceptual": [
       {
         "id": "C1",
-        "prompt": [
-          "Which two sounds begin smile?",
-          "/s/ then /m/",
-          "/m/ then /s/",
-          "/s/ then /l/",
-          "/t/ then /s/"
-        ]
+        "prompt": "What is the correct order in sm?",
+        "answer": "/s/ then /m/"
       },
       {
         "id": "C2",
-        "prompt": [
-          "Which word begins with sm?",
-          "smell",
-          "sun",
-          "map",
-          "cat"
-        ]
+        "prompt": "If smile is said as sile, which sound is missing?",
+        "answer": "/m/"
       },
       {
         "id": "C3",
-        "prompt": [
-          "What should you do after blending the onset?",
-          "Say and check the whole word",
-          "Stop after /s/",
-          "Add a vowel between the sounds",
-          "Ignore the ending"
-        ]
-      },
-      {
-        "id": "C4",
-        "prompt": [
-          "Which error changes smile to sile?",
-          "Leaving out /m/",
-          "Adding /t/ at the end",
-          "Changing /s/ to /n/",
-          "Keeping both onset sounds"
-        ]
-      },
-      {
-        "id": "C5",
-        "prompt": [
-          "How should /s/ and /m/ be blended?",
-          "In order without an extra vowel",
-          "With a long vowel between them",
-          "In reverse order",
-          "By omitting one sound"
-        ]
+        "prompt": "Which word also begins with sm?",
+        "answer": "smog"
       }
     ],
     "application": [
       {
         "id": "A1",
-        "prompt": [
-          "Which two sounds begin smile?",
-          "/s/ then /m/",
-          "/m/ then /s/",
-          "/s/ then /l/",
-          "/t/ then /s/"
-        ]
+        "prompt": "What should not be added between /s/ and /m/?",
+        "answer": "An extra vowel"
       },
       {
         "id": "A2",
-        "prompt": [
-          "Which word begins with sm?",
-          "smell",
-          "sun",
-          "map",
-          "cat"
-        ]
+        "prompt": "Which word starts with /s/ followed by /m/?",
+        "answer": "smell"
       },
       {
         "id": "A3",
-        "prompt": [
-          "What should you do after blending the onset?",
-          "Say and check the whole word",
-          "Stop after /s/",
-          "Add a vowel between the sounds",
-          "Ignore the ending"
-        ]
-      },
-      {
-        "id": "A4",
-        "prompt": [
-          "Which error changes smile to sile?",
-          "Leaving out /m/",
-          "Adding /t/ at the end",
-          "Changing /s/ to /n/",
-          "Keeping both onset sounds"
-        ]
-      },
-      {
-        "id": "A5",
-        "prompt": [
-          "How should /s/ and /m/ be blended?",
-          "In order without an extra vowel",
-          "With a long vowel between them",
-          "In reverse order",
-          "By omitting one sound"
-        ]
+        "prompt": "What should you do after blending the onset?",
+        "answer": "Blend the rest and say the whole word"
       }
     ],
     "higherOrderThinking": [
       {
         "id": "H1",
-        "prompt": [
-          "Which two sounds begin smile?",
-          "/s/ then /m/",
-          "/m/ then /s/",
-          "/s/ then /l/",
-          "/t/ then /s/"
-        ]
+        "prompt": "Which pair shares the initial sm blend?",
+        "answer": "smile, smell"
       },
       {
         "id": "H2",
-        "prompt": [
-          "Which word begins with sm?",
-          "smell",
-          "sun",
-          "map",
-          "cat"
-        ]
+        "prompt": "Which is an accurate description of an initial blend?",
+        "answer": "Two consonant sounds heard together at the start"
       },
       {
         "id": "H3",
-        "prompt": [
-          "What should you do after blending the onset?",
-          "Say and check the whole word",
-          "Stop after /s/",
-          "Add a vowel between the sounds",
-          "Ignore the ending"
-        ]
-      },
-      {
-        "id": "H4",
-        "prompt": [
-          "Which error changes smile to sile?",
-          "Leaving out /m/",
-          "Adding /t/ at the end",
-          "Changing /s/ to /n/",
-          "Keeping both onset sounds"
-        ]
-      },
-      {
-        "id": "H5",
-        "prompt": [
-          "How should /s/ and /m/ be blended?",
-          "In order without an extra vowel",
-          "With a long vowel between them",
-          "In reverse order",
-          "By omitting one sound"
-        ]
+        "prompt": "What helps confirm that you blended correctly?",
+        "answer": "Check the complete word against the sounds"
       }
     ],
     "mixedReview": [
       {
         "id": "R1",
-        "prompt": [
-          "Which two sounds begin smile?",
-          "/s/ then /m/",
-          "/m/ then /s/",
-          "/s/ then /l/",
-          "/t/ then /s/"
-        ]
+        "prompt": "Which word does not begin with sm?",
+        "answer": "slip"
       },
       {
         "id": "R2",
-        "prompt": [
-          "Which word begins with sm?",
-          "smell",
-          "sun",
-          "map",
-          "cat"
-        ]
+        "prompt": "If the two consonants are reversed, what is wrong?",
+        "answer": "The onset sounds are no longer in the taught order"
       },
       {
         "id": "R3",
-        "prompt": [
-          "What should you do after blending the onset?",
-          "Say and check the whole word",
-          "Stop after /s/",
-          "Add a vowel between the sounds",
-          "Ignore the ending"
-        ]
-      },
-      {
-        "id": "R4",
-        "prompt": [
-          "Which error changes smile to sile?",
-          "Leaving out /m/",
-          "Adding /t/ at the end",
-          "Changing /s/ to /n/",
-          "Keeping both onset sounds"
-        ]
-      },
-      {
-        "id": "R5",
-        "prompt": [
-          "How should /s/ and /m/ be blended?",
-          "In order without an extra vowel",
-          "With a long vowel between them",
-          "In reverse order",
-          "By omitting one sound"
-        ]
+        "prompt": "What is the goal when hearing initial sm?",
+        "answer": "Hear both sounds, blend smoothly, and say the whole word"
       }
     ]
   },
@@ -412,8 +237,8 @@
       "questionId": "PF291-Q01",
       "question": "Which two sounds begin smile?",
       "options": [
-        "/s/ then /m/",
         "/m/ then /s/",
+        "/s/ then /m/",
         "/s/ then /l/",
         "/t/ then /s/"
       ],
@@ -425,10 +250,10 @@
       "questionId": "PF291-Q02",
       "question": "Which word begins with sm?",
       "options": [
-        "smell",
         "sun",
         "map",
-        "cat"
+        "cat",
+        "smell"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -451,9 +276,9 @@
       "questionId": "PF291-Q04",
       "question": "What is the correct order in sm?",
       "options": [
-        "/s/ then /m/",
         "/m/ then /s/",
         "/s/ then /t/",
+        "/s/ then /m/",
         "/l/ then /m/"
       ],
       "difficulty": "conceptual",
@@ -464,8 +289,8 @@
       "questionId": "PF291-Q05",
       "question": "If smile is said as sile, which sound is missing?",
       "options": [
-        "/m/",
         "/s/",
+        "/m/",
         "/t/",
         "/n/"
       ],
@@ -490,9 +315,9 @@
       "questionId": "PF291-Q07",
       "question": "What should not be added between /s/ and /m/?",
       "options": [
-        "An extra vowel",
         "The /m/ sound",
         "The /s/ sound",
+        "An extra vowel",
         "The rest of the word"
       ],
       "difficulty": "conceptual",
@@ -503,10 +328,10 @@
       "questionId": "PF291-Q08",
       "question": "Which word starts with /s/ followed by /m/?",
       "options": [
-        "smell",
         "slip",
         "stop",
-        "frog"
+        "frog",
+        "smell"
       ],
       "difficulty": "sound_recognition",
       "marks": 1,
@@ -516,8 +341,8 @@
       "questionId": "PF291-Q09",
       "question": "What should you do after blending the onset?",
       "options": [
-        "Blend the rest and say the whole word",
         "Stop before the vowel",
+        "Blend the rest and say the whole word",
         "Reverse the consonants",
         "Guess from word length"
       ],
@@ -529,9 +354,9 @@
       "questionId": "PF291-Q10",
       "question": "Which pair shares the initial sm blend?",
       "options": [
-        "smile, smell",
         "sun, sip",
         "slip, slam",
+        "smile, smell",
         "map, mat"
       ],
       "difficulty": "sound_recognition",
@@ -555,10 +380,10 @@
       "questionId": "PF291-Q12",
       "question": "What helps confirm that you blended correctly?",
       "options": [
-        "Check the complete word against the sounds",
         "Ignore the ending",
         "Say only the first sound",
-        "Add a new sound"
+        "Add a new sound",
+        "Check the complete word against the sounds"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -568,9 +393,9 @@
       "questionId": "PF291-Q13",
       "question": "Which word does not begin with sm?",
       "options": [
-        "slip",
         "smell",
         "smile",
+        "slip",
         "smog"
       ],
       "difficulty": "sound_recognition",
@@ -581,8 +406,8 @@
       "questionId": "PF291-Q14",
       "question": "If the two consonants are reversed, what is wrong?",
       "options": [
-        "The onset sounds are no longer in the taught order",
         "The vowel is too long",
+        "The onset sounds are no longer in the taught order",
         "The word has too many spaces",
         "The ending disappears automatically"
       ],
@@ -607,12 +432,12 @@
   "answerKeys": [
     {
       "questionId": "PF291-Q01",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The initial sm blend keeps /s/ before /m/."
     },
     {
       "questionId": "PF291-Q02",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Smell begins with /s/ followed by /m/."
     },
     {
@@ -622,12 +447,12 @@
     },
     {
       "questionId": "PF291-Q04",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "The letters and sounds stay in the taught order."
     },
     {
       "questionId": "PF291-Q05",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The second consonant /m/ has been omitted."
     },
     {
@@ -637,22 +462,22 @@
     },
     {
       "questionId": "PF291-Q07",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "The blend has no extra vowel between its consonants."
     },
     {
       "questionId": "PF291-Q08",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Smell begins with /s/ followed by /m/."
     },
     {
       "questionId": "PF291-Q09",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The onset must be blended with the remaining sounds."
     },
     {
       "questionId": "PF291-Q10",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Both smile and smell begin with sm."
     },
     {
@@ -662,17 +487,17 @@
     },
     {
       "questionId": "PF291-Q12",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Whole-word checking confirms the blend and remainder."
     },
     {
       "questionId": "PF291-Q13",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Slip begins with sl, not sm."
     },
     {
       "questionId": "PF291-Q14",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The order /s/ then /m/ must be maintained."
     },
     {
