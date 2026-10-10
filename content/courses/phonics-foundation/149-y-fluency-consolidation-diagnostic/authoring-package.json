@@ -479,5 +479,25 @@
       "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
     ],
     "contentHash": "sha256:course-phonics-foundation-module-02-lesson-149-v1"
+  },
+  "assessment": {
+    "assessmentId": "PF149-DIAG-01",
+    "title": "Phonics Foundation /y/ Fluency Consolidation Diagnostic",
+    "type": "diagnostic",
+    "questionCount": 15,
+    "masteryThresholdPercent": 80,
+    "components": [
+      "sound_recognition",
+      "decoding",
+      "encoding",
+      "word_families",
+      "comprehension",
+      "fluency"
+    ],
+    "routing": {
+      "atOrAboveThreshold": "advance_to_next_phonics_cycle",
+      "belowThreshold": "targeted_remediation"
+    },
+    "freshItemsRequired": true
   }
 }
