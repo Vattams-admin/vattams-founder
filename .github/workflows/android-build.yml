@@ -10,6 +10,7 @@ on:
       - 'config/**'
       - 'content/**'
       - 'data/**'
+      - 'scripts/**'
       - 'capacitor.config.ts'
       - 'package.json'
       - 'package-lock.json'
