@@ -1,9 +1,9 @@
 import { createRemoteJWKSet, jwtVerify } from "npm:jose@6";
 import { createClient } from "npm:@supabase/supabase-js@2";
 const PROJECT_ID=Deno.env.get("FIREBASE_PROJECT_ID")||Deno.env.get("VITE_FIREBASE_PROJECT_ID")||"";
-const URL=Deno.env.get("SUPABASE_URL")||"";
+const SUPABASE_URL=Deno.env.get("SUPABASE_URL")||"";
 const KEYS=JSON.parse(Deno.env.get("SUPABASE_SECRET_KEYS")||"{}");
-const db=createClient(URL,KEYS["default"]||"",{auth:{persistSession:false,autoRefreshToken:false}});
+const db=createClient(SUPABASE_URL,KEYS["default"]||"",{auth:{persistSession:false,autoRefreshToken:false}});
 const jwks=createRemoteJWKSet(new URL("https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com"));
 const POLICY_PATH="config/assessment-remediation-policy.json";
 async function uid(auth:string|null){if(!auth?.startsWith("Bearer ")||!PROJECT_ID)throw new Error("Unauthorized");const {payload}=await jwtVerify(auth.slice(7),jwks,{issuer:"https://securetoken.google.com/"+PROJECT_ID,audience:PROJECT_ID});if(typeof payload.sub!=="string")throw new Error("Invalid Firebase token");return payload.sub;}
