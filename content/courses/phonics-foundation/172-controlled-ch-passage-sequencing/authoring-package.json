@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-172",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "172-controlled-ch-passage-sequencing",
+    "topic": "passage-reading",
+    "subtopic": "ch-controlled-passage-sequencing",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a short controlled passage containing taught ch-words.",
+      "Sequence events in the order stated by the text.",
+      "Answer literal questions using evidence from the passage.",
+      "Reread and self-correct a word that changes meaning."
+    ],
+    "concepts": [
+      "A passage connects sentences around a simple idea.",
+      "Sequencing uses details to identify what happens first, next and last.",
+      "Text evidence supports literal answers.",
+      "Accurate decoding of ch-words supports comprehension."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "Place events in the order they happen in a text."
+      },
+      {
+        "term": "passage",
+        "definition": "A connected group of sentences about a topic or event."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A word or detail in the text that supports an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Chad has a chip. The chip is in a dish.",
+        "solution": "The passage introduces Chad and the chip, then gives its location."
+      },
+      {
+        "prompt": "Chad can chop a log.",
+        "solution": "This is an action later in the passage."
+      },
+      {
+        "prompt": "Reread a sentence",
+        "solution": "Use printed words to verify the sequence and answer."
+      }
+    ],
+    "commonMistakes": [
+      "Putting events in an order not stated by the text.",
+      "Answering from memory without checking the passage.",
+      "Confusing /ch/ and /sh/ in a target word.",
+      "Skipping small words that change sentence meaning."
+    ],
+    "keyTakeaways": [
+      "Read the whole passage before sequencing.",
+      "Use first, next and last to explain the order.",
+      "Point to text evidence for each answer.",
+      "Decode ch-words fully and reread when meaning is unclear."
+    ],
+    "revisionPoints": [
+      "Chad has a chip.",
+      "The chip is in a dish.",
+      "Chad can chop a log.",
+      "Chad can chat."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What does Chad have at the start of the passage?",
+        "answer": "A chip"
+      },
+      {
+        "id": "B2",
+        "prompt": "Where is the chip?",
+        "answer": "In a dish"
+      },
+      {
+        "id": "B3",
+        "prompt": "What can Chad do later in the passage?",
+        "answer": "Chop a log"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which event happens first?",
+        "answer": "Chad has a chip"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which detail comes after Chad has a chip?",
+        "answer": "The chip is in a dish"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which word ends with ch?",
+        "answer": "much"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which two words share -op?",
+        "answer": "chop and hop"
+      },
+      {
+        "id": "A2",
+        "prompt": "What should support an answer about the passage?",
+        "answer": "Words stated in the passage"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which sentence tells where the chip is?",
+        "answer": "The chip is in a dish."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What does chop mean in the passage?",
+        "answer": "Cut into pieces"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which event happens last in the passage?",
+        "answer": "Chad can chat"
+      },
+      {
+        "id": "H3",
+        "prompt": "Why reread the passage before answering?",
+        "answer": "To check details and order"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word begins with /ch/?",
+        "answer": "Chad"
+      },
+      {
+        "id": "R2",
+        "prompt": "Which pair is in the same order as the passage?",
+        "answer": "chip, dish, log"
+      },
+      {
+        "id": "R3",
+        "prompt": "What helps a learner read the passage accurately?",
+        "answer": "Decode each word and check its sounds"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Chad has a chip.",
+      "The chip is in a dish.",
+      "Chad can chop a log.",
+      "Chad can chat."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Chad has a chip."
+      },
+      {
+        "front": "Recall 2",
+        "back": "The chip is in a dish."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Chad can chop a log."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Chad can chat."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Chad has a chip.",
+      "The chip is in a dish.",
+      "Chad can chop a log.",
+      "Chad can chat."
+    ],
+    "mistakeBasedRevision": [
+      "Putting events in an order not stated by the text.",
+      "Answering from memory without checking the passage.",
+      "Confusing /ch/ and /sh/ in a target word.",
+      "Skipping small words that change sentence meaning."
+    ],
+    "weakTopicRevision": [
+      "If passage reading accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "passage-sequencing",
+      "name": "Read the controlled ch-passage and sequence events.",
+      "steps": [
+        "Read the passage once for meaning.",
+        "Reread and number events first, next and last.",
+        "Answer literal questions using text evidence.",
+        "Retell the passage in order."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using sound or text evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme or words supporting the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Sequence at least three passage events in the stated order.",
+    "Answer at least 4 of 5 literal questions using text evidence.",
+    "Reread and correct one decoding error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF172-Q01",
+      "question": "What does Chad have at the start of the passage?",
+      "options": [
+        "A ship",
+        "A shop",
+        "A chip",
+        "A shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF172-Q02",
+      "question": "Where is the chip?",
+      "options": [
+        "On a ship",
+        "In a dish",
+        "In a shop",
+        "By a shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF172-Q03",
+      "question": "What can Chad do later in the passage?",
+      "options": [
+        "Chop a log",
+        "Fish in a dish",
+        "Shut a ship",
+        "Wash a shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF172-Q04",
+      "question": "Which event happens first?",
+      "options": [
+        "Chad can chop a log",
+        "Chad can chat",
+        "The chip is in a dish",
+        "Chad has a chip"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF172-Q05",
+      "question": "Which detail comes after Chad has a chip?",
+      "options": [
+        "Chad can chop a log",
+        "Chad can chat",
+        "The chip is in a dish",
+        "Chad sits by a log"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF172-Q06",
+      "question": "Which word ends with ch?",
+      "options": [
+        "Chad",
+        "much",
+        "chat",
+        "chip"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF172-Q07",
+      "question": "Which two words share -op?",
+      "options": [
+        "chop and hop",
+        "chip and chop",
+        "chat and chin",
+        "much and rich"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF172-Q08",
+      "question": "What should support an answer about the passage?",
+      "options": [
+        "A guess",
+        "A different story",
+        "The longest option",
+        "Words stated in the passage"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF172-Q09",
+      "question": "Which sentence tells where the chip is?",
+      "options": [
+        "Chad has a chip.",
+        "Chad can chop a log.",
+        "The chip is in a dish.",
+        "Chad can chat."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF172-Q10",
+      "question": "What does chop mean in the passage?",
+      "options": [
+        "Put in a dish",
+        "Cut into pieces",
+        "Read aloud",
+        "Close a lid"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF172-Q11",
+      "question": "Which event happens last in the passage?",
+      "options": [
+        "Chad can chat",
+        "Chad has a chip",
+        "The chip is in a dish",
+        "Chad can chop a log"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF172-Q12",
+      "question": "Why reread the passage before answering?",
+      "options": [
+        "To skip hard words",
+        "To choose by memory only",
+        "To read only the first word",
+        "To check details and order"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF172-Q13",
+      "question": "Which word begins with /ch/?",
+      "options": [
+        "dish",
+        "log",
+        "Chad",
+        "chip at the end"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF172-Q14",
+      "question": "Which pair is in the same order as the passage?",
+      "options": [
+        "log, chip, dish",
+        "chip, dish, log",
+        "chat, chip, Chad",
+        "dish, log, chip"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF172-Q15",
+      "question": "What helps a learner read the passage accurately?",
+      "options": [
+        "Decode each word and check its sounds",
+        "Guess from the picture only",
+        "Skip all ch-words",
+        "Read only the first letters"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF172-Q01",
+      "correctOptionIndex": 2,
+      "explanation": "The first sentence says Chad has a chip."
+    },
+    {
+      "questionId": "PF172-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The passage says the chip is in a dish."
+    },
+    {
+      "questionId": "PF172-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The passage says Chad can chop a log."
+    },
+    {
+      "questionId": "PF172-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The passage introduces the chip first."
+    },
+    {
+      "questionId": "PF172-Q05",
+      "correctOptionIndex": 2,
+      "explanation": "The location detail follows the introduction."
+    },
+    {
+      "questionId": "PF172-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "Much ends in ch."
+    },
+    {
+      "questionId": "PF172-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Chop and hop share -op."
+    },
+    {
+      "questionId": "PF172-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Answers should be grounded in text evidence."
+    },
+    {
+      "questionId": "PF172-Q09",
+      "correctOptionIndex": 2,
+      "explanation": "This sentence states the location."
+    },
+    {
+      "questionId": "PF172-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "Chop describes cutting a log."
+    },
+    {
+      "questionId": "PF172-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The final sentence says Chad can chat."
+    },
+    {
+      "questionId": "PF172-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Rereading verifies details and sequence."
+    },
+    {
+      "questionId": "PF172-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "Chad begins with ch."
+    },
+    {
+      "questionId": "PF172-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "The passage moves from chip to dish to log."
+    },
+    {
+      "questionId": "PF172-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Full decoding supports meaning."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-172-v1"
+  }
+}

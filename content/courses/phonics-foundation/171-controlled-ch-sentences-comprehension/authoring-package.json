@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-171",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "171-controlled-ch-sentences-comprehension",
+    "topic": "sentence-reading",
+    "subtopic": "ch-sentences-literal-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read short controlled sentences containing taught ch-words.",
+      "Answer literal questions using details stated in the sentence.",
+      "Reread when a decoded word does not fit the meaning.",
+      "Identify ch-words and use their printed sounds to support accurate reading."
+    ],
+    "concepts": [
+      "A sentence expresses a complete idea.",
+      "Accurate decoding supports understanding.",
+      "Literal answers should match information directly stated in the text.",
+      "Rereading allows readers to check both words and meaning."
+    ],
+    "definitions": [
+      {
+        "term": "literal comprehension",
+        "definition": "Understanding information directly stated in a text."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A word or detail from the text that supports an answer."
+      },
+      {
+        "term": "rereading",
+        "definition": "Reading the text again to check accuracy and meaning."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Chad has a chip.",
+        "solution": "The sentence tells us what Chad has."
+      },
+      {
+        "prompt": "The chip is in a dish.",
+        "solution": "The sentence tells where the chip is."
+      },
+      {
+        "prompt": "Chad can chop a log.",
+        "solution": "The action word is chop."
+      }
+    ],
+    "commonMistakes": [
+      "Answering from memory without rereading.",
+      "Confusing chip with ship because the words look similar.",
+      "Skipping small words such as the and a.",
+      "Reading quickly without checking meaning."
+    ],
+    "keyTakeaways": [
+      "Decode every word before answering.",
+      "Reread and point to the evidence.",
+      "Check the initial digraph and medial vowel.",
+      "Use the sentence, not a guess, to support an answer."
+    ],
+    "revisionPoints": [
+      "Chad has a chip.",
+      "The chip is in a dish.",
+      "Chad can chop a log.",
+      "Chad can chat."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "In “Chad has a chip,” what does Chad have?",
+        "answer": "A chip"
+      },
+      {
+        "id": "B2",
+        "prompt": "Where is the chip in “The chip is in a dish”?",
+        "answer": "In a dish"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word in “Chad can chop a log” begins with ch?",
+        "answer": "Chad"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which sentence tells what Chad has?",
+        "answer": "Chad has a chip."
+      },
+      {
+        "id": "C2",
+        "prompt": "Which two words share the same initial sound?",
+        "answer": "chat and chop"
+      },
+      {
+        "id": "C3",
+        "prompt": "What should a reader do before answering a text question?",
+        "answer": "Reread and find supporting words"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word contains final ch?",
+        "answer": "much"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word differs from chip by its vowel?",
+        "answer": "chop"
+      },
+      {
+        "id": "A3",
+        "prompt": "What does “Chad can chop a log” tell us?",
+        "answer": "Chad can cut a log"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which sentence contains both chip and dish?",
+        "answer": "The chip is in a dish."
+      },
+      {
+        "id": "H2",
+        "prompt": "If a learner reads chip as ship, what should be checked?",
+        "answer": "The initial digraph ch versus sh"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which word begins with the same sound as chin?",
+        "answer": "chop"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What is the best evidence that Chad can cut something?",
+        "answer": "Chad can chop a log."
+      },
+      {
+        "id": "R2",
+        "prompt": "Why does accurate decoding matter in these sentences?",
+        "answer": "A changed sound can change a word and its meaning"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which strategy helps when a sentence does not make sense?",
+        "answer": "Reread each word and check the sounds"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Chad has a chip.",
+      "The chip is in a dish.",
+      "Chad can chop a log.",
+      "Chad can chat."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Chad has a chip."
+      },
+      {
+        "front": "Recall 2",
+        "back": "The chip is in a dish."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Chad can chop a log."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Chad can chat."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Chad has a chip.",
+      "The chip is in a dish.",
+      "Chad can chop a log.",
+      "Chad can chat."
+    ],
+    "mistakeBasedRevision": [
+      "Answering from memory without rereading.",
+      "Confusing chip with ship because the words look similar.",
+      "Skipping small words such as the and a.",
+      "Reading quickly without checking meaning."
+    ],
+    "weakTopicRevision": [
+      "If sentence reading accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "sentence-reading-comprehension",
+      "name": "Read controlled ch-sentences and answer literal questions.",
+      "steps": [
+        "Read each sentence while tracking each word.",
+        "Reread before answering.",
+        "Point to the words that support the answer.",
+        "Correct a sound error and explain the meaning."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using sound or text evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme or words supporting the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read at least 4 of 5 controlled sentences accurately.",
+    "Answer at least 4 of 5 literal questions using text evidence.",
+    "Reread and correct a sound error that changes meaning."
+  ],
+  "questions": [
+    {
+      "questionId": "PF171-Q01",
+      "question": "In “Chad has a chip,” what does Chad have?",
+      "options": [
+        "A ship",
+        "A chip",
+        "A dish",
+        "A shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF171-Q02",
+      "question": "Where is the chip in “The chip is in a dish”?",
+      "options": [
+        "In a dish",
+        "On a ship",
+        "In a shop",
+        "By a shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF171-Q03",
+      "question": "Which word in “Chad can chop a log” begins with ch?",
+      "options": [
+        "can",
+        "log",
+        "a",
+        "Chad"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF171-Q04",
+      "question": "Which sentence tells what Chad has?",
+      "options": [
+        "The chip is in a dish.",
+        "Chad can chop a log.",
+        "Chad has a chip.",
+        "Chad can chat."
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF171-Q05",
+      "question": "Which two words share the same initial sound?",
+      "options": [
+        "chip and ship",
+        "chat and chop",
+        "sip and ship",
+        "fish and dish"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF171-Q06",
+      "question": "What should a reader do before answering a text question?",
+      "options": [
+        "Reread and find supporting words",
+        "Guess from memory",
+        "Skip the text",
+        "Choose the longest answer"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF171-Q07",
+      "question": "Which word contains final ch?",
+      "options": [
+        "Chad",
+        "chat",
+        "chip",
+        "much"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF171-Q08",
+      "question": "Which word differs from chip by its vowel?",
+      "options": [
+        "chin",
+        "chat",
+        "chop",
+        "chip"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF171-Q09",
+      "question": "What does “Chad can chop a log” tell us?",
+      "options": [
+        "Chad has a fish",
+        "Chad can cut a log",
+        "The log can read",
+        "Chad is a dish"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF171-Q10",
+      "question": "Which sentence contains both chip and dish?",
+      "options": [
+        "The chip is in a dish.",
+        "Chad has a chip.",
+        "Chad can chat.",
+        "Chad can chop a log."
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF171-Q11",
+      "question": "If a learner reads chip as ship, what should be checked?",
+      "options": [
+        "Only the final letter",
+        "The spaces",
+        "The capital C",
+        "The initial digraph ch versus sh"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF171-Q12",
+      "question": "Which word begins with the same sound as chin?",
+      "options": [
+        "ship",
+        "Sam",
+        "chop",
+        "lid"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF171-Q13",
+      "question": "What is the best evidence that Chad can cut something?",
+      "options": [
+        "Chad has a chip.",
+        "Chad can chop a log.",
+        "The chip is in a dish.",
+        "Chad can chat."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF171-Q14",
+      "question": "Why does accurate decoding matter in these sentences?",
+      "options": [
+        "A changed sound can change a word and its meaning",
+        "Every word means the same thing",
+        "Only punctuation matters",
+        "Readers should skip short words"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF171-Q15",
+      "question": "Which strategy helps when a sentence does not make sense?",
+      "options": [
+        "Ignore the ending",
+        "Guess the next word",
+        "Skip the sentence",
+        "Reread each word and check the sounds"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF171-Q01",
+      "correctOptionIndex": 1,
+      "explanation": "The sentence says Chad has a chip."
+    },
+    {
+      "questionId": "PF171-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence states that the chip is in a dish."
+    },
+    {
+      "questionId": "PF171-Q03",
+      "correctOptionIndex": 3,
+      "explanation": "Chad begins with ch."
+    },
+    {
+      "questionId": "PF171-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "The first sentence states what Chad has."
+    },
+    {
+      "questionId": "PF171-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Chat and chop begin with /ch/."
+    },
+    {
+      "questionId": "PF171-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Text evidence supports the answer."
+    },
+    {
+      "questionId": "PF171-Q07",
+      "correctOptionIndex": 3,
+      "explanation": "Much ends in ch."
+    },
+    {
+      "questionId": "PF171-Q08",
+      "correctOptionIndex": 2,
+      "explanation": "Chop uses short o; chip uses short i."
+    },
+    {
+      "questionId": "PF171-Q09",
+      "correctOptionIndex": 1,
+      "explanation": "Chop means cut into pieces in this sentence."
+    },
+    {
+      "questionId": "PF171-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence names both chip and dish."
+    },
+    {
+      "questionId": "PF171-Q11",
+      "correctOptionIndex": 3,
+      "explanation": "The initial digraph distinguishes the words."
+    },
+    {
+      "questionId": "PF171-Q12",
+      "correctOptionIndex": 2,
+      "explanation": "Chin and chop begin with /ch/."
+    },
+    {
+      "questionId": "PF171-Q13",
+      "correctOptionIndex": 1,
+      "explanation": "The sentence directly states the action."
+    },
+    {
+      "questionId": "PF171-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Sound substitutions can change the meaning."
+    },
+    {
+      "questionId": "PF171-Q15",
+      "correctOptionIndex": 3,
+      "explanation": "Rereading helps repair decoding and meaning."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-171-v1"
+  }
+}
