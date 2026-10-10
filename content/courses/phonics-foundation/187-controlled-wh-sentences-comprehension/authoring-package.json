@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-187",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "187-controlled-wh-sentences-comprehension",
+    "topic": "sentence-reading",
+    "subtopic": "wh-sentences-literal-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read short controlled sentences containing taught wh-words.",
+      "Answer literal questions using details stated in the sentence.",
+      "Reread when a decoded word does not fit the meaning.",
+      "Use text evidence rather than guessing."
+    ],
+    "concepts": [
+      "A sentence expresses a complete idea.",
+      "Accurate decoding supports understanding.",
+      "Literal answers should match information directly stated in the text.",
+      "Rereading helps readers check words and meaning."
+    ],
+    "definitions": [
+      {
+        "term": "literal comprehension",
+        "definition": "Understanding information directly stated in a text."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A word or detail in the text that supports an answer."
+      },
+      {
+        "term": "rereading",
+        "definition": "Reading the text again to check accuracy and meaning."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "When can we run?",
+        "solution": "The question asks when an action can happen."
+      },
+      {
+        "prompt": "We can run when the sun is up.",
+        "solution": "The sentence gives the condition: when the sun is up."
+      },
+      {
+        "prompt": "When will we win?",
+        "solution": "Reread the whole question and answer it using the text."
+      }
+    ],
+    "commonMistakes": [
+      "Answering without rereading the sentence.",
+      "Confusing the question word with the answer.",
+      "Skipping small words that change the meaning.",
+      "Assuming wh always sounds different from w."
+    ],
+    "keyTakeaways": [
+      "Decode each word before answering.",
+      "Reread and point to the evidence.",
+      "Notice question words such as when.",
+      "Use the sentence, not a guess, to support an answer."
+    ],
+    "revisionPoints": [
+      "When can we run?",
+      "We can run when the sun is up.",
+      "When will we win?",
+      "We will win when we run."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "In “When can we run?” what does the question ask?",
+        "answer": "When we can run"
+      },
+      {
+        "id": "B2",
+        "prompt": "In “We can run when the sun is up,” when can we run?",
+        "answer": "When the sun is up"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word in “When will we win?” begins with wh?",
+        "answer": "When"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which sentence tells the condition for running?",
+        "answer": "We can run when the sun is up."
+      },
+      {
+        "id": "C2",
+        "prompt": "Which pair shares -en?",
+        "answer": "when and then"
+      },
+      {
+        "id": "C3",
+        "prompt": "What should a reader do before answering a question?",
+        "answer": "Reread and find supporting words"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word begins with wh?",
+        "answer": "when"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word differs from when by its rime?",
+        "answer": "wham"
+      },
+      {
+        "id": "A3",
+        "prompt": "What does “We will win when we run” tell us?",
+        "answer": "The sentence connects winning with running"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which sentence contains both wh and w spellings?",
+        "answer": "When will we win?"
+      },
+      {
+        "id": "H2",
+        "prompt": "If when is read as wen, what should be checked?",
+        "answer": "The initial wh spelling"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which word begins with the same common sound as when?",
+        "answer": "win"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What is the best evidence for when we can run?",
+        "answer": "We can run when the sun is up."
+      },
+      {
+        "id": "R2",
+        "prompt": "Why should the whole sentence be reread?",
+        "answer": "To check word accuracy and meaning"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which strategy helps read a new wh-sentence?",
+        "answer": "Decode every word and use text evidence"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "When can we run?",
+      "We can run when the sun is up.",
+      "When will we win?",
+      "We will win when we run."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "When can we run?"
+      },
+      {
+        "front": "Recall 2",
+        "back": "We can run when the sun is up."
+      },
+      {
+        "front": "Recall 3",
+        "back": "When will we win?"
+      },
+      {
+        "front": "Recall 4",
+        "back": "We will win when we run."
+      }
+    ],
+    "formulaOrFactBank": [
+      "When can we run?",
+      "We can run when the sun is up.",
+      "When will we win?",
+      "We will win when we run."
+    ],
+    "mistakeBasedRevision": [
+      "Answering without rereading the sentence.",
+      "Confusing the question word with the answer.",
+      "Skipping small words that change the meaning.",
+      "Assuming wh always sounds different from w."
+    ],
+    "weakTopicRevision": [
+      "If sentence reading accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "sentence-reading-comprehension",
+      "name": "Read controlled wh-sentences and answer literal questions.",
+      "steps": [
+        "Read each sentence while tracking every word.",
+        "Reread before answering.",
+        "Point to the words that support the answer.",
+        "Correct any sound error and explain the meaning."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using spelling or text evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme or words supporting the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read at least 4 of 5 controlled sentences accurately.",
+    "Answer at least 4 of 5 literal questions using text evidence.",
+    "Reread and correct a decoding error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF187-Q01",
+      "question": "In “When can we run?” what does the question ask?",
+      "options": [
+        "When we can run",
+        "What we can eat",
+        "Where a ship is",
+        "Who has a bath"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF187-Q02",
+      "question": "In “We can run when the sun is up,” when can we run?",
+      "options": [
+        "When the sun is down",
+        "Only at night",
+        "Never",
+        "When the sun is up"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF187-Q03",
+      "question": "Which word in “When will we win?” begins with wh?",
+      "options": [
+        "will",
+        "we",
+        "When",
+        "win"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF187-Q04",
+      "question": "Which sentence tells the condition for running?",
+      "options": [
+        "When can we run?",
+        "We can run when the sun is up.",
+        "When will we win?",
+        "We will win when we run."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF187-Q05",
+      "question": "Which pair shares -en?",
+      "options": [
+        "when and then",
+        "whip and wham",
+        "whiz and when",
+        "which and wham"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF187-Q06",
+      "question": "What should a reader do before answering a question?",
+      "options": [
+        "Guess from memory",
+        "Skip the text",
+        "Choose the longest answer",
+        "Reread and find supporting words"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF187-Q07",
+      "question": "Which word begins with wh?",
+      "options": [
+        "win",
+        "sun",
+        "when",
+        "run"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF187-Q08",
+      "question": "Which word differs from when by its rime?",
+      "options": [
+        "then",
+        "wham",
+        "when",
+        "whip"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF187-Q09",
+      "question": "What does “We will win when we run” tell us?",
+      "options": [
+        "The sentence connects winning with running",
+        "We cannot run",
+        "The sun is down",
+        "The ship is wet"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF187-Q10",
+      "question": "Which sentence contains both wh and w spellings?",
+      "options": [
+        "We can run.",
+        "The sun is up.",
+        "We will run.",
+        "When will we win?"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF187-Q11",
+      "question": "If when is read as wen, what should be checked?",
+      "options": [
+        "Only the last letter",
+        "The spaces",
+        "The initial wh spelling",
+        "The capital W"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF187-Q12",
+      "question": "Which word begins with the same common sound as when?",
+      "options": [
+        "thin",
+        "win",
+        "ship",
+        "fin"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF187-Q13",
+      "question": "What is the best evidence for when we can run?",
+      "options": [
+        "We can run when the sun is up.",
+        "When can we run?",
+        "When will we win?",
+        "We will win when we run."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF187-Q14",
+      "question": "Why should the whole sentence be reread?",
+      "options": [
+        "To skip small words",
+        "To choose by length",
+        "To avoid punctuation",
+        "To check word accuracy and meaning"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF187-Q15",
+      "question": "Which strategy helps read a new wh-sentence?",
+      "options": [
+        "Guess from wh only",
+        "Skip the vowel",
+        "Decode every word and use text evidence",
+        "Read only the first letters"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF187-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "When asks about time or condition."
+    },
+    {
+      "questionId": "PF187-Q02",
+      "correctOptionIndex": 3,
+      "explanation": "The sentence states the condition."
+    },
+    {
+      "questionId": "PF187-Q03",
+      "correctOptionIndex": 2,
+      "explanation": "When begins with wh."
+    },
+    {
+      "questionId": "PF187-Q04",
+      "correctOptionIndex": 1,
+      "explanation": "The first sentence states the condition."
+    },
+    {
+      "questionId": "PF187-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "When and then share -en."
+    },
+    {
+      "questionId": "PF187-Q06",
+      "correctOptionIndex": 3,
+      "explanation": "Text evidence supports the answer."
+    },
+    {
+      "questionId": "PF187-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "When begins with wh."
+    },
+    {
+      "questionId": "PF187-Q08",
+      "correctOptionIndex": 1,
+      "explanation": "Wham has -am; when has -en."
+    },
+    {
+      "questionId": "PF187-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence directly connects the two actions."
+    },
+    {
+      "questionId": "PF187-Q10",
+      "correctOptionIndex": 3,
+      "explanation": "When has wh; will and we have w."
+    },
+    {
+      "questionId": "PF187-Q11",
+      "correctOptionIndex": 2,
+      "explanation": "The taught word begins with wh."
+    },
+    {
+      "questionId": "PF187-Q12",
+      "correctOptionIndex": 1,
+      "explanation": "When and win often begin with /w/."
+    },
+    {
+      "questionId": "PF187-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The first option directly gives the condition."
+    },
+    {
+      "questionId": "PF187-Q14",
+      "correctOptionIndex": 3,
+      "explanation": "Rereading supports both decoding and comprehension."
+    },
+    {
+      "questionId": "PF187-Q15",
+      "correctOptionIndex": 2,
+      "explanation": "Full decoding and evidence support comprehension."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-187-v1"
+  }
+}

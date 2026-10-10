@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-186",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "186-wh-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "wh-word-onsets-and-rimes",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Sort taught wh-words by their rime rather than by wh alone.",
+      "Identify -en, -ip, -iz and -am rimes in controlled examples.",
+      "Compare wh-words with familiar words that share the same rime.",
+      "Decode each word fully after sorting."
+    ],
+    "concepts": [
+      "The onset is the sound or sounds before the vowel.",
+      "The rime includes the vowel and any following sounds.",
+      "Words with different onsets can share a rime.",
+      "Word-family patterns support decoding but do not replace checking every grapheme."
+    ],
+    "definitions": [
+      {
+        "term": "onset",
+        "definition": "The sound or sounds before the vowel."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and the sounds that follow it."
+      },
+      {
+        "term": "word family",
+        "definition": "Words that share a rime pattern."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "when and then",
+        "solution": "Both share -en."
+      },
+      {
+        "prompt": "whip and ship",
+        "solution": "Both share -ip."
+      },
+      {
+        "prompt": "wham and ham",
+        "solution": "Both share -am."
+      }
+    ],
+    "commonMistakes": [
+      "Grouping all wh-words together even when their rimes differ.",
+      "Sorting only by the initial letters.",
+      "Ignoring the vowel and final sounds.",
+      "Guessing a word from a familiar family without decoding it."
+    ],
+    "keyTakeaways": [
+      "Compare the vowel and ending to identify a rime.",
+      "The wh onset does not make every word rhyme.",
+      "Read each word after sorting.",
+      "Use the family as a clue, then check every grapheme."
+    ],
+    "revisionPoints": [
+      "-en: when, then.",
+      "-ip: whip, ship.",
+      "-am: wham, ham.",
+      "-iz: whiz, fizz."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word shares the -en rime with when?",
+        "answer": "then"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word shares -ip with whip?",
+        "answer": "ship"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which pair shares -am?",
+        "answer": "wham and ham"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Do when and wham share the same rime?",
+        "answer": "No; -en and -am differ"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which word belongs to the -iz family?",
+        "answer": "whiz"
+      },
+      {
+        "id": "C3",
+        "prompt": "What is the onset in whip?",
+        "answer": "/w/ in the common pronunciation"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What is the rime in when?",
+        "answer": "-en"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word does NOT belong in an -ip group?",
+        "answer": "wham"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which set contains only -am words?",
+        "answer": "wham, ham, ram"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Why is sorting only by wh not enough?",
+        "answer": "The vowel and ending may differ"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which word shares -en with when?",
+        "answer": "then"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which pair shares -ip?",
+        "answer": "whip and lip"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word family is shown by wham and ham?",
+        "answer": "-am"
+      },
+      {
+        "id": "R2",
+        "prompt": "A learner groups when with wham because both start with wh. What should be checked?",
+        "answer": "The rime after the onset"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which statement about word families is accurate?",
+        "answer": "A shared rime supports reading but each word still needs decoding"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "-en: when, then.",
+      "-ip: whip, ship.",
+      "-am: wham, ham.",
+      "-iz: whiz, fizz."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "-en: when, then."
+      },
+      {
+        "front": "Recall 2",
+        "back": "-ip: whip, ship."
+      },
+      {
+        "front": "Recall 3",
+        "back": "-am: wham, ham."
+      },
+      {
+        "front": "Recall 4",
+        "back": "-iz: whiz, fizz."
+      }
+    ],
+    "formulaOrFactBank": [
+      "-en: when, then.",
+      "-ip: whip, ship.",
+      "-am: wham, ham.",
+      "-iz: whiz, fizz."
+    ],
+    "mistakeBasedRevision": [
+      "Grouping all wh-words together even when their rimes differ.",
+      "Sorting only by the initial letters.",
+      "Ignoring the vowel and final sounds.",
+      "Guessing a word from a familiar family without decoding it."
+    ],
+    "weakTopicRevision": [
+      "If word families accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "word-family-sort",
+      "name": "Sort wh-words by rime, then decode each word.",
+      "steps": [
+        "Read each word aloud.",
+        "Identify the vowel and final sounds.",
+        "Group words with matching rimes.",
+        "Read each group and explain the shared pattern."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using spelling or text evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme or words supporting the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Sort at least 8 of 10 words by rime accurately.",
+    "Explain the difference between onset and rime.",
+    "Decode each word after grouping."
+  ],
+  "questions": [
+    {
+      "questionId": "PF186-Q01",
+      "question": "Which word shares the -en rime with when?",
+      "options": [
+        "whip",
+        "wham",
+        "whiz",
+        "then"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q02",
+      "question": "Which word shares -ip with whip?",
+      "options": [
+        "when",
+        "wham",
+        "ship",
+        "whiz"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q03",
+      "question": "Which pair shares -am?",
+      "options": [
+        "when and whip",
+        "wham and ham",
+        "whiz and ship",
+        "which and wham"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q04",
+      "question": "Do when and wham share the same rime?",
+      "options": [
+        "No; -en and -am differ",
+        "Yes; both begin with wh",
+        "Yes; both have four letters",
+        "No; neither has a vowel"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q05",
+      "question": "Which word belongs to the -iz family?",
+      "options": [
+        "when",
+        "whip",
+        "wham",
+        "whiz"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q06",
+      "question": "What is the onset in whip?",
+      "options": [
+        "/ip/",
+        "/i/",
+        "/w/ in the common pronunciation",
+        "/p/"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q07",
+      "question": "What is the rime in when?",
+      "options": [
+        "-wh",
+        "-en",
+        "-whe",
+        "-n"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q08",
+      "question": "Which word does NOT belong in an -ip group?",
+      "options": [
+        "wham",
+        "whip",
+        "ship",
+        "lip"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q09",
+      "question": "Which set contains only -am words?",
+      "options": [
+        "wham, whip, ham",
+        "ham, when, ram",
+        "wham, whiz, ram",
+        "wham, ham, ram"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q10",
+      "question": "Why is sorting only by wh not enough?",
+      "options": [
+        "All wh words rhyme",
+        "Vowels do not matter",
+        "The vowel and ending may differ",
+        "Every wh word ends in wh"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF186-Q11",
+      "question": "Which word shares -en with when?",
+      "options": [
+        "thin",
+        "then",
+        "whip",
+        "wham"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q12",
+      "question": "Which pair shares -ip?",
+      "options": [
+        "whip and lip",
+        "when and wham",
+        "whiz and wham",
+        "which and when"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q13",
+      "question": "Which word family is shown by wham and ham?",
+      "options": [
+        "-en",
+        "-ip",
+        "-iz",
+        "-am"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF186-Q14",
+      "question": "A learner groups when with wham because both start with wh. What should be checked?",
+      "options": [
+        "Only word length",
+        "The capital letter",
+        "The rime after the onset",
+        "The spaces"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF186-Q15",
+      "question": "Which statement about word families is accurate?",
+      "options": [
+        "Words with wh all rhyme",
+        "A shared rime supports reading but each word still needs decoding",
+        "Only the first letters determine the family",
+        "A family word can be guessed without reading"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF186-Q01",
+      "correctOptionIndex": 3,
+      "explanation": "When and then share -en."
+    },
+    {
+      "questionId": "PF186-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "Whip and ship share -ip."
+    },
+    {
+      "questionId": "PF186-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "Wham and ham share -am."
+    },
+    {
+      "questionId": "PF186-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The vowel and ending differ."
+    },
+    {
+      "questionId": "PF186-Q05",
+      "correctOptionIndex": 3,
+      "explanation": "Whiz contains -iz."
+    },
+    {
+      "questionId": "PF186-Q06",
+      "correctOptionIndex": 2,
+      "explanation": "The onset is the initial sound."
+    },
+    {
+      "questionId": "PF186-Q07",
+      "correctOptionIndex": 1,
+      "explanation": "The rime includes the vowel and following sound."
+    },
+    {
+      "questionId": "PF186-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Wham has -am."
+    },
+    {
+      "questionId": "PF186-Q09",
+      "correctOptionIndex": 3,
+      "explanation": "Wham, ham and ram share -am."
+    },
+    {
+      "questionId": "PF186-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Rime depends on the vowel and following sounds."
+    },
+    {
+      "questionId": "PF186-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Then and when share -en."
+    },
+    {
+      "questionId": "PF186-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "Whip and lip share -ip."
+    },
+    {
+      "questionId": "PF186-Q13",
+      "correctOptionIndex": 3,
+      "explanation": "Both share -am."
+    },
+    {
+      "questionId": "PF186-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "When has -en; wham has -am."
+    },
+    {
+      "questionId": "PF186-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "Family patterns support but do not replace full decoding."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-186-v1"
+  }
+}
