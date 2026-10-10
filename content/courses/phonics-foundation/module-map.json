@@ -295,7 +295,37 @@
         "249-decode-short-words-with-pr",
         "250-spell-short-words-with-pr",
         "251-pr-word-families-controlled-reading",
-        "252-controlled-pr-sentences-comprehension"
+        "252-controlled-pr-sentences-comprehension",
+        {
+          "lessonId": "253-hear-and-blend-initial-br",
+          "title": "Hear and Blend Initial /br/",
+          "sequence": 239,
+          "package": "content/courses/phonics-foundation/253-hear-and-blend-initial-br/authoring-package.json"
+        },
+        {
+          "lessonId": "254-decode-short-words-with-br",
+          "title": "Decode Short Words with br",
+          "sequence": 240,
+          "package": "content/courses/phonics-foundation/254-decode-short-words-with-br/authoring-package.json"
+        },
+        {
+          "lessonId": "255-spell-short-words-with-br",
+          "title": "Spell Short Words with br",
+          "sequence": 241,
+          "package": "content/courses/phonics-foundation/255-spell-short-words-with-br/authoring-package.json"
+        },
+        {
+          "lessonId": "256-br-word-families-controlled-reading",
+          "title": "br Word Families and Controlled Reading",
+          "sequence": 242,
+          "package": "content/courses/phonics-foundation/256-br-word-families-controlled-reading/authoring-package.json"
+        },
+        {
+          "lessonId": "257-controlled-br-sentences-comprehension",
+          "title": "Controlled br Sentences and Comprehension",
+          "sequence": 243,
+          "package": "content/courses/phonics-foundation/257-controlled-br-sentences-comprehension/authoring-package.json"
+        }
       ],
       "progression": {
         "entrySkills": [
@@ -472,10 +502,15 @@
           "Decode taught pr-words by mapping graphemes in order.",
           "Segment pr-words into phonemes before spelling.",
           "Identify rimes in taught pr-words and familiar partner words.",
-          "Read controlled sentences containing taught pr-words accurately."
+          "Read controlled sentences containing taught pr-words accurately.",
+          "Hear /b/ followed immediately by /r/ at the beginning of a taught word.",
+          "Decode taught br-words by mapping graphemes and phonemes in order.",
+          "Segment taught br-words into ordered phonemes before writing.",
+          "Identify shared rimes in taught br-words and familiar partner words.",
+          "Read controlled sentences containing taught br-words accurately."
         ]
       },
-      "lessonCount": 238
+      "lessonCount": 243
     }
   ]
 }
