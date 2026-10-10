@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-169",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "169-spell-cvc-with-ch",
+    "topic": "encoding",
+    "subtopic": "segment-and-spell-ch-words",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Segment controlled ch-words into ordered phonemes before spelling.",
+      "Use ch together to represent one /ch/ phoneme in taught words.",
+      "Spell chip, chat, chop, chin, much and rich accurately.",
+      "Read each written word back to check the graphemes and vowel."
+    ],
+    "concepts": [
+      "Encoding moves from spoken sounds to written graphemes.",
+      "The /ch/ phoneme is written ch in the taught word set.",
+      "A digraph can occupy one sound box because it represents one phoneme.",
+      "Read-back helps detect omitted letters and vowel substitutions."
+    ],
+    "definitions": [
+      {
+        "term": "segment",
+        "definition": "Separate a spoken word into its ordered phonemes."
+      },
+      {
+        "term": "encode",
+        "definition": "Represent spoken phonemes with written graphemes."
+      },
+      {
+        "term": "sound box",
+        "definition": "A box used to map one phoneme; a digraph may share one box."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "chip",
+        "solution": "Map /ch/ | /i/ | /p/; write ch-i-p."
+      },
+      {
+        "prompt": "chat",
+        "solution": "Map /ch/ | /a/ | /t/; write ch-a-t."
+      },
+      {
+        "prompt": "much",
+        "solution": "Map /m/ | /u/ | /ch/; write m-u-ch."
+      }
+    ],
+    "commonMistakes": [
+      "Writing c or h alone for the /ch/ phoneme.",
+      "Putting c and h in separate sound boxes when mapping phonemes.",
+      "Confusing short i in chip with short o in chop.",
+      "Not reading the completed word back."
+    ],
+    "keyTakeaways": [
+      "Say the word, then segment its sounds.",
+      "Keep ch together for one /ch/ phoneme in these words.",
+      "Choose the correct short vowel.",
+      "Read the spelling aloud and compare it with the target."
+    ],
+    "revisionPoints": [
+      "chip = ch + i + p.",
+      "chat = ch + a + t.",
+      "chop = ch + o + p.",
+      "much = m + u + ch."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which spelling represents /ch/ at the start of chip?",
+        "answer": "ch"
+      },
+      {
+        "id": "B2",
+        "prompt": "How many phonemes are in chat?",
+        "answer": "Three"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which spelling matches /ch/ /o/ /p/?",
+        "answer": "chop"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which spelling matches /m/ /u/ /ch/?",
+        "answer": "much"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which word is spelled correctly?",
+        "answer": "rich"
+      },
+      {
+        "id": "C3",
+        "prompt": "When mapping chin, how should ch be treated?",
+        "answer": "One phoneme"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which spelling uses short /a/ with initial ch?",
+        "answer": "chat"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word uses short /i/ and final p?",
+        "answer": "chip"
+      },
+      {
+        "id": "A3",
+        "prompt": "What is the first step when spelling chat?",
+        "answer": "Say and segment its sounds"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which spelling changes only the vowel from chip to chop?",
+        "answer": "chop"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which is the correct sound-box mapping for much?",
+        "answer": "/m/ | /u/ | /ch/"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which word is spelled incorrectly?",
+        "answer": "chop spelled shop"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which spelling represents /ch/ /i/ /n/?",
+        "answer": "chin"
+      },
+      {
+        "id": "R2",
+        "prompt": "Why read a spelled word back?",
+        "answer": "To check graphemes match the spoken word"
+      },
+      {
+        "id": "R3",
+        "prompt": "A learner writes sip for chip. What needs correcting?",
+        "answer": "The initial grapheme must be ch"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "chip = ch + i + p.",
+      "chat = ch + a + t.",
+      "chop = ch + o + p.",
+      "much = m + u + ch."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "chip = ch + i + p."
+      },
+      {
+        "front": "Recall 2",
+        "back": "chat = ch + a + t."
+      },
+      {
+        "front": "Recall 3",
+        "back": "chop = ch + o + p."
+      },
+      {
+        "front": "Recall 4",
+        "back": "much = m + u + ch."
+      }
+    ],
+    "formulaOrFactBank": [
+      "chip = ch + i + p.",
+      "chat = ch + a + t.",
+      "chop = ch + o + p.",
+      "much = m + u + ch."
+    ],
+    "mistakeBasedRevision": [
+      "Writing c or h alone for the /ch/ phoneme.",
+      "Putting c and h in separate sound boxes when mapping phonemes.",
+      "Confusing short i in chip with short o in chop.",
+      "Not reading the completed word back."
+    ],
+    "weakTopicRevision": [
+      "If encoding accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "phoneme-grapheme-encoding",
+      "name": "Segment and spell taught ch-words.",
+      "steps": [
+        "Say the target word aloud.",
+        "Stretch and segment its phonemes.",
+        "Write ch together for /ch/.",
+        "Read the spelling and self-correct."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using sound or text evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme or words supporting the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Spell at least 8 of 10 taught ch-words accurately.",
+    "Map ch to one phoneme during segmentation.",
+    "Read each spelling back to verify it."
+  ],
+  "questions": [
+    {
+      "questionId": "PF169-Q01",
+      "question": "Which spelling represents /ch/ at the start of chip?",
+      "options": [
+        "c",
+        "h",
+        "sh",
+        "ch"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF169-Q02",
+      "question": "How many phonemes are in chat?",
+      "options": [
+        "Two",
+        "Four",
+        "Three",
+        "Five"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF169-Q03",
+      "question": "Which spelling matches /ch/ /o/ /p/?",
+      "options": [
+        "chap",
+        "chop",
+        "chip",
+        "shop"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF169-Q04",
+      "question": "Which spelling matches /m/ /u/ /ch/?",
+      "options": [
+        "much",
+        "mush",
+        "muck",
+        "mud"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF169-Q05",
+      "question": "Which word is spelled correctly?",
+      "options": [
+        "ritch",
+        "rish",
+        "rick",
+        "rich"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF169-Q06",
+      "question": "When mapping chin, how should ch be treated?",
+      "options": [
+        "Two phonemes",
+        "A silent letter",
+        "One phoneme",
+        "A vowel"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF169-Q07",
+      "question": "Which spelling uses short /a/ with initial ch?",
+      "options": [
+        "chip",
+        "chat",
+        "chop",
+        "chin"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF169-Q08",
+      "question": "Which word uses short /i/ and final p?",
+      "options": [
+        "chip",
+        "chop",
+        "chat",
+        "chin"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF169-Q09",
+      "question": "What is the first step when spelling chat?",
+      "options": [
+        "Copy a random word",
+        "Write only c",
+        "Skip the ending",
+        "Say and segment its sounds"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF169-Q10",
+      "question": "Which spelling changes only the vowel from chip to chop?",
+      "options": [
+        "chap",
+        "chat",
+        "chop",
+        "ship"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF169-Q11",
+      "question": "Which is the correct sound-box mapping for much?",
+      "options": [
+        "/m/ | /u/ | /c/ | /h/",
+        "/m/ | /u/ | /ch/",
+        "/mu/ | /ch/",
+        "/m/ | /ch/"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF169-Q12",
+      "question": "Which word is spelled incorrectly?",
+      "options": [
+        "chop spelled shop",
+        "chat",
+        "chin",
+        "much"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF169-Q13",
+      "question": "Which spelling represents /ch/ /i/ /n/?",
+      "options": [
+        "chen",
+        "chun",
+        "chinn",
+        "chin"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF169-Q14",
+      "question": "Why read a spelled word back?",
+      "options": [
+        "To make the word longer",
+        "To ignore the vowel",
+        "To check graphemes match the spoken word",
+        "To replace ch with sh"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF169-Q15",
+      "question": "A learner writes sip for chip. What needs correcting?",
+      "options": [
+        "The vowel must be o",
+        "The initial grapheme must be ch",
+        "The final p must be removed",
+        "The word needs four vowels"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF169-Q01",
+      "correctOptionIndex": 3,
+      "explanation": "The taught initial /ch/ phoneme is written ch."
+    },
+    {
+      "questionId": "PF169-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "Chat has /ch/, /a/, /t/."
+    },
+    {
+      "questionId": "PF169-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The word is chop."
+    },
+    {
+      "questionId": "PF169-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Much ends in ch."
+    },
+    {
+      "questionId": "PF169-Q05",
+      "correctOptionIndex": 3,
+      "explanation": "Rich ends with ch."
+    },
+    {
+      "questionId": "PF169-Q06",
+      "correctOptionIndex": 2,
+      "explanation": "The digraph represents one sound in chin."
+    },
+    {
+      "questionId": "PF169-Q07",
+      "correctOptionIndex": 1,
+      "explanation": "Chat has short a."
+    },
+    {
+      "questionId": "PF169-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Chip has short i and ends in p."
+    },
+    {
+      "questionId": "PF169-Q09",
+      "correctOptionIndex": 3,
+      "explanation": "Segmentation identifies the ordered phonemes."
+    },
+    {
+      "questionId": "PF169-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Chip to chop changes i to o."
+    },
+    {
+      "questionId": "PF169-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Much has three phonemes, with ch as one."
+    },
+    {
+      "questionId": "PF169-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "Shop starts with /sh/, while chop starts with /ch/."
+    },
+    {
+      "questionId": "PF169-Q13",
+      "correctOptionIndex": 3,
+      "explanation": "Chin is ch-i-n."
+    },
+    {
+      "questionId": "PF169-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "Read-back checks the spelling against the target."
+    },
+    {
+      "questionId": "PF169-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "Chip starts with ch, not s."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-169-v1"
+  }
+}
