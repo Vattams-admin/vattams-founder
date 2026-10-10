@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 357,
-    "studyMaterials": 357,
-    "questionBank": 5345,
-    "assessments": 68
+    "lessons": 362,
+    "studyMaterials": 362,
+    "questionBank": 5420,
+    "assessments": 70
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -377,7 +377,12 @@
       "content/courses/phonics-foundation/354-targeted-sm-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/355-hear-and-blend-initial-sn/authoring-package.json",
       "content/courses/phonics-foundation/356-decode-short-words-with-sn/authoring-package.json",
-      "content/courses/phonics-foundation/357-spell-short-words-with-sn/authoring-package.json"
+      "content/courses/phonics-foundation/357-spell-short-words-with-sn/authoring-package.json",
+      "content/courses/phonics-foundation/358-sn-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/359-controlled-sn-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/360-controlled-sn-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/361-sn-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/362-targeted-sn-remediation-reassessment/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -425,7 +430,9 @@
     "PF345-DIAG-01",
     "PF346-REASSESS-01",
     "PF353-DIAG-01",
-    "PF354-REASSESS-01"
+    "PF354-REASSESS-01",
+    "PF361-DIAG-01",
+    "PF362-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
