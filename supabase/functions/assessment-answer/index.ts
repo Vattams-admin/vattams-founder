@@ -68,7 +68,8 @@ async function verifyActiveEnrollment(studentId: string, courseId: string, token
   }
 }
 
-\nasync function canonicalSha256(value: unknown): Promise<string> {
+
+async function canonicalSha256(value: unknown): Promise<string> {
   const canonical = JSON.stringify(value);
   const bytes = new TextEncoder().encode(canonical);
   const digest = await crypto.subtle.digest("SHA-256", bytes);
@@ -156,7 +157,10 @@ async function saveAnswer(
   }
   if (Date.now() > startedAtMs + definition.time_seconds * 1000) {
     throw new Error("Assessment time has expired");
-  }\n\n  const publicBankForIntegrity = await loadJson(definition.question_bank_public, "public question bank");\n  await verifyRegisteredBank(definition, publicBankForIntegrity);
+  }
+
+  const publicBankForIntegrity = await loadJson(definition.question_bank_public, "public question bank");
+  await verifyRegisteredBank(definition, publicBankForIntegrity);
 
   const questionIds = Array.isArray(attempt.question_ids)
     ? attempt.question_ids.filter((id: unknown): id is string =>
