@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 500,
-    "studyMaterials": 500,
-    "questionBank": 7490,
-    "assessments": 103
+    "lessons": 520,
+    "studyMaterials": 520,
+    "questionBank": 7790,
+    "assessments": 108
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -520,7 +520,27 @@
       "content/courses/phonics-foundation/497-wh-fluency-consolidation-diagnostic/authoring-package.json",
       "content/courses/phonics-foundation/498-targeted-wh-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/499-silent-letter-patterns-mixed-review/authoring-package.json",
-      "content/courses/phonics-foundation/500-silent-letter-patterns-cumulative-checkpoint/authoring-package.json"
+      "content/courses/phonics-foundation/500-silent-letter-patterns-cumulative-checkpoint/authoring-package.json",
+      "content/courses/phonics-foundation/501-recognize-silent-gh-in-igh-words/authoring-package.json",
+      "content/courses/phonics-foundation/502-decode-words-with-silent-gh/authoring-package.json",
+      "content/courses/phonics-foundation/503-spell-words-with-silent-gh/authoring-package.json",
+      "content/courses/phonics-foundation/504-igh-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/505-controlled-igh-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/506-controlled-igh-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/507-igh-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/508-targeted-igh-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/509-recognize-silent-t-in-sten-words/authoring-package.json",
+      "content/courses/phonics-foundation/510-decode-words-with-silent-t-in-sten/authoring-package.json",
+      "content/courses/phonics-foundation/511-spell-words-with-silent-t-in-sten/authoring-package.json",
+      "content/courses/phonics-foundation/512-sten-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/513-controlled-sten-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/514-controlled-sten-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/515-sten-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/516-targeted-sten-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/517-recognize-silent-h-in-honest-hour/authoring-package.json",
+      "content/courses/phonics-foundation/518-decode-words-with-silent-h/authoring-package.json",
+      "content/courses/phonics-foundation/519-spell-words-with-silent-h/authoring-package.json",
+      "content/courses/phonics-foundation/520-silent-letter-patterns-integrated-review/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -601,7 +621,11 @@
     "PF474-REASSESS-01",
     "PF497-DIAG-01",
     "PF498-REASSESS-01",
-    "PF500-CUMULATIVE-01"
+    "PF500-CUMULATIVE-01",
+    "PF507-DIAG-01",
+    "PF508-REASSESS-01",
+    "PF515-DIAG-01",
+    "PF516-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
@@ -1103,6 +1127,26 @@
     "content/courses/phonics-foundation/497-wh-fluency-consolidation-diagnostic/authoring-package.json",
     "content/courses/phonics-foundation/498-targeted-wh-remediation-reassessment/authoring-package.json",
     "content/courses/phonics-foundation/499-silent-letter-patterns-mixed-review/authoring-package.json",
-    "content/courses/phonics-foundation/500-silent-letter-patterns-cumulative-checkpoint/authoring-package.json"
+    "content/courses/phonics-foundation/500-silent-letter-patterns-cumulative-checkpoint/authoring-package.json",
+    "content/courses/phonics-foundation/501-recognize-silent-gh-in-igh-words/authoring-package.json",
+    "content/courses/phonics-foundation/502-decode-words-with-silent-gh/authoring-package.json",
+    "content/courses/phonics-foundation/503-spell-words-with-silent-gh/authoring-package.json",
+    "content/courses/phonics-foundation/504-igh-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/505-controlled-igh-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/506-controlled-igh-passage-sequencing-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/507-igh-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/508-targeted-igh-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/509-recognize-silent-t-in-sten-words/authoring-package.json",
+    "content/courses/phonics-foundation/510-decode-words-with-silent-t-in-sten/authoring-package.json",
+    "content/courses/phonics-foundation/511-spell-words-with-silent-t-in-sten/authoring-package.json",
+    "content/courses/phonics-foundation/512-sten-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/513-controlled-sten-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/514-controlled-sten-passage-sequencing-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/515-sten-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/516-targeted-sten-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/517-recognize-silent-h-in-honest-hour/authoring-package.json",
+    "content/courses/phonics-foundation/518-decode-words-with-silent-h/authoring-package.json",
+    "content/courses/phonics-foundation/519-spell-words-with-silent-h/authoring-package.json",
+    "content/courses/phonics-foundation/520-silent-letter-patterns-integrated-review/authoring-package.json"
   ]
 }
