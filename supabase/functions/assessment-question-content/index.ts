@@ -28,7 +28,8 @@ async function verifyActiveEnrollment(studentId: string, courseId: string, token
   if (!(Array.isArray(rows) && rows.some((row: any) => row?.document))) throw new Error("You no longer have access to this assessment");
 }
 
-\nasync function canonicalSha256(value: unknown): Promise<string> {
+
+async function canonicalSha256(value: unknown): Promise<string> {
   const canonical = JSON.stringify(value);
   const bytes = new TextEncoder().encode(canonical);
   const digest = await crypto.subtle.digest("SHA-256", bytes);
