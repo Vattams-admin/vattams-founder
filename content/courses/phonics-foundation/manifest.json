@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 327,
-    "studyMaterials": 327,
-    "questionBank": 4895,
-    "assessments": 59
+    "lessons": 332,
+    "studyMaterials": 332,
+    "questionBank": 4970,
+    "assessments": 61
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -347,7 +347,12 @@
       "content/courses/phonics-foundation/324-decode-short-words-with-sw/authoring-package.json",
       "content/courses/phonics-foundation/325-spell-short-words-with-sw/authoring-package.json",
       "content/courses/phonics-foundation/326-sw-word-families-controlled-reading/authoring-package.json",
-      "content/courses/phonics-foundation/327-controlled-sw-sentences-comprehension/authoring-package.json"
+      "content/courses/phonics-foundation/327-controlled-sw-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/328-sw-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/329-sw-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/330-sw-targeted-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/331-hear-and-blend-initial-sk/authoring-package.json",
+      "content/courses/phonics-foundation/332-decode-short-words-with-sk/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -387,7 +392,9 @@
     "PF204-DIAG-01",
     "PF205-REASSESS-01",
     "PF212-DIAG-01",
-    "PF213-REASSESS-01"
+    "PF213-REASSESS-01",
+    "PF329-DIAG-01",
+    "PF330-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
