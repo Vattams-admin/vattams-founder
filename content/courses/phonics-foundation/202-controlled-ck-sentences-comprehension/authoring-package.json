@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-202",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "202-controlled-ck-sentences-comprehension",
+    "topic": "sentence-reading",
+    "subtopic": "final-ck-sentences-literal-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read short controlled sentences containing taught ck-words.",
+      "Answer literal questions using details stated in the sentence.",
+      "Reread when a decoded word does not fit the meaning.",
+      "Use text evidence rather than guessing."
+    ],
+    "concepts": [
+      "A sentence expresses a complete idea.",
+      "Accurate decoding supports understanding.",
+      "Literal answers should match information directly stated in the text.",
+      "Rereading helps readers check words and meaning."
+    ],
+    "definitions": [
+      {
+        "term": "literal comprehension",
+        "definition": "Understanding information directly stated in a text."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A word or detail in the text that supports an answer."
+      },
+      {
+        "term": "rereading",
+        "definition": "Reading the text again to check accuracy and meaning."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "The duck is by a pond.",
+        "solution": "The sentence tells where the duck is."
+      },
+      {
+        "prompt": "The duck can peck.",
+        "solution": "The sentence tells what the duck can do."
+      },
+      {
+        "prompt": "The duck hops back.",
+        "solution": "The sentence gives another action."
+      }
+    ],
+    "commonMistakes": [
+      "Answering from memory without rereading.",
+      "Confusing duck with dug because the ending was missed.",
+      "Skipping small words that change the sentence meaning.",
+      "Reading accurately but not checking comprehension."
+    ],
+    "keyTakeaways": [
+      "Decode each word before answering.",
+      "Reread and point to the evidence.",
+      "Check the final ck grapheme.",
+      "Use the sentence, not a guess, to support an answer."
+    ],
+    "revisionPoints": [
+      "The duck is by a pond.",
+      "The duck can peck.",
+      "The duck hops back.",
+      "The duck is in the pond."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "In “The duck is by a pond,” what animal is mentioned?",
+        "answer": "A duck"
+      },
+      {
+        "id": "B2",
+        "prompt": "What can the duck do?",
+        "answer": "Peck"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word ends with ck?",
+        "answer": "peck"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which sentence tells what the duck can do?",
+        "answer": "The duck can peck."
+      },
+      {
+        "id": "C2",
+        "prompt": "Which pair shares -uck?",
+        "answer": "duck and luck"
+      },
+      {
+        "id": "C3",
+        "prompt": "What should a reader do before answering?",
+        "answer": "Reread and find supporting words"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word contains final ck?",
+        "answer": "back"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word differs from duck by its final spelling?",
+        "answer": "dun"
+      },
+      {
+        "id": "A3",
+        "prompt": "What does “The duck hops back” tell us?",
+        "answer": "The duck moves back"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which sentence contains both duck and pond?",
+        "answer": "The duck is by a pond."
+      },
+      {
+        "id": "H2",
+        "prompt": "If duck is read as dug, what should be checked?",
+        "answer": "The final ck grapheme"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which word begins with the same sound as sick?",
+        "answer": "sun"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What is the best evidence that the duck can peck?",
+        "answer": "The duck can peck."
+      },
+      {
+        "id": "R2",
+        "prompt": "Why does accurate decoding matter?",
+        "answer": "A changed sound can change a word and its meaning"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which strategy helps when a sentence does not make sense?",
+        "answer": "Reread each word and check the sounds"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "The duck is by a pond.",
+      "The duck can peck.",
+      "The duck hops back.",
+      "The duck is in the pond."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "The duck is by a pond."
+      },
+      {
+        "front": "Recall 2",
+        "back": "The duck can peck."
+      },
+      {
+        "front": "Recall 3",
+        "back": "The duck hops back."
+      },
+      {
+        "front": "Recall 4",
+        "back": "The duck is in the pond."
+      }
+    ],
+    "formulaOrFactBank": [
+      "The duck is by a pond.",
+      "The duck can peck.",
+      "The duck hops back.",
+      "The duck is in the pond."
+    ],
+    "mistakeBasedRevision": [
+      "Answering from memory without rereading.",
+      "Confusing duck with dug because the ending was missed.",
+      "Skipping small words that change the sentence meaning.",
+      "Reading accurately but not checking comprehension."
+    ],
+    "weakTopicRevision": [
+      "If sentence reading accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "sentence-reading-comprehension",
+      "name": "Read controlled ck-sentences and answer literal questions.",
+      "steps": [
+        "Read each sentence while tracking every word.",
+        "Reread before answering.",
+        "Point to the words that support the answer.",
+        "Correct a sound error and explain the meaning."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using sound or text evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme or words supporting the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read at least 4 of 5 controlled sentences accurately.",
+    "Answer at least 4 of 5 literal questions using text evidence.",
+    "Reread and correct a decoding error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF202-Q01",
+      "question": "In “The duck is by a pond,” what animal is mentioned?",
+      "options": [
+        "A cat",
+        "A duck",
+        "A fish",
+        "A ship"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF202-Q02",
+      "question": "What can the duck do?",
+      "options": [
+        "Peck",
+        "Sing a song",
+        "Shut a lid",
+        "Find a shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF202-Q03",
+      "question": "Which word ends with ck?",
+      "options": [
+        "pond",
+        "duckling",
+        "sun",
+        "peck"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF202-Q04",
+      "question": "Which sentence tells what the duck can do?",
+      "options": [
+        "The duck is by a pond.",
+        "The duck hops back.",
+        "The duck can peck.",
+        "The duck is in the pond."
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF202-Q05",
+      "question": "Which pair shares -uck?",
+      "options": [
+        "duck and deck",
+        "duck and luck",
+        "peck and rock",
+        "back and sick"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF202-Q06",
+      "question": "What should a reader do before answering?",
+      "options": [
+        "Reread and find supporting words",
+        "Guess from memory",
+        "Skip the text",
+        "Choose the longest answer"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF202-Q07",
+      "question": "Which word contains final ck?",
+      "options": [
+        "bat",
+        "bad",
+        "bag",
+        "back"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF202-Q08",
+      "question": "Which word differs from duck by its final spelling?",
+      "options": [
+        "luck",
+        "tuck",
+        "dun",
+        "duck"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF202-Q09",
+      "question": "What does “The duck hops back” tell us?",
+      "options": [
+        "The duck sings",
+        "The duck moves back",
+        "The duck is a rock",
+        "The duck has a sock"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF202-Q10",
+      "question": "Which sentence contains both duck and pond?",
+      "options": [
+        "The duck is by a pond.",
+        "The duck can peck.",
+        "The duck hops back.",
+        "The duck is in the pond."
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF202-Q11",
+      "question": "If duck is read as dug, what should be checked?",
+      "options": [
+        "Only the first letter",
+        "The spaces",
+        "The capital D",
+        "The final ck grapheme"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF202-Q12",
+      "question": "Which word begins with the same sound as sick?",
+      "options": [
+        "duck",
+        "rock",
+        "sun",
+        "neck"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF202-Q13",
+      "question": "What is the best evidence that the duck can peck?",
+      "options": [
+        "The duck is by a pond.",
+        "The duck can peck.",
+        "The duck hops back.",
+        "The duck is in the pond."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF202-Q14",
+      "question": "Why does accurate decoding matter?",
+      "options": [
+        "A changed sound can change a word and its meaning",
+        "Every word means the same thing",
+        "Only punctuation matters",
+        "Readers should skip short words"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF202-Q15",
+      "question": "Which strategy helps when a sentence does not make sense?",
+      "options": [
+        "Ignore the ending",
+        "Guess the next word",
+        "Skip the sentence",
+        "Reread each word and check the sounds"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF202-Q01",
+      "correctOptionIndex": 1,
+      "explanation": "The sentence says the duck is by a pond."
+    },
+    {
+      "questionId": "PF202-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence says the duck can peck."
+    },
+    {
+      "questionId": "PF202-Q03",
+      "correctOptionIndex": 3,
+      "explanation": "Peck ends with ck."
+    },
+    {
+      "questionId": "PF202-Q04",
+      "correctOptionIndex": 2,
+      "explanation": "The first sentence states the action."
+    },
+    {
+      "questionId": "PF202-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "Duck and luck share -uck."
+    },
+    {
+      "questionId": "PF202-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Text evidence supports the answer."
+    },
+    {
+      "questionId": "PF202-Q07",
+      "correctOptionIndex": 3,
+      "explanation": "Back ends in ck."
+    },
+    {
+      "questionId": "PF202-Q08",
+      "correctOptionIndex": 2,
+      "explanation": "Dun ends with n; duck ends with ck."
+    },
+    {
+      "questionId": "PF202-Q09",
+      "correctOptionIndex": 1,
+      "explanation": "The sentence states the movement."
+    },
+    {
+      "questionId": "PF202-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "This sentence contains both words."
+    },
+    {
+      "questionId": "PF202-Q11",
+      "correctOptionIndex": 3,
+      "explanation": "The ending is /k/, written ck."
+    },
+    {
+      "questionId": "PF202-Q12",
+      "correctOptionIndex": 2,
+      "explanation": "Sick and sun begin with /s/."
+    },
+    {
+      "questionId": "PF202-Q13",
+      "correctOptionIndex": 1,
+      "explanation": "The sentence states this directly."
+    },
+    {
+      "questionId": "PF202-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Sound substitutions can change meaning."
+    },
+    {
+      "questionId": "PF202-Q15",
+      "correctOptionIndex": 3,
+      "explanation": "Rereading helps repair decoding and meaning."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-202-v1"
+  }
+}
