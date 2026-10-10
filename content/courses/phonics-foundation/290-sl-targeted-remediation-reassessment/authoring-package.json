@@ -78,261 +78,86 @@
     "basic": [
       {
         "id": "B1",
-        "prompt": [
-          "A learner says sip for slip. Which skill needs support?",
-          "Keeping /l/ in the initial blend",
-          "Answering a where question",
-          "Sequencing a story ending",
-          "Naming punctuation"
-        ]
+        "prompt": "What should guide the remediation target?",
+        "answer": "The specific errors in diagnostic evidence"
       },
       {
         "id": "B2",
-        "prompt": [
-          "Why use fresh reassessment items?",
-          "To check transfer on new examples",
-          "To reward memorizing the old key",
-          "To skip instruction",
-          "To avoid measuring progress"
-        ]
+        "prompt": "A learner drops /l/ in slip. What should be practised first?",
+        "answer": "Hear /s/ then /l/ and blend smoothly"
       },
       {
         "id": "B3",
-        "prompt": [
-          "What should follow a modelled example?",
-          "Guided practice, then independent practice",
-          "Immediate advancement for everyone",
-          "A different unrelated topic",
-          "Showing all answer keys"
-        ]
-      },
-      {
-        "id": "B4",
-        "prompt": [
-          "What score out of 15 meets 80%?",
-          "12",
-          "11",
-          "9",
-          "7"
-        ]
-      },
-      {
-        "id": "B5",
-        "prompt": [
-          "A learner remains below threshold. What next?",
-          "Continue targeted teaching and reassess with fresh items",
-          "Advance automatically",
-          "Stop all practice",
-          "Repeat only the same items"
-        ]
+        "prompt": "What is the best sequence for teaching a weak skill?",
+        "answer": "Model, guided practice, independent fresh practice"
       }
     ],
     "conceptual": [
       {
         "id": "C1",
-        "prompt": [
-          "A learner says sip for slip. Which skill needs support?",
-          "Keeping /l/ in the initial blend",
-          "Answering a where question",
-          "Sequencing a story ending",
-          "Naming punctuation"
-        ]
+        "prompt": "Which item best checks fresh transfer for sl decoding?",
+        "answer": "Decode a new taught sl-word not used in the model"
       },
       {
         "id": "C2",
-        "prompt": [
-          "Why use fresh reassessment items?",
-          "To check transfer on new examples",
-          "To reward memorizing the old key",
-          "To skip instruction",
-          "To avoid measuring progress"
-        ]
+        "prompt": "What does reassessment measure?",
+        "answer": "Whether the learner can use the skill after remediation"
       },
       {
         "id": "C3",
-        "prompt": [
-          "What should follow a modelled example?",
-          "Guided practice, then independent practice",
-          "Immediate advancement for everyone",
-          "A different unrelated topic",
-          "Showing all answer keys"
-        ]
-      },
-      {
-        "id": "C4",
-        "prompt": [
-          "What score out of 15 meets 80%?",
-          "12",
-          "11",
-          "9",
-          "7"
-        ]
-      },
-      {
-        "id": "C5",
-        "prompt": [
-          "A learner remains below threshold. What next?",
-          "Continue targeted teaching and reassess with fresh items",
-          "Advance automatically",
-          "Stop all practice",
-          "Repeat only the same items"
-        ]
+        "prompt": "How many correct answers out of 15 are needed for 80%?",
+        "answer": "12"
       }
     ],
     "application": [
       {
         "id": "A1",
-        "prompt": [
-          "A learner says sip for slip. Which skill needs support?",
-          "Keeping /l/ in the initial blend",
-          "Answering a where question",
-          "Sequencing a story ending",
-          "Naming punctuation"
-        ]
+        "prompt": "A learner scores 11/15 on fresh reassessment. What should happen?",
+        "answer": "Continue targeted support because the score is below 80%"
       },
       {
         "id": "A2",
-        "prompt": [
-          "Why use fresh reassessment items?",
-          "To check transfer on new examples",
-          "To reward memorizing the old key",
-          "To skip instruction",
-          "To avoid measuring progress"
-        ]
+        "prompt": "The learner reads sl-words well but cannot sequence a passage. What is the best target?",
+        "answer": "Sequence controlled passage events using text evidence"
       },
       {
         "id": "A3",
-        "prompt": [
-          "What should follow a modelled example?",
-          "Guided practice, then independent practice",
-          "Immediate advancement for everyone",
-          "A different unrelated topic",
-          "Showing all answer keys"
-        ]
-      },
-      {
-        "id": "A4",
-        "prompt": [
-          "What score out of 15 meets 80%?",
-          "12",
-          "11",
-          "9",
-          "7"
-        ]
-      },
-      {
-        "id": "A5",
-        "prompt": [
-          "A learner remains below threshold. What next?",
-          "Continue targeted teaching and reassess with fresh items",
-          "Advance automatically",
-          "Stop all practice",
-          "Repeat only the same items"
-        ]
+        "prompt": "What makes remediation targeted?",
+        "answer": "It directly addresses a demonstrated error pattern"
       }
     ],
     "higherOrderThinking": [
       {
         "id": "H1",
-        "prompt": [
-          "A learner says sip for slip. Which skill needs support?",
-          "Keeping /l/ in the initial blend",
-          "Answering a where question",
-          "Sequencing a story ending",
-          "Naming punctuation"
-        ]
+        "prompt": "Which response shows accurate blending?",
+        "answer": "Say /s/, /l/, then blend the whole word without an extra vowel"
       },
       {
         "id": "H2",
-        "prompt": [
-          "Why use fresh reassessment items?",
-          "To check transfer on new examples",
-          "To reward memorizing the old key",
-          "To skip instruction",
-          "To avoid measuring progress"
-        ]
+        "prompt": "Why keep answer keys private during the attempt?",
+        "answer": "To preserve assessment integrity"
       },
       {
         "id": "H3",
-        "prompt": [
-          "What should follow a modelled example?",
-          "Guided practice, then independent practice",
-          "Immediate advancement for everyone",
-          "A different unrelated topic",
-          "Showing all answer keys"
-        ]
-      },
-      {
-        "id": "H4",
-        "prompt": [
-          "What score out of 15 meets 80%?",
-          "12",
-          "11",
-          "9",
-          "7"
-        ]
-      },
-      {
-        "id": "H5",
-        "prompt": [
-          "A learner remains below threshold. What next?",
-          "Continue targeted teaching and reassess with fresh items",
-          "Advance automatically",
-          "Stop all practice",
-          "Repeat only the same items"
-        ]
+        "prompt": "Which is evidence of comprehension transfer?",
+        "answer": "Answer a new passage question and point to the supporting sentence"
       }
     ],
     "mixedReview": [
       {
         "id": "R1",
-        "prompt": [
-          "A learner says sip for slip. Which skill needs support?",
-          "Keeping /l/ in the initial blend",
-          "Answering a where question",
-          "Sequencing a story ending",
-          "Naming punctuation"
-        ]
+        "prompt": "What should happen after guided practice?",
+        "answer": "Independent practice with new items"
       },
       {
         "id": "R2",
-        "prompt": [
-          "Why use fresh reassessment items?",
-          "To check transfer on new examples",
-          "To reward memorizing the old key",
-          "To skip instruction",
-          "To avoid measuring progress"
-        ]
+        "prompt": "Which score is at least 80%?",
+        "answer": "13/15"
       },
       {
         "id": "R3",
-        "prompt": [
-          "What should follow a modelled example?",
-          "Guided practice, then independent practice",
-          "Immediate advancement for everyone",
-          "A different unrelated topic",
-          "Showing all answer keys"
-        ]
-      },
-      {
-        "id": "R4",
-        "prompt": [
-          "What score out of 15 meets 80%?",
-          "12",
-          "11",
-          "9",
-          "7"
-        ]
-      },
-      {
-        "id": "R5",
-        "prompt": [
-          "A learner remains below threshold. What next?",
-          "Continue targeted teaching and reassess with fresh items",
-          "Advance automatically",
-          "Stop all practice",
-          "Repeat only the same items"
-        ]
+        "prompt": "What is the correct next step after mastery on fresh items?",
+        "answer": "Record the result and advance to the next sequence"
       }
     ]
   },
@@ -412,8 +237,8 @@
       "questionId": "PF290-Q01",
       "question": "What should guide the remediation target?",
       "options": [
-        "The specific errors in diagnostic evidence",
         "A random choice",
+        "The specific errors in diagnostic evidence",
         "The learner's speed only",
         "A new unrelated topic"
       ],
@@ -425,10 +250,10 @@
       "questionId": "PF290-Q02",
       "question": "A learner drops /l/ in slip. What should be practised first?",
       "options": [
-        "Hear /s/ then /l/ and blend smoothly",
         "Answer passage questions only",
         "Memorize the word shape",
-        "Skip the onset"
+        "Skip the onset",
+        "Hear /s/ then /l/ and blend smoothly"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -451,9 +276,9 @@
       "questionId": "PF290-Q04",
       "question": "Which item best checks fresh transfer for sl decoding?",
       "options": [
-        "Decode a new taught sl-word not used in the model",
         "Repeat the exact model word only",
         "Copy the answer key",
+        "Decode a new taught sl-word not used in the model",
         "Choose without reading"
       ],
       "difficulty": "application",
@@ -464,8 +289,8 @@
       "questionId": "PF290-Q05",
       "question": "What does reassessment measure?",
       "options": [
-        "Whether the learner can use the skill after remediation",
         "Whether the learner remembers the old option order",
+        "Whether the learner can use the skill after remediation",
         "Only handwriting speed",
         "How many pages were read"
       ],
@@ -490,9 +315,9 @@
       "questionId": "PF290-Q07",
       "question": "A learner scores 11/15 on fresh reassessment. What should happen?",
       "options": [
-        "Continue targeted support because the score is below 80%",
         "Advance automatically",
         "Discard the evidence",
+        "Continue targeted support because the score is below 80%",
         "Reveal the key before teaching"
       ],
       "difficulty": "application",
@@ -503,10 +328,10 @@
       "questionId": "PF290-Q08",
       "question": "The learner reads sl-words well but cannot sequence a passage. What is the best target?",
       "options": [
-        "Sequence controlled passage events using text evidence",
         "Repeat only onset blending",
         "Teach an unrelated vowel",
-        "Ignore comprehension"
+        "Ignore comprehension",
+        "Sequence controlled passage events using text evidence"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -516,8 +341,8 @@
       "questionId": "PF290-Q09",
       "question": "What makes remediation targeted?",
       "options": [
-        "It directly addresses a demonstrated error pattern",
         "It repeats every task equally regardless of evidence",
+        "It directly addresses a demonstrated error pattern",
         "It removes all practice",
         "It focuses only on time"
       ],
@@ -529,9 +354,9 @@
       "questionId": "PF290-Q10",
       "question": "Which response shows accurate blending?",
       "options": [
-        "Say /s/, /l/, then blend the whole word without an extra vowel",
         "Say suh-lip with an added vowel",
         "Drop /l/",
+        "Say /s/, /l/, then blend the whole word without an extra vowel",
         "Reverse /s/ and /l/"
       ],
       "difficulty": "sound_recognition",
@@ -555,10 +380,10 @@
       "questionId": "PF290-Q12",
       "question": "Which is evidence of comprehension transfer?",
       "options": [
-        "Answer a new passage question and point to the supporting sentence",
         "Repeat a memorized answer without reading",
         "Guess from a picture only",
-        "Skip the passage"
+        "Skip the passage",
+        "Answer a new passage question and point to the supporting sentence"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -568,9 +393,9 @@
       "questionId": "PF290-Q13",
       "question": "What should happen after guided practice?",
       "options": [
-        "Independent practice with new items",
         "Automatic mastery without checking",
         "Only copying the model",
+        "Independent practice with new items",
         "Stopping before feedback"
       ],
       "difficulty": "conceptual",
@@ -581,8 +406,8 @@
       "questionId": "PF290-Q14",
       "question": "Which score is at least 80%?",
       "options": [
-        "13/15",
         "10/15",
+        "13/15",
         "8/15",
         "9/15"
       ],
@@ -607,12 +432,12 @@
   "answerKeys": [
     {
       "questionId": "PF290-Q01",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Remediation should match the diagnosed need."
     },
     {
       "questionId": "PF290-Q02",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "The error shows the second onset consonant is being omitted."
     },
     {
@@ -622,12 +447,12 @@
     },
     {
       "questionId": "PF290-Q04",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "A new example checks application beyond memorization."
     },
     {
       "questionId": "PF290-Q05",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Reassessment checks progress after targeted teaching."
     },
     {
@@ -637,22 +462,22 @@
     },
     {
       "questionId": "PF290-Q07",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Eleven of fifteen is below the 12-item threshold."
     },
     {
       "questionId": "PF290-Q08",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "The weakness is connected-text sequencing."
     },
     {
       "questionId": "PF290-Q09",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The instruction is selected from diagnostic evidence."
     },
     {
       "questionId": "PF290-Q10",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Accurate blending preserves both consonants in order."
     },
     {
@@ -662,17 +487,17 @@
     },
     {
       "questionId": "PF290-Q12",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "The learner applies the evidence strategy to a fresh item."
     },
     {
       "questionId": "PF290-Q13",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Independent fresh practice tests the skill without scaffolding."
     },
     {
       "questionId": "PF290-Q14",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Thirteen correct is above the 12/15 threshold."
     },
     {
