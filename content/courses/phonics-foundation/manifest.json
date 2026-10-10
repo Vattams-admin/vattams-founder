@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 415,
-    "studyMaterials": 415,
-    "questionBank": 6215,
-    "assessments": 81
+    "lessons": 420,
+    "studyMaterials": 420,
+    "questionBank": 6290,
+    "assessments": 83
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -435,7 +435,12 @@
       "content/courses/phonics-foundation/412-decode-short-words-with-shr/authoring-package.json",
       "content/courses/phonics-foundation/413-spell-short-words-with-shr/authoring-package.json",
       "content/courses/phonics-foundation/414-shr-word-families-controlled-reading/authoring-package.json",
-      "content/courses/phonics-foundation/415-controlled-shr-sentences-comprehension/authoring-package.json"
+      "content/courses/phonics-foundation/415-controlled-shr-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/416-controlled-shr-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/417-shr-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/418-targeted-shr-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/419-recognize-silent-k-in-initial-kn/authoring-package.json",
+      "content/courses/phonics-foundation/420-decode-short-words-with-kn/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -496,7 +501,9 @@
     "PF401-DIAG-01",
     "PF402-REASSESS-01",
     "PF409-DIAG-01",
-    "PF410-REASSESS-01"
+    "PF410-REASSESS-01",
+    "PF417-DIAG-01",
+    "PF418-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
