@@ -381,7 +381,7 @@ async function checkAccess(studentId: string, courseId: string, assessmentId: st
   if (error) throw new Error(`Assessment access lookup failed: ${error.message}`);
   if (!data || (!data.is_admin && !data.enrolment_active)) throw new Error("You do not have access to this assessment");
   const checkedAt = new Date(data.checked_at).getTime();
-  if (!Number.isFinite(checkedAt) || Date.now() - checkedAt > 60 * 60 * 1000) {
+  if (!Number.isFinite(checkedAt) || checkedAt > Date.now() + 60 * 1000 || Date.now() - checkedAt > 60 * 60 * 1000) {
     throw new Error("Your assessment access information is out of date");
   }
 }
