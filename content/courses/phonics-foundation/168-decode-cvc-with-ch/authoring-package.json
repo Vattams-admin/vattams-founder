@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-168",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "168-decode-cvc-with-ch",
+    "topic": "decoding",
+    "subtopic": "initial-and-final-ch-blending",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode controlled words containing initial or final ch.",
+      "Map ch as one phoneme while blending left to right.",
+      "Read chip, chat, chop, chin, much, rich and such accurately.",
+      "Self-correct by checking the vowel and final grapheme."
+    ],
+    "concepts": [
+      "The digraph ch is read as one phoneme in the taught words.",
+      "Initial ch can combine with a short vowel and final consonant, as in chat.",
+      "Final ch can complete a short word, as in much.",
+      "Accurate decoding uses every grapheme and checks the vowel."
+    ],
+    "definitions": [
+      {
+        "term": "blend",
+        "definition": "Combine phonemes in order to read a word."
+      },
+      {
+        "term": "grapheme mapping",
+        "definition": "Matching written letters or letter groups to sounds."
+      },
+      {
+        "term": "self-correction",
+        "definition": "Noticing an error and fixing it using the printed word."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "ch-i-p",
+        "solution": "/ch/ /i/ /p/ blends to chip."
+      },
+      {
+        "prompt": "ch-a-t",
+        "solution": "/ch/ /a/ /t/ blends to chat."
+      },
+      {
+        "prompt": "m-u-ch",
+        "solution": "/m/ /u/ /ch/ blends to much."
+      }
+    ],
+    "commonMistakes": [
+      "Splitting ch into two phonemes.",
+      "Reading chip as ship by overlooking the initial digraph.",
+      "Changing the short vowel during blending.",
+      "Guessing from the first letters and skipping the ending."
+    ],
+    "keyTakeaways": [
+      "Keep ch together as one grapheme in taught words.",
+      "Blend each phoneme from left to right.",
+      "Check the short vowel and ending.",
+      "Reread the whole word after blending."
+    ],
+    "revisionPoints": [
+      "ch-i-p → chip.",
+      "ch-a-t → chat.",
+      "ch-o-p → chop.",
+      "m-u-ch → much."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word matches /ch/ /i/ /p/?",
+        "answer": "chip"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word matches /ch/ /a/ /t/?",
+        "answer": "chat"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word begins with ch and has short /o/?",
+        "answer": "chop"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which spelling matches /m/ /u/ /ch/?",
+        "answer": "much"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which word ends in ch?",
+        "answer": "rich"
+      },
+      {
+        "id": "C3",
+        "prompt": "When blending chip, how should ch be read?",
+        "answer": "As one /ch/ sound"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word has a different vowel from chip?",
+        "answer": "chop"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word matches /ch/ /i/ /n/?",
+        "answer": "chin"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which word matches /s/ /u/ /ch/?",
+        "answer": "such"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What should you do after blending a word?",
+        "answer": "Reread and check each grapheme"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which pair begins with the same /ch/ sound?",
+        "answer": "chat and chop"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which is the correct mapping for chat?",
+        "answer": "ch-a-t"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "A learner reads chip as ship. What should be checked?",
+        "answer": "The initial digraph ch versus sh"
+      },
+      {
+        "id": "R2",
+        "prompt": "Which word belongs with much and such because of final ch?",
+        "answer": "rich"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which strategy helps when chop is read as chip?",
+        "answer": "Check the medial vowel /o/ versus /i/"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "ch-i-p → chip.",
+      "ch-a-t → chat.",
+      "ch-o-p → chop.",
+      "m-u-ch → much."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "ch-i-p → chip."
+      },
+      {
+        "front": "Recall 2",
+        "back": "ch-a-t → chat."
+      },
+      {
+        "front": "Recall 3",
+        "back": "ch-o-p → chop."
+      },
+      {
+        "front": "Recall 4",
+        "back": "m-u-ch → much."
+      }
+    ],
+    "formulaOrFactBank": [
+      "ch-i-p → chip.",
+      "ch-a-t → chat.",
+      "ch-o-p → chop.",
+      "m-u-ch → much."
+    ],
+    "mistakeBasedRevision": [
+      "Splitting ch into two phonemes.",
+      "Reading chip as ship by overlooking the initial digraph.",
+      "Changing the short vowel during blending.",
+      "Guessing from the first letters and skipping the ending."
+    ],
+    "weakTopicRevision": [
+      "If decoding accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-decoding",
+      "name": "Blend controlled words containing ch.",
+      "steps": [
+        "Map ch as one phoneme.",
+        "Blend the vowel and final consonant from left to right.",
+        "Read the complete word aloud.",
+        "Check the vowel and final grapheme."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using sound or text evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme or words that support the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Decode at least 8 of 10 taught ch-words accurately.",
+    "Keep ch as one grapheme while blending.",
+    "Self-correct a vowel or final-sound error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF168-Q01",
+      "question": "Which word matches /ch/ /i/ /p/?",
+      "options": [
+        "chop",
+        "chat",
+        "chip",
+        "ship"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF168-Q02",
+      "question": "Which word matches /ch/ /a/ /t/?",
+      "options": [
+        "chip",
+        "chat",
+        "chop",
+        "chin"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF168-Q03",
+      "question": "Which word begins with ch and has short /o/?",
+      "options": [
+        "chop",
+        "chip",
+        "chat",
+        "chin"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF168-Q04",
+      "question": "Which spelling matches /m/ /u/ /ch/?",
+      "options": [
+        "mush",
+        "muck",
+        "mud",
+        "much"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF168-Q05",
+      "question": "Which word ends in ch?",
+      "options": [
+        "ridge",
+        "rig",
+        "rich",
+        "rib"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF168-Q06",
+      "question": "When blending chip, how should ch be read?",
+      "options": [
+        "As two sounds /c/ and /h/",
+        "As one /ch/ sound",
+        "As a vowel",
+        "Not at all"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF168-Q07",
+      "question": "Which word has a different vowel from chip?",
+      "options": [
+        "chop",
+        "ship",
+        "chin",
+        "chip"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF168-Q08",
+      "question": "Which word matches /ch/ /i/ /n/?",
+      "options": [
+        "chain",
+        "chop",
+        "chat",
+        "chin"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF168-Q09",
+      "question": "Which word matches /s/ /u/ /ch/?",
+      "options": [
+        "suck",
+        "sun",
+        "such",
+        "sip"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF168-Q10",
+      "question": "What should you do after blending a word?",
+      "options": [
+        "Guess from ch only",
+        "Reread and check each grapheme",
+        "Skip the ending",
+        "Change the vowel"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF168-Q11",
+      "question": "Which pair begins with the same /ch/ sound?",
+      "options": [
+        "chat and chop",
+        "ship and chip",
+        "sip and ship",
+        "fish and dish"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF168-Q12",
+      "question": "Which is the correct mapping for chat?",
+      "options": [
+        "c-hat",
+        "ch-t-a",
+        "a-ch-t",
+        "ch-a-t"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF168-Q13",
+      "question": "A learner reads chip as ship. What should be checked?",
+      "options": [
+        "Only the last letter",
+        "The word spaces",
+        "The initial digraph ch versus sh",
+        "Capitalisation only"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF168-Q14",
+      "question": "Which word belongs with much and such because of final ch?",
+      "options": [
+        "ship",
+        "rich",
+        "cash",
+        "shop"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF168-Q15",
+      "question": "Which strategy helps when chop is read as chip?",
+      "options": [
+        "Check the medial vowel /o/ versus /i/",
+        "Ignore the vowel",
+        "Change ch to sh",
+        "Read only the first sound"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF168-Q01",
+      "correctOptionIndex": 2,
+      "explanation": "The sounds blend to chip."
+    },
+    {
+      "questionId": "PF168-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "Chat has short a."
+    },
+    {
+      "questionId": "PF168-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Chop has short o."
+    },
+    {
+      "questionId": "PF168-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "Much ends in ch."
+    },
+    {
+      "questionId": "PF168-Q05",
+      "correctOptionIndex": 2,
+      "explanation": "Rich ends in ch."
+    },
+    {
+      "questionId": "PF168-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "The digraph is one phoneme in this taught word."
+    },
+    {
+      "questionId": "PF168-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Chop has short o; chip has short i."
+    },
+    {
+      "questionId": "PF168-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Chin is ch-i-n."
+    },
+    {
+      "questionId": "PF168-Q09",
+      "correctOptionIndex": 2,
+      "explanation": "Such ends with ch."
+    },
+    {
+      "questionId": "PF168-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "Read-back checks the whole word."
+    },
+    {
+      "questionId": "PF168-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Chat and chop both begin with ch."
+    },
+    {
+      "questionId": "PF168-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Map ch, short a, then t."
+    },
+    {
+      "questionId": "PF168-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "The initial digraph changes the word."
+    },
+    {
+      "questionId": "PF168-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Rich also ends in ch."
+    },
+    {
+      "questionId": "PF168-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "The short vowel distinguishes chop and chip."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-168-v1"
+  }
+}
