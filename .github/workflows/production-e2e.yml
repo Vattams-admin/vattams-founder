@@ -18,6 +18,7 @@ on:
       - "src/components/materials/**"
       - "supabase/functions/assessment-attempt/**"
       - "supabase/functions/assessment-scoring/**"
+      - "supabase/migrations/**"
       - "config/assessment-*.json"
       - "supabase/functions/competition-official-*/**"
       - "supabase/functions/competition-mock-*/**"
