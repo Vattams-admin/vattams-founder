@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-164",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "164-controlled-sh-passage-sequencing",
+    "topic": "passage-reading",
+    "subtopic": "sh-controlled-passage-sequencing",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a short controlled passage containing taught sh-words.",
+      "Sequence three events in the order stated by the text.",
+      "Answer literal questions with evidence from the passage.",
+      "Reread and self-correct a word that changes the meaning."
+    ],
+    "concepts": [
+      "A passage connects sentences around a simple idea.",
+      "Sequencing uses details to identify what happens first, next and last.",
+      "Text evidence supports literal answers.",
+      "Accurate decoding of sh-words supports comprehension."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "Place events in the order they happen in a text."
+      },
+      {
+        "term": "passage",
+        "definition": "A connected group of sentences about a topic or event."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A word or detail in the text that supports an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Sam has a fish. The fish is in a dish.",
+        "solution": "The first detail introduces Sam and the fish; the next tells where the fish is."
+      },
+      {
+        "prompt": "Sam can shut the lid.",
+        "solution": "This action follows setting the fish in the dish."
+      },
+      {
+        "prompt": "Reread a sentence",
+        "solution": "Use the printed words to check whether the answer matches the text."
+      }
+    ],
+    "commonMistakes": [
+      "Putting events in an order that is not stated.",
+      "Answering from memory without checking the passage.",
+      "Confusing fish with dish because both end in -ish.",
+      "Skipping small words that change the sentence meaning."
+    ],
+    "keyTakeaways": [
+      "Read the whole passage before sequencing.",
+      "Use first, next and last to explain the order.",
+      "Point to the text evidence for each answer.",
+      "Decode sh-words fully and reread when meaning is unclear."
+    ],
+    "revisionPoints": [
+      "Sam has a fish.",
+      "The fish is in a dish.",
+      "Sam can shut the lid.",
+      "The fish can swish."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What does Sam have at the start of the passage?",
+        "answer": "A fish"
+      },
+      {
+        "id": "B2",
+        "prompt": "Where is the fish?",
+        "answer": "In a dish"
+      },
+      {
+        "id": "B3",
+        "prompt": "What does Sam do with the lid?",
+        "answer": "Shuts it"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which event happens first?",
+        "answer": "Sam has a fish"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which detail comes after Sam has a fish?",
+        "answer": "The fish is in a dish"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which word ends with sh?",
+        "answer": "fish"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which two words share -ish?",
+        "answer": "fish and dish"
+      },
+      {
+        "id": "A2",
+        "prompt": "What should support an answer about the passage?",
+        "answer": "Words stated in the passage"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which sentence tells the location of the fish?",
+        "answer": "The fish is in a dish."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What does “shut the lid” mean here?",
+        "answer": "Close the lid"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which event is last in the passage?",
+        "answer": "The fish can swish"
+      },
+      {
+        "id": "H3",
+        "prompt": "Why reread the passage before answering?",
+        "answer": "To check details and order"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word begins with /sh/?",
+        "answer": "shut"
+      },
+      {
+        "id": "R2",
+        "prompt": "Which pair is in the same order as the passage?",
+        "answer": "fish, dish, lid"
+      },
+      {
+        "id": "R3",
+        "prompt": "What helps a learner read the passage accurately?",
+        "answer": "Decode each word and check its sounds"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Sam has a fish.",
+      "The fish is in a dish.",
+      "Sam can shut the lid.",
+      "The fish can swish."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Sam has a fish."
+      },
+      {
+        "front": "Recall 2",
+        "back": "The fish is in a dish."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Sam can shut the lid."
+      },
+      {
+        "front": "Recall 4",
+        "back": "The fish can swish."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Sam has a fish.",
+      "The fish is in a dish.",
+      "Sam can shut the lid.",
+      "The fish can swish."
+    ],
+    "mistakeBasedRevision": [
+      "Putting events in an order that is not stated.",
+      "Answering from memory without checking the passage.",
+      "Confusing fish with dish because both end in -ish.",
+      "Skipping small words that change the sentence meaning."
+    ],
+    "weakTopicRevision": [
+      "If passage reading accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "passage-sequencing",
+      "name": "Read the controlled sh-passage and sequence events.",
+      "steps": [
+        "Read the passage once for meaning.",
+        "Reread and number events first, next and last.",
+        "Answer literal questions by pointing to the text.",
+        "Retell the passage in order."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using sound or text evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme or words that support the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Sequence at least 3 passage events in the stated order.",
+    "Answer at least 4 of 5 literal questions using text evidence.",
+    "Reread and correct one decoding error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF164-Q01",
+      "question": "What does Sam have at the start of the passage?",
+      "options": [
+        "A ship",
+        "A shop",
+        "A fish",
+        "A shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF164-Q02",
+      "question": "Where is the fish?",
+      "options": [
+        "On a ship",
+        "In a dish",
+        "In a shop",
+        "By a shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF164-Q03",
+      "question": "What does Sam do with the lid?",
+      "options": [
+        "Shuts it",
+        "Sells it",
+        "Washes it",
+        "Hides it"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF164-Q04",
+      "question": "Which event happens first?",
+      "options": [
+        "Sam shuts the lid",
+        "The fish can swish",
+        "The lid is shut",
+        "Sam has a fish"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF164-Q05",
+      "question": "Which detail comes after Sam has a fish?",
+      "options": [
+        "Sam shuts the lid",
+        "The fish can swish",
+        "The fish is in a dish",
+        "Sam reads a book"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF164-Q06",
+      "question": "Which word ends with sh?",
+      "options": [
+        "Sam",
+        "fish",
+        "lid",
+        "can"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF164-Q07",
+      "question": "Which two words share -ish?",
+      "options": [
+        "fish and dish",
+        "fish and lid",
+        "Sam and dish",
+        "shut and can"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF164-Q08",
+      "question": "What should support an answer about the passage?",
+      "options": [
+        "A guess",
+        "A different story",
+        "The longest option",
+        "Words stated in the passage"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF164-Q09",
+      "question": "Which sentence tells the location of the fish?",
+      "options": [
+        "Sam has a fish.",
+        "Sam can shut the lid.",
+        "The fish is in a dish.",
+        "The fish can swish."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF164-Q10",
+      "question": "What does “shut the lid” mean here?",
+      "options": [
+        "Open the lid",
+        "Close the lid",
+        "Paint the lid",
+        "Move the fish"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF164-Q11",
+      "question": "Which event is last in the passage?",
+      "options": [
+        "The fish can swish",
+        "Sam has a fish",
+        "The fish is in a dish",
+        "Sam can shut the lid"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF164-Q12",
+      "question": "Why reread the passage before answering?",
+      "options": [
+        "To skip hard words",
+        "To choose by memory only",
+        "To read only the first word",
+        "To check details and order"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF164-Q13",
+      "question": "Which word begins with /sh/?",
+      "options": [
+        "fish",
+        "dish",
+        "shut",
+        "Sam"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF164-Q14",
+      "question": "Which pair is in the same order as the passage?",
+      "options": [
+        "lid, fish, dish",
+        "fish, dish, lid",
+        "swish, fish, Sam",
+        "dish, lid, fish"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF164-Q15",
+      "question": "What helps a learner read the passage accurately?",
+      "options": [
+        "Decode each word and check its sounds",
+        "Guess from the picture only",
+        "Skip all sh-words",
+        "Read only the first letters"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF164-Q01",
+      "correctOptionIndex": 2,
+      "explanation": "The first sentence says Sam has a fish."
+    },
+    {
+      "questionId": "PF164-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The passage says the fish is in a dish."
+    },
+    {
+      "questionId": "PF164-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The third sentence says Sam can shut the lid."
+    },
+    {
+      "questionId": "PF164-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The passage introduces the fish first."
+    },
+    {
+      "questionId": "PF164-Q05",
+      "correctOptionIndex": 2,
+      "explanation": "The location detail follows the introduction."
+    },
+    {
+      "questionId": "PF164-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "Fish ends in sh."
+    },
+    {
+      "questionId": "PF164-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Fish and dish share the rime -ish."
+    },
+    {
+      "questionId": "PF164-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Answers should be grounded in text evidence."
+    },
+    {
+      "questionId": "PF164-Q09",
+      "correctOptionIndex": 2,
+      "explanation": "This sentence states where the fish is."
+    },
+    {
+      "questionId": "PF164-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "Shut means close."
+    },
+    {
+      "questionId": "PF164-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The final sentence says the fish can swish."
+    },
+    {
+      "questionId": "PF164-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Rereading verifies details and sequence."
+    },
+    {
+      "questionId": "PF164-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "Shut begins with sh."
+    },
+    {
+      "questionId": "PF164-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "The passage moves from fish to dish to lid."
+    },
+    {
+      "questionId": "PF164-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Full decoding supports meaning."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-164-v1"
+  }
+}
