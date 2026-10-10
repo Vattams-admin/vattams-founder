@@ -59,7 +59,7 @@ test.describe('production Thirukkural authenticated smoke', () => {
     await expect(page.getByRole('button', { name: /Start Competition/i })).toBeVisible({ timeout: 30_000 })
     await expect(page.getByRole('heading', { name: 'Study Materials', exact: true })).toBeVisible({ timeout: 30_000 })
   })
-}
+
   test('Student B cannot fetch Student A\'s mock-test question content', async ({ browser }) => {
     const emailA = process.env.E2E_STUDENT_A_EMAIL
     const passwordA = process.env.E2E_STUDENT_A_PASSWORD
@@ -138,4 +138,4 @@ test.describe('production Thirukkural authenticated smoke', () => {
       await contextB.close()
     }
   })
-)
+})
