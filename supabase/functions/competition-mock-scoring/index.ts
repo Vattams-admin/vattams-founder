@@ -444,6 +444,17 @@ function getSelectedQuestionIds(
   return [];
 }
 
+
+async function hasActiveCompetitionAccess(studentId: string, courseId: string): Promise<boolean> {
+  const { data, error } = await supabase.from("competition_access_cache")
+    .select("student_id,course_id,is_admin,enrolment_active,checked_at")
+    .eq("student_id", studentId).eq("course_id", courseId).maybeSingle();
+  if (error) throw new Error("Unable to verify competition access.");
+  if (!data || (!data.is_admin && !data.enrolment_active)) return false;
+  const checkedAt = new Date(data.checked_at).getTime();
+  return Number.isFinite(checkedAt) && checkedAt <= Date.now() + 60_000 && Date.now() - checkedAt <= 60 * 60 * 1000;
+}
+
 async function loadAttempt(
   attemptId: string,
   studentId: string,
@@ -778,6 +789,10 @@ Deno.serve(async (req) => {
       courseId,
       selectedQuestionIds,
     } = attemptData;
+
+    if (!(await hasActiveCompetitionAccess(studentId, courseId))) {
+      return json({ error: "You no longer have access to this competition." }, 403);
+    }
 
     const selectedQuestionSet =
       new Set(selectedQuestionIds);
