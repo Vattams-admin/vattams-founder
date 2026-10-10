@@ -1,0 +1,545 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-217",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "217-bl-word-families-controlled-reading",
+    "topic": "word-families",
+    "subtopic": "initial-bl-rime-families-and-controlled-reading",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Recognise rimes in taught bl-words while keeping the initial blend intact.",
+      "Group words that share the same vowel and ending sounds.",
+      "Distinguish similar bl-words by checking the vowel and final consonant.",
+      "Read each word fully rather than relying on the rime alone."
+    ],
+    "concepts": [
+      "A word family groups words with a shared rime.",
+      "Words in a family can have different onsets but share the vowel and ending.",
+      "The initial blend bl stays /b/ /l/; the rime changes across blob, blip, blot, black and block.",
+      "A word-family sort is a decoding aid, not permission to guess."
+    ],
+    "definitions": [
+      {
+        "term": "word family",
+        "definition": "A group of words that share a rime, such as blob and sob with -ob."
+      },
+      {
+        "term": "rime",
+        "definition": "The vowel and sounds that follow it in a syllable."
+      },
+      {
+        "term": "onset",
+        "definition": "The initial consonant or consonant group before the vowel."
+      },
+      {
+        "term": "contrast",
+        "definition": "Compare two words to notice a sound or spelling difference."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Compare blob and sob.",
+        "solution": "Both share -ob; blob has onset bl and sob has onset s."
+      },
+      {
+        "prompt": "Sort block and sock.",
+        "solution": "Both share -ock, though their onsets are different."
+      },
+      {
+        "prompt": "Compare black and block.",
+        "solution": "Both begin bl, but black has -ack and block has -ock."
+      },
+      {
+        "prompt": "Find the word with -ip.",
+        "solution": "Blip has the rime -ip; blob and blot have different rimes."
+      }
+    ],
+    "commonMistakes": [
+      "Grouping words because they share the first letter instead of the rime.",
+      "Treating black and block as the same family because both begin bl.",
+      "Ignoring the final consonant when comparing blob and blot.",
+      "Guessing a word from the family label without decoding it."
+    ],
+    "keyTakeaways": [
+      "Compare the vowel and ending to identify a rime.",
+      "Words can share a rime while having different onsets.",
+      "Black and block share bl but have different rimes.",
+      "Always decode the full word after sorting."
+    ],
+    "revisionPoints": [
+      "blob and sob share -ob.",
+      "blip and lip share -ip.",
+      "blot and hot share -ot.",
+      "block and sock share -ock; black has -ack."
+    ],
+    "outcomes": [
+      "Identify the onset and rime in taught bl-words.",
+      "Group words accurately by shared rime.",
+      "Explain how words with the same onset can have different rimes.",
+      "Decode every word after completing a word-family sort."
+    ],
+    "activityOneName": "Sort words into rime families.",
+    "activityOneSteps": [
+      "Read blob, sob, blip, lip, blot, hot, black, block and sock.",
+      "Group words by the vowel and ending sounds.",
+      "Name the rime in each group.",
+      "Read each word again to confirm the sort."
+    ],
+    "activityTwoName": "Compare near-neighbour bl-words.",
+    "activityTwoSteps": [
+      "Place blob beside blot and black beside block.",
+      "Say the onset and rime for each word.",
+      "Identify the sound or spelling that changes.",
+      "Explain why the full word must still be decoded."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word shares -ob with blob?",
+        "answer": "sob"
+      },
+      {
+        "id": "B2",
+        "prompt": "What is the rime in black?",
+        "answer": "-ack"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word ends in -ip?",
+        "answer": "blip"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "What makes blob and sob members of the same word family?",
+        "answer": "They share the -ob rime."
+      },
+      {
+        "id": "C2",
+        "prompt": "Do black and block share the same rime?",
+        "answer": "No; black has -ack and block has -ock."
+      },
+      {
+        "id": "C3",
+        "prompt": "Why is rime sorting not the same as guessing?",
+        "answer": "The reader must still decode every grapheme in the full word."
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word belongs with block and sock by rime?",
+        "answer": "rock"
+      },
+      {
+        "id": "A2",
+        "prompt": "Name the rime in blot.",
+        "answer": "-ot"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which word belongs with blip and lip?",
+        "answer": "sip"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "How are blob and blot alike and different?",
+        "answer": "Both begin bl, but their rimes are -ob and -ot."
+      },
+      {
+        "id": "H2",
+        "prompt": "Why can black and block be placed in different rime groups?",
+        "answer": "Their vowels differ: short a in black and short o in block."
+      },
+      {
+        "id": "H3",
+        "prompt": "What should you do if a word fits a rime group but does not sound right?",
+        "answer": "Decode it again and check every sound."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What is the onset in blip?",
+        "answer": "bl"
+      },
+      {
+        "id": "R2",
+        "prompt": "Which pair shares -ot?",
+        "answer": "blot and hot"
+      },
+      {
+        "id": "R3",
+        "prompt": "What does a word-family sort help you notice?",
+        "answer": "Shared rimes and differences among words"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Compare the vowel and ending to identify a rime.",
+      "Words can share a rime while having different onsets.",
+      "Black and block share bl but have different rimes.",
+      "Always decode the full word after sorting."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Compare the vowel and ending to identify a rime."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Words can share a rime while having different onsets."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Black and block share bl but have different rimes."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Always decode the full word after sorting."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Compare the vowel and ending to identify a rime.",
+      "Words can share a rime while having different onsets.",
+      "Black and block share bl but have different rimes.",
+      "Always decode the full word after sorting."
+    ],
+    "mistakeBasedRevision": [
+      "Grouping words because they share the first letter instead of the rime.",
+      "Treating black and block as the same family because both begin bl.",
+      "Ignoring the final consonant when comparing blob and blot.",
+      "Guessing a word from the family label without decoding it."
+    ],
+    "weakTopicRevision": [
+      "If bl word families and controlled reading accuracy is below target, model the specific step, practise with guided examples, and check transfer with fresh words."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-phonics-practice",
+      "name": "Sort words into rime families.",
+      "steps": [
+        "Read blob, sob, blip, lip, blot, hot, black, block and sock.",
+        "Group words by the vowel and ending sounds.",
+        "Name the rime in each group.",
+        "Read each word again to confirm the sort."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "self-check-and-transfer",
+      "name": "Compare near-neighbour bl-words.",
+      "steps": [
+        "Place blob beside blot and black beside block.",
+        "Say the onset and rime for each word.",
+        "Identify the sound or spelling that changes.",
+        "Explain why the full word must still be decoded."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Identify the onset and rime in taught bl-words.",
+    "Group words accurately by shared rime.",
+    "Explain how words with the same onset can have different rimes.",
+    "Decode every word after completing a word-family sort."
+  ],
+  "questions": [
+    {
+      "questionId": "PF217-Q01",
+      "question": "Which pair shares the rime -ob?",
+      "options": [
+        "blob and sob",
+        "blob and blot",
+        "black and block",
+        "blip and blot"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q02",
+      "question": "Which word ends with -ip?",
+      "options": [
+        "blip",
+        "blob",
+        "blot",
+        "block"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q03",
+      "question": "Which pair shares -ot?",
+      "options": [
+        "blot and hot",
+        "blot and blob",
+        "black and block",
+        "blip and block"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q04",
+      "question": "What is the rime in black?",
+      "options": [
+        "-ack",
+        "bl-",
+        "-ock",
+        "-ip"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q05",
+      "question": "Which word does not belong in the -ock family?",
+      "options": [
+        "blot",
+        "block",
+        "sock",
+        "rock"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q06",
+      "question": "How are blob and sob alike?",
+      "options": [
+        "They share -ob",
+        "They share onset bl",
+        "They both end in ck",
+        "They have the same first sound"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q07",
+      "question": "Which word begins with bl and has the rime -ack?",
+      "options": [
+        "black",
+        "block",
+        "blob",
+        "blip"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q08",
+      "question": "What changes between blob and blot?",
+      "options": [
+        "The final consonant sound",
+        "The onset bl",
+        "The first phoneme",
+        "Nothing changes"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q09",
+      "question": "Do black and block share the same rime?",
+      "options": [
+        "No; -ack and -ock differ",
+        "Yes; both end in -ack",
+        "Yes; both end in -ock",
+        "No; they have different onsets"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q10",
+      "question": "Which word shares -ip with blip?",
+      "options": [
+        "lip",
+        "blob",
+        "blot",
+        "black"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q11",
+      "question": "Which word belongs with block and sock by rime?",
+      "options": [
+        "rock",
+        "blot",
+        "blip",
+        "black"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q12",
+      "question": "What is the onset in blip?",
+      "options": [
+        "bl",
+        "-ip",
+        "ip",
+        "lip"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q13",
+      "question": "Which word has onset bl and rime -ot?",
+      "options": [
+        "blot",
+        "blob",
+        "blip",
+        "block"
+      ],
+      "difficulty": "word_families",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q14",
+      "question": "Which pair shares a rime but has different onsets?",
+      "options": [
+        "blob and sob",
+        "black and back",
+        "blip and blip",
+        "block and black"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF217-Q15",
+      "question": "Why should you decode every grapheme after sorting?",
+      "options": [
+        "The family helps notice patterns but does not replace reading the whole word",
+        "Every word in a family is spelled identically",
+        "The onset never matters",
+        "Rimes tell you the whole word without looking"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF217-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Blob and sob both have the rime -ob."
+    },
+    {
+      "questionId": "PF217-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "Blip ends with -ip."
+    },
+    {
+      "questionId": "PF217-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Blot and hot share the rime -ot."
+    },
+    {
+      "questionId": "PF217-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Black has onset bl and rime -ack."
+    },
+    {
+      "questionId": "PF217-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Blot ends in -ot, not -ock."
+    },
+    {
+      "questionId": "PF217-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Their rime is -ob, but their onsets differ."
+    },
+    {
+      "questionId": "PF217-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Black is bl + -ack."
+    },
+    {
+      "questionId": "PF217-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Blob ends /b/ and blot ends /t/."
+    },
+    {
+      "questionId": "PF217-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "They share the onset bl but have different rimes."
+    },
+    {
+      "questionId": "PF217-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "Lip and blip share -ip."
+    },
+    {
+      "questionId": "PF217-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Rock shares the -ock rime."
+    },
+    {
+      "questionId": "PF217-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The onset is the initial consonant group bl."
+    },
+    {
+      "questionId": "PF217-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Blot combines bl and -ot."
+    },
+    {
+      "questionId": "PF217-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Blob and sob share -ob but begin differently."
+    },
+    {
+      "questionId": "PF217-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Full decoding prevents guessing between words with similar patterns."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-217-v1"
+  }
+}
