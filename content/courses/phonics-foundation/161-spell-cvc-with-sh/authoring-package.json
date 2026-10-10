@@ -236,10 +236,10 @@
       "questionId": "PF161-Q01",
       "question": "Which spelling represents /sh/ at the start of ship?",
       "options": [
-        "sh",
         "s",
         "h",
-        "ch"
+        "ch",
+        "sh"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -250,8 +250,8 @@
       "question": "How many phoneme boxes are needed for ship?",
       "options": [
         "Two",
-        "Three",
         "Four",
+        "Three",
         "Five"
       ],
       "difficulty": "conceptual",
@@ -262,8 +262,8 @@
       "questionId": "PF161-Q03",
       "question": "Which is the correct spelling of /sh/ /o/ /p/?",
       "options": [
-        "shop",
         "shap",
+        "shop",
         "shup",
         "sop"
       ],
@@ -288,10 +288,10 @@
       "questionId": "PF161-Q05",
       "question": "Which word is spelled correctly?",
       "options": [
-        "dish",
         "dich",
         "dis",
-        "dush"
+        "dush",
+        "dish"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -301,9 +301,9 @@
       "questionId": "PF161-Q06",
       "question": "When mapping the sounds in wish, how should sh be treated?",
       "options": [
-        "One phoneme",
         "Two phonemes",
         "A silent letter",
+        "One phoneme",
         "A vowel"
       ],
       "difficulty": "conceptual",
@@ -314,8 +314,8 @@
       "questionId": "PF161-Q07",
       "question": "Which spelling matches /sh/ /u/ /t/?",
       "options": [
-        "shut",
         "shot",
+        "shut",
         "shit",
         "shat"
       ],
@@ -340,10 +340,10 @@
       "questionId": "PF161-Q09",
       "question": "What is the first step when spelling fish?",
       "options": [
-        "Say and segment its sounds",
         "Copy a random word",
         "Write only f",
-        "Skip the final sound"
+        "Skip the final sound",
+        "Say and segment its sounds"
       ],
       "difficulty": "application",
       "marks": 1,
@@ -353,9 +353,9 @@
       "questionId": "PF161-Q10",
       "question": "Which spelling changes only the vowel from ship to shop?",
       "options": [
-        "shop",
         "shup",
         "ship",
+        "shop",
         "sip"
       ],
       "difficulty": "conceptual",
@@ -366,8 +366,8 @@
       "questionId": "PF161-Q11",
       "question": "Which is the correct sound-box mapping for dish?",
       "options": [
-        "/d/ | /i/ | /sh/",
         "/d/ | /i/ | /s/ | /h/",
+        "/d/ | /i/ | /sh/",
         "/di/ | /sh/",
         "/d/ | /sh/"
       ],
@@ -392,10 +392,10 @@
       "questionId": "PF161-Q13",
       "question": "Which spelling represents /w/ /i/ /sh/?",
       "options": [
-        "wish",
         "wesh",
         "wisch",
-        "wis"
+        "wis",
+        "wish"
       ],
       "difficulty": "basic",
       "marks": 1,
@@ -405,9 +405,9 @@
       "questionId": "PF161-Q14",
       "question": "Why should you read a spelled word back?",
       "options": [
-        "To check the graphemes match the spoken word",
         "To make the word longer",
         "To ignore the vowel",
+        "To check the graphemes match the spoken word",
         "To replace sh with s"
       ],
       "difficulty": "application",
@@ -418,8 +418,8 @@
       "questionId": "PF161-Q15",
       "question": "A learner writes sip for ship. What needs correcting?",
       "options": [
-        "The initial grapheme must be sh",
         "The vowel must be o",
+        "The initial grapheme must be sh",
         "The final p must be removed",
         "The word needs four vowels"
       ],
@@ -431,17 +431,17 @@
   "answerKeys": [
     {
       "questionId": "PF161-Q01",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "The /sh/ sound is represented by sh."
     },
     {
       "questionId": "PF161-Q02",
-      "correctOptionIndex": 1,
+      "correctOptionIndex": 2,
       "explanation": "Ship has /sh/, /i/, /p/—three phonemes."
     },
     {
       "questionId": "PF161-Q03",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "The word is shop."
     },
     {
@@ -451,17 +451,17 @@
     },
     {
       "questionId": "PF161-Q05",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Dish uses sh for the final phoneme."
     },
     {
       "questionId": "PF161-Q06",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "The digraph represents one sound."
     },
     {
       "questionId": "PF161-Q07",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Shut has short /u/."
     },
     {
@@ -471,17 +471,17 @@
     },
     {
       "questionId": "PF161-Q09",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Segmentation identifies the ordered phonemes."
     },
     {
       "questionId": "PF161-Q10",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Ship to shop changes i to o."
     },
     {
       "questionId": "PF161-Q11",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Dish has three phonemes, with sh as one."
     },
     {
@@ -491,17 +491,17 @@
     },
     {
       "questionId": "PF161-Q13",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 3,
       "explanation": "Wish is w-i-sh."
     },
     {
       "questionId": "PF161-Q14",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 2,
       "explanation": "Read-back checks the spelling against the target."
     },
     {
       "questionId": "PF161-Q15",
-      "correctOptionIndex": 0,
+      "correctOptionIndex": 1,
       "explanation": "Ship starts with sh, not s."
     }
   ],
