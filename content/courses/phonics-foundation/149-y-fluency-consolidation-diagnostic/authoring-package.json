@@ -1,0 +1,483 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-149",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "149-y-fluency-consolidation-diagnostic",
+    "topic": "diagnostic",
+    "subtopic": "y-fluency-consolidation",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Measure independent accuracy across initial /y/ recognition, CVC decoding, spelling, word families, sentence comprehension, and controlled passage reading.",
+      "Identify the specific phonics component requiring reteaching.",
+      "Use fresh diagnostic items rather than repeated memorized prompts.",
+      "Route the learner to the next cycle or targeted remediation using the 80% mastery threshold."
+    ],
+    "concepts": [
+      "A diagnostic samples related skills to identify strengths and gaps.",
+      "A correct whole-word response should match every phoneme and grapheme.",
+      "Fluency includes accuracy and appropriate pacing, not speed alone.",
+      "The result guides the next instructional step rather than labeling the learner."
+    ],
+    "definitions": [
+      {
+        "term": "diagnostic assessment",
+        "definition": "An assessment used to identify current strengths and specific learning needs."
+      },
+      {
+        "term": "fluency",
+        "definition": "Accurate, connected reading at a pace that supports meaning."
+      },
+      {
+        "term": "mastery threshold",
+        "definition": "The pre-set score used to decide whether a skill is secure enough to progress."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Recognition item",
+        "solution": "Ask the learner to identify the first sound in yes; listen for /y/ rather than the letter name."
+      },
+      {
+        "prompt": "Decoding item",
+        "solution": "Present y-a-p and ask the learner to blend all three sounds into yap."
+      },
+      {
+        "prompt": "Routing example",
+        "solution": "If spelling is secure but sentence reading is weak, assign sentence-level practice rather than repeating every component."
+      }
+    ],
+    "commonMistakes": [
+      "Treating a single wrong answer as proof that every y-skill is weak.",
+      "Using the same exact words for teaching and reassessment.",
+      "Scoring fast guesses as fluent reading.",
+      "Advancing despite a component-specific gap below threshold."
+    ],
+    "keyTakeaways": [
+      "Use a balanced sample of the six target components.",
+      "Record the type of error, not only the total score.",
+      "Use the 80% threshold consistently.",
+      "Choose remediation that matches the observed gap."
+    ],
+    "revisionPoints": [
+      "Hear /y/ in yak, yam, yap, yes, yet, and yen.",
+      "Blend CVC words from left to right.",
+      "Spell by segmenting three phonemes.",
+      "Group words by vowel-plus-ending rime.",
+      "Reread sentences and use text evidence.",
+      "Sequence passage events in order."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which six components should the diagnostic sample?",
+        "answer": "sound recognition, decoding, encoding, word families, comprehension, and fluency"
+      },
+      {
+        "id": "B2",
+        "prompt": "How should a teacher respond to a weak final-consonant score?",
+        "answer": "Practise final-sound discrimination and fresh CVC decoding items."
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Why should diagnostic items sample different tasks?",
+        "answer": "To distinguish the specific skill that is secure from the skill needing support."
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "What does 80% or higher indicate in this sequence?",
+        "answer": "Meet the mastery threshold for routing forward, while still retaining cumulative review."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "If the learner scores below 80%, what should happen?",
+        "answer": "Assign targeted remediation for the weakest component and then reassess with fresh items."
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Identify the target sound, blend or segment the word, then explain how you checked the result.",
+        "answer": "Use phoneme-level evidence and reread the word or sentence."
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Hear /y/ in yak, yam, yap, yes, yet, and yen.",
+      "Blend CVC words from left to right.",
+      "Spell by segmenting three phonemes.",
+      "Group words by vowel-plus-ending rime."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Hear /y/ in yak, yam, yap, yes, yet, and yen."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Blend CVC words from left to right."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Spell by segmenting three phonemes."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Group words by vowel-plus-ending rime."
+      },
+      {
+        "front": "Recall 5",
+        "back": "Reread sentences and use text evidence."
+      },
+      {
+        "front": "Recall 6",
+        "back": "Sequence passage events in order."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Hear /y/ in yak, yam, yap, yes, yet, and yen.",
+      "Blend CVC words from left to right.",
+      "Spell by segmenting three phonemes.",
+      "Group words by vowel-plus-ending rime.",
+      "Reread sentences and use text evidence.",
+      "Sequence passage events in order."
+    ],
+    "mistakeBasedRevision": [
+      "Treating a single wrong answer as proof that every y-skill is weak.",
+      "Using the same exact words for teaching and reassessment.",
+      "Scoring fast guesses as fluent reading.",
+      "Advancing despite a component-specific gap below threshold."
+    ],
+    "weakTopicRevision": [
+      "If diagnostic accuracy is below target, isolate the weak sound or reading step, model it, practise with guided examples, then reassess using fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "diagnostic-skill-sampling",
+      "name": "type",
+      "steps": [
+        "Administer the 15-item diagnostic without teaching during the attempt.",
+        "Record each response and error type.",
+        "Group errors by sound recognition, decoding, spelling, word family, comprehension, or fluency.",
+        "Use the weakest component to select the next practice."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "oral-fluency-observation",
+      "name": "type",
+      "steps": [
+        "Ask the learner to read a short controlled y-passage.",
+        "Record accuracy, self-corrections, and whether meaning is preserved.",
+        "Do not reward speed when words are inaccurate.",
+        "Use the notes to plan targeted follow-up."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Complete the 15-item diagnostic with recorded evidence for all six target components.",
+    "Identify the weakest component from the learner's response pattern.",
+    "Apply the 80% routing threshold consistently."
+  ],
+  "questions": [
+    {
+      "questionId": "PF149-Q01",
+      "question": "Which word begins with /y/?",
+      "options": [
+        "yes",
+        "map",
+        "sun",
+        "ten"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q02",
+      "question": "Blend /y/ /a/ /m/.",
+      "options": [
+        "yam",
+        "yak",
+        "yap",
+        "yen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q03",
+      "question": "Which word contains short /e/?",
+      "options": [
+        "yet",
+        "yak",
+        "yam",
+        "yap"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q04",
+      "question": "Which spelling matches /y/ /a/ /k/?",
+      "options": [
+        "yak",
+        "yam",
+        "yap",
+        "yen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q05",
+      "question": "Which pair shares the rime -ap?",
+      "options": [
+        "yap and map",
+        "yak and yam",
+        "yes and yet",
+        "yen and yak"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q06",
+      "question": "In “Sam has a yam,” what does Sam have?",
+      "options": [
+        "a yam",
+        "a yak",
+        "a map",
+        "a pen"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q07",
+      "question": "What is the initial phoneme in yak?",
+      "options": [
+        "/y/",
+        "/a/",
+        "/k/",
+        "/m/"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q08",
+      "question": "What is the final phoneme in yap?",
+      "options": [
+        "/p/",
+        "/y/",
+        "/a/",
+        "/k/"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q09",
+      "question": "Which word does NOT begin with /y/?",
+      "options": [
+        "map",
+        "yak",
+        "yam",
+        "yet"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q10",
+      "question": "Blend y-e-n.",
+      "options": [
+        "yen",
+        "yes",
+        "yet",
+        "yam"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q11",
+      "question": "Which word shares the final sound /k/ with yak?",
+      "options": [
+        "pack",
+        "yam",
+        "yet",
+        "yes"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q12",
+      "question": "Which sentence introduces the passage events?",
+      "options": [
+        "Sam has a yam.",
+        "The yak sat by Sam.",
+        "Sam and the yak had a yam.",
+        "The yak can yap."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q13",
+      "question": "How do yak and yap differ?",
+      "options": [
+        "Their final consonants differ",
+        "Their initial sounds differ",
+        "Only yak has a vowel",
+        "They are the same word"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q14",
+      "question": "Which grapheme commonly represents initial /y/ in these words?",
+      "options": [
+        "y",
+        "w",
+        "j",
+        "m"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF149-Q15",
+      "question": "If /y/ is confused with /j/, what is the best next step?",
+      "options": [
+        "Practise listening to contrasting /y/ and /j/ words",
+        "Skip all sound work",
+        "Teach punctuation first",
+        "Repeat only letter names"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF149-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "Yes begins with the target /y/ sound."
+    },
+    {
+      "questionId": "PF149-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The three sounds blend to yam."
+    },
+    {
+      "questionId": "PF149-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Yet contains the short /e/ vowel."
+    },
+    {
+      "questionId": "PF149-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "Yak spells /y/ /a/ /k/."
+    },
+    {
+      "questionId": "PF149-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Yap and map share the vowel and final /p/."
+    },
+    {
+      "questionId": "PF149-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence states that Sam has a yam."
+    },
+    {
+      "questionId": "PF149-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The initial phoneme is /y/."
+    },
+    {
+      "questionId": "PF149-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Yap ends with /p/."
+    },
+    {
+      "questionId": "PF149-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Map begins with /m/."
+    },
+    {
+      "questionId": "PF149-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "The sequence y-e-n blends to yen."
+    },
+    {
+      "questionId": "PF149-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Pack and yak both end with /k/."
+    },
+    {
+      "questionId": "PF149-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "The passage begins by introducing Sam and the yam."
+    },
+    {
+      "questionId": "PF149-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Yak ends in /k/; yap ends in /p/."
+    },
+    {
+      "questionId": "PF149-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "The letter y represents initial /y/."
+    },
+    {
+      "questionId": "PF149-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Contrastive listening targets the specific recognition gap."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-149-v1"
+  }
+}
