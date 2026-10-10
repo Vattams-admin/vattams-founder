@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 480,
-    "studyMaterials": 480,
-    "questionBank": 7190,
-    "assessments": 98
+    "lessons": 500,
+    "studyMaterials": 500,
+    "questionBank": 7490,
+    "assessments": 103
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -500,7 +500,11 @@
       "content/courses/phonics-foundation/477-spell-words-with-silent-p/authoring-package.json",
       "content/courses/phonics-foundation/478-silent-p-word-families-controlled-reading/authoring-package.json",
       "content/courses/phonics-foundation/479-controlled-silent-p-sentences-comprehension/authoring-package.json",
-      "content/courses/phonics-foundation/480-controlled-silent-p-passage-sequencing-comprehension/authoring-package.json"
+      "content/courses/phonics-foundation/480-controlled-silent-p-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/497-wh-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/498-targeted-wh-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/499-silent-letter-patterns-mixed-review/authoring-package.json",
+      "content/courses/phonics-foundation/500-silent-letter-patterns-cumulative-checkpoint/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -578,7 +582,10 @@
     "PF466-REASSESS-01",
     "PF467-DIAG-01",
     "PF473-DIAG-01",
-    "PF474-REASSESS-01"
+    "PF474-REASSESS-01",
+    "PF497-DIAG-01",
+    "PF498-REASSESS-01",
+    "PF500-CUMULATIVE-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
@@ -594,6 +601,10 @@
     "content/courses/phonics-foundation/140-controlled-w-passage-sequencing/authoring-package.json",
     "content/courses/phonics-foundation/141-w-fluency-consolidation-diagnostic/authoring-package.json",
     "content/courses/phonics-foundation/142-targeted-w-remediation-reassessment/authoring-package.json",
-    "content/courses/phonics-foundation/143-hear-and-identify-new-consonant-y/authoring-package.json"
+    "content/courses/phonics-foundation/143-hear-and-identify-new-consonant-y/authoring-package.json",
+    "content/courses/phonics-foundation/497-wh-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/498-targeted-wh-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/499-silent-letter-patterns-mixed-review/authoring-package.json",
+    "content/courses/phonics-foundation/500-silent-letter-patterns-cumulative-checkpoint/authoring-package.json"
   ]
 }
