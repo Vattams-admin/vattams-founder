@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 430,
-    "studyMaterials": 430,
-    "questionBank": 6440,
-    "assessments": 85
+    "lessons": 435,
+    "studyMaterials": 435,
+    "questionBank": 6515,
+    "assessments": 87
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -450,7 +450,12 @@
       "content/courses/phonics-foundation/427-recognize-silent-g-in-initial-gn/authoring-package.json",
       "content/courses/phonics-foundation/428-decode-short-words-with-gn/authoring-package.json",
       "content/courses/phonics-foundation/429-spell-short-words-with-gn/authoring-package.json",
-      "content/courses/phonics-foundation/430-gn-word-families-controlled-reading/authoring-package.json"
+      "content/courses/phonics-foundation/430-gn-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/431-controlled-gn-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/432-controlled-gn-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/433-gn-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/434-targeted-gn-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/435-recognize-silent-w-in-initial-wr/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -515,7 +520,9 @@
     "PF417-DIAG-01",
     "PF418-REASSESS-01",
     "PF425-DIAG-01",
-    "PF426-REASSESS-01"
+    "PF426-REASSESS-01",
+    "PF433-DIAG-01",
+    "PF434-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
