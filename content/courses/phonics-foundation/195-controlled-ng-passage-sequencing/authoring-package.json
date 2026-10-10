@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-195",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "195-controlled-ng-passage-sequencing",
+    "topic": "passage-reading",
+    "subtopic": "ng-controlled-passage-sequencing",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a short controlled passage containing taught ng-words.",
+      "Sequence details in the order stated by the text.",
+      "Answer literal questions using evidence from the passage.",
+      "Reread and self-correct a word that changes meaning."
+    ],
+    "concepts": [
+      "A passage connects sentences around a simple idea.",
+      "Sequencing uses details to identify what happens first, next and last.",
+      "Text evidence supports literal answers.",
+      "Accurate decoding of ng-words supports comprehension."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "Place events or details in the order they appear in a text."
+      },
+      {
+        "term": "passage",
+        "definition": "A connected group of sentences about a topic or event."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A word or detail in the text that supports an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "We can sing a song. The song is long.",
+        "solution": "The passage introduces singing, then describes the song."
+      },
+      {
+        "prompt": "We can bang a drum.",
+        "solution": "This is another action later in the passage."
+      },
+      {
+        "prompt": "Reread a sentence",
+        "solution": "Use printed words to verify sequence and answers."
+      }
+    ],
+    "commonMistakes": [
+      "Putting details in an order not stated by the text.",
+      "Answering from memory without checking the passage.",
+      "Confusing final /ŋ/ with /n/.",
+      "Skipping small words that change sentence meaning."
+    ],
+    "keyTakeaways": [
+      "Read the whole passage before sequencing.",
+      "Use first, next and last to explain the order.",
+      "Point to text evidence for each answer.",
+      "Decode ng-words fully and reread when meaning is unclear."
+    ],
+    "revisionPoints": [
+      "We can sing a song.",
+      "The song is long.",
+      "We can bang a drum.",
+      "We can sing again."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What is mentioned first in the passage?",
+        "answer": "We can sing a song"
+      },
+      {
+        "id": "B2",
+        "prompt": "What does the passage say about the song?",
+        "answer": "It is long"
+      },
+      {
+        "id": "B3",
+        "prompt": "What can we bang?",
+        "answer": "A drum"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which detail happens first?",
+        "answer": "We can sing a song"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which detail follows the first sentence?",
+        "answer": "The song is long"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which word ends with ng?",
+        "answer": "song"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which pair shares -ing?",
+        "answer": "sing and ring"
+      },
+      {
+        "id": "A2",
+        "prompt": "What should support an answer about the passage?",
+        "answer": "Words stated in the passage"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which sentence tells about the song?",
+        "answer": "The song is long."
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "What does bang mean in the passage?",
+        "answer": "Hit to make a sound"
+      },
+      {
+        "id": "H2",
+        "prompt": "Which detail is last in the passage?",
+        "answer": "We can sing again"
+      },
+      {
+        "id": "H3",
+        "prompt": "Why reread before answering?",
+        "answer": "To check details and order"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word begins with /s/?",
+        "answer": "sing"
+      },
+      {
+        "id": "R2",
+        "prompt": "Which order matches the passage?",
+        "answer": "sing a song, song is long, bang a drum, sing again"
+      },
+      {
+        "id": "R3",
+        "prompt": "What helps a learner read the passage accurately?",
+        "answer": "Decode each word and check its sounds"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "We can sing a song.",
+      "The song is long.",
+      "We can bang a drum.",
+      "We can sing again."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "We can sing a song."
+      },
+      {
+        "front": "Recall 2",
+        "back": "The song is long."
+      },
+      {
+        "front": "Recall 3",
+        "back": "We can bang a drum."
+      },
+      {
+        "front": "Recall 4",
+        "back": "We can sing again."
+      }
+    ],
+    "formulaOrFactBank": [
+      "We can sing a song.",
+      "The song is long.",
+      "We can bang a drum.",
+      "We can sing again."
+    ],
+    "mistakeBasedRevision": [
+      "Putting details in an order not stated by the text.",
+      "Answering from memory without checking the passage.",
+      "Confusing final /ŋ/ with /n/.",
+      "Skipping small words that change sentence meaning."
+    ],
+    "weakTopicRevision": [
+      "If passage reading accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "passage-sequencing",
+      "name": "Read the controlled ng-passage and sequence details.",
+      "steps": [
+        "Read the passage once for meaning.",
+        "Reread and number details first, next and last.",
+        "Answer literal questions using text evidence.",
+        "Retell the passage in order."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using sound or text evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme or words supporting the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Sequence at least three passage details in the stated order.",
+    "Answer at least 4 of 5 literal questions using text evidence.",
+    "Reread and correct one decoding error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF195-Q01",
+      "question": "What is mentioned first in the passage?",
+      "options": [
+        "We can bang a drum",
+        "We can sing again",
+        "We can sing a song",
+        "The song is long"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF195-Q02",
+      "question": "What does the passage say about the song?",
+      "options": [
+        "It is thin",
+        "It is long",
+        "It is hot",
+        "It is red"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF195-Q03",
+      "question": "What can we bang?",
+      "options": [
+        "A drum",
+        "A dish",
+        "A shell",
+        "A lid"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF195-Q04",
+      "question": "Which detail happens first?",
+      "options": [
+        "We can bang a drum",
+        "We can sing again",
+        "The song is long",
+        "We can sing a song"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF195-Q05",
+      "question": "Which detail follows the first sentence?",
+      "options": [
+        "We can bang a drum",
+        "We can sing again",
+        "The song is long",
+        "We can run"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF195-Q06",
+      "question": "Which word ends with ng?",
+      "options": [
+        "drum",
+        "song",
+        "sun",
+        "sit"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF195-Q07",
+      "question": "Which pair shares -ing?",
+      "options": [
+        "sing and ring",
+        "song and long",
+        "bang and rang",
+        "hung and sung"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF195-Q08",
+      "question": "What should support an answer about the passage?",
+      "options": [
+        "A guess",
+        "A different story",
+        "The longest option",
+        "Words stated in the passage"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF195-Q09",
+      "question": "Which sentence tells about the song?",
+      "options": [
+        "We can bang a drum.",
+        "We can sing again.",
+        "The song is long.",
+        "We can run."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF195-Q10",
+      "question": "What does bang mean in the passage?",
+      "options": [
+        "Read quietly",
+        "Hit to make a sound",
+        "Sit still",
+        "Close a lid"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF195-Q11",
+      "question": "Which detail is last in the passage?",
+      "options": [
+        "We can sing again",
+        "We can sing a song",
+        "The song is long",
+        "We can bang a drum"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF195-Q12",
+      "question": "Why reread before answering?",
+      "options": [
+        "To skip hard words",
+        "To choose by memory only",
+        "To read only the first word",
+        "To check details and order"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF195-Q13",
+      "question": "Which word begins with /s/?",
+      "options": [
+        "bang",
+        "long",
+        "sing",
+        "ring"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF195-Q14",
+      "question": "Which order matches the passage?",
+      "options": [
+        "sing again, bang a drum, sing a song, song is long",
+        "sing a song, song is long, bang a drum, sing again",
+        "song is long, sing again, sing a song, bang a drum",
+        "bang a drum, sing a song, sing again, song is long"
+      ],
+      "difficulty": "sequencing",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF195-Q15",
+      "question": "What helps a learner read the passage accurately?",
+      "options": [
+        "Decode each word and check its sounds",
+        "Guess from a picture only",
+        "Skip all ng-words",
+        "Read only first letters"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF195-Q01",
+      "correctOptionIndex": 2,
+      "explanation": "The first sentence introduces singing a song."
+    },
+    {
+      "questionId": "PF195-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The passage says the song is long."
+    },
+    {
+      "questionId": "PF195-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "The passage says we can bang a drum."
+    },
+    {
+      "questionId": "PF195-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The passage starts with singing a song."
+    },
+    {
+      "questionId": "PF195-Q05",
+      "correctOptionIndex": 2,
+      "explanation": "The second sentence describes the song."
+    },
+    {
+      "questionId": "PF195-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "Song ends in ng."
+    },
+    {
+      "questionId": "PF195-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Sing and ring share -ing."
+    },
+    {
+      "questionId": "PF195-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Answers should be grounded in text evidence."
+    },
+    {
+      "questionId": "PF195-Q09",
+      "correctOptionIndex": 2,
+      "explanation": "This sentence describes the song."
+    },
+    {
+      "questionId": "PF195-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "Bang describes hitting a drum."
+    },
+    {
+      "questionId": "PF195-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The final sentence says we can sing again."
+    },
+    {
+      "questionId": "PF195-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Rereading verifies details and sequence."
+    },
+    {
+      "questionId": "PF195-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "Sing begins with /s/."
+    },
+    {
+      "questionId": "PF195-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "This order follows the passage."
+    },
+    {
+      "questionId": "PF195-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Full decoding supports meaning."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-195-v1"
+  }
+}
