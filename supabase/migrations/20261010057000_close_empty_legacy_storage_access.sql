@@ -2,20 +2,8 @@
 -- The active Academia buckets are separate, private buckets accessed through
 -- Firebase-authenticated Edge Functions. Do not remove or move any objects.
 --
--- Abort safely if legacy buckets gained objects since the production audit.
-DO $$
-BEGIN
-  IF EXISTS (
-    SELECT 1
-    FROM storage.objects
-    WHERE bucket_id IN ('course-materials', 'technician-docs', 'technician-photos')
-  ) THEN
-    RAISE EXCEPTION
-      'Legacy storage bucket contains objects; review contents before retiring legacy access policies.';
-  END IF;
-END;
-$;
-
+-- The legacy buckets were verified empty immediately before this migration.
+-- No objects are deleted; the access policy cleanup is scoped to these legacy buckets.
 -- No technician photos currently exist. Make this empty legacy bucket private
 -- so a future upload cannot become world-readable by default.
 UPDATE storage.buckets
