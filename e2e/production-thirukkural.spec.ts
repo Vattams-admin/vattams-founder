@@ -1,6 +1,34 @@
 import { test, expect, type Page } from '@playwright/test'
+import { cert, getApps, initializeApp } from 'firebase-admin/app'
+import { getAuth } from 'firebase-admin/auth'
 
 const competitionSlug = 'thirukkural-mastery-championship'
+const competitionCourseId = 'DNWt3cPE4ZSJG90CTC1e'
+
+async function setCompetitionCacheAccess(email: string, active: boolean) {
+  const serviceAccountJson = process.env.FIREBASE_SERVICE_ACCOUNT_JSON
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+  const supabaseUrl = process.env.SUPABASE_URL
+  if (!serviceAccountJson || !serviceRoleKey || !supabaseUrl) {
+    throw new Error('Firebase service account and Supabase service-role configuration are required for the revocation test.')
+  }
+  const app = getApps()[0] ?? initializeApp({ credential: cert(JSON.parse(serviceAccountJson)) })
+  const user = await getAuth(app).getUserByEmail(email)
+  const response = await fetch(
+    `${supabaseUrl}/rest/v1/competition_access_cache?student_id=eq.${encodeURIComponent(user.uid)}&course_id=eq.${encodeURIComponent(competitionCourseId)}`,
+    {
+      method: 'PATCH',
+      headers: {
+        apikey: serviceRoleKey,
+        Authorization: `Bearer ${serviceRoleKey}`,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal',
+      },
+      body: JSON.stringify({ enrolment_active: active, checked_at: new Date().toISOString() }),
+    },
+  )
+  if (!response.ok) throw new Error(`Unable to update isolated E2E competition access cache: HTTP ${response.status}`)
+}
 
 test.describe('production Thirukkural smoke', () => {
   test('public competition route renders without application errors', async ({ page }) => {
