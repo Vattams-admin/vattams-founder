@@ -1,0 +1,517 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-336",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "336-controlled-sk-passage-sequencing-comprehension",
+    "topic": "connected-text",
+    "subtopic": "sequence-events-and-answer-literal-questions-in-controlled-sk-passage",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read a short controlled passage with taught sk-words accurately.",
+      "Sequence events as first, next, and last based on the passage.",
+      "Answer literal questions using evidence from the passage.",
+      "Reread when a decoding error affects the meaning."
+    ],
+    "concepts": [
+      "A passage links sentences around related events.",
+      "Sequence language marks event order.",
+      "Literal answers must be supported by stated text.",
+      "Rereading supports both decoding and comprehension."
+    ],
+    "definitions": [
+      {
+        "term": "sequence",
+        "definition": "The order in which events happen."
+      },
+      {
+        "term": "passage",
+        "definition": "A short connected text made of related sentences."
+      },
+      {
+        "term": "text evidence",
+        "definition": "Words in a passage that support an answer."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "Read: “Skye gets a skate. Skye puts on a pad. Skye skates on the path.” What happens first?",
+        "solution": "Skye gets a skate."
+      },
+      {
+        "prompt": "What happens after Skye puts on a pad?",
+        "solution": "Skye skates on the path."
+      },
+      {
+        "prompt": "How do you verify the sequence?",
+        "solution": "Reread each sentence and follow the stated order."
+      }
+    ],
+    "commonMistakes": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Misreading skate and changing the event.",
+      "Answering without passage evidence."
+    ],
+    "keyTakeaways": [
+      "Read every sentence accurately.",
+      "Retell events in order.",
+      "Use the passage to support answers.",
+      "Reread to repair a mismatch."
+    ],
+    "revisionPoints": [
+      "Skye gets a skate.",
+      "Skye puts on a pad.",
+      "Skye skates on the path.",
+      "Use text evidence to sequence events."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "What does Skye get first?",
+        "answer": "A skate"
+      },
+      {
+        "id": "B2",
+        "prompt": "What does Skye put on?",
+        "answer": "A pad"
+      },
+      {
+        "id": "B3",
+        "prompt": "What happens last?",
+        "answer": "Skye skates on the path"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which event happens after Skye puts on a pad?",
+        "answer": "Skye skates on the path"
+      },
+      {
+        "id": "C2",
+        "prompt": "What does sequencing show?",
+        "answer": "The order of events"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which answer stays within the passage?",
+        "answer": "Skye puts on a pad"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word begins with sk?",
+        "answer": "skate"
+      },
+      {
+        "id": "A2",
+        "prompt": "What should you do if skate is read as sate?",
+        "answer": "Check for /k/"
+      },
+      {
+        "id": "A3",
+        "prompt": "What is a passage?",
+        "answer": "Related sentences forming connected text"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Why reread the passage?",
+        "answer": "To check word accuracy and event order"
+      },
+      {
+        "id": "H2",
+        "prompt": "What should you do if the retelling is out of order?",
+        "answer": "Reread the sentences in order"
+      },
+      {
+        "id": "H3",
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Sequence a passage and answer with text evidence"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What does “after” help identify?",
+        "answer": "An event that follows another event"
+      },
+      {
+        "id": "R2",
+        "prompt": "Why point to a sentence when answering?",
+        "answer": "It shows the evidence"
+      },
+      {
+        "id": "R3",
+        "prompt": "What is the main goal of this lesson?",
+        "answer": "Sequence a passage and answer with text evidence"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "Skye gets a skate.",
+      "Skye puts on a pad.",
+      "Skye skates on the path.",
+      "Use text evidence to sequence events."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "Skye gets a skate."
+      },
+      {
+        "front": "Recall 2",
+        "back": "Skye puts on a pad."
+      },
+      {
+        "front": "Recall 3",
+        "back": "Skye skates on the path."
+      },
+      {
+        "front": "Recall 4",
+        "back": "Use text evidence to sequence events."
+      }
+    ],
+    "formulaOrFactBank": [
+      "Skye gets a skate.",
+      "Skye puts on a pad.",
+      "Skye skates on the path.",
+      "Use text evidence to sequence events."
+    ],
+    "mistakeBasedRevision": [
+      "Reordering events based on a guess.",
+      "Skipping a sentence while retelling.",
+      "Misreading skate and changing the event.",
+      "Answering without passage evidence."
+    ],
+    "weakTopicRevision": [
+      "If connected-text is weak, model the target skill, practise with guidance, and retry fresh items before advancing."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "passage-sequencing-with-text-evidence",
+      "name": "Retell a controlled sk passage in order",
+      "steps": [
+        "Review the target skill and a worked example.",
+        "Complete a guided example and explain the sound or text evidence.",
+        "Try a fresh example independently.",
+        "Reread or recheck and repair any mismatch."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "error-detection-and-transfer",
+      "name": "Find the error and repair a fresh item.",
+      "steps": [
+        "Review a sample response with one target-skill error.",
+        "Identify the sound, grapheme, or evidence that does not match.",
+        "Correct the response and explain why.",
+        "Complete a fresh item without the model or answer key."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read a short controlled passage with taught sk-words accurately.",
+    "Sequence events as first, next, and last based on the passage.",
+    "Answer literal questions using evidence from the passage.",
+    "Reread when a decoding error affects the meaning."
+  ],
+  "questions": [
+    {
+      "questionId": "PF336-Q01",
+      "question": "What does Skye get first?",
+      "options": [
+        "A skate",
+        "A flag",
+        "A drum",
+        "A ship"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q02",
+      "question": "What does Skye put on?",
+      "options": [
+        "A hat",
+        "A coat",
+        "A pad",
+        "A bag"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q03",
+      "question": "What happens last?",
+      "options": [
+        "Skye gets a skate",
+        "Skye skates on the path",
+        "Skye puts on a pad",
+        "Skye swims in a pool"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q04",
+      "question": "Which event happens first?",
+      "options": [
+        "Skye skates on the path",
+        "Skye puts on a pad",
+        "Skye rests at home",
+        "Skye gets a skate"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q05",
+      "question": "Which event happens after Skye puts on a pad?",
+      "options": [
+        "Skye gets a skate",
+        "Skye skates on the path",
+        "Skye buys a drum",
+        "Skye goes to sleep"
+      ],
+      "difficulty": "sound_recognition",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q06",
+      "question": "What does sequencing show?",
+      "options": [
+        "The order of events",
+        "The number of letters",
+        "A guessed ending",
+        "The colour of the page"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q07",
+      "question": "Which word begins with sk?",
+      "options": [
+        "slip",
+        "swim",
+        "skate",
+        "step"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q08",
+      "question": "What should you do if skate is read as sate?",
+      "options": [
+        "Ignore the sound",
+        "Skip the word",
+        "Change the sentence",
+        "Check for /k/"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q09",
+      "question": "What is a passage?",
+      "options": [
+        "Related sentences forming connected text",
+        "A random set of letters",
+        "Only a title",
+        "An answer key"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q10",
+      "question": "Which answer stays within the passage?",
+      "options": [
+        "Skye wins a race",
+        "Skye flies a plane",
+        "Skye puts on a pad",
+        "Skye eats a cake"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q11",
+      "question": "Why reread the passage?",
+      "options": [
+        "To invent a new event",
+        "To check word accuracy and event order",
+        "To skip the middle sentence",
+        "To change the ending"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q12",
+      "question": "What does “after” help identify?",
+      "options": [
+        "The first letter only",
+        "An unstated character",
+        "The longest word",
+        "An event that follows another event"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q13",
+      "question": "Why point to a sentence when answering?",
+      "options": [
+        "It shows the evidence",
+        "It changes the story",
+        "It makes a guess true",
+        "It replaces reading"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q14",
+      "question": "What should you do if the retelling is out of order?",
+      "options": [
+        "Add an invented event",
+        "Skip the second sentence",
+        "Reread the sentences in order",
+        "Choose the longest answer"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF336-Q15",
+      "question": "What is the main goal of this lesson?",
+      "options": [
+        "Memorize options",
+        "Sequence a passage and answer with text evidence",
+        "Skip sk-words",
+        "Invent a new ending"
+      ],
+      "difficulty": "mixed_review",
+      "marks": 1,
+      "timeSeconds": 30
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF336-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The first sentence says Skye gets a skate."
+    },
+    {
+      "questionId": "PF336-Q02",
+      "correctOptionIndex": 2,
+      "explanation": "The second sentence says Skye puts on a pad."
+    },
+    {
+      "questionId": "PF336-Q03",
+      "correctOptionIndex": 1,
+      "explanation": "The last sentence states the final event."
+    },
+    {
+      "questionId": "PF336-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The passage begins with getting a skate."
+    },
+    {
+      "questionId": "PF336-Q05",
+      "correctOptionIndex": 1,
+      "explanation": "The third sentence follows putting on a pad."
+    },
+    {
+      "questionId": "PF336-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Sequencing is event order."
+    },
+    {
+      "questionId": "PF336-Q07",
+      "correctOptionIndex": 2,
+      "explanation": "Skate begins with sk."
+    },
+    {
+      "questionId": "PF336-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "The /k/ sound is required."
+    },
+    {
+      "questionId": "PF336-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "A passage is connected text."
+    },
+    {
+      "questionId": "PF336-Q10",
+      "correctOptionIndex": 2,
+      "explanation": "Only putting on a pad is stated among those options."
+    },
+    {
+      "questionId": "PF336-Q11",
+      "correctOptionIndex": 1,
+      "explanation": "Rereading verifies decoding and sequence."
+    },
+    {
+      "questionId": "PF336-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "After indicates sequence."
+    },
+    {
+      "questionId": "PF336-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "The sentence supports the answer."
+    },
+    {
+      "questionId": "PF336-Q14",
+      "correctOptionIndex": 2,
+      "explanation": "The text establishes the order."
+    },
+    {
+      "questionId": "PF336-Q15",
+      "correctOptionIndex": 1,
+      "explanation": "The lesson targets connected reading and comprehension."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-336-v1"
+  }
+}

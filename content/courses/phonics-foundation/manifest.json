@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 332,
-    "studyMaterials": 332,
-    "questionBank": 4970,
-    "assessments": 61
+    "lessons": 337,
+    "studyMaterials": 337,
+    "questionBank": 5045,
+    "assessments": 63
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -352,7 +352,12 @@
       "content/courses/phonics-foundation/329-sw-fluency-consolidation-diagnostic/authoring-package.json",
       "content/courses/phonics-foundation/330-sw-targeted-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/331-hear-and-blend-initial-sk/authoring-package.json",
-      "content/courses/phonics-foundation/332-decode-short-words-with-sk/authoring-package.json"
+      "content/courses/phonics-foundation/332-decode-short-words-with-sk/authoring-package.json",
+      "content/courses/phonics-foundation/333-spell-short-words-with-sk/authoring-package.json",
+      "content/courses/phonics-foundation/334-sk-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/335-controlled-sk-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/336-controlled-sk-passage-sequencing-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/337-sk-fluency-consolidation-diagnostic/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -394,7 +399,9 @@
     "PF212-DIAG-01",
     "PF213-REASSESS-01",
     "PF329-DIAG-01",
-    "PF330-REASSESS-01"
+    "PF330-REASSESS-01",
+    "PF337-DIAG-01",
+    "PF338-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
