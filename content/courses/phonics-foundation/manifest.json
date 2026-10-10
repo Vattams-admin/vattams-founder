@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 720,
-    "studyMaterials": 720,
-    "questionBank": 10790,
-    "assessments": 162
+    "lessons": 740,
+    "studyMaterials": 740,
+    "questionBank": 11090,
+    "assessments": 168
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -740,7 +740,27 @@
       "content/courses/phonics-foundation/717-au-aw-vowel-spelling-contrast/authoring-package.json",
       "content/courses/phonics-foundation/718-au-aw-connected-reading-transfer/authoring-package.json",
       "content/courses/phonics-foundation/719-au-aw-fluency-diagnostic/authoring-package.json",
-      "content/courses/phonics-foundation/720-au-aw-remediation-reassessment/authoring-package.json"
+      "content/courses/phonics-foundation/720-au-aw-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/721-recognize-ew-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/722-decode-words-with-ew/authoring-package.json",
+      "content/courses/phonics-foundation/723-spell-words-with-ew/authoring-package.json",
+      "content/courses/phonics-foundation/724-ew-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/725-controlled-ew-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/726-controlled-ew-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/727-ew-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/728-targeted-ew-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/729-recognize-ue-vowel-team/authoring-package.json",
+      "content/courses/phonics-foundation/730-decode-words-with-ue/authoring-package.json",
+      "content/courses/phonics-foundation/731-spell-words-with-ue/authoring-package.json",
+      "content/courses/phonics-foundation/732-ue-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/733-controlled-ue-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/734-controlled-ue-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/735-ue-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/736-targeted-ue-remediation-reassessment/authoring-package.json",
+      "content/courses/phonics-foundation/737-ew-ue-vowel-spelling-contrast/authoring-package.json",
+      "content/courses/phonics-foundation/738-ew-ue-connected-reading-transfer/authoring-package.json",
+      "content/courses/phonics-foundation/739-ew-ue-fluency-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/740-ew-ue-remediation-reassessment/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -883,7 +903,13 @@
     "PF715-DIAG-01",
     "PF716-REASSESS-01",
     "PF719-DIAG-01",
-    "PF720-REASSESS-01"
+    "PF720-REASSESS-01",
+    "PF727-DIAG-01",
+    "PF728-REASSESS-01",
+    "PF735-DIAG-01",
+    "PF736-REASSESS-01",
+    "PF739-DIAG-01",
+    "PF740-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/lesson-01-hear-identify-m/authoring-package.json",
@@ -1605,6 +1631,26 @@
     "content/courses/phonics-foundation/717-au-aw-vowel-spelling-contrast/authoring-package.json",
     "content/courses/phonics-foundation/718-au-aw-connected-reading-transfer/authoring-package.json",
     "content/courses/phonics-foundation/719-au-aw-fluency-diagnostic/authoring-package.json",
-    "content/courses/phonics-foundation/720-au-aw-remediation-reassessment/authoring-package.json"
+    "content/courses/phonics-foundation/720-au-aw-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/721-recognize-ew-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/722-decode-words-with-ew/authoring-package.json",
+    "content/courses/phonics-foundation/723-spell-words-with-ew/authoring-package.json",
+    "content/courses/phonics-foundation/724-ew-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/725-controlled-ew-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/726-controlled-ew-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/727-ew-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/728-targeted-ew-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/729-recognize-ue-vowel-team/authoring-package.json",
+    "content/courses/phonics-foundation/730-decode-words-with-ue/authoring-package.json",
+    "content/courses/phonics-foundation/731-spell-words-with-ue/authoring-package.json",
+    "content/courses/phonics-foundation/732-ue-word-families-controlled-reading/authoring-package.json",
+    "content/courses/phonics-foundation/733-controlled-ue-sentences-comprehension/authoring-package.json",
+    "content/courses/phonics-foundation/734-controlled-ue-passage-sequencing/authoring-package.json",
+    "content/courses/phonics-foundation/735-ue-fluency-consolidation-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/736-targeted-ue-remediation-reassessment/authoring-package.json",
+    "content/courses/phonics-foundation/737-ew-ue-vowel-spelling-contrast/authoring-package.json",
+    "content/courses/phonics-foundation/738-ew-ue-connected-reading-transfer/authoring-package.json",
+    "content/courses/phonics-foundation/739-ew-ue-fluency-diagnostic/authoring-package.json",
+    "content/courses/phonics-foundation/740-ew-ue-remediation-reassessment/authoring-package.json"
   ]
 }
