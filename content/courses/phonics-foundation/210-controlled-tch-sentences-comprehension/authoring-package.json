@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-210",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "210-controlled-tch-sentences-comprehension",
+    "topic": "sentence-reading",
+    "subtopic": "final-tch-sentences-literal-comprehension",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Read short controlled sentences containing taught tch-words.",
+      "Answer literal questions using details stated in the sentence.",
+      "Reread when a decoded word does not fit the meaning.",
+      "Use text evidence rather than guessing."
+    ],
+    "concepts": [
+      "A sentence expresses a complete idea.",
+      "Accurate decoding supports understanding.",
+      "Literal answers should match information directly stated in the text.",
+      "Rereading helps readers check words and meaning."
+    ],
+    "definitions": [
+      {
+        "term": "literal comprehension",
+        "definition": "Understanding information directly stated in a text."
+      },
+      {
+        "term": "text evidence",
+        "definition": "A word or detail in the text that supports an answer."
+      },
+      {
+        "term": "rereading",
+        "definition": "Reading the text again to check accuracy and meaning."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "The cat can catch a ball.",
+        "solution": "The sentence tells what the cat can do."
+      },
+      {
+        "prompt": "The ball is on the mat.",
+        "solution": "The sentence tells where the ball is."
+      },
+      {
+        "prompt": "The cat can catch it again.",
+        "solution": "The sentence tells what happens again."
+      }
+    ],
+    "commonMistakes": [
+      "Answering from memory without rereading.",
+      "Confusing catch with cash because the ending was missed.",
+      "Skipping small words that change the sentence meaning.",
+      "Reading accurately but not checking comprehension."
+    ],
+    "keyTakeaways": [
+      "Decode each word before answering.",
+      "Reread and point to the evidence.",
+      "Check the final tch trigraph.",
+      "Use the sentence, not a guess, to support an answer."
+    ],
+    "revisionPoints": [
+      "The cat can catch a ball.",
+      "The ball is on the mat.",
+      "The cat can catch it again.",
+      "The ball is on the mat."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "In “The cat can catch a ball,” what can the cat do?",
+        "answer": "Catch a ball"
+      },
+      {
+        "id": "B2",
+        "prompt": "Where is the ball?",
+        "answer": "On the mat"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word ends with tch?",
+        "answer": "catch"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which sentence tells what the cat can do?",
+        "answer": "The cat can catch a ball."
+      },
+      {
+        "id": "C2",
+        "prompt": "Which pair shares -atch?",
+        "answer": "catch and match"
+      },
+      {
+        "id": "C3",
+        "prompt": "What should a reader do before answering?",
+        "answer": "Reread and find supporting words"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "Which word contains final tch?",
+        "answer": "patch"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word differs from catch by its final spelling?",
+        "answer": "cash"
+      },
+      {
+        "id": "A3",
+        "prompt": "What does “The cat can catch it again” tell us?",
+        "answer": "The cat catches it another time"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which sentence contains both ball and mat?",
+        "answer": "The ball is on the mat."
+      },
+      {
+        "id": "H2",
+        "prompt": "If catch is read as cash, what should be checked?",
+        "answer": "The final tch trigraph"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which word begins with the same sound as catch?",
+        "answer": "cat"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "What is the best evidence that the ball is on the mat?",
+        "answer": "The ball is on the mat."
+      },
+      {
+        "id": "R2",
+        "prompt": "Why does accurate decoding matter?",
+        "answer": "A changed sound can change a word and its meaning"
+      },
+      {
+        "id": "R3",
+        "prompt": "Which strategy helps when a sentence does not make sense?",
+        "answer": "Reread each word and check the sounds"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "The cat can catch a ball.",
+      "The ball is on the mat.",
+      "The cat can catch it again.",
+      "The ball is on the mat."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "The cat can catch a ball."
+      },
+      {
+        "front": "Recall 2",
+        "back": "The ball is on the mat."
+      },
+      {
+        "front": "Recall 3",
+        "back": "The cat can catch it again."
+      },
+      {
+        "front": "Recall 4",
+        "back": "The ball is on the mat."
+      }
+    ],
+    "formulaOrFactBank": [
+      "The cat can catch a ball.",
+      "The ball is on the mat.",
+      "The cat can catch it again.",
+      "The ball is on the mat."
+    ],
+    "mistakeBasedRevision": [
+      "Answering from memory without rereading.",
+      "Confusing catch with cash because the ending was missed.",
+      "Skipping small words that change the sentence meaning.",
+      "Reading accurately but not checking comprehension."
+    ],
+    "weakTopicRevision": [
+      "If sentence reading accuracy is below target, model the specific skill, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "sentence-reading-comprehension",
+      "name": "Read controlled tch-sentences and answer literal questions.",
+      "steps": [
+        "Read each sentence while tracking every word.",
+        "Reread before answering.",
+        "Point to the words that support the answer.",
+        "Correct a sound error and explain the meaning."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "evidence-and-self-check",
+      "name": "Explain the answer using sound or text evidence.",
+      "steps": [
+        "State the target skill.",
+        "Point to the grapheme or words supporting the response.",
+        "Correct any mismatch.",
+        "Try a fresh example to check transfer."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Read at least 4 of 5 controlled sentences accurately.",
+    "Answer at least 4 of 5 literal questions using text evidence.",
+    "Reread and correct a decoding error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF210-Q01",
+      "question": "In “The cat can catch a ball,” what can the cat do?",
+      "options": [
+        "Sing a song",
+        "Shut a lid",
+        "Catch a ball",
+        "Find a shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF210-Q02",
+      "question": "Where is the ball?",
+      "options": [
+        "In a dish",
+        "On the mat",
+        "On a ship",
+        "By a shell"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF210-Q03",
+      "question": "Which word ends with tch?",
+      "options": [
+        "catch",
+        "cash",
+        "cat",
+        "cab"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF210-Q04",
+      "question": "Which sentence tells what the cat can do?",
+      "options": [
+        "The ball is on the mat.",
+        "The cat can catch it again.",
+        "The ball is red.",
+        "The cat can catch a ball."
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF210-Q05",
+      "question": "Which pair shares -atch?",
+      "options": [
+        "catch and pitch",
+        "fetch and ditch",
+        "catch and match",
+        "pitch and patch"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF210-Q06",
+      "question": "What should a reader do before answering?",
+      "options": [
+        "Guess from memory",
+        "Reread and find supporting words",
+        "Skip the text",
+        "Choose the longest answer"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF210-Q07",
+      "question": "Which word contains final tch?",
+      "options": [
+        "patch",
+        "pat",
+        "pan",
+        "pack"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF210-Q08",
+      "question": "Which word differs from catch by its final spelling?",
+      "options": [
+        "match",
+        "patch",
+        "catch",
+        "cash"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF210-Q09",
+      "question": "What does “The cat can catch it again” tell us?",
+      "options": [
+        "The cat has a bath",
+        "The ball is in a dish",
+        "The cat catches it another time",
+        "The cat is a rock"
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF210-Q10",
+      "question": "Which sentence contains both ball and mat?",
+      "options": [
+        "The cat can catch a ball.",
+        "The ball is on the mat.",
+        "The cat can catch it again.",
+        "The cat is fast."
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF210-Q11",
+      "question": "If catch is read as cash, what should be checked?",
+      "options": [
+        "The final tch trigraph",
+        "Only the first letter",
+        "The spaces",
+        "The capital C"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF210-Q12",
+      "question": "Which word begins with the same sound as catch?",
+      "options": [
+        "pitch",
+        "fetch",
+        "ditch",
+        "cat"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF210-Q13",
+      "question": "What is the best evidence that the ball is on the mat?",
+      "options": [
+        "The cat can catch a ball.",
+        "The cat can catch it again.",
+        "The ball is on the mat.",
+        "The ball is red."
+      ],
+      "difficulty": "comprehension",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF210-Q14",
+      "question": "Why does accurate decoding matter?",
+      "options": [
+        "Every word means the same thing",
+        "A changed sound can change a word and its meaning",
+        "Only punctuation matters",
+        "Readers should skip short words"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF210-Q15",
+      "question": "Which strategy helps when a sentence does not make sense?",
+      "options": [
+        "Reread each word and check the sounds",
+        "Ignore the ending",
+        "Guess the next word",
+        "Skip the sentence"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF210-Q01",
+      "correctOptionIndex": 2,
+      "explanation": "The sentence says the cat can catch a ball."
+    },
+    {
+      "questionId": "PF210-Q02",
+      "correctOptionIndex": 1,
+      "explanation": "The sentence says the ball is on the mat."
+    },
+    {
+      "questionId": "PF210-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Catch ends with tch."
+    },
+    {
+      "questionId": "PF210-Q04",
+      "correctOptionIndex": 3,
+      "explanation": "The first sentence states the action."
+    },
+    {
+      "questionId": "PF210-Q05",
+      "correctOptionIndex": 2,
+      "explanation": "Catch and match share -atch."
+    },
+    {
+      "questionId": "PF210-Q06",
+      "correctOptionIndex": 1,
+      "explanation": "Text evidence supports the answer."
+    },
+    {
+      "questionId": "PF210-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "Patch ends in tch."
+    },
+    {
+      "questionId": "PF210-Q08",
+      "correctOptionIndex": 3,
+      "explanation": "Cash ends in sh; catch ends in tch."
+    },
+    {
+      "questionId": "PF210-Q09",
+      "correctOptionIndex": 2,
+      "explanation": "Again means another time."
+    },
+    {
+      "questionId": "PF210-Q10",
+      "correctOptionIndex": 1,
+      "explanation": "This sentence contains both words."
+    },
+    {
+      "questionId": "PF210-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "The ending changes the word."
+    },
+    {
+      "questionId": "PF210-Q12",
+      "correctOptionIndex": 3,
+      "explanation": "Catch and cat begin with /k/."
+    },
+    {
+      "questionId": "PF210-Q13",
+      "correctOptionIndex": 2,
+      "explanation": "The sentence states this directly."
+    },
+    {
+      "questionId": "PF210-Q14",
+      "correctOptionIndex": 1,
+      "explanation": "Sound substitutions can change meaning."
+    },
+    {
+      "questionId": "PF210-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Rereading helps repair decoding and meaning."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-210-v1"
+  }
+}

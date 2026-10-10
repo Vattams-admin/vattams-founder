@@ -10,10 +10,10 @@
   "status": "draft",
   "coverage": {
     "modules": 2,
-    "lessons": 208,
-    "studyMaterials": 208,
-    "questionBank": 3110,
-    "assessments": 51
+    "lessons": 213,
+    "studyMaterials": 213,
+    "questionBank": 3185,
+    "assessments": 53
   },
   "assets": {
     "courseMap": "content/courses/phonics-foundation/course-map.json",
@@ -228,7 +228,12 @@
       "content/courses/phonics-foundation/205-targeted-ck-remediation-reassessment/authoring-package.json",
       "content/courses/phonics-foundation/206-recognise-final-trigraph-tch/authoring-package.json",
       "content/courses/phonics-foundation/207-decode-words-ending-tch/authoring-package.json",
-      "content/courses/phonics-foundation/208-spell-words-ending-tch/authoring-package.json"
+      "content/courses/phonics-foundation/208-spell-words-ending-tch/authoring-package.json",
+      "content/courses/phonics-foundation/209-tch-word-families-controlled-reading/authoring-package.json",
+      "content/courses/phonics-foundation/210-controlled-tch-sentences-comprehension/authoring-package.json",
+      "content/courses/phonics-foundation/211-controlled-tch-passage-sequencing/authoring-package.json",
+      "content/courses/phonics-foundation/212-tch-fluency-consolidation-diagnostic/authoring-package.json",
+      "content/courses/phonics-foundation/213-targeted-tch-remediation-reassessment/authoring-package.json"
     ],
     "manifestPath": "content/courses/phonics-foundation/manifest.json"
   },
@@ -266,7 +271,9 @@
     "PF196-DIAG-01",
     "PF197-REASSESS-01",
     "PF204-DIAG-01",
-    "PF205-REASSESS-01"
+    "PF205-REASSESS-01",
+    "PF212-DIAG-01",
+    "PF213-REASSESS-01"
   ],
   "contentPackages": [
     "content/courses/phonics-foundation/122-h-word-families-controlled-reading/authoring-package.json",
