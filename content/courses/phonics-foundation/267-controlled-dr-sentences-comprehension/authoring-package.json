@@ -129,8 +129,8 @@
     "higherOrderThinking": [
       {
         "id": "H1",
-        "prompt": "Which word names an object in “The drum is on the rug”?",
-        "answer": "drum"
+        "prompt": "Which item is located on the rug in “The drum is on the rug”?",
+        "answer": "The drum"
       },
       {
         "id": "H2",
@@ -352,12 +352,12 @@
     },
     {
       "questionId": "PF267-Q10",
-      "question": "Which word names an object in “The drum is on the rug”?",
+      "question": "Which item is located on the rug in “The drum is on the rug”?",
       "options": [
-        "the",
-        "drum",
-        "is",
-        "on"
+        "The drum",
+        "The drop",
+        "The flag",
+        "The crop"
       ],
       "difficulty": "comprehension",
       "marks": 1,
@@ -477,8 +477,8 @@
     },
     {
       "questionId": "PF267-Q10",
-      "correctOptionIndex": 1,
-      "explanation": "Drum names the object."
+      "correctOptionIndex": 0,
+      "explanation": "The sentence states that the drum is on the rug."
     },
     {
       "questionId": "PF267-Q11",
