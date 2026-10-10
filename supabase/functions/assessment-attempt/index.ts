@@ -388,7 +388,7 @@ async function checkAccess(studentId: string, courseId: string, assessmentId: st
 
 async function findLatestAttempt(studentId: string, assessmentId: string): Promise<AttemptRow | null> {
   const { data, error } = await supabase.from("assessment_attempts")
-    .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,expires_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders,expires_at")
+    .select("id,student_id,course_id,assessment_id,domain,kind,status,started_at,expires_at,question_ids,is_mock,release_version,release_public_sha256,release_private_sha256,integrity_sha256,option_orders")
     .eq("student_id", studentId).eq("assessment_id", assessmentId)
     .order("started_at", { ascending: false }).limit(1).maybeSingle();
   if (error) throw new Error(`Attempt lookup failed: ${error.message}`);
