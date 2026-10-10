@@ -1,0 +1,516 @@
+{
+  "packageId": "course-phonics-foundation-module-02-lesson-160",
+  "version": "1.0.0",
+  "trackId": "course-phonics-foundation",
+  "locator": {
+    "domain": "course",
+    "course": "phonics-foundation",
+    "subject": "early-literacy",
+    "module": "next-consonant-patterns",
+    "lesson": "160-decode-cvc-with-sh",
+    "topic": "decoding",
+    "subtopic": "initial-and-final-sh-blending",
+    "language": "en",
+    "ageBand": "4-6"
+  },
+  "status": "draft",
+  "studyMaterial": {
+    "objectives": [
+      "Decode short words containing initial or final sh by mapping graphemes to phonemes.",
+      "Blend /sh/ with the remaining sounds without splitting the digraph.",
+      "Read ship, shop, shut, shed, fish, dish, wish and cash accurately.",
+      "Self-correct by checking each sound and the vowel."
+    ],
+    "concepts": [
+      "The two letters sh are read as one sound before blending.",
+      "Initial-sh words can follow sh + vowel + consonant, as in ship.",
+      "Final-sh words can end in a digraph, as in fish.",
+      "Accurate decoding uses all graphemes in order, not just the first sound."
+    ],
+    "definitions": [
+      {
+        "term": "blend",
+        "definition": "Combine phonemes in order to read a word."
+      },
+      {
+        "term": "grapheme mapping",
+        "definition": "Matching each written letter or letter group to its sound."
+      },
+      {
+        "term": "self-correction",
+        "definition": "Noticing an error and fixing it using the printed word."
+      }
+    ],
+    "workedExamples": [
+      {
+        "prompt": "sh-i-p",
+        "solution": "/sh/ /i/ /p/ blends to ship."
+      },
+      {
+        "prompt": "f-i-sh",
+        "solution": "/f/ /i/ /sh/ blends to fish."
+      },
+      {
+        "prompt": "sh-u-t",
+        "solution": "/sh/ /u/ /t/ blends to shut."
+      }
+    ],
+    "commonMistakes": [
+      "Splitting sh into two sounds.",
+      "Reading ship as sip by overlooking h in the digraph.",
+      "Changing the short vowel while blending.",
+      "Guessing from the first letter and skipping the ending."
+    ],
+    "keyTakeaways": [
+      "Treat sh as one grapheme during blending.",
+      "Track left to right through the whole word.",
+      "Check the short vowel and final consonant.",
+      "Reread the word naturally after blending."
+    ],
+    "revisionPoints": [
+      "sh-i-p → ship.",
+      "sh-o-p → shop.",
+      "f-i-sh → fish.",
+      "d-i-sh → dish."
+    ]
+  },
+  "practice": {
+    "basic": [
+      {
+        "id": "B1",
+        "prompt": "Which word matches /sh/ /i/ /p/?",
+        "answer": "ship"
+      },
+      {
+        "id": "B2",
+        "prompt": "Which word matches /f/ /i/ /sh/?",
+        "answer": "fish"
+      },
+      {
+        "id": "B3",
+        "prompt": "Which word begins with sh and has short /o/?",
+        "answer": "shop"
+      }
+    ],
+    "conceptual": [
+      {
+        "id": "C1",
+        "prompt": "Which word matches /sh/ /u/ /t/?",
+        "answer": "shut"
+      },
+      {
+        "id": "C2",
+        "prompt": "Which spelling matches the word fish?",
+        "answer": "f-i-sh"
+      },
+      {
+        "id": "C3",
+        "prompt": "Which word has sh at the end?",
+        "answer": "dish"
+      }
+    ],
+    "application": [
+      {
+        "id": "A1",
+        "prompt": "When blending ship, how should sh be read?",
+        "answer": "As one /sh/ sound"
+      },
+      {
+        "id": "A2",
+        "prompt": "Which word is different from ship because of its vowel?",
+        "answer": "shop"
+      },
+      {
+        "id": "A3",
+        "prompt": "Which word matches /w/ /i/ /sh/?",
+        "answer": "wish"
+      }
+    ],
+    "higherOrderThinking": [
+      {
+        "id": "H1",
+        "prompt": "Which word matches /c/ /a/ /sh/?",
+        "answer": "cash"
+      },
+      {
+        "id": "H2",
+        "prompt": "What should you do after blending a word?",
+        "answer": "Read it again and check every grapheme"
+      },
+      {
+        "id": "H3",
+        "prompt": "Which pair both contains final sh?",
+        "answer": "fish and dish"
+      }
+    ],
+    "mixedReview": [
+      {
+        "id": "R1",
+        "prompt": "Which word begins with sh and ends with t?",
+        "answer": "shut"
+      },
+      {
+        "id": "R2",
+        "prompt": "Which is the correct left-to-right mapping for shop?",
+        "answer": "sh-o-p"
+      },
+      {
+        "id": "R3",
+        "prompt": "A learner reads fish as fit. What should be checked?",
+        "answer": "The final digraph"
+      }
+    ]
+  },
+  "revision": {
+    "quickRevision": [
+      "sh-i-p → ship.",
+      "sh-o-p → shop.",
+      "f-i-sh → fish.",
+      "d-i-sh → dish."
+    ],
+    "flashRecall": [
+      {
+        "front": "Recall 1",
+        "back": "sh-i-p → ship."
+      },
+      {
+        "front": "Recall 2",
+        "back": "sh-o-p → shop."
+      },
+      {
+        "front": "Recall 3",
+        "back": "f-i-sh → fish."
+      },
+      {
+        "front": "Recall 4",
+        "back": "d-i-sh → dish."
+      }
+    ],
+    "formulaOrFactBank": [
+      "sh-i-p → ship.",
+      "sh-o-p → shop.",
+      "f-i-sh → fish.",
+      "d-i-sh → dish."
+    ],
+    "mistakeBasedRevision": [
+      "Splitting sh into two sounds.",
+      "Reading ship as sip by overlooking h in the digraph.",
+      "Changing the short vowel while blending.",
+      "Guessing from the first letter and skipping the ending."
+    ],
+    "weakTopicRevision": [
+      "If decoding accuracy is below target, model the specific sound or reading step, practise with guided examples, then reassess with fresh items."
+    ]
+  },
+  "activities": [
+    {
+      "id": "ACT1",
+      "type": "guided-phonics-practice",
+      "name": "Build and blend short words containing sh.",
+      "steps": [
+        "Point to graphemes from left to right.",
+        "Say sh as one sound.",
+        "Blend the remaining phonemes with sh.",
+        "Read the complete word and check the vowel and ending."
+      ]
+    },
+    {
+      "id": "ACT2",
+      "type": "contrast-and-self-check",
+      "name": "Contrast close examples and explain the evidence.",
+      "steps": [
+        "Compare two similar words.",
+        "Name the sound or rime that changes.",
+        "Use the written graphemes to justify the answer.",
+        "Read the words or sentence again to confirm."
+      ]
+    }
+  ],
+  "outcomes": [
+    "Decode at least 8 of 10 taught sh-words accurately.",
+    "Keep sh as one grapheme while blending.",
+    "Self-correct a vowel or ending error."
+  ],
+  "questions": [
+    {
+      "questionId": "PF160-Q01",
+      "question": "Which word matches /sh/ /i/ /p/?",
+      "options": [
+        "ship",
+        "shop",
+        "shut",
+        "sip"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF160-Q02",
+      "question": "Which word matches /f/ /i/ /sh/?",
+      "options": [
+        "fish",
+        "dish",
+        "wish",
+        "fit"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF160-Q03",
+      "question": "Which word begins with sh and has short /o/?",
+      "options": [
+        "shop",
+        "ship",
+        "shut",
+        "shed"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF160-Q04",
+      "question": "Which word matches /sh/ /u/ /t/?",
+      "options": [
+        "shut",
+        "shot",
+        "ship",
+        "shed"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF160-Q05",
+      "question": "Which spelling matches the word fish?",
+      "options": [
+        "f-i-sh",
+        "sh-i-f",
+        "f-e-sh",
+        "f-i-s"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF160-Q06",
+      "question": "Which word has sh at the end?",
+      "options": [
+        "dish",
+        "shed",
+        "shop",
+        "shut"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF160-Q07",
+      "question": "When blending ship, how should sh be read?",
+      "options": [
+        "As one /sh/ sound",
+        "As /s/ then /h/",
+        "As a vowel",
+        "Not at all"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF160-Q08",
+      "question": "Which word is different from ship because of its vowel?",
+      "options": [
+        "shop",
+        "sip",
+        "dip",
+        "lip"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF160-Q09",
+      "question": "Which word matches /w/ /i/ /sh/?",
+      "options": [
+        "wish",
+        "wash",
+        "with",
+        "win"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF160-Q10",
+      "question": "Which word matches /c/ /a/ /sh/?",
+      "options": [
+        "cash",
+        "case",
+        "cap",
+        "cat"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF160-Q11",
+      "question": "What should you do after blending a word?",
+      "options": [
+        "Read it again and check every grapheme",
+        "Guess from the first letter",
+        "Skip the ending",
+        "Change the vowel"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF160-Q12",
+      "question": "Which pair both contains final sh?",
+      "options": [
+        "fish and dish",
+        "ship and shop",
+        "shut and shed",
+        "shop and fish"
+      ],
+      "difficulty": "conceptual",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF160-Q13",
+      "question": "Which word begins with sh and ends with t?",
+      "options": [
+        "shut",
+        "ship",
+        "shop",
+        "shed"
+      ],
+      "difficulty": "basic",
+      "marks": 1,
+      "timeSeconds": 30
+    },
+    {
+      "questionId": "PF160-Q14",
+      "question": "Which is the correct left-to-right mapping for shop?",
+      "options": [
+        "sh-o-p",
+        "s-h-op",
+        "sh-p-o",
+        "o-sh-p"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    },
+    {
+      "questionId": "PF160-Q15",
+      "question": "A learner reads fish as fit. What should be checked?",
+      "options": [
+        "The final digraph",
+        "Only the capital letter",
+        "The first vowel in ship",
+        "The spaces"
+      ],
+      "difficulty": "application",
+      "marks": 1,
+      "timeSeconds": 45
+    }
+  ],
+  "answerKeys": [
+    {
+      "questionId": "PF160-Q01",
+      "correctOptionIndex": 0,
+      "explanation": "The sounds blend to ship."
+    },
+    {
+      "questionId": "PF160-Q02",
+      "correctOptionIndex": 0,
+      "explanation": "The phonemes blend to fish."
+    },
+    {
+      "questionId": "PF160-Q03",
+      "correctOptionIndex": 0,
+      "explanation": "Shop has short /o/."
+    },
+    {
+      "questionId": "PF160-Q04",
+      "correctOptionIndex": 0,
+      "explanation": "The middle sound is short /u/."
+    },
+    {
+      "questionId": "PF160-Q05",
+      "correctOptionIndex": 0,
+      "explanation": "Fish is f-i-sh."
+    },
+    {
+      "questionId": "PF160-Q06",
+      "correctOptionIndex": 0,
+      "explanation": "Dish ends in sh."
+    },
+    {
+      "questionId": "PF160-Q07",
+      "correctOptionIndex": 0,
+      "explanation": "The digraph represents one phoneme."
+    },
+    {
+      "questionId": "PF160-Q08",
+      "correctOptionIndex": 0,
+      "explanation": "Shop has short /o/; ship has short /i/."
+    },
+    {
+      "questionId": "PF160-Q09",
+      "correctOptionIndex": 0,
+      "explanation": "Wish blends /w/ /i/ /sh/."
+    },
+    {
+      "questionId": "PF160-Q10",
+      "correctOptionIndex": 0,
+      "explanation": "Cash ends with sh and has short /a/."
+    },
+    {
+      "questionId": "PF160-Q11",
+      "correctOptionIndex": 0,
+      "explanation": "Read-back verifies the whole word."
+    },
+    {
+      "questionId": "PF160-Q12",
+      "correctOptionIndex": 0,
+      "explanation": "Fish and dish end with sh."
+    },
+    {
+      "questionId": "PF160-Q13",
+      "correctOptionIndex": 0,
+      "explanation": "Shut begins with sh and ends in t."
+    },
+    {
+      "questionId": "PF160-Q14",
+      "correctOptionIndex": 0,
+      "explanation": "Map sh, then short o, then p."
+    },
+    {
+      "questionId": "PF160-Q15",
+      "correctOptionIndex": 0,
+      "explanation": "Fish ends in sh, not t."
+    }
+  ],
+  "governance": {
+    "reviewStatus": "draft",
+    "answerKeyPrivate": true,
+    "provenance": [
+      "VATTAMS Academia Phonics Foundation authored curriculum package; internal pedagogical specification v1.0"
+    ],
+    "contentHash": "sha256:course-phonics-foundation-module-02-lesson-160-v1"
+  }
+}
